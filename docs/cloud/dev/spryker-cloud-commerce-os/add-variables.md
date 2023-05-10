@@ -89,10 +89,9 @@ To make variables available in your Jenkins instance, we need to terraform your 
     This opens the **Create parameter** page.
 3. For **Name**, enter `/{project}/{environment}/config/common/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
-4. Optional: Enter a **Description**.
-    This may be a note about what this variable is used for.
-5. Select a **Type** based on your requirements.    
-6. Enter a **Value**.
+4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
+5. For **Type**, select a type of the variable based on your requirements.    
+6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services** > **CodePipeline**.
@@ -108,10 +107,10 @@ To make variables available in your Jenkins instance, we need to terraform your 
     This opens the **Create parameter** page.
 3. For **Name**, enter `/{project}/{environment}/secret/common/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
-4. Optional: Enter a **Description**.
+4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
 5. For **Type**, select **SecureString**.
-6. Enter a **Value**.
+6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services** > **CodePipeline**.
@@ -127,10 +126,10 @@ To make variables available in your Jenkins instance, we need to terraform your 
     This opens the **Create parameter** page.
 3. For **Name**, enter `/{project}/{environment}/config/app/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
-4. Optional: Enter a **Description**.
+4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
-5. Select a **Type** based on your requirements.    
-6. Enter a **Value**.
+5. For **Type**, select a type of the variable based on your requirements.    
+6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services** > **CodePipeline**.
@@ -146,10 +145,10 @@ To make variables available in your Jenkins instance, we need to terraform your 
     This opens the **Create parameter** page.
 3. For **Name**, enter `/{project}/{environment}/secret/app/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
-4. Optional: Enter a **Description**.
+4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
 5. For **Type**, select **SecureString**.
-6. Enter a **Value**.
+6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services** > **CodePipeline**.
@@ -167,10 +166,10 @@ To make variables available in your Jenkins instance, we need to terraform your 
     * Variable: `/{project}/{environment}/config/scheduler/public/{variable_name}`
     * Secret: `/{project}/{environment}/secret/scheduler/public/{variable_name}`
         Make sure to replace the placeholders based on your requirements.
-4. Optional: Enter a **Description**.
+4. Optional: For **Description**, enter a description of the variable. This may be a note about what this variable is used for.
     This may be a note about what this variable is used for.
 5. For **Type**, select **SecureString**.
-6. Enter a **Value**.
+6. For **Value**, enter the value of the variable.
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services** > **CodePipeline**.

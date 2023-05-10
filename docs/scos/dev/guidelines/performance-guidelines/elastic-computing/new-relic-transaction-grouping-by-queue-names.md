@@ -3,11 +3,11 @@ title: New Relic transactions grouping by queue names
 description: Enhanced New Relic queue flow groups transactions by queue names.
 last_updated: May 16, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
 related:
   - title: RAM-aware batch processing
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
-  - title: Scalable application infrastructure
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
   - title: Storage caching for primary-replica database setups
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 ---

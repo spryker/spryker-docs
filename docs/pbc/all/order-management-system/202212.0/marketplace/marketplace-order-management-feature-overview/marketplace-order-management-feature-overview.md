@@ -53,7 +53,7 @@ Marketplace Sales Order Total = ∑ Merchant Order Totals + ∑ Marketplace Sale
 At the same time, each Marketplace Order Total includes the sum of the respective Merchant Order Totals, for example:
 
 * Marketplace Sales Order Subtotal = Merchant Order Subtotal 1 + Merchant Order Subtotal 2 + Merchant Order Subtotal n.
-* Marketplace Sales Order Discount Total = ∑ Discount Totals included in all Merchant Orders. Check [Marketplace Promotions and Discounts feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-promotions-and-discounts-feature-overview.html) to learn how the discounts are calculated.
+* Marketplace Sales Order Discount Total = ∑ Discount Totals included in all Merchant Orders. Check [Marketplace Promotions and Discounts feature overview](/docs/pbc/all/discount-management/{{page.version}}/marketplace/marketplace-promotions-discounts-feature-overview.html) to learn how the discounts are calculated.
 * Marketplace Sales Order Tax Total= ∑ Merchant Order Tax Totals.
 * Marketplace Sales Order Grand Total = ∑ Merchant Order Grand Totals.
 * Marketplace Sales Order Refund Total = ∑ Merchant Order Refund Totals.

@@ -37,7 +37,7 @@ For cases when several non-exclusive discounts apply to a customer’s cart, a B
 
 #### Documentation
 
-[Discount priority](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#discount-priority)
+[Discount priority](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html#discount-priority)
 
 ### Category-based discounts
 
@@ -47,7 +47,7 @@ We have added `category` to the list of fields for discount conditions and calcu
 
 #### Documentation
 
-[Decision rule](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#decision-rule)
+[Decision rule](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html#decision-rule)
 
 ### Time-defined discount validity
 
@@ -57,7 +57,7 @@ Discount validity now supports HH:MM time in addition to dates. For example, a v
 
 #### Documentation
 
-[Discount validity interval](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#discount-validity-interval)
+[Discount validity interval](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html#discount-validity-interval)
 
 ### Strikethrough prices on promotional products
 
@@ -67,7 +67,7 @@ When the **Cart** page shows eligible promotional products, these products now s
 
 #### Documentation
 
-[Promotions & Discounts feature overview](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html)
+[Promotions & Discounts feature overview](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html)
 
 
 ### Multiple abstract products within a promotional product discount
@@ -78,7 +78,7 @@ Promotional product discounts can now designate more than one abstract SKU as th
 
 
 #### Documentation
-[Promotional product](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#promotional-product)
+[Promotional product](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html#promotional-product)
 
 
 ### Storefront

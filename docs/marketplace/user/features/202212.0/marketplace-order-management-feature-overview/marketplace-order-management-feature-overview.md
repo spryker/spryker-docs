@@ -80,7 +80,7 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 * [Learn about the merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html)
 * [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
 
-## Related Business User articles
+## Related Business User documents
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|

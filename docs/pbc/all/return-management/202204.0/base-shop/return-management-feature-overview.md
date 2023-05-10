@@ -74,8 +74,8 @@ The *guest users* can not initiate returns of their orders, as the return manage
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
@@ -125,9 +125,9 @@ To install the return management capability, do the following:
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
+2. Follow the integration guides in [Related Developer documents](#related-developer-documents).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -135,7 +135,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/base-shop/build-a-return-management-process-best-practices.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|

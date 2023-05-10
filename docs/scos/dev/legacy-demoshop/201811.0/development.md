@@ -69,4 +69,4 @@ With this approach, you can directly include every module (external/local) that 
 
 As far as this approach has been designed to use javascript on server side (node.js), commands like `require`, `module` or `export` are reserved words not naturally available in browsers’ vanilla javascript. To use them, you need to add a library or a pre-compiling tool capable of interpreting them.
 
-For this reason, we rely on [Oryx](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html).
+For this reason, we rely on [Oryx](/docs/scos/dev/front-end-development/{{page.version}}/zed/oryx-builder-overview-and-setup.html).

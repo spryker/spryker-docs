@@ -22,7 +22,7 @@ The following schema illustrates product restrictions relations within the Merch
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES |
 |---------|

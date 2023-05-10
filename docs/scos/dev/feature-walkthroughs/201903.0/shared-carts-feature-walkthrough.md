@@ -11,7 +11,7 @@ The _Shared Carts_ feature allows sharing carts between company users.
 To learn more about the feature and to find out how end users use it, see [Shared Carts feature overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|

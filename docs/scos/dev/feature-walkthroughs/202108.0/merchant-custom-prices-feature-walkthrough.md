@@ -11,7 +11,7 @@ The _Merchant Custom Prices_ feature allows a merchant to define custom prices f
 To learn more about the feature and to find out how end users use it, see [Merchant Custom Prices feature overview](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | MIGRATION GUIDES |
 |---------|---------|

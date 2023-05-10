@@ -16,10 +16,10 @@ related:
   - title: Glue API - Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-labels-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-labels-feature-overview.html
 ---
 
-[Product labels](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 ## Installation
 

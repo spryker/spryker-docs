@@ -18,7 +18,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_group.csv` file to configure [Product Group](/docs/pbc/all/product-information-management/{{page.version}}/product-groups-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_group.csv` file to configure [Product Group](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-groups-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 

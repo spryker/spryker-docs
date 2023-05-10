@@ -31,7 +31,7 @@ To accommodate business requirements, there can be various price types—for exa
 
 ## Product types and price inheritance
 
-Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
+Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 

@@ -1,7 +1,7 @@
 ---
-title: Add parameters and secrets
-description: Learn how to define parameter values in the Parameter Store.
-last_updated: Jan 23, 2023
+title: Add variables
+description: Learn how to define variables in the Parameter Store.
+last_updated: May 3, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
@@ -13,7 +13,7 @@ Variables, such as parameters and secrets, are used for multiple purposes, like 
 
 ## Naming convention for variables
 
-Variables must follow this naming convention: `/{project}/{environment}/{type}/{bucket}/{grant}/{name}`.
+Variables must follow this naming convention: `/{project}/{environment}/{type}/{bucket}/{grant}/{variable_name}`.
 
 Placeholder description:
 
@@ -33,14 +33,14 @@ Placeholder description:
 
 Path examples:
 
-* /fashion_club_store/staging/config/common/limited
+* /fashion_club_store/staging/config/common/limited/composer_pass
 
-* /deans_jeans/prod/config/app/public
+* /deans_jeans/prod/config/app/public/mail_host
 
 
 ## Variable path hierarchy
 
-Path hierarchy is needed to cover the cases when several variables with the same name are declared. If several variables with the same name are declared, the variable with a higher priority applies. The following rules apply:
+Path hierarchy is needed to cover the cases when several variables with the same name are declared. If several variables with the same name are declared, the variable with a higher priority applies. The following rules define the priority of variables:
 
 1. For any `type` and `bucket`, the priority is `public` > `limited` > `internal`.
 2. Foy any `bucket`, the priority is `bucket` > `common`.
@@ -48,33 +48,33 @@ Path hierarchy is needed to cover the cases when several variables with the same
 
 The following variables are arranged from lower to higher priority:
 
-* /{project}/{environment}/config/common/internal
+* /{project}/{environment}/config/common/internal/{variable_name}
 
-* /{project}/{environment}/config/common/limited
+* /{project}/{environment}/config/common/limited/{variable_name}
 
-* /{project}/{environment}/config/common/public
+* /{project}/{environment}/config/common/public/{variable_name}
 
-* /{project}/{environment}/config/{app | scheduler}/internal
+* /{project}/{environment}/config/{app | scheduler}/internal/{variable_name}
 
-* /{project}/{environment}/config/{app | scheduler}/limited
+* /{project}/{environment}/config/{app | scheduler}/limited/{variable_name}
 
-* /{project}/{environment}/config/{app | scheduler}/public
+* /{project}/{environment}/config/{app | scheduler}/public/{variable_name}
 
-* /{project}/{environment}/secret/common/internal
+* /{project}/{environment}/secret/common/internal/{variable_name}
 
-* /{project}/{environment}/secret/common/limited
+* /{project}/{environment}/secret/common/limited/{variable_name}
 
-* /{project}/{environment}/secret/common/public
+* /{project}/{environment}/secret/common/public/{variable_name}
 
-* /{project}/{environment}/secret/{app | scheduler}/internal
+* /{project}/{environment}/secret/{app | scheduler}/internal/{variable_name}
 
-* /{project}/{environment}/secret/{app | scheduler}/limited
+* /{project}/{environment}/secret/{app | scheduler}/limited/{variable_name}
 
-* /{project}/{environment}/secret/{app | scheduler}/public
+* /{project}/{environment}/secret/{app | scheduler}/public/{variable_name}
 
 ## Add variables
 
-The following sections describe how to add variables and secrets for different resources.
+The following sections describe how to add parameters and secrets for different resources.
 
 {% info_block warningBox "Propagation of variables" %}
 
@@ -82,12 +82,12 @@ To make variables available in your Jenkins instance, we need to terraform your 
 
 {% endinfo_block %}
 
-## Add plaintext variables to all resource types
+### Add parameters to all resource types
 
 1. In the AWS Management Console, go to **Services > Parameter Store**.
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
-3. For **Name**, enter `/{project}/{environment}/config/common/public/{name}`.
+3. For **Name**, enter `/{project}/{environment}/config/common/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
 4. Optional: Enter a **Description**.
     This may be a note about what this variable is used for.
@@ -101,12 +101,12 @@ To make variables available in your Jenkins instance, we need to terraform your 
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
 
-## Add secret variables to all resource types
+### Add secrets to all resource types
 
 1. In the AWS Management Console, go to **Services > Parameter Store**.
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
-3. For **Name**, enter `/{project}/{environment}/secret/common/public/{name}`.
+3. For **Name**, enter `/{project}/{environment}/secret/common/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
 4. Optional: Enter a **Description**.
     This may be a note about what this variable is used for.
@@ -120,12 +120,12 @@ To make variables available in your Jenkins instance, we need to terraform your 
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
 
-## Add plaintext variables to ECS applications
+### Add parameters to ECS applications
 
 1. In the AWS Management Console, go to **Services > Parameter Store**.
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
-3. For **Name**, enter `/{project}/{environment}/config/app/public/{name}`.
+3. For **Name**, enter `/{project}/{environment}/config/app/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
 4. Optional: Enter a **Description**.
     This may be a note about what this variable is used for.
@@ -139,12 +139,12 @@ To make variables available in your Jenkins instance, we need to terraform your 
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
 
-## Adding secret variables to ECS applications
+### Adding secrets to ECS applications
 
 1. In the AWS Management Console, go to **Services > Parameter Store**.
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
-3. For **Name**, enter `/{project}/{environment}/secret/app/public/{name}`.
+3. For **Name**, enter `/{project}/{environment}/secret/app/public/{variable_name}`.
     Make sure to replace the placeholders based on your requirements.
 4. Optional: Enter a **Description**.
     This may be a note about what this variable is used for.
@@ -158,14 +158,14 @@ To make variables available in your Jenkins instance, we need to terraform your 
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.    
 
-## Add variables and secrets to Scheduler
+### Add parameters and secrets to Scheduler
 
 1. In the AWS Management Console, go to **Services > Parameter Store**.
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
 3. For **Name**, enter one of the following:
-    * Variable: `/{project}/{environment}/config/scheduler/public/{name}`
-    * Secret: `/{project}/{environment}/secret/scheduler/public/{name}`
+    * Variable: `/{project}/{environment}/config/scheduler/public/{variable_name}`
+    * Secret: `/{project}/{environment}/secret/scheduler/public/{variable_name}`
         Make sure to replace the placeholders based on your requirements.
 4. Optional: Enter a **Description**.
     This may be a note about what this variable is used for.

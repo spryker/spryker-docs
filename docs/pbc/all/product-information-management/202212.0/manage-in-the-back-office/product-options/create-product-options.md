@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202005.0/catalog/product-options/create-product-options.html
 related:
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-options-feature-overview.html
 ---
 
 This document describes how to create product options. Product options are additions to products, like warranty or gift wrapping.

@@ -1362,17 +1362,17 @@ entries:
                   - title: "merchant-order-status.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-order-status.csv.html
               - title: Manage main merchant orders in the Back Office
-                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+                url: /docs/pbc/all/order-management-system/marketplace/manage-main-merchant-orders.html
               - title: Manage merchant orders in the Merchant Portal
-                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-merchant-orders.html
+                url: /docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.html
               - title: "Glue API: Retrieve Marketplace orders"
-                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/glue-api-retrieve-marketplace-orders.html
+                url: /docs/pbc/all/order-management-system/marketplace/glue-api-retrieve-marketplace-orders.html
               - title: Merchant OMS
-                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/merchant-oms.html
+                url: /docs/pbc/all/order-management-system/marketplace/merchant-oms.html
               - title: Create MerchantOms flows
-                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/create-merchant-oms-flows.html
+                url: /docs/pbc/all/order-management-system/marketplace/create-merchant-oms-flows.html
               - title: Domain model and relationships
-                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/marketplace-order-management-feature-domain-model-and-relationships.html
+                url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-domain-model-and-relationships.html
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         include_versions:

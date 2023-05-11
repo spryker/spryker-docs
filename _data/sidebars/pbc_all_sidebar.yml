@@ -357,8 +357,16 @@ entries:
             include_versions:
             - "202212.0"
             nested:
-              - title: Install the Marketplace Cart feature
-                url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-marketplace-cart-feature.html
+              - title: Install features
+                nested:
+                  - title: Marketplace Cart
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-marketplace-cart-feature.html
+                  - title: Cart + Marketplace Product Options
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-cart-marketplace-product-options-feature.html
+                  - title: Checkout + Marketplace Product Options
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-checkout-marketplace-product-options-feature.html
+                  - title: Quick Add to Cart + Marketplace Product
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-quick-add-to-cart-marketplace-product-feature.html
               - title: Manage using Glue API
                 nested:
                   - title: Carts of registered users
@@ -1126,6 +1134,14 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html
                       - title: Merchant Portal - Marketplace Merchant
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html
+                      - title: Merchant Portal - Marketplace Product
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html
+                      - title: Merchant Portal - Marketplace Product + Inventory Management
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-inventory-management-feature.html
+                      - title: Merchant Portal - Marketplace Product Options
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html
+                      - title: Merchant Portal - Marketplace Product + Tax
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-tax-feature.html
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Merchant
@@ -2613,72 +2629,80 @@ entries:
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
-          - title: What's changed
-            url: /docs/pbc/all/tax-management/whats-changed-in-tax-management.html
-          - title: Install and upgrade
+          - title: Base shop
             nested:
-              - title: Integrate the Tax Glue API
-                url: /docs/pbc/all/tax-management/install-and-upgrade/integrate-the-tax-glue-api.html
-              - title: Integrate the Product Tax Sets Glue API
-                url: /docs/pbc/all/tax-management/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
-              - title: Upgrade the ProductTaxSetsRestApi module
-                url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
-              - title: Upgrade the Tax module
-                url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html
-          - title: Manage in the Back Office
-            url: /docs/pbc/all/tax-management/manage-in-the-back-office/log-into-the-back-office.html
-            include_versions:
-            - "202212.0"
+              - title: What's changed
+                url: /docs/pbc/all/tax-management/base-shop/whats-changed-in-tax-management.html
+              - title: Tax feature overview
+                url: /docs/pbc/all/tax-management/base-shop/tax-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Integrate the Tax Glue API
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/install-the-tax-glue-api.html
+                  - title: Integrate the Product Tax Sets Glue API
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
+                  - title: Upgrade the ProductTaxSetsRestApi module
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+                  - title: Upgrade the Tax module
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-tax-module.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                include_versions:
+                - "202212.0"
+                nested:
+                  - title: Create tax rates
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
+                  - title: Edit tax rates
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-rates.html
+                  - title: Create tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-sets.html
+                  - title: Edit tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
+              - title: Manage in the Back Office
+                include_versions:
+                - "202204.0"
+                nested:
+                  - title: Create tax rates
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
+                  - title: Edit tax rates
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-rates.html
+                  - title: Create tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-sets.html
+                  - title: Edit tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
+              - title: Manage via Glue API
+                nested:
+                  - title: Retrieve tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-via-glue-api/retrieve-tax-sets.html
+                  - title: Retrieve tax sets when retrieving abstract products
+                    url: /docs/pbc/all/tax-management/base-shop/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
+              - title: Import and export data
+                nested:
+                  - title: Import tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets.html
+                  - title: Import tax sets for abstract products
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets-for-abstract-products.html
+                  - title: Import tax sets for product options
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets-for-product-options.html
+                  - title: Import tax sets for shipment methoods
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets-for-shipment-methods.html
+              - title: Extend and customize
+                url: /docs/pbc/all/tax-management/base-shop/extend-and-customize/tax-module-reference-information.html
+              - title: Domain model and relationships
+                url: /docs/pbc/all/tax-management/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
+              - title: Third-party integrations
+                url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara.html
+                nested:
+                  - title: Integrate Avalara
+                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara.html
+                  - title: Integrate Avalara Tax + Product Options
+                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html
+                  - title: Integrate Avalara Tax + Shipment
+                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html
+          - title: Marketplace
             nested:
-              - title: Create tax rates
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
-              - title: Edit tax rates
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-rates.html
-              - title: Create tax sets
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html
-              - title: Edit tax sets
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-sets.html
-          - title: Manage in the Back Office
-            include_versions:
-            - "202204.0"
-            nested:
-              - title: Create tax rates
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
-              - title: Edit tax rates
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-rates.html
-              - title: Create tax sets
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html
-              - title: Edit tax sets
-                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-sets.html
-          - title: Manage via Glue API
-            nested:
-              - title: Retrieve tax sets
-                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
-              - title: Retrieve tax sets when retrieving abstract products
-                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
-          - title: Import and export data
-            nested:
-              - title: Import tax sets
-                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
-              - title: Import tax sets for abstract products
-                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
-              - title: Import tax sets for product options
-                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-product-options.html
-              - title: Import tax sets for shipment methoods
-                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.html
-          - title: Extend and customize
-            url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
-          - title: Domain model and relationships
-            url: /docs/pbc/all/tax-management/domain-model-and-relationships/tax-domain-model-and-relationships.html
-          - title: Third-party integrations
-            url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
-            nested:
-              - title: Integrate Avalara
-                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
-              - title: Integrate Avalara Tax + Product Options
-                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
-              - title: Integrate Avalara Tax + Shipment
-                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+              - title: title: Install the Tax + Merchant Portal - Marketplace Product feature
+                url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
         nested:
@@ -2868,6 +2892,10 @@ entries:
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-order-management-feature.html
                   - title: Marketplace Inventory Management + Packaging Units
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html
+                  - title: Inventory Management + Marketplace Product
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-inventory-management-marketplace-product-feature.html
+                  - title: Inventory Management + Merchant Portal - Marketplace Product
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-inventory-management-merchant-portal-marketplace-product-feature.html
               - title: Install Glue API
                 nested:
                   - title: Marketplace Inventory Management

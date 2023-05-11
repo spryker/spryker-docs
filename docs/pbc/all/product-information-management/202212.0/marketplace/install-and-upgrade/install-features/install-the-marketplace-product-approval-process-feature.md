@@ -3,6 +3,8 @@ title: Marketplace Product Approval Process feature integration
 description: Learn how to integrate the Marketplace Product Approval Process feature into a Spryker project.
 template: feature-integration-guide-template
 last_updated: Mar 11, 2022
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-product-approval-process-feature-integration.html
 related:
   - title: Marketplace Product Approval Process feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-approval-process-feature-walkthrough.html

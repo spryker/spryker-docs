@@ -1,14 +1,14 @@
 ---
-title: Connect Spryker Code Upgrader to a GitLab managed project
-description: Learn how to connect Spryker Code Upgrader to a GitLab managed project
+title: Connect the Spryker CI to a GitLab managed project
+description: Learn how to connect Spryker CI to a GitLab managed project
 template: howto-guide-template
 redirect_from:
-  - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html
+  - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
 ---
 
-There are two options for connecting Spryker Code Upgrader to your repository: using Spryker CI or an access token.
+There are two options for connecting Spryker CI to your repository: using Spryker CI's native integration or using an access token.
 
-## Connect Spryker Code Upgrader using Spryker CI
+## Connect using Spryker CI native integration
 
 1. In Spryker CI, go to **Projects**.
 2. On the **Projects** page, select the **Spryker Upgrade Service** project.

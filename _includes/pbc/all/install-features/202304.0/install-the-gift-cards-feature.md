@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | Shipment | {{site.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/integrate-the-shipment-feature.html)|
 | Order Management | {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
 | Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
-| Promotions &amp; Discounts | {{site.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html)|
+| Promotions &amp; Discounts | {{site.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules using Composer
 

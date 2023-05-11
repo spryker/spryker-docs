@@ -27,5 +27,7 @@ entries:
         url: /docs/scu/dev/invite-users-to-spryker-ci.html
       - title: Run the SCU
         url: /docs/scu/dev/run-spryker-code-upgrader.html
+      - title: Change default branch
+        url: /docs/scu/dev/change-default-branch.html
       - title: Roll back upgrades
         url: /docs/scu/dev/roll-back-upgrades.html

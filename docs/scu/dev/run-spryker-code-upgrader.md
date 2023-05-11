@@ -12,10 +12,10 @@ This document describes how to manually trigger Spryker Code Upgrader.
 
 Connect the Upgrader to your project using one of the following guides:
 
-* [Connect Spryker Code Upgrader to a GitHub managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
-* [Connect Spryker Code Upgrader to a GitLab managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
-* [Connect Spryker Code Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html)
-* [Connect Spryker Code Upgrader to a Azure managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.html)
+* [GitHub access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html#prerequisites)
+* [GitLab access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html#prerequisites)
+* [GitLab access token requirements for self-hosted projects](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html#prerequisites)
+* [Azure access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html#prerequisites)
 
 ## Manually trigger Spryker Code Upgrader
 

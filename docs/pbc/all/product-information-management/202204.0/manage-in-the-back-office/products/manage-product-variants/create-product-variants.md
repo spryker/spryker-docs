@@ -18,7 +18,7 @@ related:
   - title: Adding Product Alternatives
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
   - title: Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
 
 This topic describes how to add a product variant for an abstract product.
@@ -64,7 +64,7 @@ The page is refreshed and you can see two additional tabs: *Discontinue* and* Pr
 
 {% info_block errorBox "Important" %}
 
-To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 

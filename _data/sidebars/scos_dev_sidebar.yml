@@ -358,6 +358,13 @@ entries:
         - "202108.0"
     - title: Payments
       url: /docs/scos/dev/feature-walkthroughs/payments-feature-walkthrough.html
+      include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
     - title: Persistent Cart Sharing
       url: /docs/scos/dev/feature-walkthroughs/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
       include_versions:
@@ -579,20 +586,11 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core
-      url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
-      nested:
-      - title: How translations are managed
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html
-      - title: URL redirects overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/url-redirects-overview.html
-      - title: Vault for Tokens overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/vault-for-tokens-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      - "202108.0"
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -1342,7 +1340,6 @@ entries:
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Validate REST request format
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/validate-rest-request-format.html
         include_versions:
@@ -1536,7 +1533,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Product
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html
         include_versions:
@@ -2192,7 +2188,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Permissions
       url: /docs/scos/dev/feature-integration-guides/permissions-feature-integration.html
     - title: Persistent Cart Sharing
@@ -2600,10 +2595,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core Back Office + Warehouse User Management
-      url: /docs/scos/dev/feature-integration-guides/install-spryker-core-back-office-warehouse-user-management-feature.html
-      include_versions:
-      - "202304.0"
+      - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Picker user login
@@ -2739,8 +2731,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
     - title: Migration Guide - OMS
       url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
-    - title: Migration Guide - Payment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
     - title: Migration Guide - PersistentCart
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
@@ -2856,7 +2846,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: File details - payment_method_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
           include_versions:
@@ -2864,7 +2853,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: File details - customer.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html
           include_versions:
@@ -3952,8 +3940,6 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
-    - title: Define parameters and secrets
-      url: /docs/scos/dev/the-docker-sdk/define-parameters-and-secrets.html
   - title: Legacy Demoshop
     include_versions:
     - "201811.0"
@@ -4166,22 +4152,8 @@ entries:
       nested:
       - title: Feature HowTos
         nested:
-        - title: Data Imports
-          nested:
-          - title: "HowTo: Import warehouse data"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
-          - title: "HowTo: Add support for number formatting in the Storefront"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html
-        - title: "HowTo: Generate a token for login"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
-        - title: "HowTo: Display custom names for order item states on the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: "HowTo: Make a product searchable and shown on the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
         - title: "HowTo: Add support of number formatting in the Back Office"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
-        - title: "HowTo: Implement customer approval process based on a generic state machine"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
@@ -4205,20 +4177,14 @@ entries:
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
-      - title: "HowTo: Define the maximum size of content fields"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
       - title: "HowTo: Do better deployments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
       - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
-      - title: "HowTo: Hydrate payment methods for an order"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
       - title: "HowTo: Import big databases between environments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
-      - title: "HowTo: Process incoming HTTP requests from external ERP services for order updates"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
       - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: "HowTo: Handle graceful shutdown"
@@ -4239,8 +4205,10 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Allow Zed CSS/JS on a project"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
+      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html
+      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:
@@ -4356,6 +4324,12 @@ entries:
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
     - title: Payment partners
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
         - title: Adyen
           nested:

@@ -1,5 +1,5 @@
 ---
-title: Integrate the Shipment feature
+title: Install the Shipment feature
 description: Learn how to integrate the Shipment Back Office UI, Delivery method per store and Shipment data import functionalities in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

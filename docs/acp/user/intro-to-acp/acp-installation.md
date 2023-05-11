@@ -306,30 +306,81 @@ ENVIRONMENT_VARIABLE_NAME_A={
 </details>
 
 <details open>
-<summary>Data Structure Example for a Testing Environment</summary>
+<summary>Data Structure Example for a Demo Environment connected to Spryker ACP Production</summary>
 
 ```json
-SPRYKER_AOP_INFRASTRUCTURE='{
-  "SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG": {
-     "default": {
-         "endpoint":"https:\/\/sqs.eu-central-1.amazonaws.com",
-         "auto_setup":false,
-         "buffer_size":1
-     },
-     "DE": {
-          "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Testing-DE.fifo"
-     },
-     "AT": {
-          "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Testing-AT.fifo"
-     }
-  },
-  "SPRYKER_MESSAGE_BROKER_SNS_SENDER_CONFIG": {
-    "endpoint":"https:\/\/sns.eu-central-1.amazonaws.com",
-    "topic":"arn:aws:sns:eu-central-1:054004971898:tenant-sender-topic-testing.fifo"
-  },
-  "AWS_ACCESS_KEY_ID": "****",
-  "AWS_ACCOUNT_ID": "****"
+#AOP
+SPRYKER_AOP_APPLICATION: '{
+  "APP_CATALOG_SCRIPT_URL": "https://app-catalog.atrs.spryker.com/loader",
+  "STORE_NAME_REFERENCE_MAP": {"DE": "tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo", "AT": "tenant_messages_for_store_reference_AOP_Demo_Production-AT.fifo"},
+  "APP_DOMAINS": [
+      "os.apps.aop.spryker.com",
+      "*.bazaarvoice.com"
+  ]
 }'
+
+SPRYKER_AOP_INFRASTRUCTURE: '{
+  "SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG": {
+        "endpoint":"https:\/\/events.atrs.spryker.com\/events\/tenant"
+  },
+  "SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG": {
+    "default": {
+        "endpoint":"https:\/\/sqs.eu-central-1.amazonaws.com",
+        "region":"eu-central-1",
+        "auto_setup":false,
+        "buffer_size":1
+    },
+      "DE": {
+        "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo"
+    },
+    "AT": {
+        "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-AT.fifo"
+    }
+  }
+}'
+```
+</details>
+
+#### General configurations
+
+**Variable name**: `SPRYKER_AOP_APPLICATION`
+
+**1. Configuration key**: `APP_CATALOG_SCRIPT_URL`
+
+**Explanation**: URL for the App-Tenant-Registry-Service (ATRS) and path to the JS script to load the ACP catalog
+
+<details open>
+<summary>Value: Production ATRS_HOST and path</summary>
+
+```json
+https://app-catalog.atrs.spryker.com/loader
+```
+</details>
+
+**2. Configuration key**: `STORE_NAME_REFERENCE_MAP`
+
+**Explanation**: StoreReference mapping to the appropriate Spryker Store
+
+<details open>
+<summary>Value Example: Demo Stores for DE and AT</summary>
+
+```json
+{"DE": "tenant_messages_for_store_reference_AOP_Demo_Production-DE", "AT": "tenant_messages_for_store_reference_AOP_Demo_Production-AT"}
+```
+</details>
+
+**3. Configuration key**: `APP_DOMAINS`
+
+**Explanation**: App domains used in redirects.
+
+<details open>
+<summary>Value Example</summary>
+
+```json
+[
+  "os.apps.aop.spryker.com",
+  "*.bazaarvoice.com"
+]
 ```
 </details>
 
@@ -342,20 +393,20 @@ SPRYKER_AOP_INFRASTRUCTURE='{
 **Explanation**: Receiver configuration. The queues must be defined for each store (or default queue for all stores is used)
 
 <details open>
-<summary>Value: Staging Example</summary>
+<summary>Value Example: Spryker Production Environment</summary>
 
 ```json
 {
-    "default": {
-        "endpoint":"https://sqs.eu-central-1.amazonaws.com",
-        "auto_setup":false, "buffer_size":1
-    },
-    "DE": {
-        "queue_name":"queue_name_for_store_reference_DE"
-    },
-    "<Store Reference>": {
-        "queue_name":"queue_name_for_store_reference_<Store>"
-    }
+  "default": {
+    "endpoint":"https://sqs.eu-central-1.amazonaws.com",
+    "auto_setup":false, "buffer_size":1
+  },
+  "DE": {
+    "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo"
+  },
+  "<Store Reference>": {
+    "queue_name":"queue_name_for_store_reference_<Store>"
+  }
 }
 ```
 </details>
@@ -363,107 +414,14 @@ SPRYKER_AOP_INFRASTRUCTURE='{
 **2. Configuration key**: `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG`
 
 <details open>
-<summary>Value: Staging</summary>
+<summary>Value Example: Spryker Production Environment</summary>
 
 ```json
 {
-    "endpoint":"https://api.atrs-staging.demo-spryker.com/event-tenant"
+    "endpoint":"https://events.atrs.spryker.com/events/tenant"
 }
 ```
 </details>
-
-**Variable name**: `AWS_DEFAULT_REGION`
-
-Variable does not have configuration keys, but only a single value.
-
-**Explanation**: The variable is used inside AWS SDK, and can’t be moved to a combined variable
-
-#### Auth0 configuration
-
-**Variable name**: `SPRYKER_AOP_AUTHENTICATION`
-
-**1. Configuration key**: `AUTH0_CUSTOM_DOMAIN`
-
-**Explanation**: URL for retrieving the Auth0 token.
-
-<details open>
-<summary>Value: Staging/Testing</summary>
-
-```json
-dev-163i904u.us.auth0.com
-```
-</details>
-
-<details open>
-<summary>Value: Production</summary>
-
-```json
-spryker-prod.eu.auth0.com
-```
-</details>
-
-**2. Configuration key**: `AUTH0_CLIENT_ID`
-
-**Explanation**: ClientId for auth service.
-
-<details open>
-<summary>Value Example: Auth0 Client ID</summary>
-
-```json
-clientId from https://auth0.com/
-```
-</details>
-
-**3. Configuration key**: `AUTH0_CLIENT_SECRET`
-
-**Explanation**: ClientSecret for auth service.
-
-<details open>
-<summary>Value Example: Auth0 Client Secret</summary>
-
-```json
-clientSecret from https://auth0.com/
-```
-</details>
-
-**Variable name**: `AWS_SECRETS_MANAGER_ACCESS_KEY_ID`
-
-Variable does not have configuration keys, but only a single value.
-
-**Explanation**: Defines AWS access key used for Secrets Manager
-
-<details open>
-<summary>Value: Access Key Example</summary>
-
-```json
-AKIAY6V.....Y6JSGUF
-```
-</details>
-
-**Variable name**: `AWS_SECRETS_MANAGER_SECRET_ACCESS_KEY`
-
-Variable does not have configuration keys, but only a single value.
-
-**Explanation**: Defines AWS secret used for Secrets Manager
-
-<details open>
-<summary>Value: Secret Example</summary>
-
-```json
-o+X..X+Xfalz...MZXlZQ+UG3SQ.....xrnFPPp6
-```
-</details>
-
-#### Roles and permissions
-
-**Service**: SCOS (Tenant's) store SQS
-
-**Permissions**:
- - `“sqs:SendMessage”`
- - `"sqs:ReceiveMessage"`
- - `"sqs:GetQueueUrl"`
- - `"sqs:DeleteMessage"`
- - `"sqs:ChangeMessageVisibility"`
 
 ## Next Steps After ACP-Readiness
 Now, the SCOS codebase is up-to-date and once re-deloyed your environment is **ACP-Ready**!

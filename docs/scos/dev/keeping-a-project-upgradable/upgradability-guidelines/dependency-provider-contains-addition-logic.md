@@ -10,7 +10,7 @@ Additional logic inside the dependency provider’s methods.
 
 On the project level, developers use `if` constructs with variety of expressions in dependency providers to register the plugins in particular cases only.
 
-Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check will verify that if `if` construct is used for plugin registration, then only one of the following expressions is used:
+Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check will verify that if a `if` construct is used for plugin registration, then only one of the following expressions is used:
 
 `class_exists` it is allowed for BC reasons
 
@@ -24,17 +24,15 @@ class_exists(\Foo\Bar::class) function call
 $this->getConfig()->isDevelopmentConsoleCommandsEnabled() function calls 
 ```
 
-## Example of code that causes an upgradability error:
+## Example of code that causes an upgradability error
 
-The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in `if` construct `self::IS_DEV`.
+The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in the `if` construct `$alwaysAddPlugin`.
 
 ```php
 use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
 
 class FormDependencyProvider extends SprykerFormDependencyProvider
 {
-    public const IS_DEV = true;
-    
     ...
     
     protected function getFormPlugins(): array
@@ -45,7 +43,9 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
         
         $plugins[] = new CsrfFormPlugin();
         
-        if (static::IS_DEV) {
+        $alwaysAddPlugin = true;
+
+        if ($alwaysAddPlugin) {
             $plugins[] = new WebProfilerFormPlugin();
         }
         
@@ -54,23 +54,23 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```bash
 ======================
 MULTIDIMENSIONAL ARRAY
 ======================
 
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| # | Message                                                                                              | Target                                                                   |
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| 1 | The condition statement if (self::IS_DEV) {} is forbidden in the DependencyProvider                  | /spryker/b2c-demo-shop/src/Pyz/Yves/Form/FormDependencyProvider.php      |
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
++---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| # | Message                                                                                              | Target                                                                     |
++---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| 1 | The condition statement if ($alwaysAddPlugin) {} is forbidden in the DependencyProvider              | /spryker/b2c-demo-shop/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php |
++---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
 
 ```
 
 ### Resolving the error:
 
 To resolve the error provided in the example, try the following in the provided order:
-1. Try to avoid using conditions in dependency providers.
-2. Use only the supported expressions in `if` construct.
+1. Try to avoid using conditions in the dependency providers.
+2. Use only the supported expressions in the `if` construct.

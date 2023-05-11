@@ -4,7 +4,7 @@ description: Instructions for running the evaluator tool
 template: howto-guide-template
 ---
 
-This document describes how to check if project code is compliant with Spryker’s standards using the evaluator tool.
+This document describes how to check if the project code is compliant with Spryker’s standards using the evaluator tool.
 
 ## Install the evaluator tool
 
@@ -44,7 +44,7 @@ To evaluate your code, run the evaluator in one of the following ways:
 /vendor/bin/evaluator evaluate
 ```
 
-* Evaluate the code of specific module:
+* Evaluate the code of the specific module:
 
 ```bash
 /vendor/bin/evaluator evaluate --path=src/path_to_module

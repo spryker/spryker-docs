@@ -8,12 +8,12 @@ Multidimensional arrays inside the dependency provider’s methods.
 
 ## Problem description
 
-On the project level, developers use plugins stack, not all structures are needed and can be supported. Multidimensional arrays make configuration hardly upgradable.
-This check will verify that multidimensional arrays should have max 2 levels inside.
+On the project level, developers use a plugins stack, and not all structures are needed and can be supported. Multidimensional arrays make configuration hard to upgrade.
+This check will verify that multidimensional arrays should have a maximum of two levels inside.
 
-## Example of code that causes an upgradability error:
+## Example of code that causes an upgradability error
 
-The methods `ModuleDependencyProvider` contains unsupported multidimensional arrays, they have more 2 levels inside.
+The methods `ModuleDependencyProvider` contains unsupported multidimensional arrays, which have more than two levels inside.
 
 ```php
 
@@ -64,7 +64,7 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
 }
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```bash
 ======================
@@ -83,5 +83,5 @@ MULTIDIMENSIONAL ARRAY
 ### Resolving the error: 
 
 To resolve the error provided in the example, try the following in the provided order:
-1. Try to have simple configuration arrays they shouldn't have more than 2 levels.
+1. Try to have simple configuration arrays. They shouldn't have more than two levels.
 2. Simplify the used structure to one or two nesting.

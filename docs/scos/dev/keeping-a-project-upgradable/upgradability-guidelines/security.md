@@ -8,9 +8,9 @@ Security Checker is a tool that checks if your PHP application depends on PHP pa
 
 ## Problem description
 
-Some packages were release with security issues. When it will be known it saves to Advisories Database.
+Some packages were released with security issues. When the issues are identified, they are saved to the Advisories Database.
 
-## Example of code that causes an upgradability error:
+## Example of code that causes an upgradability error
 
 Your `composer.lock` file contains package versions that have security issues:
 
@@ -42,5 +42,5 @@ SECURITY CHECKER
 
 ### Resolving the error:
 To resolve the error provided in the example, try the following in the provided order:
-1. Try to avoid using package with current version.
+1. Try to avoid using a package with the current version.
 2. Upgrade the package to a new version.

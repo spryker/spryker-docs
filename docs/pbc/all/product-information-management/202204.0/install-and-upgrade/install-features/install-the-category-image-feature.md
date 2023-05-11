@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/category-image-feature-integration.html
 related:
   - title: Product image management
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-images-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-images-overview.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-category-image-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-category-image-feature.md -->

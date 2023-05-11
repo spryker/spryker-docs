@@ -15,7 +15,7 @@ PHP versions are checked in:
 - `composer.json`
 - Config deploy files `deploy.**.yml`
 - Installed PHP version
-- SDK php versions
+- [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) php versions
 
 ## Example of code that causes an upgradability error:
 

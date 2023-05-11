@@ -26,7 +26,6 @@ This section contains the following Marketplace feature integration guides:
 * [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)
 * [MarketplaceProduct Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)
 * [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html)
-* [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html)
 * [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)
 * [Marketplace Product Options + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-cart-feature-integration.html)
 * [Marketplace Product Options + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-checkout-feature-integration.html)

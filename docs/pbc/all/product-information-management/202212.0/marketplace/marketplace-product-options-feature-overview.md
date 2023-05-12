@@ -86,8 +86,9 @@ Currently, the feature has the following functional constraints which are going 
 | [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)  
 | [Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)|
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer documents
 
-Are you a developer? See [Marketplace Product Options feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-options-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES          | DATA IMPORT         |
+|--------------------------------|----------------|
+| [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)                                        | [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html)  |
+| [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html) |  

@@ -37,7 +37,7 @@ To learn more about the `Merchant` entity, see [Marketplace Merchant feature wal
 
 `Product` is a B2C/B2B e-commerce domain object. `Product` represents some goods or services that a customer can buy in a shop. In the Marketplace, a `Product` can be owned by a Marketplace operator or can be created by a merchant.
 
-To learn more about the `Product` entity, see [Marketplace Product feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-product-feature-walkthrough.html).
+To learn more about the `Product` entity, see [Marketplace Product feature walkthrough](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html).
 
 #### ProductOffer
 

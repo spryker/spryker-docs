@@ -105,13 +105,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Approval Process
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
@@ -171,7 +169,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Cart
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
@@ -380,42 +377,35 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202304.0"
 
           - title: Marketplace Product + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product + Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product + Quick Add to Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-quick-add-to-cart-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
@@ -465,22 +455,18 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202304.0"
 
           - title: Marketplace Product Options + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-cart-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Options + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-checkout-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Return Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html
@@ -538,14 +524,12 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Portal - Marketplace Product Options Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-options-management-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
@@ -573,14 +557,12 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Portal - Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-inventory-management-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Glue API
             url: /docs/marketplace/dev/feature-integration-guides/glue/glue.html
@@ -620,14 +602,12 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-cart-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
@@ -719,30 +699,33 @@ entries:
             - "202212.0"
 
           - title: Abstract products
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Retrieving abstract products
                 url: /docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Concrete products
             url: /docs/marketplace/dev/glue-api-guides/concrete-products/concrete-products.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"               
             nested:
               - title: Retrieving concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Retrieving product offers of concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Сarts of registered users
             url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/carts-of-registered-users.html
@@ -845,7 +828,7 @@ entries:
             url: /docs/marketplace/dev/glue-api-guides/wishlists/wishlists.html
             include_versions:
             - "202108.0"
-            - "202204.0"            
+            - "202204.0"
             nested:
               - title: Managing wishlists
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html

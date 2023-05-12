@@ -1,5 +1,5 @@
 ---
-title: Creating product options
+title: Create product options
 last_updated: Apr 21, 2021
 description: Use this procedure to create Marketplace Product Optionsgroups and values in the Back Office.
 template: back-office-user-guide-template
@@ -7,7 +7,7 @@ related:
   - title: Managing product options
     link: docs/marketplace/user/back-office-user-guides/page.version/catalog/product-options/managing-product-options.html
   - title: Marketplace Product Options feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
 ---
 
 This document describes how to create Marketplace product options.
@@ -16,7 +16,7 @@ This document describes how to create Marketplace product options.
 
 To start working with product options, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Options**.
 
-There should be an existing tax set to apply it to the [product option group](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html). For detailed instructions about creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
+There should be an existing tax set to apply it to the [product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html). For detailed instructions about creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
 
 Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 

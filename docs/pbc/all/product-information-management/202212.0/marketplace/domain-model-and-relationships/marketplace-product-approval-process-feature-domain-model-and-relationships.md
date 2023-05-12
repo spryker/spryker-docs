@@ -1,16 +1,10 @@
 ---
-title: Marketplace Product Approval Process feature walkthrough
+title: "Marketplace Product Approval Process feature: Domain model and relationships"
 description: Marketplace Product Approval Process feature adds Merchant context to product approval process.
 template: feature-walkthrough-template
 ---
 
 The *Marketplace Product Approval Process* feature adds a merchant context to Product Approval Process by providing an optional `spy_merchant.default_product_abstract_approval_status` DB column where default product approval statuses for merchants are stored and can be used as default product approval statuses for merchant products. Also, the feature provides the data importer for the merchant's default product approval statuses.
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [Marketplace Product Approval process feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html) for business users.
-
-{% endinfo_block %}
 
 ## Module dependency graph
 
@@ -28,9 +22,3 @@ The following diagram illustrates the dependencies between the modules for the *
 The following schema illustrates the *Marketplace Product Approval Process* domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/dd3fdb7e-e244-4472-a7ed-1341bfa8bcbc.png?utm_medium=live&utm_source=custom)
-
-## Related Developer documents
-
-|INSTALLATION GUIDES  | DATA IMPORT |
-|---------| --- |
-| [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html) | [File details: merchant_product_approval_status_default.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.html) |

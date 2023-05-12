@@ -4,7 +4,7 @@ description: This document describes how to manage marketplace abstract product 
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Merchant Custom Prices feature overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-custom-prices-feature-overview.html
 ---

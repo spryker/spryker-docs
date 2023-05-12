@@ -5,7 +5,7 @@ description: This document describes how to modify marketplace concrete products
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
     link: docs/pbc/all/warehouse-management-system/page.version/marketplace/marketplace-inventory-management-feature-overview.html
 ---

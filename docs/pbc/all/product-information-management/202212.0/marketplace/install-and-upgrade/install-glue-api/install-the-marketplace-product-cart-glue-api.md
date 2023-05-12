@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Marketplace Product + Cart feature integration"
+title: Install the Marketplace Product + Cart Glue API
 description: This integration guide provides steps on how to integrate the Marketplace Product + Cart Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---

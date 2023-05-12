@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---

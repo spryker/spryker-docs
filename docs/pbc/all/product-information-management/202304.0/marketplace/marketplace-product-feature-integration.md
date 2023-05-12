@@ -7,10 +7,10 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
-This document describes how to integrate the [Marketplace Product feature](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 

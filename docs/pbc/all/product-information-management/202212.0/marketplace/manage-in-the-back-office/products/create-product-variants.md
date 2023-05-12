@@ -1,5 +1,5 @@
 ---
-title: Creating product variants
+title: Create product variants
 last_updated: Jul 27, 2021
 description: This guide explains how to create product variants in Marketplace.
 template: back-office-user-guide-template
@@ -11,7 +11,7 @@ related:
   - title: Editing product variants
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to add a product variant for an abstract product.

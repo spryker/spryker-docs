@@ -5,10 +5,10 @@ Description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
 ---
 
-This document describes how to integrate the [Marketplace Product Options feature](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Marketplace Product Options feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 

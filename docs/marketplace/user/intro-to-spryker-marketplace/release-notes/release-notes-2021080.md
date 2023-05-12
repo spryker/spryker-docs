@@ -59,7 +59,7 @@ A _Merchant Product_ is a product created by a merchant. The merchant that creat
 
 ![Merchant product on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-product-on-pdp.png)
 
-Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
+Documentation: [Marketplace Products feature overview](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html)
 
 ### Merchant Product Offers
 
@@ -75,7 +75,7 @@ Documentation: [Marketplace Product Offer feature overview](/docs/marketplace/us
 
 Merchants can create and connect product options to their or other merchants’ products.
 
-Documentation: [Marketplace Product Options feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-options-feature-overview.html)
+Documentation: [Marketplace Product Options feature overview](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-options-feature-overview.html)
 
 ## Marketplace and Merchant Orders
 
@@ -114,7 +114,7 @@ The operator can edit and activate marketplace products and product options.
 
 ![Merchnat products in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-products.png)
 
-Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
+Documentation: [Marketplace Products feature overview](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html)
 
 ### Merchant product offer management
 

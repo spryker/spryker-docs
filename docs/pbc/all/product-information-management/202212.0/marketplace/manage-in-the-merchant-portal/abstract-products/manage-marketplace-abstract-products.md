@@ -1,15 +1,15 @@
 ---
-title: Managing marketplace abstract products
+title: Manage marketplace abstract products
 last_updated: May 05, 2022
 description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
     link: docs/pbc/all/warehouse-management-system/page.version/marketplace/marketplace-inventory-management-feature-overview.html
   - title: Marketplace Product Approval Process feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-approval-process-feature-overview.html
 ---
 
 This document describes how to manage marketplace abstract products in the Merchant Portal.
@@ -83,7 +83,7 @@ For the new product to be available on the Storefront, it needs to be approved. 
 
 {% info_block infoBox "Info" %}
 
-This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html)
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-approval-process-feature-overview.html)
 
 {% endinfo_block %}
 

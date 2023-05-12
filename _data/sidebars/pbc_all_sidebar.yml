@@ -357,16 +357,20 @@ entries:
             include_versions:
             - "202212.0"
             nested:
-              - title: Install features
+              - title: Install
                 nested:
-                  - title: Marketplace Cart
-                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-marketplace-cart-feature.html
-                  - title: Cart + Marketplace Product Options
-                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-cart-marketplace-product-options-feature.html
-                  - title: Checkout + Marketplace Product Options
-                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-checkout-marketplace-product-options-feature.html
-                  - title: Quick Add to Cart + Marketplace Product
-                    url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-quick-add-to-cart-marketplace-product-feature.html
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Cart
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-marketplace-cart-feature.html
+                      - title: Cart + Marketplace Product Options
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-cart-marketplace-product-options-feature.html
+                      - title: Checkout + Marketplace Product Options
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-checkout-marketplace-product-options-feature.html
+                      - title: Quick Add to Cart + Marketplace Product
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-quick-add-to-cart-marketplace-product-feature.html
+                  - title: Install the Cart + Marketplace Product Glue API
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-the-cart-marketplace-product-glue-api.html
               - title: Manage using Glue API
                 nested:
                   - title: Carts of registered users

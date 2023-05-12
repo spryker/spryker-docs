@@ -1,11 +1,11 @@
 ---
-title: Creating marketplace abstract product
+title: Create marketplace abstract products
 last_updated: May 05, 2022
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to create marketplace abstract products.
@@ -107,7 +107,7 @@ For the new product to be available on the Storefront, it needs to be approved. 
 
 {% info_block infoBox "Info" %}
 
-This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html).
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-approval-process-feature-overview.html).
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: Creating abstract products
+title: Create abstract products
 last_updated: Jul 27, 2021
 description: This guide explains how to create abstract products in Marketplace.
 template: back-office-user-guide-template
@@ -9,7 +9,7 @@ related:
   - title: Managing products
     link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-product-reference-information.html
 ---
@@ -83,7 +83,7 @@ The following table describes the attributes you enter and select when defining 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
 |Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/pbc/all/price-management/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) the price you enter here. |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-feature-overview.html) the price you enter here. |
 |Default<br>Original | Default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 | Tax Set | Conditions under which the product will be taxed.<br> For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).|
 

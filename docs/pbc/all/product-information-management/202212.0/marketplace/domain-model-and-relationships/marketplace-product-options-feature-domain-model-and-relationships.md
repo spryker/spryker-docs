@@ -6,12 +6,6 @@ template: feature-walkthrough-template
 
 The *Marketplace Product Options* feature lets merchants create their product option groups and values. Currently, you can [import product options](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) where you specify the merchant reference.
 
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [Marketplace Product Options feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html) for business users.
-
-{% endinfo_block %}
-
 ## Module dependency graph
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Product Options* feature.
@@ -34,9 +28,4 @@ The following schema illustrates the Marketplace Product Options domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/90a0e5bc-a0d9-4cb2-a215-c5d08a786115.png?utm_medium=live&utm_source=custom)
 
-## Related Developer documents
-
-| INTEGRATION GUIDES                                                                                                                                                                                              | DATA IMPORT                                                                                                                                            |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)                                        | [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html)  |
-| [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html) |                                                                                                                                                        |
+                                                                                                                                                      |

@@ -1,5 +1,5 @@
 ---
-title: Managing products
+title: Manage products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.
 last_updated: May 20, 2022
 template: back-office-user-guide-template
@@ -9,7 +9,7 @@ related:
   - title: Editing product variants
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 redirect_from:
   - docs/marketplace/user/back-office-user-guides/page.version/catalog/products/products-reference-information.html
 ---
@@ -66,4 +66,3 @@ To update the approval status of the product, in the _Actions_ column of the abs
 **What's next?**
 
 To learn more about the product management, see [Editing abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html)
-

@@ -1,5 +1,5 @@
 ---
-title: Managing product options
+title: Manage product options
 last_updated: Apr 21, 2021
 description: Use this document to manage product options in the Back Office.
 template: back-office-user-guide-template

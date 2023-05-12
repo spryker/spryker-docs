@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Spryker Core feature](/docs/scos/user/features/{{page.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html) into a Spryker project.
 
 {% info_block infoBox "Included features" %}
 

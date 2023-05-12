@@ -52,14 +52,18 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
         - title: Integrating the Docker SDK into existing projects
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
-      - title: Configuring
+      - title: Configuration
         nested:
-        - title: Setting up a self-signed SSL certificate
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
         - title: Adjusting Jenkins for a Docker environment
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
+        - title: Configuring Spryker after installing with Docker
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
+        - title: Setting up a self-signed SSL certificate
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
+    - title: Installing Spryker with custom set of modules
+      url: /docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
     - title: Managing SCOS dependencies with Composer
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis configuration
@@ -2070,6 +2074,11 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Mailing and Notifications
+      url: /docs/scos/dev/feature-integration-guides/mailing-and-notifications-feature-integration.html
+      include_versions:
+      - "202204.0"
+      - "202212.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
       include_versions:
@@ -4034,6 +4043,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html
     - title: Cache of unresolved entities for Zed
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html
+    - title: CSS lazy loading for the frontend
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-css-lazy-loading-for-the-front-end.html
     - title: Chromium browser for tests
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
     - title: CMS block widgets
@@ -4058,6 +4069,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
+    - title: Profiler module
+      url: /docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html
     - title: Propel clean command
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
     - title: Queue worker signal handling
@@ -4154,6 +4167,8 @@ entries:
         nested:
         - title: "HowTo: Add support of number formatting in the Back Office"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
+        - title: "HowTo: Add support for number formatting in the Storefront"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
@@ -4323,6 +4338,25 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+    - title: Order Management Erpoms
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: Punchout Catalog
+        include_versions:
+      - "202204.0"
+    - title: Punchout Catalog feature integration
+      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Eco - Punchout Catalogs feature integration
+      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Eco - Punchout Catalogs + Product Bundles feature integration
+      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Payment partners
       include_versions:
       - "202001.0"

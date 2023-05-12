@@ -20,7 +20,7 @@ Features are useful to structure and organize code and functionality into logica
 
 Every Oryx package exposes such features for an easy integration in your application.
 
-To register `AppFeature` with an Oryx application, use the `appBuilder.withFeature()` API:
+To register `AppFeature` in an Oryx application, use the `appBuilder.withFeature()` API:
 
 ```ts
 import { appBuilder, AppFeature } from '@spryker-oryx/core';
@@ -30,7 +30,7 @@ const myFeature: AppFeature = {...};
 const app = appBuilder().withFeature(myFeature);
 ```
 
-`AppFeature` is represented as an interface, and you can create interfaces as simple object literals.
+`AppFeature` is represented as an interface, and you can create interfaces as simple object literals:
 
 ```ts
 import { AppFeature } from '@spryker-oryx/core';
@@ -74,7 +74,7 @@ const myExtendedFeature = {
 };
 ```
 
-For features defined as classes or functions, to be able to accept the configuration and pass it to the original feature, you also have to use a class or function :
+For features defined as classes or functions, to be able to accept the configuration and pass it to the original feature, you also have to use a class or function:
 
 ```ts
 class MyExtendedFeature extends MyConfigurableFeature {
@@ -92,7 +92,7 @@ class MyExtendedFeature extends MyConfigurableFeature {
 
 ## Feature options
 
-If your feature requires some options from the consumer, you can use the `FeatureOptionsService.getFeatureOptions()` API:
+If you want the feature to accept options when it's going to be integrated, you can use the `FeatureOptionsService.getFeatureOptions()` API:
 
 ```ts
 import { FeatureOptionsService } from '@spryker-oryx/core';
@@ -105,7 +105,7 @@ class MyService {
 }
 ```
 
-This lets the consumers of the feature to pass the options via `appBuilder.withOptions()`, and it's going to be fully typed and typesafe:
+This lets the developer who's integrating the feature to pass options via `appBuilder.withOptions()`, and it's going to be fully typed and typesafe:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';

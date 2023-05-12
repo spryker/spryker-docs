@@ -16,15 +16,17 @@ An Oryx application starts with the application orchestration. It lets you boots
 - [Resources](./resources.md)
 - [Environment](./app-environment.md)
 
-Application orchestration is used to configure and customize an Oryx application to fit your needs. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
+Application orchestration is used to configure and customize an Oryx applications. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
 
-Application orchestration defines the functionality and how it is loaded in an Oryx application. For example, when components are used on a page, they are lazy-loaded, but services are loaded eagerly during application startup.
+Also, application orchestration defines how functionality is loaded in an application. For example, when components are used on a page, they are lazy-loaded, but, during application startup, services are loaded eagerly.
+
+## Application builder
 
 To start using orchestration, you need to import [`appBuilder`](./app-builder.md) from `@spryker-oryx/core`. Then, you can add functionality, like features and theme, to your application.
 
-`appBuilder` uses a chain pattern where each customization is added using a respective `.with*` method. This is the minimum boilerplate code required for an application to work. Once you start building more complex use cases in your Oryx application, instead of using a preset, we recommend extending it or creating your own feature set.
+`appBuilder` uses a chain pattern where each customization is added using a respective `.with*` method. This is the minimum boilerplate code required for an application to work. Once you start building more complex use cases, instead of using a preset<!-- add a link to presets-->, we recommend extending a preset or creating your own feature set.
 
-Application builder lets you compose and customize different pieces of functionality in your Oryx application. It is a chainable and pluggable builder which supports the following built-ins:
+Application builder lets you compose and customize different pieces of functionality. The builder is chainable and pluggable, and it supports the following built-in plugins:
 
 - [Features](./app-feature.md) (`withFeature`)
 <!-- TODO: Link to components -->
@@ -39,9 +41,9 @@ Application builder lets you compose and customize different pieces of functiona
 - [Resources](./resources.md) (`withResources`)
 - [Plugins](./app-plugins.md) (`with`)
 
-All of the above are built-in plugins, but you can also add your custom plugins by using `with` API:
+Also, you can add custom plugins by using the `with` API.
 
-## Example
+## Application setup
 
 Here is an example of a simple B2C application setup:
 
@@ -55,22 +57,22 @@ const app = appBuilder()
   .withEnvironment(import.meta.env);
 ```
 
-Once you are satisfied with your application configuration, you can create it:
+To create the application with this configuration, run the following:
 
 ```ts
 app.create().catch(console.error);
 ```
 
-Now you have a fully up and running Oryx [`App`](./app.md) instance tailored to your needs.
+Now the application is up and running.
 
-## Options
+## Customization of options
 
-When you are configuring your Oryx application, you may need to customize some of its options which have a reasonable defaults but may not suit your needs.
+When you are configuring an Oryx application, you may need to customize some of its options which have a reasonable defaults but may not suit your needs.
 
-For this you can use `appBuilder.withAppOptions()` API which allows you to customize the following:
+For this, you can use the `appBuilder.withAppOptions()` API, which lets you customize the following:
 
-- Injector, it's parent and context
-- Global component options, like a root mounting selector
+- Injector, it's parent, and context.
+- Global component options, like a root mounting selector.
 
 Here is an example of using it:
 
@@ -80,10 +82,9 @@ import { appBuilder } from '@spryker-oryx/core';
 appBuilder().withAppOptions({ components: { root: 'my-root-app' } });
 ```
 
+## Next steps
 
----
-
-To dive deeper into details of application orchestration check out:
+For more details about application orchestration, see the following documents:
 
 - [Setup the environment](./app-environment.md)
 - [Add features](./app-feature.md)

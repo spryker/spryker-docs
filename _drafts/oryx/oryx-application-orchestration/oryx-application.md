@@ -1,5 +1,5 @@
 ---
-title: Application Instance
+title: Oryx application
 description: App of the Oryx Application
 template: concept-topic-template
 ---
@@ -41,7 +41,7 @@ If you need to access some of the registered plugins, depending on your requirem
 
 Both methods expect a plugin class reference or a plugin name string to resolve the plugin.
 
-Example for getting plugins:
+Example of getting plugins:
 
 ```ts
 app.findPlugin(MyPlugin);

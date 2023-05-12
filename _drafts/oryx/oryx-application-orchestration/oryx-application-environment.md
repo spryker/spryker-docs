@@ -1,13 +1,13 @@
 ---
-title: Application Environment
+title: Oryx application environment
 description: Environment of the Oryx Application
 template: concept-topic-template
 ---
 
 
-`AppEnvironment` represents environment variables that are used in an Oryx application. It's a typesafe global object that can be extended where an environment variable is needed for a feature to work properly.
+`AppEnvironment` represents environment variables that are used in an Oryx application. It's a typesafe global object that can be extended wherever an environment variable is needed for a feature to work properly.
 
-To pass an actual environment object, use the `AppBuilder.withEnvironment()` API and  the method of accessing environment variables specific to your build:
+To pass an actual environment object, use the `AppBuilder.withEnvironment()` API and the method of accessing environment variables specific to your build:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -17,7 +17,7 @@ appBuilder().withEnvironment(import.meta.env); // or process.env in NodeJS style
 
 {% info_block warningBox "" %}
 
-When you are using all environment variables directly, like `import.meta.env`, they may end up in your application bundle. This may leak confidential information to public if your application is deployed to a public internet, so make sure you are filtering your environment variables in the build step. For example, using `envPrefix` in Vite build config.
+When you are using environment variables directly, like `import.meta.env`, they may end up in your application bundle. This may leak confidential information to public if your application is deployed to a public internet. So make sure you are filtering your environment variables in the build step. For example, by using `envPrefix` in Vite build config.
 
 {% endinfo_block %}
 

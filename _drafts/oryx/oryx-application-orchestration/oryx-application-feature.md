@@ -1,10 +1,10 @@
 ---
-title: Application Feature
+title: Oryx application feature
 description: Feature of the Oryx Application
 template: concept-topic-template
 ---
 
-`AppFeature` is a higher level collection of lower level primitives, such as the following:
+`AppFeature` is a higher level collection of lower-level primitives, such as the following:
 
 <!-- TODO: Link to components -->
 - Components
@@ -18,7 +18,7 @@ template: concept-topic-template
 
 Features are useful to structure and organize code and functionality into logical groups and to make them easier to reuse in different scenarios.
 
-Every Oryx package exposes such features for your application to be easily integrated.
+Every Oryx package exposes such features for an easy integration in your application.
 
 To register `AppFeature` with an Oryx application, use the `appBuilder.withFeature()` API:
 
@@ -30,7 +30,7 @@ const myFeature: AppFeature = {...};
 const app = appBuilder().withFeature(myFeature);
 ```
 
-`AppFeature` is represented as an interface, and you may create them as simple object literals.
+`AppFeature` is represented as an interface, and you can create interfaces as simple object literals.
 
 ```ts
 import { AppFeature } from '@spryker-oryx/core';
@@ -74,7 +74,7 @@ const myExtendedFeature = {
 };
 ```
 
-For features defined as classes or a function, you also have to use a class or function to be able to accept the configuration and pass it to the original feature:
+For features defined as classes or functions, to be able to accept the configuration and pass it to the original feature, you also have to use a class or function :
 
 ```ts
 class MyExtendedFeature extends MyConfigurableFeature {

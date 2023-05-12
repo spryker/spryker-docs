@@ -1,6 +1,6 @@
 ---
-title: "Oryx: Supported browsers, OSes, and resolutions"
-description: Browsers, OSes, and resolutions supported by Oryx
+title: "Oryx: Supported browsers"
+description: Browsers supported by Oryx
 template: concept-topic-template
 ---
 

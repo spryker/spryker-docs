@@ -298,7 +298,7 @@ There will be multiple general environment variables that in turn will contain s
 <summary>General Structure</summary>
 
 ```json
-ENVIRONMENT_VARIABLE_NAME_A={
+ENVIRONMENT_VARIABLE_NAME_A:{
   "CONFIGURATION_KEY_A":"SOME_VALUE_A",
   "CONFIGURATION_KEY_B":"SOME_VALUE_B"
 }

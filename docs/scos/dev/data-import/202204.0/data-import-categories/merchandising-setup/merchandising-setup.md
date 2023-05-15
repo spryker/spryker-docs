@@ -34,7 +34,7 @@ The order in which the files are imported is *very strict*. For this reason, the
 8. [Product Set](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
 9. [Product Search Attribute Map](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute-map.csv.html)
 10. [Product Search Attribute](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html)
-11. [Discount Amount](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-amount.csv.html)
+11. [Discount Amount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-amount.csv.html)
 12. [Product Discontinued](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html)
 13. [Product Alternative](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-alternative.csv.html)
 14. [Product Quantity](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/file-details-product-quantity.csv.html)

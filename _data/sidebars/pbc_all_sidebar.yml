@@ -19,6 +19,8 @@ entries:
             nested:
               - title: What's changed
                 url: /docs/pbc/all/carrier-management/base-shop/whats-changed-in-carrier-management.html
+              - title: Shipment feature overview
+                url: /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -73,7 +75,7 @@ entries:
                   - title: Retrieve shipments in orders
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
               - title: Import and export data
-                url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
+                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/discount-import.html
                 nested:
                   - title: File details - shipment.csv
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html
@@ -338,6 +340,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
                   - title: "HowTo: Enable guest checkout in B2B Demo Shop"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
+                  - title: "HowTo: Implement customer approval process based on a generic state machine"
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
               - title: Domain model and relationships
@@ -720,6 +724,8 @@ entries:
                 url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-cms-templates.html
               - title: "HowTo: Define positions of category CMS blocks"
                 url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
+              - title: "HowTo: Define the maximum size of content fields"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html
               - title: "HowTo: Use blocks"
                 url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-use-blocks.html
               - title: "Tutorial: CMS"
@@ -893,6 +899,8 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
               - title: Manage customer access to Glue API resources
                 url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+          - title: Generate login tokens
+            url: /docs/pbc/all/customer-relationship-management/generate-login-tokens.html
           - title: Domain model and relationships
             nested:
               - title: "Company account: module relations"
@@ -906,85 +914,83 @@ entries:
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
-          - title: What's changed
-            url: /docs/pbc/all/discount-management/whats-changed-in-discount-management.html
-          - title: Install and upgrade
+          - title: Base shop
             nested:
-              - title: Integrate the Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
-              - title: Integrate the Promotions & Discounts Glue API
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
-              - title: Integrate the Product labels + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
-              - title: Integrate the Category Management + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
-              - title: Upgrade the Discount module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
-              - title: Upgrade the DiscountCalculatorConnector module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
-              - title: Upgrade the DiscountPromotion module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html
-              - title: Upgrade the DiscountPromotionWidget module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
-              - title: Upgrade the DiscountSalesAggregatorConnector module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
-          - title: Manage in the Back Office
-            url: /docs/pbc/all/discount-management/manage-in-the-back-office/log-into-the-back-office.html
+              - title: What's changed
+                url: /docs/pbc/all/discount-management/base-shop/whats-changed-in-discount-management.html
+              - title: Promotions & Discounts feature overview
+                url: /docs/pbc/all/discount-management/base-shop/promotions-discounts-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Integrate the Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
+                  - title: Integrate the Promotions & Discounts Glue API
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
+                  - title: Integrate the Product labels + Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
+                  - title: Integrate the Category Management + Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
+                  - title: Upgrade the Discount module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
+                  - title: Upgrade the DiscountCalculatorConnector module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
+                  - title: Upgrade the DiscountPromotion module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html
+                  - title: Upgrade the DiscountPromotionWidget module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
+                  - title: Upgrade the DiscountSalesAggregatorConnector module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                nested:
+                  - title: "Best practices: Promote products with discounts"
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
+                  - title: Create discounts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/create-discounts.html
+                  - title: Edit discounts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/edit-discounts.html
+                  - title: Export voucher codes
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/export-voucher-codes.html
+              - title: Manage via Glue API
+                url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discounts-via-glue-api.html
+                nested:
+                  - title: Add items with discounts to carts of registered users
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+                  - title: Manage discount vouchers in carts of registered users
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
+                  - title: Retrieve discounts in carts of registered users
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
+                  - title: Retrieve discounts in customer carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
+                  - title: Add items with discounts to guest carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
+                  - title: Manage discount vouchers in guest carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
+                  - title: Retrieve discounts in guest carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
+              - title: Import and export data
+                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/discount-import.html
+                nested:
+                  - title: File details - discount.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount.csv.html
+                  - title: File details - discount_store.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-store.csv.html
+                  - title: File details - discount_amount.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-amount.csv.html
+                  - title: File details - discount_voucher.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
+              - title: Create discounts based on shipment
+                url: /docs/pbc/all/discount-management/base-shop/create-discounts-based-on-shipment.html
+          - title: Marketplace
             include_versions:
             - "202212.0"
             nested:
-              - title: "Best practices: Promote products with discounts"
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
-              - title: Create discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
-              - title: Edit discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/edit-discounts.html
-              - title: Export voucher codes
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
-          - title: Manage in the Back Office
-            include_versions:
-            - "202204.0"
-            nested:
-              - title: "Best practices: Promote products with discounts"
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
-              - title: Create discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
-              - title: Edit discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/edit-discounts.html
-              - title: Export voucher codes
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
-          - title: Manage via Glue API
-            url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discounts-via-glue-api.html
-            nested:
-              - title: Add items with discounts to carts of registered users
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
-              - title: Manage discount vouchers in carts of registered users
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
-              - title: Retrieve discounts in carts of registered users
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
-              - title: Retrieve discounts in customer carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
-              - title: Add items with discounts to guest carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
-              - title: Manage discount vouchers in guest carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
-              - title: Retrieve discounts in guest carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
-          - title: Import and export data
-            url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
-            nested:
-              - title: File details - discount.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html
-              - title: File details - discount_store.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-store.csv.html
-              - title: File details - discount_amount.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html
-              - title: File details - discount_voucher.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-voucher.csv.html
-          - title: Tutorials and HowTos
-            nested:
-              - title: "HowTo: Create discounts based on shipment"
-                url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+              - title: Marketplace Promotions & Discounts feature overview
+                url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-overview.html
+              - title: Install the Marketplace Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/marketplace/install-the-marketplace-promotions-discounts-feature.html
+              - title: "Marketplace Promotions & Discounts feature: Domain model and relationships"
+                url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-domain-model-and-relationships.html
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:
@@ -1216,6 +1222,19 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-feature-domain-model.html
                   - title: Merchant Opening Hours
                     url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-opening-hours-feature-domain-model.html
+      - title: Miscallaneous
+        include_versions:
+        - "202212.0"
+        nested:
+          - title: Spryker Core feature overview
+            url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
+            nested:
+              - title: How translations are managed
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/how-translations-are-managed.html
+              - title: URL redirects overview
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/url-redirects-overview.html
+              - title: Vault for Tokens overview
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/vault-for-tokens-overview.html
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:
@@ -1303,6 +1322,10 @@ entries:
                 url: /docs/pbc/all/order-management-system/manage-in-the-back-office/view-the-order-matrix.html
           - title: "Glue API: Retrieve orders"
             url: /docs/pbc/all/order-management-system/glue-api-retrieve-orders.html
+          - title: Display custom names for order item states on the Storefront
+            url: /docs/pbc/all/order-management-system/display-custom-names-for-order-item-states-on-the-storefront.html
+          - title: Process incoming HTTP requests from external ERP services for order updates
+            url: /docs/pbc/all/order-management-system/process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
           - title: Domain model and relationsips
             nested:
               - title: "Custom Order Reference: module relations"
@@ -2170,40 +2193,58 @@ entries:
                       - title: Edit
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
               - title: Manage using Glue API
-                url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-manage-products.html
+                url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-manage-products.html
                 nested:
                   - title: Abstract products
                     nested:
                       - title: Retrieve abstract products
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
                       - title: Retrieve image sets of abstract products
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
                   - title: Concrete products
                     nested:
                       - title: Retrieve concrete products
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
                       - title: Retrieve image sets of concrete products
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
                       - title: Retrieve sales units
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
                   - title: Categories
                     nested:
                       - title: Retrieve category nodes
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
                       - title: Retrieve category trees
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+                        url: /docs/pbc/all/product-information-management/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
                   - title: Retrieve alternative products
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-retrieve-alternative-products.html
                   - title: Retrieve bundled products
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-retrieve-bundled-products.html
                   - title: Retrieve configurable bundle templates
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
                   - title: Retrieve measurement units
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-retrieve-measurement-units.html
                   - title: Retrieve product attributes
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-retrieve-product-attributes.html
                   - title: Retrieve product labels
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-retrieve-product-labels.html
+              - title: Tutorials and HowTos
+                nested:
+                  - title: "HowTo: Display product groups by color on the Storefront"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
+                  - title: "HowTo: Import packaging units"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-import-packaging-units.html
+                  - title: "HowTo: Integrate and use precise decimal numbers"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
+                  - title: "HowTo: Make a product searchable and shown on the Storefront"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+                  - title: "HowTo: Manage a big number of categories"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
+                  - title: "HowTo: Render configurable bundle templates on the Storefront"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: "Tutorial: Product challenge solution"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product-challenge-solution.html
+                  - title: "Tutorial: Product"
+                    url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product.html
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:

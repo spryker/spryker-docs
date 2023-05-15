@@ -69,7 +69,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <!---- [Invoice]()-->
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)
-- [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
+- [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)
 - [Measurement units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html)
 - [Packaging units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html)

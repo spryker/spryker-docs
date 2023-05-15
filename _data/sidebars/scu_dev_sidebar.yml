@@ -31,6 +31,14 @@ entries:
         url: /docs/scu/dev/change-default-branch.html
       - title: Roll back upgrades
         url: /docs/scu/dev/roll-back-upgrades.html
+      - title: Check Spryker Code Upgrader logs
+        url: /docs/scu/dev/check-spryker-code-upgrader-logs.html
+      - title: "TransportException: Cannot move pack"
+        url: /docs/scu/dev/troubleshooting/transportexception-cannot-move-pack.html
+      - title: The process exceeded the timeout
+        url: /docs/scu/dev/troubleshooting/the-process-exceeded-the-timeout.html
+      - title: You have an unprocessed PR from a previous update
+        url: /docs/scu/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
       - title: Troubleshooting
         nested:
         - title: Check Spryker Code Upgrader logs
@@ -41,11 +49,3 @@ entries:
           url: /docs/scu/dev/troubleshooting/the-process-exceeded-the-timeout.html
         - title: You have an unprocessed PR from a previous update
           url: /docs/scu/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
-- title: Check Spryker Code Upgrader logs
-  url: /docs/scu/dev/check-spryker-code-upgrader-logs.html
-- title: "TransportException: Cannot move pack"
-  url: /docs/scu/dev/troubleshooting/transportexception-cannot-move-pack.html
-- title: The process exceeded the timeout
-  url: /docs/scu/dev/troubleshooting/the-process-exceeded-the-timeout.html
-- title: You have an unprocessed PR from a previous update
-  url: /docs/scu/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/carrier-management.html) feature API into a Spryker project.
+This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) feature API into a Spryker project.
 
 ## Install feature core
 

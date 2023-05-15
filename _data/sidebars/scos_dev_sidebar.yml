@@ -52,14 +52,18 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
         - title: Integrating the Docker SDK into existing projects
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
-      - title: Configuring
+      - title: Configuration
         nested:
-        - title: Setting up a self-signed SSL certificate
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
         - title: Adjusting Jenkins for a Docker environment
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
+        - title: Configuring Spryker after installing with Docker
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
+        - title: Setting up a self-signed SSL certificate
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
+    - title: Installing Spryker with custom set of modules
+      url: /docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
     - title: Managing SCOS dependencies with Composer
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis configuration
@@ -586,23 +590,45 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core
-      url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
-      nested:
-      - title: How translations are managed
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html
-      - title: URL redirects overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/url-redirects-overview.html
-      - title: Vault for Tokens overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/vault-for-tokens-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
       include_versions:
       - "202204.0"
       - "202108.0"
+    - title: Spryker Core 
+      url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+      nested:
+      - title: How translations are managed
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: URL redirects overview
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/url-redirects-overview.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -2082,6 +2108,11 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Mailing and Notifications
+      url: /docs/scos/dev/feature-integration-guides/mailing-and-notifications-feature-integration.html
+      include_versions:
+      - "202204.0"
+      - "202212.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
       include_versions:
@@ -3952,8 +3983,6 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
-    - title: Define parameters and secrets
-      url: /docs/scos/dev/the-docker-sdk/define-parameters-and-secrets.html
   - title: Legacy Demoshop
     include_versions:
     - "201811.0"
@@ -4048,6 +4077,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html
     - title: Cache of unresolved entities for Zed
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html
+    - title: CSS lazy loading for the frontend
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-css-lazy-loading-for-the-front-end.html
     - title: Chromium browser for tests
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
     - title: CMS block widgets
@@ -4072,6 +4103,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
+    - title: Profiler module
+      url: /docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html
     - title: Propel clean command
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
     - title: Queue worker signal handling
@@ -4166,22 +4199,10 @@ entries:
       nested:
       - title: Feature HowTos
         nested:
-        - title: Data Imports
-          nested:
-          - title: "HowTo: Import warehouse data"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
-          - title: "HowTo: Add support for number formatting in the Storefront"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html
-        - title: "HowTo: Generate a token for login"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
-        - title: "HowTo: Display custom names for order item states on the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: "HowTo: Make a product searchable and shown on the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
         - title: "HowTo: Add support of number formatting in the Back Office"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
-        - title: "HowTo: Implement customer approval process based on a generic state machine"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
+        - title: "HowTo: Add support for number formatting in the Storefront"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
@@ -4205,8 +4226,6 @@ entries:
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
-      - title: "HowTo: Define the maximum size of content fields"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
       - title: "HowTo: Do better deployments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
       - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
@@ -4215,8 +4234,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
-      - title: "HowTo: Process incoming HTTP requests from external ERP services for order updates"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
       - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: "HowTo: Handle graceful shutdown"
@@ -4355,6 +4372,25 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+    - title: Order Management Erpoms
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: Punchout Catalog
+        include_versions:
+      - "202204.0"
+    - title: Punchout Catalog feature integration
+      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Eco - Punchout Catalogs feature integration
+      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Eco - Punchout Catalogs + Product Bundles feature integration
+      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Payment partners
       include_versions:
       - "202001.0"

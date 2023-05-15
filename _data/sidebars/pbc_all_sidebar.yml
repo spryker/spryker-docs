@@ -2245,6 +2245,50 @@ entries:
                     url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"
                     url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product.html
+          - title: Marketplace
+            nested:
+              - title: Marketplace Product feature overview
+                url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.html
+              - title: Marketplace Product Approval Process feature overview
+                url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-approval-process-feature-overview.html
+              - title: Marketplace Product Options feature overview
+                url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-options-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Product Approval Process
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product + Inventory Management
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html
+                      - title: Marketplace Product + Marketplace Product Offer
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-marketplace-product-offer-feature.html
+                      - title: Marketplace Product - Merchant Portal
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-feature.html
+                      - title: Marketplace Product - Merchant Portal + Inventory Management
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-inventory-management-feature.html
+                      - title: Marketplace Product - Merchant Portal + Tax
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-tax-feature.html
+                      - title: Marketplace Product Options + Cart
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+
+
+
+
+
+
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:

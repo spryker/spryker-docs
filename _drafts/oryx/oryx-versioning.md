@@ -1,6 +1,6 @@
 ---
-title: Versioning
-description: Versioning
+title: Oryx versioning
+description: Oryx framework uses semantic versioning to ensure stability
 template: concept-topic-template
 ---
 

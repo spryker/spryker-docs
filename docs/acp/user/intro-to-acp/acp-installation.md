@@ -284,6 +284,52 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 ```
 </details>
 
+#### 5. In the OauthClientDependencyProvider.php, enable the following module plugins:
+In the MessageBrokerConfig.php, adjust the following module config:
+<details open>
+<summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\OauthClient;
+
+use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\Auth0OauthAccessTokenProviderPlugin;
+use Spryker\Zed\OauthClient\OauthClientDependencyProvider as SprykerOauthClientDependencyProvider;
+use Spryker\Zed\OauthDummy\Communication\Plugin\OauthClient\DummyOauthAccessTokenProviderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\OauthClient\CurrentStoreReferenceAccessTokenRequestExpanderPlugin;
+
+class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\OauthClientExtension\Dependency\Plugin\OauthAccessTokenProviderPluginInterface>
+     */
+    protected function getOauthAccessTokenProviderPlugins(): array
+    {
+        return [
+            new DummyOauthAccessTokenProviderPlugin(),
+            new Auth0OauthAccessTokenProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\OauthClientExtension\Dependency\Plugin\AccessTokenRequestExpanderPluginInterface>
+     */
+    protected function getAccessTokenRequestExpanderPlugins(): array
+    {
+        return [
+            new CurrentStoreReferenceAccessTokenRequestExpanderPlugin(),
+        ];
+    }
+}
+```
+</details>
+
 ### 3. Update the SCOS deploy.yml file
 
 You need to define the environment variables in the `deploy.yml` file of **each** SCOS environment (i.e. testing, staging, production)

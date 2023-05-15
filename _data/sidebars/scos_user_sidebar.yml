@@ -5,9 +5,7 @@ entries:
   nested:
   - title: Intro to Spryker
     url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
-    nested:
-    - title: About Spryker documentation
-      url: /docs/scos/user/intro-to-spryker/about-spryker-documentation.html  
+    nested: 
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/releases.html
       nested:

@@ -10,7 +10,7 @@ redirect_from:
 
 Search is one of the most effective navigation tools in modern shops. The Search capability lets you create the right search for your shop and enable customers to quickly find what they are looking for.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -18,7 +18,7 @@ Search is one of the most effective navigation tools in modern shops. The Search
 | [Define search preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/define-search-preferences.html) |
 | [Edit search preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/edit-search-preferences.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | DATA IMPORT | GLUE API GUIDES  | TUTORIALS AND HOWTOS | BEST PRACTICES |
 |---------|---------|-|-|-|-|

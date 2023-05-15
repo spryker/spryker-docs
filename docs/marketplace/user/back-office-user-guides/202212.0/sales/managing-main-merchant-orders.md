@@ -5,7 +5,7 @@ description: This guide explains how to manage main merchant orders in the Back 
 template: back-office-user-guide-template
 related:
   - title: Managing main merchant returns
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-returns.html
+    link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
   - title: Marketplace Order Management feature overview
     link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Main Merchant concept

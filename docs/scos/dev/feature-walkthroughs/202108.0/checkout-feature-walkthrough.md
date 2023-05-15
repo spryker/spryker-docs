@@ -22,7 +22,7 @@ The following diagram shows the relations of the entities in the order threshold
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|

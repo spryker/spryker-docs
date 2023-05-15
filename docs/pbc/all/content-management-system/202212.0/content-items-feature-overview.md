@@ -125,7 +125,7 @@ Structure:
   - fk_locale is a locale identifier.
 * Parameters are settings or data for a content item.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -138,7 +138,7 @@ Structure:
 |  [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
 |  [Add content items to CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|

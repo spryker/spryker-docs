@@ -4,7 +4,7 @@ description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
 related:
   - title: Managing the returns
-    link: docs/marketplace/dev/glue-api-guides/page.version/managing-the-returns.html
+    link: docs/pbc/all/return-management/page.version/marketplace/glue-api-manage-marketplace-returns.html
 ---
 
 Every registered customer can retrieve the list of orders for their account, as well as the detailed order information, including every step of the calculation and addresses used in the orders.
@@ -1430,7 +1430,7 @@ To retrieve detailed information about an order, send the request:
 | items.salesUnit | String| Sales unit to be used for the item amount calculation.|
 | items.amount | String| |
 | items.metadata   | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes   | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes   | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image     | String  | Product image URL.   |
 
 

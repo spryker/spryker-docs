@@ -16,7 +16,7 @@ Configure product availability for specific companies by blacklisting or whiteli
 
 <!-- add a link Enable Barcode Generator for your project -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

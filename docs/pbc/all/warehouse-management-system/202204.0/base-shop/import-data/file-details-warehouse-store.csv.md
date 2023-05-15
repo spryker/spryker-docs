@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.
@@ -48,7 +51,6 @@ data:import:stock-store
 
 ## Additional information
 
-Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
 The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`.
 
 You can also create `warehouse_store.csv` in `…/data/import`.

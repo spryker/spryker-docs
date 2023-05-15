@@ -16,10 +16,10 @@ related:
   - title: Glue API - Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-labels-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-labels-feature-overview.html
 ---
 
-[Product labels](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 ## Installation
 
@@ -86,8 +86,8 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
 * [Retrieve registered user's carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts)
 * [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-a-registered-users-cart)
-* [Retrieve wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-wishlists)
-* [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-a-wishlist)
+* [Retrieve wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-wishlists)
+* [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-a-wishlist)
 
 ## Possible errors
 

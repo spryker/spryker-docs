@@ -54,7 +54,7 @@ Lit is a lightweight library for creating web components using TypeScript and HT
 
 ### RxJS
 RxJS is a reactive programming library for JavaScript. In Oryx, RxJS is used to handle asynchronous operations. It provides a declarative way to handle events and data streams, making it easier to manage complex data flows and state transitions.
-RxJS is used in the service layer of Oryx to provide a reactive system that continuees to emit new values while you navigate through the (SPA) experience.
+RxJS is predominantly used in the service layer to provide a reactive system that emit new values while you navigate through the (SPA) experience.
 RxJS is not a main citizen in the component logic, as we try to hide the reactivity altogether to avoid complexity
 
 ### Vite

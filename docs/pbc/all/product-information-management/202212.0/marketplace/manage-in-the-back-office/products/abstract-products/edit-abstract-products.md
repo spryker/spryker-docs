@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/editing-abstract-products.html
 related:
   - title: Creating abstract products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html
   - title: Managing products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 
@@ -98,8 +98,8 @@ The following table describes the attributes you enter and select when editing v
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, see [Editing product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product).
-To create a product variant, see [Creating product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
+To edit a product variant, see [Editing product variants](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html#editing-product-variants-of-an-abstract-product).
+To create a product variant, see [Creating product variants](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/create-product-variants.html).
 
 ## Editing meta information of an abstract product
 

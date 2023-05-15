@@ -8,7 +8,7 @@ With the *Marketplace Promotions and Discounts* feature, the discounts are appli
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Promotions and Discounts feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Promotions and Discounts feature overview](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html) for business users.
 
 {% endinfo_block %}
 

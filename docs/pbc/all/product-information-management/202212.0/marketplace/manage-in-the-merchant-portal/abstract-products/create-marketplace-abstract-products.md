@@ -63,7 +63,7 @@ To create a new abstract product:
 
 6. Click **Next**.
 
-Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product).
+Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product).
 
 ### Reference information: Create Abstract Product drawer
 
@@ -113,5 +113,5 @@ This button is only displayed if the product status is *Draft*. To learn more ab
 
 ## Next steps
 
-- [Approve the marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html#sending-the-product-for-approval)
-- [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Approve the marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/managing-marketplace-abstract-product.html#sending-the-product-for-approval)
+- [Manage abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/managing-marketplace-abstract-product.html)

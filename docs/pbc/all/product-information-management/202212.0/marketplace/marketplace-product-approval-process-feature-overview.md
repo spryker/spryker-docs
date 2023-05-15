@@ -4,9 +4,9 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 related:
   - title: Approving and denying marketplace products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html#approving-and-denying-marketplace-products
   - title: Sending the product for approval
-    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval
 ---
 The [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is primarily responsible for ensuring the quality of data in the marketplace, including merchants, products, and offers. To control those things in the marketplace, the approval mechanism is a key feature.
 
@@ -45,7 +45,7 @@ You can configure the logic of the statuses on the project level.
 
 If a [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) wants their new marketplace product to be displayed in the Storefront, this product has to be approved by the marketplace administrator. The procedure goes through the following stages:
 
-1. [**Creating a marketplace product**](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html).
+1. [**Creating a marketplace product**](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html).
 
 2. **Submitting the product for approval.** The [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
 
@@ -59,7 +59,7 @@ A marketplace owner can set a default approval status for marketplace products o
 
 | BACK OFFICE USER GUIDES  | MERCHANT PORTAL USER GUIDES  |
 | -------------------- | ------------------ |
-|  [Approve and deny marketplace products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products)  | [Send the product for approval](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval)   |
+|  [Approve and deny marketplace products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/manage-products.html#approving-and-denying-marketplace-products)  | [Send the product for approval](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval)   |
 
 ## Related Developer documents
 

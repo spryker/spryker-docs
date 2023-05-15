@@ -23,7 +23,7 @@ The merchant onboarding process consists of the following steps:
 1. The merchant puts in a request to join the marketplace and provides all required documents.
 2. The operator verifies and registers the merchant.
 3. The operator approves the merchant and provides access to the Merchant Portal.
-4. The merchant [creates products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and [offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
+4. The merchant [creates products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html) and [offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
 5. The operator decides what kind of payment process to implement—for example, whether or not to use a *Payment Service Provider (PSP)*.
 6. An order management process for fulfillment, shipping, and returns is established for merchants through the [Spryker State Machine](/docs/pbc/all/order-management-system/{{site.version}}/state-machine-cookbook/state-machine-cookbook.html).
 7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator [activates merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and their products and offers in the Back Office. Everything can be activated through a [data importer](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) as well.
@@ -70,7 +70,7 @@ Operator: Decide who is the owner of the product data:
 * If the operator is the owner and manages the product data, other merchants can create offers with specific prices and available quantities on top of existing products.
 * If merchants can create products, the operator needs to make sure there are no duplicates in the Marketplace and regularly check the product data quality.
 
-In the Merchant Portal, merchants can [create and update products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
+In the Merchant Portal, merchants can [create and update products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html) and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
 
 {% info_block infoBox %}
 
@@ -128,7 +128,7 @@ The following diagram shows an example of a simple State Machine workflow, where
 The following steps are taken by the operator:
 
 1. Do a final check of the merchant's public profile, products, and offer quality. 
-2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and [approve products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) in the Back Office. 
+2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and [approve products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) in the Back Office. 
 3. Optional: Activate and approve products and offers through the data importer.
 4. Optional: To optimize the product and offer approval process, define specific rules per merchant. 
 

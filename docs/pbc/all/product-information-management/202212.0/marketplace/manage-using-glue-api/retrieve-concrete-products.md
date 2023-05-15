@@ -4,7 +4,7 @@ description: Retrieve details about the items of the registered users' carts, an
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving product offers of concrete products
-    link: docs/marketplace/dev/glue-api-guides/page.version/concrete-products/retrieving-product-offers-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -1135,7 +1135,7 @@ For attributes of the other included resources, see the following:
 * [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html#response)
+* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html#response)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 

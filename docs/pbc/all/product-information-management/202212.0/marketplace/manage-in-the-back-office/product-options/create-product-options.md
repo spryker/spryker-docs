@@ -5,7 +5,7 @@ description: Use this procedure to create Marketplace Product Optionsgroups and 
 template: back-office-user-guide-template
 related:
   - title: Managing product options
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/product-options/managing-product-options.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
   - title: Marketplace Product Options feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
 ---
@@ -87,4 +87,4 @@ And the values available in the drop-down lists are the product options:
 
 ## Next steps
 
-[Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)
+[Managing product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html)

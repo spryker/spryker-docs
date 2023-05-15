@@ -5,13 +5,13 @@ description: This guide explains how to create abstract products in Marketplace.
 template: back-office-user-guide-template
 related:
   - title: Editing abstract products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-products/editing-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
   - title: Managing products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 redirect_from:
-  - /docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-product-reference-information.html
+  - /docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/abstract-product-reference-information.html
 ---
 
 ## Prerequisites
@@ -166,4 +166,4 @@ The following table describes the attributes you enter and select when adding im
 
 ## Next steps
 
-[Edit abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html)
+[Edit abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html)

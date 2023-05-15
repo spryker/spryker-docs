@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/creating-product-variants.html
 related:
   - title: Managing products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html
   - title: Editing product variants
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Marketplace Product feature overview
@@ -114,4 +114,4 @@ The only field available is **Add Product Alternative by Name or SKU**. Here it 
 
 **What's next?**
 
-Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) section.
+Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/manage-products.html) section.

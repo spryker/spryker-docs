@@ -5,7 +5,7 @@ description: Use this document to manage product options in the Back Office.
 template: back-office-user-guide-template
 related:
   - title: Creating product options
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/product-options/managing-product-options.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
 ---
 
 This document describes how to manage product options.
@@ -42,10 +42,10 @@ The following table describes the attributes you enter and select while editing 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Group name translation key | Glossary key of the product option group. You can enter this value only when [creating product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html). |
+| Group name translation key | Glossary key of the product option group. You can enter this value only when [creating product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html). |
 | Tax Set | Conditions under which the product option group is taxed. To learn how to create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html). |
-| Option name translation key | Glossary key for the product option value. You can enter this value only when [creating product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html). |
-| SKU | Unique identifier of the product option value. You can enter this value only when [creating product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html). |
+| Option name translation key | Glossary key for the product option value. You can enter this value only when [creating product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html). |
+| SKU | Unique identifier of the product option value. You can enter this value only when [creating product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html). |
 | Gross price and Net price | Price values of the product option value for gross and net modes. Prices are integer values and, in the database, they are stored in their normalized form. For example, `4EUR` is stored as `400`. If you do not define a price for a product option value, it is considered *inactive* for that specific currency and price mode. If a price is `0`, it is considered *free of charge*.|
 | Group name | Option group name that's displayed on the Storefront. |
 | Option name | Option name that's displayed on the Storefront. |

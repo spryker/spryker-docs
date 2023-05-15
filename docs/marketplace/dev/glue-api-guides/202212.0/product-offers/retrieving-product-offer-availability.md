@@ -6,7 +6,7 @@ related:
   - title: Retrieving product offer prices
     link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-prices.html
   - title: Retrieving product offers
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html 
+    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html
 ---
 
 This document describes how to retrieve product offer availabilities via Glue API.
@@ -29,7 +29,7 @@ To retrieve a availability of a product offer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | ------------------ | ---------------------- |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html). |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html). |
 
 ### Request
 

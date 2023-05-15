@@ -36,7 +36,7 @@ Once you completed all the steps, the ACP catalog will appear in the Back Office
 
 As mentioned before, the first step to install ACP on SCOS is to get SCOS ACP-Ready. This itself requires different update steps depending on the template version on which your project was started.
 
-- **SCOS Product Release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html)**: All changes are included for out-of-the-box ACP-Readiness, but need be verified on the project level
+- **SCOS Product Release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html)**: All changes are included for out-of-the-box ACP-Readiness, but also need to be verified on the project level
 - **Older versions**: All steps required are for ACP-Readiness
 
 If you were onboarded with a version older than Product Release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 

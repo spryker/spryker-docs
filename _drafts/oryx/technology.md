@@ -12,11 +12,17 @@ We will examine both the deployed technology stack and the technologies utilized
 ### HTML & CSS & JS
 HTML, CSS, and JS are considered to be the fundamental and essential set of web technologies used for creating web pages. HTML is responsible for the structure and content of the page, CSS is used for styling and layout, and JS adds interactivity and dynamic behavior to the page. Together, these three technologies form the foundation of modern web development.
 
+In Oryx we prioritize CSS as the primary means of styling and layout rendering, embracing a CSS-first approach. We favor CSS over JavaScript for its inherent capability to handle styling and layout tasks without the need for additional JavaScript logic.
+
+We are  to avoid loading JS in the client unless there's a need; we gradually load snippets of JS rather than a full JS framework.
+
+In the Oryx framework, our approach is to minimize the loading of JavaScript on the client side unless it is necessary. Instead of loading a full JavaScript framework, we opt for gradually loading snippets of JavaScript as required.
+
 ### Web Components
 Web Components are a set of web platform APIs that allow developers to create custom, reusable, and encapsulated HTML elements.
 
 ### Web hosting
-Currently, Oryx uses Netlify as a hosting provider, which means you can easily find basic boilerplate to deploy your site on Netlify. However, if you choose to use a different hosting provider, there may be limitations on the implementation of SSR. To make it work, you would need to adjust the SSR rendering boilerplate, which is specific to the hosting provider.
+Any hosting provider can be used, but SSR specific build will require additional configuration.
 
 ### CSR and SSR
 Oryx provides both client-side rendered (CSR) and server-side rendered (SSR) versions of websites, so you can choose the option that best fits your needs.
@@ -31,9 +37,9 @@ Server-side rendering, on the other hand, involves generating a complete HTML do
 HTML is the backbone of the web. It is the markup language used to create web pages and applications. In Oryx, HTML is used to structure the content and layout of the application. It provides a semantic structure to the page, making it easier to understand and maintain.
 
 ### CSS
-CSS is a style sheet language used to describe the visual presentation of a document written in HTML. In Oryx, CSS is used to style the components and layout of the application. It allows developers to create a consistent visual style across the application and ensure that it is responsive and accessible.
+CSS is a style sheet language used to describe the visual presentation of a document written in HTML.
 
-Oryx uses standard CSS syntax and does not utilize CSS preprocessors or post-processors, such as Sass or PostCSS. 
+Oryx uses standard CSS syntax and does not utilize CSS preprocessors since Oryx does not use a global CSS utility library; instead, we have isolated styles per component and because of that we do not want to load global css utils in each component.
 
 Also unlike some other CSS methodologies, such as BEM (Block, Element, Modifier), Oryx does not rely on a specific naming convention to structure its CSS classes.
 
@@ -52,7 +58,7 @@ RxJS is used in the service layer of Oryx to provide a reactive system that cont
 RxJS is not a main citizen in the component logic, as we try to hide the reactivity altogether to avoid complexity
 
 ### Vite
-Vite is a build tool and development server for modern web projects. In Oryx, Vite is used to provide fast and efficient development and build times. It provides an optimized build process and a hot-reloading development server, making it easy to develop and test the application in real-time.
+Vite is a build tool and development server for modern web projects. In Oryx, Vite is used to provide fast and efficient development and build times. It provides an optimized build process and a hot-reloading development server, making it easy to develop and test the application in real-time. However, you can easily use another build tool if you want. 
 
 ### Storybook
 Storybook is an open-source tool for developing UI components in isolation. In Oryx, Storybook is used to create a component library and showcase the different UI components in the application. It provides a simple and intuitive way to develop and test UI components in isolation, making it easier to iterate on them and ensure consistency across the application.

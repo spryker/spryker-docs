@@ -2272,7 +2272,7 @@ entries:
                       - title: Marketplace Product - Merchant Portal + Tax
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-tax-feature.html
                       - title: Marketplace Product Options
-                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html                        
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html
                       - title: Marketplace Product Options + Cart
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html
                       - title: Marketplace Product Options + Checkout
@@ -2281,7 +2281,21 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-merchant-portal-feature.html
                       - title: Marketplace Product + Quick Add to Cart
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html
-
+                  - title: Install Glue API
+                    nested:
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-glue-api.html
+                      - title: Marketplace Product + Cart
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-cart-glue-api.html
+              - title: Import and export data
+                nested:
+                  - title: "merchant_product.csv"
+                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product.csv.html
+                  - title: "merchant_product_option_group.csv"
+                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html
+                  - title: merchant_product_approval_status_default.csv
+                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html
+                    
 
 
 

@@ -12,10 +12,6 @@ This document is aggregated list of activities which has to be done in order to 
 
 {% endinfo_block %}
 
-## Prerequisites
-
-[Prerequisites are explained here](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
-
 ## Assessment phase
 
 The phase has to be performed in order to understand the estimation and effort of project migration. The documents below explain the exact steps to do for such an assessment.

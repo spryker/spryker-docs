@@ -11,7 +11,6 @@ redirect_from:
 This section provides descriptions of Marketplace features from a development perspective. It includes the following feature walkthroughs:
 * [Marketplace Product](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-feature-walkthrough.html)
 * [Marketplace Product Approval Process](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-approval-process-feature-walkthrough.html)
-* [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html)
 * [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-prices-feature-walkthrough.html)
 * [Marketplace Merchant Custom Prices](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-custom-prices-feature-walkthrough.html)
 * [Marketplace Product Options](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-options-feature-walkthrough.html)

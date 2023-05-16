@@ -102,7 +102,7 @@ The touchpoints listed here may vary depending on the project. If view of that, 
 | File | Description | To do |
 |------|-------------|-------|
 | config/Shared/default_store.php     | Specifies the default store.            | Set the desired store code.      |
-| config/Shared/stores.php     | Contains store-specific application configuration.            | Remove extra stores, configure formats, locales, available countries, currencies.      |
+| config/Shared/stores.php     | Contains store-specific application configuration.            | Add new stores, configure formats, locales, available countries, currencies.      |
 | config/install/*.yml     | YAML files, describing application building steps for different environments used by docker/sdk.            | Some of the commands have a context of the store for which they are executed. Make sure the right store is used.      |
 | data/import/*.csv     | Demo data, a lot of store-specific content.            | Make sure to add or remove data for respective stores in all the files.      |
 | deploy.{environment-name}.yml     | Main docker/sdk configuration file, which is used to build all application images.            | Regions, stores, groups, and databases, domains. You can create a dedicated environment file for each store.      |

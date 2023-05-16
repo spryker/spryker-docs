@@ -1,8 +1,13 @@
-# Routing
+---
+title: Routing
+description:
+template: concept-topic-template
+last_updated: Apr 4, 2023
+---
 
-Routing is an essential feature for any web application, allowing users to navigate between different pages or components within the application. The `@spryker-oryx/router` package
-provides routing infrastructure for your application, including a `RouterService` for interacting with the router and framework-specific integrations for providing actual routing config.
-This guide will walk you through the process of setting up routing in your application, including how to add the `RouterFeature` to your application, render the router outlet, and provide routes using Dependency Injection (DI).
+Routing lets users navigate between different pages or components within an application. The `@spryker-oryx/router` package provides routing infrastructure for your application, including a `RouterService` for interacting with the router and framework-specific integrations for providing actual routing config.
+
+This document describes how to set up routing: add `RouterFeature` to your application, render the router outlet, and provide routes using Dependency Injection (DI)<!-- add a link -->.
 
 `@spryker-oryx/router` provides infrastructure for routing capabilities. It gives you mainly the `RouterService` which is a generic way for navigating in your application.
 
@@ -12,7 +17,7 @@ There are also framework specific integrations for providing actual routing conf
 
 ## Getting started
 
-To start using router add `RouterFeature` to your Oryx application:
+To start using router, add `RouterFeature` to your Oryx application:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -25,14 +30,14 @@ Now you can use `RouterService` in your components and services to interact with
 
 ## Lit routing
 
-To render router outlet you should add `LitRouter` to your root app component and render it's outlet:
+To render a router outlet, you add `LitRouter` to your root app component and render it's outlet:
 
 ```ts
 import { LitElement } from 'lit';
 import { LitRouter } from '@spryker-oryx/router/lit';
 
 class RootComponent extends LitElement {
-  router = new LitRouter(this, []); // <-- You may provide some static routes here
+  router = new LitRouter(this, []); // <-- You can provide some static routes here
 
   protected override render() {
     return this.router.outlet(); // <-- Render router outlet here
@@ -40,7 +45,7 @@ class RootComponent extends LitElement {
 }
 ```
 
-Then you can provide routes for Lit applications using DI:
+Then, you can provide routes for Lit applications using DI:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -54,7 +59,5 @@ const routes = [
 appBuilder().withProviders(provideLitRoutes({ routes }));
 ```
 
-Please note that this is a basic example and you may need to adjust the routing config
-to fit your specific use case.
-Lit routes using standard [lit router library](https://github.com/lit/lit/tree/main/packages/labs/router#readme) so you can read it's documentation for more information on how to configure routes.
-
+Please note that this is a basic example and you may need to adjust the routing config to fit your specific use case.
+Lit routes using the standard [lit router library](https://github.com/lit/lit/tree/main/packages/labs/router#readme) so you can read it's documentation for more information on how to configure routes.

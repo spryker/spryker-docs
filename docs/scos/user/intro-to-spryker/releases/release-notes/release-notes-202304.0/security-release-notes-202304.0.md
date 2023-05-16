@@ -20,9 +20,15 @@ An attacker can inject malicious code in functionalities of the Spryker applicat
 
 ### How to get the fix
 
-Update the affected module `spryker/propel` to version 3.38.0:
+If the version of `spryker/propel` module is 3.35.0 up to and including 3.37.0, update it to version 3.38.0:
 ```bash
 composer require spryker/propel:"~3.38.0"
+composer show spryker/propel # Verify the version
+```
+
+If the version of `spryker/propel` module is earlier than 3.35.0, update it to version 3.34.3:
+```bash
+composer require spryker/propel:"~3.34.3"
 composer show spryker/propel # Verify the version
 ```
 

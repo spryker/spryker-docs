@@ -5,19 +5,17 @@ template: concept-topic-template
 last_updated: Apr 4, 2023
 ---
 
-Routing lets users navigate between different pages or components within an application. The `@spryker-oryx/router` package provides routing infrastructure for your application, including a `RouterService` for interacting with the router and framework-specific integrations for providing actual routing config.
+Routing lets users navigate between different pages or components within an application. The `@spryker-oryx/router` package provides routing infrastructure for your application.
 
-This document describes how to set up routing: add `RouterFeature` to your application, render the router outlet, and provide routes using Dependency Injection (DI)<!-- add a link -->.
+This document describes how to set up routing: add `RouterFeature` to your application, render router outlets, and provide routes using Dependency Injection (DI)<!-- add a link -->.
 
-`@spryker-oryx/router` provides infrastructure for routing capabilities. It gives you mainly the `RouterService` which is a generic way for navigating in your application.
+`@spryker-oryx/router` provides the infrastructure for routing capabilities. It's main component is `RouterService` that provides access to the router, which is a generic way for navigating the application.
 
-There are also framework specific integrations for providing actual routing configuration:
+There are also framework-specific integrations for providing an actual routing configuration: for Lit, use the `@spryker-oryx/router/lit` package.
 
-- for Lit use `@spryker-oryx/router/lit` package
+## Get started with routing
 
-## Getting started
-
-To start using router, add `RouterFeature` to your Oryx application:
+To start using the router, add `RouterFeature` to your Oryx application:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -30,7 +28,7 @@ Now you can use `RouterService` in your components and services to interact with
 
 ## Lit routing
 
-To render a router outlet, you add `LitRouter` to your root app component and render it's outlet:
+To render a router outlet, add `LitRouter` to your root app component and render its outlet:
 
 ```ts
 import { LitElement } from 'lit';
@@ -58,6 +56,12 @@ const routes = [
 
 appBuilder().withProviders(provideLitRoutes({ routes }));
 ```
+{% info_block infoBox %}
 
-Please note that this is a basic example and you may need to adjust the routing config to fit your specific use case.
-Lit routes using the standard [lit router library](https://github.com/lit/lit/tree/main/packages/labs/router#readme) so you can read it's documentation for more information on how to configure routes.
+This is a basic example, and you may need to adjust the routing config to fit your specific use case.
+
+{% endinfo_block %}
+
+
+
+Lit routes using the standard [lit router library](https://github.com/lit/lit/tree/main/packages/labs/router#readme), so see its documentation for more information on how to configure routes.

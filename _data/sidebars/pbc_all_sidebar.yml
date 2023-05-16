@@ -2463,6 +2463,10 @@ entries:
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.html
               - title: Install and upgrade
                 nested:
+                  - title: Install the Marketplace Return Management feature
+                    url: /docs/pbc/all/return-managementmarketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html
+                  - title: Install the Marketplace Return Management Glue API
+                    url: /docs/pbc/all/return-management/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html
                   - title: Install the Return Management feature
                     url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-feature.html
                   - title: Install the Return Management Glue API

@@ -1408,7 +1408,7 @@ entries:
               - title: Install Glue APIs
                 nested:
                   - title: Payments
-                    url: /docs/pbc/all/payment-service-provider/202212.0/install-and-upgrade/install-the-payments-glue-api.html
+                    url: /docs/pbc/all/payment-service-provider/install-and-upgrade/install-the-payments-glue-api.html
               - title: Upgrade modules
                 nested:
                   - title: Payment

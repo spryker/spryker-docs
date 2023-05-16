@@ -15,8 +15,6 @@ This section contains the following Marketplace feature integration guides:
 * [Merchant Switcher + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-customer-account-management-feature-integration.html)
 * [Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html)
 * [Marketplace Merchant Custom Prices](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-custom-prices-feature-integration.html)
-* [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)
-* [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)
 * [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html)
 * [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
 * [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html)

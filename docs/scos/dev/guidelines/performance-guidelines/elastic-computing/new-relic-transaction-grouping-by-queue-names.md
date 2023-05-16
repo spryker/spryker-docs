@@ -10,6 +10,8 @@ related:
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
   - title: Storage caching for primary-replica database setups
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+redirect_from: 
+  - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
 ---
 
 By default, the `spryker/monitoring` module groups all New Relic transactions generated from a console command by the command’s name. For example, `ooms:check-timeout`.

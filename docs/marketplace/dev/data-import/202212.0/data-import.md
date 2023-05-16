@@ -8,8 +8,6 @@ template: concept-topic-template
 Spryker’s customers need to import data from other systems into their Spryker Marketplace project. The _Data import_ section holds all the needed information for that. For more details, see the following documents:
 
 * [Marketplace setup](/docs/marketplace/dev/data-import/{{page.version}}/marketplace-setup.html)
-* [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process.csv.html)
-* [File details: merchant_order_status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)
 * [File details: merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
 * [File details: price_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)
 * [File details: product_offer_shopping_list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html)

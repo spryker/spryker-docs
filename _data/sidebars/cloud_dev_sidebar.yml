@@ -85,8 +85,8 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
       - title: Create and restore databse backups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
-      - title: Add variables
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/add-variables.html
+      - title: Add variables in the Parameter Store
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html
       - title: Verifying email addresses
         url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
       - title: Setting up notifications for 5xx errors
@@ -98,8 +98,12 @@ entries:
       - title: Multi-store setups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
         nested:
+          - title: Multistore setup options
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
           - title: Add and remove databases of stores
             url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
+          - title: Checklist for a new store implementation
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
       - title: Troubleshooting
         url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting.html
         nested:

@@ -21,7 +21,7 @@ related:
   - title: Retrieving configurable bundle templates
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
   - title: Retrieving orders
-    link: docs/pbc/all/order-management-system/page.version/glue-api-retrieve-orders.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->

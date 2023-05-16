@@ -115,4 +115,4 @@ Make sure that when you do a `GET` request to retrieve abstract products that be
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product + Cart API | | [Glue API: Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-cart-feature-integration.html) |
+| Marketplace Product + Cart API | | [Glue API: Marketplace Product + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-cart-glue-api.html) |

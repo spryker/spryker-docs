@@ -8,7 +8,6 @@ template: concept-topic-template
 This section contains the following Marketplace feature integration guides:
 * [Combined Product Offer Import feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)
 * [Marketplace Dummy Payment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-dummy-payment-feature-integration.html)
-* [Marketplace Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/install-the-marketplace-cart-feature.html)
 * [Merchant Category feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-category-feature-integration.html)
 * [Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-opening-hours-feature-integration.html)
 * [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)

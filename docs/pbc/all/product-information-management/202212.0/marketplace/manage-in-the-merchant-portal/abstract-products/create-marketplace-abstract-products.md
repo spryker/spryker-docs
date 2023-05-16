@@ -63,7 +63,7 @@ To create a new abstract product:
 
 6. Click **Next**.
 
-Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product).
+Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product).
 
 ### Reference information: Create Abstract Product drawer
 

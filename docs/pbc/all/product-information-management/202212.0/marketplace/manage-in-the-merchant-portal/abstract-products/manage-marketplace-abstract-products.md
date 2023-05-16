@@ -72,7 +72,7 @@ To edit the existing marketplace abstract product:
 
 {% info_block warningBox "Warning" %}
 
-You can approve only the [newly created marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-product.html).
+You can approve only the [newly created marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html).
 
 {% endinfo_block %}
 

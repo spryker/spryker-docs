@@ -34,7 +34,7 @@ Customers see custom prices for products based on their merchant relationship, o
 
 | MERCHANT PORTAL USER GUIDES  |
 | -------------------- |
-| [Managing marketplace abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html) |
+| [Managing marketplace abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html) |
 | [Managing marketplace concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
 
 

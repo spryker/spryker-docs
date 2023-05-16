@@ -1014,8 +1014,8 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
               - title: Manage gift cards of registered users
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
-              - title: Retrieve gift cards in guest carts
-                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
+              - title: Retrieve gift cards in carts of registered users
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html
       - title: Identity Access Management
         url: /docs/pbc/all/identity-access-management/identity-access-management.html
         nested:

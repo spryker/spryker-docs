@@ -2493,6 +2493,13 @@ entries:
         include_versions:
         - "202212.0"
         nested:
+          - title: Search feature overview
+            url: /docs/pbc/all/search/search-feature-overview/search-feature-overview.html
+            nested:
+              - title: Category filters
+                url: /docs/pbc/all/search/search-feature-overview/category-filters-overview.html
+              - title: Standard filters
+                url: /docs/pbc/all/search/search-feature-overview/standard-filters-overview.html
           - title: Install and upgrade
             nested:
               - title: Install feature and Glue API
@@ -2546,6 +2553,12 @@ entries:
                 url: /docs/pbc/all/search/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
               - title: Search the product catalog
                 url: /docs/pbc/all/search/manage-using-glue-api/glue-api-search-the-product-catalog.html
+          - title: Import and export data
+            nested:
+              - title: "File details: product_search_attribute_map.csv"
+                url: /docs/pbc/all/search/import-data/file-details-product-search-attribute-map.csv.html
+              - title: "File details: product_search_attribute.csv"
+                url: /docs/pbc/all/search/import-data/file-details-product-search-attribute.csv.html
           - title: Tutorials and Howtos
             nested:
               - title: "Tutorial: Content and search - attribute-cart-based catalog personalization"

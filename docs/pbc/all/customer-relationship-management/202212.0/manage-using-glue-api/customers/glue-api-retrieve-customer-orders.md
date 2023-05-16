@@ -16,7 +16,7 @@ related:
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/glue-api-retrieve-orders.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration

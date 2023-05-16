@@ -35,7 +35,7 @@ This doc describes how to edit product lists in the Back Office.
 
 {% info_block warningBox "Blacklists in configurable bundles" %}
 
-If a product list is used by a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}* page, switch to the *Used by* tab.
+If a product list is used by a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}* page, switch to the *Used by* tab.
 
 {% endinfo_block %}
 

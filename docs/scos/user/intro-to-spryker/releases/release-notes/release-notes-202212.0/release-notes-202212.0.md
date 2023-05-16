@@ -47,7 +47,7 @@ For an effortless shopping experience, the localized number formatting is availa
 
 ##### Documentation
 
-[HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
+[HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 
 
 #### Number formatting in the Back Office

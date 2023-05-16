@@ -26,8 +26,8 @@ Resources: Backend
         ```bash
         composer update spryker-feature/catalog --update-with-dependencies
         ```
-    * If it’s not, then find which feature package has been released as a replacement. For this you can check in the
-        `composer.lock` file from the demo shop which feature package contains modules from the deprecated feature.
+    * If it’s not, then find which feature package has been released as a replacement. For this, you can navigate to
+        the [Spryker release app](https://release.spryker.com/features/view/76) and see the **Deprecation Note** section.
         Remove the deprecated feature package from `composer.json` and require a new one which replaces it:
         ```bash
         composer require spryker-feature/catalog:^202108.0 --update-with-dependencies

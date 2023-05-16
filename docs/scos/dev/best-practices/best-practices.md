@@ -2,6 +2,8 @@
 title: Best practices
 description: Best practices for developers working on Spryker Commerce OS
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/best-practices/
 ---
 
 This section contains the following best practices guidelines and recommendations for developing on Spryker Commerce OS:  

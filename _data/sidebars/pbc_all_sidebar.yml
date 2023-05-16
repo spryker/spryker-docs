@@ -747,6 +747,8 @@ entries:
         include_versions:
         - "202212.0"
         nested:
+          - title: Reorder feature overview
+            url: /docs/pbc/all/customer-relationship-management/reorder-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features

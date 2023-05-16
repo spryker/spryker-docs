@@ -1,14 +1,24 @@
 ---
-title: Add variables
+title: Add variables in the Parameter Store
 description: Learn how to define variables in the Parameter Store.
 last_updated: May 3, 2023
 template: howto-guide-template
+keywords: environment variable management
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/define-parameter-and-secret-values-in-sccos-environments.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/add-variables.html
 ---
 
+
+
 Variables, such as parameters and secrets, are used for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.
+
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout. Eventually, it will become available to every project.
+
+{% endinfo_block %}
 
 
 ## Naming convention for variables

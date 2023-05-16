@@ -53,7 +53,7 @@ For details about how to install the TS Linter for your project, see the [TS Lin
 
 To execute the TS Linter, do the following:
 
-1. Install the Node modules:
+1. Install the Node.js modules:
 
 ```bash
 npm ci

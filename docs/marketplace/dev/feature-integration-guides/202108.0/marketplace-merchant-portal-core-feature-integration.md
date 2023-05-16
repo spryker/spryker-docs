@@ -531,8 +531,8 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-  * NPM v6 (higher versions have problems with workspace)
-  * NodeJs v12-14
+  * npm v6 (higher versions have problems with workspace)
+  * Node.js v12-14
   * Yarn v2 (or latest Yarn v1)
 
 Spryker requirements:

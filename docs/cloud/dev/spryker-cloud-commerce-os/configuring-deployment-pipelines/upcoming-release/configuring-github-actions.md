@@ -1,5 +1,6 @@
 ---
 title: Configuring GitHub Actions
+last_updated: May 15, 2023
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
 template: howto-guide-template
 redirect_from:
@@ -70,7 +71,7 @@ jobs:
 
             - uses: actions/setup-node@v1
               with:
-                  node-version: '16'
+                  node-version: '18'
 
             - name: NPM cache
               uses: actions/cache@v2

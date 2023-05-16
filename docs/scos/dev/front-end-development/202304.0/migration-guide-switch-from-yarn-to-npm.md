@@ -1,20 +1,20 @@
 ---
-title: Migration guide - Switch from Yarn to npm v8
-last_updated: Aug 31, 2022
-description: Use this guide to migrate the project from Yarn to npm v8.
+title: Migration guide - Switch from Yarn to npm v9
+last_updated: May 15, 2023
+description: Use this guide to migrate the project from Yarn to npm v9.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
 ---
 
-This document provides instructions for migrating from Yarn to npm version 8 in your Spryker project.
+This document provides instructions for migrating from Yarn to npm version 9 in your Spryker project.
 
 ## Overview
 
 Since the beginning of the Merchant Portal project, Yarn v2 has been used to install dependencies.
 If the package versions differ between some packages, it can not install all dependencies correctly.
 The issue has been managed internally by updating all package versions simultaneously, but when customers develop the project, this cannot be guaranteed.
-Since Yarn has not responded to the reported issue for more than a year, we must switch back to npm v8, which also supports workspaces.
+Since Yarn has not responded to the reported issue for more than a year, we must switch back to npm v9, which also supports workspaces.
 
 *Estimated migration time: 2h*
 
@@ -34,8 +34,8 @@ composer update spryker/chart spryker/dashboard-merchant-portal-gui spryker/disc
 image:
     ...
     node:
-        version: 16
-        npm: 8
+        version: 18
+        npm: 9
 ```
 
 {% info_block infoBox "Note" %}
@@ -84,8 +84,8 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
     ],
     ...
     "engines": {
-        "node": ">=16.0.0",
-        "npm": ">=8.0.0"
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
     },
     ...
     "devDependencies": {
@@ -93,7 +93,7 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
         "@babel/plugin-proposal-class-properties": "~7.17.12",
         "@babel/plugin-transform-runtime": "~7.17.12",
         "@babel/preset-typescript": "~7.17.12",
-        "@spryker/oryx-for-zed": "~2.12.0",
+        "@spryker/oryx-for-zed": "~3.0.0",
         "babel-loader": "~8.2.5",
         "sass": "~1.51.0",
         ...
@@ -107,8 +107,8 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 ```yaml
 before_install:
   ...
-  - nvm install 16 > /dev/null
-  - nvm use 16
+  - nvm install 18 > /dev/null
+  - nvm use 18
   ...
 ```
 
@@ -140,7 +140,7 @@ rm -rf package-lock.json
 docker/sdk cli npm install
 ```
 
-3. Build the project using npm v8:
+3. Build the project using npm v9:
 
 ```bash
 rm -rf node_modules && docker/sdk cli rm -rf node_modules
@@ -150,7 +150,7 @@ docker/sdk up --build --assets --data
 
 {% info_block infoBox "Note" %}
 
-If you use `node` and `npm` locally, make sure their versions are correct:
+If you use `Node.js` and `npm` locally, make sure their versions are correct:
 
 ```bash
 node -v
@@ -159,7 +159,7 @@ npm -v
 
 To update the versions, use official documentation:
 
-- [Node.js](https://nodejs.org/en/download/package-manager)
-- [npm](https://docs.npmjs.com/try-the-latest-stable-version-of-npm)
+- [Node.js](https://nodejs.org/en/download)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 {% endinfo_block %}

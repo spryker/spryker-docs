@@ -53,7 +53,7 @@ For details about how to install Formatter for your project, see the [Formatter 
 
 To execute the Formatter, do the following:
 
-1. Install the Node modules:
+1. Install the Node.js modules:
 
 ```bash
 npm ci

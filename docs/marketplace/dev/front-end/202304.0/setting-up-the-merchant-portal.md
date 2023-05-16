@@ -1,5 +1,6 @@
 ---
 title: Setting up the Merchant Portal
+last_updated: May 15, 2023
 description: This document provides details about setting up Spryker Marketplace project.
 template: howto-guide-template
 related:
@@ -20,18 +21,18 @@ To start using Merchant Portal, install Spryker Demo Shop:
 ## Requirements
 
 To build Merchant Portal, install or update the following tools:
-- [Node.js](https://nodejs.org/en/download/)—minimum version is v16.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)—minimum version is v8.
+- [Node.js](https://nodejs.org/en/download/)—minimum version is v18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)—minimum version is v9.
 
 ## Overview
 
 The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are the following:  
-- Minimum Node.js version is v16.
-- Minimum npm version is v8.
+- Minimum Node.js version is v18.
+- Minimum npm version is v9.
 
 Using a *unified* approach, all frontend dependencies must be installed in one step.
 
-The entire project is now an *npm Workspace*, meaning each submodule declares its dependencies. During the installation stage, npm installs all of those dependencies and stores them into the root of the project.
+The entire project is now an *npm workspace*, meaning each submodule declares its dependencies. During the installation stage, npm installs all of those dependencies and stores them into the root of the project.
 
 ## Install dependencies and build Merchant Portal
 

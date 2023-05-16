@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant Portal Core feature integration
-last_updated: Feb 20, 2023
+last_updated: May 15, 2023
 description: Integrate the Merchant Portal Core feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -642,8 +642,8 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-- NPM v6 (higher versions have problems with workspace)
-- NodeJs v12-14
+- [Node.js](https://nodejs.org/en/download/) — minimum version is v18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) — minimum version is v9.
 - Yarn v2 (or latest Yarn v1)
 
 Spryker requirements:
@@ -760,8 +760,8 @@ npm i -D @angular-builders/custom-webpack@~12.1.3 @angular-devkit/build-angular@
         "postinstall": "npm run mp:update:paths"
     },
     "engines": {
-        "node": ">=12.0.0",
-        "npm": ">=6.9.0"
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
     },
     "resolutions": {
         "typescript": "4.2.4",

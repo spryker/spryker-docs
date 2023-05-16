@@ -2271,18 +2271,17 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-inventory-management-feature.html
                       - title: Marketplace Product - Merchant Portal + Tax
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-merchant-portal-tax-feature.html
+                      - title: Marketplace Product Options
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html                        
                       - title: Marketplace Product Options + Cart
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html
-                      - title: Marketplace Product
-                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
-                      - title: Marketplace Product
-                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
-                      - title: Marketplace Product
-                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
-                      - title: Marketplace Product
-                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
-                      - title: Marketplace Product
-                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product Options + Checkout
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-checkout-feature.html
+                      - title: Marketplace Product Options - Merchant Portal
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-merchant-portal-feature.html
+                      - title: Marketplace Product + Quick Add to Cart
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html
+
 
 
 

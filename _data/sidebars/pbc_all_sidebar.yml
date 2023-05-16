@@ -2354,8 +2354,15 @@ entries:
                       - title: Retrieve concrete products
                         url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-concrete-products.html
                       - title: Retrieve product offers of concrete products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html                                                
-
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html
+                  - title: Domain model and relationships
+                    nested:
+                      - title: Marketplace Product
+                        url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-feature-domain-model-and-relationships.html
+                      - title: Marketplace Product Approval Process
+                        url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-approval-process-feature-domain-model-and-relationships.html
+                      - title: Marketplace Product Options
+                        url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-options-feature-domain-model-and-relationships.html
 
 
 

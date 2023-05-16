@@ -336,9 +336,9 @@ You need to define the environment variables in the `deploy.yml` file of **each*
 
 The following environment variables must be configured to be used within your SCOS AWS environment.
 
-There will be multiple general environment variables that in turn will contain several configurations. 
+Configuration keys used to be variable names. There will be multiple general environment variables that in turn will contain several configurations. 
 
-**NOTE**: Configuration keys used to be variable names.
+**NOTE**: The environment variable keys must be added by you and the infrastructure values (fifo queue names) will be provided by Spryker Ops upon request.
 
 <details open>
 <summary>General Structure</summary>
@@ -407,6 +407,8 @@ https://app-catalog.atrs.spryker.com/loader
 
 **Explanation**: StoreReference mapping to the appropriate Spryker Store
 
+**NOTE**: StoreReference mapping will be created by Spryker Ops and values provided by them for you to add!
+
 <details open>
 <summary>Value Example: Demo Stores for DE and AT</summary>
 
@@ -418,6 +420,8 @@ https://app-catalog.atrs.spryker.com/loader
 **3. Configuration key**: `APP_DOMAINS`
 
 **Explanation**: App domains used in redirects.
+
+**NOTE**: Value must be provided by Spryker Ops!
 
 <details open>
 <summary>Value Example</summary>
@@ -437,6 +441,8 @@ https://app-catalog.atrs.spryker.com/loader
 **1. Configuration key**: `SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG`
 
 **Explanation**: Receiver configuration. The queues must be defined for each store (or default queue for all stores is used)
+
+**NOTE**: Queues will be created by Spryker Ops and values provided by them for you to add!
 
 <details open>
 <summary>Value Example: Spryker Production Environment</summary>
@@ -470,7 +476,7 @@ https://app-catalog.atrs.spryker.com/loader
 </details>
 
 ## Next Steps After ACP-Readiness
-Now, the SCOS codebase is up-to-date and once re-deloyed your environment is **ACP-Ready**!
+Now that the files have been configured, all modules updated, and the keys in the `deploy.yml` file were created and the completed with values provided by Spryker  Ops, the SCOS codebase is up-to-date and once re-deloyed your environment is **ACP-Ready**!
 
 The next step is to get your newly updated and deployed **ACP-Ready SCOS** environment **ACP-Enabled**.
 

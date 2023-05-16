@@ -16,7 +16,7 @@ Variables, such as parameters and secrets, are used for multiple purposes, like 
 
 {% info_block infoBox %}
 
-This feature is part of a gradual rollout. Eventually, it will become available to every project.
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
 
 {% endinfo_block %}
 

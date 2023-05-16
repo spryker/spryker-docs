@@ -15,7 +15,7 @@ related:
   - title: Reorder category filters
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/reorder-category-filters.html
   - title: Category filters overview
-    link: docs/scos/user/features/page.version/search-feature-overview/category-filters-overview.html
+    link: docs/pbc/all/search/page.version/search-feature-overview/category-filters-overview.html
 ---
 
 This topic describes how to assign and deassign filters from categories in the Back Office.

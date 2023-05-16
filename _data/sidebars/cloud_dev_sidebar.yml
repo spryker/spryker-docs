@@ -85,8 +85,8 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
       - title: Create and restore databse backups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
-      - title: Define parameter and secret values
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/define-parameter-and-secret-values-in-sccos-environments.html
+      - title: Add variables in the Parameter Store
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html
       - title: Verifying email addresses
         url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
       - title: Setting up notifications for 5xx errors

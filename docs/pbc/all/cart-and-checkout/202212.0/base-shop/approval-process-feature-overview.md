@@ -201,5 +201,5 @@ Company users can perform the following actions using the Approval Process featu
 
 |INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
 | [Shipment + Approval Process feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html)  |   |

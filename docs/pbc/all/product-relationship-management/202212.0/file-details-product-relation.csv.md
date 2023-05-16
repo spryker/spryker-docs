@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-relationcsv
   - /docs/file-details-product-relationcsv
   - /docs/en/file-details-product-relationcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_relation.csv` file to configure [Product Relation](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) information in your Spryker Demo Shop.

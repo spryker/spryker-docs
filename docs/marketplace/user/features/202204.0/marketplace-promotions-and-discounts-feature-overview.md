@@ -14,11 +14,11 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
+A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 {% info_block warningBox "Warning" %}
 
-In current implementation, it is impossible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html) for more details.
+In current implementation, it is impossible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) for more details.
 
 {% endinfo_block %}
 
@@ -46,7 +46,7 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html).
+To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 ## Cart Rule
 
@@ -56,7 +56,7 @@ A *cart rule* is a discount that applies to cart once all the [decision rules](#
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike with [vouchers](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Promotions+and+Discounts+feature+overview/cart-rule-storefront.png)
 
-To learn how a product catalog manager can create a cart rule in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
+To learn how a product catalog manager can create a cart rule in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 ### Decision rule
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
@@ -165,14 +165,14 @@ See examples in the following table.
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
 
-A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive discount
@@ -215,7 +215,7 @@ A *validity interval* is a time period during which a discount is active and can
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
 
-A product catalog manager defines calculation when [creating a discount](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
+A product catalog manager defines calculation when [creating a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
 
 {% info_block warningBox "Developer guides" %}

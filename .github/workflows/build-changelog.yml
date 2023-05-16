@@ -13,20 +13,20 @@ jobs:
         id: github_release
         uses: mikepenz/release-changelog-builder-action@v3
         with:
-          configurationJson: |
+          configurationJson: '
             {
               "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
               "categories": [
                 {
                     "title": "## New pages",
-                    "labels": ["New"]
+                    "labels": ["new"]
                 },
                 {
                     "title": "## Updated pages",
                     "labels": ["updated"]
                 }
               ]
-            }
+            }'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

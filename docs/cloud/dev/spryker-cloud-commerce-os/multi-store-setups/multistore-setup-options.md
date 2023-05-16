@@ -6,7 +6,7 @@ related:
   - title: Add and remove databases of stores
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
   - title: Implement a new store
-    link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/implement-a-new-store.html
+    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
 ---
 
 This document outlines the various options available for a multistore setup and is essential to review when defining the architecture for your project and prior to implementing a new store. 
@@ -216,7 +216,7 @@ If you anticipate a high load, it It is essential to consult and obtain guidance
 |  | Setup 1  | Setup 2  | Setup 3  |
 |------|---|---|---|
 | ACCESSIBILITY     | <ul><li>Data is separated only on the application level.</li><li>Complexity in data separation in the Back Office.</li></ul>  | Full data separation | Full data separation  |
-| MAINTAINABILITY     |<ul><li>Not all features fully support multi-store in one Database. Some features have to be customized as multi-country</li><li>New code-base is rolled out to all countries at once.</li></ul>   |<ul><li>Import of each country’s data into its own Database only (no shared catalog data). <li>New code-base is rolled out to all countries at once.</li></ul>   |<ul></li>Data import has to be executed on all environments.</li><li>No possibility of rolling out the codebase to all regions at the same time.</li></ul>   |
+| MAINTAINABILITY     |<ul><li>Not all features fully support multi-store in one Database. Some features have to be customized as multi-country</li><li>New code-base is rolled out to all countries at once.</li></ul>   |<ul><li>Import of each country’s data into its own Database only (no shared catalog data).</li> <li>New code-base is rolled out to all countries at once.</li></ul>   |<ul><li>Data import has to be executed on all environments.</li><li>No possibility of rolling out the codebase to all regions at the same time.</li></ul>   |
 | PERFORMANCE     |Infrastructure is subject to more frequent scaling up in case of higher loads.   | Infrastructure is subject to more frequent scaling up in case of higher loads.  |Isolated AWS accounts.   |
 
 ## Next steps

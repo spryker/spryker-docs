@@ -4,7 +4,7 @@ description: Learn how to implement a new store in a multistore environment
 template: concept-topic-template
 related:
   - title: Multistore setup options
-    link: docs\cloud\dev\spryker-cloud-commerce-os\multi-store-setups\multistore-setup-options.html
+    link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
 ---
 
 This document outlines the high-level tasks and responsibilities of Spryker and Customer when setting up a new store depending on the chosen setup for the multistore environment. For description of setups referred to in this document, see [Multistore setup options](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html).

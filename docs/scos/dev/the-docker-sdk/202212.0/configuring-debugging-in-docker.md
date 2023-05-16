@@ -138,7 +138,7 @@ Set up a new `Launch.json`:
             "port": 9003,
             "runtimeExecutable": "/absolute/path/php/bin",
             "pathMappings": {
-                "/data": "${workspaceFolder}",
+                "/data": "${workspaceFolder}"
             },
             "log": true,
             "xdebugSettings": {
@@ -147,7 +147,7 @@ Set up a new `Launch.json`:
                 "max_children": 100,
                 "max_depth": 5
             }
-        },
+        }
     ]
 }
 ```
@@ -210,3 +210,9 @@ Find several examples below:
 * `docker/sdk cli -x console queue:worker:start`
 * `docker/sdk console -x queue:worker:start`
 * `docker/sdk testing -x codecept run -codeception.yml`
+
+[PHPMD command requires PHPMD_ALLOW_XDEBUG](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) env variable for debug mode.
+```
+docker/sdk cli -x
+PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
+```

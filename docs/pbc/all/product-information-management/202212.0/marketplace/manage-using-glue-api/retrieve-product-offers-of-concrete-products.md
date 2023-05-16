@@ -1,5 +1,5 @@
 ---
-title: Retrieving product offers of concrete products
+title: Retrieve product offers of concrete products
 description: Retrieve details about product offers via Glue API
 template: glue-api-storefront-guide-template
 related:

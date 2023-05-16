@@ -2324,6 +2324,37 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html
                       - title: Manage marketplace concrete product attributes
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Products
+                    url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/products.html
+                    nested:
+                      - title: Abstract products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/abstract-products.html
+                        nested:
+                          - title: Create abstract products
+                            url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html
+                          - title: Edit absract products
+                            url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
+                      - title: Create product variants
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/create-product-variants.html
+                      - title: Manage products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/manage-products.html
+                  - title: Product options
+                    url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/product-options/product-options.html
+                    nested:
+                      - title: Create product options
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/product-options/create-product-options.html
+                      - title: Manage product options
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
+                  - title: Manage using Glue API
+                    nested:
+                      - title: Retrieve abstract products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-abstract-products.html
+                      - title: Retrieve concrete products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-concrete-products.html
+                      - title: Retrieve product offers of concrete products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html                                                
 
 
 

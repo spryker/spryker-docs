@@ -1,5 +1,5 @@
 ---
-title: Retrieving abstract products
+title: Retrieve abstract products
 description: This glue API document describes how to retrieve general information about abstract products and related resources in the Spryker Marketplace
 template: glue-api-storefront-guide-template
 related:

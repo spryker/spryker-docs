@@ -2498,6 +2498,8 @@ entries:
             nested:
               - title: Category filters
                 url: /docs/pbc/all/search/search-feature-overview/category-filters-overview.html
+              - title: Search types overview
+                url: /docs/pbc/all/search/search-feature-overview/search-types-overview.html
               - title: Standard filters
                 url: /docs/pbc/all/search/search-feature-overview/standard-filters-overview.html
           - title: Install and upgrade

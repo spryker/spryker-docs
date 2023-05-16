@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Merc
 template: concept-topic-template
 related:
   - title: Managing marketplace abstract product prices
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/managing-marketplace-abstract-product-prices.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
   - title: Managing marketplace concrete product prices
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
 ---

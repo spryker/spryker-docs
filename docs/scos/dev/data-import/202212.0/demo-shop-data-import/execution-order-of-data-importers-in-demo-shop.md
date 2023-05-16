@@ -87,7 +87,7 @@ The following list illustrates the order followed to run the data importers and 
   * [discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/file-details-discount.csv.html)
   * [discount-store](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/file-details-discount-store.csv.html)
   * [discount-voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/file-details-discount-voucher.csv.html)
-  * [product-group](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-group.csv.html)
+  * [product-group](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-group.csv.html)
   * [product-relation](/docs/pbc/all/product-relationship-management/{{page.version}}/file-details-product-relation.csv.html)
   * [product-review](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/file-details-product-review.csv.html)
   * [product-label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-label.csv.html)

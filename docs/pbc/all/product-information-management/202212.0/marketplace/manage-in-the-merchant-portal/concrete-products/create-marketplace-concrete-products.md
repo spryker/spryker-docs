@@ -20,14 +20,14 @@ This document contains reference information. Make sure to review it before you 
 
 You can create a marketplace concrete product in two ways:
 
-- While [creating an abstract marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html).
+- While [creating an abstract marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-product.html).
 - By adding a concrete product to the existing abstract product.
 
 To add a concrete product to the existing abstract product:
   1. Hover over the three dots next to the abstract product for which you will create a concrete product and click **Manage Product** or just click the line. The **[Product name]** drawer opens.
   2. Navigate to the **Concrete Products** tab.
   3. On the **Concrete Products** page, click **Add Concrete Products**. The **Create Concrete Products for [Abstract product name SKU]** drawer opens.
-  4. Based on the super attributes selected while [creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html), add or select values to the existing super attributes. Upon adding the super attribute values, the preview of the concrete products is displayed.
+  4. Based on the super attributes selected while [creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-product.html), add or select values to the existing super attributes. Upon adding the super attribute values, the preview of the concrete products is displayed.
 
   {% info_block infoBox "Info" %}
 
@@ -47,7 +47,7 @@ Once the product is created, it needs to be [activated](/docs/pbc/all/product-in
 
 ### Reference information: Create Concrete Products for [Abstract product name SKU]
 
-This page contains a drop-down menu that displays super attribute values based on a super attribute selected while [creating a marketplace abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html). When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane, you can view the products to be created.
+This page contains a drop-down menu that displays super attribute values based on a super attribute selected while [creating a marketplace abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-product.html). When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane, you can view the products to be created.
 
 By selecting **Autogenerate SKUs**, the SKU numbers for the concrete products are generated automatically, based on the SKU prefix of their abstract product.
 

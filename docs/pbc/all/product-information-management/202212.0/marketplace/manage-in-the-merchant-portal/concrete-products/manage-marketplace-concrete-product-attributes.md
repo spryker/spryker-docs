@@ -1,5 +1,5 @@
 ---
-title: Managing marketplace concrete product attributes
+title: Manage marketplace concrete product attributes
 last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product attributes in the Merchant Portal.
 template: back-office-user-guide-template

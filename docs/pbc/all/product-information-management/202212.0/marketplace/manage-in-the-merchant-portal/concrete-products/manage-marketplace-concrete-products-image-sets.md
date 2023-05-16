@@ -1,5 +1,5 @@
 ---
-title: Managing marketplace concrete product image sets
+title: Manage marketplace concrete product image sets
 last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product image sets in the Merchant Portal.
 template: back-office-user-guide-template

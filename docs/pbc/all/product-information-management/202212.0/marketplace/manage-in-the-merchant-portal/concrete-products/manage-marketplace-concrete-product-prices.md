@@ -1,5 +1,5 @@
 ---
-title: Managing marketplace concrete product prices
+title: Manage marketplace concrete product prices
 description: This document describes how to manage marketplace concrete product prices in the Merchant Portal.
 template: back-office-user-guide-template
 related:

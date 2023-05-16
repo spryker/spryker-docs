@@ -713,7 +713,7 @@ entries:
             url: /docs/marketplace/dev/glue-api-guides/concrete-products/concrete-products.html
             include_versions:
             - "202108.0"
-            - "202204.0"               
+            - "202204.0"
             nested:
               - title: Retrieving concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
@@ -975,7 +975,6 @@ entries:
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
@@ -1035,7 +1034,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: product-price.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-price.csv.html
@@ -1049,7 +1047,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
       - title: Front-end
         url: /docs/marketplace/dev/front-end/front-end.html

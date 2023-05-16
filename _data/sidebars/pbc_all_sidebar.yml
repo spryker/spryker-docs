@@ -2295,7 +2295,36 @@ entries:
                     url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html
                   - title: merchant_product_approval_status_default.csv
                     url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html
-                    
+              - title: Manage in the Merchant Portal
+                url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html
+                nested:
+                  - title: Abstract products
+                    nested:
+                      - title: Create marketplace abstract products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html
+                      - title: Manage marketplace abstract products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html
+                      - title: Manage marketplace abstract product prices
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
+                      - title: Manage marketplace abstract product image sets
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html
+                      - title: Manage marketplace abstract product attributes
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html
+                      - title: Manage marketplace abstract product meta information
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html
+                  - title:
+                    nested:
+                      - title: Create marketplace concrete products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
+                      - title: Manage marketplace concrete products
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html
+                      - title: Manage marketplace concrete product prices
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
+                      - title: Manage marketplace concrete product image sets
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html
+                      - title: Manage marketplace concrete product attributes
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html
+
 
 
 

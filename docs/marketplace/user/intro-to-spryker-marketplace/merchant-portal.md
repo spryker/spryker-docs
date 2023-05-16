@@ -17,7 +17,7 @@ The Merchant Portal includes the following pages:
 - [Dashboard](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/dashboard/managing-merchants-performance-data.html)
 - [Profile](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/profile/editing-merchants-profile-details.html)
 - [Offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html)
-- [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html)
+- [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-product.html)
 - [Orders](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/orders/managing-merchant-orders.html)
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal.gif)
@@ -25,7 +25,7 @@ The Merchant Portal includes the following pages:
 ## Merchant Portal tables
 
 In the Merchant Portal, tables are designed to fit the needs of any Merchant Portal user.
-You can encounter tables in the [Offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html), [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/creating-marketplace-abstract-product.html), and [Orders](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/orders/managing-merchant-orders.html) sections of the Merchant Portal.
+You can encounter tables in the [Offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html), [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-product.html), and [Orders](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/orders/managing-merchant-orders.html) sections of the Merchant Portal.
 Merchant Portal tables are adjustable. You can configure the table to display only the details that you need, for example, show or hide the unnecessary columns, rearrange them or reset the table view to the default state.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal-table-view.gif)

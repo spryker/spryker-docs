@@ -89,7 +89,7 @@ The availability of a product bundle is defined by the availability of each prod
 
 {% endinfo_block %}
 
-In the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
+In the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
 
 <details open>
 <summary markdown='span'>State machine example</summary>

@@ -1401,10 +1401,18 @@ entries:
             url: /docs/pbc/all/payment-service-provider/payments-feature-overview.html
           - title: Install and upgrade
             nested:
-              - title: Install the Payments feature
-                url: /docs/pbc/all/payment-service-provider/install-and-upgrade/install-the-payments-feature.html
-              - title: Upgrade the Payment module
-                url: /docs/pbc/all/payment-service-provider/install-and-upgrade/upgrade-the-payment-module.html
+              - title: Install features
+                nested:
+                  - title: Payments
+                    url: /docs/pbc/all/payment-service-provider/install-and-upgrade/install-the-payments-feature.html
+              - title: Install Glue APIs
+                nested:
+                  - title: Payments
+                    url: /docs/pbc/all/payment-service-provider/202212.0/install-and-upgrade/install-the-payments-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Payment
+                    url: /docs/pbc/all/payment-service-provider/install-and-upgrade/upgrade-the-payment-module.html
           - title: Import data
             nested:
               - title: File details - payment_method.csv
@@ -1435,6 +1443,9 @@ entries:
           - title: "Payments feature: Domain model and relationships"
             url: /docs/pbc/all/payment-service-provider/payments-feature-domain-model-and-relationships.html
           - title: Third-party integrations
+            url: /docs/pbc/all/payment-service-provider/third-party-integrations/payment-service-provider-integrations.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Adyen
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/adyen.html

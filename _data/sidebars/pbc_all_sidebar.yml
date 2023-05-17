@@ -2481,18 +2481,18 @@ entries:
         url: /docs/pbc/all/search/search.html
         include_versions:
         - "202212.0"
-         nested:
+        nested:
           - title: Search feature overview
             url: /docs/pbc/all/search/search-feature-overview/search-feature-overview.html
             nested:
               - title: Search feature walkthrough
-              - url: /docs/pbc/all/search/search-feature-overview/search-feature-walkthrough.html
+                url: /docs/pbc/all/search/search-feature-overview/search-feature-walkthrough.html
               - title: Category filters overview
-              - url: /docs/pbc/all/search/search-feature-overview/category-filters-overview.html
+                url: /docs/pbc/all/search/search-feature-overview/category-filters-overview.html
               - title: Search types overview
-              - url: /docs/pbc/all/search/search-feature-overview/search-types-overview.html
+                url: /docs/pbc/all/search/search-feature-overview/search-types-overview.html
               - title: Standard filters overview
-              - url: /docs/pbc/all/search/search-feature-overview/standard-filters-overview.html
+                url: /docs/pbc/all/search/search-feature-overview/standard-filters-overview.html
           - title: Install and upgrade
             nested:
               - title: Install feature and Glue API

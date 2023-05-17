@@ -3,6 +3,8 @@ title: Manage products in the merchant portal
 last_updated: Apr 4, 2023
 description: This section describes how to manage abstract and concrete products.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/marketplace/user/merchant-portal-user-guides/202212.0/products/products.html
 ---
 
 In this section, you can learn how to manage abstract and concrete products.

@@ -3,6 +3,8 @@ title: Managing marketplace abstract product attributes
 last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace abstract product attributes in the Merchant Portal.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/marketplace/user/merchant-portal-user-guides/202212.0/products/abstract-products/managing-marketplace-abstract-product-attributes.html
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html

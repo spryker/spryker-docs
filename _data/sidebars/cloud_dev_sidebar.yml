@@ -98,8 +98,12 @@ entries:
       - title: Multi-store setups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
         nested:
+          - title: Multistore setup options
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
           - title: Add and remove databases of stores
             url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
+          - title: Checklist for a new store implementation
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
       - title: Troubleshooting
         url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting.html
         nested:

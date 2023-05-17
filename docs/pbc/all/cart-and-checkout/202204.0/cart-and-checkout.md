@@ -3,8 +3,6 @@ title: "Cart and Checkout"
 description: Cart and Checkout capability enables customers to create multiple carts and check out with ease.
 last_updated: Mar 23, 2023
 template: concept-topic-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202212.0/cart-and-checkout.html
 ---
 
 The *Cart and Checkout* capability enables customers and guest users to create and manage multiple shopping carts. After filling a cart, they go through a multi-step checkout to fill in all the details and place an order.

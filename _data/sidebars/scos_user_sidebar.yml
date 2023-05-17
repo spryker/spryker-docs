@@ -12,6 +12,14 @@ entries:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
         nested:
+        - title: Release notes 202304.0
+          nested:
+          - title: Security release notes 202304.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
+        - title: Relese notes 202302.0
+          nested:
+          - title: Security release notes 202302.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
         - title: Release notes 202212.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
           nested:
@@ -69,6 +77,8 @@ entries:
           nested:
           - title: Security release notes 2018.11.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
+    - title: Docs release notes
+      url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
@@ -151,6 +161,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
       - title: Add and edit diagrams
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
+      - title: Install recommended VS Code extensions
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/install-recommended-vs-code-extensions.html
       - title: Report documentation issues
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
       - title: Build the documentation site
@@ -281,6 +293,13 @@ entries:
         - "201811.0"
     - title: Company Account
       url: /docs/scos/user/features/company-account-feature-overview/company-account-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Company accounts
         url: /docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html
@@ -390,8 +409,22 @@ entries:
       - "202108.0"
     - title: Customer Access
       url: /docs/scos/user/features/customer-access-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Customer Account Management
       url: /docs/scos/user/features/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Customer Accounts
         url: /docs/scos/user/features/customer-account-management-feature-overview/customer-accounts-overview.html
@@ -494,6 +527,13 @@ entries:
       - "202108.0"
     - title: Navigation
       url: /docs/scos/user/features/navigation-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Non-splittable products
       url: /docs/scos/user/features/non-splittable-products-feature-overview.html
       include_versions:
@@ -559,6 +599,12 @@ entries:
       - "202108.0"
     - title: Payments
       url: /docs/scos/user/features/payments-feature-overview.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Persistent Cart Sharing
       url: /docs/scos/user/features/persistent-cart-sharing-feature-overview.html
       include_versions:
@@ -704,6 +750,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Push Notification
+      url: /docs/scos/user/features/push-notification-feature-overview.html
+      include_versions:
+      - "202304.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
     - title: Quotation Process
@@ -774,6 +824,12 @@ entries:
     - title: Search
       url: /docs/scos/user/features/search-feature-overview/search-feature-overview.html
       nested:
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       - title: Category Filters
         url: /docs/scos/user/features/search-feature-overview/category-filters-overview.html
         include_versions:
@@ -880,9 +936,12 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
     - title: Spryker Core Back Office
       url: /docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Back Office Translations
         url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
@@ -1015,7 +1074,7 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
-    nested: 
+    nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
       include_versions:
@@ -2904,18 +2963,15 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: View payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/view-payment-methods.html
           include_versions:
           - "202204.0"
-          - "202212.0"
         - title: Edit payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/edit-payment-methods.html
           include_versions:
           - "202204.0"
-          - "202212.0"
         - title: Managing payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html
           include_versions:
@@ -3304,7 +3360,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Afterpay
         url: /docs/scos/user/technology-partners/payment-partners/afterpay.html

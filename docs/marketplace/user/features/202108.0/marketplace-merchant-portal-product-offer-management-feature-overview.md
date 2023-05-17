@@ -26,7 +26,7 @@ Merchants define the following settings when creating product offers:
 
 
 
-## Related Business User articles
+## Related Business User documents
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|

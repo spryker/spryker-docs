@@ -136,6 +136,87 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 | ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
+| MerchantStockAclEntityConfigurationExpanderPlugin | Expands provided ACL entity metadata config transfer object with merchant stock composite data. |  | Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal |
+| ProductOfferStockAclEntityConfigurationExpanderPlugin | Expands provided ACL entity metadata config transfer object with product offer composite data. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\AclMerchantPortal |
+| ProductOfferAvailabilityStorageStrategyPlugin | Provides product offer availability strategy, which defines whether the product offer is available for the current store. |  | Spryker\Client\ProductOfferAvailabilityStorage\Plugin\AvailabilityStorage |
+| ProductOfferAvailabilityEventResourceBulkRepositoryPlugin | Triggers publish events for all or particular product offer availability (using the ID identifier) which sends them to `spy_product_offer_availability_storage` table. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event |
+
+**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal\MerchantStockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductOfferStock\Communication\Plugin\AclMerchantPortal\ProductOfferStockAclEntityConfigurationExpanderPlugin;
+
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            ...
+            new MerchantStockAclEntityConfigurationExpanderPlugin(),
+            new ProductOfferStockAclEntityConfigurationExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Client/AvailabilityStorage/AvailabilityStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\AvailabilityStorage;
+
+use Spryker\Client\AvailabilityStorage\AvailabilityStorageDependencyProvider as SprykerAvailabilityStorageDependencyProvider;
+use Spryker\Client\ProductOfferAvailabilityStorage\Plugin\AvailabilityStorage\ProductOfferAvailabilityStorageStrategyPlugin;
+
+class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\AvailabilityStorageExtension\Dependency\Plugin\AvailabilityStorageStrategyPluginInterface>
+     */
+    protected function getAvailabilityStorageStrategyPlugins(): array
+    {
+        return [
+            ...
+            new ProductOfferAvailabilityStorageStrategyPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\EventBehavior;
+
+use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
+use Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\ProductOfferAvailabilityEventResourceBulkRepositoryPlugin;
+
+class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\EventBehavior\Dependency\Plugin\EventResourcePluginInterface>
+     */
+    protected function getEventTriggerResourcePlugins(): array
+    {
+        return [
+            ...
+            new ProductOfferAvailabilityEventResourceBulkRepositoryPlugin(),
+        ];
+    }
+}
+```
 
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 

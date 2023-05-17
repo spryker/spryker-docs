@@ -56,4 +56,4 @@ If you create a PR and feel that the issue is important, [contact our support](h
 ---
 **See also:**
 
-[Contributing to documentation](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html)
+[Contribute to documentation](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html)

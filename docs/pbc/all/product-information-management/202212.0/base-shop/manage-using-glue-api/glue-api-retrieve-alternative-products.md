@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/retrieving-alternative-products
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-alternative-products.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-alternative-products.html
+  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 related:
   - title: Retrieving related products
     link: docs/scos/dev/glue-api-guides/page.version/retrieve-related-products.html

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/retrieving-configurable-bundle-templates
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-configurable-bundle-templates.html
   - /docs/scos/dev/glue-api-guides/202212.0/managing-products/retrieving-configurable-bundle-templates.html  
+  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
 related:
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/configurable-bundle-feature-overview.html

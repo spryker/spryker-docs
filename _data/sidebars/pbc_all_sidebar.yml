@@ -2283,6 +2283,8 @@ entries:
                   - title: "Tutorial: Product"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product.html
           - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
               - title: Marketplace Product feature overview
                 url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.html

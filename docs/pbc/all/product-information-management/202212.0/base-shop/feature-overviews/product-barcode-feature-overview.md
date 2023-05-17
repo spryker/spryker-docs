@@ -15,6 +15,7 @@ redirect_from:
   - /docs/product-barcode
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-barcode-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/product-barcode-feature-walkthrough.html
+  - /docs/pbc/all/product-information-management/202212.0/feature-overviews/product-barcode-feature-overview.html
 ---
 
 The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html).

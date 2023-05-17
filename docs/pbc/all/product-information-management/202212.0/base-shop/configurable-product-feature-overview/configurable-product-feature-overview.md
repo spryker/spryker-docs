@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202108.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html  
   - /docs/scos/dev/feature-walkthroughs/202212.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html  
+  - /docs/pbc/all/product-information-management/202212.0/configurable-product-feature-overview/configurable-product-feature-overview.html
 ---
 
 The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/retrieving-concrete-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
   - /docs/scos/dev/glue-api-guides/202212.0/managing-products/concrete-products/retrieving-concrete-products.html
+  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 related:
   - title: Retrieve concrete product availability
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html

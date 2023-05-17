@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/retrieving-measurement-units
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-measurement-units.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-measurement-units.html
+  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 related:
   - title: Measurement Units feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/measurement-units-feature-overview.html

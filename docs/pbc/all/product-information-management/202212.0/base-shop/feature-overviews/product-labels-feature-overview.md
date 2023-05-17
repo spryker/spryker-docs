@@ -14,6 +14,7 @@ redirect_from:
   - /docs/product-label
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-labels-feature-walkthrough.html  
   - /docs/scos/dev/feature-walkthroughs/202212.0/product-labels-feature-walkthrough.html  
+  - /docs/pbc/all/product-information-management/202212.0/feature-overviews/product-labels-feature-overview.html
 ---
 
 The _Product Label_ feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.

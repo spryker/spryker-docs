@@ -8,13 +8,13 @@ The checker that checks dead code that extends core classes in the project.
 
 ## Problem description
 
-The project can extend core classes and after some time it can be unusable. It can cause the issues related to project the upgradability. 
+The project can extend core classes and after some time it can become unusable due to the core changes. As a result, it can cause issues related to the project's upgradability.
 It checks possible dead classes. For obvious reasons, the classes that are created magically tend to be skipped.
-If the checker does find a false result, it can be skipped using an annotation `@evaluator-skip-dead-code` in the class.
+Optionally, the Dead code checker can be muted for the specific class with the @evaluator-skip-dead-code.
 
 ## Example of code that causes an upgradability error:
 
-The code has class that doesn't have explicit initialization in project module like `new Class()`: 
+The code has class that doesn't have explicit initialization in project module: 
 
 ```bash
 namespace Spryker/Zed/Module;

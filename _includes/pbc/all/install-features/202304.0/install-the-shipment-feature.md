@@ -79,7 +79,6 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 ### 3) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
-
 ```bash
 console propel:install
 console transfer:generate
@@ -116,6 +115,7 @@ Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 ### 4) Add translations
+
 1. Append glossary according to your configuration:
 
 ```csv
@@ -403,7 +403,7 @@ console data:import shipment-method-shipment-type
 {% info_block warningBox "Verification" %}
 
 Make sure that the configured data has been added to the `spy_shipment_method`, `spy_shipment_method_price`, 
-`spy_shipment_method_store`, `spy_shipment_type` and `spy_shipment_type_store` tables in the database.
+`spy_shipment_method_store`, `spy_shipment_type`, and `spy_shipment_type_store` tables in the database.
 
 {% endinfo_block %}
 
@@ -412,7 +412,6 @@ Make sure that the configured data has been added to the `spy_shipment_method`, 
 1. Configure the data import to use your data on the project level:
 
 **src/Pyz/Zed/ShipmentDataImport/ShipmentDataImportConfig**
-
 ```php
 <?php
 
@@ -487,7 +486,6 @@ class ShipmentTypeDataImportConfig extends SprykerShipmentTypeDataImportConfig
 | ShipmentTotalCalculatorPlugin     | Calculates shipment total using expenses.                                                                  | None          | Spryker\Zed\Shipment\Communication\Plugin\Calculation |
 
 **src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
-
 ```php
 <?php
 
@@ -553,7 +551,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-4. Configure the sales order item shipment expander plugins:
+3. Configure the sales order item shipment expander plugins:
 
 | PLUGIN                          | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                                       |
 |---------------------------------|----------------------------------------------|---------------|---------------------------------------------------------------------------------|
@@ -618,37 +616,37 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that you can send the following requests:
+Make sure that you can send the following requests:
 
-    * `GET https://glue-backend.mysprykershop.com/shipment-types`
-    * `GET https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types-uuid{% raw %}}{{% endraw %}`
-    * `POST https://glue-backend.mysprykershop.com/shipment-types`
+* `GET https://glue-backend.mysprykershop.com/shipment-types`
+* `GET https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types-uuid{% raw %}}{{% endraw %}`
+* `POST https://glue-backend.mysprykershop.com/shipment-types`
 
-         ```json
-         {
-             "data": {
-                 "type": "shipment-types",
-                 "attributes": {
-                     "name": "Some Shipment Type",
-                     "key": "some-shipment-type",
-                     "isActive": true,
-                     "stores": ["DE", "AT"]
-                 }
-             }
-         }
-         ```
+    ```json
+    {
+        "data": {
+            "type": "shipment-types",
+            "attributes": {
+                "name": "Some Shipment Type",
+                "key": "some-shipment-type",
+                "isActive": true,
+                "stores": ["DE", "AT"]
+            }
+        }
+    }
+    ```
 
-    * `PATCH https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types{% raw %}}{{% endraw %}`
+* `PATCH https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types{% raw %}}{{% endraw %}`
 
-         ```json
-         {
-             "data": {
-                 "type": "shipment-types",
-                 "attributes": {
-                     "isActive": false
-                 }
-             }
-         }
-         ```
+    ```json
+    {
+        "data": {
+            "type": "shipment-types",
+            "attributes": {
+                "isActive": false
+            }
+        }
+    }
+    ```
       
 {% endinfo_block %}

@@ -29,7 +29,7 @@ This file has the following dependency: [ product_abstract.csv](/docs/pbc/all/pr
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| abstract_sku | &check; | String | | Name of the product, in locale US. |
+| abstract_sku | &check; | String | | The SKU of the parent abstract product. |
 | old_sku |  | String | | Old SKU identifier. |
 | concrete_sku | &check;  | String | Must be unique. |  SKU identifier of the concrete product. |
 | name.{ANY_LOCALE_NAME}**<br>Example value: *name.en_US* | &check; | String | | Name of the product in the specified location (US for our example). |

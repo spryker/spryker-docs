@@ -211,7 +211,7 @@ Find several examples below:
 * `docker/sdk console -x queue:worker:start`
 * `docker/sdk testing -x codecept run -codeception.yml`
 
-[PHPMD command requires PHPMD_ALLOW_XDEBUG](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) env variable for debug mode.
+The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) command requires the `PHPMD_ALLOW_XDEBUG` env variable for debug mode:
 ```
 docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...

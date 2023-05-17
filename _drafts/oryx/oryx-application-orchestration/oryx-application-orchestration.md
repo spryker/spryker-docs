@@ -16,7 +16,7 @@ An Oryx application starts with the application orchestration. It lets you boots
 - [Resources](./resources.md)
 - [Environment](./app-environment.md)
 
-Application orchestration is used to configure and customize an Oryx applications. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
+Application orchestration is used to configure and customize Oryx applications. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
 
 Also, application orchestration defines how functionality is loaded in an application. For example, when components are used on a page, they are lazy-loaded, but, during application startup, services are loaded eagerly.
 

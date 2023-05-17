@@ -37,7 +37,7 @@ class MyPlugin implements AppPlugin {
 
 ## Interact with plugins
 
-If you need to access some of the registered plugins, depending on your requirements towards the plugins, you can use the `findPlugin` or `requirePlugin` API. If your code needs a plugin to work, and you cannot provide a feasible fallback without it, use the `requirePlugin` API. If the plugin is not registered with the Oryx application, it throws an error. Otherwise, you can use `findPlugin`. If a plugin is not available, it returns `undefined`, in which case you need to design your code to handle the fallback logic.
+If you need to access some of the registered plugins, depending on your requirements for the plugins, you can use the `findPlugin` or `requirePlugin` API. If your code needs a plugin to work, and you cannot provide a feasible fallback without it, use the `requirePlugin` API. If the plugin is not registered with the Oryx application, it throws an error. Otherwise, you can use `findPlugin`. If a plugin is not available, it returns `undefined`, in which case you need to design your code to handle the fallback logic.
 
 Both methods expect a plugin class reference or a plugin name string to resolve the plugin.
 

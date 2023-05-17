@@ -18,7 +18,7 @@ related:
   - title: Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/spryker-core-feature-integration.html
   - title: Spryker Core feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
+    link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-spryker-core-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-spryker-core-glue-api.md -->

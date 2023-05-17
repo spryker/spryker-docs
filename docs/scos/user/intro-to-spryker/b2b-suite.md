@@ -41,10 +41,10 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.html)
 - [Company Account](/docs/pbc/all/customer-relationship-management/{{site.version}}/company-account-feature-overview/company-account-feature-overview.html)
-- [Order Management](/docs/pbc/all/order-management-system/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html)
-- [Refunds](/docs/pbc/all/order-management-system/{{site.version}}/refunds-feature-overview.html)
-- [Reclamations](/docs/pbc/all/order-management-system/{{site.version}}/reclamations-feature-overview.html)
-- [State Machine](/docs/pbc/all/order-management-system/{{site.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
+- [Order Management](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html)
+- [Refunds](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/refunds-feature-overview.html)
+- [Reclamations](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/reclamations-feature-overview.html)
+- [State Machine](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
 - [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/pbc/all/back-office/{{site.version}}/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
@@ -69,7 +69,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <!---- [Invoice]()-->
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)
-- [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
+- [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/product-feature-overview/product-feature-overview.html)
 - [Measurement units](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/measurement-units-feature-overview.html)
 - [Packaging units](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/packaging-units-feature-overview.html)

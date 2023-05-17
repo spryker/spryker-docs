@@ -4,7 +4,7 @@ description: Manage the returns via Glue API in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving Marketplace orders
-    link: docs/marketplace/dev/glue-api-guides/page.version/retrieving-marketplace-orders.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/glue-api-retrieve-marketplace-orders.html
 ---
 
 The Return Management API lets developers retrieve return information and create returns. The list of retrievable information includes:
@@ -193,7 +193,7 @@ To create a return for a registered user, send the Request sample:
 | return-items | reason | String | Predefined reason why the return was created. |
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
-For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html).
+For the attributes of the included resources, see [Retrieving marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html).
 
 ## Retrieve returns
 
@@ -551,7 +551,7 @@ To retrieve returns, send the Request sample:
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
 For the attributes of the other other included resources, see the following:
-* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
+* [Retrieving marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
 
 ## Retrieve a return

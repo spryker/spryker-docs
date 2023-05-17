@@ -48,9 +48,7 @@ data:import:stock
 
 ## Additional information
 
-Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
-
-{% info_block infoBox "Note" %}
+{% info_block infoBox "" %}
 
 The `warehouse.csv` file replaces the `stock.csv` previously used.
 

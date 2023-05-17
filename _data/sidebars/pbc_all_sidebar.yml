@@ -2878,12 +2878,12 @@ entries:
                     url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-sets.html
                   - title: Edit tax sets
                     url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
-              - title: Manage via Glue API
+              - title: Manage using Glue API
                 nested:
                   - title: Retrieve tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/manage-via-glue-api/retrieve-tax-sets.html
+                    url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets.html
                   - title: Retrieve tax sets when retrieving abstract products
-                    url: /docs/pbc/all/tax-management/base-shop/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
+                    url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
               - title: Import and export data
                 nested:
                   - title: Import tax sets

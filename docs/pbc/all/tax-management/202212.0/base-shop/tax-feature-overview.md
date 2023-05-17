@@ -23,16 +23,16 @@ redirect_from:
   - /docs/pbc/all/tax-management/tax-management.html
 ---
 
-The *Tax Management* capability lets you define taxes for the items you sell. The capability is represented by two entities: tax rates and tax sets.
+The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
 The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html).
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) or[ import tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets.html) into your project.
+A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) or [import tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets.html) into your project.
 
 Tax sets can be applied to an abstract product, product option, and shipment:
 
 
-| ENTITY | INSTRUCTIONS ON DEFINING TAX SETS FOR THE ENTITY IN THE BACK OFFICE  | DETAILS ON THE IMPORT FILE TO IMPORT TAX SETS FOR THE ENTITY |
+| ENTITY | DEFINE TAX SETS IN THE BACK OFFICE  | IMPORT TAX SETS |
 | --- | --- | --- |
 | Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) |
 | Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html) |
@@ -46,7 +46,6 @@ In a tax system, the tax rate is the ratio (usually expressed as a percentage) a
 
 A *tax set* is a set of tax rates that can be applied to a specific product.
 
-Keeping that in mind, the tax rate is created first.
 ![Tax rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-rate.gif)
 
 Once the rate is defined, you can attach it to a tax set(s). A tax set can contain from one to many tax rates.

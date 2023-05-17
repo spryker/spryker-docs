@@ -1220,11 +1220,11 @@ entries:
             url: /docs/pbc/all/search/202212.0/best-practices/search-feature-overview/search-feature-overview.html
             nested:
               - title: Category filters overview
-              - url: /docs/pbc/all/search/202212.0/best-practices/search-feature-overview/category-filters-overview.html
+              - url: /docs/pbc/all/search/best-practices/search-feature-overview/category-filters-overview.html
               - title: Search types overview
-              - url: /docs/pbc/all/search/202212.0/best-practices/search-feature-overview/search-types-overview.html
+              - url: /docs/pbc/all/search/best-practices/search-feature-overview/search-types-overview.html
               - title: Standard filters overview
-              - url: /docs/pbc/all/search/202212.0/best-practices/search-feature-overview/standard-filters-overview.html
+              - url: /docs/pbc/all/search/best-practices/search-feature-overview/standard-filters-overview.html
           - title: Reclamations feature overview
             url: /docs/pbc/all/order-management-system/reclamations-feature-overview.html
           - title: Refunds feature overview

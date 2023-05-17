@@ -2908,6 +2908,8 @@ entries:
                   - title: Integrate Avalara Tax + Shipment
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html
           - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html

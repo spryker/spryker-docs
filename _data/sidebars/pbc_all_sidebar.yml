@@ -2481,7 +2481,7 @@ entries:
         url: /docs/pbc/all/search/search.html
         include_versions:
         - "202212.0"
-        nested:
+         nested:
           - title: Search feature overview
             url: /docs/pbc/all/search/search-feature-overview/search-feature-overview.html
             nested:

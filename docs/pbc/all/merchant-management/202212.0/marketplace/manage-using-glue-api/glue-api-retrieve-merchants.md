@@ -648,7 +648,7 @@ Retrieve merchant information as a relationship when sending the following reque
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-a-wishlist)
 * [Retrieve a product offer]
-* [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
+* [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 
 Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html).
 Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).

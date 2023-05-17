@@ -1837,8 +1837,17 @@ entries:
                 url: /docs/pbc/all/product-information-management/feature-overviews/alternative-products-feature-overview.html
               - title: Category Management
                 url: /docs/pbc/all/product-information-management/feature-overviews/category-management-feature-overview.html
+              - title: Catalog 
+                url: /docs/pbc/all/product-information-management/feature-overviews/catalog-feature-overview.html
+                include_versions:
+                - "202204.0"
               - title: Configurable Bundle
                 url: /docs/pbc/all/product-information-management/feature-overviews/configurable-bundle-feature-overview.html
+              - title: Configurable Product
+                url: /docs/pbc/all/product-information-management/configurable-product-feature-overview/configurable-product-feature-overview.html
+                nested:
+                  - title: Configuration process flow of configurable products
+                    url: /docs/pbc/all/product-information-management/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
               - title: Measurement Units
                 url: /docs/pbc/all/product-information-management/feature-overviews/measurement-units-feature-overview.html
               - title: Packaging Units
@@ -1867,8 +1876,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-feature.html
                   - title: Alternative Products + Inventory Management
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
-                  - title: Alternative Products + Product Label
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-product-label-feature.html
+                  - title: Alternative Products + Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
                   - title: Alternative Products + Wishlist
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
                   - title: Approval Process + Shipment
@@ -1877,10 +1886,14 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-filters-feature.html
                   - title: Category Image
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-image-feature.html
-                  - title: Category Management + CMS
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
                   - title: Category Management
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-feature.html
+                  - title: Category Management + Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
+                    include_versions:
+                    - "202212.0"
+                  - title: Category Management + CMS
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
                   - title: Category Management + Promotions and Discounts
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-promotions-and-discounts-feature.html
                   - title: Configurable Bundle
@@ -2180,7 +2193,7 @@ entries:
                   - title: Edit
                     url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-options/edit-product-options.html
               - title: View product barcodes
-                url: /docs/pbc/all/product-information-management/202212.0/manage-in-the-back-office/view-product-barcodes.html
+                url: /docs/pbc/all/product-information-management/manage-in-the-back-office/view-product-barcodes.html
           - title: Manage using Glue API
             url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-manage-products.html
             nested:
@@ -2234,6 +2247,37 @@ entries:
                 url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product-challenge-solution.html
               - title: "Tutorial: Product"
                 url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product.html
+          - title: Third-party integrations
+            nested:
+              - title: Akeneo
+                url: /docs/pbc/all/product-information-management/third-party-integrations/akeneo/akeneo.html
+                nested:
+                  - title: Install and configure Akeneo
+                    url: /docs/pbc/all/product-information-management/third-party-integrations/akeneo/install-and-configure-akeneo.html
+                  - title: "Akeneo: Console commands"
+                    url: /docs/pbc/all/product-information-management/third-party-integrations/akeneo/akeneo-console-commands.html
+              - title: Contentserv
+                url: /docs/pbc/all/product-information-management/third-party-integrations/contentserv.html
+              - title: Censhare PIM
+                url: /docs/pbc/all/product-information-management/third-party-integrations/censhare-pim.html
+              - title: Xentral
+                url: /docs/pbc/all/product-information-management/third-party-integrations/xentral.html
+          - title: Domain model and relationships
+            nested:
+              - title: "Alternative Products feature: database schema"
+                url: /docs/pbc/all/product-information-management/domain-model-and-relationships/alternative-products-feature-database-schema.html
+              - title: "Configurable Bundle feature: module relations"
+                url: /docs/pbc/all/product-information-management/domain-model-and-relationships/configurable-bundle-feature-module-relations.html
+              - title: "Measurement Units feature: Module relations"
+                url: /docs/pbc/all/product-information-management/domain-model-and-relationships/measurement-units-feature-module-relations.html
+              - title: "Product approval process: Module relations"
+                url: /docs/pbc/all/product-information-management/domain-model-and-relationships/product-approval-process-module-relations.html
+              - title: "Product feature: Module relations"
+                url: /docs/pbc/all/product-information-management/domain-model-and-relationships/product-feature-module-relations.html
+              - title: "Product Sets: Module relations"
+                url: docs/pbc/all/product-information-management/domain-model-and-relationships/product-sets-module-relations.html
+                include_versions:
+                - "202212"
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:
@@ -2304,7 +2348,7 @@ entries:
               - title: Install the Product Rating and Reviews + Product Group feature
                 url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
               - title: Install the Product Rating and Reviews Glue API
-                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
           - title: Import and export data
             nested:
               - title: File details- product_review.csv

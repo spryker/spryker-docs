@@ -1,14 +1,15 @@
 ---
-title: "Product Sets: module relations"
+title: "Product Sets: Module relations"
 description: Module relations and database schema of the Product Sets feature.
 template: feature-walkthrough-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-sets-feature-walkthrough/product-sets-module-relations.html
+  - /docs/pbc/all/product-information-management/202212.0/install-and-upgrade/upgrade-modules/product-sets-module-relations.html
 ---
 
 The Product Set feature consists of the following modules:
 
-| Module | Description |
+| MODULE | DESCRIPTION |
 | --- | --- |
 | ProductSet | Manages the Product Sets feature's core functionalities, such as persisting all related data to database and reading from it. It also provides the Client functionality to list Product Sets from Search. |
 | ProductSetCollector|Provides full Collector logic to export product sets to Search and Storage. |

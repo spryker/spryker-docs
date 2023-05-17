@@ -456,7 +456,7 @@ https://app-catalog.atrs.spryker.com/loader
   "DE": {
     "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo"
   },
-  "<Store Reference>": {
+  "<Store>": {
     "queue_name":"queue_name_for_store_reference_<Store>"
   }
 }

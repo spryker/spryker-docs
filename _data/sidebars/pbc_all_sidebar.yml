@@ -2482,8 +2482,6 @@ entries:
         include_versions:
         - "202212.0"
         nested:
-          - title: Install and upgrade
-            nested:
           - title: Search feature overview
             url: /docs/pbc/all/search/search-feature-overview/search-feature-overview.html
             nested:
@@ -2495,6 +2493,8 @@ entries:
               - url: /docs/pbc/all/search/search-feature-overview/search-types-overview.html
               - title: Standard filters overview
               - url: /docs/pbc/all/search/search-feature-overview/standard-filters-overview.html
+          - title: Install and upgrade
+            nested:
               - title: Install feature and Glue API
                 nested:
                   - title: Install the Catalog + Category Management feature

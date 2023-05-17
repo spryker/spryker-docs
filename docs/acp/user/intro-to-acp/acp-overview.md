@@ -6,12 +6,13 @@ redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
 ---
 
-The App Composition Platform (ACP) lets Spryker Cloud customers connect, configure, and use the available third-party services or apps, in their application with a click of a button, without development efforts from their side.
+The App Composition Platform (ACP) lets Spryker Cloud customers connect, configure, and use the available third-party services via apps, in their application with the click of a button, with no or low development efforts from their side.
 
 ![ACP](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop.png)
 
 The following apps are supported:
 
+- [Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/algolia.html), a Search Engine
 - [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html), a Consent Management Platform (CMP)
 - [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)

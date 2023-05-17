@@ -212,7 +212,7 @@ Find several examples below:
 * `docker/sdk testing -x codecept run -codeception.yml`
 
 The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) command requires the `PHPMD_ALLOW_XDEBUG` env variable for debug mode:
-```
+```bash
 docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
 ```

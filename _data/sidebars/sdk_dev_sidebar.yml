@@ -24,7 +24,7 @@ entries:
         url: /docs/sdk/dev/integrate-sdk-commands-to-php-storm-command-line-tools.html
       - title: Initialize and run workflows
         url: /docs/sdk/dev/initialize-and-run-workflows.html
-      - title: Releases vs. Customization types
+      - title: Releases vs. customization types
         url: /docs/sdk/dev/releases-vs-customization-types.html
       - title: Telemetry
         url: /docs/sdk/dev/telemetry.html

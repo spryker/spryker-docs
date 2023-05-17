@@ -31,7 +31,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html)
-- [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.html)
@@ -43,7 +43,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Spryker Core Back Office](/docs/pbc/all/back-office/{{site.version}}/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
-- [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 - [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html)

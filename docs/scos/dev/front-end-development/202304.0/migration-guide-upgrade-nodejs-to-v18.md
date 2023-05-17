@@ -60,46 +60,36 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 }
 ```
 
-{% info_block infoBox "Note" %}
+4. Remove dependency in the `package.json`:
 
-Keep in mind *@spryker/sass-resources-loader* must be replaced with *sass-resources-loader* dependency.
+```json
+    "@spryker/sass-resources-loader": "x.x.x"
+```
 
-{% endinfo_block %}
-
-4. Update webpack config in `frontend/configs/development.js`:
+5. Update webpack config in `frontend/configs/development.js`:
+  - Replace `options` of `postcss-loader`;
+  - Replace `@spryker/sass-resources-loader` with `sass-resources-loader`;
 
 ```js
-webpack: {
-    module: {
-        rules: [
-            ...,
-            {
-                test: /\.scss/i,
-                use: [
-                    ...,
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    require('autoprefixer')
-                                ]
-                            }
-                        }
-                    },
-                    ...,
-                    {
-                        loader: 'sass-resources-loader',
-                        options: {
-                            resources: [sharedScss, ...styles],
-                        },
-                    },
-                ],
-            },
-        ],
-    },
     ...
-}
+        {
+            loader: 'postcss-loader',
+            options: {
+                postcssOptions: {
+                    plugins: [
+                        require('autoprefixer')
+                    ]
+                }
+            }
+        },
+        ...,
+        {
+            loader: 'sass-resources-loader',
+            options: {
+                resources: [sharedScss, ...styles],
+            },
+        },
+    ...
 ```
 
 ## 2) Build the project

@@ -96,18 +96,19 @@ Simultaneously, Oryx caters to the increasing demand for serverless architecture
 
 While both approaches offer sensible configuration tailored to most deployment scenarios, it also exposes a lower-level API, allowing advanced customization to cater to unique project requirements.
 
-### Build with SSR support
+### Building with SSR Support
 
-Oryx has been designed from the ground up with SSR support in mind, ensuring that all components render correctly on the server side. This ingrained support for SSR enables Oryx to deliver faster initial page load times and improved SEO out of the box.
+Designed with SSR at its core, Oryx ensures that all components correctly render server-side. This design choice brings about inherent advantages such as rapid initial page load times and boosted SEO, right out of the box.
 
-Moreover, Oryx supports late and partial hydration that further optimizes performance. This approach ensures that only the necessary components are hydrated when they are required, reducing the amount of JavaScript that needs to be parsed and executed on the client side.
+Additionally, Oryx features mechanisms that further enhance performance by managing the hydration process intelligently.
 
 ### Hydration
 
-Following the "islands architecture" approach, Oryx goes beyond traditional hydration strategies. Instead of hydrating the entire application at once, Oryx allows developers to selectively hydrate components or "islands" on the page. This partial hydration strategy delivers performance benefits, as it reduces the amount of JavaScript needed for initial page interaction.
+In the context of SSR, hydration refers to the process where the client-side JavaScript runtime takes over the static HTML sent by the server and turns it into a dynamic Document Object Model (DOM).
 
-Furthermore, Oryx adopts a "late hydration" strategy, which delays the hydration process until a user interacts with a component. This strategy ensures that resources are used only when necessary, offering an efficient and responsive user experience.
+In most applications, hydration happens all at once. But Oryx follows a more strategic approach known as "islands architecture". It enables selective hydration of components or "islands" on a need basis, thereby reducing the amount of JavaScript parsed and executed during initial page interaction.
 
+Moreover, Oryx employs a "late hydration" strategy, delaying the hydration process until the user interacts with a component. This ensures that client-side resources are only utilized when absolutely necessary, fostering an efficient and highly responsive user experience.
 
 ## Developing with SSR
 

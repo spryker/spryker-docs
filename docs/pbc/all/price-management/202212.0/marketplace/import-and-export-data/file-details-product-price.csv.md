@@ -18,15 +18,13 @@ related:
 
 This document contains content of the **product_price.csv** file to configure [prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
-To import the file, run:
+## Dependencies
 
-```bash
-data:import product-price
-```
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
+- `stores.php` configuration file of the Demo Shop PHP project
 
-## Headers & Mandatory Fields
-
-These are the header fields to be included in the CSV file:
+## Import file parameters
 
 | FIELD NAME    | MANDATORY  | TYPE  | OTHER REQUIREMENTS/COMMENTS | DESCRIPTION  |
 | ------------------ | ------------- | ----- | ------------- | ------------------- |
@@ -41,19 +39,19 @@ These are the header fields to be included in the CSV file:
 
 *N/A: Not applicable.
 
-## Dependencies
 
-This file has the following dependencies:
 
-- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
-- `stores.php` configuration file of the Demo Shop PHP project
+## Import template file and content example
 
-## Template File & Content Example
-
-A template and an example of the `product_price.csv` file can be downloaded here:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [product_price.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/Template+product_price.csv) | Product Price CSV template file (empty content, contains headers only). |
 | [product_price.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/product_price.csv) | Product Price CSV file containing a Demo Shop data sample.  |
+
+## Import command
+
+
+```bash
+data:import product-price
+```

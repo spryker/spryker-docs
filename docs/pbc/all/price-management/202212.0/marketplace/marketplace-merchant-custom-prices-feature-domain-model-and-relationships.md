@@ -1,16 +1,10 @@
 ---
-title: Marketplace Merchant Custom Prices feature walkthrough
+title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
 description: Marketplace Merchant Custom Prices feature lets merchants to define custom prices for specific business units of B2B customers via Merchant Portal Product Price UI.
 template: feature-walkthrough-template
 ---
 
 The *Marketplace Merchant Custom Prices* feature allows merchants to define custom prices for specific business units of B2B customers via the Merchant Portal Product Price UI.
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the Marketplace Merchant Custom Prices feature and find out how end users use it see [Marketplace Merchant Custom Prices feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-custom-prices-feature-overview.html).
-
-{% endinfo_block %}
 
 ## Module dependency graph
 

@@ -14,15 +14,13 @@ related:
 
 This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import price-product-offer
-```
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
+- [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
+
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ------- | ------------- | ----------------- | ------------- |
@@ -34,18 +32,18 @@ The file should have the following parameters:
 | value_gross              |               | Integer  |                   | Empty price values are imported as zeros.                    | Gross price in cents.                                        |
 | price_data.volume_prices |               | Array    |                   |                                                              | Price data which can be used to define alternative prices, that is, volume prices, overwriting the given net or gross price values. |
 
-## Import file dependencies
 
-The file has the following dependencies:
-
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
-- [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE |DESCRIPTION |
 | ------------------------- | ----------------------- |
 | [template_price-product-offer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/template_price_product_offer.csv) | Import file template with headers only.         |
 | [price-product-offer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/price_product_offer.csv) | Example of the import file with Demo Shop data. |
+
+
+## Import command
+
+```bash
+data:import price-product-offer
+```

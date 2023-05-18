@@ -39,8 +39,8 @@ The feature has the following functional constraints which are going to be resol
 * Search preference attributes are shared across all the stores in a project.
 * You cannot define a search preference for a single store.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer documents
 
-Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| GLUE API GUIDES |
+|---|
+| [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |

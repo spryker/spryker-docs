@@ -756,6 +756,8 @@ entries:
       - "202304.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
+      include_versions:
+      - "202204.0"
     - title: Quotation Process
       url: /docs/scos/user/features/quotation-process-feature-overview.html
       include_versions:
@@ -925,7 +927,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Vault for Tokens
         url: /docs/scos/user/features/spryker-core-feature-overview/vault-for-tokens-overview.html
@@ -2684,44 +2685,37 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Define filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/define-filter-preferences.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Edit filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/edit-filter-preferences.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Reorder filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Category filters
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Assign and deassign filters from categories
           url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Reorder category filters
           url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/reorder-category-filters.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Search and filters
         include_versions:
         - "201811.0"

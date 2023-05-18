@@ -27,9 +27,3 @@ The feature has the following functional constraints, which are going to be reso
 |BACK OFFICE USER GUIDES|
 |---|
 | [Manage category filters](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/category-filters/assign-and-deassign-filters-from-categories.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

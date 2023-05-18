@@ -1,4 +1,7 @@
-This document describes how to integrate the Marketplace Inventory Management feature into a Spryker project.
+
+
+
+This document describes how to integrate the [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -15,8 +18,6 @@ To start feature integration, integrate the required features:
 | Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)  |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-inventory-management:"{{page.version}}" --update-with-dependencies
@@ -43,7 +44,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Adjust the schema definition so entity changes trigger events:
+1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/ProductOfferStock/Persistence/Propel/Schema/spy_product_offer_stock.schema.xml**
 
@@ -64,7 +65,7 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes:
+2. Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -128,18 +129,18 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantStockMerchantExpanderPlugin | Expands MerchantTransfer with related stocks. |  | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
+| MerchantStockMerchantExpanderPlugin | Expands `MerchantTransfer` with related stocks. |  | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
 | MerchantStockMerchantPostCreatePlugin | Creates default stock for the merchant. |  | Spryker\Zed\MerchantStock\Communication\Plugin\Merchant |
-| MerchantStockMerchantFormExpanderPlugin | Expands MerchantForm with form field for merchant warehouses. |  | Spryker\Zed\MerchantStockGui\Communication\Plugin\MerchantGui |
-| ProductOfferStockProductOfferExpanderPlugin | Expands ProductOfferTransfer with Product Offer Stock. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
+| MerchantStockMerchantFormExpanderPlugin | Expands `MerchantForm` with the form field for merchant warehouses. |  | Spryker\Zed\MerchantStockGui\Communication\Plugin\MerchantGui |
+| ProductOfferStockProductOfferExpanderPlugin | Expands `ProductOfferTransfer` with product offer stock. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferStockProductOfferPostCreatePlugin | Persists product offer stock on product offer create. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferStockProductOfferPostUpdatePlugin | Persists product offer stock on product offer updated. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer |
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
-| ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
-| MerchantStockAclEntityConfigurationExpanderPlugin | Expands provided ACL entity metadata config transfer object with merchant stock composite data. |  | Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal |
-| ProductOfferStockAclEntityConfigurationExpanderPlugin | Expands provided ACL entity metadata config transfer object with product offer composite data. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\AclMerchantPortal |
-| ProductOfferAvailabilityStorageStrategyPlugin | Provides product offer availability strategy, which defines whether the product offer is available for the current store. |  | Spryker\Client\ProductOfferAvailabilityStorage\Plugin\AvailabilityStorage |
-| ProductOfferAvailabilityEventResourceBulkRepositoryPlugin | Triggers publish events for all or particular product offer availability (using the ID identifier) which sends them to `spy_product_offer_availability_storage` table. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event |
+| ProductOfferStockProductOfferViewSectionPlugin | Shows the stock section on the product offer view page in the Back Office. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
+| MerchantStockAclEntityConfigurationExpanderPlugin | Expands the provided ACL entity metadata config transfer object with merchant stock composite data. |  | Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal |
+| ProductOfferStockAclEntityConfigurationExpanderPlugin | Expands the provided ACL entity metadata config transfer object with product offer composite data. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\AclMerchantPortal |
+| ProductOfferAvailabilityStorageStrategyPlugin | Provides a product offer availability strategy, which defines whether the product offer is available for the current store. |  | Spryker\Client\ProductOfferAvailabilityStorage\Plugin\AvailabilityStorage |
+| ProductOfferAvailabilityEventResourceBulkRepositoryPlugin | Triggers publish events for all or particular product offer availability (using the ID identifier), which sends them to the `spy_product_offer_availability_storage` table. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event |
 
 **src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
 
@@ -255,9 +256,9 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you retrieve merchant using `MerchantFacade::get()` the response transfer contains merchant stocks.
-
-Make sure that when you create a merchant in Zed UI, its stock also gets created in the `spy_merchant_stock` table.
+Make sure the following actions take place as expected:
+* When you retrieve a merchant using `MerchantFacade::get()`, the response transfer contains merchant stocks.
+* When you create a merchant in the Back Office, its stock also gets created in the `spy_merchant_stock` table.
 
 {% endinfo_block %}
 
@@ -287,7 +288,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Warehouses` field.
+Make sure that when you edit a merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, the `Warehouses` field is displayed.
 
 {% endinfo_block %}
 
@@ -318,7 +319,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you can see the `Stock` section.
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you the `Stock` section is displayed.
 
 {% endinfo_block %}
 
@@ -370,11 +371,10 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you create a product offer using `ProductOfferFacade::create()` with provided stock data, it persists to `spy_product_offer_stock`.
-
-Make sure that when you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
-
-Make sure that when you retrieve a product offer using `ProductOfferFacade::findOne()`, the response data contains info about product offer stocks.
+Make sure the following actions take place as expected:
+* When you create a product offer using `ProductOfferFacade::create()` with provided stock data, it persists to `spy_product_offer_stock`.
+* When you update a product offer using `ProductOfferFacade::create()` with provided stock data, it updates stock data in `spy_product_offer_stock`.
+* When you retrieve a product offer using `ProductOfferFacade::findOne()`, the response data contains info about product offer stocks.
 
 {% endinfo_block %}
 
@@ -404,19 +404,19 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySkuForStore()` returns not a product but a product offer availability if the product offer reference passed in the request.
+Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySkuForStore()` returns not a product but a product offer availability if the product offer reference is passed in the request.
 
 {% endinfo_block %}
 
 ### 6) Configure export to Redis
 
-This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronize the data to the storage.
+This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronizes the data to the storage.
 
 #### Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferAvailabilityStorageEventSubscriber | Registers listeners that are responsible for publishing product offer availability related changes to storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\Subscriber |
+| ProductOfferAvailabilityStorageEventSubscriber | Registers listeners that are responsible for publishing product offer availability-related changes to the storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -448,7 +448,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferAvailabilityProductOfferStoreStoragePublisherPlugin | Synchronizes product offer availability to storage when the product offer store entity has changed. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Publisher\ProductOfferAvailability |
+| ProductOfferAvailabilityProductOfferStoreStoragePublisherPlugin | Synchronizes product offer availability to the storage when the product offer store entity has changed. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Publisher\ProductOfferAvailability |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -525,7 +525,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with Redis storage, and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with the Redis storage and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/ProductOfferAvailabilityStorage/ProductOfferAvailabilityStorageConfig.php**
 
@@ -578,11 +578,11 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up, re-generate, and re-sync features
+#### Set up, regenerate, and resync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
+| ProductOfferAvailabilitySynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into the storage. |  | Spryker\Zed\ProductOfferAvailabilityStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -610,9 +610,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the command `console sync:data merchant_profile` exports data from `spy_product_offer_availability_storage` table to Redis.
-
-Make sure that when a product offer availability entities get created or updated through ORM, it is exported to Redis accordingly.
+Make sure the following actions take place as expected:
+* The command `console sync:data merchant_profile` exports data from the `spy_product_offer_availability_storage` table to Redis.
+* When a product offer availability entity gets created or updated through ORM, it is exported to Redis accordingly.
 
 {% endinfo_block %}
 
@@ -776,8 +776,8 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 |-|-|-|-|-|
 | product_offer_reference | &check; | string | offer350 | Product offer identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
-| quantity | &check; | int | 21 | The amount of available product offers. |
-| is_never_out_of_stock | &check; | int | 1 | Flag that lets you make product offer always available, ignoring stock quantity. |
+| quantity | &check; | int | 21 | Amount of available product offers. |
+| is_never_out_of_stock | &check; | int | 1 | Flag that lets you make a product offer always available, ignoring stock quantity. |
 
 Register the following plugins to enable data import:
 

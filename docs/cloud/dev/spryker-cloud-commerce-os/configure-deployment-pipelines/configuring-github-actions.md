@@ -12,8 +12,6 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/upcoming-release/configuring-github-actions.html
 ---
 
-<details>
-<summary>Release 202304.0</summary>
 This document describes how to configure continuous integration using GitHub Actions.
 
 ## GitHub Actions
@@ -24,6 +22,9 @@ For more information on GitHub Actions, see the following documents:
 * [GitHub Actions](https://github.com/features/actions)
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 
+
+<details>
+<summary>Release 202304.0</summary>
 
 ## Prerequisites
 
@@ -430,16 +431,6 @@ image:
 
 <details>
 <summary>Release 202212.0</summary>
-This document describes how to configure continuous integration using GitHub Actions.
-
-## GitHub Actions
-
-GitHub Actions helps you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
-
-For more information on GitHub Actions, see the following documents:
-* [GitHub Actions](https://github.com/features/actions)
-* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
-
 
 ## Prerequisites
 
@@ -847,16 +838,6 @@ image:
 
 <details>
 <summary>Release 202204.0</summary>
-This document describes how to configure continuous integration using GitHub Actions.
-
-## GitHub Actions
-
-GitHub Actions help you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
-
-For more information on GitHub Actions, see
-* [GitHub Actions](https://github.com/features/actions)
-* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
-
 
 ## Prerequisites
 

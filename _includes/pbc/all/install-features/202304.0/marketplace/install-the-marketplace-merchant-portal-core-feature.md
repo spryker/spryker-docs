@@ -724,8 +724,8 @@ Update `package.json` with the following fields:
         "postinstall": "npm run mp:update:paths"
     },
     "engines": {
-        "node": ">=12.0.0",
-        "npm": ">=6.9.0"
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
     },
     "resolutions": {
         "typescript": "4.2.4",

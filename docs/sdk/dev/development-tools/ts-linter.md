@@ -41,6 +41,12 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
+{% info_block warningBox "No longer supported" %}
+
+Since `202304.0` release this tool is no longer supported and was replaced by `ESLint`. If you want to migrate on `ESLint`, see [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html).
+
+{% endinfo_block %}
+
 *TS Linter* allows you to find and fix code style mistakes. It helps a team follow the same standards and make code more readable.
 
  To analyze and fix files, [TSLint](https://palantir.github.io/tslint/) is used.

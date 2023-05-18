@@ -12,8 +12,6 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/upcoming-release/configuring-github-actions.html
 ---
 
-<details>
-<summary>Release 202304.0</summary>
 This document describes how to configure continuous integration using GitHub Actions.
 
 ## GitHub Actions
@@ -24,6 +22,9 @@ For more information on GitHub Actions, see the following documents:
 * [GitHub Actions](https://github.com/features/actions)
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 
+
+<details>
+<summary>Release 202304.0</summary>
 
 ## Prerequisites
 
@@ -61,7 +62,7 @@ jobs:
             PROJECT: project-name
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Configure sysctl limits
               run: |
@@ -75,12 +76,12 @@ jobs:
                   stack-version: 7.6.0
                   port: 10005
 
-            - uses: actions/setup-node@v1
+            - uses: actions/setup-node@v3
               with:
                   node-version: '18'
 
             - name: NPM cache
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: ~/.npm
                   key: ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-node-${% raw %}{{{% endraw %} hashFiles('**/package-lock.json') {% raw %}}}{% endraw %}
@@ -89,9 +90,9 @@ jobs:
             - name: Composer get cache directory
               id: composer-cache
               run: |
-                  echo "::set-output name=dir::$(composer config cache-files-dir)"
+                  echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
             - name: Composer cache
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: ${% raw %}{{{% endraw %} steps.composer-cache.outputs.dir {% raw %}}}{% endraw %}
                   key: ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-composer-${% raw %}{{{% endraw %} hashFiles('**/composer.lock') {% raw %}}}{% endraw %}
@@ -196,7 +197,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -291,7 +292,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -351,7 +352,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -402,7 +403,7 @@ image:
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -430,16 +431,6 @@ image:
 
 <details>
 <summary>Release 202212.0</summary>
-This document describes how to configure continuous integration using GitHub Actions.
-
-## GitHub Actions
-
-GitHub Actions helps you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
-
-For more information on GitHub Actions, see the following documents:
-* [GitHub Actions](https://github.com/features/actions)
-* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
-
 
 ## Prerequisites
 
@@ -847,16 +838,6 @@ image:
 
 <details>
 <summary>Release 202204.0</summary>
-This document describes how to configure continuous integration using GitHub Actions.
-
-## GitHub Actions
-
-GitHub Actions help you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
-
-For more information on GitHub Actions, see
-* [GitHub Actions](https://github.com/features/actions)
-* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
-
 
 ## Prerequisites
 

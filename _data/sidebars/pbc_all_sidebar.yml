@@ -394,11 +394,11 @@ entries:
                 url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html
               - title: CMS blocks
                 url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html
-              - title: Templates and Slots
-                url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
               - title: CMS pages in search results
                 url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-in-search-results-overview.html
               - title: Email as a CMS block
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html
+              - title: Templates and Slots
                 url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
           - title: Content items feature overview
             url: /docs/pbc/all/content-management-system/content-items-feature-overview.html
@@ -406,6 +406,8 @@ entries:
             url: /docs/pbc/all/content-management-system/file-manager-feature-overview.html
           - title: Navigation feature overview
             url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
+          - title: Product Sets feature overview
+            url: /docs/pbc/all/content-management-system/product-sets-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -552,6 +554,7 @@ entries:
           - title: Manage in the Back Office
             url: /docs/pbc/all/content-management-system/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
+            - "202204.0"
             - "202212.0"
             nested:
               - title: "Best practices: Add content to the Storefront pages using templates and slots"
@@ -612,82 +615,18 @@ entries:
                     url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-page-versions.html
                   - title: Manage CMS pages
                     url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-pages.html
-              - title: Manage slots
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-slots.html
-              - title: Redirects
+              - title: Product sets
                 nested:
-                  - title: Create CMS redirects
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/create-cms-redirects.html
-                  - title: Manage CMS redirects
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/manage-cms-redirects.html
-              - title: Manage file list
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-list.html
-              - title: Manage file tree
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-tree.html
-              - title: Add and edit MIME types
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html
-          - title: Manage in the Back Office
-            include_versions:
-            - "202204.0"
-            nested:
-              - title: "Best practices: Add content to the Storefront pages using templates and slots"
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
-              - title: Navigation
-                nested:
-                  - title: Create navigation elements
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/create-navigation-elements.html
-                  - title: Create navigation nodes
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/create-navigation-nodes.html
-                  - title: Duplicate navigation elements
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
-                  - title: Edit navigation elements
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-elements.html
-                  - title: Edit navigation nodes
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-nodes.html
-                  - title: Delete navigation nodes
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/delete-navigation-nodes.html
-              - title: Content items
-                nested:
-                  - title: Create abstract product list content items
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
-                  - title: Create banner content items
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-banner-content-items.html
-                  - title: Create file list content items
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-file-list-content-items.html
-                  - title: Create navigation content items
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-navigation-content-items.html
-                  - title: Create product set content items
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-product-set-content-items.html
-                  - title: Edit content items
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/edit-content-items.html
-              - title: Blocks
-                nested:
-                  - title: Create CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-cms-blocks.html
-                  - title: Create category CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-category-cms-blocks.html
-                  - title: Create email CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-email-cms-blocks.html
-                  - title: Create product CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-product-cms-blocks.html
-                  - title: Edit CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-cms-blocks.html
-                  - title: Add content items to CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
-                  - title: Edit placeholders in CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
-              - title: Pages
-                nested:
-                  - title: Create CMS pages
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/create-cms-pages.html
-                  - title: Edit CMS pages
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/edit-cms-pages.html
-                  - title: Add content items to CMS pages
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
-                  - title: Manage CMS page versions
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-page-versions.html
-                  - title: Manage CMS pages
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-pages.html
+                  - title: Create product sets
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/product-sets/create-product-sets.html
+                  - title: Delete product sets
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/product-sets/delete-product-sets.html
+                  - title: Edit product sets
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/product-sets/edit-product-sets.html
+                  - title: Reorder product sets
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/product-sets/reorder-product-sets.html
+                  - title: View product sets
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/product-sets/view-product-sets.html
               - title: Manage slots
                 url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-slots.html
               - title: Redirects
@@ -742,6 +681,8 @@ entries:
             nested:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
+              - title: Product Sets domain model and relationships
+                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/product-sets-domain-model-and-relationships.html
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:

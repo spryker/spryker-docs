@@ -18,14 +18,14 @@ The Merchant Portal includes the following pages:
 - [Profile](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/profile/editing-merchants-profile-details.html)
 - [Offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html)
 - [Products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/abstract-products/creating-marketplace-abstract-product.html)
-- [Orders](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/orders/managing-merchant-orders.html)
+- [Orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-merchant-orders.html)
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal.gif)
 
 ## Merchant Portal tables
 
 In the Merchant Portal, tables are designed to fit the needs of any Merchant Portal user.
-You can encounter tables in the [Offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html), [Products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/abstract-products/creating-marketplace-abstract-product.html), and [Orders](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/orders/managing-merchant-orders.html) sections of the Merchant Portal.
+You can encounter tables in the [Offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html), [Products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/abstract-products/creating-marketplace-abstract-product.html), and [Orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-merchant-orders.html) sections of the Merchant Portal.
 Merchant Portal tables are adjustable. You can configure the table to display only the details that you need, for example, show or hide the unnecessary columns, rearrange them or reset the table view to the default state.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Merchant+Portal/merchant-portal-table-view.gif)

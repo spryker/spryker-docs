@@ -28,4 +28,4 @@ The [Payments](/docs/pbc/all/payment-service-provider/{{page.version}}/payments-
 
 ## Spryker Core Back Office
 
-The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.
+The [Spryker Core Back Office](/docs/pbc/all/back-office/{{page.version}}/spryker-core-back-office-feature-overview.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.

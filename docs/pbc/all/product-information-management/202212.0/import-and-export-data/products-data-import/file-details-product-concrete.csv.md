@@ -11,9 +11,12 @@ redirect_from:
   - /docs/en/file-details-product-concretecsv
   - /docs/scos/dev/data-import/202200.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 
 ## Import file dependencies
@@ -26,7 +29,7 @@ This file has the following dependency: [ product_abstract.csv](/docs/pbc/all/pr
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| abstract_sku | &check; | String | | Name of the product, in locale US. |
+| abstract_sku | &check; | String | | The SKU of the parent abstract product. |
 | old_sku |  | String | | Old SKU identifier. |
 | concrete_sku | &check;  | String | Must be unique. |  SKU identifier of the concrete product. |
 | name.{ANY_LOCALE_NAME}**<br>Example value: *name.en_US* | &check; | String | | Name of the product in the specified location (US for our example). |

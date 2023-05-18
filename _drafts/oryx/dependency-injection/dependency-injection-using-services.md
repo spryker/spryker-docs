@@ -1,5 +1,5 @@
 ---
-title: Using services
+title: "Dependency Injection: Using services"
 description: Learn how to inject services and dependencies
 template: concept-topic-template
 last_updated: Apr 13, 2023
@@ -20,8 +20,6 @@ export class MyService {
 }
 ```
 
-
-
 ## resolve()
 
 The `resolve` method works similarly to `inject`, but it tries to resolve the current injector using context. By default, it tries to resolve `globalThis`. This method is suitable to use in components, especially in web components, where the injection context may not be defined in services' constructors.
@@ -32,7 +30,6 @@ export class MyComponent extends LitElement {
 }
 ```
 
-
 ## One container by default
 
 A typical Oryx application usually uses one global DI container, which is set up by the app orchestrator. This is the recommended approach for Oryx applications that utilize web components, as it provides a streamlined solution that usually addresses all requirements of an application.
@@ -40,4 +37,4 @@ A typical Oryx application usually uses one global DI container, which is set up
 
 ## Next steps
 
-[Defining services](./defining-services.md)
+[Defining services](./dependency-injection-defining-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Providing services
+title: "Dependency Injection: Providing services"
 description: Recommended conventions for providing services
 template: concept-topic-template
 last_updated: Apr 13, 2023
@@ -35,3 +35,7 @@ export const app = appBuilder()
 ```
 
 In this example, the customized cart service is provided by specifying the provider's property within a feature object. This way, you can easily manage and extend the services provided by your Oryx application.
+
+## Next steps
+
+[Advanced dependency injection strategies](/_drafts/oryx/dependency-injection/advanced-dependency-injection-strategies.html)

@@ -1,5 +1,5 @@
 ---
-title: Defining services
+title: "Dependency Injection: Defining services"
 description: Recommended conventions for defining services
 template: concept-topic-template
 last_updated: Apr 13, 2023
@@ -56,4 +56,4 @@ export class DefaultCartService implements CartService {
 
 ## Next step
 
-[Providing services](./providing-services.md)
+[Providing services](./dependency-injection-providing-services.md)

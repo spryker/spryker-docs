@@ -5,9 +5,7 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 ---
 
-The service layer in Oryx serves as the foundation for the business logic. The main objective of the service layer in Oryx is to abstract all the system functionality, including querying backend services, data caching and reloading, state management, and reactivity.
-
-Dependency injection (DI) plays a crucial role in achieving this objective.
+The service layer in Oryx serves as the foundation for the business logic. The main objective of the service layer is to abstract all the system functionality, including querying backend services, data caching and reloading, state management, and reactivity. Dependency injection (DI) plays a crucial role in achieving this objective.
 
 Furthermore, DI is utilized by many higher-level elements and concepts in Oryx, ranging from adapters and normalizers to HTTP interceptors, authentication, product loading, cart management, and the checkout process.
 
@@ -24,4 +22,4 @@ In a typical Oryx application, the application orchestrator automatically handle
 
 ## Next steps
 
-[Using services](./using-services.md)
+[Using services](./dependency-injection-using-services.md)

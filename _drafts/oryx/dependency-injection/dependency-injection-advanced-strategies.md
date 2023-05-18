@@ -1,6 +1,6 @@
 ---
-title: Advanced dependency injection strategies
-description:
+title: "Dependency Injection: Advanced strategies"
+description: Strategies for using DI that cover advanced use cases
 template: concept-topic-template
 last_updated: Apr 13, 2023
 ---

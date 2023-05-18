@@ -62,7 +62,7 @@ jobs:
             PROJECT: project-name
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Configure sysctl limits
               run: |
@@ -76,12 +76,12 @@ jobs:
                   stack-version: 7.6.0
                   port: 10005
 
-            - uses: actions/setup-node@v1
+            - uses: actions/setup-node@v3
               with:
                   node-version: '18'
 
             - name: NPM cache
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: ~/.npm
                   key: ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-node-${% raw %}{{{% endraw %} hashFiles('**/package-lock.json') {% raw %}}}{% endraw %}
@@ -90,9 +90,9 @@ jobs:
             - name: Composer get cache directory
               id: composer-cache
               run: |
-                  echo "::set-output name=dir::$(composer config cache-files-dir)"
+                  echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
             - name: Composer cache
-              uses: actions/cache@v2
+              uses: actions/cache@v3
               with:
                   path: ${% raw %}{{{% endraw %} steps.composer-cache.outputs.dir {% raw %}}}{% endraw %}
                   key: ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-composer-${% raw %}{{{% endraw %} hashFiles('**/composer.lock') {% raw %}}}{% endraw %}
@@ -197,7 +197,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -292,7 +292,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -352,7 +352,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |
@@ -403,7 +403,7 @@ image:
             TRAVIS: 1
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Install apt-packages
               run: |

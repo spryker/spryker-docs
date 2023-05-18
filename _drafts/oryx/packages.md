@@ -5,7 +5,7 @@ last_updated: Apr 19, 2023
 template: concept-topic-template
 ---
 
-The Oryx code base is [available on Github](https://github.com/spryker/oryx/), and the code is published and distributed as npm packages. [npmjs.com](https://www.npmjs.com/) is a widely used registry of packages. Package managers, like npm, yarn, deno or bun, are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
+The Oryx code base is [available on Github](https://github.com/spryker/oryx/), and the code is published and distributed as npm packages. [npmjs.com](https://www.npmjs.com/) is a widely used registry of packages. Package managers, like npm, yarn, deno, or bun, are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
 Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see Versioning.
 
@@ -62,7 +62,7 @@ The Labs package is an exception. It consists of experimental or demo functional
 
 ## Domain packages
 
-Domain packages provide components and service logic for certain domains. Organizing packages in domains improves the developer experience by making it easy to understand where to find a certain component or service. For example, the `product` domain package contains all product related components, as well as product services and adapters that integrate with Spryker APIs.
+Domain packages provide components and service logic for certain domains. Organizing packages in domains improves the developer experience by making it easy to understand where to find a certain component or service. For example, the `product` domain package contains all product-related components, as well as product services and adapters that integrate with Spryker APIs.
 
 | PACKAGES                                                         | LOCATION                 |
 | ---------------------------------------------------------------- | ------------------------ |

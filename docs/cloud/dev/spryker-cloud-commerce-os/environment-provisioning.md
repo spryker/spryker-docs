@@ -145,7 +145,8 @@ Optional:
 - Dynamic BGP routes
 - Other Parameters of tunnels
 
-In case IPsec is\will be needed, provide your internal subnet CIDR, so our Spryker VPC doesn’t overlap here. It is very important to evaluate this option during provisioning as Spryker can’t change this later once the environment is provisioned and in case it overlaps with customer CIDR in future there is no option that Spryker can provide except customers using different ranges.
+In case IPsec is or will be needed, provide your internal subnet CIDR, so our Spryker VPC does not overlap here. 
+It is very important to evaluate this option during provisioning as Spryker can not change this later once the environment is provisioned and the environment will need to be recreated in case an overlap will be identified.
 
 ### Default Network Settings
 Each Spryker Cloud Commerce environment is using a dedicated VPC (Virtual Private Cloud) 

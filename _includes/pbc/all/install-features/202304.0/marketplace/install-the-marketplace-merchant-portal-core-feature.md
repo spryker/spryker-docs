@@ -656,7 +656,7 @@ To start builder integration, check versions of Spryker packages:
 Install the required modules:
 
 ```bash
-composer require spryker/dashboard-merchant-portal-gui:"^2.0.0" --update-with-dependencies
+composer require spryker/dashboard-merchant-portal-gui:"^2.1.0" --update-with-dependencies
 ```
 
 | MODULE | EXPECTED DIRECTORY |

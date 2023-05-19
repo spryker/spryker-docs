@@ -137,7 +137,7 @@ jobs:
 
             - name: Frontend install-dependencies
               run: |
-                  vendor/bin/console frontend:project:install-dependencies
+                  vendor/bin/console frontend:project:install-dependencies -vvv
             - name: Install NPM packages
               run: |
                   sudo npm install --location=global --unsafe-perm speccy@0.11.0
@@ -145,19 +145,22 @@ jobs:
               run: speccy lint src/Generated/Glue/Specification/spryker_rest_api.schema.yml --rules=default
 
             - name: Style lint
-              run: node ./frontend/libs/stylelint
+              run: npm run yves:stylelint
 
-            - name: TS lint
-              run: node ./frontend/libs/tslint --format stylish
+            - name: ES lint
+              run: npm run yves:lint
 
             - name: Front-end Formatter
-              run: node ./frontend/libs/formatter
+              run: npm run formatter
+
+            - name: Front-end MP Lint
+              run: npm run mp:lint
+
+            - name: Front-end MP Style lint
+              run: npm run mp:stylelint
 
             - name: Front-end MP Unit Tests
               run: npm run mp:test
-
-            - name: Front-end MP Build
-              run: npm run mp:build
 
             - name: Validate propel files
               run: |

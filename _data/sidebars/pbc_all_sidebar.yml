@@ -280,8 +280,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
                       - title: CheckoutRestApi
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
-                      - title: Migration guide - QuickOrder
+                      - title: QuickOrder
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
+                        include_versions:
+                        - "202212.0"
                       - title: QuickOrderPage
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
               - title: Extend and customize
@@ -930,7 +932,7 @@ entries:
                 - "202204.0"
                 nested:
                   - title: "HowTo: Create discounts based on shipment"
-                    url: /docs/pbc/all/discount-management/202204.0/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+                    url: /docs/pbc/all/discount-management/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
           - title: Marketplace
             include_versions:
             - "202212.0"
@@ -2860,7 +2862,9 @@ entries:
                       - title: Inventory Management + Alternative Products
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
                       - title: Order Management + Inventory Management
-                        url: /docs/pbc/all/warehouse-management-system/202304.0/base-shop/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
+                        include_versions:
+                        - "202304.0"
                       - title: Availability Notification Glue API
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
                       - title: Inventory Management Glue API

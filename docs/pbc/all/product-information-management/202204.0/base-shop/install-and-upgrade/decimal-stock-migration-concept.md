@@ -23,8 +23,6 @@ related:
     link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
-  - title: Split Delivery migration concept
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/split-delivery-migration-concept.html
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---

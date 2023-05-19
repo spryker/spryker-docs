@@ -12,6 +12,10 @@ entries:
             url: /docs/pbc/all/back-office/back-office-translations-overview.html
           - title: Install the Spryker Core Back Office feature
             url: /docs/pbc/all/back-office/install-the-spryker-core-back-office-feature.html
+          - title: Install the Spryker Core Back Office + Warehouse User Management feature
+            url: /docs/pbc/all/back-office/install-spryker-core-back-office-warehouse-user-management-feature.html
+            include_versions:
+            - "202304.0"
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -188,6 +192,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
                       - title: Cart Notes
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html
+                        include_versions:
+                        - "202304.0"
+                      - title: Cart + Prices
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-prices-feature.html
                         include_versions:
                         - "202304.0"
                       - title: Cart + Product
@@ -1308,6 +1316,10 @@ entries:
                     url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/nekom-cc-gmbh.html
                   - title: Tradebyte
                     url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/tradebyte.html
+              - title: Process incoming HTTP requests from external ERP services for order updates
+                url: /docs/pbc/all/order-management-system/base-shop/process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
+              - title: Display custom names for order item states on the Storefront
+                url: /docs/pbc/all/order-management-system/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html
           - title: Marketplace
             nested:
               - title: Marketplace Order Management feature overview
@@ -2847,6 +2859,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
                       - title: Inventory Management + Alternative Products
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
+                      - title: Order Management + Inventory Management
+                        url: /docs/pbc/all/warehouse-management-system/202304.0/base-shop/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
                       - title: Availability Notification Glue API
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
                       - title: Inventory Management Glue API

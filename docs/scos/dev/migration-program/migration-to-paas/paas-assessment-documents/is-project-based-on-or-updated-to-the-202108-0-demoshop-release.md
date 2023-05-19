@@ -4,53 +4,48 @@ description: This document allows you to assess if a project is based on or upda
 template: howto-guide-template
 ---
 
-# Is project based on or updated to the 202108.0 demoshop release?
 
-{% info_block infoBox %}
+`202108.0` is the earliest release compatible with the latest `docker/sdk`, therefore it’s the minimum release to update to.
+Because the update is time consuming, it makes sense to update only the packages responsible for the compatibility with the latest Docker SDK. Follow the steps to estimate the upgrade effort.
 
-Resources: Backend
+1. Based on the project's code and `composer.json`, check if [Separate endpoint bootstraps](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) are integrated.
+    If it is integrated, the project is compatible with the lates Docker SDK and the migration is not required.
 
-{% endinfo_block %}
+2. If the separate endpoint bootstraps are not integrated, using the [formula](#formula), estimate the required effort to update the packages to the provided versions:
+```json
+"spryker/application": "3.28.0"
+"spryker/event-dispatcher": "1.3.0"
+"spryker/monitoring": "2.3.0"
+"spryker/router": "1.12.0"
+"spryker/session": "4.10.0"
+"spryker/twig": "3.15.1"
+```
 
-## Description
 
-The `202108.0` release is considered to be compatible with the latest `docker/sdk`, therefore it’s suggested to update to this release at least.
-But since the project update is time-consuming it’s possible to update only fewer packages that are exactly responsible for
-the compatibility with the latest `docker/sdk`. Use the steps below to assess on how to become compatible with the latest `docker/sdk`
-and get the required the `202108.0` release packages.
+## Resources
 
-1. Use project code and the project’s `composer.json` to understand if the feature [Separate endpoint bootstraps](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html)
-    is integrated. If it is already in place then the migration is not required and the project should be already compatible with
-    the latest `docker/sdk` which is used in `PaaS`.
-2. If the `Separate endpoint bootstraps` feature is not integrated then the effort has to be estimated using the formula.
-   Calculate which packages from the list below have to be updated in order to receive these versions:
-    ```json
-    "spryker/application": "3.28.0"
-    "spryker/event-dispatcher": "1.3.0"
-    "spryker/monitoring": "2.3.0"
-    "spryker/router": "1.12.0"
-    "spryker/session": "4.10.0"
-    "spryker/twig": "3.15.1"
-    ```
+Backend
 
 ## Formula
 
-#### Project customisation multiplier (PCM):
-* No customisation - 1
-* Medium customisation - 1.5
-* Big customisation - 2
+### Project customization multiplier (PCM)
 
-#### Project ongoing development multiplier (PODM):
-* No parallel merges to master - 1
-* Bug fixes will be merged to master - 1.25
-* New features will be merged to master - 1.5
-* Highly active development process is ongoing - 2
+* No customization: 1
+* Medium customization: 1.5
+* Big customization: 2
 
-1. No project customisation:
-    1. Approx 2h-4h per major.
-    2. Detailed estimation can be found in [MG](/docs/scos/dev/module-migration-guides/about-migration-guides.html) per module.
-    3. Approx 0.25h per minor/patch.
-2. Project customisation:
-    1. Approx {1.i} * PCM * PODM per major.
-    2. Approx {1.ii} * PCM * PODM per major
-    3. Approx {1.iii} * PCM * PODM per minor/patch.
+### Project ongoing development multiplier (PODM)
+
+* No parallel merges to master: 1
+* Bug fixes will be merged to master: 1.25
+* New features will be merged to master: 1.5
+* Highly active development process is ongoing: 2
+
+1. No project customization:
+    1. Approximately 2h to 4h per major.
+    2. For a per-module estimation, see the the needed modules' upgrade guides.
+    3. Approximately 0.25h per minor or patch.
+2. Project customization:
+    1. Approximately {1.i} * PCM * PODM per major.
+    2. Approximately {1.ii} * PCM * PODM per major
+    3. Approximately {1.iii} * PCM * PODM per minor or patch.

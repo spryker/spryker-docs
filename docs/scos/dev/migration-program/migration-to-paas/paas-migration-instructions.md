@@ -4,19 +4,13 @@ description: This document is aggregated list of activities which has to be done
 template: howto-guide-template
 ---
 
-# PaaS: migration instructions
-
-{% info_block infoBox %}
-
 This document is aggregated list of activities which has to be done in order to move the on-Prem hosted Spryker project to PaaS.
 
-{% endinfo_block %}
+## Assessment
 
-## Assessment phase
+Go through the following documents to estimate the effort needed to migrate the project.
 
-The phase has to be performed in order to understand the estimation and effort of project migration. The documents below explain the exact steps to do for such an assessment.
-
-1. [Is the latest version of Docker SDK installed?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-the-latest-version-of-docker-sdk-installed.html)
+1. [Check if the latest version of Docker SDK is installed](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-the-latest-version-of-docker-sdk-installed.html)
 2. [Is the latest version of Docker SDK integrated and project is running on Docker SDK?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-the-latest-version-of-docker-sdk-integrated.html)
 3. [Are performance and security guidelines implemented?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-performance-and-security-guidelines-implemented.html)
 4. [Is currently used PHP Version >=8.0?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-currently-used-php-version-8-0.html)
@@ -36,7 +30,7 @@ The phase has to be performed in order to understand the estimation and effort o
 18. [Are ElasticSearch and Redis restorable?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-elasticsearch-and-redis-restorable.html)
 19. [How to do the transition?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/how-to-do-the-transition.html)
 
-## Migration phase
+## Migration
 
 Migrations process itself. Documents below explains common todos, tools and best practices for project migration.
 

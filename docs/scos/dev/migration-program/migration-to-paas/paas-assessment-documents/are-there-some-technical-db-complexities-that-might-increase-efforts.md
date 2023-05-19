@@ -4,13 +4,9 @@ description: This document allows you to assess if a project has technical compl
 template: howto-guide-template
 ---
 
-# Are there some technical complexities, that might increase efforts like: CTE, Raw SQL?
+## Resources
 
-{% info_block infoBox %}
-
-Resources: Backend
-
-{% endinfo_block %}
+Backend
 
 ## Description
 
@@ -24,11 +20,11 @@ Resources: Backend
     * PROCEDURE
     * FUNCTION
     * etc.
-2. Additional information could be received as part of the prerequisite data.
+2. Check if related information was provided in the prerequisite from.
 
 ## Formula
 
-* 1d per CTE query;
-* 1d per function/procedure;
-* 1d per custom structure e.g. view, tmp table;
-* 4h per raw sql query;
+* 1d per CTE query.
+* 1d per function or procedure.
+* 1d per custom structure, like view or tmp table.
+* 4h per raw SQL query.

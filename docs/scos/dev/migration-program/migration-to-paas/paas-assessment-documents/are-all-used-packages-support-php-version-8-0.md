@@ -4,26 +4,23 @@ description: This document allows you to assess if all used packages support PHP
 template: howto-guide-template
 ---
 
-# Are all used packages support PHP Version >=8.0?
 
-{% info_block infoBox %}
+Check how many packages are not compatible with PHP 8.0:
 
-Resources: Backend
+```bash
+composer why-not php 8.0
+```
+This should let you estimate the migration effort.
 
-{% endinfo_block %}
 
-## Description
+## Resources
 
-1. Run the `why-not` command from composer and see how many packages are not compatible with PHP 8.0:
-    ```bash
-    composer why-not php 8.0
-    ```
-2. Use the list of packages to understand the effort of migration.
+Backend
 
 ## Formula
 
-1. ONLY IF MODULES HAVE PHP 8 support:
-    * Approx 2h-4h per major
-    * Approx 1h per minor/patch 
-2. IF MODULES DO NOT HAVE PHP 8 support:
-   * Additional investigation is needed
+* If modules support PHP 8.O:
+    * Approximately 2h-4h per major.
+    * Approximately 1h per minor or patch.
+* If modules don't support PHP 8.O:
+   * Additional investigation is needed.

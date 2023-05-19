@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
 related:
   - title: Reorder category filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/reorder-category-filters.html
+    link: docs/pbc/all/search/page.version/manage-in-the-back-office/category-filters/reorder-category-filters.html
   - title: Category filters overview
     link: docs/pbc/all/search/page.version/search-feature-overview/category-filters-overview.html
 ---
@@ -23,7 +23,7 @@ This topic describes how to assign and deassign filters from categories in the B
 ## Prerequisites
 
 
-1. Create the category filters you want to assign. For instructions, see [Define filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html)
+1. Create the category filters you want to assign. For instructions, see [Define filter preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/filter-preferences/define-filter-preferences.html)
 2. To start working with category filters, go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 
 ## Assign filters to a category

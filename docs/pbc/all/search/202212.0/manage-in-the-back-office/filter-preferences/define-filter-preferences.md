@@ -51,5 +51,5 @@ Review the [reference information](#reference-information-create-a-category-filt
 
 ## Next steps
 
-* [Reorder filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/reorder-filter-preferences.html)
-* [Assign and dessign filters from categories](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/category-filters/assign-and-deassign-filters-from-categories.html)
+* [Reorder filter preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html)
+* [Assign and dessign filters from categories](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html)

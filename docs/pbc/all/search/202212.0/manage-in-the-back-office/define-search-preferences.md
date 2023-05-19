@@ -16,9 +16,9 @@ related:
   - title: Edit search preferences
     link: docs/pbc/all/search/page.version/manage-in-the-back-office/edit-search-preferences.html
   - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
+    link: docs/pbc/all/search/page.version/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
   - title: Managing Filter Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/filter-preferences/define-filter-preferences.html
+    link: docs/pbc/all/search/page.version/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
   - title: Search feature overview
     link: docs/pbc/all/search/page.version/search.html
 ---

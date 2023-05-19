@@ -1,7 +1,7 @@
 ---
 title: TS linter
 description: Learn about the SCSS Linter tool that lets you find and fix mistakes in the code style.
-last_updated: Jun 16, 2021
+last_updated: May 15, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ts-linter
 originalArticleId: d7e97882-9e50-4bf5-8b39-130c94326818
@@ -43,7 +43,7 @@ related:
 
 {% info_block warningBox "No longer supported" %}
 
-Since `202304.0` release this tool is no longer supported and was replaced by `ESLint`. If you want to migrate on `ESLint`, see [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html).
+Since the `202304.0` release, this tool is no longer supported and has been replaced by `ESLint`. Follow the [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html) to migrate to `ESLint`.
 
 {% endinfo_block %}
 

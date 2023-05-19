@@ -66,7 +66,7 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-delivery-methods.html
                   - title: Edit delivery methods
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/edit-delivery-methods.html
-              - title: Manage via Glue API
+              - title: Manage using Glue API
                 nested:
                   - title: Retrieve shipments and shipment methods when submitting checkout data
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
@@ -185,13 +185,15 @@ entries:
                       - title: Cart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
                       - title: Cart + Non-splittable Products
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
                       - title: Cart Notes
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html
                         include_versions:
                         - "202304.0"
                       - title: Cart + Product
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-feature.html
+                      - title: Cart + Product Bundles
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
                       - title: Cart + Product Group
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-group-feature.html
                       - title: Cart + Shipment
@@ -270,6 +272,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
                       - title: CheckoutRestApi
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
+                      - title: Migration guide - QuickOrder
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                       - title: QuickOrderPage
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
               - title: Extend and customize
@@ -297,15 +301,8 @@ entries:
               - title: Manage in the Back Office
                 url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 include_versions:
-                - "202212.0"
-                nested:
-                  - title: Define global thresholds
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
-                  - title: Manage threshold settings
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/manage-threshold-settings.html
-              - title: Manage in the Back Office
-                include_versions:
                 - "202204.0"
+                - "202212.0"
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
@@ -313,10 +310,16 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/manage-threshold-settings.html
               - title: Manage using Glue API
                 nested:
-                  - title: Retrieve customer carts
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+                  - title: Check out purchases
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/check-out-purchases.html
                   - title: Manage carts of registered users
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+                  - title: Retrieve customer carts
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+                  - title: Submit checkout data
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
+                  - title: Update payment data
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/update-payment-data.html
                     nested:
                       - title: Manage items in carts of registered users
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html
@@ -492,6 +495,8 @@ entries:
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
                   - title: NavigationsRestApi
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
+                  - title: ProductSetGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-productsetgui-module.html
               - title: Category CMS blocks
                 url: /docs/pbc/all/content-management-system/install-and-upgrade/install-category-cms-blocks.html
               - title: Product CMS blocks
@@ -882,7 +887,7 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/edit-discounts.html
                   - title: Export voucher codes
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/export-voucher-codes.html
-              - title: Manage via Glue API
+              - title: Manage using Glue API
                 url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discounts-via-glue-api.html
                 nested:
                   - title: Add items with discounts to carts of registered users
@@ -912,6 +917,12 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
               - title: Create discounts based on shipment
                 url: /docs/pbc/all/discount-management/base-shop/create-discounts-based-on-shipment.html
+              - title: Tutorials and HowTos
+                include_versions:
+                - "202204.0"
+                nested:
+                  - title: "HowTo: Create discounts based on shipment"
+                    url: /docs/pbc/all/discount-management/202204.0/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
           - title: Marketplace
             include_versions:
             - "202212.0"
@@ -1080,9 +1091,9 @@ entries:
                       - title: Marketplace Merchant
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
                       - title: Merchant Category
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html
                       - title: Merchant Opening Hours
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-opening-hours-glue-api.html
               - title: Import data
                 nested:
                   - title: "File details: merchant.csv"
@@ -1225,6 +1236,8 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/comment-orders.html
                       - title: Create returns
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/create-returns.html
+                      - title: Create shipments
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/create-shipments.html
                       - title: Edit billing addresses in orders
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
                       - title: Add and remove custom order references
@@ -2704,7 +2717,7 @@ entries:
                 url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html
               - title: Edit tax sets
                 url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-sets.html
-          - title: Manage via Glue API
+          - title: Manage using Glue API
             nested:
               - title: Retrieve tax sets
                 url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html

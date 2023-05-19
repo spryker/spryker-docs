@@ -9,7 +9,7 @@ redirect_from:
 
 The Product Set feature consists of the following modules:
 
-| Module | Description |
+| MODULE | DESCRIPTION |
 | --- | --- |
 | ProductSet | Manages the Product Sets feature's core functionalities, such as persisting all related data to database and reading from it. It also provides the Client functionality to list Product Sets from Search. |
 | ProductSetCollector|Provides full Collector logic to export product sets to Search and Storage. |
@@ -20,3 +20,4 @@ The `ProductSet` module provides a `spy_product_set` table that stores some non-
 The products in product sets and their sorting positions are stored in the `spy_product_abstract_set` table.
 
 ![Product Set Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product_set_db_schema.png)
+

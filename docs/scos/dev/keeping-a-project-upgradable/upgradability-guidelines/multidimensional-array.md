@@ -4,11 +4,11 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Multidimensional arrays inside the dependency provider’s methods.
+This document describes multidimensional arrays inside the dependency provider’s methods, and how to resolve problems related to them.
 
 ## Problem description
 
-On the project level, developers use a plugins stack, and not all structures are needed and can be supported. Multidimensional arrays make configuration hard to upgrade.
+If a plugins stack is used on the project level, not all structures are necessarily needed or can be supported. Multidimensional arrays make configuration hard to upgrade.
 This check will verify that multidimensional arrays should have a maximum of two levels inside.
 
 ## Example of code that causes an upgradability error
@@ -80,7 +80,7 @@ MULTIDIMENSIONAL ARRAY
 
 ```
 
-### Resolving the error: 
+### Resolving the error
 
 To resolve the error provided in the example, try the following in the provided order:
 1. Try to have simple configuration arrays. They shouldn't have more than two levels.

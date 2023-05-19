@@ -4,12 +4,12 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-The allowed and consistent PHP version is used in different project parts.
+This guide describes how to resolve problems surrounding the allowed and consistent PHP version being used in different project parts.
 
 ## Problem description
 
 The PHP version is declared in different configuration files and used by dependencies.
-Need to be sure that all those items have the consistent and supported by spryker PHP version.
+You need to be sure that all those items have a PHP version that is consistent and supported by Spryker..
 
 PHP versions are checked in:
 - `composer.json`
@@ -69,9 +69,9 @@ PHP VERSION CHECKER
 ### Resolving the error
 
 To resolve the issue:
-1. Use an allowed PHP version in:
+1. Use a PHP version that is allowed in:
    - `composer.json`
    - Config deploy files `deploy.**.yml`
    - Installed PHP version
    - SDK php versions
-2. Make sure that all the items above have the consistent PHP versions.
+2. Make sure that all the items above have consistent PHP versions.

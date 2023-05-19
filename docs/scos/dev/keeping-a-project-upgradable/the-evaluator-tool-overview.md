@@ -8,7 +8,7 @@ This document describes how to check if the project code is compliant with Spryk
 
 ## Install the evaluator tool
 
-* Install the evaluator tool to project by composer:
+* Install the evaluator tool in your project by using the composer:
 ```bash
 composer require --dev spryker-sdk/evaluator
 ```
@@ -44,7 +44,7 @@ To evaluate your code, run the evaluator in one of the following ways:
 /vendor/bin/evaluator evaluate
 ```
 
-* Evaluate the code of the specific module:
+* Evaluate the code of a specific module:
 
 ```bash
 /vendor/bin/evaluator evaluate --path=src/path_to_module
@@ -52,4 +52,4 @@ To evaluate your code, run the evaluator in one of the following ways:
 
 ## Resolve upgradability issues
 
-If the report contains upgradability issues, to resolve them, see [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html).
+If the report contains upgradability issues, see [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) to resolve them.

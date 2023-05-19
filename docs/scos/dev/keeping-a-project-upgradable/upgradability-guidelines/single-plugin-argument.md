@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Single plugin arguments inside the dependency provider’s methods.
+This guide describes how to resolve issues related to single plugin arguments inside the dependency provider’s methods.
 
 ## Problem description
 
@@ -59,7 +59,8 @@ SINGLE PLUGIN ARGUMENT
 ```
 
 ### Resolving the error
+
 To resolve the error provided in the example, try the following in the provided order:
-1. Try to use file name as argument and move reading inside of plugin.
+1. Try to use file name as an argument and move the reading inside of the plugin.
 2. Try to avoid arguments that are not mentioned in the supported types.
 

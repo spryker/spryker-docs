@@ -40,7 +40,8 @@ SECURITY CHECKER
 +---+---------------------------------------------------------------------------------------------------------------------+------------------------+
 ```
 
-### Resolving the error:
+### Resolving the error
+
 To resolve the error provided in the example, try the following in the provided order:
 1. Try to avoid using a package with the current version.
 2. Upgrade the package to a new version.

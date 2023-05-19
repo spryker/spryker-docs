@@ -1,20 +1,20 @@
 ---
-title: Dead code
+title: A dead code checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-The checker that checks dead code that extends core classes in the project.
+This checker checks for dead code that extends core classes in your project.
 
 ## Problem description
 
-The project can extend core classes and after some time it can become unusable due to the core changes. As a result, it can cause issues related to the project's upgradability.
+The project can extend core classes and after some time it can become unusable due to core changes. As a result, issues related to the project's upgradability arise.
 It checks possible dead classes. For obvious reasons, the classes that are created magically tend to be skipped.
-Optionally, the Dead code checker can be muted for the specific class with the @evaluator-skip-dead-code.
+Optionally, you can mute the dead code checker for a specific class with `@evaluator-skip-dead-code`.
 
 ## Example of code that causes an upgradability error:
 
-The code has class that doesn't have explicit initialization in project module: 
+The code has a class that doesn't have explicit initialization in project module: 
 
 ```bash
 namespace Spryker/Zed/Module;
@@ -47,6 +47,6 @@ DEAD CODE CHECKER
 
 ### Resolving the error: 
 To resolve the error provided in the example, try the following in the provided order:
-1. Skip violation with annotation.
-2. Remove unused class.
+1. Skip the violation with an annotation.
+2. Remove the unused class.
 

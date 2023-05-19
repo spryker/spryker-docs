@@ -3,9 +3,9 @@ title: Plugin registration with restrictions
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
-
+This guide describes how to fix problems related to plugin registration with restrictions.
 ## Problem description
-If plugins must be registered in a specific order, `after` and `before` annotations must be provided in the doc blocks. They must have specific syntax.
+If plugins must be registered in a specific order, `after` and `before` annotations need to be provided in the doc blocks. They must also have specific syntax.
 The annotated class must be imported into the provider class.
 
 ## Example of code that causes an upgradability error
@@ -50,8 +50,8 @@ PLUGINS REGISTRATION WITH RESTRICTIONS CHECKER
 
 ### Resolving the error
 
-- To solve this issue annotations must follow the syntax:
+- To solve this issue, annotations must follow the syntax:
 ```
 * - <order_definition> {@link <full_path_to_the_plugin>} <optional_info_message>.
 ```
-- Plugin annotated class should be imported into the current provider class.
+- The plugin annotated class should be imported into the current provider class.

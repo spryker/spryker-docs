@@ -10,7 +10,7 @@ Additional logic inside the dependency provider’s methods.
 
 On the project level, developers use `if` constructs with variety of expressions in dependency providers to register the plugins in particular cases only.
 
-Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check will verify that if a `if` construct is used for plugin registration, then only one of the following expressions is used:
+Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check will verify that if an `if` construct is used for plugin registration, then only one of the following expressions is used:
 
 `class_exists` it is allowed for BC reasons
 
@@ -18,7 +18,7 @@ Not all possible expressions are needed inside of the `if` statements for plugin
 class_exists(\Foo\Bar::class) function call
 ```
 
-`isDevelopment` function calls - it is allowed for plugins that are needed in development mode only (e.g.: profiling, debug, etc.)
+`isDevelopment` function calls - it is allowed for plugins that are needed in development mode only (e.g. profiling, debug, etc.)
     
 ```php
 $this->getConfig()->isDevelopmentConsoleCommandsEnabled() function calls 
@@ -69,7 +69,7 @@ MULTIDIMENSIONAL ARRAY
 
 ```
 
-### Resolving the error:
+### Resolving the error
 
 To resolve the error provided in the example, try the following in the provided order:
 1. Try to avoid using conditions in the dependency providers.

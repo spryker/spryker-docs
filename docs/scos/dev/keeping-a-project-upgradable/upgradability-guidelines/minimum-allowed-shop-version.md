@@ -4,11 +4,11 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-The shop project dependencies should be at least a supported release version.
+The shop project dependencies should be at least a supported release version. This document explains the problem and how to address it.
 
 ## Problem description
 
-The shop contains the old package dependencies that are already unsupported. It can cause the issues related to project the upgradability.
+The shop contains old package dependencies that are already unsupported. This can cause issues related to the project's upgradability.
 
 ## Example of code that causes an upgradability error
 
@@ -52,6 +52,6 @@ MINIMUM ALLOWED SHOP VERSION
 +---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
 ```
 
-### Resolving the error:
+### Resolving the error
 
 To resolve this issue, you need to update the outdated dependencies to the current release or version.

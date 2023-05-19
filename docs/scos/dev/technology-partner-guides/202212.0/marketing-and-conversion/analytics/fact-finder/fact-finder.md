@@ -5,7 +5,9 @@ last_updated: Apr 26, 2023
 template: concept-topic-template
 ---
 
-The *FACT-Finder* section includes the following documents:
+The *Fact-Finder* section provides guidance about integrating and utilizing the FACT-Finder module. Learn how to export product data, install and configure web components and the NG API, integrate Fact Finder modules, and leverage campaigns, recommendations, search suggestions, and tracking for improved search functionality and personalized user experiences.
+
+For detailed instructions, see the respective documents:
 * [Exporting product data for FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html)
 * [Installing and configuring FACT-Finder web components](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html)
 * [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)

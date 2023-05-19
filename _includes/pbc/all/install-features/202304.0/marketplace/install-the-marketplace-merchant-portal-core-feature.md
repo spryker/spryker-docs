@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Acl | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html) |
 
-###  1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 Install the required modules:
 
@@ -48,13 +48,43 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the database schema
+### 2) Set up configuration
+
+Add the following configuration:
+
+| CONFIGURATION                        | SPECIFICATION                                                               | NAMESPACE        |
+|--------------------------------------|-----------------------------------------------------------------------------|------------------|
+| GuiTableConfig::getDefaultTimezone() | Defines default timezone for formatting the `DateTime` data to the ISO 8601 format. | Pyz\Zed\GuiTable |
+
+**src/Pyz/Zed/GuiTable/GuiTableConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\GuiTable;
+
+use Spryker\Zed\GuiTable\GuiTableConfig as SprykerGuiTableConfig;
+
+class GuiTableConfig extends SprykerGuiTableConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getDefaultTimezone(): ?string
+    {
+        return 'UTC';
+    }
+}
+```
+
+### 3) Set up the database schema
 
 **src/Pyz/Zed/Merchant/Persistence/Propel/Schema/spy_merchant.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Merchant\Persistence" package="src.Orm.Zed.Merchant.Persistence">
+    
     <table name="spy_merchant">
         <behavior name="event">
             <parameter name="spy_merchant-name" column="name"/>
@@ -87,7 +117,7 @@ console propel:install
 console transfer:generate
 ```
 
-### 3) Set up behavior
+### 4) Set up behavior
 
 Set up behavior as follows:
 
@@ -268,6 +298,7 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
     }
 }
 ```
+
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
 ```php
@@ -440,6 +471,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 </details>
 
 **src/Pyz/Zed/MerchantPortalApplication/Communication/Bootstrap/MerchantPortalBootstrap.php**
+
 ```php
 <?php
 
@@ -453,6 +485,7 @@ class MerchantPortalBootstrap extends MerchantPortalApplicationBootstrap
 ```
 
 **src/Pyz/Zed/MerchantPortalApplication/Communication/MerchantPortalApplicationCommunicationFactory.php**
+
 ```php
 <?php
 
@@ -497,19 +530,19 @@ Open access to the Merchant Portal login page by default:
 <?php
 
 $config[AclConstants::ACL_DEFAULT_RULES][] = [
-  [
-    'bundle' => 'security-merchant-portal-gui',
-    'controller' => 'login',
-    'action' => 'index',
-    'type' => 'allow',
-  ],
-
+    [
+        'bundle' => 'security-merchant-portal-gui',
+        'controller' => 'login',
+        'action' => 'index',
+        'type' => 'allow',
+    ],
 ];
 ```
 
 Add a console command for warming up the *Merchant Portal* router cache:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
 
@@ -537,17 +570,18 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 **config/install/docker.yml**
+
 ```yaml
 env:
     NEW_RELIC_ENABLED: 0
 
 sections:
     build:
-      router-cache-warmup-merchant-portal:
-        command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
+        router-cache-warmup-merchant-portal:
+            command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
-### 4) Set up transfer objects
+### 5) Set up transfer objects
 
 Generate transfer objects:
 
@@ -604,9 +638,8 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-- npm v9
-- Node.js v18
-- Yarn v2 (or latest Yarn v1)
+- [Node.js](https://nodejs.org/en/download/) — minimum version is v18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) — minimum version is v9.
 
 Spryker requirements:
 
@@ -623,7 +656,7 @@ To start builder integration, check versions of Spryker packages:
 Install the required modules:
 
 ```bash
-composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
+composer require spryker/dashboard-merchant-portal-gui:"^2.1.0" --update-with-dependencies
 ```
 
 | MODULE | EXPECTED DIRECTORY |
@@ -657,49 +690,52 @@ Execute the following command:
 ```bash
 console navigation:build-cache
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that Merchant Portal has the **Dashboard** menu.
 
 {% endinfo_block %}
 
-
 ### 4) Set up Marketplace builder configs
 
 Add the following files to the root folder:
 
 ```bash
-wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/angular.json
-wget -O nx.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/nx.json
-wget -O .browserslistrc https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.browserslistrc
+wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/master/angular.json
+wget -O nx.json https://raw.githubusercontent.com/spryker-shop/suite/master/nx.json
+wget -O .browserslistrc https://raw.githubusercontent.com/spryker-shop/suite/master/.browserslistrc
+wget -O .npmrc https://raw.githubusercontent.com/spryker-shop/suite/master/.npmrc
+wget -O .stylelintrc.mp.js https://raw.githubusercontent.com/spryker-shop/suite/master/.stylelintrc.mp.js
 ```
 
 Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.base.json
-wget -O tsconfig.yves.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tsconfig.yves.json
-wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tsconfig.mp.json
+wget -O tsconfig.yves.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.yves.json
+wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.mp.json
+wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.json
 ```
 
-Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
+Add `src/Pyz/Zed/*/Presentation/Components/**`, `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the `tslint.mp.json` file:
+Add the `.eslintrc.mp.json` file:
 
 ```bash
-wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tslint.mp.json
+wget -O .eslintrc.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/.eslintrc.mp.json
 ```
 
 Install npm dependencies:
 
 ```bash
-npm i rxjs@~7.4.0 zone.js@~0.11.4 @webcomponents/custom-elements@~1.3.1 @webcomponents/webcomponents-platform@~1.0.1 @webcomponents/webcomponentsjs@~2.4.0
+npm i @angular/animations@~15.0.3 @angular/cdk@~15.0.3 @angular/common@~15.0.3 @angular/compiler@~15.0.3 @angular/core@~15.0.3 @angular/elements@~15.0.3 @angular/forms@~15.0.3 @angular/platform-browser@~15.0.3 @angular/platform-browser-dynamic@~15.0.3 @angular/router@~15.0.3 rxjs@~7.5.7 zone.js@~0.12.0
 ```
 
 Install npm dev dependencies:
 
 ```bash
-npm i -D @angular-builders/custom-webpack@~12.1.3 @angular-devkit/build-angular@~12.2.16 @angular/cli@~12.2.16 @angular/common@~12.2.16 @angular/compiler@~12.2.16 @angular/compiler-cli@~12.2.16 @angular/core@~12.2.16 @angular/language-service@~12.2.16 @angular/platform-browser@~12.2.16 @angular/platform-browser-dynamic@~12.2.16 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/cli@~12.10.1 @nrwl/jest@~12.10.1 @nrwl/tao@~12.10.1 @nrwl/workspace@~12.10.1 @spryker/oryx-for-zed@~2.11.3 @types/jest@~27.0.2 @types/node@~14.14.33 @types/webpack@~4.41.17 jest@~27.2.3 jest-preset-angular@~9.0.3 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~27.0.5 ts-node@~9.1.1 tslib@~2.0.0 typescript@~4.2.4
+npm i -D @angular-builders/custom-webpack@~15.0.0 @angular-devkit/build-angular@~15.0.3 @angular-eslint/builder@~15.0.0 @angular-eslint/eslint-plugin@~15.0.0 @angular-eslint/eslint-plugin-template@~15.0.0 @angular-eslint/schematics@~15.0.0 @angular-eslint/template-parser@~15.0.0 @angular/cli@~15.0.3 @angular/compiler-cli@~15.0.3 @angular/language-service@~15.0.3 @babel/plugin-proposal-class-properties@~7.17.12 @babel/plugin-transform-runtime@~7.17.12 @babel/preset-typescript@~7.17.12 @jsdevtools/file-path-filter@~3.0.2 @nrwl/cli@~15.0.7 @nrwl/jest@~15.0.7 @nrwl/workspace@~15.0.7 @spryker/oryx-for-zed@~3.0.0 @types/jest@~28.1.1 @types/node@~14.14.33 @types/webpack@~5.28.0 @typescript-eslint/eslint-plugin@~5.44.0 @@typescript-eslint/parser@~5.44.0 eslint@~8.28.0 eslint-plugin-deprecation@~1.3.3 jest@~28.1.3 jest-environment-jsdom@~28.1.1 jest-preset-angular@~12.2.3 nx@~15.0.7 postcss@~8.4.20 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~28.0.8 ts-node@~10.9.1 tslib@~2.0.0 typescript@~4.8.4 webpack@~5.74.0 webpack-merge@~5.8.0
 ```
 
 Update `package.json` with the following fields:
@@ -715,9 +751,10 @@ Update `package.json` with the following fields:
     "scripts": {
         "mp:build": "ng build",
         "mp:build:watch": "ng build --watch",
-        "mp:build:production": "ng build --prod",
-        "mp:test": "ng test",
+        "mp:build:production": "ng build --configuration production",
+        "mp:stylelint": "node ./frontend/merchant-portal/stylelint",
         "mp:lint": "ng lint",
+        "mp:test": "ng test",
         "mp:clean": "run-s mp:clean:*",
         "mp:clean:dist": "rimraf public/MerchantPortal/assets/js",
         "mp:update:paths": "node ./frontend/merchant-portal/update-config-paths",
@@ -726,10 +763,6 @@ Update `package.json` with the following fields:
     "engines": {
         "node": ">=18.0.0",
         "npm": ">=9.0.0"
-    },
-    "resolutions": {
-        "typescript": "4.2.4",
-        "fsevents": "2.1.3"
     }
 }
 ```
@@ -740,53 +773,26 @@ For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to
 
 ```js
 const globalSettings = {
-  ...
-  paths: {
-    tsConfig: './tsconfig.yves.json',
     ...
-  }
+    paths: {
+        tsConfig: './tsconfig.yves.json',
+        ...
+    }
 };
-```
-
-Add a `.yarnrc.yml` file:
-
-**.yarnrc.yml**
-
-```yaml
-nodeLinker: node-modules
-
-plugins:
-    - path: .yarn/plugins/@yarnpkg/plugin-workspace-tools.js
-      spec: '@yarnpkg/plugin-workspace-tools'
-    - path: .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs
-      spec: '@yarnpkg/plugin-interactive-tools'
-
-yarnPath: .yarn/releases/yarn-2.3.3.js
-```
-
-Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`:
-
-```bash
-mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
-wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
-wget -O .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/plugins/%40yarnpkg/plugin-interactive-tools.cjs
-wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.yarn/releases/yarn-2.3.3.js
 ```
 
 Run commands from the root of the project:
 
 ```bash
-npm i -g yarn @angular/cli@12.2.16
+npm i -g @angular/cli@15.0.3
 ```
 
-Run `yarn -v` to check if the yarn has been installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
-
-`ng --version` should show Angular CLI: 12.2.16 version.
+`ng --version` should show Angular CLI: 15.0.3 version.
 
 Install project dependencies:
 
 ```bash
-yarn install
+npm install
 ```
 
 {% info_block warningBox "Warning" %}
@@ -795,7 +801,7 @@ If you're getting `Missing write access to node_modules/mp-profile`, delete this
 
 {% endinfo_block %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
+Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -803,47 +809,17 @@ Add the `merchant-portal` folder and builder files:
 
 ```bash
 mkdir frontend/merchant-portal
-wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/entry-points.js
-wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/html-transform.js
-wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/jest.config.js
-wget -O frontend/merchant-portal/jest.preset.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/jest.preset.js
-wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/mp-paths.js
-wget -O frontend/merchant-portal/test-setup.ts https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/test-setup.ts
-wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/tsconfig.spec.json
-wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/update-config-paths.js
-wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/utils.js
-wget -O frontend/merchant-portal/webpack.config.ts https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/frontend/merchant-portal/webpack.config.ts
-```
-
-**frontend/merchant-portal/webpack.config.ts**
-
-```ts
-import {
-    CustomWebpackBrowserSchema,
-    TargetOptions,
-} from "@angular-builders/custom-webpack";
-import * as webpack from "webpack";
-
-import { getMPEntryPointsMap } from "./entry-points";
-
-export default async (
-    config: webpack.Configuration,
-    options: CustomWebpackBrowserSchema,
-    targetOptions: TargetOptions
-): Promise<webpack.Configuration> => {
-    console.log("Resolving entry points...");
-
-    const entryPointsMap = await getMPEntryPointsMap();
-
-    console.log(`Found ${Object.keys(entryPointsMap).length} entry point(s)!`);
-
-    config.entry = {
-        ...(config.entry as any),
-        ...entryPointsMap,
-    };
-
-    return config;
-};
+wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/entry-points.js
+wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/html-transform.js
+wget -O frontend/merchant-portal/jest.config.ts https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/jest.config.ts
+wget -O frontend/merchant-portal/jest.preset.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/jest.preset.js
+wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/mp-paths.js
+wget -O frontend/merchant-portal/stylelint.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/stylelint.js
+wget -O frontend/merchant-portal/test-setup.ts https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/test-setup.ts
+wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/tsconfig.spec.json
+wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/update-config-paths.js
+wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/utils.js
+wget -O frontend/merchant-portal/webpack.config.ts https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/webpack.config.ts
 ```
 
 ### 6) Add files for the Merchant Portal entry point:
@@ -995,7 +971,6 @@ if (environment.production) {
 
 platformBrowserDynamic()
     .bootstrapModule(AppModule)
-    /* tslint:disable-next-line: no-console */
     .catch((error) => console.error(error));
 ```
 
@@ -1007,9 +982,9 @@ import '@mp/polyfills';
 
 {% info_block warningBox "Verification" %}
 
-`yarn run mp:build` should pass successfully. If it doesn't work, try the full rebuild:
+`npm run mp:build` should pass successfully. If it doesn't work, try the full rebuild:
 
-`rm -rf node_modules && yarn cache clean --all && npm cache clean --force && yarn install && yarn mp:build`
+`rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`
 
 {% endinfo_block %}
 
@@ -1029,7 +1004,6 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\SetupFrontend\Communication\Console\MerchantPortalBuildFrontendConsole;
-use Spryker\Zed\SetupFrontend\Communication\Console\MerchantPortalInstallDependenciesConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
@@ -1041,7 +1015,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         $commands = [
-            new MerchantPortalInstallDependenciesConsole(),
             new MerchantPortalBuildFrontendConsole(),
         ];
 
@@ -1051,32 +1024,326 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-- Add the Merchant Portal installation command:
-  - build-static:
+Add the Merchant Portal build command:
 
-    ```yaml
-    merchant-portal-install-dependencies:
-    command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
-    ```
-
-- Add the Merchant Portal build command:
-  - build-static-production:
+- build-static-production:
     ```yaml
     merchant-portal-build-frontend:
-      command: 'vendor/bin/console frontend:mp:build -e production'
-      timeout: 1600
+        command: 'vendor/bin/console frontend:mp:build -e production'
+        timeout: 1600
     ```
 
-  - build-static-development:
+- build-static-development:
     ```yaml
     merchant-portal-build-frontend:
-      command: 'vendor/bin/console frontend:mp:build'
-      timeout: 1600
+        command: 'vendor/bin/console frontend:mp:build'
+        timeout: 1600
     ```
+
+### 7) Set up ACL behavior
+
+Each feature/module with a persistent relation to the merchant must expand the ACL configuration. Based on your built-in features, you need to integrate the required plugins:
+
+#### Integrate the ACL rule plugins
+
+| PLUGIN                                                                             | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                            |
+|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| DashboardMerchantPortalGuiMerchantAclRuleExpanderPlugin                            | Adds `dashboard-merchant-portal-gui` to list of `AclRules`.                           | None          | Spryker\Zed\DashboardMerchantPortalGui\Communication\Plugin\AclMerchantPortal                        |
+| MerchantProfileMerchantPortalGuiMerchantAclRuleExpanderPlugin                      | Adds `merchant-profile-merchant-portal-gui` to list of `AclRules`.                    | None          | Spryker\Zed\MerchantProfileMerchantPortalGui\Communication\Plugin\AclMerchantPortal                  |
+| ProductOfferMerchantPortalGuiMerchantAclRuleExpanderPlugin                         | Adds `product-offer-merchant-portal-gui` to list of `AclRules`.                       | None          | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\AclMerchantPortal                     |
+| ProductMerchantPortalGuiMerchantAclRuleExpanderPlugin                              | Adds `product-merchant-portal-gui` to list of `AclRules`.                             | None          | Spryker\Zed\ProductMerchantPortalGui\Communication\Plugin\AclMerchantPortal                          |
+| SalesMerchantPortalGuiMerchantAclRuleExpanderPlugin                                | Adds `sales-merchant-portal-gui` to list of `AclRules`.                               | None          | Spryker\Zed\SalesMerchantPortalGui\Communication\Plugin\AclMerchantPortal                            |
+| DummyMerchantPortalGuiMerchantAclRuleExpanderPlugin                                | Adds `dummy-merchant-portal-gui` to list of `AclRules`.                               | None          | Spryker\Zed\DummyMerchantPortalGui\Communication\Plugin\AclMerchantPortal                            |
+| PriceProductMerchantRelationshipMerchantPortalGuiMerchantAclRuleExpanderPlugin     | Adds `price-product-merchant-relationship-merchant-portal-gui` to list of `AclRules`. | None          | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
+| SecurityMerchantPortalGuiMerchantUserAclRuleExpanderPlugin                         | Adds `security-merchant-portal-gui` to list of `AclRules`.                            | None          | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\AclMerchantPortal                         |
+| UserMerchantPortalGuiMerchantUserAclRuleExpanderPlugin                             | Adds `user-merchant-portal-gui` to list of `AclRules`.                                | None          | Spryker\Zed\UserMerchantPortalGui\Communication\Plugin\AclMerchantPortal                             |
+| MerchantUserMerchantUserAclEntityRuleExpanderPlugin                                | Expands set of `AclEntityRule` transfer objects with merchant user composite data.    | None          | Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal                                      |
+
+
+#### Integrate the ACL configuration plugins
+
+| PLUGIN                                             | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                            |
+|----------------------------------------------------|---------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| AclEntityAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\AclEntity\Communication\Plugin\AclMerchantPortal                                         |
+| AclEntityConfigurationExpanderPlugin    | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\\Communication\Plugin\AclMerchantPortal                                                  |
+| AvailabilityAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Availability\Communication\Plugin\AclMerchantPortal                                      |
+| CategoryAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Category\Communication\Plugin\AclMerchantPortal                                          |
+| CategoryImageAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\CategoryImage\Communication\Plugin\AclMerchantPortal                                     |
+| CmsBlockAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\CmsBlock\Communication\Plugin\AclMerchantPortal                                          |
+| CommentAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Comment\Communication\Plugin\AclMerchantPortal                                           |
+| CompanyBusinessUnitAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\CompanyBusinessUnit\Communication\Plugin\AclMerchantPortal                               |
+| CountryAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal                                           |
+| CurrencyAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal                                          |
+| DiscountAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Discount\Communication\Plugin\AclMerchantPortal                                          |
+| DiscountPromotionAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\DiscountPromotion\Communication\Plugin\AclMerchantPortal                                 |
+| GiftCardAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\GiftCard\Communication\Plugin\AclMerchantPortal                                          |
+| GlossaryAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Glossary\Communication\Plugin\AclMerchantPortal                                          |
+| LocaleAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal                                            |
+| MerchantAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal                                          |
+| MerchantCategoryAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantCategory\Communication\Plugin\AclMerchantPortal                                  |
+| MerchantProductAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\AclMerchantPortal                                   |
+| MerchantProductOfferAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantProductOffer\Communication\Plugin\AclMerchantPortal                              |
+| MerchantProfileAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantProfile\Communication\Plugin\AclMerchantPortal                                   |
+| MerchantRelationshipAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantRelationship\Communication\Plugin\AclMerchantPortal                              |
+| MerchantSalesOrderAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\AclMerchantPortal                                |
+| MerchantStockAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal                                     |
+| MerchantUserAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal                                      |
+| OmsAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Oms\Communication\Plugin\AclMerchantPortal                                               |
+| OmsProductOfferReservationAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\AclMerchantPortal                        |
+| PaymentAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Payment\Communication\Plugin\AclMerchantPortal                                           |
+| PriceProductAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\PriceProduct\Communication\Plugin\AclMerchantPortal                                      |
+| PriceProductMerchantRelationshipAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\AclMerchantPortal                  |
+| PriceProductOfferAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\PriceProductOffer\Communication\Plugin\AclMerchantPortal                                 |
+| ProductAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Product\Communication\Plugin\AclMerchantPortal                                           |
+| ProductAttributeAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductAttribute\Communication\Plugin\AclMerchantPortal                                  |
+| ProductCategoryAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductCategory\Communication\Plugin\AclMerchantPortal                                   |
+| ProductImageAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductImage\Communication\Plugin\AclMerchantPortal                                      |
+| ProductOfferAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductOffer\Communication\Plugin\AclMerchantPortal                                      |
+| ProductOfferStockAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductOfferStock\Communication\Plugin\AclMerchantPortal                                 |
+| ProductOfferValidityAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductOfferValidity\Communication\Plugin\AclMerchantPortal                              |
+| ProductOptionAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductOption\Communication\Plugin\AclMerchantPortal                                     |
+| ProductSearchAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductSearch\Communication\Plugin\AclMerchantPortal                                     |
+| ProductValidityAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\ProductValidity\Communication\Plugin\AclMerchantPortal                                   |
+| RefundAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Refund\Communication\Plugin\AclMerchantPortal                                            |
+| SalesAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Sales\Communication\Plugin\AclMerchantPortal                                             |
+| SalesInvoiceAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\SalesInvoice\Communication\Plugin\AclMerchantPortal                                      |
+| SalesOrderThresholdAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\AclMerchantPortal                               |
+| ShipmentAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Shipment\Communication\Plugin\AclMerchantPortal                                          |
+| StateMachineAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\StateMachine\Communication\Plugin\AclMerchantPortal                                      |
+| StockAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Stock\Communication\Plugin\AclMerchantPortal                                             |
+| StoreAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Store\Communication\Plugin\AclMerchantPortal                                             |
+| TaxAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Tax\Communication\Plugin\AclMerchantPortal                                               |
+| UrlAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Url\Communication\Plugin\AclMerchantPortal                                               |
+| UserPasswordResetAclEntityConfigurationExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\UserPasswordReset\Communication\Plugin\AclMerchantPortal                                 |
+
+<details><summary markdown='span'>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\Acl\Communication\Plugin\AclMerchantPortal\AclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\AclEntity\Communication\Plugin\AclMerchantPortal\AclEntityAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use Spryker\Zed\Availability\Communication\Plugin\AclMerchantPortal\AvailabilityAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Category\Communication\Plugin\AclMerchantPortal\CategoryAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\CategoryImage\Communication\Plugin\AclMerchantPortal\CategoryImageAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\CmsBlock\Communication\Plugin\AclMerchantPortal\CmsBlockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Comment\Communication\Plugin\AclMerchantPortal\CommentAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\CompanyBusinessUnit\Communication\Plugin\AclMerchantPortal\CompanyBusinessUnitAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Customer\Communication\Plugin\AclMerchantPortal\CustomerMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\DashboardMerchantPortalGui\Communication\Plugin\AclMerchantPortal\DashboardMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\Discount\Communication\Plugin\AclMerchantPortal\DiscountAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Discount\Communication\Plugin\AclMerchantPortal\DiscountMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\DiscountPromotion\Communication\Plugin\AclMerchantPortal\DiscountPromotionAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\DiscountPromotion\Communication\Plugin\AclMerchantPortal\DiscountPromotionMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\DummyMerchantPortalGui\Communication\Plugin\AclMerchantPortal\DummyMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\GiftCard\Communication\Plugin\AclMerchantPortal\GiftCardAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Glossary\Communication\Plugin\AclMerchantPortal\GlossaryAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal\MerchantAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Merchant\Communication\Plugin\AclMerchantPortal\MerchantMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\MerchantCategory\Communication\Plugin\AclMerchantPortal\MerchantCategoryAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\AclMerchantPortal\MerchantProductAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\AclMerchantPortal\MerchantProductMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\MerchantProductOffer\Communication\Plugin\AclMerchantPortal\MerchantProductOfferAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantProfile\Communication\Plugin\AclMerchantPortal\MerchantProfileAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantProfileMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantProfileMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\MerchantRelationship\Communication\Plugin\AclMerchantPortal\MerchantRelationshipAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\AclMerchantPortal\MerchantSalesOrderAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantSalesOrder\Communication\Plugin\AclMerchantPortal\MerchantSalesOrderMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\MerchantStock\Communication\Plugin\AclMerchantPortal\MerchantStockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal\MerchantUserAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal\MerchantUserMerchantUserAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Oms\Communication\Plugin\AclMerchantPortal\OmsAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Oms\Communication\Plugin\AclMerchantPortal\OmsMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\AclMerchantPortal\OmsProductOfferReservationAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\AclMerchantPortal\OmsProductOfferReservationMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\AclMerchantPortal\PaymentAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\PriceProduct\Communication\Plugin\AclMerchantPortal\PriceProductAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\PriceProduct\Communication\Plugin\AclMerchantPortal\PriceProductMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\AclMerchantPortal\PriceProductMerchantRelationshipAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\AclMerchantPortal\PriceProductMerchantRelationshipMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\PriceProductOffer\Communication\Plugin\AclMerchantPortal\PriceProductOfferAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Product\Communication\Plugin\AclMerchantPortal\ProductAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Product\Communication\Plugin\AclMerchantPortal\ProductMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\ProductAttribute\Communication\Plugin\AclMerchantPortal\ProductAttributeAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductCategory\Communication\Plugin\AclMerchantPortal\ProductCategoryAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductImage\Communication\Plugin\AclMerchantPortal\ProductImageAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductImage\Communication\Plugin\AclMerchantPortal\ProductImageMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\ProductMerchantPortalGui\Communication\Plugin\AclMerchantPortal\ProductMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\ProductOffer\Communication\Plugin\AclMerchantPortal\ProductOfferAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductOffer\Communication\Plugin\AclMerchantPortal\ProductOfferMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\AclMerchantPortal\ProductOfferMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\ProductOfferStock\Communication\Plugin\AclMerchantPortal\ProductOfferStockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductOfferValidity\Communication\Plugin\AclMerchantPortal\ProductOfferValidityAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductOption\Communication\Plugin\AclMerchantPortal\ProductOptionAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductSearch\Communication\Plugin\AclMerchantPortal\ProductSearchAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\ProductValidity\Communication\Plugin\AclMerchantPortal\ProductValidityAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Refund\Communication\Plugin\AclMerchantPortal\RefundAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Refund\Communication\Plugin\AclMerchantPortal\RefundMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Sales\Communication\Plugin\AclMerchantPortal\SalesAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Sales\Communication\Plugin\AclMerchantPortal\SalesMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\SalesInvoice\Communication\Plugin\AclMerchantPortal\SalesInvoiceAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\SalesMerchantPortalGui\Communication\Plugin\AclMerchantPortal\SalesMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\AclMerchantPortal\SalesOrderThresholdAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\AclMerchantPortal\SecurityMerchantPortalGuiMerchantUserAclRuleExpanderPlugin;
+use Spryker\Zed\Shipment\Communication\Plugin\AclMerchantPortal\ShipmentAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\StateMachine\Communication\Plugin\AclMerchantPortal\StateMachineAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Stock\Communication\Plugin\AclMerchantPortal\StockAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\AclMerchantPortal\StoreAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\AclMerchantPortal\StoreMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\Tax\Communication\Plugin\AclMerchantPortal\TaxAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Url\Communication\Plugin\AclMerchantPortal\UrlAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Url\Communication\Plugin\AclMerchantPortal\UrlMerchantAclEntityRuleExpanderPlugin;
+use Spryker\Zed\UserMerchantPortalGui\Communication\Plugin\AclMerchantPortal\UserMerchantPortalGuiMerchantUserAclRuleExpanderPlugin;
+use Spryker\Zed\UserPasswordReset\Communication\Plugin\AclMerchantPortal\UserPasswordResetAclEntityConfigurationExpanderPlugin;
+
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantAclRuleExpanderPluginInterface>
+     */
+    protected function getMerchantAclRuleExpanderPlugins(): array
+    {
+        return [
+            new DashboardMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new MerchantProfileMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new ProductOfferMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new ProductMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new SalesMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new DummyMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new PriceProductMerchantRelationshipMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantAclEntityRuleExpanderPluginInterface>
+     */
+    protected function getMerchantAclEntityRuleExpanderPlugins(): array
+    {
+        return [
+            new ProductOfferMerchantAclEntityRuleExpanderPlugin(),
+            new ProductMerchantAclEntityRuleExpanderPlugin(),
+            new MerchantMerchantAclEntityRuleExpanderPlugin(),
+            new MerchantSalesOrderMerchantAclEntityRuleExpanderPlugin(),
+            new MerchantProductMerchantAclEntityRuleExpanderPlugin(),
+            new CurrencyMerchantAclEntityRuleExpanderPlugin(),
+            new CountryMerchantAclEntityRuleExpanderPlugin(),
+            new StoreMerchantAclEntityRuleExpanderPlugin(),
+            new LocaleMerchantAclEntityRuleExpanderPlugin(),
+            new SalesMerchantAclEntityRuleExpanderPlugin(),
+            new PriceProductMerchantAclEntityRuleExpanderPlugin(),
+            new ProductImageMerchantAclEntityRuleExpanderPlugin(),
+            new OmsProductOfferReservationMerchantAclEntityRuleExpanderPlugin(),
+            new OmsMerchantAclEntityRuleExpanderPlugin(),
+            new UrlMerchantAclEntityRuleExpanderPlugin(),
+            new RefundMerchantAclEntityRuleExpanderPlugin(),
+            new CustomerMerchantAclEntityRuleExpanderPlugin(),
+            new DiscountMerchantAclEntityRuleExpanderPlugin(),
+            new DiscountPromotionMerchantAclEntityRuleExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantUserAclRuleExpanderPluginInterface>
+     */
+    protected function getMerchantUserAclRuleExpanderPlugins(): array
+    {
+        return [
+            new SecurityMerchantPortalGuiMerchantUserAclRuleExpanderPlugin(),
+            new UserMerchantPortalGuiMerchantUserAclRuleExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantUserAclEntityRuleExpanderPluginInterface>
+     */
+    protected function getMerchantUserAclEntityRuleExpanderPlugins(): array
+    {
+        return [
+            new MerchantUserMerchantUserAclEntityRuleExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            new AclEntityAclEntityConfigurationExpanderPlugin(),
+            new AclEntityConfigurationExpanderPlugin(),
+            new AvailabilityAclEntityConfigurationExpanderPlugin(),
+            new CategoryAclEntityConfigurationExpanderPlugin(),
+            new CategoryImageAclEntityConfigurationExpanderPlugin(),
+            new CmsBlockAclEntityConfigurationExpanderPlugin(),
+            new CommentAclEntityConfigurationExpanderPlugin(),
+            new CompanyBusinessUnitAclEntityConfigurationExpanderPlugin(),
+            new CountryAclEntityConfigurationExpanderPlugin(),
+            new CurrencyAclEntityConfigurationExpanderPlugin(),
+            new DiscountAclEntityConfigurationExpanderPlugin(),
+            new DiscountPromotionAclEntityConfigurationExpanderPlugin(),
+            new GiftCardAclEntityConfigurationExpanderPlugin(),
+            new GlossaryAclEntityConfigurationExpanderPlugin(),
+            new LocaleAclEntityConfigurationExpanderPlugin(),
+            new MerchantAclEntityConfigurationExpanderPlugin(),
+            new MerchantCategoryAclEntityConfigurationExpanderPlugin(),
+            new MerchantProductAclEntityConfigurationExpanderPlugin(),
+            new MerchantProductOfferAclEntityConfigurationExpanderPlugin(),
+            new MerchantProfileAclEntityConfigurationExpanderPlugin(),
+            new MerchantRelationshipAclEntityConfigurationExpanderPlugin(),
+            new MerchantSalesOrderAclEntityConfigurationExpanderPlugin(),
+            new MerchantStockAclEntityConfigurationExpanderPlugin(),
+            new MerchantUserAclEntityConfigurationExpanderPlugin(),
+            new OmsAclEntityConfigurationExpanderPlugin(),
+            new OmsProductOfferReservationAclEntityConfigurationExpanderPlugin(),
+            new PaymentAclEntityConfigurationExpanderPlugin(),
+            new PriceProductAclEntityConfigurationExpanderPlugin(),
+            new PriceProductMerchantRelationshipAclEntityConfigurationExpanderPlugin(),
+            new PriceProductOfferAclEntityConfigurationExpanderPlugin(),
+            new ProductAclEntityConfigurationExpanderPlugin(),
+            new ProductAttributeAclEntityConfigurationExpanderPlugin(),
+            new ProductCategoryAclEntityConfigurationExpanderPlugin(),
+            new ProductImageAclEntityConfigurationExpanderPlugin(),
+            new ProductOfferAclEntityConfigurationExpanderPlugin(),
+            new ProductOfferStockAclEntityConfigurationExpanderPlugin(),
+            new ProductOfferValidityAclEntityConfigurationExpanderPlugin(),
+            new ProductOptionAclEntityConfigurationExpanderPlugin(),
+            new ProductSearchAclEntityConfigurationExpanderPlugin(),
+            new ProductValidityAclEntityConfigurationExpanderPlugin(),
+            new RefundAclEntityConfigurationExpanderPlugin(),
+            new SalesAclEntityConfigurationExpanderPlugin(),
+            new SalesInvoiceAclEntityConfigurationExpanderPlugin(),
+            new SalesOrderThresholdAclEntityConfigurationExpanderPlugin(),
+            new ShipmentAclEntityConfigurationExpanderPlugin(),
+            new StateMachineAclEntityConfigurationExpanderPlugin(),
+            new StockAclEntityConfigurationExpanderPlugin(),
+            new StoreAclEntityConfigurationExpanderPlugin(),
+            new TaxAclEntityConfigurationExpanderPlugin(),
+            new UrlAclEntityConfigurationExpanderPlugin(),
+            new UserPasswordResetAclEntityConfigurationExpanderPlugin(),
+        ];
+    }
+}
+```
+</details>
+
+{% info_block warningBox "Verification" %}
+
+Make sure that all propel-related entities with the merchant have the allowed/restricted access level according to the ACL configuration.
+
+{% endinfo_block %}
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office—MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It is not safe to expose MerchantPortal next to the Back Office — MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
@@ -1094,45 +1361,52 @@ MerchantPortal *must not have* access to the following:
 - Scheduler
 
 **deploy.dev.yml**
+
 ```yaml
 ...
+image:
+    ...
+    node:
+        version: 18
+        npm: 9
+...
 groups:
-  EU:
-    region: EU
-    applications:
-      merchant_portal_eu:
-        application: merchant-portal
-        endpoints:
-          mp.de.spryker.local:
-            entry-point: MerchantPortal
-            store: DE
-            primal: true
-            services:
-              session:
-                namespace: 7
-          mp.at.spryker.local:
-            entry-point: MerchantPortal
-            store: AT
-            services:
-              session:
-                namespace: 8
-  US:
-    region: US
-    applications:
-      merchant_portal_us:
-        application: merchant-portal
-        endpoints:
-          mp.us.spryker.local:
-            entry-point: MerchantPortal
-            store: US
-            services:
-              session:
-                namespace: 9
+    EU:
+        region: EU
+        applications:
+            merchant_portal_eu:
+                application: merchant-portal
+                endpoints:
+                    mp.de.spryker.local:
+                        entry-point: MerchantPortal
+                        store: DE
+                        primal: true
+                        services:
+                            session:
+                                namespace: 7
+                    mp.at.spryker.local:
+                        entry-point: MerchantPortal
+                        store: AT
+                        services:
+                            session:
+                                namespace: 8
+    US:
+        region: US
+        applications:
+            merchant_portal_us:
+                application: merchant-portal
+                endpoints:
+                    mp.us.spryker.local:
+                        entry-point: MerchantPortal
+                        store: US
+                        services:
+                            session:
+                                namespace: 9
 ```
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD operations—`INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
+Grant only default CRUD operations — `INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 
@@ -1144,7 +1418,7 @@ FLUSH PRIVILEGES;
 
 ### 3) Create a new Nginx web server configuration
 
-The following is an example of an Nginx configuration:
+The following is an example of a Nginx configuration:
 
 **/etc/nginx/merchant-portal.conf**
 
@@ -1216,7 +1490,6 @@ Make sure the following pages do not open: `https://your-merchant-portal.domain/
 ### 4) Register modules in ACL
 
 Add new modules to installer rules:
-
 
 **src/Pyz/Zed/Acl/AclConfig.php**
 
@@ -1293,6 +1566,7 @@ Add the `My Account` and `Logout` sections to `navigation-secondary.xml`:
 ```
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```

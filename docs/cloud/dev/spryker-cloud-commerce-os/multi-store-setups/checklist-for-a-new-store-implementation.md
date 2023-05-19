@@ -15,8 +15,7 @@ For detailed steps about the new store implementation, see [HowTo: Set up multip
 
 **Spryker**
 1. Adjust deployment structure / CI: define the environment variables in Spryker CI based on the deployment files.
-2. Make adjustments for stage and production: adjust the configuration in the `config.php` file.
-3. Change DNS (Spryker owns DNS in AWS).
+2. Change DNS (Spryker owns DNS in AWS).
 
 **SI / Customer**
 1. Set up a local dev environment and adjust configuration in `config.php`, including hosts in data YML files, for example, in `/deploy.spryker-b2c-production.yml`.
@@ -45,9 +44,8 @@ For this setup, send a support request to Spryker and do the following:
 
 **Spryker**
 1. Adjust deployment structure / CI: define the environment variables in Spryker CI based on the deployment files.
-2. Make adjustments for staging and production: adjust the configuration in the `config.php` file.
-3. Add new endpoints for stores and regions (Spryker owns DNS in AWS).
-4. Update the RDS configuration to activate multi-database feature
+2. Add new endpoints for stores and regions (Spryker owns DNS in AWS).
+3. Update the RDS configuration to activate multi-database feature
 
 **SI / Customer**
 

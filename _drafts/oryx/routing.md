@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Apr 4, 2023
 ---
 
-Routing lets users navigate between different pages and components within an application. This document describes how to set up routing: add `RouterFeature`, render router outlets, and provide routes using Dependency Injection (DI)<!-- add a link -->.
+Routing lets users navigate between different pages and components within an application. This document describes how to set up routing: add `RouterFeature`, render router outlets, and provide routes using [Dependency Injection (DI)](/_drafts/oryx/dependency-injection/dependency-injection.html).
 
 `@spryker-oryx/router` provides the infrastructure for routing capabilities. Its main component is `RouterService`, which enables navigation from one view to the next as users perform application tasks.
 

@@ -272,7 +272,6 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
         ];
     }
 }
-
 ```
 
 **src/Pyz/Zed/AclEntity/AclEntityDependencyProvider.php**
@@ -1021,7 +1020,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         return $commands;
     }
 }
-
 ```
 
 Add the Merchant Portal build command:
@@ -1333,6 +1331,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -1529,7 +1528,6 @@ class AclConfig extends SprykerAclConfig
         return $installerRules;
     }
 }
-
 ```
 
 {% info_block warningBox "Verification" %}

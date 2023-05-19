@@ -45,7 +45,7 @@ For this setup, send a support request to Spryker and do the following:
 **Spryker**
 1. Adjust deployment structure / CI: define the environment variables in Spryker CI based on the deployment files.
 2. Add new endpoints for stores and regions (Spryker owns DNS in AWS).
-3. Update the RDS configuration to activate multi-database feature
+3. Update the RDS configuration to activate multi-database feature.
 
 **SI / Customer**
 
@@ -108,7 +108,7 @@ The touchpoints listed here may vary depending on the project. If view of that, 
 ### Data
 1. Generate product data files to add new localized attributes and entries.
 2. Create the folder `data/import/common/{NewStore}` and fill it with all the files that reflect the new store. 
-3. Modify install recipes to add the new folder you created or copied in the previous steps
+3. Modify install recipes to add the new folder you created or copied in the previous steps.
 
 ### Store domains and certificates
 Request the Spryker Cloud team to create domains and certificates.

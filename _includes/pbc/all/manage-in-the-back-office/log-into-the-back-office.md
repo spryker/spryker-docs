@@ -12,8 +12,6 @@ On the Back Office login page, enter the **EMAIL** and **PASSWORD** of your acco
 
 If you don't have a login URL, your Back Office administrator or a developer can provide you with it.
 
-If you don't have a Back Office account, ask an existing Back Office user or a developer to [create](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#create-a-user) you one.
-
 
 ## Restore a Back Office password
 

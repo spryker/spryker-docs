@@ -151,7 +151,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 Ensure that the plugin works correctly:
  
-1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html).
+1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
 3. Add **ABSTRACT PRODUCT SKU**.
 4. Create another discount with one or more identic promotional products.

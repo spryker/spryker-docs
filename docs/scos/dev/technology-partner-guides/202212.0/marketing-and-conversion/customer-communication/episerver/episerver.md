@@ -5,7 +5,7 @@ last_updated: Apr 26, 2023
 template: concept-topic-template
 ---
 
-The "Episerver" section provides guidance about integrating and utilizing Episerver. Learn about the Episerver API requests and order reference commands. Follow the instructions to integrate and configure Episerver in your project.
+The *Episerver* section provides guidance about integrating and utilizing Episerver. Learn about the Episerver API requests and order reference commands. Follow the instructions to integrate and configure Episerver in your project.
 
 For more information the following documents in this section:
 * [Episerver API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-api.html)

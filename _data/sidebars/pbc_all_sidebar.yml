@@ -2529,6 +2529,20 @@ entries:
                 url: /docs/pbc/all/search/manage-in-the-back-office/define-search-preferences.html
               - title: Edit search preferences
                 url: /docs/pbc/all/search/manage-in-the-back-office/edit-search-preferences.html
+              - title: Filter preferences
+                nested:
+                  - title: Define
+                    url: /docs/pbc/all/search/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
+                  - title: Edit
+                    url: /docs/pbc/all/search/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html
+                  - title: Reorder
+                    url: /docs/pbc/all/search/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html
+              - title: Category filters
+                nested:
+                  - title: Assign and deassign filters from categories
+                    url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
+                  - title: Reorder category filters
+                    url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/reorder-category-filters.html                                        
           - title: Manage using Glue API
             nested:
               - title: Retrieve autocomplete and search suggestions

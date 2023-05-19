@@ -23,7 +23,7 @@ This topic describes how to assign and deassign filters from categories in the B
 ## Prerequisites
 
 
-1. Create the category filters you want to assign. For instructions, see [Define filter preferences](/docs/scos/user/back-office-user-guides/202204.0/merchandising/filter-preferences/define-filter-preferences.html)
+1. Create the category filters you want to assign. For instructions, see [Define filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html)
 2. To start working with category filters, go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 
 ## Assign filters to a category

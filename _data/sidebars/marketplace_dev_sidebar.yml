@@ -313,6 +313,8 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
+            - "202304.0"
 
           - title: Marketplace Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html

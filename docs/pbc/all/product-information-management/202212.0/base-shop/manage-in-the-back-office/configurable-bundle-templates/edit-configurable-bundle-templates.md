@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
 related:
   - title: Create configurable bundle templates
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html
   - title: Edit slots in configurable bundle templates
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
@@ -52,4 +52,4 @@ To start editing a configurable bundle template, do the following:
 
 ## Next steps
 
-[Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)    
+[Edit slots in configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)    

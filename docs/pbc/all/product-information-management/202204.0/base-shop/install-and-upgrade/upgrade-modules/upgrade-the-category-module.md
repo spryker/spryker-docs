@@ -33,6 +33,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-category.html
 related:
   - title: Creating Categories
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/category/create-categories.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/categories/create-categories.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-category-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-category-module.md -->

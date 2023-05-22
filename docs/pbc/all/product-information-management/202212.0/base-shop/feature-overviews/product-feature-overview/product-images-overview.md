@@ -34,4 +34,4 @@ You can enjoy the following benefits of the feature:
 |BACK OFFICE USER GUIDES|
 |---|
 | [Assign images to a product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#optional-add-images) |
-| [Assign images to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/create-categories.html) |
+| [Assign images to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html) |

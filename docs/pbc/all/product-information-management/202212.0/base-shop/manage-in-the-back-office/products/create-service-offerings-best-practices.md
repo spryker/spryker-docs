@@ -102,7 +102,7 @@ If you don’t want to display the Service products in the Storefront so buyers 
     4. Click **Add Slot** in the top right corner on the **Template details** page.
     5. Enter the name of your slot in the **Name** field for the corresponding locale.
     6. Click **Save**. Two tabs will be added to the Slot details page: **Assign Categories** and **Assign Products**.
-    7. Assign categories or products to the slot. Make sure to assign all products for which you want to offer the specific service. See [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html) for details on how to assign categories and products.
+    7. Assign categories or products to the slot. Make sure to assign all products for which you want to offer the specific service. See [Edit slots in configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html) for details on how to assign categories and products.
     8. Go back to the **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates** section and click **Edit** for the just created Configurable bundle template.
     9. Click **Add slot** and add the Service product to it.
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.

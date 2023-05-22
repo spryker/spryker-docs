@@ -2131,6 +2131,26 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html
                       - title: Edit product attributes
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
+                  - title: Categories
+                    nested:
+                      - title: Create categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/create-categories.html
+                      - title: Edit categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/edit-categories.html
+                      - title: Delete categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/delete-categories.html
+                      - title: Assign and deassign products from categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
+                      - title: Order products in categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
+                  - title: Configurable bundle templates
+                    nested:
+                    - title: Create configurable bundle templates
+                      url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html
+                    - title: Edit configurable bundle templates
+                      url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html
+                    - title: Edit slots in configurable bundle templates
+                      url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
                   - title: Products
                     nested:
                       - title: "Creating service offerings: best practices"
@@ -2175,6 +2195,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/create-product-options.html
                       - title: Edit
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
+                  - title: View product barcodes
+                    url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/view-product-barcodes.html
               - title: Manage in the Back Office
                 include_versions:
                 - "202204.0"

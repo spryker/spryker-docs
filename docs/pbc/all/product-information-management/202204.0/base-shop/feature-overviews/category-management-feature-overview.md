@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/category-management-feature-walkthrough.html
 ---
 
-A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/assign-products-to-categories.html) from the Back Office or [import stores for categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/assign-products-to-categories.html).
+A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html) from the Back Office or [import stores for categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html).
 
 ## Root, parent, and child categories
 
@@ -24,7 +24,7 @@ The product catalog is structured in a category tree, which consists of root, pa
 
 A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
 
-A parent category is a category that has products and other categories assigned to it. Categories assigned to parent categories are referred to as *child categories*. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones by editing categories in the Back Office or importing the categories. For information about how to assign child categories to parent categories, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/create-categories.html) and [Edit categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/edit-categories.html). For information about importing child categories, see [File details: category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/file-details-category.csv.html).
+A parent category is a category that has products and other categories assigned to it. Categories assigned to parent categories are referred to as *child categories*. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones by editing categories in the Back Office or importing the categories. For information about how to assign child categories to parent categories, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html) and [Edit categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/edit-categories.html). For information about importing child categories, see [File details: category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/file-details-category.csv.html).
 
 On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
@@ -35,9 +35,9 @@ In the image below, the Cameras & Camcorders parent category has the Digital Cam
 
 ## Category templates
 
-A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information about how to do that, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/create-categories.html).
+A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information about how to do that, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
 
-For more information about types of category templates, see [Category page template types](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/create-categories.html#reference-information-template).
+For more information about types of category templates, see [Category page template types](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html#reference-information-template).
 
 ## Category filters
 
@@ -75,11 +75,11 @@ The Category Management feature has the following functional constraints, which 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/create-categories.html) |
-| [Assign products to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/assign-products-to-categories.html) |
-| [Edit categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/edit-categories.html) |
-| [Order products in categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/order-products-in-categories.html) |
-| [Delete categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/delete-categories.html) |
+| [Create a category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html) |
+| [Assign products to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html) |
+| [Edit categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/edit-categories.html) |
+| [Order products in categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html) |
+| [Delete categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/delete-categories.html) |
 
 
 ## Related Developer documents

@@ -11,11 +11,11 @@ redirect_from:
   - /docs/creating-categories
   - /docs/en/creating-categories
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/creating-categories.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/category/creating-categories.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/category/creating-categories.html
 
 related:
   - title: Assigning Products to Categories
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/category/assign-products-to-categories.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
 ---
@@ -93,4 +93,4 @@ You can add multiple image sets and multiple images to an image set. However, by
 
 ## Next Steps
 
-[Assign product to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/assign-products-to-categories.html)
+[Assign product to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html)

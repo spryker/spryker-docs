@@ -562,6 +562,9 @@ jobs:
             - name: Front-end Formatter
               run: node ./frontend/libs/formatter
 
+            - name: Front-end MP Unit Tests
+              run: npm run mp:test
+
             - name: Validate propel files
               run: |
                   vendor/bin/console propel:schema:validate

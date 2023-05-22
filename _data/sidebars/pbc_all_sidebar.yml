@@ -742,6 +742,8 @@ entries:
             nested:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
+              - title: "Product Sets feature: domain model and relationships"
+                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
@@ -2542,7 +2544,7 @@ entries:
                   - title: Assign and deassign filters from categories
                     url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
                   - title: Reorder category filters
-                    url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/reorder-category-filters.html                                        
+                    url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/reorder-category-filters.html
           - title: Manage using Glue API
             nested:
               - title: Retrieve autocomplete and search suggestions

@@ -1,19 +1,9 @@
 ---
-title: Product Sets feature walkthrough
+title: "Product Sets feature: domain model and relationships"
 last_updated: Aug 19, 2021
 description: The Product Sets feature lets you create and sale collections of products
 template: concept-topic-template
-redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202200.0/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
 ---
-
-The _Product Sets_ feature lets you create and sale collections of products.
-
-
-To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) for business users.
-
-
-## Entity diagram
 
 The Product Sets feature consists of the following modules:
 
@@ -32,10 +22,3 @@ The products in product sets and their sorting positions are stored in the `spy_
 ![Product Set Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product_set_db_schema.png)
 
 </div>
-
-
-## Related Developer documents
-
-|INSTALLATION GUIDES | DATA IMPORT |
-|---------|---------|
-| [Product Sets feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-sets-feature.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-product-set.csv.html) |

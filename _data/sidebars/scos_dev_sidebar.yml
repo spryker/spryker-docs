@@ -169,6 +169,9 @@ entries:
       - "202108.0"
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: "Company account: module relations"
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
@@ -524,6 +527,9 @@ entries:
       - "202204.0"
     - title: Reorder
       url: /docs/scos/dev/feature-walkthroughs/reorder-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Resource Sharing
       url: /docs/scos/dev/feature-walkthroughs/resource-sharing-feature-walkthrough.html
       include_versions:

@@ -6,7 +6,6 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
-  - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
 ---
 
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
@@ -29,11 +28,11 @@ To start feature integration, overview and install the necessary features:
 Install the required modules:
 
 ```bash
-composer require spryker/oauth-api:"^1.0.0" \
-spryker/oauth-backend-api:"^1.0.0" \
-spryker/authentication-oauth:"^1.0.0" \
+composer require spryker/oauth-api:"^1.2.0" \
+spryker/oauth-backend-api:"^1.3.0" \
+spryker/authentication-oauth:"^1.0.1" \
 spryker/oauth-customer-connector:"^1.8.0" \
-spryker/oauth-user-connector:"^1.0.0" \
+spryker/oauth-user-connector:"^1.3.0" \
 --update-with-dependencies
 ```
 
@@ -374,6 +373,7 @@ vendor/bin/console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
+* Adjust `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` according to your needs, value format is `[{"identifier":"client-identifier","secret":"client-secret","isConfidential":true,"name":"Customer client","redirectUri":null,"isDefault":true}]`
 * Ensure that the Oauth client has been added to the `spy_oauth_client` table:
 
   1. Run the SQL query:

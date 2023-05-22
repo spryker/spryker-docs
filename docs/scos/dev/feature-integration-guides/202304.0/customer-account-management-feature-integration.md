@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/customer-account-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/customer-account-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/customer-account-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202304.0/customer-account-management-feature-integration.html
 related:
   - title: Customer Account Management + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
@@ -22,4 +21,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-customer-account-management-feature.md -->
+{% include pbc/all/install-features/202304.0/install-the-customer-access-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-customer-access-feature.md -->

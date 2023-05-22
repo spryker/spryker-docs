@@ -154,7 +154,7 @@ The following list illustrates the order followed to run the data importers and 
   * [merchant-open-hours-weekday-schedule](/docs/marketplace/dev/data-import/202204.0/file-details-merchant-open-hours-week-day-schedule.csv.html)
   * [merchant-open-hours-date-schedule](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html)
   * [product-offer-validity](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-validity.csv.html)
-  * [price-product-offer](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)
+  * [price-product-offer](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/file-details-price-product-offer.csv.html)
   * [product-offer-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-data/file-details-product-offer-stock.csv.html)
   * [merchant-stock](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-stock.csv.html)
   * merchant-relationship

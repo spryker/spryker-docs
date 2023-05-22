@@ -1,7 +1,7 @@
 ---
 title: Glue API - Authentication integration
 description: Create an authentication token for the Storefront and Backend API applications in a Spryker project.
-last_updated: September 30, 2022
+last_updated: May 22, 2023
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
@@ -373,7 +373,7 @@ vendor/bin/console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Adjust `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` according to your needs, value format is `[{"identifier":"client-identifier","secret":"client-secret","isConfidential":true,"name":"Customer client","redirectUri":null,"isDefault":true}]`
+* Adjust environment configuration for `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` in `config/Shared/config_default.php` according to your needs, value format is `[{"identifier":"client-identifier","secret":"client-secret","isConfidential":true,"name":"Customer client","redirectUri":null,"isDefault":true}]`
 * Ensure that the Oauth client has been added to the `spy_oauth_client` table:
 
   1. Run the SQL query:

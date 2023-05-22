@@ -789,7 +789,7 @@ console setup:init-db
 
 Ensure the following:
 
-* The `spy_oauth_client` table is populated with the OAuth client you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
+* The `spy_oauth_client` table is populated with the OAuth client(s) you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
 
 * The `spy_oauth_scope` tables are filled with customer scopes.
 

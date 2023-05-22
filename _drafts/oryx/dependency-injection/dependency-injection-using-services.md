@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 ---
 
-There are two primary methods for injecting services and dependencies:
+There are two primary methods for injecting services and dependencies: TEST CODEOWNERS
 
 - `inject`: usually used inside services.
 - `resolve`: usually used inside components and web components.

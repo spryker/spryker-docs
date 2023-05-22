@@ -4,31 +4,23 @@ description: This document allows you to assess if deployment process is compati
 template: howto-guide-template
 ---
 
-# Is deployment process compatible with PaaS OOTB deployment process?
-
-{% info_block infoBox %}
-
-Resources: DevOps
-
-{% endinfo_block %}
-
-## Description
 
 The purpose of this artcile is clarification of the deployment process after migration to Spryker Cloud.
 
-After setting up a repository (GitHub/GitLab/Bitbucket) and a deplyment branch for the project the automatic rollout
-releases triggered by a commit event. Deployment includes the `Approve` step to avoid rollout by mistake.
-This may be disabled, for example, to non-production envs by request in [SalesForce portal](http://support.spryker.com)
-or during filling out the onboarding [questionary form](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
+After setting up a repository with a deployment branch for the project, changes are deployed automatically on commit. To avoid unexpected rollouts, deployment pipelines contain the `Approve` step. The step may be disabled, for example, for non-production environments by creating a ticket in the [SalesForce portal](http://support.spryker.com)
+or by specifying this request in [onboarding questionnaire](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
 
-The current `Spryker PaaS` solution doesn't support any rollout strategies such as blue-green deployments, canary deployments etc.
-So, It is very important to perform well-done testing before rollout changes on production.
+Spryker Cloud Commerce OS doesn't support rollout strategies like blue-green or canary deployment. So, it's very important to cover changes with thorough testing before rolling them out to production.
 
-There are several types of deployment are available to use in CodePipeline:
-1. Build. Only uses for verification of the images building. It doesn't include a rollout.
-2. Rollout Scheduler. This pipeline includes only deploy of Jenkins.
-3. Normal. The main pipeline for application deployment.
-4. Destructive. The same as Normal pipeline, but includes clearing and next filling out data in RDS.
-   Is is mandatory to be launch for the first deploy or in case refreshing data. 
+The following deployment pipelines are available:
+1. Build. Used only for verifying if an image can be built. It doesn't include a rollout.
+2. Rollout Scheduler. Deploys only Jenkins.
+3. Normal. The main pipeline for deploying applications.
+4. Destructive. The same as Normal pipeline, but resets data in RDS. Is is used for initial deployments or for resetting data in non-production environments.
 
-The more detailed explanation how pipelines work you can find [here](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.html#production-pipeline-steps).
+For more information on how pipelines work, see [Deployment in states](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.html#production-pipeline-steps).
+
+
+## Resources 
+
+DevOps

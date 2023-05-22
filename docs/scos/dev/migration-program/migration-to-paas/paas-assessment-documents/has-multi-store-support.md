@@ -4,29 +4,20 @@ description: This document allows you to assess if a project has multi-store sup
 template: howto-guide-template
 ---
 
-# Has multi-store support?
+To estimate the additional effort for aligning the project's usage of the multi-store concept to our default one, do the following:
 
-{% info_block infoBox %}
-
-Resources: Backend
-
-{% endinfo_block %}
-
-## Description
-
-This assessment step doesn’t have migration instructions, it’s necessary to know to understand overall additional efforts
-for project migration.
-
-* Navigate to `config/Shared/stores.php` and see the multi-store settings.
-* Clarify with the customer how much different multi-store concept usage is from the default Spryker multi-store concept:
-    * Is it single DB per store?
-    * Do stores getting deployed simultaneously?
+* In `config/Shared/stores.php`, check the multi-store settings.
+* Clarify with the customer how different multi-store concept usage is from the default Spryker multi-store concept:
+    * Is it single database per store?
+    * Are stores deployed simultaneously?
     * How do URLs build per store?
-    * etc.
 
-Having this information aggregated it should be possible to add additional effort on top to make multi-store concept
-usage compatible with default Spryker multi-store usage.
+
+## Resources
+
+Backend
+
 
 ## Formula
 
-Efforts have to be estimated per specific issue.
+Effort is estimated per specific issue.

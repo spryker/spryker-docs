@@ -4,19 +4,12 @@ description: This document allows you to assess if a project uses MariaDB / MySQ
 template: howto-guide-template
 ---
 
-# Is MariaDB / MySQL used in the project?
+Database driver information has to be provided as part of the prerequisites. To check for additional complexities, in the source code, check how database driver features are used.
 
-{% info_block infoBox %}
+## Resources
 
-Resources: Backend
-
-{% endinfo_block %}
-
-## Description
-
-1. DB driver information has to be provided as part of the prerequisites.
-2. Review source code in order to identify DB driver specific features usage in order to see additional complexities.
+Backend
 
 ## Formula
 
-Approximately 5 days per DB.
+Approximately 5 days per database.

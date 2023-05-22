@@ -7,7 +7,7 @@ template: howto-guide-template
 
 {% info_block infoBox %}
 
-Resources: Backend
+## Resources Backend
 
 {% endinfo_block %}
 

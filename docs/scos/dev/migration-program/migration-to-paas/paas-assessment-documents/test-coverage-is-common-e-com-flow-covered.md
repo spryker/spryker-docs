@@ -4,27 +4,26 @@ description: This document allows you to assess if Common E-com flow is covered 
 template: howto-guide-template
 ---
 
-# Test coverage: Is common E-com flow covered?
 
-{% info_block infoBox %}
-
-Resources: Backend
-
-{% endinfo_block %}
-
-## Description
-
-Do a code review of the archived project received as part of the prerequisites and identify if the following
-functionalities were covered with tests:
-* PLP (product listing page)
-* PDP (product detail page)
-* Add to Cart
-* Checkout (test steps)
+Do a code review of the archived project received as part of the prerequisites and identify if the following functionalities were covered with tests:
+* Product Listing page
+* Product Details page
+* Add to cart
+* Checkout: test steps
 * Place order
 
-These functionalities have to be covered with at least one type of testing from the list: unit, functional or behavioural.
-It’s acceptable to have other testing technologies except for default codeception, for example, Behat, phpspec etc…
+These functionalities should be covered with at least one type of testing:
+* Unit
+* Functional
+* Behavioral
+
+
+Except of Codeception, it’s acceptable for the project to use other testing technologies, like Behat or phpspec.
+
+## Resources
+
+Backend
 
 ## Formula
 
-Approximately 1 day per functionality/module.
+Approximately 1 day per functionality or module.

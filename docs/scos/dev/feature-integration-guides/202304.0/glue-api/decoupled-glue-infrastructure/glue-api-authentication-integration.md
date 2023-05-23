@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
 ---
 
-This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
+This document describes how to create an authentication token for the Storefront and  for Backend API applications in a Spryker project.
 
 ## Install feature core
 
@@ -23,7 +23,7 @@ To start feature integration, overview and install the necessary features:
 | Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
 | Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
 
-### 1) Install the required modules using Composer
+### Install the required modules using Composer
 
 Install the required modules:
 
@@ -53,9 +53,9 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### Set up database schema and transfer objects
 
-Apply database changes and generate entity and transfer changes:
+Apply database changes, then generate the entity and transfer the changes:
 
 ```bash
 vendor/bin/console transfer:generate
@@ -93,9 +93,9 @@ Ensure that the following changes have occurred in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### Set up behavior
 
-1. Activate the following plugins:
+Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -373,8 +373,8 @@ vendor/bin/console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Adjust environment configuration for `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` in `config/Shared/config_default.php` according to your needs, value format is `[{"identifier":"client-identifier","secret":"client-secret","isConfidential":true,"name":"Customer client","redirectUri":null,"isDefault":true}]`
-* Ensure that the Oauth client has been added to the `spy_oauth_client` table:
+* Adjust environment configuration for `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` in `config/Shared/config_default.php` according to your needs, the value format is `[{"identifier":"client-identifier","secret":"client-secret","isConfidential":true,"name":"Customer client","redirectUri":null,"isDefault":true}]`
+* Ensure that the Oauth client has been added to the `spy_oauth_client` table.
 
   1. Run the SQL query:
     ```sql
@@ -384,7 +384,7 @@ vendor/bin/console setup:init-db
   2. Check that the output contains one record.
     
 
-* Ensure that you can authenticate as a customer:
+* Ensure that you can authenticate as a customer.
   1. Send the request:
     ```
     POST /token/ HTTP/1.1
@@ -398,7 +398,7 @@ vendor/bin/console setup:init-db
     
   2. Check that the output contains the 201 response with a valid token.
 
-* Ensure that you can authenticate as a user:
+* Ensure that you can authenticate as a user.
 
   1. Send the request:
     ```

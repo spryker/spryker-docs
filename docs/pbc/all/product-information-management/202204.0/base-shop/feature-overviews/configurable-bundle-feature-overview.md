@@ -19,7 +19,7 @@ For example, when buying a kitchen set, a customer selects pieces of furniture, 
 ## Configurable bundle template
 Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sports suit, a car, or a kitchen set.
 
-A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html) to learn how they do it.
+A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templatescreate-configurable-bundle-templates.html) to learn how they do it.
 
 ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)
 
@@ -79,7 +79,7 @@ When a Back Office user creates a configurable bundle template, they create the 
 {% endinfo_block %}
 
 To learn how a Back Office User edits product lists, see [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html).
-To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
+To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templatesedit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
 
 When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
@@ -247,9 +247,9 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html)  |
-|  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
-|  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
+|  [Create configurable bundle templates](docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templatescreate-configurable-bundle-templates.html)  |
+|  [Edit configurable bundle templates](docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templatesedit-configurable-bundle-templates.html)  |
+|  [Edit slots in configurable bundle templates](docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/configurable-bundle-templatesedit-slots-in-configurable-bundle-templates.html)  |
 
 ## Related Developer documents
 

@@ -15,4 +15,4 @@ To learn more about the feature and to find out how end users use it, see [Promo
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | Discount migration guide | | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{site.version}}/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html) |
+| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | Discount migration guide | | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{site.version}}/base-shop/create-discounts-based-on-shipment.html) |

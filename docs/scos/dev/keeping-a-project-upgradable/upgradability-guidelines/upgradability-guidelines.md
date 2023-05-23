@@ -28,8 +28,8 @@ In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. To f
 <div class="width-100">
 
 
-| Check name  | Error message template                                                   | Documentation                                                                                                                                                                            |
-| ----------- |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER | The condition statement if {statement} is forbidden in the DependencyProvider | [Dependency provider addition logic checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html#transfer-name-is-not-unique) |
+| Check name  | Error message template                                                   | Documentation                                                                                                                                                                          |
+| ----------- |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER | The condition statement if {statement} is forbidden in the DependencyProvider | Dependency provider addition logic checker |
 
 </div>

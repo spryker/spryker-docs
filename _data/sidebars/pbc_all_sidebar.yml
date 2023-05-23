@@ -507,6 +507,8 @@ entries:
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
                   - title: ProductSetGui
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-productsetgui-module.html
+                    include_versions:
+                    - "202204.0"
               - title: Category CMS blocks
                 url: /docs/pbc/all/content-management-system/install-and-upgrade/install-category-cms-blocks.html
               - title: Product CMS blocks

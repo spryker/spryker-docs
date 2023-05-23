@@ -14,12 +14,12 @@ Any third-party file storage is supposed to be migrated to S3 bucket usage. File
 
 We expect to receive this information as part of the [prerequisites](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
 
-## Resources
+## Resources for assessment
 
 * Backend
 * Optional: DevOps
 
 
-## Formula
+## Formula for calculating the migration effort
 
 Locally stored data -> move to S3 - 1-2 days. Everything else is to be estimated.

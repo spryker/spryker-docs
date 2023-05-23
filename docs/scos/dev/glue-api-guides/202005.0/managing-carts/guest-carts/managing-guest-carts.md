@@ -39,7 +39,7 @@ For detailed information on the modules that provide the API functionality and r
 
 
 
-## Resources for Accessing Guest Carts
+## Resources for assessment for Accessing Guest Carts
 The `/guest-carts` and `/guest-cart-items` resources provide endpoints to manage carts of users who haven't yet registered in the system or authenticated with the Glue REST API. Such carts provide the possibility for users to place items on a cart without the necessity to provide any registration information.
 
 Each guest customer is identified by the value of the **X-Anonymous-Customer-Unique-Id** header. The header needs to be passed with each request related to a guest user. Glue REST API does not assign unique IDs to guest customer users. It is the responsibility of the API client to generate and manage unique IDs for all guest user sessions.

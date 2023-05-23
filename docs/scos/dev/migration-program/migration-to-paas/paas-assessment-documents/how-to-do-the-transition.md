@@ -8,7 +8,7 @@ template: howto-guide-template
 
 {% info_block infoBox %}
 
-## Resources Backend, DevOps
+## Resources for assessment Backend, DevOps
 
 {% endinfo_block %}
 
@@ -40,7 +40,7 @@ a domain zone (customer or Spryker) the switching time may vary.
 Due to infra side is fully managed by Spryker a ticket about endpoints update should be created in [SalesForce portal](http://support.spryker.com)
 to Operation team. All further communication with a customer is carried out by any preferable channel, such as slack/email etc
 
-## Formula
+## Formula for calculating the migration effort
 
 If the dry-run switch has been executed we can get the precise time of down time and related efforts,
 see [Switch from on prem to Spryker Cloud](/docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/switch-from-on-prem-to-spryker-cloud.html).

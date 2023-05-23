@@ -9,12 +9,12 @@ The information about non-standard services is provided in the [prerequisites fo
 Services mentioned in prerequisites have to be compared with the services from Spryker documentation to get the diff:
 [System requirements: Spryker product release 202204.0](/docs/scos/dev/system-requirements/202204.0/system-requirements.html).
 
-## Resources
+## Resources for assessment
 
 * Backend
 * DevOps
 
 
-## Formula
+## Formula for calculating the migration effort
 
 Estimation is based on the specific issues.

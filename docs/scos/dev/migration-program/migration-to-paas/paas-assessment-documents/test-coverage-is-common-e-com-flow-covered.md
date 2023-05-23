@@ -20,10 +20,10 @@ These functionalities should be covered with at least one type of testing:
 
 Except of Codeception, it’s acceptable for the project to use other testing technologies, like Behat or phpspec.
 
-## Resources
+## Resources for assessment
 
 Backend
 
-## Formula
+## Formula for calculating the migration effort
 
 Approximately 1 day per functionality or module.

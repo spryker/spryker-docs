@@ -21,6 +21,6 @@ The following deployment pipelines are available:
 For more information on how pipelines work, see [Deployment in states](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.html#production-pipeline-steps).
 
 
-## Resources 
+## Resources for assessment 
 
 DevOps

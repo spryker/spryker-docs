@@ -13,11 +13,11 @@ To estimate the additional effort for aligning the project's usage of the multi-
     * How do URLs build per store?
 
 
-## Resources
+## Resources for assessment
 
 Backend
 
 
-## Formula
+## Formula for calculating the migration effort
 
 Effort is estimated per specific issue.

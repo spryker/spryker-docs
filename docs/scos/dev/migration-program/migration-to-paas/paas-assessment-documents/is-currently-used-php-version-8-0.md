@@ -8,7 +8,7 @@ template: howto-guide-template
 
 {% info_block infoBox %}
 
-## Resources Backend
+## Resources for assessment Backend
 
 {% endinfo_block %}
 
@@ -80,6 +80,6 @@ vendor/bin/rector init
 vendor/bin/rector process src --dry-run
 ```
 
-## Formula
+## Formula for calculating the migration effort
 
 Approximately 30m per incompatibility issue.

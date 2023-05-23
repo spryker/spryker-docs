@@ -8,7 +8,7 @@ template: howto-guide-template
 
 {% info_block infoBox %}
 
-## Resources Backend
+## Resources for assessment Backend
 
 {% endinfo_block %}
 
@@ -17,7 +17,7 @@ template: howto-guide-template
 Based on prerequisites data identify if the environment is restorable via default Spryker utilities - `sync:data`
 and `publisher:trigger-events`.
 
-## Formula
+## Formula for calculating the migration effort
 
 ### sync:data
 

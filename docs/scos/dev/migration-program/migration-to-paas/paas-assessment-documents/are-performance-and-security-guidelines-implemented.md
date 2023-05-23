@@ -9,11 +9,11 @@ Check if the following guidelines are implemented:
 * [Security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
 * [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 
-## Resources
+## Resources for assessment
 
 Backend
 
 
-## Formula
+## Formula for calculating the migration effort
 
 Approximately 2 days.

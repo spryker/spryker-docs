@@ -4,20 +4,10 @@ description: This document allows you to assess if the latest version of Docker 
 template: howto-guide-template
 ---
 
-# Is latest version of Docker SDK installed?
+## With project repository access
 
-{% info_block infoBox %}
-
-## Resources Backend
-
-{% endinfo_block %}
-
-## Description
-
-### With project repository access
-
-1. Find `docker` folder in the root of the project and ensure it’s sub-repository.
-2. In the `docker` folder, check the remote origin of the Docker SDK:
+1. In the project's root folder, find the `docker` folder and check if it's added as a sub-module.
+2. In the `docker` sub-module, check the remote origin of the Docker SDK:
 
 ```shell
 git remote show origin
@@ -25,9 +15,11 @@ git remote show origin
 
 It should be pointed to `git@github.com:spryker/docker-sdk.git`.
 
-3. Run `git log` from `docker` submodule. Having that information it’s easier to judge how much docker sdk is outdated comparing it with [releases](https://github.com/spryker/docker-sdk/releases)
+3. To check the latest commits in the `docker` submodule, run `git log`.
 
-### With project code provided as an archive
+4. To figure out how outdated the Docker SDK is in the project, compare the date of the latest commit to the Docker SDK's [releases](https://github.com/spryker/docker-sdk/releases).
+
+## With project code provided as an archive
 
 1. In the project's root, check if the `docker` folder exists.
     If it’s missing, the Docker SDK *is not used*.
@@ -37,6 +29,11 @@ It should be pointed to `git@github.com:spryker/docker-sdk.git`.
 5. In order to understand the version of the installed docker SDK use prerequisites information, where a hash commit of the docker SDK repository is requested.
 6. Use hash commit and [Docker SDK repo](https://github.com/spryker/docker-sdk) to understand which version is used.
 
-## Formula
+
+## Resources for assessment
+
+Backend
+
+## Formula for calculating the migration effort
 
 Approximately 2h.

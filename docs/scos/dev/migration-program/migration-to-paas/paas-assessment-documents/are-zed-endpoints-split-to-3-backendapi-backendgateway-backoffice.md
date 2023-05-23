@@ -6,7 +6,7 @@ template: howto-guide-template
 
 
 
-## Resources
+## Resources for assessment
 
 Backend
 
@@ -16,6 +16,6 @@ Backend
     folders with `index.php` entry points inside exist.
 2. Ensure this [integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) is implemented.
 
-## Formula
+## Formula for calculating the migration effort
 
 Approximately 1d if required packages are already installed.

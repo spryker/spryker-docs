@@ -17,12 +17,12 @@ $config[ServiceApiConstants::API_SECRET] = env('SERVICE_API_SECRET');
 By default, the `env()` function is used to get the environment variable value, but a custom
 function may be used for this purpose too.
 
-## Resources
+## Resources for assessment
 
 * Backend
 * DevOps
 
-## Formula
+## Formula for calculating the migration effort
 
 1. If sensitive information is defined as env variables, respective variables with values need to be defined in the cloud environments. Approximately 4h per environment.
 2. If sensitive information is defined using another approach, the effort is estimated based on the current approach and the number of configuration values that need to be reworked. Approximately 10m per configuration item.

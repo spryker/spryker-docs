@@ -8,7 +8,7 @@ template: howto-guide-template
 
 {% info_block infoBox %}
 
-## Resources Backend
+## Resources for assessment Backend
 
 {% endinfo_block %}
 

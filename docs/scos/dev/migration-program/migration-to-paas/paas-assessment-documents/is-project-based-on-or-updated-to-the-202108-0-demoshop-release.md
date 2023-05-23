@@ -22,11 +22,11 @@ Because the update is time consuming, it makes sense to update only the packages
 ```
 
 
-## Resources
+## Resources for assessment
 
 Backend
 
-## Formula
+## Formula for calculating the migration effort
 
 ### Project customization multiplier (PCM)
 

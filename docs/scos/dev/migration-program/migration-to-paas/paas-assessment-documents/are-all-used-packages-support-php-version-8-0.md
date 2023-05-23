@@ -13,11 +13,11 @@ composer why-not php 8.0
 This should let you estimate the migration effort.
 
 
-## Resources
+## Resources for assessment
 
 Backend
 
-## Formula
+## Formula for calculating the migration effort
 
 * If modules support PHP 8.O:
     * Approximately 2h-4h per major.

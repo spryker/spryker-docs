@@ -10,12 +10,12 @@ Check the following information about the assets used by the project that are st
 
 * Double-check with the customer if the assets are really needed and have to be migrated together with the project.
 
-## Resources
+## Resources for assessment
 
 * Backend
 * DevOps
 
 
-## Formula
+## Formula for calculating the migration effort
 
 Approximately 2d.

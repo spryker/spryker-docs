@@ -8,7 +8,7 @@ template: howto-guide-template
 
 {% info_block infoBox %}
 
-## Resources Backend
+## Resources for assessment Backend
 
 {% endinfo_block %}
 
@@ -25,6 +25,6 @@ were covered with tests:
 These functionalities have to be covered with at least one type of testing from the list: unit, functional, behavioural.
 It’s acceptable to have other testing technologies except for default codeception, for example, Behat, phpspec etc…
 
-## Formula
+## Formula for calculating the migration effort
 
 Approximately 1 day per functionality/module.

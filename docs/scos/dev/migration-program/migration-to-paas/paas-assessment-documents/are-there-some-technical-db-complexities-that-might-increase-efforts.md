@@ -4,7 +4,7 @@ description: This document allows you to assess if a project has technical compl
 template: howto-guide-template
 ---
 
-## Resources
+## Resources for assessment
 
 Backend
 
@@ -22,7 +22,7 @@ Backend
     * etc.
 2. Check if related information was provided in the prerequisite from.
 
-## Formula
+## Formula for calculating the migration effort
 
 * 1d per CTE query.
 * 1d per function or procedure.

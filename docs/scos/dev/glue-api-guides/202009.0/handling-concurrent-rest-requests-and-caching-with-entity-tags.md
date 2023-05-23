@@ -71,7 +71,7 @@ The following diagram shows the workflow of resources that support concurrent re
 
 ![Workflow diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Handling+Concurrent+REST+Requests+and+Caching+with+Etags/entity-tag-process-flow.png)
 
-## Resources supporting concurrent requests with ETags
+## Resources for assessment supporting concurrent requests with ETags
 The following resource support concurrent requests with ETag headers by default:
 
 | Endpoint | Methods | Resource |

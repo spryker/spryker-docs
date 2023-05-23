@@ -4,11 +4,11 @@ description: Oryx framework uses semantic versioning to ensure stability
 template: concept-topic-template
 ---
 
-This document describes the methods used in Oryx to deliver an advanced application development platform while maintaining stability. The goal of implementing versioning methods is to ensure that any upcoming changes are introduced in a predictable manner. This makes sure that all Oryx users are informed and adequately prepared for the release of new features and  removal of outdated ones.
+This document describes the methods used in Oryx to deliver an advanced application development platform while maintaining stability. The goal of implementing versioning methods is to ensure that any upcoming changes are introduced in a predictable manner. This makes sure that all Oryx users are informed and adequately prepared for the release of new features and removal of outdated ones.
 
 Stability is a critical aspect of any software framework, and it's especially important for frontend frameworks like Oryx. The stability of a framework refers to its ability to function reliably and consistently over time, despite changes in the environment or updates to its components.
 
-The following sections describe how Oryx framework achieves stability through its versioning and release processes, uses version numbers to indicate changes, and ensures backward compatibility.
+The following sections describe how the Oryx framework achieves stability through its versioning and release processes, uses version numbers to indicate changes, and ensures backward compatibility.
 
 ## Semantic versioning
 
@@ -21,7 +21,7 @@ This means that, for version `x.y.z`, the following applies:
 
 ### Release previews
 
-For those who want to know what's to come beforehand, for every major and minor release, we offer pre-release versions called Release Candidates (RC).
+For those who want to know what's to come beforehand, for every major and minor release, we offer prerelease versions called Release Candidates (RC).
 
 ## Release process
 
@@ -31,7 +31,7 @@ The Oryx framework consists of two components that are released separately:
 
 ### Libraries
 
-The primary source of functionality within the Oryx framework are the Oryx libraries. They include core features, utilities and helpers, domain-specific functionality, as well as pre-designed themes and presets that can be used as provided by default.
+The primary source of functionality within the Oryx framework is the Oryx libraries. They include core features, utilities and helpers, domain-specific functionality, as well as predesigned themes and presets that can be used as provided by default.
 
 The libraries are released as [packages](https://www.npmjs.com/org/spryker-oryx) under the same version.
 
@@ -62,7 +62,7 @@ Oryx consists of a range of packages, applications, and tools. To avoid inadvert
 
 ## Backward compatibility
 
-Oryx framework provides maximum compatibility with previous versions. If a feature is deprecated, it is removed completely only after a few releases.
+The Oryx framework provides maximum compatibility with previous versions. If a feature is deprecated, it is removed completely only after a few releases.
 
 Minor releases are fully backward compatible and do not require any developer assistance.
 

@@ -2298,6 +2298,18 @@ entries:
             url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html
           - title: "Product Relations: module relations"
             url: /docs/pbc/all/product-relationship-management/product-relations-module-relations.html
+          - title: Third-party integrations
+            nested:
+              - title: Contentserv
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/contentserv.html
+              - title: Econda
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda.html
+              - title: Nosto
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/nosto.html
+              - title: 8Select
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/8select.html
+              - title: trbo
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
       - title: Punchout
         url: /docs/pbc/all/punchout/punchout-catalogs.html
         include_versions:

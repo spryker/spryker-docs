@@ -3230,6 +3230,12 @@ entries:
     url: /docs/scos/user/technology-partners/technology-partners.html
     nested:
     - title: Order Management (ERPOMS)
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Tradebyte
         url: /docs/scos/user/technology-partners/order-management-erpoms/tradebyte.html
@@ -3307,6 +3313,10 @@ entries:
       nested:
       - title: Personalization and cross-selling
         nested:
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"       
         - title: Contentserv
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/contentserv.html
         - title: Econda

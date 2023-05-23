@@ -4287,6 +4287,9 @@ entries:
           - title: Order referenced commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
       - title: Personalization and cross-selling
+        include_versions:
+        - "202108.0"
+        - "202204.0" 
         nested:
         - title: Econda
           nested:

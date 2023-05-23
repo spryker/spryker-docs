@@ -2,6 +2,7 @@
 title: Oryx versioning
 description: Oryx framework uses semantic versioning to ensure stability
 template: concept-topic-template
+last_updated: Mar 3, 2023
 ---
 
 This document describes the methods used in Oryx to deliver an advanced application development platform while maintaining stability. The goal of implementing versioning methods is to ensure that any upcoming changes are introduced in a predictable manner. This makes sure that all Oryx users are informed and adequately prepared for the release of new features and removal of outdated ones.

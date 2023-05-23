@@ -15,7 +15,7 @@ Keep in mind that the definition of a store can vary depending on the business u
 
 ## Assess whether your shop is fit for Spryker Multistore
 
-When planning for multiple stores, it is crucial to determine whether your project supports the Spryker Multistore solution and assess whether it is necessary for your business needs.
+When planning multiple stores, it is crucial to determine whether your project supports the Spryker Multistore solution and assess whether it is necessary for your business needs.
 
 The Spryker Multistore solution is designed to represent several business channels on a single platform. These channels include:
 
@@ -77,6 +77,8 @@ On the infrastructure level, applications can't be scaled or deployed independen
 
 The following table provides details on infrastructure for this setup:
 
+<div class="width-100">
+
 | What | How |
 |------|-----|
 | DB     | Shared    |
@@ -84,6 +86,8 @@ The following table provides details on infrastructure for this setup:
 | Spryker Storefront Yves     |Shared     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
 | Complexity of rollout     | Low   |
+
+</div>
 
 ### Setup 2: Isolated virtual database
 ![setup-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups/setup-2.png)
@@ -110,6 +114,8 @@ This setup is recommended when you don’t have shared data.
 
 The following table provides details on the infrastructure for this setup:
 
+<div class="width-100">
+
 | What | How |
 |------|-----|
 | DB     | Separate    |
@@ -117,6 +123,8 @@ The following table provides details on the infrastructure for this setup:
 | Spryker Storefront Yves     |Shared     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
 | Complexity of rollout     | Medium   |
+
+</div>
 
 {% info_block infoBox "Info" %}
 
@@ -160,6 +168,8 @@ In each AWS account, you can have several stores.
 
 The following table provides details on the infrastructure for this setup:
 
+<div class="width-100">
+
 | What | How |
 |------|-----|
 | DB     | Separate    |
@@ -168,16 +178,18 @@ The following table provides details on the infrastructure for this setup:
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Separate   |
 | Complexity of rollout     | High   |
 
+</div>
+
 ## Summary
 
 The following tables contain high-level criteria that sum up the setups described in this document and help you decide on the most suitable setup for your requirements.
 
-Infrastructure details:
+**Infrastructure details:**
 
 | What                                                                   | Setup 1 | Setup 2  | Setup 2  |
 |------------------------------------------------------------------------|---------|----------|----------|
 | DB                                                                     | Shared  | Separate | Separate |
-| Ke-value storage (Redis) and search (OpenSearch/ElasticCache) Services | Shared  | Shared   | Separate |
+| Ke-value storage (Redis) and search (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |
 | Spryker Storefront Yves                                                | Shared  | Shared   | Separate |
 | Spryker Commerce OS                                                    | Shared  | Shared   | Separate |
 | Complexity of rollout                                                  | Low     | Medium   | High     |

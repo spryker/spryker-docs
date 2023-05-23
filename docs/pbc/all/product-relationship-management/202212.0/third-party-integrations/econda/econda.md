@@ -11,6 +11,7 @@ redirect_from:
   - /docs/econda
   - /docs/en/econda
   - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
 ---
 
 ## Partner information
@@ -32,11 +33,11 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Installing Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html)
-* [Integrating Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html)
-* [Integrating Econda cross-selling](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html)
-* [Adding the Econda tracking code](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html)
-* [Exporting Econda data](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html)
+* [Installing Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/install-econda.html)
+* [Integrating Econda](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda.html)
+* [Integrating Econda cross-selling](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda-cross-selling.html)
+* [Adding the Econda tracking code](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/add-the-econda-tracking-code.html)
+* [Exporting Econda data](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/export-econda-data.html)
 
 
 

@@ -2303,7 +2303,18 @@ entries:
               - title: Contentserv
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/contentserv.html
               - title: Econda
-                url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda.html
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/econda.html
+                nested:
+                  - title: Installing Econda
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/install-econda.html
+                  - title: Integrating Econda
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/integrate-econda.html
+                  - title: Integrating Econda cross-selling
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/integrate-econda-cross-selling.html
+                  - title: Adding the Econda tracking code
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/add-the-econda-tracking-code.html
+                  - title: Exporting Econda data
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/export-econda-data.html
               - title: Nosto
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/nosto.html
               - title: 8Select

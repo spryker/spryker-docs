@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/econda-integration-into-project
   - /docs/scod/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
 ---
 
 To integrate Econda, do the following.
@@ -23,7 +24,7 @@ To integrate with Econda, you will need to connect your Econda account. If you d
 
 To enable Econda tracking for your application, you need to download a personalized JavaScript library from the Econda Analytics Configuration menu (you can find the detailed instructions on the [Econda website](https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen)).
 
-For [cross sell widgets](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html), we will demonstrate integration of JS SDK that you can download from the [Econda website](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php).
+For [cross sell widgets](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/integrate-econda-cross-selling.html), we will demonstrate integration of JS SDK that you can download from the [Econda website](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php).
 
 Please refer to [Econda](http://www.econda.de/) documentation on how to customize your Econda widgets.
 
@@ -31,7 +32,7 @@ Some examples can be found at [https://www.econda.de/](https://www.econda.de/)
 
 Details on how to work with Javascript and templates in Spryker can be found in the [Front-End guide](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html).
 
-Econda module uses collectors to [export data to CSV](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html). Please read more about Collectors.
+Econda module uses collectors to [export data to CSV](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/export-econda-data.html). Please read more about Collectors.
 
 ### Econda JS Library and SDK
 

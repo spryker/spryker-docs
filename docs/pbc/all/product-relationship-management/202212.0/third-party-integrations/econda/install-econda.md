@@ -1,5 +1,5 @@
 ---
-title: Installation Econda
+title: Install Econda
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-installation-and-configuration
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/econda-installation-and-configuration
   - /docs/socs/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
 ---
 
 To install Econda, install the required module:

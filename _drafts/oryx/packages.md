@@ -79,7 +79,7 @@ Domain packages provide components and service logic for certain domains. Organi
 
 ## Platform packages
 
-The platform layer contains the core packages of Oryx framework. They provide the infrastructure to the whole system.
+The platform layer contains the core packages of the Oryx framework. They provide the infrastructure to the whole system.
 
 | PACKAGES                                                                           | LOCATION                          |
 | ---------------------------------------------------------------------------------- | --------------------------------- |

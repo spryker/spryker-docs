@@ -1,0 +1,34 @@
+---
+title: File details - shipment_method_store.csv
+description: This document describes the shipment_method_store.csv file to configure the Shipment information in your Spryker Demo Shop.
+template: data-import-template
+last_updated: May 23, 2023
+---
+
+This document describes the `shipment_method_store.csv` file to configure the [shipment](/docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html) type information in your Spryker Demo Shop.
+
+## Import file dependencies
+
+[TODO: verify dependencies and add missing ones; if no dependencies, remove the section]
+
+[`shipment.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html)
+
+## Import file parameters
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+|---|---|---|---|---|
+| shipment_method_key | &check; | string | | Key of the existing shipping method. |
+| store| &check; | string | | Name of the existing store. |
+
+## Import file template and content example
+
+| FILE | DESCRIPTION |
+|---|---|
+| [`shipment_method_store.csv` template](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-store.csv.md/template_shipment_method_store.csv) | Import file template with headers only. |
+| [`shipment_method_store.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-store.csv.md/shipment_method_store.csv) | Exemplary import file with the Demo Shop data. |
+
+## Import file command
+
+```bash
+data:import:shipment-method-store
+```

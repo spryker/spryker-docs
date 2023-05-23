@@ -5,7 +5,7 @@ last_updated: Mar 30, 2023
 template: howto-guide-template
 ---
 
-This section of the Spryker documentation describes the prerequisites for installing Spryker in Docker on Linux, MacOS, and Windows.
+This section describes the prerequisites for installing Spryker in Docker on Linux, MacOS, and Windows.
 
 To review the installation prerequisites for your operating system, see the following documents:
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)

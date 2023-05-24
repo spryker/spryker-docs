@@ -11,8 +11,7 @@ This document describes the `shipment_type.csv` file to configure the [shipment]
 
 [TODO: verify dependencies and add missing ones; if no dependencies, remove the section]
 
-[`shipment_type_store.csv`](_drafts/data-import/202309.0/file-details-shipment-type-store.csv.md) <!--adjust links when doc moved to the proper folder -->
-
+[`shipment_type_store.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment-type-store.csv.html)
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |

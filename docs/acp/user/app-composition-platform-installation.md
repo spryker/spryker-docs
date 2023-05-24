@@ -405,7 +405,7 @@ SPRYKER_AOP_INFRASTRUCTURE: '{
 <thead>
   <tr>
     <th>Configuration key</th>
-    <th>Desctiption</th>
+    <th>Description</th>
     <th>Example</th>
   </tr>
 </thead>
@@ -452,7 +452,7 @@ SPRYKER_AOP_INFRASTRUCTURE: '{
 <thead>
   <tr>
     <th>Configuration key</th>
-    <th>Desctiption</th>
+    <th>Description</th>
     <th>Example</th>
   </tr>
 </thead>

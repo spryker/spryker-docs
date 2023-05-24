@@ -13,21 +13,6 @@ This document describes how to check if the project code is compliant with Spryk
 composer require --dev spryker-sdk/evaluator
 ```
 
-{% info_block warningBox "Specify the Evaluator tool repository" %}
-
-Specify the repository in the `composer.json` file:
-
-```json
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/spryker-sdk/evaluator.git"
-        }
-],
-```
-
-{% endinfo_block %}
-
 * Get general information about the tool and see all the commands related to evaluation in the `evaluate` section:
 
 ```bash

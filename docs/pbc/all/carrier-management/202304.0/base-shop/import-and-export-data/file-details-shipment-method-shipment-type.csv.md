@@ -9,9 +9,8 @@ This document describes the `shipment_method_shipment_type.csv` file to configur
 
 ## Import file dependencies
 
-[TODO: verify dependencies and add missing ones; if no dependencies, remove the section]
-
 [`shipment.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html)
+[`shipment-type.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment-type.csv.html)
 
 ## Import file parameters
 

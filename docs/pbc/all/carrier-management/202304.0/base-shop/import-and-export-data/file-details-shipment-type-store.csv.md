@@ -9,8 +9,6 @@ This document describes the `shipment_type_store.csv` file to configure the [shi
 
 ## Import file dependencies
 
-[TODO: verify dependencies and add missing ones; if no dependencies, remove the section]
-
 [`shipment_type.csv`](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment-type.csv.html)
 
 ## Import file parameters

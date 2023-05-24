@@ -20,7 +20,7 @@ See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev
 
 - Node.js v12+
 - Yarn v2 (or latest Yarn v1)
-- Spryker supported PHP version (7.3, 7.4)
+- Spryker supported PHP version 7.4
 - Host for Zed application
 
 ## Installing frontend dependencies

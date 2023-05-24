@@ -48,12 +48,12 @@ jobs:
     ...
     validation:
         name: "CS, ArchSniffer, PHPStan, Security"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         strategy:
             fail-fast: false
             matrix:
                 php-version: [
-                    '7.4'
+                    '8.0'
                 ]
 
         env:
@@ -193,7 +193,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 ...
     php-{php_version}-{database_type}-{tests_type}-{image}:
         name: "PHP {php_version} / {database_type} / {tests_type} / {image}"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:{image_tag}
@@ -288,7 +288,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
   ...
     php-73-mysql-functional-alpine:
         name: "PHP 7.3 / MySQL / Functional / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
@@ -348,7 +348,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 ...
     php-80-postgresql-glue-debian:
         name: "PHP 8.0 / PostgreSQL / Glue / Debian"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -399,7 +399,7 @@ image:
 ...
     php-7.4-mariadb-acceptance-alpine:
         name: "PHP 7.4 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.4
@@ -457,12 +457,12 @@ jobs:
     ...
     validation:
         name: "CS, ArchSniffer, PHPStan, Security"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         strategy:
             fail-fast: false
             matrix:
                 php-version: [
-                    '7.4'
+                    '8.0'
                 ]
 
         env:
@@ -596,7 +596,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 ...
     php-{php_version}-{database_type}-{tests_type}-{image}:
         name: "PHP {php_version} / {database_type} / {tests_type} / {image}"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:{image_tag}
@@ -691,7 +691,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
   ...
     php-73-mysql-functional-alpine:
         name: "PHP 7.3 / MySQL / Functional / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
@@ -751,7 +751,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 ...
     php-80-postgresql-glue-debian:
         name: "PHP 8.0 / PostgreSQL / Glue / Debian"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -802,7 +802,7 @@ image:
 ...
     php-7.4-mariadb-acceptance-alpine:
         name: "PHP 7.4 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.4
@@ -861,7 +861,7 @@ jobs:
     ...
     validation:
         name: "CS, ArchSniffer, PHPStan, Security"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         strategy:
             fail-fast: false
             matrix:
@@ -1018,7 +1018,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 ...
     php-{php_version}-{database_type}-{tests_type}-{image}:
         name: "PHP {php_version} / {database_type} / {tests_type} / {image}"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:{image_tag}
@@ -1113,7 +1113,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
   ...
     php-73-mysql-functional-alpine:
         name: "PHP 7.3 / MySQL / Functional / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
@@ -1173,7 +1173,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 ...
     php-80-postgresql-glue-debian:
         name: "PHP 8.0 / PostgreSQL / Glue / Debian"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -1224,7 +1224,7 @@ image:
 ...
     php-7.4-mariadb-acceptance-alpine:
         name: "PHP 7.4 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.4

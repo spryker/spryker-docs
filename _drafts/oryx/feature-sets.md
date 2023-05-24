@@ -1,28 +1,39 @@
 ---
 title: Feature sets
 description: Setup your frontend application using feature sets that contain all standard features
-last_updated: May 3, 2023
+last_updated: May 24, 2023
 template: concept-topic-template
 ---
 
-A feature set is a group of related features that can be added to an Oryx application with a single reference. Using feature sets simplifies the process of setting up an application by reducing the amount of [boilerplate code](./boilerplate.md) required to configure and initialize the application.
+A feature set is a group of related features that can be added to an Oryx application with a single reference. Using feature sets simplifies the process of setting up an application by reducing the amount of [boilerplate code](./boilerplate.md) required to configure and initialize the application. Feature sets can be seen as _demo apps_ and are useful to quickly setup a project without developing code.
 
-Feature sets are organized by business model, such as b2c, b2b, marketplace or fulfillment. The feature sets demonstrate the available features that Oryx provides. A feature list might be too opinionated for your business. You can therefor decide to use a complete feature set, or create your own sets.
+Feature sets are organized by business model (e.g. b2c, b2b, fulfillment, etc.), but we call them "Application feature sets" in this document. The feature sets demonstrate the available features that Oryx provides. A feature list might be too opinionated for your project though. You can therefor decide to use a full feature set, a partial set, or define your own feature set.
 
-Each package provides its own features. For example, the product package exposes all product features available. This includes both components as well as the associated business logic.
+Each package provides its own features. For example, the product package exposes all product features available. This includes both components as well as the associated business logic. The application feature sets simply aggregate all the package feature sets as a set.
 
-## Available Feature Sets
+## Application Feature Sets
 
-Oryx includes several predefined feature sets that cover common use cases for web applications. The business feature sets are provided in the [presets package](./presets.md). These feature sets currently available are:
+Oryx includes several predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](./presets.md). The (currently) available sets are:
 
 - b2cFeatures: Includes features commonly used in B2C (business-to-consumer) applications.
 - fulfillmentFeatures: Includes features used in a PWA, used for picking products for fulfillment.
 
-Future feature sets are likely b2b and marketplace features.
+Future feature sets will likely represent other business models, such as b2b,marketplace, etc.
 
 ## Labs
 
 The labs package provides experimental features that are not build for production. They might evolve to the standard feature set over time, but this is not guaranteed. You can use the labs feature set in your demo's and POCs or local development, by configuring the feature set in your application.
+
+## Configure feature sets
+
+The following code snippet demonstrate how to configure your application with feature sets. The `withFeature` method, provided by `appBuilder` can be used with a single feature set, or with an array of sets.
+
+```ts
+import { appBuilder } from "@spryker-oryx/application";
+import { b2cFeatures } from "@spryker-oryx/presets";
+
+export const app = appBuilder().withFeature(features).create();
+```
 
 ## Creating Custom Feature Sets
 

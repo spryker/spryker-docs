@@ -176,7 +176,7 @@ These are the new data importers available in our data import framework:
 ### Data export
 The new merchant order exporter lets you export information like orders, order items, and expenses.
 
-Documentation: [Data export Merchant Orders CSV files format](/docs/marketplace/dev/data-export/{{site.version}}/data-export-merchant-orders-csv-files-format.html)
+Documentation: [Data export Merchant Orders CSV files format](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-data/data-export-merchant-orders-csv-files-format.html)
 
 ## Technical enhancements
 

@@ -992,6 +992,19 @@ entries:
             url: /docs/pbc/all/emails/howto-create-and-register-a-mail-type-builder-plugin.html
           - title: "Tutorial: Sending a mail"
             url: /docs/pbc/all/emails/tutorial-sending-an-email.html
+          - title: Third-party integrations
+            nested:
+              - title: Inxmail
+                url: /docs/pbc/all/emails/third-party-integrations/inxmail.html
+              - title: Installing and configuring Inxmail
+                url: /docs/pbc/all/emails/third-party-integrations/install-and-configure-inxmail.html
+              - title: Integrating Inxmail
+                url: /docs/pbc/all/emails/third-party-integrations/integrate-inxmail.html
+              - title: Inxmail API requests
+                url: /docs/pbc/all/emails/third-party-integrations/inxmail-api-requests.html
+              - title: Inxmail Order referenced commands
+                url: /docs/pbc/all/emails/third-party-integrations/inxmail-order-referenced-commands.html
+
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
         nested:

@@ -4277,6 +4277,10 @@ entries:
           - title: Order reference commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
         - title: Inxmail guides
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"          
           nested:
           - title: Installing and configuring Inxmail
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
@@ -4289,7 +4293,7 @@ entries:
       - title: Personalization and cross-selling
         include_versions:
         - "202108.0"
-        - "202204.0" 
+        - "202204.0"
         nested:
         - title: Econda
           nested:

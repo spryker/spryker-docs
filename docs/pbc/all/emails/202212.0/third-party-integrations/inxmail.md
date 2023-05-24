@@ -39,10 +39,10 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Inxmail API requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html)
-* [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html)
-* [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html)
-* [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html)
+* [Inxmail API requests](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-api-requests.html)
+* [Inxmail order reference commands](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/inxmail-order-referenced-commands.html)
+* [Installing and configuring Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/install-and-configure-inxmail.html)
+* [Integrating Inxmail](/docs/pbc/all/emails/{{page.version}}/third-party-integrations/integrate-inxmail.html)
 
 
 ---

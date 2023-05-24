@@ -45,7 +45,7 @@ This document describes how to create users in the Back Office.
 8. For **ASSIGNED GROUPS**, select one or more user groups you want to assign this user to.
 9. Optional: To make this user an agent, select **THIS USER IS AN AGENT**.
 10. Optional: Ensure the user has the **WAREHOUSE USER** role.
-11. Select an interface language.
+11. For **INTERFACE LANGUAGE**, select a language suitable for the user.
 12. **Create** a user.
 
 This opens the **Users** page with the success message displayed. The created user is displayed in the list.

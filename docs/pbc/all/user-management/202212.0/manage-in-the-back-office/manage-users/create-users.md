@@ -62,3 +62,4 @@ This opens the **Users** page with the success message displayed. The created us
 | ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
+| WAREHOUSE USER| Defines if this user is a warehouse user. |

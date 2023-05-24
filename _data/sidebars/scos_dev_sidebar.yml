@@ -4167,11 +4167,6 @@ entries:
       nested:
       - title: Feature HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
-        nested:
-        - title: "HowTo: Add support for number formatting in the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
-        - title: "HowTo: Add support of number formatting in the Back Office"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:

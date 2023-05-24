@@ -10,12 +10,12 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-| -------------------- | ---------- | ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                                               |
+|----------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                            |
 | Spryker Core BO      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Acl | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)                     |
+| Acl                  | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html)                                                      |
 
 ###  1) Install the required modules using Composer
 
@@ -29,17 +29,17 @@ composer require spryker-feature/marketplace-merchantportal-core:"{{page.version
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| ZedUi  | vendor/spryker/zed-ui |
-| GuiTable | vendor/spryker/gui-table |
-| AclMerchantPortal   | vendor/spryker/acl-merchant-portal  |
-| MerchantPortalApplication   | vendor/spryker/merchant-portal-application  |
-| MerchantUserPasswordResetMail   | vendor/spryker/merchant-user-password-reset-mail  |
-| Navigation   | vendor/spryker/navigation  |
-| SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
-| UserMerchantPortalGui | vendor/spryker/user-merchant-portal-gui |
-| UserMerchantPortalGuiExtension | spryker/user-merchant-portal-gui-extension |
+| MODULE                         | EXPECTED DIRECTORY                               |
+|--------------------------------|--------------------------------------------------|
+| ZedUi                          | vendor/spryker/zed-ui                            |
+| GuiTable                       | vendor/spryker/gui-table                         |
+| AclMerchantPortal              | vendor/spryker/acl-merchant-portal               |
+| MerchantPortalApplication      | vendor/spryker/merchant-portal-application       |
+| MerchantUserPasswordResetMail  | vendor/spryker/merchant-user-password-reset-mail |
+| Navigation                     | vendor/spryker/navigation                        |
+| SecurityMerchantPortalGui      | vendor/spryker/security-merchant-portal-gui      |
+| UserMerchantPortalGui          | vendor/spryker/user-merchant-portal-gui          |
+| UserMerchantPortalGuiExtension | spryker/user-merchant-portal-gui-extension       |
 
 {% endinfo_block %}
 
@@ -89,20 +89,20 @@ Set up behavior as follows:
 
 #### Integrate the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ----------- | ------------ | ------------- | --------- |
-| MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
-| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
-| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components. |  | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component. |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
-| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
-| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
-| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
-| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
-| MerchantUserUserRoleFilterPlugin | Filters `ROLE_BACK_OFFICE_USER` to prevent Merchant User login to Backoffice. |  | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui  |
-| ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| PLUGIN                                                    | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES  | NAMESPACE                                                                        |
+|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|----------------------------------------------------------------------------------|
+| MerchantUserSecurityPlugin                                | Sets security firewalls (rules, handlers) for Marketplace users.                                                                                                                                        |                | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
+| BooleanToStringTwigPlugin                                 | Adds a new Twig function for converting Boolean to String.                                                                                                                                              |                | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
+| ZedUiNavigationTwigPlugin                                 | Adds a new Twig function for rendering Navigation using web components.                                                                                                                                 |                | Spryker\Zed\ZedUi\Communication\Plugin                                           |
+| GuiTableApplicationPlugin                                 | Enables GuiTable infrastructure for Zed.                                                                                                                                                                |                | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
+| GuiTableConfigurationTwigPlugin                           | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.                                                                                                            |                | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
+| SecurityTokenUpdateMerchantUserPostChangePlugin           | Rewrites Symfony security token.                                                                                                                                                                        |                | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin       | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |                | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
+| MerchantAclMerchantPostCreatePlugin                       | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant.                                                                                                  |                | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
+| MerchantAclMerchantUserPostCreatePlugin                   | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for provided merchant user.                                                                                            |                | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out.                                                                                                                             |                | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| MerchantUserUserRoleFilterPlugin                          | Filters `ROLE_BACK_OFFICE_USER` to prevent Merchant User login to Backoffice.                                                                                                                           |                | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
+| ProductViewerForOfferCreationAclInstallerPlugin           | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install.                                                                                                               |                | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -165,9 +165,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use Spryker\Zed\SecurityGui\Communication\Plugin\Security\UserSecurityPlugin;
 use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security\MerchantUserSecurityPlugin;
-use Spryker\Zed\User\Communication\Plugin\Security\UserSessionHandlerSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
@@ -177,9 +175,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            new UserSessionHandlerSecurityPlugin(),
             new MerchantUserSecurityPlugin(),
-            new UserSecurityPlugin(),
         ];
     }
 }
@@ -353,6 +349,25 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 ```
 
 #### Enable Merchant Portal infrastructural plugins
+
+| PLUGIN                                | SPECIFICATION                                                                                                                               | PREREQUISITES | NAMESPACE                                                    |
+|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
+| SessionApplicationPlugin              | Registers session in Application.                                                                                                           |               | Spryker\Zed\Session\Communication\Plugin\Application         |
+| TwigApplicationPlugin                 | Registers Twig in Application.                                                                                                              |               | Spryker\Zed\Twig\Communication\Plugin\Application            |
+| EventDispatcherApplicationPlugin      | Extends `EventDispatcher` with `EventDispatcherExtensionPlugins`.                                                                           |               | Spryker\Zed\EventDispatcher\Communication\Plugin\Application |
+| LocaleApplicationPlugin               | Adds the Locale service.                                                                                                                    |               | Spryker\Zed\Locale\Communication\Plugin\Application          |
+| TranslatorApplicationPlugin           | Adds the Translator service.                                                                                                                |               | Spryker\Zed\Translator\Communication\Plugin\Application      |
+| MessengerApplicationPlugin            | Adds the Messenger service to the Container.                                                                                                |               | Spryker\Zed\Messenger\Communication\Plugin\Application       |
+| PropelApplicationPlugin               | Initializes PropelOrm to be used within Zed.                                                                                                |               | Spryker\Zed\Propel\Communication\Plugin\Application          |
+| MerchantPortalRouterApplicationPlugin | Adds the Router service.                                                                                                                    |               | Spryker\Zed\Router\Communication\Plugin\Application          |
+| HttpApplicationPlugin                 | Sets trusted proxies and host. Sets `cookies` service identifier. Adds `HttpKernel`, `RequestStack`, and `RequestContext` to the container. |               | Spryker\Zed\Http\Communication\Plugin\Application            |
+| ErrorHandlerApplicationPlugin         | Register the Whoops error handler which provides a pretty error interface when its enabled.                                                 |               | Spryker\Zed\ErrorHandler\Communication\Plugin\Application    |
+| FormApplicationPlugin                 | Adds `form.factory` service, `form.csrf_provider` service, global `FORM_FACTORY` service as an alias for `form.factory`.                    |               | Spryker\Zed\Form\Communication\Plugin\Application            |
+| ValidatorApplicationPlugin            | Adds `validator` service.                                                                                                                   |               | Spryker\Zed\Validator\Communication\Plugin\Application       |
+| GuiTableApplicationPlugin             | Enables GuiTable infrastructure for Zed.                                                                                                    |               | Spryker\Zed\GuiTable\Communication\Plugin\Application        |
+| SecurityApplicationPlugin             | Adds security applications to the Application.                                                                                              |               | Spryker\Zed\Security\Communication\Plugin\Application        |
+| ZedUiApplicationPlugin                | Adds `SERVICE_ZED_UI_FACTORY` service.                                                                                                      |               | Spryker\Zed\ZedUi\Communication\Plugin\Application           |
+| AclEntityApplicationPlugin            | Enables ACL for the whole Application.                                                                                                      |               | Spryker\Zed\AclEntity\Communication\Plugin\Application       |
 
 <details><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
 
@@ -533,41 +548,96 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| ----------- | ----- | ------- | -------------------- |
-| GuiTableDataRequest | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer |
-| GuiTableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer |
-| GuiTableColumnConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer |
-| GuiTableTitleConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableTitleConfigurationTransfer |
-| GuiTableDataSourceConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableDataSourceConfigurationTransfer |
-| GuiTableRowActionsConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionsConfigurationTransfer |
-| GuiTableBatchActionsConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionsConfigurationTransfer |
-| GuiTablePaginationConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTablePaginationConfigurationTransfer |
-| GuiTableSearchConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableSearchConfigurationTransfer |
-| GuiTableFiltersConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableFiltersConfigurationTransfer |
-| GuiTableItemSelectionConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableItemSelectionConfigurationTransfer |
-| GuiTableSyncStateUrlConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableSyncStateUrlConfigurationTransfer |
-| GuiTableEditableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableConfigurationTransfer |
-| GuiTableEditableCreateConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableCreateConfigurationTransfer |
-| GuiTableEditableUpdateConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUpdateConfigurationTransfer |
-| GuiTableEditableButton | class | Created | src/Generated/Shared/Transfer/GuiTableEditableButtonTransfer |
-| GuiTableEditableUrl | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUrlTransfer |
-| GuiTableEditableInitialData | class | Created | src/Generated/Shared/Transfer/GuiTableEditableInitialDataTransfer |
-| GuiTableEditableDataError | class | Created | src/Generated/Shared/Transfer/GuiTableEditableDataErrorTransfer |
-| GuiTableDataResponse | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponseTransfer |
-| GuiTableRowDataResponse | class | Created | src/Generated/Shared/Transfer/GuiTableRowDataResponseTransfer |
-| GuiTableDataResponsePayload | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponsePayloadTransfer |
-| SelectGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/SelectGuiTableFilterTypeOptionsTransfer |
-| OptionSelectGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/OptionSelectGuiTableFilterTypeOptionsTransfer |
-| GuiTableFilter | class | Created | src/Generated/Shared/Transfer/GuiTableFilterTransfer |
-| GuiTableRowAction | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionTransfer |
-| GuiTableRowActionOptions | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionOptionsTransfer |
-| DateRangeGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/DateRangeGuiTableFilterTypeOptionsTransfer |
-| CriteriaRangeFilter | class | Created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer |
-| GuiTableBatchAction | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionTransfer |
-| GuiTableBatchActionOptions | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionOptionsTransfer |
+| TRANSFER                                | TYPE  | EVENT   | PATH                                                                          |
+|-----------------------------------------|-------|---------|-------------------------------------------------------------------------------|
+| GuiTableDataRequest                     | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer                     |
+| GuiTableConfiguration                   | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer                   |
+| GuiTableColumnConfiguration             | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer             |
+| GuiTableTitleConfiguration              | class | Created | src/Generated/Shared/Transfer/GuiTableTitleConfigurationTransfer              |
+| GuiTableDataSourceConfiguration         | class | Created | src/Generated/Shared/Transfer/GuiTableDataSourceConfigurationTransfer         |
+| GuiTableRowActionsConfiguration         | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionsConfigurationTransfer         |
+| GuiTableBatchActionsConfiguration       | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionsConfigurationTransfer       |
+| GuiTablePaginationConfiguration         | class | Created | src/Generated/Shared/Transfer/GuiTablePaginationConfigurationTransfer         |
+| GuiTableSearchConfiguration             | class | Created | src/Generated/Shared/Transfer/GuiTableSearchConfigurationTransfer             |
+| GuiTableFiltersConfiguration            | class | Created | src/Generated/Shared/Transfer/GuiTableFiltersConfigurationTransfer            |
+| GuiTableItemSelectionConfiguration      | class | Created | src/Generated/Shared/Transfer/GuiTableItemSelectionConfigurationTransfer      |
+| GuiTableSyncStateUrlConfiguration       | class | Created | src/Generated/Shared/Transfer/GuiTableSyncStateUrlConfigurationTransfer       |
+| GuiTableEditableConfiguration           | class | Created | src/Generated/Shared/Transfer/GuiTableEditableConfigurationTransfer           |
+| GuiTableEditableCreateConfiguration     | class | Created | src/Generated/Shared/Transfer/GuiTableEditableCreateConfigurationTransfer     |
+| GuiTableEditableUpdateConfiguration     | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUpdateConfigurationTransfer     |
+| GuiTableEditableButton                  | class | Created | src/Generated/Shared/Transfer/GuiTableEditableButtonTransfer                  |
+| GuiTableEditableUrl                     | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUrlTransfer                     |
+| GuiTableEditableInitialData             | class | Created | src/Generated/Shared/Transfer/GuiTableEditableInitialDataTransfer             |
+| GuiTableEditableDataError               | class | Created | src/Generated/Shared/Transfer/GuiTableEditableDataErrorTransfer               |
+| GuiTableDataResponse                    | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponseTransfer                    |
+| GuiTableRowDataResponse                 | class | Created | src/Generated/Shared/Transfer/GuiTableRowDataResponseTransfer                 |
+| GuiTableDataResponsePayload             | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponsePayloadTransfer             |
+| SelectGuiTableFilterTypeOptions         | class | Created | src/Generated/Shared/Transfer/SelectGuiTableFilterTypeOptionsTransfer         |
+| OptionSelectGuiTableFilterTypeOptions   | class | Created | src/Generated/Shared/Transfer/OptionSelectGuiTableFilterTypeOptionsTransfer   |
+| GuiTableFilter                          | class | Created | src/Generated/Shared/Transfer/GuiTableFilterTransfer                          |
+| GuiTableRowAction                       | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionTransfer                       |
+| GuiTableRowActionOptions                | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionOptionsTransfer                |
+| DateRangeGuiTableFilterTypeOptions      | class | Created | src/Generated/Shared/Transfer/DateRangeGuiTableFilterTypeOptionsTransfer      |
+| CriteriaRangeFilter                     | class | Created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer                     |
+| GuiTableBatchAction                     | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionTransfer                     |
+| GuiTableBatchActionOptions              | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionOptionsTransfer              |
 | GuiTableColumnConfiguratorConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfiguratorConfigurationTransfer |
-| ZedUiFormResponseAction | class | Created | src/Generated/Shared/Transfer/ZedUiFormResponseActionTransfer |
+| ZedUiFormResponseAction                 | class | Created | src/Generated/Shared/Transfer/ZedUiFormResponseActionTransfer                 |
+| Group                                   | class | Created | src/Generated/Shared/Transfer/GroupTransfer                                   |
+| Groups                                  | class | Created | src/Generated/Shared/Transfer/GroupsTransfer                                  |
+| Role                                    | class | Created | src/Generated/Shared/Transfer/RoleTransfer                                    |
+| Roles                                   | class | Created | src/Generated/Shared/Transfer/RolesTransfer                                   |
+| Rule                                    | class | Created | src/Generated/Shared/Transfer/RuleTransfer                                    |
+| Rules                                   | class | Created | src/Generated/Shared/Transfer/RulesTransfer                                   |
+| User                                    | class | Created | src/Generated/Shared/Transfer/UserTransfer                                    |
+| AclRoleCriteria                         | class | Created | src/Generated/Shared/Transfer/AclRoleCriteriaTransfer                         |
+| GroupCriteria                           | class | Created | src/Generated/Shared/Transfer/GroupCriteriaTransfer                           |
+| NavigationItem                          | class | Created | src/Generated/Shared/Transfer/NavigationItemTransfer                          |
+| NavigationItemCollection                | class | Created | src/Generated/Shared/Transfer/NavigationItemCollectionTransfer                |
+| AclEntityRule                           | class | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer                           |
+| UserCollection                          | class | Created | src/Generated/Shared/Transfer/UserCollectionTransfer                          |
+| UserConditions                          | class | Created | src/Generated/Shared/Transfer/UserConditionsTransfer                          |
+| UserCriteria                            | class | Created | src/Generated/Shared/Transfer/UserCriteriaTransfer                            |
+| AclEntityMetadataConfig                 | class | Created | src/Generated/Shared/Transfer/AclEntityMetadataConfigTransfer                 |
+| AclEntitySegment                        | class | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer                        |
+| AclEntitySegmentRequest                 | class | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer                 |
+| AclEntityRuleRequest                    | class | Created | src/Generated/Shared/Transfer/AclEntityRuleRequestTransfer                    |
+| AclEntityRule                           | class | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer                           |
+| AclEntityRuleCollection                 | class | Created | src/Generated/Shared/Transfer/AclEntityRuleCollectionTransfer                 |
+| AclEntitySegmentResponse                | class | Created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer                |
+| AclEntitySegmentCriteria                | class | Created | src/Generated/Shared/Transfer/AclEntitySegmentCriteriaTransfer                |
+| AclEntityRuleCriteria                   | class | Created | src/Generated/Shared/Transfer/AclEntityRuleCriteriaTransfer                   |
+| AclEntityRuleResponse                   | class | Created | src/Generated/Shared/Transfer/AclEntityRuleResponseTransfer                   |
+| AclEntityMetadata                       | class | Created | src/Generated/Shared/Transfer/AclEntityMetadataTransfer                       |
+| AclEntityParentMetadata                 | class | Created | src/Generated/Shared/Transfer/AclEntityParentMetadataTransfer                 |
+| AclEntityParentConnectionMetadata       | class | Created | src/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer       |
+| AclEntityMetadataCollection             | class | Created | src/Generated/Shared/Transfer/AclEntityMetadataCollectionTransfer             |
+| MerchantResponse                        | class | Created | src/Generated/Shared/Transfer/MerchantResponseTransfer                        |
+| Merchant                                | class | Created | src/Generated/Shared/Transfer/MerchantTransfer                                |
+| MerchantError                           | class | Created | src/Generated/Shared/Transfer/MerchantErrorTransfer                           |
+| MerchantUser                            | class | Created | src/Generated/Shared/Transfer/MerchantUserTransfer                            |
+| MerchantUserCriteria                    | class | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer                    |
+| MerchantUserResponse                    | class | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer                    |
+| Message                                 | class | Created | src/Generated/Shared/Transfer/MessageTransfer                                 |
+| MerchantCriteria                        | class | Created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer                        |
+| UserPasswordResetRequest                | class | Created | src/Generated/Shared/Transfer/UserPasswordResetRequestTransfer                |
+| Mail                                    | class | Created | src/Generated/Shared/Transfer/MailTransfer                                    |
+| MailRecipient                           | class | Created | src/Generated/Shared/Transfer/MailRecipientTransfer                           |
+| MailTemplate                            | class | Created | src/Generated/Shared/Transfer/MailTemplateTransfer                            |
+| MailSender                              | class | Created | src/Generated/Shared/Transfer/MailSenderTransfer                              |
+| Navigation                              | class | Created | src/Generated/Shared/Transfer/NavigationTransfer                              |
+| NavigationCriteria                      | class | Created | src/Generated/Shared/Transfer/NavigationCriteriaTransfer                      |
+| DuplicateNavigation                     | class | Created | src/Generated/Shared/Transfer/DuplicateNavigationTransfer                     |
+| NavigationResponse                      | class | Created | src/Generated/Shared/Transfer/NavigationResponseTransfer                      |
+| NavigationError                         | class | Created | src/Generated/Shared/Transfer/NavigationErrorTransfer                         |
+| NavigationNode                          | class | Created | src/Generated/Shared/Transfer/NavigationNodeTransfer                          |
+| NavigationNodeLocalizedAttributes       | class | Created | src/Generated/Shared/Transfer/NavigationNodeLocalizedAttributesTransfer       |
+| NavigationTree                          | class | Created | src/Generated/Shared/Transfer/NavigationTreeTransfer                          |
+| NavigationTreeNode                      | class | Created | src/Generated/Shared/Transfer/NavigationTreeNodeTransfer                      |
+| Url                                     | class | Created | src/Generated/Shared/Transfer/UrlTransfer                                     |
+| Locale                                  | class | Created | src/Generated/Shared/Transfer/LocaleTransfer                                  |
+| LocaleCriteria                          | class | Created | src/Generated/Shared/Transfer/LocaleCriteriaTransfer                          |
+| LocaleConditions                        | class | Created | src/Generated/Shared/Transfer/LocaleConditionsTransfer                        |
 
 {% endinfo_block %}
 
@@ -586,8 +656,8 @@ Spryker requirements:
 
 To start builder integration, check the Spryker packages versions:
 
-| NAME | VERSION |
-| --------------------------- | --------- |
+| NAME                        | VERSION   |
+|-----------------------------|-----------|
 | Discount (optional)         | >= 9.7.4  |
 | Gui (optional)              | >= 3.30.2 |
 | Product Relation (optional) | >= 2.4.3  |
@@ -600,9 +670,9 @@ Install the required modules:
 composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
 ```
 
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
+| MODULE                              | EXPECTED DIRECTORY                                     |
+|-------------------------------------|--------------------------------------------------------|
+| DashboardMerchantPortalGui          | vendor/spryker/dashboard-merchant-portal-gui           |
 | DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
 
 ### 2) Set up transfer objects
@@ -617,9 +687,9 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-|-|-|-|-|
-| MerchantDashboardCard | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer |
+| TRANSFER                      | TYPE   | EVENT   | PATH                                                                |
+|-------------------------------|--------|---------|---------------------------------------------------------------------|
+| MerchantDashboardCard         | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer         |
 | MerchantDashboardActionButton | object | Created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
 
 {% endinfo_block %}
@@ -1250,6 +1320,6 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| - | - | -|
-| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+| FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                  |
+|-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

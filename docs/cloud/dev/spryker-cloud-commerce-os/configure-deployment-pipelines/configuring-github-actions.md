@@ -234,15 +234,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
-|---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
-|{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| PLACEHOLDER                     | DESCRIPTION                                                                                                                                                                                                            | EXAMPLE IN THE PROPERTY NAME     | EXAMPLE IN THE PROPERTY VALUE |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------------------------------|
+| {php_version}                   | PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.                                                                                                    | 74                               | 7.4                           |
+| {database_type}                 | Database type on which validation is based.                                                                                                                                                                            | mariadb                          | MariaDB                       |
+| {tests_type}                    | The group of tests to run.                                                                                                                                                                                             | glue                             | Glue                          |
+| {image}                         | Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.                                                                                                  | alpine                           | Alpine                        |
+| {image_tag}                     | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).                       | 7.4                              |                               |
+| {deployment_configuration_file} | Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml) | deploy.ci.functional.mariadb.yml |                               |
+| {tests_configuration_file}      | Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)                           | codeception.functional.yml       |                               |
 
 1. Repeat steps 1 to 3 until you add all the desired jobs.
 
@@ -637,15 +637,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
-|---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
-|{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| PLACEHOLDER                     | DESCRIPTION                                                                                                                                                                                                            | EXAMPLE IN THE PROPERTY NAME     | EXAMPLE IN THE PROPERTY VALUE |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------------------------------|
+| {php_version}                   | PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.                                                                                                    | 74                               | 7.4                           |
+| {database_type}                 | Database type on which validation is based.                                                                                                                                                                            | mariadb                          | MariaDB                       |
+| {tests_type}                    | The group of tests to run.                                                                                                                                                                                             | glue                             | Glue                          |
+| {image}                         | Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.                                                                                                  | alpine                           | Alpine                        |
+| {image_tag}                     | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).                       | 7.4                              |                               |
+| {deployment_configuration_file} | Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml) | deploy.ci.functional.mariadb.yml |                               |
+| {tests_configuration_file}      | Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)                           | codeception.functional.yml       |                               |
 
 1. Repeat steps 1 to 3 until you add all the desired jobs.
 
@@ -1059,15 +1059,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
-|---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
-|{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| PLACEHOLDER                     | DESCRIPTION                                                                                                                                                                                                         | EXAMPLE IN THE PROPERTY NAME     | EXAMPLE IN THE PROPERTY VALUE |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------------------------------|
+| {php_version}                   | PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.                                                                                               | 74                               | 7.4                           |
+| {database_type}                 | Database type on which validation is based.                                                                                                                                                                         | mariadb                          | MariaDB                       |
+| {tests_type}                    | The group of tests to run.                                                                                                                                                                                          | glue                             | Glue                          |
+| {image}                         | Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.                                                                                             | alpine                           | Alpine                        |
+| {image_tag}                     | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).                    | 7.4                              |                               |
+| {deployment_configuration_file} | Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml) | deploy.ci.functional.mariadb.yml |                               |
+| {tests_configuration_file}      | Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)                    | codeception.functional.yml       |                               |
 
 4. Repeat steps 1 to 3 until you add all the desired jobs.
 

@@ -40,10 +40,10 @@ $ npm run mp:build:production
 
 Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
 
-| NAME | VERSION | INTEGRATION GUIDE |
-| --------- | ----- | ---------- |
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| NAME                             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                                     |
+|----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                     | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                                                                  |
+| Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### Merchant Portal users
 
@@ -350,14 +350,14 @@ composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-
 
 Update the following modules to the latest minors.
 
-| MODULE |  DIRECTORY |
-| ------------- | --------------- |
-| Application   | vendor/spryker/application  |
+| MODULE       | DIRECTORY                    |
+|--------------|------------------------------|
+| Application  | vendor/spryker/application   |
 | MerchantUser | vendor/spryker/merchant-user |
-| Security  | vendor/spryker/security |
-| Session | vendor/spryker/session |
-| User | vendor/spryker/user |
-| ZedUi | vendor/spryker/zed-ui |
+| Security     | vendor/spryker/security      |
+| Session      | vendor/spryker/session       |
+| User         | vendor/spryker/user          |
+| ZedUi        | vendor/spryker/zed-ui        |
 
 Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
 
@@ -380,12 +380,12 @@ After login, you should be redirected to the Dashboard. The contents of the Side
 
 Integrate the following related features:
 
-| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
-|----------|------------------|------------|
-| Merchant Portal - Marketplace Merchant    | [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)    |
-| Merchant Portal - Marketplace Product   | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)       |
-| Merchant Portal - Marketplace Order Management     |                          | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)    |
-| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                           | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
-| Merchant Portal - Marketplace Product + Inventory Management  |                           | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)     |
-| Merchant Portal - Marketplace Product Options Management   |                           | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)    |
-| Merchant Portal - Marketplace Product + Tax   |                           | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)   |
+| FEATURE                                                                                                   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                                                                                                                 |
+|-----------------------------------------------------------------------------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Portal - Marketplace Merchant                                                                    |                                  | [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)                                                                                                   |
+| Merchant Portal - Marketplace Product                                                                     |                                  | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)                                                                                                                                       |
+| Merchant Portal - Marketplace Order Management                                                            |                                  | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                                                                                                                     |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                                  | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Product + Inventory Management                                              |                                  | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)                                                                                           |
+| Merchant Portal - Marketplace Product Options Management                                                  |                                  | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)                                                                                                         |
+| Merchant Portal - Marketplace Product + Tax                                                               |                                  | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)                                                                                                                             |

@@ -632,6 +632,16 @@ $jobs[] = [
 ];
 ```
 
+## Additional information on Algolia integration
+
+### SearchHTTP plugins setup
+
+Spryker's `SearchHTTP` module transfers Glue search requests to external search providers (one of which is Algolia). The `SearchHTTP` query is built using the `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method. The order of execution of those plugins might be customized on the project level. By default, all module-specific query builder plugins will be executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite search query parameters set before.
+
+### Default facets differences
+
+There is a difference in how default facets behave on Algolia and default Spryker installation using Elasticsearch. Some default Spryker facets like `brand` only accept one value as a filter, so it is impossible to specify multiple brands to filter on in one search request. This is not the case with Algolia - in this case, multiple brands can be specified in the same search requests. This also applies to other configured facets.
+
 ## Next steps
 
 [Configure the Algolia app](/docs/pbc/all/search/{{site.version}}/third-party-integrations/configure-algolia.html) for your store.

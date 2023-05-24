@@ -81,7 +81,7 @@ Default fields for searchable attributes are the following:
 - `description`
 - `keywords`
 
-### Adjust the searchable attributes list
+### Adjust the searchable attributes list in Algolia
 
 1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
 2. Open the Algolia indices list and find all primary indices. 
@@ -89,6 +89,56 @@ Default fields for searchable attributes are the following:
 4. To adjust the **Searchable attributes** list, add and remove needed searchable attributes.
 5. Click **Review and save settings**. This opens the **Review and save settings** window.
 6. Enable **Copy these settings to other indices and/or replicas** and click **Save settings**.
+
+### Send additional fields to Algolia
+
+Spryker's Algolia PBC integration allows adding additional data to exported products.
+At this moment this is achieved using preconfigured `searchMetadata` field on ProductConcrete and ProductAbstract transfers.
+
+#### Filling `searchMetadata` field
+There's multiple ways of adding search metadata but we'll implement a `ProductConcreteExpanderPlugin` as an example.
+
+Create a new plugin implementing `ProductConcreteExpanderPluginInterface`. After this you can add any logic inside that plugin's `expand` method to add necessary metadata to ProductConcrete transfers.
+
+```php
+  
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;  
+use Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface;
+
+class SearchMetadataExampleProductConcreteExpanderPlugin extends AbstractPlugin implements ProductConcreteExpanderPluginInterface  
+{  
+    /**  
+     * @param array<\Generated\Shared\Transfer\ProductConcreteTransfer> $productConcreteTransfers  
+     *  
+     * @return array<\Generated\Shared\Transfer\ProductConcreteTransfer>  
+     */  
+    public function expand(array $productConcreteTransfers): array  
+    {  
+        foreach ($productConcreteTransfers as $productConcreteTransfer) 
+        {
+            $productConcreteTransfer->addSearchMetadata('isBestseller', true);
+            // ...
+            // OR
+            // ...
+            $searchMetadata = [
+                'isBestseller' => true,
+                'popularity' => 100,
+            ];
+
+            $productConcreteTransfer->setSearchMetadata($searchMetadata);
+        }
+        
+        return $productConcreteTransfers;
+    }  
+}
+```
+
+Please keep in mind that this field should be an associative array. Allowed values are all scalars and arrays.
+
+##### Using `searchMetadata` field in Algolia
+
+Algolia product object `searchMetadata` field is a simple object which can be used in any index configuration just like any other field.
+
 
 ### Overview of facets list
 
@@ -106,6 +156,34 @@ Default attributes for faceting are as follows:
 
 The `prices` attribute is an object with nested fields. Algolia creates facets for each nested field and creates facets for all the currencies and pricing modes available in product entities.
 
+#### Facet configuration
+
+##### Searchable
+
+Attributes defined as searchable may be used while calling Algolia's `searchForFacetValues` method, which can be used for Yves integration. This method is necessary to display catalog page facets if many values are possible for each facet - in this case, only 100 of those values will be shown by default. Accessing other values requires searching for them using the method above. Select this option if you plan on having a large number of different values for this facet, and use Yves.
+
+##### Filter only
+
+Attributes defined as filters only will not be used for aggregation and can only be used to narrow down search result lists. This can be used with attributes for which aggregated counts are not important.
+
+{% info_block warningBox "Important" %}
+
+Setting an attribute as `filter only` will prevent it from showing in the facets list in the Glue API search response.
+
+{% endinfo_block %}
+
+##### Not searchable
+
+Default option. This facet configuration will enable aggregation of search results by facet values. `searchForFacetValues` method can't be used with facets configured this way. Use this option when you have limited facet values or plan on using something other than Yves.
+
+##### After distinct checkbox
+
+It is checked by default. Unchecking this checkbox will change the calculation method for facet aggregation for the given field. By default, facet aggregation is calculated after search results for a given query are processed by deduplication or grouping process. It is not recommended to turn this checkbox off.
+
+#### Algolia and Glue API facets interaction
+
+When used with Algolia PBC, Spryker facets configuration is ignored and Algolia facets configuration is used instead. This means, that Glue API response fields `"valueFacets"` and `"rangeFacets"` will include facets configured in Algolia. Be wary that setting any Algolia facet to `"filter only"` mode will remove it from corresponding field in Glue API response.
+
 ### Add new attributes for faceting
 
 1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
@@ -118,6 +196,5 @@ The `prices` attribute is an object with nested fields. Algolia creates facets f
 ### Custom ranking and sorting
 
 ![algolia-ranking](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-ranking.png)
-
 
 Algolia's **Ranking and sorting** configuration determines which products can be shown before others when customers search your catalog. Spryker creates a **Popularity** index where you can use Product properties as ranking or sorting attributes. Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).

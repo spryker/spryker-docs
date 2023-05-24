@@ -29,13 +29,15 @@ The ACP has the following advantages:
 
 ## Installing the ACP catalog
 
-With the latest Spryker Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is embedded inside the Back Office by default, but not registered with ACP yet. 
+With the latest Spryker product release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet. 
 
-You can access the ACP catalog for now only if you are a SCOS customer and have additionally been enabled for ACP, which means that your SCOS is properly set up and registered with the ACP.
+You can access the ACP catalog only if you are a SCOS customer and have additionally been enabled for ACP, which means that your SCOS is properly set up and registered with the ACP. Check [ACP installation](/docs/acp/user/intro-to-acp/acp-installation.html) for details on how to install and enable the ACP catalog for your version of SCOS.
 
-Please check [ACP installation guide](/docs/acp/user/intro-to-acp/acp-installation.html) on how to install and enable the ACP catalog for your version of SCOS.
+{% info_block warningBox "Info" %}
 
-Depending on the update status of your SCOS module versions, the type of actions and associated effort to update it to be ACP-ready may vary. The 2nd step to be ACP-enabled will always be handled by Spryker.
+The actions and level of effort required to make your project ACP-ready may vary depending on the update status of your SCOS module versions.
+
+{% endinfo_block %}
 
 
 ## Using an app from the ACP catalog

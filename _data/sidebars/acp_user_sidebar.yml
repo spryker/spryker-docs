@@ -11,8 +11,8 @@ entries:
           - title: ACP security assessment
             url: /docs/acp/user/intro-to-acp/aop-security-assessment.html
             nested:  
-            - title: Installing ACP Catalog
-              url: /docs/acp/user/intro-to-acp/acp-installation.html
+            - title: Install ACP Catalog
+              url: /docs/acp/user/intro-to-acp/app-composition-platform-installation.html
       - title: Developing an app
         url: /docs/acp/user/developing-an-app.html
       - title: App manifest

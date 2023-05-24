@@ -1,6 +1,6 @@
 ---
 title: Feature sets
-description: Setup your frontend application using feature sets that contain all standard features
+description: Feature sets are collections of standard features
 last_updated: May 24, 2023
 template: concept-topic-template
 ---

@@ -25,7 +25,7 @@ Every merchant can have multiple offers for the same concrete product. However, 
 
 {% info_block infoBox "Note" %}
 
-You can retrieve product offer details via Glue API. For details, see [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html).
+You can retrieve product offer details via Glue API. For details, see [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html).
 
 {% endinfo_block %}
 

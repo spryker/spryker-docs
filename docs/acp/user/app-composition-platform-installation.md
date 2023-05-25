@@ -69,12 +69,7 @@ Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html) you intend 
 
 The Spryker ACP Apps are continuously enhanced and improved with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCOS modules to take full advantage of the latest app feature updates.
 
-For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. The following apps are supported:
-
-- [Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/algolia.html), a Search Engine
-- [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html), a Payment Service Provider (PSP)
-- [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html), a Consent Management Platform (CMP)
-- [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)
+For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You will find this information on each App integration guide.
 
 ### 2. Configure SCOS
 

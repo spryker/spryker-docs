@@ -42,4 +42,4 @@ Customers see custom prices for products based on their merchant relationship, o
 
 | INSTALLATION GUIDES|
 |---------|
-| [Marketplace Merchant Custom Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-custom-prices-feature-integration.html) |
+| [Marketplace Merchant Custom Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-custom-prices-feature.html) |

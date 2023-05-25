@@ -1839,6 +1839,16 @@ entries:
                 url: /docs/pbc/all/price-management/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
                 url: /docs/pbc/all/price-management/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html
+          - title: Marketplace
+            nested:
+              - title: Marketplace Merchant Custom Prices feature overview
+                url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Marketplace Merchant Custom Prices feature
+                    url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-marketplace-merchant-custom-prices-feature.html
+                  - title: Install the Prices + Marketplace Wishlist Glue API
+                    url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-prices-marketplace-wishlist-glue-api.html                    
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:

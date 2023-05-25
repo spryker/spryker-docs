@@ -4,7 +4,7 @@ template: data-import-template
 last_updated: 
 ---
 
-This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/packaging-units-feature-overview.html) in your Spryker shop.
+This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](/docs/pbc/all/product-information-management/{{page.verison}}/feature-overviews/measurement-units-feature-overview.html) in your Spryker shop.
 
 
 ## Import file dependencies

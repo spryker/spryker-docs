@@ -39,7 +39,7 @@ The following list illustrates the order followed to run the data importers, and
   11. payment-method
   12. payment-method-store
 
-2. [Catalog Setup](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-catalog-data.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
+2. [Catalog Setup](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-catalog-data.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
 
   13. category-template
   14. category

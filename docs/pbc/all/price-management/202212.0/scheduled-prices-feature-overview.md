@@ -44,7 +44,7 @@ Even though you can use any time zone for defining a price schedule, in the data
 
 You can define price schedules as follows:
 Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/pbc/all/price-management/{{site.version}}/manage-in-the-back-office/create-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price-schedule.csv.html).
-Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
+Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
 ## Cron job
 

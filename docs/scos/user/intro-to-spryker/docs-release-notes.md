@@ -26,7 +26,7 @@ In April 2023, we have added and updated the following pages:
 ### Updated pages
 - [Install the Spryker Core Back Office + Warehouse User Management feature](/docs/pbc/all/back-office/202304.0/install-spryker-core-back-office-warehouse-user-management-feature.html)
 - [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202304.0/install-the-spryker-core-back-office-feature.html)
-- [Product + Category feature integration](/docs/pbc/all/product-information-management/202304.0/install-and-upgrade/install-features/install-the-product-category-feature.html)
+- [Product + Category feature integration](/docs/pbc/all/product-information-management/202304.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html)
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202304.0/base-shop/install-and-upgrade/install-the-shipment-feature.html)
 
 For more details on the latest additions and updates to the Spryker docs, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

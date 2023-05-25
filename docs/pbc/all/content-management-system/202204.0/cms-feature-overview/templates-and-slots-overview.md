@@ -132,7 +132,7 @@ To learn what a content manager can do with content items in the Back Office&nbs
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/create-categories.html).
+* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
 * CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html).
 
 A developer can apply templates with slots to all the other page types.
@@ -210,7 +210,7 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 {% info_block infoBox "Product details page" %}
 
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/assign-products-to-categories.html).
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html).
 
 {% endinfo_block %}
 

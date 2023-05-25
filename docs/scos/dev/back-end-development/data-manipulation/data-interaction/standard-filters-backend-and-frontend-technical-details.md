@@ -18,7 +18,7 @@ redirect_from:
   - /v4/docs/en/standard-filters-backend-and-frontend-technical-details
 related:
   - title: Category Filters feature integration
-    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-category-filters-feature.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html
   - title: Managing Category Filters
     link: docs/pbc/all/search/page.version/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
 ---

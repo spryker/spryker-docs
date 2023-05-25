@@ -85,18 +85,21 @@ entries:
 
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
+          include_versions:
+          - "202204.0"
 
         - title: Marketplace Product Approval Process
           url: /docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
           include_versions:
           - "202204.0"
-          - "202212.0"
 
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
         - title: Marketplace Product Options
           url: /docs/marketplace/user/features/marketplace-product-options-feature-overview.html
+          include_versions:
+          - "202204.0"
 
         - title: Marketplace Inventory Management
           url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
@@ -181,6 +184,8 @@ entries:
 
             - title: Products
               url: /docs/marketplace/user/back-office-user-guides/catalog/products/products.html
+              include_versions:
+              - "202204.0"
               nested:
 
               - title: Abstract products
@@ -199,27 +204,6 @@ entries:
 
                 - title: Creating product variants
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
-
-              - title: Managing products
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
-                include_versions:
-                - "202212.0"
-                nested:
-
-                - title: Managing products
-                  url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
-                  include_versions:
-                  - "202212.0"
-
-                - title: Product Options
-                  url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/product-options.html
-                  nested:
-
-                    - title: Creating product options
-                      url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
-
-                    - title: Managing product options
-                      url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
 
         - title: Marketplace
           url: /docs/marketplace/user/back-office-user-guides/marketplace/marketplace.html
@@ -298,6 +282,8 @@ entries:
 
         - title: Products
           url: /docs/marketplace/user/merchant-portal-user-guides/products/products.html
+          include_versions:
+          - "202204.0"
           nested:
 
           - title: Abstract products

@@ -592,7 +592,7 @@ When paging is enabled, the links section of the response contains links for the
 | isSearchable | Boolean | Indicates if the page can be searched for on the web. |
 | url | String | URL address of the CMS page. |
 
-For the attributes of the included resource, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#response).
+For the attributes of the included resource, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#response).
 
 ## Retrieve a CMS page
 

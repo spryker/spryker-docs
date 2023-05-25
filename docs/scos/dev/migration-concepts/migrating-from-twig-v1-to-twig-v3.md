@@ -16,7 +16,7 @@ related:
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
-    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/decimal-stock-migration-concept.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
   - title: Split Delivery migration concept
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/split-delivery-migration-concept.html
   - title: Silex Replacement migration concept

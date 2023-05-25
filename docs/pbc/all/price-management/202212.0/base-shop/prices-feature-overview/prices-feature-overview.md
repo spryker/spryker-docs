@@ -31,7 +31,7 @@ To accommodate business requirements, there can be various price types—for exa
 
 ## Product types and price inheritance
 
-Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
+Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 
@@ -57,7 +57,7 @@ Prices are stored as an integer, in the smallest unit of a currency—for exampl
 
 Each price is assigned to a price type, like DEFAULT or ORIGINAL price. For a price type, there can be *one* to *n* product prices defined. Price type entity is used to differentiate between use cases. For example, you can have DEFAULT and ORIGINAL types to use for sale pricing.
 
-The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. 
+The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example.
 
 {% info_block Net and Gross Prices Across Tax Regions %}
 
@@ -86,9 +86,9 @@ The following diagram summarizes the logic for retrieving the price for a produc
 | OVERVIEWS | BACK OFFICE USER GUIDES |
 |---| - |
 | [Volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
-| | [Edit prices of an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
-| | [Define prices when creating a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html)  |
-| | [Edit prices of a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html)   |
+| | [Edit prices of an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
+| | [Define prices when creating a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html)  |
+| | [Edit prices of a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html)   |
 
 ## Related Developer documents
 

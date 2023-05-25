@@ -149,7 +149,7 @@ To add items to a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
 | quantity | Integer | &check; | Quantity of the product to add. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
@@ -158,7 +158,7 @@ To add items to a shopping list, send the request:
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
 For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
@@ -331,7 +331,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productConfigurationInstance.quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
 For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
@@ -462,7 +462,7 @@ To change item quantity in a shopping list, send the request:
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
 For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
@@ -620,7 +620,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productOfferReference | String | &check; | Unique identifier of the product offer. |
 | merchantReference| String | &check; | Unique identifier of the merchant. |
 | quantity | Integer | &check; | Updated quantity of the product. |
-| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
@@ -628,7 +628,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
 For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 

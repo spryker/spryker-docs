@@ -2628,7 +2628,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Create configurable bundle templates
           url: /docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html

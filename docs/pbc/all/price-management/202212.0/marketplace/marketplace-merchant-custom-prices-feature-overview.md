@@ -4,9 +4,9 @@ description: This document contains concept information for the Marketplace Merc
 template: concept-topic-template
 related:
   - title: Managing marketplace abstract product prices
-    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/abstract-products/managing-marketplace-abstract-product-prices.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
   - title: Managing marketplace concrete product prices
-    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/concrete-products/managing-marketplace-concrete-product-prices.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
 ---
 
 The *Marketplace Merchant Custom Prices* feature allows marketplace merchants to define custom prices for the marketplace products within specific business units of B2B customers via the Merchant Portal.
@@ -34,8 +34,8 @@ Customers see custom prices for products based on their merchant relationship, o
 
 | MERCHANT PORTAL USER GUIDES  |
 | -------------------- |
-| [Managing marketplace abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html) |
-| [Managing marketplace concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html)
+| [Managing marketplace abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html) |
+| [Managing marketplace concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
 
 
 ## Related Developer documents

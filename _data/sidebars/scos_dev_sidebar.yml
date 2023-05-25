@@ -4725,7 +4725,7 @@ entries:
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
       - title: Supported extension scenarios
-      nested:
+        nested:
         - title: Event subscribers' registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
         - title: Modules configuration

@@ -19,8 +19,6 @@ To start feature integration, integrate the required features:
 
 ###  1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
 ```
@@ -99,14 +97,14 @@ Set up behavior as follows:
 | MerchantUserSecurityPlugin                                                                          | Sets security firewalls (rules, handlers) for Marketplace users.                                                                                                                                        |                                        | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
 | BooleanToStringTwigPlugin                                                                           | Adds a new Twig function for converting Boolean to String.                                                                                                                                              |                                        | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
 | ZedUiNavigationTwigPlugin   Adds a new Twig function for rendering Navigation using web components. |                                                                                                                                                                                                         | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin                                                                           | Enables GuiTable infrastructure for Zed.                                                                                                                                                                |                                        | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
-| GuiTableConfigurationTwigPlugin                                                                     | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.                                                                                                            |                                        | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
+| GuiTableApplicationPlugin                                                                           | Enables the `GuiTable` infrastructure for Zed.                                                                                                                                                                |                                        | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
+| GuiTableConfigurationTwigPlugin                                                                     | Adds a new Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                                                                                                            |                                        | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
 | SecurityTokenUpdateMerchantUserPostChangePlugin                                                     | Rewrites Symfony security token.                                                                                                                                                                        |                                        | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin                                                 | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
-| MerchantAclMerchantPostCreatePlugin                                                                 | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for a provided merchant.                                                                                                |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin                                                 | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities, and allow list entities. |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
+| MerchantAclMerchantPostCreatePlugin                                                                 | Creates an ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for a provided merchant.                                                                                                |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
 | MerchantAclMerchantUserPostCreatePlugin                                                             | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user.                                                                                          |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
 | AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin                                           | Checks if the Symfony security authentication roles should be filtered out.                                                                                                                             |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| MerchantUserUserRoleFilterPlugin                                                                    | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from loging in to the Back Office.                                                                                                           |                                        | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
+| MerchantUserUserRoleFilterPlugin                                                                    | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging in to the Back Office.                                                                                                           |                                        | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
 | ProductViewerForOfferCreationAclInstallerPlugin                                                     | Provide `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                                                                                                          |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
 | AclGroupMerchantUserLoginRestrictionPlugin                                                          | Checks if the merchant user login is restricted.                                                                                                                                                        |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
 
@@ -330,7 +328,7 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Ensure that non-merchant users whose Acl Group has Back Office allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
+Ensure that non-merchant users whose Acl Group has *Back Office allowed Acl Group Reference* (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
 
 {% endinfo_block %}
 
@@ -608,8 +606,8 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-- [Node.js](https://nodejs.org/en/download/) — minimum version is v16.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) — minimum version is v8.
+- [Node.js](https://nodejs.org/en/download/): minimum version is 16.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 8.
 
 Spryker requirements:
 
@@ -622,8 +620,6 @@ To start builder integration, check versions of Spryker packages:
 | Product Relation (optional) | >= 2.4.3  |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
@@ -655,8 +651,6 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Build navigation cache
 
-Execute the following command:
-
 ```bash
 console navigation:build-cache
 ```
@@ -669,7 +663,7 @@ Make sure that Merchant Portal has the **Dashboard** menu.
 
 ### 4) Set up Marketplace builder configs
 
-Add the following files to the root folder:
+1. Add the following files to the root folder:
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/angular.json
@@ -677,7 +671,7 @@ wget -O nx.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/nx.js
 wget -O .browserslistrc https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.browserslistrc
 ```
 
-Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
+2. Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.base.json
@@ -685,27 +679,27 @@ wget -O tsconfig.yves.json https://raw.githubusercontent.com/spryker-shop/suite/
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tsconfig.mp.json
 ```
 
-Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
+3. Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the `tslint.mp.json` file:
+4. Add the `tslint.mp.json` file:
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tslint.mp.json
 ```
 
-Install npm dependencies:
+5. Install npm dependencies:
 
 ```bash
 npm i @angular/animations@~12.2.16 @angular/cdk@~12.2.16 @angular/common@~12.2.16 @angular/compiler@~12.2.16 @angular/core@~12.2.16 @angular/elements@~12.2.16 @angular/forms@~12.2.16 @angular/platform-browser@~12.2.16 @angular/platform-browser-dynamic@~12.2.16 @angular/router@~12.2.16 @webcomponents/custom-elements@~1.3.1 @webcomponents/webcomponents-platform@~1.0.1 @webcomponents/webcomponentsjs@~2.4.0 rxjs@~7.4.0 zone.js@~0.11.4
 ```
 
-Install npm dev dependencies:
+6. Install npm dev dependencies:
 
 ```bash
 npm i -D @angular-builders/custom-webpack@~12.1.3 @angular-devkit/build-angular@~12.2.16 @angular/cli@~12.2.16 @angular/compiler-cli@~12.2.16 @angular/language-service@~12.2.16 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/cli@~12.10.1 @nrwl/jest@~12.10.1 @nrwl/tao@~12.10.1 @nrwl/workspace@~12.10.1 @spryker/oryx-for-zed@~2.11.3 @types/jest@~27.0.2 @types/node@~14.14.33 @types/webpack@~4.41.17 jest@~27.2.3 jest-preset-angular@~9.0.3 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~27.0.5 ts-node@~9.1.1 tslib@~2.0.0 typescript@~4.2.4
 ```
 
-Update `package.json` with the following fields:
+7. Update `package.json` with the following fields:
 
 **package.json**
 
@@ -733,7 +727,7 @@ Update `package.json` with the following fields:
 }
 ```
 
-For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
+8. For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
 
 **frontend/settings.js**
 
@@ -747,7 +741,7 @@ const globalSettings = {
 };
 ```
 
-Run commands from the root of the project:
+9. Run commands from the root of the project:
 
 ```bash
 npm i -g @angular/cli@12.2.16
@@ -755,7 +749,7 @@ npm i -g @angular/cli@12.2.16
 
 `ng --version` should show Angular CLI: 12.2.16 version.
 
-Install project dependencies:
+10. Install project dependencies:
 
 ```bash
 npm install
@@ -767,7 +761,7 @@ If you're getting `Missing write access to node_modules/mp-profile`, delete this
 
 {% endinfo_block %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -856,7 +850,7 @@ $bootstrap
 
 /**
  * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See the LICENSE file.
  */
 
 if (file_exists(__DIR__ . '/maintenance.marker')) {
@@ -948,9 +942,10 @@ import '@mp/polyfills';
 
 {% info_block warningBox "Verification" %}
 
-`npm run mp:build` should pass successfully. If it doesn't work, try the full rebuild:
-
-`rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`
+Ensure that `npm run mp:build` passes successfully. If it doesn't work, try the full rebuild:
+```bash
+rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`
+```
 
 {% endinfo_block %}
 
@@ -958,8 +953,8 @@ import '@mp/polyfills';
 
 To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment YAML:
 
-- Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
-- Add required console commands:
+1. Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
+2. Add required console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -989,16 +984,16 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-Add the Merchant Portal build command:
+3. Add the Merchant Portal build command:
 
-- build-static-production:
+   1. build-static-production:
     ```yaml
     merchant-portal-build-frontend:
         command: 'vendor/bin/console frontend:mp:build -e production'
         timeout: 1600
     ```
 
-- build-static-development:
+   2. build-static-development:
     ```yaml
     merchant-portal-build-frontend:
         command: 'vendor/bin/console frontend:mp:build'
@@ -1007,18 +1002,18 @@ Add the Merchant Portal build command:
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office — MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It's not safe to expose `MerchantPortal` next to the Back Office. `MerchantPortal` *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-MerchantPortal *must be* placed into its own private subnet.
+`MerchantPortal` *must be* placed into its own private subnet.
 
-MerchantPortal *must have* access to the following:
+`MerchantPortal` *must have* access to the following:
 
 - Primary Database
 - Message broker
 
-MerchantPortal *must not have* access to the following:
+`MerchantPortal` *must not have* access to the following:
 
 - Search and Storage
 - Gateway
@@ -1120,7 +1115,7 @@ server {
 }
 ```
 
-After modifying the Nginx config, apply the new `config:f`
+After modifying the Nginx config, apply the new `config:f`:
 
 ```bash
 sudo service nginx reload

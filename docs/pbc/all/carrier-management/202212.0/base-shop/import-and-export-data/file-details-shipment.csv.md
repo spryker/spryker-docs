@@ -37,7 +37,7 @@ data:import:shipment
 | name|  &check; | String | | The name of the shipment method. |
 | carrier |  &check; | String |  | The name of the shipment carrier. |
 | taxSetName |  &check; | String | | 	The name of the tax set. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 

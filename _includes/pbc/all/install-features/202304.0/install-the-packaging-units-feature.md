@@ -1,7 +1,7 @@
 
 
 
-This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 | Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html) 
 | Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
-| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -978,7 +978,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
-| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 | Non-splittable Products | {{page.version}} |
 
 ### 1) Install the required modules using Composer

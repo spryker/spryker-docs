@@ -43,8 +43,8 @@ These are the header fields to be included in the CSV file:
 
 This file has the following dependencies:
 
-- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 - `stores.php` configuration file of the Demo Shop PHP project
 
 ## Template File & Content Example

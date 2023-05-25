@@ -5,7 +5,7 @@ description: This document describes how to view and manage merchant product off
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to view and manage [merchant product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the Back Office.

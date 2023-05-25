@@ -1,10 +1,3 @@
----
-title: Marketplace Product + Quick Add to Cart feature integration
-last_updated: May 16, 2022
-description: This document describes the process how to integrate the Marketplace Product + Quick Add to Cart feature into a Spryker project.
-template: feature-integration-guide-template
----
-
 This document describes how to integrate the Marketplace Product + Quick Add to Cart feature into a Spryker project.
 
 ## Install feature frontend
@@ -17,7 +10,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-------------------|-----------------|----------------|
-| Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
+| Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)|
 | Quick Add to Cart   | {{page.version}} | [Install the Quick Add to Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html)              |
 
 ### Add translations

@@ -13,7 +13,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 1. Update `spryker/product-option` to at least version 6.0.0.
 2. Install/Update `spryker/currency` to at least version 3.0.0. See [Migration Guide - Currency](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) for more details.
 3. Install/Update `spryker/price` to at least version 5.0.0. See [Migration Guide - Price](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) for more details.
-4. Update `spryker/product-option-cart-connector` to at least version 5.0.0 (if you have this module already installed). See [Migration Guide - Product Option Cart Connector](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) for more details.
+4. Update `spryker/product-option-cart-connector` to at least version 5.0.0 (if you have this module already installed). See [Migration Guide - Product Option Cart Connector](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) for more details.
 5. Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 6. Run `vendor/bin/console propel:migrate` to apply the database changes.
 7. Generate ORM models by running `vendor/bin/console propel:model:build`.

@@ -88,7 +88,7 @@ console price-product-merchant-relationship:delete [-m X] . X = MR ID
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Set prices per merchant relations when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| [Set prices per merchant relations when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
 
 ## Related Developer documents
 

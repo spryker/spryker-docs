@@ -16,7 +16,7 @@ You can apply the approaches described in this document only if your project fol
 {% endinfo_block %}
 
 Let's assume you have a [default price](/docs/pbc/all/price-management/{{site.version}}/scheduled-prices-feature-overview.html#price-types) for products, and you have merchants for whom you want to make a certain percentage discount from the default price.
-You can do this by [adding merchant custom prices in the Back Office](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by data import. This document explains how you can manage the merchant custom prices with data import.
+You can do this by [adding merchant custom prices in the Back Office](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by data import. This document explains how you can manage the merchant custom prices with data import.
 
 ## Data importers for merchant custom prices
 

@@ -4218,10 +4218,6 @@ entries:
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:
-    - title: Hosting providers
-      nested:
-      - title: Integrating Heroku
-        url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
       url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
       nested:
@@ -4280,7 +4276,7 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"          
+          - "202204.0"
           nested:
           - title: Installing and configuring Inxmail
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html

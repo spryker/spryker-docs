@@ -1840,6 +1840,8 @@ entries:
               - title: "PriceProduct module details: reference information"
                 url: /docs/pbc/all/price-management/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html
           - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
               - title: Marketplace Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
@@ -1848,7 +1850,15 @@ entries:
                   - title: Install the Marketplace Merchant Custom Prices feature
                     url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-marketplace-merchant-custom-prices-feature.html
                   - title: Install the Prices + Marketplace Wishlist Glue API
-                    url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-prices-marketplace-wishlist-glue-api.html                    
+                    url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-prices-marketplace-wishlist-glue-api.html
+              - title: Import and export data
+                nested:
+                  - title: "File details: product_price.csv"
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-product-price.csv.html
+                  - title: "File details: price-product-offer.csv"
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
+              - title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
+                url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:

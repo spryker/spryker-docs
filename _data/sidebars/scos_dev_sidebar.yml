@@ -4733,12 +4733,35 @@ entries:
     - title: Keeping a project upgradable
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
+      - title: Supported extension scenarios
+        nested:
         - title: Event subscribers' registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
         - title: Modules configuration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
         - title: Plugins registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+      - title: Run the evaluator tool
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+      - title: Upgradability guidelines
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+        nested:
+        - title: Dead code checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html
+        - title: Additional logic in dependency provider
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
+        - title: Minimum allowed shop version
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
+        - title: Multidimensional array
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
+        - title: PHP version
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
+        - title: Plugin registration with restrictions
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
+        - title: Security
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+        - title: Single plugin argument
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:

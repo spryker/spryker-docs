@@ -184,8 +184,6 @@ use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TransactionIdMe
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\ValidationMiddlewarePlugin;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
 use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Receiver\AwsSqsMessageReceiverPlugin;
-use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\AwsSnsMessageSenderPlugin;
-use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\AwsSqsMessageSenderPlugin;
 use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\HttpMessageSenderPlugin;
 use Spryker\Zed\OauthClient\Communication\Plugin\MessageBroker\AccessTokenMessageAttributeProviderPlugin;
 use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
@@ -200,8 +198,6 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageSenderPlugins(): array
     {
         return [
-            new AwsSnsMessageSenderPlugin(),
-            new AwsSqsMessageSenderPlugin(),
             new HttpMessageSenderPlugin(),
         ];
     }
@@ -309,7 +305,6 @@ namespace Pyz\Zed\OauthClient;
 
 use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\Auth0OauthAccessTokenProviderPlugin;
 use Spryker\Zed\OauthClient\OauthClientDependencyProvider as SprykerOauthClientDependencyProvider;
-use Spryker\Zed\OauthDummy\Communication\Plugin\OauthClient\DummyOauthAccessTokenProviderPlugin;
 use Spryker\Zed\Store\Communication\Plugin\OauthClient\CurrentStoreReferenceAccessTokenRequestExpanderPlugin;
 
 class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
@@ -320,7 +315,6 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
     protected function getOauthAccessTokenProviderPlugins(): array
     {
         return [
-            new DummyOauthAccessTokenProviderPlugin(),
             new Auth0OauthAccessTokenProviderPlugin(),
         ];
     }
@@ -346,7 +340,7 @@ You need to define the environment variables in the `deploy.yml` file of *each* 
 
 {% info_block warningBox "Warning" %}
 
-It is crucial to specify the keys for the environment variables. The infrastructure values (FIFO queue names) are provided by Spryker OPS upon request.
+It is crucial to specify the keys for the environment variables. The infrastructure values, such as `SPRYKER_AOP_INFRASTRUCTURE` and `STORE_NAME_REFERENCE_MAP` are provided by Spryker OPS upon request.
 
 {% endinfo_block %}
 
@@ -354,10 +348,10 @@ It is crucial to specify the keys for the environment variables. The infrastruct
 <summary>General structure</summary>
 
 ```json
-ENVIRONMENT_VARIABLE_NAME_A:{
+ENVIRONMENT_VARIABLE_NAME_A: '{
   "CONFIGURATION_KEY_A":"SOME_VALUE_A",
   "CONFIGURATION_KEY_B":"SOME_VALUE_B"
-}
+}'
 ```
 </details>
 
@@ -399,7 +393,7 @@ SPRYKER_AOP_INFRASTRUCTURE: '{
 
 #### General configurations: SPRYKER_AOP_APPLICATION variable
 
-The configuration key `APP_CATALOG_SCRIPT_URL`is the URL for the App-Tenant-Registry-Service (ATRS) and path to the JS script to load the ACP catalog. E
+The configuration key `APP_CATALOG_SCRIPT_URL`is the URL for the App-Tenant-Registry-Service (ATRS) and path to the JS script to load the ACP catalog.
 
 Example of the production ATRS_HOST and path:
 

@@ -4,7 +4,7 @@ description: Instructions for running the evaluator tool
 template: howto-guide-template
 ---
 
-This document describes how to check if the project code is compliant with Spryker’s standards using the evaluator tool.
+This document outlines the process of using the evaluator tool to verify if your project code adheres to Spryker's standards.
 
 ## Install the evaluator tool
 

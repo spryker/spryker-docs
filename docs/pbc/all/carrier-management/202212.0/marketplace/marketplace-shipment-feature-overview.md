@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-shipment-feature-walkthrough.html
 ---
 
-The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
+The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
 
 A *shipment* is a set of two or more products combined by the same delivery address.
 

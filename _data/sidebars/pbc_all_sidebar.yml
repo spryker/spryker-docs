@@ -2121,86 +2121,11 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-label-store.csv.html
                   - title: product_label.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-label.csv.html
-              - title: Manage in the Back Office
-                url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202212.0"
-                nested:
-                  - title: Attributes
-                    nested:
-                      - title: Create product attributes
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html
-                      - title: Edit product attributes
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
-                  - title: Categories
-                    nested:
-                      - title: Create categories
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/create-categories.html
-                      - title: Edit categories
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/edit-categories.html
-                      - title: Delete categories
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/delete-categories.html
-                      - title: Assign and deassign products from categories
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
-                      - title: Order products in categories
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
-                  - title: Configurable bundle templates
-                    nested:
-                    - title: Create configurable bundle templates
-                      url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html
-                    - title: Edit configurable bundle templates
-                      url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html
-                    - title: Edit slots in configurable bundle templates
-                      url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
-                  - title: Products
-                    nested:
-                      - title: "Creating service offerings: best practices"
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/create-service-offerings-best-practices.html
-                      - title: Manage abstract products and product bundles
-                        nested:
-                          - title: Create abstract products and product bundles
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
-                          - title: Edit abstract products and product bundles
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
-                          - title: Assign product attributes to abstract products
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
-                      - title: Manage product variants
-                        nested:
-                          - title: Create product variants
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
-                          - title: Edit product variants
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
-                          - title: Assign product attributes to product variants
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
-                          - title: Add product alternatives
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
-                          - title: Discontinue products
-                            url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
-                  - title: Product labels
-                    nested:
-                      - title: Create
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
-                      - title: Edit
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
-                      - title: View
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-labels/view-product-labels.html
-                  - title: Product lists
-                    nested:
-                      - title: Create
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html
-                      - title: Edit
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html
-                  - title: Product options
-                    nested:
-                      - title: Create
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/create-product-options.html
-                      - title: Edit
-                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
-                  - title: View product barcodes
                     url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/view-product-barcodes.html
               - title: Manage in the Back Office
                 include_versions:
                 - "202204.0"
+                - "202212.0"
                 nested:
                   - title: Attributes
                     nested:
@@ -2634,16 +2559,6 @@ entries:
                     url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202212.0"
-                nested:
-                  - title: Change the state of order items in returns
-                    url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
-                  - title: Manage returns
-                    url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/manage-returns.html
-              - title: Manage in the Back Office
-                include_versions:
-                - "202204.0"
                 nested:
                   - title: Change the state of order items in returns
                     url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
@@ -2671,22 +2586,14 @@ entries:
                     url: /docs/pbc/all/return-management/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html
                   - title: Install the Marketplace Return Management Glue API
                     url: /docs/pbc/all/return-management/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html
-                  - title: Install the Return Management feature
-                    url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-feature.html
+                  - title: Install the Marketplace Return Management feature
+                    url: /docs/pbc/all/return-management/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.md
                   - title: Install the Return Management Glue API
-                    url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
+                    url: /docs/pbc/all/return-management/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/log-into-the-back-office.html
                 include_versions:
                 - "202212.0"
-                nested:
-                  - title: Main merchant returns
-                    url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
-                  - title: Marketplace returns
-                    url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
-              - title: Manage in the Back Office
-                include_versions:
-                - "202204.0"
                 nested:
                   - title: Main merchant returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
@@ -2955,20 +2862,6 @@ entries:
                     url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-tax-module.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202212.0"
-                nested:
-                  - title: Create tax rates
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
-                  - title: Edit tax rates
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-rates.html
-                  - title: Create tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-sets.html
-                  - title: Edit tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
-              - title: Manage in the Back Office
-                include_versions:
-                - "202204.0"
                 nested:
                   - title: Create tax rates
                     url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
@@ -3034,36 +2927,6 @@ entries:
                 url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/user-management/manage-in-the-back-office/log-into-the-back-office.html
-            include_versions:
-            - "202212.0"
-            nested:
-              - title: "Best practices: Manage users and their permissions with roles and groups"
-                url: /docs/pbc/all/user-management/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
-              - title: Manage user roles
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-roles/create-user-roles.html
-                  - title: Edit
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
-              - title: Manage user groups
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-groups/create-user-groups.html
-                  - title: Edit
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
-              - title: Manage users
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/create-users.html
-                  - title: Edit
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/edit-users.html
-                  - title: Assign and deassign customers
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
-                  - title: Delete
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/delete-users.html
-          - title: Manage in the Back Office
-            include_versions:
-            - "202204.0"
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"
                 url: /docs/pbc/all/user-management/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
@@ -3146,20 +3009,6 @@ entries:
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-product-stock.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202212.0"
-                nested:
-                  - title: Create warehouses
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/create-warehouses.html
-                  - title: Edit warehouses
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-warehouses.html
-                  - title: Check availability of products
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/check-availability-of-products.html
-                  - title: Edit stock of products and product bundles
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html
-              - title: Manage in the Back Office
-                include_versions:
-                - "202204.0"
                 nested:
                   - title: Create warehouses
                     url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/create-warehouses.html

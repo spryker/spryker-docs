@@ -7,6 +7,12 @@ originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
 redirect_from:
   - /docs/getting-started-with-spryker-cloud-commerce-os
   - /docs/en/getting-started-with-spryker-cloud-commerce-os
+  - /docs/scos/user/technology-partners/202212.0/hosting-providers/claranet.html
+  - /docs/scos/user/technology-partners/202212.0/hosting-providers/root-360.html
+  - /docs/scos/user/technology-partners/202212.0/hosting-providers/heroku.html
+  - /docs/scos/user/technology-partners/202212.0/hosting-providers/continum.html
+  - /docs/scos/user/technology-partners/202212.0/hosting-providers/metaways.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/hosting-providers/integrating-heroku.html
 ---
 
 This document is a starting point of development with the Spryker Cloud Commerce OS(SCCOS).

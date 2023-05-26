@@ -24,6 +24,6 @@ The following diagram illustrates the dependencies between the modules for the *
 
 ## Related Developer documents
 
-| INTEGRATION GUIDES|
+| INSTALLATION GUIDES|
 | -------------- |
 | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |

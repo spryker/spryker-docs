@@ -59,7 +59,7 @@ A _Merchant Product_ is a product created by a merchant. The merchant that creat
 
 ![Merchant product on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-product-on-pdp.png)
 
-Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
+Documentation: [Marketplace Products feature overview](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html)
 
 ### Merchant Product Offers
 
@@ -75,7 +75,7 @@ Documentation: [Marketplace Product Offer feature overview](/docs/marketplace/us
 
 Merchants can create and connect product options to their or other merchants’ products.
 
-Documentation: [Marketplace Product Options feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-options-feature-overview.html)
+Documentation: [Marketplace Product Options feature overview](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-options-feature-overview.html)
 
 ## Marketplace and Merchant Orders
 
@@ -114,7 +114,7 @@ The operator can edit and activate marketplace products and product options.
 
 ![Merchnat products in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-products.png)
 
-Documentation: [Marketplace Products feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
+Documentation: [Marketplace Products feature overview](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html)
 
 ### Merchant product offer management
 
@@ -152,10 +152,10 @@ All the significant features of Spryker Marketplace are covered with Glue APIs.
 
 Documentation:
 * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{site.version}}/merchants/retrieving-merchants.html)
-* [Retrieving merchant abstract products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/abstract-products/retrieving-abstract-products.html)
-* [Retrieving merchant concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html)
+* [Retrieving merchant abstract products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
+* [Retrieving merchant concrete products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/product-offers/retrieving-product-offers.html)
-* [Retrieving product offers of concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html)
+* [Retrieving product offers of concrete products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html)
 * [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
 * [Retrieving Marketplaceorders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 * [Managing the returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/glue-api-manage-marketplace-returns.html)
@@ -176,7 +176,7 @@ These are the new data importers available in our data import framework:
 ### Data export
 The new merchant order exporter lets you export information like orders, order items, and expenses.
 
-Documentation: [Data export Merchant Orders CSV files format](/docs/marketplace/dev/data-export//{{site.version}}/data-export-merchant-orders-csv-files-format.html)
+Documentation: [Data export Merchant Orders CSV files format](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-data/data-export-merchant-orders-csv-files-format.html)
 
 ## Technical enhancements
 

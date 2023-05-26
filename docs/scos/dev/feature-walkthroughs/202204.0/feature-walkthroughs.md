@@ -45,7 +45,7 @@ The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/compa
 
 ### Configuration process flow of Configurable Product
 
-The [configuration process](/docs/pbc/all/product-information-management/{{page.version}}/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) of a configurable product consists of eight phases.
+The [configuration process](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) of a configurable product consists of eight phases.
 
 ## Content Items
 

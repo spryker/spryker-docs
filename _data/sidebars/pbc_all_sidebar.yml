@@ -754,6 +754,8 @@ entries:
             nested:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
+              - title: "Product Sets feature: domain model and relationships"
+                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
@@ -1002,6 +1004,21 @@ entries:
             url: /docs/pbc/all/emails/howto-create-and-register-a-mail-type-builder-plugin.html
           - title: "Tutorial: Sending a mail"
             url: /docs/pbc/all/emails/tutorial-sending-an-email.html
+          - title: Third-party integrations
+            include_versions:
+            - "202212.0"
+            nested:
+              - title: Inxmail
+                url: /docs/pbc/all/emails/third-party-integrations/inxmail.html
+              - title: Install and configure Inxmail
+                url: /docs/pbc/all/emails/third-party-integrations/install-and-configure-inxmail.html
+              - title: Integrate Inxmail
+                url: /docs/pbc/all/emails/third-party-integrations/integrate-inxmail.html
+              - title: Inxmail API requests
+                url: /docs/pbc/all/emails/third-party-integrations/inxmail-api-requests.html
+              - title: Inxmail Order referenced commands
+                url: /docs/pbc/all/emails/third-party-integrations/inxmail-order-referenced-commands.html
+
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
         nested:
@@ -1718,114 +1735,134 @@ entries:
         url: /docs/pbc/all/price-management/price-management.html
         nested:
           - title: Prices feature overview
-            url: /docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html
+            url: /docs/pbc/all/price-management/base-shop/prices-feature-overview/prices-feature-overview.html
             nested:
               - title: Volume Prices overview
-                url: /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
+                url: /docs/pbc/all/price-management/base-shop/prices-feature-overview/volume-prices-overview.html
           - title: Merchant Custom Prices feature overview
-            url: /docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html
+            url: /docs/pbc/all/price-management/base-shop/merchant-custom-prices-feature-overview.html
           - title: Scheduled Prices feature overview
-            url: /docs/pbc/all/price-management/scheduled-prices-feature-overview.html
+            url: /docs/pbc/all/price-management/base-shop/scheduled-prices-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features
                 nested:
                   - title: Prices
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
                   - title: Merchant Custom Prices
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
                   - title: Scheduled prices
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
                   - title: Product Price Glue API
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-product-price-glue-api.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
               - title: Upgrade modules
                 nested:
                   - title: CRUD Scheduled Prices
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
                   - title: Multi-currency
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
                   - title: Currency
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
                   - title: Price
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
                   - title: PriceCartConnector
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html
                   - title: PriceProduct
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
                   - title: PriceProductSchedule
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html
                   - title: PriceProductScheduleGui
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html
                   - title: PriceProductStorage
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html
                   - title: PriceProductVolume
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
                   - title: PriceProductVolumeGui
-                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
           - title: Import and export data
-            url: /docs/pbc/all/price-management/import-and-export-data/import-of-prices.html
+            url: /docs/pbc/all/price-management/base-shop/import-and-export-data/import-of-prices.html
             nested:
               - title: currency.csv
-                url: /docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html
+                url: /docs/pbc/all/price-management/base-shop/import-and-export-data/file-details-currency.csv.html
               - title: product_price_schedule.csv
-                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html
+                url: /docs/pbc/all/price-management/base-shop/import-and-export-data/file-details-product-price-schedule.csv.html
               - title: product_price.csv
-                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html
+                url: /docs/pbc/all/price-management/base-shop/import-and-export-data/file-details-product-price.csv.html
           - title: Manage in the Back Office
-            url: /docs/pbc/all/price-management/manage-in-the-back-office/log-into-the-back-office.html
+            url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
             - "202212.0"
             nested:
               - title: Create scheduled prices
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/create-scheduled-prices.html
               - title: Manage scheduled prices
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/manage-scheduled-prices.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/manage-scheduled-prices.html
               - title: Add scheduled prices to abstract products and product bundles
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
               - title: Add volume prices to abstract products and product bundles
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
           - title: Manage in the Back Office
             include_versions:
             - "202204.0"
             nested:
               - title: Create scheduled prices
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/create-scheduled-prices.html
               - title: Manage scheduled prices
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/manage-scheduled-prices.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/manage-scheduled-prices.html
               - title: Add scheduled prices to abstract products and product bundles
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
               - title: Add volume prices to abstract products and product bundles
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
+                url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
           - title: Manage using Glue API
             nested:
               - title: Retrieve abstract product prices
-                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
+                url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
               - title: Retrieve concrete product prices
-                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
+                url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
               - title: Retrieve prices when retrieving abstract products
-                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-prices-when-retrieving-abstract-products.html
+                url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-abstract-products.html
               - title: Retrieve prices when retrieving concrete products
-                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
+                url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Create personalized prices"
-                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-create-personalized-prices.html
+                url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
               - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
-                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
+                url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
               - title: "HowTo: Manage business unit specific prices via data import"
-                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
+                url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
               - title: "HowTo: Schedule cron job for Scheduled Prices"
-                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+                url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
           - title: Extend and customize
             nested:
               - title: Configuration of price modes and types
-                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
+                url: /docs/pbc/all/price-management/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html
               - title: "Money module: reference information"
-                url: /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
+                url: /docs/pbc/all/price-management/base-shop/extend-and-customize/money-module-reference-information.html
               - title: Multiple currencies per store configuration
-                url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
+                url: /docs/pbc/all/price-management/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
-                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
+                url: /docs/pbc/all/price-management/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html
+          - title: Marketplace
+            include_versions:
+            - "202212.0"
+            nested:
+              - title: Marketplace Merchant Custom Prices feature overview
+                url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Marketplace Merchant Custom Prices feature
+                    url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-marketplace-merchant-custom-prices-feature.html
+                  - title: Install the Prices + Marketplace Wishlist Glue API
+                    url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-the-prices-marketplace-wishlist-glue-api.html
+              - title: Import and export data
+                nested:
+                  - title: "File details: product_price.csv"
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-product-price.csv.html
+                  - title: "File details: price-product-offer.csv"
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
+              - title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
+                url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
@@ -2470,6 +2507,29 @@ entries:
             url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html
           - title: "Product Relations: module relations"
             url: /docs/pbc/all/product-relationship-management/product-relations-module-relations.html
+          - title: Third-party integrations
+            nested:
+              - title: Contentserv
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/contentserv.html
+              - title: Econda
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/econda.html
+                nested:
+                  - title: Installing Econda
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/install-econda.html
+                  - title: Integrating Econda
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/integrate-econda.html
+                  - title: Integrating Econda cross-selling
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/integrate-econda-cross-selling.html
+                  - title: Adding the Econda tracking code
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/add-the-econda-tracking-code.html
+                  - title: Exporting Econda data
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/export-econda-data.html
+              - title: Nosto
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/nosto.html
+              - title: 8Select
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/8select.html
+              - title: trbo
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
       - title: Punchout
         url: /docs/pbc/all/punchout/punchout-catalogs.html
         include_versions:
@@ -2703,6 +2763,20 @@ entries:
                 url: /docs/pbc/all/search/manage-in-the-back-office/define-search-preferences.html
               - title: Edit search preferences
                 url: /docs/pbc/all/search/manage-in-the-back-office/edit-search-preferences.html
+              - title: Filter preferences
+                nested:
+                  - title: Define
+                    url: /docs/pbc/all/search/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
+                  - title: Edit
+                    url: /docs/pbc/all/search/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html
+                  - title: Reorder
+                    url: /docs/pbc/all/search/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html
+              - title: Category filters
+                nested:
+                  - title: Assign and deassign filters from categories
+                    url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
+                  - title: Reorder category filters
+                    url: /docs/pbc/all/search/manage-in-the-back-office/category-filters/reorder-category-filters.html
           - title: Manage using Glue API
             nested:
               - title: Retrieve autocomplete and search suggestions

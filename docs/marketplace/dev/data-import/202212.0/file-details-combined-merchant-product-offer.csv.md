@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
@@ -37,7 +39,7 @@ The file should have the following parameters:
 | merchant_product_offer.is_active             |               | Integer  |                   | 1—is active<br> 0—is not active                             | Defines whether the offer is active or not.                  |
 | merchant_product_offer.approval_status       | &check;             | String   |                   | Can be:<ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | Defines the [status of the offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#offer-approval-status) in the system. |
 | merchant_product_offer_store.store_name      |               | String   |                   |                                                              | Name of the store where the offer belongs.                   |
-| product_offer_stock.stock_name               |               | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                                           |
+| product_offer_stock.stock_name               |               | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                                           |
 | product_offer_stock.quantity                 |               | Integer  |                   |                                                              | Number of product offers that are in stock.                  |
 | product_offer_stock.is_never_out_of_stock    |               | Integer  |                   | 1—option is enabled<br> 0—option is disabled.               | Allows the offer to be never out of stock. |
 | price_product_offer.price_type               |               | String   |                   | Can be DEFAULT or ORIGINAL.                                  | Price type of the product offer.                             |

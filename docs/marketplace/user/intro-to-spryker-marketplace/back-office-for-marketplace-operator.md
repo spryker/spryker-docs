@@ -48,14 +48,14 @@ As a part of order management, a marketplace administrator helps merchants manag
 * Sets marketplace return states
 * Prints marketplace return slips
 
-For detailed instructions on managing returns, see [Managing marketplace returns](/docs/marketplace/user/back-office-user-guides/{{site.version}}/sales/managing-marketplace-returns.html).
+For detailed instructions on managing returns, see [Managing marketplace returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-marketplace-returns.html).
 
 
 ## Main merchant sales
 
 In an [enterprise marketplace business model](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html), apart from managing the marketplace, a marketplace operator sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html). In the Back Office, they manage their orders and returns in **Sales&nbsp;<span aria-label="and then">></span> My Orders** and **Sales&nbsp;<span aria-label="and then">></span> My returns** sections, respectively. With their own orders, they can perform the same actions as they do with other merchants' as described in [Order management](#order-management) and [Return management](#return-management). Apart from that, they can create and edit shipments for their orders.
 
-For detailed instructions about managing main merchant orders and returns, see [Managing main merchant orders](/docs/marketplace/user/back-office-user-guides/{{site.version}}/sales/managing-main-merchant-orders.html) and [Managing main merchant returns](/docs/marketplace/user/back-office-user-guides/{{site.version}}/sales/managing-main-merchant-returns.html).
+For detailed instructions about managing main merchant orders and returns, see [Managing main merchant orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-main-merchant-orders.html) and [Managing main merchant returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html).
 
 ## Read next
 

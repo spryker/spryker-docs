@@ -49,8 +49,11 @@ commonOptions = {
     /www.acunetix.com\/[\.\w\-\/\?]+/,
     /gcc.gnu.org\/[\.\w\-\/\?]+/,
     /github.com\/[\.\w\-\/\?]+/,
-    /www.collect.ai\/[\.\w\-\/\?]+/
-
+    /www.collect.ai\/[\.\w\-\/\?]+/,
+    /twitter.com\/[\.\w\-\/\?]+/,
+    /www.optimise-it.de\/[\.\w\-\/\?]+/,
+    /blackfire.io\/[\.\w\-\/\?]+/,
+    /www.blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

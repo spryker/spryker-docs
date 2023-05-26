@@ -11,6 +11,9 @@ redirect_from:
   - /docs/file-details-product-concrete-pre-configurationcsv
   - /docs/en/file-details-product-concrete-pre-configurationcsv
   - /docs/scos/dev/data-import/202200.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) information in your Spryker shop.
@@ -35,7 +38,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependency: [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html#import-file-parameters)
+The file has the following dependency: [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html#import-file-parameters)
 
 ## Import template file and content example
 

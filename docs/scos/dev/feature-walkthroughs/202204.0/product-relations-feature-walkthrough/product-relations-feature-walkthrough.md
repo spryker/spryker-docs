@@ -21,9 +21,9 @@ The following schema illustrates relations within the Product Relations feature:
 
 </div>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
 |[Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelation migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html) |
-| [Glue API: Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelationStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productrelationstorage-module.html) |
+| [Glue API: Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelationStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productrelationstorage-module.html) |

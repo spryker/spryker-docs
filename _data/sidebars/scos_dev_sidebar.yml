@@ -169,6 +169,9 @@ entries:
       - "202108.0"
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: "Company account: module relations"
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
@@ -267,7 +270,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"      
+      - "202204.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
@@ -358,6 +361,13 @@ entries:
         - "202108.0"
     - title: Payments
       url: /docs/scos/dev/feature-walkthroughs/payments-feature-walkthrough.html
+      include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
     - title: Persistent Cart Sharing
       url: /docs/scos/dev/feature-walkthroughs/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
       include_versions:
@@ -517,6 +527,9 @@ entries:
       - "202204.0"
     - title: Reorder
       url: /docs/scos/dev/feature-walkthroughs/reorder-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Resource Sharing
       url: /docs/scos/dev/feature-walkthroughs/resource-sharing-feature-walkthrough.html
       include_versions:
@@ -579,20 +592,11 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core
-      url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
-      nested:
-      - title: How translations are managed
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html
-      - title: URL redirects overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/url-redirects-overview.html
-      - title: Vault for Tokens overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/vault-for-tokens-overview.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      - "202108.0"
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -984,7 +988,7 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"        
+        - "202204.0"
         nested:
         - title: Managing carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -1342,7 +1346,6 @@ entries:
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Validate REST request format
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/validate-rest-request-format.html
         include_versions:
@@ -1536,7 +1539,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Product
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html
         include_versions:
@@ -2192,7 +2194,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Permissions
       url: /docs/scos/dev/feature-integration-guides/permissions-feature-integration.html
     - title: Persistent Cart Sharing
@@ -2600,16 +2601,9 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core Back Office + Warehouse User Management
-      url: /docs/scos/dev/feature-integration-guides/install-spryker-core-back-office-warehouse-user-management-feature.html
-      include_versions:
-      - "202304.0"
+      - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
-    - title: Warehouse picking
-      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
-      include_versions:
-      - "202304.0"
     - title: Picker user login
       url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
       include_versions:
@@ -2622,6 +2616,26 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
+    - title: Warehouse picking + Inventory Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-inventory-management-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Order Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-order-management-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Product
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-product-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Shipment
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-shipment-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Spryker Core Back Office
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-spryker-core-back-office-feature.html
+      include_versions:
+      - "202304.0"
     - title: Spryker in Docker
       include_versions:
       - "201907.0"
@@ -2634,6 +2648,10 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Warehouse picking
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
+      include_versions:
+      - "202304.0"
     - title: Warehouse User Management
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-user-management-feature.html
       include_versions:
@@ -2719,8 +2737,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
     - title: Migration Guide - OMS
       url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
-    - title: Migration Guide - Payment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
     - title: Migration Guide - PersistentCart
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
@@ -2836,7 +2852,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: File details - payment_method_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
           include_versions:
@@ -2844,7 +2859,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: File details - customer.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html
           include_versions:
@@ -3700,15 +3714,28 @@ entries:
     nested:
     - title: Zed
       url: /docs/scos/dev/front-end-development/zed/zed.html
+      include version:
+      - "202212.0"
+      - "202304.0"
       nested:
       - title: Oryx Builder overview and setup
         url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
+        include version:
+        - "202212.0"
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
+        include version:
+        - "202212.0"
       - title: Overriding Webpack, JS, SCSS for ZED on project level
         url: /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+        include version:
+        - "202212.0"
+        - "202304.0"
       - title: Oryx for Zed
         url: /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
+        include version:
+        - "202212.0"
+        - "202304.0"
     - title: Yves
       url: /docs/scos/dev/front-end-development/yves/yves.html
       nested:
@@ -3919,8 +3946,6 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
-    - title: Define parameters and secrets
-      url: /docs/scos/dev/the-docker-sdk/define-parameters-and-secrets.html
   - title: Legacy Demoshop
     include_versions:
     - "201811.0"
@@ -4133,22 +4158,8 @@ entries:
       nested:
       - title: Feature HowTos
         nested:
-        - title: Data Imports
-          nested:
-          - title: "HowTo: Import warehouse data"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
-          - title: "HowTo: Add support for number formatting in the Storefront"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html
-        - title: "HowTo: Generate a token for login"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
-        - title: "HowTo: Display custom names for order item states on the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: "HowTo: Make a product searchable and shown on the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
         - title: "HowTo: Add support of number formatting in the Back Office"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
-        - title: "HowTo: Implement customer approval process based on a generic state machine"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
@@ -4172,18 +4183,14 @@ entries:
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
-      - title: "HowTo: Define the maximum size of content fields"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
       - title: "HowTo: Do better deployments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
       - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
-      - title: "HowTo: Hydrate payment methods for an order"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
+      - title: "HowTo: Import big databases between environments"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
-      - title: "HowTo: Process incoming HTTP requests from external ERP services for order updates"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
       - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: "HowTo: Handle graceful shutdown"
@@ -4204,15 +4211,13 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Allow Zed CSS/JS on a project"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
+      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html
+      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:
-    - title: Hosting providers
-      nested:
-      - title: Integrating Heroku
-        url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
       url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
       nested:
@@ -4268,6 +4273,10 @@ entries:
           - title: Order reference commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
         - title: Inxmail guides
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing and configuring Inxmail
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
@@ -4278,6 +4287,9 @@ entries:
           - title: Order referenced commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
       - title: Personalization and cross-selling
+        include_versions:
+        - "202108.0"
+        - "202204.0"
         nested:
         - title: Econda
           nested:
@@ -4321,6 +4333,12 @@ entries:
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
     - title: Payment partners
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
         - title: Adyen
           nested:
@@ -4715,12 +4733,35 @@ entries:
     - title: Keeping a project upgradable
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
+      - title: Supported extension scenarios
+        nested:
         - title: Event subscribers' registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
         - title: Modules configuration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
         - title: Plugins registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+      - title: Run the evaluator tool
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+      - title: Upgradability guidelines
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+        nested:
+        - title: Dead code checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html
+        - title: Additional logic in dependency provider
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
+        - title: Minimum allowed shop version
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
+        - title: Multidimensional array
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
+        - title: PHP version
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
+        - title: Plugin registration with restrictions
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
+        - title: Security
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+        - title: Single plugin argument
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
@@ -4730,8 +4771,6 @@ entries:
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
         - title: RAM-aware batch processing
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
-        - title: Scalable application infrastructure for publish and sync workers
-          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
         - title: Storage caching for primary-replica database setups
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: General performance guidelines
@@ -4939,10 +4978,25 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
         - title: Vendor folder synchronization error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
-  - title: Updating a Spryker-based project
-    url: /docs/scos/dev/updating-a-spryker-based-project.html
-  - title: Analyzing and upgrading your project with Spryker Jarvis
-    url: /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
+  - title: Updating Spryker
+    url: /docs/scos/dev/updating-spryker/updating-spryker.html
+    nested:
+      - title: Feature or module updates
+        url: /docs/scos/dev/updating-spryker/feature-or-module-updates.html
+      - title: Plan updates
+        url: /docs/scos/dev/updating-spryker/plan-updates.html
+      - title: Installing features and updating modules
+        url: /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
+      - title: Testing updates
+        url: /docs/scos/dev/updating-spryker/testing-updates.html
+      - title: Preventing update issues
+        url: /docs/scos/dev/updating-spryker/preventing-update-issues.html
+      - title: Analyzing and upgrading projects with Spryker Jarvis
+        url: /docs/scos/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.html
+      - title: Switch Demo Shop version
+        url: /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
+      - title: Troubleshooting updates
+        url: /docs/scos/dev/updating-spryker/troubleshooting-updates.html
   - title: Code contribution guide
     url: /docs/scos/dev/code-contribution-guide.html
 ...

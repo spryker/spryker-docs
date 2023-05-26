@@ -3,6 +3,20 @@ title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC) documentation section
 template: concept-topic-template
 redirect_from:
+  - /2021080/docs/overview-of-the-feature-guides
+  - /2021080/docs/en/overview-of-the-feature-guides
+  - /docs/overview-of-the-feature-guides
+  - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/202200.0/features.html
+  - /docs/scos/user/features/202212.0/features.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201903.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/feature-walkthroughs.html  
   - /docs/pbc/all/pbc-landing.html
 ---
 
@@ -30,10 +44,10 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 | [Price Management](/docs/pbc/all/price-management/{{site.version}}/price-management.html) | The Spryker Cloud Commerce OS supports multiple currencies and automatically detects the payment currency based on a customer’s preference. You can manage gross and net prices per product and per country. You can also offer volume discounts to encourage customers to purchase products in larger quantities. | Saves you time by letting you implement your pricing strategy in one place and catering it to your business needs. |
 | [Product Information Management (PIM)](/docs/pbc/all/product-information-management/{{site.version}}/product-information-management.html) | Encompasses all functionality that is needed to set up your product catalog. With PIM, you can create and extend the product catalog to match your business needs. | Helps you expand your business by organizing your products in a fast and efficient way. |
 | [Product Relationship Management](/docs/pbc/all/product-relationship-management/{{site.version}}/product-relationship-management.html) | Helps you enhance your shop with cross- and up-selling capabilities to increase sales. | Increases average order values with product relations. |
-| [Payment Service Provider (PSP)](/docs/pbc/all/payment-service-providers/psp.html) | Provides integration of payment methods. You can integrate multiple payment gateways, define their availability, and customize how they appear on your site. | Lets you provide an excellent shopping experience and integrate your customers’ preferred payment methods. |
+| [Payment Service Provider (PSP)](/docs/pbc/all/payment-service-provider/{{site.version}}/payment-service-provider.html) | Provides integration of payment methods. You can integrate multiple payment gateways, define their availability, and customize how they appear on your site. | Lets you provide an excellent shopping experience and integrate your customers’ preferred payment methods. |
 | Punchout |The Punchout integration eases the purchasing process for your B2B customers. Buyers can select a shop within their procurement system and visit the supplier website via a Punchout Setup Request, thereby allowing them to follow internal procurement guidelines. | Lets you increase customer satisfaction by offering a direct Punchout integration. |
 | [Ratings and Reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/ratings-and-reviews.html) | Lets you incorporate user reviews and ratings. You can receive and moderate feedback in the Back Office. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings. | Inspires trust among customers with ratings and reviews. |
-| [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html) | Lets you establish a return policy and execute returns. | Increase customer satisfaction and loyalty. |
+| [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html) | Lets you establish a return policy and execute returns. | Increase customer satisfaction and loyalty. |
 | [Request for Quote (RFQ)](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) | Your customers can request a quote for products and services that you sell. The Request for Quote feature supports all functionalities of the price engine and product capabilities, such as Volume Prices, Customer Specific Prices, Measuring and Packaging units, Shipping costs, Product Options, etc. | Enhances customer loyalty and increase conversion rates. |
 | [Search](/docs/pbc/all/search/{{site.version}}/search.html) | The out-of-the-box Elasticsearch technology lets you include full-text search, auto-suggestions, and auto-completion. You can set individual search preferences for multiple stores and categorize your products by adding dynamic filters and facets to help your customers further refine the search results. You can also add more advanced filters that use the product’s metadata or promote a brand’s top-sellers or highly rated products. | Helps you increase conversion rates by providing an excellent Search and Filter experience. |
 | [Shopping List and Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-list-and-wishlist.html) | Your B2B customers can save the products they wish to purchase, in shopping lists. Different roles and permission systems ensure smooth sharing and contribution management amongst company users. This PBC encompasses additional features like printing, barcode generation, and direct-to-cart. Enabling your B2C customers to track and save the products they wish to purchase through a wish list function effectively reduces cart abandonment, boosts your sales, and allows you to keep track of which products are of interest to your customers. | Lets you increase conversion rates and loyalty by offering rich Shopping and B2B Wish Lists. |
@@ -55,7 +69,7 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 | NAME | CATEGORY |
 | --- | --- |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
-| [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | PSP (Payment Service Provider) |
+| [Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html) | PSP (Payment Service Provider) |
 | [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>

@@ -34,7 +34,7 @@ The following schema illustrates the Marketplace Product Options domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/90a0e5bc-a0d9-4cb2-a215-c5d08a786115.png?utm_medium=live&utm_source=custom)
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES                                                                                                                                                                                                | DATA IMPORT                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html
 ---
 
-Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing the product's SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. With this being done, the customer either adds the items to the cart or proceeds directly to checkout.
+Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing the product's SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. With this being done, the customer either adds the items to the cart or proceeds directly to checkout.
 
 The *Quick Add to Cart* feature lets wholesale and returning customers place bulk orders.
 
@@ -37,7 +37,7 @@ To view how to create a quick order, see [Quick Order on the Storefront](#quick-
 <!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->
 
-As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/pbc/all/product-information-management/{{site.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
+As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
 
 {% info_block errorBox %}
 
@@ -88,7 +88,7 @@ The **Quantity** field in the **Quick Order** adheres to these quantities. There
 
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 
@@ -134,7 +134,7 @@ Using the Quick Order feature on the Storefront, company users can do the follow
 The following figure shows how to perform these actions:
 ![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES |
 |---|---|

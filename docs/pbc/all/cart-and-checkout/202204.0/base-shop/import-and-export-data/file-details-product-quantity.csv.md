@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/file-details-product-quantitycsv
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_quantity.csv` file to configure [Product Quantity](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/non-splittable-products-feature-overview.html) Store information in your Spryker Demo Shop.
@@ -34,7 +37,7 @@ The file must have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html).
+This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html).
 
 ## Import template file and content example
 

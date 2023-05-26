@@ -26,7 +26,7 @@ You can enjoy the following benefits of the feature:
 * Possibility to create different image sets for different use cases on different pages per product
 * Possibility to define the order of images to be displayed on frontend
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

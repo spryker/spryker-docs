@@ -7,9 +7,7 @@ template: concept-topic-template
 
 The Oryx code base is [available on Github](https://github.com/spryker/oryx/), and the code is published and distributed as npm packages. [npmjs.com](https://www.npmjs.com/) is a widely used registry of packages. Package managers, like npm, yarn, deno, or bun, are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
-Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see Versioning.
-
-<!-- Add link to version.md (see https://spryker.atlassian.net/browse/HRZ-2147) -->
+Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see [versioning](./oryx-versioning.md).
 
 We recommend [installing](./set-up-oryx.md) the packages instead of cloning the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
 
@@ -17,30 +15,9 @@ We recommend [installing](./set-up-oryx.md) the packages instead of cloning the 
 
 While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
 
-While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](./boilerplate.md), which is set up using a preset.
+While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](./boilerplate.md), which is set up using a [preset](./presets.md).
 
-<!-- Add link to presets.md (see https://spryker.atlassian.net/browse/HRZ-2153) -->
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#fff','primaryBorderColor': '#aaa'}}}%%
-
-flowchart TD
-classDef app fill:#fff,stroke:#fff;
-
-app("Application"):::app
-template(Template packages):::template
-domain(Domain packages)
-platform(Platform packages)
-base(Base packages)
-
-app-..->|"use presets\n(e.g. b2c)"|template
-app-->domain
-
-template --> domain
-domain --> platform
-platform --> base
-domain --> base
-```
+<img src="./diagrams/packages.png" width="250px">
 
 ## Template packages
 

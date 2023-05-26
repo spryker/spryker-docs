@@ -52,6 +52,7 @@ entries:
               - title: Manage in the Back Office
                 url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 include_versions:
+                - "202204.0"
                 - "202212.0"
                 nested:
                   - title: Add carrier companies
@@ -61,15 +62,6 @@ entries:
                   - title: Edit delivery methods
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/edit-delivery-methods.html
               - title: Manage in the Back Office
-                include_versions:
-                - "202204.0"
-                nested:
-                  - title: Add carrier companies
-                    url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
-                  - title: Add delivery methods
-                    url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-delivery-methods.html
-                  - title: Edit delivery methods
-                    url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/edit-delivery-methods.html
               - title: Manage using Glue API
                 nested:
                   - title: Retrieve shipments and shipment methods when submitting checkout data
@@ -79,7 +71,6 @@ entries:
                   - title: Retrieve shipments in orders
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
               - title: Import and export data
-                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/discount-import.html
                 nested:
                   - title: File details - shipment.csv
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html
@@ -1416,15 +1407,8 @@ entries:
           - title: Manage in the Back Office
             url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
-            - "202212.0"
-            nested:
-              - title: Edit payment methods
-                url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html
-              - title: View payment methods
-                url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/view-payment-methods.html
-          - title: Manage in the Back Office
-            include_versions:
             - "202204.0"
+            - "202212.0"
             nested:
               - title: Edit payment methods
                 url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html
@@ -1755,19 +1739,8 @@ entries:
           - title: Manage in the Back Office
             url: /docs/pbc/all/price-management/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
-            - "202212.0"
-            nested:
-              - title: Create scheduled prices
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
-              - title: Manage scheduled prices
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/manage-scheduled-prices.html
-              - title: Add scheduled prices to abstract products and product bundles
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
-              - title: Add volume prices to abstract products and product bundles
-                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
-          - title: Manage in the Back Office
-            include_versions:
             - "202204.0"
+            - "202212.0"
             nested:
               - title: Create scheduled prices
                 url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
@@ -2532,14 +2505,6 @@ entries:
                 url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/log-into-the-back-office.html
-            include_versions:
-            - "202212.0"
-            nested:
-              - title: Manage product reviews
-                url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
-          - title: Manage in the Back Office
-            include_versions:
-            - "202204.0"
             nested:
               - title: Manage product reviews
                 url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html

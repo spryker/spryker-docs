@@ -9,8 +9,8 @@ See [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchan
 
 ## Environment requirements
 
-- [Node.js](https://nodejs.org/en/download/) — minimum version is v16.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) — minimum version is v8.
+- [Node.js](https://nodejs.org/en/download/): minimum version is 16.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 8.
 - Spryker supported PHP version 8.0
 - Host for Zed application
 

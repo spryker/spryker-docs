@@ -48,7 +48,7 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
    1. Remove the deprecated `frontend:yves:install-dependencies` and `frontend:zed:install-dependencies` commands.
    2. Replace the `frontend:mp:install-dependencies` command with `frontend:project:install-dependencies`.
 
-3. Pass all (yves, zed, mp) frontend dependencies:
+3. Pass all (yves, zed, and mp) frontend dependencies:
 
 ```bash
 frontend:project:install-dependencies

@@ -43,7 +43,7 @@ related:
 
 {% info_block warningBox "No longer supported" %}
 
-Since the `202304.0` release, this tool is no longer supported and has been replaced by `ESLint`. Follow the [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html) to migrate to `ESLint`.
+Since the `202304.0` release, this tool is no longer supported and has been replaced by `ESLint`. To migrate to `ESLint`, follow [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html).
 
 {% endinfo_block %}
 

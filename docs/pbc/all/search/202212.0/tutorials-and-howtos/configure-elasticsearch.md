@@ -79,7 +79,7 @@ Elasticsearch is:
 
 It's also fully text-boosted, allowing different methods towards calculating relevance scores, and has default stopwords such as "the" or "and" which are filtered out of results, for maximum accuracy.
 
-**Filter and Sorting**
+##Filter and sorting
 
 The following filter options are available:
 * Brand
@@ -88,12 +88,12 @@ The following filter options are available:
 * Category (not yet available on frontend)
 The following sorting options are available:
 * By relevance (default)
-* By Price
-* By Name
+* By price
+* By name
 
-**Elasticsearch Enhancements**
+##Elasticsearch enhancements
 
-URL Redirects are a way to forward customers and search engines from one URL to another. For example, if a user searches “advent calendars”, they will see a search results page for this query and will be additionally notified about the URL redirect. The customer can then choose to follow that redirect, or browse search results. However, this capability is not available OOTB (Out Of The Box), and requires enabling in the Back Office.
+URL redirects are a way to forward customers and search engines from one URL to another. For example, if a user searches “advent calendars”, they will see a search results page for this query and will be additionally notified about the URL redirect. The customer can then choose to follow that redirect, or browse search results. However, this capability is not available by default, and requires enabling in the Back Office.
 
 
 

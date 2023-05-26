@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/search-feature-walkthrough.html
 ---
 
-Search is one of the most effective navigation tools in modern shops. The Search capability lets you create the right search for your shop and enables customers to quickly find what they are looking for.
+The Search capability lets you create the right search for your shop and enables customers to quickly find what they are looking for.
 
 The Search capability comes with a variety of functionalities to make your customer's search experience smoother and more efficient.
 

@@ -173,6 +173,9 @@ entries:
       - "202108.0"
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: "Company account: module relations"
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
@@ -528,6 +531,9 @@ entries:
       - "202204.0"
     - title: Reorder
       url: /docs/scos/dev/feature-walkthroughs/reorder-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Resource Sharing
       url: /docs/scos/dev/feature-walkthroughs/resource-sharing-feature-walkthrough.html
       include_versions:
@@ -4261,10 +4267,6 @@ entries:
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:
-    - title: Hosting providers
-      nested:
-      - title: Integrating Heroku
-        url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
       url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
       nested:
@@ -4320,6 +4322,10 @@ entries:
           - title: Order reference commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
         - title: Inxmail guides
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing and configuring Inxmail
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
@@ -4330,6 +4336,9 @@ entries:
           - title: Order referenced commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
       - title: Personalization and cross-selling
+        include_versions:
+        - "202108.0"
+        - "202204.0"
         nested:
         - title: Econda
           nested:

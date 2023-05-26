@@ -48,7 +48,7 @@ To search by products, send the request:
 | q | Restricts the returned items to the values of the provided parameters | <ul><li>{% raw %}{{{% endraw %}null{% raw %}}}{% endraw %} (empty)</li><li>{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}abstract_product_name{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}product_attribute{% raw %}}}{% endraw %} (for example, brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul>|
 | price[min] | Restricts the returned items to products with prices matching or above the provided value. `price[min]=10` equals to 1000 cents or 10 monetary units | {% raw %}{{{% endraw %}minimum_price{% raw %}}}{% endraw %} |
 | price[max] | Restricts the returned items to products with prices matching or below the provided value. `price[max]=10` equals to 1000 cents or 10 monetary units | {% raw %}{{{% endraw %}maximum_price{% raw %}}}{% endraw %} |
-| priceMode | Returns the prices defined for the price mode value provided. Useful if your store is configured with multiple price modes.  | {% raw %}{{{% endraw %}price_mode_name{% raw %}}}{% endraw %}<br>Spryker provides two price modes by default: `GROSS_MODE` and `NET_MODE`. For more information, see [Configuration of price modes and types](/docs/pbc/all/price-management/{{page.version}}/extend-and-customize/configuration-of-price-modes-and-types.html). |
+| priceMode | Returns the prices defined for the price mode value provided. Useful if your store is configured with multiple price modes.  | {% raw %}{{{% endraw %}price_mode_name{% raw %}}}{% endraw %}<br>Spryker provides two price modes by default: `GROSS_MODE` and `NET_MODE`. For more information, see [Configuration of price modes and types](/docs/pbc/all/price-management/{{page.version}}/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html). |
 | brand | Specifies the product brand | {% raw %}{{{% endraw %}brand_name{% raw %}}}{% endraw %} |
 | label | Specifies the product label | {% raw %}{{{% endraw %}label{% raw %}}}{% endraw %} |
 | weight | Specifies the product weight | {% raw %}{{{% endraw %}weight{% raw %}}}{% endraw %} |
@@ -6667,7 +6667,7 @@ To search by products, send the request:
 For other abstract product attributes, see:
 
 * [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html)
+* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html)
 
 **Value facets**
 

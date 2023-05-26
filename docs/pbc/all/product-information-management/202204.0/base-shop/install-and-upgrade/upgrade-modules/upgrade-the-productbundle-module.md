@@ -33,7 +33,7 @@ redirect_from:
   - /module_migration_guides/mg-product-bundle.htm
 related:
   - title: Migration guide - Price
-    link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Migration guide - Product
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
 ---

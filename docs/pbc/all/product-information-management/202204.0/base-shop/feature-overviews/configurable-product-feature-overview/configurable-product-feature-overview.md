@@ -91,7 +91,7 @@ If a configurator does not pass availability, [regular product availability](/do
 
 The price of a configurable product is based on the selected configuration. When a customer chooses a configuration, the product's price in the selected configuration is displayed. After they save the configuration, the product price in the selected configuration is passed to the shop. The customer is redirected back to the shop where they can purchase the product for the price.
 
-If the configurator does not provide a price, [a regular product price](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html) is used.
+If the configurator does not provide a price, [a regular product price](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) is used.
 
 ### Complete and incomplete configuration
 

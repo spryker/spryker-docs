@@ -17,7 +17,8 @@ While packages are distributed as a flat list, there is an architectural hierarc
 
 While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](./boilerplate.md), which is set up using a [preset](./presets.md).
 
-<img src="./diagrams/packages.png" width="250px">
+
+{% include diagrams/packages.svg %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-marketplace-product-offer-feature.md -->
 
 ## Template packages
 

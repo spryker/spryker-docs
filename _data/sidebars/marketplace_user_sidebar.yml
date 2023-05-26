@@ -173,7 +173,7 @@ entries:
         - title: Catalog
           url: /docs/marketplace/user/back-office-user-guides/catalog/catalog.html
           include_versions:
-          - "202212.0"
+          - "202204.0"
           nested:
 
             - title: Availability
@@ -234,6 +234,8 @@ entries:
 
             - title: Orders
               url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
+              include_versions:
+              - "202204.0"
               nested:
 
                 - title: Managing marketplace orders

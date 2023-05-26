@@ -39,7 +39,7 @@ Since many merchants sell products simultaneously, the order management of a mar
 * Comments on marketplace orders.
 * Edits billing addresses of marketplace orders.
 
-For detailed instructions on managing orders, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/orders/managing-marketplace-orders.html).
+For detailed instructions on managing orders, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
 
 ### Return management
 

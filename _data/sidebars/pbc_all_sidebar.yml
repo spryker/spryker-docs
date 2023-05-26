@@ -1400,8 +1400,12 @@ entries:
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-oms-process.csv.html
                   - title: "merchant-order-status.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-order-status.csv.html
-              - title: Manage main merchant orders in the Back Office
-                url: /docs/pbc/all/order-management-system/marketplace/manage-main-merchant-orders.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Manage main merchant orders
+                    url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+                  - title: Manage marketplace orders
+                    url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
               - title: Manage merchant orders in the Merchant Portal
                 url: /docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.html
               - title: "Glue API: Retrieve Marketplace orders"
@@ -3136,6 +3140,8 @@ entries:
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
               - title: "Marketplace Inventory Management feature: Domain model"
                 url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-domain-model.html
+              - title: Manage availability in the Back Office
+                url: /docs/pbc/all/warehouse-management-system/marketplace/manage-availability.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

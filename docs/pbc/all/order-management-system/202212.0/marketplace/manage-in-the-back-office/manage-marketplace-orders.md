@@ -1,8 +1,10 @@
 ---
-title: Managing marketplace orders
+title: Manage marketplace orders
 last_updated: Jul 15, 2021
 description: This document describes how to manage marketplace orders in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/marketplace/user/back-office-user-guides/202212.0/marketplace/orders/managing-marketplace-orders.html
 related:
   - title: Marketplace Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
@@ -51,7 +53,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 | ACTION | DESCRIPTION |
 |---|---|
 | View | Takes you to the **View Order: _[Return ID]_** page. Here, you can find all the information about the chosen order. |
-| Claim | Takes you to the **Create reclamation** page, where you can [create a reclamation](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#claiming-marketplace-orders) for the order. |
+| Claim | Takes you to the **Create reclamation** page, where you can [create a reclamation](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#claiming-marketplace-orders) for the order. |
 
 **<a id="view-order-order-id"></a>View Order: _[Order ID]_**
 <br>The following table describes the attributes on the **View Order: _[Order ID]_** page when you view an order.

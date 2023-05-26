@@ -131,7 +131,7 @@ The operator can view and cancel Marketplace and merchant orders.
 
 ![Marketplace orders in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-orders.png)
 
-Documentation: [Managing Marketplaceorders](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/orders/managing-marketplace-orders.html)
+Documentation: [Managing Marketplaceorders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html)
 
 
 ### Marketplace and merchant return management

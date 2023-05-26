@@ -114,7 +114,7 @@ The following table describes the attributes on the **View Order _[Order ID]_** 
   </tr>
   <tr>
     <td>Trigger all matching states inside this order</td>
-    <td>Action button for changing the available states for all the items in the order. See <br><a href="/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#changing-marketplace-order-states">Changing marketplace order states</a> for details.</td>
+    <td>Action button for changing the available states for all the items in the order. See <br><a href="/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#changing-marketplace-order-states">Changing marketplace order states</a> for details.</td>
   </tr>
   <tr>
     <td rowspan="6">Customer</td>

@@ -43,7 +43,7 @@ This file has the following dependencies:
 ## Recommendations & Other Information
 Every concrete product is linked to an abstract one via the `abstract_sku` field.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_concrete.csv*  file can be downloaded here:
 
 | File | Description |

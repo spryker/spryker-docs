@@ -30,7 +30,7 @@ To retrieve prices of a product offer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | ------------------ | ---------------------- |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html). |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html). |
 
 ### Request
 
@@ -95,7 +95,7 @@ Response sample: retrieve prices of a product offer
 | prices.currency.code   | String  | Currency code.   |
 | prices.currency.name   | String  | Currency name.  |
 | prices.currency.symbol   | String  | Currency symbol.  |
-| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/pbc/all/price-management/{{page.version}}/prices-feature-overview/volume-prices-overviewhe product offer.  |
+| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/volume-prices-overviewhe product offer.  |
 | prices.volumePrices.grossAmount | Integer   |  Gross volume price in cents.         |
 | prices.volumePrices.netAmount | Integer   | Net volume price in cents.          |
 | prices.volumePrices.quantity  |  Integer         | Required quantity of items in offer for the volume price to apply.  |

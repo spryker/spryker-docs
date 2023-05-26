@@ -186,9 +186,9 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 ### 5) Configure export to Redis
 
-Configure tables to be published to the `spy_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
+Configure tables to be published to `spy_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
 
-1. Adjust `RabbitMq` module configuration in `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
+1.  In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module configuration:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -214,7 +214,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-2. Register new queue message processor:
+2. Register the new queue message processor:
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -245,7 +245,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```
 
-3. Configure synchronization pool and event queue name
+3. Configure the synchronization pool and event queue name:
 
 **src/Pyz/Zed/ShipmentTypeStorage/ShipmentTypeStorageConfig.php**
 
@@ -275,7 +275,7 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 |----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
 | ShipmentTypeWriterPublisherPlugin      | Publishes shipment type data by `SpyShipmentType` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType        |
 | ShipmentTypeStoreWriterPublisherPlugin | Publishes shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
-| ShipmentTypePublisherTriggerPlugin     | Allows to populate shipment type storage table with data and trigger further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
+| ShipmentTypePublisherTriggerPlugin     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -328,7 +328,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the shipment type storage table content into Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the shipment type storage table's content into Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -361,17 +361,17 @@ Make sure that the `shipment-type` trigger plugin works correctly:
 1. Fill the `spy_shipment_type`, `spy_shipment_type_store` tables with data.
 2. Run the `console publish:trigger-events -r shipment_type` command.
 3. Make sure that the `spy_shipment_type_storage` table has been filled with respective data.
-4. Make sure that, in your system, storage entries are displayed with `kv:shipment_type:{store}:{shipment_type_id}` mask.
+4. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
 
 Make sure that `shipment-type` synchronization plugin works correctly:
 
 1. Fill the `spy_shipment_type_storage` table with some data.
 2. Run the `console sync:data -r shipment_type` command.
-3. Make sure that, in your system, storage entries are displayed with `kv:shipment_type:{store}:{shipment_type_id}` mask.
+3. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
 
 Make sure that when a shipment type is created or edited through BAPI, it is exported to Redis accordingly.
 
-Make sure you are able to see data in Redis in the following format:
+In Redis, make sure data is represented in the following format:
 ```json
 {
     "id_shipment_type": 1,

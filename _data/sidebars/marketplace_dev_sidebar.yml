@@ -141,7 +141,6 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
@@ -358,7 +357,6 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
@@ -647,8 +645,7 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
-
+                
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
                 include_versions:
@@ -894,7 +891,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
       - title: Data import
         url: /docs/marketplace/dev/data-import/data-import.html
         nested:
@@ -988,13 +984,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: product-offer-shopping-list.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
@@ -1034,7 +1028,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html

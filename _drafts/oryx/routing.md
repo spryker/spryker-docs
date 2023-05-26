@@ -2,7 +2,7 @@
 title: Routing
 description:
 template: concept-topic-template
-last_updated: Apr 4, 2023
+last_updated: May 25, 2023
 ---
 
 Routing lets users navigate between different pages and components within an application. This document describes how to set up routing: add `RouterFeature`, render router outlets, and provide routes using [Dependency Injection (DI)](/_drafts/oryx/dependency-injection/dependency-injection.html).
@@ -62,4 +62,4 @@ This is a basic example, and you may need to adjust the routing config to fit yo
 
 
 
-Lit routes using the standard [lit router library](https://github.com/lit/lit/tree/main/packages/labs/router#readme), so see its documentation for more information on how to configure routes.
+Lit routes using the standard lit router library. For more information about configuring routes, see the [router documentation](https://github.com/lit/lit/tree/main/packages/labs/router#readme).

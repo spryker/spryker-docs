@@ -3,6 +3,8 @@ title: Marketplace Product Options feature integration
 last_updated: Jan 16, 2023
 Description: This document describes the process how to integrate the Marketplace Product Options feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/202304.0/marketplace/marketplace-product-options-feature-integration.html
 related:
   - title: Marketplace Product Options feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html

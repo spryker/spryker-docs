@@ -5,6 +5,7 @@ template: feature-walkthrough-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-sets-feature-walkthrough/product-sets-module-relations.html
   - /docs/pbc/all/product-information-management/202212.0/install-and-upgrade/upgrade-modules/product-sets-module-relations.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/install-and-upgrade/upgrade-modules/product-sets-module-relations.html
 ---
 
 The Product Set feature consists of the following modules:

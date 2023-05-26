@@ -87,7 +87,7 @@ The **Quantity** field in the **Quick Order** adheres to these quantities. There
 
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 

@@ -82,7 +82,6 @@ entries:
           url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
           include_versions:
           - "202204.0"
-          - "202212.0"
 
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html

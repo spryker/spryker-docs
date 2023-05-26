@@ -120,7 +120,7 @@ console transfer:generate
 
 Set up behavior as follows:
 
-#### Integrate the following plugins:
+#### Integrate the following plugins
 
 | PLUGIN                                                                                              | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                          | NAMESPACE                                                                        |
 |-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|----------------------------------------------------------------------------------|
@@ -753,7 +753,6 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Build navigation cache
 
-Execute the following command:
 
 ```bash
 console navigation:build-cache
@@ -1061,7 +1060,7 @@ rm -rf node_modules && npm cache clean --force && npm install && npm run mp:buil
 
 To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment YAML:
 
-1. Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
+1. Remove existing Yves dependencies' installation commands from the deployment YAML: `dependencies-install` and `yves-isntall-dependencies`.
 2. Add required console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -1416,9 +1415,7 @@ It's not safe to expose `MerchantPortal` next to the Back Office. `MerchantPorta
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-`MerchantPortal` *must be* placed into its own private subnet.
-
-`MerchantPortal` *must have* access to the following:
+`MerchantPortal` *must be* placed into its own private subnet and *must have* access to the following:
 
 - Primary Database
 - Message broker
@@ -1552,7 +1549,7 @@ The following page now shows the login page for `MerchantPortal`: `https://your-
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages don't open: `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`.
+Make sure the following pages don't open: `https://your-merchant-portal.domain/security-gui/login` and `https://your-merchant-portal.domain/`.
 
 {% endinfo_block %}
 

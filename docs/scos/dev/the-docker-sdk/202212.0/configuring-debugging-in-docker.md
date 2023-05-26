@@ -33,6 +33,8 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
   - title: Running tests with the Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+  - title: Running tests with Robot-Framework
+    link: docs/scos/dev/the-docker-sdk/page.version/robot-framework.html
 ---
 
 This document describes how to configure debugging of Spryker in Docker.

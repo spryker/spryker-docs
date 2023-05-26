@@ -33,6 +33,8 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
   - title: Running tests with the Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+  - title: Running tests with Robot-Framework
+    link: docs/scos/dev/the-docker-sdk/page.version/robot-framework.html
 ---
 
 Spryker Docker SDK is a tool designed to help you set up a Docker environment for your Spryker project.
@@ -188,6 +190,8 @@ The `docker/sdk export images {tag}` command is only for the baked mode. It does
  - Based on assetsBuilder and CLI image, builds the assets builder docker image. Runs `vendor/bin-install -s build-static build-static-{mode}`.
  - Builds and tags frontend images.
  - Prints information about the built images.
+
+ The `docker/sdk robot-framework {command}` command executes sets of API and UI tests, built on the Robot Framework.
 
 ## Development environment
 The following schema illustrates the development environment with the Docker SDK:

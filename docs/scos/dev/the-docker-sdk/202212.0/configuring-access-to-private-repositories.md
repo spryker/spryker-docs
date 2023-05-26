@@ -31,6 +31,8 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
   - title: Running tests with the Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+  - title: Running tests with Robot-Framework
+    link: docs/scos/dev/the-docker-sdk/page.version/robot-framework.html
 ---
 
 This document describes how to configure an environment to allow the Docker SDK access private repositories.

@@ -160,7 +160,7 @@ The `prices` attribute is an object with nested fields. Algolia creates facets f
 
 ##### Searchable
 
-Attributes defined as searchable may be used while calling Algolia's `searchForFacetValues` method, which can be used for Yves integration. This method is necessary to display catalog page facets if many values are possible for each facet - in this case, only 100 of those values will be shown by default. Accessing other values requires searching for them using the method above. Select this option if you plan on having a large number of different values for this facet, and use Yves.
+Attributes defined as searchable may be used while calling Algolia's `searchForFacetValues` method, which can be used for Yves integration. This method is necessary to display catalog page facets if many values are possible for each facet - in this case, only 100 of those values will be shown by default. Accessing other values requires searching for them using the `searchForFacetValues` method. Select this option if you plan on having a large number of different values for this facet, and if you use Spryker Storefront.
 
 ##### Filter only
 

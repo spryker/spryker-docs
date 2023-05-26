@@ -9,11 +9,10 @@ This document describes how to set up an environment for developing in the Oryx 
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/) or a compatible Javascript runtime
-* npm package manager
+- [Node.js](https://nodejs.org/) or a compatible Javascript runtime
+- npm package manager
 
 ## Install Oryx with the boilerplate project
-
 
 1. Download the boilerplate project and install dependencies:
 
@@ -28,6 +27,7 @@ npm i
 ```shell
 npm run dev
 ```
+
 The application gets available at [localhost:3000](http://localhost:3000).
 
 For more information about the boilerplate project, see the [boilerplate guide](./boilerplate.md).
@@ -38,4 +38,4 @@ The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Ory
 
 ## Packages
 
-Oryx is distributed on [npmjs.com](https://www.npmjs.com/org/spryker-oryx).  
+Oryx [packages](./packages.md) are distributed on [npmjs.com](https://www.npmjs.com/org/spryker-oryx).

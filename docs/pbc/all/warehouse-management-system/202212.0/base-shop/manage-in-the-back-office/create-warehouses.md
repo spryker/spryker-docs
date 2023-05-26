@@ -60,7 +60,7 @@ If you clear all checkboxes for stores assigned to a specific warehouse, this wa
 
 ## Next steps
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
 
 Additionally, you can [edit a warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html). For more details, see the [Editing warehouse details]
 

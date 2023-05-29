@@ -26,7 +26,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating product variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/create-product-variants.html
 ---
 
 The document describes the flow of making a product searchable and displayed on the Storefront.

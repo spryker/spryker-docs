@@ -4171,8 +4171,6 @@ entries:
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
-      - title: Feature HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:

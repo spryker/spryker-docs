@@ -132,6 +132,23 @@ To update the versions, use official documentation:
 {% endinfo_block %}
 
 ## 3) Update GitHub Actions
-In case using GitHub Actions on the project need to update:
+In case using GitHub Actions on the project need to update `.github/workflows/ci.yml` file.
+Update Node.js version:
 
-Comming soon...
+```yaml
+- uses: actions/setup-node@v3
+    with:
+      node-version: '18'
+```
+
+Remove npm cache:
+
+```yaml
+- name: NPM cache
+  uses: actions/cache@v3
+  with:
+    path: ~/.npm
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    restore-keys: |
+      ${{ runner.os }}-node-
+```

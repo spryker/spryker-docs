@@ -62,4 +62,4 @@ The following steps are identified in the diagram:
 
 ## Next steps
 
-[Key concepts of reactivity](./key-concepts-of-reactivity.md)
+[Key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/key-concepts-of-reactivity.md)

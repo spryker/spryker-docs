@@ -37,4 +37,4 @@ A typical Oryx application usually uses one global DI container, which is set up
 
 ## Next steps
 
-[Defining services](./dependency-injection-defining-services.md)
+[Defining services](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection-defining-services.md)

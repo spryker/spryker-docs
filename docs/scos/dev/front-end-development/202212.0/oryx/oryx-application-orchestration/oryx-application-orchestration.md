@@ -6,15 +6,15 @@ template: concept-topic-template
 
 An Oryx application starts with the application orchestration. It lets you bootstrap and configure your application from reusable bits and pieces, such as the following:
 
-- [Features](./app-feature.md)
+- [Features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-feature.md)
 <!-- TODO: Link to components -->
 - Components
 <!-- TODO: Link to providers -->
 - Providers
 <!-- TODO: Link to themes -->
 - Themes
-- [Resources](./resources.md)
-- [Environment](./app-environment.md)
+- [Resources](/docs/scos/dev/front-end-development/{{page.version}}/oryx/resources.md)
+- [Environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-environment.md)
 
 Application orchestration is used to configure and customize Oryx applications. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
 
@@ -22,13 +22,13 @@ Also, application orchestration defines how functionality is loaded in an applic
 
 ## Application builder
 
-To start using orchestration, you need to import [`appBuilder`](./app-builder.md) from `@spryker-oryx/core`. Then, you can add functionality, like features and theme, to your application.
+To start using orchestration, you need to import [`appBuilder`](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-builder.md) from `@spryker-oryx/core`. Then, you can add functionality, like features and theme, to your application.
 
 `appBuilder` uses a chain pattern where each customization is added using a respective `.with*` method. This is the minimum boilerplate code required for an application to work. Once you start building more complex use cases, instead of using a preset<!-- add a link to presets-->, we recommend extending a preset or creating your own feature set.
 
 Application builder lets you compose and customize different pieces of functionality. The builder is chainable and pluggable, and it supports the following built-in plugins:
 
-- [Features](./app-feature.md) (`withFeature`)
+- [Features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-feature.md) (`withFeature`)
 <!-- TODO: Link to components -->
 - Components (`withComponents`)
 <!-- TODO: Link to providers -->
@@ -36,10 +36,10 @@ Application builder lets you compose and customize different pieces of functiona
 <!-- TODO: Link to themes -->
 - Themes (`withTheme`)
 - [Options](#options) (`withAppOptions`)
-- [FeatureOptions](./app-feature.md) (`withOptions`)
-- [Environment](./app-environment.md) (`withEnvironment`)
-- [Resources](./resources.md) (`withResources`)
-- [Plugins](./app-plugins.md) (`with`)
+- [FeatureOptions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-feature.md) (`withOptions`)
+- [Environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-environment.md) (`withEnvironment`)
+- [Resources](/docs/scos/dev/front-end-development/{{page.version}}/oryx/resources.md) (`withResources`)
+- [Plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-plugins.md) (`with`)
 
 Also, you can add custom plugins by using the `with` API.
 
@@ -86,8 +86,8 @@ appBuilder().withAppOptions({ components: { root: 'my-root-app' } });
 
 For more details about application orchestration, see the following documents:
 
-- [Setup the environment](./app-environment.md)
-- [Add features](./app-feature.md)
+- [Setup the environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-environment.md)
+- [Add features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-feature.md)
 <!-- TODO: Link to components -->
 - Add components
 <!-- TODO: Link to providers -->
@@ -96,5 +96,5 @@ For more details about application orchestration, see the following documents:
 - Add resources
 <!-- TODO: Link to theme -->
 - Add theme
-- [Add plugins](./app-plugins.md)
-- [Interact with application](./app.md)
+- [Add plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-plugins.md)
+- [Interact with application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app.md)

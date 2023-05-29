@@ -14,11 +14,11 @@ The Oryx boilerplate is provided in the [Composable Frontend repository](https:/
 In Oryx, we use the following tactics to prevent boilerplate code:
 
 1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) instead of source.
-2. Expose a function to set up the [app orchestrator](./app-orchestrator.md) conveniently.
-3. Provide [presets](./presets.md) for the standard application setup, including the feature sets and UI themes.
+2. Expose a function to set up the [app orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-orchestrator.md) conveniently.
+3. Provide [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/presets.md) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
 5. Provide configurable components and business logic.
-6. Allow for customizations with [dependency injection](./dependency-injection.md).
+6. Allow for customizations with [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection.md).
 
 By using these tactics, we greatly reduced the amount of boilerplate code required in Oryx projects. This simplifies maintaining and upgrading code over time, and lets you focus on building features instead of maintaining the underlying framework.
 
@@ -84,7 +84,7 @@ We recommend fronting the dependencies with a caret notation (`^`), so that the 
 {% endinfo_block %}
 
 
-Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](./set-up-oryx.md).
+Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.md).
 
 ### `index.html`
 
@@ -102,7 +102,7 @@ While `index.html` can have a few more details, the following is the required ba
   <body>
     <root-app></root-app>
   </body>
-  <script type="module" src="./app.ts"></script>
+  <script type="module" src="/docs/scos/dev/front-end-development/{{page.version}}/oryx/app.ts"></script>
 </html>
 ```
 

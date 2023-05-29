@@ -308,7 +308,6 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
-            - "202304.0"
 
           - title: Marketplace Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html
@@ -645,7 +644,7 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                
+
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
                 include_versions:

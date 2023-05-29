@@ -22,9 +22,6 @@ To start feature integration, integrate the required features:
 
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
-```
-
-```bash
 composer require spryker/security-merchant-portal-gui-extension
 ```
 
@@ -78,6 +75,8 @@ class GuiTableConfig extends SprykerGuiTableConfig
 
 ### 3) Set up the database schema
 
+1. Set up the database schemas as follows:
+
 **src/Pyz/Zed/Merchant/Persistence/Propel/Schema/spy_merchant.schema.xml**
 
 ```xml
@@ -108,7 +107,7 @@ class GuiTableConfig extends SprykerGuiTableConfig
 </database>
 ```
 
-Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -407,6 +406,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 ```
 
 #### Enable Merchant Portal infrastructural plugins
+1. Enable the following infrastructural plugins:
 
 | PLUGIN                                | SPECIFICATION                                                                                                                               | PREREQUISITES | NAMESPACE                                                    |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|

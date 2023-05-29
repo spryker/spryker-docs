@@ -1,5 +1,5 @@
 ---
-title: Integration of backend APIs
+title: "Oryx: Integration of backend APIs"
 description: Compose a frontend application from backend APIs
 template: concept-topic-template
 last_updated: Apr 3, 2023

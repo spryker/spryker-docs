@@ -1,5 +1,5 @@
 ---
-title: Oryx packages
+title: "Oryx: Packages"
 description: Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
 last_updated: Apr 19, 2023
 template: concept-topic-template
@@ -9,17 +9,17 @@ The Oryx code base is [available on Github](https://github.com/spryker/oryx/), a
 
 Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see Versioning.
 
-<!-- Add link to version.md (see https://spryker.atlassian.net/browse/HRZ-2147) -->
+<!-- Add link to version.html (see https://spryker.atlassian.net/browse/HRZ-2147) -->
 
-We recommend [installing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.md) the packages instead of cloning the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
+We recommend [installing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.html) the packages instead of cloning the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
 
 ## Layers
 
 While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
 
-While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/boilerplate.md), which is set up using a preset.
+While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx–boilerplate.html), which is set up using a preset.
 
-<!-- Add link to presets.md (see https://spryker.atlassian.net/browse/HRZ-2153) -->
+<!-- Add link to presets.html (see https://spryker.atlassian.net/browse/HRZ-2153) -->
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#fff','primaryBorderColor': '#aaa'}}}%%
@@ -49,8 +49,8 @@ The template layer contains packages that can be used as quick starters for demo
 | PACKAGES                                                       | LOCATION                    |
 | -------------------------------------------------------------- | --------------------------- |
 |                                                                |                             |
-| [Application](https://www.npmjs.com/package/@spryker-oryx/)    | `@spryker-oryx/application` |
-| [Presets](https://www.npmjs.com/package/@spryker-oryx/presets) | `@spryker-oryx/presets`     |
+| [Application](https://www.npmjs.com/package/@spryker-oryx/)    | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
+| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`     |
 | [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)      | `@spryker-oryx/labs`        |
 | [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)  | `@spryker-oryx/themes`      |
 

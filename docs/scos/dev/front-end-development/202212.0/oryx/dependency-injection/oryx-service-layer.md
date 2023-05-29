@@ -22,4 +22,4 @@ In a typical Oryx application, the application orchestrator automatically handle
 
 ## Next steps
 
-[Using services](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection-using-services.md)
+[Using services](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-using-services.html)

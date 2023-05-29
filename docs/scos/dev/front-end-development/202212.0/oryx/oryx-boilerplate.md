@@ -14,11 +14,11 @@ The Oryx boilerplate is provided in the [Composable Frontend repository](https:/
 In Oryx, we use the following tactics to prevent boilerplate code:
 
 1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) instead of source.
-2. Expose a function to set up the [app orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/app-orchestrator.md) conveniently.
-3. Provide [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/presets.md) for the standard application setup, including the feature sets and UI themes.
+2. Expose a function to set up the [app orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html) conveniently.
+3. Provide [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
 5. Provide configurable components and business logic.
-6. Allow for customizations with [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection.md).
+6. Allow for customizations with [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection/dependency-injection.html).
 
 By using these tactics, we greatly reduced the amount of boilerplate code required in Oryx projects. This simplifies maintaining and upgrading code over time, and lets you focus on building features instead of maintaining the underlying framework.
 
@@ -32,7 +32,7 @@ By separating out the application logic, we eliminated the boilerplate code from
 
 Another source of boilerplate code is the configuration required to get your application up and running. To simplify this process, we introduced the concept of presets in Oryx.
 
-The [preset packages](https://www.npmjs.com/package/@spryker-oryx/presets) provide configurations and data structures that are designed to get your project up and running quickly without providing a lot of configuration yourself. Presets can be considered as "demo applications", as they typically represent a demo application for a specific business model, like a B2C Demo Shop. By using presets, you can quickly configure an application without writing any code. This is useful for starting the first project, running a demo, or for testing things out.
+The [preset packages](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) provide configurations and data structures that are designed to get your project up and running quickly without providing a lot of configuration yourself. Presets can be considered as "demo applications", as they typically represent a demo application for a specific business model, like a B2C Demo Shop. By using presets, you can quickly configure an application without writing any code. This is useful for starting the first project, running a demo, or for testing things out.
 
 ### appBuilder
 
@@ -68,7 +68,7 @@ The bare minimum `package.json` includes the following dependencies:
 {
   ...
   "dependencies": {
-    "@spryker-oryx/presets": "^1.0.0"
+    "@spryker-oryx/oryx-presets": "^1.0.0"
   },
   "devDependencies": {
     "vite": "^4.0.0"
@@ -84,7 +84,7 @@ We recommend fronting the dependencies with a caret notation (`^`), so that the 
 {% endinfo_block %}
 
 
-Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.md).
+Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.html).
 
 ### `index.html`
 
@@ -102,7 +102,7 @@ While `index.html` can have a few more details, the following is the required ba
   <body>
     <root-app></root-app>
   </body>
-  <script type="module" src="/docs/scos/dev/front-end-development/{{page.version}}/oryx/app.ts"></script>
+  <script type="module" src="/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application.ts"></script>
 </html>
 ```
 
@@ -114,7 +114,7 @@ Oryx can be installed and used next to other applications' code. You could there
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
-import { b2cFeatures } from "@spryker-oryx/presets";
+import { b2cFeatures } from "@spryker-oryx/oryx-presets";
 import { storefrontTheme } from "@spryker-oryx/themes";
 
 export const app = appBuilder()

@@ -868,7 +868,7 @@ If you're getting `Missing write access to node_modules/mp-profile`, delete this
 
 {% endinfo_block %}
 
-11. Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
+11. Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 

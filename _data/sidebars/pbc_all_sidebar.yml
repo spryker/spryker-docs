@@ -2225,7 +2225,7 @@ entries:
                   - title: "Akeneo: Console commands"
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
                   - title: Xentral
-                    url: /docs/pbc/all/product-information-managementbase-shop/third-party-integrations/xentral.html
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Display product groups by color on the Storefront"

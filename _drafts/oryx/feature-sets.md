@@ -17,7 +17,7 @@ A domain feature set is an aggregation of the features related to a certain func
 
 An application feature set is an aggregation of the features related to a certain business model, such as B2C, B2B, marketplace, or fulfillment. Such feature sets are usually bigger and can include features from different domain feature sets.
 
-Application feature sets can be seen as _demo apps_, because one such set lets you quickly set up a project without developing. However, a standard feature set might be too opinionated for your production application, which is why you may extend an existing set or create your own. For more details about creating feature sets, see [Create feature  sets](#create-feature-sets).
+Application feature sets can be seen as _demo apps_, because one such set lets you quickly set up a project without developing. However, a standard feature set might be too opinionated for your production application, which is why you might want to extend an existing set or create your own. For more details about creating feature sets, see [Create feature sets](#create-feature-sets).
 
 ### Available application feature sets
 

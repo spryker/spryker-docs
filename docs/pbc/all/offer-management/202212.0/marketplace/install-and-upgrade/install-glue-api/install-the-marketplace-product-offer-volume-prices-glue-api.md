@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
+title: Install the Marketplace Product Offer Volume Prices Glue API
 last_updated: Dec 04, 2020
 description: This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
 template: feature-integration-guide-template

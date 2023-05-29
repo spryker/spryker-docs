@@ -47,7 +47,7 @@ For an effortless shopping experience, the localized number formatting is availa
 
 ##### Documentation
 
-[HowTo: Add support for number formatting in the Storefront](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.md.html#prerequisites)
+[HowTo: Add support for number formatting in the Storefront](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 
 
 #### Number formatting in the Back Office

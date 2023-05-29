@@ -14,7 +14,9 @@ This document describes how to connect a code repository to Spryker Cloud Commer
 
 {% info_block infoBox "Initial setup" %}
 
-If you specified a code repository in the Onboarding Questionnaire, we connected it to your Staging environment during the initial setup. To connect a code repository to another environment, follow this document.  
+If you specified a code repository in the Onboarding Questionnaire, we connected it to your Staging environment during the initial setup. To connect a code repository to another environment, follow this document. 
+
+Note that we are only supporting the Cloud variants of the repositories listed below. To connect the On-Premises repository, reach out to our [support team](https://support.spryker.com/s/) to discuss potential options.
 
 {% endinfo_block %}
 

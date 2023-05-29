@@ -18,7 +18,7 @@ With the search widget, the customer doesn't need to go to the product details p
 
 You can add a search widget on the Quick Order, Shopping List, and Shopping Cart pages. Using the widget, the customer only needs to paste the necessary items either by entering the concrete products SKUs or typing their name. The matching product variants are suggested in the drop-down.
 
-Using the search widget, online shoppers can find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/multiple-currencies-per-store-configuration.html) and [price mode](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html) settings are searched for.
+Using the search widget, online shoppers can find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html) and [price mode](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html) settings are searched for.
 
 Here's an example of what the search widget looks like on:
 

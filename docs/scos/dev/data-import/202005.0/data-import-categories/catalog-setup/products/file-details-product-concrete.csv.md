@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_concrete.csv** file to configure [Concrete Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -43,7 +43,7 @@ This file has the following dependencies:
 ## Recommendations & Other Information
 Every concrete product is linked to an abstract one via the `abstract_sku` field.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_concrete.csv*  file can be downloaded here:
 
 | File | Description |

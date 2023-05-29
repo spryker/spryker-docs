@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -33,7 +33,7 @@ These are the header fields to be included in the .csv file:
 ## Dependencies
 This file has no dependencies.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *customer.csv* file can be downloaded here:
 
 | File | Description |

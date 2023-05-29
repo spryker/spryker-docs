@@ -2260,7 +2260,6 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/domain-model-and-relationships/product-sets-module-relations.html
           - title: Marketplace
             include_versions:
-            - "202204.0"
             - "202212.0"
             nested:
               - title: Marketplace Product feature overview

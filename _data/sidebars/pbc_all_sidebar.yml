@@ -465,7 +465,7 @@ entries:
                   - title: CmsBlockCategoryConnector
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html
                   - title: CmsBlockCategoryConnector migration script
-                    url: /docs/pbc/all/content-management-systeminstall-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.html
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.html
                   - title: CmsBlockCollector
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
                   - title: CmsBlockGui

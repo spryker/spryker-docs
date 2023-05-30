@@ -5,7 +5,7 @@ template: data-import-template
 last_updated: May 23, 2023
 ---
 
-This document describes the `shipment_type.csv` file to configure the [shipment](/docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html) type information in your Spryker Demo Shop.
+This document describes the `shipment_type.csv` file to configure the [shipment method](/docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html) and store information in your Spryker Demo Shop.
 
 ## Import file parameters
 

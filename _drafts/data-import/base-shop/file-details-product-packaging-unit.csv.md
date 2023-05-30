@@ -29,8 +29,8 @@ This document describes the `product_packaging_unit.csv` file to configure infor
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_packaging_unit.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
-| [`product_packaging_unit.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
+| [`template_product_packaging_unit.csv`](TODO: link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
+| [`product_packaging_unit.csv`](TODO: link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

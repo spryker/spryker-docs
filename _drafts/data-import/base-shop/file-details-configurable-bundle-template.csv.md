@@ -4,7 +4,7 @@ template: data-import-template
 last_updated: 
 ---
 
-This document describes the `configurable_bundle_template.csv` file to configure information about [configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) in your Spryker shop.
+This document describes the `configurable_bundle_template.csv` file to configure information about [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) templates in your Spryker shop.
 
 ## Import file dependencies
 
@@ -15,9 +15,9 @@ This document describes the `configurable_bundle_template.csv` file to configure
 
 | PARAMETER                                | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION                                          |
 | ---------------------------------------- | -------- | ---- | ------------- | ----------------------- | ---------------------------------------------------- |
-| configurable_bundle_template_key         |  &check; | string |               |                         | Internal data import identifier for the configurable bundle template. |
+| configurable_bundle_template_key         |  &check; | string |               |                         | Internal data import identifier of the configurable bundle template. |
 | configurable_bundle_template_uuid        |          | string |               |                         | Unique identifier of the configurable bundle.  |
-| configurable_bundle_template_name        |  &check; | string |               |                         | Glossary key for the configurable bundle name. |
+| configurable_bundle_template_name        |  &check; | string |               |                         | Glossary key of the configurable bundle name. |
 | configurable_bundle_template_is_active   |  &check; | boolean | `1` | `1`: configurable bunlde is active</li><li>`0`: configurable bunlde is inactive</li></ul> | Flag for the configurable bundle name.  |
 
 ## Import file template and content example
@@ -31,5 +31,5 @@ This document describes the `configurable_bundle_template.csv` file to configure
 ## Import file command
 
 ```bash
-data:import:company
+data:import:configurable-bundle-template
 ```

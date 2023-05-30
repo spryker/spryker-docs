@@ -7,9 +7,7 @@ template: concept-topic-template
 
 The Oryx code base is [available on Github](https://github.com/spryker/oryx/), and the code is published and distributed as npm packages. [npmjs.com](https://www.npmjs.com/) is a widely used registry of packages. Package managers, like npm, yarn, deno, or bun, are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
-Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see Versioning.
-
-<!-- Add link to version.html (see https://spryker.atlassian.net/browse/HRZ-2147) -->
+Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see [Versioning](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-versioning.html).
 
 We recommend [installing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.html) the packages instead of cloning the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
 
@@ -17,9 +15,7 @@ We recommend [installing](/docs/scos/dev/front-end-development/{{page.version}}/
 
 While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
 
-While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx–boilerplate.html), which is set up using a preset.
-
-<!-- Add link to presets.html (see https://spryker.atlassian.net/browse/HRZ-2153) -->
+While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html), which is set up using a [preset](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html).
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#fff','primaryBorderColor': '#aaa'}}}%%
@@ -49,7 +45,7 @@ The template layer contains packages that can be used as quick starters for demo
 | PACKAGES                                                       | LOCATION                    |
 | -------------------------------------------------------------- | --------------------------- |
 |                                                                |                             |
-| [Application](https://www.npmjs.com/package/@spryker-oryx/)    | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
+| [Application](https://www.npmjs.com/package/@spryker-oryx/application)    | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
 | [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`     |
 | [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)      | `@spryker-oryx/labs`        |
 | [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)  | `@spryker-oryx/themes`      |

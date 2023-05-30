@@ -23,10 +23,11 @@ composer require spryker-feature/product-offer-shipment:"{{site.version}}" --upd
 
 Make sure that the following module has been installed:
 
-| MODULE       | EXPECTED DIRECTORY           |
-|--------------|------------------------------|
-| ProductOffer | vendor/spryker/product-offer |
-| Shipment     | vendor/spryker/shipment      |
+| MODULE                   | EXPECTED DIRECTORY                         |
+|--------------------------|--------------------------------------------|
+| ProductOffer             | vendor/spryker/product-offer               |
+| Shipment                 | vendor/spryker/shipment                    |
+| ProductOfferShipmentType | vendor/spryker/product-offer-shipment-type |
 
 {% endinfo_block %}
 

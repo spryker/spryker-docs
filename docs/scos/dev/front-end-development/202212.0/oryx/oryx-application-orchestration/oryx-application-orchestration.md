@@ -35,7 +35,7 @@ Application builder lets you compose and customize different pieces of functiona
 - Providers: `withProviders`
 <!-- TODO: Link to themes -->
 - Themes: `withTheme`
-- [Options](#options): `withAppOptions`
+- [Options](#customization-of-options): `withAppOptions`
 - [FeatureOptions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-feature.html): `withOptions`
 - [Environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-environment.html): `withEnvironment`
 - Resources: `withResources`

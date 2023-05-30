@@ -28,7 +28,7 @@ npm i
 npm run dev
 ```
 
-The application gets available at [localhost:3000](http://localhost:3000).
+The application gets available at `localhost:3000`.
 
 For more information about the boilerplate project, see the [boilerplate guide](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html).
 

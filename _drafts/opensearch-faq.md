@@ -80,28 +80,42 @@ However, we recognize the potential benefits and features that OpenSearch brings
 No, the migration does not entail any additional costs. We take care of the migration on our side as part of your existing agreement. The cost of running OpenSearch is similar to Elasticsearch, and any changes in usage or scale can affect overall costs.
 
 ## Can I continue using Elasticsearch APIs with OpenSearch?
-Yes, you can continue using Elasticsearch APIs with OpenSearch. OpenSearch maintains backward compatibility with Elasticsearch 7.10, which means all your existing APIs, clients, and applications should continue to work as expected with OpenSearch.
 
-How is backward compatibility maintained in OpenSearch?
-OpenSearch maintains backward compatibility by ensuring its APIs and core search functionality are compatible with its predecessor, Elasticsearch 7.10.2. When OpenSearch was forked from Elasticsearch 7.10.2, the goal was to keep the base functionality and APIs the same. This allows applications and tools built to work with Elasticsearch 7.10.2 to continue functioning with OpenSearch.
+Yes, you can. OpenSearch maintains backward compatibility with Elasticsearch 7.10, which means all your existing APIs, clients, and applications should continue to work as expected with OpenSearch.
 
-In addition, OpenSearch includes a compatibility mode, which allows OpenSearch to respond with a version number of 7.10.2. This can be useful for tools or clients who perform version checking and expect to communicate with Elasticsearch 7.10.2.
+## How is backward compatibility maintained in OpenSearch?
 
-However, while backward compatibility is a priority, some specific cases may be where certain features or functionalities from older versions of Elasticsearch are not supported in OpenSearch. It's always recommended to thoroughly test your application in a non-production environment when making a change like upgrading to a new version or different software.
+OpenSearch maintains backward compatibility by ensuring its APIs and core search functionality are compatible with Elasticsearch 7.10.2. When OpenSearch was forked from Elasticsearch 7.10.2, the goal was to keep the base functionality and APIs the same. This lets applications and tools built to work with Elasticsearch 7.10.2 to continue functioning with OpenSearch.
 
-Also, as OpenSearch continues to evolve and new versions are released, it's essential to stay up-to-date with the official OpenSearch documentation or their GitHub page for the most current and comprehensive information on backward compatibility.
+In addition, OpenSearch includes a compatibility mode, which lets OpenSearch respond with a version number of 7.10.2. This can be useful for tools or clients that check the version of the search engine and expect to communicate with Elasticsearch 7.10.2.
 
-Does OpenSearch support all the plugins that I used with Elasticsearch? OpenSearch supports most plugins compatible with Elasticsearch 7.10.2. However, it's always a good idea to check the compatibility of specific plugins in the OpenSearch documentation or with the plugin provider. There may be certain cases where a plugin needs to be updated or replaced with an OpenSearch-compatible version. Check with your Spryker support team about what specific plugins you are currently using to ensure backward compatibility. You will get a rolling upgrade from the development and staging environment to test the changes before upgrading to OpenSearch in production.
+However, while backward compatibility is a priority, certain features or functionalities from older versions of Elasticsearch are not supported in OpenSearch. We recommend  thoroughly testing your application in a non-production environment when upgrading to a new version or migrating to different software.
 
-How will the upgrade affect my current configurations and settings? The upgrade from Elasticsearch to OpenSearch should not affect your current configurations and settings. OpenSearch is designed to be backward compatible with Elasticsearch 7.10.2, which means it should respect your existing configurations and settings. However, it's always a good idea to review any major version upgrade documentation or notes provided by the OpenSearch team, just in case there are specific changes you need to be aware of.
+Also, as OpenSearch continues to evolve and new versions are released, for the updates on backward compatibility, make sure to to stay up to date with the official OpenSearch documentation or their GitHub page.
 
-Can I roll back to Elasticsearch if I face issues after upgrading to OpenSearch? While downgrading is generally not recommended, if you experience any significant issues after upgrading to OpenSearch, a rollback to Elasticsearch 7 is still possible. However, this downgrade might require downtime and data migration. The Spryker Cloud Operations team is equipped to facilitate this process. However, it's important to remember that the long-term support, including security patches and updates, will be for OpenSearch, so any rollback should be temporary while issues are resolved.
+## Does OpenSearch support all the plugins that I used with Elasticsearch?
 
-Is there any change in the way I interact with the platform after the upgrade? No, there is no change in the way you interact with the platform after the upgrade. OpenSearch maintains compatibility with the Elasticsearch APIs, so the operations, requests, and procedures you were accustomed to using with Elasticsearch will continue functioning as before the upgrade.
+OpenSearch supports most plugins compatible with Elasticsearch 7.10.2. However, it's always a good idea to check the compatibility of specific plugins in the OpenSearch documentation or with a particular plugin's provider. Some cases require plugins to be updated or replaced an OpenSearch-compatible version. Check with your Spryker support team about what specific plugins you are currently using to ensure backward compatibility. You will get a rolling upgrade from the development and staging environment to test the changes before upgrading to OpenSearch in production.
 
-How will the upgrade impact my data ingestion and query processes? The upgrade to OpenSearch should not impact your data ingestion and query processes. OpenSearch is designed to be fully backward compatible with Elasticsearch, meaning that the APIs used for data ingestion, such as the Index and Bulk APIs, and the query DSL for searching your data, will work as they did in Elasticsearch.
+## How will the migration affect my current configurations and settings?
 
-Are there any security implications with the upgrade to OpenSearch? No, there are no negative security implications with the upgrade to OpenSearch. OpenSearch includes improved security features, such as granular access control, audit logging, and integration with identity providers, which further enhance the security posture of your deployments. However, as with any software upgrade, reviewing the security settings and ensuring they align with your organization's security policies is always a good practice.
+The migration from Elasticsearch to OpenSearch should not affect your current configurations and settings. OpenSearch is designed to be backward compatible with Elasticsearch 7.10.2, which means it should respect your existing configurations and settings. However, when updating to a major version, we recommend to always review update documentation or notes provided by OpenSearch.
+
+## Can I roll back to Elasticsearch if I face issues after migrating to OpenSearch?
+
+While rolling back is generally not recommended, if you experience any significant issues after the migration, a rollback to Elasticsearch 7 is still possible. However, the rollback may require downtime and data migration. The Spryker Cloud Operations team is equipped to facilitate this process. However, long-term support, including security patches and updates, will be provided for OpenSearch, so a rollback should be a temporary solution. After the compatibility issues are fixed, to ensure the project's security and long-term support, it should be migrated to OpenSearch.
+
+## Is there any change in the way I interact with the platform after the upgrade? 
+
+No, there is no change in the way you interact with the platform after the upgrade. OpenSearch maintains compatibility with the Elasticsearch APIs, so the operations, requests, and procedures you were accustomed to using with Elasticsearch will continue functioning as before.
+
+## How will the migration impact my data ingestion and query processes?
+
+The migration should not impact your data ingestion and query processes. OpenSearch is designed to be fully backward compatible with Elasticsearch. The APIs used for data ingestion, such as the Index and Bulk APIs, and the query DSL for searching your data, will work as they did in Elasticsearch.
+
+## Are there any security implications with the migration to OpenSearch?
+
+No, there are no security implications with the migration. OpenSearch includes improved security features, such as granular access control, audit logging, and integration with identity providers, which further enhance the security of your deployments. However, we recommend reviewing the security settings and ensuring they align with your organization's security policies.
 
 Will OpenSearch support the same languages and frameworks that Elasticsearch does? Yes, OpenSearch supports the same languages and frameworks as Elasticsearch. This includes all the official clients Elasticsearch supported, such as those for Java, JavaScript, Python, Ruby, Go, .NET, and PHP. You should be able to continue using the same languages and frameworks with OpenSearch that you used with Elasticsearch.
 

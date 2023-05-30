@@ -17,29 +17,7 @@ Implementing reactivity in a web application is a complex challenge, especially 
 
 The following is a high-level overview of the reactivity patterns available in Oryx. In the diagram, it is shown using a product component.
 
-```mermaid
-sequenceDiagram
-autonumber
-
-ProductComponent-->AsyncStateController: @asyncState() product
-
-note right of AsyncStateController: Observes updates of product
-AsyncStateController-->AsyncStateController: observe
-activate AsyncStateController
-ProductComponent->>ProductService: get()
-activate ProductService
-ProductService-->>API: Requests/response data
-ProductService-->>ProductComponent: returns data
-deactivate ProductService
-AsyncStateController->>AsyncStateController: indicates update
-activate AsyncStateController
-AsyncStateController-->>ProductComponent: requestUpdate()
-activate ProductComponent
-deactivate AsyncStateController
-ProductComponent-->ProductComponent:update view
-deactivate ProductComponent
-deactivate AsyncStateController
-```
+{% include diagrams/oryx/reactivity-high-level.svg %}
 
 {% info_block infoBox "Note" %}
 

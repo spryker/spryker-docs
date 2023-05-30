@@ -17,38 +17,19 @@ While packages are distributed as a flat list, there is an architectural hierarc
 
 While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html), which is set up using a [preset](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html).
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#fff','primaryBorderColor': '#aaa'}}}%%
-
-flowchart TD
-classDef app fill:#fff,stroke:#fff;
-
-app("Application"):::app
-template(Template packages):::template
-domain(Domain packages)
-platform(Platform packages)
-base(Base packages)
-
-app-..->|"use presets\n(e.g. b2c)"|template
-app-->domain
-
-template --> domain
-domain --> platform
-platform --> base
-domain --> base
-```
+{% include diagrams/oryx/packages.svg %}
 
 ## Template packages
 
 The template layer contains packages that can be used as quick starters for demos and projects. Templated packages follow semantic versioning and ensure upgradability. Some packages in the template layer, like presets, are opinionated and might not be used inside your final setup. Their main purpose is to quickly get up and running a standard frontend application.
 
-| PACKAGES                                                       | LOCATION                    |
-| -------------------------------------------------------------- | --------------------------- |
-|                                                                |                             |
-| [Application](https://www.npmjs.com/package/@spryker-oryx/application)    | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
-| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`     |
-| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)      | `@spryker-oryx/labs`        |
-| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)  | `@spryker-oryx/themes`      |
+| PACKAGES                                                                 | LOCATION                                                                |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+|                                                                          |                                                                         |
+| [Application](https://www.npmjs.com/package/@spryker-oryx/application)   | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
+| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`                                            |
+| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)                | `@spryker-oryx/labs`                                                    |
+| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)            | `@spryker-oryx/themes`                                                  |
 
 {% info_block infoBox %}
 

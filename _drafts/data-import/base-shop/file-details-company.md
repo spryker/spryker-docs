@@ -6,7 +6,6 @@ last_updated:
 
 This document describes the `company.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.
 
-
 ## Import file dependencies
 
 [TODO: add dependencies]
@@ -17,7 +16,7 @@ This document describes the `company.csv` file to configure information about [c
 
 | PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| key |&check;| string |  | Company key|
+| key |&check;| string |  | Company key.|
 | name |&check;| string | | Company name.|
 | is_active | &check; | bool | <ul><li>`1`: active</li><li>`0`: inactive</li></ul> | Defines if a company is active. |
 | status |&check;|string|  <!--TODO: add possible statuses--> |Company status.|

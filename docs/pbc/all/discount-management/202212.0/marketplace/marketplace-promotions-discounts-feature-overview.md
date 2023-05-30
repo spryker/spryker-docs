@@ -223,6 +223,6 @@ A product catalog manager defines calculation when [creating a discount](/docs/p
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES|
+| INSTALLATION GUIDES|
 | -------------- |
 | [Marketplace Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/marketplace/install-the-marketplace-promotions-discounts-feature.html) |

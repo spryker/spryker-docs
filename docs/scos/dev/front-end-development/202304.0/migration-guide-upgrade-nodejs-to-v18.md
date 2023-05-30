@@ -9,13 +9,13 @@ This document provides instructions for upgrading Node.js to v18 and npm to v9.
 
 ## Overview
 
-According to [Node.js schedule](https://github.com/nodejs/release#release-schedule) the 16 version will be maintained till 11.09.2023. So Spryker recommends migrating to 18 LTS version.
+According to [Node.js schedule](https://github.com/nodejs/release#release-schedule), the maintenance of version 16 stops on September 11, 2023. Therefore, we recommend migrating to the 18 LTS version.
 
 *Estimated migration time: 1h*
 
 ## 1) Update configuration files
 
-1. Set up new versions of `node/npm` in the main `*.yml` files, like `deploy.yml`, `deploy.dev.yml`, and `deploy.ci.yml`:
+1. In the main `*.yml` files, set up new versions of `node/npm`, like `deploy.yml`, `deploy.dev.yml`, and `deploy.ci.yml`:
 
 ```yaml
 image:
@@ -31,13 +31,13 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 
 {% endinfo_block %}
 
-2. In the root directory, create/update `.nvmrc` file with the following content:
+2. In the root directory, create or update the `.nvmrc` file with the following content:
 
 ```text
 18.16.0
 ```
 
-3. Update or add dependencies and engines in the `package.json`:
+3. In the `package.json`, update or add dependencies and engines:
 
 ```json
 {
@@ -61,15 +61,15 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 }
 ```
 
-4. Remove dependency in the `package.json`:
+4. In the `package.json`, remove the dependency :
 
 ```json
     "@spryker/sass-resources-loader": "x.x.x"
 ```
 
-5. Update webpack config in `frontend/configs/development.js`:
-  - Replace `options` of `postcss-loader`;
-  - Replace `@spryker/sass-resources-loader` with `sass-resources-loader`;
+5. In `frontend/configs/development.js`, update the webpack config:
+   1. In `postcss-loader`, replace `options`. 
+   2. Replace `@spryker/sass-resources-loader` with `sass-resources-loader`;
 
 ```js
     ...
@@ -110,7 +110,7 @@ docker/sdk cli npm install
 
 {% info_block infoBox "Note" %}
 
-Ensure that the `package-lock.json` file has `"lockfileVersion": 2` or higher, otherwise need to remove `node_modules` and `package-lock.json`. After that regenerate again.
+Ensure that the `package-lock.json` file has `"lockfileVersion": 2` or later; otherwise, remove `node_modules` and `package-lock.json` and regenerate the file again.
 
 ```bash
 rm -rf node_modules && docker/sdk cli rm -rf node_modules && rm -rf package-lock.json
@@ -143,8 +143,10 @@ To update the versions, use official documentation:
 {% endinfo_block %}
 
 ## 3) Update GitHub Actions
+
 In case using GitHub Actions on the project need to update `.github/workflows/ci.yml` file.
-Update Node.js version:
+
+1. Update Node.js version:
 
 ```yaml
 - uses: actions/setup-node@v3
@@ -152,7 +154,7 @@ Update Node.js version:
       node-version: '18'
 ```
 
-Remove npm cache:
+2. Remove npm cache:
 
 ```yaml
 - name: NPM cache

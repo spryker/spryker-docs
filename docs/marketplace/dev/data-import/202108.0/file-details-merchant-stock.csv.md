@@ -3,6 +3,9 @@ title: "File details: merchant_stock.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_stock.csv file to configure merchant stock information in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management) information in your Spryker shop.
@@ -17,7 +20,7 @@ data:import merchant-stock
 
 The file should have the following parameters:
 
-| PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
+| PARAMETER    | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
 | merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
 | stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                        |

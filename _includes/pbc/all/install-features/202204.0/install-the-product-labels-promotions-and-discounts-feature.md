@@ -11,9 +11,9 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Promotions & Discounts | {{site.version}} |
-| Product Labels | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Promotions & Discounts | {{page.version}} |
+| Product Labels | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -62,7 +62,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 Ensure that the plugins work correctly:
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *product-label* field.
+1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *product-label* field.
 2. Add a product with the defined product label to cart.
 3. The discount should be applied to the cart.
 

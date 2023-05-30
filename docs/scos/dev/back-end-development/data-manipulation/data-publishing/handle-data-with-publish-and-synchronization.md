@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and Synchronize and multi-store shop systems
+  - title: Publish and synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
@@ -611,8 +611,13 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
      */
     public function writeCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {
@@ -653,8 +658,13 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
      */
     public function deleteCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,14 +12,14 @@ Overview and install the necessary features.
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -918,7 +918,7 @@ category_key,parent_category_key,name.de_DE,name.en_US,meta_title.de_DE,meta_tit
 cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,1,1,1,0,1,90,Catalog (default)
 ```
 
-|COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
+|COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
 | category_key | ✓ | string | cameras-and-camcorder | Sluggable name of the category. |
 | parent_category_key | | string | demoshop | Sluggable name of the parent category. |
@@ -1229,15 +1229,15 @@ Overview and install the following features.
 
 | NAME | VERSION |
 | --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}}|
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}}|
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1340,6 +1340,6 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|
+| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/search/{{page.version}}/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
+| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

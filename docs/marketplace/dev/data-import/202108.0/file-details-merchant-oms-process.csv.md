@@ -3,6 +3,9 @@ title: "File details: merchant_oms_process.csv"
 last_updated: Jun 07, 2021
 description: This document describes the merchant_oms_process.csv file to configure Merchant state machines in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) in your Spryker shop.
@@ -17,7 +20,7 @@ data:import merchant-oms-process
 
 The file should have the following parameters:
 
-| PARAMETER  | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION   |
+| PARAMETER  | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION   |
 | --------------- | ---------- | ------- | ------------ | -------------- | ----------------------- |
 | merchant_reference        | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system. |
 | merchant_oms_process_name | &check;             | String   |                   |                              | Name of the merchant state machine.       |

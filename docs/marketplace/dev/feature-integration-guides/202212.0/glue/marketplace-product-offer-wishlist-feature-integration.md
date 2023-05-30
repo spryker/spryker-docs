@@ -14,12 +14,12 @@ Follow the steps below to install the Marketplace Product Offer + Wishlist Glue 
 ### Prerequisites
 
 To start feature integration, integrate the required features:
-<!--
+
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
+| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
 | Marketplace Product Offer API    | {{page.version}}  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
--->
+
 ### 1) Install the required modules using Composer
 
 Install the required modules:

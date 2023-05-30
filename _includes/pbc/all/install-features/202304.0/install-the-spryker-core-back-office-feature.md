@@ -17,14 +17,14 @@ Ensure that the related features are installed:
 
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- | 
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | 
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) | 
 
 ## 1) Install the required modules using Composer
 
 1. Install the required modules:
 
 ```bash
-composer require spryker-feature/spryker-core-back-office:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core-back-office:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -98,12 +98,12 @@ Ensure the following transfers have been created:
 
 Add the following configuration to your project:
 
-| CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                         | NAMESPACE                                |
-|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES                           | Fallback locales that are used if there is no translation for a selected locale.                                                                      | Spryker\Shared\Translator                |
-| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY                            | An bsolute path to a translation cache directory—for example, `/var/www/data/DE/cache/Zed/translation`.                                                | Spryker\Shared\Translator                |
-| TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS                         | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters.                          | Spryker\Shared\Translator                |
-| AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                                          | Spryker\Shared\Acl                       |
+| CONFIGURATION                                           | SPECIFICATION                                                                                                                | NAMESPACE                 |
+|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES   | Fallback locales that are used if there is no translation for a selected locale.                                             | Spryker\Shared\Translator |
+| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY    | An absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                       | Spryker\Shared\Translator |
+| TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters. | Spryker\Shared\Translator |
+| AclConstants::ACL_DEFAULT_RULES                         | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                 | Spryker\Shared\Acl        |
 | SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for a Back Office user.                                    | Spryker\Shared\SecurityBlockerBackoffice |
 | SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the Back Office user is blocked if the number of attempts is exceeded for the Back Office.            | Spryker\Shared\SecurityBlockerBackoffice |
 | SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerBackoffice |
@@ -126,7 +126,7 @@ $config[TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS] = [
     APPLICATION_ROOT_DIR . '/data/translation/Zed/*/[a-z][a-z]_[A-Z][A-Z].csv',
 ];
 
-// >> BACK OFFICE
+// >> BACKOFFICE
 
 // ACL: Allow or disallow URLs for Zed GUI for ALL users
 $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -155,8 +155,8 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 Spryker offers two authentication strategies out of the box:
 
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`—if a user does not exist, it is created automatically based on the data from an external service.
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`—it accepts only existing users for authentication.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it is created automatically based on the data from an external service.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: It accepts only existing users for authentication.
 
 
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserConfig.php**
@@ -190,7 +190,7 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 After finishing the entire integration, ensure the following:
 * Entries without a translation for a language with a configured fallback are translated into the fallback language.
 * The translation cache is stored under the configured directory.
-* Translations are found based on the configured file path pattern.
+* Translations are found based on the configured path pattern.
 
 {% endinfo_block %}
 
@@ -228,9 +228,30 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, make sure you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
+In the Back Office, make sure that you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
 
 {% endinfo_block %}
+
+### Configure the `User` module to execute post save plugins:
+
+**src/Pyz/Zed/User/UserConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\User;
+
+use Spryker\Zed\User\UserConfig as SprykerUserConfig;
+
+class UserConfig extends SprykerUserConfig
+{
+    /**
+     * @var bool
+     */
+    protected const IS_POST_SAVE_PLUGINS_ENABLED_AFTER_USER_STATUS_CHANGE = true;
+
+}
+```
 
 ## 4) Set up behavior
 
@@ -419,7 +440,7 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following takes place:
+Ensure the following:
 * You can open the Back Office login page or any page which requires authentication.
 * On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
 * You receive a password reset email to the email address you submitted the password reset form with.
@@ -438,7 +459,7 @@ Ensure the following takes place:
 | UserLocaleLocalePlugin        | Provides locale of the logged-in user as current locale.                             | Enable `\Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin` that sets the locale of the application based on the provided locale plugin. | Spryker\Zed\UserLocale\Communication\Plugin\Locale    |
 | AssignUserLocalePreSavePlugin | Expands `UserTransfer` before saving it with a locale ID and name.                   | None                                                                                                                                                               | Spryker\Zed\UserLocale\Communication\Plugin\User      |
 | LocaleUserExpanderPlugin      | Expands `UserTransfer` with a locale ID and name after reading it from the database. | None                                                                                                                                                               | Spryker\Zed\UserLocale\Communication\Plugin\User      |
-| UserLocaleFormExpanderPlugin  | Expands the **Edit Users** page with a locale field.                              | None                                                                                                                                                               | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
+| UserLocaleFormExpanderPlugin  | Expands the Edit user profile form with a locale field.                              | None                                                                                                                                                               | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 ```php
@@ -613,7 +634,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 Ensure that you've enabled the plugins:
 1. In the Back Office, select **Users&nbsp;<span aria-label="and then">></span> Users**.
-2. Click **Add New User**.
+2. Select **Add New User**.
 3. On the **Create new User** page, check that the **Interface language*** field exists.
 
 {% endinfo_block %}

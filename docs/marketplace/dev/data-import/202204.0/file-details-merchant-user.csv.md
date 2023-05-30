@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
   - title: Merchant users overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/merchant-users-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant-user.csv` file to configure [merchant user](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) information in your Spryker shop.
@@ -22,7 +24,7 @@ data:import merchant-user
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | merchant_reference | &check; | String |   |  Unique | Identifier of the merchant in the system. |
 | username | &check; | String |   |  Unique | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |

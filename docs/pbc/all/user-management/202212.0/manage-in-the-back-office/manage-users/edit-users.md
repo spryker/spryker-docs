@@ -56,4 +56,4 @@ The following table describes the attributes you enter and select when editing u
 | ASSIGNED GROUPS | The user groups this user is assigned to. User groups define what areas and actions the user has access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
-| STATUS |
+| STATUS | Defines if the user can access the Back Office. |

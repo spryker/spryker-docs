@@ -65,7 +65,6 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 
 * [Dotdigital](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
 * [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
-* [Inxmail](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
 ## Customer Retention & Loyalty
 
@@ -73,22 +72,9 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Trustpilot](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
-## Personalization & Cross-Selling
-
-<!--* [8Select](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
-* [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
-* [Nosto](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
-* [trbo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
-
 ## Marketplace Integrations
 
 * [ChannelPilot Marketplace](/docs/scos/user/technology-partners/{{page.version}}/marketplace-integrations/channelpilot-marketplace.html)
-
-## Order Management (ERP/OMS)
-
-* [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)
-* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
 
 ## Operational Tools
 
@@ -103,22 +89,3 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [VSHN](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/vshn.html)
 <!--* [Mindcurv](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/mindcurv.html)-->
 <!--* [Shopmacher](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/shopmacher.html)-->
-
-## Payment Partners
-
-* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
-* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
-* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
-* [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
-* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
-* [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop.html)
-* [CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
-* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
-* [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
-* [Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
-* [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
-* [ratenkauf by easyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit.html)
-* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)

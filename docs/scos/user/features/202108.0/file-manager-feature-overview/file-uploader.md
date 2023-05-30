@@ -159,7 +159,7 @@ To check the full list of MIME types, refer to the article.
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

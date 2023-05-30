@@ -13,14 +13,14 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/thresholds/managing-merchant-order-thresholds.html
 related:
   - title: Managing Global Thresholds
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-in-the-back-office/define-global-thresholds.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/define-global-thresholds.html
   - title: Managing Threshold Settings
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-in-the-back-office/manage-threshold-settings.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/manage-threshold-settings.html
   - title: Order Thresholds feature overview
     link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
 ---
 
-This doc describes how to manage [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds) in the Back Office.
+This doc describes how to manage [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds) in the Back Office.
 
 
 

@@ -38,7 +38,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-For more details about how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/checkout-feature-overview/multi-step-checkout-overview.html).
+For more details about how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/checkout-feature-overview/multi-step-checkout-overview.html).
 
 ## Split Delivery in the Back Office
 
@@ -70,7 +70,7 @@ Most of payment service providers (PSP) support a single delivery address for a 
 With Split Delivery, Product Bundles items can be shipped to different delivery addresses. However, if a product bundle is a part of the order and you don't want it to be split and delivered to different delivery addresses, you need to configure the implementation of the Checkout process on your project level.
 -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

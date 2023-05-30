@@ -4,17 +4,15 @@ last_updated: May 13, 2022
 description: This document describes the product_offer_shopping_list.csv file to configure shopping lists with product offers in your Spryker shop.
 template: import-file-template
 related:
-  - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
-  - title: Marketplace Shopping Lists feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shopping-lists-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
   - title: Marketplace Shopping List feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-shopping-list-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
+This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/marketplace-shopping-lists-feature-overview.html) in your Spryker shop.
 
 To import the file, run:
 
@@ -26,7 +24,7 @@ console data:import product-offer-shopping-list-item
 
 The file should have the following parameters:
 
-| PARAMETER   | REQUIRED? | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER   | REQUIRED | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |--------------|-----------|---------|---------------|------------|
 | shopping_list_item_key  | &check;   | String  | Unique  | Identifier of the shopping list item in the system. |
 | product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the system. |

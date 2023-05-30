@@ -39,7 +39,7 @@ To define the visibility of a product offer on the Storefront, the following det
 | Merchant SKU         | Lets the merchant identify the product offer in the ERP system. |
 | Offer Reference      | Unique ID that helps to identify the product offer in the Marketplace. Offer reference is mandatory. |
 | Store                | Defines the store where the product offer is available.      |
-| Price                | Lets the merchant set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html). {% endinfo_block %}      |
+| Price                | Lets the merchant set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html). {% endinfo_block %}      |
 | Stock                | Lets the merchant define stock for the product offer. The stock can be reserved and available. |
 | Status               | Approval status: <ul><li>Approval status (Waiting for approval, Approved, Denied).</li><li>Visibility: Visibility (Active, Inactive).</li></ul> |
 | Validity Dates       | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
@@ -75,7 +75,7 @@ The product offer prices support:
 * Store
 * Currency
 
-Product offer price follows the [concrete product price inheritance model](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (for example, original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. For details about price types, see [Price types](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html).
+Product offer price follows the [concrete product price inheritance model](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (for example, original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. For details about price types, see [Price types](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html).
 
 Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) or [import product offer prices](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html).
 
@@ -144,7 +144,7 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 
 ### Product offers on the Quick Order page
 
-On the **Quick Order** page, customers can add product offers to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only the product offers of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add offers from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Order feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/quick-add-to-cart-feature-overview.html).
+On the **Quick Order** page, customers can add product offers to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only the product offers of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add offers from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Order feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/quick-add-to-cart-feature-overview.html).
 
 ![quick-order-from-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-order-from-quick-order-page.gif)
 
@@ -167,7 +167,7 @@ Note that the drop-down with merchants is not visible until the product offer is
 * All cart-related B2B features (for example, Quick Order, RFQ, Approval Process) will be supported later.
 * Availability Notification is not supported.
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|

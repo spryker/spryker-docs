@@ -266,7 +266,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 155_30149933,134_26145012,
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 |---|---|---|---|---|
 |  `concrete_sku` | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
 |  `alternative_product_concrete_sku` | optional | string | 420565 | SKU of the concrete alternative product. |

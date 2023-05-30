@@ -3,6 +3,9 @@ title: "File details: product_offer_validity.csv"
 last_updated: Feb 26, 2021
 description: This document describes the product_offer_validity.csv file to configure  product offer validity dates in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_offer_validity.csv` file to configure product offer validity dates in your Spryker shop.
@@ -17,7 +20,7 @@ data:import product-offer-validity
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
 | product_offer_reference | &check;             | String   |                   | Unique                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
 | valid_from              |               | Datetime |                   |                              | Date and time from which the offer is active.                |

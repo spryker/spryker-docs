@@ -26,7 +26,7 @@ related:
   - title: Security Release Notes 2018.11.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - title: Shopping Cart
     link: docs/scos/user/features/page.version/cart-feature-overview/cart-feature-overview.html
   - title: Reorder feature overview
@@ -144,13 +144,13 @@ Enrich your products with an individual barcode that is generated based on the S
 
 With the Product Restrictions feature, you as a shop owner can easily define who of your customers gets to see what items or categories. Any item in your product catalog can be either whitelisted or blacklisted per customer. The lists can be uploaded or imported to make it easier to set up.
 
-**Documentation**: [Product Restrictions](/docs/scos/user/features/{{site.version}}/merchant-product-restrictions-feature-overview.html)
+**Documentation**: [Product Restrictions](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html)
 
 ### Merchant Concept
 
 We have introduced the concept of Merchant to allow our customers to implement the Marketplace functionality. In a non-marketplace setup, there is always one Merchant. Product Restrictions and Customer Specific Prices are implemented by linking a B2B customer to the Merchant.
 
-**Documentation**: [Merchants and Merchant Relations](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)
+**Documentation**: [Merchants and Merchant Relations](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
 
 ## General Cart Enhancements
 
@@ -168,7 +168,7 @@ Easily set a minimum order value for any of your products where either the custo
 You can easily manage gross and net prices per product, country, and currency. Please note that you cannot mix Net and Gross prices in the same shopping cart.
 ![Net and gross price](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image14.png)
 
-**Documentation**: [Net &amp; Gross Prices](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html)
+**Documentation**: [Net &amp; Gross Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html)
 
 ### Volume Prices
 

@@ -15,7 +15,7 @@ redirect_from:
 
 *Customer Groups* let you organize customers into groups to help you target users for discounts and promotions.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

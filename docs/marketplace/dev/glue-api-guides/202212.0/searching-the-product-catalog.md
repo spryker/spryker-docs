@@ -1,5 +1,5 @@
 ---
-title: Searching the product catalog
+title: "Glue API: Search the product catalog"
 description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 related:
@@ -7273,8 +7273,8 @@ To search by products, send the request:
 
 For details of the included resources, see:
 
-- [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
-- [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
+- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
+- [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
 - [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
 ## Possible errors

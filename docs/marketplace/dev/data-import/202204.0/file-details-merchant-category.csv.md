@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-category-feature-walkthrough.html
   - title: Merchant Category feature overview
     link: docs/marketplace/user/features/page.version/merchant-category-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_category.csv` file to configure [merchant categories](/docs/marketplace/user/features/{{site.version}}/merchant-category-feature-overview.html) in your Spryker shop.
@@ -22,7 +24,7 @@ data:import merchant-category
 
 The file should have the following parameters:
 
-| PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION      |
+| PARAMETER      | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION      |
 | -------------- | ----------- | ------- | ------------- | -------------------- | ------------------------------- |
 | category_key       | &check;             | String   |                   |                              | Category key to assign the merchant to.   |
 | merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system. |

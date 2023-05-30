@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES |
 |---------|---------|

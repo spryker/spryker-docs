@@ -2125,11 +2125,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-label-store.csv.html
                   - title: product_label.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-label.csv.html
-                    url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/view-product-barcodes.html
               - title: Manage in the Back Office
-                include_versions:
-                - "202204.0"
-                - "202212.0"
+                url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Attributes
                     nested:
@@ -2181,6 +2178,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/create-product-options.html
                       - title: Edit
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
+                  - title: View product barcodes
+                    url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/view-product-barcodes.html
               - title: Manage using Glue API
                 url: /docs/pbc/all/product-information-management/base-shop/manage-using-glue-api/glue-api-manage-products.html
                 nested:

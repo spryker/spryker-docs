@@ -108,6 +108,17 @@ docker/sdk up
 docker/sdk cli npm install
 ```
 
+{% info_block infoBox "Note" %}
+
+Ensure that the `package-lock.json` file has `"lockfileVersion": 2` or higher, otherwise need to remove `node_modules` and `package-lock.json`. After that regenerate again.
+
+```bash
+rm -rf node_modules && docker/sdk cli rm -rf node_modules && rm -rf package-lock.json
+docker/sdk cli npm install
+```
+
+{% endinfo_block %}
+
 3. Build the project using Node.js v18 and npm v9:
 
 ```bash

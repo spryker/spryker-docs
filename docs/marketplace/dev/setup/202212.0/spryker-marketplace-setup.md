@@ -5,6 +5,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/setup/spryker-marketplace-setup.html
   - /docs/marketplace/dev/setup/installation.html
+  - /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
 ---
 
 This document describes how to get started with the B2C Demo Marketplace.

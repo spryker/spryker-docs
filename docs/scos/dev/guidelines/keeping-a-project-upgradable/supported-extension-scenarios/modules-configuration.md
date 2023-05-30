@@ -12,27 +12,50 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
 ---
 
-## Introduction
 
-Manifests support changes in a module's configuration files.
+This document explains how manifests support changes in the configuration files of modules.
 
 Manifests support all scalar types (bool, int, float, string), the compound type array, and the special type, null.
 
 Manifests do not support compound type objects, or callable, iterable and special type resources.
 
-Manifest only add values to configuration files. Manifests **will not remove** values from project configuration. 
+Manifest only add values to configuration files. Manifests *don't remove* values from project configuration. 
 
-## 1.1. Basic scalar values as return
+## Basic scalar values as the return
 
-Manifests fully support 4 PHP data types:
-* boolean
-* int
-* float (floating-point number)
-* string
+Manifests fully support 4 PHP data types as the return.
 
-Manifests also support the usage of constants and have built in basic support for constant concatenation.
+The following is an example of how to have the method return a boolean:
 
-Code example 1.1.1: Method returns string
+```php
+use SprykerShop\Yves\ProductReplacementForWidget\ProductReplacementForWidgetConfig as SprykerShopProductReplacementForWidgetConfig;
+
+class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementForWidgetConfig
+{
+    ...
+    public function isProductReplacementFilterActive(): bool
+    {
+        return true;
+    }
+}
+```
+
+The following is an example of how to have the method return an int:
+
+```php
+use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
+
+class CustomerConfig extends SprykerCustomerConfig
+{
+    ...
+    public function getCustomerPasswordSequenceLimit(): ?int
+    {
+        return 3;
+    }
+}
+```
+
+The following is an example of how to have the method return a string:
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 
@@ -46,7 +69,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-Code example 1.1.2: Method returns string (constant used)
+Manifests also support the usage of constants and have built in basic support for constant concatenation.
+
+The following is an example of how to have the method return a string with a constant:
+
 ```php
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Zed\ConfigurableBundleStorage\ConfigurableBundleStorageConfig as SprykerConfigurableBundleStorageConfig;
@@ -61,7 +87,8 @@ class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageCo
 }
 ```
 
-Code example 1.1.3: Method returns string with constant concatenation
+The following is an example of how to have the method return a string with constant concatenation:
+
 ```php
 use Spryker\Zed\Development\DevelopmentConfig as SprykerDevelopmentConfig;
 
@@ -74,40 +101,14 @@ class DevelopmentConfig extends SprykerDevelopmentConfig
     }
 }
 ```
+##  Array as a return
 
-Code example 1.1.4: Method returns boolean
-```php
-use SprykerShop\Yves\ProductReplacementForWidget\ProductReplacementForWidgetConfig as SprykerShopProductReplacementForWidgetConfig;
+There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 
-class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementForWidgetConfig
-{
-    ...
-    public function isProductReplacementFilterActive(): bool
-    {
-        return true;
-    }
-}
-```
+### Indexed array as the return
 
-Code example 1.1.5: Method returns int
-```php
-use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
+The following is an example of how to have the method return an indexed array:
 
-class CustomerConfig extends SprykerCustomerConfig
-{
-    ...
-    public function getCustomerPasswordSequenceLimit(): ?int
-    {
-        return 3;
-    }
-}
-```
-
-## 1.2. Array as return
-
-### 1.2.1. Indexed array as the return
-
-Code example 1.2.1: Method returns indexed array
 ```php
 use Spryker\Client\Storage\StorageConfig as SprykerStorageClientConfig;
 
@@ -126,9 +127,10 @@ class StorageConfig extends SprykerStorageClientConfig
 }
 ```
 
-### 1.2.2. Associative array as the return
+### Associative array as the return
 
-Code example 1.2.2: Method returns associative array
+The following is an example of how to have the method return an associative array:
+
 ```php
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfigi;
 
@@ -145,9 +147,10 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfigi
 }
 ```
 
-### 1.2.3. Multidimensional array as the return
+### Multidimensional array as the return
 
-Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions **must** be used: 
+Multidimensional associative arrays are supported up to two levels, but for their usage the wrapped functions *must* be used: 
+
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\Event\EventConfig;
@@ -175,19 +178,19 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### 1.2.4. Merging arrays
+### Merging arrays
 
 Manifests fully support merging the results of calling multiple methods.
 
-Inside of an array merge function call you can use:
+Inside of an array merge function call you can use the following:
+
 * wrap methods calls
 * parent method call
 * indexed arrays
 * associative arrays
-* multidimensional arrays
-* variables
 
-Code example 1.2.4: Method returns associative array (with constants, parent method call and array merging)
+The following is an example of how to have the method return an associative array (with constants, parent method call and array merging):
+
 ```php
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Client\MultiCart\MultiCartConfig as SprykerMultiCartConfig;
@@ -204,10 +207,10 @@ class MultiCartConfig extends SprykerMultiCartConfig
     }
 }
 ```
+multidimensional arrays of up to two levels are also supported, but to use them, you must use the wrapped function.
 
-Multidimensional arrays (up to 2 levels) are also supported here, but to use them the wrapped function **must** be used.
+The following is an example of how to have the method return a multidimensional array (with constants, wrap methods call and array merging):
 
-Code example 1.2.5: Method returns multidimensional array (with constants, wrap methods call and array merging)
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\Event\EventConfig;
@@ -238,10 +241,12 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+* variables
 
-## 1.3 Null as the return
+## Null as the return
 
-Code example 1.3.1: Method returns null
+The following is an example of how to have the method return a null result:
+
 ```php
 use Spryker\Zed\Api\ApiConfig as SprykerApiConfig;
 

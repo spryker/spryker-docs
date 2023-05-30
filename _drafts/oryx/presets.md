@@ -37,6 +37,8 @@ export const b2cFeatures: AppFeature[] = [
   ...
 ```
 
+For more information about feature sets, see [Feature sets](./feature-sets.md)
+
 ## Themes
 
 The overarching UI of the application is driven by themes. To get started with a default theme, you can import it from the preset package and apply it to your Oryx application:

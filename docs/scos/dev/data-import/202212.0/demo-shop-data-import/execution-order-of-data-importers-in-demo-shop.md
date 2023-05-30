@@ -26,7 +26,7 @@ The following list illustrates the order followed to run the data importers and 
 
 * Commerce:
   * store: it's not a data importer; it's hardcoded.
-  * [currency](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-currency.csv.html)
+  * [currency](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-currency.csv.html)
   * [customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/file-details-customer.csv.html)
   * [glossary](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
   * [tax](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-tax-sets.html)
@@ -47,8 +47,8 @@ The following list illustrates the order followed to run the data importers and 
   * [product-abstract-store](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html)
   * [product-concrete](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
   * [product-image](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-image.csv.html)
-  * [product-price](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-product-price.csv.html)
-  * [product-price-schedule](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-product-price-schedule.csv.html)
+  * [product-price](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
+  * [product-price-schedule](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price-schedule.csv.html)
   * [product-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html)
 * Special Products:
   * [product-option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html)
@@ -154,7 +154,7 @@ The following list illustrates the order followed to run the data importers and 
   * [merchant-open-hours-weekday-schedule](/docs/marketplace/dev/data-import/202204.0/file-details-merchant-open-hours-week-day-schedule.csv.html)
   * [merchant-open-hours-date-schedule](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html)
   * [product-offer-validity](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-validity.csv.html)
-  * [price-product-offer](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)
+  * [price-product-offer](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/file-details-price-product-offer.csv.html)
   * [product-offer-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-data/file-details-product-offer-stock.csv.html)
   * [merchant-stock](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-stock.csv.html)
   * merchant-relationship

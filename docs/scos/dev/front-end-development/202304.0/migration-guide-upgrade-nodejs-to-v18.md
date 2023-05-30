@@ -37,7 +37,7 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 18.16.0
 ```
 
-3. Update engines and dependencies in the `package.json`:
+3. Update or add dependencies and engines in the `package.json`:
 
 ```json
 {
@@ -105,7 +105,6 @@ docker/sdk up
 2. Regenerate `package-lock.json`:
 
 ```bash
-rm -rf package-lock.json
 docker/sdk cli npm install
 ```
 

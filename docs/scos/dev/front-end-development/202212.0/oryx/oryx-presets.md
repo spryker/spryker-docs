@@ -37,7 +37,7 @@ export const b2cFeatures: AppFeature[] = [
   ...
 ```
 
-For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx-feature-sets.html)
+For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html)
 
 ## Themes
 

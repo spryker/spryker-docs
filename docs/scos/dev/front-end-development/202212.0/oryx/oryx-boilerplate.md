@@ -1,5 +1,5 @@
 ---
-title: Oryx boilerplate
+title: "Oryx: Boilerplate"
 description: Create maintainable and upgradeable applications using the Oryx boilerplate
 last_updated: Apr 3, 2023
 template: concept-topic-template

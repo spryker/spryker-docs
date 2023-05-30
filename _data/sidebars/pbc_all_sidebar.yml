@@ -16,6 +16,8 @@ entries:
             url: /docs/pbc/all/back-office/install-spryker-core-back-office-warehouse-user-management-feature.html
             include_versions:
             - "202304.0"
+          - title: "HowTo: Add support of number formatting in the Back Office"
+            url: /docs/pbc/all/back-office/howto-add-support-of-number-formatting-in-the-back-office.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -439,7 +441,7 @@ entries:
                   - title: Content Items
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html
                   - title: File Manager
-                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-file-manager-feature.md
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-file-manager-feature.html
                     include_versions:
                     - "202304.0"
                   - title: Navigation
@@ -1203,6 +1205,8 @@ entries:
           - title: Spryker Core feature overview
             url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
             nested:
+              - title: "HowTo: Add support for number formatting in the Storefront"
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.html
               - title: How translations are managed
                 url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/how-translations-are-managed.html
               - title: URL redirects overview

@@ -2381,12 +2381,6 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-approval-process-feature-domain-model-and-relationships.html
                       - title: Marketplace Product Options
                         url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-options-feature-domain-model-and-relationships.html
-
-
-
-
-
-
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:

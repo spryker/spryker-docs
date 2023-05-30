@@ -1,10 +1,10 @@
 ---
-title: "File details: product_measurement_unit.csv"
+title: "File details: company.csv"
 template: data-import-template
 last_updated: 
 ---
 
-This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](/docs/pbc/all/product-information-management/{{page.verison}}/feature-overviews/measurement-units-feature-overview.html) in your Spryker shop.
+This document describes the `company.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.
 
 
 ## Import file dependencies
@@ -13,23 +13,25 @@ This document describes the `product_measurement_unit.csv` file to configure inf
 <!--If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.-->
 
 ## Import file parameters
+<!--| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |-->
 
-| PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| name | &check; | string | Gdlossary key used for displaying. Each name needs glossary key definition for all configured locales. |
-| code | &check; | unique, string | Unique identifier used by the Spryker OS to identify measurement units. |
-| default_precision | &check; | integer, power of ten | Property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations.|
+| PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS  DESCRIPTION |
+| --- | --- | --- | --- | --- |
+| key |||||
+| name |||||
+| is_active |||||
+| status |||||
 
 ## Import file template and content example
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_measurement_unit.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
-| [`product_measurement_unit.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
+| [`template_company.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
+| [`company.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command
 
 ```bash
-data:import:product-measurement-unit
+data:import:company
 ```

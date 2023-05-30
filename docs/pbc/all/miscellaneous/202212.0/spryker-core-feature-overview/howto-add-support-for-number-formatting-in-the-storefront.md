@@ -3,6 +3,8 @@ title: "HowTo: Add support for number formatting in the Storefront"
 description: Add support for numbers formatting in the Storefront UI.
 template: howto-guide-template
 last_updated: Nov 04, 2022
+redirect_from:
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
 ---
 
 This document explains how to add support for number formatting in the Storefront UI.

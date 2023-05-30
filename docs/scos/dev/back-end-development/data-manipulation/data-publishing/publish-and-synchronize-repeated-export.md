@@ -1,5 +1,5 @@
 ---
-title: Publish and Synchronize repeated export
+title: Publish and synchronize repeated export
 description: By following the steps from this document, you can regenerate published data and re-write data of database tables in Storage and Search modules with subsequent update of Redis and Elasticsearch records
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -37,7 +37,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and Synchronize and multi-store shop systems
+  - title: Publish and synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html

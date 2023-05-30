@@ -48,10 +48,11 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
     },
     ...
     "devDependencies": {
-        ...
+        ...,
+        "@babel/preset-env": "~7.20.2",
         "@spryker/oryx-for-zed": "~3.0.0",
         "autoprefixer": "~10.4.14",
-        "postcss": "~8.4.23",
+        "postcss": "~8.4.24",
         "postcss-loader": "~7.3.0",
         "sass-resources-loader": "~2.2.5",
         ...

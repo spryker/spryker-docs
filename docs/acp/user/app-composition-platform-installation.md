@@ -24,7 +24,7 @@ The installation process of ACP on SCOS is also called *ACP enablement*. It invo
 
 The following diagram illustrates the different steps of the ACP enablement process and outlines the responsibilities for executing them.
 
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2023-05-24T12:16:20.866Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\&quot; etag=\&quot;25ZUu-HYlgnVy0ph-uXi\&quot; version=\&quot;21.3.3\&quot;&gt;\n  &lt;diagram name=\&quot;Страница 1\&quot; id=\&quot;0AxMdV5PH_cISPjeI29k\&quot;&gt;\n    &lt;mxGraphModel dx=\&quot;1450\&quot; dy=\&quot;541\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;0\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;827\&quot; pageHeight=\&quot;1169\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-32\&quot; value=\&quot;&amp;lt;b&amp;gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;Customer/SI&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;-80\&quot; y=\&quot;132\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-33\&quot; value=\&quot;&amp;lt;b&amp;gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;Spryker (OPS/ACP)&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ebea0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;-80\&quot; y=\&quot;252\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-34\&quot; value=\&quot;\&quot; style=\&quot;endArrow=none;dashed=1;html=1;rounded=0;\&quot; parent=\&quot;1\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;41\&quot; y=\&quot;332\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;41\&quot; y=\&quot;132\&quot; as=\&quot;targetPoint\&quot; /&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-50\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-35\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-35\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS is updated to the latest module versions required for ACP and Apps&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;80\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-51\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS is configured to activate ACP catalog in the Back Office&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;190\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-52\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS environment variable keys are prepared&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;300\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;LKxQeUD1ZAAE0P82jiso-6\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; value=\&quot;&amp;lt;span style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color);&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color); font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS environment variable keys are configured&amp;lt;/font&amp;gt;&amp;lt;/span&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;410\&quot; y=\&quot;132\&quot; width=\&quot;90\&quot; height=\&quot;90\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS is &amp;quot;&amp;lt;b&amp;gt;ACP-ready&amp;lt;/b&amp;gt;&amp;quot;&amp;lt;/font&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;520\&quot; y=\&quot;128\&quot; width=\&quot;110\&quot; height=\&quot;98\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-56\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-45\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; value=\&quot;&amp;lt;font color=&amp;quot;#ffffff&amp;quot; style=&amp;quot;font-size: 9px;&amp;quot;&amp;gt;SCOS is &amp;quot;&amp;lt;/font&amp;gt;&amp;lt;b style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color); color: rgb(255, 255, 255); font-size: 9px;&amp;quot;&amp;gt;ACP-enabled&amp;lt;/b&amp;gt;&amp;lt;span style=&amp;quot;color: rgb(255, 255, 255); font-size: 9px;&amp;quot;&amp;gt;&amp;quot;&amp;lt;/span&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;670\&quot; y=\&quot;129\&quot; width=\&quot;110\&quot; height=\&quot;98\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-45\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;b&amp;gt;ACP&amp;lt;br&amp;gt;&amp;amp;nbsp;catalog&amp;lt;/b&amp;gt; can be fully used with SCOS&amp;lt;/font&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;810\&quot; y=\&quot;124\&quot; width=\&quot;110\&quot; height=\&quot;108\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-58\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Customer Cloud Infrastructure is updated with ACP components&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;300\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-61\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Values for Customer env variables are created based on Customer&amp;#39;s Cloud ACP components&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;align=center;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;410\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-60\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Register Customer SCOS with ACP&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;600\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-59\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;540\&quot; y=\&quot;282\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;560\&quot; y=\&quot;292\&quot; as=\&quot;targetPoint\&quot; /&gt;\n            &lt;Array as=\&quot;points\&quot;&gt;\n              &lt;mxPoint x=\&quot;575\&quot; y=\&quot;296\&quot; /&gt;\n            &lt;/Array&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n&lt;/mxfile&gt;\n&quot;}"></div>
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2023-05-24T14:49:42.621Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\&quot; etag=\&quot;Qukq0BDP7WyFCnFGgsy6\&quot; version=\&quot;21.3.3\&quot;&gt;\n  &lt;diagram name=\&quot;Страница 1\&quot; id=\&quot;0AxMdV5PH_cISPjeI29k\&quot;&gt;\n    &lt;mxGraphModel dx=\&quot;2474\&quot; dy=\&quot;1116\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;0\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;827\&quot; pageHeight=\&quot;1169\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-32\&quot; value=\&quot;&amp;lt;b&amp;gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;Customer/SI&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;-80\&quot; y=\&quot;132\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-33\&quot; value=\&quot;&amp;lt;b&amp;gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;Spryker (OPS/ACP)&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ebea0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;-80\&quot; y=\&quot;252\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-34\&quot; value=\&quot;\&quot; style=\&quot;endArrow=none;dashed=1;html=1;rounded=0;\&quot; parent=\&quot;1\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;41\&quot; y=\&quot;332\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;41\&quot; y=\&quot;132\&quot; as=\&quot;targetPoint\&quot; /&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-50\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-35\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-35\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS is updated to the latest module versions required for ACP and Apps&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;80\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-51\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS is configured to activate ACP catalog in the Back Office&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;190\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;fknyoAEU52s9SkgYHo2v-4\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS environment variable keys are prepared&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;300\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;LKxQeUD1ZAAE0P82jiso-6\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; value=\&quot;&amp;lt;span style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color);&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color); font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS environment variable keys are configured&amp;lt;/font&amp;gt;&amp;lt;/span&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;410\&quot; y=\&quot;132\&quot; width=\&quot;90\&quot; height=\&quot;90\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCOS is &amp;quot;&amp;lt;b&amp;gt;ACP-ready&amp;lt;/b&amp;gt;&amp;quot;&amp;lt;/font&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;520\&quot; y=\&quot;128\&quot; width=\&quot;110\&quot; height=\&quot;98\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-56\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-45\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; value=\&quot;&amp;lt;font color=&amp;quot;#ffffff&amp;quot; style=&amp;quot;font-size: 9px;&amp;quot;&amp;gt;SCOS is &amp;quot;&amp;lt;/font&amp;gt;&amp;lt;b style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color); color: rgb(255, 255, 255); font-size: 9px;&amp;quot;&amp;gt;ACP-enabled&amp;lt;/b&amp;gt;&amp;lt;span style=&amp;quot;color: rgb(255, 255, 255); font-size: 9px;&amp;quot;&amp;gt;&amp;quot;&amp;lt;/span&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;670\&quot; y=\&quot;129\&quot; width=\&quot;110\&quot; height=\&quot;98\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-45\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;b&amp;gt;ACP&amp;lt;br&amp;gt;&amp;amp;nbsp;catalog&amp;lt;/b&amp;gt; can be fully used with SCOS&amp;lt;/font&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;810\&quot; y=\&quot;124\&quot; width=\&quot;110\&quot; height=\&quot;108\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;fknyoAEU52s9SkgYHo2v-5\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Customer Cloud Infrastructure is updated with ACP components&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;300\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-61\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Values for Customer env variables are created based on Customer&amp;#39;s Cloud ACP components&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;align=center;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;410\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-60\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Register Customer SCOS with ACP&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;600\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-59\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;540\&quot; y=\&quot;282\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;560\&quot; y=\&quot;292\&quot; as=\&quot;targetPoint\&quot; /&gt;\n            &lt;Array as=\&quot;points\&quot;&gt;\n              &lt;mxPoint x=\&quot;575\&quot; y=\&quot;296\&quot; /&gt;\n            &lt;/Array&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n&lt;/mxfile&gt;\n&quot;}"></div>
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 
 {% info_block warningBox "Info" %}
@@ -184,8 +184,6 @@ use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TransactionIdMe
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\ValidationMiddlewarePlugin;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
 use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Receiver\AwsSqsMessageReceiverPlugin;
-use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\AwsSnsMessageSenderPlugin;
-use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\AwsSqsMessageSenderPlugin;
 use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\HttpMessageSenderPlugin;
 use Spryker\Zed\OauthClient\Communication\Plugin\MessageBroker\AccessTokenMessageAttributeProviderPlugin;
 use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
@@ -200,8 +198,6 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageSenderPlugins(): array
     {
         return [
-            new AwsSnsMessageSenderPlugin(),
-            new AwsSqsMessageSenderPlugin(),
             new HttpMessageSenderPlugin(),
         ];
     }
@@ -309,7 +305,6 @@ namespace Pyz\Zed\OauthClient;
 
 use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\Auth0OauthAccessTokenProviderPlugin;
 use Spryker\Zed\OauthClient\OauthClientDependencyProvider as SprykerOauthClientDependencyProvider;
-use Spryker\Zed\OauthDummy\Communication\Plugin\OauthClient\DummyOauthAccessTokenProviderPlugin;
 use Spryker\Zed\Store\Communication\Plugin\OauthClient\CurrentStoreReferenceAccessTokenRequestExpanderPlugin;
 
 class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
@@ -320,7 +315,6 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
     protected function getOauthAccessTokenProviderPlugins(): array
     {
         return [
-            new DummyOauthAccessTokenProviderPlugin(),
             new Auth0OauthAccessTokenProviderPlugin(),
         ];
     }
@@ -346,7 +340,7 @@ You need to define the environment variables in the `deploy.yml` file of *each* 
 
 {% info_block warningBox "Warning" %}
 
-It is crucial to specify the keys for the environment variables. The infrastructure values (FIFO queue names) are provided by Spryker OPS upon request.
+It is crucial to specify the keys for the environment variables. The infrastructure values, such as `SPRYKER_AOP_INFRASTRUCTURE` and `STORE_NAME_REFERENCE_MAP` are provided by Spryker OPS upon request.
 
 {% endinfo_block %}
 
@@ -354,10 +348,10 @@ It is crucial to specify the keys for the environment variables. The infrastruct
 <summary>General structure</summary>
 
 ```json
-ENVIRONMENT_VARIABLE_NAME_A:{
+ENVIRONMENT_VARIABLE_NAME_A: '{
   "CONFIGURATION_KEY_A":"SOME_VALUE_A",
   "CONFIGURATION_KEY_B":"SOME_VALUE_B"
-}
+}'
 ```
 </details>
 
@@ -399,75 +393,59 @@ SPRYKER_AOP_INFRASTRUCTURE: '{
 
 #### General configurations: SPRYKER_AOP_APPLICATION variable
 
-<div class="width-100">
+The configuration key `APP_CATALOG_SCRIPT_URL`is the URL for the App-Tenant-Registry-Service (ATRS) and path to the JS script to load the ACP catalog.
 
-<table class="tg">
-<thead>
-  <tr>
-    <th>Configuration key</th>
-    <th>Description</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>APP_CATALOG_SCRIPT_URL</td>
-    <td>URL for the App-Tenant-Registry-Service (ATRS) and path to the JS script to load the ACP catalog.</td>
-    <td>Production ATRS_HOST and path:
-    <pre>
-    json
-    https://app-catalog.atrs.spryker.com/loader
-    </pre>
-    </td>
-  </tr>
-  <tr>
-    <td>STORE_NAME_REFERENCE_MAP</td>
-    <td>StoreReference mapping to the appropriate Spryker store.</td>
-    <td>Demo Stores for DE and AT: 
-    <pre>
-    json 
-    {"DE": "tenant_messages_for_store_reference_AOP_Demo_Production-DE", "AT": "tenant_messages_for_store_reference_AOP_Demo_Production-AT"}
-    </pre></td>
-  </tr>
-  <tr>
-    <td>APP_DOMAINS</td>
-    <td>App domains used in redirects.</td>
-    <td><pre>json
-    [
-      "os.apps.aop.spryker.com",
-      "*.bazaarvoice.com"
-    ]</pre>
-</td>
-  </tr>
-</tbody>
-</table>
+Example of the production ATRS_HOST and path:
 
-</div>
+```json
+https://app-catalog.atrs.spryker.com/loader
+```
 
-#### Message Broker configuration: SPRYKER_AOP_INFRASTRUCTURE variable
+The configuration key: `STORE_NAME_REFERENCE_MAP` is the StoreReference mapping to the appropriate Spryker store.
 
-<div class="width-100">
+{% info_block infoBox "Spryker OPS" %}
 
-<table class="tg">
-<thead>
-  <tr>
-    <th>Configuration key</th>
-    <th>Description</th>
-    <th>Example</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG</td>
-    <td>Receiver configuration. The queues must be defined for each store, or a default queue for all stores is to be defined.
-{% info_block warningBox "Warning" %}
-
-Queues are be created by Spryker OPS and values are provided by them for you to add.
+The StoreReference mapping is created by Spryker OPS, and they provide you with the corresponding values to be added to your deploy.yml file.
 
 {% endinfo_block %}
-</td>
-    <td>Example from the Spryker Production environment:
-    <pre>json
+
+
+Example of demo stores for DE and AT:
+
+```json
+{"DE": "tenant_messages_for_store_reference_AOP_Demo_Production-DE", "AT": "tenant_messages_for_store_reference_AOP_Demo_Production-AT"}
+```
+
+The configuration key `APP_DOMAINS` designates the app domains used in redirects.
+
+{% info_block infoBox "Spryker OPS" %}
+
+The app domains are provided by Spryker OPS.
+
+{% endinfo_block %}
+
+
+Example of the app domain values:
+
+```json
+[
+  "os.apps.aop.spryker.com",
+  "*.bazaarvoice.com"
+]
+```
+#### Message Broker configuration: SPRYKER_AOP_INFRASTRUCTURE variable
+
+The configuration key `SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG` is for the receiver configuration. The queues must be defined for each store, or a default queue for all stores is to be defined.
+
+{% info_block infoBox "Spryker OPS" %}
+
+The queues are created by Spryker OPS, and they provide you with the corresponding values to be added to your deploy.yml file.
+
+{% endinfo_block %}
+
+Example of the receiver configuration for the Spryker production environment:
+
+```json
 {
   "default": {
     "endpoint":"https://sqs.eu-central-1.amazonaws.com",
@@ -476,28 +454,19 @@ Queues are be created by Spryker OPS and values are provided by them for you to 
   "DE": {
     "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo"
   },
-  &quot;&lt;Store&gt;&quot;: {
-    "queue_name":"queue_name_for_store_reference_&quot;&lt;Store&gt;&quot;"
+  "<Store Reference>": {
+    "queue_name":"queue_name_for_store_reference_<Store>"
   }
 }
-</pre>
-  </td>
-</tr>
-  <tr>
-    <td>SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG</td>
-    <td>StoreReference mapping to the appropriate Spryker store.</td>
-    <td>Example from the Spryker Production environment:
-    <pre>json
-    {
-    "endpoint":"https://events.atrs.spryker.com/events/tenant"
-    }
-    </pre>
-    </td>
-  </tr>
-</tbody>
-</table>
+```
 
-</div>
+Example of the `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG` configuration key value:
+
+```json
+{
+    "endpoint":"https://events.atrs.spryker.com/events/tenant"
+}
+```
 
 ## Next steps after the ACP-readiness
 

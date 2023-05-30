@@ -17,7 +17,7 @@ This file does not exist by default on the project level.  It can be created in 
 
 {% endinfo_block %}
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 <div>
@@ -32,7 +32,7 @@ These are the header fields to be included in the .csv file:
 
 This file has no dependencies.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *mime_type.csv*  file can be downloaded here:
 
 | File | Description |

@@ -7,7 +7,7 @@ redirect_from:
 
 ---
 
-This section contains a collection of articles describing how data manipulation works in the Spryker SCOS:
+This section contains a collection of documents describing how data manipulation works in the Spryker SCOS:
 * [Run and revert a database migration](/docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html)
 * [Data publishing](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 * [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)

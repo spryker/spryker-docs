@@ -3790,10 +3790,10 @@ entries:
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
     - title: Oryx
+      include_versions:
+      - "202212.0"
       url: /docs/scos/dev/front-end-development/oryx/oryx.html
       nested:
-        - title: Supported browsers
-          url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
         - title: Set up
           url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
         - title: Boilerplate
@@ -3808,6 +3808,8 @@ entries:
           url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
         - title: Presets
           url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
+        - title: Supported browsers
+          url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
         - title: Dependency injection
           url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection.html
           nested:
@@ -3820,7 +3822,28 @@ entries:
             - title: Providing services
               url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-providing-services.html
             - title: Advanced strategies
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-advanced-strategies.html                                                        
+              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-advanced-strategies.html
+        - title: Application orchestration
+          url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-orchestration.html
+          nested:
+            - title: Application
+              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application.html
+            - title: Application environment
+              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-environment.html
+            - title: Application feature
+              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-feature.html
+            - title: Application plugins
+              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-plugins.html
+        - title: Reactivity
+          url: /docs/scos/dev/front-end-development/oryx/reactivity/reactivity.html
+          nested:
+            - title: Key concepts
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/key-concepts-of-reactivity.html
+            - title: Reactive components
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
+            - title: Integration of backend APIs
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
+
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8

@@ -1,5 +1,5 @@
 ---
-title: Oryx versioning
+title: "Oryx: Versioning"
 description: Oryx framework uses semantic versioning to ensure stability
 template: concept-topic-template
 last_updated: Mar 3, 2023
@@ -57,9 +57,11 @@ Specific package names and versions may vary depending on your project and its d
 
 A major upgrade may require significant code changes that may be incompatible with previous versions of Oryx. To perform a major upgrade of the Oryx framework, refer to a respective migration or upgrade guide provided in the documentation.
 
+<!--
+
 ## Public API
 
-Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API<!--](//TODO: add link)-->.
+Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](//TODO: add link)-->.
 
 ## Backward compatibility
 

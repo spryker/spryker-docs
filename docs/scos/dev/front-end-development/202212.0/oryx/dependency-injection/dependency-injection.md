@@ -13,4 +13,4 @@ The key advantage of using Oryx's DI implementation is that it is vanilla JavaSc
 
 ## Next step
 
-[Oryx service layer](./oryx-service-layer.md)
+[Oryx service layer](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/oryx-service-layer.html)

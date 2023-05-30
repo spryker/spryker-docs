@@ -5,7 +5,8 @@ description: This document shows the configuration process of the configurable p
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
-
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
 ---
 
 The configuration process of a configurable product consists of eight phases illustrated in the following flow chart:

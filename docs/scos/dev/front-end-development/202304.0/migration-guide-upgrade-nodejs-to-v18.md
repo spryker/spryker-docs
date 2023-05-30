@@ -144,7 +144,7 @@ To update the versions, use official documentation:
 
 ## 3) Update GitHub Actions
 
-In case using GitHub Actions on the project need to update `.github/workflows/ci.yml` file.
+If you are using GitHub Actions on the project, update the `.github/workflows/ci.yml` file:
 
 1. Update Node.js version:
 

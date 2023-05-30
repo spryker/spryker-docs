@@ -1,11 +1,11 @@
 ---
-title: Feature sets
+title: "Oryx: Feature sets"
 description: Feature sets are collections of standard features
 last_updated: May 24, 2023
 template: concept-topic-template
 ---
 
-A *feature set* is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](./boilerplate.md) required to configure and initialize the application.
+A *feature set* is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html) required to configure and initialize the application.
 
 There are two types of feature sets: domain and application feature sets.
 
@@ -21,7 +21,7 @@ Application feature sets can be seen as _demo apps_, because one such set lets y
 
 ### Available application feature sets
 
-Oryx includes predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](./presets.md). The following feature sets are available:
+Oryx includes predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html). The following feature sets are available:
 
 - b2cFeatures: features commonly used in B2C applications.
 - fulfillmentFeatures: features used in PWAs, used for picking products for fulfillment.
@@ -36,7 +36,7 @@ In addition to the provided feature sets, you can create custom sets tailored to
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
-import { customFeature1, customFeature2 } from "./my-features";
+import { customFeature1, customFeature2 } from "/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-features";
 
 const customFeatures = [customFeature1, customFeature2];
 

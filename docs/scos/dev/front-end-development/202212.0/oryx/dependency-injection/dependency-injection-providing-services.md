@@ -38,4 +38,4 @@ In this example, the customized cart service is provided by specifying the provi
 
 ## Next steps
 
-[Advanced dependency injection strategies](/_drafts/oryx/dependency-injection/advanced-dependency-injection-strategies.html)
+[Advanced strategies](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-advanced-strategies.html)

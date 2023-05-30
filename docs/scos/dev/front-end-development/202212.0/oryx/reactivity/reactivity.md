@@ -5,8 +5,6 @@ template: concept-topic-template
 last_updated: Apr 3, 2023
 ---
 
-# Reactivity
-
 Reactivity is a fundamental concept in modern web development that enables dynamic, real-time updates to the user interface. In interactive applications, and single-page application (SPA) in particular, reactivity ensures that the displayed data is constantly in sync with the underlying data model, even as that data is loaded asynchronously and in real time from a backend API.
 
 In a reactive frontend, data is treated as _streams_ that continue to emit new values in an asynchronous manner. This allows for a highly responsive and engaging user experience, as updates to the data are immediately reflected in the user interface. Examples of reactive behavior include searching for products, adding products to cart, and navigating the application.
@@ -19,29 +17,7 @@ Implementing reactivity in a web application is a complex challenge, especially 
 
 The following is a high-level overview of the reactivity patterns available in Oryx. In the diagram, it is shown using a product component.
 
-```mermaid
-sequenceDiagram
-autonumber
-
-ProductComponent-->AsyncStateController: @asyncState() product
-
-note right of AsyncStateController: Observes updates of product
-AsyncStateController-->AsyncStateController: observe
-activate AsyncStateController
-ProductComponent->>ProductService: get()
-activate ProductService
-ProductService-->>API: Requests/response data
-ProductService-->>ProductComponent: returns data
-deactivate ProductService
-AsyncStateController->>AsyncStateController: indicates update
-activate AsyncStateController
-AsyncStateController-->>ProductComponent: requestUpdate()
-activate ProductComponent
-deactivate AsyncStateController
-ProductComponent-->ProductComponent:update view
-deactivate ProductComponent
-deactivate AsyncStateController
-```
+{% include diagrams/oryx/reactivity-high-level.svg %}
 
 {% info_block infoBox "Note" %}
 
@@ -62,4 +38,4 @@ The following steps are identified in the diagram:
 
 ## Next steps
 
-[Key concepts of reactivity](./key-concepts-of-reactivity.md)
+[Key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/key-concepts-of-reactivity.html)

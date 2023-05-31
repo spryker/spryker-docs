@@ -15,7 +15,7 @@ related:
 
 This article contains content of the **product_label_store.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -30,7 +30,7 @@ These are the header fields to be included in the .csv file:
 This file has the following dependency:
 *    [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_label_store.csv*  file can be downloaded here:
 
 | File | Description |

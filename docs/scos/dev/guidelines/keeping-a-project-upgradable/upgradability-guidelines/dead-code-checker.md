@@ -1,5 +1,5 @@
 ---
-title: A dead code checker
+title: Dead code checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---

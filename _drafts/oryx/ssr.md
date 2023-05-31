@@ -65,7 +65,7 @@ Caching and CDNs are additional layers that can significantly enhance the perfor
 **Content Delivery Networks (CDNs)**: CDNs distribute cached content across a network of servers located worldwide. This ensures that users receive content from the nearest server, which significantly improves delivery speed and reduces latency.
 
 In the context of serverless platforms like Netlify, you can leverage Netlify's on-demand builder.
-It works as a simple wrapper to SSR Lambda handler and automatically feed Netlify Edge CDN by building and caching a page when it's requested, thereby reducing the load on the serverless function and improving performance.
+It works as a simple wrapper to Oryx SSR Lambda handler and automatically feed Netlify Edge CDN by building and caching a page when it's requested, thereby reducing the load on the serverless function and improving performance.
 
 ```mermaid
 sequenceDiagram

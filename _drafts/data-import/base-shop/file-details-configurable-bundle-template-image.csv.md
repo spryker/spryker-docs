@@ -12,10 +12,10 @@ This document describes the `configurable_bundle_template_image.csv` file to con
 
 ## Import file parameters
 
-| PARAMETER                                | REQUIRED | TYPE | DEFAULT VALUE | DESCRIPTION                                          |
-| ---------------------------------------- | -------- | ---- | ------------- | ---------------------------------------------------- |
-| configurable_bundle_template_key | &check; | string |  | Internal data import identifier for the configurable bundle template. |
-| product_image_set_key            | &check; | string |  | Internal data import identifier for the product image set. |
+| PARAMETER                                | REQUIRED | TYPE | DESCRIPTION                                          |
+| ---------------------------------------- | -------- | ---- | ---------------------------------------------------- |
+| configurable_bundle_template_key | &check; | string | Internal data import identifier for the configurable bundle template. |
+| product_image_set_key            | &check; | string | Internal data import identifier for the product image set. |
 
 ## Import file template and content example
 

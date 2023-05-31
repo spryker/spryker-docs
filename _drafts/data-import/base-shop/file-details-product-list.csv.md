@@ -4,7 +4,7 @@ template: data-import-template
 last_updated: 
 ---
 
-This document describes the `product_list.csv` file to configure information about [product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) lists in your Spryker shop.
+This document describes the `product_list.csv` file to configure information about [product lists](https://docs.spryker.com/docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/product-lists-feature-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 
@@ -13,7 +13,7 @@ This document describes the `product_list.csv` file to configure information abo
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | product_list_key | &check; | string (unique) | Unique identifier used to identify a product list. |
 |name|&check;|string|Custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
 |type|&check;|string ("blacklist"/"whitelist")|Defines whether the list is a blacklist or a whitelist.|

@@ -1,3 +1,6 @@
+
+
+
 This document describes how to integrate the [Shipment](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html) + Service Points feature into a Spryker project.
 
 ## Install feature core

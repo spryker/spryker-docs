@@ -1285,18 +1285,18 @@ entries:
                     nested:
                       - title: Marketplace Merchant Portal Product Offer Management - Merchant Portal
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
+                      - title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management - Merchant Portal
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-merchant-portal-feature.html
+                      - title: Marketplace Product Offer + Cart feature
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html
+                      - title: Marketplace Product Offer + Checkout
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-checkout-feature.html
                       - title: Marketplace Product Offer
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
-                      - title: Marketplace Product Offer
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
-                      - title: Marketplace Product Offer
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
-                      - title: Marketplace Product Offer
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
-                      - title: Marketplace Product Offer
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
-                      - title: Marketplace Product Offer
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer + Marketplace Product
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-marketplace-product-feature.html
+                      - title: Marketplace Product Offer + Quick Add to Cart
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html
               - title: Marketplace Product Offer feature overview
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
               - title: Marketplace Product Offer feature overview

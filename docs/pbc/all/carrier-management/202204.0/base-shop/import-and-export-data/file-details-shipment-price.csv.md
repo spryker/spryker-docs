@@ -31,7 +31,7 @@ data:import:shipment-price
 | --- | --- | --- | --- | --- |
 | shipment_method_key | &check; | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | store | &check; | String | Value previously defined in the *stores.php* project configuration. | Name of the store. |
-| currency | &check; | String | Value previously imported already by its data importer using the [currency.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-currency.csv.html) file. | Currency ISO code. |
+| currency | &check; | String | Value previously imported already by its data importer using the [currency.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-currency.csv.html) file. | Currency ISO code. |
 | value_net | No |Integer | Empty price values will be imported as zeros. | Net value of the shipment cost. |
 | value_gross | No | String | Empty price values will be imported as zeros. | Gross value of the shipment cost.  |
 
@@ -40,7 +40,7 @@ data:import:shipment-price
 
 
 * [shipment.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html)
-* [currency.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-currency.csv.html)
+* [currency.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-currency.csv.html)
 * *stores.ph*p configuration file of the demo shop PHP project
 
 ## Additional information

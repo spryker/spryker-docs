@@ -52,6 +52,7 @@ commonOptions = {
     /www.collect.ai\/[\.\w\-\/\?]+/,
     /twitter.com\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/,
+    /blackfire.io\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

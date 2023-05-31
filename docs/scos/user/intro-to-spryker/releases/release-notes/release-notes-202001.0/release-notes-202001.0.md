@@ -157,7 +157,7 @@ Ratings and reviews are critical for the customer’s purchase decision. Shop ow
 With this API, you will be able to display a product with its different options each of them with its own price, product option group, and tax set, to display the item in the cart or guest cart with the selected option and to make use of those through the checkout process.
 
 #### Documentation
-[Product Options API](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
+[Product Options API](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
 
 ### Improved Navigation URLs
 

@@ -1,15 +1,8 @@
 ---
-title: Scalable application infrastructure for publish and sync workers
-description: Learn how to use scalable application infrastructure.
-last_updated: May 16, 2022
+title: FAQ: Migration to OpenSearch
+description: Answers to frequently asked questions about the migration to OpenSearch
+last_updated: Jun 3, 2023
 template: concept-topic-template
-related:
-  - title: New Relic transactions grouping by queue names
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
-  - title: RAM-aware batch processing
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
-  - title: Storage caching for primary-replica database setups
-    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 ---
 
 
@@ -105,7 +98,7 @@ The migration from Elasticsearch to OpenSearch should not affect your current co
 
 While rolling back is generally not recommended, if you experience any significant issues after the migration, a rollback to Elasticsearch 7 is still possible. However, the rollback may require downtime and data migration. The Spryker Cloud Operations team is equipped to facilitate this process. However, long-term support, including security patches and updates, will be provided for OpenSearch, so a rollback should be a temporary solution. After the compatibility issues are fixed, to ensure the project's security and long-term support, it should be migrated to OpenSearch.
 
-## Is there any change in the way I interact with the platform after the upgrade? 
+## Is there any change in the way I interact with the platform after the upgrade?
 
 No, there is no change in the way you interact with the platform after the upgrade. OpenSearch maintains compatibility with the Elasticsearch APIs, so the operations, requests, and procedures you were accustomed to using with Elasticsearch will continue functioning as before.
 
@@ -117,16 +110,23 @@ The migration should not impact your data ingestion and query processes. OpenSea
 
 No, there are no security implications with the migration. OpenSearch includes improved security features, such as granular access control, audit logging, and integration with identity providers, which further enhance the security of your deployments. However, we recommend reviewing the security settings and ensuring they align with your organization's security policies.
 
-Will OpenSearch support the same languages and frameworks that Elasticsearch does? Yes, OpenSearch supports the same languages and frameworks as Elasticsearch. This includes all the official clients Elasticsearch supported, such as those for Java, JavaScript, Python, Ruby, Go, .NET, and PHP. You should be able to continue using the same languages and frameworks with OpenSearch that you used with Elasticsearch.
+## Does OpenSearch support the languages and frameworks that Elasticsearch does?
 
-Will Spryker Cloud support Elasticsearch 8+ anytime? As Spryker Cloud is built on AWS and heavily relies on their Amazon OpenSearch Service, we align our strategies to their developments and service offerings. Currently, Amazon OpenSearch Service does not support Elasticsearch 8+, and as a result, Spryker Cloud will not be providing out-of-the-box support for Elasticsearch 8+ in the near future. This decision is based on our commitment to ensuring the best possible stability, security, and compatibility for our users within the supported AWS ecosystem. We will continue to closely monitor developments in this area and adjust our strategies as needed to best serve the needs of our Community.
+Yes, OpenSearch supports the languages and frameworks as Elasticsearch. This includes all the official clients Elasticsearch supports, such as those for Java, JavaScript, Python, Ruby, Go, .NET, and PHP. You should be able to continue using the same languages and frameworks with OpenSearch.
 
-If I'm currently utilizing Elasticsearch 8+ in an on-premises setup, what steps should I take to ensure compatibility when transitioning to Spryker Cloud/PaaS?
-To ensure compatibility with Spryker Cloud, you must first migrate your application from Elasticsearch 8+ to OpenSearch 1. This process will ensure your platform aligns with the technologies supported by Spryker Cloud and allows you to take full advantage of its features and capabilities.
+## Will SCCOS support Elasticsearch 8+ anytime?
 
-However, Spryker also values extensibility and flexibility in our solutions. We understand that sophisticated business models have unique needs, and we are always open to exploring new patterns that allow our customers to leverage and extend Spryker Cloud with their own cloud solutions in a multi-cloud setup.
+ As SCCOS is built on AWS and heavily relies on Amazon OpenSearch Service, we align our strategies to their developments and service offerings. Currently, Amazon OpenSearch Service does not support Elasticsearch 8+. As a result, SCCOS does not support Elasticsearch 8+ by default. This decision is based on our commitment to ensuring the best possible stability, security, and compatibility for our users within the supported AWS ecosystem. We continue to closely monitor developments in this area and adjust our strategies as needed to best serve the needs of our community.
 
-Therefore, if you have ideas or requirements related to Elasticsearch 8+ or any other technology, we encourage you to contact us. At the end of the day, our primary goal is to ensure that Spryker Cloud is a robust and reliable platform and a customizable solution that can adapt to the changing needs of our customers.
+## My on-premises project is running Elasticsearch 8+, what steps should I take to ensure compatibility when migrating to SCCOS?
+
+To ensure compatibility with SCCOS, you need to migrate the project from Elasticsearch 8+ to OpenSearch 1.
+
+However, we understand that sophisticated business models have unique needs, and we are always open to exploring new patterns that enable our customers to leverage and extend SCCOS with their own solutions in a multi-cloud setup.
+
+Therefore, if you have ideas or requirements related to Elasticsearch 8+ or any other technology, we encourage you to contact us. Our primary goal is to ensure that SCCOS is a robust and reliable platform and a customizable solution that can adapt to the changing needs of our customers.
 
 
-When can we expect the transition to OpenSearch 2 within the Spryker ecosystem? Given that OpenSearch 2 is already available, we know it brings several updates compared to its predecessor, OpenSearch 1. At Spryker, we meticulously analyze these changes to understand their implications fully. We aim to develop a comprehensive migration strategy that ensures our customers experience no disruption in their services during the transition. Once we have devised a robust and tested transition plan, we will disseminate thorough guidelines to enable a seamless migration to OpenSearch 2. We appreciate your patience during this process and assure you that we will communicate updates as soon as they are available. Stay tuned for this announcement from us.
+## When can we expect the upgrade to OpenSearch 2 within the Spryker ecosystem?
+
+OpenSearch 2 is already available and we know that it brings several updates compared to its predecessor, OpenSearch 1. We are analyzing these changes to understand their implications. We aim to develop a comprehensive upgrade strategy that ensures our customers experience no disruption in their services during the upgrade. Once we have a robust and tested upgrade plan, we will provide detailed guidance on how to do it.

@@ -1,5 +1,5 @@
 ---
-title: Rendering merchant product offers on the Storefront
+title: Render merchant product offers on the Storefront
 last_updated: Nov 05, 2021
 description: Learn how to render the Merchant Product Offers on the Storefront.
 template: howto-guide-template

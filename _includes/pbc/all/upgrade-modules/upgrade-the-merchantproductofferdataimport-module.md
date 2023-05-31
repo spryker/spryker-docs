@@ -1,8 +1,3 @@
----
-title: "Migration guide: MerchantProductOfferDataImport"
-description: Use the guide to update versions to the newer ones of the MerchantProductOfferDataImport module.
-template: module-migration-guide-template
----
 
 ## Upgrading from version 0.* to version 1.0.0
 

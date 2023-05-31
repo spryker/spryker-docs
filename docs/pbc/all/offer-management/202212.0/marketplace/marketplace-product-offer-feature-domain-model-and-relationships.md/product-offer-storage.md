@@ -1,5 +1,5 @@
 ---
-title: Product Offer storage
+title: "Product Offer storage: Domain model and relationships"
 description: This document provides reference information about Marketplace Product Offer storage.
 template: concept-topic-template
 ---

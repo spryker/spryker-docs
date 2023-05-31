@@ -1,5 +1,5 @@
 ---
-title: Marketplace Product Offer feature walkthrough
+title: "Marketplace Product Offer feature: Domain model and relationships"
 last_updated: Apr 23, 2021
 description: Product Offer is created when a merchant wants to sell products already available on the Marketplace.
 template: feature-walkthrough-template
@@ -14,12 +14,6 @@ The product offer re-uses and extends concrete product features. All product-rel
 All offer-related data is stored in a separate entity and linked to a concrete product.
 
 The Marketplace Product Offer feature contains both merchant product offer and product offer concepts. Merchant product offer extends product offer by adding a pointer to a merchant.
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [Marketplace Product Offer feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) for business users.
-
-{% endinfo_block %}
 
 ## Module dependency graph
 
@@ -62,17 +56,3 @@ The following table lists the main modules of the Marketplace Product Offer feat
 The following schema illustrates the domain model of the Marketplace Product Offer feature:
 
 ![Domain model](https://confluence-connect.gliffy.net/embed/image/681c5f0c-4a17-4255-9033-7777a6127ce0.png?utm_medium=live&utm_source=custom)
-
-## Related Developer documents
-
-|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | HOW-TO GUIDES |REFERENCES          |
-|---------|---------|---------|---------|---------|
-|[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)     | [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)        | [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html)        |[Rendering merchant product offers on the Storefront](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html)         | [Product offer in the Back Office](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html)          |
-|[Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)     | [Retrieving product offers for a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html)        |[File details: merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)         |         | [Product offer storage](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-storage.html)          |
-|[Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)     |         | [File details: product_offer_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-data/file-details-product-offer-stock.csv.html)        |         |[Product Offer store relation](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-store-relation.html)           |
-|[Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) | | [File details: product_offer_validity.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-validity.csv.html) | | |
-|[Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) | | [File details: merchant_product_offer_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html) | |[Product Offer validity dates](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html) |
-|[Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)      |         |  |         |           |
-|[Glue API: Marketplace Product Offer integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)     |         |         |         |           |
-|[Glue API: Marketplace Product Offer + Wishlist integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-wishlist-feature-integration.html)     |         |         |         |           |
-|[Glue API: Marketplace Product Offer + Cart integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-cart-feature-integration.html)     |         |         |         |           |

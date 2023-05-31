@@ -1,5 +1,5 @@
 ---
-title: Product Offer in the Back Office
+title: "Product Offer in the Back Office: Domain model and relationships"
 description: This document provides reference information about product offers in the Back Office.
 template: concept-topic-template
 ---

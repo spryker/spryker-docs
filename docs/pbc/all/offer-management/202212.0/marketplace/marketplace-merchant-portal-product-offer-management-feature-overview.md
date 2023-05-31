@@ -35,8 +35,8 @@ Merchants define the following settings when creating product offers:
 |---------|---------|
 | [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html)|
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer documents
 
-Are you a developer? See [Marketplace Merchant Portal Product Offer Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES|
+| -------------- |
+| [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |

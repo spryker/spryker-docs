@@ -1268,6 +1268,51 @@ entries:
                 url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/url-redirects-overview.html
               - title: Vault for Tokens overview
                 url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/vault-for-tokens-overview.html
+      - title: Offer Management
+        url: /docs/pbc/all/offer-management/offer-management.html
+        include_versions:
+        - "202212.0"
+        nested:
+          - title: Marketplace
+            nested:
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Merchant Portal Product Offer Management feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Merchant Portal Product Offer Management - Merchant Portal
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:

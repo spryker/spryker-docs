@@ -1,8 +1,4 @@
----
-title: "Migration guide: ProductMerchantPortalGui"
-description: Use the guide to update versions to the newer ones of the ProductMerchantPortalGui module.
-template: module-migration-guide-template
----
+
 
 ## Upgrading from version 1.* to version 2.0.0
 

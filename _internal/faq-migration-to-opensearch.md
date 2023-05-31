@@ -1,42 +1,43 @@
 ---
-title: FAQ: Migration to OpenSearch
+title: "FAQ: Migration to OpenSearch"
 description: Answers to frequently asked questions about the migration to OpenSearch
 last_updated: Jun 3, 2023
 template: concept-topic-template
 ---
 
+This document provides answers to the frequently asked questions about the migration to OpenSearch.
 
 ## What is OpenSearch, and how is it different from Elasticsearch?
 
-[OpenSearch](https://opensearch.org/) is an open-source search and analytics suite derived from Elasticsearch 7.10.2.  It's essentially the same codebase until the fork event: after the fork, the projects started to diverge slightly. It includes the OpenSearch search engine and OpenSearch Dashboards, which is based on Kibana. OpenSearch maintains compatibility with Elasticsearch 7.10.2 while introducing additional enhancements and features. It is fully open source and developed in a community-driven manner.
+[OpenSearch](https://opensearch.org/) is an open-source search and analytics suite derived from Elasticsearch 7.10.2.  It had been the same before it was forked. After the fork, the projects started to diverge slightly. OpenSearch consists of the OpenSearch search engine and OpenSearch Dashboards, which are based on Kibana. OpenSearch maintains compatibility with Elasticsearch 7.10.2 while introducing additional enhancements and features. It is fully open source and developed in a community-driven manner.
 
 ## What is Amazon OpenSearch Service?
 
-On April 12, 2021, AWS announced its commitment to making a long-term investment in OpenSearch to ensure users continue to have a secure, high-quality, fully open-source search and analytics suite with a rich roadmap of new and innovative functionality. AWS changed the name from Amazon Elasticsearch Service to Amazon OpenSearch Service. Along with OpenSearch, Amazon continues to support legacy Elasticsearch versions until 7.10. Aside from the name change, Amazon OpenSearch Service delivers the same great experience without any impact on ongoing operations, development methodology, or business use.
+Amazon OpenSearch Service is a managed search solution that is based on OpenSearch. As part of the service, AWS provides the OpenSearch suite and continues to support legacy Elasticsearch versions until 7.10.
 
-## How is OpenSearch different the Amazon OpenSearch Service?
+## How is OpenSearch different from the Amazon OpenSearch Service?
 
-OpenSearch refers to the community-driven open-source search and analytics technology that offers added enhancements and features. On the other hand, Amazon OpenSearch Service is a managed service provided by AWS that lets users deploy, secure, and run OpenSearch and Elasticsearch at scale without the need to manage the underlying infrastructure. It offers the benefits of a fully managed service, including simplified deployment and management, while leveraging the power and capabilities of OpenSearch and Elasticsearch.
+OpenSearch refers to the community-driven open-source search and analytics technology. On the other hand, Amazon OpenSearch Service is a managed service provided by AWS that lets users deploy, secure, and run OpenSearch and Elasticsearch at scale without the need to manage the underlying infrastructure. It offers the benefits of a fully managed service, including simplified deployment and management, while leveraging the power and capabilities of OpenSearch and Elasticsearch.
 
 ## How does Spryker Cloud Commerce OS leverage Amazon OpenSearch service?
 
-As a recognized AWS Partner, Spryker Cloud Commerce OS(SCCOS) relies on AWS-managed services, including Amazon OpenSearch Service, to securely unlock real-time search, monitoring, and analysis of business and operational data for use cases like application monitoring, log analytics, observability, and website search.
+As a recognized AWS Partner, Spryker Cloud Commerce OS(SCCOS) relies on AWS-managed services. SCCOS leverages Amazon OpenSearch Service to securely unlock real-time search, monitoring, and analysis of business and operational data for use cases like application monitoring, log analytics, observability, and website search.
 
-## Does it mean that all SCCCOS projects are already using Amazon OpenSearch Service?
+## Does it mean that all SCCOS projects are already using Amazon OpenSearch Service?
 
 Yes, all SCCOS projects are already running on Amazon OpenSearch Service, regardless of the engine version of Elasticsearch or OpenSearch you are currently using.
 
-## Can I migrate to OpenSearch if I am running Spryker Commerce OS on premises?
+## Can my project migrate to OpenSearch if I it's running Spryker Commerce OS on premises?
 
 Yes, you can enable OpenSearch until version 1.2 on premises, because OpenSearch is an open-source project that can be deployed and run on your own infrastructure.
 
 ## If my SCCOS project is running Elasticsearch, do I need to prepare for the migration from Elasticsearch to OpenSearch?
 
-If you are running Elasticsearch version 6.8 or above, no action is required on your part. We will handle the migration from Elasticsearch to OpenSearch. For the projects running lower versions of Elasticsearch, we recommend upgrading to Elasticsearch 6.8 before migrating. If you need technical guidance for updating Elasticsearch, [contact our Support team](https://spryker.my.site.com/support/s/).
+If you are running Elasticsearch version 6.8 or above, no action is required on your part. We will handle the migration from Elasticsearch to OpenSearch. For the projects running lower versions of Elasticsearch, before migrating, we recommend updating Elasticsearch to version 6.8. If you need technical guidance for updating Elasticsearch, [contact our Support team](https://spryker.my.site.com/support/s/).
 
 ## How long does it take to migrate from Elasticsearch to OpenSearch?
 
-We can do the migration during the upgrade maintenance window or on demand. We follow AWS's blue-green deployment strategy, ensuring a seamless switch between versions without downtime or data loss. The migration process takes a short time, usually within the maintenance window.
+The migration takes a short time, usually within the maintenance window. We can migrate your project during the maintenance window or on demand.
 
 ## Will there any data loss during the migration to OpenSearch?
 

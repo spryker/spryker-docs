@@ -5018,7 +5018,7 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
-        - title: Security
+        - title: Security checker
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html

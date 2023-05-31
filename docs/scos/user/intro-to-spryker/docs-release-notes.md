@@ -4,6 +4,43 @@ description: Spryker docs release notes
 template: concept-topic-template
 ---
 
+## May 2023
+
+In May 2023, we have added and updated the following pages:
+
+### New pages
+
+- [Docs release notes](/docs/scos/user/intro-to-spryker/docs-release-notes.html)
+- Multistore documentation:
+    - [Multistore setup options](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html): Learn about all the setup options you have for a multistore environment.
+    - [Checklist for a new store implementation](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.
+- [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html): Learn how to install the App Orchestration Platform.
+- [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html): Learn how to write the evaluator tool.
+- [Upgardability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html):
+    - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
+    - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
+    - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+    - [Multidimensional array](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+    - [PHP version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
+    - [Plugin registration with restrictions](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
+    - [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+    - [Single plugin argument](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html)
+- [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html)
+- [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
+- [Change default branch](/docs/scu/dev/change-default-branch.html): Learn how to change the default branch in Spryker CI
+
+### Updated pages
+
+- [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
+- [App manifest](/docs/acp/user/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
+- [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
+- [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing
+- [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
+- [Environment provisioning](/docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html): Learn how you can submit an environment provisioning request.
+- [Configure Algolia](/docs/pbc/all/search/202212.0/third-party-integrations/configure-algolia.html): Learn how to configure the Algolia app.
+- [Integrate Algolia](/docs/pbc/all/search/202212.0/third-party-integrations/integrate-algolia.html): Learn how to integrate the Algolia app.
+
 ## April 2023
 
 In April 2023, we have added and updated the following pages:

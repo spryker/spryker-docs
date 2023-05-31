@@ -16,7 +16,7 @@ This document describes how to connect a code repository to Spryker Cloud Commer
 
 If you specified a code repository in the Onboarding Questionnaire, we connected it to your Staging environment during the initial setup. To connect a code repository to another environment, follow this document. 
 
-Note that we are only supporting the Cloud variants of the repositories listed below. To connect the On-Premises repository, please check the documentation of your git respository provider on how the repository can be mirrored to one of the providers listed below.
+Note that we are only supporting the Cloud variants of the repositories listed below. To connect the On-Premises repository, check the documentation of your git repository provider about mirroring the repository to one of the following providers.
 
 {% endinfo_block %}
 

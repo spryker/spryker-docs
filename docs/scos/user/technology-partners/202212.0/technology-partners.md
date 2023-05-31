@@ -65,21 +65,12 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 
 * [Dotdigital](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
 * [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
-* [Inxmail](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
 ## Customer Retention & Loyalty
 
 * [Namogoo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
 * [Trustpilot](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
-
-## Personalization & Cross-Selling
-
-<!--* [8Select](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
-* [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
-* [Nosto](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
-* [trbo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
 ## Marketplace Integrations
 

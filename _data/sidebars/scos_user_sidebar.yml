@@ -130,8 +130,6 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
       - title: Understanding Project and Core Level Fixes
         url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
-    - title: Roadmap
-      url: /docs/scos/user/intro-to-spryker/roadmap.html
     - title: FAQ
       url: /docs/scos/user/intro-to-spryker/faq.html
     - title: B2C Suite
@@ -171,9 +169,16 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
-
   - title: Features
     url: /docs/scos/user/features/features.html
+    include_versions:
+    - "201903.0"
+    - "201907.0"
+    - "202001.0"
+    - "202005.0"
+    - "202009.0"
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Agent Assist
       url: /docs/scos/user/features/agent-assist-feature-overview.html
@@ -756,6 +761,8 @@ entries:
       - "202304.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
+      include_versions:
+      - "202204.0"
     - title: Quotation Process
       url: /docs/scos/user/features/quotation-process-feature-overview.html
       include_versions:
@@ -925,7 +932,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Vault for Tokens
         url: /docs/scos/user/features/spryker-core-feature-overview/vault-for-tokens-overview.html
@@ -1081,6 +1087,9 @@ entries:
       - "202108.0"
     - title: Viewing dashboard
       url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: References
         include_versions:
@@ -1152,8 +1161,7 @@ entries:
       nested:
       - title: Order matrix
         url: /docs/scos/user/back-office-user-guides/sales/view-the-order-matrix.html
-        include_versions:
-        - "202204.0"
+
       - title: Order matrix
         include_versions:
         - "201811.0"
@@ -1206,6 +1214,11 @@ entries:
           include_versions:
           - "202108.0"
           - "202204.0"
+        - title: Creating shipments
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
         - title: Editing shipments
           url: /docs/scos/user/back-office-user-guides/sales/orders/editing-shipments.html
           include_versions:
@@ -1225,6 +1238,11 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
+        - title: Creating shipments
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
         - title: Managing order shipments
           url: /docs/scos/user/back-office-user-guides/sales/orders/managing-order-shipments.html
           include_versions:
@@ -2616,7 +2634,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Create configurable bundle templates
           url: /docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html
@@ -2684,44 +2701,37 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Define filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/define-filter-preferences.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Edit filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/edit-filter-preferences.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Reorder filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Category filters
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Assign and deassign filters from categories
           url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Reorder category filters
           url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/reorder-category-filters.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Search and filters
         include_versions:
         - "201811.0"
@@ -2853,7 +2863,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Merchants
         include_versions:
@@ -3225,6 +3234,15 @@ entries:
     url: /docs/scos/user/technology-partners/technology-partners.html
     nested:
     - title: Order Management (ERPOMS)
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Tradebyte
         url: /docs/scos/user/technology-partners/order-management-erpoms/tradebyte.html
@@ -3302,6 +3320,10 @@ entries:
       nested:
       - title: Personalization and cross-selling
         nested:
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
         - title: Contentserv
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/contentserv.html
         - title: Econda
@@ -3325,6 +3347,10 @@ entries:
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/dotdigital.html
         - title: Inxmail
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/inxmail.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
       - title: AB testing and performance
         nested:
         - title: AB Tasty

@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **discount.csv** file to configure [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -39,7 +39,7 @@ This file has no dependencies.
 ## Recommendations & other information
 If `discount_type` is set to *voucher*  then a voucher pool will be created from this data.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *discount.csv*  file can be downloaded here:
 
 | File | Description |

@@ -15,7 +15,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cart-integration.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 related:
   - title: Glue API - Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cart-feature-integration.html

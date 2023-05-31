@@ -1,5 +1,5 @@
 ---
-title: Retrieving product offers
+title: "Glue API: Retrieve product offers"
 description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
 related:

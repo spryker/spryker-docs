@@ -1889,6 +1889,8 @@ entries:
                     url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-product-price.csv.html
                   - title: "File details: price-product-offer.csv"
                     url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
+              - title: Retrieve product offer prices using Glue API
+                url: /docs/pbc/all/price-management/marketplace/glue-api-retrieve-product-offer-prices.html
               - title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
       - title: Product Information Management
@@ -2947,6 +2949,8 @@ entries:
                         url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
                       - title: Wishlist + Marketplace Product Offer Prices
                         url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-wishlist-marketplace-product-offer-prices-glue-api.html
+                  - title: Import product offers as shopping list items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/file-details-product-offer-shopping-list.csv.html
               - title: Manage using Glue API
                 url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html
                 nested:
@@ -3242,6 +3246,8 @@ entries:
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-glue-api.html
                   - title: Marketplace Inventory Management + Wishlist
                     url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
+              - title: Retrieve product offer availability using Glue API
+                url: /docs/pbc/all/warehouse-management-system/marketplace/glue-api-retrieve-product-offer-availability.html
               - title: "Marketplace Inventory Management feature: Domain model"
                 url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-domain-model.html
               - title: Manage availability in the Back Office

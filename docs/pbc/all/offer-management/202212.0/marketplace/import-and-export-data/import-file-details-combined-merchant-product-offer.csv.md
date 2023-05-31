@@ -1,5 +1,5 @@
 ---
-title: "File details: combined_merchant_product_offer.csv"
+title: "Import file details: combined_merchant_product_offer.csv"
 last_updated: Jun 07, 2021
 description: This document describes the combined_merchant_product_offer.csv file to configure product offers in your Spryker shop.
 template: import-file-template
@@ -14,21 +14,20 @@ related:
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
-To import the file, run:
-
-```bash
-data:import --config data/import/common/combined_merchant_product_offer_import_config_{store}.yml
-```
-
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 
+
+## Import file dependencies
+
+- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
+- `stores.php` configuration file of the demo shop PHP project  
+
 ## Import file parameters
 
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ------------ | ------ | ------------ | ----------------- | ------------- |
@@ -51,18 +50,18 @@ The file should have the following parameters:
 | product_offer_validity.valid_from            |               | Datetime |                   |                                                              | Date and time from which the offer is active.                |
 | product_offer_validity.valid_to              |               | Datetime |                   |                                                              | Date and time  till which the offer is active.               |
 
-## Import file dependencies
 
-The file has the following dependencies:
-
-- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
-- `stores.php` configuration file of the demo shop PHP project  
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE   | DESCRIPTION     |
 | ------------------------ | ------------------------- |
 | [template_combined_merchant_product_offer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/template_combined_merchant_product_offer.csv) | Import file template with headers only.         |
 | [combined_merchant_product_offer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/combined_merchant_product_offer.csv) | Example of the import file with Demo Shop data. |
+
+
+## Import command
+
+```bash
+data:import --config data/import/common/combined_merchant_product_offer_import_config_{store}.yml
+```

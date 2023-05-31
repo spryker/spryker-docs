@@ -3,7 +3,7 @@
 
 ### Why SSR?
 
-Server-Side Rendering (SSR) has grown in popularity due to its ability to boost web application performance and facilitate effective Search Engine Optimization (SEO). SSR operates by delivering pre-rendered HTML from the server (or even CDN) to the client, leading to quicker initial page load times and an enhanced user experience. As a result, it bypasses the need for the client's browser to download, parse, and execute JavaScript before displaying the webpage — a fundamental limitation of Client-Side Rendering (CSR).
+Server-Side Rendering (SSR) has grown in popularity due to its ability to boost web application performance and facilitate effective Search Engine Optimization (SEO) and social sharing. SSR operates by delivering pre-rendered HTML from the server (or even CDN) to the client, leading to quicker initial page load times and an enhanced user experience. As a result, it bypasses the need for the client's browser to download, parse, and execute JavaScript before displaying the webpage — a fundamental limitation of Client-Side Rendering (CSR).
 
 ### SSR vs. CSR: Understanding the Differences
 

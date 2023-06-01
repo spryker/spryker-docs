@@ -48,12 +48,12 @@ jobs:
     ...
     validation:
         name: "CS, ArchSniffer, PHPStan, Security"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         strategy:
             fail-fast: false
             matrix:
                 php-version: [
-                    '7.4'
+                    '8.0'
                 ]
 
         env:
@@ -193,7 +193,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 ...
     php-{php_version}-{database_type}-{tests_type}-{image}:
         name: "PHP {php_version} / {database_type} / {tests_type} / {image}"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:{image_tag}
@@ -234,15 +234,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
-|---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
-|{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| PLACEHOLDER                     | DESCRIPTION                                                                                                                                                                                                            | EXAMPLE IN THE PROPERTY NAME     | EXAMPLE IN THE PROPERTY VALUE |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------------------------------|
+| {php_version}                   | PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.                                                                                                    | 74                               | 7.4                           |
+| {database_type}                 | Database type on which validation is based.                                                                                                                                                                            | mariadb                          | MariaDB                       |
+| {tests_type}                    | The group of tests to run.                                                                                                                                                                                             | glue                             | Glue                          |
+| {image}                         | Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.                                                                                                  | alpine                           | Alpine                        |
+| {image_tag}                     | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).                       | 7.4                              |                               |
+| {deployment_configuration_file} | Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml) | deploy.ci.functional.mariadb.yml |                               |
+| {tests_configuration_file}      | Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)                           | codeception.functional.yml       |                               |
 
 1. Repeat steps 1 to 3 until you add all the desired jobs.
 
@@ -288,7 +288,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
   ...
     php-73-mysql-functional-alpine:
         name: "PHP 7.3 / MySQL / Functional / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
@@ -348,7 +348,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 ...
     php-80-postgresql-glue-debian:
         name: "PHP 8.0 / PostgreSQL / Glue / Debian"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -399,7 +399,7 @@ image:
 ...
     php-7.4-mariadb-acceptance-alpine:
         name: "PHP 7.4 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.4
@@ -457,12 +457,12 @@ jobs:
     ...
     validation:
         name: "CS, ArchSniffer, PHPStan, Security"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         strategy:
             fail-fast: false
             matrix:
                 php-version: [
-                    '7.4'
+                    '8.0'
                 ]
 
         env:
@@ -546,7 +546,7 @@ jobs:
 
             - name: Frontend install-dependencies
               run: |
-                  vendor/bin/console frontend:project:install-dependencies
+                  vendor/bin/console frontend:project:install-dependencies -vvv
             - name: Install NPM packages
               run: |
                   sudo npm install --location=global --unsafe-perm speccy@0.11.0
@@ -564,9 +564,6 @@ jobs:
 
             - name: Front-end MP Unit Tests
               run: npm run mp:test
-
-            - name: Front-end MP Build
-              run: npm run mp:build
 
             - name: Validate propel files
               run: |
@@ -599,7 +596,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 ...
     php-{php_version}-{database_type}-{tests_type}-{image}:
         name: "PHP {php_version} / {database_type} / {tests_type} / {image}"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:{image_tag}
@@ -640,15 +637,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
-|---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
-|{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| PLACEHOLDER                     | DESCRIPTION                                                                                                                                                                                                            | EXAMPLE IN THE PROPERTY NAME     | EXAMPLE IN THE PROPERTY VALUE |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------------------------------|
+| {php_version}                   | PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.                                                                                                    | 74                               | 7.4                           |
+| {database_type}                 | Database type on which validation is based.                                                                                                                                                                            | mariadb                          | MariaDB                       |
+| {tests_type}                    | The group of tests to run.                                                                                                                                                                                             | glue                             | Glue                          |
+| {image}                         | Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.                                                                                                  | alpine                           | Alpine                        |
+| {image_tag}                     | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).                       | 7.4                              |                               |
+| {deployment_configuration_file} | Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml) | deploy.ci.functional.mariadb.yml |                               |
+| {tests_configuration_file}      | Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)                           | codeception.functional.yml       |                               |
 
 1. Repeat steps 1 to 3 until you add all the desired jobs.
 
@@ -694,7 +691,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
   ...
     php-73-mysql-functional-alpine:
         name: "PHP 7.3 / MySQL / Functional / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
@@ -754,7 +751,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 ...
     php-80-postgresql-glue-debian:
         name: "PHP 8.0 / PostgreSQL / Glue / Debian"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -805,7 +802,7 @@ image:
 ...
     php-7.4-mariadb-acceptance-alpine:
         name: "PHP 7.4 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.4
@@ -864,7 +861,7 @@ jobs:
     ...
     validation:
         name: "CS, ArchSniffer, PHPStan, Security"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         strategy:
             fail-fast: false
             matrix:
@@ -1021,7 +1018,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 ...
     php-{php_version}-{database_type}-{tests_type}-{image}:
         name: "PHP {php_version} / {database_type} / {tests_type} / {image}"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:{image_tag}
@@ -1062,15 +1059,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 3. Replace the placeholders with the actual values using the following description.
 
-| PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
-|---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
-|{database_type}| Database type on which validation is based.| mariadb| MariaDB|
-| {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
-|{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| PLACEHOLDER                     | DESCRIPTION                                                                                                                                                                                                         | EXAMPLE IN THE PROPERTY NAME     | EXAMPLE IN THE PROPERTY VALUE |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------------------------------|
+| {php_version}                   | PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.                                                                                               | 74                               | 7.4                           |
+| {database_type}                 | Database type on which validation is based.                                                                                                                                                                         | mariadb                          | MariaDB                       |
+| {tests_type}                    | The group of tests to run.                                                                                                                                                                                          | glue                             | Glue                          |
+| {image}                         | Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.                                                                                             | alpine                           | Alpine                        |
+| {image_tag}                     | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).                    | 7.4                              |                               |
+| {deployment_configuration_file} | Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml) | deploy.ci.functional.mariadb.yml |                               |
+| {tests_configuration_file}      | Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)                    | codeception.functional.yml       |                               |
 
 4. Repeat steps 1 to 3 until you add all the desired jobs.
 
@@ -1116,7 +1113,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
   ...
     php-73-mysql-functional-alpine:
         name: "PHP 7.3 / MySQL / Functional / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.3-alpine3.12
@@ -1176,7 +1173,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 ...
     php-80-postgresql-glue-debian:
         name: "PHP 8.0 / PostgreSQL / Glue / Debian"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:8.0-debian
@@ -1227,7 +1224,7 @@ image:
 ...
     php-7.4-mariadb-acceptance-alpine:
         name: "PHP 7.4 / MariaDB / Acceptance / Alpine"
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-20.04
         env:
             PROGRESS_TYPE: plain
             SPRYKER_PLATFORM_IMAGE: spryker/php:7.4

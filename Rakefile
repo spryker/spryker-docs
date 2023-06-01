@@ -51,8 +51,10 @@ commonOptions = {
     /github.com\/[\.\w\-\/\?]+/,
     /www.collect.ai\/[\.\w\-\/\?]+/,
     /twitter.com\/[\.\w\-\/\?]+/,
-    /www.optimise-it.de\/[\.\w\-\/\?]+/
-
+    /www.optimise-it.de\/[\.\w\-\/\?]+/,
+    /blackfire.io\/[\.\w\-\/\?]+/,
+    /rxjs.dev\/[\.\w\-\/\?]+/,
+    /www.blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

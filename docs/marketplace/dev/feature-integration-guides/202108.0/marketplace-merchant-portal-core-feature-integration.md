@@ -1230,6 +1230,6 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| - | - | -|
-| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+| FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                  |
+|-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

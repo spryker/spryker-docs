@@ -3,7 +3,7 @@
 
 | ATTRIBUTE       | TYPE   | DESCRIPTION                                                  |
 | --------------- | ------ | ------------------------------------------------------------ |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.                    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
@@ -96,7 +96,7 @@
 | items.salesOrderConfiguredBundleItem |Object |Contains information about the items of the configured bundle. |
 | items.salesOrderConfiguredBundleItem.configurableBundleTemplateSlotUuid| String| Unique identifier of the configurable bundle slot in the system. |
 | items.metadata                          | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes          | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes          | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image                    | String  | Product image URL.                                           |
 
 **Measurement unit calculations**

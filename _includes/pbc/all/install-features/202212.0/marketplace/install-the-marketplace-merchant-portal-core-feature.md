@@ -10,16 +10,14 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION          | INTEGRATION GUIDE |
-| -------------------- |------------------| ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Spryker Core BO      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                                                             |
+|----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                                          |
+| Spryker Core BO      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)               |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Acl | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html) |
+| Acl                  | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html)                                                                    |
 
 ###  1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
@@ -33,18 +31,18 @@ composer require spryker/security-merchant-portal-gui-extension
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| ZedUi  | vendor/spryker/zed-ui |
-| GuiTable | vendor/spryker/gui-table |
-| AclMerchantPortal   | vendor/spryker/acl-merchant-portal  |
-| MerchantPortalApplication   | vendor/spryker/merchant-portal-application  |
-| MerchantUserPasswordResetMail   | vendor/spryker/merchant-user-password-reset-mail  |
-| Navigation   | vendor/spryker/navigation  |
-| SecurityMerchantPortalGui  | vendor/spryker/security-merchant-portal-gui |
-| UserMerchantPortalGui | vendor/spryker/user-merchant-portal-gui |
-| UserMerchantPortalGuiExtension | spryker/user-merchant-portal-gui-extension |
-| SecurityMerchantPortalGuiExtension | spryker/security-merchant-portal-gui-extension |
+| MODULE                             | EXPECTED DIRECTORY                               |
+|------------------------------------|--------------------------------------------------|
+| ZedUi                              | vendor/spryker/zed-ui                            |
+| GuiTable                           | vendor/spryker/gui-table                         |
+| AclMerchantPortal                  | vendor/spryker/acl-merchant-portal               |
+| MerchantPortalApplication          | vendor/spryker/merchant-portal-application       |
+| MerchantUserPasswordResetMail      | vendor/spryker/merchant-user-password-reset-mail |
+| Navigation                         | vendor/spryker/navigation                        |
+| SecurityMerchantPortalGui          | vendor/spryker/security-merchant-portal-gui      |
+| UserMerchantPortalGui              | vendor/spryker/user-merchant-portal-gui          |
+| UserMerchantPortalGuiExtension     | spryker/user-merchant-portal-gui-extension       |
+| SecurityMerchantPortalGuiExtension | spryker/security-merchant-portal-gui-extension   |
 
 {% endinfo_block %}
 
@@ -94,21 +92,21 @@ Set up behavior as follows:
 
 #### Integrate the following plugins:
 
-| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---| --- |---|
-| MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security    |
-| BooleanToStringTwigPlugin | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig |
-| ZedUiNavigationTwigPlugin   Adds a new Twig function for rendering Navigation using web components.      |  | Spryker\Zed\ZedUi\Communication\Plugin  |
-| GuiTableApplicationPlugin  | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application     |
-| GuiTableConfigurationTwigPlugin    | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.  |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
-| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin       | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity   |
-| MerchantAclMerchantPostCreatePlugin     | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for a provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant    |
-| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser |
-| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser |
-| MerchantUserUserRoleFilterPlugin   | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from loging in to the Back Office.  |  | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui |
-| ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` roles with rules and groups to create on installation. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser |
-| AclGroupMerchantUserLoginRestrictionPlugin | Checks if the merchant user login is restricted.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
+| PLUGIN                                                                                              | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                          | NAMESPACE                                                                        |
+|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|----------------------------------------------------------------------------------|
+| MerchantUserSecurityPlugin                                                                          | Sets security firewalls (rules, handlers) for Marketplace users.                                                                                                                                        |                                        | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
+| BooleanToStringTwigPlugin                                                                           | Adds a new Twig function for converting Boolean to String.                                                                                                                                              |                                        | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
+| ZedUiNavigationTwigPlugin   Adds a new Twig function for rendering Navigation using web components. |                                                                                                                                                                                                         | Spryker\Zed\ZedUi\Communication\Plugin |
+| GuiTableApplicationPlugin                                                                           | Enables the `GuiTable` infrastructure for Zed.                                                                                                                                                                |                                        | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
+| GuiTableConfigurationTwigPlugin                                                                     | Adds a new Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                                                                                                            |                                        | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
+| SecurityTokenUpdateMerchantUserPostChangePlugin                                                     | Rewrites Symfony security token.                                                                                                                                                                        |                                        | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin                                                 | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities, and allow list entities. |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
+| MerchantAclMerchantPostCreatePlugin                                                                 | Creates an ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for a provided merchant.                                                                                                |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
+| MerchantAclMerchantUserPostCreatePlugin                                                             | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user.                                                                                          |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin                                           | Checks if the Symfony security authentication roles should be filtered out.                                                                                                                             |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| MerchantUserUserRoleFilterPlugin                                                                    | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging in to the Back Office.                                                                                                           |                                        | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
+| ProductViewerForOfferCreationAclInstallerPlugin                                                     | Provide `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                                                                                                          |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| AclGroupMerchantUserLoginRestrictionPlugin                                                          | Checks if the merchant user login is restricted.                                                                                                                                                        |                                        | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -330,7 +328,7 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Ensure that non-merchant users whose Acl Group has Back Office allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
+Ensure that non-merchant users whose Acl Group has *Back Office allowed Acl Group Reference* (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
 
 {% endinfo_block %}
 
@@ -563,41 +561,41 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| ----------- | ----- | ------- | -------------------- |
-| GuiTableDataRequest | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer |
-| GuiTableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer |
-| GuiTableColumnConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer |
-| GuiTableTitleConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableTitleConfigurationTransfer |
-| GuiTableDataSourceConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableDataSourceConfigurationTransfer |
-| GuiTableRowActionsConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionsConfigurationTransfer |
-| GuiTableBatchActionsConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionsConfigurationTransfer |
-| GuiTablePaginationConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTablePaginationConfigurationTransfer |
-| GuiTableSearchConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableSearchConfigurationTransfer |
-| GuiTableFiltersConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableFiltersConfigurationTransfer |
-| GuiTableItemSelectionConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableItemSelectionConfigurationTransfer |
-| GuiTableSyncStateUrlConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableSyncStateUrlConfigurationTransfer |
-| GuiTableEditableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableConfigurationTransfer |
-| GuiTableEditableCreateConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableCreateConfigurationTransfer |
-| GuiTableEditableUpdateConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUpdateConfigurationTransfer |
-| GuiTableEditableButton | class | Created | src/Generated/Shared/Transfer/GuiTableEditableButtonTransfer |
-| GuiTableEditableUrl | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUrlTransfer |
-| GuiTableEditableInitialData | class | Created | src/Generated/Shared/Transfer/GuiTableEditableInitialDataTransfer |
-| GuiTableEditableDataError | class | Created | src/Generated/Shared/Transfer/GuiTableEditableDataErrorTransfer |
-| GuiTableDataResponse | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponseTransfer |
-| GuiTableRowDataResponse | class | Created | src/Generated/Shared/Transfer/GuiTableRowDataResponseTransfer |
-| GuiTableDataResponsePayload | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponsePayloadTransfer |
-| SelectGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/SelectGuiTableFilterTypeOptionsTransfer |
-| OptionSelectGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/OptionSelectGuiTableFilterTypeOptionsTransfer |
-| GuiTableFilter | class | Created | src/Generated/Shared/Transfer/GuiTableFilterTransfer |
-| GuiTableRowAction | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionTransfer |
-| GuiTableRowActionOptions | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionOptionsTransfer |
-| DateRangeGuiTableFilterTypeOptions | class | Created | src/Generated/Shared/Transfer/DateRangeGuiTableFilterTypeOptionsTransfer |
-| CriteriaRangeFilter | class | Created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer |
-| GuiTableBatchAction | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionTransfer |
-| GuiTableBatchActionOptions | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionOptionsTransfer |
+| TRANSFER                                | TYPE  | EVENT   | PATH                                                                          |
+|-----------------------------------------|-------|---------|-------------------------------------------------------------------------------|
+| GuiTableDataRequest                     | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer                     |
+| GuiTableConfiguration                   | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer                   |
+| GuiTableColumnConfiguration             | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer             |
+| GuiTableTitleConfiguration              | class | Created | src/Generated/Shared/Transfer/GuiTableTitleConfigurationTransfer              |
+| GuiTableDataSourceConfiguration         | class | Created | src/Generated/Shared/Transfer/GuiTableDataSourceConfigurationTransfer         |
+| GuiTableRowActionsConfiguration         | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionsConfigurationTransfer         |
+| GuiTableBatchActionsConfiguration       | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionsConfigurationTransfer       |
+| GuiTablePaginationConfiguration         | class | Created | src/Generated/Shared/Transfer/GuiTablePaginationConfigurationTransfer         |
+| GuiTableSearchConfiguration             | class | Created | src/Generated/Shared/Transfer/GuiTableSearchConfigurationTransfer             |
+| GuiTableFiltersConfiguration            | class | Created | src/Generated/Shared/Transfer/GuiTableFiltersConfigurationTransfer            |
+| GuiTableItemSelectionConfiguration      | class | Created | src/Generated/Shared/Transfer/GuiTableItemSelectionConfigurationTransfer      |
+| GuiTableSyncStateUrlConfiguration       | class | Created | src/Generated/Shared/Transfer/GuiTableSyncStateUrlConfigurationTransfer       |
+| GuiTableEditableConfiguration           | class | Created | src/Generated/Shared/Transfer/GuiTableEditableConfigurationTransfer           |
+| GuiTableEditableCreateConfiguration     | class | Created | src/Generated/Shared/Transfer/GuiTableEditableCreateConfigurationTransfer     |
+| GuiTableEditableUpdateConfiguration     | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUpdateConfigurationTransfer     |
+| GuiTableEditableButton                  | class | Created | src/Generated/Shared/Transfer/GuiTableEditableButtonTransfer                  |
+| GuiTableEditableUrl                     | class | Created | src/Generated/Shared/Transfer/GuiTableEditableUrlTransfer                     |
+| GuiTableEditableInitialData             | class | Created | src/Generated/Shared/Transfer/GuiTableEditableInitialDataTransfer             |
+| GuiTableEditableDataError               | class | Created | src/Generated/Shared/Transfer/GuiTableEditableDataErrorTransfer               |
+| GuiTableDataResponse                    | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponseTransfer                    |
+| GuiTableRowDataResponse                 | class | Created | src/Generated/Shared/Transfer/GuiTableRowDataResponseTransfer                 |
+| GuiTableDataResponsePayload             | class | Created | src/Generated/Shared/Transfer/GuiTableDataResponsePayloadTransfer             |
+| SelectGuiTableFilterTypeOptions         | class | Created | src/Generated/Shared/Transfer/SelectGuiTableFilterTypeOptionsTransfer         |
+| OptionSelectGuiTableFilterTypeOptions   | class | Created | src/Generated/Shared/Transfer/OptionSelectGuiTableFilterTypeOptionsTransfer   |
+| GuiTableFilter                          | class | Created | src/Generated/Shared/Transfer/GuiTableFilterTransfer                          |
+| GuiTableRowAction                       | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionTransfer                       |
+| GuiTableRowActionOptions                | class | Created | src/Generated/Shared/Transfer/GuiTableRowActionOptionsTransfer                |
+| DateRangeGuiTableFilterTypeOptions      | class | Created | src/Generated/Shared/Transfer/DateRangeGuiTableFilterTypeOptionsTransfer      |
+| CriteriaRangeFilter                     | class | Created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer                     |
+| GuiTableBatchAction                     | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionTransfer                     |
+| GuiTableBatchActionOptions              | class | Created | src/Generated/Shared/Transfer/GuiTableBatchActionOptionsTransfer              |
 | GuiTableColumnConfiguratorConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfiguratorConfigurationTransfer |
-| ZedUiFormResponseAction | class | Created | src/Generated/Shared/Transfer/ZedUiFormResponseActionTransfer |
+| ZedUiFormResponseAction                 | class | Created | src/Generated/Shared/Transfer/ZedUiFormResponseActionTransfer                 |
 
 {% endinfo_block %}
 
@@ -608,30 +606,28 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-- [Node.js](https://nodejs.org/en/download/) — minimum version is v16.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) — minimum version is v8.
+- [Node.js](https://nodejs.org/en/download/): minimum version is 16.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 8.
 
 Spryker requirements:
 
 To start builder integration, check versions of Spryker packages:
 
-| NAME | VERSION |
-| --------------------------- | --------- |
+| NAME                        | VERSION   |
+|-----------------------------|-----------|
 | Discount (optional)         | >= 9.7.4  |
 | Gui (optional)              | >= 3.30.2 |
 | Product Relation (optional) | >= 2.4.3  |
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
 ```
 
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| DashboardMerchantPortalGui   | vendor/spryker/dashboard-merchant-portal-gui  |
+| MODULE                              | EXPECTED DIRECTORY                                     |
+|-------------------------------------|--------------------------------------------------------|
+| DashboardMerchantPortalGui          | vendor/spryker/dashboard-merchant-portal-gui           |
 | DashboardMerchantPortalGuiExtension | vendor/spryker/dashboard-merchant-portal-gui-extension |
 
 ### 2) Set up transfer objects
@@ -646,16 +642,14 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-|-|-|-|-|
-| MerchantDashboardCard | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer |
+| TRANSFER                      | TYPE   | EVENT   | PATH                                                                |
+|-------------------------------|--------|---------|---------------------------------------------------------------------|
+| MerchantDashboardCard         | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer         |
 | MerchantDashboardActionButton | object | Created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
 
 {% endinfo_block %}
 
 ### 3) Build navigation cache
-
-Execute the following command:
 
 ```bash
 console navigation:build-cache
@@ -669,7 +663,7 @@ Make sure that Merchant Portal has the **Dashboard** menu.
 
 ### 4) Set up Marketplace builder configs
 
-Add the following files to the root folder:
+1. Add the following files to the root folder:
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/angular.json
@@ -677,7 +671,7 @@ wget -O nx.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/nx.js
 wget -O .browserslistrc https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.browserslistrc
 ```
 
-Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
+2. Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.base.json
@@ -685,27 +679,27 @@ wget -O tsconfig.yves.json https://raw.githubusercontent.com/spryker-shop/suite/
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tsconfig.mp.json
 ```
 
-Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
+3. Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the `tslint.mp.json` file:
+4. Add the `tslint.mp.json` file:
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tslint.mp.json
 ```
 
-Install npm dependencies:
+5. Install npm dependencies:
 
 ```bash
 npm i @angular/animations@~12.2.16 @angular/cdk@~12.2.16 @angular/common@~12.2.16 @angular/compiler@~12.2.16 @angular/core@~12.2.16 @angular/elements@~12.2.16 @angular/forms@~12.2.16 @angular/platform-browser@~12.2.16 @angular/platform-browser-dynamic@~12.2.16 @angular/router@~12.2.16 @webcomponents/custom-elements@~1.3.1 @webcomponents/webcomponents-platform@~1.0.1 @webcomponents/webcomponentsjs@~2.4.0 rxjs@~7.4.0 zone.js@~0.11.4
 ```
 
-Install npm dev dependencies:
+6. Install npm dev dependencies:
 
 ```bash
 npm i -D @angular-builders/custom-webpack@~12.1.3 @angular-devkit/build-angular@~12.2.16 @angular/cli@~12.2.16 @angular/compiler-cli@~12.2.16 @angular/language-service@~12.2.16 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/cli@~12.10.1 @nrwl/jest@~12.10.1 @nrwl/tao@~12.10.1 @nrwl/workspace@~12.10.1 @spryker/oryx-for-zed@~2.11.3 @types/jest@~27.0.2 @types/node@~14.14.33 @types/webpack@~4.41.17 jest@~27.2.3 jest-preset-angular@~9.0.3 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~27.0.5 ts-node@~9.1.1 tslib@~2.0.0 typescript@~4.2.4
 ```
 
-Update `package.json` with the following fields:
+7. Update `package.json` with the following fields:
 
 **package.json**
 
@@ -733,7 +727,7 @@ Update `package.json` with the following fields:
 }
 ```
 
-For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
+8. For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
 
 **frontend/settings.js**
 
@@ -747,7 +741,7 @@ const globalSettings = {
 };
 ```
 
-Run commands from the root of the project:
+9. Run commands from the root of the project:
 
 ```bash
 npm i -g @angular/cli@12.2.16
@@ -755,7 +749,7 @@ npm i -g @angular/cli@12.2.16
 
 `ng --version` should show Angular CLI: 12.2.16 version.
 
-Install project dependencies:
+10. Install project dependencies:
 
 ```bash
 npm install
@@ -767,7 +761,7 @@ If you're getting `Missing write access to node_modules/mp-profile`, delete this
 
 {% endinfo_block %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -856,7 +850,7 @@ $bootstrap
 
 /**
  * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See the LICENSE file.
  */
 
 if (file_exists(__DIR__ . '/maintenance.marker')) {
@@ -948,9 +942,10 @@ import '@mp/polyfills';
 
 {% info_block warningBox "Verification" %}
 
-`npm run mp:build` should pass successfully. If it doesn't work, try the full rebuild:
-
-`rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`
+Ensure that `npm run mp:build` passes successfully. If it doesn't work, try the full rebuild:
+```bash
+rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`
+```
 
 {% endinfo_block %}
 
@@ -958,8 +953,8 @@ import '@mp/polyfills';
 
 To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment YAML:
 
-- Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
-- Add required console commands:
+1. Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
+2. Add required console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -989,16 +984,16 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-Add the Merchant Portal build command:
+3. Add the Merchant Portal build command:
 
-- build-static-production:
+   1. build-static-production:
     ```yaml
     merchant-portal-build-frontend:
         command: 'vendor/bin/console frontend:mp:build -e production'
         timeout: 1600
     ```
 
-- build-static-development:
+   2. build-static-development:
     ```yaml
     merchant-portal-build-frontend:
         command: 'vendor/bin/console frontend:mp:build'
@@ -1007,18 +1002,18 @@ Add the Merchant Portal build command:
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office — MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It's not safe to expose `MerchantPortal` next to the Back Office. `MerchantPortal` *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-MerchantPortal *must be* placed into its own private subnet.
+`MerchantPortal` *must be* placed into its own private subnet.
 
-MerchantPortal *must have* access to the following:
+`MerchantPortal` *must have* access to the following:
 
 - Primary Database
 - Message broker
 
-MerchantPortal *must not have* access to the following:
+`MerchantPortal` *must not have* access to the following:
 
 - Search and Storage
 - Gateway
@@ -1070,7 +1065,7 @@ groups:
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD operations — `INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
+Grant only default CRUD operations: `INSERT`, `DELETE`, `UPDATE`, and `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 
@@ -1120,7 +1115,7 @@ server {
 }
 ```
 
-After modifying the Nginx config, apply the new `config:f`
+After modifying the Nginx config, apply the new `config:f`:
 
 ```bash
 sudo service nginx reload
@@ -1244,6 +1239,6 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 Integrate the following related features:
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| - | - | -|
-| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+| FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                  |
+|-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

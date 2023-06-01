@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **category.csv** file to configure [Category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 
 {% info_block infoBox "Info" %}
 
@@ -46,7 +46,7 @@ These are the header fields to be included in the .csv file:
 This file has the following dependency:
 *    [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *category.csv*  file can be downloaded here:
 
 | File | Description |

@@ -34,6 +34,7 @@ redirect_from:
   - /docs/fes/dev/launching-storefronts.html
   - /docs/fes/dev/installing-applications.html
   - /docs/scos/user/intro-to-spryker/roadmap.html
+  - /docs/scos/user/intro-to-spryker/about-spryker-documentation.html
 ---
 
 ## What is the Spryker Commerce OS?

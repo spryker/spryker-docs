@@ -37,8 +37,8 @@ It also provides access to Zed settings and Zed Webpack configuration, so you ca
 
 ### Requirements
 
-- [Node.js](https://nodejs.org/en/download/) — minimum version is v18.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) — minimum version is v9.
+- [Node.js](https://nodejs.org/en/download/): minimum version is 18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
 
 {% info_block infoBox "Note" %}
 

@@ -16,7 +16,7 @@ In May 2023, we have added and updated the following pages:
     - [Checklist for a new store implementation](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html): Learn how to install the App Orchestration Platform.
 - [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html): Learn how to write the evaluator tool.
-- [Upgardability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html):
+- [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html):
     - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
     - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
     - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
@@ -54,22 +54,18 @@ In May 2023, we have added and updated the following pages:
     - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
 
 
-
-
-
-
-
-
 ### Updated pages
 
 - [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
 - [App manifest](/docs/acp/user/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
-- [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing
+- [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html): Learn how you can submit an environment provisioning request.
 - [Configure Algolia](/docs/pbc/all/search/202212.0/third-party-integrations/configure-algolia.html): Learn how to configure the Algolia app.
 - [Integrate Algolia](/docs/pbc/all/search/202212.0/third-party-integrations/integrate-algolia.html): Learn how to integrate the Algolia app.
+
+For more details on these and other updates to the Spryker docs in May 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
 ## April 2023
 

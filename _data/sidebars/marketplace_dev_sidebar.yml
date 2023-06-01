@@ -12,13 +12,11 @@ entries:
             url: /docs/marketplace/dev/setup/system-requirements.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
             include_versions:
             - "202204.0"
-            - "202212.0"
             - "202212.0"
 
           - title: Marketplace supported browsers
@@ -241,7 +239,7 @@ entries:
 
                   - title: GUI modules concept
                     url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
-
+                    
                   - title: Merchant User concept
                     url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
 
@@ -1156,6 +1154,7 @@ entries:
               - title: "Table Filters"
                 url: /docs/marketplace/dev/front-end/table-design/table-filters/
                 include_versions:
+                - "202108.0"
                 - "202204.0"
                 - "202212.0"
                 nested:
@@ -1184,13 +1183,14 @@ entries:
                  - "202204.0"
 
           - title: "UI components library"
+            url: /docs/marketplace/dev/front-end/ui-components-library/
             include_versions:
             - "202204.0"
             - "202212.0"
             nested:
 
               - title: "Actions"
-                url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+                url: /docs/marketplace/dev/front-end/ui-components-library/actions/
                 include_versions:
                 - "202204.0"
                 - "202212.0"

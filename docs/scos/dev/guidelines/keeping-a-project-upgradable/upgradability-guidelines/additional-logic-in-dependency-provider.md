@@ -1,16 +1,12 @@
 ---
-title: Dependency provider contains addition logic
+title: Additional logic in dependency provider
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Additional logic inside the dependency provider’s methods.
-
-## Problem description
-
 On the project level, developers use `if` constructs with variety of expressions in dependency providers to register the plugins in particular cases only.
 
-Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check will verify that if an `if` construct is used for plugin registration, then only one of the following expressions is used:
+Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check verifies that if an `if` construct is used for plugin registration, then only one of the following expressions is used:
 
 `class_exists` it is allowed for BC reasons
 

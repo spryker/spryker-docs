@@ -6,7 +6,13 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
-  - /docs/scos/user/features/202204.0/configurable-product-feature-overview.html
+  - /docs/scos/user/features/202212.0/configurable-product-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html  
+  - /docs/pbc/all/product-information-management/202212.0/configurable-product-feature-overview/configurable-product-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html
 ---
 
 The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.
@@ -84,7 +90,7 @@ The availability of a configurable product is based on the selected configuratio
 
 A customer selects the quantity of a product in a configurator or a shop. If a configurator allows them to select a product quantity, it passes the specified quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and they select the product quantity in the shop.
 
-If a configurator does not pass availability, [regular product availability](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) is used.
+If a configurator does not pass availability, [regular product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) is used.
 
 ### Price calculation in a product configurator
 

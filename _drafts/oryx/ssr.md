@@ -1,9 +1,8 @@
-
 ## Introduction to SSR
 
 ### Why SSR?
 
-Server-Side Rendering (SSR) has grown in popularity due to its ability to boost web application performance and facilitate effective Search Engine Optimization (SEO) and social sharing. SSR operates by delivering pre-rendered HTML from the server (or even CDN) to the client, leading to quicker initial page load times and an enhanced user experience. As a result, it bypasses the need for the client's browser to download, parse, and execute JavaScript before displaying the webpage — a fundamental limitation of Client-Side Rendering (CSR).
+Server-Side Rendering (SSR) has grown in popularity due to its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). CWV are a set of metrics that Google uses to measure aspects of web usability such as loading performance, interactivity, and visual stability. By delivering pre-rendered HTML from the server (or even CDN) to the client, SSR leads to quicker initial page load times, enhances the user experience, and can significantly improve CWV scores. This bypasses the need for the client's browser to download, parse, and execute JavaScript before displaying the webpage — a fundamental limitation of Client-Side Rendering (CSR).
 
 ### SSR vs. CSR: Understanding the Differences
 
@@ -11,50 +10,40 @@ Server-Side Rendering (SSR) has grown in popularity due to its ability to boost 
 
 **SEO**: SSR is typically more favorable for SEO since search engine crawlers find it easier to index pre-rendered HTML content.
 
+**Social Media Integration**: SSR significantly improves integration with social providers like Facebook and Twitter, and bots like Slack. It enables the generation of link previews, rich snippets, and thumbnails, enhancing the visibility and appeal of shared content on these platforms.
+
 **User Experience**: By delivering pre-rendered content faster, SSR minimizes user waiting time, providing a superior user experience compared to CSR.
 
 **Resource Allocation**: While SSR enhances performance and user experience, it requires more server resources and processing power. CSR lightens server load by offloading rendering to the client, but at the cost of potentially increased load times and less effective SEO.
 
-### Weighing SSR: Pros and Cons
+
+### SSR: Pros and Cons
 
 | Benefits of SSR                                                   | Drawbacks of SSR    |
 |-------------------------------------------------------------------|---------------------|
-| Quicker initial page load times.                                  | Higher server resource usage and processing power. |
-| Improved SEO due to pre-rendered HTML.                            | Potential performance challenges with highly interactive web applications. |
-| Better user experience due to faster content delivery.            | More complex development and deployment processes. |
+| Quicker initial page load times.                                  | Higher server resource usage. |
+| Enhanced SEO.                                                     | Increased development and deployment complexity. |
+| Improved user experience.                                         | Infrastructure concerns. |
+| Better social media integration.                                  | Potential for stale content. |
+
+#### Applicability of SSR
+
+While SSR offers numerous benefits, it may not be the best fit for every type of application, for example:
+
+- **B2B (Closed) Shops**: Public-facing SEO and quicker initial page load times offered by SSR may not significantly benefit these types of applications.
+- **Business Apps**: Applications heavily focused on functionality, like a fulfillment app, might not require the SEO or user experience enhancements provided by SSR.
+- **Instore Apps**: Used in a controlled environment and designed for specific functions, these types of applications might not necessitate the benefits of SSR.
 
 
-## SSR Implementation
+## SSR Implementation Approaches
 
 ### Traditional server-based SSR
 
-Traditional SSR implementation involves rendering the initial HTML content on a server, typically powered by Node.js. Oryx supports this scenario for both development and production builds with `createServer` utility in `@spryker-oryx/application/server` package:
-
-```ts
-  import { createServer } from '@spryker-oryx/application/server';
-
-  createServer(config).run();
-```
-
-`createServer` utility is using ExpressJS server under the hood and provides a convenient way to configure and run the server and also exposes the ExpressJS server instance for further customization.
+Traditional SSR implementation involves rendering the initial HTML content on a server, typically powered by Node.js. 
 
 ### Serverless SSR using Lambda
 
 Serverless SSR, on the other hand, employs on-demand serverless platforms such as AWS Lambda for HTML rendering, eliminating the need for a dedicated server. 
-
-Oryx supports this scenario for both development and production builds with `storefrontHandler` utility in `@spryker-oryx/application/lambda'` package:
-
-```ts
-import { storefrontHandler } from '@spryker-oryx/application/lambda';
-
-return (event, context) => storefrontHandler(event, {
-    ...context,
-    root: 'file:///apps/storefront/functions/ssr/index.js',
-    index: '../../client/index.html',
-    entry: '../../server/render.js',
-    component: '<root-app></root-app>',
-});
-```
 
 ### Caching, CDN
 
@@ -69,22 +58,37 @@ It works as a simple wrapper to Oryx SSR Lambda handler and automatically feed N
 
 ```mermaid
 sequenceDiagram
-  participant User
-  participant CDN
-  participant SSR Service
-  participant Backend
-  
-  User->>CDN: Request page
+    participant User
+    participant CDN
+    participant SSR Service
+    participant Backend
+
+    User->>CDN: Request page
     CDN->>SSR Service: Request SSR page
+    Note over SSR Service: Slow processing, need for caching
     SSR Service-->>CDN: Cache SSR page
-  CDN-->>User: Deliver SSR page
-  User->>CDN: Request static assets (CSR)
-  CDN-->>User: Deliver static JS assets
-  Note over User: Hydration occurs, SPA mode
-  User->>Backend: CSR Interacts with backend app
+    CDN-->>User: Deliver SSR page
+    User->>CDN: Request static assets (CSR)
+    CDN-->>User: Deliver static JS assets
+    Note over User: Hydration occurs, SPA mode
+    User->>Backend: CSR Interacts with backend app
+
 ```
 
-## SSR in Oryx
+### Hydration
+
+In the context of SSR, hydration refers to the process where the client-side JavaScript runtime takes over the static HTML sent by the server and turns it into a dynamic Document Object Model (DOM).
+
+In most applications, hydration happens all at once. But Oryx follows a more strategic approach known as "islands architecture". It enables selective hydration of components or "islands" on a need basis, thereby reducing the amount of JavaScript parsed and executed during initial page interaction.
+
+Moreover, Oryx employs a "late hydration" strategy, delaying the hydration process until the user interacts with a component. This ensures that client-side resources are only utilized when absolutely necessary, fostering an efficient and highly responsive user experience.
+
+
+## Developing with SSR
+
+### SSR Consideration
+
+When developing with SSR, it's important to understand how the SSR process works. SSR involves rendering the initial HTML on the server, which is then sent to the client. This provides faster initial page load times and better SEO. However, because this process can differ from traditional client-side rendering, there are specific considerations and potential pitfalls to keep in mind, such as avoiding direct manipulation of the DOM and being mindful of lifecycle hooks.
 
 ### Configuration
 
@@ -102,19 +106,6 @@ Designed with SSR at its core, Oryx ensures that all components correctly render
 
 Additionally, Oryx features mechanisms that further enhance performance by managing the hydration process intelligently.
 
-### Hydration
-
-In the context of SSR, hydration refers to the process where the client-side JavaScript runtime takes over the static HTML sent by the server and turns it into a dynamic Document Object Model (DOM).
-
-In most applications, hydration happens all at once. But Oryx follows a more strategic approach known as "islands architecture". It enables selective hydration of components or "islands" on a need basis, thereby reducing the amount of JavaScript parsed and executed during initial page interaction.
-
-Moreover, Oryx employs a "late hydration" strategy, delaying the hydration process until the user interacts with a component. This ensures that client-side resources are only utilized when absolutely necessary, fostering an efficient and highly responsive user experience.
-
-## Developing with SSR
-
-### SSR Consideration
-
-When developing with SSR, it's important to understand how the SSR process works. SSR involves rendering the initial HTML on the server, which is then sent to the client. This provides faster initial page load times and better SEO. However, because this process can differ from traditional client-side rendering, there are specific considerations and potential pitfalls to keep in mind, such as avoiding direct manipulation of the DOM and being mindful of lifecycle hooks.
 
 ### SSR-aware Components
 

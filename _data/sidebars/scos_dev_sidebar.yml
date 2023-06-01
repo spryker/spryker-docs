@@ -3884,7 +3884,6 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
-
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8
@@ -3893,8 +3892,6 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
     - title: Migration guide - Switch from TSLint to ESLint
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
-    - title: Migration guide - Upgrade Node.js to v18 and npm to v9
-      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18.html
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:

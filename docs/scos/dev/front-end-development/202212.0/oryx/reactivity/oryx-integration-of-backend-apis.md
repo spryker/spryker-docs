@@ -17,7 +17,7 @@ By transforming the data from an API into a client model, adapters abstract away
 
 The following is a sequence diagram of this high-level architecture:
 
-{% include diagrams/oryx/backend-integration.svg %}
+{% include diagrams/oryx/backend-integration.md %}
 
 The following steps are visualized:
 

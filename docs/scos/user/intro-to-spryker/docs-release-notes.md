@@ -48,7 +48,7 @@ In May 2023, we have added and updated the following pages:
     - [Oryx application environment](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-environment.html): Learn about the environment of the Oryx Application.
     - [Oryx application feature](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-feature.html): Learn about the feature of the Oryx Application.
     - [Oryx application plugins](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-plugins.html): Learn about plugins of the Oryx Application.
-    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html): Learn Reactivity enables real-time updates.
+    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
     - [Key concepts of Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
     - [Reactive components](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
     - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.

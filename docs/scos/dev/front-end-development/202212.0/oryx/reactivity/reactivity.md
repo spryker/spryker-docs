@@ -17,7 +17,7 @@ Implementing reactivity in a web application is a complex challenge, especially 
 
 The following is a high-level overview of the reactivity patterns available in Oryx. In the diagram, it is shown using a product component.
 
-{% include diagrams/oryx/reactivity-high-level.svg %}
+{% include diagrams/oryx/reactivity-high-level.md %}
 
 {% info_block infoBox "Note" %}
 

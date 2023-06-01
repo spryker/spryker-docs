@@ -18,8 +18,6 @@ This document describes the `shopping_list.csv` file to configure information ab
 |name|&check;|string|Name of the shopping list.|
 |owner_customer_reference|&check;|string |Customer reference of the shopping list owner.|
 
-
-
 ## Import file template and content example
 
 | FILE | DESCRIPTION |

@@ -116,7 +116,7 @@ Yes, OpenSearch supports all the official clients supported by Elasticsearch, su
 
  As SCCOS heavily relies on Amazon OpenSearch Service, which does not support Elasticsearch 8+, SCCOS does not support it by default. This decision is based on our commitment to ensuring the best possible stability, security, and compatibility for our users within the supported AWS ecosystem. We continue to closely monitor the developments in this area and adjust our strategies as needed to best serve the needs of our community.
 
-## My on-premises project is running Elasticsearch 8+, what steps should I take to ensure compatibility when migrating to SCCOS?
+## My on-premises project is running Elasticsearch 8+. what steps should I take to ensure compatibility when migrating to SCCOS?
 
 To ensure compatibility with SCCOS, you need to migrate from Elasticsearch 8+ to OpenSearch 1.
 

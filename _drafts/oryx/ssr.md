@@ -2,7 +2,7 @@
 
 ### Why SSR?
 
-Server-Side Rendering (SSR) has grown in popularity due to its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). CWV are a set of metrics that Google uses to measure aspects of web usability such as loading performance, interactivity, and visual stability. By delivering pre-rendered HTML from the server (or even CDN) to the client, SSR leads to quicker initial page load times, enhances the user experience, and can significantly improve CWV scores. This bypasses the need for the client's browser to download, parse, and execute JavaScript before displaying the webpage — a fundamental limitation of Client-Side Rendering (CSR).
+Server-Side Rendering (SSR), including Static Site Generation (SSG) as a variant, has grown in popularity due to its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). By delivering pre-rendered HTML from the server (or even CDN) to the client, SSR and SSG lead to quicker initial page load times, enhance the user experience, and can significantly improve CWV scores. SSG, in particular, pre-renders HTML at build time, resulting in static HTML, CSS, and JavaScript files that can be served directly from a CDN. It is a useful strategy for sites with content that does not change frequently, and can improve performance, scalability, and security.
 
 ### SSR vs. CSR: Understanding the Differences
 
@@ -39,11 +39,15 @@ While SSR offers numerous benefits, it may not be the best fit for every type of
 
 ### Traditional server-based SSR
 
-Traditional SSR implementation involves rendering the initial HTML content on a server, typically powered by Node.js. 
+Traditional SSR implementation involves rendering the initial HTML content on a server, typically powered by Node.js.
 
 ### Serverless SSR using Lambda
 
 Serverless SSR, on the other hand, employs on-demand serverless platforms such as AWS Lambda for HTML rendering, eliminating the need for a dedicated server. 
+
+### SSG: Static Site Generation
+
+SSG is a variant of SSR where the server generates static HTML pages at build time. These pages can be directly served from a CDN, reducing server load and accelerating delivery. This approach is particularly effective for sites where content does not change often. SSG enhances load times, scalability, and security.
 
 ### Caching, CDN
 

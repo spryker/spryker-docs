@@ -25,7 +25,7 @@ As a recognized AWS Partner, Spryker Cloud Commerce OS(SCCOS) relies on AWS-mana
 
 ## Does it mean that all SCCOS projects are already using Amazon OpenSearch Service?
 
-Yes, all SCCOS projects are already running on Amazon OpenSearch Service, regardless of the engine version of Elasticsearch or OpenSearch you are currently using.
+Yes, all SCCOS projects are already running Amazon OpenSearch Service, regardless of the engine version of Elasticsearch or OpenSearch you are currently using.
 
 ## Can my project migrate to OpenSearch if I it's running Spryker Commerce OS on premises?
 
@@ -39,57 +39,57 @@ If you are running Elasticsearch version 6.8 or above, no action is required on 
 
 The migration takes a short time, usually within the maintenance window. We can migrate your project during the maintenance window or on demand.
 
-## Will there any data loss during the migration to OpenSearch?
+## Will there be any data loss during the migration?
 
 No, the migration to OpenSearch follows AWS's blue-green deployment strategy, which ensures data continuity and prevents any loss. Your data will remain intact and available in the upgraded environment.
 
-## Will any functionality be lost during the transition to OpenSearch?
+## Will any functionality be lost during the migration?
 
-No, there won't be any loss of functionality during the migration to OpenSearch. OpenSearch 1 is backward compatible with Elasticsearch 7, ensuring that all features and functions remain accessible after the migration.
+No, there won't be any loss of functionality during the migration. Because OpenSearch 1 is backward compatible with Elasticsearch 7, all features and functions remain accessible after the migration.
 
 ## Will there be any downtime during the migration or scaling process?
 
-No, there will not be any downtime during the migration or scaling process. AWS's blue-green deployment strategy ensures uninterrupted service during the migration.
+No, AWS's blue-green deployment strategy ensures uninterrupted service during the migration.
 
-## I am currently using Elasticsearch 7 or older versions. What are the benefits of upgrading to OpenSearch?
+## I am currently using Elasticsearch 7 or older versions. What are the benefits of migrating to OpenSearch?
 
-Migrating from Elasticsearch 7 or older versions to OpenSearch provides several benefits:
+Migration to OpenSearch provides several benefits:
 
-* Enhanced Security: OpenSearch includes built-in security features to protect your data better.
+* Enhanced security: OpenSearch includes built-in security features to protect your data better.
 
-* Continued Support: OpenSearch receives long-term support and updates, ensuring ongoing improvements and maintenance.
+* Continued support: OpenSearch receives long-term support and updates, ensuring ongoing improvements and maintenance.
 
-* Advanced Features: OpenSearch introduces new features such as better observability, anomaly detection, and data lifecycle management.
+* Advanced features: OpenSearch introduces new features such as better observability, anomaly detection, and data lifecycle management.
 
-* Active Community: OpenSearch benefits from a thriving open-source community, driving continuous enhancement and innovation.
+* Active community: OpenSearch benefits from a thriving open-source community, driving continuous enhancement and innovation.
 
-## Why didn’t we get earlier access to OpenSearch?
+## Why didn’t we get access to OpenSearch earlier?
 
-At Spryker, we prioritize our services' stability, security, and compatibility above all else. Our commitment to these principles means we approach upgrades with the utmost caution, ensuring that we have extensively tested and verified their functionality and compatibility before they are introduced into our ecosystem. Elasticsearch has been a reliable and robust search engine, and many of our customers still use versions under 7.10. Despite Elastic's decision to deprecate some older versions of Elasticsearch, we've been able to maintain their service continuity through our partnership with AWS, which has committed to supporting these versions without deprecation notice. As a result, there was no immediate need to rush an upgrade to OpenSearch.
+We prioritize our services' stability, security, and compatibility above all else. That's why we approach upgrades with the utmost caution, ensuring that we have extensively tested and verified their functionality and compatibility before they are introduced into our ecosystem. Elasticsearch has been a reliable and robust search engine, and many of our customers still use versions under 7.10. Despite Elastic's decision to deprecate some older versions of Elasticsearch, we've been able to maintain their service continuity through our partnership with AWS, which has committed to supporting these versions without deprecation notice. As a result, there was no immediate need to rush the migration to OpenSearch.
 
-However, we recognize the potential benefits and features that OpenSearch brings. After thorough testing and validation, we are confident that OpenSearch is a solid platform for the search needs of the Spryker community. As with any upgrade, our commitment remains to ensure the transition is smooth, backward compatible, and minimally disruptive.
+However, we recognize the potential benefits and features that OpenSearch brings. After thorough testing and validation, we are confident that OpenSearch is a solid platform and the transition will be smooth, backward compatible, and minimally disruptive.
 
 ## Does the migration to OpenSearch entail any additional costs?
 
-No, the migration does not entail any additional costs. We take care of the migration on our side as part of your existing agreement. The cost of running OpenSearch is similar to Elasticsearch, and any changes in usage or scale can affect overall costs.
+No, we take care of the migration on our side as part of your existing agreement. The cost of running OpenSearch is similar to Elasticsearch. However, any changes in usage or scale can affect overall costs.
 
 ## Can I continue using Elasticsearch APIs with OpenSearch?
 
-Yes, you can. OpenSearch maintains backward compatibility with Elasticsearch 7.10, which means all your existing APIs, clients, and applications should continue to work as expected with OpenSearch.
+Yes, OpenSearch maintains backward compatibility with Elasticsearch 7.10. All your existing APIs, clients, and applications should continue to work as expected with OpenSearch.
 
 ## How is backward compatibility maintained in OpenSearch?
 
 OpenSearch maintains backward compatibility by ensuring its APIs and core search functionality are compatible with Elasticsearch 7.10.2. When OpenSearch was forked from Elasticsearch 7.10.2, the goal was to keep the base functionality and APIs the same. This lets applications and tools built to work with Elasticsearch 7.10.2 to continue functioning with OpenSearch.
 
-In addition, OpenSearch includes a compatibility mode, which lets OpenSearch respond with a version number of 7.10.2. This can be useful for tools or clients that check the version of the search engine and expect to communicate with Elasticsearch 7.10.2.
+Also, OpenSearch includes a compatibility mode, which lets OpenSearch respond with a version number of 7.10.2. This can be useful for tools or clients that check the version of the search engine and expect to communicate with Elasticsearch 7.10.2.
 
-However, while backward compatibility is a priority, certain features or functionalities from older versions of Elasticsearch are not supported in OpenSearch. We recommend  thoroughly testing your application in a non-production environment when upgrading to a new version or migrating to different software.
+However, while backward compatibility is a priority, certain features or functionalities from older versions of Elasticsearch are not supported in OpenSearch. We recommend  thoroughly testing your application in a non-production environment when upgrading or migrating to different software.
 
-Also, as OpenSearch continues to evolve and new versions are released, for the updates on backward compatibility, make sure to to stay up to date with the official OpenSearch documentation or their GitHub page.
+Also, as OpenSearch continues to evolve, and new versions are released, for the updates on backward compatibility, make sure to check the [OpenSearch documentation](https://opensearch.org/docs/latest/) or their [GitHub repository](https://github.com/opensearch-project/OpenSearch).
 
 ## Does OpenSearch support all the plugins that I used with Elasticsearch?
 
-OpenSearch supports most plugins compatible with Elasticsearch 7.10.2. However, it's always a good idea to check the compatibility of specific plugins in the OpenSearch documentation or with a particular plugin's provider. Some cases require plugins to be updated or replaced an OpenSearch-compatible version. Check with your Spryker support team about what specific plugins you are currently using to ensure backward compatibility. You will get a rolling upgrade from the development and staging environment to test the changes before upgrading to OpenSearch in production.
+OpenSearch supports most plugins compatible with Elasticsearch 7.10.2. However, make sure to check the compatibility of specific plugins in the OpenSearch documentation or with a particular plugin's provider. Some cases require plugins to be updated or replaced with OpenSearch-compatible versions. To get the list of the plugins you are currently using,  [contact our Support team](https://spryker.my.site.com/support/s/). Before the production environment is migrated, we will migrate your development and staging environments, so you can test backward compatibility.
 
 ## How will the migration affect my current configurations and settings?
 
@@ -123,7 +123,7 @@ Yes, OpenSearch supports the languages and frameworks as Elasticsearch. This inc
 
 To ensure compatibility with SCCOS, you need to migrate the project from Elasticsearch 8+ to OpenSearch 1.
 
-However, we understand that sophisticated business models have unique needs, and we are always open to exploring new patterns that enable our customers to leverage and extend SCCOS with their own solutions in a multi-cloud setup.
+However, we understand that sophisticated business models have unique needs, and we are always open to exploring new patterns that enable our customers to leverage and extend SCCOS with their own solutions.
 
 Therefore, if you have ideas or requirements related to Elasticsearch 8+ or any other technology, we encourage you to contact us. Our primary goal is to ensure that SCCOS is a robust and reliable platform and a customizable solution that can adapt to the changing needs of our customers.
 

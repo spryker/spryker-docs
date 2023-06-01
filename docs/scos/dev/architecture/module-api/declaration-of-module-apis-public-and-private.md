@@ -54,6 +54,7 @@ In the Spryker Commerce OS's core, the following is the public API:
     * Twig functions
     * [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
     * Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
+    * Traits and public methods of abstract classes 
 * [Database](/docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html)
 * Search
 * [Storage](/docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html)

@@ -8,7 +8,7 @@ This document describes the `shopping_list.csv` file to configure information ab
 
 ## Import file dependencies
 
-<!--If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.-->
+[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
 
 ## Import file parameters
 

@@ -11,13 +11,12 @@ This document describes the `quote_request.csv` file to configure information ab
 [quote_request.csv](_drafts/data-import/base-shop/file-details-quote-request.csv.md)
 
 ## Import file parameters
-<!--| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |-->
 
 | PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| quote_request_reference |&check;| string |  | Qute request ID.|
-| company_user_key |&check;| string | | Key that identified the company user that that the quote is shared with. |
-| quote_request_status | &check; | string | | Status of the quote.|
+| quote_request_reference |&check;| string |  Qute request ID.|
+| company_user_key |&check;| string | Key that identified the company user that that the quote is shared with. |
+| quote_request_status | &check; | string | Status of the quote.|
 
 ## Import file template and content example
 

@@ -8,8 +8,7 @@ This document describes the `configurable_bundle_template.csv` file to configure
 
 ## Import file dependencies
 
-[TODO: add dependencies]
-<!--If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.-->
+[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
 
 ## Import file parameters
 

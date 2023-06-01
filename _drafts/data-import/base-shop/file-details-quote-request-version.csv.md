@@ -11,9 +11,9 @@ This document describes the `quote_request_version.csv` file to configure inform
 [quote_request.csv](_drafts/data-import/base-shop/file-details-quote-request.csv.md)
 ## Import file parameters
 
-| PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| quote_request_reference | &check; | string | Qute request reference.|
+| quote_request_reference | &check; | string |  Qute request reference.|
 | version | &check; | string | Version of the quote request. |
 | version_reference | &check; | string | Status of the quote.|
 | metadata | &check; | string | Array of quote request metadata.|

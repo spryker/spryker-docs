@@ -55,7 +55,8 @@ commonOptions = {
     /blackfire.io\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,
     /dixa.com\/[\.\w\-\/\?]+/,
-    /rxjs.dev\/[\.\w\-\/\?]+/
+    /rxjs.dev\/[\.\w\-\/\?]+/,
+    /www.blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

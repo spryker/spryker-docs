@@ -14,8 +14,8 @@ To start feature integration, integrate the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE                                                                                                                              |
 |-------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse Picking | {{site.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-picking-feature.html) |
-| Shipment          | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)        |
+| Warehouse Picking | {{page.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-warehouse-picking-feature.html) |
+| Shipment          | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-feature.html)        |
 
 ## 1) Install the required modules using Composer
 

@@ -11,9 +11,9 @@ Follow the steps below to install the Glue JSON:API convention core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME          | VERSION   | INTEGRATION GUIDE  |
-|---------------|-----------|--------------------|
-| Spryker Core  | Feature   | {{page.version}}   |
+| NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                     |
+|----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core   | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 
@@ -136,6 +136,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly, and you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
+To verify that everything is set up correctly, and you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
 
 {% endinfo_block %}

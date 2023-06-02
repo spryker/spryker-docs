@@ -31,28 +31,7 @@ composer require spryker/glue-backend-api-application-glue-json-api-convention-c
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
-
-Add the following configuration:
-
-**config/Shared/config\_default.php**
-
-```php
-<?php
-
-use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
-
-// ----------------------------------------------------------------------------
-// ------------------------------ Glue Backend API -------------------------------
-// ----------------------------------------------------------------------------
-$sprykerGlueBackendHost = getenv('SPRYKER_GLUE_BACKEND_HOST');
-$config[GlueBackendApiApplicationConstants::GLUE_BACKEND_API_HOST] = $sprykerGlueBackendHost;
-$config[GlueBackendApiApplicationConstants::PROJECT_NAMESPACES] = [
-    'Pyz',
-];
-```
-
-### 3) Set up transfer objects
+### 2) Set up transfer objects
 
 Generate transfers:
 
@@ -73,7 +52,7 @@ Ensure the following transfers have been created:
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

@@ -5,7 +5,7 @@ description: Learn how to render the Merchant Product Offers on the Storefront.
 template: howto-guide-template
 ---
 
-This document explains how to render the merchant product offers on the Storefront.
+This document explains how to render merchant product offers on the Storefront.
 
 ## Prerequisites
 

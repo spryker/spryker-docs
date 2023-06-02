@@ -239,7 +239,7 @@ entries:
 
                   - title: GUI modules concept
                     url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
-                    
+
                   - title: Merchant User concept
                     url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
 
@@ -547,6 +547,9 @@ entries:
 
           - title: Glue API
             url: /docs/marketplace/dev/feature-integration-guides/glue/glue.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: "Glue API: Marketplace Inventory Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
@@ -975,7 +978,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: combined-merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html

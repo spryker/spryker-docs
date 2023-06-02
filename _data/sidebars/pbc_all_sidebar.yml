@@ -1290,9 +1290,9 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/manage-product-offers.html
               - title: Retrieve product offers using Glue API
                 url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
-              - title: Marketplace Product Offer feature overview
-                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
-              - title: Marketplace Product Offer feature overview
+              - title: Render merchant product offers on the Storefront
+                url: /docs/pbc/all/offer-management/marketplace/render-merchant-product-offers-on-the-storefront.html
+              - title: "Marketplace Product Offer feature: Domain model and relationships"
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
               - title: Marketplace Product Offer feature overview
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html

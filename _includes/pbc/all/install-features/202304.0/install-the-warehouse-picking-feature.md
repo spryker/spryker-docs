@@ -560,11 +560,11 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 
 3. To enable the Backend API, register these plugins:
 
-| PLUGIN                                                          | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                            |
-|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                                    |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication |
-| PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                               |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication |
-| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds the `picking-list-items` resources as relationships to the `picking-lists` resources. |               |                                                                      |
+| PLUGIN                                                          | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                                                          |
+|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
+| PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                                    |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
+| PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                               |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
+| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds the `picking-list-items` resources as relationships to the `picking-lists` resources. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -603,7 +603,7 @@ namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
 use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
-use Spryker\Glue\PickingListsBackendApi\Plugin\GlueJsonApiConvention\PickingListItemsByPickingListsBackendResourceRelationshipPlugin;
+use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\PickingListItemsByPickingListsBackendResourceRelationshipPlugin;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {

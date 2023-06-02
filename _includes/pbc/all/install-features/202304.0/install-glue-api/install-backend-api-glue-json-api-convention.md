@@ -99,6 +99,17 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+In order to make sure that `RelationshipPluginsContextExpanderPlugin` is setup correctly,
+attempt to generate the documentation for `backend`. Do so by passing the optional `--application` parameter:
+```
+vendor/bin/glue api:generate:documentation --application backend
+```
+Make sure only the "backend" application documentation was generated with related relationships.
+
+{% endinfo_block %}
+
 **src/Pyz/Glue/GlueJsonApiConvention/GlueJsonApiConventionDependencyProvider.php**
 
 ```
@@ -123,4 +134,8 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
 To verify that everything is set up correctly, and you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
+
+{% endinfo_block %}

@@ -17,8 +17,6 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker/glue-backend-api-application-glue-json-api-convention-connector:"^1.0.0" --update-with-dependencies
 ```
@@ -35,7 +33,7 @@ composer require spryker/glue-backend-api-application-glue-json-api-convention-c
 
 Generate transfers:
 
-```
+```bash
 vendor/bin/console transfer:generate
 ```
 
@@ -63,7 +61,7 @@ Enable the following behaviors by registering the plugins:
 
 **Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\DocumentationGeneratorApi;
@@ -101,12 +99,13 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 
 {% info_block warningBox "Verification" %}
 
-In order to make sure that `RelationshipPluginsContextExpanderPlugin` is setup correctly,
-attempt to generate the documentation for `backend`. Do so by passing the optional `--application` parameter:
-```
+To make sure that `RelationshipPluginsContextExpanderPlugin` is setup correctly, generate the documentation for `backend` by passing the optional `--application` parameter:
+
+```bash
 vendor/bin/glue api:generate:documentation --application backend
 ```
-Make sure only the "backend" application documentation was generated with related relationships.
+
+Make sure only the backend application documentation has been generated with related relationships.
 
 {% endinfo_block %}
 
@@ -136,6 +135,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly, and you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
+To verify that everything is set up correctly and that you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
 
 {% endinfo_block %}

@@ -1,14 +1,16 @@
 ---
 title: "File details: quote_request_version.csv"
+description: The quote_request_version.csv file to configure information about quote request versions in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
 ---
 
 This document describes the `quote_request_version.csv` file to configure information about [quote request](https://docs.spryker.com/docs/pbc/all/request-for-quote/202212.0/request-for-quote.html) versions in your Spryker shop.
 
 ## Import file dependencies
 
-[quote_request.csv](_drafts/data-import/base-shop/file-details-quote-request.csv.md)
+[quote_request.csv](/docs/pbc/all/request-for-quote/202212.0/import-and-export-data/file-details-quote-request.csv.html)
+
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
@@ -23,8 +25,8 @@ This document describes the `quote_request_version.csv` file to configure inform
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_quote_request_version.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
-| [`quote_request_version.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
+| [`template_quote_request_version.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/import-and-export-data/file-details-quote-request-version.csv.md/template_quote_request_version.csv) | Import file template with headers only. |
+| [`quote_request_version.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/import-and-export-data/file-details-quote-request-version.csv.md/quote_request_version.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

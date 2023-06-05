@@ -1,7 +1,8 @@
 ---
 title: "File details: configurable_bundle_template_slot.csv"
+description: Use the configurable_bundle_template_slot.csv file to configure information about configurable bundle templates' slots in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
 ---
 
 This document describes the `configurable_bundle_template_slot.csv` file to configure information about [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) templates' slots in your Spryker shop.

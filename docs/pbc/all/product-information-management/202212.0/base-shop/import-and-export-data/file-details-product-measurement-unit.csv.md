@@ -1,7 +1,8 @@
 ---
 title: "File details: product_measurement_unit.csv"
+description: Use the product_measurement_unit.csv file to configure information about measurement units in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
 ---
 
 This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](/docs/pbc/all/product-information-management/{{page.verison}}/feature-overviews/measurement-units-feature-overview.html) in your Spryker shop.

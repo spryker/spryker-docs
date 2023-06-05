@@ -1,7 +1,8 @@
 ---
 title: "File details: configurable_bundle_template.csv"
+description: Use the configurable_bundle_template.csv file to configure information about configurable bundle templates in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
 ---
 
 This document describes the `configurable_bundle_template.csv` file to configure information about [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) templates in your Spryker shop.
@@ -23,8 +24,8 @@ This document describes the `configurable_bundle_template.csv` file to configure
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_configurable_bundle_template.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
-| [`configurable_bundle_template.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
+| [`template_configurable_bundle_template.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.md/template_configurable_bundle_template.csv)| Import file template with headers only. |
+| [`configurable_bundle_template.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.md/configurable_bundle_template.csv) | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

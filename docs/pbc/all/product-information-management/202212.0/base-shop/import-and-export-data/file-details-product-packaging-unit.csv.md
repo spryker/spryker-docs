@@ -1,7 +1,8 @@
 ---
 title: "File details: product_packaging_unit.csv"
+description: Use the product_packaging_unit.csv file to configure information about product packaging units in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
 ---
 
 This document describes the `product_packaging_unit.csv` file to configure information about [product packaging units](docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/packaging-units-feature-overview.html) in your Spryker shop.

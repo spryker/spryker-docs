@@ -1,7 +1,8 @@
 ---
 title: "File details: product_list.csv"
+description: Use the product_list.csv file to configure information about product lists in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
 ---
 
 This document describes the `product_list.csv` file to configure information about [product lists](https://docs.spryker.com/docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/product-lists-feature-overview.html) in your Spryker shop.
@@ -22,9 +23,8 @@ This document describes the `product_list.csv` file to configure information abo
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_list.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
-| [`product_list.csv`](link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
-
+| [`template_product_list.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.md/template_product_list.csv)| Import file template with headers only. |
+| [`product_list.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.md/product_list.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

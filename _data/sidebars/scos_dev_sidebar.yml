@@ -3900,7 +3900,7 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
       include_versions:
       - "202212.0"
- - title: Migration concepts
+  - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
     - title: Migrating from Twig v1 to Twig v3

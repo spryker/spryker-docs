@@ -2,7 +2,6 @@ This document describes how to integrate the Service Points feature into a Spryk
 
 ## Install feature core
 
-Follow the steps below to install the Service Points feature.
 To start feature integration, integrate the required features:
 
 ### Prerequisites
@@ -119,10 +118,6 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery   | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery   |
 | \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage      | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage      |
 | \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -262,7 +257,6 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | address3          | optional  | string    | 12/1                      | Third line of address            |
 | city              | mandatory | string    | Berlin                    | City                             |
 | zip_code          | mandatory | string    | 10115                     | Zip code                         |
-
 
 **data/import/common/common/service_type.csv**
 

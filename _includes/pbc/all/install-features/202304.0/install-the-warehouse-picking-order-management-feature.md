@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Warehouse picking + [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse picking + [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,8 +12,8 @@ To start feature integration, integrate the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE                                                                                                                              |
 |-------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse Picking | {{site.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-picking-feature.html) |
-| Order Management  | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)   |
+| Warehouse Picking | {{page.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-warehouse-picking-feature.html) |
+| Order Management  | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)   |
 
 ## 1) Install the required modules using Composer
 

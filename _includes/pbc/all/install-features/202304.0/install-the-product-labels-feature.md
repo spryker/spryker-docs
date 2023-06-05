@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Product Labels feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Product Labels feature](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -13,13 +13,13 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION           | INTEGRATION GUIDE                                                                                                                                                  | 
 |--------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                               |
-| Product      | {{site.version}}  | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                               |
+| Product      | {{page.version}}  | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -561,13 +561,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE| 
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
+composer require "spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

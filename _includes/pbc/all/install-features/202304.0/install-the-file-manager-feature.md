@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [File Manager feature](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [File Manager feature](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -13,12 +13,12 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/file-manager:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/file-manager:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

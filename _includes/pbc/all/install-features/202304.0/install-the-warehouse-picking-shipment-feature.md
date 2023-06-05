@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Warehouse picking + [Shipment](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse picking + [Shipment](/docs/scos/user/features/{{page.version}}/shipment/shipment-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

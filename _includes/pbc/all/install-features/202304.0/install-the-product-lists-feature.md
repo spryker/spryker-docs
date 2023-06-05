@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -13,14 +13,14 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE| 
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product | {{site.version}}  | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}}  | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/product-lists:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -841,6 +841,6 @@ Make sure that no restricted products can be added to a cart, and if they were a
 
 After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user, who browses the catalog, gets product lists assigned, and this can be fulfilled by providing owners with product lists.
 
-To add this functionality for merchant relationships, see  [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html).
+To add this functionality for merchant relationships, see  [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html).
 
 {% endinfo_block %}

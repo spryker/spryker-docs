@@ -15,9 +15,9 @@ To start feature integration, integrate the required features:
 
 | NAME                                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cart                                        | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                            |
-| Prices                                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
-| Marketplace Product Offer Prices (Optional) | {{site.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-prices-feature-integration.html) |
+| Cart                                        | {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                                            |
+| Prices                                      | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
+| Marketplace Product Offer Prices (Optional) | {{page.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -74,7 +74,7 @@ The `PriceCartConnectorConfig::getItemFieldsForIdentifier()` lets you set up a l
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-prices-feature-integration.html) feature installed.
+Apply the following changes only if you have the [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) feature installed.
 
 {% endinfo_block %}
 

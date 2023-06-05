@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.md) into a Spryker project.
+This document describes how to integrate the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-access-feature-overview.md) into a Spryker project.
 
 ## Install Feature Core
 
@@ -12,7 +12,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE| 
 |---|---|---|
-| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -407,7 +407,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE| 
 |---|---|---|
-| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 
 ### 1) Add translations

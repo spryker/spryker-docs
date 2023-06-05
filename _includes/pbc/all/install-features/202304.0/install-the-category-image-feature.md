@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Category Image feature](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -13,13 +13,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE| 
 |---|---|---|
-| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Category | {{site.version}} | |
+| Spryker Core | {{page.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} | |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -439,13 +439,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE | 
 |---|---|---|
-| Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Category | {{site.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} | |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

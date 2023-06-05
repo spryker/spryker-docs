@@ -63,7 +63,7 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 }
 ```
 
-1. In `package.json`, remove the dependency:
+4. In `package.json`, remove the dependency:
 
 ```json
     "@spryker/sass-resources-loader": "x.x.x"

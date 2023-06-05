@@ -626,9 +626,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 4. Import data:
 
 ```bash
-console data:import:shipment
-console data:import:shipment-price
-console data:import:shipment-method-store
+console data:import shipment
+console data:import shipment-price
+console data:import shipment-method-store
 console data:import shipment-type
 console data:import shipment-type-store
 console data:import shipment-method-shipment-type

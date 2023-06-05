@@ -19,7 +19,9 @@ We are  to avoid loading JS in the client unless there's a need; we gradually lo
 In the Oryx framework, our approach is to minimize the loading of JavaScript on the client side unless it is necessary. Instead of loading a full JavaScript framework, we opt for gradually loading snippets of JavaScript as required.
 
 ### Web Components
-Web Components are a set of web platform APIs that allow developers to create custom, reusable, and encapsulated HTML elements.
+Oryx components are build as web components. Web components is a set of web platform standards that allow developers to create custom, reusable, and encapsulated HTML elements.
+
+Oryx uses LIT elements to build web components, but you can use any framework (or plain HTML) to build those components.
 
 ### Web hosting
 Any hosting provider can be used, but SSR specific build will require additional configuration.

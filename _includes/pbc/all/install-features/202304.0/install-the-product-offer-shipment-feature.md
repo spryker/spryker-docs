@@ -4,16 +4,16 @@ This document describes how to integrate the Product offer shipment feature into
 
 Follow the steps below to install the Product offer shipment feature core.
 
-### Prerequisites
+## Prerequisites
 
-To start feature integration, integrate the required features:
+To start feature integration, integrate the following required features:
 
 | NAME          | VERSION          | INTEGRATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
  | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-feature-integration.html) |
  | Shipment      | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                   |
 
-## 1) Install the required modules using Composer
+## Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/product-offer-shipment:"{{site.version}}" --update-with-dependencies
@@ -31,9 +31,9 @@ Make sure that the following module has been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### Set up behavior
 
-Enable the following plugins.
+Enable the following plugins:
 
 | PLUGIN                                   | SPECIFICATION                                                                                                                 | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                |
 |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -86,7 +86,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 ```
 
-### 3) Set up database schema and transfer objects
+### Set up database schema and transfer objects
 
 ```bash
 console propel:install
@@ -171,7 +171,7 @@ Ensure the following transfers have been created:
 
 {% endinfo_block %}
 
-### 5) Import shipment types for product offers
+### Import shipment types for product offers
 
 1. Prepare your data according to your requirements using our demo data:
 

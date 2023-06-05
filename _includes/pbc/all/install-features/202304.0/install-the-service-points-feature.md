@@ -67,6 +67,12 @@ Make sure that the following modules have been installed:
       </behavior>
    </table>
 
+   <table name="spy_service">
+      <behavior name="event">
+         <parameter name="spy_service_all" column="*"/>
+      </behavior>
+   </table>
+
 </database>
 ```
 
@@ -645,12 +651,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Register publisher plugins
 
-| PLUGIN                                  | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                                         |
-|-----------------------------------------|-----------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
-| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
-| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
-| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
+| PLUGIN                                  | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                                         |
+|-----------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
+| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data.       | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
+| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
+| ServiceWritePublisherPlugin             | Listens for service events and publishes respective data. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\Service             |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -660,6 +667,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\Service\ServiceWritePublisherPlugin;
 use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint\ServicePointDeletePublisherPlugin;
 use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint\ServicePointWritePublisherPlugin;
 use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin;
@@ -677,6 +685,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ServicePointDeletePublisherPlugin(),
             new ServicePointAddressWritePublisherPlugin(),
             new ServicePointStoreWritePublisherPlugin(),
+            new ServiceWritePublisherPlugin(),
         ];
     }
 }
@@ -684,12 +693,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Register query expander and result formatter plugins
 
-| PLUGIN                                         | SPECIFICATION                                 | PREREQUISITES | NAMESPACE                                                              |
-|------------------------------------------------|-----------------------------------------------|---------------|------------------------------------------------------------------------|
-| ServicePointSearchResultFormatterPlugin        | Maps raw Elasticsearch results to a transfer. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
-| SortedServicePointSearchQueryExpanderPlugin    | Adds sorting to a search query.               | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| PaginatedServicePointSearchQueryExpanderPlugin | Adds pagination to a search query.            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| StoreServicePointSearchQueryExpanderPlugin     | Adds filtering by locale to a search query.   | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| PLUGIN                                            | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                              |
+|---------------------------------------------------|----------------------------------------------------|---------------|------------------------------------------------------------------------|
+| ServicePointSearchResultFormatterPlugin           | Maps raw Elasticsearch results to a transfer.      | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
+| SortedServicePointSearchQueryExpanderPlugin       | Adds sorting to a search query.                    | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| PaginatedServicePointSearchQueryExpanderPlugin    | Adds pagination to a search query.                 | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| StoreServicePointSearchQueryExpanderPlugin        | Adds filtering by locale to a search query.        | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServiceTypesServicePointSearchQueryExpanderPlugin | Adds filtering by service types to a search query. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 
@@ -725,6 +735,7 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
             new StoreServicePointSearchQueryExpanderPlugin(),
             new SortedServicePointSearchQueryExpanderPlugin(),
             new PaginatedServicePointSearchQueryExpanderPlugin(),
+            new ServiceTypesServicePointSearchQueryExpanderPlugin(),
         ];
     }
 }

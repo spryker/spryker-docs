@@ -16,7 +16,7 @@ To start feature integration, integrate the required features:
 | NAME                                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Cart                                        | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                            |
-| Prices                                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)              |
+| Prices                                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
 | Marketplace Product Offer Prices (Optional) | {{site.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer

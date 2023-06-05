@@ -6,7 +6,4 @@ template: concept-topic-template
 ---
 This section contains a collection of guides to help administrators manage marketplaces in the Back Office.
 
-
-* [Sales](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/sales.html)
-* [Catalog](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/catalog.html)
 * [Marketplace](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/marketplace.html)

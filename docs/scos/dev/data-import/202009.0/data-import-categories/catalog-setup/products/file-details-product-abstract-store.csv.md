@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_abstract_store.csv** file to configure Product Abstract Store information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
+## Import file parameters
 
 These are the header fields to be included in the .csv file:
 
@@ -27,7 +27,7 @@ This file has the following dependencies:
 * [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
-## Template File & Content Example
+## Import template file and content example
 
 A template and an example of the *product_abstract_store.csv*  file can be downloaded here:
 

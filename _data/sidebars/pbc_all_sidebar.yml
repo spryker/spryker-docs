@@ -399,7 +399,6 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
-
       - title: Content Management System
         url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:
@@ -864,8 +863,12 @@ entries:
                 url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-login-by-token-reference-information.html
               - title: "Customer module overview: reference information"
                 url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-module-overview-reference-information.html
-          - title: "File details: customer.csv"
-            url: /docs/pbc/all/customer-relationship-management/file-details-customer.csv.html
+          - title: Import and export data
+            nested:
+              - title: company.csv
+                url: /docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.html
+              - title: customer.csv
+                url: /docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-customer.csv.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

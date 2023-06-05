@@ -1,7 +1,11 @@
 ---
 title: "File details: shopping_list_item.csv"
+description: Use the shopping_list_item.csv file to configure information about shopping list items in your Spryker shop.
 template: data-import-template
 last_updated: Jun 1, 2023
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `shopping_list_item.csv` file to configure information about [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) items in your Spryker shop.

@@ -1,7 +1,11 @@
 ---
 title: "File details: company.csv"
+description: Use the company.csv file to configure information about company accounts in your Spryker shop.
 template: data-import-template
-last_updated: 
+last_updated: Jun 1, 2023
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `company.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.

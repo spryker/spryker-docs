@@ -44,7 +44,7 @@ Some layers can be considered optional if you build your own domains or componen
 
 The following diagram shows the interaction between layers using the product domain as an example.
 
-![reactivity-interaction](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/front-end-development/reactivity/reactivity-interaction.png)
+{% include diagrams/oryx/reactivity-high-level.md %}
 
 Description:
 

@@ -1,6 +1,6 @@
-# Internationalization
+# Localization
 
-It is important to internationalize texts in UI instead of shipping hardcoded texts.
+It is important to localize texts in UI instead of shipping hardcoded texts.
 
 To achieve this, we provide the `@spryker-oryx/utilities` package which introduces lightweight i18n capabilities for vanilla JS and Lit components. It is free from dependencies on other oryx packages like `injector`, so you can freely depend on it from the most low-level packages like `@spryker-oryx/ui`.
 
@@ -86,9 +86,9 @@ ICU message formatting defines standard syntax to handle common translation case
 - Pluralization: for example, `You have {count} {count, plural, one {item} other {items}} in cart`.
 - Selects: for example, `{gender, select, male {He} female {She} other {They}} invited you to party!`.
 
-## Internationalize texts in Lit components
+## Localize texts in Lit components
 
-To internationalize texts inside lit components, use the [`i18n`](https://github.com/spryker/oryx/blob/development/libs/base/utilities/src/directives/i18n/i18n.directive.ts) lit-directive from the `@spryker-oryx/utilities` package:
+To localize texts inside lit components, use the [`i18n`](https://github.com/spryker/oryx/blob/development/libs/base/utilities/src/directives/i18n/i18n.directive.ts) lit-directive from the `@spryker-oryx/utilities` package:
 
 ```ts
 import { LitElement, html } from 'lit';
@@ -114,9 +114,9 @@ class ExampleComponent extends LitElement {
 }
 ```
 
-## Internationalize texts in vanilla JS components
+## Localize texts in vanilla JS components
 
-To internationalize texts in vanilla JS or TS, use the [`I18nService`](https://github.com/spryker/oryx/blob/development/libs/platform/i18n/src/lib/i18n/i18n.service.ts) service from the `@spryker-oryx/i18n` package:
+To localize texts in vanilla JS or TS, use the [`I18nService`](https://github.com/spryker/oryx/blob/development/libs/platform/i18n/src/lib/i18n/i18n.service.ts) service from the `@spryker-oryx/i18n` package:
 
 ```ts
 import { inject } from '@spryker-oryx/injector';

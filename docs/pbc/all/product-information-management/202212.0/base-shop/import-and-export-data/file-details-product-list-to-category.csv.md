@@ -11,9 +11,9 @@ This document describes the `product_list_to_category.csv` file to configure inf
 
 ## Import file dependencies
 
-* [File details - product_list.csv](_drafts/data-import/base-shop/file-details-product-list.csv.md)
-* [File details - category.csv](https://docs.spryker.com/docs/pbc/all/product-information-management/202212.0/base-shop/import-and-export-data/categories-data-import/file-details-category.csv.html)
-* 
+* [File details - product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
+* [File details - category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/file-details-category.csv.html)
+
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |

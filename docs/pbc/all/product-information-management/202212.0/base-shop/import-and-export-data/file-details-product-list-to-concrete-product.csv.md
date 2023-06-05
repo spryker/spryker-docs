@@ -12,7 +12,7 @@ This document describes the `product_list_to_concrete_product.csv` file to confi
 
 ## Import file dependencies
 
-* [File details - product_list.csv](_drafts/data-import/base-shop/file-details-product-list.csv.md)
+* [File details - product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
 * [File details - product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 
 ## Import file parameters

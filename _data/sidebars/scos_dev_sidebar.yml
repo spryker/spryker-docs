@@ -3897,7 +3897,7 @@ entries:
     - title: Migration guide - Switch from TSLint to ESLint
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
     - title: Migration guide - Upgrade Node.js to v18 and npm to v9
-      url: docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
+      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
       include_versions:
       - "202212.0"
  - title: Migration concepts

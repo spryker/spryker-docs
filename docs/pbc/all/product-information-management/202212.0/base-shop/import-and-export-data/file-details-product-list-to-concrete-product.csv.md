@@ -3,6 +3,9 @@ title: "File details: product_list_to_concrete_product.csv"
 description: Use the product_list_to_concrete_product.csv file to configure configurable product assignments for product lists in your Spryker shop.
 template: data-import-template
 last_updated: Jun 1, 2023
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_list_to_concrete_product.csv` file to configure [configurable product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) assignments for [product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html) in your Spryker shop.

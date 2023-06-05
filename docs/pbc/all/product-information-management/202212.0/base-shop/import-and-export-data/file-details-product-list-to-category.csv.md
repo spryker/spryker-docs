@@ -2,6 +2,9 @@
 title: "File details: product_list_to_category.csv"
 description: Use the product_list_to_category.csv file to configure information about product lists and respective categories in your Spryker shop.
 last_updated: Jun 1, 2023
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_list_to_category.csv` file to configure information about [product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.md) and respective categories in your Spryker shop.

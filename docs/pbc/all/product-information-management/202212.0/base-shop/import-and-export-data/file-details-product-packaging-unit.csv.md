@@ -3,6 +3,9 @@ title: "File details: product_packaging_unit.csv"
 description: Use the product_packaging_unit.csv file to configure information about product packaging units in your Spryker shop.
 template: data-import-template
 last_updated: Jun 1, 2023
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_packaging_unit.csv` file to configure information about [product packaging units](docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/packaging-units-feature-overview.html) in your Spryker shop.
@@ -29,8 +32,8 @@ This document describes the `product_packaging_unit.csv` file to configure infor
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_packaging_unit.csv`](TODO: link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link-->| Import file template with headers only. |
-| [`product_packaging_unit.csv`](TODO: link to the exemplary file)<!--after doc moved to proper place, upload CSV to S3 and add a link--> | Exemplary import file with the Demo Shop data. |
+| [`template_product_packaging_unit.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.md/template_product_packaging_unit.csv) | Import file template with headers only. |
+| [`product_packaging_unit.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.md/product_packaging_unit.csv) | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

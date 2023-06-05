@@ -3,6 +3,9 @@ title: "File details: configurable_bundle_template.csv"
 description: Use the configurable_bundle_template.csv file to configure information about configurable bundle templates in your Spryker shop.
 template: data-import-template
 last_updated: Jun 1, 2023
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `configurable_bundle_template.csv` file to configure information about [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) templates in your Spryker shop.

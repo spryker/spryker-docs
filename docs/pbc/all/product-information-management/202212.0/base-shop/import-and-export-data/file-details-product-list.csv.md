@@ -10,10 +10,6 @@ related:
 
 This document describes the `product_list.csv` file to configure information about [product lists](https://docs.spryker.com/docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/product-lists-feature-overview.html) in your Spryker shop.
 
-## Import file dependencies
-
-[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
-
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |

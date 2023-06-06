@@ -12,7 +12,7 @@ This document describes the `shopping_list.csv` file to configure information ab
 
 ## Import file dependencies
 
-[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
+[File details: customer.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-customer.csv.html)
 
 ## Import file parameters
 

@@ -13,7 +13,7 @@ This document describes the `product_packaging_unit.csv` file to configure infor
 
 ## Import file dependencies
 
-[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
+[File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 
 ## Import file parameters
 

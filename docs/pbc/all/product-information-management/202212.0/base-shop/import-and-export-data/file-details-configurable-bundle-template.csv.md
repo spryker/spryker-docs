@@ -10,10 +10,6 @@ related:
 
 This document describes the `configurable_bundle_template.csv` file to configure information about [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) templates in your Spryker shop.
 
-## Import file dependencies
-
-[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
-
 ## Import file parameters
 
 | PARAMETER                                | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION                                          |

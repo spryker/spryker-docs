@@ -10,18 +10,14 @@ related:
 
 This document describes the `company.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.
 
-## Import file dependencies
-
-[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
-
 ## Import file parameters
 
-| PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-| --- | --- | --- | --- | --- |
-| key |&check;| string |  | Company key.|
-| name |&check;| string | | Company name.|
-| is_active | &check; | bool | <ul><li>`1`: active</li><li>`0`: inactive</li></ul> | Defines if a company is active. |
-| status |&check;|string|  <!--TODO: add possible statuses if needed; remove the comment otherwise--> |Company status.|
+| PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS                                  | DESCRIPTION |
+| --- | --- | --- |-----------------------------------------------------------| --- |
+| key |&check;| string |                                                           | Company key.|
+| name |&check;| string |                                                           | Company name.|
+| is_active | &check; | bool | <ul><li>`1`: active</li><li>`0`: inactive</li></ul>       | Defines if a company is active. |
+| status |&check;|string| <ul><li>pending</li><li>approved</li><li>denied</li></ul> |Company status.|
 
 ## Import file template and content example
 

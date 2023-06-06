@@ -13,6 +13,7 @@ This document describes the `shopping_list_item.csv` file to configure informati
 ## Import file dependencies
 
 [shopping_list.csv](_drafts/data-import/base-shop/file-details-shopping-list.csv.md)
+[product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 
 ## Import file parameters
 

@@ -10,16 +10,11 @@ related:
 
 This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](/docs/pbc/all/product-information-management/{{page.verison}}/feature-overviews/measurement-units-feature-overview.html) in your Spryker shop.
 
-
-## Import file dependencies
-
-[TODO: add dependencies; If the file has no dependencies, remove the section. If there are two and more import files, use bullet points.]
-
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | &check; | string | Gdlossary key used for displaying. Each name needs glossary key definition for all configured locales. |
+| name | &check; | string | Glossary key used for displaying. Each name needs glossary key definition for all configured locales. |
 | code | &check; | unique, string | Unique identifier used by the Spryker OS to identify measurement units. |
 | default_precision | &check; | integer, power of ten | Property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations.|
 

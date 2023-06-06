@@ -22,13 +22,14 @@ composer require spryker-feature/service-points: "{{page.version}}" --update-wit
 
 Make sure that the following modules have been installed:
 
-| MODULE                  | EXPECTED DIRECTORY                        |
-|-------------------------|-------------------------------------------|
-| ServicePoint            | vendor/spryker/service-point              |
-| ServicePointDataImport  | vendor/spryker/service-point-data-import  |
-| ServicePointsBackendApi | vendor/spryker/service-points-backend-api |
-| ServicePointSearch      | vendor/spryker/service-point-search       |
-| ServicePointStorage     | vendor/spryker/service-point-storage      |
+| MODULE                   | EXPECTED DIRECTORY                         |
+|--------------------------|--------------------------------------------|
+| ProductOfferServicePoint | vendor/spryker/product-offer-service-point |
+| ServicePoint             | vendor/spryker/service-point               |
+| ServicePointDataImport   | vendor/spryker/service-point-data-import   |
+| ServicePointsBackendApi  | vendor/spryker/service-points-backend-api  |
+| ServicePointSearch       | vendor/spryker/service-point-search        |
+| ServicePointStorage      | vendor/spryker/service-point-storage       |
 
 {% endinfo_block %}
 
@@ -97,27 +98,30 @@ Make sure that the following changes have been applied in the database:
 | spy_service_point_search  | table  | created |
 | spy_service_point_storage | table  | created |
 | spy_service_type          | table  | created |
+| spy_product_offer_service | table  | created |
 | spy_region.uuid           | column | created |
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
-| CLASS NAMESPACE                                                      | EXTENDS                                                                                 |
-|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                    |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery        |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery               |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointService             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointService             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointServiceQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointServiceQuery        |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery        |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore               |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery          | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery          |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                     | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                     |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery                | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery                |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch        | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch        |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery   | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery   |
-| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage      | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage      |
-| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery |
+| CLASS NAMESPACE                                                           | EXTENDS                                                                                      |
+|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                         | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                         |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress                  | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress                  |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointService                  | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointService                  |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointServiceQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointServiceQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery               |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                          | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                          |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery                     | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery                     |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch             | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch             |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery        | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery        |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage           | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage           |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery      | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery      |
+| \Orm\Zed\ProductOfferServicePoint\Persistence\SpyProductOfferService      | \Spryker\Zed\ProductOfferServicePoint\Persistence\Propel\AbstractSpyProductOfferService      |
+| \Orm\Zed\ProductOfferServicePoint\Persistence\SpyProductOfferServiceQuery | \Spryker\Zed\ProductOfferServicePoint\Persistence\Propel\AbstractSpyProductOfferServiceQuery |
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -168,6 +172,10 @@ Make sure that the following changes have been applied in transfer objects:
 | ServiceTypeTransfer                           | class | created | Generated/Shared/Transfer/ServiceTypeTransfer                           |
 | ServicePointStorage                           | class | created | Generated/Shared/Transfer/ServicePointStorage                           |
 | ServicePointAddressStorage                    | class | created | Generated/Shared/Transfer/ServicePointAddressStorage                    |
+| ProductOfferService                           | class | created | Generated/Shared/Transfer/ProductOfferService                           |
+| ProductOfferServiceCollection                 | class | created | Generated/Shared/Transfer/ProductOfferServiceCollection                 |
+| ProductOfferServiceCollectionRequest          | class | created | Generated/Shared/Transfer/ProductOfferServiceCollectionRequest          |
+| ProductOfferServiceCollectionResponse         | class | created | Generated/Shared/Transfer/ProductOfferServiceCollectionResponse         |
 | CountryStorage                                | class | created | Generated/Shared/Transfer/CountryStorage                                |
 | RegionStorage                                 | class | created | Generated/Shared/Transfer/RegionStorage                                 |
 | ServicePointStorageCollection                 | class | created | Generated/Shared/Transfer/ServicePointStorageCollection                 |
@@ -285,6 +293,23 @@ sps2,sp2,pickup,1
 | service_type_key  | mandatory | string    | pickup            | Unique key of the service type.                 |
 | is_active         | mandatory | bool      | 0                 | Defines if the service point service is active. |
 
+**data/import/common/common/marketplace/product_offer_service.csv**
+
+```csv
+service_key,product_offer_reference
+s1,offer419
+s1,offer420
+s1,offer421
+s2,offer422
+s2,offer423
+s2,offer424
+```
+
+| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                         |
+|-------------------------|-----------|-----------|--------------|------------------------------------------|
+| service_key             | mandatory | string    | s1           | Unique key of the service point service. |
+| product_offer_reference | mandatory | string    | offer419     | Unique reference of the product offer.   |
+
 2. Enable data imports at your configuration file—for example:
 
 **data/import/local/full_EU.yml**
@@ -300,17 +325,20 @@ sps2,sp2,pickup,1
       source: data/import/common/common/service_type.csv
     - data_entity: service-point-service
       source: data/import/common/common/service_point_service.csv
+    - data_entity: product-offer-service
+      source: data/import/common/common/marketplace/product_offer_service.csv
 ```
 
 3. Register the following data import plugins:
 
-| PLUGIN                              | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
-|-------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ServicePointDataImportPlugin        | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
-| ServicePointStoreDataImportPlugin   | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
-| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
-| ServiceTypeDataImportPlugin         | Imports service types into the database.                      | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
-| ServicePointServiceDataImportPlugin | Imports service point services into the database.             | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
+| PLUGIN                              | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                                       |
+|-------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
+| ServicePointDataImportPlugin        | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointStoreDataImportPlugin   | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServiceTypeDataImportPlugin         | Imports service types into the database.                      | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointServiceDataImportPlugin | Imports service point services into the database.             | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ProductOfferServiceDataImportPlugin | Imports product offer services into the database.             | None          | \Spryker\Zed\ProductOfferServicePointDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -320,6 +348,7 @@ sps2,sp2,pickup,1
 namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+use Spryker\Zed\ProductOfferServicePointDataImport\Communication\Plugin\DataImport\ProductOfferServiceDataImportPlugin;
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointDataImportPlugin;
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointStoreDataImportPlugin;
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointAddressDataImportPlugin;
@@ -337,6 +366,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new ServicePointAddressDataImportPlugin(),
             new ServiceTypeDataImportPlugin(),
             new ServicePointServiceDataImportPlugin(),
+            new ProductOfferServiceDataImportPlugin(),
         ];
     }
 }
@@ -354,6 +384,7 @@ namespace Pyz\Zed\Console;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use Spryker\Zed\ProductOfferServicePointDataImport\ProductOfferServicePointDataImportConfig;
 use Spryker\Zed\ServicePointDataImport\ServicePointDataImportConfig;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
@@ -372,6 +403,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_ADDRESS),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_TYPE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_SERVICE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferServicePointDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SERVICE),
         ];
 
         return $commands;
@@ -387,6 +419,7 @@ console data:import service-point-address
 console data:import:service-point-service
 console data:import service-point-store
 console data:import:service-type
+console data:import:product-offer-service
 ```
 
 {% info_block warningBox “Verification” %}
@@ -398,6 +431,7 @@ Make sure that entities were imported to the following database tables respectiv
 - `spy_service_point_address`
 - `spy_service_type`
 - `spy_service_point_service`
+- `spy_product_offer_service`
 
 {% endinfo_block %}
 
@@ -472,6 +506,16 @@ service_point.validation.service_type_key_immutability,The service type key is i
 service_point.validation.service_type_key_immutability,Der Service-Typ-Schlüssel ist unveränderlich.,de_DE
 service_point.validation.service_point_service_key_exists,A service point service with the same key already exists.,en_US
 service_point.validation.service_point_service_key_exists,Ein Servicepunkt-Service mit demselben Schlüssel existiert bereits.,de_DE
+product_offer_service_point.validation.product_offer_reference_not_found,Product offer '%product_offer_reference%' not found.,en_US
+product_offer_service_point.validation.product_offer_reference_not_found,Product offer '%product_offer_reference%' nicht gefunden.,de_DE
+product_offer_service_point.validation.product_offer_has_multiple_service_points,Product offer '%product_offer_reference%' can have only one service point.,en_US
+product_offer_service_point.validation.product_offer_has_multiple_service_points,Das Product Offer '%product_offer_reference%' kann nur einen Service Point haben.,de_DE
+product_offer_service_point.validation.service_uuid_not_found,Services with uuids '%service_uuids%' not found.,en_US
+product_offer_service_point.validation.service_uuid_not_found,Services mit den uuids '%service_uuids%' wurde nicht gefunden.,de_DE
+product_offer_service_point.validation.service_not_unique,A service for product offer '%product_offer_reference%' with the same uuid already exists in request.,de_DE
+product_offer_service_point.validation.service_not_unique,Ein Service für Product Offer '%product_offer_reference%' mit derselben UUID ist bereits in der Anfrage vorhanden.,de_DE
+product_offer_service_point.validation.product_offer_not_unique,A product offer with the same reference already exists in request.,de_DE
+product_offer_service_point.validation.product_offer_not_unique,Ein Product Offer mit der gleichen Referenz liegt bereits in der Anfrage vor.,de_DE
 ```
 
 2. Import data:
@@ -1024,7 +1068,65 @@ Make sure you are able to see data in Redis in the following format:
 
 ### 7) Set up behavior
 
-1. To enable the Backend API, register the plugins:
+2. To expand product offers with services, register the plugins:
+
+| PLUGIN                                    | SPECIFICATION                               | PREREQUISITES | NAMESPACE                                                               |
+|-------------------------------------------|---------------------------------------------|---------------|-------------------------------------------------------------------------|
+| ServiceProductOfferPostCreatePlugin       | Creates the product offer service entities. |               | \Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer |
+| ServiceProductOfferPostUpdatePlugin       | Updates the product offer service entities. |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer  |
+| ServiceProductOfferExpanderPlugin         | Expands product offer with services.        |               | \Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer |
+
+**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOffer;
+
+use Spryker\Zed\ProductOffer\ProductOfferDependencyProvider as SprykerProductOfferDependencyProvider;
+use Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer\ServiceProductOfferExpanderPlugin;
+use Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer\ServiceProductOfferPostCreatePlugin;
+use Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer\ServiceProductOfferPostUpdatePlugin;
+
+class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvider
+{
+        /**
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface>
+     */
+    protected function getProductOfferPostCreatePlugins(): array
+    {
+        return [
+            ...
+            new ServiceProductOfferPostCreatePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface>
+     */
+    protected function getProductOfferPostUpdatePlugins(): array
+    {
+        return [
+            ...
+            new ServiceProductOfferPostUpdatePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface>
+     */
+    protected function getProductOfferExpanderPlugins(): array
+    {
+        return [
+            ...
+            new ServiceProductOfferExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
+2. To enable the Backend API, register the plugins:
 
 | PLUGIN                                     | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                                                            |
 |--------------------------------------------|---------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
@@ -1058,7 +1160,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 ```
 
-2. To enable the Backend API relationships, register the plugin:
+3. To enable the Backend API relationships, register the plugin:
 
 | PLUGIN                                                                 | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                                            |
 |------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|

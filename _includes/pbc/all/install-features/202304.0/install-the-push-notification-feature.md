@@ -82,8 +82,8 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
 | PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
 | PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
-| ApiPushNotificationSubscriptionAttributes            | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionAttributesTransfer            |
-| ApiPushNotificationGroupAttributes                   | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupAttributesTransfer                   |
+| ApiPushNotificationSubscriptionsAttributes           | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionsAttributesTransfer           |
+| ApiPushNotificationGroupsAttributes                  | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
 
 {% endinfo_block %}
 

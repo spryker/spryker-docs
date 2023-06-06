@@ -5,7 +5,7 @@ description: This document describes the product_offer_validity.csv file to conf
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
@@ -17,7 +17,7 @@ This document describes the `product_offer_validity.csv` file to configure produ
 
 ## Import file dependencies
 
-[merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
+[merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
 
 
 ## Import file parameters

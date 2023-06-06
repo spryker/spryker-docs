@@ -6,7 +6,7 @@ related:
   - title: Managing marketplace product offers
     link: docs/marketplace/user/merchant-portal-user-guides/page.version/offers/managing-product-offers.html
   - title: Managing merchant product offers
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/offers/managing-merchant-product-offers.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
 ---
 
 In a marketplace environment, merchants manage [product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the Merchant Portal.
@@ -33,7 +33,7 @@ Merchants define the following settings when creating product offers:
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html)|
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)|
 
 ## Related Developer documents
 

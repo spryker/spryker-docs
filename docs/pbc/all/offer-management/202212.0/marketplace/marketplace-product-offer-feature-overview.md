@@ -6,16 +6,16 @@ related:
   - title: Managing product offers
     link: docs/marketplace/user/merchant-portal-user-guides/page.version/offers/managing-product-offers.html
   - title: Managing merchant product offers
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/offers/managing-merchant-product-offers.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
 ---
 
 The *Product Offer* entity is created when multiple merchants need to sell the same product on the Marketplace.
 
 A product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
-Merchants can [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal or [import the product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html).
+Merchants can [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal or [import the product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html).
 
-Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. For details, see [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html).
+Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. For details, see [Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html).
 
 Every merchant can have multiple offers for the same concrete product. However, a product offer is related to a single merchant and cannot be shared between other merchants:
 
@@ -25,7 +25,7 @@ Every merchant can have multiple offers for the same concrete product. However, 
 
 {% info_block infoBox "Note" %}
 
-You can retrieve product offer details via Glue API. For details, see [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html).
+You can retrieve product offer details via Glue API. For details, see [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html) and [Retrieving product offers for a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html).
 
 {% endinfo_block %}
 
@@ -53,9 +53,9 @@ Product offer status defines whether the offer is active and displayed on the St
 
 * *Waiting for Approval*: Default status that is applied to the offer after it has been created.
 
-* *Approved*:  The approved offer can be displayed on the Storefront. Only the Marketplace administrator can approve the offer. For details about how a Marketplace administrator can approve offers in the Back Office, see [Approving or denying offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers).
+* *Approved*:  The approved offer can be displayed on the Storefront. Only the Marketplace administrator can approve the offer. For details about how a Marketplace administrator can approve offers in the Back Office, see [Approving or denying offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers).
 
-* *Denied*: If the offer is denied, it cannot be displayed on the Storefront. Only the Marketplace administrator can deny the offer. For details about how a Marketplace administrator can deny offers in the Back Office, see [Approving or denying offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers).
+* *Denied*: If the offer is denied, it cannot be displayed on the Storefront. Only the Marketplace administrator can deny the offer. For details about how a Marketplace administrator can deny offers in the Back Office, see [Approving or denying offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers).
 
 ### Visibility
 
@@ -91,7 +91,7 @@ The following table illustrates the logic according to which the product offer 
 | Store where the product offer is added    | x    | &check;    | &check;    |
 | Is product offer visible?                 | no   | yes  | no   |
 
-Merchants can define product offer stores in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer), or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html).
+Merchants can define product offer stores in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer), or [import the product offer store](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer-store.csv.html).
 
 ## Product offers on the Storefront
 
@@ -171,17 +171,17 @@ Note that the drop-down with merchants is not visible until the product offer is
 
 | MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html)|
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html)  |[Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)|
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | HOW-TO GUIDES |REFERENCES          |
 |---------|---------|---------|---------|---------|
-|[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)     | [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)        | [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html)        |[Rendering merchant product offers on the Storefront](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html)         | [Product offer in the Back Office](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html)          |
-|[Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)     | [Retrieving product offers for a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html)        |[File details: merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)         |         | [Product offer storage](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-storage.html)          |
+|[Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)     | [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)        | [File details: combined_merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html)        |[Rendering merchant product offers on the Storefront](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html)         | [Product offer in the Back Office](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html)          |
+|[Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)     | [Retrieving product offers for a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html)        |[File details: merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)         |         | [Product offer storage](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-storage.html)          |
 |[Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)     |         | [File details: product_offer_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-data/file-details-product-offer-stock.csv.html)        |         |[Product Offer store relation](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-store-relation.html)           |
-|[Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) | | [File details: product_offer_validity.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-validity.csv.html) | | |
-|[Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) | | [File details: merchant_product_offer_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html) | |[Product Offer validity dates](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html) |
+|[Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) | | [File details: product_offer_validity.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-product-offer-validity.csv.html) | | |
+|[Marketplace Product Offer + Quick Add to Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html) | | [File details: merchant_product_offer_store.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer-store.csv.html) | |[Product Offer validity dates](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html) |
 |[Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)      |         |  |         |           |
 |[Glue API: Marketplace Product Offer integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)     |         |         |         |           |
 |[Glue API: Marketplace Product Offer + Wishlist integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-wishlist-feature-integration.html)     |         |         |         |           |

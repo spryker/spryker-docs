@@ -802,7 +802,7 @@ For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
-* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
+* [Retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
 
 ## Edit a shopping list
 

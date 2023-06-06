@@ -122,7 +122,7 @@ The operator can view and approve merchant product offers.
 
 ![Merchant offer in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-offers.png)
 
-Documentation: [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/offers/managing-merchant-product-offers.html)
+Documentation: [Managing merchant product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html)
 
 
 ### Marketplace and merchant order management
@@ -144,7 +144,7 @@ The operator can view and create Marketplaceand merchant returns.
 
 The operator can act as a _Main Merchant_ and sell products. In Back Office, they manage their own orders and returns separately from the other merchantsâ€™ orders and returns.
 
-Documentation: [Managing main merchant orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-main-merchant-orders.html)
+Documentation: [Managing main merchant orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html)
 
 ## Glue APIs
 
@@ -154,7 +154,7 @@ Documentation:
 * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{site.version}}/merchants/retrieving-merchants.html)
 * [Retrieving merchant abstract products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
 * [Retrieving merchant concrete products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
-* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/product-offers/retrieving-product-offers.html)
+* [Retrieving product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/glue-api-retrieve-product-offers.html)
 * [Retrieving product offers of concrete products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html)
 * [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
 * [Retrieving Marketplaceorders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
@@ -170,7 +170,7 @@ To ensure a smooth merchant onboarding process and overall Marketplacesetup, weâ
 ### Data import
 
 These are the new data importers available in our data import framework:
-* Product offers: The operator can provide a template to the merchants so that they can add all offer-related information in one file that can be imported afterward. Documentation: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-combined-merchant-product-offer.csv.html).
+* Product offers: The operator can provide a template to the merchants so that they can add all offer-related information in one file that can be imported afterward. Documentation: [File details: combined_merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html).
 * Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-data/file-details-merchant-order-status.csv.html).
 
 ### Data export

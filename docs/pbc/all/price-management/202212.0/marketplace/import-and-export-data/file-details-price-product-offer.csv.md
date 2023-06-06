@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/data-import/202212.0/file-details-price-product-offer.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
@@ -18,7 +18,7 @@ This document describes the `price-product-offer.csv` file to configure [Merchan
 
 ## Import file dependencies
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
+- [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
 - [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
 
 

@@ -27,7 +27,7 @@ The following schema illustrates the ProductOffer-ProductOfferValidity domain mo
 
 ## Validity data import
 
-You can import the product offer validity data from the[product_offer_validity.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-product-offer-validity.csv.html) file by running
+You can import the product offer validity data from the[product_offer_validity.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-product-offer-validity.csv.html) file by running
 
 ```bash
 data:import product-offer-validity

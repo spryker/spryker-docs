@@ -8,7 +8,7 @@ related:
   - title: Retrieving product offer prices
     link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-prices.html
   - title: Retrieving product offers
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/glue-api-retrieve-product-offers.html
 ---
 
 This document describes how to retrieve product offer availabilities via Glue API.
@@ -18,8 +18,8 @@ This document describes how to retrieve product offer availabilities via Glue AP
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
 ## Retrieve availability of a product offer
 

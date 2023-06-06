@@ -4,7 +4,7 @@ description: The Marketplace Product Offer Prices feature lets Marketplace merch
 template: feature-walkthrough-template
 ---
 
-With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
+With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html).
 
 Merchants can define the prices for each product offer. If no price for the product offer is specified, a default price from the concrete product is used.
 
@@ -65,5 +65,5 @@ The following schema illustrates the Marketplace Product Offer Prices domain mod
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
-| [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)          | [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/file-details-price-product-offer.csv.html)           |
+| [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)          | [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/file-details-price-product-offer.csv.html)           |
 |[Glue API: Marketplace Product Offer Prices integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)           |           |           |

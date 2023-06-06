@@ -5,7 +5,7 @@ description: This document describes the combined_merchant_product_offer.csv fil
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop

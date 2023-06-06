@@ -19,7 +19,7 @@ This document describes the `product_offer_shopping_list.csv` file to configure 
 
 ## Import file dependencies
 
-[merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
+[merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
 
 ## Import file parameters
 

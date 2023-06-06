@@ -69,7 +69,7 @@ The *Product details* page contains a section where a customer can view and sele
 
 ![Merchant offers on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-offers-on-pdp.png)
 
-Documentation: [Marketplace Product Offer feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
+Documentation: [Marketplace Product Offer feature overview](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html)
 
 ### Merchant Product Options
 

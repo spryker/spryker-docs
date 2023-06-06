@@ -7,7 +7,7 @@ related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
@@ -24,7 +24,7 @@ This document describes the `product_offer_validity.csv` file to configure produ
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
-| product_offer_reference | &check;             | String   |                   | Unique                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;             | String   |                   | Unique                       | Identifier of the [merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
 | valid_from              |               | Datetime |                   |                              | Date and time from which the offer is active.                |
 | valid_to                |               | Datetime |                   |                              | Date and time till which the offer is active.                |
 

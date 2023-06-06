@@ -4,7 +4,7 @@ description: This document describes the actions a Merchant can do in the Offers
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
 ---
 
 This document describes the actions a Merchant can do in the Offers section in the Merchant Portal.

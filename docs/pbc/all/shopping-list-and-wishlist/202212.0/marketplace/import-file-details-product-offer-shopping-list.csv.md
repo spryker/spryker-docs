@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/data-import/202212.0/file-details-product-offer-shopping-list.csv.html
 related:
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Marketplace Shopping List feature overview
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
   - title: Execution order of data importers in Demo Shop
@@ -26,7 +26,7 @@ This document describes the `product_offer_shopping_list.csv` file to configure 
 | PARAMETER   | REQUIRED | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |--------------|-----------|---------|---------------|------------|
 | shopping_list_item_key  | &check;   | String  | Unique  | Identifier of the shopping list item in the system. |
-| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
 
 
 

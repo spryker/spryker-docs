@@ -8,7 +8,7 @@ related:
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
 ---
 
-This document describes how to integrate the [Marketplace Product Offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 

@@ -2389,6 +2389,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Product Offer Shipment
+      url: /docs/scos/dev/feature-integration-guides/install-the-product-offer-shipment-feature.html
+      include_versions:
+      - "202304.0"
     - title: Product Options + Order Management
       url: /docs/scos/dev/feature-integration-guides/product-options-order-management-feature-integration.html
       include_versions:
@@ -2433,6 +2437,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html
       include_versions:
       - "202304.0"
+    - title: Service Points
+      url: /docs/scos/dev/feature-integration-guides/install-the-service-points-feature.html
+      include_versions:
+        - "202304.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:

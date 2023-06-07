@@ -23,7 +23,7 @@ This document describes the `configurable_bundle_template_slot.csv` file to conf
 | configurable_bundle_template_slot_name   | &check; | string |  |Name (glossary key) of the configurable bundle template slot.  |
 | configurable_bundle_template_slot_uuid   |         | string |  |Unique identifier of the configurable bundle template slot.  |
 | configurable_bundle_template_key         | &check; | string |  | Internal data import identifier of the configurable bundle template. |
-| product_list_key                         | &check; | string |  | ID of the product list for allowed products of the slot. |
+| product_list_key                         | &check; | string |  | Internal data import identifier of the product list for allowed products of the slot. |
 
 ## Import file template and content example
 

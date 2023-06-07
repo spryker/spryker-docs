@@ -15,9 +15,9 @@ This document describes the `quote_request_version.csv` file to configure inform
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| quote_request_reference | &check; | string |  Qute request reference.|
+| quote_request_reference | &check; | string |  Quote request reference.|
 | version | &check; | string | Version of the quote request. |
-| version_reference | &check; | string | Status of the quote.|
+| version_reference | &check; | string | Qute request version reference.|
 | metadata | &check; | string | Array of quote request metadata.|
 | quote | &check; | string | Array of quote request details.|
 

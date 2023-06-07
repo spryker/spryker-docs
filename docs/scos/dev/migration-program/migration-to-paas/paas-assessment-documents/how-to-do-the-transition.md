@@ -4,41 +4,38 @@ description: This document describes how to do the transition.
 template: howto-guide-template
 ---
 
-# How to do the transition?
 
-{% info_block infoBox %}
+## Resources for assessment
 
-## Resources for assessment Backend, DevOps
-
-{% endinfo_block %}
+ Backend, DevOps
 
 ## Description
 
-In this step, we need to assess efforts related to the exact moment of switching the shops from on-prem to Spryker Cloud.
+In this step, you need to assess efforts related to the exact moment of switching the shops from on-prem to Spryker Cloud.
 
-Before you start the transition please make sure that:
+Before you start the transition, make sure that the following applies:
 
-1. Depending on a environment type a correspondent template was applied in your cloud service provider (currently, is AWS).
+1. Depending on the environment type, a correspondent template was applied in the cloud service provider. Currently, it's AWS.
     All stage similar ones (dev/uat/test/qa etc) should have only one run task per basic service (Yves/Zed/Glue...).
-    For production system this number is 2. Go to ECS -> Clusters -> <your_name> -> tab Services.
+    For a production system, there should be two tasks per basic service. Go to ECS > Clusters > <your_name> -> tab Services.
     Check the number in Desired/Running tasks columns.
-2. If you have a production environment, then "Multi AZ" is enabled for RDS/OpenSearch(ES)/Redis(EC) services.
-3. Data is present in RDS based on a dump provided by customer.
-4. All jobs in jenkins are up and running and have green color.
-5. No any processing in RabbitMQ and the error queues don't have stacked messages. You have to resolve all data issues
-   before env is publicly available.
+2. If you are migrating a production environment, "Multi AZ" is enabled for RDS, OpenSearch(ES), and Redis(EC) services.
+3. Data is present in RDS based on the dump provided by the customer.
+4. All jobs in Jenkins are up and running and have green color.
+5. No any processing in RabbitMQ and the error queues don't have stacked messages. You have to resolve all data issues before env is publicly available.
 
-**! Note:** If some service wasn't migrated from on-premise into cloud and remain to work on a customer' side then
-a Site-to-Site VPN connection should be initiated between them. Verify the availability of the service from your cloud network.
+{% info_block warningBox "" %}
 
-During a transition process we don't consider any blue/green deployment strategy. The cloud env is a copy of on-premise
-system and should have a similar set of services to run.
+If a service wasn't migrated from on-premise to cloud and remain to work on a customer's side, a site-to-site VPN connection should be initiated between them. Verify the availability of the service from the cloud network.
 
-The shop switching assumes a recreation of existing url references from on-premise to cloud. Based on who manages
-a domain zone (customer or Spryker) the switching time may vary.
+{% endinfo_block %}
 
-Due to infra side is fully managed by Spryker a ticket about endpoints update should be created in [SalesForce portal](http://support.spryker.com)
-to Operation team. All further communication with a customer is carried out by any preferable channel, such as slack/email etc
+
+During the migration, we don't consider any blue/green deployment strategy. The cloud environment is a copy of the on-premise system and should have a similar set of services to run.
+
+The shop switching assumes a recreation of existing url references from on-premise to cloud. Based on who manages the domain zone (customer or Spryker), the switching time may vary.
+
+Because the infrastructure is fully managed by Spryker, a ticket about endpoints update should be created in [SalesForce portal](http://support.spryker.com) to Operation team. All further communication with a customer is carried out by any preferable channel, such as slack/email etc
 
 ## Formula for calculating the migration effort
 

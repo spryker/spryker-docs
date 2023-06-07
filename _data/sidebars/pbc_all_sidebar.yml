@@ -1240,13 +1240,13 @@ entries:
               - title: Customer service
                 nested:
                   - title: Dixa
-                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/dixa.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/dixa.html
                   - title: Live Chat Service
-                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/live-chat-service.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/live-chat-service.html
                   - title: optimise-it
-                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/optimise-it.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/optimise-it.html
                   - title: iAdvize
-                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/iadvize.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/iadvize.html
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
         include_versions:

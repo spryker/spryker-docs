@@ -3289,12 +3289,18 @@ entries:
       - title: ChannelPilot Marketplace
         url: /docs/scos/user/technology-partners/marketplace-integrations/channelpilot-marketplace.html
     - title: Finance and accounting
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Nitrobox
         url: /docs/scos/user/technology-partners/finance-and-accounting/nitrobox.html
       - title: CollectAI
         url: /docs/scos/user/technology-partners/finance-and-accounting/collectai.html
     - title: Customer Service
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Dixa
         url: /docs/scos/user/technology-partners/customer-service/dixa.html

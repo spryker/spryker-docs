@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Product Offer feature: Domain model and relationships"
-last_updated: Apr 23, 2021
 description: Product Offer is created when a merchant wants to sell products already available on the Marketplace.
+last_updated: Apr 23, 2021
 template: feature-walkthrough-template
 redirect_from: /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 ---

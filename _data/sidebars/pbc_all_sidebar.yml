@@ -1229,6 +1229,24 @@ entries:
                 url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/url-redirects-overview.html
               - title: Vault for Tokens overview
                 url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/vault-for-tokens-overview.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Add translations
+                url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
+              - title: Edit translations
+                url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
+          - title: Third-party integrations
+            nested:
+              - title: Customer service
+                nested:
+                  - title: Dixa
+                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/dixa.html
+                  - title: Live Chat Service
+                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/live-chat-service.html
+                  - title: optimise-it
+                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/optimise-it.html
+                  - title: iAdvize
+                    url: /docs/pbc/all/miscellaneous/technology-partners/customer-service/iadvize.html
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
         include_versions:
@@ -1437,10 +1455,14 @@ entries:
                 url: /docs/pbc/all/order-management-system/base-shop/email-invoices-using-bcc.html
               - title: Third-party integrations
                 nested:
+                  - title: CollectAI
+                    url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/collectai.html
                   - title: NEKOM CC GmbH
                     url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/nekom-cc-gmbh.html
                   - title: Tradebyte
                     url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/tradebyte.html
+                  - title: Nitrobox
+                    url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/nitrobox.html
               - title: Process incoming HTTP requests from external ERP services for order updates
                 url: /docs/pbc/all/order-management-system/base-shop/process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
               - title: Display custom names for order item states on the Storefront

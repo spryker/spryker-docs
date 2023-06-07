@@ -12,7 +12,8 @@ This document describes the `shopping_list_company_user.csv` file to configure [
 
 ## Import file dependencies
 
-[shopping_list.csv](_drafts/data-import/base-shop/file-details-shopping-list.csv.md)
+* [company_user.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company-user.csv.html)
+* [shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/import-and-export-data/file-details-shopping-list.csv.html)
 
 ## Import file parameters
 

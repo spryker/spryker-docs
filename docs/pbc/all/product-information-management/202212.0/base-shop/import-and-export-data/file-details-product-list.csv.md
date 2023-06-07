@@ -22,8 +22,8 @@ This document describes the `product_list.csv` file to configure information abo
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_list.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.md/template_product_list.csv)| Import file template with headers only. |
-| [`product_list.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.md/product_list.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_list.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.md/template_product_list.csv)| Import file template with headers only. |
+| [product_list.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.md/product_list.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

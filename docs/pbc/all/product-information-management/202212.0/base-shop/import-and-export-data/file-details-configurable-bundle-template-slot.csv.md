@@ -12,8 +12,8 @@ This document describes the `configurable_bundle_template_slot.csv` file to conf
 
 ## Import file dependencies
 
-[File details: configurable_bundle_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html)
-[File details: product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
+* [File details: configurable_bundle_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html)
+* [File details: product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
 
 ## Import file parameters
 
@@ -29,8 +29,8 @@ This document describes the `configurable_bundle_template_slot.csv` file to conf
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_configurable_bundle_template_slot.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.md/template_configurable_bundle_template_slot.csv)| Import file template with headers only. |
-| [`configurable_bundle_template_slot.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.md/configurable_bundle_template_slot.csv) | Exemplary import file with the Demo Shop data. |
+| [template_configurable_bundle_template_slot.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.md/template_configurable_bundle_template_slot.csv)| Import file template with headers only. |
+| [configurable_bundle_template_slot.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.md/configurable_bundle_template_slot.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

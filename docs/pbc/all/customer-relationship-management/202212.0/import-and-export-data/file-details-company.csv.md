@@ -23,8 +23,8 @@ This document describes the `company.csv` file to configure information about [c
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_company.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/template_company.csv)| Import file template with headers only. |
-| [`company.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/company.csv)| Exemplary import file with the Demo Shop data. |
+| [template_company.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/template_company.csv)| Import file template with headers only. |
+| [company.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/company.csv)| Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

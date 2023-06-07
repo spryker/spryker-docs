@@ -22,8 +22,8 @@ This document describes the `product_measurement_unit.csv` file to configure inf
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_measurement_unit.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.md/template_product_measurement_unit.csv)| Import file template with headers only. |
-| [`product_measurement_unit.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.md/product_measurement_unit.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_measurement_unit.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.md/template_product_measurement_unit.csv)| Import file template with headers only. |
+| [product_measurement_unit.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.md/product_measurement_unit.csv) | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

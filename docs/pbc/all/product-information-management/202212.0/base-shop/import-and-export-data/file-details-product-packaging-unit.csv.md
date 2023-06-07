@@ -32,8 +32,8 @@ This document describes the `product_packaging_unit.csv` file to configure infor
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_packaging_unit.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.md/template_product_packaging_unit.csv) | Import file template with headers only. |
-| [`product_packaging_unit.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.md/product_packaging_unit.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_packaging_unit.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.md/template_product_packaging_unit.csv) | Import file template with headers only. |
+| [product_packaging_unit.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.md/product_packaging_unit.csv) | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

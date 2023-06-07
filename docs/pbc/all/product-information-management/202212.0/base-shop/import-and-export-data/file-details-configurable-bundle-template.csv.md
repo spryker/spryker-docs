@@ -23,8 +23,8 @@ This document describes the `configurable_bundle_template.csv` file to configure
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_configurable_bundle_template.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.md/template_configurable_bundle_template.csv)| Import file template with headers only. |
-| [`configurable_bundle_template.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.md/configurable_bundle_template.csv) | Exemplary import file with the Demo Shop data. |
+| [template_configurable_bundle_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.md/template_configurable_bundle_template.csv)| Import file template with headers only. |
+| [configurable_bundle_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.md/configurable_bundle_template.csv) | Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

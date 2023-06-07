@@ -12,8 +12,8 @@ This document describes the `product_list_to_concrete_product.csv` file to confi
 
 ## Import file dependencies
 
-* [File details - product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
-* [File details - product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
+* [File details: product_list.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-list.csv.html)
+* [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 
 ## Import file parameters
 
@@ -26,8 +26,8 @@ This document describes the `product_list_to_concrete_product.csv` file to confi
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_list_to_concrete_product.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.md/template_product_list_to_concrete_product.csv)| Import file template with headers only. |
-| [`product_list_to_concrete_product.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.md/product_list_to_concrete_product.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_list_to_concrete_product.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.md/template_product_list_to_concrete_product.csv)| Import file template with headers only. |
+| [product_list_to_concrete_product.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.md/product_list_to_concrete_product.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

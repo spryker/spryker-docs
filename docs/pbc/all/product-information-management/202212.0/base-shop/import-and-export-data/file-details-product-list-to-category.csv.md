@@ -25,8 +25,8 @@ This document describes the `product_list_to_category.csv` file to configure inf
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`template_product_list_to_category.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.md/template_product_list_to_category.csv) | Import file template with headers only. |
-| [`product_list_to_category.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.md/product_list_to_category.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_list_to_category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.md/template_product_list_to_category.csv) | Import file template with headers only. |
+| [product_list_to_category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.md/product_list_to_category.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

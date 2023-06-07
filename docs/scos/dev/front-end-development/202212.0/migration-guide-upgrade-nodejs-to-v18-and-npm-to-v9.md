@@ -3,6 +3,8 @@ title: Migration guide - Upgrade Node.js to v18 and npm to v9
 last_updated: May 16, 2023
 description: Use this guide to upgrade Node.js to v18 and npm to v9.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202304.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
 ---
 
 This document provides instructions for upgrading Node.js to v18 and npm to v9.
@@ -37,7 +39,7 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 18.16.0
 ```
 
-3. In the `package.json`, update or add dependencies and engines:
+3. In `package.json`, update or add dependencies and engines:
 
 ```json
 {
@@ -61,7 +63,7 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 }
 ```
 
-4. In the `package.json`, remove the dependency :
+4. In `package.json`, remove the dependency:
 
 ```json
     "@spryker/sass-resources-loader": "x.x.x"
@@ -110,7 +112,7 @@ docker/sdk cli npm install
 
 {% info_block infoBox "Note" %}
 
-Ensure that the `package-lock.json` file has `"lockfileVersion": 2` or later; otherwise, remove `node_modules` and `package-lock.json` and regenerate the file again.
+Ensure that the `package-lock.json` file has `"lockfileVersion": 2` or later; otherwise, remove `node_modules` and `package-lock.json` and regenerate the file again:
 
 ```bash
 rm -rf node_modules && docker/sdk cli rm -rf node_modules && rm -rf package-lock.json

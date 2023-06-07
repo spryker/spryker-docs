@@ -175,10 +175,10 @@ Make sure that the following changes have been applied in transfer objects:
 | ServiceType                            | class | created | src/Generated/Shared/Transfer/ServiceTypeTransfer                           |
 | ServicePointStorage                    | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                   |
 | ServicePointAddressStorage             | class | created | src/Generated/Shared/Transfer/ServicePointAddressStorageTransfer            |
-| ProductOfferService                    | class | created | src/Generated/Shared/Transfer/ProductOfferService                           |
-| ProductOfferServiceCollection          | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollection                 |
-| ProductOfferServiceCollectionRequest   | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionRequest          |
-| ProductOfferServiceCollectionResponse  | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionResponse         |
+| ProductOfferService                    | class | created | src/Generated/Shared/Transfer/ProductOfferServiceTransfer                   |
+| ProductOfferServiceCollection          | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionTransfer         |
+| ProductOfferServiceCollectionRequest   | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionRequestTransfer  |
+| ProductOfferServiceCollectionResponse  | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionResponseTransfer |
 | CountryStorage                         | class | created | src/Generated/Shared/Transfer/CountryStorageTransfer                        |
 | RegionStorage                          | class | created | src/Generated/Shared/Transfer/RegionStorageTransfer                         |
 | ServicePointStorageCollection          | class | created | src/Generated/Shared/Transfer/ServicePointStorageCollectionTransfer         |
@@ -314,10 +314,10 @@ s2,offer423
 s2,offer424
 ```
 
-| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                         |
-|-------------------------|-----------|-----------|--------------|------------------------------------------|
-| service_key             | mandatory | string    | s1           | Unique key of the service point service. |
-| product_offer_reference | mandatory | string    | offer419     | Unique reference of the product offer.   |
+| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
+|-------------------------|-----------|-----------|--------------|----------------------------------------|
+| service_key             | mandatory | string    | s1           | Unique key of the service.             |
+| product_offer_reference | mandatory | string    | offer419     | Unique reference of the product offer. |
 
 2. Enable data imports at your configuration file—for example:
 

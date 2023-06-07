@@ -39,7 +39,7 @@ To ensure the CI jobs run successfully, add the same config part to all `deploy.
 18.16.0
 ```
 
-3. In the `package.json`, update or add dependencies and engines:
+3. In `package.json`, update or add dependencies and engines:
 
 ```json
 {

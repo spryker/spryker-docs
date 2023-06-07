@@ -2437,6 +2437,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html
       include_versions:
       - "202304.0"
+    - title: Service Points
+      url: /docs/scos/dev/feature-integration-guides/install-the-service-points-feature.html
+      include_versions:
+        - "202304.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:

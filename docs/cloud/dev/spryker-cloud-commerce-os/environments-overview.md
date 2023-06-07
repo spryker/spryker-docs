@@ -9,7 +9,7 @@ This document explains what to do with the hosting environments you received at 
 {% info_block infoBox "Note" %}
 
 The contents of contracts may vary, and this document only describes the default setup. If you are using a different setup, ask your project manager or product owner for a more detailed explanation.
-Please note that your non-production environments do not scale automatically. If you want to increase their scaling, please let us know by requesting through this dedicated form in our support portal: [Upscale Request](https://support.spryker.com/s/hosting-change-requests/environment-upscaling)
+Please note that your non-production environments do not scale automatically. If you want to increase their scaling, please let us know by requesting through this dedicated form in our support portal: [Upscale Request](https://support.spryker.com/s/hosting-change-requests/environment-upscaling) Due to contractual reasons these changes can only be requested by customers not partners.
 
 {% endinfo_block %}
 

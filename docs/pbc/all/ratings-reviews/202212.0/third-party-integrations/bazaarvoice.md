@@ -33,3 +33,6 @@ When you connect Bazaarvoice, the app puts JavaScrip tags into your store, and t
 If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
+
+## Next step
+[Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{page.version}/third-party-integrations/integrate-bazaarvoice.html)

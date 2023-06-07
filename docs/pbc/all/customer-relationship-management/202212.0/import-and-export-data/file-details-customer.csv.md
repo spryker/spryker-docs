@@ -21,6 +21,10 @@ related:
 
 This document describes the `customer.csv` file to configure [Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
 
+## Import file dependencies
+
+[TODO: Add dependencies if any; remove the section otherwise]
+
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |

@@ -36,7 +36,7 @@ To ensure the successful delivery of Spryker updates, we recommend using the ext
 
 ## Migrate to Spryker Cloud Commerce OS
 
-The Upgrader supports only the projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
+The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
 
 ## Minimum technical requirements
 

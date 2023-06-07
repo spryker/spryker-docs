@@ -311,6 +311,10 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
                   - title: Manage threshold settings
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/manage-threshold-settings.html
+                  - title: Define merchant order thresholds
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
+                    include_versions:
+                    - "202212.0"
               - title: Manage using Glue API
                 nested:
                   - title: Check out purchases

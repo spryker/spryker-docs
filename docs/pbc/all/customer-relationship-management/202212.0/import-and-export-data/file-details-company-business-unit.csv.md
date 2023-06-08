@@ -18,8 +18,8 @@ This document describes the `company_business_unit.csv` file to configure inform
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
 | --- | - | --- | --- |
-| company_key |&check;| string | Company identifier of the busines unit.|
-| business_unit_key |&check;| string | Business unit identifier.|
+| company_key |&check;| string |  Internal data import identifier of the company.|
+| business_unit_key |&check;| string |  Internal data import identifier of the company business unit. |
 | name | &check; | string | Business unit name. |
 | email | | string | Business unit email. |
 | phone | | string | Business unit phone number. |

@@ -64,7 +64,7 @@ Retrieve all the necessary information to build your checkout for guest customer
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html), [Managing Wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html), [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/glue-api-retrieve-orders.html).
+**Documentation**: [Managing Customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html), [Managing Wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html), [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png)

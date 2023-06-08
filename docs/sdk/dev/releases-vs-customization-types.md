@@ -1,10 +1,9 @@
 ---
-title: Explain Releases vs Customization types
+title: Releases vs customization types
 description: Explain Spryker Corer release types and how different project development strategies are affected by each of them.
 template: concept-topic-template
 ---
-## Release types
-Spryker uses Semantic versioning for its packages. There are 3 release types - major, minor, and patch. For more information visit our [Semantic versioning - major vs. minor vs. patch release](https://docs.spryker.com/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release) page.
+Spryker uses semantic versioning for its packages. There are 3 release types - major, minor, and patch. For more information visit our [Semantic versioning - major vs. minor vs. patch release](https://docs.spryker.com/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release) page.
 
 Depending on the customization strategy and the type of release, you will possibly need to invest additional efforts to integrate a release.
 
@@ -59,30 +58,30 @@ This section explains how different project customizations affect upgradability 
     <tbody>
         <tr>
             <td>Module configuration customization</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:heavy_minus_sign:</td>
+            <td>➕</td>
+            <td>➕</td>
+            <td>➖</td>
         </tr>
         <tr>
             <td>Plug and Play customization</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:warning:</td>
-            <td>:heavy_minus_sign:</td>
+            <td>➕</td>
+            <td>⚠️</td>
+            <td>➖</td>
         </tr>
         <tr>
             <td>Module customization</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:warning:</td>
-            <td>:heavy_minus_sign:</td>
+            <td>➕</td>
+            <td>⚠️</td>
+            <td>➖</td>
         </tr>
     </tbody>
 </table>
 
-:heavy_plus_sign: Customization doesn’t affect the upgradability process.
+➕ Customization doesn’t affect the upgradability process.
 
-:warning: Customization may affect the upgradability process, cause some issues, and sometimes requires review.
+⚠️ Customization may affect the upgradability process, cause some issues, and sometimes requires review.
 
-:heavy_minus_sign: Customization heavily affects upgradability and requires review and manual changes.
+➖ Customization heavily affects upgradability and requires review and manual changes.
 
 {% info_block warningBox "Note" %}
 

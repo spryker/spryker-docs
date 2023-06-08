@@ -1,7 +1,7 @@
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|
 | sku | String | SKU of the concrete product. |
-| isDiscontinued | Boolean | Specifies whether a product is [discontinued](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/discontinued-products-overview.html):<br>**true** - the product is discontinued and requires a replacement item; <br> **false**—the product is not discontinued. |
+| isDiscontinued | Boolean | Specifies whether a product is [discontinued](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html):<br>**true** - the product is discontinued and requires a replacement item; <br> **false**—the product is not discontinued. |
 | discontinuedNote | String | Optional note that was specified when marking a product as discontinued. |
 | averageRating | String | Average [rating](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) of the product based on customer rating. |
 | reviewCount | Integer | Number of reviews left by customer for this product. |

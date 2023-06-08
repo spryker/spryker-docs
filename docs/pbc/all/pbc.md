@@ -3,6 +3,20 @@ title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC) documentation section
 template: concept-topic-template
 redirect_from:
+  - /2021080/docs/overview-of-the-feature-guides
+  - /2021080/docs/en/overview-of-the-feature-guides
+  - /docs/overview-of-the-feature-guides
+  - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/202200.0/features.html
+  - /docs/scos/user/features/202212.0/features.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201903.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/feature-walkthroughs.html  
   - /docs/pbc/all/pbc-landing.html
 ---
 
@@ -48,14 +62,15 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 | Back Office | The administration interface that allows you to manage all back-office tasks. In the Back Office, you can manage and create customer accounts and define who can access the Back Office. You can also keep track of all your internal processes including the management of your products, orders, customers and many more. | Keeps your back-end processes running efficiently, protects your data and administers all accounts. |
 | Storefront | The out-of-the-box online shop application that includes all regular functionalities and workflows. You can use the Storefront as a boilerplate to kick-start your project. | Lets you easily start your online shop from our boilerplate solution. |
 
-## ACP (App Composition Platform) PBCs
+## ACP (App Composition Platform) Apps
 
 <div class="width-100">
 
 | NAME | CATEGORY |
 | --- | --- |
+| [Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/algolia.html) | Search |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html) | PSP (Payment Service Provider) |
-| [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
+| [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | CMP (Consent Management Platform) |
 
 </div>

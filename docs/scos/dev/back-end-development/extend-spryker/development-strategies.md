@@ -13,7 +13,7 @@ To get maximum from the Spryker OS codebase, atomic releases, leverage minimum e
 3. Project modules
 
 
-The following table briefly describes all the available strategies and how they affect a project's upgraddability. For full description of the strategies, see the following sections.
+The following table briefly describes all the available strategies and how they affect a project's upgradability. For a full description of the strategies, see the following sections.
 
 | DEVELOPMENT STRATEGY | SPRYKER OS UPDATE SUPPORT |
 | --- | --- |

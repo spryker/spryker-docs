@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-navigation.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-navigation.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/file-details-content-navigation.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html#navigation-as-content-item) information in your Spryker Demo Shop.
@@ -33,8 +36,8 @@ This document describes the `content_navigation.csv` file to configure [Content 
 | name | &check; | string | Human-readable name. | Name of the content. |
 | description |   | string |  | Description of the content. |
 | navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html).  |
-| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html) for the `en_US` [locale](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/multi-language-setup.html). |
-| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/multi-language-setup.html). |
+| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html) for the `en_US` [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html). |
+| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html). |
 
 
 

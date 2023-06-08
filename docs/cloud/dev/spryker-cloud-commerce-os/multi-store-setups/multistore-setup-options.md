@@ -82,7 +82,7 @@ The following table provides details on infrastructure for this setup:
 | What | How |
 |------|-----|
 | DB     | Shared    |
-| Key-value storage (Redis) and Search (OpenSearch/ElasticCache) services     | Shared    |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Shared    |
 | Spryker Storefront Yves     |Shared     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
 | Complexity of rollout     | Low   |
@@ -119,7 +119,7 @@ The following table provides details on the infrastructure for this setup:
 | What | How |
 |------|-----|
 | DB     | Separate    |
-| Key-value storage (Redis) and search (OpenSearch/ElasticCache) services     | Shared    |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Shared    |
 | Spryker Storefront Yves     |Shared     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
 | Complexity of rollout     | Medium   |
@@ -138,7 +138,7 @@ You can apply the virtually isolated database to setup one and setup three too. 
 This setup has the following characteristics:
 
 - Multiple stores. 
-- Each store has dedicated search and key-value storage services. 
+- Each store has dedicated key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services. 
 - Separate database per account.
 - Allows for different regions.
 - Lets you use themes for a different visual look and feel.
@@ -173,7 +173,7 @@ The following table provides details on the infrastructure for this setup:
 | What | How |
 |------|-----|
 | DB     | Separate    |
-| Key-value storage (Redis) and search (OpenSearch/ElasticCache) services     | Separate    |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Separate    |
 | Spryker Storefront Yves     |Separate     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Separate   |
 | Complexity of rollout     | High   |
@@ -189,7 +189,7 @@ The following tables contain high-level criteria that sum up the setups describe
 | What                                                                   | Setup 1 | Setup 2  | Setup 2  |
 |------------------------------------------------------------------------|---------|----------|----------|
 | DB                                                                     | Shared  | Separate | Separate |
-| Ke-value storage (Redis) and search (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |
+| Ke-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |
 | Spryker Storefront Yves                                                | Shared  | Shared   | Separate |
 | Spryker Commerce OS                                                    | Shared  | Shared   | Separate |
 | Complexity of rollout                                                  | Low     | Medium   | High     |

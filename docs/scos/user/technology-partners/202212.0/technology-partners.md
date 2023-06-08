@@ -21,19 +21,6 @@ In this section you will find information about our Technology Partner Integrati
 
 Visit [Technology Partners](https://spryker.com/technology-partners/) for a complete list of our partners.
 
-
-## Content Management
-
-* [Coremedia](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/coremedia.html)
-* [E-Spirit](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/e-spirit.html)
-* [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/magnolia.html)
-* [Styla](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/styla.html)
-
-## Finance & Accounting
-
-* [CollectAI](/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/collectai.html)
-* [Nitrobox](/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/nitrobox.html)
-
 ## A/B Testing & Performance
 
 * [AB Tasty](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html)
@@ -46,12 +33,6 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Haensel AMS](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/haensel-ams.html)
 * [Mindlab](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/mindlab.html)
 * [Minubo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/minubo.html)
-
-## Customer Retention & Loyalty
-
-* [Namogoo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
-* [Trustpilot](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
-* [Zenloop](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
 ## Marketplace Integrations
 

@@ -10,13 +10,15 @@ related:
 
 This document describes the `company_user.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.
 
-## 
+## Import file dependencies
+
+[TODO: Add dependencies if any; remove the section otherwise]
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- |-----| --- |
-| company_user_key |&check;| string |   | Company user key.|
+| company_user_key |&check;| string |   | Company user identifier.|
 | customer_reference |&check;| string |  | Company name.|
 | company_key	is_default | &check; | bool | `1`: default user; no value otherwise. | Defines if a company user is default. |
 

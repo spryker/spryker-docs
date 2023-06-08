@@ -10,21 +10,23 @@ related:
 
 This document describes the `company_business_unit.csv` file to configure information about [business units](docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
 
-## 
+## Import file dependencies
+
+[TODO: Add dependencies if any; remove the section otherwise]
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| company_key |&check;| string | Company user key.|
-| business_unit_key |&check;| string | Company name.|
-| name | is_default | &check; | string | Defines if a company user is default. |
-| email | is_default | &check; | string | Defines if a company user is default. |
-| phone | is_default | &check; | string | Defines if a company user is default. |
-| external_url | is_default | &check; | string | Defines if a company user is default. |
-| iban | is_default | &check; | string | Defines if a company user is default. |
-| bic | is_default | &check; | string | Defines if a company user is default. |
-| parent_business_unit_key | | &check; | string | Defines if a company user is default. |
+| company_key |&check;| string | Company identifier of the busines unit.|
+| business_unit_key |&check;| string | Business unit identifier.|
+| name | &check; | string | Business unit name. |
+| email | &check; | string | Business unit email. |
+| phone | &check; | string | Business unit phone number. |
+| external_url | | string | Link to the buisness unit. |
+| iban | | string | IBAN of the business unit. |
+| bic | | string | [TODO: Add description] |
+| parent_business_unit_key | | string | Internal identifier of the parent business unit. |
 
 ## Import file template and content example
 
@@ -33,9 +35,8 @@ This document describes the `company_business_unit.csv` file to configure inform
 | [template_company_business_unit.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/file-details-company-business-unit.csv.md/template_company_business_unit.csv)| Import file template with headers only. |
 | [company_business_unit.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/file-details-company-business-unit.csv.md/company_business_unit.csv)| Exemplary import file with the Demo Shop data. |
 
-
 ## Import file command
 
 ```bash
-data:import:company-user
+data:import:company-business-unit
 ```

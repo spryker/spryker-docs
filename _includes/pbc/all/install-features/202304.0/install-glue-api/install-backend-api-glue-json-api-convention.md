@@ -135,6 +135,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly and that you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
+To verify that everything is set up correctly and that you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
 
 {% endinfo_block %}

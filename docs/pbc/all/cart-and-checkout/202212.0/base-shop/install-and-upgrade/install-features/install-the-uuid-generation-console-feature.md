@@ -1,5 +1,5 @@
 ---
-title: Uuid Generation Console feature integration
+title: Install the Uuid Generation Console feature
 last_updated: Jul 4, 2022
 template: feature-integration-guide-template
 redirect_from:

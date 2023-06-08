@@ -1,5 +1,5 @@
 ---
-title: Splittable Order Items feature integration
+title: Install the Splittable Order Items feature
 last_updated: Jun 20, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/splittable-order-items-integration

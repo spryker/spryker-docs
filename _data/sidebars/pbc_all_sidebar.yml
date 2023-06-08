@@ -241,6 +241,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
                       - title: Shared Carts
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                      - title: Uuid Generation Console
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html
                   - title: Install Glue API
                     nested:
                       - title: Install the Cart Glue API
@@ -1202,6 +1204,12 @@ entries:
         include_versions:
         - "202212.0"
         nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install the Spryker Core feature
+                url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-the-spryker-core-feature.html
+              - title: Install the Spryker Core Glue API
+                url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-the-spryker-core-glue-api.html
           - title: Spryker Core feature overview
             url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
             nested:
@@ -1249,6 +1257,8 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Quick Add to Cart + Non-splittable Products
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+                      - title: Splittable Order Items
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
                   - title: Install Glue API
                     nested:
                       - title: Checkout

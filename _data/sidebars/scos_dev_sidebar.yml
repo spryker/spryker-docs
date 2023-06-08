@@ -595,7 +595,7 @@ entries:
       include_versions:
       - "202204.0"
       - "202108.0"
-    - title: Spryker Core 
+    - title: Spryker Core
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
       include_versions:
       - "201811.0"
@@ -1701,7 +1701,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Store
         url: /docs/scos/dev/feature-integration-guides/glue-api/store-api-feature-integration.html
         include_versions:
@@ -2634,7 +2633,6 @@ entries:
       - "201903.0"
       - "201907.0"
       - "202204.0"
-      - "202212.0"
     - title: Spryker Core
       url: /docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
       include_versions:
@@ -2645,8 +2643,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
-      - "202304.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2659,6 +2655,8 @@ entries:
       - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Picker user login
       url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
       include_versions:
@@ -3891,7 +3889,7 @@ entries:
             - title: Reactive components
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8

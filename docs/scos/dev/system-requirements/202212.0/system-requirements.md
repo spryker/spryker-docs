@@ -1,5 +1,5 @@
 ---
-title: 'System requirements: Spryker product release 202212.0'
+title: System requirements
 description: This article provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 last_updated: Oct 5 2022
 template: howto-guide-template

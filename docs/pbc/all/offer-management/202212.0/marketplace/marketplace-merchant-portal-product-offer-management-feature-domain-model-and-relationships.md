@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Merchant Portal Product Offer Management feature: Domain model and relationships"
-description: This document provides reference information about product offers in the Merchant Portal.
-template: feature-walkthrough-template
+description: This document provides reference information about product offers in the Merchant Portal
+template: concept-topic-template
 ---
 
 The *Marketplace Merchant Portal Product Offer Management* feature lets merchants manage product offers and their prices, stock, validity dates in the Merchant Portal.

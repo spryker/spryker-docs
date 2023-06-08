@@ -22,14 +22,15 @@ composer require spryker-feature/service-points: "{{page.version}}" --update-wit
 
 Make sure that the following modules have been installed:
 
-| MODULE                   | EXPECTED DIRECTORY                         |
-|--------------------------|--------------------------------------------|
-| ProductOfferServicePoint | vendor/spryker/product-offer-service-point |
-| ServicePoint             | vendor/spryker/service-point               |
-| ServicePointDataImport   | vendor/spryker/service-point-data-import   |
-| ServicePointsBackendApi  | vendor/spryker/service-points-backend-api  |
-| ServicePointSearch       | vendor/spryker/service-point-search        |
-| ServicePointStorage      | vendor/spryker/service-point-storage       |
+| MODULE                             | EXPECTED DIRECTORY                                     |
+|------------------------------------|--------------------------------------------------------|
+| ProductOfferServicePoint           | vendor/spryker/product-offer-service-point             |
+| ProductOfferServicePointDataImport | vendor/spryker/product-offer-service-point-data-import |
+| ServicePoint                       | vendor/spryker/service-point                           |
+| ServicePointDataImport             | vendor/spryker/service-point-data-import               |
+| ServicePointsBackendApi            | vendor/spryker/service-points-backend-api              |
+| ServicePointSearch                 | vendor/spryker/service-point-search                    |
+| ServicePointStorage                | vendor/spryker/service-point-storage                   |
 
 {% endinfo_block %}
 
@@ -305,13 +306,13 @@ s2,sp2,pickup,1
 **data/import/common/common/marketplace/product_offer_service.csv**
 
 ```csv
-service_key,product_offer_reference
-s1,offer419
-s1,offer420
-s1,offer421
-s2,offer422
-s2,offer423
-s2,offer424
+product_offer_reference,service_key
+offer419,s1
+offer420,s1
+offer421,s1
+offer422,s1
+offer423,s1
+offer424,s1
 ```
 
 | COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
@@ -1077,7 +1078,7 @@ Make sure you are able to see data in Redis in the following format:
 
 ### 7) Set up behavior
 
-2. To expand product offers with services, register the plugins:
+1. To expand product offers with services, register the plugins:
 
 | PLUGIN                                    | SPECIFICATION                               | PREREQUISITES | NAMESPACE                                                               |
 |-------------------------------------------|---------------------------------------------|---------------|-------------------------------------------------------------------------|

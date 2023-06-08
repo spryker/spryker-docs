@@ -2,6 +2,7 @@
 title: Environments overview
 description: Learn about the development, staging, and production environments of the Spryker Cloud Commerce OS
 template: concept-topic-template
+last_updated: Jun 8, 2023
 ---
 
 This document explains what to do with the hosting environments you received at the start of your contract and how you can make use of them best. Knowing the purpose of these platforms and working with them as intended can help you build more solid and performant projects.

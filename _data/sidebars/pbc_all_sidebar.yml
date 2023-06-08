@@ -1826,7 +1826,7 @@ entries:
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
-          - title: Base shop 
+          - title: Base shop
             nested:
               - title: Feature overviews
                 nested:

@@ -317,8 +317,8 @@ offer424,s1
 
 | COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
 |-------------------------|-----------|-----------|--------------|----------------------------------------|
-| service_key             | mandatory | string    | s1           | Unique key of the service.             |
 | product_offer_reference | mandatory | string    | offer419     | Unique reference of the product offer. |
+| service_key             | mandatory | string    | s1           | Unique key of the service.             |
 
 2. Enable data imports at your configuration file—for example:
 

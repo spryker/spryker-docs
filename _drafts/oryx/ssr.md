@@ -122,7 +122,7 @@ Oryx provides special decorators to address some SSR related challenges:
 
 ### Utilities
 
-Oryx also provides utilities to assist with SSR:
+Oryx provides the following utilities to assist with SSR:
 
 - `ssrAwaiter`: this utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
 

@@ -37,11 +37,17 @@ export const b2cFeatures: AppFeature[] = [
   ...
 ```
 
+Feature sets also contain static experience data. Experience data includes the structure and layout of the components of the application, such as pages and sections. By utilizing the static experience data provided by the presets, you do no need to set up any boilerplate code. Moreover, we avoid hardcoded page structures that would not allow for personalized experiences going forward.
+
 For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html)
 
 ## Themes
 
-The overarching UI of the application is driven by themes. To get started with a default theme, you can import it from the preset package and apply it to your Oryx application:
+Themes in Oryx play a key role in defining the visual appearance of your application. A theme represents the global typography, colors, and other specific design elements, such as form field placeholder color, that define the overall look and feel of your application.
+
+The theme consists of design tokens, which are configuration values that control the visual aspects of your application. Design tokens allow you to define global typography, colors, spacing, and other visual properties. By configuring these design tokens, you can customize the visual appearance of your application to align with your brand or specific design requirements.
+
+To apply a theme to your Oryx application, you can import it from the preset package and use it during the application setup:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
@@ -53,7 +59,11 @@ export const app = appBuilder()
   .create();
 ```
 
-The theme contains mainly design tokens that are used inside the components styles.
+By utilizing themes and design tokens in Oryx presets, you have the flexibility to customize the visual aspects of your application, making it unique and aligned with your branding or specific design preferences.
+
+Themes play a crucial role in maintaining a consistent and coherent visual experience throughout your application. They provide a centralized way to manage and apply design tokens, ensuring a unified look and feel across components and screens.
+
+Take advantage of the themes provided in Oryx presets or create your own themes to tailor the visual appearance of your application according to your specific needs.
 
 ## Resources
 
@@ -63,7 +73,7 @@ Resources are an alternative approach, which allows for lazy loading of web reso
 
 Resources are lazily loaded, so that the runtime performance is not affected when a lot of resources are used.
 
-You can use resources in your application by using the `appBuilder()` API:
+You can add resources to your application with the `appBuilder()` API:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -74,16 +84,24 @@ const app = appBuilder()
   .create();
 ```
 
-As an application developer, you can create your own resources:
+As an application developer, you could also create your own resources.
 
 ```ts
 import { Resources } from "@spryker-oryx/core";
 
 const myResources: Resources = {
   graphics: {
-    logo: { source: () => import("/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-logo").then((m) => m.default) },
+    logo: {
+      source: () =>
+        import(
+          "/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-logo"
+        ).then((m) => m.default),
+    },
     otherImg: {
-      source: () => import("/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-other-img").then((m) => m.default),
+      source: () =>
+        import(
+          "/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-other-img"
+        ).then((m) => m.default),
     },
   },
 };

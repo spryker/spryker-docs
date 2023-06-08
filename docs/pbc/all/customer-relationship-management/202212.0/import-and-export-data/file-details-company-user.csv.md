@@ -12,15 +12,17 @@ This document describes the `company_user.csv` file to configure information abo
 
 ## Import file dependencies
 
-[TODO: Add dependencies if any; remove the section otherwise]
+[File details: company.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company.csv.html)
+[File details: customer.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-customer.csv.html)
 
 ## Import file parameters
 
-| PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-| --- | --- | --- |-----| --- |
-| company_user_key |&check;| string |   | Company user identifier.|
-| customer_reference |&check;| string |  | Company name.|
-| company_key	is_default | &check; | bool | `1`: default user; no value otherwise. | Defines if a company user is default. |
+| PARAMETER          | REQUIRED  | TYPE    | REQUIREMENTS OR COMMENTS                              | DESCRIPTION                                          |
+|--------------------|-----------|---------|-------------------------------------------------------|------------------------------------------------------|
+| company_user_key   | &check;   | string  |                                                       | Internal data import identifier of the company user. |
+| customer_reference | &check;   | string  |                                                       | Customer identifier.                                 |
+| company_key        | &check;   | string  |                                                       | Internal data import identifier of the company.      |
+| is_default         |           | bool    | `1`: default company user; `0` or no value otherwise. | Defines if a company user is default.                |
 
 ## Import file template and content example
 

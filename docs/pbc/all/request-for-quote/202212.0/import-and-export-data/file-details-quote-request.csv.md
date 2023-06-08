@@ -7,6 +7,10 @@ last_updated: Jun 1, 2023
 
 This document describes the `quote_request.csv` file to configure information about [quote requests](https://docs.spryker.com/docs/pbc/all/request-for-quote/202212.0/request-for-quote.html) in your Spryker shop.
 
+## Import file dependencies
+
+[File details: company_user.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company-user.csv.md.html)
+
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |

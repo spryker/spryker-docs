@@ -12,12 +12,12 @@ This document describes the `company.csv` file to configure information about [c
 
 ## Import file parameters
 
-| PARAMETER | REQUIRED |  TYPE | REQUIREMENTS OR COMMENTS                                  | DESCRIPTION |
-| --- | --- | --- |-----------------------------------------------------------| --- |
-| key |&check;| string |                                                           | Company key.|
-| name |&check;| string |                                                           | Company name.|
-| is_active | &check; | bool | <ul><li>`1`: active</li><li>`0`: inactive</li></ul>       | Defines if a company is active. |
-| status |&check;|string| <ul><li>pending</li><li>approved</li><li>denied</li></ul> |Company status.|
+| PARAMETER | REQUIRED | TYPE   | REQUIREMENTS OR COMMENTS                                  | DESCRIPTION                     |
+|-----------|----------|--------|-----------------------------------------------------------|---------------------------------|
+| key       | &check;  | string |                                                           | Company key.                    |
+| name      | &check;  | string |                                                           | Company name.                   |
+| is_active |          | bool   | <ul><li>`1`: active</li><li>`0`: inactive</li></ul>       | Defines if a company is active. |
+| status    |          | string | <ul><li>pending</li><li>approved</li><li>denied</li></ul> | Company status.                 |
 
 ## Import file template and content example
 

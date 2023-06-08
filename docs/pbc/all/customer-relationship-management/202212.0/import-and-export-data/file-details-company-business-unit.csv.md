@@ -12,17 +12,17 @@ This document describes the `company_business_unit.csv` file to configure inform
 
 ## Import file dependencies
 
-[TODO: Add dependencies if any; remove the section otherwise]
+[File details: company.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company.csv.html)
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED |  TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
+| --- | - | --- | --- |
 | company_key |&check;| string | Company identifier of the busines unit.|
 | business_unit_key |&check;| string | Business unit identifier.|
 | name | &check; | string | Business unit name. |
-| email | &check; | string | Business unit email. |
-| phone | &check; | string | Business unit phone number. |
+| email | | string | Business unit email. |
+| phone | | string | Business unit phone number. |
 | external_url | | string | Link to the buisness unit. |
 | iban | | string | IBAN of the business unit. |
 | bic | | string | [TODO: Add description] |

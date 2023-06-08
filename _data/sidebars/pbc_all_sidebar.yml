@@ -1247,6 +1247,30 @@ entries:
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/optimise-it.html
                   - title: iAdvize
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/iadvize.html
+              - title: Operational tools, monitoring, legal
+                nested:
+                - title: PlusServer
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/plusserver.html
+                - title: common solutions
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/common-solutions.html
+                - title: VSHN
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/vshn.html
+                - title: Tideways
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/tideways.html
+                - title: Shopmacher
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/shopmacher.html
+                - title: Loggly
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly.html
+                - title: Proclane
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
+                - title: Data Virtuality
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
+                - title: Usercentrics
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/usercentrics.html
+                - title: New Relic
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+                - title: Mindcurv
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
         include_versions:

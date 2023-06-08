@@ -3484,6 +3484,12 @@ entries:
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Operational tools, monitoring, legal, etc.
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: PlusServer
         url: /docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/plusserver.html

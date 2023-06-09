@@ -36,11 +36,15 @@ To ensure the successful delivery of Spryker updates, we recommend using the ext
 
 ## Migrate to Spryker Cloud Commerce OS
 
-The upgrader supports only the projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
+The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
 
-## Update PHP to version 7.4 or higher
+## Minimum technical requirements
 
-The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
+To ensure a smooth experience, please make sure that your environments meet the minimum technical requirements outlined below:
+
+* PHP 7.4+. The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
+* Composer 2.1+
+* Git 2.24+
 
 ## Optional: Implement headless design
 

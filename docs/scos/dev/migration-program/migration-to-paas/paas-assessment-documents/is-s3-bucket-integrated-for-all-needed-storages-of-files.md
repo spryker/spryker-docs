@@ -4,9 +4,7 @@ description: This document allows you to assess if S3 bucket is integrated for a
 template: howto-guide-template
 ---
 
-
-
-We need to make sure, the customer is not using any local storage or somewhere which could add more effort to migrate data into the S3 bucket. It should have some cloud storage configured.
+Make sure that the project is not using any local storage, which may add more effort to migrate data to S3. It should have some cloud storage configured.
 
 Possible cases to check: Locally stored data, files stored in other places (not S3 bucket).
 

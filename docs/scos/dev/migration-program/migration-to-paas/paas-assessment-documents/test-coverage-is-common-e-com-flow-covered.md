@@ -18,7 +18,7 @@ These functionalities should be covered with at least one type of testing:
 * Behavioral
 
 
-Except of Codeception, it’s acceptable for the project to use other testing technologies, like Behat or phpspec.
+Apart from Codeception, other testing technologies, like Behat or phpspec, are acceptable.
 
 ## Resources for assessment
 

@@ -9,6 +9,8 @@ This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.ve
 
 ## Prerequisites
 
+Before you can integrate the Algolia app, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+
 The Algolia app requires the following Spryker modules:
 
 * `spryker/catalog: "^5.8.0"`

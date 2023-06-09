@@ -1728,8 +1728,10 @@ entries:
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
                   - title: Merchant Custom Prices
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
-                  - title: Scheduled prices
+                  - title: Scheduled Prices
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
+                  - title: Prices per Merchant Relation
+                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-per-merchant-relation-feature.html
                   - title: Product Price Glue API
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
               - title: Upgrade modules

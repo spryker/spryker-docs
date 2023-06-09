@@ -2269,6 +2269,8 @@ entries:
       - "202108.0"
     - title: Prices per Merchant Relation
       url: /docs/scos/dev/feature-integration-guides/prices-per-merchant-relation-feature-integration.html
+      include_versions:
+      - "202204.0"      
     - title: Product
       url: /docs/scos/dev/feature-integration-guides/product-feature-integration.html
       include_versions:
@@ -2450,7 +2452,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-feature-integration.html
       include_versions:
@@ -3467,6 +3468,10 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+    - title: "Tutorial: Replace a default data importer with the queue data importer"
+      url: /docs/scos/dev/data-import/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html
+      include_versions:
+      - "202212.0"
     - title: Data importer speed optimization
       url: /docs/scos/dev/data-import/data-importer-speed-optimization.html
       include_versions:
@@ -4261,8 +4266,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html
       - title: "Tutorial: Managing glossary keys"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
-      - title: "Tutorial: Replacing a default data importer with the queue data importer"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
       - title: "Tutorial: Twig extensions"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
       - title: "Tutorial: New Relic monitoring"

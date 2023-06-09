@@ -1,7 +1,5 @@
 ---
-title: Marketplace Product Offer feature Domain model and relationships
-description: Modules of the Marketplace Product Offer feature
-last_updated: Apr 23, 2021
+title: "Marketplace Product Offer feature: Domain model and relationships"
 template: concept-topic-template
 ---
 

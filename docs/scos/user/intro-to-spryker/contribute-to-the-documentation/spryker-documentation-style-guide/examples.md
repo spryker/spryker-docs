@@ -1,6 +1,6 @@
 ---
 title: Examples
-description:
+description: Guidance for introducing examples in Spryker documentation
 last_updated: Mar 23, 2023
 template: concept-topic-template
 ---

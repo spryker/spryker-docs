@@ -13,6 +13,8 @@ You can configure the data processing services and the visual representation of 
 
 ## Prerequisites
 
+Before you can integrate Usercentrics, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+
 The UserCentrics app requires the following Spryker modules:
 
 * `spryker/asset: ^1.3.0`

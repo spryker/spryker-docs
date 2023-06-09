@@ -48,3 +48,6 @@ Having separate CMS pages outside of the Spryker store requires additional confi
 
 {% endinfo_block %}
 
+## Next step
+[Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html)
+

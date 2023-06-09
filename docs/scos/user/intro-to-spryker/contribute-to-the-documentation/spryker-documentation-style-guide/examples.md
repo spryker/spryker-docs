@@ -7,7 +7,7 @@ template: concept-topic-template
 
 In general, follow [Google's guidance for examples](https://developers.google.com/style/format-examples?hl=en).
 
-Additional guidance for introducing examples at the end of a sentence:
+Additional guidance for introducing short and long examples:
 
 <div class="width-100">
 

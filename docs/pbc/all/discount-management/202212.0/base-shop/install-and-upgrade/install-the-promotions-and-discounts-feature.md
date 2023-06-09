@@ -1,5 +1,5 @@
 ---
-title: Integrate the Promotions & Discounts feature
+title: Install the Promotions & Discounts feature
 description: Learn how to integrate the Promotions & Discounts feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:

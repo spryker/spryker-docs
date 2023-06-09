@@ -1,5 +1,5 @@
 ---
-title: Integrate the Promotions & Discounts Glue API
+title: Install the Promotions & Discounts Glue API
 description: Learn how to integrate the Promotions & Discounts Glue API into a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

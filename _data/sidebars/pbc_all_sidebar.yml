@@ -879,14 +879,16 @@ entries:
                 url: /docs/pbc/all/discount-management/base-shop/promotions-discounts-feature-overview.html
               - title: Install and upgrade
                 nested:
-                  - title: Integrate the Promotions & Discounts feature
+                  - title: Install the Promotions & Discounts feature
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
-                  - title: Integrate the Promotions & Discounts Glue API
+                  - title: Install the Promotions & Discounts Glue API
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
-                  - title: Integrate the Product labels + Promotions & Discounts feature
+                  - title: Install the Product labels + Promotions & Discounts feature
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
-                  - title: Integrate the Category Management + Promotions & Discounts feature
+                  - title: Install the Category Management + Promotions & Discounts feature
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
+                  - title: Install the Multiple Abstract Products as Promotional Products & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-multiple-abstract-products-as-promotional-products-discounts-feature.html                    
                   - title: Upgrade the Discount module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
                   - title: Upgrade the DiscountCalculatorConnector module

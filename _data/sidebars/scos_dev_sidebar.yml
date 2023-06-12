@@ -595,7 +595,7 @@ entries:
       include_versions:
       - "202204.0"
       - "202108.0"
-    - title: Spryker Core 
+    - title: Spryker Core
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
       include_versions:
       - "201811.0"
@@ -3853,6 +3853,8 @@ entries:
           url: /docs/scos/dev/front-end-development/oryx/oryx-packages.html
         - title: Routing
           url: /docs/scos/dev/front-end-development/oryx/oryx-routing.html
+        - title: Server-side rendering
+          url: /docs/scos/dev/front-end-development/oryx/oryx-server-side-rendering.html
         - title: Versioning
           url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
         - title: Presets
@@ -3891,7 +3893,7 @@ entries:
             - title: Reactive components
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8

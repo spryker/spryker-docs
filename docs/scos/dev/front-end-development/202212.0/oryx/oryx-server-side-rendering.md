@@ -1,23 +1,28 @@
-## Introduction to SSR
+---
+title: "Oryx: Server-side rendering"
+description: Get a general idea of server-side rendering
+template: concept-topic-template
+last_updated: June 3, 2023
+---
 
-Server-Side Rendering (SSR), including Static Site Generation (SSG) as a variant, has grown in popularity due to its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). By delivering pre-rendered HTML from the server or even content delivery netowrk (CDN) to the client, SSR and SSG lead to quicker initial page load times, enhance the user experience, and can significantly improve CWV scores. SSG, in particular, pre-renders HTML at build time, resulting in static HTML, CSS, and JavaScript files that can be served directly from a CDN. It is a useful strategy for sites with content that does not change frequently, and can improve performance, scalability, and security.
+Server-side rendering (SSR), including Static Site Generation (SSG) as a variant, has grown in popularity due to its ability to boost web application performance, facilitate effective Search Engine Optimization (SEO), social sharing, and improve Core Web Vitals (CWV). By delivering pre-rendered HTML from the server or even a  content delivery network (CDN) to the client, SSR and SSG lead to quicker initial page load times, improve user experience (UX), and can significantly improve CWV scores. SSG, in particular, pre-renders HTML at build time, resulting in static HTML, CSS, and JavaScript files that can be served directly from a CDN. It is a useful strategy for sites with content that does not change frequently, and can improve performance, scalability, and security.
 
-## Differences between SSR and CSR
+## Differences between server-side and client-side rendering
 
-* Speed and performance*: With SSR, the browser receives pre-rendered HTML, reducing the time taken to display meaningful content.
+* Speed and performance: With server-side rendering (SSR), the browser receives pre-rendered HTML, reducing the time taken to display meaningful content.
 
 * SEO: SSR is typically more favorable for SEO, because search engine crawlers find it easier to index pre-rendered HTML content.
 
 * Social media integration: SSR significantly improves integration with social providers like Facebook and Twitter, and bots like Slack. It enables the generation of link previews, rich snippets, and thumbnails, enhancing the visibility and appeal of shared content on these platforms.
 
-* User experience (UX): By delivering pre-rendered content faster, SSR minimizes user waiting time, providing a superior user experience compared to CSR.
+* User experience (UX): By delivering pre-rendered content faster, SSR minimizes user waiting time, providing a superior user experience compared to client-side rendering (CSR).
 
 * Resource allocation: While SSR enhances performance and user experience, it requires more server resources and processing power. CSR lightens server load by offloading rendering to the client, but at the cost of potentially increased load times and less effective SEO.
 
 
-## SSR: Pros and Cons
+## Advantages and disadvantages of SSR
 
-| Benefits of SSR                                                   | Drawbacks of SSR    |
+| ADVANTAGES OF SSR                        | DISADVANTAGES of SSR    |
 |-------------------------------------------------------------------|---------------------|
 | Quicker initial page load time.                                  | Higher server resource usage. |
 | Enhanced SEO.                                                     | Higher development and deployment complexity. |
@@ -34,6 +39,8 @@ While SSR offers numerous benefits, it's not the best fit for every type of appl
 
 
 ## SSR implementation approaches
+
+The following sections describe the approaches to implementing SSR.
 
 ### Traditional server-based SSR
 
@@ -57,24 +64,8 @@ CDNs distribute cached content across a network of servers located worldwide. Th
 
 In the context of serverless platforms like Netlify, you can leverage Netlify's on-demand builder. It works as a simple wrapper to Oryx SSR Lambda handler and automatically feeds Netlify Edge CDN by building and caching a page when it's requested, thereby reducing the load on the serverless function and improving performance.
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant CDN
-    participant SSR Service
-    participant Backend
+{% include diagrams/oryx/caching-and-cdns.md %}
 
-    User->>CDN: Request page
-    CDN->>SSR Service: Request SSR page
-    Note over SSR Service: Slow processing, need for caching
-    SSR Service-->>CDN: Cache SSR page
-    CDN-->>User: Deliver SSR page
-    User->>CDN: Request static assets (CSR)
-    CDN-->>User: Deliver static JS assets
-    Note over User: Hydration occurs, SPA mode
-    User->>Backend: CSR Interacts with backend app
-
-```
 
 ## Hydration
 
@@ -87,11 +78,13 @@ Moreover, Oryx employs a *late hydration* strategy, delaying the hydration proce
 
 ## Developing with SSR
 
+The following sections describes the development of applications with SSR support in the Oryx framework.
+
 ### SSR consideration
 
 When developing with SSR, it's important to understand how the SSR process works. SSR involves rendering the initial HTML on the server, which is then sent to the client. This provides faster initial page load times and better SEO. However, because this process can differ from traditional client-side rendering, there are specific considerations and potential pitfalls to keep in mind, such as avoiding direct manipulation of the DOM and being mindful of lifecycle hooks.
 
-### SSR Configuration
+### SSR configuration
 
 Oryx integrates seamlessly with server environments, offering support for traditional Node.js SSR and serverless architectures, similar to AWS Lambda or Netlify functions.
 
@@ -122,7 +115,7 @@ Oryx provides special decorators to address some SSR related challenges:
 
 ### Utilities
 
-Oryx provides the following utilities to assist with SSR:
+Oryx also provides utilities to assist with SSR:
 
 - `ssrAwaiter`: this utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
 

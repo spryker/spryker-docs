@@ -157,7 +157,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Set up synchronization queue pools to synchronize non-multistore entities (not store-specific entities) among stores:
+Set up synchronization queue pools to synchronize non-multi-store entities (not store-specific entities) among stores:
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageConfig.php**
 

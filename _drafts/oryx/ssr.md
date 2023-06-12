@@ -28,7 +28,7 @@ Server-Side Rendering (SSR), including Static Site Generation (SSG) as a variant
 
 While SSR offers numerous benefits, it's not the best fit for every type of application, like the following:
 
-- B2B (closed) shops: public-facing SEO and quicker initial page load times offered by SSR may not significantly benefit these types of applications.
+- B2B shops with restricted access: public-facing SEO and quicker initial page load times offered by SSR may not significantly benefit these types of applications.
 - Business apps: applications heavily focused on functionality, like a fulfillment app, might not require the SEO or user experience enhancements provided by SSR.
 - Instore apps: used in a controlled environment and designed for specific functions, these types of applications might not necessitate the benefits of SSR.
 
@@ -118,7 +118,7 @@ Oryx provides special decorators to address some SSR related challenges:
 
 - The `@hydratable` decorator marks a component for late hydration. This allows the component to render on the server but delays its hydration until it's interacted with on the client. Hydration can be triggered programmatically, or automatically with events.   
 
-- The `@ssrShim` decorator shims a component API to make it work on the server: `toggleAttribute()` and `style` property.
+- The `@ssrShim` decorator shims certain parts of the component API to make it work on the server. Specifically, it adjusts how the toggleAttribute() function and style property work.
 
 ### Utilities
 

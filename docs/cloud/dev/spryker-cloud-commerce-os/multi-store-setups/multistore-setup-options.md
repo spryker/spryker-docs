@@ -186,7 +186,7 @@ The following tables contain high-level criteria that sum up the setups describe
 
 **Infrastructure details:**
 
-| What                                                                   | Setup 1 | Setup 2  | Setup 2  |
+| What                                                                   | Setup 1 | Setup 2  | Setup 3  |
 |------------------------------------------------------------------------|---------|----------|----------|
 | DB                                                                     | Shared  | Separate | Separate |
 | Ke-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |

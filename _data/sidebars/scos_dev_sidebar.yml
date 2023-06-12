@@ -2121,7 +2121,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/mailing-and-notifications-feature-integration.html
       include_versions:
       - "202204.0"
-      - "202212.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
       include_versions:
@@ -2154,6 +2153,9 @@ entries:
       - "202108.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Merchants and Merchant Relations
       url: /docs/scos/dev/feature-integration-guides/merchants-and-merchant-relations-feature-integration.html
     - title: Microsoft Azure Active Directory
@@ -2270,7 +2272,7 @@ entries:
     - title: Prices per Merchant Relation
       url: /docs/scos/dev/feature-integration-guides/prices-per-merchant-relation-feature-integration.html
       include_versions:
-      - "202204.0"      
+      - "202204.0"
     - title: Product
       url: /docs/scos/dev/feature-integration-guides/product-feature-integration.html
       include_versions:

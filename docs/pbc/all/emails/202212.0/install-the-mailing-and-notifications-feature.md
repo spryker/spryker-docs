@@ -1,5 +1,5 @@
 ---
-title: Mailing and notifications feature integration
+title: Install the Mailing and Notifications feature
 description: The guide describes the process of installing the mailing provider in your project.
 last_updated: Nov 21, 2022
 template: feature-integration-guide-template

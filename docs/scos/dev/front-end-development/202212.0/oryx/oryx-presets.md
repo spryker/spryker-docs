@@ -43,9 +43,7 @@ For more information about feature sets, see [Feature sets](/docs/scos/dev/front
 
 ## Themes
 
-Themes in Oryx play a key role in defining the visual appearance of your application. A theme represents the global typography, colors, and other specific design elements, such as form field placeholder color, that define the overall look and feel of your application.
-
-The theme consists of design tokens, which are configuration values that control the visual aspects of your application. Design tokens allow you to define global typography, colors, spacing, and other visual properties. By configuring these design tokens, you can customize the visual appearance of your application to align with your brand or specific design requirements.
+A theme represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as form field placeholder color. The theme is build with design tokens, which are configurable values that are used in CSS properties. By configuring these design tokens, you can customize the theme and align the application and it's components with your brand identity or specific design requirements.
 
 To apply a theme to your Oryx application, you can import it from the preset package and use it during the application setup:
 
@@ -59,11 +57,7 @@ export const app = appBuilder()
   .create();
 ```
 
-By utilizing themes and design tokens in Oryx presets, you have the flexibility to customize the visual aspects of your application, making it unique and aligned with your branding or specific design preferences.
-
 Themes play a crucial role in maintaining a consistent and coherent visual experience throughout your application. They provide a centralized way to manage and apply design tokens, ensuring a unified look and feel across components and screens.
-
-Take advantage of the themes provided in Oryx presets or create your own themes to tailor the visual appearance of your application according to your specific needs.
 
 ## Resources
 

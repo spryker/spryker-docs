@@ -10,6 +10,8 @@ The App Composition Platform (ACP) lets Spryker Cloud customers connect, configu
 
 ![ACP](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop.png)
 
+<a name="supported-apps"></a>
+
 The following apps are supported:
 
 - [Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/algolia.html), a Search Engine
@@ -55,3 +57,6 @@ Make sure you check the configuration guidelines for the app you need because ad
 {% endinfo_block %}
 
 That's it! You are all set to try the app out.
+
+## Next steps
+To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/acp/user/app-composition-platform-installation.html#getting-scos-acp-ready).

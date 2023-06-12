@@ -23,7 +23,7 @@ This document describes the `company_business_unit.csv` file to configure inform
 | name | &check; | string | Business unit name. |
 | email | | string | Business unit email. |
 | phone | | string | Business unit phone number. |
-| external_url | | string | Link to the buisness unit. |
+| external_url | | string | Link to internal or external resources related to the business unit. |
 | iban | | string | IBAN of the business unit. |
 | bic | | string | [TODO: Add description] |
 | parent_business_unit_key | | string | Internal identifier of the parent business unit. |

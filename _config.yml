@@ -171,6 +171,19 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
+  -
+    scope:
+      path: "docs/unified-commerce/dev"
+    values:
+      sidebar: "unified-commerce_dev_sidebar"
+      role: "dev"
+
+  -
+    scope:
+      path: "docs/unified-commerce/user"
+    values:
+      sidebar: "unified-commerce_user_sidebar"
+      role: "user"
 
 versions:
   '201811.0': '201811.0'
@@ -183,6 +196,7 @@ versions:
   '202204.0': '202204.0'
   '202212.0': '202212.0'
   '202304.0': 'Upcoming release'
+  '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:

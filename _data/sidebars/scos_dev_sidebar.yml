@@ -2437,6 +2437,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html
       include_versions:
       - "202304.0"
+    - title: Service Points
+      url: /docs/scos/dev/feature-integration-guides/install-the-service-points-feature.html
+      include_versions:
+        - "202304.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:
@@ -3896,6 +3900,10 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
     - title: Migration guide - Switch from TSLint to ESLint
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
+    - title: Migration guide - Upgrade Node.js to v18 and npm to v9
+      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
+      include_versions:
+      - "202212.0"
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:

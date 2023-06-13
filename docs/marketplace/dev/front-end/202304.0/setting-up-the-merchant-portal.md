@@ -1,8 +1,8 @@
 ---
 title: Setting up the Merchant Portal
+last_updated: May 15, 2023
 description: This document provides details about setting up Spryker Marketplace project.
 template: howto-guide-template
-last_updated: May 26, 2023
 related:
   - title: Building the project
     link: docs/marketplace/dev/front-end/page.version/building-the-project.html
@@ -14,33 +14,31 @@ This document provides details about how to set up the Spryker Merchant Portal.
 
 To start using Merchant Portal, install Spryker Demo Shop:
 
-* To install a Marketplace project, use [Spryker `suite` repository](https://github.com/spryker-shop/suite).  
-* [Install the Spryker project](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+1. For the Marketplace project installation, use [this repository](https://github.com/spryker-shop/suite).  
+2. [Install the project](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 
 ## Requirements
 
 To build Merchant Portal, install or update the following tools:
-- [Node.js](https://nodejs.org/en/download/): minimum required version is 16.
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum required version is 8.
+- [Node.js](https://nodejs.org/en/download/)—minimum version is v18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)—minimum version is v9.
 
 ## Overview
 
 The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are the following:  
-- Minimum Node.js version is 16.
-- Minimum npm version is 8.
+- Minimum Node.js version is v18.
+- Minimum npm version is v9.
 
 Using a *unified* approach, all frontend dependencies must be installed in one step.
 
-The entire project is now an *npm Workspace*, meaning each submodule declares its dependencies. During the installation stage, npm installs all of those dependencies and stores them into the root of the project.
+The entire project is now an *npm workspace*, meaning each submodule declares its dependencies. During the installation stage, npm installs all of those dependencies and stores them into the root of the project.
 
-## Install dependencies
+## Install dependencies and build Merchant Portal
 
 ```bash
 npm install
 ```
-
-## Build Merchant Portal
 
 ```bash
 npm run mp:build

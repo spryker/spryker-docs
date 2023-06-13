@@ -2389,6 +2389,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Product Offer Shipment
+      url: /docs/scos/dev/feature-integration-guides/install-the-product-offer-shipment-feature.html
+      include_versions:
+      - "202304.0"
     - title: Product Options + Order Management
       url: /docs/scos/dev/feature-integration-guides/product-options-order-management-feature-integration.html
       include_versions:
@@ -3884,7 +3888,6 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
-
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8

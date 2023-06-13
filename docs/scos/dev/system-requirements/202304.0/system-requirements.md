@@ -1,6 +1,6 @@
 ---
-title: 'System requirements: Spryker product release 202304.0'
-description: This article provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
+title: System requirements
+description: This document provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 last_updated: May 15 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/system-requirements

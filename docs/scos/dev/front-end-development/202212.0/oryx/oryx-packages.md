@@ -17,7 +17,7 @@ While packages are distributed as a flat list, there is an architectural hierarc
 
 While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html), which is set up using a [preset](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html).
 
-{% include diagrams/oryx/packages.svg %}
+{% include diagrams/oryx/packages.md %}
 
 ## Template packages
 

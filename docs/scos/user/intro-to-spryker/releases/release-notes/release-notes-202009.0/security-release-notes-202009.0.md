@@ -192,7 +192,7 @@ To work around this issue without upgrading, use DOMPurify with its `SAFE_FOR_JQ
 ```bash
 composer update spryker/gui
 ```
-### acorn NPM library vulnerable to Regular Expression Denial of Service
+### acorn npm library vulnerable to Regular Expression Denial of Service
 Affected versions of acorn are vulnerable to Regular Expression Denial of Service.
 A regex in the form of `/[x-\ud800]/u` causes the parser to enter an infinite loop.
 The string is not valid UTF16, which usually results in it being sanitized before reaching the parser.

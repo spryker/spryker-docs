@@ -1,64 +1,51 @@
----
-title: Merchant Portal feature integration
-last_updated: Oct 19, 2021
-description: This document describes the process how to integrate the Merchant Portal feature into a Spryker project.
-draft: true
-template: feature-integration-guide-template
-related:
-  - title: Merchant Portal overview
-    link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
----
+
 
 {% info_block infoBox "Info" %}
 
-See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html).
+See [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 {% endinfo_block %}
 
 
 ## Environment requirements
 
-- Node.js v12+
-- Yarn v2 (or latest Yarn v1)
-- Spryker supported PHP version 7.4
+- [Node.js](https://nodejs.org/en/download/): inimum version is 18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
+- Spryker supported PHP version 8.0
 - Host for Zed application
 
-## Installing frontend dependencies
-
-Run the following command:
+## Install frontend dependencies
 
 ```bash
-$ yarn install
+$ npm install
 ```
 
-## Building frontend
-
-Run the following command:
+## Build frontend
 
 ```bash
-$ yarn mp:build
+$ npm run mp:build
 ```
 
-For production
+For production:
 
 ```bash
-$ yarn mp:build:production
+$ npm run mp:build:production
 ```
 
-## Installing backend
+## Install backend
 
-Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
+Install the needed packages for the Merchant Portal with dependencies. For available list, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
-| NAME | VERSION | INTEGRATION GUIDE |
-| --------- | ----- | ---------- |
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
+| NAME                             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                                     |
+|----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                     | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                                                                  |
+| Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### Merchant Portal users
 
 ### 1) Create users
 
-Create users for the Merchant Portal using Zed UI (Backoffice), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`, for example:
+Create users for the Merchant Portal using Zed UI (Back Office), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`—for example:
 
 **src/Pyz/Zed/User/UserConfig.php**
 
@@ -90,7 +77,7 @@ class UserConfig extends SprykerUserConfig
 
 ### 2) Connect users and merchants
 
-Connect users and merchants using Zed UI (Backoffice) or using the next data import.
+1.Connect users and merchants using Zed UI (the Back Office) or the following data import:
 
 **data/import/common/common/marketplace/merchant.csv**
 
@@ -99,8 +86,7 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
 
-In case you don't have merchant user data import been integrated, you can find how to do it in the [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) guide.
-
+2. To inegrate merchant user data import, see [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
@@ -109,7 +95,7 @@ merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import merchant
@@ -118,13 +104,13 @@ console data:import merchant-user
 
 ### 3) ACL adjustments.
 
-By default all newly created merchants and merchant users will automatically have group, role and segment with autogenerated names based on MerchantName, MerchantUserName and MerchantPortalKey.
+By default, all newly created merchants and merchant users automatically have a group, role, and segment with autogenerated names based on `MerchantName`, `MerchantUserName`, and `MerchantPortalKey`.
 
-Adjust `AclConfig` up to your needs in order to allow Merchant Portal pages (*-merchant-portal-gui) for merchant users (optionally deny access to them for Admin roles)
+1. To allow Merchant Portal pages (*-merchant-portal-gui) for merchant users (optionally deny access to them for Admin roles), adjust `AclConfig` respectively.
 
-You can check the available list of packages for the Merchant Portal here https://github.com/spryker/?q=merchant-portal-gui
+To check the available list of packages for the Merchant Portal, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
-**src/Pyz/Zed/Acl/AclConfig.php**
+<details><summary markdown='span'>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
 ```php
 <?php
@@ -197,16 +183,17 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
+</details>
 
-Create users with ACL rules:
+2. Create users with ACL rules:
 
 ```bash
 console setup:init-db
 ```
 
-#### Extending ACL entity metadata configuration.
+#### Extend ACL entity metadata configuration.
 
-You can use our `AclEntityDummyProduct` module as an example of extending AclEntityMetadata configuration.
+As an example of extending the `AclEntityMetadata` configuration, you can use the `AclEntityDummyProduct` module. 
 
 Install the module:
 
@@ -214,7 +201,7 @@ Install the module:
 composer require spryker/acl-entity-dummy-product:"^0.2.0" --update-with-dependencies
 ```
 
-Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin` as an example of `AclEntityMetadataCollection` configuration.
+As an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin`:
 
 ```php
 <?php
@@ -237,12 +224,11 @@ Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetad
      }
 ```
 
+### 4) Merchant Portal Navigation links in the sidebar
 
-### 4) Merchant Portal Navigation Links in the Sidebar
+1. To configure the Merchant Portal sidebar, add installed MP GUI modules to `config/Zed/navigation.xml`.
 
-To configure the Merchant Portal Sidebar add installed MP GUI modules into `config/Zed/navigation.xml`.
-
-**config/Zed/navigation.xml**
+<details><summary markdown='span'>config/Zed/navigation.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -307,8 +293,9 @@ To configure the Merchant Portal Sidebar add installed MP GUI modules into `conf
     </security-merchant-portal-gui>
 </config>
 ```
+</details>
 
-Build navigation cache:
+2. Build navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -316,9 +303,9 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all configured items are present in the Merchant Portal Sidebar and route you accordingly.
-
-Make sure that you have enabled `\Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin` in `\Pyz\Zed\ZedNavigation\ZedNavigationDependencyProvider`.
+Make sure the following is true:
+* All configured items are present in the Merchant Portal Sidebar and route you accordingly.
+* In `\Pyz\Zed\ZedNavigation\ZedNavigationDependencyProvider`, `\Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin` is enabled:
 
 ```php
 <?php
@@ -341,13 +328,14 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
     }
 }
 ```
+
 {% endinfo_block %}
 
-### 5) Separate Login feature setup (security firewalls).
+### 5) Separate login feature setup (security firewalls).
 
-It requires upgrading spryker/smyfony:3.5.0 and applying some changes on the project, see [Symfony 5 integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html).
+It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project. For details, see [Symfony 5 integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html).
 
-Install the required modules:
+1. Install the required modules:
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension spryker/authentication-merchant-portal-gui
@@ -357,29 +345,27 @@ composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-conne
 composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-gui:"^1.0.0" spryker/security-system-user:"^1.0.0" spryker/user-password-reset:"^1.0.0" spryker/user-password-reset-extension:"^1.0.0" spryker/user-password-reset-mail:"^1.0.0" --update-with-dependencies
 ```
 
-Update next modules to latest minors.
+2. Update the following modules to the latest minors.
 
-| MODULE |  DIRECTORY |
-| ------------- | --------------- |
-| Application   | vendor/spryker/application  |
+| MODULE       | DIRECTORY                    |
+|--------------|------------------------------|
+| Application  | vendor/spryker/application   |
 | MerchantUser | vendor/spryker/merchant-user |
-| Security  | vendor/spryker/security |
-| Session | vendor/spryker/session |
-| User | vendor/spryker/user |
-| ZedUi | vendor/spryker/zed-ui |
+| Security     | vendor/spryker/security      |
+| Session      | vendor/spryker/session       |
+| User         | vendor/spryker/user          |
+| ZedUi        | vendor/spryker/zed-ui        |
 
-Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
+3. Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
 
 
 {% info_block warningBox "Verification" %}
 
-Go to `http://mp.de.spryker.local/security-merchant-portal-gui/login`
-
-The Merchant Portal should look like on the picture:
+Go to `http://mp.de.spryker.local/security-merchant-portal-gui/login` and ensure that the Merchant Portal looks as follows:
 
 ![Merchant Portal login](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-login.png)
 
-After login, you should be redirected to the Dashboard. The contents of the Sidebar will depend on the  installed features and their configuration.
+After loging in, you are redirected to the dashboard. The contents of the sidebar depend on the installed features and their configuration.
 
 ![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-dashboard.png)
 
@@ -391,10 +377,10 @@ Integrate the following related features:
 
 | FEATURE                                                                                                   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                                                                                                                 |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Portal - Marketplace Merchant                                                                    |                         | [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html)                                                                                                                                     |
-| Merchant Portal - Marketplace Product                                                                     |                          | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)                                                                                                                                       |
-| Merchant Portal - Marketplace Order Management                                                            |                          | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                                                                                                                     |
-| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                           | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
-| Merchant Portal - Marketplace Product + Inventory Management                                              |                           | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)                                                                                           |
-| Merchant Portal - Marketplace Product Options Management                                                   |                           | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)                                                                                                                   |
-| Merchant Portal - Marketplace Product + Tax                                                               |                           | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)                                                                                                                             |
+| Merchant Portal - Marketplace Merchant                                                                    |                                  | [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)                                                                                                   |
+| Merchant Portal - Marketplace Product                                                                     |                                  | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)                                                                                                                                       |
+| Merchant Portal - Marketplace Order Management                                                            |                                  | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                                                                                                                     |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                                  | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Product + Inventory Management                                              |                                  | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)                                                                                           |
+| Merchant Portal - Marketplace Product Options Management                                                  |                                  | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)                                                                                                         |
+| Merchant Portal - Marketplace Product + Tax                                                               |                                  | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)                                                                                                                             |

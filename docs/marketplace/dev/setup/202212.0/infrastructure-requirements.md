@@ -4,7 +4,6 @@ description: This document provides the required system infrastructure requireme
 template: concept-topic-template
 redirect_from: 
   - /docs/marketplace/dev/setup/infrastructure-requirements.html
-  - /docs/marketplace/dev/setup/202212.0/system-requirements.html
   - /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
 related:
   - title: System requirements

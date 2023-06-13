@@ -67,6 +67,6 @@ module.export = {
 
 With this approach, you can directly include every module (external/local) that you need, and expose publicly only the functions and the properties you want to. Each module has its own scope, so nothing goes global.
 
-As far as this approach has been designed to use javascript on server side (node.js), commands like `require`, `module` or `export` are reserved words not naturally available in browsers’ vanilla javascript. To use them, you need to add a library or a pre-compiling tool capable of interpreting them.
+As far as this approach has been designed to use javascript on server side (Node.js), commands like `require`, `module` or `export` are reserved words not naturally available in browsers’ vanilla javascript. To use them, you need to add a library or a pre-compiling tool capable of interpreting them.
 
 For this reason, we rely on [Oryx](/docs/scos/dev/front-end-development/{{page.version}}/zed/oryx-builder-overview-and-setup.html).

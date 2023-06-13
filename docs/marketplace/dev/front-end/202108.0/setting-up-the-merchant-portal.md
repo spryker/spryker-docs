@@ -32,8 +32,8 @@ To build Merchant Portal, install or update the following tools:
 
 The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are:  
 
-- Minimum NodeJS version is v12.
-- NPM is replaced by Yarn v2 with Workspaces.
+- Minimum Node.js version is v12.
+- npm is replaced by Yarn v2 with Workspaces.
 
 Using a "unified" approach, all frontend dependencies must be installed in one step
 

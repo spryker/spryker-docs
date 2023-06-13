@@ -234,7 +234,7 @@ Depending on your environment and needs, there is a number of commands you can r
 
 {% info_block infoBox %}
 
-To use the NPM commands, download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). The minimum version for Node.js is *16.x* and for NPM it is *8.x*. Then, you can use the appropriate commands listed in the table.
+To use the npm commands, download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). The minimum version for Node.js is *18.x* and for npm it is *9.x*. Then, you can use the appropriate commands listed in the table.
 
 {% endinfo_block %}
 

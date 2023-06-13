@@ -29,7 +29,7 @@ Server-side rendering (SSR), including Static Site Generation (SSG) as a variant
 | Improved UX.                                                      | Infrastructure concerns. |
 | Better social media integration.                                  | Potential for stale content. |
 
-## Inapplicability of SSR
+## Applicability of SSR
 
 While SSR offers numerous benefits, it's not the best fit for every type of application, like the following:
 

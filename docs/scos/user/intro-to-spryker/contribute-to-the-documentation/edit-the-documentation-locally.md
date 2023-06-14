@@ -64,7 +64,7 @@ At this point, you are most likely to know which document you want to edit. To f
 
 {% info_block infoBox "Naming convention" %}
 
-The name of the pull request should match the title of the page or section that you create or edit. For instance, if you make changes to the document titled "Cart Feature Integration Guide," your pull request should be named "Cart Feature Integration Guide" as well.
+The name of the pull request must match the title of the page or section that you create or edit. For example, if you make changes to the document titled "Cart Feature Integration Guide," your pull request must be named "Cart Feature Integration Guide" as well.
 
 {% endinfo_block %}
 

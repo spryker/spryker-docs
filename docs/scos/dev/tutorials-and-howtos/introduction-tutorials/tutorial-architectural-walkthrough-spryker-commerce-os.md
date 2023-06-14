@@ -719,7 +719,7 @@ As mentioned before, dependency providers provide dependencies at a module level
 
 {% info_block infoBox "Info" %}
 
-Bild a business layer inside `StringReverser` with a facade and a model to reverse the string.
+Build a business layer inside `StringReverser` with a facade and a model to reverse the string.
 
 {% endinfo_block %}
 

@@ -2389,6 +2389,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Product Offer Shipment
+      url: /docs/scos/dev/feature-integration-guides/install-the-product-offer-shipment-feature.html
+      include_versions:
+      - "202304.0"
     - title: Product Options + Order Management
       url: /docs/scos/dev/feature-integration-guides/product-options-order-management-feature-integration.html
       include_versions:
@@ -2433,6 +2437,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html
       include_versions:
       - "202304.0"
+    - title: Service Points
+      url: /docs/scos/dev/feature-integration-guides/install-the-service-points-feature.html
+      include_versions:
+        - "202304.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:
@@ -3884,7 +3892,6 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
-
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8
@@ -3893,6 +3900,10 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
     - title: Migration guide - Switch from TSLint to ESLint
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
+    - title: Migration guide - Upgrade Node.js to v18 and npm to v9
+      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
+      include_versions:
+      - "202212.0"
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
@@ -4993,7 +5004,7 @@ entries:
     - title: Keeping a project upgradable
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
-      - title: Supported extension scenarios
+      - title: Extension scenarios
         nested:
         - title: Event subscribers' registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
@@ -5018,7 +5029,7 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
-        - title: Security
+        - title: Security checker
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html

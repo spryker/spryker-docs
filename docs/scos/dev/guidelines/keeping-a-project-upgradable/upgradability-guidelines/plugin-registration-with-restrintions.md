@@ -3,7 +3,8 @@ title: Plugin registration with restrictions
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
-This guide describes how to fix problems related to plugin registration with restrictions.
+This guide describes how to fix issues related to plugin registration with restrictions.
+
 ## Problem description
 If plugins must be registered in a specific order, `after` and `before` annotations need to be provided in the doc blocks. They must also have specific syntax.
 The annotated class must be imported into the provider class.

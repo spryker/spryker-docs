@@ -12,7 +12,7 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME                  | VERSION          | INTEGRATION GUIDE                                                                                                                                                        |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core API      | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)         |
+| Spryker Core API      | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)         |
 | Product API           | {{page.version}} | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)                  |
 | Cart API              | {{page.version}} | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)                                  |
 | Wishlist API          | {{page.version}} | [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/integrate-the-wishlist-glue-api.html)                              |

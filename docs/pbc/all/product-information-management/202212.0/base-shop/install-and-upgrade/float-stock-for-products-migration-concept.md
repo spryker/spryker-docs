@@ -35,8 +35,6 @@ related:
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
-## Float stock migration
-
 We have changed the type of stock and quantity fields from int to float. With this change, we allow to manage fractions of items in the system.
 
 As stock and quantity are very basic concepts of any commerce system, changing their type is a horizontal barrier for the modules. This means that, if a module is upgraded to a version that uses float stock, all the other modules in the project which are involved in the float stock barrier must be upgraded to avoid accidental type incompatibilities. For example, if ModuleX uses float stock and ModuleY uses int stock and there is no hard dependency between them, it’s technically possible to upgrade only one of them, however, during runtime, both modules may happen to process the same request data and, as a result, the response will either be calculated incorrectly or a fatal error will be thrown due to a data type mismatch.
@@ -59,7 +57,7 @@ Here are some typical occurrences of working with stocks and quantities and tips
 
 You can try to upgrade all affected modules together by following the steps below.
 
-1. You can try to upgrade all affected modules together by following the steps below.
+1. Update the modules:
 
 ```bash
 composer update "spryker/*" "spryker-shop/*"

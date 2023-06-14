@@ -16,6 +16,6 @@ related:
   - title: Spryker Core feature integration
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-the-spryker-core-feature.html
   - title: Glue API - Spryker Core feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-product-relations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-relations-feature.md -->

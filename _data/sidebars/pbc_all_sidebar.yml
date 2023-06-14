@@ -1749,7 +1749,7 @@ entries:
                   - title: Prices per Merchant Relation
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-per-merchant-relation-feature.html
                     include_versions:
-                    - "202212.0"                     
+                    - "202212.0"
                   - title: Product Price Glue API
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
               - title: Upgrade modules
@@ -3028,6 +3028,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
                       - title: AvailabilityStorage
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
+                      - title: StockGui
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html                        
               - title: Import data
                 nested:
                   - title: File details - warehouse.csv

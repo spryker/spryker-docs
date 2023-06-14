@@ -19,4 +19,4 @@ Use the following references in this order:
 
 ## Write in a way that makes sense
 
-Spryker is a rapidly evolving product, as well as its documentation. If it makes sense to not follow the guides, go for it. Consider if your approach is better only in your  particular case or for the entire documentation. Edit existing and add new guidance to this style guide.
+Spryker is a rapidly evolving product, as well as its documentation. If it makes sense to not follow the guides, go for it. Consider if your approach is better only in your particular case or for the entire documentation. Edit existing and add new guidance to this style guide.

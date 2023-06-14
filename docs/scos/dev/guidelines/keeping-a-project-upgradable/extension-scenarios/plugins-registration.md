@@ -10,6 +10,8 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
   - title: Modules configuration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+redirect_from:
+    - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
 ---
 
 Manifests support plugins registration in the dependency provider and plugins registration in the configuration files. There are multiple ways how plugins can be registered inside of the project. 

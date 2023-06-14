@@ -39,7 +39,6 @@ commonOptions = {
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
     /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
-    /blackfire.io\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
@@ -52,6 +51,9 @@ commonOptions = {
     /www.collect.ai\/[\.\w\-\/\?]+/,
     /twitter.com\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/,
+    /blackfire.io\/[\.\w\-\/\?]+/,
+    /dixa.com\/[\.\w\-\/\?]+/,
+    /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

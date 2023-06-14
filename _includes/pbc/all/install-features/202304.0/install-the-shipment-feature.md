@@ -43,6 +43,7 @@ Make sure that the following modules have been installed:
 | Shipment                | vendor/spryker/shipment                   |
 | ShipmentType            | vendor/spryker/shipment-type              |
 | ShipmentTypeDataImport  | vendor/spryker/shipment-type-data-import  |
+| ShipmentTypeStorage     | vendor/spryker/shipment-type-storage      |
 | ShipmentTypesBackendApi | vendor/spryker/shipment-types-backend-api |
 
 {% endinfo_block %}
@@ -78,7 +79,36 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 ### 3) Set up database schema and transfer objects
 
-Apply database changes and generate entity and transfer changes:
+1. Adjust the schema definition so entity changes trigger events.
+
+| AFFECTED ENTITY         | TRIGGERED EVENTS                                                                                                        |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| spy_shipment_type       | Entity.spy_shipment_type.create<br>Entity.spy_shipment_type.update<br>Entity.spy_shipment_type.delete                   |
+| spy_shipment_type_store | Entity.spy_shipment_type_store.create<br>Entity.spy_shipment_type_store.update<br>Entity.spy_shipment_type_store.delete |
+
+
+**src/Pyz/Zed/ShipmentType/Persistence/Propel/Schema/spy_shipment_type.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" namespace="Orm\Zed\ShipmentType\Persistence" package="src.Orm.Zed.ShipmentType.Persistence" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd">
+
+    <table name="spy_shipment_type" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <behavior name="event">
+            <parameter name="spy_shipment_type_all" column="*"/>
+        </behavior>
+    </table>
+
+    <table name="spy_shipment_type_store" idMethod="native" allowPkInsert="true">
+        <behavior name="event">
+            <parameter name="spy_shipment_type_store_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
+2. Apply database changes and generate entity and transfer changes:
 ```bash
 console propel:install
 console transfer:generate
@@ -92,6 +122,7 @@ Make sure that the following changes have been applied by checking your database
 |--------------------------------------|--------|---------|
 | spy_shipment_method_store            | table  | created |
 | spy_shipment_type                    | table  | created |
+| spy_shipment_type_storage            | table  | created |
 | spy_shipment_type_store              | table  | created |
 | spy_shipment_method.fk_shipment_type | column | created |
 
@@ -110,6 +141,10 @@ Make sure that the following changes have been applied in transfer objects:
 | ShipmentTypeTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                    |
 | ShipmentTypeCriteriaTransfer            | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer            |
 | ShipmentTypeConditionsTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer          |
+| ShipmentTypeStorageCollectionTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer   |
+| ShipmentTypeStorageTransfer             | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer             |
+| ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer     |
+| ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer   |
 | ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                  |
 
 {% endinfo_block %}
@@ -149,7 +184,206 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 {% endinfo_block %}
 
-### 5) Import shipment methods
+### 5) Configure export to Redis
+
+Configure tables to be published to `spy_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
+
+1.  In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module configuration:
+
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+use Spryker\Shared\ShipmentTypeStorage\ShipmentTypeStorageConfig;
+
+class RabbitMqConfig extends SprykerRabbitMqConfig
+{
+    /**
+     * @return array<mixed>
+     */
+    protected function getSynchronizationQueueConfiguration(): array
+    {
+        return [
+            ShipmentTypeStorageConfig::QUEUE_NAME_SYNC_STORAGE_SHIPMENT_TYPE,
+        ];
+    }
+}
+```
+
+2. Register the new queue message processor:
+
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Queue;
+
+use Spryker\Shared\ShipmentTypeStorage\ShipmentTypeStorageConfig;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
+use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
+
+class QueueDependencyProvider extends SprykerDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
+     */
+    protected function getProcessorMessagePlugins(Container $container): array
+    {
+        return [
+            ShipmentTypeStorageConfig::QUEUE_NAME_SYNC_STORAGE_SHIPMENT_TYPE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+        ];
+    }
+}
+
+```
+
+3. Configure the synchronization pool and event queue name:
+
+**src/Pyz/Zed/ShipmentTypeStorage/ShipmentTypeStorageConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ShipmentTypeStorage;
+
+use Pyz\Zed\Synchronization\SynchronizationConfig;
+use Spryker\Zed\ShipmentTypeStorage\ShipmentTypeStorageConfig as SprykerShipmentTypeStorageConfig;
+
+class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getShipmentTypeStorageSynchronizationPoolName(): ?string
+    {
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+    }
+}
+```
+
+4. Set up publisher plugins:
+
+| PLUGIN                                 | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
+|----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
+| ShipmentTypeWriterPublisherPlugin      | Publishes shipment type data by `SpyShipmentType` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType        |
+| ShipmentTypeStoreWriterPublisherPlugin | Publishes shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
+| ShipmentTypePublisherTriggerPlugin     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypePublisherTriggerPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreWriterPublisherPlugin;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array<int|string, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>|array<string, array<int|string, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>>
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            $this->getShipmentTypeStoragePlugins(),
+        );
+    }
+
+    /**
+     * @return lsit<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ShipmentTypePublisherTriggerPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getShipmentTypeStoragePlugins(): array
+    {
+        return [
+            new ShipmentTypeWriterPublisherPlugin(),
+            new ShipmentTypeStoreWriterPublisherPlugin(),
+        ];
+    }
+}
+```
+
+5. Set up synchronization plugins:
+
+| PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
+|-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the shipment type storage table's content into Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Synchronization;
+
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
+
+class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
+     */
+    protected function getSynchronizationDataPlugins(): array
+    {
+        return [
+            new ShipmentTypeSynchronizationDataBulkRepositoryPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `shipment-type` trigger plugin works correctly:
+
+1. Fill the `spy_shipment_type`, `spy_shipment_type_store` tables with data.
+2. Run the `console publish:trigger-events -r shipment_type` command.
+3. Make sure that the `spy_shipment_type_storage` table has been filled with respective data.
+4. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
+
+Make sure that `shipment-type` synchronization plugin works correctly:
+
+1. Fill the `spy_shipment_type_storage` table with some data.
+2. Run the `console sync:data -r shipment_type` command.
+3. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
+
+Make sure that when a shipment type is created or edited through BAPI, it is exported to Redis accordingly.
+
+In Redis, make sure data is represented in the following format:
+```json
+{
+    "id_shipment_type": 1,
+    "uuid": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
+    "name": "Pickup",
+    "key": "pickup",
+    "_timestamp": 1684933897.870368
+}
+```
+{% endinfo_block %}
+
+### 6) Import shipment methods
 
 {% info_block infoBox "Info" %}
 
@@ -392,9 +626,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 4. Import data:
 
 ```bash
-console data:import:shipment
-console data:import:shipment-price
-console data:import:shipment-method-store
+console data:import shipment
+console data:import shipment-price
+console data:import shipment-method-store
 console data:import shipment-type
 console data:import shipment-type-store
 console data:import shipment-method-shipment-type
@@ -407,7 +641,7 @@ Make sure that the configured data has been added to the `spy_shipment_method`, 
 
 {% endinfo_block %}
 
-### 6) Set up behavior
+### 7) Set up behavior
 
 1. Configure the data import to use your data on the project level:
 

@@ -32,6 +32,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html
 related:
   - title: Migration guide - Price
-    link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productsetgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsetgui-module.md -->

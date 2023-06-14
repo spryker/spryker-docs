@@ -99,3 +99,6 @@ Here is an example of product data stored in Algolia:
   "objectID": "017_21748906"
 }
 ```
+
+## Next step
+[Integrate Algolia](/docs/pbc/all/search/{page.version}/third-party-integrations/integrate-algolia.html)

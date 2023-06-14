@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/commerce-setup
 ---
 
-The **Commerce Setup** category contains data required to set up the multistore environment, warehouses, tax levels, shipping and payment methods, etc. so you could start selling products/services online. 
+The **Commerce Setup** category contains data required to set up the multi-store environment, warehouses, tax levels, shipping and payment methods, etc. so you could start selling products/services online. 
 The table below provides details on Commerce Setup data importers, their purpose, .csv files, dependencies, and other details. Each data importer contains links to .csv files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 

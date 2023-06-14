@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This guide describes how to resolve problems surrounding the allowed and consistent PHP version being used in different project parts.
+This guide describes how to resolve issues surrounding the allowed and consistent PHP version being used in different project parts.
 
 ## Problem description
 

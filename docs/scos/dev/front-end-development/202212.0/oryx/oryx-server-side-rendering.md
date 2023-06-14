@@ -103,7 +103,7 @@ Also, Oryx features mechanisms that further improve performance by managing the 
 
 ### SSR-aware components
 
-Oryx components are built with SSR in mind. They're designed to render correctly on the server and work with late and partial hydration. However, when building custom components, be aware of the SSR lifecycle and the potential issues that may arise, such as the `unsafeStatic` issue, which can lead to unexpected behavior during the SSR process.
+Oryx components are built with SSR in mind. They're designed to render correctly on the server and work with late and partial hydration. However, when building custom components, be aware of the components' limited lifecycles coverage, which can lead to unexpected behavior during the SSR process.
 
 ### Decorators
 

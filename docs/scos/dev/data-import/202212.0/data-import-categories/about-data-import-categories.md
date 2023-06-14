@@ -23,6 +23,6 @@ For details about building your import files, choose the Demo Shop category you 
 
 {% info_block warningBox "Warning" %}
 
-As the data importers’ execution has certain dependencies, you must follow the correct [execution order of data importers](/docs/scos/dev/data-import/{page.version}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html).
+As the data importers’ execution has certain dependencies, you must follow the correct [execution order of data importers](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html).
 
 {% endinfo_block %}

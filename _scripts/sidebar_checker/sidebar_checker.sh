@@ -24,8 +24,12 @@ for i in "${!SIDEBARS[@]}"; do
   folder="${FOLDERS[$i]}"
   sidebar_title="${TITLES[$i]}"
 
-  # Find missing files in folder
-  missing_files=($(find "$folder" -type f -name "*.md" -not -name "index.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | while IFS= read -r -d '' file_path; do
+  # Find missing files in folder; overview-of-features.md files are intenionally exluded from the sidebar; index.md files are skipped as these are used implicitly.
+  missing_files=($(find "$folder" -type f -name "*.md" \
+  -not -path "*/overview-of-features/202204.0/overview-of-features.md" \
+    -not -path "*/overview-of-features/202212.0/overview-of-features.md" \
+    -not -name "index.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | \
+    while IFS= read -r -d '' file_path; do
     ignored=false
     for dir in $(dirname "$file_path" | tr '/' ' '); do
       if [[ "${IGNORED_FOLDERS[*]}" =~ "$dir" ]]; then

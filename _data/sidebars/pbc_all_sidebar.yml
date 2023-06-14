@@ -710,7 +710,7 @@ entries:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
               - title: "Product Sets feature: domain model and relationships"
-                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/product-sets-domain-feature-model-and-relationships.html
+                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:

@@ -10,6 +10,9 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
   - title: Modules configuration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+redirect_from: 
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+
 ---
 
 [Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support registering event subscribers only in the dependency provider, a type of code class.

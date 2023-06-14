@@ -57,4 +57,6 @@ In case of a project that uses a method to change code that is not covered, any 
 
 {% endinfo_block %}
 
+## Bypass project upgradability issues
 
+Learn how you can avoid and fix the project [upgradability issues](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html).

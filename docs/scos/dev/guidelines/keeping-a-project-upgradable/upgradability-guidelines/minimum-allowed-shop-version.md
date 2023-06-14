@@ -54,4 +54,4 @@ MINIMUM ALLOWED SHOP VERSION
 
 ### Resolving the error
 
-To resolve this issue, you need to update the outdated dependencies to the current release or version.
+To resolve this issue, update the outdated dependencies to the current release or version.

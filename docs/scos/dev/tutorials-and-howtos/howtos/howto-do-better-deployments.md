@@ -58,7 +58,11 @@ For this, you need two things:
 * Your RDS instance URL.
 * Your DB credentials.
 
-You can obtain all these things by logging in to the AWS console and searching for "Task Definitions". Clicking on the Feature should bring you to the task definitions overview of Amazon Elastic Container Service. Select your backend gateway task (backgw) and then its latest revision (should be top of the list). Switch to "JSON" view. You are looking for the following parameters in the JSON document shown:
+To obtain all these things, follow these steps:
+1. Log in to the AWS console and search for "Task Definitions". 
+2. To open the task definitions overview of Amazon Elastic Container Service, click the feature.
+3. Select your backend gateway task (backgw) and then its latest revision (should be top of the list). 
+4. Switch to the **JSON** view and find the following parameters in the JSON document shown:
 - `SPRYKER_DB_HOST`
 - `SPRYKER_DB_ROOT_USERNAME`
 - `SPRYKER_DB_PASSWORD`

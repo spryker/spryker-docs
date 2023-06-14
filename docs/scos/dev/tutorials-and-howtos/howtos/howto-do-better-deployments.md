@@ -58,10 +58,10 @@ For this, you need two things:
 * Your RDS instance URL.
 * Your DB credentials.
 
-You can obtain all these things by logging in to the AWS console and searching for "Parameter Store". Ensure that you have selected the right AWS region before you search.  To list all the Parameter Store entries for the DB, you can enter "DB" in the search. You are looking for the following parameters:
-- `/codebuild/base_task_definition/SPRYKER_DB_HOST`
-- `/codebuild/base_task_definition/SPRYKER_DB_ROOT_USERNAME`
-- `/codebuild/base_task_definition/SPRYKER_DB_ROOT_PASSWORD`
+You can obtain all these things by logging in to the AWS console and searching for "Task Definitions". Clicking on the Feature should bring you to the task definitions overview of Amazon Elastic Container Service. Select your backend gateway task (backgw) and then its latest revision (should be top of the list). Switch to "JSON" view. You are looking for the following parameters in the JSON document shown:
+- `SPRYKER_DB_HOST`
+- `SPRYKER_DB_ROOT_USERNAME`
+- `SPRYKER_DB_PASSWORD`
 
 With this information, you can connect to the database from any SQL client and create a database dump which you can then import locally. After you have imported the data, don't forget to publish events so that all the data gets imported to Redis and Elastic Search as well. You can use the following command to achieve that.
 ```

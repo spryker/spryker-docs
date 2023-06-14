@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION          | INTEGRATION GUIDE |
 | -------------------- |------------------| ---------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-the-spryker-core-feature.html) |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Acl | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html) |
@@ -1650,4 +1650,3 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
-

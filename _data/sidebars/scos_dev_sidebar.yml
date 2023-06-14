@@ -2192,6 +2192,8 @@ entries:
       - "202108.0"
     - title: Multi-store Products
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-feature-integration.html
       include_versions:
@@ -3913,33 +3915,33 @@ entries:
           - title: ErrorHandler
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html
           - title: EventDispatcher
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-EventDispatcher-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html
           - title: Form
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Form-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-form-module.html
           - title: HTTP
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-HTTP-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-http-module.html
           - title: Locale
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Locale-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-locale-module.html
           - title: Messenger
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Messenger-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-messenger-module.html
           - title: Propel
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Propel-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-propel-module.html
           - title: Router
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Router-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-router-module.html
           - title: Security
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Security-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-security-module.html
           - title: Session
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Session-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-session-module.html
           - title: Store
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Store-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-store-module.html
           - title: Translator
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Translator-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-translator-module.html
           - title: Twig
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Twig-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-twig-module.html
           - title: Validator
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-Validator-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html
           - title: WebProfiler
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-WebProfiler-module.html
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

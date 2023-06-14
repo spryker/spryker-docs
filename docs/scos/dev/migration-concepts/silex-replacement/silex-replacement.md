@@ -124,7 +124,7 @@ Update the following modules using the provided migration guides:
 | Validator | [Migration guide - Validator](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/upgrade-the-validator-module.html) |
 | WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/upgrade-the-webprofiler-module.html) |
 
-You've replaced silex.
+You've replaced Silex.
 
 ### Removing Silex
 

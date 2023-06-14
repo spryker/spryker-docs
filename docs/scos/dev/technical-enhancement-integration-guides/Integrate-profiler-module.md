@@ -13,7 +13,7 @@ To start the integration, review and install the necessary features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE |
 |--------------|------------------|-------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-the-spryker-core-feature.html)
 
 ## 1) Enable extension
 

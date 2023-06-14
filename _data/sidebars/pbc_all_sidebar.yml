@@ -243,6 +243,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
                       - title: Uuid Generation Console
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html
+                        include_versions:
+                        - "202212.0"
                   - title: Install Glue API
                     nested:
                       - title: Install the Cart Glue API
@@ -891,6 +893,8 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
                   - title: Install the Multiple Abstract Products as Promotional Products & Discounts feature
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-multiple-abstract-products-as-promotional-products-discounts-feature.html
+                    include_versions:
+                    - "202212.0"
                   - title: Upgrade the Discount module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
                   - title: Upgrade the DiscountCalculatorConnector module
@@ -963,6 +967,8 @@ entries:
         nested:
           - title: Install the Mailing and Notifications feature
             url: /docs/pbc/all/emails/install-the-mailing-and-notifications-feature.html
+            include_versions:
+            - "202212.0"
           - title: "HowTo: Create and register a MailTypePlugin"
             url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
           - title: "HowTo: Create and register a mail provider"
@@ -1742,6 +1748,8 @@ entries:
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
                   - title: Prices per Merchant Relation
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-per-merchant-relation-feature.html
+                    include_versions:
+                    - "202212.0"                     
                   - title: Product Price Glue API
                     url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
               - title: Upgrade modules
@@ -1929,6 +1937,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
                       - title: Measurement Units + Quick Add to Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
+                      - title: Multi-store Products
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-multi-store-products-feature.html
+                        include_versions:
+                        - "202212.0"
                       - title: Packaging Units
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
@@ -2091,6 +2103,11 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html
                       - title: ProductValidity
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
+                      - title: Touch
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
+                        include_versions:
+                        - "202212.0"
+
                   - title: Decimal Stock migration concept
                     url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
                   - title: Float stock for products migration concept

@@ -119,4 +119,4 @@ Oryx also provides utilities to assist with SSR:
 
 - `ssrAwaiter`: this utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
 
-- `@subscribe`: this decorator is used to manage subscriptions during SSR. It solves the problem of missing lifecycle hooks in SSR and ensures that subscriptions are cleaned up properly. However, note that it currently can't be used with the `observe` controller.
+- `@subscribe`: this decorator is used to manage subscriptions during SSR. It solves the problem of missing lifecycle hooks in SSR and ensures that subscriptions are cleaned up properly.

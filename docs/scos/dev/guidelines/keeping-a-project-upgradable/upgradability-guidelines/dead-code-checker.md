@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This checker checks for dead code that extends core classes in your project.
+The dead code checker checks for dead code that extends core classes in your project.
 
 ## Problem description
 

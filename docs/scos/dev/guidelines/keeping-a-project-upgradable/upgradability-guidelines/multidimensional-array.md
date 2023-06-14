@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This document describes multidimensional arrays inside the dependency provider’s methods, and how to resolve problems related to them.
+This document describes multidimensional arrays inside the dependency provider’s methods, and how to resolve issues related to them.
 
 ## Problem description
 

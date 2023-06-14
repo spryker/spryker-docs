@@ -60,7 +60,7 @@ Make sure that the following modules have been installed:
  </database>
  ```
 
-2. Set up synchronization queue pools so that non-multistore entities (not store-specific entities) get synchronized among stores:
+2. Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 

@@ -202,12 +202,12 @@ In the Back Office, there is no filter in place to prevent that the email addres
 **Affected modules**:
 •	User (3.13.1)
 
-## Security vulnerability in bl NPM package (CVE-2020-8244)
+## Security vulnerability in bl npm package (CVE-2020-8244)
 
 A buffer over-read vulnerability exists in bl <4.0.3, <3.0.1, <2.2.1, and <1.2.3, which allows an attacker to supply user input (even typed) that if it ends up in the `consume()` argument and can become negative, the *BufferList* state can be corrupted, tricking it into exposing uninitialized memory via regular `.slice()` calls.
 
 **Changes**:
-The version of the bl NPM package was updated.
+The version of the bl npm package was updated.
 
 ## Outdated PHP version in use
 

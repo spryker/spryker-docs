@@ -1,7 +1,7 @@
 ---
 title: TS linter
 description: Learn about the SCSS Linter tool that lets you find and fix mistakes in the code style.
-last_updated: Jun 16, 2021
+last_updated: May 15, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ts-linter
 originalArticleId: d7e97882-9e50-4bf5-8b39-130c94326818
@@ -41,6 +41,12 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
+{% info_block warningBox "No longer supported" %}
+
+Since the `202304.0` release, this tool is no longer supported and has been replaced by `ESLint`. To migrate to `ESLint`, follow [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html).
+
+{% endinfo_block %}
+
 *TS Linter* allows you to find and fix code style mistakes. It helps a team follow the same standards and make code more readable.
 
  To analyze and fix files, [TSLint](https://palantir.github.io/tslint/) is used.
@@ -53,7 +59,7 @@ For details about how to install the TS Linter for your project, see the [TS Lin
 
 To execute the TS Linter, do the following:
 
-1. Install the Node modules:
+1. Install the Node.js modules:
 
 ```bash
 npm ci

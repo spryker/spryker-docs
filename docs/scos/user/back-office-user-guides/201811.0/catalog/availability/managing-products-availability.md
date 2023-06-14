@@ -30,7 +30,7 @@ The main advantage is that you do not need to make any manual calculations. The 
 **To check** the product availability:
 1. In the _Actions_ column of the **Products availability list** table, click **View** next to the corresponding product item.
 This will take you to the **Product Availability** page. See [Availability: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/references/availability-reference-information.html) for more details.
-2. In case of a multistore setup, in the **Store** drop-down select the store locale to check the product's availability for each specific locale.
+2. In case of a multi-store setup, in the **Store** drop-down select the store locale to check the product's availability for each specific locale.
 ***
 ## Editing Stock
 **To edit** the product stock:

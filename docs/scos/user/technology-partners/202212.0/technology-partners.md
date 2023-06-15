@@ -21,33 +21,6 @@ In this section you will find information about our Technology Partner Integrati
 
 Visit [Technology Partners](https://spryker.com/technology-partners/) for a complete list of our partners.
 
-##  Hosting Providers
-
-* [Claranet](/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/claranet.html)
-* [Continum](/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/continum.html)
-* [Metaways](/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/metaways.html)
-* [root360](/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/root-360.html)
-
-
-## Content Management
-
-* [Coremedia](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/coremedia.html)
-* [E-Spirit](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/e-spirit.html)
-* [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/magnolia.html)
-* [Styla](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/styla.html)
-
-## Customer Service
-
-* [Dixa](/docs/scos/user/technology-partners/{{page.version}}/customer-service/dixa.html)
-* [iAdvize](/docs/scos/user/technology-partners/{{page.version}}/customer-service/iadvize.html)
-* [Optimise it](/docs/scos/user/technology-partners/{{page.version}}/customer-service/optimise-it.html)
-* [Live chat service](/docs/scos/user/technology-partners/{{page.version}}/customer-service/live-chat-service.html)
-
-## Finance & Accounting
-
-* [CollectAI](/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/collectai.html)
-* [Nitrobox](/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/nitrobox.html)
-
 ## A/B Testing & Performance
 
 * [AB Tasty](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html)
@@ -61,31 +34,6 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Mindlab](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/mindlab.html)
 * [Minubo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/minubo.html)
 
-## Customer Communication
-
-* [Dotdigital](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
-
-## Customer Retention & Loyalty
-
-* [Namogoo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
-* [Trustpilot](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
-* [Zenloop](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
-
 ## Marketplace Integrations
 
 * [ChannelPilot Marketplace](/docs/scos/user/technology-partners/{{page.version}}/marketplace-integrations/channelpilot-marketplace.html)
-
-## Operational Tools
-
-<!--* [Common Solutions](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/common-solutions.html)-->
-* [Data Virtuality](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/data-virtuality.html)
-* [Loggly](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/loggly.html)
-* [New Relic](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic.html)
-* [Proclane](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/proclane.html)
-* [PlusServer](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/plusserver.html)
-* [Tideways](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/tideways.html)
-* [Usercentrics](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/usercentrics.html)
-* [VSHN](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/vshn.html)
-<!--* [Mindcurv](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/mindcurv.html)-->
-<!--* [Shopmacher](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/shopmacher.html)-->

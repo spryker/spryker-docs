@@ -29,11 +29,7 @@ related:
 ---
 
 
-In this section, you can find installation guides for Spryker in Docker. Currently, you can install Spryker in the following ways:
-
-* Install Spryker in Development mode.
-* Install Spryker in Demo mode.
-* Integrate Docker into an exiting project.
+You can install Spryker in Development and Demo modes.
 
 ## What installation mode do I choose?
 
@@ -46,8 +42,6 @@ To check out Spryker features and how Spryker works in general, go with the Demo
 
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
-
-If you are already running a Spryker project with another solution like Vagrant, and you want to switch to Docker, see [Integrating the Docker SDK into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html).
 
 Find more details about each mode in the following sections.
 
@@ -77,7 +71,7 @@ Demo mode is a configuration in which Spryker is built and running without devel
 In Demo mode, the following functionalities are missing or disabled:
 
 1. Swagger UI service
-2. Debugging functionality
+2. Debugging
 3. File synchronization
 
 ### Use Cases
@@ -95,11 +89,6 @@ See one of the following guides to install Spryker in Demo mode:
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 
-## Integrating Docker into existing projects
-
-If you are already running a Spryker project based on Development Virtual Machine or any other solution, you can convert it into a Docker based project.
-Learn how to convert a project into a Docker based instance in [Integrating the Docker SDK into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html).
-
 ## Next steps
 
 Once you've selected and installation mode, follow one of the guides below:
@@ -108,4 +97,3 @@ Once you've selected and installation mode, follow one of the guides below:
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)

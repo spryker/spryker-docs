@@ -23,48 +23,48 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following the steps from the [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html) technical enhancement guide.
 
 {% endinfo_block %}
 
 
-This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.
+This document describes how to install Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.
 
 ## Install Docker prerequisites on MacOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
 
-* [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
-* [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
+* [Install Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
+* [Install Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 
 ## Clone a Demo Shop and the Docker SDK
 
 1. Open a terminal.
 2. Create a new folder and navigate into it.
-3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
-
-    * Clone the B2C repository:
+3. Clone *one* of the following [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+    * B2C Demo Shop:
 
     ```shell
     git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
     ```
 
-    * Clone the B2B repository:
+    * B2B Demo Shop:
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
+
 4. Depending on the cloned repository, navigate into the cloned folder:
 
-    * B2C repository:
+    * B2C Demo Shop:
 
     ```bash
     cd b2c-demo-shop
     ```
 
-    * B2B repository:
+    * B2B Demo Shop:
 
     ```bash
     cd b2b-demo-shop
@@ -93,28 +93,21 @@ docker/sdk bootstrap
 
 {% info_block warningBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
-
-* Docker SDK version update.
-* Deploy file update.
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after updating the Docker SDK or changing the deploy file.
 
 {% endinfo_block %}
 
-2. Once the job finishes, build and start the instance:
+
+2. Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
+
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
+
+
+3. Build and start the instance:
 
 ```shell
 docker/sdk up
 ```
-
-3. Update the `hosts` file:
-
-Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
-
-{% info_block infoBox %}
-
-To get the list of the instructions, you can run `docker/sdk install` after `bootstrap`.
-
-{% endinfo_block %}
 
 {% info_block warningBox %}
 
@@ -126,15 +119,15 @@ Depending on the hardware performance, the first project launch can take up to *
 
 To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-### Back-Office
+## Back-Office
 
 The default credentials to access the Back Office are located inside `/src/Pyz/Zed/User/UserConfig.php`.
 
-### RabbitMQ
+## RabbitMQ
 
 To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. For information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

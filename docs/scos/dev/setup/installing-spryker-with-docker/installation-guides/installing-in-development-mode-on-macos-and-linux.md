@@ -21,7 +21,7 @@ redirect_from:
   - /docs/installation-guide-development-mode
   - /docs/en/installation-guide-development-mode
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
-related: 
+related:
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
@@ -36,8 +36,6 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 
 ## Install Docker prerequisites on MacOS and Linux
 
-To install Docker prerequisites, follow one of the guides:
-
 * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 
@@ -45,29 +43,28 @@ To install Docker prerequisites, follow one of the guides:
 
 1. Open a terminal.
 2. Create a new folder and navigate into it.
-3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+3. Clone *one* of the following [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+    * B2C Demo Shop:
 
-    * Clone the B2C repository:
-
-    ```bash
+    ```shell
     git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
     ```
 
-    * Clone the B2B repository:
+    * B2B Demo Shop:
 
-    ```bash
+    ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
+s
+4. Depending on the cloned repository, navigate into the cloned folder:
 
-4. Depending on the repository you've cloned, navigate into the cloned folder:
-
-    * B2C repository:
+    * B2C Demo Shop:
 
     ```bash
     cd b2c-demo-shop
     ```
 
-    * B2B repository:
+    * B2B Demo Shop:
 
     ```bash
     cd b2b-demo-shop
@@ -96,21 +93,16 @@ docker/sdk bootstrap deploy.dev.yml
 
 {% info_block warningBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after you update the Docker SDK or the deploy file.
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after updating the Docker SDK or changing the deploy file.
 
 {% endinfo_block %}
 
-2. Update the `hosts` file:
+2. Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
 
-Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
-{% info_block infoBox %}
 
- You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
-
-{% endinfo_block %}
-
-3. Once the job finishes, build and start the instance:
+3. Build and start the instance:
 
 ```bash
 docker/sdk up
@@ -126,15 +118,15 @@ Depending on the hardware performance, the first project launch can take up to *
 
 To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-### Back-Office
+## Back-Office
 
 The default credentials to access the back-office are located inside this file `/src/Pyz/Zed/User/UserConfig.php`
 
-### RabbitMQ
+## RabbitMQ
 
 To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

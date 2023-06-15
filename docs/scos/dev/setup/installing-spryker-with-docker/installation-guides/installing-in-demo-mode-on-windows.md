@@ -21,40 +21,40 @@ This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/setup/in
 
 ## Install Docker prerequisites on Windows
 
-To install Docker prerequisites on Windows with WSL1, follow [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
+Depending on the needed WSL version, follow one of the guides:
 
-To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
+* [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
 
-## Installing Spryker in Demo mode on Windows
+* [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
-Follow the steps to install Spryker in Demo Mode:
+## Install Spryker in Demo mode on Windows
 
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+4. Clone *one* of the [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
 
-    * Clone the B2C repository:
+    * B2C Demo Shop:
 
     ```shell
     git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
     ```
 
-    * Clone the B2B repository:
+    * B2B Demo Shop:
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
 
-5. Depending on the cloned repository, navigate into the cloned folder:
+5. Depending on the cloned Demo Shop, navigate into the cloned folder:
 
-    * B2C repository:
+    * B2C Demo Shop:
 
     ```bash
     cd b2c-demo-shop
     ```
 
-    * B2B repository:
+    * B2B Demo Shop:
 
     ```bash
     cd b2b-demo-shop
@@ -86,10 +86,7 @@ docker/sdk bootstrap
 
 {% info_block infoBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following takes place:
-
-* Docker SDK version update.
-* Deploy file update.
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after updating the Docker SDK or changing the deploy file.
 
 {% endinfo_block %}
 
@@ -120,7 +117,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     9. Select **File > Save**.
     10. Close the file.
 
-10. Once the job finishes, build and start the instance:
+10. Build and start the instance:
 
 ```shell
 docker/sdk up
@@ -155,7 +152,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

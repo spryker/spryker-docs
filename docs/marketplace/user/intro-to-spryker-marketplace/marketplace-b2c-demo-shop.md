@@ -15,7 +15,7 @@ The Spryker B2C Marketplace Demo Shop is a collection of ready-to-use B2C-Market
 - [Merchant Opening Hours](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html)
 - [Marketplace Product](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html)
 - [Marketplace Product Options](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-options-feature-overview.html)
-- [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
+- [Marketplace Product Offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html)
 - [Marketplace Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/marketplace-cart-feature-overview.html)
 - [Marketplace Order Management](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
 - [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/marketplace-inventory-management-feature-overview.html)
@@ -23,7 +23,7 @@ The Spryker B2C Marketplace Demo Shop is a collection of ready-to-use B2C-Market
 - [Marketplace Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
 - [Marketplace Shipment](/docs/pbc/all/carrier-management/{{site.version}}/marketplace/marketplace-shipment-feature-overview.html)
 - [Marketplace Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/marketplace/marketplace-wishlist-feature-overview.html)
-- [Marketplace Merchant Portal Product Offer Management](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-portal-product-offer-management-feature-overview.html)
+- [Marketplace Merchant Portal Product Offer Management](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html)
 
 </details>
 

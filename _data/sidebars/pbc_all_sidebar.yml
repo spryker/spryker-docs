@@ -1238,10 +1238,28 @@ entries:
         nested:
           - title: Install and upgrade
             nested:
-              - title: Install the Spryker Core feature
-                url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-the-spryker-core-feature.html
-              - title: Install the Spryker Core Glue API
-                url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-the-spryker-core-glue-api.html
+              - title: Install features
+                nested:
+                  - title: Permissions
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-permissions-feature.html
+                  - title: Queue Data Import
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
+                  - title: Sales Data Export
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
+                  - title: Spryker Core
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Spryker Core
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+                  - title: REST Schema Validation
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Quote
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
+                  - title: Transfer
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
           - title: Spryker Core feature overview
             url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
             nested:
@@ -3190,7 +3208,7 @@ entries:
                       - title: StockGui
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
                         include_versions:
-                        - "202212.0"                        
+                        - "202212.0"
               - title: Import data
                 nested:
                   - title: File details - warehouse.csv

@@ -10,7 +10,7 @@ To start feature integration, integrate the following required features:
 
 | NAME          | VERSION          | INTEGRATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
- | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-feature-integration.html) |
+ | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
  | Shipment      | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                   |
 
 ## Install the required modules using Composer

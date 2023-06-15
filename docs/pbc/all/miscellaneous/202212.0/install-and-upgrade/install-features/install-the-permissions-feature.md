@@ -1,5 +1,5 @@
 ---
-title: Permissions feature integration
+title: Install the Permissions feature
 description: The guide provides a step-by-step procedure to install the Permissions feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

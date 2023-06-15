@@ -28,17 +28,17 @@ Oryx includes predefined feature sets that cover common use cases for web applic
 
 ## Static Experience Data
 
-Feature sets also contain (static) experience data. Experience data includes the structure and layout of the components of the application. Feature sets provide all the static pages data that is required for the application experiences. The `b2cFeatures` feature set, for example, comes with the following static data:
+Feature sets contain static experience data. Experience data includes the structure and layout of the components of an application. Feature sets provide all the static pages data that is required for the application experiences. For example, the `b2cFeatures` feature set comes with the following static data:
 
-- home page
-- search page
-- category page
-- product detail page
-- cart page
-- checkout page
-- login page
+- Home page
+- Search page
+- Category page
+- Product Details page
+- Cart page
+- Checkout page
+- Login page
 
-Other application feature sets will introduce their own pages or might reuse some of those pages.
+Application feature sets reuse each other's pages and introduce their own.
 
 Static experience data is provided using the `ExperienceStaticData` injection token. Although feature sets provide standard experience data, you can provide your own using the same mechanism:
 
@@ -55,7 +55,7 @@ const app = appBuilder()
   .create();
 ```
 
-Here's an example of static experience data for the login page:
+Here's an example of static experience data for the Login page:
 
 ```ts
 export const loginPage = {
@@ -83,7 +83,7 @@ export const loginPage = {
 };
 ```
 
-To better understand the data structure, we refer to the concept of [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
+To better understand the data structure, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
 
 By utilizing the static experience data provided in Oryx presets, you can easily set up the overall structure and layout of your application, including common sections like the header and footer, without having to write the code from scratch.
 

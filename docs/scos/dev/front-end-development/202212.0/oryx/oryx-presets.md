@@ -37,13 +37,13 @@ export const b2cFeatures: AppFeature[] = [
   ...
 ```
 
-Feature sets also contain static experience data. Experience data includes the structure and layout of the components of the application, such as pages and sections. By utilizing the static experience data provided by the presets, you do no need to set up any boilerplate code. Moreover, we avoid hardcoded page structures that would not allow for personalized experiences going forward.
+Feature sets also contain static experience data. Experience data includes the structure and layout of the components of and application, such as pages and sections. By utilizing the static experience data provided by the presets, you don't need to set up any boilerplate code. Moreover, we avoid hardcoded page structures which enables personalized experiences.
 
-For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html)
+For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
 
 ## Themes
 
-A theme represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as form field placeholder color. The theme is build with design tokens, which are configurable values that are used in CSS properties. By configuring these design tokens, you can customize the theme and align the application and it's components with your brand identity or specific design requirements.
+A *theme* represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as form field placeholder color. Themes are  built with design tokens, which are configurable values that are used in CSS properties. By configuring these design tokens, you can customize a theme and align the application and it's components with your brand identity or specific design requirements.
 
 To apply a theme to your Oryx application, you can import it from the preset package and use it during the application setup:
 
@@ -78,7 +78,7 @@ const app = appBuilder()
   .create();
 ```
 
-As an application developer, you could also create your own resources.
+As an application developer, you might want to create your own resources.
 
 ```ts
 import { Resources } from "@spryker-oryx/core";

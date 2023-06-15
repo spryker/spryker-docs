@@ -5,45 +5,45 @@ last_updated: June 8, 2023
 template: concept-topic-template
 ---
 
-Compositions in Oryx are a powerful tool for organizing components and defining their layout. It removes page specific layout concerns from the component implementation, which makes the components less opinionated and therefore better reusable.
+Compositions in Oryx are a powerful tool for organizing components and defining their layout. It removes page specific layout concerns from the component implementation, which makes the components less opinionated and more reusable.
 
-## Overview
+## Overview of compositions
 
 A composition contains a list of components which are rendered in the DOM in their specific order. A composition itself is a component, which means that you can easily create nested composition structures. In fact, a page itself is a composition.
 
-Compositions in Oryx take a data-driven approach, allowing you to configure the composition using external data sources. This approach offers several potential benefits:
+Compositions take a data-driven approach, letting you configure the composition using external data sources. This approach offers several potential benefits:
 
-- **Avoid Hard-Coded Page Layout**: By using data to configure compositions, you can avoid hard-coding the page layout in your application code. Instead, you can define the structure and layout of your pages using external data, making it more flexible and easier to customize.
+- Avoid hard-coded page layout: By using data to configure compositions, you can avoid hardcoding the page layout in your application code. Instead, you can define the structure and layout of your pages using external data, making it more flexible and easier to customize.
 
-- **Upgradable composition**: A configurable data set is easier upgradable. Instead of upgrading to hardcoded component structure, you can select an alternative data set that will hold new components. This makes it easier to _opt-in_ to alternative compositions.
+- Upgradable composition: A configurable data set is easier to upgrade. Instead of upgrading to a hardcoded component structure, you can select an alternative data set that will hold new components. This makes it easier to _opt in_ to alternative compositions.
 
-- **No-Code Customizations**: The data-driven approach enables no-code customizations of the compositions. With the use of a WYSIWYG (What You See Is What You Get) tool, non-technical users can easily modify the composition by adjusting the data configuration, without the need to modify the underlying code.
+- No-code customizations: The data-driven approach enables no-code customizations of the compositions. With the use of a What You See Is What You Get (WYSIWYG) tool, non-technical users can easily modify a composition by adjusting the data configuration, without the need to edit the underlying code.
 
-- **Split Testing of Data Sets**: The data-driven compositions allow for split testing of different data sets. This means you can create alternative data configurations and perform A/B testing to compare their impact on user experience and performance. This provides valuable insights for optimizing your application.
+- Split testing of data sets: Data-driven compositions enable split testing of different data sets. This means that you can create alternative data configurations and perform A/B testing to compare their impact on user experience and performance. This provides valuable insights for optimizing your application.
 
-- **Personalization of Data Sets**: The data-driven approach allows for personalization of the data set based on various criteria such as user profiling, location, time, and more. You can tailor the composition data to provide personalized experiences to different target groups, enhancing user engagement and satisfaction.
+- Personalization of data sets: The data-driven approach enables the personalization of a data set based on various criteria like user profiling, location, or time. You can tailor the composition data to provide personalized experiences to different target groups, enhancing user engagement and satisfaction.
 
-- **Alternative Data Sets per Screen Size**: Oryx compositions support the configuration of alternative data sets based on screen sizes. This means you can define different experiences for different devices, such as mobile, tablet, and desktop. By adapting the data set based on screen size, you can optimize the user experience for each device type.
+- Alternative data sets per screen size: Oryx compositions support the configuration of alternative data sets based on screen sizes. You can define different experiences for different devices, such as mobile, tablet, and desktop. By adapting a data set based on screen size, you optimize the user experience.
 
-The data-driven approach in Oryx compositions empowers you to dynamically configure the structure, layout, and content of your application based on external data sources. This flexibility allows for easy customization, experimentation, and personalization, leading to enhanced user experiences and improved performance.
+The data-driven approach in Oryx compositions empowers you to dynamically configure the structure, layout, and content of your application based on external data sources. This flexibility enables easy customization, experimentation, and personalization, leading to enhanced user experiences and improved performance.
 
-## Configuring Compositions with Data
+## Configuring compositions with data
 
-To utilize the data-driven approach in Oryx compositions, you can provide the composition data using static experience data, or by loading the data from an external source (e.g. a backend API). An example of how the static experience data is provided can be found in the [feature sets documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
+To utilize the data-driven approach, you can provide the composition data using static-experience data, or by loading the data from an external source like a backend API. For an example of how the static–experience data is provided, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
 
-The data configuration for a composition typically includes information about the components, their order, layout rules, styling options, and any other properties relevant to the composition.
+The data configuration for a composition typically includes information about the components: their order, layout rules, styling options, and any other properties relevant to the composition.
 
 By separating the data configuration from the code, you can easily update and manage the composition without modifying the underlying application code. This promotes a more efficient development process and enables non-technical stakeholders to contribute to the composition customization.
 
 ## Nested compositions
 
-Compositions can be nested. Every time you need to put in additional structure for the organization and layout of a section, you can bring in a nested composition. A good example of nested compositions is the footer of an e-commerce storefront. The footer typically comes with a lot of links. The links are organized in groups, to better group them by corporate links, self service links, legal links, social link, etc. For a good experience, the groups have a layout assigned to them, to put them on the left or right, top of bottom of the footer.
+Compositions can be nested. When you need to put in an additional structure for the organization and layout of a section, you can use a nested composition. A good example of nested compositions is the footer of an e-commerce storefront. The footer typically comes with a lot of links. The links are organized in groups, like self service links, legal, and social. For a good experience, the groups have a layout assigned to them, to put them on the left or right, top of bottom of the footer.
 
 ## Generated HTML
 
-The generated HTML represents the composition hierarchy and defines the rendering order of components within Oryx applications. Understanding the generated DOM structure is important for working effectively with compositions.
+The generated HTML represents the composition hierarchy and defines the rendering order of components in Oryx applications. Understanding the generated DOM structure is important for working effectively with compositions.
 
-The DOM structure is based on the experience data provided for each composition. It reflects the composition hierarchy and the components included within the composition. Let's take the login page composition as an example:
+The DOM structure is based on the experience data provided for each composition. It reflects the composition hierarchy and the components included in the compositions. The following is an example of a login page composition:
 
 ```ts
 export const loginPage = {
@@ -63,7 +63,7 @@ export const loginPage = {
 };
 ```
 
-Based on the composition data, which only holds a single component, the following html is generated:
+Based on the composition data, which only holds a single component, the following HTML is generated:
 
 ```html
 <oryx-composition route="/login" uid="static129">
@@ -78,9 +78,8 @@ Based on the composition data, which only holds a single component, the followin
 </oryx-composition>
 ```
 
-When the data structure does not provide an unique id, a `uid` will be
-autogenerated. The example demonstrates the need to have a `uid`, as the data
-driven styles are bound to elements with those uids. Nested compositions are
+When the data structure does not provide a unique ID, a `uid` is autogenerated. The example demonstrates the need to have a `uid`, as the data
+driven styles are bound to elements with those UIDs. Nested compositions are
 added to the DOM as you would expect, they are just placed as part of the list
 of inner components of a composition. The following example shows the components
 of the cart page:
@@ -95,12 +94,4 @@ of the cart page:
 </oryx-composition>
 ```
 
-## Conclusion
-
-Compositions in Oryx take a data-driven approach, enabling you to configure the structure, layout, and content of your application using external data sources. This approach offers flexibility, customization options, and the ability to perform split testing and personalization.
-
-By utilizing data-driven compositions, you can avoid hard-coded page layouts, empower non-technical users to customize compositions, and adapt the user experience based on screen size and other criteria.
-
-The data-driven approach in Oryx compositions promotes a more efficient development process and enhances the ability to create engaging and personalized experiences for your users.
-
-To learn more about Oryx presets and feature sets, which often work hand in hand with compositions, refer to the [Oryx presets documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) and [Oryx feature sets documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
+To learn more about Oryx presets and feature sets, which often work hand in hand with compositions, see [Presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) and [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).

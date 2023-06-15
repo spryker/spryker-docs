@@ -1876,7 +1876,7 @@ entries:
               - title: Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/base-shop/merchant-custom-prices-feature-overview.html
               - title: Scheduled Prices feature overview
-                url: /docs/pbc/all/price-management/base-shop/scheduled-prices-feature-overview.html                
+                url: /docs/pbc/all/price-management/base-shop/scheduled-prices-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -3189,6 +3189,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
                       - title: StockGui
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
+                        include_versions:
+                        - "202212.0"                        
               - title: Import data
                 nested:
                   - title: File details - warehouse.csv

@@ -2184,7 +2184,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
       include_versions:
       - "202204.0"
-      - "202212.0"
     - title: Multi-store CMS Block
       url: /docs/scos/dev/feature-integration-guides/multi-store-cms-block-feature-integration.html
       include_versions:
@@ -2256,6 +2255,9 @@ entries:
       - "202204.0"
     - title: Permissions
       url: /docs/scos/dev/feature-integration-guides/permissions-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Persistent Cart Sharing
       url: /docs/scos/dev/feature-integration-guides/persistent-cart-sharing-feature-integration.html
       include_versions:
@@ -2812,14 +2814,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
     - title: Migration Guide - Stock
       url: /docs/scos/dev/module-migration-guides/migration-guide-stock.html
-    - title: Migration Guide - StockGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stockgui.html
     - title: Migration Guide - StockSalesConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
-    - title: Migration Guide - Touch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
-    - title: Migration Guide - Transfer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-transfer.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

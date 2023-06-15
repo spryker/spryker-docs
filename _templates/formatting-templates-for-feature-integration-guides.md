@@ -28,7 +28,7 @@ To a code snippet with more than 35 lines, apply the following formatting:
 
 ## Inline code
 
-Use inline code only when it appears in text. For example, compare the content of *PLUGIN** and *SPECIFICATION* columns:
+Use inline code only when it appears in text. For example, compare the content of *PLUGIN* and *SPECIFICATION* columns:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

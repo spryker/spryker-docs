@@ -198,13 +198,13 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
 
 4. Set up publisher plugins:
 
-| PLUGIN                                                         | SPECIFICATION                                                                              | PREREQUISITES                                                                               | NAMESPACE                                                                                           |
-|----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| ProductOfferShipmentTypeWriterPublisherPlugin                  | Publishes product offer shipment type data by `SpyProductOfferShipmentType` entity events. | Requires `productOfferReference` to be provided in `EventEntityTransfers.additionalValues`. | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType |
-| ProductOfferProductOfferShipmentTypeWriterPublisherPlugin      | Publishes product offer shipment type data by `SpyProductOffer` events.                    |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer             |
-| ProductOfferStoreProductOfferShipmentTypeWriterPublisherPlugin | Publishes product offer shipment type data by `SpyProductOfferStore` events.               |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore        |
-| ShipmentTypeProductOfferShipmentTypeWriterPublisherPlugin      | Publishes product offer shipment type data by `SpyShipmentType` events.                    |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType             |
-| ShipmentTypeStoreProductOfferShipmentTypeWriterPublisherPlugin | Publishes product offer shipment type data by `SpyShipmentTypeStore` events.               |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore        |
+| PLUGIN                                                        | SPECIFICATION                                                                              | PREREQUISITES                                                                               | NAMESPACE                                                                                           |
+|---------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeWritePublisherPlugin                  | Publishes product offer shipment type data by `SpyProductOfferShipmentType` entity events. | Requires `productOfferReference` to be provided in `EventEntityTransfers.additionalValues`. | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType |
+| ProductOfferProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyProductOffer` events.                    |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer             |
+| ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyProductOfferStore` events.               |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore        |
+| ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyShipmentType` events.                    |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType             |
+| ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyShipmentTypeStore` events.               |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore        |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -213,11 +213,11 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
 
 namespace Pyz\Zed\Publisher;
 
-use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferProductOfferShipmentTypeWriterPublisherPlugin;
-use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType\ProductOfferShipmentTypeWriterPublisherPlugin;
-use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore\ProductOfferStoreProductOfferShipmentTypeWriterPublisherPlugin;
-use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeProductOfferShipmentTypeWriterPublisherPlugin;
-use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreProductOfferShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType\ProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore\ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -238,11 +238,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getProductOfferShipmentTypeStoragePlugins(): array
     {
         return [
-            new ProductOfferShipmentTypeWriterPublisherPlugin(),
-            new ProductOfferProductOfferShipmentTypeWriterPublisherPlugin(),
-            new ProductOfferStoreProductOfferShipmentTypeWriterPublisherPlugin(),
-            new ShipmentTypeProductOfferShipmentTypeWriterPublisherPlugin(),
-            new ShipmentTypeStoreProductOfferShipmentTypeWriterPublisherPlugin(),
+            new ProductOfferShipmentTypeWritePublisherPlugin(),
+            new ProductOfferProductOfferShipmentTypeWritePublisherPlugin(),
+            new ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin(),
+            new ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin(),
+            new ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin(),
         ];
     }
 }

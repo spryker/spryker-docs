@@ -1,5 +1,5 @@
 ---
-title: Configuring Spryker after installing with Docker
+title: Configure Spryker after installing
 description: Instructions for configuring Spryker after installing it with Docker
 last_updated: Jun 16, 2021
 template: howto-guide-template

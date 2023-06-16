@@ -123,11 +123,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 docker/sdk up
 ```
 
-{% info_block infoBox %}
-
 Depending on the hardware performance, the first project launch can take up to 20 minutes.
-
-{% endinfo_block %}
 
 ## Endpoints
 

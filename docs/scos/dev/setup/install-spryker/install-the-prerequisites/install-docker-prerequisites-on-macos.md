@@ -28,10 +28,10 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
-This document describes the prerequisites for installing Spryker in Docker on MacOS.
+This document describes the prerequisites for installing Spryker on MacOS.
 
 
-## System requirements for installing Spryker with Docker
+## System requirements for installing Spryker
 
 Review the system and software requirements in the table and configure them using the following instructions.
 
@@ -44,13 +44,9 @@ Review the system and software requirements in the table and configure them usin
 | Swap  | 2GB or more |
 
 
-## Installing and configuring required software
-
-Follow the steps to install and configure the required software:
+## Install and configure required software
 
 1. Download and install [Docker Desktop (Mac)](https://docs.docker.com/desktop/mac/install/).
-
-2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
 
 {% info_block infoBox %}
 
@@ -58,11 +54,13 @@ Signup for Docker Hub is not required.
 
 {% endinfo_block %}
 
+2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
+
 3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
 
-4. In the *General* section of *Preferences*, select the **Use Docker Compose V2** checkbox.
+4. In the **General** section of **Preferences**, click the **Use Docker Compose V2** checkbox.
 
-5. Update Memory and Swap Limits:
+5. Set recommended memory and swap limits:
 
     1. Go to **Resources** > **ADVANCED**.
     2. Set **CPUs:** to "4" or higher.
@@ -71,12 +69,6 @@ Signup for Docker Hub is not required.
     5. Set the desired **Disk image size:**.
     6. Select the desired **Disk image location**.
     7. Select **Apply & Restart**.
-
-{% info_block warningBox %}
-
-You can select lower **Memory:** and **Swap:** values than those provided in the instructions. However, the default ones won't be sufficient to run the application.
-
-{% endinfo_block %}
 
 5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
 

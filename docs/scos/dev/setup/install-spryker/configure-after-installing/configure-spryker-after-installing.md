@@ -35,16 +35,16 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
 ---
 
-This document describes how to configure Spryker after installing it with Docker.
+This document describes how to configure Spryker after installing it.
 
 
-## Configuring services
+## Configuration of services
 
-Spryker provides an easily manageable and extendable way to configure required services according to the predefined `deploy.*.yml` file that contains a `service` section which describes services used to deploy Spryker Applications for different environments.
+Spryker provides an easily manageable and extendable way to configure required services according to the predefined `deploy.*.yml` file that contains a `services` section which describes services used to deploy Spryker applications for different environments.
 
 Configuration can be defined on different levels: project-wide, region-wide, store-specific or endpoint-specific with limitations depending on the service type.
 
-Below, you can find an example of the service declaration that represents type and configuration of the `broker` service.
+Below, you can find an example of the service declaration that represents the type and configuration of the `broker` service.
 
 ```php
 ...
@@ -62,21 +62,17 @@ services:
 ...
 ```
 
-## Configuring endpoints
+## Configuration of endpoints
 
-Endpoint is a point of access to a Spryker Application or Service.
+Endpoint is a point of access to a Spryker application or service.
 
 Individual endpoints and ports are set in `deploy.*.yml` file.
 
-{% info_block warningBox %}
-
 Key format: `domain[:port]`. By default, the port for HTTP endpoints is 80. A port is mandatory for TCP endpoints.
 
-{% endinfo_block %}
+## Configure by editing deploy files
 
-## Applying the changes
-
-1. Apply the necessary changes in `deploy.*.yml`.
+1. To configure an application per your requirements, edit `deploy.*.yml`.
 
 ```php
 ...

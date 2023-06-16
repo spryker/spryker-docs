@@ -12,12 +12,10 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
-This document describes the prerequisites for installing Spryker in Docker on Windows.
+This document describes the prerequisites for installing Spryker on Windows.
 
 
-## System requirements for installing Spryker with Docker
-
-Review the system and software requirements in the table.
+## System requirements for installing Spryker
 
 | REQUIREMENT | VALUE OR VERSION  | ADDITIONAL DETAILS |
 | --- |-------------------| --- |
@@ -29,9 +27,7 @@ Review the system and software requirements in the table.
 | RAM  | 4GB or more       |
 | Swap  | 2GB or more       |
 
-## Install and configure the required software with WSL1
-
-Follow the steps below to install and configure the required software with WSL1.
+## Install and configure the required software
 
 {% info_block errorBox "Outdated software" %}
 
@@ -45,20 +41,20 @@ When running commands described in this document, use absolute paths. For exampl
 
 {% endinfo_block %}
 
-### Install Docker Desktop    
+Follow the steps below to install and configure the required software with WSL1.
 
-Install Docker Desktop:
+
+### Install Docker Desktop    
 
 1. Download [Docker Desktop for Windows](https://download.docker.com/win/static/stable/x86_64/).
 
 2. Open the installation file and follow the instructions of the wizard.
 
-#### Enable Docker experimental features
+### Enable Docker experimental features
 
-Follow the steps to enable Docker experimental features:
 1. Right-click the **Docker** icon in the tray and select **Settings**.
 2. Select the **Daemon** tab.
-3. Select the **Basic** checkbox.
+3. Click the **Basic** checkbox.
 4. Update variables as follows:
 
 ```json
@@ -75,25 +71,23 @@ Follow the steps to enable Docker experimental features:
 
 WSL is a Windows Subsystem for Linux. It allows Linux programs to run on Windows.
 
-To enable WSL1:
+To enable WSL1, follow the steps:
 
 1. Open **Windows Control Panel** > **Programs** > **Programs and Features**.
-2. Select the **Turn Windows features on or off**  hyperlink.
+2. Click the **Turn Windows features on or off** hyperlink.
 ![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/w-features-on-off.png)
 
-3. Select **Windows Subsystem for Linux** and select **OK**.
+3. Select **Windows Subsystem for Linux** and click **OK**.
 ![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/windows-subsystem.png)
 
-### Install and update Ubuntu
-
-Install Ubuntu:
+### Install Ubuntu
 
 1. Open Microsoft Store.
 2. In the Search filed, enter *Ubuntu* and press *Enter*.
 3. From the search results page, select **Ubuntu 18.04 LTS** and install it.
 ![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png)
 
-Update Ubuntu:
+### Update Ubuntu
 
 1. Open the **Start menu**.
 2. Find and launch **Ubuntu**.
@@ -113,15 +107,13 @@ mountFsTab = false
 
 ### Install Docker
 
-Install Docker:
-
-1. Update the apt package:
+1. Update the APT package:
 
 ```bash
 sudo apt-get update
 ```
 
-2. To allow `apt` to use a repository over HTTPS, install the packages:
+2. To allow APT to use a repository over HTTPS, install the packages:
 
 ```bash
 sudo apt-get install \
@@ -155,12 +147,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ### Install Docker Compose
 
-Install Docker Compose:
-
 1. Download the current stable release of Docker Compose:
 
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
 2. Apply executable permissions to the binary:
@@ -171,7 +161,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ### Install docker-sync
 
-Install docker-sync:
 
 1. Install `ruby` and `ruby -dev`:
 
@@ -195,8 +184,6 @@ sudo gem install docker-sync
     ```
 
 ### Install OCaml
-
-Install OCaml:
 
 1. Check [OCaml release changelog](https://github.com/ocaml/ocaml/releases) and make sure that the version you are going to install is compatible. In the procedure below, we are using version 4.06.0.
 
@@ -242,36 +229,32 @@ sudo make clean
 
 ## Install Unison
 
-Follow the steps to install Unison:
-
 1. Download the source code of the latest Unison version.
-2. Compile and install it:
+2. Download the Unison archive:
 
-    1 . Download the Unison archive:
+```bash
+wget https://github.com/bcpierce00/unison/archive/v2.51.2.tar.gz
+```
 
-    ```bash
-    wget https://github.com/bcpierce00/unison/archive/v2.51.2.tar.gz
-    ```
+3. Extract the archive:
 
-    2. Extract the archive:
+```bash
+tar xvf v2.51.2.tar.gz
+```
 
-    ```bash
-    tar xvf v2.51.2.tar.gz
-    ```
+4. Change the directory:
 
-    3. Change the directory:
+```bash
+cd unison-2.51.2
+```
 
-    ```bash
-    cd unison-2.51.2
-    ```
+5. Compile and install Unison:
 
-    4. Compile and install Unison:
-
-    ```bash
-    $ make UISTYLE=text
-    $ sudo cp src/unison /usr/local/bin/unison
-    $ sudo cp src/unison-fsmonitor /usr/local/bin/unison-fsmonitor
-    ```
+```bash
+$ make UISTYLE=text
+$ sudo cp src/unison /usr/local/bin/unison
+$ sudo cp src/unison-fsmonitor /usr/local/bin/unison-fsmonitor
+```
 
 You've installed and configured the required software.
 

@@ -28,7 +28,7 @@ related:
 
 {% info_block infoBox "Info" %}
 
-Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following the steps from the [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html) technical enhancement guide.
+Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html).
 
 {% endinfo_block %}
 
@@ -55,7 +55,7 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
-s
+
 4. Depending on the cloned repository, navigate into the cloned folder:
 
     * B2C Demo Shop:
@@ -108,15 +108,11 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 docker/sdk up
 ```
 
-{% info_block warningBox %}
-
 Depending on the hardware performance, the first project launch can take up to **20 minutes**.
-
-{% endinfo_block %}
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+To ensure that the installation is successful, make sure you can access the endpoints configured in the deploy file. For more information about the deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Back-Office
 

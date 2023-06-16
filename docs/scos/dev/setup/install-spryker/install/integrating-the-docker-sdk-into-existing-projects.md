@@ -18,16 +18,14 @@ redirect_from:
   - /v4/docs/en/integrating-docker-into-existing-projects
   - /v3/docs/integrating-docker-into-an-existing-project-201907
   - /v3/docs/en/integrating-docker-into-an-existing-project-201907
-related: 
+related:
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This page describes how you can convert a non-Docker based project into a Docker based one. If you want to install Spryker in Docker from scratch, start with [Development Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) or [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode).
 
-## Prerequisites
-
-To start integrating Docker into your project:
+## Install the prerequisites
 
 1. Follow one of the Docker installation prerequisites:
     * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
@@ -35,7 +33,7 @@ To start integrating Docker into your project:
     * [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
     * [Installing Docker prerequisites on Windowswith WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
-2. Integrate the [Spryker Core](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) feature into your project.
+2. Install the [Spryker Core](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) feature.
 
 ## Set up .dockerignore
 
@@ -59,15 +57,15 @@ node_modules
 !/docker/deployment/
 ```
 
-See [.dockerignore file](https://docs.docker.com/engine/reference/builder/#dockerignore-file) to learn more about the structure of the file.
+To learn more about the structure of the file, see [.dockerignore file](https://docs.docker.com/engine/reference/builder/#dockerignore-file).
 
 ## Set up configuration
 
-In `config/Shared`, adjust or create a configuration file. The name of the file should correspond to your environment. See  [config_default-docker.php](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/config_default-docker.dev.php) as an example.
+In `config/Shared`, adjust or create a configuration file. The name of the file should correspond to your environment. See [config_default-docker.php](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/config_default-docker.dev.php) as an example.
 
-## Set up a Deploy file
+## Set up a deploy file
 
-Set up a [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) per your infrastructure requirements using the examples in the table:
+Set up a [deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) per your infrastructure requirements using the examples in the table:
 
 | DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |
@@ -85,9 +83,7 @@ Use the following recipe examples:
 
 ## Install the Docker SDK
 
-Follow the steps to install the Docker SDK:
-
-1. Fetch Docker SDK tools:
+1. Clone the Docker SDK:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
@@ -101,14 +97,11 @@ docker/sdk bootstrap
 
 {% info_block infoBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. Run it only after:
-
-* Docker SDK version update
-* Deploy file update
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after updating the Docker SDK or changing the deploy file.
 
 {% endinfo_block %}
 
-3. Build and run Spryker applications:
+3. Build and run the application:
 
 ```bash
 docker/sdk up
@@ -131,7 +124,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

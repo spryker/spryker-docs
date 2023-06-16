@@ -25,7 +25,7 @@ related:
 
 {% info_block infoBox "" %}
 
-Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following the steps from the [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html) technical enhancement guide.
+Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html).
 
 {% endinfo_block %}
 
@@ -109,11 +109,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 docker/sdk up
 ```
 
-{% info_block warningBox %}
-
 Depending on the hardware performance, the first project launch can take up to *20 minutes*.
-
-{% endinfo_block %}
 
 ## Endpoints
 

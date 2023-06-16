@@ -28,12 +28,10 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
 ---
 
-This document describes the prerequisites for installing Spryker in Docker on Windows.
+This document describes the prerequisites for installing Spryker on Windows.
 
 
-## System requirements for installing Spryker with Docker
-
-Review the system and software requirements in the table.
+## System requirements for installing Spryker
 
 | REQUIREMENT | VALUE OR VERSION | ADDITIONAL DETAILS |
 | --- | --- | --- |
@@ -45,7 +43,7 @@ Review the system and software requirements in the table.
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
 
-## Installing and configuring the required software with WSL2
+## Install and configure the required software
 
 {% info_block infoBox "WSL1 and WSL2" %}
 

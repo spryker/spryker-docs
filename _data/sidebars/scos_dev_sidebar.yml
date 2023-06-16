@@ -2771,10 +2771,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
     - title: Migration Guide - Flysystem
       url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
-    - title: Migration Guide - Merchant
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
-    - title: Migration guide - MerchantGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
     - title: Migration Guide - Monitoring
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
     - title: Migration Guide - MultiCartPage

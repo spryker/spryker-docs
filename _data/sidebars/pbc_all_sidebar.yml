@@ -262,7 +262,7 @@ entries:
                   - title: Upgrade modules
                     nested:
                       - title: Calculation
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html                      
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html
                       - title: Cart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
                       - title: CartExtension

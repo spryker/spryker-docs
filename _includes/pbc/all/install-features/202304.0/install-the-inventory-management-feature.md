@@ -23,7 +23,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE |
 |--------------|------------------|------------------|
-| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-the-spryker-core-featureeature.html)
+| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-featureeature.html)
 
 ### 1) Install the required modules using Composer
 

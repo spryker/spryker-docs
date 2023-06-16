@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/shopping-lists-feature-integration.html
 related:
   - title: Glue API - Shopping Lists feature integration
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-the-shopping-lists-glue-api.html
   - title: Shopping list widget overview
     link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-widget-overview.html
   - title: Shopping Lists + Product Options feature integration
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-the-shopping-lists-product-options-feature.html
   - title: Glue API - Shopping Lists feature integration
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-the-shopping-lists-glue-api.html
   - title: Shopping List Notes overview
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---

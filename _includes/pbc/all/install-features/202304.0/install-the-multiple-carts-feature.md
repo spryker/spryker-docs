@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-the-spryker-core-feature.html)            |
+| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
 | Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
@@ -470,7 +470,7 @@ To start feature integration, integrate the required features:
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-the-spryker-core-feature.html)            |
+| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
 | Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 

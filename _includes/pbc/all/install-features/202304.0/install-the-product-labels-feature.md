@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION           | INTEGRATION GUIDE                                                                                                                                                  |
 |--------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-the-spryker-core-feature.html)                               |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                               |
 | Product      | {{site.version}}  | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
@@ -561,7 +561,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ### 1) Install the required modules using Composer

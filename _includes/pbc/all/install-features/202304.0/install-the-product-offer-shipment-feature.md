@@ -48,7 +48,8 @@ Make sure that the following module has been installed:
 
     <table name="spy_product_offer_shipment_type">
         <behavior name="event">
-            <parameter name="spy_product_offer_shipment_type_all" column="*" keep-additional="true"/>
+            <parameter name="spy_product_offer_shipment_type_all" column="*"/>
+            <parameter name="spy_product_offer_shipment_type_product_offer_reference" column="product_offer_reference" keep-additional="true"/>
         </behavior>
     </table>
 
@@ -407,7 +408,6 @@ Enable the following plugins:
 | ShipmentTypeProductOfferPostUpdatePlugin            | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence.  | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
 | ShipmentTypeProductOfferExpanderPlugin              | Expands `ProductOfferTransfer` with related shipment types.                                                                    | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                 | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
 | ShipmentTypeProductOfferStorageExpanderPlugin       | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                                | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                         | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage         |
-| MerchantProductOfferShipmentTypeStorageFilterPlugin | Filters out `ProductOfferShipmentTypeCollectionTransfer.productOfferShipmentTypes` with product offers with inactive merchants | Requires `ProductOfferShipmentTypeCollectionTransfer.productOfferShipmentTypes.productOffer` to be set.                                                                                                         | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferShipmentTypeStorage |
 
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
@@ -473,30 +473,6 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     {
         return [
             new ShipmentTypeProductOfferStorageExpanderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/ProductOfferShipmentTypeStorage/ProductOfferShipmentTypeStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductOfferShipmentTypeStorage;
-
-use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferShipmentTypeStorage\MerchantProductOfferShipmentTypeStorageFilterPlugin;
-use Spryker\Zed\ProductOfferShipmentTypeStorage\ProductOfferShipmentTypeStorageDependencyProvider as SprykerProductOfferShipmentTypeStorageDependencyProvider;
-
-class ProductOfferShipmentTypeStorageDependencyProvider extends SprykerProductOfferShipmentTypeStorageDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\ProductOfferShipmentTypeStorageExtension\Dependency\Plugin\ProductOfferShipmentTypeStorageFilterPluginInterface>
-     */
-    protected function getProductOfferShipmentTypeStorageFilterPlugins(): array
-    {
-        return [
-            new MerchantProductOfferShipmentTypeStorageFilterPlugin(),
         ];
     }
 }

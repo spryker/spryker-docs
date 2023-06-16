@@ -13,12 +13,6 @@ entries:
             include_versions:
             - "202204.0"
 
-          - title: Infrastructure requirements
-            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html
             include_versions:

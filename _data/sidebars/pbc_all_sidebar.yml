@@ -1232,6 +1232,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-feature-domain-model.html
                   - title: Merchant Opening Hours
                     url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-opening-hours-feature-domain-model.html
+              - title: Third-party integrations
+                nested:
+                  - title: ChannelPilot Marketplace
+                    url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
       - title: Miscallaneous
         include_versions:
         - "202212.0"
@@ -1289,6 +1293,40 @@ entries:
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/optimise-it.html
                   - title: iAdvize
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/iadvize.html
+              - title: Marketing and conversion
+                nested:
+                - title: Customer communication
+                  nested:
+                  - title: Episerver
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver.html
+                  - title: Dotdigital
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/dotdigital.html
+                - title: AB testing and performance
+                  nested:
+                  - title: AB Tasty
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
+                  - title: Baqend
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/ab-testing-and-performance/baqend.html
+                - title: Customer retention and loyalty
+                  nested:
+                  - title: Zenloop
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html
+                  - title: Namogoo
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html
+                  - title: Trustpilot
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html
+                - title: Analytics
+                  nested:
+                  - title: FACT-Finder
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder.html
+                  - title: Minubo
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo.html
+                  - title: ChannelPilot Analytics
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/channelpilot-analytics.html
+                  - title: Haensel AMS
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/haensel-ams.html
+                  - title: Mindlab
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
               - title: Operational tools, monitoring, legal
                 nested:
                 - title: PlusServer

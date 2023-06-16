@@ -261,6 +261,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html
                   - title: Upgrade modules
                     nested:
+                      - title: Calculation
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html                      
                       - title: Cart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
                       - title: CartExtension

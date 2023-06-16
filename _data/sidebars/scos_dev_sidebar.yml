@@ -71,6 +71,9 @@ entries:
       url: /docs/scos/dev/setup/redis-configuration.html
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
+    include_versions:
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
@@ -2744,8 +2747,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
     - title: Migration Guide - Business On Behalf Data Import
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
-    - title: Migration Guide - Calculation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - CompanyBusinessUnit

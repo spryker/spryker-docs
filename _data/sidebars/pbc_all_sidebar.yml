@@ -1244,8 +1244,6 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-permissions-feature.html
                   - title: Queue Data Import
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
-                  - title: Sales Data Export
-                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
                   - title: Spryker Core
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
               - title: Install Glue API
@@ -1424,6 +1422,8 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
                       - title: Splittable Order Items
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
+                      - title: Sales Data Export
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html                        
                   - title: Install Glue API
                     nested:
                       - title: Checkout

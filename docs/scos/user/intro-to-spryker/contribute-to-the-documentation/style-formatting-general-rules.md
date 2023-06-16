@@ -96,7 +96,7 @@ related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
   - title: Sales Data Export feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 ```
 

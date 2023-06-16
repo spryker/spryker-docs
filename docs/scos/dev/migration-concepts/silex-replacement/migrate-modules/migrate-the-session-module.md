@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-session.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-session.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-session.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-session.html
   - /module_migration_guides/mg-session.htm
 ---
 

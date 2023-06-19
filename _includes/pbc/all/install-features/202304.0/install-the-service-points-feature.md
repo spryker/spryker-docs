@@ -1,3 +1,5 @@
+
+
 This document describes how to integrate the Service Points feature into a Spryker project.
 
 ## Install feature core

@@ -2,7 +2,7 @@ This document describes how to integrate the Service Points feature into a Spryk
 
 ## Install feature core
 
-To start feature integration, integrate the required features:
+Follow the steps below to install the Service Points feature core.
 
 ### Prerequisites
 

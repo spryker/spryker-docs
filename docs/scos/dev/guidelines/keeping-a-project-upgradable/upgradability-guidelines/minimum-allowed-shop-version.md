@@ -4,54 +4,46 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-The shop project dependencies should be at least a supported release version. This document explains the problem and how to address it.
+"Minimum allowed shop version" check makes sure that the project uses one of the supported product releases by [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
 
 ## Problem description
 
-The shop contains old package dependencies that are already unsupported. This can cause issues related to the project's upgradability.
+The project should meet the minimum required Spryker product release to make it upgradable by [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html). 
 
-## Example of code that causes an upgradability error
+If the project doesn't use the feature packages, the corresponding Spryker module versions should be used.
 
-composer.lock contains unsupported package versions
-```json
-{
-  "_readme": [
-    "This file locks the dependencies of your project to a known state",
-    "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-    "This file is @generated automatically"
-  ],
-  "content-hash": "7f3bcb8eeee91ab717f561b035b8df84",
-  "packages": [
-    {
-      "name": "spryker-feature/agent-assist",
-      "version": "202203.0",
-      ...
-    },
-    {
-      "name": "spryker/availability-gui",
-      "version": "6.5.9",
-      ...
-    }
-  ]
-}
-```
+## Example of evaluator error message
 
-### Related error in the Evaluator output
+Example 1. Used feature package version doesn't correspond the minimum required version
 
 ```shell
 ============================
 MINIMUM ALLOWED SHOP VERSION
 ============================
 
-+---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| # | Message                                                                                                           | Target                                |
-+---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| 1 | The package "spryker-feature/agent-assist" version "202203.0" is not supported. The minimum allowed version is "202204.0" | spryker-feature/agent-assist:202203.0 |
-+---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| 2 | The package "spryker/availability-gui" version "6.5.9" is not supported. The minimum allowed version is "6.6.0"           | spryker/availability-gui:6.5.9        |
-+---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
++---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+| # | Message                                                                                                                   | Target                                |
++---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+| 1 | The package "spryker-feature/agent-assist" version "202108.0" is not supported. The minimum allowed version is "202204.0" | spryker-feature/agent-assist:202108.0 |
++---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+```
+
+Example 2. Used Spryker package version doesn't correspond the minimum required version
+
+```shell
+============================
+MINIMUM ALLOWED SHOP VERSION
+============================
+
++---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
+| # | Message                                                                                                         | Target                         |
++---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
+| 1 | The package "spryker/availability-gui" version "6.5.9" is not supported. The minimum allowed version is "6.6.0" | spryker/availability-gui:6.5.9 |
++---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
 ```
 
 ### Resolving the error
 
-To resolve this issue, update the outdated dependencies to the current release or version.
+To resolve this issue:
+
+1. Update the outdated dependencies to make it corresponding to the minimum required version.

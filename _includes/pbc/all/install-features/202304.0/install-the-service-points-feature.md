@@ -192,7 +192,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Set up configuration
 
-To make the `service-points`, `service-point-addresses`, `services`, `service-types` resources protected, adjust the protected paths configuration:
+To make the `service-points`, `service-point-addresses`, `services`, and `service-types` resources protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -447,7 +447,7 @@ Make sure that entities were imported to the following database tables respectiv
 
 ### 5) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 ```csv
 service_point.validation.service_point_key_exists,A service point with the same key already exists.,en_US
@@ -536,7 +536,7 @@ console data:import glossary
 
 ### 5) Configure export to Elasticsearch
 
-1. In `SearchElasticsearchConfig`, adjust Elasicsearch config:
+1. In `SearchElasticsearchConfig`, adjust the Elasicsearch config:
 
 **src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
 
@@ -853,7 +853,7 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 
 Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
 
-1. Adjust `RabbitMq` module configuration in `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
+1. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module's configuration:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -907,7 +907,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-3. Configure synchronization pool and event queue name
+3. Configure synchronization pool and event queue name:
 
 **src/Pyz/Zed/ServicePointStorage/ServicePointStorageConfig.php**
 
@@ -1032,7 +1032,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Make sure that the `service-point` trigger plugin works correctly:
 
-1. Fill the `spy_service_point`, `spy_service_point_store`, `spy_servoce_point_address` tables with data.
+1. Fill the `spy_service_point`, `spy_service_point_store`, and `spy_servoce_point_address` tables with data.
 2. Run the `console publish:trigger-events -r service_point` command.
 3. Make sure that the `spy_service_point_storage` table has been filled with respective data.
 4. Make sure that, in your system, storage entries are displayed with `kv:service_point:{store}:{service_point_id}` mask.
@@ -1041,11 +1041,11 @@ Make sure that `service-point` synchronization plugin works correctly:
 
 1. Fill the `spy_service_point_storage` table with some data.
 2. Run the `console sync:data -r service_point` command.
-3. Make sure that, in your system, storage entries are displayed with `kv:service_point:{store}:{service_point_id}` mask.
+3. Make sure that, in your system, storage entries are displayed with the `kv:service_point:{store}:{service_point_id}` mask.
 
 Make sure that when a service point is created or edited through BAPI, it is exported to Redis accordingly.
 
-Make sure you are able to see data in Redis in the following format:
+Make sure that, in Redis, data is displayed in the following format:
 ```yaml
 {
    "id_service_point": 1,

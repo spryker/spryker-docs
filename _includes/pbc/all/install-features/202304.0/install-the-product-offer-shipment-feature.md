@@ -1,3 +1,5 @@
+
+
 This document describes how to integrate the Product offer shipment feature into a Spryker project.
 
 ## Install feature core
@@ -71,10 +73,6 @@ Make sure that the following changes have been applied by checking your database
 |-----------------------------------------|-------|---------|
 | spy_product_offer_shipment_type         | table | created |
 | spy_product_offer_shipment_type_storage | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Ensure the following transfers have been created:
 
@@ -305,6 +303,7 @@ In Redis, make sure data is represented in the following format:
     ]
 }
 ```
+
 {% endinfo_block %}
 
 ### 4) Import shipment types for product offers
@@ -404,8 +403,8 @@ Enable the following plugins:
 
 | PLUGIN                                              | SPECIFICATION                                                                                                                  | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                                    |
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferPostCreatePlugin            | Persists product offer shipment type to persistence.                                                                           | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
-| ShipmentTypeProductOfferPostUpdatePlugin            | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence.  | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
+| ShipmentTypeProductOfferPostCreatePlugin            | Persists a product offer shipment type to persistence.                                                                           | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
+| ShipmentTypeProductOfferPostUpdatePlugin            | Deletes redundant product offer shipment types from `Persistence`. Persists missed product offer shipment types to `Persistence`.  | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
 | ShipmentTypeProductOfferExpanderPlugin              | Expands `ProductOfferTransfer` with related shipment types.                                                                    | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                 | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
 | ShipmentTypeProductOfferStorageExpanderPlugin       | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                                | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                         | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage         |
 

@@ -21,6 +21,10 @@ redirect_from:
   - /docs/installation-guide-development-mode
   - /docs/en/installation-guide-development-mode
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
+  - /docs/marketplace/dev/setup/spryker-marketplace-setup.html
+  - /docs/marketplace/dev/setup/installation.html
+  - /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
+  - /docs/marketplace/dev/setup/202212.0/spryker-marketplace-setup.html  
 related:
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
@@ -42,8 +46,13 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 ## Clone a Demo Shop and the Docker SDK
 
 1. Open a terminal.
-2. Create a new folder and navigate into it.
-3. Clone *one* of the following [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+2. Create a folder for the project and navigate into it:
+```bash
+mkdir spryker-shop && cd spryker-shop
+```
+
+3. Clone *one* of the following Demo Shops:
+
     * B2C Demo Shop:
 
     ```shell
@@ -56,27 +65,19 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
 
-4. Depending on the cloned repository, navigate into the cloned folder:
+    * B2C Marketplace Demo Shop
 
-    * B2C Demo Shop:
-
-    ```bash
-    cd b2c-demo-shop
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202212.0-p2 --single-branch ./
     ```
 
-    * B2B Demo Shop:
+    * B2B Marketplace Demo Shop
 
-    ```bash
-    cd b2b-demo-shop
-    ```
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./
+    ```    
 
-{% info_block warningBox "Verification" %}
-
-Make sure that you are in the correct folder by running the `pwd` command.
-
-{% endinfo_block %}
-
-5. Clone the Docker SDK repository:
+5. Clone the Docker SDK:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
@@ -85,7 +86,7 @@ git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 
 ## Configure and start the instance
 
-1. Bootstrap local docker setup:
+1. Bootstrap the local docker setup:
 
 ```bash
 docker/sdk bootstrap deploy.dev.yml
@@ -108,7 +109,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 docker/sdk up
 ```
 
-Depending on the hardware performance, the first project launch can take up to **20 minutes**.
+Depending on the hardware performance, the first project launch can take up to 20 minutes.
 
 ## Endpoints
 

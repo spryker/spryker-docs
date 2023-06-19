@@ -9,4 +9,3 @@ This section describes how to get started with the B2C Demo Marketplace, includi
 * [System requirements](/docs/marketplace/dev/setup/{{page.version}}/system-requirements.html)
 * [Infrastructure requirements](/docs/marketplace/dev/setup/{{page.version}}/infrastructure-requirements.html)
 * [Marketplace supported browsers](/docs/marketplace/dev/setup/{{page.version}}/marketplace-supported-browsers.html)
-* [Setup](/docs/marketplace/dev/setup/{{page.version}}/spryker-marketplace-setup.html)

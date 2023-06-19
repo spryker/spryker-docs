@@ -18,6 +18,10 @@ entries:
             - "202304.0"
           - title: "HowTo: Add support of number formatting in the Back Office"
             url: /docs/pbc/all/back-office/howto-add-support-of-number-formatting-in-the-back-office.html
+          - title: Manage in the Back Office
+            nested:
+              - title: View Dashboard
+                url: /docs/pbc/all/back-office/manage-in-the-back-office/view-dashboard.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -1557,12 +1561,14 @@ entries:
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-merchant-portal-feature.html
                   - title: Marketplace Order Management + Order Threshold
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
-              - title: Import data
+              - title: Import and export data
                 nested:
                   - title: "merchant_oms_process.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-oms-process.csv.html
                   - title: "merchant-order-status.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-order-status.csv.html
+                  - title: Data export Merchant Orders CSV files format
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/data-export-merchant-orders-csv-files-format.html
               - title: Manage in the Back Office
                 nested:
                   - title: Manage main merchant orders
@@ -2346,6 +2352,26 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html
                       - title: Edit product attributes
                         url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
+                  - title: Categories
+                    nested:
+                      - title: Delete categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/delete-categories.html
+                      - title: Assign and deassign products from categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
+                      - title: Create categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/create-categories.html
+                      - title: Edit categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/edit-categories.html
+                      - title: Order products in categories
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
+                  - title: Configurable bundle
+                    nested:
+                      - title: Create configurable bundle templates
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html
+                      - title: Edit slots in configurable bundle templates
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
+                      - title: Edit configurable bundle templates
+                        url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html
                   - title: Products
                     nested:
                       - title: "Creating service offerings: best practices"

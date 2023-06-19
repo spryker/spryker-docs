@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/viewing-dashboard
   - /docs/viewing-dashboard
   - /docs/en/viewing-dashboard
+  - /docs/pbc/all/back-office/202212.0/manage-in-the-back-office/viewing-dashboard.html
 ---
 
 This topic provides an overview of the dashboard charts presented in the Dashboard section in Spryker Back Office.

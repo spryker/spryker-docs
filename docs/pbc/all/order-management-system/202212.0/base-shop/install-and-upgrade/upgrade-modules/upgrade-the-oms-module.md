@@ -1,5 +1,5 @@
 ---
-title: Migration guide - OMS
+title: Upgrade the OMS module
 description: Use the guide to upgrade the Oms module to the new version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

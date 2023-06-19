@@ -279,6 +279,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
                       - title: CheckoutRestApi
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
+                      - title: PersistentCart
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html
+                        include_versions:
+                        - "202212.0"                        
                       - title: QuickOrder
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                         include_versions:
@@ -1476,6 +1480,8 @@ entries:
                     nested:
                       - title: ManualOrderEntryGui
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html
+                      - title: OMS
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html
                       - title: OrdersRestApi
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
                       - title: Refund

@@ -2783,12 +2783,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-offer.html
     - title: Migration Guide - OfferGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
-    - title: Migration Guide - OMS
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration Guide - PersistentCart
-      url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
       url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
     - title: Migration Guide - Publish and Synchronization

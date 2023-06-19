@@ -145,16 +145,22 @@ To configure export to Redis and Elasticsearch, take the following steps:
 
 #### Set up publisher plugins:
 
-| PLUGIN                                                  | SPECIFICATION                                                                                                                                 | PREREQUISITES | NAMESPACE                                                                                          |
-|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
-| ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                          |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
-| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                   |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
-| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config. |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
-| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
-| MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
-| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant                    |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer                 |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
+| PLUGIN                                                  | SPECIFICATION                                                                                                                                                                                               | PREREQUISITES | NAMESPACE                                                                                          |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
+| ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                                                                                        |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                                                                                 |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductConcreteProductOffersStoreWritePublisherPlugin   | Publishes product concrete product offers using product offer IDs retrieved from event transfers.                                                                                                           |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductConcreteProductOffersStoreDeletePublisherPlugin  | Unpublishes product offer reference from `spy_product_concrete_product_offers_storage` by provided `EventEntity.foreign_keys.fk_product_offer` and `EventEntity.foreign_keys.fk_store` transfer properties. |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config.                                                               |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                                                                                       |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferStoreWritePublisherPlugin                   | Publishes product offers using product offer IDs retrieved from event transfers.                                                                                                                            |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferStoreDeletePublisherPlugin                  | Unpublishes product offers by provided `EventEntity.foreign_keys.fk_product_offer` and `EventEntity.foreign_keys.fk_store` transfer properties.                                                             |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferPublisherTriggerPlugin                      | Publishes the product offer collection by offset and limit from Persistence.                                                                                                                                |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher                                     |
+| MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.                                                                          |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
+| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                                                                                  |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant                    |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                                                                              |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer                 |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                                                                                        |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
+| MerchantProductOfferProductConcreteExpanderPlugin       | Expands product concrete collection with offers.                                                                                                                                                            |               | \Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product                                     |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -168,9 +174,15 @@ use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Produ
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer\ProductConcreteWritePublisherPlugin as ProductOfferProductConcreteWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore\ProductConcreteWritePublisherPlugin as ProductOfferStoreProductConcreteWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersDeletePublisherPlugin;
-use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferDeletePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferWritePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferStoreDeletePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferStoreWritePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersStoreWritePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersStoreDeletePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersWritePublisherPlugin;
+use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOfferPublisherTriggerPlugin;
+
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -197,6 +209,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductConcreteProductOffersWritePublisherPlugin(),
             new ProductOfferDeletePublisherPlugin(),
             new ProductOfferWritePublisherPlugin(),
+            new ProductOfferStoreWritePublisherPlugin(),
+            new ProductOfferStoreDeletePublisherPlugin(),
+            new ProductConcreteProductOffersStoreWritePublisherPlugin(),
+            new ProductConcreteProductOffersStoreDeletePublisherPlugin(),
         ];
     }
 
@@ -219,6 +235,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new ProductOfferProductConcreteWritePublisherPlugin(),
             new ProductOfferStoreProductConcreteWritePublisherPlugin(),
+        ];
+    }
+    
+     /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ProductOfferPublisherTriggerPlugin(),
         ];
     }
 }
@@ -414,6 +440,32 @@ class MerchantProductOfferSearchConfig extends SprykerMerchantProductOfferSearch
     public function getMerchantProductOfferEventQueueName(): ?string
     {
         return PublisherConfig::PUBLISH_QUEUE;
+    }
+}
+```
+
+Product feature setup 
+
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Product;
+
+use Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product\MerchantProductOfferProductConcreteExpanderPlugin;
+use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
+
+class ProductDependencyProvider extends SprykerProductDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
+     */
+    protected function getProductConcreteExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferProductConcreteExpanderPlugin(),
+        ];
     }
 }
 ```

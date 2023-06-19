@@ -36,7 +36,7 @@ related:
 
 ### Requirements
 
-* `nodejs` version >=12.0.0
+* `Node.js` version >=12.0.0
 * `npm` version >=6.9.0
 
 ### Setup

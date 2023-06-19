@@ -1088,6 +1088,15 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
+    include_versions:
+    - "201811.0"
+    - "201903.0"
+    - "201907.0"
+    - "202001.0"
+    - "202005.0"
+    - "202009.0"
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
@@ -2932,7 +2941,6 @@ entries:
         url: /docs/scos/user/back-office-user-guides/administration/view-stores.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Stores
         url: /docs/scos/user/back-office-user-guides/administration/stores.html
         include_versions:
@@ -3069,12 +3077,10 @@ entries:
           url: /docs/scos/user/back-office-user-guides/administration/glossary/add-translations.html
           include_versions:
           - "202204.0"
-          - "202212.0"
         - title: Edit translations
           url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-translations.html
           include_versions:
           - "202204.0"
-          - "202212.0"
       - title: Tax rates
         include_versions:
         - "201811.0"
@@ -3149,7 +3155,6 @@ entries:
         url: /docs/scos/user/back-office-user-guides/administration/define-merchant-order-thresholds.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Thresholds
         include_versions:
         - "201903.0"
@@ -3292,12 +3297,18 @@ entries:
       - title: ChannelPilot Marketplace
         url: /docs/scos/user/technology-partners/marketplace-integrations/channelpilot-marketplace.html
     - title: Finance and accounting
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Nitrobox
         url: /docs/scos/user/technology-partners/finance-and-accounting/nitrobox.html
       - title: CollectAI
         url: /docs/scos/user/technology-partners/finance-and-accounting/collectai.html
     - title: Customer Service
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Dixa
         url: /docs/scos/user/technology-partners/customer-service/dixa.html
@@ -3481,6 +3492,12 @@ entries:
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Operational tools, monitoring, legal, etc.
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: PlusServer
         url: /docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/plusserver.html

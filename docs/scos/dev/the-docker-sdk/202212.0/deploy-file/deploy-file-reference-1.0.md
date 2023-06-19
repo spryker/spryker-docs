@@ -323,7 +323,7 @@ image:
 Defines Node.js settings.
 
 * `image: node: version:`—defines a Node.js version. Supports only major versions that are greater than the default one. The default version is `12`.
-* `image: node: npm`—defines an NPM version. Supports only major versions that are greater than the default one. The default version is `6`.
+* `image: node: npm`—defines a npm version. Supports only major versions that are greater than the default one. The default version is `6`.
 * `image: node: distro:`—defines a Linux distribution for the Node Docker image. Should be equal to your base PHP image. Possible values are `alpine` and `debian`. This variable is optional with the default value of `alpine`.
 
 ```yaml

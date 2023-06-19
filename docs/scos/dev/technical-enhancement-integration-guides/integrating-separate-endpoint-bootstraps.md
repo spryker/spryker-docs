@@ -37,7 +37,7 @@ Update the required modules:
 composer update spryker/twig spryker/session spryker/router spryker/monitoring spryker/event-dispatcher spryker/application
 ```
 
-### 2) Update modules using NPM
+### 2) Update modules using npm
 
 Update the required module:
 

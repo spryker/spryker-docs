@@ -53,7 +53,7 @@ For details about how to install the SCSS Linter for your project, see the [SCSS
 
 To execute the SCSS Linter, do the following:
 
-1. Install the Node modules:
+1. Install the Node.js modules:
 
 ```bash
 npm ci

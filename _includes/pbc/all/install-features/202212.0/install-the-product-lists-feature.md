@@ -102,7 +102,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-3. Set up synchronization queue pools so  that non-multistore entities (not store-specific entities) are synchronized among stores:
+3. Set up synchronization queue pools so  that non-multi-store entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/ProductListStorage/Persistence/Propel/Schema/spy_product_list_storage.schema.xml**
 

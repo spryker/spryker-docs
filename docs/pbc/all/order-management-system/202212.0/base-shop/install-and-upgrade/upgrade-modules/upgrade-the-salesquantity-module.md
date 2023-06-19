@@ -1,5 +1,5 @@
 ---
-title: Migration guide - SalesQuantity
+title: Upgrade the SalesQuantity module
 description: Use the guide to learn how to update the SalesQuantity module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

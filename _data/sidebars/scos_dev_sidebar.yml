@@ -2773,8 +2773,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
     - title: Migration Guide - Monitoring
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - MultiCartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
     - title: Migration Guide - Oauth
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
@@ -2789,16 +2787,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
     - title: Migration Guide - Publish and Synchronization
       url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - Sales
-      url: /docs/scos/dev/module-migration-guides/migration-guide-sales.html
-    - title: Migration Guide - SalesAggregator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesaggregator.html
-    - title: Migration guide - SalesMerchantConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
-    - title: Migration Guide - SalesQuantity
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
-    - title: Migration Guide - SalesSplit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
     - title: Migration Guide - Setup
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - SharedCartPage

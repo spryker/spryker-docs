@@ -1,5 +1,5 @@
 ---
-title: Migration guide - SalesSplit
+title: Upgrade the SalesSplit module
 description: Use the guide to learn how to update the SalesSplit module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

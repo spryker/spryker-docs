@@ -279,10 +279,14 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
                       - title: CheckoutRestApi
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
+                      - title: MultiCartPage
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-multicartpage-module.html
+                        include_versions:
+                        - "202212.0"
                       - title: PersistentCart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html
                         include_versions:
-                        - "202212.0"                        
+                        - "202212.0"
                       - title: QuickOrder
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                         include_versions:
@@ -1486,6 +1490,12 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
                       - title: Refund
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
+                      - title: Sales
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
+                      - title: SalesQuantity
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html                                                
+                      - title: SalesSplit
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html
                   - title: Split delivery migration concept
                     url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/split-delivery-migration-concept.html
               - title: Import order statuses

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product offer shipment feature into a Spryker project.
+This document describes how to integrate the Product Offer Shipment feature into a Spryker project.
 
 ## Install feature core
 

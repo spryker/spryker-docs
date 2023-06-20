@@ -37,7 +37,7 @@ To view how to create a quick order, see [Quick Order on the Storefront](#quick-
 <!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->
 
-As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/pbc/all/product-information-management/{{site.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
+As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
 
 {% info_block errorBox %}
 
@@ -88,7 +88,7 @@ The **Quantity** field in the **Quick Order** adheres to these quantities. There
 
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 

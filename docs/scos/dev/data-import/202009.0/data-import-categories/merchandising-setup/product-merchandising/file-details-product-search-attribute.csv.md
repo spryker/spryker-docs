@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_search_attribute.csv** file to configure Product Search Attribute information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -31,7 +31,7 @@ This file has the following dependency:
 ## Recommendations & other information
 The attribute key is previously loaded from *productattributekey.csv*, which can be translated in key.* fields.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_search_attribute.csv*  file can be downloaded here:
 
 | File | Description |

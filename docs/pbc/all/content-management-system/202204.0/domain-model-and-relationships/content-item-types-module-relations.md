@@ -43,7 +43,7 @@ See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{pa
 
 ## Abstract Product List
 
-The Abstract product list content item is a content piece that consists of text and [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) in the Back Office > **Content Management** > **Content Items**.
+The Abstract product list content item is a content piece that consists of text and [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) in the Back Office > **Content Management** > **Content Items**.
 
 The schema below shows the module relations of the Abstract product list content item and its components:
 

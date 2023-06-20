@@ -1,6 +1,6 @@
 
 
-This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/pbc/all/discount-management/{{page.version}}/discount-management.html) feature.
+This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/promotions-discounts-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -64,7 +64,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 Ensure that the plugins work correctly:
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *category* field.
+1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *category* field.
 2. Add a product assigned to the defined category to the cart.
 3. The discount should be applied to the cart.
 

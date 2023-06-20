@@ -12,5 +12,5 @@ This section contains overviews and instructions for frontend developing on the 
 * [Yves](/docs/scos/dev/front-end-development/{{page.version}}/yves/yves.html)
 * [Migration guide – Remove support of IE11](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-remove-support-of-ie11.html)
 * [Migration guide – Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-switch-from-tslint-to-eslint.html)
-* [Migration guide – Switch from Yarn to NPM v8](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-switch-from-yarn-to-npm.html)
+* [Migration guide – Switch from Yarn to npm v8](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-switch-from-yarn-to-npm.html)
 * [Migration guide - Upgrade to Webpack v5](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-upgrade-to-webpack-v5.html)

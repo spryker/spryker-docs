@@ -34,6 +34,7 @@ redirect_from:
   - /docs/fes/dev/launching-storefronts.html
   - /docs/fes/dev/installing-applications.html
   - /docs/scos/user/intro-to-spryker/roadmap.html
+  - /docs/scos/user/intro-to-spryker/about-spryker-documentation.html
 ---
 
 ## What is the Spryker Commerce OS?
@@ -105,7 +106,6 @@ This documentation site contains lots of information on Spryker Commerce OS. Sel
 * [Setup](/docs/scos/dev/setup/setup.html): installation of Spryker.
 * [Features](/docs/scos/user/features/{{site.version}}/features.html): the Spryker features.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
-* [User Guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Back Office and Storefront user guides.
 * [Developer Guides](/docs/scos/dev/developer-getting-started-guide.html): technical information and guides for developers.
 * [Technology Partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partners.html): Spryker technology partners information and integration guides.
 * [Tutorials](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html): tutorials and HowTos.

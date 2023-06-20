@@ -27,9 +27,9 @@ To start managing orders, go to **Sales&nbsp;<span aria-label="and then">></span
 
 {% info_block warningBox "Returning bundles" %}
 
-You can only return separate items in a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html), not the bundle itself.
+You can only return separate items in a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), not the bundle itself.
 
-You can return [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html) only as a single item.
+You can return [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html) only as a single item.
 
 {% endinfo_block %}
 

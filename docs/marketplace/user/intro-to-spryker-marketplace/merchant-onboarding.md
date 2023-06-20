@@ -12,7 +12,7 @@ There are two primary roles: *operator* and *merchant*:
 * An [operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
 * A [merchant](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
 
-The merchant onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take. 
+The merchant onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take.
 
 If you run into any issues when onboarding the merchant, get in touch with your Spryker contact.
 
@@ -23,23 +23,23 @@ The merchant onboarding process consists of the following steps:
 1. The merchant puts in a request to join the marketplace and provides all required documents.
 2. The operator verifies and registers the merchant.
 3. The operator approves the merchant and provides access to the Merchant Portal.
-4. The merchant [creates products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and [offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
+4. The merchant [creates products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html) and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
 5. The operator decides what kind of payment process to implement—for example, whether or not to use a *Payment Service Provider (PSP)*.
-6. An order management process for fulfillment, shipping, and returns is established for merchants through the [Spryker State Machine](/docs/pbc/all/order-management-system/{{site.version}}/state-machine-cookbook/state-machine-cookbook.html).
+6. An order management process for fulfillment, shipping, and returns is established for merchants through the [Spryker State Machine](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html).
 7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator [activates merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and their products and offers in the Back Office. Everything can be activated through a [data importer](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) as well.
 
 Each step is described in the following sections.
 
 ### 1) Merchant: Put in a request to join
 
-The official onboarding starts with a merchant requesting to join the marketplace. 
+The official onboarding starts with a merchant requesting to join the marketplace.
 
 To request a new merchant account, you can build a landing page with the [Spryker CMS](/docs/pbc/all/content-management-system/{{site.version}}/content-management-system.html) where potential merchants can find the email address or a form to contact the operator to join the marketplace. In some cases, the operator may contact their partners and inform them about the marketplace.
 
 ### 2) Operator: Verify (the KYC process) and register a merchant
 
 1. Gather data a merchant provides, such as a registration number and the company behind the merchant, including representatives' information and their IDs.
-2. To identify the trust level and the need for additional information, validate your merchant through public registers. 
+2. To identify the trust level and the need for additional information, validate your merchant through public registers.
 
 {% info_block infoBox %}
 
@@ -54,9 +54,9 @@ The official relationship between the operator and merchant can be established b
 ### 3) Operator: Approve the merchant
 
 1. In the Back Office, navigate to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
-2. On the **Overview of Merchants** page that opens, in the **Actions** column, click **Approve Access**. 
+2. On the **Overview of Merchants** page that opens, in the **Actions** column, click **Approve Access**.
 
-By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#approving-and-denying-merchants), the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers. 
+By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#approving-and-denying-merchants), the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers.
 Then, the operator needs to create a merchant admin user based on data provided through the registration form, such as the email or first and last name of the contact person. For this, the operator finds a merchant user in the Back Office, in **Merchant&nbsp;<span aria-label="and then">></span> Users** and assigns them the required permissions.
 The email with the password is automatically sent to access the Merchant Portal later on. The operator can also create more user accounts for the merchant if required.
 
@@ -70,7 +70,7 @@ Operator: Decide who is the owner of the product data:
 * If the operator is the owner and manages the product data, other merchants can create offers with specific prices and available quantities on top of existing products.
 * If merchants can create products, the operator needs to make sure there are no duplicates in the Marketplace and regularly check the product data quality.
 
-In the Merchant Portal, merchants can [create and update products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
+In the Merchant Portal, merchants can [create and update products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html) and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
 
 {% info_block infoBox %}
 
@@ -90,7 +90,7 @@ The operator and merchants need to align on categories, attributes, and values t
 ### 5) Operator: Set up the payment process
 
 The operator takes the following steps:
-1. Decide what kind of payment process to implement—for example, whether to use a PSP or not. 
+1. Decide what kind of payment process to implement—for example, whether to use a PSP or not.
 2. Choose a revenue model to apply in the marketplace—for example, transaction-based, subscription-based, or listing-based—and whether a PSP can cover it.
 
 The following example illustrates the process when using a PSP to cover the marketplace payments completely:
@@ -127,10 +127,10 @@ The following diagram shows an example of a simple State Machine workflow, where
 
 The following steps are taken by the operator:
 
-1. Do a final check of the merchant's public profile, products, and offer quality. 
-2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and [approve products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/offers/managing-merchant-product-offers.html#approving-or-denying-offers) in the Back Office. 
+1. Do a final check of the merchant's public profile, products, and offer quality.
+2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and [approve products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers) in the Back Office. 
 3. Optional: Activate and approve products and offers through the data importer.
-4. Optional: To optimize the product and offer approval process, define specific rules per merchant. 
+4. Optional: To optimize the product and offer approval process, define specific rules per merchant.
 
 {% info_block infoBox %}
 
@@ -141,6 +141,3 @@ Trusted merchants can have an automatic pre-approval, while new merchants have t
 ![offers-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-in-the-back-office.png)
 
 ![offers-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-on-the-storefront.png)
-
-
-

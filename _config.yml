@@ -152,7 +152,7 @@ defaults:
      scope:
        path: "docs/scu"
      values:
-       product: "spryker-code-upgrader"
+       product: "scu"
   -
      scope:
        path: "docs/scu/dev"
@@ -224,6 +224,7 @@ versioned_categories:
       - front-end-development
   pbc:
     all:
+      - back-office
       - cart-and-checkout
       - carrier-management
       - content-management-system
@@ -233,8 +234,11 @@ versioned_categories:
       - gift-cards
       - identity-access-management
       - merchant-management
+      - miscellaneous
+      - offer-management
       - order-management-system
       - price-management
+      - payment-service-provider
       - product-information-management
       - product-relationship-management
       - punchout
@@ -295,7 +299,7 @@ algolia:
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'scu_dev'
-      title: 'Cloud Developer'
+      title: 'SCU Developer'
 sass:
     sass_dir: css
     style: compressed

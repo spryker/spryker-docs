@@ -9,7 +9,6 @@ The following information pertains to security-related issues that have been rec
 
 If you need any additional support with this content, [contact our support](mailto:support@spryker.com). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
 
-
 ## Stored XSS in product pages 
 
 Administrators can place a malicious payload into the description section of new and existing product pages in the Back Office application. This payload is then executed to all users of the shop that visit the affected product pages, resulting in a Cross-Site Scripting (XSS) vulnerability.
@@ -17,7 +16,6 @@ Administrators can place a malicious payload into the description section of new
 ## Affected modules
 
 `spryker/product-management`: 0.19.3 - 0.19.35 
-
 
 ## Introduced changes
 
@@ -44,7 +42,6 @@ composer require spryker/product-management:"~0.19.36" spryker/gui:"~3.48.0" spr
 composer show spryker/product-management # Verify the version
 ```
 
-
 ## Cross-company Role Manipulation 
 
 Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This attack was possible by manipulating the company ID parameter included in the HTTP requests of the role creation functionality. 
@@ -52,7 +49,6 @@ Due to missing access validation controls on the backend, an administrator user 
 ## Affected modules
 
 `spryker-shop/company-page`: 1.0.0-2.21.0 
-
 
 ## Introduced changes
 

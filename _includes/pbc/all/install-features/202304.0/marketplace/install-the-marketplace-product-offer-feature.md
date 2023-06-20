@@ -48,7 +48,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up database schema and transfer objects
 
-Adjust the schema definition so that entity changes will trigger events:
+1. Adjust the schema definition so that entity changes will trigger events:
 
 | AFFECTED ENTITY         | TRIGGERED EVENTS                                                                                                        |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -79,7 +79,7 @@ Adjust the schema definition so that entity changes will trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes:
+2. Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -97,7 +97,6 @@ Verify that the following changes have been implemented by checking your databas
 | spy_product_offer_storage                   | table | created |
 | spy_product_offer_store                     | table | created |
 | spy_product_offer_validity                  | table | created |
-
 
 Make sure that the following changes were applied in transfer objects:
 
@@ -141,23 +140,23 @@ console translator:generate-cache
 
 To configure export to Redis and Elasticsearch, take the following steps:
 
-#### Set up publisher plugins:
+#### Set up publisher plugins
 
 | PLUGIN                                                  | SPECIFICATION                                                                                                                                                                                               | PREREQUISITES | NAMESPACE                                                                                          |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
 | ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                                                                                        |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
-| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                                                                                 |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as JSON encoded to storage table.                                                                                                 |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
 | ProductConcreteProductOffersStoreWritePublisherPlugin   | Publishes product concrete product offers using product offer IDs retrieved from event transfers.                                                                                                           |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
 | ProductConcreteProductOffersStoreDeletePublisherPlugin  | Unpublishes product offer reference from `spy_product_concrete_product_offers_storage` by provided `EventEntity.foreign_keys.fk_product_offer` and `EventEntity.foreign_keys.fk_store` transfer properties. |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
-| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config.                                                               |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
-| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                                                                                       |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given `productOfferReferences` and sends a delete message to the queue based on module config.                                                               |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as JSON encoded to storage table.                                                                                       |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
 | ProductOfferStoreWritePublisherPlugin                   | Publishes product offers using product offer IDs retrieved from event transfers.                                                                                                                            |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
 | ProductOfferStoreDeletePublisherPlugin                  | Unpublishes product offers by provided `EventEntity.foreign_keys.fk_product_offer` and `EventEntity.foreign_keys.fk_store` transfer properties.                                                             |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
 | ProductOfferPublisherTriggerPlugin                      | Publishes the product offer collection by offset and limit from Persistence.                                                                                                                                |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher                                     |
 | MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.                                                                          |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
-| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                                                                                  |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant                    |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                                                                              |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer                 |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                                                                                        |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
+| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as JSON encoded to storage table.                                                                                                  |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant                    |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update, and delete product offer events.                                                                                                                              |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer                 |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update, and delete product offer store events.                                                                                                                        |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
 | MerchantProductOfferProductConcreteExpanderPlugin       | Expands product concrete collection with offers.                                                                                                                                                            |               | \Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product                                     |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
@@ -414,7 +413,7 @@ class ProductOfferStorageConfig extends SprykerProductOfferStorageConfig
 }
 ```
 
-3. Configure synchronization search
+3. Configure synchronization search:
 
 **src/Pyz/Zed/MerchantProductOfferSearch/MerchantProductOfferSearchConfig.php**
 
@@ -476,8 +475,8 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 Make sure that after setting up the event listeners, the following commands do the following:
 
-1. `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
-2. `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
+* `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
+* `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
 
 Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
 
@@ -490,7 +489,7 @@ Make sure that when the following entities get updated through the ORM, the corr
 
 ### 5) Import data
 
-Prepare your data according to your requirements using the demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
@@ -1072,7 +1071,7 @@ offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 | valid_from              |          | String    | 2020-01-01   | Date since which the product offer is valid. |
 | valid_to                |          | String    | 2020-01-01   | Date till which the product offer is valid.  |
 
-Register the following plugins to enable data import:
+2. Register the following plugins to enable data import:
 
 | PLUGIN                                    | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                                  |
 |-------------------------------------------|---------------------------------------------------|---------------|----------------------------------------------------------------------------|
@@ -1148,11 +1147,9 @@ console data:import product-offer-validity
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product offer data is attached to Merchants in `spy_product_offer`.
-
-Make sure that the product offer data is attached to Stores in `spy_product_offer_store`.
-
-Make sure that the product offer validity data is correctly imported in `spy_product_offer_validity`.
+Make sure the following is true:
+* The product offer data is attached to Merchants in `spy_product_offer` and to Stores in `spy_product_offer_store`.
+* The product offer validity data is imported to `spy_product_offer_validity` correctly.
 
 {% endinfo_block %}
 
@@ -1568,30 +1565,24 @@ class ProductOfferShipmentTypeStorageDependencyProvider extends SprykerProductOf
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following is a true:
-
-The default product offer is given when retrieving product concrete data.
-
-The validity data is saved when saving a product offer.
-
-Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
-
-The merchant column is in the Product Offers list in `ProductOfferGui`.
-
-The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
+Make sure that the following is true:
+* The default product offer is given when retrieving product concrete data.
+* The validity data is saved when saving a product offer.
+* Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
+* The merchant column is in the Product Offers list, in `ProductOfferGui`.
+* The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
 
 When a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
 
 It means the following:
-
-1. If a merchant gets deactivated, `ProductAbstract`of abstract products that were on the catalog search only because they had a product offer from that merchant get removed.
+1. If a merchant gets deactivated, `ProductAbstract` of abstract products that were on the catalog search only because they had a product offer from that merchant get removed.
 2. If a product offer gets created, the related `ProductAbstract` that was unavailable on catalog search gets available now.
 
 {% endinfo_block %}
 
 ### 7) Configure navigation
 
-1. Add product offers section to marketplace section of `navigation.xml`:
+1. Add the product offers section to the marketplace section of `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -1620,7 +1611,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, make sure that in **Marketplace*, the **Offers** menu item is displayed.
+In the Back Office, make sure that, in Marketplace, the **Offers** menu item is displayed.
 
 {% endinfo_block %}
 
@@ -1656,7 +1647,7 @@ Verify that the following modules have been installed:
 
 ### 2) Add Translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -1688,8 +1679,6 @@ Make sure that the configured data is added to the `spy_glossary_key` and `spy_g
 {% endinfo_block %}
 
 ### 3) Enable controllers
-
-Enable controllers as follows:
 
 Register the following route provider on the Storefront:
 
@@ -1775,7 +1764,7 @@ Make sure that the following widgets were registered:
 | MODULE                            | TEST                                                                                                                                  |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | MerchantProductOfferWidget        | Go to a product concrete details page that has product offers and check if the default offer is selected and the widget is displayed. |
-| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders product offers list after performing a product search.                              |
+| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders the product offers list after performing a product search.                              |
 
 {% endinfo_block %}
 

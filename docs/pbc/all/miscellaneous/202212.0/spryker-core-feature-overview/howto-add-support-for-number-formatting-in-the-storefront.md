@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
 ---
 
-This document explains how to add support for number formatting in the Storefront UI.
+Number formats can vary by locales. For example, if in the DE locale there is a number _123.456,78_, in the US locale it would be _123,456.78_. To enable the proper number formatting by locale in your store, follow the instructions in this document.
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product Offer into a Spryker project.
+This document describes how to integrate the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -17,8 +17,6 @@ To start feature integration, integrate the required features:
 | Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                                                                    |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --update-with-dependencies
@@ -253,6 +251,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Set up event listeners
 
+1. Set up the following plugins:
+
 | PLUGIN                                    | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                                                    |
 |-------------------------------------------|------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
 | MerchantProductOfferSearchEventSubscriber | Registers listeners responsible for publishing merchant product offer search to storage. |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
@@ -285,7 +285,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Register the synchronization queue and synchronization error queue:
+2. Register the synchronization queue and synchronization error queue:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -346,7 +346,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up, re-generate, and re-sync features
+#### Set up, regenerate, and resync features
+
+1. Set up the following plugins:
 
 | PLUGIN                                                              | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------------------------|---------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -379,7 +381,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-Configure synchronization storage:
+2. Configure synchronization storage:
 
 **src/Pyz/Zed/ProductOfferStorage/ProductOfferStorageConfig.php**
 
@@ -412,7 +414,7 @@ class ProductOfferStorageConfig extends SprykerProductOfferStorageConfig
 }
 ```
 
-Configure synchronization search
+3. Configure synchronization search
 
 **src/Pyz/Zed/MerchantProductOfferSearch/MerchantProductOfferSearchConfig.php**
 
@@ -444,7 +446,7 @@ class MerchantProductOfferSearchConfig extends SprykerMerchantProductOfferSearch
 }
 ```
 
-Product feature setup 
+4. Set up the product feature setup 
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -474,10 +476,10 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 Make sure that after setting up the event listeners, the following commands do the following:
 
-1. `console sync:data product_concrete_product_offers` exports data from `spy_product_concrete_product_offers_storage` table to Redis.
-2. `console sync:data product_offer` exports data from `spy_product_offer_storage` table to Redis.
+1. `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
+2. `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
 
-Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
+Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER                | EXAMPLE EXPECTED DATA FRAGMENT                                                                           |
 |---------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------|
@@ -631,14 +633,14 @@ offer418,112_312526172,MER000002,,1,approved
 ```
 </details>
 
-| COLUMN                  | REQUIRED     | DATA TYPE | DATA EXAMPLE  | DATA EXPLANATION                                                                                                                                                                                                                                                                                                                                         |
-|-------------------------|--------------|-----------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| product_offer_reference | &check;      | string    | offer1        | Product offer reference that will be referenced to this merchant.                                                                                                                                                                                                                                                                                        |
-| concrete_sku            | &check;      | string    | 093_24495843  | Concrete product SKU this product offer is attached to.                                                                                                                                                                                                                                                                                                  |
-| merchant_reference      | &check;      | string    | MER000002     | Merchant identifier.                                                                                                                                                                                                                                                                                                                                     |
-| merchant_sku            |              | string    | GS952M00H-Q11 | merchant internal SKU for the product offer.                                                                                                                                                                                                                                                                                                             |
-| is_active               |              | boolean   | 1             | Product offer status, defaults to 1.                                                                                                                                                                                                                                                                                                                     |
-| approval_status         |              | string    | approved      | Approval status (Waiting for Approval – Approved – Denied). Denied and Waiting for Approval statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true.This can be configured (along with the transition between statuses in ProductOfferConfig). If not supplied, ProductOfferConfig → getDefaultStatus is applied. |
+| COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE  | DATA EXPLANATION                                                                                                                                                                                                                                                                                                                                                      |
+|-------------------------|----------|-----------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| product_offer_reference | &check;  | string    | offer1        | Product offer identifier that references to this merchant.                                                                                                                                                                                                                                                                                                            |
+| concrete_sku            | &check;  | string    | 093_24495843  | Concrete product SKU this product offer is attached to.                                                                                                                                                                                                                                                                                                               |
+| merchant_reference      | &check;  | string    | MER000002     | Merchant identifier.                                                                                                                                                                                                                                                                                                                                                  |
+| merchant_sku            |          | string    | GS952M00H-Q11 | Merchant internal SKU for the product offer.                                                                                                                                                                                                                                                                                                                          |
+| is_active               |          | boolean   | 1             | Product offer status, defaults to 1.                                                                                                                                                                                                                                                                                                                                  |
+| approval_status         |          | string    | approved      | (*Waiting for Approval*&nbsp;=> *Approved*&nbsp;=> *Denied*). *Denied* and *Waiting for Approval* statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true. This can be configured (along with the transition between statuses in `ProductOfferConfig`). If not supplied, `ProductOfferConfig` → `getDefaultStatus` is applied. |
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
@@ -1566,28 +1568,30 @@ class ProductOfferShipmentTypeStorageDependencyProvider extends SprykerProductOf
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a default product offer is given when retrieving product concrete data.
+Make sure that the following is a true:
 
-Make sure that validity data is saved when saving a product offer.
+The default product offer is given when retrieving product concrete data.
 
-Make sure Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
+The validity data is saved when saving a product offer.
 
-Make sure the Merchant column is in the Product Offers list in `ProductOfferGui`.
+Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
 
-Make sure the console command invalidates expired product offers and reactivates product offers that are within their validity dates.
+The merchant column is in the Product Offers list in `ProductOfferGui`.
 
-Make sure that when a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
+The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
+
+When a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
 
 It means the following:
 
-1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
-2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
+1. If a merchant gets deactivated, `ProductAbstract`of abstract products that were on the catalog search only because they had a product offer from that merchant get removed.
+2. If a product offer gets created, the related `ProductAbstract` that was unavailable on catalog search gets available now.
 
 {% endinfo_block %}
 
 ### 7) Configure navigation
 
-Add product offers section to marketplace section of `navigation.xml`:
+1. Add product offers section to marketplace section of `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -1608,7 +1612,7 @@ Add product offers section to marketplace section of `navigation.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Execute the following command:
 
 ```bash
 console navigation:build-cache
@@ -1616,14 +1620,14 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
+In the Back Office, make sure that in **Marketplace*, the **Offers** menu item is displayed.
 
 {% endinfo_block %}
 
 
 ## Install feature frontend
 
-Follow the steps below to install the Marketplace Product Offer feature front end.
+Follow the steps below to install the Marketplace Product Offer feature frontend.
 
 ### Prerequisites
 
@@ -1636,11 +1640,11 @@ To start feature integration, integrate the following features:
 
 ### 1) Install the required modules using Composer
 
-If installed before, not needed.
+If already installed, skip this step.
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following modules were installed:
+Verify that the following modules have been installed:
 
 | MODULE                              | EXPECTED DIRECTORY                                   |
 |-------------------------------------|------------------------------------------------------|
@@ -1652,7 +1656,7 @@ Verify that the following modules were installed:
 
 ### 2) Add Translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -1671,7 +1675,7 @@ merchant_product_offer_widget.merchant_name,Merchant,en_US
 merchant_product_offer_widget.merchant_name,Händler,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -1725,7 +1729,7 @@ Make sure that the `yves.mysprykershop.com/merchant-product-offer-widget/merchan
 
 ### 4) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN                            | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE                                          |
 |-----------------------------------|------------------------------------------------------------------------|---------------|----------------------------------------------------|
@@ -1758,7 +1762,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1768,10 +1772,10 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| MODULE                            | TEST                                                                                                                               |
-|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| MerchantProductOfferWidget        | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
-| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders product offers list after performing a product search.                           |
+| MODULE                            | TEST                                                                                                                                  |
+|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| MerchantProductOfferWidget        | Go to a product concrete details page that has product offers and check if the default offer is selected and the widget is displayed. |
+| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders product offers list after performing a product search.                              |
 
 {% endinfo_block %}
 
@@ -1812,11 +1816,11 @@ class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDe
 | FEATURE                                              | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                                            |
 |------------------------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)                                                                                        |
-| Marketplace Product Offer Prices                     |                                  | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                                                                          |
+| Marketplace Product Offer Prices                     |                                  | [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                          |
 | Marketplace Merchant Portal Product Offer Management |                                  | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)                                                  |
 | Marketplace Product Offer API                        |                                  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)                                                                         |
 | Marketplace Product + Marketplace Product Offer      |                                  | [Marketplace Product + Marketplace Product Offer feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-marketplace-product-offer-feature.html) |
 | Marketplace Product Offer + Cart                     |                                  | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)                                                                            |
 | Marketplace Product Offer + Checkout                 |                                  | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)                                                                    |
-| Marketplace Product Offer + Prices                   |                                  | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                                                                        |
-| Marketplace Product Offer + Quick Add to Cart        |                                  | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html)                                                  |
+| Marketplace Product Offer + Prices                   |                                  | [Marketplace Product Offer + Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                        |
+| Marketplace Product Offer + Quick Add to Cart        |                                  | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html)                                                  |

@@ -6,8 +6,7 @@ template: howto-guide-template
 
 The information about non-standard services is provided in the [prerequisites form](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
 
-Services mentioned in prerequisites have to be compared with the services from Spryker documentation to get the diff:
-[System requirements: Spryker product release 202204.0](/docs/scos/dev/system-requirements/202204.0/system-requirements.html).
+To asses the migration effort for services, compare the non-standard services with the [default services](/docs/scos/dev/system-requirements/202204.0/system-requirements.html).
 
 ## Resources for assessment
 

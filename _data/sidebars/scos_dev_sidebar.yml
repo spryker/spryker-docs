@@ -2789,12 +2789,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
     - title: Migration Guide - Setup
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
-    - title: Migration Guide - SharedCartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
-    - title: Migration Guide - Stock
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stock.html
     - title: Migration Guide - StockSalesConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
   - title: DevOps migration guides

@@ -782,6 +782,8 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
                   - title: CustomerReorderWidget
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
+                  - title: SharedCartPage
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
           - title: Company Account feature overview
             url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-account-feature-overview.html
             nested:
@@ -1493,7 +1495,7 @@ entries:
                       - title: Sales
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
                       - title: SalesQuantity
-                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html                                                
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html
                       - title: SalesSplit
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html
                   - title: Split delivery migration concept
@@ -2332,10 +2334,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html
                       - title: ProductValidity
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
+                      - title: Stock
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html                        
                       - title: Touch
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
-                        include_versions:
-                        - "202212.0"
 
                   - title: Decimal Stock migration concept
                     url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/decimal-stock-migration-concept.html

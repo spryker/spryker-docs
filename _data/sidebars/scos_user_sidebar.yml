@@ -155,10 +155,18 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
       - title: Edit the documentation locally
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
-      - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
+      - title: General rules and guidance for adding new documents
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html
       - title: Markdown syntax
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
+      - title: Spryker documentation style guide
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spryker-documentation-style-guide.html
+        nested:
+          - title: Examples
+            url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html
+          - title: Spelling
+            url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html
+
       - title: Add and edit diagrams
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
       - title: Install recommended VS Code extensions

@@ -75,4 +75,4 @@ You can also see which one was the most expensive in terms of memory:
 
 ## Next steps
 
-Once you have deployed your application, you can use NewRelic APM to monitor its performance in real time. If still you haven't done it, see the "New Relic" section in the [Configure services](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#new-relic) guide.
+Once you have deployed your application, you can use NewRelic APM to monitor its performance in real-time. If you still haven't done it, see the "New Relic" section in the [Configure services](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#new-relic) guide.

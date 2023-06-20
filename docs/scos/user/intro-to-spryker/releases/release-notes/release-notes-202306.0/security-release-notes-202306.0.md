@@ -13,15 +13,15 @@ If you need any additional support with this content, [contact our support](mail
 
 Administrators can place a malicious payload into the description section of new and existing product pages in the Back Office application. This payload is then executed to all users of the shop that visit the affected product pages, resulting in a Cross-Site Scripting (XSS) vulnerability.
 
-## Affected modules
+### Affected modules
 
 `spryker/product-management`: 0.19.3 - 0.19.35 
 
-## Introduced changes
+### Introduced changes
 
 Sanitization controls have been implemented to prevent the input of malicious payloads within product forms.
 
-## How to get the fix
+### How to get the fix
 
 To implement a fix for this vulnerability, the ProductManagement module should be updated to version 0.19.36.
 
@@ -42,19 +42,19 @@ composer require spryker/product-management:"~0.19.36" spryker/gui:"~3.48.0" spr
 composer show spryker/product-management # Verify the version
 ```
 
-## Cross-company Role Manipulation 
+## Cross-company role manipulation 
 
 Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This attack was possible by manipulating the company ID parameter included in the HTTP requests of the role creation functionality. 
 
-## Affected modules
+### Affected modules
 
 `spryker-shop/company-page`: 1.0.0-2.21.0 
 
-## Introduced changes
+### Introduced changes
 
 Access validation controls have been implemented to prevent administrators from being able to create and edit roles for other companies. 
 
-## How to get the fix
+### How to get the fix
 
 The update requires PHP 8 to be installed. If you are using PHP 7, see [PHP 8.0 as the minimum version for all Spryker projects](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html).
 
@@ -66,19 +66,19 @@ composer show spryker-shop/company-page # Verify the version
 ```
 
 
-## Unvalidated URL Redirection
+## Unvalidated URL redirection
 
 Attackers were able to bypass the redirect URL validation for URLs provided through the GET request parameter and control the website that the user is redirected to. This type of vulnerability can be used in conjunction with social engineering to coerce a victim into navigating to a malicious resource or location.
 
-## Affected modules
+### Affected modules
 
 `spryker/kernel`: 1.0.0-3.72.0
 
-## Introduced changes
+### Introduced changes
 
 Additional validation controls have been implemented to prevent an attacker from being able to manipulate the location of the URL redirection. 
 
-## How to get the fix
+### How to get the fix
 
 To implement a fix for this vulnerability, update the Kernel module:
 
@@ -114,15 +114,15 @@ composer show spryker/kernel # Verify the version
 
 The Back Office and Merchant portals were prone to brute-force attacks. By exploiting this type of vulnerability, an attacker was able to systematically attempt different combinations of usernames and passwords against the login pages of the affected portals until a valid combination is identified.
 
-## Affected modules
+### Affected modules
 
 `spryker/security-blocker`: 1.0.0-1.1.1
 
-## Introduced changes
+### Introduced changes
 
 Maximum login attempts and blocking time can be configured for the affected portals.
 
-## How to get the fix
+### How to get the fix
 
 1. Upgrade the `spryker/security-blocker` module version to 1.2.0:
 
@@ -174,7 +174,7 @@ console transfer:generate
 
 8. Add configuration to `config/Shared/config_default.php`:
 
-```bash
+```php
 // >>> Security Blocker Storefront Agent
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL] = 900;
@@ -193,7 +193,7 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 9. Add translations to `data/import/common/common/glossary.csv`:
 
-```bash
+```csv
 security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
@@ -206,7 +206,7 @@ console data:import:glossary
 
 11. Register plugins in `SecurityBlockerDependencyProvider`:
 
-```bash
+```php
 <?php
 
 namespace Pyz\Client\SecurityBlocker;
@@ -234,7 +234,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 12. Adjust `src/Pyz/Zed/ErrorHandler/ErrorHandlerConfig.php`:
 
-```bash
+```php
 <?php
 
 namespace Pyz\Zed\ErrorHandler;
@@ -266,7 +266,7 @@ class ErrorHandlerConfig extends SprykerErrorHandlerConfigAlias
 
 13. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
-```bash
+```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider 
 {
 ...
@@ -304,7 +304,7 @@ console transfer:generate
 
 4. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
-```bash
+```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider 
 {
 ...
@@ -320,7 +320,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 5. Register plugins in `SecurityBlockerDependencyProvider`:
 
-```bash
+```php
 <?php
 
 /**
@@ -350,7 +350,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 6. Add configuration to `config/Shared/config_default.php`:
 
-```bash
+```php
 // >>> Security Blocker MerchantPortal user
 $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
@@ -359,7 +359,7 @@ $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NU
 
 7. Add translations to `data/import/common/common/glossary.csv`:
 
-```bash
+```csv
 security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```

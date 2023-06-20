@@ -76,7 +76,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html)
 - [Product Groups](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-groups-feature-overview.html)
 - [Product Relations](/docs/pbc/all/product-relationship-management/{{site.version}}/product-relationship-management.html)
-- [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/product-sets-feature-overview.html)
+- [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/product-sets-feature-overview.html)
 - [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
 - [Product Barcode](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-barcode-feature-overview.html)
 - [Product Bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)

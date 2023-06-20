@@ -177,17 +177,17 @@ Ensure the following transfers have been created:
 
 **vendor/spryker/spryker/Bundles/ProductOfferShipmentTypeDataImport/data/import/product_offer_shipment_type.csv**
 ```csv
-shipment_type_key,product_offer_reference
-delivery,offer1
-delivery,offer2
-delivery,offer3
-pickup,offer4
+product_offer_reference,shipment_type_key
+offer1,delivery
+offer2,delivery
+offer3,delivery
+offer4,pickup
 ```
 
 | COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION            |
 |-------------------------|-----------|-----------|--------------|-----------------------------|
-| shipment_type_key       | mandatory | string    | delivery     | Key of the shipment type.   |
 | product_offer_reference | mandatory | string    | offer1       | Reference of product offer. |
+| shipment_type_key       | mandatory | string    | delivery     | Key of the shipment type.   |
 
 2. Register the following data import plugin:
 

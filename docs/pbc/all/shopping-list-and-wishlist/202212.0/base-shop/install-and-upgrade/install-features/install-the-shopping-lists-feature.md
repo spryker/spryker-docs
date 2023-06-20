@@ -1,5 +1,5 @@
 ---
-title: Integrate the Shopping Lists feature
+title: Install the Shopping Lists feature
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/shopping-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/shopping-lists-feature-integration.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/integrate-the-shopping-lists-feature.html
 related:
   - title: Glue API - Shopping Lists feature integration
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html

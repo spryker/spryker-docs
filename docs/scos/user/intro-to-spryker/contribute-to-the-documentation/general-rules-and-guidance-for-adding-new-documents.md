@@ -1,10 +1,11 @@
 ---
-title: Style, syntax, formatting, and general rules
+title: General rules and guidance for adding new documents
 description: Learn how to style and format your docs.
 last_updated: Jul 18, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+  - /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
@@ -20,13 +21,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-This document describes the structure, main style, syntax and formatting rules of the [Spryker documents](https://github.com/spryker/spryker-docs).
-
-{% info_block infoBox "Info" %}
-
-Note that Spryker documentation is written in US English.
-
-{% endinfo_block %}
+This document describes the directory structure, templates, front matter, and versioning of Spryker documentation.
 
 ## Directory structure
 

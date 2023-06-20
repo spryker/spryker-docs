@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/cms-page-search-product-lists-catalog-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-product-lists-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cms-product-lists-catalog-feature-integration.html
+  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
 related:
   - title: Product Lists feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html

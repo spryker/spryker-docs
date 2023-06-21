@@ -4,6 +4,6 @@ description: Quick Add to Cart + Shopping Lists allow creating a shopping list t
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:
-  - - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-shopping-lists-feature.md -->

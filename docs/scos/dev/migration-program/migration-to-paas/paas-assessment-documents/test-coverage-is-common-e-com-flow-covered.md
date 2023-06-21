@@ -4,8 +4,7 @@ description: This document allows you to assess if Common E-com flow is covered 
 template: howto-guide-template
 ---
 
-
-Do a code review of the archived project received as part of the prerequisites and identify if the following functionalities were covered with tests:
+Do a code review of the project and identify if the following functionalities were covered with tests:
 * Product Listing page
 * Product Details page
 * Add to cart
@@ -26,4 +25,4 @@ Backend
 
 ## Formula for calculating the migration effort
 
-Approximately 1 day per functionality or module.
+Approximately 1 day per functionality or module not covered with tests.

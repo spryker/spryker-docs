@@ -25,4 +25,5 @@ function may be used for this purpose too.
 ## Formula for calculating the migration effort
 
 1. If sensitive information is defined as env variables, respective variables with values need to be defined in the cloud environments. Approximately 4h per environment.
-2. If sensitive information is defined using another approach, the effort is estimated based on the current approach and the number of configuration values that need to be reworked. Approximately 10m per configuration item.
+
+2. If sensitive information is defined using another approach, estimate the additional effort based on the current approach and the number of configuration values that need to be reworked. Approximately 10m per configuration item.

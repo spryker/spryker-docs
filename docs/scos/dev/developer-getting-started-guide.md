@@ -67,10 +67,10 @@ Both Demo Shops can also be expanded with separate [features](/docs/scos/user/fe
 
 When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements.
 
-To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
+To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/set-up/install-spryker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
-* Make sure you have all of the necessary [prerequisites before installing docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).
-* Once you have the necessary prerequisites set up, you can then [choose your installation mode with your OS](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#installation). You can install docker in modes for Development, Demo, or add it to an existing project.
+* Make sure you have all of the necessary [prerequisites before installing docker](/docs/scos/dev/set-up/install-spryker/installing-spryker-with-docker.html#prerequisites).
+* Once you have the necessary prerequisites set up, you can then [choose your installation mode with your OS](/docs/scos/dev/set-up/install-spryker/installing-spryker-with-docker.html#installation). You can install docker in modes for Development, Demo, or add it to an existing project.
 
 #### The deploy file
 
@@ -110,7 +110,7 @@ To better define your strategy when implementing Spryker updates, learn about ou
 
 {% endinfo_block %}
 
-When installing and managing module dependencies, we use [Composer](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
+When installing and managing module dependencies, we use [Composer](/docs/scos/dev/set-up/managing-scos-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
 
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 * To update all the modules for your project: `composer update "spryker/*"`.
@@ -139,8 +139,8 @@ The next step to take once installation has finished and modules set up, you nee
 
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    * [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
-    * [Redis](/docs/scos/dev/setup/redis-configuration.html)
+    * [Database](/docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
+    * [Redis](/docs/scos/dev/set-up/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.

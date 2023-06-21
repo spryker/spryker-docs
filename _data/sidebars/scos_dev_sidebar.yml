@@ -6,7 +6,7 @@ entries:
   - title: Developer getting started guide
     url: /docs/scos/dev/developer-getting-started-guide.html
   - title: Setup
-    url: /docs/scos/dev/setup/setup.html
+    url: /docs/scos/dev/set-up/setup.html
     nested:
     - title: System requirements
       url: /docs/scos/dev/system-requirements/system-requirements.html
@@ -19,56 +19,56 @@ entries:
       include_versions:
       - "202204.0"
     - title: "Quickstart guides: Install Spryker"
-      url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
+      url: /docs/scos/dev/set-up/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
       - title: "Quickstart guide: Install Spryker on MacOS and Linux"
-        url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
+        url: /docs/scos/dev/set-up/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
       - title: "Quickstart guide: Install Spryker on Windows"
-        url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
+        url: /docs/scos/dev/set-up/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
     - title: Installing Spryker with Docker
-      url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html
+      url: /docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites.html
       nested:
       - title: Installing Docker prerequisites
-        url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html
+        url: /docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites.html
         nested:
-        - title: Installing Docker prerequisites on MacOS
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
-        - title: Installing Docker prerequisites on Linux
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
-        - title: Installing Docker prerequisites on Windows with WSL1
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
-        - title: Installing Docker prerequisites on Windows with WSL2
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
-      - title: Choosing an installation mode
-        url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
+        - title: Install Docker prerequisites on MacOS
+          url: /docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
+        - title: Install Docker prerequisites on Linux
+          url: /docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
+        - title: Install Docker prerequisites on Windows with WSL1
+          url: /docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+        - title: Install Docker prerequisites on Windows with WSL2
+          url: /docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
+      - title: Choose an installation mode
+        url: /docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html
         nested:
-        - title: Installing in Development mode on MacOS and Linux
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html
-        - title: Installing in Development mode on Windows
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html
-        - title: Installing in Demo mode on MacOS and Linux
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html
-        - title: Installing in Demo mode on Windows
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
+        - title: Install in Development mode on MacOS and Linux
+          url: /docs/scos/dev/set-up/install-spryker/install/install-in-development-mode-on-macos-and-linux.html
+        - title: Install in Development mode on Windows
+          url: /docs/scos/dev/set-up/install-spryker/install/install-in-development-mode-on-windows.html
+        - title: Install in Demo mode on MacOS and Linux
+          url: /docs/scos/dev/set-up/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html
+        - title: Install in Demo mode on Windows
+          url: /docs/scos/dev/set-up/install-spryker/install/install-in-demo-mode-on-windows.html
         - title: Integrating the Docker SDK into existing projects
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
+          url: /docs/scos/dev/set-up/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html
       - title: Configuration
-        url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuration.html
+        url: /docs/scos/dev/set-up/configure-after-installing/configuration.html
         nested:
-        - title: Adjusting Jenkins for a Docker environment
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
+        - title: Adjust Jenkins for a Docker environment
+          url: /docs/scos/dev/set-up/configure-after-installing/adjust-jenkins-for-a-docker-environment.html
         - title: Configure Spryker after installing
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
-        - title: Setting up a self-signed SSL certificate
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
+          url: /docs/scos/dev/set-up/configure-after-installing/configure-spryker-after-installing-with-docker.html
+        - title: Set up a self-signed SSL certificate
+          url: /docs/scos/dev/set-up/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
       - title: Database access credentials
-        url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
+        url: /docs/scos/dev/set-up/install-spryker/database-access-credentials.html
     - title: Installing Spryker with custom set of modules
-      url: /docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
-    - title: Managing SCOS dependencies with Composer
-      url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
+      url: /docs/scos/dev/set-up/installing-spryker-with-custom-set-of-modules.html
+    - title: Manage dependencies with Composer
+      url: /docs/scos/dev/set-up/managing-scos-dependencies-with-composer.html
     - title: Redis configuration
-      url: /docs/scos/dev/setup/redis-configuration.html
+      url: /docs/scos/dev/set-up/redis-configuration.html
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
     nested:
@@ -5234,21 +5234,21 @@ entries:
       - title: Troubleshooting Docker installation
         nested:
         - title: An error during frontend setup
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/an-error-during-front-end-setup.html
         - title: Demo data was imported incorrectly
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/demo-data-was-imported-incorrectly.html
         - title: Docker daemon is not running
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/docker-daemon-is-not-running.html
         - title: docker-sync cannot start
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/docker-sync-cannot-start.html
         - title: Error 403 No valid crumb was included in the request
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
         - title: Node Sass does not yet support your current environment
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/node-saas-does-not-yet-support-your-current-environment.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
         - title: Setup of new indexes throws an exception
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
         - title: Vendor folder synchronization error
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
+          url: /docs/scos/dev/set-up/troubleshooting-installation/vendor-folder-synchronization-error.html
   - title: Updating Spryker
     url: /docs/scos/dev/updating-spryker/updating-spryker.html
     nested:

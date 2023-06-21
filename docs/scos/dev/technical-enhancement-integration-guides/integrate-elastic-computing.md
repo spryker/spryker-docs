@@ -234,7 +234,7 @@ class GlossaryWriterStep extends PublishAwareStep implements DataImportStepInter
 
 
 
-<!--
+
 
 ## Integrate scalable application infrastructure for publish and sync workers
 
@@ -269,7 +269,7 @@ class QueueConfig extends SprykerQueueConfig
 
 As a result, the worker spawns a group of processes per each non-empty queue based on the number of messages and available RAM.
 
--->
+
 
 ## Integrate Storage caching for primary-replica database setups
 

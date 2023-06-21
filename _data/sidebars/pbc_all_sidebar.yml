@@ -1272,8 +1272,6 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-permissions-feature.html
                   - title: Queue Data Import
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
-                  - title: Sales Data Export
-                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
                   - title: Spryker Core
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
               - title: Install Glue API
@@ -1486,6 +1484,8 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
                       - title: Splittable Order Items
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
+                      - title: Sales Data Export
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html                        
                   - title: Install Glue API
                     nested:
                       - title: Checkout
@@ -3070,28 +3070,34 @@ entries:
                 url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.html
               - title: Install and upgrade
                 nested:
-                  - title: Integrate the Shopping Lists feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-lists-feature.html
-                  - title: Integrate the Shopping Lists Glue API
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-lists-glue-api.html
-                  - title: Install the Shopping List + Agent Assist feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-list-agent-assist-feature.html
-                  - title: Install the Shopping Lists + Quick Add to Cart feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
-                  - title: Integrate the Shopping Lists + Product Options feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-lists-product-options-feature.html
-                  - title: Integrate the Wishlist Glue API
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-wishlist-glue-api.html
-                  - title: Install the Wishlist + Alternative Products feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-wishlist-alternative-products-feature.html
-                  - title: Upgrade the ShoppingList module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglist-module.html
-                  - title: Upgrade the ShoppingListPage module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglistpage-module.html
-                  - title: Upgrade the ShoppingListWidget module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
-                  - title: Upgrade the Wishlist module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html
+                  - title: Install features
+                    nested:
+                      - title: Install the Shopping Lists feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html
+                      - title: Install the Shopping List + Agent Assist feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-list-agent-assist-feature.html
+                      - title: Install the Shopping Lists + Quick Add to Cart feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-quick-add-to-cart-feature.html
+                      - title: Install the Shopping Lists + Product Options feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html
+                      - title: Install the Wishlist + Alternative Products feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-wishlist-alternative-products-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Install the Shopping Lists Glue API
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
+                      - title: Install the Wishlist Glue API
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: Upgrade the ShoppingList module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglist-module.html
+                      - title: Upgrade the ShoppingListPage module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistpage-module.html
+                      - title: Upgrade the ShoppingListWidget module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html
+                      - title: Upgrade the Wishlist module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html
               - title: Manage using Glue API
                 nested:
                   - title: Shopping lists

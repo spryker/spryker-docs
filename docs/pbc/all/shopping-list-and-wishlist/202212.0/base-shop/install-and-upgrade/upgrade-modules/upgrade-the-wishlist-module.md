@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-wishlist.html
   - /module_migration_guides/mg-wishlist.htm
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-wishlist.html  
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html
 related:
   - title: Upgrade the Cart
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html

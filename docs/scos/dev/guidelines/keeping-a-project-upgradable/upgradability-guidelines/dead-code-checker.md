@@ -8,9 +8,10 @@ The dead code checker checks for dead code that extends core classes in your pro
 
 ## Problem description
 
-The project can extend core classes and after some time it can become unusable due to project or core changes. As a result, issues related to the project's upgradability arise.
-It checks possible dead classes. The Spryker kernel classes such as `Factory`, `Facade` or `DependencyProvider` tend to be skipped.
-Optionally, you can mute the dead code checker for a specific class with `@evaluator-skip-dead-code`.
+The project has the capability to extend Spryker core classes, but over time, it may become ineffective due to changes in the project or core components.
+This results in unnecessary additional time investment from developers, as they need to update the dead code.
+This check examines potential obsolete classes, with a tendency to overlook important Spryker kernel classes like `Factory`, `Facade`, or `DependencyProvider`.
+If desired, you have the option to disable the dead code checker for a particular class using the `@evaluator-skip-dead-code` annotation.
 
 ## Example of evaluator error message
 

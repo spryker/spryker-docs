@@ -8,9 +8,9 @@ template: howto-guide-template
 
 ## Problem description
 
-The project should meet the minimum required Spryker product release to make it upgradable by [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html). 
+To enable smooth upgradability of the project using the [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html), it is essential for the project to adhere to the minimum required Spryker product release.
 
-If the project doesn't use the feature packages, the corresponding Spryker module versions should be used.
+In case the project does not utilize the feature packages, it is necessary to ensure that the corresponding Spryker module versions are used.
 
 ## Example of evaluator error message
 

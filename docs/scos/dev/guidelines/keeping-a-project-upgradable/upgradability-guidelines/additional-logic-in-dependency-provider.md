@@ -4,13 +4,14 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-"Additional logic in dependency provider" check checks the way how plugins are registered in dependency provider on the project level.
+"Additional logic in dependency provider" check checks the way how plugins are registered in the dependency provider on the project level.
 
 ## Problem description
 
-On the project level, developers use `if` constructs with variety of expressions in dependency providers to register the plugins in particular cases only.
+At the project level, developers use `if` structures with diverse expressions in dependency providers to selectively register plugins in specific cases.
 
-Used expressions inside of the `if` statements should not complicate use the complicated logic in dependency provider. This check verifies that if an `if` construct is used for plugin registration, then only one of the following expressions is used:
+The expressions utilized within the `if` statements should not overly complicate the logic within the dependency provider.
+This check ensures that if an `if` structure is used for plugin registration, only one of the subsequent expressions is used:
 
 1. `class_exists` function call
 

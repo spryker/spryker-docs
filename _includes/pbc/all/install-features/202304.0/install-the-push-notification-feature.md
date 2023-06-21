@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  |
 
 ### 1) Install the required modules using Composer
 
@@ -282,7 +282,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 Ensure that the installer plugin works correctly:
 
-1. Execute install plugins: 
+1. Execute install plugins:
 ```bash
 docker/sdk console setup:init-db
 ```
@@ -317,7 +317,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
      * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
-    { 
+    {
         return [
             new DeleteExpiredPushNotificationSubscriptionConsole(),
             new SendPushNotificationConsole(),
@@ -638,7 +638,7 @@ self.addEventListener('push', function (event) {
 
 5. Setup credentials:
    1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your `VAPID` public key.
-   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system. 
+   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system.
 6. Run the local HTTP server with the demo app:
 ```bash
 php -S localhost:8000

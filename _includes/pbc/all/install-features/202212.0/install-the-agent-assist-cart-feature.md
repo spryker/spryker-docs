@@ -8,7 +8,7 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME         | VERSION | INTEGRATION GUIDE                                            |
 | ------------ | ------- | ------------------------------------------------------------ |
-| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Agent Assist | {{page.version}}  | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html) |
 | Cart         | {{page.version}}  | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
 

@@ -305,7 +305,7 @@ s2,sp2,pickup,1
 | service_type_key  | mandatory | string    | pickup            | Unique key of the service type.   |
 | is_active         | mandatory | bool      | 0                 | Defines if the service is active. |
 
-**data/import/common/common/marketplace/product_offer_service.csv**
+**data/import/common/common/product_offer_service.csv**
 
 ```csv
 product_offer_reference,service_key

@@ -34,7 +34,7 @@ related:
   - title: Upgrade the Currency
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
   - title: Upgrade the Sales
-    link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
   - title: Upgrade the Price
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Upgrade the Discount
@@ -61,7 +61,7 @@ composer update spryker/*
 
 2. The Orders now includes currency iso code, which is used when order is displayed to format price. We have changed `OrderSaver` and how prices are formatted for Order in Yves and Zed:
 
-   * **Sales >= 8.** — see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) for more details.
+   * **Sales >= 8.** — see [Migration Guide - Sales](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html) for more details.
    * **Quote >= 1.1.** — stores current currency when quote is persisted.
 
 3. **Discount** module has undergone big changes. Specifically, the way fixed discount calculation works has been changed. The way the amount is entered in Zed form has been changed as well (the amount requires currency now). Decision rules that MUST be built with currency/price mode decision rule include:

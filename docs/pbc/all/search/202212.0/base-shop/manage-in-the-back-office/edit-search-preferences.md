@@ -8,7 +8,7 @@ related:
   - title: Define search preferences
     link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/define-search-preferences.html
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search.html
+    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 This document describes how to edit search preferences for product attributes in the Back Office.

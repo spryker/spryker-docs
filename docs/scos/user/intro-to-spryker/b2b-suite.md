@@ -88,7 +88,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
-- [Search](/docs/pbc/all/search/{{site.version}}/base-shop/search.html)
+- [Search](/docs/pbc/all/search/{{site.version}}/base-shop/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
 
 <br>

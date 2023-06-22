@@ -20,7 +20,7 @@ related:
   - title: Managing Filter Preferences
     link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search.html
+    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 This topic describes how to add product attributes to search and define search preferences.

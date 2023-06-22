@@ -2791,8 +2791,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
-    - title: Migration Guide - StockSalesConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

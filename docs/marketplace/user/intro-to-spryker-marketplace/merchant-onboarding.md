@@ -34,7 +34,7 @@ Each step is described in the following sections.
 
 The official onboarding starts with a merchant requesting to join the marketplace.
 
-To request a new merchant account, you can build a landing page with the [Spryker CMS](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/content-management-system.html) where potential merchants can find the email address or a form to contact the operator to join the marketplace. In some cases, the operator may contact their partners and inform them about the marketplace.
+To request a new merchant account, you can build a landing page with the [Spryker CMS](/docs/pbc/all/content-management-system/{{site.version}}/content-management-system.html) where potential merchants can find the email address or a form to contact the operator to join the marketplace. In some cases, the operator may contact their partners and inform them about the marketplace.
 
 ### 2) Operator: Verify (the KYC process) and register a merchant
 

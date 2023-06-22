@@ -8,9 +8,9 @@ Security Checker is a tool that checks if your PHP application depends on PHP pa
 
 ## Problem description
 
-It is possible that project uses the dependencies, that contain known vulnerabilities. To minimise the security risk for the project, such dependencies should be updated till the version, where the vulnerability was fixed.
+A project can sometimes use dependencies that contain known vulnerabilities.. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
 
-## Example of evaluator error message
+## Example of an Evaluator error message
 
 ```bash
 ================
@@ -44,4 +44,4 @@ Your `composer.lock` file contains package versions that have security issues:
 ### Resolving the error
 
 To resolve the error:
-1. Upgrade the package till the version where the issue was fixed.
+1. Upgrade the package to a version where the vulnerability issue is fixed.

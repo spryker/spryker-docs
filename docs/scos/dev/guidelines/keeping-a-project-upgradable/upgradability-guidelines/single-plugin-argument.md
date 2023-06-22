@@ -9,7 +9,7 @@ This check makes sure that the plugins don't require the complicated constructor
 ## Problem description
 
 Inside of the dependency provider you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. 
-To keep the plugins simple, they shouldn't require the complicated objects as constructor arguments.
+To keep the plugins simple, they shouldn't require complicated objects as constructor arguments.
 
 Supported argument types:
  - int
@@ -62,5 +62,5 @@ class ConsoleDependencyProvider
 ### Resolving the error
 
 To resolve the error:
-1. Rework the plugin - remove the usage of the complicated constructor arguments
+1. Rework the plugin - remove the usage of the complicated constructor arguments.
 

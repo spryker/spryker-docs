@@ -16,9 +16,9 @@ PHP versions are checked in:
 - Config deploy files `deploy.**.yml`
 - [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP versions
 
-## Example of correct code
+## An example of correct code
 
-PHP version in deploy files should correspond the PHP version declared in `composer.json` and supported PHP version by [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html).
+The PHP version in your deploy files should correspond to the PHP version declared in `composer.json` and the supported PHP version by [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html).
 
 `composer.json`:
 
@@ -47,9 +47,9 @@ image:
 ...
 ```
 
-## Example of evaluator error message
+## Example of an Evaluator error message
 
-Example 1. Unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version is used in `composer.json` file.
+Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `composer.json` file:
 
 ```shell
 ===================
@@ -77,7 +77,7 @@ PHP VERSION CHECKER
 }
 ```
 
-Example 2. Unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version is used in `deploy.yml` file.
+Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `deploy.yml` file.
 
 ```shell
 ===================
@@ -92,7 +92,7 @@ PHP VERSION CHECKER
 +---+-----------------------------------------------------------------------------------+------------------------------+
 ```
 
-`deploy.yml` file, that produces the error message:
+The `deploy.yml` file that produces the error message:
 
 ```yaml
 ...
@@ -105,7 +105,7 @@ image:
 ...
 ```
 
-Example 3. Inconsistent PHP versions are used in `composer.json` and `deploy.yml` files:
+Below is an example of inconsistent PHP versions being used in the `composer.json` and `deploy.yml` files:
 
 ```shell
 ===================
@@ -115,7 +115,7 @@ PHP VERSION CHECKER
 +---+--------------------------------------------+--------------------------------------------------------+
 | # | Message                                    | Target                                                 |
 +---+--------------------------------------------+--------------------------------------------------------+
-| 1 | Not all the targets have same PHP versions | Current php version $phpVersion: php7.2                |
+| 1 | Not all the targets have the same PHP versions | Current php version $phpVersion: php7.2                |
 |   |                                            | tests/Acceptance/_data/InvalidProject/composer.json: - |
 |   |                                            | tests/Acceptance/_data/InvalidProject/deploy**.yml: -  |
 |   |                                            | SDK php versions: php7.2, php8.2                       |

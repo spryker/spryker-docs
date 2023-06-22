@@ -4,11 +4,11 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Some plugins have dependencies from another plugins and should be used only before or after another plugins. "Plugin registration with restrictions" checks that dependencies between the plugins are described according to the specification.
+Some plugins have dependencies from other plugins and should be used only before or after another plugin. The *Plugin registration with restrictions* check checks that dependencies between the plugins are described according to the specification.
 
 ## Problem description
 
-If plugins must be registered in a specific order, `after` and `before` annotations need to be provided in the doc blocks before the plugin. They must also have specific syntax.
+If plugins must be registered in a specific order, `after` and `before` annotations need to be provided in the documentation blocks before the plugin. They must also have specific syntax.
 
 1. Annotation to register plugin before another one: 
 
@@ -20,7 +20,7 @@ If plugins must be registered in a specific order, `after` and `before` annotati
 */
 ```
 
-Example 1. Annotation syntax to register plugin before another one:
+Below is an example of the annotation syntax needed to register a plugin before another one:
 
 ```php
     /**
@@ -30,7 +30,7 @@ Example 1. Annotation syntax to register plugin before another one:
     new ProductOfferReferenceStrategyPlugin(),
 ```
 
-2. Annotation to register plugin after another one:
+Below is an example of the annotation syntax needed to register a plugin after another one:```
 
 ```php
 /**
@@ -40,7 +40,7 @@ Example 1. Annotation syntax to register plugin before another one:
 */
 ```
 
-Example 2. Annotation syntax to register plugin only after another one:
+Below is an example of the annotation syntax needed to register a plugin only after another one:```
 
 ```php
     /**
@@ -51,7 +51,7 @@ Example 2. Annotation syntax to register plugin only after another one:
     new DefaultProductOfferReferenceStrategyPlugin(),
 ```
 
-## Example of evaluator error message
+## Example of an Evaluator error message
 
 ```shell
 ==============================================

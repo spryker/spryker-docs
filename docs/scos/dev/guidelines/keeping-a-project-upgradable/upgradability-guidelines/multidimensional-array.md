@@ -9,9 +9,9 @@ This check checks that project doesn't use the deeply nested multidimensional ar
 ## Problem description
 
 If a plugins stack is used on the project level, not all structures are necessarily needed. Deeply nested multidimensional arrays make configuration hard to upgrade.
-This check verifies that multidimensional arrays have maximum of two levels of nesting inside.
+This check verifies that multidimensional arrays have a maximum of two levels of nesting inside.
 
-## Example of evaluator error message
+## Example of an Evaluator error message
 
 ```bash
 ======================

@@ -13,7 +13,7 @@ This results in unnecessary additional time investment from developers, as they 
 This check examines potential obsolete classes, with a tendency to overlook important Spryker kernel classes like `Factory`, `Facade`, or `DependencyProvider`.
 If desired, you have the option to disable the dead code checker for a particular class using the `@evaluator-skip-dead-code` annotation.
 
-## Example of evaluator error message
+## Example of an Evaluator error message
 
 ```bash
 =================
@@ -40,7 +40,7 @@ class SinglePlugin extends SprykerSinglePlugin
 }
 ```
 
-### Resolving the error:
+### Resolving the error
 
 To resolve the error:
 

@@ -15,9 +15,9 @@ This check ensures that if an `if` structure is used for plugin registration, on
 
 1. `class_exists` function call
 
-Usage of `class_exists` function call inside of the `if` statement is allowed for BC reasons only.
+Usage of the `class_exists` function call inside of the `if` statement is allowed for BC reasons only.
 
-Example of `class_exists` function call inside of the `if` statement:
+Below is an example of the `class_exists` function call inside of the `if` statement:
 
 ```php
 namespace Pyz\Zed\Form;
@@ -44,7 +44,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 2. `isDevelopment` function call
 
-Usage of `isDevelopment` checks is allowed to register the plugins that are needed in development mode only (e.g. profiling, debug, etc.)
+The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only (e.g. profiling, debug, etc.).
     
 ```php
 namespace Pyz\Zed\Console;
@@ -73,7 +73,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-## Example of evaluator error message
+## Example of an Evaluator error message
 
 ```bash
 ======================
@@ -120,5 +120,5 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 To resolve the issue:
 
-1. Try to avoid the usage of the conditions in the dependency providers.
+1. Try to avoid the usage of conditions in the dependency providers.
 2. Use only the supported expressions in the `if` construct.

@@ -105,7 +105,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
-9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -124,7 +124,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -143,7 +143,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **ECS-updater-{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -162,7 +162,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
-9. On the **Pipelines** page, select the **ECS-updater-{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.    
@@ -183,7 +183,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.  

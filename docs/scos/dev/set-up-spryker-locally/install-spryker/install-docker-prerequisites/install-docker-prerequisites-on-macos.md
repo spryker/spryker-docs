@@ -21,11 +21,11 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
 related:
   - title: Install Docker prerequisites on Linux
-    link: docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
   - title: Install Docker prerequisites on Windows with WSL1
-    link: docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
   - title: Install Docker prerequisites on Windows with WSL2
-    link: docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This document describes the prerequisites for installing Spryker on MacOS.
@@ -70,7 +70,7 @@ Signup for Docker Hub is not required.
     6. Select the desired **Disk image location**.
     7. Select **Apply & Restart**.
 
-5. [Development mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
+5. [Development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
@@ -78,10 +78,10 @@ brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/
 
 ## Next steps
 
-To choose an installation mode, see [Choose an installation mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html).
+To choose an installation mode, see [Choose an installation mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html).
 
 If you've already selected an installation mode, follow one of the guides below:
 
-* [Install in Development mode on MacOS and Linux](/docs/scos/dev/set-up/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/set-up/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html)
+* [Install in Development mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+* [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html)

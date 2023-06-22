@@ -22,17 +22,17 @@ redirect_from:
   - /v2/docs/en/post-installation-steps-and-additional-info
   - /v1/docs/post-installation-steps-and-additional-info
   - /v1/docs/en/post-installation-steps-and-additional-info
-  - /docs/scos/dev/set-up/post-installation-steps-and-additional-info.html
-  - /docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
-  - /docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
-  - /docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
-  - /docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
-  - /docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
+  - /docs/scos/dev/set-up-spryker-locally/post-installation-steps-and-additional-info.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
 related:
   - title: Adjust Jenkins for a Docker environment
-    link: docs/scos/dev/set-up/configure-after-installing/adjust-jenkins-for-a-docker-environment.html
+    link: docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html
   - title: Set up a self-signed SSL certificate
-    link: docs/scos/dev/set-up/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
+    link: docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
 ---
 
 This document describes how to configure Spryker after installing it.

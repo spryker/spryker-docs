@@ -14,18 +14,18 @@ redirect_from:
   - /v6/docs/en/installing-in-demo-mode-on-windows
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up/install-spryker/installing-spryker-with-docker.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html
 ---
 
-This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html#demo-mode) on Windows.
+This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#demo-mode) on Windows.
 
 ## Install Docker prerequisites on Windows
 
 Depending on the needed WSL version, follow one of the guides:
 
-* [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
+* [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
 
-* [Install Docker prerequisites on Windows with WSL2](/docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+* [Install Docker prerequisites on Windows with WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 ## Install Spryker in Demo mode on Windows
 
@@ -158,5 +158,5 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
-* [Set up a self-signed SSL certificate](/docs/scos/dev/set-up/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
-* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)
+* [Set up a self-signed SSL certificate](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
+* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)

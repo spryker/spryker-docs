@@ -20,7 +20,7 @@ redirect_from:
   - /v3/docs/en/spryker-in-docker-dev-mode-201907
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up/install-spryker/installing-spryker-with-docker.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html
 ---
 
 {% info_block infoBox "" %}
@@ -30,12 +30,12 @@ Starting with the 202204.0 release, the following guide applies to both Intel an
 {% endinfo_block %}
 
 
-This document describes how to install Spryker in [Demo Mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html#demo-mode) on MacOS and Linux.
+This document describes how to install Spryker in [Demo Mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#demo-mode) on MacOS and Linux.
 
 ## Install Docker prerequisites on MacOS and Linux
 
-* [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-* [Install Docker prerequisites on Linux](/docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
+* [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
+* [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
 
 ## Clone a Demo Shop and the Docker SDK
 
@@ -95,7 +95,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 2. Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
 
-![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/set-up/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
 
 3. Build and start the instance:
@@ -128,5 +128,5 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
-* [Set up a self-signed SSL certificate](/docs/scos/dev/set-up/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
-* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)
+* [Set up a self-signed SSL certificate](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
+* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)

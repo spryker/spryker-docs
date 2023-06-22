@@ -12,20 +12,20 @@ redirect_from:
   - /docs/en/installing-in-development-mode-on-windows
   - /v6/docs/installing-in-development-mode-on-windows
   - /v6/docs/en/installing-in-development-mode-on-windows
-  - /docs/scos/dev/set-up/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up/install-spryker/installing-spryker-with-docker.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html
 
 ---
 
-This document describes how to install Spryker in [Development Mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html#development-mode) on Windows.
+This document describes how to install Spryker in [Development Mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode) on Windows.
 
 ## Install the prerequisites on Windows
 
-* [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
+* [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
 
-* [Install Docker prerequisites on Windows with WSL2](/docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+* [Install Docker prerequisites on Windows with WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 
 ## Install Spryker in Development mode on Windows
@@ -160,5 +160,5 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
-* [Set up a self-signed SSL certificate](/docs/scos/dev/set-up/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
-* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)
+* [Set up a self-signed SSL certificate](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
+* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)

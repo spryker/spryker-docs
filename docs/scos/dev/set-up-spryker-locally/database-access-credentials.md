@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/database-access-credentials
 ---
 
-In this document, you can find credentials for accessing your database. By default, you can access a database only in [Development mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html#development-mode).
+In this document, you can find credentials for accessing your database. By default, you can access a database only in [Development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode).
 
 MySQL or MariaDB database:
 

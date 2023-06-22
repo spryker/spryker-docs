@@ -25,11 +25,11 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-linux.html
 related:
   - title: Install Docker prerequisites on MacOS
-    link: docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
   - title: Install Docker prerequisites on Windows with WSL1
-    link: docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
   - title: Install Docker prerequisites on Windows with WSL2
-    link: docs/scos/dev/set-up/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
+    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This document describes the prerequisites for installing Spryker on Linux.
@@ -93,8 +93,8 @@ You've installed and configured the required software.
 
 ## Next steps
 
-To choose an installation mode, see [Choose an installation mode](/docs/scos/dev/set-up/install-spryker/install/choose-an-installation-mode.html).
+To choose an installation mode, see [Choose an installation mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html).
 If you've already selected an installation mode, follow one of the guides:
-* [Install in Development mode on MacOS and Linux](/docs/scos/dev/set-up/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
-* [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/set-up/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html)
+* [Install in Development mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
+* [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html)

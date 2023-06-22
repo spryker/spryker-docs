@@ -18,18 +18,18 @@ redirect_from:
   - /v4/docs/en/b2b-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/b2c-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/en/b2c-demo-shop-installation-without-development-virtual-machine
-  - /docs/scos/dev/set-up/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-  - /docs/scos/dev/set-up/installing-spryker-without-devvm.html
-  - /docs/scos/dev/set-up/installing-spryker-without-development-virtual-machine-or-docker.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-devvm.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-development-virtual-machine-or-docker.html
 related:
   - title: Install module structure and configuration
-    link: docs/scos/dev/set-up/install-module-structure-and-configuration.html
+    link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
   - title: Installing Spryker with custom set of modules
-    link: docs/scos/dev/set-up/installing-spryker-with-custom-set-of-modules.html
+    link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-custom-set-of-modules.html
   - title: Manage dependencies with Composer
-    link: docs/scos/dev/set-up/managing-scos-dependencies-with-composer.html
+    link: docs/scos/dev/set-up-spryker-locally/managing-scos-dependencies-with-composer.html
   - title: Redis configuration
-    link: docs/scos/dev/set-up/redis-configuration.html
+    link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 To install [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) without Docker, follow the steps below.

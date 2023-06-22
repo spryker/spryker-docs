@@ -20,6 +20,19 @@ This feature is part of a gradual rollout and will be available to everyone even
 
 {% endinfo_block %}
 
+## Customer-Owned and Spryker-Owned Variables
+
+When working with environment variables in the Spryker Cloud Commerce OS, it's important to understand that there are two types of variables: those owned by the customer and those owned by Spryker.
+
+Customer-owned variables are created and managed by you - the onboarded customer or implementation partner. You have full control over these variables and can add or edit them according to your needs. However, please note that changes to these variables do not automatically propagate into the running environment. To apply changes made to your environment variables, you'll need to run an ECS-updater-* pipeline in order to bring them to the containers (full re-deploy would also do the trick, of course). This process does not require Spryker Cloud or support intervention.
+
+On the other hand, Spryker-owned environment variables should not be altered directly in the Parameter Store. These variables have been configured by Spryker for the optimal operation of the Cloud Commerce OS. Any change made directly to these variables can introduce inconsistencies and potential issues in Cloud Operations.
+
+If there is a need to modify a Spryker-owned environment variable, it must be done through Terraform to ensure proper application and consistency. However, such changes require Spryker Cloud or support intervention, as it needs to be coordinated with our DevOps team.
+
+By adhering to these guidelines, you can effectively manage your environment variables without risking system stability. It also helps in maintaining a seamless experience while working with Spryker Cloud Commerce OS.
+
+Please remember that improper management of environment variables can lead to unexpected issues and it is recommended to consult Spryker Cloud or support for any complex or system-critical changes.
 
 ## Naming convention for variables
 

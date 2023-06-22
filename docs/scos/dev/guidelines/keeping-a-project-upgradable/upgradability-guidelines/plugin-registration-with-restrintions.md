@@ -51,7 +51,7 @@ Below is an example of the annotation syntax needed to register a plugin only af
     new DefaultProductOfferReferenceStrategyPlugin(),
 ```
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 ```shell
 ==============================================
@@ -65,7 +65,7 @@ PLUGINS REGISTRATION WITH RESTRICTIONS CHECKER
 +---+------------------------------------------------------------------------------------------------------+--------------------------------+
 ```
 
-## Example of code that causes an upgradability error
+## Example of code that causes an evaluator error
 
 ```php
 namespace Pyz\Zed\Category;

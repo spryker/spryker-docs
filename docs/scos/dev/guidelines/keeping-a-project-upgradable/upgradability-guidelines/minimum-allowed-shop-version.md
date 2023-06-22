@@ -12,7 +12,7 @@ To enable smooth upgradability of the project using the [Spryker Code Upgrader](
 
 In case the project does not utilize the feature packages, it is necessary to ensure that the corresponding Spryker module versions are used.
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 Below is an example of when a used feature package version doesn't correspond to the minimum required version:
 
@@ -27,6 +27,8 @@ MINIMUM ALLOWED SHOP VERSION
 | 1 | The package "spryker-feature/agent-assist" version "202108.0" is not supported. The minimum allowed version is "202204.0" | spryker-feature/agent-assist:202108.0 |
 +---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
 ```
+
+## Example of code that causes an evaluator error
 
 Below is an example of when the used Spryker package version doesn't correspond to the minimum required version:
 

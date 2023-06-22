@@ -47,7 +47,7 @@ image:
 ...
 ```
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `composer.json` file:
 
@@ -149,7 +149,7 @@ image:
 ...
 ```
 
-Inconsistent PHP versions produces the error message output.
+Inconsistent PHP versions produce the error message output.
 
 ### Resolving the error
 

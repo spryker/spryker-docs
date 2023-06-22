@@ -73,7 +73,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 ```bash
 ======================
@@ -88,7 +88,7 @@ MULTIDIMENSIONAL ARRAY
 
 ```
 
-## Example of code that causes an upgradability error
+## Example of code that causes an evaluator error
 
 The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in the `if` construct `$alwaysAddPlugin`.
 

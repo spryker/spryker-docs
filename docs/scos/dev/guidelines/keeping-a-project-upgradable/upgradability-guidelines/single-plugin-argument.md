@@ -36,7 +36,7 @@ SINGLE PLUGIN ARGUMENT
 +---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
 ```
 
-## Example of code that causes an upgradability error
+## Example of code that causes an evaluator error
 
 The dependency provider method returns the plugin with unwanted argument: 
 

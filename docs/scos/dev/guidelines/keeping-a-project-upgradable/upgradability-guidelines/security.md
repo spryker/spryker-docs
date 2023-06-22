@@ -10,7 +10,7 @@ Security Checker is a tool that checks if your PHP application depends on PHP pa
 
 A project can sometimes use dependencies that contain known vulnerabilities.. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 ```bash
 ================
@@ -24,7 +24,7 @@ SECURITY CHECKER
 +---+---------------------------------------------------------------------------------------------------------------------+-----------------------+
 ```
 
-## Example of code that causes an upgradability error
+## Example of code that causes an evaluator error
 
 Your `composer.lock` file contains package versions that have security issues:
 

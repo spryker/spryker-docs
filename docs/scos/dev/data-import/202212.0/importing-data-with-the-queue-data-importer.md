@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/importing-data-with-queue-data-importer
 related:
   - title: Queue Data Import feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/queue-data-import-feature-integration.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
 ---
 
 Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
@@ -34,14 +34,14 @@ Regular data import is done as a single-step process: data is read from a data s
 Queue data import is designed to be done in two separate steps.
 
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
-2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html). 
+2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html).
 
 ## Importing data from CSV to queue
 
 If the provided data is in the .CSV format, you can import it to the queues.
 The [DataImport](https://github.com/spryker/data-import) module has classes responsible for providing the preconfigured queue writer instances to the data import facilities. It is configured on the project level.
 
-To import data into a message queue, use an instance of `Spryker\Zed\DataImport\Business\DataWriter\QueueWriter\QueueWriter` as a data writer during import. 
+To import data into a message queue, use an instance of `Spryker\Zed\DataImport\Business\DataWriter\QueueWriter\QueueWriter` as a data writer during import.
 
 Do the following:
 1. Provide two pieces of configuration to a queue writer's `::write()` method:
@@ -56,14 +56,14 @@ Do the following:
 .....
 use Spryker\Zed\DataImport\DataImportConfig as SprykerDataImportConfig;
 .....
- 
+
 class DataImportConfig extends SprykerDataImportConfig
 {
     public const PRODUCT_ABSTRACT_QUEUE = 'import.product_abstract';
     public const PRODUCT_ABSTRACT_QUEUE_ERROR = 'import.product_abstract.error';
- 
+
     .....
- 
+
     public function getProductAbstractQueueWriterConfiguration(): DataImporterQueueWriterConfigurationTransfer
     {
         return (new QueueWriterConfigurationTransfer())
@@ -90,7 +90,7 @@ Here, you specify the names for the queues:
 
 use Spryker\Zed\DataImport\Communication\Plugin\AbstractQueueWriterPlugin;
 .....
- 
+
 /**
  * @method \Pyz\Zed\DataImport\DataImportConfig getConfig()
  */
@@ -100,7 +100,7 @@ class ProductAbstractQueueWriterPlugin extends AbstractQueueWriterPlugin
     {
         return $this->getConfig()->getProductAbstractQueueWriterConfiguration()->getQueueName();
     }
- 
+
     protected function getChunkSize(): int
     {
         return $this->getConfig()->getProductAbstractQueueWriterConfiguration()->getChunkSize();
@@ -124,9 +124,9 @@ Create additional plugins for other resources, should they need to be imported w
 <?php
 
 use Spryker\Zed\DataImport\DataImportConfig;
-  
+
 .....
-  
+
 /**
  * @return \ArrayObject
  */
@@ -136,7 +136,7 @@ protected function getQueueOptions()
     //Queue data import
     $queueOptionCollection->append($this->createQueueOption(DataImportConfig::PRODUCT_ABSTRACT_QUEUE, DataImportConfig::PRODUCT_ABSTRACT_QUEUE_ERROR));
     ......
-  
+
     return $queueOptionCollection;
 }
 ```
@@ -152,7 +152,7 @@ protected function getQueueOptions()
 
 use Pyz\Zed\DataImport\DataImportConfig;
 use Pyz\Zed\DataImport\Communication\Plugin\ProductAbstract\ProductAbstractQueueWriterPlugin;
-  
+
 class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 {
     .....
@@ -164,21 +164,21 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
         .....
         return $dataImporterCollection;
     }
-  
+
     public function getProductAbstractQueueWriter()
     {
         $dataImporter = $this->getCsvDataImporterWriterAwareFromConfig($this->getConfig()->getProductAbstractDataImporterConfiguration());
         $dataImporter->setImportGroup(DataImportConfig::IMPORT_GROUP_QUEUE_WRITERS);
         $dataImporter->setDataSetWriter($this->createProductAbstractQueueDataImportWriters());
-  
+
         return $dataImporter;
     }
-  
+
     protected function createProductAbstractQueueDataImportWriters(): DataSetWriterInterface
     {
         return new DataSetWriterCollection($this->createProductAbstractQueueWriterPlugins());
     }
-  
+
     protected function createProductAbstractQueueWriterPlugins(): array
     {
         return [
@@ -215,7 +215,6 @@ vendor/bin/console data:import:product-abstract --group=QUEUE_WRITERS
 
 {% info_block warningBox "Note" %}
 
-We also recommend preparing the properly structured data for the import in queues from the very beginning instead of actually importing it from CSV, XML, etc., as the first step. In this case, a queue can be treated as an original source of data for import which would make the overall process more convenient. 
+We also recommend preparing the properly structured data for the import in queues from the very beginning instead of actually importing it from CSV, XML, etc., as the first step. In this case, a queue can be treated as an original source of data for import which would make the overall process more convenient.
 
 {% endinfo_block %}
-

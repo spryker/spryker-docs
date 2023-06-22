@@ -12,8 +12,8 @@ To start feature integration, integrate the following required features:
 
 | NAME          | VERSION          | INTEGRATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer | {{site.version}} | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-feature-integration.html) |
-| Shipment      | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                   |
+ | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+ | Shipment      | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                   |
 
 ## 1) Install the required modules using Composer
 
@@ -299,7 +299,7 @@ In Redis, make sure data is represented in the following format:
 {
     "product_offer_reference": "offer1",
     "shipment_type_uuids": [
-        "174d9dc0-55ae-5c4b-a2f2-a419027029ef" 
+        "174d9dc0-55ae-5c4b-a2f2-a419027029ef"
     ]
 }
 ```

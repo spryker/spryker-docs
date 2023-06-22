@@ -9,10 +9,9 @@ template: back-office-user-guide-template
 
 ## Next steps
 
-* [Best practices: Add content to the Storefront pages using templates and slots]()
+* [Best practices: Add content to the Storefront pages using templates and slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html)
 * [Create CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html)
-* [Create navigation elements](/docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/navigation/create-navigation-elements.html)
-* [Create CMS pages](/docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/pages/create-cms-pages.html)
-* [Create product sets](/docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/product-sets/create-product-sets.html)
-* [Create CMS redirects](/docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/redirects/create-cms-redirects.html)
-* []
+* [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html)
+* [Create CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html)
+* [Create product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html)
+* [Create CMS redirects](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html)

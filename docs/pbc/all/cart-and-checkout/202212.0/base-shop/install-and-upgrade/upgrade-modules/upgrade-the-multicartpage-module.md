@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-multicartpage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multicartpage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multicartpage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
   - /module_migration_guides/mg-multi-cart-page.htm
 related:
   - title: Multiple Carts per User Feature Overview

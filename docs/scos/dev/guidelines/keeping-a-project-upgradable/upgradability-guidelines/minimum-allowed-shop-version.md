@@ -14,7 +14,7 @@ In case the project does not utilize the feature packages, it is necessary to en
 
 ## Example of an Evaluator error message
 
-Below is an example of when a used feature package version doesn't correspond the minimum required version:
+Below is an example of when a used feature package version doesn't correspond to the minimum required version:
 
 ```shell
 ============================
@@ -28,7 +28,7 @@ MINIMUM ALLOWED SHOP VERSION
 +---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
 ```
 
-Below is an example when the used Spryker package version doesn't correspond the minimum required version:
+Below is an example of when the used Spryker package version doesn't correspond to the minimum required version:
 
 ```shell
 ============================

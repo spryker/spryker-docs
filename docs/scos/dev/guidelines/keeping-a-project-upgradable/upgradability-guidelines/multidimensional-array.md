@@ -4,11 +4,11 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This check checks that project doesn't use the deeply nested multidimensional arrays in dependency providers for not overloading it with complicated logic.
+This check checks that project doesn't use the deeply nested multidimensional arrays in dependency providers, in order to not overload it with complicated logic.
 
 ## Problem description
 
-If a plugins stack is used on the project level, not all structures are necessarily needed. Deeply nested multidimensional arrays make configuration hard to upgrade.
+If a plugins stack is used on the project level, not all structures are necessarily required. Deeply nested multidimensional arrays make configuration hard to upgrade.
 This check verifies that multidimensional arrays have a maximum of two levels of nesting inside.
 
 ## Example of an Evaluator error message

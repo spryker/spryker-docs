@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-"Additional logic in dependency provider" check checks the way how plugins are registered in the dependency provider on the project level.
+The *Additional logic in dependency provider* check checks the way plugins are registered in the dependency provider on the project level.
 
 ## Problem description
 

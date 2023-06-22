@@ -63,7 +63,7 @@ PHP VERSION CHECKER
 +---+------------------------------------------------------------------------+---------------------------------+
 ```
 
-`composer.json` file, that produces the error message:
+A `composer.json` file that produces the error message:
 
 ```json
 {
@@ -92,7 +92,7 @@ PHP VERSION CHECKER
 +---+-----------------------------------------------------------------------------------+------------------------------+
 ```
 
-The `deploy.yml` file that produces the error message:
+A `deploy.yml` file that produces the error message:
 
 ```yaml
 ...
@@ -122,7 +122,7 @@ PHP VERSION CHECKER
 +---+--------------------------------------------+--------------------------------------------------------+
 ```
 
-`composer.json` file uses PHP version `7.2`:
+The `composer.json` file uses PHP version `7.2`:
 
 ```json
 {
@@ -136,7 +136,7 @@ PHP VERSION CHECKER
 }
 ```
 
-`deploy.yml` file uses PHP version `8.2`:
+The `deploy.yml` file uses PHP version `8.2`:
 
 ```yaml
 ...

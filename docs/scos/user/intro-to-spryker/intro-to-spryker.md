@@ -43,6 +43,7 @@ The Spryker Commerce OS (SCOS) is a completely modular B2B and B2C e-commerce te
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/Spryker-OS-Overview-RGB-JULY19_Spryker-OS-Overview.png)
 
 We establish a unique advantage for our customers by creating a commerce operating system that revolves around two cornerstones for success: modular and layered architectures.
+Changes.
 
 ### Modular architecture
 

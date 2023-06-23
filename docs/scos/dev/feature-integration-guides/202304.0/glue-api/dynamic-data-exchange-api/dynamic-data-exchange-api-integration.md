@@ -26,6 +26,7 @@ To start feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Glue Backend Api Application | {{page.version}} | [Glue API - Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html) |
+| Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-authentication-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -401,6 +402,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can operate with the data. Follow the link to discover how to perform it [x] TODO: Add How-to request API endpoints
+If everything is set up correctly, you can operate with the data. Follow the link to discover how to perform it [How to send request in Dynamic Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-exchange-api/how-to-guides/how-to-send-request-in-dynamic-data-exchange-api.html)
 
 {% endinfo_block %}

@@ -196,7 +196,7 @@ Ensure that you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for dynamic entities. In order to do that follow the link - [x] TODO: Add How-to set the configuration  
+Add configurations for dynamic entities. In order to do that follow the link [How to configure Dynamic Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-exchange-api/how-to-guides/how-to-configure-dynamic-data-exchange-api.html)  
 
 Ensure the following transfers have been created:
 
@@ -399,4 +399,8 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 ```
 </details>
 
+{% info_block warningBox "Verification" %}
+
 If everything is set up correctly, you can operate with the data. Follow the link to discover how to perform it [x] TODO: Add How-to request API endpoints
+
+{% endinfo_block %}

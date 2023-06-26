@@ -265,6 +265,8 @@ Run the following console command to import data:
 console data:import glossary
 ```
 
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the configured data in the database has been added to the `spy_glossary` table.

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/searching-the-product-catalog
   - /docs/scos/dev/glue-api-guides/202200.0/searching-the-product-catalog.html
   - /docs/scos/dev/glue-api-guides/202212.0/searching-the-product-catalog.html
+  - /docs/pbc/all/search/202212.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html

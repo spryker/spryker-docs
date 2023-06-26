@@ -3,6 +3,8 @@ title: Configure Algolia
 description: Find out how you can configure Algolia in your Spryker shop
 last_updated: Feb 21 2023
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/search/202212.0/third-party-integrations/configure-algolia.html
 ---
 Once you have integrated the Algolia app, you can configure it.
 
@@ -18,7 +20,7 @@ To configure Algolia, do the following:
 2. In **App Composition Platform Catalog**, click **Algolia**. This takes you to the Algolia app details page.
 3. In the top right corner of the Algolia app details page, click **Connect app**. The notification saying that the application connection is pending is displayed.
 4. Log in to the [Algolia website](https://www.algolia.com).
-5. On the Algolia website, go to **Settings**. 
+5. On the Algolia website, go to **Settings**.
 6. Under **Team and Access**, click **API keys**.
 
 ![algolia-keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-keys.png)
@@ -33,14 +35,14 @@ To configure Algolia, do the following:
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
-11. Click **Save**. 
+11. Click **Save**.
 
 The Algolia app is now added to your store and starts exporting your product data automatically.
 
 {% info_block infoBox "Info" %}
 
 You need to wait for a few minutes until Algolia finishes the product export.
-The more products you have, the longer you have to wait. 
+The more products you have, the longer you have to wait.
 The average export speed is around *100 products per minute*.
 
 {% endinfo_block %}
@@ -55,8 +57,8 @@ The average export speed is around *100 products per minute*.
 {% info_block warningBox "Verification" %}
 
 Verify that your index is populated with data from your store:
-1. Go to the Algolia website. 
-2. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
+1. Go to the Algolia website.
+2. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**.
 3. Make sure that the index is populated with data from your store.
 
 {% endinfo_block %}
@@ -83,9 +85,9 @@ Default fields for searchable attributes are the following:
 
 ### Adjust the searchable attributes list in Algolia
 
-1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
-2. Open the Algolia indices list and find all primary indices. 
-3. On the **Configuration** tab, select **Searchable attributes**. 
+1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**.
+2. Open the Algolia indices list and find all primary indices.
+3. On the **Configuration** tab, select **Searchable attributes**.
 4. To adjust the **Searchable attributes** list, add and remove needed searchable attributes.
 5. Click **Review and save settings**. This opens the **Review and save settings** window.
 6. Enable **Copy these settings to other indices and/or replicas** and click **Save settings**.
@@ -101,7 +103,7 @@ There're multiple ways of adding search metadata. For the sake of an example, we
 Create a new plugin implementing `ProductConcreteExpanderPluginInterface`. Then you can add any logic inside that plugin's `expand` method to add necessary metadata to ProductConcrete transfers:
 
 ```php
-  
+
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;  
 use Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface;
 
@@ -114,7 +116,7 @@ class SearchMetadataExampleProductConcreteExpanderPlugin extends AbstractPlugin 
      */  
     public function expand(array $productConcreteTransfers): array  
     {  
-        foreach ($productConcreteTransfers as $productConcreteTransfer) 
+        foreach ($productConcreteTransfers as $productConcreteTransfer)
         {
             $productConcreteTransfer->addSearchMetadata('isBestseller', true);
             // ...
@@ -127,7 +129,7 @@ class SearchMetadataExampleProductConcreteExpanderPlugin extends AbstractPlugin 
 
             $productConcreteTransfer->setSearchMetadata($searchMetadata);
         }
-        
+
         return $productConcreteTransfers;
     }  
 }
@@ -189,10 +191,10 @@ When used with Algolia PBC, Spryker facets configuration is ignored and Algolia 
 
 ### Add new attributes for faceting
 
-1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
+1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**.
 2. Find all primary indices.
 3. On the **Configuration** tab, select **Facets**.
-4. To adjust the **Attributes for faceting** list, add and remove attributes. 
+4. To adjust the **Attributes for faceting** list, add and remove attributes.
 5. Click **Review and save settings**. This opens the **Review and save settings** window.
 6. Enable **Copy these settings to other indices and/or replicas** and click **Save Settings**.
 

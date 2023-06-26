@@ -3,6 +3,8 @@ title: Integrate Algolia
 description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
 last_updated: Feb 23, 2023
+redirect_from:
+  - /docs/pbc/all/search/202212.0/third-party-integrations/integrate-algolia.html
 ---
 
 This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia.html) into a Spryker shop.
@@ -85,7 +87,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ### 2. Configure modules and dependencies
 
-Configure modules and add and the necessary dependencies according to these guidelines. 
+Configure modules and add and the necessary dependencies according to these guidelines.
 
 #### Configure Catalog dependencies in `Client`
 
@@ -111,11 +113,11 @@ use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SortSearchHttpResul
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SpellingSuggestionSearchHttpResultFormatterPlugin;
 use Spryker\Shared\SearchHttp\SearchHttpConfig;
 
-//... 
+//...
 
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
-//... 
+//...
 
     /**
      * @return array<string, array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>>
@@ -131,7 +133,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -147,7 +149,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SearchHttpQueryPlugin($searchContextTransfer),
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>>
      */
@@ -162,7 +164,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -181,7 +183,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     //...
 }
 ```
@@ -199,8 +201,8 @@ use Spryker\Shared\SearchHttp\SearchHttpConfig;
 
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
-    //... 
-    
+    //...
+
     /**
      * @return array<mixed>
      */
@@ -211,7 +213,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE,
         ];
     }
-    
+
     //...
 }
 ```
@@ -231,7 +233,7 @@ use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchContextExpanderPlugi
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
     //...
-    
+
     /**
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchAdapterPluginInterface>
      */
@@ -242,7 +244,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
             //...
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextExpanderPluginInterface>
      */
@@ -252,7 +254,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
             new SearchHttpSearchContextExpanderPlugin(), # It is very important to put this plugin at the top of the list.
             //...
         ];
-    
+
     //...
 }
 ```
@@ -329,7 +331,7 @@ use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemo
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
   //...
-  
+
   /**
     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
     */
@@ -342,7 +344,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
           new SearchEndpointRemovedMessageHandlerPlugin(),
       ];
   }
-  
+
   //...
 }
 ```
@@ -352,7 +354,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
-//... 
+//...
 
 class MessageBrokerConfig extends SprykerMessageBrokerConfig
 {
@@ -365,7 +367,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
     {
         return [/*... ,*/ 'product', 'search'];
     }
-    
+
     //...
 }
 ```
@@ -390,7 +392,7 @@ use Spryker\Zed\ProductReview\Dependency\ProductReviewEvents;
 class ProductConfig extends SprykerProductConfig
 {
     //...
-    
+
     /**
      * @api
      *
@@ -422,7 +424,7 @@ class ProductConfig extends SprykerProductConfig
             ProductImageEvents::PRODUCT_IMAGE_PRODUCT_CONCRETE_PUBLISH,
         ];
     }
-    
+
     //...
 }
 ```
@@ -432,7 +434,7 @@ class ProductConfig extends SprykerProductConfig
 Add the following code to `src/Pyz/Zed/Product/ProductDependencyProvider.php`:
 
 ```php
-//... 
+//...
 
 # MerchantProductOffer is used only for Marketplace
 use Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product\MerchantProductOfferProductConcreteExpanderPlugin;
@@ -449,7 +451,7 @@ use Spryker\Zed\ProductLabel\Communication\Plugin\Product\ProductLabelProductCon
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
     //...
-    
+
     /**
      * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
      */
@@ -463,7 +465,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ProductLabelProductConcreteExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteMergerPluginInterface>
      */
@@ -475,7 +477,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ApprovalStatusProductConcreteMergerPlugin(), # Add this plugin if you are using the spryker/product-approval module
         ];
     }
-    
+
     //...
 }
 ```
@@ -494,7 +496,7 @@ use Spryker\Shared\SearchHttp\SearchHttpConfig;
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     //...
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -530,7 +532,7 @@ use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteUpdatedMes
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
     //...
-    
+
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -541,7 +543,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getProductExportPlugins(),
         );
     }
-    
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -555,7 +557,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductAbstractUpdatedMessageBrokerPublisherPlugin(),
         ];
     }
-    
+
     //...
 }
 ```
@@ -598,7 +600,7 @@ use Spryker\Zed\SearchHttp\Communication\Plugin\Synchronization\SearchHttpSynchr
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     //...
-    
+
     /**
      * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */

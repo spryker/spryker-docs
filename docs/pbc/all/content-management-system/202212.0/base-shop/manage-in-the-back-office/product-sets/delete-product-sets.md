@@ -2,6 +2,8 @@
 title: Delete product sets
 description: Learn how to reorder product sets in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+- /docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/product-sets/delete-product-sets.html
 related:
   - title: Create product sets
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html
@@ -16,7 +18,7 @@ related:
 ---
 
 
-This document describes how to delete product sets in the Back Office. Deleting a product set does not delete the products in the set. The product set stops being displayed on the Storefront, but the individual products are still displayed, and the customers can purchase them. 
+This document describes how to delete product sets in the Back Office. Deleting a product set does not delete the products in the set. The product set stops being displayed on the Storefront, but the individual products are still displayed, and the customers can purchase them.
 
 To delete a product set, do the following:
 

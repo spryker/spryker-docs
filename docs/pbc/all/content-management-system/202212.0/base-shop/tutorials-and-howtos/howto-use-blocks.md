@@ -22,6 +22,7 @@ redirect_from:
   - /v1/docs/ht-use-cms-blocks
   - /v1/docs/en/ht-use-cms-blocks
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
+  - /docs/pbc/all/content-management-system/202212.0/tutorials-and-howtos/howto-use-blocks.html
 ---
 
 Blocks can be viewed as partial content snippets that can be embedded in other pages. From an SEO perspective, blocks are a real advantage.

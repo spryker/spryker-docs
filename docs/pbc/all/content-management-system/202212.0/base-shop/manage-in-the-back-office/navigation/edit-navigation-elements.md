@@ -3,6 +3,8 @@ title: Edit navigation elements
 description: Learn how to edit navigation elements in the Back Office
 last_updated: Dec 2, 2022
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/navigation/edit-navigation-nodes.html
 ---
 
 To edit a navigation element in the Back Office, follow the steps:

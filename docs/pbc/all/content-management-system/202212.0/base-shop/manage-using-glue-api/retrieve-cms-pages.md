@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-cms-pages.html
   - /docs/scos/dev/glue-api-guides/202005.0/retrieving-cms-pages.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-cms-pages.html
+  - /docs/pbc/all/content-management-system/202212.0/manage-using-glue-api/retrieve-cms-pages.html
 related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

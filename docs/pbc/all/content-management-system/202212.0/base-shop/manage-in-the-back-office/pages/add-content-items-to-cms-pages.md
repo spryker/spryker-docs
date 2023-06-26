@@ -3,6 +3,8 @@ title: Add content items to CMS pages
 description: Learn how to add content items to CMS pages in the Back Office
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
+redirect_from:
+- docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
 ---
 
 This document describes how to add content items to Storefront pages using the Back Office.

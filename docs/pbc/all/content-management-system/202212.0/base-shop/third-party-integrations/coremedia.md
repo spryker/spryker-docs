@@ -11,6 +11,7 @@ redirect_from:
   - /docs/coremedia
   - /docs/en/coremedia
   - /docs/scos/user/technology-partners/202212.0/content-management/coremedia.html
+  - /docs/pbc/all/content-management-system/202212.0/third-party-integrations/coremedia.html
 ---
 
 ## Partner Information

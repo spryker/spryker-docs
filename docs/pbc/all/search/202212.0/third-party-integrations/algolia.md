@@ -15,7 +15,7 @@ To use Algolia as your search engine, you need an account with Algolia. For deta
 
 {% info_block infoBox "Note" %}
 
-You can retrieve Algolia search results from the Spryker API endpoint `GET /catalog-search`. The Spryker Storefront will soon be supported.
+With the current ACP Algolia PBC you can retrieve Algolia search results in your frontend from the Spryker API endpoint `GET /catalog-search`. The Spryker Storefront (Yves) will soon be supported.
 
 {% endinfo_block %}
 

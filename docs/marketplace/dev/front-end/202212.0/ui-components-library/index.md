@@ -19,7 +19,7 @@ This document provides details about the UI components library.
 
 ## Introduction
 
-Separate from Spryker Core, there is a set of UI Angular Components that are distributed independently via NPM Registry. Each package can be installed via npm or yarn commands:
+Separate from Spryker Core, there is a set of UI Angular Components that are distributed independently via npm Registry. Each package can be installed via npm or yarn commands:
 
 ```bash
 npm install @spryker/package_name

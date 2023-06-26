@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_price_schedule.csv** file to configure [Product Price Schedule](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
+## Import file parameters
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -34,7 +34,7 @@ This file has the following dependencies:
 * [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 *     *stores.php* configuration file of the Demo Shop PHP project
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_price_schedule.csv*  file can be downloaded here:
 
 | File | Description |

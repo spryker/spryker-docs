@@ -12,13 +12,16 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/pbc/all/content-management-system/{{page.version}}/content-items-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 
 ## Import file parameters

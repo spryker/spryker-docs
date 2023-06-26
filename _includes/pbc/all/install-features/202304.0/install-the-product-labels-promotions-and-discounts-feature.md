@@ -15,7 +15,7 @@ To start feature integration, integrate the required features:
 |------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Promotions & Discounts | {{site.version}}   | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html) |
 | Product Labels         | {{site.version}}   | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-labels-feature-integration.html)                   |
-| Spryker Core           | {{site.version}}   | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                       |
+| Spryker Core           | {{site.version}}   | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                       |
 
 ### 1) Set up behavior
 
@@ -64,7 +64,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 Ensure that the plugins work correctly:
 
-1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *product-label* field.
+1. [Create a discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *product-label* field.
 2. Add a product with the defined product label to the cart.
 3. Verify that the discount is applied to the cart.
 

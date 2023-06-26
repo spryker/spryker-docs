@@ -12,9 +12,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/install-and-upgrade/install-features/install-the-prices-feature.html) |
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Prices | {{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -1161,4 +1161,4 @@ Make sure that when a product offer with a volume price is selected, and the sel
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html) |

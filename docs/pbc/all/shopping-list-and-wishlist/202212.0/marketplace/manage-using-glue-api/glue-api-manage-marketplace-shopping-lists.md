@@ -18,7 +18,7 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)
 
@@ -332,7 +332,7 @@ For the response attributes, see [Create a shopping list](#create-a-shopping-lis
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 
 ## Retrieve a shopping list
 
@@ -800,9 +800,9 @@ For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
-* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
+* [Retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
 
 ## Edit a shopping list
 
@@ -1018,7 +1018,7 @@ For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 
 ## Delete a shopping list
 

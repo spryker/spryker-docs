@@ -13,13 +13,16 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html  
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `gift_card_abstract_configuration.csv` file to configure [Gift Card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) Abstract Configuration information in your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. The **Gift Card Abstract Product** represents a type of Gift Cards with a code pattern (e.g. "XMAS-", “Happy-B”, etc.).
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 ## Import file parameters
 

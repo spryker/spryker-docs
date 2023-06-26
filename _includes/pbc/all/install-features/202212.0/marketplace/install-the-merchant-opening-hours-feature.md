@@ -12,7 +12,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
 
 ###  1) Install the required modules using Composer
@@ -547,7 +547,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}} | [Spryker Core](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
+| Spryker Core | {{page.version}} | [Spryker Core](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 

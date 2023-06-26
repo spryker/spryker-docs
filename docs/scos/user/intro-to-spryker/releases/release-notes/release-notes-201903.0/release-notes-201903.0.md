@@ -120,7 +120,7 @@ With this release, Spryker introduces a new code generator called Spryk. It help
 ### Product Relations
 The Spryker Glue REST API now includes endpoints for retrieving lists of related products. Endpoints are available for every type of relation working with the corresponding business logic.
 
-**Documentation**: [Retrieving Related Products](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieve-related-products.html).
+**Documentation**: [Retrieving Related Products](/docs/pbc/all/product-relationship-management/{{site.version}}/glue-api-retrieve-related-products.html).
 
 ### Navigation
 Every navigation node and its structure are retrievable via the navigation API endpoint.
@@ -164,7 +164,7 @@ With the market showing an increasing number of marketplaces, Spryker has integr
 
 Customer payments can now be split in the background and assigned to the corresponding vendors when a client buys a product delivered by different vendors. This feature ensures customers can buy several units of the same product sold by different vendors while still going through the checkout with one single order and one single payment.
 
-**Documentation**: [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html).
+**Documentation**: [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html).
 
 ### Adyen
 Our recently finished Adyen integration covers a wide range of payment methods used both in the DACH region as well as outside of it, thus making sure customers can select the most appropriate payment method.

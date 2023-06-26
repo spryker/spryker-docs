@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
   - title: Marketplace Merchant feature overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management) information in your Spryker shop.

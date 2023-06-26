@@ -12,8 +12,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
@@ -1113,5 +1113,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
+| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html) |
 | Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html)  |

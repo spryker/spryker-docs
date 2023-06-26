@@ -1,15 +1,3 @@
----
-title: Marketplace Product Options feature integration
-last_updated: Jul 28, 2021
-Description: This document describes the process how to integrate the Marketplace Product Options feature into a Spryker project.
-template: feature-integration-guide-template
-redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-product-option-feature-integration.html
-related:
-  - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
----
-
 This document describes how to integrate the Marketplace Product Options feature into a Spryker project.
 
 
@@ -23,7 +11,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product Options      | {{page.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 

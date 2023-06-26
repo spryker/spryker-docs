@@ -13,10 +13,10 @@ To start feature integration, review and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)| 
+| Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
 | Checkout | {{page.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
-| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -375,10 +375,10 @@ To start feature integration, review and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)| 
+| Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
 | Checkout | {{page.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
-| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 | Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 
 ### 1) Install the required modules using Composer
@@ -609,10 +609,10 @@ Make sure that the plugin has been registered:
 
 1. On the Storefront, log in to the customer account.
 2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, and `ApproveQuotePermission` permissions to any role related to the current customer.
-3. For the current customer quote ID and current customer company user as an approver, add the record to `spy_quote_approval`. 
-4. Open `https://mysprykershop.com/cart/`. 
+3. For the current customer quote ID and current customer company user as an approver, add the record to `spy_quote_approval`.
+4. Open `https://mysprykershop.com/cart/`.
 5. Click the **Approve** button. Quote approval status becomes approved and the **Proceed to checkout** button must be displayed.
-6. Create a new quote with items. 
+6. Create a new quote with items.
 7. Open ` https://mysprykershop.com/cart/` and click the **Request for Approval** button. The quote approval status must become waiting, and the approver functionality must be shown.
 
 {% endinfo_block %}

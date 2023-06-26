@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration

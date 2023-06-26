@@ -9,7 +9,7 @@ Spryker's customers need to import data from other systems into their Spryker Co
 * [Demo Shop data import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 * [Data import categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html)
 * [Creating a data importer](/docs/scos/dev/data-import/{{page.version}}/creating-a-data-importer.html)
-* [Importing product data with a single file](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-data-with-a-single-file.html)
+* [Importing product data with a single file](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-data-with-a-single-file.html)
 * [Data importers overview and implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
 * [Importing data with the queue data importer](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-the-queue-data-importer.html)
 * [Data importer speed optimization](/docs/scos/dev/data-import/{{page.version}}/data-importer-speed-optimization.html)

@@ -16,7 +16,7 @@ For detailed information about the modules that provide the API functionality an
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Marketplace Product Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
 
 
 ## Add items to a guest cart
@@ -281,7 +281,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) to learn more.
 {% endinfo_block %}
 
 {% info_block infoBox "Product options" %}
@@ -1741,10 +1741,10 @@ It is the responsibility of the API Client to track whether the selected items a
 For the attributes of the included resources, see:
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
 * [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
-* [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
-* [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
+* [Retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
+* [Retrieve abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
-* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
 
 ## Change item quantity in a guest cart
 

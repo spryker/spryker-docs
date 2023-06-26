@@ -370,9 +370,9 @@ security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %mi
 console data:import:glossary
 ```
 
-## Weak Input Validation for Customer Address Field
+## Weak input validation for the customer address field
 
-The parameters related to the address field had insufficient server-side input validation. By supplying invalid or potentially malicious parameter values, an attacker might be able to cause the server in responding in an unexpected way.
+The parameters related to the address field had insufficient server-side input validation. By supplying invalid or potentially malicious parameter values, an attacker might be able to cause the server to respond in an unexpected way.
 
 ### Affected modules
 
@@ -384,11 +384,11 @@ The parameters related to the address field had insufficient server-side input v
 
 ### Introduced changes
 
-Input validation controls have been implemented server-side for validating address submitted values.
+Input validation controls have been implemented on the server side to validate values submitted in the address field.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, the ShopUi, CustomerPage, CompanyPage, Customer, CompanyUnitAddressGui, and MerchantProfileGui modules should be updated:
+To implement a fix for this vulnerability, update the ShopUi, CustomerPage, CompanyPage, Customer, CompanyUnitAddressGui, and MerchantProfileGui modules:
 
 1. Upgrade the `spryker-shop/shop-ui` module to at least version 1.70.0:
 
@@ -397,7 +397,7 @@ composer require spryker-shop/shop-ui:"^1.70.0"
 composer show spryker-shop/customer-page # Verify the version
 ```
 
-2. Add the SanitizeXssTypeExtensionFormPlugin plugin to FormDependencyProvider:
+2. Add the `SanitizeXssTypeExtensionFormPlugin` plugin to `FormDependencyProvider`:
 src/Pyz/Yves/Form/FormDependencyProvider.php
 
 ```bash
@@ -452,7 +452,7 @@ composer require spryker/customer:"~7.42.1"
 composer show spryker/customer # Verify the version
 ```
 
-5.3 If your version of `spryker/customer` is earlier than 7.50.0, update to version 7.50.1:
+5.3 If your version of `spryker/customer` is earlier than 7.50.0, update it to version 7.50.1:
 
 ```bash
 composer require spryker/customer:"~7.50.1"
@@ -473,9 +473,9 @@ composer require spryker/merchant-profile-gui:"~1.2.1"
 composer show spryker/merchant-profile-gui # Verify the version
 ```
 
-## Outdated Third-Party Library (guzzlehttp/psr7)
+## Outdated third-party library guzzlehttp/psr7
 
-An outdated version of the guzzlehttp/psr7 library was identified to affect Spryker’s applications. The version in use (2.4.3) was affected by a publicly know vulnerability that could allow an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197). 
+An outdated version of the _guzzlehttp/psr7_ library was identified to affect Spryker’s applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could allow an attacker to sneak in a newline (\n) into both the header names and values (CVE-2023-29197). 
 
 ### Affected modules
 
@@ -490,9 +490,9 @@ The affected library has been upgraded.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, the Guzzle, MessageBrokerAws, SecretsManagerAws, and  OauthAuth0 modules should be updated:
+To implement a fix for this vulnerability, update the Guzzle, MessageBrokerAws, SecretsManagerAws, and  OauthAuth0 modules:
 
-1. Upgrade `spryker/guzzle` module to version 2.4.1:
+1. Upgrade the `spryker/guzzle` module to version 2.4.1:
 
 ```bash
 composer require spryker/guzzle:"^2.4.1"

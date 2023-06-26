@@ -245,6 +245,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
                       - title: Shared Carts
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                      - title: Uuid Generation Console
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html
+                        include_versions:
+                        - "202212.0"
                   - title: Install Glue API
                     nested:
                       - title: Install the Cart Glue API
@@ -756,6 +760,8 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
               - title: Upgrade modules
                 nested:
+                  - title: BusinessOnBehalfDataImport
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.html
                   - title: CompanyBusinessUnit
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companybusinessunit-module.html
                   - title: CompanyUser
@@ -895,14 +901,18 @@ entries:
                 url: /docs/pbc/all/discount-management/base-shop/promotions-discounts-feature-overview.html
               - title: Install and upgrade
                 nested:
-                  - title: Integrate the Promotions & Discounts feature
-                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
-                  - title: Integrate the Promotions & Discounts Glue API
-                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
-                  - title: Integrate the Product labels + Promotions & Discounts feature
+                  - title: Install the Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-feature.html
+                  - title: Install the Promotions & Discounts Glue API
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-glue-api.html
+                  - title: Install the Product labels + Promotions & Discounts feature
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
-                  - title: Integrate the Category Management + Promotions & Discounts feature
+                  - title: Install the Category Management + Promotions & Discounts feature
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
+                  - title: Install the Multiple Abstract Products as Promotional Products & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-multiple-abstract-products-as-promotional-products-discounts-feature.html
+                    include_versions:
+                    - "202212.0"
                   - title: Upgrade the Discount module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
                   - title: Upgrade the DiscountCalculatorConnector module
@@ -973,6 +983,10 @@ entries:
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:
+          - title: Install the Mailing and Notifications feature
+            url: /docs/pbc/all/emails/install-the-mailing-and-notifications-feature.html
+            include_versions:
+            - "202212.0"
           - title: "HowTo: Create and register a MailTypePlugin"
             url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
           - title: "HowTo: Create and register a mail provider"
@@ -1085,6 +1099,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html
                   - title: Merchant
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchant-feature.html
+                  - title: Merchant Product Restrictions
+                    url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
+                  - title: Merchants and Merchant Relations
+                    url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchants-and-merchant-relations-feature.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -1222,6 +1240,28 @@ entries:
         include_versions:
         - "202212.0"
         nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Permissions
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-permissions-feature.html
+                  - title: Queue Data Import
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
+                  - title: Spryker Core
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Spryker Core
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+                  - title: REST Schema Validation
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Quote
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
+                  - title: Transfer
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
           - title: Spryker Core feature overview
             url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
             nested:
@@ -1384,6 +1424,10 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Quick Add to Cart + Non-splittable Products
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+                      - title: Splittable Order Items
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
+                      - title: Sales Data Export
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html                        
                   - title: Install Glue API
                     nested:
                       - title: Checkout
@@ -1867,6 +1911,10 @@ entries:
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
                       - title: Scheduled prices
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
+                      - title: Prices per Merchant Relation
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-per-merchant-relation-feature.html
+                        include_versions:
+                        - "202212.0"
                       - title: Product Price Glue API
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
                   - title: Upgrade modules
@@ -2068,6 +2116,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
                       - title: Measurement Units + Quick Add to Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
+                      - title: Multi-store Products
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-multi-store-products-feature.html
+                        include_versions:
+                        - "202212.0"
                       - title: Packaging Units
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
@@ -2230,6 +2282,11 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html
                       - title: ProductValidity
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
+                      - title: Touch
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
+                        include_versions:
+                        - "202212.0"
+
                   - title: Decimal Stock migration concept
                     url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
                   - title: Float stock for products migration concept
@@ -2941,28 +2998,34 @@ entries:
                 url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.html
               - title: Install and upgrade
                 nested:
-                  - title: Integrate the Shopping Lists feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-shopping-lists-feature.html
-                  - title: Integrate the Shopping Lists Glue API
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
-                  - title: Install the Shopping List + Agent Assist feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-list-agent-assist-feature.html
-                  - title: Install the Shopping Lists + Quick Add to Cart feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
-                  - title: Integrate the Shopping Lists + Product Options feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
-                  - title: Integrate the Wishlist Glue API
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-wishlist-glue-api.html
-                  - title: Install the Wishlist + Alternative Products feature
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-wishlist-alternative-products-feature.html
-                  - title: Upgrade the ShoppingList module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglist-module.html
-                  - title: Upgrade the ShoppingListPage module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglistpage-module.html
-                  - title: Upgrade the ShoppingListWidget module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
-                  - title: Upgrade the Wishlist module
-                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html
+                  - title: Install features
+                    nested:
+                      - title: Install the Shopping Lists feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html
+                      - title: Install the Shopping List + Agent Assist feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-list-agent-assist-feature.html
+                      - title: Install the Shopping Lists + Quick Add to Cart feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-quick-add-to-cart-feature.html
+                      - title: Install the Shopping Lists + Product Options feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html
+                      - title: Install the Wishlist + Alternative Products feature
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-features/install-the-wishlist-alternative-products-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Install the Shopping Lists Glue API
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
+                      - title: Install the Wishlist Glue API
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: Upgrade the ShoppingList module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglist-module.html
+                      - title: Upgrade the ShoppingListPage module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistpage-module.html
+                      - title: Upgrade the ShoppingListWidget module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglistwidget-module.html
+                      - title: Upgrade the Wishlist module
+                        url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html
               - title: Manage using Glue API
                 nested:
                   - title: Shopping lists
@@ -3174,6 +3237,10 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
                       - title: AvailabilityStorage
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
+                      - title: StockGui
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
+                        include_versions:
+                        - "202212.0"
               - title: Import data
                 nested:
                   - title: File details - warehouse.csv

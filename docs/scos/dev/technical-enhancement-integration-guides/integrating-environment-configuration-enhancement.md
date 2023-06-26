@@ -40,7 +40,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/resolving-search-engine-friendly-urls
 related:
   - title: Glue API - Spryker Core feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
@@ -32,7 +32,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
 ## Resolve a SEF URL into a Glue API URL
 

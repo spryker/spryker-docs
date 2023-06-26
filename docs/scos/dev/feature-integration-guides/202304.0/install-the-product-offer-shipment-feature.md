@@ -1,7 +1,7 @@
 ---
 title: Install the Product offer shipment feature
 description: Learn how to integrate the Product offer shipment feature into your project
-last_updated: May 25, 2023
+last_updated: June 20, 2023
 template: feature-integration-guide-template
 ---
 

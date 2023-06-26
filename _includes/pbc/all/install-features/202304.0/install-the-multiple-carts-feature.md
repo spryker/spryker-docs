@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)            |
+| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
 | Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
@@ -329,7 +329,7 @@ Make sure that customer carts have unique names. If a customer creates a cart wi
 
 {% info_block infoBox "Info" %}
 
-Example: 
+Example:
 
 If the name "Shopping cart" already exists, it is changed to the following:
 * Shopping cart → Shopping cart 1
@@ -470,7 +470,7 @@ To start feature integration, integrate the required features:
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)            |
+| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
 | Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 

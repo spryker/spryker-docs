@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME                     | VERSION          | INTEGRATION GUIDE                                                                                                                                                                         |
 |--------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core             | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                                      |  |
+| Spryker Core             | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |  |
 | Spryker Core Back Office | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html)                              |
 | Inventory Management     | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
@@ -150,7 +150,7 @@ console translator:generate-cache
 2. Make sure that translations cache is built successfully in Back Office:
    1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
    2. For a user of your choice, click **Assign Warehouses**.
-   3. Make sure that the **Warehouse User Assignment** table is translatable. 
+   3. Make sure that the **Warehouse User Assignment** table is translatable.
 
 To switch the language, follow these steps:
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.

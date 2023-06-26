@@ -369,3 +369,153 @@ security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %mi
 ```bash
 console data:import:glossary
 ```
+
+## Weak Input Validation for Customer Address Field
+
+The parameters related to the address field had insufficient server-side input validation. By supplying invalid or potentially malicious parameter values, an attacker might be able to cause the server in responding in an unexpected way.
+
+### Affected modules
+
+`spryker-shop/customer-page`: 0.1.0 - 2.41.0
+`spryker-shop/company-page`: 0.0.1 - 2.22.0
+`spryker/customer`: 0.20.0 - 7.51.2
+`spryker/company-unit-address-gui`: 0.1.0 - 1.3.0
+`spryker/merchant-profile-gui`: 0.1.0 - 1.2.0
+
+### Introduced changes
+
+Input validation controls have been implemented server-side for validating address submitted values.
+
+### How to get the fix
+
+To implement a fix for this vulnerability, the ShopUi, CustomerPage, CompanyPage, Customer, CompanyUnitAddressGui, and MerchantProfileGui modules should be updated:
+
+1. Upgrade the `spryker-shop/shop-ui` module to at least version 1.70.0:
+
+```bash
+composer require spryker-shop/shop-ui:"^1.70.0"
+composer show spryker-shop/customer-page # Verify the version
+```
+
+2. Add the SanitizeXssTypeExtensionFormPlugin plugin to FormDependencyProvider:
+src/Pyz/Yves/Form/FormDependencyProvider.php
+
+```bash
+<?php
+
+namespace Pyz\Yves\Form;
+
+use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
+use SprykerShop\Yves\ShopUi\Plugin\Form\SanitizeXssTypeExtensionFormPlugin;
+
+class FormDependencyProvider extends SprykerFormDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface>
+     */
+    protected function getFormPlugins(): array
+    {
+        return [
+            new SanitizeXssTypeExtensionFormPlugin(),
+        ];
+    }
+}
+```
+
+3. Upgrade the `spryker-shop/customer-page` module to version 2.42.0:
+
+```bash
+composer require spryker-shop/customer-page:"~2.42.0"
+composer show spryker-shop/customer-page # Verify the version
+```
+
+4. Upgrade the `spryker-shop/company-page` module to version 2.23.0:
+
+```bash
+composer require spryker-shop/company-page:"~2.23.0"
+composer show spryker-shop/company-page # Verify the version
+```
+
+5. Upgrade the `spryker/customer` module:
+
+5.1 If your version of `spryker/customer` is 7.42.0 and later, update it to version 7.51.3:
+
+```bash
+composer require spryker/customer:"~7.51.3"
+composer show spryker/customer # Verify the version
+```
+
+5.2 If your version of `spryker/customer` is earlier than 7.42.0, update it to version 7.42.1:
+
+```bash
+composer require spryker/customer:"~7.42.1"
+composer show spryker/customer # Verify the version
+```
+
+5.3 If your version of `spryker/customer` is earlier than 7.50.0, update to version 7.50.1:
+
+```bash
+composer require spryker/customer:"~7.50.1"
+composer show spryker/customer # Verify the version
+```
+
+6. Upgrade the `spryker/company-unit-address-gui` module to version 1.3.1:
+
+```bash
+composer require spryker/company-unit-address-gui:"~1.3.1"
+composer show spryker/company-unit-address-gui # Verify the version
+```
+
+7. Upgrade the `spryker/merchant-profile-gui` module version to 1.2.1:
+
+```bash
+composer require spryker/merchant-profile-gui:"~1.2.1"
+composer show spryker/merchant-profile-gui # Verify the version
+```
+
+## Outdated Third-Party Library (guzzlehttp/psr7)
+
+An outdated version of the guzzlehttp/psr7 library was identified to affect Spryker’s applications. The version in use (2.4.3) was affected by a publicly know vulnerability that could allow an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197). 
+
+### Affected modules
+
+`spryker/guzzle`: 0.20.0 - 2.4.0
+`spryker/message-broker-aws`: 1.0.0 - 1.4.2
+`spryker/secrets-manager-aws`: 1.0.0 - 1.0.1
+`spryker/oauth-auth0` : 1.0.0
+
+### Introduced changes
+
+The affected library has been upgraded.
+
+### How to get the fix
+
+To implement a fix for this vulnerability, the Guzzle, MessageBrokerAws, SecretsManagerAws, and  OauthAuth0 modules should be updated:
+
+1. Upgrade `spryker/guzzle` module to version 2.4.1:
+
+```bash
+composer require spryker/guzzle:"^2.4.1"
+composer show spryker/guzzle # Verify the version
+```
+
+2. Upgrade the `spryker/message-broker-aws` module to version 1.4.3:
+
+```bash
+composer require spryker/message-broker-aws:"^1.4.3"
+composer show spryker/message-broker-aws # Verify the version
+```
+
+3. Upgrade the `spryker/secrets-manager-aws` module to version 1.0.2:
+
+```bash
+composer require spryker/secrets-manager-aws:"^1.0.2"
+composer show spryker/secrets-manager-aws # Verify the version
+```
+
+4. Upgrade the `spryker/oauth-auth0` module to version 1.0.1:
+
+```bash
+composer require spryker/oauth-auth0:"^1.0.1"
+composer show spryker/oauth-auth0 # Verify the version
+```

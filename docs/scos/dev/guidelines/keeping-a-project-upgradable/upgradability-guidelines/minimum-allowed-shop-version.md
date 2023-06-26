@@ -37,11 +37,8 @@ Below is an example of when the used Spryker package version doesn't correspond 
 MINIMUM ALLOWED SHOP VERSION
 ============================
 
-+---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
-| # | Message                                                                                                         | Target                         |
-+---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
-| 1 | The package "spryker/availability-gui" version "6.5.9" is not supported. The minimum allowed version is "6.6.0" | spryker/availability-gui:6.5.9 |
-+---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
+Message: The package "spryker/availability-gui" version "6.5.9" is not supported. The minimum allowed version is "6.6.0"
+Target:  spryker/availability-gui:6.5.9
 ```
 
 ### Resolving the error

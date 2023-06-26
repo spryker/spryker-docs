@@ -56,11 +56,8 @@ Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/doc
 PHP VERSION CHECKER
 ===================
 
-+---+------------------------------------------------------------------------+---------------------------------+
-| # | Message                                                                | Target                          |
-+---+------------------------------------------------------------------------+---------------------------------+
-| 1 | Composer json PHP constraint "7.2" does not match allowed PHP versions | <path_to_project>/composer.json |
-+---+------------------------------------------------------------------------+---------------------------------+
+Message: Composer json PHP constraint "7.2" does not match allowed PHP versions
+Target:  <path_to_project>/composer.json
 ```
 
 A `composer.json` file that produces the error message:
@@ -84,12 +81,9 @@ Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/doc
 PHP VERSION CHECKER
 ===================
 
-+---+-----------------------------------------------------------------------------------+------------------------------+
-| # | Message                                                                           | Target                       |
-+---+-----------------------------------------------------------------------------------+------------------------------+
-| 1 | The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12" | <path_to_project>/deploy.yml |
-|   | The image tag must contain an allowed PHP version (image:abc-8.0)                 |                              |
-+---+-----------------------------------------------------------------------------------+------------------------------+
+Message: The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12"
+         The image tag must contain an allowed PHP version (image:abc-8.0)
+Target:  <path_to_project>/deploy.yml
 ```
 
 A `deploy.yml` file that produces the error message:
@@ -112,14 +106,11 @@ Below is an example of inconsistent PHP versions being used in the `composer.jso
 PHP VERSION CHECKER
 ===================
 
-+---+--------------------------------------------+--------------------------------------------------------+
-| # | Message                                    | Target                                                 |
-+---+--------------------------------------------+--------------------------------------------------------+
-| 1 | Not all the targets have the same PHP versions | Current php version $phpVersion: php7.2                |
-|   |                                            | tests/Acceptance/_data/InvalidProject/composer.json: - |
-|   |                                            | tests/Acceptance/_data/InvalidProject/deploy**.yml: -  |
-|   |                                            | SDK php versions: php7.2, php8.2                       |
-+---+--------------------------------------------+--------------------------------------------------------+
+Message: Not all the targets have the same PHP versions
+Target:  Current php version $phpVersion: php7.2
+         tests/Acceptance/_data/InvalidProject/composer.json: -
+         tests/Acceptance/_data/InvalidProject/deploy**.yml: -
+         SDK php versions: php7.2, php8.2
 ```
 
 The `composer.json` file uses PHP version `7.2`:

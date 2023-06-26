@@ -20,11 +20,8 @@ If desired, you have the option to disable the dead code checker for a particula
 DEAD CODE CHECKER
 =================
 
-+---+---------------------------------------------------------------------------------+--------------------------------------------------+
-| # | Message                                                                         | Target                                           |
-+---+---------------------------------------------------------------------------------+--------------------------------------------------+
-| 1 | Class "Pyz/Zed/Single/Communication/Plugin/SinglePlugin" is not used in project | Pyz/Zed/Single/Communication/Plugin/SinglePlugin |
-+---+---------------------------------------------------------------------------------+--------------------------------------------------+
+Message: Class "Pyz/Zed/Single/Communication/Plugin/SinglePlugin" is not used in project
+Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
 ```
 
 ## Example of code that causes an evaluator error

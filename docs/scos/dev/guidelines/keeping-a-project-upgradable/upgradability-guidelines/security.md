@@ -17,11 +17,8 @@ A project can sometimes use dependencies that contain known vulnerabilities.. To
 SECURITY CHECKER
 ================
 
-+---+---------------------------------------------------------------------------------------------------------------------+-----------------------+
-| # | Message                                                                                                             | Target                |
-+---+---------------------------------------------------------------------------------------------------------------------+-----------------------+
-| 1 | Improper header validation (CVE-2023-29197): https://github.com/guzzle/psr7/security/advisories/GHSA-wxmh-65f7-jcvw | guzzlehttp/psr7:2.4.1 |
-+---+---------------------------------------------------------------------------------------------------------------------+-----------------------+
+Message: Improper header validation (CVE-2023-29197): https://github.com/guzzle/psr7/security/advisories/GHSA-wxmh-65f7-jcvw
+Target:  guzzlehttp/psr7:2.4.1
 ```
 
 ## Example of code that causes an evaluator error

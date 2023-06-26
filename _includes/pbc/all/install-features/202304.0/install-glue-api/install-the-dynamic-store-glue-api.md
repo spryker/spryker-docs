@@ -17,13 +17,13 @@ Activate the following plugins:
 | PLUGIN | SPECIFICATION                                                                                                                                  | PREREQUISITES | NAMESPACE                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------| --- |-----------------------------------------------------------|
 | StoreHttpHeaderApplicationPlugin | Gets store name from the Request parameter or Request header used for Glue Application. If both defined Request parameter has more priority. - | None | Spryker\Glue\StoresRestApi\Plugin\Application             |
-| StoreApplicationPlugin | Gets store name from the Request parameter or Request header used for Storefront API. If both defined Request parameter has more priority. -   | None | Spryker\Glue\StoresApi\Plugin\Application                 |
-| StoreApplicationPlugin | Gets store name from the Request parameter or Request header used for Storefront API. If both defined Request parameter has more priority. -   | None | Spryker\Glue\StoresBackendApi\Plugin\Application          |
+| StoreApplicationPlugin | Gets store name from the Request parameter or Request header used for Storefront API. If both defined Request parameter has more priority. -   | None | Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication                 |
+| StoreApplicationPlugin | Gets store name from the Request parameter or Request header used for Storefront API. If both defined Request parameter has more priority. -   | None | Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication          |
 | LocaleApplicationPlugin | Gets locale name from the Request header.                                                                                                      | None | Spryker\Glue\ProductOptionsRestApi\Plugin\GlueApplication |
 
 {% info_block warningBox "Warning" %}
 
-`StoreHttpHeaderApplicationPlugin` is deprecated, please use `\Spryker\Glue\StoresApi\Plugin\Application\StoreApplicationPlugin` instead.
+`StoreHttpHeaderApplicationPlugin` is deprecated, please use `\Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication\StoreApplicationPlugin` instead.
 
 {% endinfo_block %}
 
@@ -76,7 +76,7 @@ Make sure that the store and locale are set correctly.
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\StoresBackendApi\Plugin\Application\StoreApplicationPlugin;
+use Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication\StoreApplicationPlugin;
  
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
@@ -133,7 +133,7 @@ namespace Pyz\Glue\GlueStorefrontApiApplication;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 use Spryker\Glue\Http\Plugin\Application\HttpApplicationPlugin;
 use Spryker\Glue\Locale\Plugin\Application\LocaleApplicationPlugin;
-use Spryker\Glue\StoresApi\Plugin\Application\StoreApplicationPlugin;
+use Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication\StoreApplicationPlugin;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
 {

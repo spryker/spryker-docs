@@ -12,7 +12,7 @@ To start feature integration, integrate the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)               |
+| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
 
@@ -575,8 +575,8 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
-2. For any category of your choice, in **Actions**, select **Delete**. 
-3. On the **DELETE CATEGORY: `{CATEGORY_NAME}`** page that opens, make sure the **Products to be de-assigned** field is present. The `{CATEGORY_NAME}` placeholder stands for the name of the category that you choose in step 2. 
+2. For any category of your choice, in **Actions**, select **Delete**.
+3. On the **DELETE CATEGORY: `{CATEGORY_NAME}`** page that opens, make sure the **Products to be de-assigned** field is present. The `{CATEGORY_NAME}` placeholder stands for the name of the category that you choose in step 2.
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
@@ -664,7 +664,7 @@ To start feature integration, integrate the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)               |
+| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
 

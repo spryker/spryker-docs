@@ -18,6 +18,9 @@ redirect_from:
   - /v4/docs/en/integrating-docker-into-existing-projects
   - /v3/docs/integrating-docker-into-an-existing-project-201907
   - /v3/docs/en/integrating-docker-into-an-existing-project-201907
+related:
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This page describes how you can migrate a non-Docker based project into a Docker based one. If you want to install Spryker from scratch, see [Set up](/docs/scos/dev/set-up-spryker-locally/set-up.html).
@@ -30,7 +33,7 @@ This page describes how you can migrate a non-Docker based project into a Docker
     * [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
     * [Installing Docker prerequisites on Windowswith WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
-2. Install the [Spryker Core](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) feature.
+2. Install the [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) feature.
 
 ## Set up .dockerignore
 

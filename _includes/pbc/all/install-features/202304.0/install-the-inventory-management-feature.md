@@ -23,7 +23,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE |
 |--------------|------------------|------------------|
-| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
+| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 ### 1) Install the required modules using Composer
 
@@ -191,21 +191,21 @@ Make sure that `SpyAvailabilityTableMap::getBehaviors()` provides mapping for `s
 >
     <process name="DummyPayment01" main="true">
         <transitions>
-            
+
             <transition happy="true">
                 <source>new</source>
                 <target>warehouse allocated</target>
                 <event>allocate warehouse</event>
             </transition>
-    
+
         </transitions>
-        
+
         <subprocesses>
             <process>WarehouseAllocation</process>
         </subprocesses>
-        
+
     </process>
-    
+
     <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
 
 </statemachine>

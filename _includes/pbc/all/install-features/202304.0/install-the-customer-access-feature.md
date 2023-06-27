@@ -5,14 +5,14 @@ This document describes how to integrate the [Customer Access feature](/docs/pbc
 ## Install Feature Core
 
 Follow the steps below to install the Customer Access feature core.
- 
+
 ### Prerequisites
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE| 
+| NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -405,9 +405,9 @@ Follow the steps below to install the Customer Access feature frontend.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE| 
+| NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 
 ### 1) Add translations

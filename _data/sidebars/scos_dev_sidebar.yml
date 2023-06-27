@@ -1221,6 +1221,11 @@ entries:
       - "202108.0"
     - title: Retrieve related products
       url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+      - "202204.0"
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
       include_versions:
@@ -1354,7 +1359,6 @@ entries:
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:
       - "202204.0"
-      - "202212.0"
       nested:
       - title: B2C API React example
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
@@ -1670,6 +1674,9 @@ entries:
         - "202108.0"
       - title: Glue API - REST Schema Validation
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html
+        include_versions:
+        - "202108.0"
+        - "202204.0"
       - title: Glue API - Return Management
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html
         include_versions:
@@ -1701,7 +1708,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Store
         url: /docs/scos/dev/feature-integration-guides/glue-api/store-api-feature-integration.html
         include_versions:
@@ -2122,7 +2128,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/mailing-and-notifications-feature-integration.html
       include_versions:
       - "202204.0"
-      - "202212.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
       include_versions:
@@ -2155,8 +2160,14 @@ entries:
       - "202108.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Merchants and Merchant Relations
       url: /docs/scos/dev/feature-integration-guides/merchants-and-merchant-relations-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Microsoft Azure Active Directory
       url: /docs/scos/dev/feature-integration-guides/microsoft-azure-active-directory.html
       include_versions:
@@ -2173,7 +2184,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
       include_versions:
       - "202204.0"
-      - "202212.0"
     - title: Multi-store CMS Block
       url: /docs/scos/dev/feature-integration-guides/multi-store-cms-block-feature-integration.html
       include_versions:
@@ -2181,6 +2191,8 @@ entries:
       - "202108.0"
     - title: Multi-store Products
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-feature-integration.html
       include_versions:
@@ -2243,6 +2255,9 @@ entries:
       - "202204.0"
     - title: Permissions
       url: /docs/scos/dev/feature-integration-guides/permissions-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Persistent Cart Sharing
       url: /docs/scos/dev/feature-integration-guides/persistent-cart-sharing-feature-integration.html
       include_versions:
@@ -2270,6 +2285,8 @@ entries:
       - "202108.0"
     - title: Prices per Merchant Relation
       url: /docs/scos/dev/feature-integration-guides/prices-per-merchant-relation-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Product
       url: /docs/scos/dev/feature-integration-guides/product-feature-integration.html
       include_versions:
@@ -2451,7 +2468,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-feature-integration.html
       include_versions:
@@ -2634,7 +2650,6 @@ entries:
       - "201903.0"
       - "201907.0"
       - "202204.0"
-      - "202212.0"
     - title: Spryker Core
       url: /docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
       include_versions:
@@ -2645,8 +2660,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
-      - "202304.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2659,6 +2672,8 @@ entries:
       - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Picker user login
       url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
       include_versions:
@@ -2753,24 +2768,12 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
     - title: Migration Guide - Environment Configuration
       url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
-    - title: Migration Guide - ErrorHandler
-      url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
-    - title: Migration Guide - EventDispatcher
-      url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
     - title: Migration Guide - Flysystem
       url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
-    - title: Migration Guide - Form
-      url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
-    - title: Migration Guide - HTTP
-      url: /docs/scos/dev/module-migration-guides/migration-guide-http.html
-    - title: Migration Guide - Locale
-      url: /docs/scos/dev/module-migration-guides/migration-guide-locale.html
     - title: Migration Guide - Merchant
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
     - title: Migration guide - MerchantGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
-    - title: Migration Guide - Messenger
-      url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
     - title: Migration Guide - Monitoring
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
     - title: Migration Guide - MultiCartPage
@@ -2791,12 +2794,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
       url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
-    - title: Migration Guide - Propel
-      url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
     - title: Migration Guide - Publish and Synchronization
       url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - Router
-      url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
     - title: Migration Guide - Sales
       url: /docs/scos/dev/module-migration-guides/migration-guide-sales.html
     - title: Migration Guide - SalesAggregator
@@ -2807,10 +2806,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
     - title: Migration Guide - SalesSplit
       url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
-    - title: Migration Guide - Security
-      url: /docs/scos/dev/module-migration-guides/migration-guide-security.html
-    - title: Migration Guide - Session
-      url: /docs/scos/dev/module-migration-guides/migration-guide-session.html
     - title: Migration Guide - Setup
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - SharedCartPage
@@ -2819,24 +2814,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
     - title: Migration Guide - Stock
       url: /docs/scos/dev/module-migration-guides/migration-guide-stock.html
-    - title: Migration Guide - StockGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stockgui.html
     - title: Migration Guide - StockSalesConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
-    - title: Migration Guide - Store
-      url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
-    - title: Migration Guide - Touch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
-    - title: Migration Guide - Transfer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-transfer.html
-    - title: Migration Guide - Translator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-translator.html
-    - title: Migration Guide - Twig
-      url: /docs/scos/dev/module-migration-guides/migration-guide-twig.html
-    - title: Migration Guide - Validator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
-    - title: Migration Guide - WebProfiler
-      url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -3469,6 +3448,10 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+    - title: "Tutorial: Replace a default data importer with the queue data importer"
+      url: /docs/scos/dev/data-import/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html
+      include_versions:
+      - "202212.0"
     - title: Data importer speed optimization
       url: /docs/scos/dev/data-import/data-importer-speed-optimization.html
       include_versions:
@@ -3923,6 +3906,38 @@ entries:
           url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
         - title: Router Zed
           url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
+      - title: Migrate modules
+        nested:
+          - title: ErrorHandler
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html
+          - title: EventDispatcher
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html
+          - title: Form
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-form-module.html
+          - title: HTTP
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-http-module.html
+          - title: Locale
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-locale-module.html
+          - title: Messenger
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-messenger-module.html
+          - title: Propel
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-propel-module.html
+          - title: Router
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-router-module.html
+          - title: Security
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-security-module.html
+          - title: Session
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-session-module.html
+          - title: Store
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-store-module.html
+          - title: Translator
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-translator-module.html
+          - title: Twig
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-twig-module.html
+          - title: Validator
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html
+          - title: WebProfiler
+            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:
@@ -4263,8 +4278,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html
       - title: "Tutorial: Managing glossary keys"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
-      - title: "Tutorial: Replacing a default data importer with the queue data importer"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
       - title: "Tutorial: Twig extensions"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
       - title: "Tutorial: New Relic monitoring"

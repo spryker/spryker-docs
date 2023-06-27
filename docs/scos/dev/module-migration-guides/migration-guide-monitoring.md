@@ -32,7 +32,7 @@ redirect_from:
   - /module_migration_guides/mg-monitoring.htm
 related:
   - title: New Relic
-    link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-monitoring-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-monitoring-module.md -->

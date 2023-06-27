@@ -1,13 +1,13 @@
 ---
 title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
-last_updated: Jun 21, 2023
+last_updated: Jun 27, 2023
 template: concept-topic-template
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
 
-If you need any additional support with this content, [contact our support](mailto:support@spryker.com). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
+If you need any additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
 
 ## Stored XSS in product pages 
 

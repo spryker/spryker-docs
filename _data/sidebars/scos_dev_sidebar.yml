@@ -50,8 +50,6 @@ entries:
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html
         - title: Install in Demo mode on Windows
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
-        - title: Integrating the Docker SDK into existing projects
-          url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html
       - title: Configuration
         url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/configuration.html
         nested:
@@ -3938,6 +3936,8 @@ entries:
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html
           - title: WebProfiler
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
+      - title: Migrate to Docker
+        url: /docs/scos/dev/migration-concepts/migrate-to-docker.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

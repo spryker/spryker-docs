@@ -171,4 +171,4 @@ The first key is responsible for proper call from Yves to Zed, while the second 
 
 ## Upgrading to a newer version
 
-To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/set-up-spryker-locally/managing-scos-dependencies-with-composer.html#core-updates).
+To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html#core-updates).

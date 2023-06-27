@@ -103,7 +103,7 @@ To better define your strategy when implementing Spryker updates, learn about ou
 
 {% endinfo_block %}
 
-When installing and managing module dependencies, we use [Composer](/docs/scos/dev/set-up-spryker-locally/managing-scos-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
+When installing and managing module dependencies, we use [Composer](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
 
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 * To update all the modules for your project: `composer update "spryker/*"`.

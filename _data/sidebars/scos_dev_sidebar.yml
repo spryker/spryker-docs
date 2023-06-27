@@ -5,8 +5,8 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/scos/dev/developer-getting-started-guide.html
-  - title: Setup
-    url: /docs/scos/dev/set-up-spryker-locally/setup.html
+  - title: Set up locally
+    url: /docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
     - title: System requirements
       url: /docs/scos/dev/system-requirements/system-requirements.html
@@ -25,21 +25,21 @@ entries:
         url: /docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
       - title: "Quickstart guide: Install Spryker on Windows"
         url: /docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
-    - title: Installing Spryker with Docker
-      url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites.html
+    - title: Install Spryker
+      url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html
       nested:
-      - title: Installing Docker prerequisites
+      - title: Install Docker prerequisites
         url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites.html
         nested:
         - title: Install Docker prerequisites on MacOS
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
         - title: Install Docker prerequisites on Linux
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
-        - title: Install Docker prerequisites on Windows with WSL1
-          url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
         - title: Install Docker prerequisites on Windows with WSL2
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
-      - title: Choose an installation mode
+        - title: Install Docker prerequisites on Windows with WSL1
+          url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+      - title: Install
         url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html
         nested:
         - title: Install in Development mode on MacOS and Linux
@@ -66,7 +66,7 @@ entries:
     - title: Installing Spryker with custom set of modules
       url: /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-custom-set-of-modules.html
     - title: Manage dependencies with Composer
-      url: /docs/scos/dev/set-up-spryker-locally/managing-scos-dependencies-with-composer.html
+      url: /docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration
       url: /docs/scos/dev/set-up-spryker-locally/redis-configuration.html
   - title: Feature walkthroughs
@@ -595,7 +595,7 @@ entries:
       include_versions:
       - "202204.0"
       - "202108.0"
-    - title: Spryker Core 
+    - title: Spryker Core
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
       include_versions:
       - "201811.0"
@@ -3891,7 +3891,7 @@ entries:
             - title: Reactive components
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html                            
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8

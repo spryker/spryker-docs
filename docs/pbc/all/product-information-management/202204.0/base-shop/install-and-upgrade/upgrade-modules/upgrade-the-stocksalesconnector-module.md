@@ -7,4 +7,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
 ---
 
+<!-- Deprecated, don't move to newer versions -->
+
 {% include pbc/all/upgrade-modules/upgrade-the-stocksalesconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-stocksalesconnector-module.md -->

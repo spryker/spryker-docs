@@ -28,7 +28,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-stock.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-stock.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-stock.html
-  - /docs/scos/dev/module-migration-guides/2021080.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-stock.html
   - /module_migration_guides/mg-stock.htm
 ---
 

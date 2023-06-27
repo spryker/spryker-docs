@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/haensel-ams
   - /docs/haensel-ams
   - /docs/en/haensel-ams
+  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/haensel-ams.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

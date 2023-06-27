@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/baqend
   - /docs/baqend
   - /docs/en/baqend
+  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/baqend.html  
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html
@@ -24,4 +25,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

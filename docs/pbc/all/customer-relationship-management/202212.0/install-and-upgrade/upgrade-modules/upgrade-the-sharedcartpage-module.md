@@ -26,6 +26,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-sharedcartpage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sharedcartpage.html
   - /module_migration_guides/mg-shared-cart-page.htm
+  - /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md -->

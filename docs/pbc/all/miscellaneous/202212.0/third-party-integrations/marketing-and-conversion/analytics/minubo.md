@@ -11,6 +11,7 @@ redirect_from:
   - /docs/minubo
   - /docs/en/minubo
   - /industry_partners/performance/minubo.htm
+  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/minubo.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

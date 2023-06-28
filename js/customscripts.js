@@ -496,10 +496,6 @@ function initResponsiveTable() {
         switcher.insertAfter(table);
         wrapper = table.closest('.table');
 
-        if (th.length < 3) {
-            wrapper.addClass('width-50');
-        }
-
         tr.each(function () {
             $(this).find('td').each(function (i, item) {
                 item.setAttribute('data-th-text', th.eq(i).text());

@@ -45,13 +45,16 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 ## Related Business User documents
 
+
+
 |BACK OFFICE USER GUIDES|
+
 |---|
-| [Get a general idea of Templates and Slots](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
-| [Get a general idea of CMS Pages](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
-| [Get a general idea of CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)  |
-| [Get a general idea of CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
-| [Get a general idea of email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)  |
+| [Templates and Slots](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)  |
+| [CMS Pages](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-pages-overview.html)  |
+| [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)  |
+| [CMS pages in search results](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
+| [Email as a CMS block](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/composer
   - /v1/docs/en/composer  
   - /docs/scos/dev/set-up-spryker-locally/composer.html
+  - /docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
 related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html

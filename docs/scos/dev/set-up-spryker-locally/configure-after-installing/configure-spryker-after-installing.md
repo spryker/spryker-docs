@@ -29,8 +29,6 @@ redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
 related:
-  - title: Adjust Jenkins for a Docker environment
-    link: docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html
   - title: Set up a self-signed SSL certificate
     link: docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
 ---

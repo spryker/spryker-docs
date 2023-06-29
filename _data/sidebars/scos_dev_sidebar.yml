@@ -50,23 +50,35 @@ entries:
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html
         - title: Install in Demo mode on Windows
           url: /docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
-      - title: Configuration
-        url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/configuration.html
+      - title: Configure after installing
+        url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/configure-spryker-after-installing.html
         nested:
-        - title: Adjust Jenkins for a Docker environment
-          url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html
-        - title: Configure Spryker after installing
-          url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/configure-spryker-after-installing-with-docker.html
         - title: Set up a self-signed SSL certificate
           url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
       - title: Database access credentials
         url: /docs/scos/dev/set-up-spryker-locally/install-spryker/database-access-credentials.html
-    - title: Installing Spryker with custom set of modules
-      url: /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-custom-set-of-modules.html
     - title: Manage dependencies with Composer
       url: /docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration
       url: /docs/scos/dev/set-up-spryker-locally/redis-configuration.html
+    - title: Troubleshooting
+      nested:
+      - title: An error during frontend setup
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
+      - title: Demo data was imported incorrectly
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
+      - title: Docker daemon is not running
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
+      - title: docker-sync cannot start
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
+      - title: Error 403 No valid crumb was included in the request
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+      - title: Node Sass does not yet support your current environment
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
+      - title: Setup of new indexes throws an exception
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
+      - title: Vendor folder synchronization error
+        url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
     nested:
@@ -3937,7 +3949,10 @@ entries:
           - title: WebProfiler
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
       - title: Migrate to Docker
-        url: /docs/scos/dev/migration-concepts/migrate-to-docker.html
+        url: /docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html
+        nested:
+          - title: Adjust Jenkins for a Docker environment
+            url: /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:
@@ -5244,24 +5259,6 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
         - title: Port is already occupied on host
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
-      - title: Troubleshooting Docker installation
-        nested:
-        - title: An error during frontend setup
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
-        - title: Demo data was imported incorrectly
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
-        - title: Docker daemon is not running
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
-        - title: docker-sync cannot start
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
-        - title: Error 403 No valid crumb was included in the request
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
-        - title: Node Sass does not yet support your current environment
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
-        - title: Setup of new indexes throws an exception
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
-        - title: Vendor folder synchronization error
-          url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
   - title: Updating Spryker
     url: /docs/scos/dev/updating-spryker/updating-spryker.html
     nested:

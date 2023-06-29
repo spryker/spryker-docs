@@ -65,4 +65,3 @@ The following documents detail these customizations:
 
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Adjust Jenkins for a Docker environment](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/adjust-jenkins-for-a-docker-environment.html)

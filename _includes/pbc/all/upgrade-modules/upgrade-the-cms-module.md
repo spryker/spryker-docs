@@ -2,7 +2,7 @@
 
 ## Upgrading from version 6.* to version 7.*
 
-Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 ### BC breaks and solutions:
 

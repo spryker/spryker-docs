@@ -15,6 +15,8 @@ To start the integration, review and install the necessary features:
 |--------------|------------------|-------------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
+TODO: Pavel Maksimov should finish the configuration part
+
 ## 1) Enable extension
 
 To collect execution traces, enable the `xhprof` extension.
@@ -32,6 +34,8 @@ image:
     enabled-extensions:
       - xhprof
 ```
+
+TODO: Pavel Maksimov should finish the configuration part
 
 ## 2) Bootstrap the Docker setup
 
@@ -82,9 +86,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
      */
     protected function getEventDispatcherPlugins(): array
     {
-        return [
-            new ProfilerRequestEventDispatcherPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
+            $plugins[] = new ProfilerRequestEventDispatcherPlugin();
+        }
+    
+        return $plugins;
     }
 }
 ```
@@ -104,9 +114,15 @@ class WebProfilerWidgetDependencyProvider extends SprykerWebProfilerDependencyPr
      */
     public function getDataCollectorPlugins(): array
     {
-        return [
-            new WebProfilerProfilerDataCollectorPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        return $plugins;
     }
 }
 
@@ -134,9 +150,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
      */
     protected function getEventDispatcherPlugins(): array
     {
-        return [
-            new ProfilerRequestEventDispatcherPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
+            $plugins[] = new ProfilerRequestEventDispatcherPlugin();
+        }
+
+        return $plugins;
     }
 }
 ```
@@ -156,9 +178,15 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
      */
     public function getDataCollectorPlugins(): array
     {
-        return [
-            new WebProfilerProfilerDataCollectorPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        return $plugins;
     }
 }
 ```

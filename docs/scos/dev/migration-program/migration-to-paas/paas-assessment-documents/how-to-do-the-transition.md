@@ -30,9 +30,6 @@ If a service wasn't migrated from on-premise to cloud and remain to work on a cu
 
 {% endinfo_block %}
 
-
-During the migration, we don't consider any blue/green deployment strategy. The cloud environment is a copy of the on-premise system and should have a similar set of services to run.
-
 The shop switching assumes a recreation of existing url references from on-premise to cloud. Based on who manages the domain zone (customer or Spryker), the switching time may vary.
 
 Because the infrastructure is fully managed by Spryker, a ticket about endpoints update should be created in [SalesForce portal](http://support.spryker.com) to Operation team. All further communication with a customer is carried out by any preferable channel, such as slack/email etc

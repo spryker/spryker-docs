@@ -5,11 +5,11 @@ template: howto-guide-template
 ---
 
 
-`202108.0` is the earliest release compatible with the latest `docker/sdk`, therefore it’s the minimum release to update to.
+`202108.0` is the earliest release compatible with the latest `docker/sdk`, so it’s the earliest release to update to.
 Because the update is time consuming, it makes sense to update only the packages responsible for the compatibility with the latest Docker SDK. Follow the steps to estimate the upgrade effort.
 
 1. Based on the project's code and `composer.json`, check if [Separate endpoint bootstraps](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) are integrated.
-    If it is integrated, the project is compatible with the lates Docker SDK and the migration is not required.
+    If it is integrated, the project is compatible with the latest Docker SDK and the migration is not required.
 
 2. If the separate endpoint bootstraps are not integrated, using the [formula](#formula), estimate the required effort to update the packages to the provided versions:
 ```json

@@ -81,6 +81,9 @@ entries:
         url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
+    include_versions:
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
@@ -2754,8 +2757,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
     - title: Migration Guide - Business On Behalf Data Import
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
-    - title: Migration Guide - Calculation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - CompanyBusinessUnit
@@ -2780,14 +2781,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
     - title: Migration Guide - Flysystem
       url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
-    - title: Migration Guide - Merchant
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
-    - title: Migration guide - MerchantGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
     - title: Migration Guide - Monitoring
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - MultiCartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
     - title: Migration Guide - Oauth
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
@@ -2796,36 +2791,16 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-offer.html
     - title: Migration Guide - OfferGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
-    - title: Migration Guide - OMS
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration Guide - PersistentCart
-      url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
       url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
     - title: Migration Guide - Publish and Synchronization
       url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - Sales
-      url: /docs/scos/dev/module-migration-guides/migration-guide-sales.html
-    - title: Migration Guide - SalesAggregator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesaggregator.html
-    - title: Migration guide - SalesMerchantConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
-    - title: Migration Guide - SalesQuantity
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
-    - title: Migration Guide - SalesSplit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
     - title: Migration Guide - Setup
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
-    - title: Migration Guide - SharedCartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
-    - title: Migration Guide - Stock
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stock.html
-    - title: Migration Guide - StockSalesConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

@@ -3,6 +3,8 @@ title: Installing Docker prerequisites
 description: This section
 last_updated: Mar 30, 2023
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html
 ---
 
 This section describes the prerequisites for installing Spryker in Docker on Linux, MacOS, and Windows.

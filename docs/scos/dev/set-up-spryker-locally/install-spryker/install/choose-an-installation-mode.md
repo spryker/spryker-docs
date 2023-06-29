@@ -23,9 +23,10 @@ redirect_from:
   - /v3/docs/getting-started-with-docker-201907
   - /v3/docs/en/getting-started-with-docker-201907
   - /docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html
+  - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html
+    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
 
 

@@ -63,7 +63,7 @@ You can choose from the following options:
 
 Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
 
-To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
+To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
 ### The deploy file
 

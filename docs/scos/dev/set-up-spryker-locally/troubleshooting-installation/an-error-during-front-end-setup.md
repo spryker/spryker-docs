@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/an-error-during-front-end-setup
   - /v6/docs/an-error-during-front-end-setup
   - /v6/docs/en/an-error-during-front-end-setup
+  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
 related:
   - title: Demo data was imported incorrectly
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
@@ -57,7 +58,7 @@ gyp ERR!
 ## Solution
 
 1. In `deploy.*.yaml`, change the base PHP image:
-   
+
 ```yaml
 image:
     tag: spryker/php:7.3-alpine3.10

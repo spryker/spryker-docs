@@ -18,9 +18,10 @@ redirect_from:
   - /v4/docs/en/installation-guide-demo-mode
   - /v3/docs/spryker-in-docker-dev-mode-201907
   - /v3/docs/en/spryker-in-docker-dev-mode-201907
+  - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html
+    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
 
 {% info_block infoBox "" %}

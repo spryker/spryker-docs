@@ -56,7 +56,7 @@ entries:
         - title: Set up a self-signed SSL certificate
           url: /docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
       - title: Database access credentials
-        url: /docs/scos/dev/set-up-spryker-locally/install-spryker/database-access-credentials.html
+        url: /docs/scos/dev/set-up-spryker-locally/database-access-credentials.html
     - title: Manage dependencies with Composer
       url: /docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration

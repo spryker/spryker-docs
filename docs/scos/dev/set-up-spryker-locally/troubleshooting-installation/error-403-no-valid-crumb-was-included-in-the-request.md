@@ -3,6 +3,8 @@ title: Error 403 No valid crumb was included in the request
 description: Learn how to fix the issue with no valid crumbs provided.
 last_updated: May 4, 2022
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/error-403-no-valid-crumb-was-included-in-the-request.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

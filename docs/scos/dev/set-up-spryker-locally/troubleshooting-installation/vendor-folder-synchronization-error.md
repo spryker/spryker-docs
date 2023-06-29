@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/vendor-folder-synchronization-error
   - /v6/docs/vendor-folder-synchronization-error
   - /v6/docs/en/vendor-folder-synchronization-error
+  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

@@ -23,6 +23,7 @@ redirect_from:
   - /docs/docker-installation-prerequisites
   - /docs/en/docker-installation-prerequisites
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-linux.html
+  - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html  
 related:
   - title: Install Docker prerequisites on MacOS
     link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
@@ -97,4 +98,4 @@ To choose an installation mode, see [Choose an installation mode](/docs/scos/dev
 If you've already selected an installation mode, follow one of the guides:
 * [Install in Development mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
 * [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/integrating-the-docker-sdk-into-existing-projects.html)
+* [Integrating Docker into existing projects](/docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html)

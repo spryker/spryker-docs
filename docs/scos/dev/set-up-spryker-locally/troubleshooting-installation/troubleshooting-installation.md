@@ -3,13 +3,15 @@ title: Troubleshooting installation
 description: Troubleshoot installation issues.
 last_updated: Jun 16, 2023
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/troubleshooting-installation.html
 ---
 
 This section includes guidance for problems related to issues you might encounter when installing Spryker.  
 
 ## Topics
 
-Troubleshooting [Docker installation](/docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html):
+Troubleshooting [Docker installation](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html):
 * [An error during front end setup](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html)
 * [Demo data was imported incorrectly](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html)
 * [Docker daemon is not running](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html)

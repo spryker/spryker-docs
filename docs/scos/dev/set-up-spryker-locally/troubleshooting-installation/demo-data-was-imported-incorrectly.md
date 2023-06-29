@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/demo-data-was-imported-incorrectly
   - /v6/docs/demo-data-was-imported-incorrectly
   - /v6/docs/en/demo-data-was-imported-incorrectly
+  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

@@ -10,7 +10,7 @@ This document describes how to get started with the B2C Demo Marketplace.
 
 {% info_block infoBox "Info" %}
 
-The B2C Demo Marketplace installation process described in this document is based on the [Spryker in Docker installation](/docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html). You can also install the B2C Demo Marketplace based on Vagrant. To do so, use [Installing Spryker with the Development Virtual Machine](/docs/scos/dev/developer-getting-started-guide.html) for reference and adapt this installation guide to installation in Vagrant.
+The B2C Demo Marketplace installation process described in this document is based on the [Spryker in Docker installation](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). You can also install the B2C Demo Marketplace based on Vagrant. To do so, use [Installing Spryker with the Development Virtual Machine](/docs/scos/dev/developer-getting-started-guide.html) for reference and adapt this installation guide to installation in Vagrant.
 
 {% endinfo_block %}
 

@@ -13,9 +13,10 @@ redirect_from:
   - /v6/docs/installing-in-development-mode-on-windows
   - /v6/docs/en/installing-in-development-mode-on-windows
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
+  - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/installing-spryker-with-docker.html
+    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
 
 ---
 

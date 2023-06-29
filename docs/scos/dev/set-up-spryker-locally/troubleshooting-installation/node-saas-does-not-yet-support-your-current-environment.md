@@ -3,6 +3,8 @@ title: Node Sass does not yet support your current environment
 description: Learn how to fix the issue with unsupported Saas
 last_updated: May 4, 2022
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/node-saas-does-not-yet-support-your-current-environment.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

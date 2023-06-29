@@ -2838,7 +2838,7 @@ entries:
         include_versions:
         - "202212.0"
         nested:
-          - title: Algolia # REDIRECTS DONE
+          - title: Algolia
             url: /docs/pbc/all/search/algolia/algolia.html
             nested:
               - title: Integrate Algolia
@@ -2852,7 +2852,7 @@ entries:
           - title: Elasticsearch
             url: /docs/pbc/all/search/elasticsearch/elasticsearch.html
             nested:
-              - title: Install and Upgrade Elasticsearch # REDIRECTS DONE
+              - title: Install and Upgrade Elasticsearch
                 nested:
                   - title: Install Elasticsearch
                     nested:
@@ -2890,8 +2890,7 @@ entries:
                         url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-productsetpagesearch-module.html
                       - title: Search
                         url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-search–module.html
-              - title: Configure Elasticsearch # REDIRECTS DONE
-                url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/configure-elasticsearch.html # REDO THE CONTENT
+              - title: Configure Elasticsearch
                 nested:
                   - title: Define search preferences
                     url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/define-search-preferences.html
@@ -2915,13 +2914,13 @@ entries:
                         url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/category-filters/reorder-category-filters.html
               - title: Search via API # REDIRECTS DONE
                 url: /docs/pbc/all/search/elasticsearch/search-via-api/search-via-api.html
-              - title: Import data # REDIRECTS DONE
+              - title: Import data
                 nested:
                   - title: "File details: product_search_attribute_map.csv"
                     url: /docs/pbc/all/search/elasticsearch/import-data/file-details-product-search-attribute-map.csv.html
                   - title: "File details: product_search_attribute.csv"
                     url: /docs/pbc/all/search/elasticsearch/import-data/file-details-product-search-attribute.csv.html
-              - title: Tutorials and Howtos # REDIRECTS DONE
+              - title: Tutorials and Howtos
                 nested:
                   - title: Content and search - attribute-cart-based catalog personalization
                     url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
@@ -2941,7 +2940,7 @@ entries:
                     url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/facet-filter-overview-and-configuration.html
                   - title: Integrate any search engine into a project
                     url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
-              - title: Best practices # REDIRECTS DONE
+              - title: Best practices
                 nested:
                   - title: Data-driven ranking
                     url: /docs/pbc/all/search/elasticsearch/best-practices/data-driven-ranking.html

@@ -52,8 +52,6 @@ Review the [reference information](#reference-information-add-product-attributes
 5. Optional: To start using the created search attribute, click **Synchronize search preferences**.
     This refreshes the page with a success message displayed.
 
-
-
 ## Reference information: Add product attributes to search and define search preferences
 
 This section describes attributes you see and enter when adding product attributes to search and defining search preferences for them.
@@ -102,7 +100,12 @@ Defines if auto-completion suggestions should appear when customers search for t
 For example, the _storage_media_ attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term is autocompleted with `sh`, and there is a list of suggested terms in the search results.
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)
 
-
-
 Also, it does not make much sense to activate search preferences for attributes with the **numeric** and **Yes/No** values. As numbers may occur not only in attributes but in product SKUs, names and descriptions (which are actually ranked higher than attributes in search results), therefore the probability that a user will find what they were looking for is low, but the list of search results will be huge, and the search term will be present in multiple places.
 Besides, it is very unlikely that users will be searching for an attribute with a numeric value or the Yes/No values.
+
+## Current constraints
+
+The feature has the following functional constraints:
+
+* Search preference attributes are shared across all the stores in a project.
+* You cannot define a search preference for a single store.

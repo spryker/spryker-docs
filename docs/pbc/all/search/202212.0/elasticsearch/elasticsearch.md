@@ -16,41 +16,36 @@ redirect_from:
   - /docs/pbc/all/search/202212.0/search-feature-overview/search-feature-overview.html
   - /docs/pbc/all/search/202212.0/search-feature-overview/search-types-overview.html
   - /docs/pbc/all/search/202212.0/best-practices/search-best-practices.html
+  - /docs/pbc/all/search/202212.0/manage-in-the-back-office/log-into-the-back-office.html
 ---
 
 Spryker is shipped with Elasticsearch as the default search solution. Elasticsearch provides all the basic search functionalities. You can extend or customize it to fit your needs.
 
+## Indexed entities
+
 By default, the following information is indexed:
 
-- General product information (name, description, SKU)
-- Product reviews
-- Product attributes
+- Products (Abstract & Concrete level information)
+- Product Reviews
 - CMS pages
 
-**General product information**
+### Products
+
 Everything you have on the product details page is indexed. Therefore, it is important that you provide full and accurate information here, like a complete title (for example, not just *Samsung Galaxy A03*, but *Samsung Galaxy A03 Core 2/32GB Blue*), descriptions, or manufacturer information.
-
-**Product reviews**
-The indexed content includes summary and description of [product reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html). If any of the text from either summary or description matches the search query, the product appears on a search result page.
-
-**Product attributes**
 The indexed [Product attribute](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) values help customers refine their search. Therefore, it is important that your list of attribute is complete and precise. For information about creating the product attributes, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 
-**CMS pages**
+### Product Reviews
+
+The indexed content includes summary and description of [product reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html). If any of the text from either summary or description matches the search query, the product appears on a search result page.
+
+### CMS pages
+
 Information from the CMS pages is indexed just like the information from the product details page. So if user searches for something that occurs on any of the CMS pages, the CMS page appears in the search results. For information about how you can create CMS pages, see [Creating CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html)
 
-## Current constraints
+## Search types supported
 
-The feature has the following functional constraints which are going to be resolved in the future.
-* Search preference attributes are shared across all the stores in a project.
-* You cannot define a search preference for a single store.
+### Full-site search
 
-===================================================
-
-This document describes the default search types shipped with the *Search* feature.
-
-
-## Full-site search
 The default full-site search has the following functionality:
 
 * *Fuzzy search*: Suggests search results that do not exactly match the search request.
@@ -59,17 +54,10 @@ The default full-site search has the following functionality:
 * *Did-you-mean*: Offers typo corrections for the search string.
 * *Mimic a dynamic category* by saving a search result and embedding it like a category page in your navigation.
 
-## Multi-language search
+### Multi-language search
+
 If you set up a multi-language store, the search function automatically checks and adjusts the language your customer has selected. All search functions, such as auto-complete or auto-suggest, are then applied to the selected language.
 
-## Textual search
+### Textual search
+
 By default, all content on CMS and Product Pages, such as product name, description text, or allocated attributes, is searchable. Additionally, Product attributes can be boosted in the search results. You can easily define which products or content to include in or exclude from the full-text search.
-
-For details about how you can manage the search preferences, see [Managing search preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/define-search-preferences.html).
-
-## Current constraints
-
-The feature has the following functional constraints:
-
-* Search preference attributes are shared across all the stores in a project.
-* You cannot define a search preference for a single store.

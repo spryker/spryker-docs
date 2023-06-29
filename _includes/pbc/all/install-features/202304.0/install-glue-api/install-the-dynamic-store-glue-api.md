@@ -16,9 +16,9 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION                                                                                                                                  | PREREQUISITES | NAMESPACE                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------| --- |-----------------------------------------------------------|
-| StoreHttpHeaderApplicationPlugin | Gets store name from the Request parameter or Request header used for Glue Application. If both defined Request parameter has more priority. - | None | Spryker\Glue\StoresRestApi\Plugin\Application             |
-| StoreApplicationPlugin | Gets store name from the Request parameter or Request header used for Storefront API. If both defined Request parameter has more priority. -   | None | Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication                 |
-| StoreApplicationPlugin | Gets store name from the Request parameter or Request header used for Storefront API. If both defined Request parameter has more priority. -   | None | Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication          |
+| StoreHttpHeaderApplicationPlugin | Gets the name of the store from the Request parameter or the Request header used for the Glue Application. If both are defined, the Request parameter has more priority. - | None | Spryker\Glue\StoresRestApi\Plugin\Application             |
+| StoreApplicationPlugin | Gets the name of the store from the Request parameter or the Request header used for the Storefront API. If both are defined, the Request parameter has more priority. -   | None | Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication                 |
+| StoreApplicationPlugin |  Gets the name of the store from the Request parameter or the Request header used for the Storefront API. If both are defined, the Request parameter has more priority. -   | None | Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication          |
 | LocaleApplicationPlugin | Gets locale name from the Request header.                                                                                                      | None | Spryker\Glue\ProductOptionsRestApi\Plugin\GlueApplication |
 
 {% info_block warningBox "Warning" %}
@@ -57,7 +57,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response whithout any errors and contains the `content-language` header set to **de_DE**.
+If everything is set up correctly, a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response without any errors and contain the `content-language` header set to **de_DE**.
 
 {% endinfo_block %}
 
@@ -95,9 +95,9 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue-backend.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response whithout any errors and contains the `content-language` header set to **de_DE**.
+If everything is set up correctly, a request to `https://glue-backend.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response without any errors and contain the `content-language` header set to **de_DE**.
 
-An example for testing with Store header: 
+An example for testing with a Store header: 
 
 ```bash
 curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token' \
@@ -109,7 +109,7 @@ curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token' 
 
 ```
 
-An example for testing with Store Request parameter:
+An example for testing with a Store Request parameter:
 
 ```bash
 curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token?_store=DE' \
@@ -153,6 +153,6 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue-storefront.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response whithout any errors and contains the `content-language` header set to **de_DE**.
+If everything is set up correctly, a request to `https://glue-storefront.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response without any errors and contain the `content-language` header set to **de_DE**.
 
 {% endinfo_block %}

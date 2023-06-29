@@ -1315,4 +1315,4 @@ Integrate the following related features:
 |--- | --- | --- |
 | GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
 | Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|
+| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

@@ -51,7 +51,6 @@ Make sure that the following module has been installed:
     <table name="spy_product_offer_shipment_type">
         <behavior name="event">
             <parameter name="spy_product_offer_shipment_type_all" column="*"/>
-            <parameter name="spy_product_offer_shipment_type_fk_product_offer" column="fk_product_offer" keep-additional="true"/>
         </behavior>
     </table>
 

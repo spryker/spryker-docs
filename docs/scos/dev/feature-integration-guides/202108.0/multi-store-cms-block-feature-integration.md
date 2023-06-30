@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/multi-store-cms-block-feature-integration
 related:
   - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 
 To prepare your project to work with multi-store CMS Blocks, the following minimum module versions are required:

@@ -8,6 +8,7 @@ originalArticleId: 0af5d38e-725f-44a1-9bfd-dd9f85cdf29b
 redirect_from:
   - /2021080/docs/precise-search-by-super-attributes
   - /2021080/docs/en/precise-search-by-super-attributes
+  - /docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
   - /docs/precise-search-by-super-attributes
   - /docs/en/precise-search-by-super-attributes
   - /v6/docs/precise-search-by-super-attributes
@@ -37,41 +38,41 @@ related:
 
 ## Task to achieve
 
-Imagine a shop selling a laptop (abstract product) with 16/32Gb RAM and i5/i7 CPU options. One day there are only two models in stock: *16Gb + i5* and *32Gb + i7*.
+Imagine a shop selling a laptop with 16/32Gb RAM and i5/i7 CPU options. One day there are only two models in stock: *16Gb + i5* and *32Gb + i7*.
 
-Selecting in the search *RAM: 16Gb + CPU: i7* shows you this abstract product in the catalog/search, while none of it's concretes match the requirements.
+Selecting *RAM: 16Gb + CPU: i7* shows you this abstract product in the catalog/search, while none of its concretes match the requirements.
 
-It's expected, that only products with at least one concrete matching selected super-attribute values must be shown. In the previously mentioned example, the search result must be empty.
+As expected,  only products with at least one concrete matching selected super-attribute values must be shown. In the previously mentioned example, the search result must be empty.
 
 ## Possible solutions
 
 The following solutions require [Product Page Search 3.0.0](https://github.com/spryker/product-page-search/releases/tag/3.0.0) or newer.
 
 ### Solution 1. Concrete products index as a support call
-The solution consists of several steps: the idea, implementation plan, and possible downsides of the solution. 
+The solution consists of several steps: the idea, the implementation plan, and the possible downsides of the solution. 
 
 #### Idea
 
-Search is done in two steps:
-1. In the **product concrete index**, search is performed by super attributes and matching product abstract IDs are displayed.
-2. Those from the main index for product abstracts are retrieved.
+The Search is done in two steps:
+1. In the **product concrete index**, search is performed by super attributes, and matching product abstract IDs are displayed.
+2. Those from the main index for product abstracts are then retrieved.
 
 #### Implementation
 
-1. Extend `ProductConcretePageSearchTransfer` with new field *attributes*, where desired attributes would be stored as an array of string values:
+1. Extend `ProductConcretePageSearchTransfer` with the new field *attributes*, where the desired attributes are stored as an array of string values:
 
 ```
 <property name="attributes" type="string[]" singular="attribute"/>
 ```
 
-2. Implement Data expander with the interface `\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageDataExpanderPluginInterface` in order to fill into `ProductConcretePageSearchTransfer` super attributes from the concrete. 
-3. Add this plugin in `ProductPageSearchDependencyProvider` into plugins list `getProductConcretePageDataExpanderPlugins`.
-3. Implement the query expander `ConcreteProductSearchQueryExpanderPlugin` implementing interface `QueryExpanderPluginInterface`. You have to add this plugin before `FacetQueryExpanderPlugin` in `CatalogDependencyProvider` into list `createCatalogSearchQueryExpanderPlugins`.
+2. Implement the Data expander with the interface `\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageDataExpanderPluginInterface` to fill into `ProductConcretePageSearchTransfer` super attributes from the concrete. 
+3. Add this plugin in `ProductPageSearchDependencyProvider` into the plugins list `getProductConcretePageDataExpanderPlugins`.
+3. Implement the query expander `ConcreteProductSearchQueryExpanderPlugin`, implementing the interface `QueryExpanderPluginInterface`. You have to add this plugin before `FacetQueryExpanderPlugin` in `CatalogDependencyProvider` into list `createCatalogSearchQueryExpanderPlugins`.
 
 This plugin does the following:
 - Filters out from the request values for super attributes and doesn't include those in the query.
-- Makes a sub-search request like `CatalogClient::searchProductConcretesByFullText`, but searches by facets of super attributes from the request.
-- Adds into query list of unique abstract product IDs.
+- Makes a sub-search request such as  `CatalogClient::searchProductConcretesByFullText`, but searches by facets of super attributes from the request.
+- Adds a list of unique abstract product IDs into the query.
 
 An example implementation looks as follows:
 
@@ -91,7 +92,7 @@ Make sure to use updated plugin in `CatalogDependencyProvider`.
 
 #### Downsides
 
-As you see from the implementation, the results of the last query abstract products index cannot be actually paginated. You can't deal with smooth pagination since it's unknown how many concrete products to skip or query to get the next page with abstract products.
+As you see from the implementation, the results of the last query abstract products index can't be actually paginated. You can't deal with smooth pagination since it's unknown how many concrete products to skip or query to get the next page with abstract products.
 
 
 ### Solution 2: Concrete products index is used as a main search index
@@ -100,7 +101,7 @@ The solution consists of several steps: the idea, implementation plan, and possi
 
 #### Idea
 
-The search request is made on the concrete product index, which is extended with attributes, to allow filter by those, and with abstract product data to fulfill required abstract product information for catalog display.
+The search request is made on the concrete product index, which is extended with attributes, to allow filtering by those, and with abstract product data to fulfill the required abstract product information for catalog display.
 
 #### Implementation plan
 

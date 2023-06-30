@@ -74,8 +74,8 @@ The following table lists the modules affected by the Decimal Stock update and w
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
 | `spryker/availability` | 9.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900) |
-| `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html#upgrading-from-version-10-to-version-1100) |
-| `spryker/stock` | 8.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7-to-version-800) |
+| `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/pbc/all/order-management-system/202212.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html#upgrading-from-version-10-to-version-1100) |
+| `spryker/stock` | 8.0.0 | [Migration Guide - Stock](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html#upgrading-from-version-7-to-version-800) |
 | `spryker/availability-storage` | 2.0.0 | [Upgrade the AvailabilityStorage module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/availability-gui` | 6.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html#upgrading-from-version-5-to-version-600) |
 | `spryker/availability-cart-connector` | 7.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html#upgrading-from-version-6-to-version-700) |

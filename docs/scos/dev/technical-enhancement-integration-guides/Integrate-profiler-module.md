@@ -9,13 +9,12 @@ This document describes how to integrate profiler module into a Spryker project.
 
 ## Prerequisites
 
-To start the integration, review and install the necessary features:
+To start the integration, review, install and enable the necessary features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE |
-|--------------|------------------|-------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-
-TODO: Pavel Maksimov should finish the configuration part
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                             |
+|--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)   |
+| Web Profiler | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.md) |
 
 ## 1) Enable extension
 
@@ -34,8 +33,6 @@ image:
     enabled-extensions:
       - xhprof
 ```
-
-TODO: Pavel Maksimov should finish the configuration part
 
 ## 2) Bootstrap the Docker setup
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/setup-of-new-indexes-throws-an-exception
   - /v6/docs/setup-of-new-indexes-throws-an-exception
   - /v6/docs/en/setup-of-new-indexes-throws-an-exception
-  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

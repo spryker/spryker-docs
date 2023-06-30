@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 ---
 
-This document describes how to get started with the B2C Demo Marketplace. 
+This document describes how to get started with the B2C Demo Marketplace.
 
 {% info_block infoBox "Info" %}
 
@@ -86,6 +86,6 @@ That's it. You've set up your Spryker B2C Demo Marketplace and can access your a
 
 ## Next steps
 
-- For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html).
+- For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html).
 - Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html).
 - See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-b2b-reference.html).

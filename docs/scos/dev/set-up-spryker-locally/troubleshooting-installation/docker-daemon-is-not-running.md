@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/docker-daemon-is-not-running
   - /v6/docs/docker-daemon-is-not-running
   - /v6/docs/en/docker-daemon-is-not-running
-  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/docker-sync-cannot-start
   - /v6/docs/docker-sync-cannot-start
   - /v6/docs/en/docker-sync-cannot-start
-  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
 related:
   - title: An error during front end setups
     link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html

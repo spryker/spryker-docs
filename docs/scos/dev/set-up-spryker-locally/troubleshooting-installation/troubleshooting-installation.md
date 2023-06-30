@@ -4,7 +4,7 @@ description: Troubleshoot installation issues.
 last_updated: Jun 16, 2023
 template: troubleshooting-guide-template
 redirect_from:
-  - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/troubleshooting-installation.html
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-installation/troubleshooting-installation.html
 ---
 
 This section includes guidance for problems related to issues you might encounter when installing Spryker.  

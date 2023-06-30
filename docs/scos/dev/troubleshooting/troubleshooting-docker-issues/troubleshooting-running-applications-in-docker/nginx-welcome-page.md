@@ -14,17 +14,17 @@ redirect_from:
   - /v6/docs/en/nginx-welcome-page
 related:
   - title: 413 Request Entity Too Large
-    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
+    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
   - title: An application is not reachable via http
-    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html
+    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html
   - title: MacOS and Windows - file synchronization issues in Development mode
-    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
+    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
   - title: Mutagen error
-    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
+    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
   - title: Mutagen synchronization issue
-    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
+    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
   - title: Port is already occupied on host
-    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
+    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 ---
 
 You get the Nginx welcome page by opening an application in the browser.

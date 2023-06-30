@@ -18,9 +18,6 @@ redirect_from:
   - /v4/docs/en/integrating-docker-into-existing-projects
   - /v3/docs/integrating-docker-into-an-existing-project-201907
   - /v3/docs/en/integrating-docker-into-an-existing-project-201907
-related:
-  - title: Database access credentials
-    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This page describes how you can migrate a non-Docker based project into a Docker based one. If you want to install Spryker from scratch, see [Set up](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
@@ -130,7 +127,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
+* [Troubleshooting](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
 * [Debugging Setup in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)

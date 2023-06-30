@@ -1332,7 +1332,28 @@ entries:
                 - title: Analytics
                   nested:
                   - title: FACT-Finder
-                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html
+                    nested:
+                      - title: Installing and configuring FACT-Finder NG API
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+                      - title: Installing and configuring FACT-Finder
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+                      - title: Installing and configuring FACT-Finder web components
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+                      - title: Exporting product data for FACT-Finder
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+                      - title: Using FACT-Finder campaigns
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+                      - title: Using FACT-Finder search
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+                      - title: Using FACT-Finder search suggestions
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+                      - title: Using FACT-Finder tracking
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+                      - title: Integrating FACT-Finder
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+                      - title: Using FACT-Finder recommendation engine
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
                   - title: Minubo
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo.html
                   - title: ChannelPilot Analytics

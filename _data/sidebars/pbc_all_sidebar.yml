@@ -76,14 +76,15 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
                   - title: Retrieve shipments in orders
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
-              - title: Import and export data
+              - title: Import data
+                url: /docs/pbc/all/carrier-management/base-shop/import-data/import-carrier-management-data.html
                 nested:
                   - title: File details - shipment.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-data/file-details-shipment.csv.html
                   - title: File details - shipment_method_store.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-store.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-data/file-details-shipment-method-store.csv.html
                   - title: File details - shipment_price.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-price.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-data/file-details-shipment-price.csv.html
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Add a new shipment method"

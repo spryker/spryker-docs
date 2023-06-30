@@ -75,4 +75,4 @@ docker/sdk up
 The project is now running. For the full list of the project's endpoints, see `http://spryker.local`.
 
 
-For detailed installation instructions, start with [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html#prerequisites).
+For detailed installation instructions, start with [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker).

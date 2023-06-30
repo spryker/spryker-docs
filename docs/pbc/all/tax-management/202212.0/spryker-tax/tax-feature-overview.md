@@ -1,6 +1,6 @@
 ---
-title: Tax feature overview
-description: With the Tax Management capability you can define taxes for the items you sell.
+title: Spryker Tax
+description: With the Spryker Tax Management capability you can define taxes for the items you sell.
 last_updated: Jun 25, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
@@ -101,28 +101,3 @@ The capability has the following functional constraints:
 
 * There is no Back Office UI for the Avalara tax codes.
 * Many Avalara features are not supported yet. This will be resolved in the future.
-
-
-## Related Business User documents
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html) |
-| [Edit tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-rates.html) |
-| [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) |
-| [Edit tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-sets.html) |
-
-## Related Developer documents
-
-| INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
-|---|---|---|---|
-| [Integrate the Tax Glue API](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/install-the-tax-glue-api.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html)  | [Import tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets.html) |
-| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets-for-abstract-products.html) |
-| | | | [Import tax sets for shipment methods](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets-for-shipment-methods.html) |
-| | | | [Import tax sets for product options](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets-for-product-options.html) |
-
-<!--
-| [Integrate Avalara](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara.html) |
-| [Integrrate Avalara Tax + Shipment feature](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |
-| [Integrate Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html) |
--->

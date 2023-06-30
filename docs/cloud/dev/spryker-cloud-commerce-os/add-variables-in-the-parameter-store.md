@@ -58,6 +58,12 @@ Path examples:
 
 * /deans_jeans/prod/config/app/public/mail_host
 
+### Reserved variables
+Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you cannot define your own variables using these names.
+The reserved variable names are the following:
+* `DUMMY_INIT`
+* `SPRYKER_*`
+
 
 ## Variable path hierarchy
 
@@ -96,12 +102,6 @@ The following variables are arranged from lower to higher priority:
 ## Add variables
 
 The following sections describe how to add parameters and secrets for different resources.
-
-{% info_block warningBox "Propagation of variables" %}
-
-To make variables available in your Jenkins instance, we need to terraform your added or changed variables. To do this, create a [support case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests).
-
-{% endinfo_block %}
 
 ### Add parameters to all resource types
 

@@ -64,7 +64,7 @@ docker/sdk bootstrap deploy.dev.yml
 
 Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
 
-![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
 ## 3. Build and start the instance
 
@@ -75,4 +75,4 @@ docker/sdk up
 The project is now running. For the full list of the project's endpoints, see `http://spryker.local`.
 
 
-For detailed installation instructions, start with [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker).
+For detailed installation instructions, start with [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).

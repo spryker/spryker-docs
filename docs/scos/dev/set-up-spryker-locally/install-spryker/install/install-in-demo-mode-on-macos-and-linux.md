@@ -96,7 +96,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 2. Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
 
-![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
 
 3. Build and start the instance:

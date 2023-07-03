@@ -3,7 +3,7 @@ name: Contributor of the Month
 on:
   push:
     branches:
-      - your-branch-name
+      - fix-404
 
 jobs:
   calculate-contributor-of-the-month:

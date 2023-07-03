@@ -44,6 +44,8 @@ reserved, you cannot define your own variables using these names.
 * `DUMMY_INIT`
 * `SPRYKER_*`
 
+If you are already using these reserved variables in your code, you need to change their names to avoid any service issues.
+
 {% endinfo_block %}
 
 Placeholder description:

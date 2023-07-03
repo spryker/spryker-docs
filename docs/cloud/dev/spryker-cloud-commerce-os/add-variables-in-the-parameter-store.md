@@ -58,12 +58,17 @@ Path examples:
 
 * /deans_jeans/prod/config/app/public/mail_host
 
+
 ### Reserved variables
-Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you cannot define your own variables using these names.
-The reserved variable names are the following:
+{% info_block warningBox "Important" %}
+
+Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are 
+reserved, you cannot define your own variables using these names.
+<BR> The reserved variable names are the following:
 * `DUMMY_INIT`
 * `SPRYKER_*`
 
+{% endinfo_block %}
 
 ## Variable path hierarchy
 

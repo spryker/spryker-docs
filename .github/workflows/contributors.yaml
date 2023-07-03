@@ -1,8 +1,8 @@
 name: Contributors
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - fix-404
 jobs:
   contributors:
     runs-on: ubuntu-latest

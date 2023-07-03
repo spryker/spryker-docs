@@ -27,4 +27,4 @@ jobs:
           while IFS= read -r login; do
             contributors+=("$login")
           done < <(echo "${response}" | jq -r '.[].login')
-          echo
+          echo "Contributors: ${contributors[*]}"

@@ -1651,8 +1651,8 @@ entries:
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-oms-process.csv.html
                   - title: "merchant-order-status.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-order-status.csv.html
-                  - title: Data export Merchant Orders CSV files format
-                    url: /docs/pbc/all/order-management-system/marketplace/import-data/data-export-merchant-orders-csv-files-format.html
+                  - title: "merchant_orders.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/export-file-details-merchant-orders.html
               - title: Manage in the Back Office
                 nested:
                   - title: Manage main merchant orders
@@ -1690,12 +1690,13 @@ entries:
                 nested:
                   - title: Payment
                     url: /docs/pbc/all/payment-service-provider/install-and-upgrade/upgrade-the-payment-module.html
-          - title: Import data
+          - title: Import and export data
+            url: /docs/pbc/all/payment-service-provider/import-and-export-data/import-and-export-payment-service-provider-data.html
             nested:
               - title: File details - payment_method.csv
-                url: /docs/pbc/all/payment-service-provider/import-data/file-details-payment-method.csv.html
+                url: /docs/pbc/all/payment-service-provider/import-and-export-data/file-details-payment-method.csv.html
               - title: File details - payment_method_store.csv
-                url: /docs/pbc/all/payment-service-provider/import-data/file-details-payment-method-store.csv.html
+                url: /docs/pbc/all/payment-service-provider/import-and-export-data/file-details-payment-method-store.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:

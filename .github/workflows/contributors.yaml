@@ -16,5 +16,4 @@ jobs:
       - name: Display Contributors
         run: |
           git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*"
-          git log --format='%aN <%aE>' | sort -fu
-
+          git log --format='%an <%ae>' | sort -fu

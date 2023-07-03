@@ -28,9 +28,9 @@ In June 2023, we have added and updated the following pages:
 - [Spryker Core Back Office + Warehouse User Management feature integration guide](/docs/pbc/all/back-office/202304.0/install-spryker-core-back-office-warehouse-user-management-feature.html).
 - [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202304.0/base-shop/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 - [Warehouse picking feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-feature.html).
-- [Push notification feature integration guide](/docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html).
-- [Product Offer Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/install-the-product-offer-shipment-feature.html).
-- [Service Points feature integration guide](/docs/scos/dev/feature-integration-guides/install-the-service-points-feature.html).
+- [Push notification feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-push-notification-feature.html).
+- [Product Offer Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-product-offer-shipment-feature.html).
+- [Service Points feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-service-points-feature.html).
 - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
 - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
 - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.

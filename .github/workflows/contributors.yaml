@@ -1,4 +1,4 @@
-name: Contributor of the Month
+name: Display Contributors
 
 on:
   push:
@@ -6,38 +6,15 @@ on:
       - fix-404
 
 jobs:
-  calculate-contributor-of-the-month:
+  contributors:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Calculate contributor of the month
-        id: calculate
+      - name: Display Contributors
         run: |
-          # Get the last month's start and end dates
-          LAST_MONTH_START=$(date -d "1 month ago" -I)
-          LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I)
+          git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*"
+          git log --format='%aN <%aE>' | sort -fu
 
-          # Fetch the pull requests merged in the last month
-          PRS=$(git log --merges --since="$LAST_MONTH_START" --until="$LAST_MONTH_END" --pretty=format:'%an')
-
-          # Calculate the number of PRs per contributor
-          CONTRIBUTORS=$(echo "$PRS" | sort | uniq -c | sort -nr)
-
-          # Find the highest number of PRs
-          MAX_PRS=$(echo "$CONTRIBUTORS" | head -n1 | awk '{print $1}')
-
-          # Filter contributors with the highest number of PRs
-          WINNERS=$(echo "$CONTRIBUTORS" | awk -v max="$MAX_PRS" '$1 == max {print $2}')
-
-          echo "Contributors of the Month: $WINNERS"
-
-      - name: Create Issue
-        uses: peter-evans/create-issue@v3
-        with:
-          title: Contributors of the Month
-          body: |
-            The contributors of the month are:
-            ${{ steps.calculate.outputs.WINNERS }}

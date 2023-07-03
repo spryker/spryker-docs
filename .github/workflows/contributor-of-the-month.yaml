@@ -13,20 +13,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-
-      - name: Install Jekyll dependencies
-        run: gem install bundler jekyll
-
-      - name: Install project dependencies
-        run: bundle install
-
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
-
       - name: Calculate contributor of the month
         id: calculate
         run: |

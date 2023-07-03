@@ -23,5 +23,9 @@ jobs:
           HEADERS="Accept: application/vnd.github.v3+json"
           AUTH_HEADER="Authorization: Bearer ${TOKEN}"
           response=$(curl -sSL -H "${HEADERS}" -H "${AUTH_HEADER}" "${CONTRIBUTORS_URL}?since=${DATE}")
-          contributors=$(echo "${response}" | jq -r '.[].login')
-          echo "Contributors: ${contributors}"
+          echo "Response: ${response}"
+          contributors=()
+          while IFS= read -r login; do
+            contributors+=("$login")
+          done < <(echo "${response}" | jq -r '.[].login')
+          echo "Contributors: ${contributors[@]}"

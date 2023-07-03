@@ -22,4 +22,5 @@ jobs:
           DATE=$(date -u +"%Y-%m-01T00:00:00Z" -d "1 month ago")
           HEADERS="Accept: application/vnd.github.v3+json"
           AUTH_HEADER="Authorization: Bearer ${TOKEN}"
-          curl -sSL -H "${HEADERS}" -H "${AUTH_HEADER}" "${CONTRIBUTORS_URL}?since=${DATE}" | jq -r '.[].login'
+          response=$(curl -sSL -H "${HEADERS}" -H "${AUTH_HEADER}" "${CONTRIBUTORS_URL}?since=${DATE}")
+          echo "${response}" | jq -r '.login'

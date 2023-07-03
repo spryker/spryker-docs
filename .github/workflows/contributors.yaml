@@ -1,31 +1,34 @@
 name: Display Contributors
 
 on:
-  push:
-    branches:
-      - fix-404
+  workflow_dispatch:
+  schedule:
+    # Runs on every Sunday at 00:00 UTC
+    #
+    #        ┌────────────── minute
+    #        │ ┌──────────── hour
+    #        │ │ ┌────────── day (month)
+    #        │ │ │ ┌──────── month
+    #        │ │ │ │ ┌────── day (week)
+    - cron: '0 0 * * 0'
 
 jobs:
-  contributors:
+  github-collaborator-report:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Display Contributors
-        run: |
-          TOKEN="${{ secrets.GITHUB_TOKEN }}"
-          BASE_URL="https://api.github.com"
-          REPO_URL="${BASE_URL}/spryker/spryker-docs"
-          CONTRIBUTORS_URL="${REPO_URL}/contributors"
-          DATE=$(date -u +"%Y-%m-01T00:00:00Z" -d "1 month ago")
-          HEADERS="Accept: application/vnd.github.v3+json"
-          AUTH_HEADER="Authorization: Bearer ${TOKEN}"
-          response=$(curl -sSL -H "${HEADERS}" -H "${AUTH_HEADER}" "${CONTRIBUTORS_URL}?since=${DATE}")
-          echo "Response: ${response}"
-          contributors=()
-          while IFS= read -r login; do
-            contributors+=("$login")
-          done < <(echo "${response}" | jq -r '.[].login')
-          echo "Contributors: ${contributors[@]}"
+      - name: Get repo collaborator report
+        uses: nicklegan/github-org-repo-collaborator-action@v2.0.0
+        with:
+          token: ${{ secrets.ORG_TOKEN }}
+        # org: ''
+        # affil: 'ALL'
+        # permission: 'ADMIN'
+        # days: '90'
+        # json: 'FALSE'
+        # appid: ${{ secrets.APPID }}
+        # privatekey: ${{ secrets.PRIVATEKEY }}
+        # installationid: ${{ secrets.INSTALLATIONID }}

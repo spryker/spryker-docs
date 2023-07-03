@@ -1,16 +1,9 @@
 name: Display Contributors
 
 on:
-  workflow_dispatch:
-  schedule:
-    # Runs on every Sunday at 00:00 UTC
-    #
-    #        ┌────────────── minute
-    #        │ ┌──────────── hour
-    #        │ │ ┌────────── day (month)
-    #        │ │ │ ┌──────── month
-    #        │ │ │ │ ┌────── day (week)
-    - cron: '0 0 * * 0'
+  push:
+    branches:
+      - fix-404
 
 jobs:
   github-collaborator-report:
@@ -24,6 +17,7 @@ jobs:
         uses: nicklegan/github-org-repo-collaborator-action@v2.0.0
         with:
           token: ${{ secrets.ORG_TOKEN }}
+          days: '30'
         # org: ''
         # affil: 'ALL'
         # permission: 'ADMIN'

@@ -1,5 +1,10 @@
 name: Contributor of the Month
 
+on:
+  workflow_dispatch: # Add this line to enable manual triggering
+  schedule:
+    - cron: "0 0 1 * *"
+
 jobs:
   calculate-contributor-of-the-month:
     runs-on: ubuntu-latest
@@ -11,12 +16,12 @@ jobs:
       - name: Calculate contributor of the month
         id: calculate
         run: |
-          # Get the last month's start and end dates
-          LAST_MONTH_START=$(date -d "1 month ago" -I)
-          LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I")
+          # Get the previous month's start and end dates
+          PREVIOUS_MONTH_START=$(date -d "1 month ago" -I)
+          PREVIOUS_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I")
 
-          # Fetch the pull requests merged in the last month
-          PRS=$(gh pr list --state merged --base master --json number,merged_at --query "[?merged_at >= '$LAST_MONTH_START' && merged_at <= '$LAST_MONTH_END'].{number: number}")
+          # Fetch the pull requests merged in the previous month
+          PRS=$(gh pr list --state merged --base master --json number,merged_at --query "[?merged_at >= '$PREVIOUS_MONTH_START' && merged_at <= '$PREVIOUS_MONTH_END'].{number: number}")
 
           # Calculate the number of PRs per contributor
           CONTRIBUTORS=$(echo "$PRS" | jq -r '.[].number' | sort | uniq -c | sort -nr)
@@ -27,4 +32,4 @@ jobs:
           # Filter contributors with the highest number of PRs
           WINNERS=$(echo "$CONTRIBUTORS" | awk -v max="$MAX_PRS" '$1 == max {print $2}')
 
-          echo "Contributors of the Month: $WINNERS"
+          echo "Contributors of the Previous Month: $WINNERS"

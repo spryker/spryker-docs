@@ -1,9 +1,5 @@
 name: Contributor of the Month
 
-on:
-  schedule:
-    - cron: "0 0 1 * *"
-
 jobs:
   calculate-contributor-of-the-month:
     runs-on: ubuntu-latest

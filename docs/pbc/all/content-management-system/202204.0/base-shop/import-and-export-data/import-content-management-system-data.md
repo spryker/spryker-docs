@@ -1,5 +1,5 @@
 ---
-title: CMS data import
+title: Import Content Management System data
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-management
@@ -9,10 +9,12 @@ redirect_from:
   - /2021080/docs/en/content-management
   - /docs/content-management
   - /docs/en/content-management
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/navigation-setup.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/navigation-setup/navigation-setup.html
   - /docs/scos/dev/data-import/202108.0/data-import-categories/content-management/content-management.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/content-management.html
 ---
+
+To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Cart and Checkout PBC.
 
 The CMS data import category contains data required to create and manage content elements like CMS pages or blocks.
 
@@ -32,7 +34,7 @@ The table below provides details on Content Management data importers, their pur
 | CMS Page Store  | Imports information about CMS pages to specific stores. |`data:import:cms-page-store` |[cms_page_store.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-page-store.csv.html) | <ul><li>[cms_page.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-page.csv.html)</li><li>**stores.php** configuration file of demo shop PHP project</li></ul>|
 | Content Banner | Imports information used in banners' content. |`data:import:content-banner` |[content_banner.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-content-banner.csv.html) |[glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html) |
 | Content Product Abstract List  |Imports information used to import the content related to abstract products.  |`data:import:content-product-abstract-list` |[content_product_abstract_list.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-content-product-abstract-list.csv.html) |[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)|
-| Content Product Set  |Imports information used to load content linked to product sets.  |`data:import:content-product-set` | [content_product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-content-product-set.csv.html)| [product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-product-set.csv.html)|
+| Content Product Set  |Imports information used to load content linked to product sets.  |`data:import:content-product-set` | [content_product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-content-product-set.csv.html)| [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)|
 | Content Navigation | Imports information used to configure content navigation.|`data:import:content-navigation` | [content_navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-content-navigation.csv.html) | [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html) |
 | Navigation | Imports information about the navigation entities. |`data:import:navigation` | [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html) |None |
 | Navigation Node | Imports information about the navigation nodes. |`data:import:navigation-node` |[ navigation_node.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation-node.csv.html) | <ul><li>[navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html)</li><li>[glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)</li></ul>|
@@ -40,7 +42,7 @@ The table below provides details on Content Management data importers, their pur
 
 {% info_block warningBox "Import order" %}
 
-Apart fron navigation and navigation nodes, the order in which the files are imported is *very strict*. The data importers should be executed in the following order:
+Apart from navigation and navigation nodes, the order in which the files are imported is *very strict*. The data importers should be executed in the following order:
 
 1. [CMS Template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-template.csv.html)
 2. [CMS Block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-block.csv.html)

@@ -1,5 +1,5 @@
 ---
-title: "File details: merchant_oms_process.csv"
+title: "Import file details: merchant_oms_process.csv"
 last_updated: Jun 07, 2021
 description: This document describes the merchant_oms_process.csv file to configure Merchant state machines in your Spryker shop.
 template: import-file-template

@@ -1,5 +1,5 @@
 ---
-title: "File details: merchant-order-status.csv"
+title: "Import file details: merchant-order-status.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant-order-status.csv file to update merchant order states in your Spryker shop.
 template: import-file-template

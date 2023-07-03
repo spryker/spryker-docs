@@ -1,8 +1,10 @@
 ---
-title: Data export Merchant Orders CSV files format
+title: "Export file details: merchant_orders.csv"
 last_updated: May 27, 2021
 description: This document contains content of merchant-orders, merchant order-items, and merchant-order-expenses.
 template: import-file-template
+redirect_from:
+  - /docs/pbc/all/order-management-system/202212.0/marketplace/import-data/data-export-merchant-orders-csv-files-format.html
 related:
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html

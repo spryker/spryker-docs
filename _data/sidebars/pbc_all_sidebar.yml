@@ -80,11 +80,11 @@ entries:
                 url: /docs/pbc/all/carrier-management/base-shop/import-data/import-carrier-management-data.html
                 nested:
                   - title: File details - shipment.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-data/file-details-shipment.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html
                   - title: File details - shipment_method_store.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-data/file-details-shipment-method-store.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-store.csv.html
                   - title: File details - shipment_price.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-data/file-details-shipment-price.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-price.csv.html
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Add a new shipment method"
@@ -307,6 +307,7 @@ entries:
                   - title: Checkout steps
                     url: /docs/pbc/all/cart-and-checkout/base-shop/extend-and-customize/checkout-steps.html
               - title: Import and export data
+                url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-cart-and-checkout-data.html
                 nested:
                   - title: File details - comment.csv
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-comment.csv.html
@@ -554,7 +555,7 @@ entries:
                   - title: Navigation module
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-navigation-module.html
               - title: Import and export data
-                url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/cms-data-import.html
+                url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-content-management-system-data.html
                 nested:
                   - title: cms_template.csv
                     url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-template.csv.html
@@ -965,7 +966,7 @@ entries:
                   - title: Retrieve discounts in guest carts
                     url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
               - title: Import and export data
-                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/discount-import.html
+                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-discount-management-data.html
                 nested:
                   - title: File details - discount.csv
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount.csv.html
@@ -1033,7 +1034,7 @@ entries:
               - title: Enable gift cards
                 url: /docs/pbc/all/gift-cards/install-and-upgrade/enable-gift-cards.html
           - title: Import and export data
-            url: /docs/pbc/all/gift-cards/import-and-export-data/import-of-gift-cards.html
+            url: /docs/pbc/all/gift-cards/import-and-export-data/import-gift-cards-data.html
             nested:
               - title: File details- gift_card_abstract_configuration.csv
                 url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html
@@ -1188,6 +1189,7 @@ entries:
                       - title: Merchant Opening Hours
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-opening-hours-glue-api.html
               - title: Import data
+                url: /docs/pbc/all/merchant-management/marketplace/import-data/import-merchant-management-data.html
                 nested:
                   - title: "File details: merchant.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant.csv.html
@@ -1437,6 +1439,7 @@ entries:
                       - title: ProductOfferPricesRestApi
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-productofferpricesrestapi-module.html
               - title: Import data
+                url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-offer-management-data.html
                 nested:
                   - title: "combined_merchant_product_offer.csv"
                     url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html
@@ -1642,6 +1645,7 @@ entries:
                   - title: Marketplace Order Management + Order Threshold
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
               - title: Import and export data
+                url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-and-export-order-management-system-data.html
                 nested:
                   - title: "merchant_oms_process.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-oms-process.csv.html

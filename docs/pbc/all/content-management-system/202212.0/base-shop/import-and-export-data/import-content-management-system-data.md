@@ -1,5 +1,5 @@
 ---
-title: CMS data import
+title: Import Content Management System data
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-management
@@ -12,8 +12,10 @@ redirect_from:
   - /docs/scos/dev/data-import/202212.0/data-import-categories/navigation-setup/navigation-setup.html
   - /docs/scos/dev/data-import/202108.0/data-import-categories/content-management/content-management.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/content-management.html
-  - /docs/pbc/all/content-management-system/202212.0/import-and-export-data/cms-data-import.html
+  - /docs/pbc/all/content-management-system/202212.0/import-and-export-data/import-content-management-system-data.html
 ---
+
+To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Cart and Checkout PBC.
 
 The CMS data import category contains data required to create and manage content elements like CMS pages or blocks.
 
@@ -41,7 +43,7 @@ The table below provides details on Content Management data importers, their pur
 
 {% info_block warningBox "Import order" %}
 
-Apart fron navigation and navigation nodes, the order in which the files are imported is *very strict*. The data importers should be executed in the following order:
+Apart from navigation and navigation nodes, the order in which the files are imported is *very strict*. The data importers should be executed in the following order:
 
 1. [CMS Template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-template.csv.html)
 2. [CMS Block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-block.csv.html)

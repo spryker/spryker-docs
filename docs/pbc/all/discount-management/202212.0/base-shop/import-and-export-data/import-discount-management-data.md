@@ -1,5 +1,5 @@
 ---
-title: Discount import
+title: Import Discount Management data
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/discounts
@@ -11,17 +11,17 @@ redirect_from:
   - /docs/en/discounts
   - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/discounts/discounts.html
   - /docs/pbc/all/discount-management/202212.0/import-and-export-data/discount-import.html
+  - /docs/pbc/all/discount-management/202212.0/base-shop/import-and-export-data/discount-import.html
 ---
 
-The **Discounts** category contains all data you need to manage product discount information in the online store.
-We have structured this section according to the following CSV files, required for importing the data:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:
 
 * [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount.csv.html): allows you to import general information about the discounts and their attributes.
 * [discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-amount.csv.html):  allows you to import data used to set the values of the discounts imported with *discount.csv*.
 * [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-store.csv.html): allows you to link the discounts with the stores.
 * [discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-voucher.csv.html) allows you to import information about vouchers.
 
-The following table provides details about Product Merchandising data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Discount Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES | DEPENDENCIES |
 | --- | --- | --- | --- |--- |

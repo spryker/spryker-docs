@@ -15,5 +15,11 @@ jobs:
 
       - name: Display Contributors
         run: |
-          git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*"
-          git log --since="1 month ago" --format='%an <%ae>' | sort -fu
+          TOKEN="${{ secrets.GITHUB_TOKEN }}"
+          BASE_URL="https://api.github.com"
+          REPO_URL="${BASE_URL}/spryker/spryker-docs"
+          CONTRIBUTORS_URL="${REPO_URL}/contributors"
+          DATE=$(date -u +"%Y-%m-01T00:00:00Z" -d "1 month ago")
+          HEADERS="Accept: application/vnd.github.v3+json"
+          AUTH_HEADER="Authorization: Bearer ${TOKEN}"
+          curl -sSL -H "${HEADERS}" -H "${AUTH_HEADER}" "${CONTRIBUTORS_URL}?since=${DATE}" | jq -r '.[].login'

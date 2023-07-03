@@ -18,7 +18,6 @@ jobs:
 
         with:
           token: ${{ secrets.ORG_TOKEN }}
-          days: '30'
         # org: ''
         # affil: 'ALL'
         # permission: 'ADMIN'

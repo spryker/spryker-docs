@@ -3,7 +3,7 @@ name: Contributor of the Month
 on:
   push:
     branches:
-      - fix-404
+      - your-branch-name
 
 jobs:
   calculate-contributor-of-the-month:
@@ -21,15 +21,6 @@ jobs:
           LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I")
 
           # Fetch the pull requests merged in the last month
-          PRS=$(gh pr list --state merged --base master --json number,merged_at --query "[?merged_at >= '$LAST_MONTH_START' && merged_at <= '$LAST_MONTH_END'].{number: number}")
+          PRS=$(git log --merges --since="$LAST_MONTH_START" --until="$LAST_MONTH_END" --pretty=format:'%H' | wc -l)
 
-          # Calculate the number of PRs per contributor
-          CONTRIBUTORS=$(echo "$PRS" | jq -r '.[].number' | sort | uniq -c | sort -nr)
-
-          # Find the highest number of PRs
-          MAX_PRS=$(echo "$CONTRIBUTORS" | head -n1 | awk '{print $1}')
-
-          # Filter contributors with the highest number of PRs
-          WINNERS=$(echo "$CONTRIBUTORS" | awk -v max="$MAX_PRS" '$1 == max {print $2}')
-
-          echo "Contributors of the Month: $WINNERS"
+          echo "Number of merged pull requests in the last month: $PRS"

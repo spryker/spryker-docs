@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html
 ---
 
-This document describes how to quickly install Spryker on MacOS or Linux in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html#prerequisites).
+This document describes how to quickly install Spryker on MacOS or Linux in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
 
 To install Spryker on MacOS or Linux, follow these steps:
 

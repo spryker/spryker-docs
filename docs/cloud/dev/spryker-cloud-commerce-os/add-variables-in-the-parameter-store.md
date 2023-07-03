@@ -36,6 +36,16 @@ Please remember that improper management of environment variables can lead to un
 
 Variables must follow this naming convention: `/{project}/{environment}/{type}/{bucket}/{grant}/{variable_name}`.
 
+{% info_block warningBox "Reserved variables" %}
+
+Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are 
+reserved, you cannot define your own variables using these names.
+<BR> The reserved variable names are the following:
+* `DUMMY_INIT`
+* `SPRYKER_*`
+
+{% endinfo_block %}
+
 Placeholder description:
 
 * `type`: defines the type of a variable. Possible values:
@@ -57,18 +67,6 @@ Path examples:
 * /fashion_club_store/staging/config/common/limited/composer_pass
 
 * /deans_jeans/prod/config/app/public/mail_host
-
-
-### Reserved variables
-{% info_block warningBox "Important" %}
-
-Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are 
-reserved, you cannot define your own variables using these names.
-<BR> The reserved variable names are the following:
-* `DUMMY_INIT`
-* `SPRYKER_*`
-
-{% endinfo_block %}
 
 ## Variable path hierarchy
 

@@ -1,4 +1,4 @@
-name: Contributor of the Month
+name: Contributor of the month
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
         run: |
           # Get the last month's start and end dates
           LAST_MONTH_START=$(date -d "1 month ago" -I)
-          LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I")
+          LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I)
 
           # Fetch the pull requests merged in the last month
           PRS=$(git log --merges --since="$LAST_MONTH_START" --until="$LAST_MONTH_END" --pretty=format:'%an')

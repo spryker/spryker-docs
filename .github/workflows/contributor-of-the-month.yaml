@@ -1,12 +1,14 @@
 name: Contributor of the Month
 
 on:
+  push:
+    branches:
+      - fixing-404s
   workflow_dispatch:
     inputs:
       manual_run:
         description: 'Trigger manual run'
         required: false
-
 
 jobs:
   calculate-contributor-of-the-month:

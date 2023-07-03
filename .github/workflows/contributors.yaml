@@ -13,8 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Get repo collaborator report
+      - name: GitHub Organization Repository Collaborator Action
         uses: nicklegan/github-org-repo-collaborator-action@v2.0.0
+
         with:
           token: ${{ secrets.ORG_TOKEN }}
           days: '30'

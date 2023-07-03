@@ -1,9 +1,12 @@
 name: Contributor of the Month
 
 on:
-  workflow_dispatch: # Add this line to enable manual triggering
-  schedule:
-    - cron: "0 0 1 * *"
+  workflow_dispatch:
+    inputs:
+      manual_run:
+        description: 'Trigger manual run'
+        required: false
+
 
 jobs:
   calculate-contributor-of-the-month:

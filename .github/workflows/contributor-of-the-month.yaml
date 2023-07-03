@@ -13,20 +13,26 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          node-version: '14'
+          ruby-version: '2.7'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Jekyll dependencies
+        run: gem install bundler jekyll
+
+      - name: Install project dependencies
+        run: bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
       - name: Calculate contributor of the month
         id: calculate
         run: |
           # Get the last month's start and end dates
           LAST_MONTH_START=$(date -d "1 month ago" -I)
-          LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I)
+          LAST_MONTH_END=$(date -d "$(date +%Y-%m-01) -1 day" -I")
 
           # Fetch the merged pull requests in the last month
           PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \

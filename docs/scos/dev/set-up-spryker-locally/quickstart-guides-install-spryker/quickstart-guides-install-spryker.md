@@ -12,4 +12,4 @@ The following installation guides provide high-level information about installin
 - [Quickstart guide: Install Spryker on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html)
 - [Quickstart guide: Install Spryker on Windows](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html)
 
-For more detailed guides, see [Install Spryker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html#prerequisites).
+For more detailed guides, see [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).

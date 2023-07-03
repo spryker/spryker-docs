@@ -1,15 +1,15 @@
 ---
-title: Dynamic Data Exchange API integration
-description: Integrate the Dynamic Data Exchange API into a Spryker project.
+title: Dynamic Data API integration
+description: Integrate the Dynamic Data API into a Spryker project.
 last_updated: June 22, 2023
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Dynamic Data Exchange API into a Spryker project.
+This document describes how to integrate the Dynamic Data API into a Spryker project.
 
 ---
 
-The Dynamic Data Exchange (DDE) API is a powerful tool that allows seamless interaction with your database.
+The Dynamic Data API is a powerful tool that allows seamless interaction with your database.
 
 You can easily access your data by sending requests to the API endpoint. 
 
@@ -17,7 +17,7 @@ It enables you to retrieve, create, update, and manage data in a flexible and ef
 
 ## Install feature core
 
-Follow the steps below to install the Dynamic Data Exchange API core.
+Follow the steps below to install the Dynamic Data API core.
 
 ### Prerequisites
 
@@ -49,12 +49,12 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the configuration
 
-1. Move the following commands into `demodata` section after the data import step:
+1. Move the following commands into `setup-glue` section after `demodata` step:
 
 **config/install/docker.yml**
 
 ```yaml
-demodata:
+setup-glue:
 
     ...
     
@@ -65,7 +65,7 @@ demodata:
         command: 'vendor/bin/glue api:generate:documentation'
 ```
 
-2. By default, Dynamic Data Exchange API sends a request to `/dynamic-entity/{entity-alias}`. 
+2. By default, requests are sent to `/dynamic-entity/{entity-alias}`. 
    Adjust `DynamicEntityBackendApiConfig` in order to replace `dynamic-entity` part with another one:
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
@@ -94,7 +94,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-3. The Data Exchange API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
+3. The Dynamic Data API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
    The logging is enabled by default. Adjust `DynamicEntityBackendApiConfig` in order to disable this option or change a path for the log file.
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
@@ -145,50 +145,6 @@ console propel:install
 console transfer:generate
 ```
 
-Append the following Propel classes:
-
-```php
-<?php
-
-namespace Orm\Zed\DynamicEntity\Persistence;
-
-use Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfiguration as BaseSpyDynamicEntityConfiguration;
-
-/**
- * Skeleton subclass for representing a row from the 'spy_dynamic_entity_configuration' table.
- *
- *
- *
- * You should add additional methods to this class to meet the
- * application requirements. This class will only be generated as
- * long as it does not already exist in the output directory.
- */
-class SpyDynamicEntityConfiguration extends BaseSpyDynamicEntityConfiguration
-{
-}
-```
-
-```php
-<?php
-
-namespace Orm\Zed\DynamicEntity\Persistence;
-
-use Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationQuery as BaseSpyDynamicEntityConfigurationQuery;
-
-/**
- * Skeleton subclass for performing query and update operations on the 'spy_dynamic_entity_configuration' table.
- *
- *
- *
- * You should add additional methods to this class to meet the
- * application requirements. This class will only be generated as
- * long as it does not already exist in the output directory.
- */
-class SpyDynamicEntityConfigurationQuery extends BaseSpyDynamicEntityConfigurationQuery
-{
-}
-```
-
 {% info_block warningBox "Verification" %}
 
 Ensure that you've triggered the following changes by checking the database:
@@ -197,7 +153,7 @@ Ensure that you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for dynamic entities. In order to do that follow the link [How to configure Dynamic Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-exchange-api/how-to-guides/how-to-configure-dynamic-data-exchange-api.html)  
+Add configurations for dynamic entities. In order to do that follow the link [How to configure Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html)  
 
 Ensure the following transfers have been created:
 
@@ -241,20 +197,20 @@ dynamic_entity.validation.invalid_data_format,"Invalid or missing data format. P
 dynamic_entity.validation.invalid_data_format,"Ungültiges oder fehlendes Datenformat. Stellen Sie bitte sicher, dass die Daten im richtigen Format bereitgestellt werden. Beispiel Anforderungskörper: {'data':[{...},{...}]}",de_DE
 dynamic_entity.validation.persistence_failed,"Failed to persist the data. Please verify the provided data and try again.",en_US
 dynamic_entity.validation.persistence_failed,"Das Speichern der Daten ist fehlgeschlagen. Bitte überprüfen Sie die bereitgestellten Daten und versuchen Sie es erneut.",de_DE
-dynamic_entity.validation.model_does_not_exist,"The model does not exist. Check if the requested table alias is correct or run `console propel:model:build`.",en_US
-dynamic_entity.validation.model_does_not_exist,"Das Modell existiert nicht. Überprüfen Sie, ob der angeforderte Tabellenalias korrekt ist oder führen Sie `console propel:model:build` aus.",de_DE
+dynamic_entity.validation.persistence_failed_duplicate_entry,"Failed to persist the data. Please verify the provided data and try again. Entry is duplicated.",en_US
+dynamic_entity.validation.persistence_failed_duplicate_entry,"Das Speichern der Daten ist fehlgeschlagen. Bitte überprüfen Sie die bereitgestellten Daten und versuchen Sie es erneut. Eintrag is doppelt vorhanden.",de_DE
 dynamic_entity.validation.entity_does_not_exist,"The entity could not be found in the database.",en_US
 dynamic_entity.validation.entity_does_not_exist,"Die Entität konnte in der Datenbank nicht gefunden werden.",de_DE
 dynamic_entity.validation.required_data_is_missing_or_forbidden,"Some required data is missing or provided data cannot be modified. Please verify the request and try again.",en_US
 dynamic_entity.validation.required_data_is_missing_or_forbidden,"Einige erforderliche Daten fehlen oder die bereitgestellten Daten können nicht geändert werden. Bitte überprüfen Sie die Anfrage und versuchen Sie es erneut.",de_DE
-dynamic_entity.validation.config_is_not_found,"Configuration was not found in the database.",en_US
-dynamic_entity.validation.config_is_not_found,"Die Konfiguration wurde in der Datenbank nicht gefunden.",de_DE
 dynamic_entity.validation.invalid_field_type,"Invalid data type for field: %fieldName%",en_US
 dynamic_entity.validation.invalid_field_type,"Ungültiger Datentyp: %fieldName%",de_DE
-dynamic_entity.validation.invalid_field_value,"Invalid data value for field. Field rules: %validationRules%",en_US
-dynamic_entity.validation.invalid_field_value,"Ungültiger Datenwert für das Feld. Feldregeln: %validationRules%",de_DE
+dynamic_entity.validation.invalid_field_value,"Invalid data value for field: %fieldName%, row number: %rowNumber%. Field rules: %validationRules%",en_US
+dynamic_entity.validation.invalid_field_value,"Ungültiger Datenwert für das Feld: %fieldName%, Zeilennummer: %rowNumber%. Feldregeln: %validationRules%",de_DE
 dynamic_entity.validation.required_field_is_missing,"The required field must not be empty. Field: '%fieldName%'",en_US
 dynamic_entity.validation.required_field_is_missing,"Das erforderlich Feld darf nicht leer sein. Feld: '%fieldName%'",de_DE
+dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entity not found by identifier, and new identifier can not be persisted. Please update the request.",en_US
+dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entität konnte anhand der ID nicht gefunden werden, und die neue ID kann nicht dauerhaft gespeichert werden. Bitte aktualisieren Sie die Anfrage.",de_DE
 ```
 
 {% info_block infoBox "Info" %}
@@ -279,8 +235,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| PropelApplicationPlugin | Initializes `PropelOrm` to be used within Zed. | Spryker\Zed\Propel\Communication\Plugin\Application |
-| DynamicEntityApiSchemaContextExpanderPlugin | Adds dynamic entities to the documentation generation context. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorOpenApi |
+| PropelApplicationPlugin | Initializes `PropelOrm`. | Spryker\Zed\Propel\Communication\Plugin\Application |
+| DynamicEntityApiSchemaContextExpanderPlugin | Adds dynamic entities to the documentation generation context. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorApi |
 | DynamicEntityOpenApiSchemaFormatterPlugin | Formats dynamic entities of the Open API 3 schema: info, components, paths, tags. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorOpenApi |
 | DynamicEntityRouteProviderPlugin | Adds routes for the provided dynamic entity to the RouteCollection. | Spryker\Glue\DynamicEntityBackendApi\Plugin |
 | DynamicEntityProtectedPathCollectionExpanderPlugin | Expands a list of protected endpoints with dynamic entity endpoints. | Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
@@ -326,7 +282,7 @@ namespace Pyz\Glue\DocumentationGeneratorApi;
 
 use Spryker\Glue\DocumentationGeneratorApi\DocumentationGeneratorApiDependencyProvider as SprykerDocumentationGeneratorApiDependencyProvider;
 use Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface;
-use Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorOpenApi\DynamicEntityApiSchemaContextExpanderPlugin;
+use Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorApi\DynamicEntityApiSchemaContextExpanderPlugin;
 
 class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGeneratorApiDependencyProvider
 {
@@ -342,8 +298,6 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
      */
     protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface	    
     {	    
-        ...
-        
         $contextExpanderCollection->addExpander(new DynamicEntityApiSchemaContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
     }
 }
@@ -404,6 +358,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can operate with the data. Follow the link to discover how to perform it [How to send request in Dynamic Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-exchange-api/how-to-guides/how-to-send-request-in-dynamic-data-exchange-api.html)
+If everything is set up correctly, you can operate with the data. Follow the link to discover how to perform it [How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html)
 
 {% endinfo_block %}

@@ -1,25 +1,25 @@
 ---
-title: How send a request in Dynamic Data Exchange API
-description: This guide shows how to send a request in Dynamic Data Exchange API.
+title: How send a request in Dynamic Data API
+description: This guide shows how to send a request in Dynamic Data API.
 last_updated: June 23, 2023
 template: howto-guide-template
 ---
 
-This guide shows how to send a request in Dynamic Data Exchange API.
+This guide shows how to send a request in Dynamic Data API.
 
 {% info_block infoBox %}
 
-Ensure the Dynamic Data Exchange API is integrated (follow [Dynamic Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-exchange-api-integration.html))
-and configured (follow [How to configure Dynamic Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-exchange-api/how-to-guides/how-to-configure-dynamic-data-exchange-api.html))
+Ensure the Dynamic Data API is integrated (follow [Dynamic Data API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html))
+and configured (follow [How to configure Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html))
 as described in the guides.
 
 {% endinfo_block %}
 
 Let's say you have an endpoint `/dynamic-data/country` to operate with data in `spy_country` table in database.
 
-The Dynamic Data Exchange API is a non-resource-based API and routes directly to a controller all specified endpoints.
+The Dynamic Data API is a non-resource-based API and routes directly to a controller all specified endpoints.
 
-By default, all routes within the Dynamic Data Exchange API are protected to ensure data security.
+By default, all routes within the Dynamic Data API are protected to ensure data security.
 To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
 
 ```bash
@@ -213,15 +213,15 @@ Therefore, the API will create a new record with all the provided fields.
 However, if any of the fields are configured as `isCreatable: false` it won't be created. 
 
 Let's configure `isCreatable: false` for `iso3_code` and send the same request.
-You will receive the following response which does not include `iso3_code` because the value was not set:
+You will receive the following error response because a non-creatable field `id_country` is provided:
 
 ```json
 [
-    {
-        "iso2_code": "WA",
-        "name": "FOO",
-        "id_country": 259
-    }
+  {
+    "message": "Some required data is missing or provided data cannot be modified. Please verify the request and try again.",
+    "status": 400,
+    "code": "505"
+  }
 ]
 ```
 
@@ -239,9 +239,9 @@ Otherwise, you will receive the following response:
 ```json
 [
     {
-        "message": "Failed to persist the data. Please verify the provided data and try again.",
-        "status": 500,
-        "code": "502"
+        "message": "Failed to persist the data. Please verify the provided data and try again. Entry is duplicated.",
+        "status": 400,
+        "code": "511"
     }
 ]
 ```
@@ -322,14 +322,14 @@ However, if any of the fields are configured as `isEditable: false` it won't be 
 
 Let's configure `isEditable: false` for `iso3_code` and send the same request.
 
-You will receive the following response which does not include `iso3_code` because the value was not updated:
+You will receive the following error response because a non-editable field `iso3_code` is provided:
 
 ```json
 [
   {
-    "iso2_code": "WB",
-    "name": "FOO",
-    "id_country": 1
+    "message": "Some required data is missing or provided data cannot be modified. Please verify the request and try again.",
+    "status": 400,
+    "code": "505"
   }
 ]
 ```
@@ -367,7 +367,6 @@ If the `id_country` is not found you will get the following response:
 {% info_block infoBox %}
 
 Similarly to the `POST` request, it is important to consider database-specific configurations when sending a `PATCH` request. 
-For example, modifying the ID of the entity or providing duplicate values for unique columns, etc will result in an error.
 
 {% endinfo_block %}
 
@@ -420,7 +419,7 @@ The response payload includes all touched fields for the provided resource.
 
 {% info_block infoBox %}
 
-It is also possible to send a `PUT` request for a specific ID instead of a collection, use the following request:
+It is also possible to send a `PUT` request for a specific ID instead of a collection using the following request:
 
 ```bash
 PUT /dynamic-entity/country/1 HTTP/1.1

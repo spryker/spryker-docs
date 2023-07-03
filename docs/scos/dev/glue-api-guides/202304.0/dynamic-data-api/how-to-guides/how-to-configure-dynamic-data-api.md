@@ -1,11 +1,11 @@
 ---
-title: How to configure Dynamic Data Exchange API endpoints.
-description: This guide shows how to configure the Dynamic Data Exchange API endpoints.
+title: How to configure Dynamic Data API endpoints.
+description: This guide shows how to configure the Dynamic Data API endpoints.
 last_updated: June 23, 2023
 template: howto-guide-template
 ---
 
-This guide shows how to configure the Dynamic Data Exchange API endpoints.
+This guide shows how to configure the Dynamic Data API endpoints.
 
 In order to incorporate a new endpoint for interacting with entities in the database, 
 it is necessary to add a corresponding row to the `spy_dynamic_entity_configuration` table. 
@@ -31,15 +31,15 @@ However, future releases are expected to introduce UI solution for adding new ro
 
 Let's dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
 
-Below is an example snippet illustrating the structure of a possible definition value:
+Below is an example snippet illustrating the structure of a possible definition value based on `spy_country` table:
 
 ```json
 {
-  "identifier": "table_id",
+  "identifier": "id_country",
   "fields": [
     { 
-      "fieldName": "field_name",
-      "fieldVisibleName": "field_visible_name",
+      "fieldName": "iso2_code",
+      "fieldVisibleName": "iso2_code",
       "type": "string", 
       "isEditable": true,
       "isCreatable": true,
@@ -66,11 +66,27 @@ And now, let's delve into the meaning of each field within the snippet. Here's a
 | isCreatable | A flag indicating whether the field can be set. If set to "true," the field can be included in requests to provide an initial value during record creation. |
 | validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria. |
 | required | A validation attribute that determines whether the field is required or optional. When set to "true," the field must be provided in API requests. |
-| maxLength/minLength | An optional validation attribute that specifies the minimum/maximum length allowed for the field. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
+| maxLength/minLength | An optional validation attribute that specifies the minimum/maximum length allowed for the field defined with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
+| max/min | An optional validation attribute that specifies the minimum/maximum value allowed for the field defined with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
 
 {% info_block infoBox %}
 
 It is recommended to set `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
+
+{% endinfo_block %}
+
+{% info_block infoBox %}
+
+Configuring the definition for the field responsible for the identifier keep in mind that it JSON accepts numbers within 
+the range of a 64-bit signed integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807). However, if there is a need 
+to use identifiers outside this range or if the person providing the configuration anticipates larger values, the field can be set as a 
+string type instead.
+
+{% endinfo_block %}
+
+{% info_block infoBox %}
+
+So far the Dynamic Data API supports the following types for the configured fields: boolean, integer, string and decimal.
 
 {% endinfo_block %}
 
@@ -86,7 +102,9 @@ COMMIT;
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Dynamic Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-exchange-api/how-to-guides/how-to-send-request-in-dynamic-data-exchange-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Dynamic Data Exchange API follow [Dynamic Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-exchange-api-integration.html) to proceed with it.
+If everything is set up correctly, you can follow [How to send request in Dynamic Data API][] to discover how to request your API endpoint.
+Or if you're in the middle of the integration process for the Dynamic Data API follow [Dynamic Data API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html) to proceed with it.
 
 {% endinfo_block %}
+
+[]: /docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html

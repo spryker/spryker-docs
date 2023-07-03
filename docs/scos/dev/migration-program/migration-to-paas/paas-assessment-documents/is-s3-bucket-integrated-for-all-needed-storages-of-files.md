@@ -10,7 +10,7 @@ Possible cases to check: Locally stored data, files stored in other places (not 
 
 Any third-party file storage is supposed to be migrated to S3 bucket usage. Files under the git repository are not counting here. In case the project uses third-party storage e.g. FTP server, it’s usage has to be replaced with an S3 bucket.
 
-We expect to receive this information as part of the [prerequisites](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
+You should be able to find this information in the prerequisites.
 
 ## Resources for assessment
 

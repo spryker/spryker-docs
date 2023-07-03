@@ -7,7 +7,8 @@ template: howto-guide-template
 
 ## Resources for assessment
 
- Backend, DevOps
+* Backend
+* DevOps
 
 ## Description
 
@@ -21,8 +22,9 @@ Before you start the transition, make sure that the following applies:
     Check the number in Desired/Running tasks columns.
 2. If you are migrating a production environment, "Multi AZ" is enabled for RDS, OpenSearch(ES), and Redis(EC) services.
 3. Data is present in RDS based on the dump provided by the customer.
-4. All jobs in Jenkins are up and running and have green color.
-5. No any processing in RabbitMQ and the error queues don't have stacked messages. You have to resolve all data issues before env is publicly available.
+4. All jobs in Jenkins are running and green.
+5. There must not be any processing queues in the RabbitMQ, and all the error queues must be empty.
+    You need to resolve all data issues before the environment is publicly available.
 
 {% info_block warningBox "" %}
 

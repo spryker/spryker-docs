@@ -1,4 +1,4 @@
-name: Contributor of the month
+name: Contributor of the Month
 
 on:
   push:
@@ -33,3 +33,11 @@ jobs:
           WINNERS=$(echo "$CONTRIBUTORS" | awk -v max="$MAX_PRS" '$1 == max {print $2}')
 
           echo "Contributors of the Month: $WINNERS"
+
+      - name: Create Issue
+        uses: peter-evans/create-issue@v3
+        with:
+          title: Contributors of the Month
+          body: |
+            The contributors of the month are:
+            ${{ steps.calculate.outputs.WINNERS }}

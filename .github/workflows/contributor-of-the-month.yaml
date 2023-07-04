@@ -38,7 +38,7 @@ jobs:
           done
 
           # Determine the top 3 contributors and the number of PRs they created
-          CONTRIBUTORS=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | head -n3 | awk '{print $2, $1}')
+          CONTRIBUTORS=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -k1,1nr | head -n3 | awk '{print $2, $1}')
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV

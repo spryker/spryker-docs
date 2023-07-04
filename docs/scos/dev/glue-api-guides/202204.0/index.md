@@ -23,5 +23,5 @@ This section contains a collection of guides for working with the Spryker Glue A
 * [Reference information – GlueApplication errors](/docs/scos/dev/glue-api-guides/202204.0/reference-information-glueapplication-errors.html)
 * [Glue Spryks](/docs/scos/dev/glue-api-guides/202204.0/glue-spryks.html)
 * [Glue infrastructure](/docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html)
-* [Glue Backend API](/docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html)
+* [Glue Backend API](/docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/how-to-guides/routing/create-storefront-resources.html)
 * [Glue API tutorials](/docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/glue-api-tutorials.html)

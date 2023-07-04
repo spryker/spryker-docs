@@ -1273,12 +1273,12 @@ entries:
         - "202212.0"
         nested:
         - title: How to create a storefront resource
-          url: /docs/scos/dev/glue-api-guides/routing/how-to-create-a-storefront-resource.html
+          url: /docs/scos/dev/glue-api-guides/routing/create-storefront-resources.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to create a backend resource
-          url: /docs/scos/dev/glue-api-guides/routing/how-to-create-a-backend-resource.html
+          url: /docs/scos/dev/glue-api-guides/routing/create-backend-resources.html
           include_versions:
             - "202204.0"
             - "202212.0"
@@ -1288,7 +1288,7 @@ entries:
           - "202204.0"
           - "202212.0"
         - title: How to create a route
-          url: /docs/scos/dev/glue-api-guides/routing/how-to-create-a-route.html
+          url: /docs/scos/dev/glue-api-guides/routing/create-routes.html
           include_versions:
           - "202204.0"
           - "202212.0"
@@ -1303,7 +1303,7 @@ entries:
           - "202204.0"
           - "202212.0"
         - title: How to create a JSON:API relationship
-          url: /docs/scos/dev/glue-api-guides/how-to-create-a-json-api-relationship.html
+          url: /docs/scos/dev/glue-api-guides/create-json-api-relationships.html
           include_versions:
           - "202204.0"
           - "202212.0"

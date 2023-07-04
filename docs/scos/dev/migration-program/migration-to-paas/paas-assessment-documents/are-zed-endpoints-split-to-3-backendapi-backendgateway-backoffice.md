@@ -17,4 +17,4 @@ Backend
 
 ## Formula for calculating the migration effort
 
-Approximately 1d if required packages are already installed.
+Approximately 1d for splitting the endpoints.

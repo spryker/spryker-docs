@@ -15,11 +15,15 @@ jobs:
       - name: Determine contributor
         id: determine
         run: |
-          # Fetch merged pull requests
+          # Determine the start and end dates of the previous month
+          START_DATE=$(date -d "last month" +%Y-%m-01)
+          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
+
+          # Fetch merged pull requests within the previous month
           PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                  -H "Accept: application/vnd.github.v3+json" \
-                 "https://api.github.com/repos/spryker/spryker-docs/pulls?state=merged&base=master" \
-                 | jq -r '.[].user.login')
+                 "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc" \
+                 | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
@@ -32,14 +36,17 @@ jobs:
             fi
           done
 
-          # Determine the contributor with the most merged PRs
-          CONTRIBUTOR=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | awk '{print $2}' | head -n1)
+          # Determine the top 3 contributors and the number of PRs they created
+          CONTRIBUTORS=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | head -n3 | awk '{print $2, $1}')
 
-          echo "CONTRIBUTOR=${CONTRIBUTOR}" >> $GITHUB_ENV
+          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
 
-      - name: Log contributor
+      - name: Log contributors
         run: |
-          CONTRIBUTOR="${{ env.CONTRIBUTOR }}"
+          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
 
-          # Print the contributor of the month
-          echo "Internal Contributor of the Month: $CONTRIBUTOR"
+          # Print the top 3 contributors of the month and the number of PRs they created
+          echo "Top Contributors of the Month:"
+          echo "$CONTRIBUTORS" | while read -r contributor count; do
+            echo "- $contributor (PRs: $count)"
+          done

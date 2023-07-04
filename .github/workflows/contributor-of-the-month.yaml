@@ -42,7 +42,7 @@ jobs:
           # Get the count of PRs for each contributor
           CONTRIBUTORS_COUNT=()
           for contributor in "${CONTRIBUTORS[@]}"; do
-            count=$(echo "$PRS" | grep -cF "$contributor")
+            count=$(grep -cF "$contributor" <<< "$PRS")
             CONTRIBUTORS_COUNT+=("$contributor $count")
           done
 
@@ -50,7 +50,7 @@ jobs:
           SORTED_CONTRIBUTORS=($(echo "${CONTRIBUTORS_COUNT[@]}" | tr ' ' '\n' | sort -k2nr -k1 | tr '\n' ' '))
 
           # Take the top 3 contributors
-          TOP_3_CONTRIBUTORS=("${SORTED_CONTRIBUTORS[@]:0:6}")
+          TOP_3_CONTRIBUTORS=("${SORTED_CONTRIBUTORS[@]:0:3}")
 
           echo "CONTRIBUTORS=${TOP_3_CONTRIBUTORS[*]}" >> $GITHUB_ENV
 

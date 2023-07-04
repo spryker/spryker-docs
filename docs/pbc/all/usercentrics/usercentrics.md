@@ -7,13 +7,15 @@ redirect_from:
    - docs/acp/user/apps/usercentrics.html
 ---
 
-============== ADD USERCENTRICS HERO PICTURE HERE
+![usercentrics-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/usercentrics-hero.png)
 
 [Usercentrics](https://usercentrics.com/) is the Consent Management Platform (CMP) that lets you obtain and manage the consent of your users to use cookies across your store. Usercentrics helps you get GDPR, CCPA, and LGPD compliant by letting your customers decide which tracking cookies they want to accept or reject.
 
-## App Demo
-
-============== ADD USERCENTRICS DEMO VIDEO from https://drive.google.com/file/d/1KS8aiY-LibNIs0T-j56BW-88P5sa8RcL/view?usp=sharing If you cannot download it, please reach out I will give you access.
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/Usercentrics_ACPApp_Demo.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Next step
 

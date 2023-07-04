@@ -34,19 +34,9 @@ To integrate Usercentics, follow these steps:
 2. Click **Usercentrics**.
    This takes you to the Usercentrics app details page.
 3. In the top right corner of the Usercentrics app details page, click **Connect app**.
-   This displays a message about the successful integration of the app. The Usercentrics app's status changes to *Connection pending*.   
-4. Log in to the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
-5. In the Usercentrics Admin Interface, copy the setting ID of your app:
-   ![usercentrics-setting-id](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/usercentrics/usercentrics-setting-id.png)
-6. Go back to your store's Back Office, to the Usercentrics app details page.
-7. In the top right corner of the Usercentrics app details page, click **Configure**.
-8. In the **Configure** pane, in **Configurations**, by default, **[Enable Smart Data Protector](#smart-data-protector)** is selected. You can either leave this setting or select **[Enable Direct Integration (Works only with Google Tag manager)](#google-tag-manager)**.
-![usercentrics-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/integrate-usercentrics/usercentrics-configuration.png)
-9. Select the store and insert the setting ID from step 5.
-10. To activate Usercentrics for the selected store, select **Is active**.
-11. Optional: To add more stores with the same or different setting IDs, click **Add store configuration**.
+   This displays a message about the successful integration of the app. The Usercentrics app's status changes to *Connection pending*.
 
-That's it. You have integrated the Usercentrics app into your store. The app changes to *Connected* on the apps catalog page. Now, the cookie consent dialogs should be displayed on every page of the Storefront.
+That's it. You have integrated the Usercentrics app into your store. Now, you need to configure it. See [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html) for details on how to do that.
 
 ## Configuration settings
 

@@ -41,13 +41,14 @@ jobs:
           IFS=$'\n' CONTRIBUTORS=($(for USER in "${!PR_COUNTS[@]}"; do echo "$USER ${PR_COUNTS["$USER"]}"; done | sort -k2,2nr))
           TOP_CONTRIBUTORS=("${CONTRIBUTORS[@]:0:3}")
 
-          echo "::set-output name=top_contributors::${TOP_CONTRIBUTORS[*]}"
-          echo "::set-output name=month_name::$MONTH_NAME"
+          # Save the top contributors and month name to environment files
+          echo "${TOP_CONTRIBUTORS[*]}" > contributors.txt
+          echo "$MONTH_NAME" > month.txt
 
       - name: Log contributors
         run: |
-          TOP_CONTRIBUTORS="${{ steps.determine.outputs.top_contributors }}"
-          MONTH_NAME="${{ steps.determine.outputs.month_name }}"
+          TOP_CONTRIBUTORS=$(cat contributors.txt)
+          MONTH_NAME=$(cat month.txt)
 
           # Print the top 3 contributors of the month and the number of PRs they created
           echo "Top Contributors of $MONTH_NAME:"

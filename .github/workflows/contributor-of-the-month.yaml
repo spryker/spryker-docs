@@ -18,6 +18,7 @@ jobs:
           # Determine the start and end dates of the previous month
           START_DATE=$(date -d "last month" +%Y-%m-01)
           END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
+          MONTH_NAME=$(date -d "last month" +%B)
 
           # Fetch merged pull requests within the previous month
           PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -40,13 +41,15 @@ jobs:
           CONTRIBUTORS=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | head -n3 | awk '{print $2, $1}')
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
+          echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
+          MONTH_NAME="${{ env.MONTH_NAME }}"
 
           # Print the top 3 contributors of the month and the number of PRs they created
-          echo "Top Contributors of the Month:"
+          echo "Top Contributors of $MONTH_NAME:"
           echo "$CONTRIBUTORS" | while read -r contributor count; do
             echo "- $contributor (PRs: $count)"
           done

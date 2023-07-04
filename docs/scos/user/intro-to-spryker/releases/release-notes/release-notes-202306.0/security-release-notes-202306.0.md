@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
-last_updated: Jun 27, 2023
+last_updated: Jul 04, 2023
 template: concept-topic-template
 ---
 
@@ -518,4 +518,95 @@ composer show spryker/secrets-manager-aws # Verify the version
 ```bash
 composer require spryker/oauth-auth0:"^1.0.1"
 composer show spryker/oauth-auth0 # Verify the version
+```
+
+## Missing security HTTP headers
+
+Security related HTTP headers were missing from Spryker’s applications. Adding these headers improves the overall security posture of the applications as they implement an additional layer of protection against common web application attacks.
+
+### Affected modules
+
+`spryker/event-dispatcher`: <=1.4.0
+`spryker/glue-backend-api-application`: <=1.3.0
+`spryker/glue-storefront-api-application`: <=1.2.0
+`spryker/http`: <=1.10.0
+`spryker/merchant-portal-application`: <=1.1.0
+
+### Introduced changes
+
+The below security related HTTP headers can be implemented:
+
+`Strict-Transport-Security`
+`Cache-Control`
+`X-Content-Type-Options`
+`X-Frame-Options`
+`X-XSS-Protection`
+`Content-Security-Policy`
+
+### How to get the fix
+
+To implement a fix for this vulnerability: 
+
+1. Update the event-dispatcher, glue-backend-api-application, glue-storefront-api-application, http and merchant-portal-application modules:
+
+```bash
+composer update spryker/event-dispatcher spryker/glue-backend-api-application spryker/glue-storefront-api-application spryker/http spryker/merchant-portal-application
+```
+
+2. Register `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` in `Pyz\Glue\EventDispatcher::getEventDispatcherPlugins()`
+
+3. Register `Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin` in `Pyz\Glue\GlueBackendApiApplication::getResponseFormatterPlugins()`
+
+4. Register `Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin` in `Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider::getResponseFormatterPlugins()`
+
+5. Register `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+
+6. Register `Spryker\Yves\Http\Plugin\EventDispatcher\EnvironmentInfoHeaderEventDispatcherPlugin` in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+
+7. Remove deprecated `Spryker\Yves\Http\Plugin\EventDispatcher\HeaderEventDispatcherPlugin` from `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+
+8. Register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` in `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+
+9. Register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\EnvironmentInfoHeaderEventDispatcherPlugin` in `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+
+10. Register `Spryker\Zed\MerchantPortalApplication\Communication\Plugin\EventDispatcher\HeadersSecurityEventDispatcherPlugin` in `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getMerchantPortalEventDispatcherPlugins()`
+
+11. Remove deprecated `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\HeaderEventDispatcherPlugin` from `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+
+12. Register `Spryker\Zed\EventDispatcher\Communication\Plugin\MerchantPortalApplication\MerchantPortalEventDispatcherApplicationPlugin` in `Pyz\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider::getMerchantPortalApplicationPlugins()`
+
+13. Overwrite `Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationConfig::getSecurityHeaders()` and `Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConfig::getSecurityHeaders()` to set Cache-Control security header.
+
+```bash
+/**
+ * @return array<string, string>
+ */
+public function getSecurityHeaders(): array
+{
+    return array_merge(
+        parent::getSecurityHeaders(),
+        ['Cache-Control' => 'no-cache, private'],
+    );
+}
+```
+
+14. Adjust `config/Shared/config_default.php` to add cache control configuration. (Please check `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` to see list of available directives)
+
+```bash
+use Spryker\Shared\Http\HttpConstants;
+
+$config[HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG] = [
+   'public' = true,
+   'max-age' = 3600,
+];
+
+$config[HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG] = [
+   'public' = true,
+   'max-age' = 3600,
+];
+
+$config[HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG] = [
+   'public' = true,
+   'max-age' = 3600,
+];
 ```

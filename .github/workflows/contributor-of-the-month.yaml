@@ -18,7 +18,7 @@ jobs:
           # Determine the start and end dates of the previous month
           START_DATE=$(date -d "last month" +%Y-%m-01)
           END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
-          MONTH_NAME=$(date -d "last month" +%B)
+          MONTH_NAME=$(date -d "last month" "+%B")
 
           # Fetch merged pull requests within the previous month
           PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -29,28 +29,29 @@ jobs:
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
-          # Filter out excluded users
-          PRS_FILTERED=""
+          # Filter out excluded users and count PRs for each user
+          declare -A PR_COUNTS
           for USER in $PRS; do
             if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-              PRS_FILTERED+=" $USER"
+              ((PR_COUNTS[$USER]++))
             fi
           done
 
-          # Determine the top 3 contributors and the number of PRs they created
-          CONTRIBUTORS=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -k1,1nr | head -n3 | awk '{print $2" "$1}')
+          # Sort contributors by PR count in descending order
+          IFS=$'\n' CONTRIBUTORS=($(for USER in "${!PR_COUNTS[@]}"; do echo "$USER ${PR_COUNTS[$USER]}"; done | sort -k2,2nr))
+          TOP_CONTRIBUTORS=("${CONTRIBUTORS[@]:0:3}")
 
-          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
-          echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
+          echo "::set-output name=top_contributors::${TOP_CONTRIBUTORS[*]}"
+          echo "::set-output name=month_name::$MONTH_NAME"
 
       - name: Log contributors
         run: |
-          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
-          MONTH_NAME="${{ env.MONTH_NAME }}"
+          TOP_CONTRIBUTORS="${{ steps.determine.outputs.top_contributors }}"
+          MONTH_NAME="${{ steps.determine.outputs.month_name }}"
 
           # Print the top 3 contributors of the month and the number of PRs they created
           echo "Top Contributors of $MONTH_NAME:"
-          IFS=$'\n' CONTRIBUTORS_ARRAY=($CONTRIBUTORS)
-          for contributor in "${CONTRIBUTORS_ARRAY[@]}"; do
+          IFS=$'\n' CONTRIBUTORS=($TOP_CONTRIBUTORS)
+          for contributor in "${CONTRIBUTORS[@]}"; do
             echo "- $contributor"
           done

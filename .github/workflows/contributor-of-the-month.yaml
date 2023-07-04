@@ -56,7 +56,7 @@ jobs:
 
       - name: Log contributors
         run: |
-          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
+          CONTRIBUTORS=(${{ env.CONTRIBUTORS }})
 
           # Print the top 3 contributors of the month and the number of PRs they created
           echo "Top Contributors of the Month:"

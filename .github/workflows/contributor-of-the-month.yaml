@@ -6,13 +6,13 @@ on:
       - 'contributor-workflow'
 
 jobs:
-  determine-contributor:
+  determine-contributors:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Determine contributor
+      - name: Determine contributors
         id: determine
         run: |
           # Fetch merged pull requests
@@ -25,21 +25,17 @@ jobs:
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
           # Filter out excluded users
-          PRS_FILTERED=""
-          for USER in $PRS; do
-            if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-              PRS_FILTERED+=" $USER"
-            fi
-          done
+          PRS_FILTERED=$(echo "$PRS" | grep -vF "${EXCLUDED_USERS[@]}")
 
-          # Determine the contributor with the most merged PRs
-          CONTRIBUTOR=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | awk '{print $2}' | head -n1)
+          # Determine the top 3 contributors and the number of PRs they created
+          CONTRIBUTORS=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | head -n3 | awk '{print $2, $1}')
 
-          echo "CONTRIBUTOR=${CONTRIBUTOR}" >> $GITHUB_ENV
+          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
 
-      - name: Log contributor
+      - name: Log contributors
         run: |
-          CONTRIBUTOR="${{ env.CONTRIBUTOR }}"
+          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
 
-          # Print the contributor of the month
-          echo "Internal Contributor of the Month: $CONTRIBUTOR"
+          # Print the top 3 contributors of the month and the number of PRs they created
+          echo "Top Contributors of the Month:"
+          echo "$CONTRIBUTORS" | while read -r contributor prs; do echo "- $contributor: $prs PRs"; done

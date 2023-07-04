@@ -33,12 +33,12 @@ jobs:
           declare -A PR_COUNTS
           for USER in $PRS; do
             if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-              ((PR_COUNTS[$USER]++))
+              PR_COUNTS["$USER"]=$((PR_COUNTS["$USER"]+1))
             fi
           done
 
           # Sort contributors by PR count in descending order
-          IFS=$'\n' CONTRIBUTORS=($(for USER in "${!PR_COUNTS[@]}"; do echo "$USER ${PR_COUNTS[$USER]}"; done | sort -k2,2nr))
+          IFS=$'\n' CONTRIBUTORS=($(for USER in "${!PR_COUNTS[@]}"; do echo "$USER ${PR_COUNTS["$USER"]}"; done | sort -k2,2nr))
           TOP_CONTRIBUTORS=("${CONTRIBUTORS[@]:0:3}")
 
           echo "::set-output name=top_contributors::${TOP_CONTRIBUTORS[*]}"

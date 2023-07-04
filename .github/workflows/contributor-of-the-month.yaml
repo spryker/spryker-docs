@@ -29,22 +29,21 @@ jobs:
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
-          # Filter out excluded users and count PRs for each user
-          PR_COUNTS=()
+          # Declare an associative array to count PRs for each user
+          declare -A PR_COUNTS
+
+          # Count PRs for each user
           for USER in $PRS; do
             if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-              PR_COUNTS+=("$USER")
+              ((PR_COUNTS[$USER]++))
             fi
           done
 
           # Prepare contributors list
-          IFS=$'\n' PR_COUNTS_SORTED=($(printf "%s\n" "${PR_COUNTS[@]}" | sort))
           CONTRIBUTORS=""
-          for USER in "${PR_COUNTS_SORTED[@]}"; do
-            COUNT=$(grep -o "$USER" <<< "${PR_COUNTS[*]}" | wc -l)
+          for USER in "${!PR_COUNTS[@]}"; do
+            COUNT=${PR_COUNTS[$USER]}
             CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
-            # Remove the matched PRs from PR_COUNTS to avoid duplicates
-            PR_COUNTS=("${PR_COUNTS[@]/$USER}")
           done
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV

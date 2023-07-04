@@ -1,5 +1,5 @@
 ---
-title: How to create grant type parameters
+title: Create grant type parameters
 description: This document explains how to create the grant type parameters and how to use them in code
 last_updated: October 24, 2022
 template: howto-guide-template
@@ -38,7 +38,7 @@ class OauthConfig extends SprykerOauthConfig
 ```
 
 2. Create `UserAuthCodeGrantTypeBuilder`:
-   
+
 ```php
 <?php
 

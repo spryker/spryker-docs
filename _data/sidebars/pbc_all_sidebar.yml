@@ -1091,6 +1091,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
               - title: Delete expired refresh tokens
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html
+              - title: Retrieve protected resources
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-retrieve-protected-resources.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
       - title: Merchant Management
@@ -1298,6 +1300,8 @@ entries:
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
+          - title: Retrieve store configuration using Glue API
+            url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-retrieve-protected-resources.html
           - title: Third-party integrations
             nested:
               - title: Customer service

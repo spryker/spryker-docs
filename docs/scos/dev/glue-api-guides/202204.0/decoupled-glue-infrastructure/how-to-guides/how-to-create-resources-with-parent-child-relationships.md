@@ -16,7 +16,7 @@ The `ResourceInterface` interface provides only one method: `getParentResourceTy
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
 
-1. Create a resource using the steps described in the [How to create a storefront resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html) guide.
+1. Create a resource using the steps described in the [How to create a storefront resource](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/how-to-create-a-storefront-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/how-to-create-a-backend-resource.html) guide.
 2. Add a child resource name:
 
 **src\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig.php**

@@ -1,11 +1,10 @@
 ---
-title: How to use Glue API authorization scopes
+title: Use Glue API authorization scopes
 description: This guide describes how to add scopes to the resource and custom route for the storefront API and backend API applications
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authorization-scopes.html
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html
+
 ---
 
 This guide describes how to add scopes to the resource and custom route for the storefront API and backend API applications.
@@ -42,7 +41,7 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
 3. To implement `ScopeRouteProviderPluginInterface` and set up the scopes, adjust `ModuleBarRouteProviderPlugin`:
 
 **Pyz\Glue\ModuleRestApi\Plugin\ModuleBarRouteProviderPlugin.php**
-   
+
 ```php
 <?php
 
@@ -71,7 +70,7 @@ class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProvid
         $getRoute->addDefaults(['scope' => 'backend:modulebar:read']);
 
         $routeCollection->add('moduleBarGetCollection', $getRoute);
-        
+
         return $routeCollection;
     }
 }

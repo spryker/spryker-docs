@@ -1,5 +1,5 @@
 ---
-title: How to create a route
+title: Create a route
 description: This document describes how to create a route
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -83,7 +83,7 @@ class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProvid
             ->setMethods(Request::METHOD_GET);
 
         $routeCollection->add('moduleBarGetCollection', $getRoute);
-        
+
         return $routeCollection;
     }
 }
@@ -95,7 +95,7 @@ Ensure you use `AbstractPlugin` specific to the storefront or backend needs.
 
 {% endinfo_block %}
 
-3. Inject `ModuleBarRouteProviderPlugin` into `GlueBackendApiApplicationDependencyProvider`: 
+3. Inject `ModuleBarRouteProviderPlugin` into `GlueBackendApiApplicationDependencyProvider`:
 
 **\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider**
 
@@ -191,9 +191,9 @@ $ docker/sdk/cli
 ╭─/data | Store: DE | Env: docker.dev | Debug: (.) | Testing: (.)
 ╰─$ glue route:debug Backend -c
 Code bucket: DE | Store: DE | Environment: docker.dev
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- --------------
   Name                Method   Scheme   Host   Path     Controller                                                                      Is Protected  
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- --------------
   tokenResourcePost   POST     ANY      ANY    /token   Spryker\Glue\OauthBackendApi\Controller\TokenResourceController::postAction()   No            
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- --------------
 ```

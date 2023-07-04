@@ -848,8 +848,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
-      - "202212.0"
       - "202001.0"
       - "202005.0"
     - title: Managing products
@@ -1199,8 +1197,6 @@ entries:
       url: /docs/scos/dev/glue-api-guides/retrieving-cms-pages.html
       include_versions:
       - "202108.0"
-    - title: Retrieving store configuration
-      url: /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
     - title: Retrieving measurement units
       url: /docs/scos/dev/glue-api-guides/retrieving-measurement-units.html
       include_versions:
@@ -1277,22 +1273,22 @@ entries:
         - "202212.0"
         nested:
         - title: How to create a storefront resource
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html
+          url: /docs/scos/dev/glue-api-guides/routing/how-to-create-a-storefront-resource.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to create a backend resource
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html
+          url: /docs/scos/dev/glue-api-guides/routing/how-to-create-a-backend-resource.html
           include_versions:
             - "202204.0"
             - "202212.0"
         - title: How to create resources with parent-child relationships
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
+          url: /docs/scos/dev/glue-api-guides/how-to-create-resources-with-parent-child-relationships.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to create a route
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-route.html
+          url: /docs/scos/dev/glue-api-guides/routing/how-to-create-a-route.html
           include_versions:
           - "202204.0"
           - "202212.0"
@@ -1302,29 +1298,29 @@ entries:
           - "202204.0"
           - "202212.0"
         - title: How to use OOTB Glue parameters
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-ootb-glue-parameters.html
+          url: /docs/scos/dev/glue-api-guides/use-default-glue-parameters.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to create a JSON:API relationship
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-json-api-relationship.html
+          url: /docs/scos/dev/glue-api-guides/how-to-create-a-json-api-relationship.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to document Glue API endpoints
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html
+          url: /docs/scos/dev/glue-api-guides/document-glue-api-endpoints.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to use authorization framework
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-authorization-framework.html
+          url: /docs/scos/dev/glue-api-guides/how-to-use-authorization-framework.html
         - title: How to use the Glue authorization scopes
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-glue-api-authorization-scopes.html
+          url: /docs/scos/dev/glue-api-guides/use-glue-api-authorization-scopes.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to create protected endpoints
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html
+          url: /docs/scos/dev/glue-api-guides/create-protected-glue-api-endpoints.html
           include_versions:
           - "202204.0"
           - "202212.0"
@@ -1334,17 +1330,17 @@ entries:
           - "202204.0"
           - "202212.0"
         - title: How to create or change a convention
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html
+          url: /docs/scos/dev/glue-api-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to create grant type parameters
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-grant-type-parameters.html
+          url: /docs/scos/dev/glue-api-guides/create-grant-type-parameters.html
           include_versions:
           - "202204.0"
           - "202212.0"
         - title: How to use an authentication server
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-an-authentication-server.html
+          url: /docs/scos/dev/glue-api-guides/use-authentication-servers-with-glue-api.html
           include_versions:
           - "202204.0"
           - "202212.0"

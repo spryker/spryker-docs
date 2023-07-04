@@ -20,19 +20,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/glue-spryks.html
 ---
 
-Spryker SDK facilitates Glue API Resource development by providing a set of code generation tools, called **Spryks**. Usage of _Spryks_ not only provides an easy and fast way of performing various tasks, but also ensures that the generated code is fully compatible with Spryker and that all coding, naming and other conventions are observed.
+Spryker SDK facilitates Glue API Resource development by providing a set of code generation tools, called *Spryks*. Usage of _Spryks_ not only provides an easy and fast way of performing various tasks, but also ensures that the generated code is fully compatible with Spryker and that all coding, naming and other conventions are observed. For more information on Spryks, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
 
-{% info_block infoBox %}
 
-For more information on _Spryks_, see [Spryk](/docs/sdk/dev/spryks/spryks.html).
-
-{% endinfo_block %}
-
-The following article describes the Spryks available for Glue API development and their arguments.
+This document describes the Spryks available for Glue API development and their arguments.
 
 {% info_block warningBox %}
 
-To perform the requested operations, besides the _Spryks_ called by the user, other _Spryks_ can be called automatically. The reference includes, for each _Spryk_, only its own arguments.
+To perform the requested operations, besides the Spryks called by the user, other Spryks can be called automatically. The reference includes, for each _Spryk_, only its own arguments.
 
 {% endinfo_block %}
 

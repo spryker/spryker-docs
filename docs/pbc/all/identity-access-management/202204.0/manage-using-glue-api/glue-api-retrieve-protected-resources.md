@@ -1,5 +1,5 @@
 ---
-title: Retrieving protected resources
+title: "Glue API: Retrieve protected resources"
 description: The article describes how to retrieve a list of resources protected from unauthorized access.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -15,7 +15,7 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Customer Access feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-access-feature-overview.html
+    link: docs/scos/user/features/page.version/customer-access-feature-overview.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---

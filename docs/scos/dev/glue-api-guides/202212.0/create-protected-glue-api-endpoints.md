@@ -1,5 +1,5 @@
 ---
-title: How to create protected endpoints
+title: Create protected Glue API endpoints
 description: Learn how to create the protected endpoint using a resource for the Storefront and backend API applications.
 last_updated: Feb 23, 2023
 template: howto-guide-template
@@ -37,7 +37,7 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
             '/module' => [
                 'isRegularExpression' => false,
             ],
-            // Route added by regular expression and provide access for 
+            // Route added by regular expression and provide access for
             // methods patch, get if the token is passed and valid
             '/\/module\/.+/' => [
                 'isRegularExpression' => true,
@@ -60,4 +60,3 @@ For backend API, use the appropriate backend-specific class `src/Pyz/Shared/Glue
 2. Try to access `https://glue-storefront.mysprykershop.com/module` without an access token.
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.
 4. Access `https://glue-storefront.mysprykershop.com/module`, with a valid access token.
-

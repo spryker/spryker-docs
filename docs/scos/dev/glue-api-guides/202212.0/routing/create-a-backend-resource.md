@@ -1,5 +1,5 @@
 ---
-title: How to create a backend resource
+title: Create a backend resource
 description: This guide shows how to create an API endpoint using a resource for the backend API application.
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -27,9 +27,9 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 {
     public const RESOURCE_MODULE = 'module';
 }
-``` 
+```
 
-2. Create `ModuleController`: 
+2. Create `ModuleController`:
 
 **\Pyz\Glue\ModuleRestApi\Controller\ModuleController**
 
@@ -48,7 +48,7 @@ use Spryker\Glue\Kernel\Backend\Controller\AbstractBackendApiController;
 class ModuleResourceController extends AbstractBackendApiController
 {
     public function getAction(
-      string $id, 
+      string $id,
       GlueRequestTransfer $glueRequestTransfer
     ): GlueResponseTransfer {
         return (new GlueResponseTransfer())
@@ -57,7 +57,7 @@ class ModuleResourceController extends AbstractBackendApiController
             ->setType(ModuleRestApiConfig::RESOURCE_MODULE)
             ->setAttributes((new ModuleRestAttributesTransfer());
     }
-    
+
     public function postAction(
       ModuleRestAttributesTransfer $moduleRestAttributesTransfer,
       GlueRequestTransfer $glueRequestTransfer
@@ -93,7 +93,7 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
     {
         return ModuleRestApiConfig::RESOURCE_MODULE;
     }
-    
+
     public function getController(): string
     {
         return ModuleResourceController::class;
@@ -117,9 +117,9 @@ The default request and response data format are CamelCase, to apply a snake_cas
 
 {% endinfo_block %}
 
-See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html) guide.
+See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/how-to-create-or-change-a-convention.html) guide.
 
-4. Declare the resource: 
+4. Declare the resource:
 
 **\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider
 
@@ -172,9 +172,9 @@ $ docker/sdk/cli
 ╭─/data | Store: DE | Env: docker.dev | Debug: (.) | Testing: (.)
 ╰─$ glue route:debug Backend -c
 Code bucket: DE | Store: DE | Environment: docker.dev
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- --------------
   Name                Method   Scheme   Host   Path     Controller                                                                      Is Protected  
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- --------------
   tokenResourcePost   POST     ANY      ANY    /token   Spryker\Glue\OauthBackendApi\Controller\TokenResourceController::postAction()   No            
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- --------------
 ```

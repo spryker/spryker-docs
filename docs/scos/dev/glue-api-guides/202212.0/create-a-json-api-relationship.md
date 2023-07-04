@@ -1,5 +1,5 @@
 ---
-title: How to create a JSON:API relationship
+title: Create JSON:API relationships
 description: This guide describes how to add resources through relationships
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-json-api-relationship.html
 ---
+
 Some modules represent relationships between two different resources. Their task is to extend the response of one of the resources with the data of related resources.
 
 To query certain data, you often need to use endpoints from different APIs to get the necessary information. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
@@ -70,7 +71,7 @@ use Spryker\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\Glue
 class GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {
     protected const RESOURCE_MODULE = 'module';
-    
+
     /**
      * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *

@@ -1,5 +1,5 @@
 ---
-title: How to create a storefront resource
+title: Create a storefront resource
 description: This guide shows how to create an API endpoint using a resource for the storefront API application.
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -27,7 +27,7 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 {
     public const RESOURCE_MODULE = 'module';
 }
-``` 
+```
 
 2. Create `module_api.transfer.xml`:
 
@@ -54,7 +54,7 @@ class ModuleRestApiConfig extends AbstractBundleConfig
   <transfer name="ModuleRestAttributes">
     //add transfer fields
   </transfer>
-  
+
     //used for declared list of methods in Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface::getDeclaredMethods()
   <transfer name="GlueResourceMethodCollection">
     <property name="get" type="GlueResourceMethodConfiguration"/>
@@ -67,12 +67,12 @@ class ModuleRestApiConfig extends AbstractBundleConfig
     <property name="action" type="string"/>
     <property name="attributes" type="string"/>
   </transfer>
-  
+
   //add other used transfers
 </transfers>
 ```
 
-3. Create `ModuleController`: 
+3. Create `ModuleController`:
 
 **\Pyz\Glue\ModuleRestApi\Controller\ModuleController**
 
@@ -91,7 +91,7 @@ use Spryker\Glue\Kernel\Controller\AbstractStorefrontApiController;
 class ModuleResourceController extends AbstractStorefrontApiController
 {
     public function getAction(
-      string $id, 
+      string $id,
       GlueRequestTransfer $glueRequestTransfer
     ): GlueResponseTransfer {
         return (new GlueResponseTransfer())
@@ -100,7 +100,7 @@ class ModuleResourceController extends AbstractStorefrontApiController
             ->setType(ModuleRestApiConfig::RESOURCE_MODULE)
             ->setAttributes((new ModuleRestAttributesTransfer());
     }
-    
+
     public function postAction(
       ModuleRestAttributesTransfer $moduleRestAttributesTransfer,
       GlueRequestTransfer $glueRequestTransfer
@@ -136,7 +136,7 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
     {
         return ModuleRestApiConfig::RESOURCE_MODULE;
     }
-    
+
     public function getController(): string
     {
         return ModuleResourceController::class;
@@ -182,7 +182,7 @@ class ModuleResource extends AbstractResourcePlugin implements JsonApiResourceIn
     {
         return ModuleRestApiConfig::RESOURCE_MODULE;
     }
-    
+
     public function getController(): string
     {
         return ModuleResourceController::class;
@@ -206,9 +206,9 @@ The default request and response data format are CamelCase, to apply a snake_cas
 
 {% endinfo_block %}
 
-See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html) guide.
+See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/how-to-create-or-change-a-convention.html) guide.
 
-5. Declare the resource: 
+5. Declare the resource:
 
 **\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider**
 
@@ -261,9 +261,9 @@ $ docker/sdk/cli
 ╭─/data | Store: DE | Env: docker.dev | Debug: (.) | Testing: (.)
 ╰─$ glue route:debug Storefront -c
 Code bucket: DE | Store: DE | Environment: docker.dev
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ --------------
   Name                Method   Scheme   Host   Path     Controller                                                               Is Protected  
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ --------------
   tokenResourcePost   POST     ANY      ANY    /token   Spryker\Glue\OauthApi\Controller\TokenResourceController::postAction()   No            
- ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ -------------- 
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ --------------
 ```

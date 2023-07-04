@@ -1,5 +1,5 @@
 ---
-title: Retrieving store configuration
+title: "Glue API: Retrieve store configuration"
 description: This article explains how to retrieve the store configuration including currencies, countries, locales, and time zones.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

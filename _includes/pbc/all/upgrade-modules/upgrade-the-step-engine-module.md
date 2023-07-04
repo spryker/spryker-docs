@@ -2,6 +2,7 @@
 
 ## Upgrading from version 2.* to version 3.*
 
-If you're migrating the StepEngine module from version 2 to version 3, you need to follow the steps described below.
-In Version 3 the `StepCollectionInterface::getPreviousStep()` has a new second optional argument (`AbstractTransfer $dataTransfer`). If you use this interface for your own implementation, you need to update your derived class.
-If `StepEngineInterface::getTemplateVariables()` is overridden in your project, you need to update the call to `StepCollectionInterface::getPreviousStep()` here as well.
+In Version 3 `StepCollectionInterface::getPreviousStep()` has a new second optional argument: `AbstractTransfer $dataTransfer`. Depending on your usage of the interface, do the following:
+
+* If the interface is used for your own implementation, update your derived class.
+* If the interface is overridden in your project, update the call to `StepCollectionInterface::getPreviousStep()` as well.

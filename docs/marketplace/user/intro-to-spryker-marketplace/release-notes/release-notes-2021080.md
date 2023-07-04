@@ -160,8 +160,8 @@ Documentation:
 * [Retrieving Marketplaceorders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 * [Managing the returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/glue-api-manage-marketplace-returns.html)
 * [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html)
-* [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)
-* [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html)
+* [Search the product catalog](/docs/pbc/all/search/{{site.version}}/marketplace/glue-api-search-the-product-catalog.html)
+* [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html)
 
 ## Data exchange
 

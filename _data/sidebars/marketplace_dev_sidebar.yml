@@ -13,12 +13,6 @@ entries:
             include_versions:
             - "202204.0"
 
-          - title: Infrastructure requirements
-            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html
             include_versions:
@@ -715,7 +709,6 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Guest carts
             url: /docs/marketplace/dev/glue-api-guides/guest-carts/guest-carts.html
@@ -813,7 +806,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Managing the returns
             url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html

@@ -62,6 +62,8 @@ To enable the Upgrader to analyze the project and create PRs, the GitHub persona
 
 * **Metadata**: Access: Read-only
 
+* **Webhooks**: Access: Read-only
+
 * **Pull requests**: Access: Read and write
 
 

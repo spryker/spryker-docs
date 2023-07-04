@@ -10,6 +10,12 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/debugging
 ---
 
+{% info_block warningBox "Security" %}
+
+Debugging mode should be turned off once debugging is completed. Leaving it permanently enabled can lead to disclosure of sensitive information.
+    
+{% endinfo_block %}
+
 Currently, Xdebug is not supported, but you can enable extended logs in the deploy file to debug an application. Extended logs provide extra information about application state and behavior.
 
 To enable extended logs:

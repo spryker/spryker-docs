@@ -43,7 +43,7 @@ To configure Usercentrics, do the following:
 3. In your store's Back Office, go to **Apps**.
 2. In **Apps**, click **Usercentrics**. This takes you to the Usercentrics app details page.
 3. In the top right corner of the Usercentrics app details page, click **Configure**.
-8. In the **Configure** pane, in **Configurations**, by default, **[Enable Smart Data Protector](#smart-data-protector)** is selected. You can either leave this setting or select **[Enable Direct Integration (Works only with Google Tag manager)](/docs/pbc/all/usercentrics/integrate-usercentrics.html#google-tag-manager)**.
+8. In the **Configure** pane, in **Configurations**, by default, **[Enable Smart Data Protector](/docs/pbc/all/usercentrics/integrate-usercentrics.html#smart-data-protector)** is selected. You can either leave this setting or select **[Enable Direct Integration (Works only with Google Tag manager)](/docs/pbc/all/usercentrics/integrate-usercentrics.html#google-tag-manager)**.
 9. Select the store and insert the setting ID from step 2.
 10. To activate Usercentrics for the selected store, select **Is active**.
 8. Click **Save**.

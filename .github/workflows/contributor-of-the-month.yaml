@@ -43,11 +43,11 @@ jobs:
           CONTRIBUTORS_COUNT=()
           for contributor in "${CONTRIBUTORS[@]}"; do
             count=$(grep -cF "$contributor" <<< "$PRS")
-            CONTRIBUTORS_COUNT+=("$contributor $count")
+            CONTRIBUTORS_COUNT+=("$contributor:$count")
           done
 
           # Sort contributors by PR count in descending order
-          SORTED_CONTRIBUTORS=($(echo "${CONTRIBUTORS_COUNT[@]}" | tr ' ' '\n' | sort -k2nr -k1 | tr '\n' ' '))
+          SORTED_CONTRIBUTORS=($(echo "${CONTRIBUTORS_COUNT[@]}" | tr ' ' '\n' | sort -t: -k2nr -k1 | tr '\n' ' '))
 
           # Take the top 3 contributors
           TOP_3_CONTRIBUTORS=("${SORTED_CONTRIBUTORS[@]:0:3}")
@@ -61,5 +61,5 @@ jobs:
           # Print the top 3 contributors of the month and the number of PRs they created
           echo "Top Contributors of the Month:"
           for contributor in "${CONTRIBUTORS[@]}"; do
-            echo "- $contributor"
+            echo "- ${contributor/:/ - PRs: }"
           done

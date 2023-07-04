@@ -24,12 +24,12 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.8.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -67,8 +67,7 @@ For more details about key generation, see [OAuth 2.0 Server Installation](https
 $config[OauthConstants::PRIVATE_KEY_PATH] = 'file://path/to/private.key';
 $config[OauthConstants::PUBLIC_KEY_PATH] = 'file://path/to/public.key';
 $config[OauthConstants::ENCRYPTION_KEY] = 'generated-encryption-key';
-$config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = 'client-identifier';
-$config[OauthConstants::OAUTH_CLIENT_SECRET] = 'client-secret';
+$config[OauthConstants::OAUTH_CLIENT_CONFIGURATION] = '[{"identifier":"client-identifier","secret":"client-secret","isConfidential":true,"name":"Customer client","redirectUri":null,"isDefault":true}]';
 ```
 
 2. Adjust RabbitMq module configuration:
@@ -790,7 +789,7 @@ console setup:init-db
 
 Ensure the following:
 
-* The `spy_oauth_client` table is populated with the OAuth client you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_IDENTIFIER` of environment config files.
+* The `spy_oauth_client` table is populated with the OAuth client(s) you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
 
 * The `spy_oauth_scope` tables are filled with customer scopes.
 
@@ -807,7 +806,7 @@ To start feature integration, integrate the required feature:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 

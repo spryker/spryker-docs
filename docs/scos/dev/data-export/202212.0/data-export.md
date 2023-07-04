@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/exporting-data
 related:
   - title: Sales Data Export feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
   - title: Data export orders .csv files format
     link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
 ---
@@ -33,7 +33,7 @@ Out of the box, Spryker supports only CSV as a format for exporting files.
 
 To export the order data, follow these steps:
 
-1. Make sure you have the [Sales Data Export feature installed](/docs/scos/dev/feature-integration-guides/{{page.version}}/sales-data-export-feature-integration.html) for your project.
+1. Make sure you have the [Sales Data Export feature installed](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html) for your project.
 2. Specify necessary configurations in the YML export configuration file residing in `./data/export/config/`. For details about the YML export configuration file structure and configuration options, see [.yml Export configuration file](#yml-export-configuration-file).
 3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
 
@@ -123,7 +123,7 @@ You can set the following filter criteria for the order data export in your YML 
 
 #### Defining the stores for order data export
 
-To define the stores you want to export the order data for, specify them in `destination` for the specific data entities. 
+To define the stores you want to export the order data for, specify them in `destination` for the specific data entities.
 
 {% info_block warningBox "Warning" %}
 
@@ -157,7 +157,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [AT]
   ```
-  
+
 
 {% endinfo_block %}
 

@@ -531,8 +531,8 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-  * NPM v6 (higher versions have problems with workspace)
-  * NodeJs v12-14
+  * npm v6 (higher versions have problems with workspace)
+  * Node.js v12-14
   * Yarn v2 (or latest Yarn v1)
 
 Spryker requirements:
@@ -1230,6 +1230,6 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| - | - | -|
-| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+| FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                  |
+|-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

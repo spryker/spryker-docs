@@ -30,27 +30,18 @@ jobs:
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
           # Filter out excluded users and count PRs for each user
-          declare -A PR_COUNTS
-          for USER in $PRS; do
-            if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-              ((PR_COUNTS[$USER]++))
-            fi
-          done
+          PR_COUNTS=$(echo "$PRS" | grep -vF "${EXCLUDED_USERS[*]}" | sort | uniq -c | awk '{print $2 ":" $1}')
 
-          # Prepare contributors list
-          CONTRIBUTORS=""
-          for USER in "${!PR_COUNTS[@]}"; do
-            CONTRIBUTORS+="- $USER (PRs: ${PR_COUNTS[$USER]})\n"
-          done
-
-          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
+          echo "PR_COUNTS=${PR_COUNTS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
-          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
+          PR_COUNTS="${{ env.PR_COUNTS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
 
           # Print all contributors of the month and the number of PRs they created
           echo "Top Contributors of $MONTH_NAME:"
-          echo -e "$CONTRIBUTORS"
+          echo "$PR_COUNTS" | while IFS=':' read -r user count; do
+            echo "- $user (PRs: $count)"
+          done

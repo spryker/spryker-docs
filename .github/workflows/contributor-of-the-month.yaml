@@ -3,7 +3,7 @@ name: Internal Contributor of the Month
 on:
   push:
     branches:
-      - 'contributor-workflow'
+      - '*'
 
 jobs:
   determine-contributor:
@@ -24,12 +24,11 @@ jobs:
           # Determine the contributor with the most merged PRs
           CONTRIBUTOR=$(echo "$PRS" | sort | uniq -c | sort -nr | awk '{print $2}' | head -n1)
 
-          echo "::set-output name=contributor::$CONTRIBUTOR"
+          echo "CONTRIBUTOR=${CONTRIBUTOR}" >> $GITHUB_ENV
 
       - name: Log contributor
-        if: steps.determine.outputs.contributor != null
         run: |
-          CONTRIBUTOR="${{ steps.determine.outputs.contributor }}"
+          CONTRIBUTOR="${{ env.CONTRIBUTOR }}"
 
           # Print the contributor of the month
           echo "Internal Contributor of the Month: $CONTRIBUTOR"

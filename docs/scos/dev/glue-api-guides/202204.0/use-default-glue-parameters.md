@@ -1,5 +1,5 @@
 ---
-title: How to use OOTB Glue parameters
+title: Use default Glue parameters
 description: This document explains how to pass the parameters and how to use them in code
 last_updated: September 30, 2022
 template: howto-guide-template

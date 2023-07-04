@@ -1,6 +1,6 @@
 ---
-title: How to create resources with parent-child relationships
-description: Learn how to create resources with parent-child relationships
+title: Create Glue API resources with parent-child relationships
+description: Learn Create Glue API resources with parent-child relationships
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
@@ -16,7 +16,7 @@ The `ResourceInterface` interface provides only one method: `getParentResourceTy
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
 
-1. Create a resource using the steps described in the [How to create a storefront resource](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-storefront-resources.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-backend-resources.html).
+1. Create a resource using the steps described in the [Create storefront resources](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-storefront-resources.html) or [Create backend resources](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-backend-resources.html).
 2. Add a child resource name:
 
 **src\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig.php**

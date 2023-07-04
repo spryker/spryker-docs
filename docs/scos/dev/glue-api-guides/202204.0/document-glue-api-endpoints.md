@@ -1,5 +1,5 @@
 ---
-title: How to document Glue API endpoints
+title: Document Glue API endpoints
 description: You can enhance the way your resource is described in the OPENAPI v3 schema
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
 ---
 
-This document shows how to document Glue API endpoints.
+This document shows Document Glue API endpoints.
 
 You can enhance your resource's description in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). 
 

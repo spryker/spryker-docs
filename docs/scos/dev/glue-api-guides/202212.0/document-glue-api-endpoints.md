@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html
 ---
 
-This document shows how to document Glue API endpoints.
+This document shows Document Glue API endpoints.
 
 You can enhance your resource's description in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/).
 

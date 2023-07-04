@@ -1,5 +1,5 @@
 ---
-title: How to create a backend resource
+title: Create backend resources
 description: This guide shows how to create an API endpoint using a resource for the backend API application.
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -116,7 +116,7 @@ The default request and response data format are CamelCase, to apply a snake_cas
 
 {% endinfo_block %}
 
-See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/how-to-create-or-change-a-convention.html) guide.
+See also [Create and change Glue API conventions](/docs/scos/dev/glue-api-guides/{{page.version}}/create-and-change-glue-api-conventions.html) guide.
 
 4. Declare the resource: 
 

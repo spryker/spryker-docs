@@ -1,5 +1,5 @@
 ---
-title: How to create protected endpoints
+title: Create protected Glue API endpoints
 description: Learn how to create the protected endpoint using a resource for the Storefront and backend API applications.
 last_updated: September 30, 2022
 template: howto-guide-template

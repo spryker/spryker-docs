@@ -1,6 +1,6 @@
 ---
 title: Use authentication servers with Glue API
-description: This document describes how to use an authentication server.
+description: This document describes Use authentication servers with Glue API.
 last_updated: October 24, 2022
 template: howto-guide-template
 redirect_from:
@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-use-an-authentication-server.html
 ---
 
-This document describes how to use an authentication server.
+This document describes Use authentication servers with Glue API.
 
 Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html) guide.
 

@@ -1,6 +1,6 @@
 ---
-title: How to create a route
-description: This document describes how to create a route
+title: Create routes
+description: This document describes Create routes
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:

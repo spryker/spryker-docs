@@ -1,5 +1,5 @@
 ---
-title: How to create API applications in decoupled Glue infrastructure
+title: Create Glue API applications
 description: This document describes how to create a new API application
 last_updated: September 30, 2022
 template: howto-guide-template

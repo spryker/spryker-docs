@@ -1,5 +1,5 @@
 ---
-title: How to use authorization framework
+title: Create Glue API authorization strategies
 description: This document describes how to create a new authorization strategy.
 last_updated: September 30, 2022
 template: howto-guide-template

@@ -1,6 +1,6 @@
 ---
-title: How to use an authentication server
-description: This document describes how to use an authentication server.
+title: Use authentication servers with Glue API
+description: This document describes Use authentication servers with Glue API.
 last_updated: October 24, 2022
 template: howto-guide-template
 redirect_from:
@@ -8,15 +8,15 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-use-an-authentication-server.html
 ---
 
-This document describes how to use an authentication server.
+This document describes Use authentication servers with Glue API.
 
 Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html) guide.
 
 Glue allows switching between different authentication servers. In order to provide that ability, the `AuthenticationServerPluginInterface` must be implemented.
-That conception allows wiring plugins implemented an authentication server and extend the default functionality. 
+That conception allows wiring plugins implemented an authentication server and extend the default functionality.
 
 `OauthAuthenticationServerPlugin` implements `AuthenticationServerPluginInterface` and builds the request to the `Oauth` server out of the box.
- 
+
 <details><summary markdown='span'>AuthenticationServerPluginInterface</summary>
 
 ```php
@@ -82,7 +82,7 @@ class OauthAuthenticationServerPlugin extends AbstractPlugin implements Authenti
 ```
 </details>
 
-This plugin is run by `AuthenticationFacade::authenticate()`. 
+This plugin is run by `AuthenticationFacade::authenticate()`.
 
 For the Glue Storefront API application, `Spryker\Client\AuthenticationOauth\Communication\Plugin\Authentication\OauthAuthenticationServerPlugin` is used and run by `AuthenticationClient::authenticate()`.
 
@@ -130,5 +130,3 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
     }
 }
 ```
-
-

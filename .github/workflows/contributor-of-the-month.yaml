@@ -6,13 +6,13 @@ on:
       - 'contributor-workflow'
 
 jobs:
-  determine-contributors:
+  determine-contributor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Determine contributors
+      - name: Determine contributor
         id: determine
         run: |
           # Fetch merged pull requests
@@ -24,42 +24,22 @@ jobs:
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
-          # Determine the top 3 contributors and the number of PRs they created
-          CONTRIBUTORS=()
-          for user in $PRS; do
-            excluded=false
-            for excludedUser in "${EXCLUDED_USERS[@]}"; do
-              if [[ $user == $excludedUser ]]; then
-                excluded=true
-                break
-              fi
-            done
-            if [[ $excluded == false ]]; then
-              CONTRIBUTORS+=("$user")
+          # Filter out excluded users
+          PRS_FILTERED=""
+          for USER in $PRS; do
+            if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
+              PRS_FILTERED+=" $USER"
             fi
           done
 
-          # Get the count of PRs for each contributor
-          CONTRIBUTORS_COUNT=()
-          for contributor in "${CONTRIBUTORS[@]}"; do
-            count=$(grep -cF "$contributor" <<< "$PRS")
-            CONTRIBUTORS_COUNT+=("$contributor:$count")
-          done
+          # Determine the contributor with the most merged PRs
+          CONTRIBUTOR=$(echo "$PRS_FILTERED" | sort | uniq -c | sort -nr | awk '{print $2}' | head -n1)
 
-          # Sort contributors by PR count in descending order
-          SORTED_CONTRIBUTORS=($(echo "${CONTRIBUTORS_COUNT[@]}" | tr ' ' '\n' | sort -t: -k2nr -k1 | tr '\n' ' '))
+          echo "CONTRIBUTOR=${CONTRIBUTOR}" >> $GITHUB_ENV
 
-          # Take the top 3 contributors
-          TOP_3_CONTRIBUTORS=("${SORTED_CONTRIBUTORS[@]:0:3}")
-
-          echo "CONTRIBUTORS=${TOP_3_CONTRIBUTORS[*]}" >> $GITHUB_ENV
-
-      - name: Log contributors
+      - name: Log contributor
         run: |
-          CONTRIBUTORS=(${{ env.CONTRIBUTORS }})
+          CONTRIBUTOR="${{ env.CONTRIBUTOR }}"
 
-          # Print the top 3 contributors of the month and the number of PRs they created
-          echo "Top Contributors of the Month:"
-          for contributor in "${CONTRIBUTORS[@]}"; do
-            echo "- ${contributor/:/ - PRs: }"
-          done
+          # Print the contributor of the month
+          echo "Internal Contributor of the Month: $CONTRIBUTOR"

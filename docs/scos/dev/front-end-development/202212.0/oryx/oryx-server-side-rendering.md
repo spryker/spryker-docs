@@ -11,13 +11,13 @@ Server-side rendering (SSR), including Static Site Generation (SSG) as a variant
 
 * Speed and performance: With server-side rendering (SSR), the browser receives pre-rendered HTML, reducing the time taken to display meaningful content.
 
-* SEO: SSR is typically more favorable for SEO, because search engine crawlers find it easier to index pre-rendered HTML content.
+* SEO: SSR is typically more favorable for SEO because search engine crawlers find it easier to index pre-rendered HTML content.
 
-* Social media integration: SSR significantly improves integration with social providers like Facebook and Twitter, and bots like Slack. It enables the generation of link previews, rich snippets, and thumbnails, enhancing the visibility and appeal of shared content on these platforms.
+* Social media integration: SSR significantly improves integration with social providers like Facebook and Twitter and bots like Slack. It enables the generation of link previews, rich snippets, and thumbnails, enhancing the visibility and appeal of shared content on these platforms.
 
 * User experience (UX): By delivering pre-rendered content faster, SSR minimizes user waiting time, providing a superior user experience compared to client-side rendering (CSR).
 
-* Resource allocation: While SSR enhances performance and user experience, it requires more server resources and processing power. CSR lightens server load by offloading rendering to the client, but at the cost of potentially increased load times and less effective SEO.
+* Resource allocation: While SSR enhances performance and user experience, it requires more server resources and processing power. CSR lightens the server load by offloading rendering to the client but at the cost of potentially increased load times and less effective SEO.
 
 
 ## Advantages and disadvantages of SSR
@@ -58,7 +58,7 @@ SSG is a variant of SSR where the server generates static HTML pages at build ti
 
 Caching and CDNs are additional layers that can significantly improve the performance of SSR applications by reducing server load and accelerating content delivery.
 
-Caching acts as a layer on top of rendering. Once the HTML content is rendered, it's cached to serve repeated requests without the need for re-rendering. There are various caching solutions, like Varnish, Redis, or even service-specific solutions, like Cloudflare's caching services.
+Caching acts as a layer on top of rendering. Once the HTML content is rendered, it's cached to serve repeated requests without the need for rerendering. There are various caching solutions, like Varnish and Redis, or even service-specific solutions, like Cloudflare's caching services.
 
 CDNs distribute cached content across a network of servers located worldwide. This ensures that users receive content from the nearest server, which significantly improves delivery speed and reduces latency.
 
@@ -78,7 +78,7 @@ Moreover, Oryx employs a *late hydration* strategy, delaying the hydration proce
 
 ## Developing with SSR
 
-The following sections describes the development of applications with SSR support in the Oryx framework.
+The following sections describe the development of applications with SSR support in the Oryx framework.
 
 ### SSR consideration
 
@@ -107,16 +107,16 @@ Oryx components are built with SSR in mind. They're designed to render correctly
 
 ### Decorators
 
-Oryx provides special decorators to address some SSR related challenges:
+Oryx provides special decorators to address some SSR-related challenges:
 
 - The `@hydratable` decorator marks a component for late hydration. This allows the component to render on the server but delays its hydration until it's interacted with on the client. Hydration can be triggered programmatically, or automatically with events.   
 
-- The `@ssrShim` decorator shims certain parts of the component API to make it work on the server. Specifically, it adjusts how the toggleAttribute() function and style property work.
+- The `@ssrShim` decorator shims certain parts of the component API to make it work on the server. Specifically, it adjusts how the `toggleAttribute()` function and style property work.
 
 ### Utilities
 
 Oryx also provides utilities to assist with SSR:
 
-- `ssrAwaiter`: this utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
+- `ssrAwaiter`: This utility manages asynchronous operations during SSR. It's particularly useful when a component depends on asynchronous data. By using `ssrAwaiter`, you can ensure that the server waits for the data before rendering the component.
 
-- `@subscribe`: this decorator is used to manage subscriptions during SSR. It solves the problem of missing lifecycle hooks in SSR and ensures that subscriptions are cleaned up properly.
+- `@subscribe`: This decorator is used to manage subscriptions during SSR. It solves the problem of missing lifecycle hooks in SSR and ensures that subscriptions are cleaned up properly.

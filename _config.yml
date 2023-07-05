@@ -170,20 +170,12 @@ defaults:
     values:
       sidebar: "pbc_all_sidebar"
       role: "all"
-
   -
     scope:
-      path: "docs/unified-commerce/dev"
+      path: "docs/unified-commerce/all"
     values:
-      sidebar: "unified-commerce_dev_sidebar"
-      role: "dev"
-
-  -
-    scope:
-      path: "docs/unified-commerce/user"
-    values:
-      sidebar: "unified-commerce_user_sidebar"
-      role: "user"
+      sidebar: "unified_commerce_sidebar"
+      role: "all"
 
 versions:
   '201811.0': '201811.0'

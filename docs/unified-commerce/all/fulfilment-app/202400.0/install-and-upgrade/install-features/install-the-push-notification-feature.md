@@ -1,5 +1,5 @@
 ---
-title: Install the Push notification feature
+title: Install the Push Notification feature
 description: Learn how to integrate the Push notification feature into your project
 last_updated: Jan 24, 2023
 template: feature-integration-guide-template

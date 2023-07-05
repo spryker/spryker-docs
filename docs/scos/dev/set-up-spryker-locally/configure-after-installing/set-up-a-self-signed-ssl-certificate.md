@@ -34,7 +34,7 @@ Depending on the OS, follow the instructions:
 To add `spryker_ca.crt` to trusted authorities on MacOS, follow the steps:
 
 1. Open Keychain Access.
-2. Select **File** > **Import Items**.
+2. Select **File&nbsp;<span aria-label="and then">></span> Import Items**.
 3. Select `spryker_ca.crt` and click **Open**.
 4. Go to the *Certificates* category.
 5. Right-click the *Spryker* certificate and select **Get Info**.

@@ -681,7 +681,7 @@ entries:
       include_versions:
       - "202204.0"
       - "202212.0"
-      nested:      
+      nested:
         - title: Create storefront resources
           url: /docs/scos/dev/glue-api-guides/routing/create-storefront-resources.html
         - title: Create backend resources
@@ -779,10 +779,12 @@ entries:
       url: /docs/scos/dev/glue-api-guides/rest-api-b2c-reference.html
       include_versions:
       - "202204.0"
+      - "202212.0"
     - title: REST API B2B Demo Shop reference
       url: /docs/scos/dev/glue-api-guides/rest-api-b2b-reference.html
       include_versions:
       - "202204.0"
+      - "202212.0"      
     - title: Managing customers
       url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
       include_versions:

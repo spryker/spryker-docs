@@ -1652,11 +1652,15 @@ entries:
                 url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-and-export-order-management-system-data.html
                 nested:
                   - title: "merchant_oms_process.csv"
-                    url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-oms-process.csv.html
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/import-file-details-merchant-oms-process.csv.html
                   - title: "merchant-order-status.csv"
-                    url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-order-status.csv.html
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/import-file-details-merchant-order-status.csv.html
                   - title: "merchant_orders.csv"
-                    url: /docs/pbc/all/order-management-system/marketplace/import-data/export-file-details-merchant-orders.html
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/export-file-details-merchant-orders.csv.html
+                  - title: "merchant_orders-expenses.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/export-file-details-merchant-order-expenses.csv.html
+                  - title: "merchant_orders-items.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/export-file-details-merchant-order-items.csv.html
               - title: Manage in the Back Office
                 nested:
                   - title: Manage main merchant orders

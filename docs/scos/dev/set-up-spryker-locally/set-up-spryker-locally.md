@@ -2,6 +2,7 @@
 title: Set up Spryker locally
 description: Set up Spryker Cloud Commerce OS locally
 template: concept-topic-template
+last_updated: Jun 23, 2023
 redirect_from:
   - /docs/about-installation
   - /docs/scos/dev/setup/setup.html

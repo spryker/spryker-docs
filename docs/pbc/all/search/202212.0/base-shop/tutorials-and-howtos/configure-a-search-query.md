@@ -45,7 +45,7 @@ related:
   - title: Expand search data
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/expand-search-data.html
   - title: Facet filter overview and configuration
-    link: /docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
 Once you have all the necessary data in Elasticsearch, you can display it on Yves.

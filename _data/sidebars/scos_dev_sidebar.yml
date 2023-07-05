@@ -678,10 +678,10 @@ entries:
           url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/security-and-authentication.html
 
     - title: Routing
-      nested:
       include_versions:
       - "202204.0"
       - "202212.0"
+      nested:      
         - title: Create storefront resources
           url: /docs/scos/dev/glue-api-guides/routing/create-storefront-resources.html
         - title: Create backend resources

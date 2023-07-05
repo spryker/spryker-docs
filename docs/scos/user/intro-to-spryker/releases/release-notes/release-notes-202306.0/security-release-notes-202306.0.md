@@ -48,7 +48,7 @@ Due to missing access validation controls on the backend, an administrator user 
 
 ### Affected modules
 
-* `spryker-shop/company-page`: 1.0.0-2.21.0 
+`spryker-shop/company-page`: 1.0.0-2.21.0 
 
 ### Introduced changes
 
@@ -72,7 +72,7 @@ Attackers were able to bypass the redirect URL validation for URLs provided thro
 
 ### Affected modules
 
-* `spryker/kernel`: 1.0.0-3.72.0
+`spryker/kernel`: 1.0.0-3.72.0
 
 ### Introduced changes
 
@@ -116,7 +116,7 @@ The Back Office and Merchant portals were prone to brute-force attacks. By explo
 
 ### Affected modules
 
-* `spryker/security-blocker`: 1.0.0-1.1.1
+`spryker/security-blocker`: 1.0.0-1.1.1
 
 ### Introduced changes
 

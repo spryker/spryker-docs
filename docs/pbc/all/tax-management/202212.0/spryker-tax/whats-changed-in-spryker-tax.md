@@ -1,8 +1,10 @@
 ---
-title: What's changed in Tax Management
+title: What's changed in Spryker Tax
 last_updated: Jul 29, 2022
 description: This document lists all the Tax Management releases
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/tax-management/202212.0/base-shop/whats-changed-in-tax-management.html
 ---
 
 ## April 18th, 2022

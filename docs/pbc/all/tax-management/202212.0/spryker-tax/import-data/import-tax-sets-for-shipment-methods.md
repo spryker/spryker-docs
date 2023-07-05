@@ -2,6 +2,8 @@
 title: Import tax sets for shipment methods
 last_updated: Aug 2, 2022
 template: data-import-template
+redirect_from:
+  - /docs/pbc/all/tax-management/202212.0/base-shop/import-and-export-data/import-tax-sets-for-shipment-methods.html
 ---
 
 This document describes how to import taxes for shipment methods via  `shipment.csv`. To import full information for shipment methods, see [File details - shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html).

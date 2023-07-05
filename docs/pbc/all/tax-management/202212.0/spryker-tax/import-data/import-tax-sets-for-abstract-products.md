@@ -4,6 +4,7 @@ last_updated: July 22, 2022
 template: data-import-template
 redirect_from:
   - /docs/pbc/all/tax-management/202212.0/import-and-export-data/import-tax-sets-for-abstract-products.html
+  - /docs/pbc/all/tax-management/202212.0/base-shop/import-and-export-data/import-tax-sets-for-abstract-products.html
 ---
 
 This document describes how to import taxes for abstract products via  `product_abstract.csv`. To import full information for abstract products, see [File details - product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
@@ -16,9 +17,8 @@ This document describes how to import taxes for abstract products via  `product_
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-
 | abstract_sku | &check;  | String | | SKU identifier of the abstract product. |
-| tax_set_name |  | String | | Name of the tax set. |
+| tax_set_name | | String | | Name of the tax set. |
 
 ## Import the file
 

@@ -34,7 +34,7 @@ Each section contains reference information. Make sure to review it before you s
 To check the product availability:
 1. In the _Actions_ column of the *Products availability list* table, click **View** next to the corresponding product item.
 This will take you to the *Product Availability* page.
-2. In case of a multistore setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
+2. In case of a multi-store setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
 
 ### Reference information: Checking availability
 

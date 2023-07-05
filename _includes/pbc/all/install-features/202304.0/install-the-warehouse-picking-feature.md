@@ -563,6 +563,7 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 | PLUGIN                                                          | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                                                          |
 |-----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
 | PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                                    |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
+| PickingListStartPickingBackendResourcePlugin                    | Registers the `picking-lists` resources `start-picking` resource.                          |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
 | PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                               |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
 | PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds the `picking-list-items` resources as relationships to the `picking-lists` resources. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
@@ -574,6 +575,7 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\PickingListStartPickingBackendResourcePlugin;
 use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\PickingListsBackendResourcePlugin;
 use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\PickingListItemsBackendResourcePlugin;
 
@@ -586,6 +588,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     {
         return [
             new PickingListsBackendResourcePlugin(),
+            new PickingListStartPickingBackendResourcePlugin(),
             new PickingListItemsBackendResourcePlugin()
         ];
     }
@@ -642,20 +645,7 @@ Make sure that you can send the following requests:
 
 * To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
-* To start a pick-up operation for a warehouse user, send the request:
-
-`PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
-
-```json
-{
-  "data": {
-    "type": "picking-lists",
-    "attributes": {
-      "action": "startPicking"
-    }
-  }
-}
-```
+* To start a pick-up operation for a warehouse user, send the request: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
 
 * To get a collection of the picking list items for a particular picking list, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
 

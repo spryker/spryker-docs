@@ -1,4 +1,6 @@
-This document describes how to integrate the Product offer shipment feature into a Spryker project.
+
+
+This document describes how to integrate the Product Offer Shipment feature into a Spryker project.
 
 ## Install feature core
 
@@ -10,10 +12,10 @@ To start feature integration, integrate the following required features:
 
 | NAME          | VERSION          | INTEGRATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
- | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-feature-integration.html) |
+ | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
  | Shipment      | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                   |
 
-## Install the required modules using Composer
+## 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/product-offer-shipment:"{{site.version}}" --update-with-dependencies
@@ -23,23 +25,400 @@ composer require spryker-feature/product-offer-shipment:"{{site.version}}" --upd
 
 Make sure that the following module has been installed:
 
-| MODULE                   | EXPECTED DIRECTORY                         |
-|--------------------------|--------------------------------------------|
-| ProductOffer             | vendor/spryker/product-offer               |
-| Shipment                 | vendor/spryker/shipment                    |
-| ProductOfferShipmentType | vendor/spryker/product-offer-shipment-type |
+| MODULE                                   | EXPECTED DIRECTORY                                           |
+|------------------------------------------|--------------------------------------------------------------|
+| ProductOfferShipmentType                 | vendor/spryker/product-offer-shipment-type                   |
+| ProductOfferShipmentTypeDataImport       | vendor/spryker/product-offer-shipment-type-data-import       |
+| ProductOfferShipmentTypeStorage          | vendor/spryker/product-offer-shipment-type-storage           |
+| ProductOfferShipmentTypeStorageExtension | vendor/spryker/product-offer-shipment-type-storage-extension |
 
 {% endinfo_block %}
 
-### Set up behavior
+### 2) Set up database schema and transfer objects
+
+1. Adjust the schema definition so entity changes trigger events.
+
+| AFFECTED ENTITY                 | TRIGGERED EVENTS                                                                                                                                |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| spy_product_offer_shipment_type | Entity.spy_product_offer_shipment_type.create<br>Entity.spy_product_offer_shipment_type.update<br>Entity.spy_product_offer_shipment_type.delete |
+
+**src/Pyz/Zed/ProductOfferShipmentType/Persistence/Propel/Schema/spy_product_offer_shipment_type.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" namespace="Orm\Zed\ProductOfferShipmentType\Persistence" package="src.Orm.Zed.ProductOfferShipmentType.Persistence" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd">
+
+    <table name="spy_product_offer_shipment_type">
+        <behavior name="event">
+            <parameter name="spy_product_offer_shipment_type_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
+2. Apply database changes and generate entity and transfer changes:
+
+```bash
+console propel:install
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY                         | TYPE  | EVENT   |
+|-----------------------------------------|-------|---------|
+| spy_product_offer_shipment_type         | table | created |
+| spy_product_offer_shipment_type_storage | table | created |
+
+Ensure the following transfers have been created:
+
+| TRANSFER                                   | TYPE  | EVENT   | PATH                                                                             |
+|--------------------------------------------|-------|---------|----------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeCriteria           | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCriteriaTransfer           |
+| ProductOfferShipmentTypeConditions         | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeConditionsTransfer         |
+| ProductOfferShipmentTypeCollection         | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionTransfer         |
+| ProductOfferShipmentTypeIteratorCriteria   | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeIteratorCriteriaTransfer   |
+| ProductOfferShipmentTypeIteratorConditions | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeIteratorConditionsTransfer |
+| ProductOfferShipmentType                   | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeTransfer                   |
+| ProductOfferShipmentTypeStorage            | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeStorageTransfer            |
+| ProductOfferCriteria                       | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer                       |
+| ProductOfferConditions                     | class | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer                     |
+| ProductOfferCollection                     | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer                     |
+| ProductOffer                               | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                               |
+| ShipmentTypeCriteria                       | class | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer                       |
+| ShipmentTypeConditions                     | class | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer                     |
+| ShipmentTypeCollection                     | class | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer                     |
+| ShipmentType                               | class | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                               |
+| ProductOfferStorage                        | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                        |
+| ShipmentTypeStorageCriteria                | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer                |
+| ShipmentTypeStorageConditions              | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer              |
+| ShipmentTypeStorageCollection              | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer              |
+| ShipmentTypeStorage                        | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                        |
+| StoreCollection                            | class | created | src/Generated/Shared/Transfer/StoreCollectionTransfer                            |
+| Store                                      | class | created | src/Generated/Shared/Transfer/StoreTransfer                                      |
+| StoreRelation                              | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                              |
+| Pagination                                 | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                 |
+| CartChange                                 | class | created | src/Generated/Shared/Transfer/CartChangeTransfer                                 |
+| Sort                                       | class | created | src/Generated/Shared/Transfer/SortTransfer                                       |
+| DataImporterConfiguration                  | class | created | src/Generated/Shared/Transfer/DataImportConfigurationTransfer                    |
+| DataImporterReport                         | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                         |
+| EventEntity                                | class | created | src/Generated/Shared/Transfer/EventEntityTransfer                                |
+| SynchronizationData                        | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                        |
+| Filter                                     | class | created | src/Generated/Shared/Transfer/FilterTransfer                                     |
+
+{% endinfo_block %}
+
+### 3) Configure export to Redis
+
+Configure tables to be published to `spy_product_offer_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
+
+1. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module configuration:
+
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+use Spryker\Shared\ProductOfferShipmentTypeStorage\ProductOfferShipmentTypeStorageConfig;
+
+class RabbitMqConfig extends SprykerRabbitMqConfig
+{
+    /**
+     * @return list<string>
+     */
+    protected function getSynchronizationQueueConfiguration(): array
+    {
+        return [
+            ProductOfferShipmentTypeStorageConfig::PRODUCT_OFFER_SHIPMENT_TYPE_SYNC_STORAGE_QUEUE,
+        ];
+    }
+}
+```
+
+2. Register the new queue message processor:
+
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Queue;
+
+use Spryker\Shared\ProductOfferShipmentTypeStorage\ProductOfferShipmentTypeStorageConfig;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
+use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationStorageQueueMessageProcessorPlugin;
+
+class QueueDependencyProvider extends SprykerDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<string, \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
+     */
+    protected function getProcessorMessagePlugins(Container $container): array
+    {
+        return [
+            ProductOfferShipmentTypeStorageConfig::PRODUCT_OFFER_SHIPMENT_TYPE_SYNC_STORAGE_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+        ];
+    }
+}
+
+```
+
+3. Configure the synchronization pool and event queue name:
+
+**src/Pyz/Zed/ShipmentTypeStorage/ShipmentTypeStorageConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ShipmentTypeStorage;
+
+use Pyz\Zed\Synchronization\SynchronizationConfig;
+use Spryker\Zed\ShipmentTypeStorage\ProductOfferShipmentTypeStorageConfig as SprykerProductOfferShipmentTypeStorageConfig;
+
+class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentTypeStorageConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getProductOfferShipmentTypeStorageSynchronizationPoolName(): ?string
+    {
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+    }
+}
+```
+
+4. Set up publisher plugins:
+
+| PLUGIN                                                        | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                                                                           |
+|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeWritePublisherPlugin                  | Publishes product offer shipment type data by `SpyProductOfferShipmentType` entity events.                  |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType |
+| ProductOfferProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyProductOffer` events.                                     |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer             |
+| ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyProductOfferStore` events.                                |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore        |
+| ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyShipmentType` events.                                     |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType             |
+| ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore        |
+| ProductOfferShipmentTypePublisherTriggerPlugin                | Allows to populate product offer shipment type storage table with data and trigger further export to Redis. |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher                          |
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType\ProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentTypePublisherTriggerPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore\ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array<int|string, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>|array<string, array<int|string, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>>
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            $this->getProductOfferShipmentTypeStoragePlugins(),
+        );
+    }
+    
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            return new ProductOfferShipmentTypePublisherTriggerPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getProductOfferShipmentTypeStoragePlugins(): array
+    {
+        return [
+            new ProductOfferShipmentTypeWritePublisherPlugin(),
+            new ProductOfferProductOfferShipmentTypeWritePublisherPlugin(),
+            new ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin(),
+            new ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin(),
+            new ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin(),
+        ];
+    }
+}
+```
+
+5. Set up synchronization plugins:
+
+| PLUGIN                                                          | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                                                        |
+|-----------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the product offer shipment type storage table's content into Redis. |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Synchronization |
+
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Synchronization;
+
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Synchronization\ProductOfferShipmentTypeSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
+
+class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
+     */
+    protected function getSynchronizationDataPlugins(): array
+    {
+        return [
+            new ProductOfferShipmentTypeSynchronizationDataBulkRepositoryPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `product-offer-shipment-type` data is stored in storage correctly:
+
+1. Fill the `spy_product_offer`, `spy_product_offer_store`, `spy_shipment_type`, `spy_shipment_type_store`, and `spy_product_offer_shipment_type` tables with data.
+2. Run the `console publish:trigger-events -r product_offer` command.
+3. Make sure that the `spy_product_offer_shipment_type_storage` table has been filled with respective data.
+4. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_shipment_type:{store}:{product_offer_reference}` mask.
+
+Make sure that `product-offer-shipment-type` synchronization plugin works correctly:
+
+1. Fill the `spy_product_offer_shipment_type_storage` table with some data.
+2. Run the `console sync:data -r product_offer_shipment_type` command.
+3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_shipment_type:{store}:{product_offer_reference}` mask.
+
+Make sure that when a product offer shipment type relation is created or edited through BAPI, it is exported to Redis accordingly.
+
+In Redis, make sure data is represented in the following format:
+```json
+{
+    "product_offer_reference": "offer1",
+    "shipment_type_uuids": [
+        "174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+    ]
+}
+```
+{% endinfo_block %}
+
+### 4) Import shipment types for product offers
+
+1. Prepare your data according to your requirements using our demo data:
+
+**vendor/spryker/spryker/Bundles/ProductOfferShipmentTypeDataImport/data/import/product_offer_shipment_type.csv**
+```csv
+product_offer_reference,shipment_type_key
+offer1,delivery
+offer2,delivery
+offer3,delivery
+offer4,pickup
+```
+
+| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION            |
+|-------------------------|-----------|-----------|--------------|-----------------------------|
+| product_offer_reference | mandatory | string    | offer1       | Reference of product offer. |
+| shipment_type_key       | mandatory | string    | delivery     | Key of the shipment type.   |
+
+2. Register the following data import plugin:
+
+| PLUGIN                                   | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                                       |
+|------------------------------------------|--------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeDataImportPlugin | Imports product offer shipment types data from the specified file. | None          | \Spryker\Zed\ProductOfferShipmentTypeDataImport\Communication\Plugin\DataImport |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+use Spryker\Zed\ProductOfferShipmentTypeDataImport\Communication\Plugin\DataImport\ProductOfferShipmentTypeDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            new ProductOfferShipmentTypeDataImportPlugin(),
+        ];
+    }
+}
+```
+
+3. Enable the behaviors by registering the console commands:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use Spryker\Zed\ProductOfferShipmentTypeDataImport\ProductOfferShipmentTypeDataImportConfig;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container)
+    {
+        $commands = [
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ProductOfferShipmentTypeDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHIPMENT_TYPE),
+        ];
+
+        return $commands;
+    }
+}
+```
+
+4. Import data:
+
+```bash
+console data:import:product-offer-shipment-type
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_product_offer_shipment_type` table in the database.
+
+{% endinfo_block %}
+
+### 5) Set up behavior
 
 Enable the following plugins:
 
-| PLUGIN                                   | SPECIFICATION                                                                                                                 | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                |
-|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| ShipmentTypeProductOfferPostCreatePlugin | Persists product offer shipment type to persistence.                                                                          | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer  |
-| ShipmentTypeProductOfferPostUpdatePlugin | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence. | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer  |
-| ShipmentTypeProductOfferExpanderPlugin   | Expands `ProductOfferTransfer` with related shipment types.                                                                   | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                 | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer  |
+| PLUGIN                                              | SPECIFICATION                                                                                                                  | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                                    |
+|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| ShipmentTypeProductOfferPostCreatePlugin            | Persists product offer shipment type to persistence.                                                                           | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
+| ShipmentTypeProductOfferPostUpdatePlugin            | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence.  | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
+| ShipmentTypeProductOfferExpanderPlugin              | Expands `ProductOfferTransfer` with related shipment types.                                                                    | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                 | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer                      |
+| ShipmentTypeProductOfferStorageExpanderPlugin       | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                                | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                         | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage         |
 
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
@@ -86,178 +465,26 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 ```
 
-### Set up database schema and transfer objects
+**src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
 
-```bash
-console propel:install
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied by checking your database:
-
-| DATABASE ENTITY                 | TYPE  | EVENT   |
-|---------------------------------|-------|---------|
-| spy_product_offer_shipment_type | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Ensure the following transfers have been created:
-
-| TRANSFER                       | TYPE  | EVENT   | PATH                                                                 |
-|--------------------------------|-------|---------|----------------------------------------------------------------------|
-| ProductOffer                   | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                   |
-| ShipmentTypeCollection         | class | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer         |
-| ShipmentType                   | class | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                   |
-| ShipmentTypeCriteria           | class | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer           |
-| ShipmentTypeConditions         | class | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer         |
-| CartChange                     | class | created | src/Generated/Shared/Transfer/CartChangeTransfer                     |
-| Item                           | class | created | src/Generated/Shared/Transfer/ItemTransfer                           |
-| ProductOfferStore              | class | created | src/Generated/Shared/Transfer/ProductOfferStoreTransfer              |
-| ProductOfferError              | class | created | src/Generated/Shared/Transfer/ProductOfferErrorTransfer              |
-| ProductOfferCollection         | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer         |
-| ProductOfferCriteria           | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer           |
-| ProductOfferConditions         | class | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer         |
-| Pagination                     | class | created | src/Generated/Shared/Transfer/PaginationTransfer                     |
-| Quote                          | class | created | src/Generated/Shared/Transfer/QuoteTransfer                          |
-| Store                          | class | created | src/Generated/Shared/Transfer/StoreTransfer                          |
-| Message                        | class | created | src/Generated/Shared/Transfer/MessageTransfer                        |
-| CartPreCheckResponse           | class | created | src/Generated/Shared/Transfer/CartPreCheckResponseTransfer           |
-| CheckoutResponse               | class | created | src/Generated/Shared/Transfer/CheckoutResponseTransfer               |
-| CheckoutError                  | class | created | src/Generated/Shared/Transfer/CheckoutErrorTransfer                  |
-| CartItemQuantity               | class | created | src/Generated/Shared/Transfer/CartItemQuantityTransfer               |
-| EventEntity                    | class | created | src/Generated/Shared/Transfer/EventEntityTransfer                    |
-| AclEntityMetadataConfig        | class | created | src/Generated/Shared/Transfer/AclEntityMetadataConfigTransfer        |
-| AclEntityMetadata              | class | created | src/Generated/Shared/Transfer/AclEntityMetadataTransfer              |
-| AclEntityParentMetadata        | class | created | src/Generated/Shared/Transfer/AclEntityParentMetadataTransfer        |
-| AclEntityMetadataCollection    | class | created | src/Generated/Shared/Transfer/AclEntityMetadataCollectionTransfer    |
-| AclEntityRule                  | class | created | src/Generated/Shared/Transfer/AclEntityRuleTransfer                  |
-| ShipmentCarrier                | class | created | src/Generated/Shared/Transfer/ShipmentCarrierTransfer                |
-| ShipmentMethodPluginCollection | class | created | src/Generated/Shared/Transfer/ShipmentMethodPluginCollectionTransfer |
-| ShipmentCarrierRequest         | class | created | src/Generated/Shared/Transfer/ShipmentCarrierRequestTransfer         |
-| ShipmentMethods                | class | created | src/Generated/Shared/Transfer/ShipmentMethodsTransfer                |
-| ShipmentMethod                 | class | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                 |
-| ShipmentCriteria               | class | created | src/Generated/Shared/Transfer/ShipmentCriteriaTransfer               |
-| ShipmentConditions             | class | created | src/Generated/Shared/Transfer/ShipmentConditionsTransfer             |
-| ShipmentCollection             | class | created | src/Generated/Shared/Transfer/ShipmentCollectionTransfer             |
-| SalesShipmentCriteria          | class | created | src/Generated/Shared/Transfer/SalesShipmentCriteriaTransfer          |
-| SalesShipmentConditions        | class | created | src/Generated/Shared/Transfer/SalesShipmentConditionsTransfer        |
-| SalesShipmentCollection        | class | created | src/Generated/Shared/Transfer/SalesShipmentCollectionTransfer        |
-| Order                          | class | created | src/Generated/Shared/Transfer/OrderTransfer                          |
-| Address                        | class | created | src/Generated/Shared/Transfer/AddressTransfer                        |
-| Shipment                       | class | created | src/Generated/Shared/Transfer/ShipmentTransfer                       |
-| SaveOrder                      | class | created | src/Generated/Shared/Transfer/SaveOrderTransfer                      |
-| Expense                        | class | created | src/Generated/Shared/Transfer/ExpenseTransfer                        |
-| MoneyValue                     | class | created | src/Generated/Shared/Transfer/MoneyValueTransfer                     |
-| Money                          | class | created | src/Generated/Shared/Transfer/MoneyTransfer                          |
-| ShipmentGroup                  | class | created | src/Generated/Shared/Transfer/ShipmentGroupTransfer                  |
-| ShipmentMethodsCollection      | class | created | src/Generated/Shared/Transfer/ShipmentMethodsCollectionTransfer      |
-| ShipmentPrice                  | class | created | src/Generated/Shared/Transfer/ShipmentPriceTransfer                  |
-| ShipmentGroupResponse          | class | created | src/Generated/Shared/Transfer/ShipmentGroupResponseTransfer          |
-| CalculableObject               | class | created | src/Generated/Shared/Transfer/CalculableObjectTransfer               |
-| Mail                           | class | created | src/Generated/Shared/Transfer/MailTransfer                           |
-| TaxSet                         | class | created | src/Generated/Shared/Transfer/TaxSetTransfer                         |
-| Currency                       | class | created | src/Generated/Shared/Transfer/CurrencyTransfer                       |
-| TaxSetCollection               | class | created | src/Generated/Shared/Transfer/TaxSetCollectionTransfer               |
-| Country                        | class | created | src/Generated/Shared/Transfer/CountryTransfer                        |
-| StoreRelation                  | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                  |
-| Totals                         | class | created | src/Generated/Shared/Transfer/TotalsTransfer                         |
-| Filter                         | class | created | src/Generated/Shared/Transfer/FilterTransfer                         |
-| OrderFilter                    | class | created | src/Generated/Shared/Transfer/OrderFilterTransfer                    |
-| Sort                           | class | created | src/Generated/Shared/Transfer/SortTransfer                           |
-
-{% endinfo_block %}
-
-### Import shipment types for product offers
-
-1. Prepare your data according to your requirements using our demo data:
-
-**vendor/spryker/spryker/Bundles/ProductOfferShipmentTypeDataImport/data/import/product_offer_shipment_type.csv**
-```csv
-shipment_type_key,product_offer_reference
-delivery,offer1
-delivery,offer2
-delivery,offer3
-pickup,offer4
-```
-
-| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION            |
-|-------------------------|-----------|-----------|--------------|-----------------------------|
-| shipment_type_key       | mandatory | string    | delivery     | Key of the shipment type.   |
-| product_offer_reference | mandatory | string    | offer1       | Reference of product offer. |
-
-2. Register the following data import plugin:
-
-| PLUGIN                                   | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                                       |
-|------------------------------------------|--------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
-| ProductOfferShipmentTypeDataImportPlugin | Imports product offer shipment types data from the specified file. | None          | \Spryker\Zed\ProductOfferShipmentTypeDataImport\Communication\Plugin\DataImport |
-
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 ```php
 <?php
 
-namespace Pyz\Zed\DataImport;
+namespace Pyz\Client\ProductOfferStorage;
 
-use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-use Spryker\Zed\ProductOfferShipmentTypeDataImport\Communication\Plugin\DataImport\ProductOfferShipmentTypeDataImportPlugin;
+use Spryker\Client\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage\ShipmentTypeProductOfferStorageExpanderPlugin;
 
-class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
 {
     /**
-     * @return array
+     * @return list<\Spryker\Client\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageExpanderPluginInterface>
      */
-    protected function getDataImporterPlugins(): array
+    protected function getProductOfferStorageExpanderPlugins(): array
     {
         return [
-            new ProductOfferShipmentTypeDataImportPlugin(),
+            new ShipmentTypeProductOfferStorageExpanderPlugin(),
         ];
     }
 }
 ```
-
-3. Enable the behaviors by registering the console commands:
-
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Console;
-
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
-use Spryker\Zed\ProductOfferShipmentTypeDataImport\ProductOfferShipmentTypeDataImportConfig;
-
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Symfony\Component\Console\Command\Command[]
-     */
-    protected function getConsoleCommands(Container $container)
-    {
-        $commands = [
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . ':' . ProductOfferShipmentTypeDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHIPMENT_TYPE),
-        ];
-
-        return $commands;
-    }
-}
-```
-
-4. Import data:
-
-```bash
-console data:import product-offer-shipment-type
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data has been added to the `spy_product_offer_shipment_type` table in the database.
-
-{% endinfo_block %}

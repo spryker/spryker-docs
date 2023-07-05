@@ -96,7 +96,7 @@ src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging
 </database>
 ```
 
-Set up synchronization queue pools, so non-multistore entities (not store-specific entities) can be synchronized among stores:
+Set up synchronization queue pools, so non-multi-store entities (not store-specific entities) can be synchronized among stores:
 
 src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml
 

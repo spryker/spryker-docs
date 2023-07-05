@@ -19,7 +19,7 @@ related:
   - title: Installing and configuring FACT-Finder NG API
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
   - title: FACT-Finder
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/analytics/fact-finder.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder.html
   - title: Using FACT-Finder tracking
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
   - title: Using FACT-Finder search suggestions

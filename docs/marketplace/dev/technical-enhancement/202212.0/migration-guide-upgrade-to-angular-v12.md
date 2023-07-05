@@ -53,7 +53,7 @@ composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/
 console transfer:generate
 ```
 
-### 2) Update NPM dependencies
+### 2) Update npm dependencies
 
 {% info_block infoBox "Info" %}
 

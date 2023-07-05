@@ -1,20 +1,20 @@
 ---
-title: Migration guide - Switch from Yarn to NPM v8
+title: Migration guide - Switch from Yarn to npm v8
 last_updated: Aug 31, 2022
-description: Use this guide to migrate the project from Yarn to NPM v8.
+description: Use this guide to migrate the project from Yarn to npm v8.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
 ---
 
-This document provides instructions for migrating from YARN to NPM version 8 in your Spryker project.
+This document provides instructions for migrating from Yarn to npm version 8 in your Spryker project.
 
 ## Overview
 
 Since the beginning of the Merchant Portal project, Yarn v2 has been used to install dependencies.
 If the package versions differ between some packages, it can not install all dependencies correctly.
 The issue has been managed internally by updating all package versions simultaneously, but when customers develop the project, this cannot be guaranteed.
-Since Yarn has not responded to the reported issue for more than a year, we must switch back to NPM v8, which also supports workspaces.
+Since Yarn has not responded to the reported issue for more than a year, we must switch back to npm v8, which also supports workspaces.
 
 *Estimated migration time: 2h*
 
@@ -140,7 +140,7 @@ rm -rf package-lock.json
 docker/sdk cli npm install
 ```
 
-3. Build the project using NPM v8:
+3. Build the project using npm v8:
 
 ```bash
 rm -rf node_modules && docker/sdk cli rm -rf node_modules
@@ -159,7 +159,7 @@ npm -v
 
 To update the versions, use official documentation:
 
-- [node](https://nodejs.org/en/download/package-manager)
+- [Node.js](https://nodejs.org/en/download/package-manager)
 - [npm](https://docs.npmjs.com/try-the-latest-stable-version-of-npm)
 
 {% endinfo_block %}

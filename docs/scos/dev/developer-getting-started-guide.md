@@ -141,7 +141,7 @@ The next step to take once installation has finished and modules set up, you nee
 2. Configure your environment:
     * [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
     * [Redis](/docs/scos/dev/setup/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
+    <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).

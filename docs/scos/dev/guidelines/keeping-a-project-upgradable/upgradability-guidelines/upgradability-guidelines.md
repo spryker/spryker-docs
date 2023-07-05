@@ -23,13 +23,13 @@ DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER
 
 ```
 
-In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. To find the documentation for this error, check the name in the table below.
+In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. The table bellow describes the error and documentation about it.
 
 <div class="width-100">
 
 
 | Check name  | Error message template                                                   | Documentation                                                                                                                                                                          |
 | ----------- |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER | The condition statement if {statement} is forbidden in the DependencyProvider | Dependency provider addition logic checker |
+| DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER | The condition statement if {statement} is forbidden in the DependencyProvider | [Dependency provider additional logic checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html) |
 
 </div>

@@ -120,7 +120,7 @@ With this release, Spryker introduces a new code generator called Spryk. It help
 ### Product Relations
 The Spryker Glue REST API now includes endpoints for retrieving lists of related products. Endpoints are available for every type of relation working with the corresponding business logic.
 
-**Documentation**: [Retrieving Related Products](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieve-related-products.html).
+**Documentation**: [Retrieving Related Products](/docs/pbc/all/product-relationship-management/{{site.version}}/glue-api-retrieve-related-products.html).
 
 ### Navigation
 Every navigation node and its structure are retrievable via the navigation API endpoint.

@@ -484,7 +484,7 @@ In version 5, shipment lost the direct foreign key `sales.fk_shipment_method` to
 
 A new `SalesOrderHydration` plugin was added to populate `OrderTransfer` with shipment information `ShipmentOrderHydratePlugin`.
 
-The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
+The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html).
 
 
 ## Upgrading from version 2.* to version 3.*

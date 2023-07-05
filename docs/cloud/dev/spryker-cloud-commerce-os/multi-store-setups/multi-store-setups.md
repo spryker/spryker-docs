@@ -4,9 +4,9 @@ description: Types of multi-store setups in Spryker Cloud Commerce OS
 template: concept-topic-template
 ---
 
-This document describes the multi-store setups supported by Spryker Cloud Commerce OS.
+The Multi-Store is a capability in the Spryker Cloud Commerce OS that gives you the flexibility to create multiple stores for different scenarios—giving you the ability to easily reach your customers everywhere. 
 
-Currently, the following setups are available:
+The Spryker Cloud Commerce OS supports following multi-store setups:
 
 * Separated: a codebase with dedicated databases per store.
 * Shared: a codebase with all the stores sharing a database.

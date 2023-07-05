@@ -38,8 +38,7 @@ Variables must follow this naming convention: `/{project}/{environment}/{type}/{
 
 {% info_block warningBox "Reserved variables" %}
 
-Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are 
-reserved, you cannot define your own variables using these names.
+Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you can't define your own variables using these names.
 <BR> The reserved variable names are the following:
 * `DUMMY_INIT`
 * `SPRYKER_*`

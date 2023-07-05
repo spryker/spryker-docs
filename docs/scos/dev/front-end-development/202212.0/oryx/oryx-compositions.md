@@ -5,11 +5,11 @@ last_updated: June 8, 2023
 template: concept-topic-template
 ---
 
-Compositions in Oryx are a powerful tool for organizing components and defining their layout. It removes page-specific layout concerns from the component implementation, which makes the components less opinionated and more reusable.
+Compositions in Oryx are a tool for organizing components and defining their layout. It removes page-specific layout concerns from the component implementation, which makes the components less opinionated and more reusable.
 
 ## Overview of compositions
 
-A composition contains a list of components which are rendered in the DOM in their specific order. A composition itself is a component, which means that you can easily create nested composition structures. In fact, a page itself is a composition.
+A composition contains a list of components that are rendered in the DOM in their specific order. A composition itself is a component, which means that you can easily create nested composition structures. In fact, a page itself is a composition.
 
 Compositions take a data-driven approach, letting you configure the composition using external data sources. This approach offers several potential benefits:
 
@@ -17,7 +17,7 @@ Compositions take a data-driven approach, letting you configure the composition 
 
 - Upgradable composition: A configurable data set is easier to upgrade. Instead of upgrading to a hardcoded component structure, you can select an alternative data set that will hold new components. This makes it easier to _opt in_ to alternative compositions.
 
-- No-code customizations: The data-driven approach enables no-code customizations of the compositions. With the use of a What You See Is What You Get (WYSIWYG) tool, non-technical users can easily modify a composition by adjusting the data configuration, without the need to edit the underlying code.
+- No-code customizations: The data-driven approach enables no-code customizations of the compositions. With the use of a What You See Is What You Get (WYSIWYG) tool, non-technical users can easily modify a composition by adjusting the data configuration without the need to edit the underlying code.
 
 - Split testing of data sets: Data-driven compositions enable split testing of different data sets. This means that you can create alternative data configurations and perform A/B testing to compare their impact on user experience and performance. This provides valuable insights for optimizing your application.
 
@@ -29,7 +29,7 @@ The data-driven approach in Oryx compositions empowers you to dynamically config
 
 ## Configuring compositions with data
 
-To utilize the data-driven approach, you can provide the composition data using static-experience data, or by loading the data from an external source like a backend API. For an example of how the static–experience data is provided, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
+To utilize the data-driven approach, you can provide the composition data using static-experience data or by loading the data from an external source like a backend API. For an example of how the static–experience data is provided, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
 
 The data configuration for a composition typically includes information about the components: their order, layout rules, styling options, and any other properties relevant to the composition.
 
@@ -37,7 +37,7 @@ By separating the data configuration from the code, you can easily update and ma
 
 ## Nested compositions
 
-Compositions can be nested. When you need to put in an additional structure for the organization and layout of a section, you can use a nested composition. A good example of nested compositions is the footer of an e-commerce storefront. The footer typically comes with a lot of links. The links are organized in groups, like self service links, legal, and social. For a good experience, the groups have a layout assigned to them, to put them on the left or right, top of bottom of the footer.
+Compositions can be nested. When you need to put in an additional structure for the organization and layout of a section, you can use a nested composition. A good example of nested compositions is the footer of an e-commerce storefront. The footer typically comes with a lot of links. The links are organized in groups, like self-service links, legal, and social. For a good experience, the groups have a layout assigned to them, to put them on the left or right, top or bottom of the footer.
 
 ## HTML produced by composition structure
 

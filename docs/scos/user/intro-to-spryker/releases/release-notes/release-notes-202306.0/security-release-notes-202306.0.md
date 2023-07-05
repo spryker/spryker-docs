@@ -15,7 +15,7 @@ Administrators can place a malicious payload into the description section of new
 
 ### Affected modules
 
-* `spryker/product-management`: 0.19.3-0.19.35 
+`spryker/product-management`: 0.19.3-0.19.35 
 
 ### Introduced changes
 
@@ -64,7 +64,6 @@ To implement a fix for this vulnerability, upgrade the company page module to ve
 composer require spryker-shop/company-page:"~2.22.0"
 composer show spryker-shop/company-page # Verify the version
 ```
-
 
 ## Unvalidated URL redirection
 

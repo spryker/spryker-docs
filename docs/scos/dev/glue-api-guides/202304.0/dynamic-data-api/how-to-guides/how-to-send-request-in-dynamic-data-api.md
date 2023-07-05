@@ -210,15 +210,15 @@ The response payload includes all the specified fields from the request body, al
 
 Note that all fields included in the request payload are marked as `isCreatable: true` in the configuration. 
 Therefore, the API will create a new record with all the provided fields. 
-However, if any of the fields are configured as `isCreatable: false` it won't be created. 
+However, if any of the provided fields are configured as `isCreatable: false` it will result in an error. 
 
 Let's configure `isCreatable: false` for `iso3_code` and send the same request.
-You will receive the following error response because a non-creatable field `id_country` is provided:
+You will receive the following error response because a non-creatable field `iso3_code` is provided:
 
 ```json
 [
   {
-    "message": "Some required data is missing or provided data cannot be modified. Please verify the request and try again.",
+    "message": "Modification of immutable field `iso3_code` is prohibited.",
     "status": 400,
     "code": "505"
   }
@@ -318,7 +318,7 @@ Content-Length: 143
 
 Note that all fields included in the request payload are marked as `isEditable: true` in the configuration.
 Therefore, the API will update the found record with all the provided fields.
-However, if any of the fields are configured as `isEditable: false` it won't be updated.
+However, if any of the provided fields are configured as `isEditable: false` it will result in an error.
 
 Let's configure `isEditable: false` for `iso3_code` and send the same request.
 
@@ -327,7 +327,7 @@ You will receive the following error response because a non-editable field `iso3
 ```json
 [
   {
-    "message": "Some required data is missing or provided data cannot be modified. Please verify the request and try again.",
+    "message": "Modification of immutable field `iso3_code` is prohibited.",
     "status": 400,
     "code": "505"
   }
@@ -343,9 +343,9 @@ If the `id_country` is not provided you will get the following response:
 ```json
 [
   {
-    "message": "Some required data is missing or provided data cannot be modified. Please verify the request and try again.",
+    "message": "Incomplete Request - missing identifier.",
     "status": 400,
-    "code": "505"
+    "code": "512"
   }
 ]
 ```

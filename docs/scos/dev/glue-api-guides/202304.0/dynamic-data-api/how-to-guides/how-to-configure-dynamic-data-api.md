@@ -37,6 +37,16 @@ Below is an example snippet illustrating the structure of a possible definition 
 {
   "identifier": "id_country",
   "fields": [
+    {
+      "fieldName": "id_country",
+      "fieldVisibleName": "id_country",
+      "isEditable": false,
+      "isCreatable": false,
+      "type": "integer",
+      "validation": {
+        "isRequired": false
+      }
+    },
     { 
       "fieldName": "iso2_code",
       "fieldVisibleName": "iso2_code",
@@ -77,10 +87,10 @@ It is recommended to set `isEditable` and `isCreatable` to `false` for fields th
 
 {% info_block infoBox %}
 
-Configuring the definition for the field responsible for the identifier keep in mind that it JSON accepts numbers within 
-the range of a 64-bit signed integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807). However, if there is a need 
-to use identifiers outside this range or if the person providing the configuration anticipates larger values, the field can be set as a 
-string type instead.
+Configuring the definition for the field responsible for the numerable values keep in mind that an integer data type is a non-decimal number 
+between -2147483648 and 2147483647 in 32-bit systems, and between -9223372036854775808 and 9223372036854775807 in 64-bit systems. 
+However, if there is a need to use values outside this range or if the person providing the configuration anticipates 
+larger values, the field can be set as a string type instead.
 
 {% endinfo_block %}
 

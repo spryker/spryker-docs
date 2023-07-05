@@ -55,9 +55,6 @@ Make sure that the following modules have been installed:
 
 ```yaml
 setup-glue:
-
-    ...
-    
     controller-cache-warmup:
         command: 'vendor/bin/glue glue-api:controller:cache:warm-up'
 
@@ -201,8 +198,6 @@ dynamic_entity.validation.persistence_failed_duplicate_entry,"Failed to persist 
 dynamic_entity.validation.persistence_failed_duplicate_entry,"Das Speichern der Daten ist fehlgeschlagen. Bitte überprüfen Sie die bereitgestellten Daten und versuchen Sie es erneut. Eintrag is doppelt vorhanden.",de_DE
 dynamic_entity.validation.entity_does_not_exist,"The entity could not be found in the database.",en_US
 dynamic_entity.validation.entity_does_not_exist,"Die Entität konnte in der Datenbank nicht gefunden werden.",de_DE
-dynamic_entity.validation.required_data_is_missing_or_forbidden,"Some required data is missing or provided data cannot be modified. Please verify the request and try again.",en_US
-dynamic_entity.validation.required_data_is_missing_or_forbidden,"Einige erforderliche Daten fehlen oder die bereitgestellten Daten können nicht geändert werden. Bitte überprüfen Sie die Anfrage und versuchen Sie es erneut.",de_DE
 dynamic_entity.validation.invalid_field_type,"Invalid data type for field: %fieldName%",en_US
 dynamic_entity.validation.invalid_field_type,"Ungültiger Datentyp: %fieldName%",de_DE
 dynamic_entity.validation.invalid_field_value,"Invalid data value for field: %fieldName%, row number: %rowNumber%. Field rules: %validationRules%",en_US
@@ -211,6 +206,10 @@ dynamic_entity.validation.required_field_is_missing,"The required field must not
 dynamic_entity.validation.required_field_is_missing,"Das erforderlich Feld darf nicht leer sein. Feld: '%fieldName%'",de_DE
 dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entity not found by identifier, and new identifier can not be persisted. Please update the request.",en_US
 dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entität konnte anhand der ID nicht gefunden werden, und die neue ID kann nicht dauerhaft gespeichert werden. Bitte aktualisieren Sie die Anfrage.",de_DE
+dynamic_entity.validation.modification_of_immutable_field_prohibited,"Modification of immutable field `%fieldName%` is prohibited",en_US
+dynamic_entity.validation.modification_of_immutable_field_prohibited,"Änderung des unveränderlichen Feldes %fieldName% ist nicht zulässig.",de_DE
+dynamic_entity.validation.missing_identifier,"Incomplete Request - missing identifier",en_US
+dynamic_entity.validation.missing_identifier,"Unvollständige Anforderung - fehlende ID",de_DE
 ```
 
 {% info_block infoBox "Info" %}

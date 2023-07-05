@@ -103,14 +103,14 @@ Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
 
 To add `spryker_ca.crt` to trusted authorities on Windows, follow the steps:
 
-1. To open the **Run** window, press **Win+R**.
-2. In the **Open** field, enter *mmc* and press **Enter**.
-3. Click **Yes** to confirm the action.
+1. To open the **Run** window, press <kbd>Win+R</kbd>.
+2. In the **Open** field, enter `mmc` and press <kbd>Enter</kbd>.
+3. To confirm the action, click **Yes**.
 4. From the **File** menu, select **Add/Remove Snap-in...**.
 
 {% info_block infoBox %}
 
-Alternatively, press **Ctrl+M** to open the **Add or Remove Snap-ins** window.
+Alternatively, to open the **Add or Remove Snap-ins** window, press <kbd>Ctrl+M</kbd>.
 
 {% endinfo_block %}
 
@@ -118,8 +118,8 @@ Alternatively, press **Ctrl+M** to open the **Add or Remove Snap-ins** window.
 6. Select **Add >**.
 ![Add certs](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/add-certs.png)
 
-7. Click **Certificates (local computer)** > **Trusted Root Authorities**.
-8. Right-click the **Certificates** folder and select **All Tasks** > **Import**.
+7. Click **Certificates (local computer)&nbsp;<span aria-label="and then">></span> Trusted Root Authorities**.
+8. Right-click the **Certificates** folder and select **All Tasks&nbsp;<span aria-label="and then">></span> Import**.
 9. Select the `spryker_ca.crt` file and click **OK**.
 
 {% info_block warningBox "Verification" %}

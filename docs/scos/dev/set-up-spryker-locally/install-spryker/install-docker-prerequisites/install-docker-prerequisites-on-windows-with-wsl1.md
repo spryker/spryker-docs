@@ -85,7 +85,7 @@ To enable WSL1, follow the steps:
 ### Install Ubuntu
 
 1. Open Microsoft Store.
-2. In the Search filed, enter *Ubuntu* and press *Enter*.
+2. In the **Search** field, enter `Ubuntu` and press <kbd>Enter</kbd>.
 3. From the search results page, select **Ubuntu 18.04 LTS** and install it.
 ![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png)
 

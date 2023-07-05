@@ -15,12 +15,12 @@ We provide several installation guides to match your experience and requirements
 
 ### You are a business user
 
-For business users, regardless of their experience with SCCOS, we recommend following a quickstart guide for an efortless and quick installation: [Quickstart guides: Install Spryker](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html).
+For business users, regardless of their experience with SCCOS, we recommend following a quickstart guide for an effortless and quick installation: [Quickstart guides: Install Spryker](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html).
 
 ### You are a developer who's new to SCCOS
 
-For the devlopers that are installing Spryker for the first time, we recommend going through the detailed installation guide that explains every steps of the process: [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
+For the developers that are installing Spryker for the first time, we recommend going through the detailed installation guide that explains every step of the process: [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
 
 ### You are a developer experienced with SCCOS
 
-For the developers that installed Spryker before, we recommend following a quickstart guide for an efortless and quick installation: [Quickstart guides: Install Spryker](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html).
+For the developers that installed Spryker before, we recommend following a quickstart guide for an effortless and quick installation: [Quickstart guides: Install Spryker](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html).

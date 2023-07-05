@@ -129,7 +129,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% endinfo_block %}
 
-    9. Click **File > Save**.
+    9. Click **File&nbsp;<span aria-label="and then">></span> Save**.
     10. Close the file.
 
 11. Build and start the instance:

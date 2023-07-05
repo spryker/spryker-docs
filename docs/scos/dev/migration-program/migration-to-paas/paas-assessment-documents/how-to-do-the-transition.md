@@ -17,7 +17,7 @@ In this step, you need to assess efforts related to the exact moment of switchin
 Before you start the transition, make sure that the following applies:
 
 1. Depending on the environment type, a correspondent template was applied in the cloud service provider. Currently, it's AWS.
-    All stage similar ones (dev/uat/test/qa etc) should have only one run task per basic service (Yves/Zed/Glue...).
+    All the stage-like environments, like dev, test, or qa, should have only one run task per basic service: Yves, Zed, Glue, etc.
     For a production system, there should be two tasks per basic service. Go to ECS > Clusters > <your_name> -> tab Services.
     Check the number in Desired/Running tasks columns.
 2. If you are migrating a production environment, "Multi AZ" is enabled for RDS, OpenSearch(ES), and Redis(EC) services.

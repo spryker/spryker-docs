@@ -37,7 +37,7 @@ export const b2cFeatures: AppFeature[] = [
   ...
 ```
 
-Feature sets also contain static experience data. Experience data includes the structure and layout of the components of and application, such as pages and sections. By utilizing the static experience data provided by the presets, you don't need to set up any boilerplate code. Moreover, we avoid hardcoded page structures which enables personalized experiences.
+Feature sets also contain static experience data. Experience data includes the structure and layout of the components of an application, such as pages and sections. By utilizing the static experience data provided by the presets, you don't need to set up any boilerplate code. Moreover, we avoid hardcoded page structures which enables personalized experiences.
 
 For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
 

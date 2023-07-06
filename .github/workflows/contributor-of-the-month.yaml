@@ -70,10 +70,7 @@ jobs:
           CONTRIBUTORS=$(echo -e "$CONTRIBUTORS" | sort -t '(' -k2 -n -r)
 
           TOTAL_CONTRIBUTORS=${#PR_COUNTS[@]}
-          TOP_CONTRIBUTOR=$(echo -e "$CONTRIBUTORS" |I apologize for the abrupt cut-off in the previous message. Here is the completion of that code block:
-
-```yaml
-          head -n 1)
+          TOP_CONTRIBUTOR=$(echo -e "$CONTRIBUTORS" | head -n 1)
           TOP_CONTRIBUTOR_COUNT=$(echo $TOP_CONTRIBUTOR | awk -F'[()]' '{print $2}' | tr -dc '0-9')
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV

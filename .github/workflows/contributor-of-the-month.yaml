@@ -63,15 +63,18 @@ jobs:
           for USER in "${!PR_COUNTS[@]}"; do
             COUNT="${PR_COUNTS[$USER]}"
             INFO="${USER_INFO[$USER]}"
-            CONTRIBUTORS+="- $USER, $INFO (PRs: $COUNT)\n"
-         done
+            CONTRIBUTORS+="$USER, $INFO (PRs: $COUNT)\n"
+          done
 
           # Sort contributors by PR count
           CONTRIBUTORS=$(echo -e "$CONTRIBUTORS" | sort -t '(' -k2 -n -r)
 
           TOTAL_CONTRIBUTORS=${#PR_COUNTS[@]}
-          TOP_CONTRIBUTOR=$(echo -e "$CONTRIBUTORS" | head -n 1)
-          TOP_CONTRIBUTOR_COUNT=$(echo $TOP_CONTRIBUTOR | grep -oP '(?<=PRs: )\d+')
+          TOP_CONTRIBUTOR=$(echo -e "$CONTRIBUTORS" |I apologize for the abrupt cut-off in the previous message. Here is the completion of that code block:
+
+```yaml
+          head -n 1)
+          TOP_CONTRIBUTOR_COUNT=$(echo $TOP_CONTRIBUTOR | awk -F'[()]' '{print $2}' | tr -dc '0-9')
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV

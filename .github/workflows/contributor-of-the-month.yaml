@@ -40,6 +40,19 @@ jobs:
               break
             fi
 
+          while : ; do
+            # Fetch all closed PRs
+            PRS_RAW=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                       -H "Accept: application/vnd.github.v3+json" \
+                       "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&page=$PAGE&per_page=100")
+            # If no PRs, break the loop
+            if [[ "$PRS_RAW" == "[]" ]]; then
+                break
+            fi
+
+            # Filter PRs merged in the date range
+            PRS=$(echo "$PRS_RAW" | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and .merged_at != null)) | .[].user')
+
             for PR in $PRS; do
               USER=$(echo $PR | jq -r '.login')
               if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then

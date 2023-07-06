@@ -1,5 +1,5 @@
 ---
-title: Exporting data
+title: Data export
 description: This document shows how to export data from a Spryker shop to an external system
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -13,8 +13,6 @@ redirect_from:
 related:
   - title: Sales Data Export feature integration
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
-  - title: Data export orders .csv files format
-    link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
 ---
 
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.
@@ -111,8 +109,6 @@ When running the command for data export with this file, `console data:export --
 * `order-items_DE.csv`
 * `orders_AT.csv`
 * `orders_DE.csv`
-
-For details about the content of each of the files, see [Data Export Orders CSV Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html).
 
 ### Setting the filter criteria in a YML file
 

@@ -16,8 +16,8 @@ jobs:
         id: determine
         run: |
           # Determine the start and end dates of the previous month
-          START_DATE=$(date -d "last month" +%Y-%m-01)
-          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
+          START_DATE=$(date -u -d "last month -1 day" +%Y-%m-%d)
+          END_DATE=$(date -u -d "last month +1 month" +%Y-%m-%d)
           MONTH_NAME=$(date -d "last month" +%B)
 
           # Exclude certain users

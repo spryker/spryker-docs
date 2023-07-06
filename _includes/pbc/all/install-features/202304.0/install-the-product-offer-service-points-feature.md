@@ -177,7 +177,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 }
 ```
-</details>
 
 4. Enable the behaviors by registering the console commands:
 

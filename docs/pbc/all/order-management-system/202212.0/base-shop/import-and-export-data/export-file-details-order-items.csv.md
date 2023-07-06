@@ -1,5 +1,5 @@
 ---
-title: Data Export orders CSV files format
+title: "Export file details: order_items.csv"
 description: The document explains the format of the orders.csv, order-items.csv, order-expenses.csv export files
 last_updated: Jun 16, 2021
 template: data-export-template
@@ -17,64 +17,9 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 
-This document holds the content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
 
-* orders.csv
-* order-items.csv
-* order-expenses.csv
 
-## Orders
-
-These are the header fields included in the order.csv file:
-
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- |
-| 1 | order_reference | Yes | String | Unique | Order reference identifier. |
-| 2 | customer_reference | No | String |  | Customer reference identifier. |
-| 3 | order_created_at | No | Date Time |  | Timestamp of this order creation. |
-| 4 | order_updated_at | No | Date Time |  | Last update timestamp of this order. |
-| 5 | order_store | No | String |  | The name of the store where the order was place. |
-| 6 | email | No | String |  | E-mail of the customer. |
-| 7 | salutation | No | String |  | Salutation used with the customer. |
-| 8 | first_name | No | String |  | Customer’s first name. |
-| 9 | last_name | No | String |  | Customer’s last name. |
-| 10 | order_note | No | String |  | Note added to the order. |
-| 11 | currency_iso_code | No | String |  | Indicates the currency used in the order. |
-| 12 | price_mode | No | Enum (NET_MODE, GROSS_MODE) |  | Indicates if the order was calculated in a net or gross price mode. |
-| 13 | 	locale_name | No | String |  | Sales order’s locale used during the checkout. The Sales Order has a relation to the Locale which was used during the checkout so that the same locale can be used for communication. |
-| 14 | billing_address_salutation | No | ENUM (Mr, Mrs, Dr, Ms) |  | Customer salutation used with the billing address. |
-| 15 | billing_address_first_name | Yes | String |  | Customer’s first name used in the billing address. |
-| 16 | billing_address_last_name | Yes | String |  | Customer’s last name used in the billing address. |
-| 17 | billing_address_middle_name | No | String |  | Customer’s middle name used in the billing address. |
-| 18 | billing_address_email | No | String |  | E-mail used with the billing address. |
-| 19 | billing_address_cell_phone | No | String |  | Cell phone used with the billing address. |
-| 20 | billing_address_phone | No | String |  | Phone used with the billing address. |
-| 21 | billing_address_address1 | No | String |  | Address first line of the billing address. Billing address is the address to which the invoice or bill is registered. |
-| 22 | billing_address_address2 | No | String |  | Address second line of the billing address. |
-| 23 | billing_address_address3 | No | String |  | Address third line of the billing address. |
-| 24 | billing_address_city | Yes | String |  | City of the billing address. |
-| 25 | billing_address_zip_code | Yes | String |  | Zip code of the billing address. |
-| 26 | 	billing_address_po_box | No | String |  | P.O. Box of the billing address. |
-| 27 | billing_address_company | No | String |  | Company used in the billing address. |
-| 28 | billing_address_description | No | String |  | Description used with the billing address. |
-| 29 | billing_address_comment | No | String |  | Comment used with the billing address. |
-| 30 | 	billing_address_country | Yes | String |  | Country of the billing address. |
-| 31 | billing_address_region | No | String |  | Region of the billing address. |
-| 32 | 	order_totals_canceled_total | No | Number | The original value is multiplied by 100, before stored in this field. | Canceled total of the order totals. |
-| 33 | order_totals_discount_total | No | Number | The original value is multiplied by 100, before stored in this field. | Discount total of the order totals. |
-| 34 | order_totals_grand_total | No | Number | The original value is multiplied by 100, before stored in this field. | Grand total of the order totals. |
-| 35 | order_totals_order_expense_total | No | Number | The original value is multiplied by 100, before stored in this field. | Order expense total of the order totals. |
-| 36 | order_totals_refund_total | No | Number | The original value is multiplied by 100, before stored in this field. | Refund total of the order totals. |
-| 37 | order_totals_subtotal | No | Number | The original value is multiplied by 100, before stored in this field. | Subtotal of the order totals. |
-| 38 | order_totals_tax_total | No | Number | The original value is multiplied by 100, before stored in this field. | Tax total of the order totals. |
-| 39 | order_comments | No | Object | The comments are presented in a  JSON array format:<br>*order_comments<br>{% raw %}{{{% endraw %}username, message, createdat, updated_at}, …}* | Comments added by the customer to the sales order.<br>Username may be a different name from the customer first, middle or last name, e. g. a nickname.
- |
-
- Check out the [orders.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/orders.csv).
-
-##  Order Items
-
-These are the header fields included in the order_items.csv file:
+These are the header fields included in the `order_items.csv` file:
 
 
 | DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
@@ -139,26 +84,3 @@ These are the header fields included in the order_items.csv file:
 | 58 | shipping_address_region | No | String |  | Region of shipping address. |
 
  Check out the [order-items.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/order-items.csv).
-
-##  Order Expenses
-
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- |
-| 1 | order_reference | Yes | String |  | Order reference identifier. |
-| 2 | order_shipment_id | No | Number |  |Order shipment identification. |
-| 3 | canceled_amount | No | Number | Default = 0 | Expense canceled amount. |
-| 4 | discount_amount_aggregation | No | Number | Default = 0 | Expense discount amount aggregation. |
-| 5 | gross_price | Yes | Number | The original value is multiplied by 100, before stored in this field | Gross price of the expense. |
-| 6 | name | No | String |  | Name of the expense. |
-| 7 | net_price | No | Number | The original value is multiplied by 100, before stored in this field. | Net price of the expense. |
-| 8 | price | No | Number | The original value is multiplied by 100, before stored in this field. | Price of the expense. |
-| 9 |price_to_pay_aggregation  | No | Number |The original value is multiplied by 100, before stored in this field.  |Expense price to pay aggregation.  |
-| 10 | refundable_amount | No | Number | The original value is multiplied by 100, before stored in this field. |Refundable amount of the expense. |
-| 11 | 	tax_amount | No | Number |The original value is multiplied by 100, before stored in this field.  | Tax amount of the expense. |
-| 12 | 	tax_amount_after_cancellation | No | Number | The original value is multiplied by 100, before stored in this field. | Expense tax amount after cancellation. |
-| 13 | tax_rate	 | No | Number |  | Tax rate of the expense. |
-| 14 | 	type | No | String |  | Type of expense. |
-| 15 | expense_created_at | Yes | Date Time |  |Timestamp of this sales expense creation.  |
-| 16 |expense_updated_at | Yes | Date Time |  | Last update timestamp of this sales expense. |
-
- Check out the [order-expenses.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/order-expenses.csv).

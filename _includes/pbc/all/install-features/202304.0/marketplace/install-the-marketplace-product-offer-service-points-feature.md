@@ -12,8 +12,8 @@ To start feature integration, integrate the required features:
 
 | NAME                         | VERSION          | INTEGRATION GUIDE                                                                                                                                                                               |
 |------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product Offer    | {{page.version}} | [Marketplace Product Offer feature integration](spryker-docs/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html) |
-| Product Offer Service Points | {{page.version}} | [Product Offer Service Points feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-product-offer-service-points-feature.html)                            |
+| Marketplace Product Offer    | {{page.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html) |
+| Product Offer + Service Points | {{page.version}} | [Install the Product Offer + Service Points feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-product-offer-service-points-feature.html)                            |
 
 ### 1) Set up behavior
 

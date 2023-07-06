@@ -4,7 +4,9 @@ description: Learn how to integrate the Spryker Core Back Office + Warehouse Use
 last_updated: Jan 25, 2023
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/back-office/202400.0/unified-commerce/fulfilment-app/install-the-spryker-core-back-office-warehouse-user-management-feature.html
   - /docs/pbc/all/back-office/202304.0/install-spryker-core-back-office-warehouse-user-management-feature.html
+  - /docs/scos/dev/feature-integration-guides/202304.0/spryker-core-back-office-warehouse-user-management-feature-integration.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-spryker-core-back-office-warehouse-user-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-spryker-core-back-office-warehouse-user-management-feature.md -->

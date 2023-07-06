@@ -25,22 +25,33 @@ jobs:
 
           # Count PRs for each user
           declare -A PR_COUNTS=()
+          declare -A USER_INFO=()
 
           PAGE=1
+          TOTAL_PR=0
           while : ; do
             # Fetch merged pull requests within the previous month
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user')
 
             if [ -z "$PRS" ]; then
               break
             fi
 
-            for USER in $PRS; do
+            for PR in $PRS; do
+              USER=$(echo $PR | jq -r '.login')
               if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
                 PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+                TOTAL_PR=$((TOTAL_PR+1))
+
+                if [[ -z ${USER_INFO[$USER]} ]]; then
+                  INFO=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/users/$USER")
+                  REAL_NAME=$(echo $INFO | jq -r '.name // ""')
+                  EMAIL=$(echo $INFO | jq -r '.email // ""')
+                  USER_INFO[$USER]="$REAL_NAME,$EMAIL"
+                fi
               fi
             done
 
@@ -51,17 +62,35 @@ jobs:
           CONTRIBUTORS=""
           for USER in "${!PR_COUNTS[@]}"; do
             COUNT="${PR_COUNTS[$USER]}"
-            CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
-          done
+            INFO="${USER_INFO[$USER]}"
+            CONTRIBUTORS+="- $USER, $INFO (PRs: $COUNT)\n"
+         done
+
+          # Sort contributors by PR count
+          CONTRIBUTORS=$(echo -e "$CONTRIBUTORS" | sort -t '(' -k2 -n -r)
+
+          TOTAL_CONTRIBUTORS=${#PR_COUNTS[@]}
+          TOP_CONTRIBUTOR=$(echo -e "$CONTRIBUTORS" | head -n 1)
+          TOP_CONTRIBUTOR_COUNT=$(echo $TOP_CONTRIBUTOR | grep -oP '(?<=PRs: )\d+')
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
+          echo "TOTAL_CONTRIBUTORS=${TOTAL_CONTRIBUTORS}" >> $GITHUB_ENV
+          echo "TOTAL_PR=${TOTAL_PR}" >> $GITHUB_ENV
+          echo "TOP_CONTRIBUTOR=${TOP_CONTRIBUTOR}" >> $GITHUB_ENV
+          echo "TOP_CONTRIBUTOR_COUNT=${TOP_CONTRIBUTOR_COUNT}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
+          TOTAL_CONTRIBUTORS="${{ env.TOTAL_CONTRIBUTORS }}"
+          TOTAL_PR="${{ env.TOTAL_PR }}"
+          TOP_CONTRIBUTOR="${{ env.TOP_CONTRIBUTOR }}"
+          TOP_CONTRIBUTOR_COUNT="${{ env.TOP_CONTRIBUTOR_COUNT }}"
 
           # Print all contributors of the month and the number of PRs they created
-          echo "Top Contributors of $MONTH_NAME:"
+          echo -e "In $MONTH_NAME, we had $TOTAL_CONTRIBUTORS contributors, with a total number of $TOTAL_PR PRs. Thank you, guys, for your great job. Keep up the awesome work."
+          echo "Here are the detailed results:"
           echo -e "$CONTRIBUTORS"
+          echo -e "Our top contributor of the month is $TOP_CONTRIBUTOR — $TOP_CONTRIBUTOR_COUNT PRs in total."

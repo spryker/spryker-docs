@@ -25,46 +25,24 @@ jobs:
 
           # Count PRs for each user
           declare -A PR_COUNTS=()
-          declare -A USER_INFO=()
 
           PAGE=1
-          TOTAL_PR=0
+          TOTAL_PRS=0
           while : ; do
             # Fetch merged pull requests within the previous month
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user')
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
             fi
 
-          while : ; do
-            # Fetch all closed PRs
-            PRS_RAW=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                       -H "Accept: application/vnd.github.v3+json" \
-                       "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&page=$PAGE&per_page=100")
-            # If no PRs, break the loop
-            if [[ "$PRS_RAW" == "[]" ]]; then
-                break
-            fi
-
-            # Filter PRs merged in the date range
-            PRS=$(echo "$PRS_RAW" | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and .merged_at != null)) | .[].user')
-
-            for PR in $PRS; do
-              USER=$(echo $PR | jq -r '.login')
+            for USER in $PRS; do
               if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
                 PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
-                TOTAL_PR=$((TOTAL_PR+1))
-
-                if [[ -z ${USER_INFO[$USER]} ]]; then
-                  INFO=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/users/$USER")
-                  REAL_NAME=$(echo $INFO | jq -r '.name // ""')
-                  EMAIL=$(echo $INFO | jq -r '.email // ""')
-                  USER_INFO[$USER]="$REAL_NAME,$EMAIL"
-                fi
+                ((TOTAL_PRS++))
               fi
             done
 
@@ -73,37 +51,33 @@ jobs:
 
           # Prepare contributors list
           CONTRIBUTORS=""
+          MAX_PRS=0
+          TOP_CONTRIBUTOR=""
           for USER in "${!PR_COUNTS[@]}"; do
             COUNT="${PR_COUNTS[$USER]}"
-            INFO="${USER_INFO[$USER]}"
-            CONTRIBUTORS+="$USER, $INFO (PRs: $COUNT)\n"
+            if ((COUNT > MAX_PRS)); then
+              MAX_PRS=$COUNT
+              TOP_CONTRIBUTOR=$USER
+            fi
+            CONTRIBUTORS+="$USER (Merged PRs: $COUNT)\n"
           done
 
-          # Sort contributors by PR count
-          CONTRIBUTORS=$(echo -e "$CONTRIBUTORS" | sort -t '(' -k2 -n -r)
-
-          TOTAL_CONTRIBUTORS=${#PR_COUNTS[@]}
-          TOP_CONTRIBUTOR=$(echo -e "$CONTRIBUTORS" | head -n 1)
-          TOP_CONTRIBUTOR_COUNT=$(echo $TOP_CONTRIBUTOR | awk -F'[()]' '{print $2}' | tr -dc '0-9')
-
-          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
+          echo "CONTRIBUTORS=$(printf '%s\n' "${CONTRIBUTORS}" | sort -k4 -rn)" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
-          echo "TOTAL_CONTRIBUTORS=${TOTAL_CONTRIBUTORS}" >> $GITHUB_ENV
-          echo "TOTAL_PR=${TOTAL_PR}" >> $GITHUB_ENV
           echo "TOP_CONTRIBUTOR=${TOP_CONTRIBUTOR}" >> $GITHUB_ENV
-          echo "TOP_CONTRIBUTOR_COUNT=${TOP_CONTRIBUTOR_COUNT}" >> $GITHUB_ENV
+          echo "TOTAL_PRS=${TOTAL_PRS}" >> $GITHUB_ENV
+          echo "TOTAL_CONTRIBUTORS=${#PR_COUNTS[@]}" >> $GITHUB_ENV
+          echo "MAX_PRS=${MAX_PRS}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
-          TOTAL_CONTRIBUTORS="${{ env.TOTAL_CONTRIBUTORS }}"
-          TOTAL_PR="${{ env.TOTAL_PR }}"
           TOP_CONTRIBUTOR="${{ env.TOP_CONTRIBUTOR }}"
-          TOP_CONTRIBUTOR_COUNT="${{ env.TOP_CONTRIBUTOR_COUNT }}"
-
+          TOTAL_PRS="${{ env.TOTAL_PRS }}"
+          TOTAL_CONTRIBUTORS="${{ env.TOTAL_CONTRIBUTORS }}"
+          MAX_PRS="${{ env.MAX_PRS }}"
           # Print all contributors of the month and the number of PRs they created
-          echo -e "In $MONTH_NAME, we had $TOTAL_CONTRIBUTORS contributors, with a total number of $TOTAL_PR PRs. Thank you, guys, for your great job. Keep up the awesome work."
-          echo "Here are the detailed results:"
+          echo -e "In $MONTH_NAME, we had $TOTAL_CONTRIBUTORS contributors. The total number of PRs is $TOTAL_PRS.\n"
           echo -e "$CONTRIBUTORS"
-          echo -e "Our top contributor of the month is $TOP_CONTRIBUTOR — $TOP_CONTRIBUTOR_COUNT PRs in total."
+          echo -e "Our top contributor of the month is $TOP_CONTRIBUTOR, with $MAX_PRS merged PRs in total.\n"

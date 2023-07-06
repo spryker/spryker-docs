@@ -16,8 +16,8 @@ jobs:
         id: determine
         run: |
           # Determine the start and end dates of the previous month
-          START_DATE=$(date -u -d "last month -1 day" +%Y-%m-%d)
-          END_DATE=$(date -u -d "last month +1 month" +%Y-%m-%d)
+          START_DATE=$(date -u -d "last month -1 month 3:00 PM" +%Y-%m-%dT%H:%M:%SZ)  # UTC+3
+          END_DATE=$(date -u -d "last month 2:59 PM" +%Y-%m-%dT%H:%M:%SZ)  # UTC+3
           MONTH_NAME=$(date -d "last month" +%B)
 
           # Exclude certain users
@@ -32,7 +32,7 @@ jobs:
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=300" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at < $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break

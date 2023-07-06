@@ -16,8 +16,8 @@ jobs:
         id: determine
         run: |
           # Determine the start and end dates of the previous month
-          START_DATE=$(date -u -d "last month -1 month 3:00 PM" +%Y-%m-%dT%H:%M:%SZ)  # UTC+3
-          END_DATE=$(date -u -d "last month 2:59 PM" +%Y-%m-%dT%H:%M:%SZ)  # UTC+3
+          START_DATE=$(date -d "last month" +%Y-%m-01)
+          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
           MONTH_NAME=$(date -d "last month" +%B)
 
           # Exclude certain users
@@ -31,8 +31,8 @@ jobs:
             # Fetch merged pull requests within the previous month
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
-                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=300" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at < $END)) | .[].user.login')
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break

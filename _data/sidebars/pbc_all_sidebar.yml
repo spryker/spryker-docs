@@ -81,7 +81,7 @@ entries:
                   - title: Retrieve shipments in orders
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
               - title: Import data
-                url: /docs/pbc/all/carrier-management/base-shop/import-data/import-carrier-management-data.html
+                url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-carrier-management-data.html
                 nested:
                   - title: File details - shipment.csv
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html

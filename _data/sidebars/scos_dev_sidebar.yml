@@ -695,9 +695,9 @@ entries:
       - "202204.0"
       - "202212.0"
     - title: Create Glue API authorization strategies
-      url: /docs/scos/dev/glue-api-guides/how-to-use-authorization-framework.html
+      url: /docs/scos/dev/glue-api-guides/create-glue-api-authorization-strategies.html
     - title: Create Glue API resources with parent-child relationships
-      url: /docs/scos/dev/glue-api-guides/how-to-create-resources-with-parent-child-relationships.html
+      url: /docs/scos/dev/glue-api-guides/create-glue-api-resources-with-parent-child-relationships.html
       include_versions:
       - "202204.0"
       - "202212.0"
@@ -784,7 +784,7 @@ entries:
       url: /docs/scos/dev/glue-api-guides/rest-api-b2b-reference.html
       include_versions:
       - "202204.0"
-      - "202212.0"      
+      - "202212.0"
     - title: Managing customers
       url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
       include_versions:

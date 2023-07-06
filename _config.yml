@@ -311,6 +311,8 @@ algolia:
       title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
+    - name: 'uc_all'
+      title: 'Unified Commerce'
 sass:
     sass_dir: css
     style: compressed

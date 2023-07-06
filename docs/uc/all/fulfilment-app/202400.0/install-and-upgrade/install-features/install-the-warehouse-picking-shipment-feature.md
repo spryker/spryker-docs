@@ -7,4 +7,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-shipment-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-warehouse-picking-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-warehouse-picking-shipment-feature.md -->
+{% include pbc/all/install-features/202400.0/install-the-warehouse-picking-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-warehouse-picking-shipment-feature.md -->

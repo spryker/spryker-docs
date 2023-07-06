@@ -172,9 +172,9 @@ defaults:
       role: "all"
   -
     scope:
-      path: "docs/unified-commerce/all"
+      path: "docs/uc/all"
     values:
-      sidebar: "unified_commerce_sidebar"
+      sidebar: "uc_all_sidebar"
       role: "all"
 
 versions:
@@ -256,6 +256,10 @@ versioned_categories:
       - tax-management
       - user-management
       - warehouse-management-system
+  uc:
+    all:
+      - enhanced-click-collect
+      - fulfilment-app
 
 
 # these are defaults used for the front matter for these file types
@@ -270,6 +274,7 @@ sidebars:
   - acp_user_sidebar
   - scu_dev_sidebar
   - pbc_all_sidebar
+  - uc_all_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

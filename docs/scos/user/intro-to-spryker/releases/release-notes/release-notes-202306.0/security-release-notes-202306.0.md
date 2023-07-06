@@ -174,6 +174,10 @@ console transfer:generate
 8. Add configuration to `config/Shared/config_default.php`:
 
 ```php
+use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
+use Spryker\Shared\SecurityBlockerStorefrontAgent\SecurityBlockerStorefrontAgentConstants;
+use Spryker\Shared\SecurityBlockerStorefrontCustomer\SecurityBlockerStorefrontCustomerConstants;
+
 // >>> Security Blocker Storefront Agent
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL] = 900;

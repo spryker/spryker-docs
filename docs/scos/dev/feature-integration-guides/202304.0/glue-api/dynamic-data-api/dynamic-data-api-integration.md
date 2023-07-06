@@ -33,7 +33,7 @@ To start feature integration, overview and install the necessary features:
 Install the required modules:
 
 ```bash
-composer require spryker/dynamic-entity-backend-api:"^1.0.0" --update-with-dependencies
+composer require spryker/dynamic-entity-backend-api:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

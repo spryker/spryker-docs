@@ -9,15 +9,15 @@ entries:
               - title: Install features
                 nested:
                   - title: Install the Product offer shipment feature
-                    url: /docs/unified-commerce/all/enhanced-click-collect/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html
+                    url: /docs/uc/all/enhanced-click-collect/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Service Points feature
-                    url: /docs/unified-commerce/all/enhanced-click-collect/install-and-upgrade/install-features/install-the-service-points-feature.html
+                    url: /docs/uc/all/enhanced-click-collect/install-and-upgrade/install-features/install-the-service-points-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Shipment + Service Points feature
-                    url: /docs/unified-commerce/all/enhanced-click-collect/install-and-upgrade/install-features/install-the-shipment-service-points-feature.html
+                    url: /docs/uc/all/enhanced-click-collect/install-and-upgrade/install-features/install-the-shipment-service-points-feature.html
                     include versions: 
                     - "202400.0"
       - title: Fulfilment App
@@ -25,7 +25,7 @@ entries:
         - "202400.0"
         nested:
           - title: Push Notification feature overview
-            url: /docs/unified-commerce/all/fulfilment-app/push-notification-feature-overview.html
+            url: /docs/uc/all/fulfilment-app/push-notification-feature-overview.html
             include versions: 
             - "202400.0"
           - title: Install and upgrade
@@ -33,38 +33,38 @@ entries:
               - title: Install features
                 nested:
                   - title: Install the Picker user login feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-picker-user-login-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-picker-user-login-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Push Notification feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-push-notification-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-push-notification-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse picking feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse picking + Inventory Management feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-inventory-management-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-inventory-management-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse picking + Order Management feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-order-management-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-order-management-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse picking + Product feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-product-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-product-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse picking + Shipment feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-shipment-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-shipment-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse picking + Spryker Core Back Office feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-spryker-core-back-office-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-picking-spryker-core-back-office-feature.html
                     include versions: 
                     - "202400.0"
                   - title: Install the Warehouse User Management feature
-                    url: /docs/unified-commerce/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html
+                    url: /docs/uc/all/fulfilment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html
                     include versions: 
                     - "202400.0"

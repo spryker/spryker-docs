@@ -50,7 +50,7 @@ jobs:
           done
 
           # Prepare contributors list
-          CONTRIBUTORS=""
+          CONTRIBUTORS=()
           MAX_PRS=0
           TOP_CONTRIBUTOR=""
           for USER in "${!PR_COUNTS[@]}"; do
@@ -59,10 +59,16 @@ jobs:
               MAX_PRS=$COUNT
               TOP_CONTRIBUTOR=$USER
             fi
-            CONTRIBUTORS+="$USER (Merged PRs: $COUNT)\n"
+            CONTRIBUTORS+=("$USER (Merged PRs: $COUNT)")
           done
 
-          echo "CONTRIBUTORS=$(printf '%s\n' "${CONTRIBUTORS}" | sort -k4 -rn)" >> $GITHUB_ENV
+          # Sort contributors by the number of merged PRs, descending
+          CONTRIBUTORS_SORTED=($(printf "%s\n" "${CONTRIBUTORS[@]}" | sort -k4 -rn))
+
+          # Join contributors into a string with the desired format
+          CONTRIBUTORS_STR=$(printf "%s\n" "${CONTRIBUTORS_SORTED[@]}")
+
+          echo "CONTRIBUTORS=${CONTRIBUTORS_STR}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
           echo "TOP_CONTRIBUTOR=${TOP_CONTRIBUTOR}" >> $GITHUB_ENV
           echo "TOTAL_PRS=${TOTAL_PRS}" >> $GITHUB_ENV
@@ -76,8 +82,7 @@ jobs:
           TOP_CONTRIBUTOR="${{ env.TOP_CONTRIBUTOR }}"
           TOTAL_PRS="${{ env.TOTAL_PRS }}"
           TOTAL_CONTRIBUTORS="${{ env.TOTAL_CONTRIBUTORS }}"
-          MAX_PRS="${{ env.MAX_PRS }}"
-          # Print all contributors of the month and the number of PRs they created
+
           echo -e "In $MONTH_NAME, we had $TOTAL_CONTRIBUTORS contributors. The total number of PRs is $TOTAL_PRS.\n"
           echo -e "$CONTRIBUTORS"
           echo -e "Our top contributor of the month is $TOP_CONTRIBUTOR, with $MAX_PRS merged PRs in total.\n"

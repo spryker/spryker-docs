@@ -20,21 +20,31 @@ jobs:
           END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
           MONTH_NAME=$(date -d "last month" +%B)
 
-          # Fetch merged pull requests within the previous month
-          PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                 -H "Accept: application/vnd.github.v3+json" \
-                 "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged" \
-                 | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
-
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
           # Count PRs for each user
           declare -A PR_COUNTS=()
-          for USER in $PRS; do
-            if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-              PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+
+          PAGE=1
+          while : ; do
+            # Fetch merged pull requests within the previous month
+            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                   -H "Accept: application/vnd.github.v3+json" \
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+
+            if [ -z "$PRS" ]; then
+              break
             fi
+
+            for USER in $PRS; do
+              if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
+                PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+              fi
+            done
+
+            ((PAGE++))
           done
 
           # Prepare contributors list

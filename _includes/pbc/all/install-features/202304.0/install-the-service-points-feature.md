@@ -1093,12 +1093,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 2. To enable the Backend API relationships, register the plugin:
 
-| PLUGIN                                                                | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                                            |
-|-----------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
-| ServicePointAddressesByServicePointsBackendResourceRelationshipPlugin | Adds `service-point-addresses` relationship to `service-points` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
-| ServicesByServicePointsBackendResourceRelationshipPlugin              | Adds `services` relationship to `service-points` resource.                |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
-| ServicePointsByServicesBackendResourceRelationshipPlugin              | Adds `service-points` relationship to `services` resource.                |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
-| ServiceTypesByServicesBackendResourceRelationshipPlugin               | Adds `service-types` relationship to `services` resource.                 |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| PLUGIN                                                                | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                                            |
+|-----------------------------------------------------------------------|-----------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| ServicePointAddressesByServicePointsBackendResourceRelationshipPlugin | Adds the `service-point-addresses` relationship to the `service-points` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| ServicesByServicePointsBackendResourceRelationshipPlugin              | Adds the `services` relationship to the `service-points` resource.                |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| ServicePointsByServicesBackendResourceRelationshipPlugin              | Adds the `service-points` relationship to the `services` resource.                |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| ServiceTypesByServicesBackendResourceRelationshipPlugin               | Adds the `service-types` relationship to the `services` resource.                 |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
 

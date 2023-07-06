@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Offer Service Points feature into a Spryker project.
+This document describes how to integrate the Product Offer + Service Points feature into a Spryker project.
 
 ## Install feature core
 
@@ -154,7 +154,8 @@ offer424,s1
 |-------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
 | ProductOfferServiceDataImportPlugin | Imports product offer services into the database.             | None          | \Spryker\Zed\ProductOfferServicePointDataImport\Communication\Plugin\DataImport |
 
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -177,10 +178,12 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 }
 ```
+</details>
 
 4. Enable the behaviors by registering the console commands:
 
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -210,6 +213,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+</details>
 
 5. Import data:
 
@@ -259,7 +263,8 @@ Configure tables to be published and synchronized to the Storage on create, edit
 
 1. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module's configuration:
 
-**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+<details open>
+<summary markdown='span'>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -282,10 +287,12 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+</details>
 
 2. Register new queue message processor:
 
-**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -310,10 +317,12 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
+</details>
 
 3. Configure synchronization pool and event queue name:
 
-**src/Pyz/Zed/ProductOfferServicePointStorage/ProductOfferServicePointStorageConfig.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/ProductOfferServicePointStorage/ProductOfferServicePointStorageConfig.php</summary>
 
 ```php
 <?php
@@ -348,6 +357,7 @@ class ProductOfferServicePointStorageConfig extends SprykerProductOfferServicePo
     }
 }
 ```
+</details>
 
 4. Set up publisher plugins:
 
@@ -363,7 +373,8 @@ class ProductOfferServicePointStorageConfig extends SprykerProductOfferServicePo
 | ProductOfferServicePublisherTriggerPlugin        | Allows to populate product offer service storage table with data and trigger further export to Redis. |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Publisher                     |
 
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -419,6 +430,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+</details>
 
 5. Set up synchronization plugins:
 
@@ -426,7 +438,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 |------------------------------------------------------------|----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
 | ProductOfferServiceSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the product offer service storage table content into Redis. |               | Spryker\Zed\ProductOfferServicePointStorage\Communication\Plugin\Synchronization |
 
-**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -449,6 +462,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -490,7 +504,8 @@ To expand product offers with services, register the plugins:
 | ServiceProductOfferExpanderPlugin        | Expands product offer with services.                                |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer    |
 | ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage |
 
-**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -538,8 +553,11 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+</details>
 
-**src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -561,3 +579,4 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     }
 }
 ```
+</details>

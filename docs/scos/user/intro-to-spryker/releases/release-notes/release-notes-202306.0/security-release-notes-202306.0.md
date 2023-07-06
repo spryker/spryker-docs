@@ -65,7 +65,6 @@ composer require spryker-shop/company-page:"~2.22.0"
 composer show spryker-shop/company-page # Verify the version
 ```
 
-
 ## Unvalidated URL redirection
 
 Attackers were able to bypass the redirect URL validation for URLs provided through the GET request parameter and control the website that the user is redirected to. This type of vulnerability can be used in conjunction with social engineering to coerce a victim into navigating to a malicious resource or location.
@@ -376,11 +375,11 @@ The parameters related to the address field had insufficient server-side input v
 
 ### Affected modules
 
-`spryker-shop/customer-page`: 0.1.0-2.41.0
-`spryker-shop/company-page`: 0.0.1-2.22.0
-`spryker/customer`: 0.20.0-7.51.2
-`spryker/company-unit-address-gui`: 0.1.0-1.3.0
-`spryker/merchant-profile-gui`: 0.1.0-1.2.0
+* `spryker-shop/customer-page`: 0.1.0-2.41.0
+* `spryker-shop/company-page`: 0.0.1-2.22.0
+* `spryker/customer`: 0.20.0-7.51.2
+* `spryker/company-unit-address-gui`: 0.1.0-1.3.0
+* `spryker/merchant-profile-gui`: 0.1.0-1.2.0
 
 ### Introduced changes
 
@@ -480,10 +479,10 @@ An outdated version of the `guzzlehttp/psr7` library was identified to affect Sp
 
 ### Affected modules
 
-`spryker/guzzle`: 0.20.0-2.4.0
-`spryker/message-broker-aws`: 1.0.0-1.4.2
-`spryker/secrets-manager-aws`: 1.0.0-1.0.1
-`spryker/oauth-auth0` : 1.0.0
+* `spryker/guzzle`: 0.20.0-2.4.0
+* `spryker/message-broker-aws`: 1.0.0-1.4.2
+* `spryker/secrets-manager-aws`: 1.0.0-1.0.1
+* `spryker/oauth-auth0` : 1.0.0
 
 ### Introduced changes
 
@@ -527,11 +526,11 @@ Security-related HTTP headers were missing from Spryker’s applications. Adding
 
 ### Affected modules
 
-`spryker/event-dispatcher`: <=1.4.0
-`spryker/glue-backend-api-application`: <=1.3.0
-`spryker/glue-storefront-api-application`: <=1.2.0
-`spryker/http`: <=1.10.0
-`spryker/merchant-portal-application`: <=1.1.0
+* `spryker/event-dispatcher`: <=1.4.0
+* `spryker/glue-backend-api-application`: <=1.3.0
+* `spryker/glue-storefront-api-application`: <=1.2.0
+* `spryker/http`: <=1.10.0
+* `spryker/merchant-portal-application`: <=1.1.0
 
 ### Introduced changes
 

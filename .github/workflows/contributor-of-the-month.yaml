@@ -27,13 +27,12 @@ jobs:
           declare -A PR_COUNTS=()
 
           PAGE=1
-          TOTAL_PRS=0
           while : ; do
             # Fetch merged pull requests within the previous month
-            PRS=$(curl -s -H "Authorization: Bearer YOUR_PAT" \
-                  -H "Accept: application/vnd.github.v3+json" \
-                  "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                  | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                   -H "Accept: application/vnd.github.v3+json" \
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
@@ -42,7 +41,6 @@ jobs:
             for USER in $PRS; do
               if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
                 PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
-                ((TOTAL_PRS++))
               fi
             done
 
@@ -50,39 +48,20 @@ jobs:
           done
 
           # Prepare contributors list
-          CONTRIBUTORS=()
-          MAX_PRS=0
-          TOP_CONTRIBUTOR=""
+          CONTRIBUTORS=""
           for USER in "${!PR_COUNTS[@]}"; do
             COUNT="${PR_COUNTS[$USER]}"
-            if ((COUNT > MAX_PRS)); then
-              MAX_PRS=$COUNT
-              TOP_CONTRIBUTOR=$USER
-            fi
-            CONTRIBUTORS+=("$USER (Merged PRs: $COUNT)")
+            CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
           done
 
-          # Sort contributors by the number of merged PRs, descending
-          CONTRIBUTORS_SORTED=($(printf "%s\n" "${CONTRIBUTORS[@]}" | sort -k4 -rn))
-
-          # Join contributors into a string with the desired format
-          CONTRIBUTORS_STR=$(printf "%s\n" "${CONTRIBUTORS_SORTED[@]}")
-
-          echo "CONTRIBUTORS=${CONTRIBUTORS_STR}" >> $GITHUB_ENV
+          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
-          echo "TOP_CONTRIBUTOR=${TOP_CONTRIBUTOR}" >> $GITHUB_ENV
-          echo "TOTAL_PRS=${TOTAL_PRS}" >> $GITHUB_ENV
-          echo "TOTAL_CONTRIBUTORS=${#PR_COUNTS[@]}" >> $GITHUB_ENV
-          echo "MAX_PRS=${MAX_PRS}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
-          TOP_CONTRIBUTOR=$(printf "%q" "$USER")
-          TOTAL_PRS="${{ env.TOTAL_PRS }}"
-          TOTAL_CONTRIBUTORS="${{ env.TOTAL_CONTRIBUTORS }}"
 
-          echo -e "In $MONTH_NAME, we had $TOTAL_CONTRIBUTORS contributors. The total number of PRs is $TOTAL_PRS.\n"
+          # Print all contributors of the month and the number of PRs they created
+          echo "Top Contributors of $MONTH_NAME:"
           echo -e "$CONTRIBUTORS"
-          echo -e "Our top contributor of the month is $TOP_CONTRIBUTOR, with $MAX_PRS merged PRs in total.\n"

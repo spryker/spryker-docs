@@ -79,7 +79,7 @@ jobs:
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
-          TOP_CONTRIBUTOR="${{ env.TOP_CONTRIBUTOR }}"
+          TOP_CONTRIBUTOR=$(printf "%q" "$USER")
           TOTAL_PRS="${{ env.TOTAL_PRS }}"
           TOTAL_CONTRIBUTORS="${{ env.TOTAL_CONTRIBUTORS }}"
 

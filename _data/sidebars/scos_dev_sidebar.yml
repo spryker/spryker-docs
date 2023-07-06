@@ -3729,12 +3729,13 @@ entries:
         url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
     url: /docs/scos/dev/front-end-development/front-end-development.html
+    include version:
+    - "202212.0"
     nested:
     - title: Zed
       url: /docs/scos/dev/front-end-development/zed/zed.html
       include version:
       - "202212.0"
-      - "202304.0"
       nested:
       - title: Oryx Builder overview and setup
         url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
@@ -3748,19 +3749,23 @@ entries:
         url: /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
         include version:
         - "202212.0"
-        - "202304.0"
       - title: Oryx for Zed
         url: /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
         include version:
         - "202212.0"
-        - "202304.0"
     - title: Yves
       url: /docs/scos/dev/front-end-development/yves/yves.html
+      include version:
+      - "202212.0"
       nested:
       - title: Yves multi-themes
         url: /docs/scos/dev/front-end-development/yves/yves-multi-themes.html
+        include version:
+        - "202212.0"
       - title: Atomic Frontend
         url: /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+        include version:
+        - "202212.0"
         nested:
         - title: Integrating JQuery into Atomic Frontend
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
@@ -3797,9 +3802,9 @@ entries:
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
     - title: Oryx
+      url: /docs/scos/dev/front-end-development/oryx/oryx.html
       include_versions:
       - "202212.0"
-      url: /docs/scos/dev/front-end-development/oryx/oryx.html
       nested:
         - title: Set up
           url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
@@ -3852,12 +3857,20 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
+      include version:
+      - "202212.0"
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
+      include version:
+      - "202212.0"
     - title: Migration guide - Upgrade to Webpack v5
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
+      include version:
+      - "202212.0"
     - title: Migration guide - Switch from TSLint to ESLint
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
+      include version:
+      - "202212.0"
     - title: Migration guide - Upgrade Node.js to v18 and npm to v9
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
       include_versions:

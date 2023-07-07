@@ -15,6 +15,9 @@ jobs:
       - name: Determine contributor
         id: determine
         run: |
+          set -e  # Exit script immediately if a command exits with a non-zero status.
+          set -x  # Print each command before executing it, for debugging
+
           # Set the start and end dates for June 2023
           START_DATE="2023-06-01"
           END_DATE="2023-06-30"
@@ -85,12 +88,12 @@ jobs:
           TOP_CONTRIBUTORS="${{ env.TOP_CONTRIBUTORS }}"
           TOP_PR_COUNT="${{ env.TOP_PR_COUNT }}"
 
-          # Print total number of contributed PRs
           echo "Total number of contributed PRs in $MONTH_NAME: $TOTAL_PRS"
-
-          # Print all contributors of the month and the number of PRs they created
-          echo -e "\nOur contributors:"
+          echo ""
+          echo "Our contributors:"
           echo -e "$CONTRIBUTORS"
-
-          # Print top contributors
-          echo -e "\n1st place: $TOP_CONTRIBUTORS. Each of you contributed $TOP_PR_COUNT PRs to Spryker documentation. Thank you all for an awesome job."
+          if [[ $(echo "$TOP_CONTRIBUTORS" | tr ',' '\n' | wc -l) -gt 1 ]]; then
+            echo "1st place: $TOP_CONTRIBUTORS. Each of you contributed $TOP_PR_COUNT PRs to Spryker documentation. Thank you all for an awesome job."
+          else
+            echo "1st place: $TOP_CONTRIBUTORS. Contributed $TOP_PR_COUNT PRs to Spryker documentation. Thank you for an awesome job."
+          fi

@@ -16,8 +16,8 @@ jobs:
         id: determine
         run: |
           # Set the start and end dates for June 2023
-          START_DATE="2023-06-01"
-          END_DATE="2023-06-30"
+          START_DATE="2023-05-01"
+          END_DATE="2023-05-31"
           MONTH_NAME="June"
 
           # Exclude certain users
@@ -61,19 +61,6 @@ jobs:
             fi
           done
 
-      - name: Log contributors
-        run: |
-          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
-          MONTH_NAME="${{ env.MONTH_NAME }}"
-          TOP_CONTRIBUTORS_TEXT="${{ env.TOP_CONTRIBUTORS_TEXT }}"
-
-          # Print the top contributor(s) of the month
-          echo "$TOP_CONTRIBUTORS_TEXT"
-
-          # Print all contributors of the month and the number of PRs they created
-          echo "Contributors of $MONTH_NAME:"
-          echo -e "$CONTRIBUTORS"
-
           TOP_CONTRIBUTORS_LIST=$(IFS=,; echo "${TOP_CONTRIBUTORS[*]}")
           TOP_CONTRIBUTORS_TEXT="The top contributor(s) of $MONTH_NAME: $TOP_CONTRIBUTORS_LIST (PRs: $MAX_COUNT)"
 
@@ -88,3 +75,16 @@ jobs:
 
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
+
+      - name: Log contributors
+        run: |
+          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
+          MONTH_NAME="${{ env.MONTH_NAME }}"
+          TOP_CONTRIBUTORS_TEXT="${{ env.TOP_CONTRIBUTORS_TEXT }}"
+
+          # Print the top contributor(s) of the month
+          echo "$TOP_CONTRIBUTORS_TEXT"
+
+          # Print all contributors of the month and the number of PRs they created
+          echo "Contributors of $MONTH_NAME:"
+          echo -e "$CONTRIBUTORS"

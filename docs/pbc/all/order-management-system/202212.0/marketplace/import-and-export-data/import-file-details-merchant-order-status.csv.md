@@ -3,6 +3,8 @@ title: "Import file details: merchant-order-status.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant-order-status.csv file to update merchant order states in your Spryker shop.
 template: import-file-template
+redirect_from:
+  - /docs/pbc/all/order-management-system/202212.0/marketplace/import-data/file-details-merchant-order-status.csv.html
 related:
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html

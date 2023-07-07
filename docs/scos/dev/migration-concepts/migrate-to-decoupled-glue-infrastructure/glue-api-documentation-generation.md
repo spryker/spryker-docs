@@ -1,5 +1,5 @@
 ---
-title: Glue API - Glue documentation generation
+title: Integrate documentation generator
 description: Integrate the Glue documentation generation into your project
 template: feature-integration-guide-template
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-title: Glue API - Authorization protected endpoints integration
+title: Integrate the protected endpoints authorization for decoupled Glue infrastructure
 description: This document describes how to use the protected endpoints authorization strategy for storefront API and backend API applications in a Spryker project.
 last_updated: October 21, 2022
 template: feature-integration-guide-template

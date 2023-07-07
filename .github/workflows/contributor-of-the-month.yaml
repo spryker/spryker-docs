@@ -15,10 +15,10 @@ jobs:
       - name: Determine contributor
         id: determine
         run: |
-          # Determine the start and end dates of the previous month
-          START_DATE=$(date -d "last month" +%Y-%m-01)
-          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
-          MONTH_NAME=$(date -d "last month" +%B)
+          # Set the start and end dates for June 2023
+          START_DATE="2023-06-01"
+          END_DATE="2023-06-30"
+          MONTH_NAME="June"
 
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
@@ -28,7 +28,7 @@ jobs:
 
           PAGE=1
           while : ; do
-            # Fetch merged pull requests within the previous month
+            # Fetch merged pull requests within the specified date range
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \

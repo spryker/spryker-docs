@@ -112,9 +112,7 @@ COMMIT;
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Dynamic Data API][] to discover how to request your API endpoint.
+If everything is set up correctly, you can follow [How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html) to discover how to request your API endpoint.
 Or if you're in the middle of the integration process for the Dynamic Data API follow [Dynamic Data API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html) to proceed with it.
 
 {% endinfo_block %}
-
-[]: /docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html

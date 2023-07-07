@@ -14,7 +14,7 @@ The `spy_dynamic_entity_configuration` table represents the configuration for dy
 
 | COLUMN | SPECIFICATION |
 | --- | --- |
-| id_dynamic_entity_configuration | The unique identifier for the configuration. |
+| id_dynamic_entity_configuration | The unique ID for the configuration. |
 | table_alias | An alias used in the request URL to refer to the endpoint. |
 | table_name | The name of the corresponding table in the database to operate on. |
 | is_active | Indicates whether the endpoint is enabled or disabled. |
@@ -25,7 +25,7 @@ The `spy_dynamic_entity_configuration` table represents the configuration for dy
 {% info_block infoBox %}
 
 Currently, the process entails manually executing SQL queries as there is no existing user interface (UI) feature in Spryker for it. 
-However, future releases are expected to introduce UI solution for adding new rows to the `spy_dynamic_entity_configuration` table.
+However, future releases are expected to introduce an UI solution for adding new rows to the `spy_dynamic_entity_configuration` table.
 
 {% endinfo_block %}
 
@@ -67,7 +67,7 @@ And now, let's delve into the meaning of each field within the snippet. Here's a
 
 | FIELD | SPECIFICATION |
 | --- | --- |
-| identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique identifier for each record. |
+| identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique ID for each record. |
 | fields | An array containing the descriptions of the columns from the table. It allows customization of which columns are included for interaction. By specifying the desired columns in the "fields" array, the API will only expose and operate on those specific columns. Any columns not included in the array will be inaccessible through API requests. |
 | fieldName | The actual name of the column in the database table. |
 | fieldVisibleName | The name used for interacting with the field through API requests. It provides a more user-friendly and descriptive name compared to the physical column name. |
@@ -87,7 +87,7 @@ It is recommended to set `isEditable` and `isCreatable` to `false` for fields th
 
 {% info_block infoBox %}
 
-Configuring the definition for the field responsible for the numerable values keep in mind that an integer data type is a non-decimal number 
+When configuring the definition for the field responsible for the numerable values, keep in mind that an integer data type is a non-decimal number 
 between -2147483648 and 2147483647 in 32-bit systems, and between -9223372036854775808 and 9223372036854775807 in 64-bit systems. 
 However, if there is a need to use values outside this range or if the person providing the configuration anticipates 
 larger values, the field can be set as a string type instead.

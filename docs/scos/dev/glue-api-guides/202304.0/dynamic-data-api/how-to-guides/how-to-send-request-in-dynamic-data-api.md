@@ -32,7 +32,7 @@ Content-Length: 67
 grant_type=password&username={username}&password={password}
 ```
 
-### Sending `GET` request
+### Sending a `GET` request
 
 To retrieve a collection of countries, a `GET` request should be sent to the `/dynamic-entity/country` endpoint. 
 This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
@@ -80,7 +80,7 @@ If everything is set up correctly you will get the following response:
 
 {% info_block infoBox %}
 
-Note, by default, API `GET` request returns up to 20 records.
+Note, by default the API `GET` request returns up to 20 records.
 
 {% endinfo_block %}
 
@@ -202,7 +202,7 @@ If everything is set up correctly you will get the following response:
 ]
 ```
 
-The response payload includes all the specified fields from the request body, along with the id of the newly created entity.
+The response payload includes all the specified fields from the request body, along with the ID of the newly created entity.
 
 {% endinfo_block %}
 
@@ -338,7 +338,7 @@ You will receive the following error response because a non-editable field `iso3
 
 {% info_block infoBox %}
 
-If the `id_country` is not provided you will get the following response:
+If `id_country` is not provided you will get the following response:
 
 ```json
 [
@@ -350,7 +350,7 @@ If the `id_country` is not provided you will get the following response:
 ]
 ```
 
-If the `id_country` is not found you will get the following response:
+If `id_country` is not found you will get the following response:
 
 ```json
 [

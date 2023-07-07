@@ -21,14 +21,14 @@ Follow the steps below to install the Dynamic Data API core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Glue Backend Api Application | {{page.version}} | [Glue API - Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html) |
 | Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-authentication-integration.html) |
 
-### 1) Install the required modules using Composer
+### Install the required modules using Composer
 
 Install the required modules:
 
@@ -47,7 +47,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+### Set up the configuration
 
 1. Move the following commands into `setup-glue` section after `demodata` step:
 
@@ -92,7 +92,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 ```
 
 3. The Dynamic Data API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
-   The logging is enabled by default. Adjust `DynamicEntityBackendApiConfig` in order to disable this option or change a path for the log file.
+   Logging is enabled by default. Adjust `DynamicEntityBackendApiConfig` in order to disable this option or change the path for the log file.
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
 
@@ -133,7 +133,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-### 2) Set up database schema and transfer objects
+### Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
@@ -150,7 +150,7 @@ Ensure that you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for dynamic entities. In order to do that follow the link [How to configure Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html)  
+Add configurations for dynamic entities. In order to do that follow the instructions here [how to configure Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html)  
 
 Ensure the following transfers have been created:
 
@@ -183,9 +183,9 @@ Ensure the following transfers have been created:
 
 {% endinfo_block %}
 
-### 4) Add translations
+### Add translations
 
-Append glossary according to your language configuration:
+Append the glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
 
@@ -228,7 +228,7 @@ Make sure that the configured data in the database has been added to the `spy_gl
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -357,6 +357,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can operate with the data. Follow the link to discover how to perform it [How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html)
+If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html)
 
 {% endinfo_block %}

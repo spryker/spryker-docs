@@ -33,7 +33,7 @@ jobs:
           TOTAL_PRS=0
           while : ; do
             # Fetch merged pull requests within the specified date range
-            PRS=$(curl -s -H "Authorization: token ${{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}} \
+            PRS=$(curl -s -H "Authorization: ***" \
                   -H "Accept: application/vnd.github.v3+json" \
                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')

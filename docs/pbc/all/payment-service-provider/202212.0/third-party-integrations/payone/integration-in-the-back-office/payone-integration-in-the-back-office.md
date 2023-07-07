@@ -78,7 +78,7 @@ When customers pay with PayPal, a shop owner can do the following:
 
 ## Next steps
 
-[Integrate Payone](/docs/pbc/all/payment-service-provider/{page.version}/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
+[Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
 
 
 

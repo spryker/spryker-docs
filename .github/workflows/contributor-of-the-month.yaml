@@ -27,6 +27,7 @@ jobs:
           declare -A PR_COUNTS=()
 
           PAGE=1
+          TOTAL_PRS=0
           while : ; do
             # Fetch merged pull requests within the specified date range
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -41,40 +42,55 @@ jobs:
             for USER in $PRS; do
               if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
                 PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+                ((TOTAL_PRS++))
               fi
             done
 
             ((PAGE++))
           done
 
-          # Prepare contributors list and sort by PR counts
-          CONTRIBUTORS=()
+          # Prepare contributors list
+          CONTRIBUTORS=""
           for USER in "${!PR_COUNTS[@]}"; do
             COUNT="${PR_COUNTS[$USER]}"
-            CONTRIBUTORS+=("$COUNT:$USER")
+            CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
           done
-          IFS=$'\n' sorted=($(sort -nr <<<"${CONTRIBUTORS[*]}"))
-          unset IFS
 
-          # Prepare top 3 contributors list
-          TOP_CONTRIBUTORS=""
-          for i in 0 1 2; do
-            if [[ $i -lt ${#sorted[@]} ]]; then
-              PR_COUNT=${sorted[$i]%%:*}
-              USERS=$(printf ', %s' $(grep -oP "(?<=^$PR_COUNT:).+" <<<"${sorted[@]}"))
-              USERS=${USERS#, }
-              TOP_CONTRIBUTORS+="$((i+1))nd place: $USERS (PRs: $PR_COUNT)\n"
+          # Determine top contributor(s)
+          TOP_PR_COUNT=0
+          for COUNT in "${PR_COUNTS[@]}"; do
+            if ((COUNT > TOP_PR_COUNT)); then
+              TOP_PR_COUNT=$COUNT
             fi
           done
+          TOP_CONTRIBUTORS=()
+          for USER in "${!PR_COUNTS[@]}"; do
+            if ((PR_COUNTS[$USER] == TOP_PR_COUNT)); then
+              TOP_CONTRIBUTORS+=("$USER")
+            fi
+          done
+          TOP_CONTRIBUTORS_LIST=$(IFS=, ; echo "${TOP_CONTRIBUTORS[*]}")
 
-          echo "TOP_CONTRIBUTORS=${TOP_CONTRIBUTORS}" >> $GITHUB_ENV
+          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
+          echo "TOTAL_PRS=${TOTAL_PRS}" >> $GITHUB_ENV
+          echo "TOP_CONTRIBUTORS=${TOP_CONTRIBUTORS_LIST}" >> $GITHUB_ENV
+          echo "TOP_PR_COUNT=${TOP_PR_COUNT}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
-          TOP_CONTRIBUTORS="${{ env.TOP_CONTRIBUTORS }}"
+          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
+          TOTAL_PRS="${{ env.TOTAL_PRS }}"
+          TOP_CONTRIBUTORS="${{ env.TOP_CONTRIBUTORS }}"
+          TOP_PR_COUNT="${{ env.TOP_PR_COUNT }}"
 
-          # Print top 3 contributors of the month and the number of PRs they created
-          echo "Top 3 Contributors of $MONTH_NAME:"
-          echo -e "$TOP_CONTRIBUTORS"
+          # Print total number of contributed PRs
+          echo "Total number of contributed PRs in $MONTH_NAME: $TOTAL_PRS"
+
+          # Print all contributors of the month and the number of PRs they created
+          echo -e "\nOur contributors:"
+          echo -e "$CONTRIBUTORS"
+
+          # Print top contributors
+          echo -e "\n1st place: $TOP_CONTRIBUTORS. Each of you contributed $TOP_PR_COUNT PRs to Spryker documentation. Thank you all for an awesome job."

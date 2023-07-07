@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202304.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
 ---
-
+ 
 This document provides instructions for upgrading Node.js to v18 and npm to v9.
 
 ## Overview

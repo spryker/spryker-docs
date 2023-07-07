@@ -37,11 +37,11 @@ redirect_from:
   - /docs/pbc/all/search/202212.0/tutorials-and-howtos/configure-a-search-query.html
 related:
   - title: Configure Elasticsearch
-    link: docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html
   - title: Configure search for multi-currency
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure search features
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-featureshtml
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-features.html
   - title: Expand search data
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/expand-search-data.html
   - title: Facet filter overview and configuration

@@ -9,11 +9,13 @@ This document describes how to integrate profiler module into a Spryker project.
 
 ## Prerequisites
 
-To start the integration, review and install the necessary features:
+To start the integration, install the necessary features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE |
-|--------------|------------------|-------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+| NAME                  | VERSION          | INTEGRATION GUIDE                                                                                                                                               |
+|-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core          | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
+| Web Profiler for Zed  | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html) |
+| Web Profiler for Yves | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html) |
 
 ## 1) Enable extension
 
@@ -82,9 +84,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
      */
     protected function getEventDispatcherPlugins(): array
     {
-        return [
-            new ProfilerRequestEventDispatcherPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
+            $plugins[] = new ProfilerRequestEventDispatcherPlugin();
+        }
+    
+        return $plugins;
     }
 }
 ```
@@ -104,9 +112,15 @@ class WebProfilerWidgetDependencyProvider extends SprykerWebProfilerDependencyPr
      */
     public function getDataCollectorPlugins(): array
     {
-        return [
-            new WebProfilerProfilerDataCollectorPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        return $plugins;
     }
 }
 
@@ -134,9 +148,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
      */
     protected function getEventDispatcherPlugins(): array
     {
-        return [
-            new ProfilerRequestEventDispatcherPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
+            $plugins[] = new ProfilerRequestEventDispatcherPlugin();
+        }
+
+        return $plugins;
     }
 }
 ```
@@ -156,9 +176,15 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
      */
     public function getDataCollectorPlugins(): array
     {
-        return [
-            new WebProfilerProfilerDataCollectorPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        return $plugins;
     }
 }
 ```

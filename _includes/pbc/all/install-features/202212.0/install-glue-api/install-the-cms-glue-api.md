@@ -9,7 +9,7 @@ To start feature integration, overview and install the necessary features:
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |
 | Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -198,5 +198,5 @@ Integrate the following related features:
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ---------- | ----------------- | ---------------------------- |
-| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-content-items-feature.html) |
-| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |
+| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |

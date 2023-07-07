@@ -12,14 +12,12 @@ redirect_from:
   - /docs/en/install-module-structure-and-configuration
   - /v6/docs/install-module-structure-and-configuration
   - /v6/docs/en/install-module-structure-and-configuration
-  - /docs/scos/dev/setup/install-module-structure-and-configuration.html
+  - /docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
 related:
-  - title: Installing Spryker with custom set of modules
-    link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
-  - title: Managing SCOS dependencies with Composer
-    link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
+  - title: Manage dependencies with Composer
+    link: docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
   - title: Redis configuration
-    link: docs/scos/dev/setup/redis-configuration.html
+    link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 Starting from [version 1.0.0 the Install package](https://github.com/spryker/install/releases/tag/1.0.0) has become a regular Spryker module, not a standalone tool as it used to be before version 1.0.0. This means that the Install module can be extended on the project level in the same way as any other module.

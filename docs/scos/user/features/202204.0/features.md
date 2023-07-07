@@ -26,7 +26,7 @@ In the feature documentation, you can find the following information:
 
 {% info_block infoBox "Reference documentation" %}
 
-The documentation in the **Features** section provides reference information that can't be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html).
+The documentation in the **Features** section provides reference information that can't be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html).
 
 Or, you can go directly to the following guides:
 

@@ -1498,7 +1498,7 @@ entries:
               - title: Refunds feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/refunds-feature-overview.html
               - title: Import and export data
-                url: /docs/pbc/all/order-management-system/ibase-shop/import-and-export-data/import-and-export-order-management-system-data.html
+                url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-and-export-order-management-system-data.html
                 nested:
                   - title: "Import file details: order-status.csv"
                     url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-file-details-order-status.csv.html
@@ -1507,7 +1507,7 @@ entries:
                   - title: "Export file details: order-expenses.csv"
                     url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
                   - title: "Export file details: order-items.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html                
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1662,11 +1662,11 @@ entries:
                   - title: Marketplace Order Management + Order Threshold
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
               - title: Import and export data
-                url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-and-export-order-management-system-data.html
+                url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/marketplace-import-and-export-order-management-system-data.html
                 nested:
-                  - title: "Import file details - merchant_oms_process.csv"
+                  - title: "Import file details: merchant_oms_process.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html
-                  - title: "Import file details - merchant-order-status.csv"
+                  - title: "Import file details: merchant-order-status.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html
                   - title: "Export file details: merchant_orders.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-orders.csv.html

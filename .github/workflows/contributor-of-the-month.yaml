@@ -16,8 +16,8 @@ jobs:
         id: determine
         run: |
           # Set the start and end dates for June 2023
-          START_DATE="2023-05-01"
-          END_DATE="2023-05-31"
+          START_DATE="2023-06-01"
+          END_DATE="2023-06-30"
           MONTH_NAME="June"
 
           # Exclude certain users
@@ -66,9 +66,9 @@ jobs:
 
           echo "TOP_CONTRIBUTORS_TEXT=$TOP_CONTRIBUTORS_TEXT" >> $GITHUB_ENV
 
-          # Prepare contributors list
+          # Prepare contributors list sorted by PR count in descending order
           CONTRIBUTORS=""
-          for USER in "${!PR_COUNTS[@]}"; do
+          for USER in $(for k in "${!PR_COUNTS[@]}"; do echo $k ${PR_COUNTS[$k]}; done | sort -rn -k2 | cut -d' ' -f1); do
             COUNT="${PR_COUNTS[$USER]}"
             CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
           done

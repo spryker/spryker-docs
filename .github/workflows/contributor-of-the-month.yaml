@@ -15,9 +15,6 @@ jobs:
       - name: Determine contributor
         id: determine
         run: |
-          # set -e  # Exit script immediately if a command exits with a non-zero status.
-          set -x  # Print each command before executing it, for debugging
-
           # Set the start and end dates for June 2023
           START_DATE="2023-06-01"
           END_DATE="2023-06-30"
@@ -30,13 +27,12 @@ jobs:
           declare -A PR_COUNTS=()
 
           PAGE=1
-          TOTAL_PRS=0
           while : ; do
             # Fetch merged pull requests within the specified date range
-            PRS=$(curl -s -H "Authorization: ***" \
-                  -H "Accept: application/vnd.github.v3+json" \
-                  "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                  | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.docs_internal_contributors }}" \
+                   -H "Accept: application/vnd.github.v3+json" \
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
@@ -44,11 +40,7 @@ jobs:
 
             for USER in $PRS; do
               if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-                if [ -z "${PR_COUNTS[$USER]}" ]; then
-                  PR_COUNTS[$USER]=0
-                fi
                 PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
-                ((TOTAL_PRS++))
               fi
             done
 
@@ -62,44 +54,14 @@ jobs:
             CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
           done
 
-          # Determine top contributor(s)
-          TOP_PR_COUNT=0
-          for COUNT in "${PR_COUNTS[@]}"; do
-            if ((COUNT > TOP_PR_COUNT)); then
-              TOP_PR_COUNT=$COUNT
-            fi
-          done
-          TOP_CONTRIBUTORS=()
-          for USER in "${!PR_COUNTS[@]}"; do
-            if ((PR_COUNTS[$USER] == TOP_PR_COUNT)); then
-              TOP_CONTRIBUTORS+=("$USER")
-            fi
-          done
-          TOP_CONTRIBUTORS_LIST=$(IFS=, ; echo "${TOP_CONTRIBUTORS[*]}")
-
           echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
-          echo "TOTAL_PRS=${TOTAL_PRS}" >> $GITHUB_ENV
-          echo "TOP_CONTRIBUTORS=${TOP_CONTRIBUTORS_LIST}" >> $GITHUB_ENV
-          echo "TOP_PR_COUNT=${TOP_PR_COUNT}" >> $GITHUB_ENV
-
 
       - name: Log contributors
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
-          TOTAL_PRS="${{ env.TOTAL_PRS }}"
-          TOP_CONTRIBUTORS="${{ env.TOP_CONTRIBUTORS }}"
-          TOP_PR_COUNT="${{ env.TOP_PR_COUNT }}"
 
-          echo "Total number of contributed PRs in $MONTH_NAME: $TOTAL_PRS"
-          echo ""
-          echo "Our contributors:"
+          # Print all contributors of the month and the number of PRs they created
+          echo "Top Contributors of $MONTH_NAME:"
           echo -e "$CONTRIBUTORS"
-          if [[ $(echo "$TOP_CONTRIBUTORS" | tr ',' '\n' | wc -l) -gt 1 ]]; then
-            echo "1st place: $TOP_CONTRIBUTORS. Each of you contributed $TOP_PR_COUNT PRs to Spryker documentation. Thank you all for an awesome job."
-          else
-            echo "1st place: $TOP_CONTRIBUTORS. Contributed $TOP_PR_COUNT PRs to Spryker documentation. Thank you for an awesome job."
-          fi
-
-

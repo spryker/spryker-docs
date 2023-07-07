@@ -47,6 +47,25 @@ jobs:
             ((PAGE++))
           done
 
+          # Determine the top contributor
+          MAX_COUNT=0
+          TOP_CONTRIBUTORS=()
+
+          for USER in "${!PR_COUNTS[@]}"; do
+            COUNT=${PR_COUNTS[$USER]}
+            if (( COUNT > MAX_COUNT )); then
+              MAX_COUNT=$COUNT
+              TOP_CONTRIBUTORS=($USER)
+            elif (( COUNT == MAX_COUNT )); then
+              TOP_CONTRIBUTORS+=($USER)
+            fi
+          done
+
+          TOP_CONTRIBUTORS_LIST=$(IFS=,; echo "${TOP_CONTRIBUTORS[*]}")
+          TOP_CONTRIBUTORS_TEXT="The top contributor(s) of $MONTH_NAME: $TOP_CONTRIBUTORS_LIST (PRs: $MAX_COUNT)"
+
+          echo "TOP_CONTRIBUTORS_TEXT=$TOP_CONTRIBUTORS_TEXT" >> $GITHUB_ENV
+
           # Prepare contributors list
           CONTRIBUTORS=""
           for USER in "${!PR_COUNTS[@]}"; do
@@ -61,6 +80,10 @@ jobs:
         run: |
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
+          TOP_CONTRIBUTORS_TEXT="${{ env.TOP_CONTRIBUTORS_TEXT }}"
+
+          # Print the top contributor(s) of the month
+          echo "$TOP_CONTRIBUTORS_TEXT"
 
           # Print all contributors of the month and the number of PRs they created
           echo "Contributors of $MONTH_NAME:"

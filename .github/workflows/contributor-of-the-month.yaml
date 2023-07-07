@@ -47,21 +47,34 @@ jobs:
             ((PAGE++))
           done
 
-          # Prepare contributors list
-          CONTRIBUTORS=""
+          # Prepare contributors list and sort by PR counts
+          CONTRIBUTORS=()
           for USER in "${!PR_COUNTS[@]}"; do
             COUNT="${PR_COUNTS[$USER]}"
-            CONTRIBUTORS+="- $USER (PRs: $COUNT)\n"
+            CONTRIBUTORS+=("$COUNT:$USER")
+          done
+          IFS=$'\n' sorted=($(sort -nr <<<"${CONTRIBUTORS[*]}"))
+          unset IFS
+
+          # Prepare top 3 contributors list
+          TOP_CONTRIBUTORS=""
+          for i in 0 1 2; do
+            if [[ $i -lt ${#sorted[@]} ]]; then
+              PR_COUNT=${sorted[$i]%%:*}
+              USERS=$(printf ', %s' $(grep -oP "(?<=^$PR_COUNT:).+" <<<"${sorted[@]}"))
+              USERS=${USERS#, }
+              TOP_CONTRIBUTORS+="$((i+1))nd place: $USERS (PRs: $PR_COUNT)\n"
+            fi
           done
 
-          echo "CONTRIBUTORS=${CONTRIBUTORS}" >> $GITHUB_ENV
+          echo "TOP_CONTRIBUTORS=${TOP_CONTRIBUTORS}" >> $GITHUB_ENV
           echo "MONTH_NAME=${MONTH_NAME}" >> $GITHUB_ENV
 
       - name: Log contributors
         run: |
-          CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
+          TOP_CONTRIBUTORS="${{ env.TOP_CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
 
-          # Print all contributors of the month and the number of PRs they created
-          echo "Top Contributors of $MONTH_NAME:"
-          echo -e "$CONTRIBUTORS"
+          # Print top 3 contributors of the month and the number of PRs they created
+          echo "Top 3 Contributors of $MONTH_NAME:"
+          echo -e "$TOP_CONTRIBUTORS"

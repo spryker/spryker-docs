@@ -110,7 +110,7 @@ To see details on a module, such as, what changes have been made in the later ve
   <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screen+Recording+2020-08-06+at+10.04.06.mov">
 </video>
 
-The detailed view of modules lets you analyze the changes, and if needed, upgrade the modules. To upgrade to the latest minor module versions, run the module [composer update command](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html#composer-update). To upgrade to a major version, follow the [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) of the respective module.
+The detailed view of modules lets you analyze the changes, and if needed, upgrade the modules. To upgrade to the latest minor module versions, run the module [composer update command](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html#composer-update). To upgrade to a major version, follow the [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) of the respective module.
 
 ### Missing-features view: Upgrading your project with the compatible Spryker features
 

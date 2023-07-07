@@ -3392,5 +3392,7 @@ entries:
         nested:
           - title: Integrate Usercentrics
             url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
+          - title: Configure Usercentrics
+            url: /docs/pbc/all/usercentrics/configure-usercentrics.html
           - title: Disconnect Usercentrics
             url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

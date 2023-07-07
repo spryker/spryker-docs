@@ -10,7 +10,7 @@ redirect_from:
 
 This document describes how to use an authentication server.
 
-Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html) guide.
+Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) guide.
 
 Glue allows switching between different authentication servers. In order to provide that ability, the `AuthenticationServerPluginInterface` must be implemented.
 That conception allows wiring plugins implemented an authentication server and extend the default functionality. 

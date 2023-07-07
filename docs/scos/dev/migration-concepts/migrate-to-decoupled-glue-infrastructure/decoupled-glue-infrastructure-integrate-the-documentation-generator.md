@@ -1,5 +1,5 @@
 ---
-title: Integrate documentation generator
+title: "Decoupled Glue infrastructure: Integrate the documentation generator"
 description: Integrate the Glue documentation generation into your project
 template: feature-integration-guide-template
 redirect_from:
@@ -18,7 +18,7 @@ To start the integration of the feature, overview and install the necessary feat
 
 | NAME                                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                           |
 |----------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html)  |
+| Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html)  |
 
 
 ### 1) Install the required modules using Composer

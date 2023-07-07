@@ -3888,6 +3888,20 @@ entries:
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
+    - title: Migrate to decoupled Glue infrastructure
+      nested:
+        - title: Integrate Storefront and Backend Glue API applications
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
+        - title: Integrate the authentication
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+        - title: Integrate the authorization scopes
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
+        - title: Integrate the documentation generator
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
+        - title: Integrate the Glue JSON:API convention
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
+        - title: Integrate the protected endpoints authorization
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html                                                  
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Silex Replacement

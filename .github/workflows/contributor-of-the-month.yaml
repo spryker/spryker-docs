@@ -82,9 +82,9 @@ jobs:
           MONTH_NAME="${{ env.MONTH_NAME }}"
           TOP_CONTRIBUTORS_TEXT="${{ env.TOP_CONTRIBUTORS_TEXT }}"
 
-          # Print the top contributor(s) of the month
-          echo "$TOP_CONTRIBUTORS_TEXT"
-
           # Print all contributors of the month and the number of PRs they created
           echo "Contributors of $MONTH_NAME:"
           echo -e "$CONTRIBUTORS"
+
+          # Print the top contributor(s) of the month
+          echo "$TOP_CONTRIBUTORS_TEXT"

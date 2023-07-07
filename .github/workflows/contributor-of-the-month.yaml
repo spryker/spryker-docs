@@ -31,7 +31,7 @@ jobs:
             # Fetch merged pull requests within the previous month
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
-                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
                    | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then

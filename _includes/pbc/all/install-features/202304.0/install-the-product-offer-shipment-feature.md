@@ -51,7 +51,6 @@ Make sure that the following module has been installed:
     <table name="spy_product_offer_shipment_type">
         <behavior name="event">
             <parameter name="spy_product_offer_shipment_type_all" column="*"/>
-            <parameter name="spy_product_offer_shipment_type_product_offer_reference" column="product_offer_reference" keep-additional="true"/>
         </behavior>
     </table>
 
@@ -76,37 +75,39 @@ Make sure that the following changes have been applied by checking your database
 
 Ensure the following transfers have been created:
 
-| TRANSFER                           | TYPE  | EVENT   | PATH                                                                     |
-|------------------------------------|-------|---------|--------------------------------------------------------------------------|
-| ProductOfferShipmentTypeCriteria   | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCriteriaTransfer   |
-| ProductOfferShipmentTypeConditions | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeConditionsTransfer |
-| ProductOfferShipmentTypeCollection | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionTransfer |
-| ProductOfferShipmentType           | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeTransfer           |
-| ProductOfferShipmentTypeStorage    | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeStorageTransfer    |
-| ProductOfferCriteria               | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer               |
-| ProductOfferConditions             | class | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer             |
-| ProductOfferCollection             | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer             |
-| ProductOffer                       | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                       |
-| ShipmentTypeCriteria               | class | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer               |
-| ShipmentTypeConditions             | class | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer             |
-| ShipmentTypeCollection             | class | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer             |
-| ShipmentType                       | class | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                       |
-| ProductOfferStorage                | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                |
-| ShipmentTypeStorageCriteria        | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer        |
-| ShipmentTypeStorageConditions      | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer      |
-| ShipmentTypeStorageCollection      | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer      |
-| ShipmentTypeStorage                | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                |
-| StoreCollection                    | class | created | src/Generated/Shared/Transfer/StoreCollectionTransfer                    |
-| Store                              | class | created | src/Generated/Shared/Transfer/StoreTransfer                              |
-| StoreRelation                      | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                      |
-| Pagination                         | class | created | src/Generated/Shared/Transfer/PaginationTransfer                         |
-| CartChange                         | class | created | src/Generated/Shared/Transfer/CartChangeTransfer                         |
-| Sort                               | class | created | src/Generated/Shared/Transfer/SortTransfer                               |
-| DataImporterConfiguration          | class | created | src/Generated/Shared/Transfer/DataImportConfigurationTransfer            |
-| DataImporterReport                 | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                 |
-| EventEntity                        | class | created | src/Generated/Shared/Transfer/EventEntityTransfer                        |
-| SynchronizationData                | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                |
-| Filter                             | class | created | src/Generated/Shared/Transfer/FilterTransfer                             |
+| TRANSFER                                   | TYPE  | EVENT   | PATH                                                                             |
+|--------------------------------------------|-------|---------|----------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeCriteria           | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCriteriaTransfer           |
+| ProductOfferShipmentTypeConditions         | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeConditionsTransfer         |
+| ProductOfferShipmentTypeCollection         | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionTransfer         |
+| ProductOfferShipmentTypeIteratorCriteria   | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeIteratorCriteriaTransfer   |
+| ProductOfferShipmentTypeIteratorConditions | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeIteratorConditionsTransfer |
+| ProductOfferShipmentType                   | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeTransfer                   |
+| ProductOfferShipmentTypeStorage            | class | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeStorageTransfer            |
+| ProductOfferCriteria                       | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer                       |
+| ProductOfferConditions                     | class | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer                     |
+| ProductOfferCollection                     | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer                     |
+| ProductOffer                               | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                               |
+| ShipmentTypeCriteria                       | class | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer                       |
+| ShipmentTypeConditions                     | class | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer                     |
+| ShipmentTypeCollection                     | class | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer                     |
+| ShipmentType                               | class | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                               |
+| ProductOfferStorage                        | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                        |
+| ShipmentTypeStorageCriteria                | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer                |
+| ShipmentTypeStorageConditions              | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer              |
+| ShipmentTypeStorageCollection              | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer              |
+| ShipmentTypeStorage                        | class | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                        |
+| StoreCollection                            | class | created | src/Generated/Shared/Transfer/StoreCollectionTransfer                            |
+| Store                                      | class | created | src/Generated/Shared/Transfer/StoreTransfer                                      |
+| StoreRelation                              | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                              |
+| Pagination                                 | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                 |
+| CartChange                                 | class | created | src/Generated/Shared/Transfer/CartChangeTransfer                                 |
+| Sort                                       | class | created | src/Generated/Shared/Transfer/SortTransfer                                       |
+| DataImporterConfiguration                  | class | created | src/Generated/Shared/Transfer/DataImportConfigurationTransfer                    |
+| DataImporterReport                         | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                         |
+| EventEntity                                | class | created | src/Generated/Shared/Transfer/EventEntityTransfer                                |
+| SynchronizationData                        | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                        |
+| Filter                                     | class | created | src/Generated/Shared/Transfer/FilterTransfer                                     |
 
 {% endinfo_block %}
 
@@ -134,7 +135,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     protected function getSynchronizationQueueConfiguration(): array
     {
         return [
-            ProductOfferShipmentTypeStorageConfig::QUEUE_NAME_SYNC_STORAGE_PRODUCT_OFFER_SHIPMENT_TYPE,
+            ProductOfferShipmentTypeStorageConfig::PRODUCT_OFFER_SHIPMENT_TYPE_SYNC_STORAGE_QUEUE,
         ];
     }
 }
@@ -164,7 +165,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     protected function getProcessorMessagePlugins(Container $container): array
     {
         return [
-            ProductOfferShipmentTypeStorageConfig::QUEUE_NAME_SYNC_STORAGE_PRODUCT_OFFER_SHIPMENT_TYPE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+            ProductOfferShipmentTypeStorageConfig::PRODUCT_OFFER_SHIPMENT_TYPE_SYNC_STORAGE_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
         ];
     }
 }
@@ -197,13 +198,14 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
 
 4. Set up publisher plugins:
 
-| PLUGIN                                                        | SPECIFICATION                                                                              | PREREQUISITES                                                                               | NAMESPACE                                                                                           |
-|---------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| ProductOfferShipmentTypeWritePublisherPlugin                  | Publishes product offer shipment type data by `SpyProductOfferShipmentType` entity events. | Requires `productOfferReference` to be provided in `EventEntityTransfers.additionalValues`. | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType |
-| ProductOfferProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyProductOffer` events.                    |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer             |
-| ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyProductOfferStore` events.               |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore        |
-| ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyShipmentType` events.                    |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType             |
-| ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyShipmentTypeStore` events.               |                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore        |
+| PLUGIN                                                        | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                                                                           |
+|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------|
+| ProductOfferShipmentTypeWritePublisherPlugin                  | Publishes product offer shipment type data by `SpyProductOfferShipmentType` entity events.                  |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType |
+| ProductOfferProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyProductOffer` events.                                     |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer             |
+| ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyProductOfferStore` events.                                |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore        |
+| ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin      | Publishes product offer shipment type data by `SpyShipmentType` events.                                     |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType             |
+| ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin | Publishes product offer shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore        |
+| ProductOfferShipmentTypePublisherTriggerPlugin                | Allows to populate product offer shipment type storage table with data and trigger further export to Redis. |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher                          |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -214,6 +216,7 @@ namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferProductOfferShipmentTypeWritePublisherPlugin;
 use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentType\ProductOfferShipmentTypeWritePublisherPlugin;
+use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferShipmentTypePublisherTriggerPlugin;
 use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ProductOfferStore\ProductOfferStoreProductOfferShipmentTypeWritePublisherPlugin;
 use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeProductOfferShipmentTypeWritePublisherPlugin;
 use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreProductOfferShipmentTypeWritePublisherPlugin;
@@ -229,6 +232,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return array_merge(
             $this->getProductOfferShipmentTypeStoragePlugins(),
         );
+    }
+    
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            return new ProductOfferShipmentTypePublisherTriggerPlugin(),
+        ];
     }
 
     /**
@@ -281,7 +294,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Make sure that the `product-offer-shipment-type` data is stored in storage correctly:
 
-1. Fill the `spy_product_offer`, `spry_product_offer_store`, `spy_shipment_type`, `spy_shipment_type_store`, and `spy_product_offer_shipment_type` tables with data.
+1. Fill the `spy_product_offer`, `spy_product_offer_store`, `spy_shipment_type`, `spy_shipment_type_store`, and `spy_product_offer_shipment_type` tables with data.
 2. Run the `console publish:trigger-events -r product_offer` command.
 3. Make sure that the `spy_product_offer_shipment_type_storage` table has been filled with respective data.
 4. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_shipment_type:{store}:{product_offer_reference}` mask.

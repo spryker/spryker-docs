@@ -24,8 +24,8 @@ redirect_from:
 - /v1/docs/en/system-requirements
 - /v4/docs/supported-browsers
 - /v4/docs/en/supported-browsers
-- /docs/scos/dev/setup/system-requirements.html
-- /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+- /docs/scos/dev/set-up-spryker-locally/system-requirements.html
+- /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
 ---
 | REQUIREMENT                               | VALUE                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

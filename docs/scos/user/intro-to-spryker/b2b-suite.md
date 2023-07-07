@@ -76,7 +76,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html)
 - [Product Groups](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-groups-feature-overview.html)
 - [Product Relations](/docs/pbc/all/product-relationship-management/{{site.version}}/product-relationship-management.html)
-- [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/product-sets-feature-overview.html)
+- [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/product-sets-feature-overview.html)
 - [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
 - [Product Barcode](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-barcode-feature-overview.html)
 - [Product Bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
@@ -88,7 +88,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
-- [Search](/docs/pbc/all/search/{{site.version}}/search.html)
+- [Search](/docs/pbc/all/search/{{site.version}}/base-shop/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
 
 <br>
@@ -101,4 +101,4 @@ To demonstrate the B2B features in a live implementation, we use a B2B Demo Shop
 
 To download the B2B Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2b-demo-shop](https://github.com/spryker-shop/b2b-demo-shop).
 
-To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).

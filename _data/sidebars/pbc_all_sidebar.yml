@@ -1497,6 +1497,17 @@ entries:
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/refunds-feature-overview.html
+              - title: Import and export data
+                url: /docs/pbc/all/order-management-system/ibase-shop/import-and-export-data/import-and-export-order-management-system-data.html
+                nested:
+                  - title: "Import file details: order-status.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-file-details-order-status.csv.html
+                  - title: "Export file details: orders.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-orders.csv.html
+                  - title: "Export file details: order-expenses.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
+                  - title: "Export file details: order-items.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html                
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1537,17 +1548,6 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html
                   - title: Split delivery migration concept
                     url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/split-delivery-migration-concept.html
-              - title: Import and export data
-                url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-and-export-order-management-system-data.html
-        #        nested:
-        #          - title: "Import file details - order-status.csv"
-        #            url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-file-details-order-status.csv.html
-        #          - title: "Export file details: orders.csv"
-        #            url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-orders.csv.html
-        #          - title: "Export file details: order-expenses.csv"
-        #            url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
-        #          - title: "Export file details: order-items.csv"
-        #            url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:

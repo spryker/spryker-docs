@@ -22,7 +22,7 @@ redirect_from:
   - /v2/docs/en/vm-cleanup
   - /v1/docs/vm-cleanup
   - /v1/docs/en/vm-cleanup
-  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/virtual-machine-cleanup.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/virtual-machine-cleanup.html
 ---
 
 <!-- Used to be: http://spryker.github.io/getting-started/installation/virtual-machine-cleanup/ -->

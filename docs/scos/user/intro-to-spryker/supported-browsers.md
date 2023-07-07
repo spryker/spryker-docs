@@ -4,7 +4,7 @@ description: This document lists browsers supported by Spryker Commerce OS.
 last_updated: Jun 8, 2022
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
   - /docs/scos/dev/system-requirements/202212.0/scos-supported-browsers.html
 ---
 

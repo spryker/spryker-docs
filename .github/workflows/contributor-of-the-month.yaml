@@ -29,7 +29,7 @@ jobs:
           PAGE=1
           while : ; do
             # Fetch merged pull requests within the specified date range
-            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.DOCS_INTERNAL_CONTRIBUTORS }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
                    | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
@@ -47,6 +47,24 @@ jobs:
             ((PAGE++))
           done
 
+          # Determine the top contributor
+          TOP_CONTRIBUTOR=()
+          MAX_PR=0
+          for USER in "${!PR_COUNTS[@]}"; do
+            if [ "${PR_COUNTS[$USER]}" -gt "$MAX_PR" ]; then
+              MAX_PR="${PR_COUNTS[$USER]}"
+              TOP_CONTRIBUTOR=("$USER")
+            elif [ "${PR_COUNTS[$USER]}" -eq "$MAX_PR" ]; then
+              TOP_CONTRIBUTOR+=("$USER")
+            fi
+          done
+
+          # Print all contributors of the month and the number of PRs they created
+          echo "Top Contributors of $MONTH_NAME:"
+          for USER in "${TOP_CONTRIBUTOR[@]}"; do
+            echo "- $USER (PRs: $MAX_PR)"
+          done
+
           # Prepare contributors list
           CONTRIBUTORS=""
           for USER in "${!PR_COUNTS[@]}"; do
@@ -62,6 +80,4 @@ jobs:
           CONTRIBUTORS="${{ env.CONTRIBUTORS }}"
           MONTH_NAME="${{ env.MONTH_NAME }}"
 
-          # Print all contributors of the month and the number of PRs they created
-          echo "Contributors of $MONTH_NAME:"
           echo -e "$CONTRIBUTORS"

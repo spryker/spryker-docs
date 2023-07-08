@@ -3,7 +3,47 @@ title: Docs release notes
 description: Spryker docs release notes
 template: concept-topic-template
 ---
+## June 2023
 
+In June 2023, we have added and updated the following pages:
+
+### New pages
+- [Security release notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html).
+- [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-presets.html): Learn how you can use presets to install predefined applications.
+- [Service Points feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-service-points-feature.html).
+- [Shipment + Service Points feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-shipment-service-points-feature.html).
+- [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202304.0/glue-api/install-backend-api-glue-json-api-convention.html).
+- Documentation on shipment data import:
+    - [File details - shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/202304.0/base-shop/import-and-export-data/file-details-shipment-method-shipment-type.csv.html).
+    - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/202304.0/base-shop/import-and-export-data/file-details-shipment-type-store.csv.html).
+    - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/202304.0/base-shop/import-and-export-data/file-details-shipment-type.csv.html).
+- [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/scos/dev/front-end-development/202212.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html).
+- [Spryker documentation style guide](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spryker-documentation-style-guide.html):
+    - [Examples](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html).
+    - [Spelling](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html).
+
+## Updated pages
+- [Shipment feature integration guide](/docs/pbc/all/carrier-management/202304.0/base-shop/install-and-upgrade/install-the-shipment-feature.html).
+- [Environments overview](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html).
+- [Spryker Core Back Office + Warehouse User Management feature integration guide](/docs/pbc/all/back-office/202304.0/install-spryker-core-back-office-warehouse-user-management-feature.html).
+- [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202304.0/base-shop/install-and-upgrade/install-the-warehouse-user-management-feature.html).
+- [Warehouse picking feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-feature.html).
+- [Push notification feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-push-notification-feature.html).
+- [Product Offer Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-product-offer-shipment-feature.html).
+- [Service Points feature integration guide](/docs/scos/dev/feature-integration-guides/202304.0/install-the-service-points-feature.html).
+- [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
+- [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
+- [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+- [Multidimensional array](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+- [PHP version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
+- [Plugin registration with restrictions](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
+- [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Single plugin argument](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- [Integrate profiler module](/docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html).
+- [Approval Process feature overview](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/approval-process-feature-overview.html).
+- [Approval Process feature integration](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html).
+
+For more details on these and other updates to the Spryker docs in June 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 ## May 2023
 
 In May 2023, we have added and updated the following pages:

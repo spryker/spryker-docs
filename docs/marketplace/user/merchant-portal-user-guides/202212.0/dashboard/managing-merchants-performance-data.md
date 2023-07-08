@@ -30,7 +30,7 @@ This section contains the attributes description you see when managing offers in
 
 #### Offers widget
 
-![offers-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/offers-widget.png)
+![offers-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/orders-widget.png)
 
 The **Offers** widget provides the following information:
 
@@ -73,7 +73,7 @@ This section contains the attributes description you see when managing orders in
 
 #### Orders widget
 
-![orders-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/orders-widget.png)
+![orders-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/offers-widget.png)
 
 The **Orders** widget provides the following information:
 

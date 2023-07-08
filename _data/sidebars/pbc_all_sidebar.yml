@@ -12,6 +12,10 @@ entries:
             url: /docs/pbc/all/back-office/back-office-translations-overview.html
           - title: Install the Spryker Core Back Office feature
             url: /docs/pbc/all/back-office/install-the-spryker-core-back-office-feature.html
+          - title: Install the Warehouse User Management feature
+            url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-the-warehouse-user-management-feature.html
+            include_versions:
+            - "202304.0"
           - title: Install the Spryker Core Back Office + Warehouse User Management feature
             url: /docs/pbc/all/back-office/install-spryker-core-back-office-warehouse-user-management-feature.html
             include_versions:
@@ -3388,5 +3392,7 @@ entries:
         nested:
           - title: Integrate Usercentrics
             url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
+          - title: Configure Usercentrics
+            url: /docs/pbc/all/usercentrics/configure-usercentrics.html
           - title: Disconnect Usercentrics
             url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

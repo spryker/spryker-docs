@@ -9,7 +9,7 @@ This document describes how to integrate profiler module into a Spryker project.
 
 ## Prerequisites
 
-To start the integration, review and install the necessary features:
+To start the integration, install the necessary features:
 
 | NAME                  | VERSION          | INTEGRATION GUIDE                                                                                                                                               |
 |-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|

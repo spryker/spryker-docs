@@ -1,7 +1,7 @@
 ---
 title: Oryx for Zed
 description: oryx-for-zed is a tool that performs a full build for Spryker Zed UI applications.
-last_updated: Apr 3, 2023
+last_updated: May 15, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/oryx-for-zed
 originalArticleId: 7bb2b280-f309-4bd4-b7cd-d5c30b345cc0
@@ -37,8 +37,8 @@ It also provides access to Zed settings and Zed Webpack configuration, so you ca
 
 ### Requirements
 
-* `nodejs` version >=16.0.0
-* `npm` version >=8.0.0
+- [Node.js](https://nodejs.org/en/download/): minimum version is 18.
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
 
 {% info_block infoBox "Note" %}
 
@@ -52,8 +52,6 @@ You need to add `oryx-for-zed` to your `package.json`. Open the terminal, go to 
 
 ```bash
 npm install @spryker/oryx-for-zed --save-dev
-# or
-yarn add @spryker/oryx-for-zed --dev
 ```
 
 ## Usage
@@ -81,8 +79,6 @@ The following section describes how to run `oryx-for-zed`.
 
 ```bash
 npm run build-zed
-# or
-yarn run build-zed
 ```
 
 ### Extend or change the settings
@@ -219,8 +215,6 @@ You can pass them using the terminal:
 
 ```bash
 npm run zed -- --arg
-# or
-yarn run zed -- --arg
 ```
 
 Or embed them into the script section in `package.json`:

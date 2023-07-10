@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
 ---
 
-This document explains how to add support for number formatting in the Storefront UI.
+Number formats can vary by locales. For example, if in the DE locale there is a number _123.456,78_, in the US locale it would be _123,456.78_. To enable the proper number formatting by locale in your store, follow the instructions in this document.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ To add support for number formatting in the Storefront, integrate the required f
 
 | NAME                                   | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                           | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                           |
+| Spryker Core                           | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
 
 ## 1) Install the required modules using Composer
 

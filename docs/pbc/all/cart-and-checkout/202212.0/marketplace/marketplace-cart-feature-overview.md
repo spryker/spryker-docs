@@ -16,7 +16,7 @@ Item notes in the Merchant Portal:
 
 ![Items notes in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Cart+Notes/mp-item-notes-merchant-portal.png)
 
-The Marketplace administrator can see the special request in the [order details section of the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-main-merchant-orders.html#merchant-order-overview-page):
+The Marketplace administrator can see the special request in the [order details section of the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html#merchant-order-overview-page):
 
 ![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png)
 

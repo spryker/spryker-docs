@@ -9,7 +9,7 @@ related:
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
 
 
 {% info_block warningBox "Note" %}
@@ -55,7 +55,7 @@ One return can include products only from one merchant.
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the merchant [processes the return](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#creating-a-marketplace-return). For details about the return states, see [Return items states](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#reference-information-creating-a-marketplace-return).
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the merchant [processes the return](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#creating-a-marketplace-return). For details about the return states, see [Return items states](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html#reference-information-creating-a-marketplace-return).
 
 All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the buyer can view the return details and print the return slip.
 
@@ -65,7 +65,7 @@ The following figure shows how to create a return, view its details, and print a
 
 ## Marketplace Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide: Managing orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html). Also, a Back Office user can view returns, close fulfilled returns, print a return slip, and cancel returns.
+A Back Office user can create returns for the [returnable items](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide: Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). Also, a Back Office user can view returns, close fulfilled returns, print a return slip, and cancel returns.
 
 ## Marketplace Return Management in the Merchant Portal
 

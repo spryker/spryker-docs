@@ -4,12 +4,13 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This guide describes how to resolve issues related to single plugin arguments inside the dependency provider’s methods.
+This check makes sure that the plugins don't require the complicated constructor arguments.
 
 ## Problem description
 
 Inside of the dependency provider you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. 
-But not all possible expressions and variable types can be used as constructor arguments.
+To keep the plugins simple, they shouldn't require complicated objects as constructor arguments.
+
 Supported argument types:
  - int
  - float
@@ -18,20 +19,36 @@ Supported argument types:
  - null
  - usage of new statement to instantiate a class (without further methods calls)
 
+## Example of evaluator error message
+
+```bash
+================
+SINGLE PLUGIN ARGUMENT
+================
+
++---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+| # | Message                                                                                   | Target                                                                |
++---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+| 1 | Plugin \Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin                  |                                                                       |
+|   | should not have unsupported constructor parameters.                                       | <path_to_class>\ConsoleDependencyProvider::getMonitoringConsoleMethod |
+|   | Supported argument types: int, float, string, const, bool, int, usage of new statement to |                                                                       |
+|   | instantiate a class (without further methods calls)                                       |                                                                       |
++---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+```
+
 ## Example of code that causes an upgradability error
 
 The dependency provider method returns the plugin with unwanted argument: 
 
 ```bash
-namespace SprykerSdkTest\InvalidProject\src\Pyz\Zed\SinglePluginArgument;
+namespace Pyz\Zed\SinglePluginArgument;
 
-use Spryker\Zed\Monitoring\Communication\Plugin\Console\MonitoringConsolePlugin;
-use stdClass;
+use Pyz\Zed\Monitoring\Communication\Plugin\Console\MonitoringConsolePlugin;
 
 class ConsoleDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin
+     * @return \Pyz\Zed\Console\Communication\Plugin\MonitoringConsolePlugin
      */
     public function getMonitoringConsoleMethod(): MonitoringConsolePlugin
     {
@@ -41,26 +58,9 @@ class ConsoleDependencyProvider
     }
 }
 ```
-### Related error in the Evaluator output
-
-```bash
-================
-SINGLE PLUGIN ARGUMENT
-================
-
-+---+---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| # | Message                                                                                                                         | Target                                                                                                     |
-+---+---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| 1 | Plugin \Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin                                                        |                                                                                                            |
-|   | should not have unsupported constructor parameters.                                                                             | \Pyz\InvalidProject\src\Pyz\Zed\SinglePluginArgument\ConsoleDependencyProvider::getMonitoringConsoleMethod |
-|   | Supported argument types: int, float, string, const, bool, int, usage of new statement to                                       |                                                                                                            |
-|   | instantiate a class (without further methods calls)                                                                             |                                                                                                            |
-+---+---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-```
 
 ### Resolving the error
 
-To resolve the error provided in the example, try the following in the provided order:
-1. Try to use file name as an argument and move the reading inside of the plugin.
-2. Try to avoid arguments that are not mentioned in the supported types.
+To resolve the error:
+1. Rework the plugin - remove the usage of the complicated constructor arguments.
 

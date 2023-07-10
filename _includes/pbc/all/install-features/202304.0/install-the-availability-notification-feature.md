@@ -16,7 +16,7 @@ To start feature integration, integrate the required features:
 | Mailing and Notifications | {{site.version}}   | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
 | Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Product                   | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
-| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                                      |
+| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules using Composer
 
@@ -103,9 +103,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
      public function getEventSubscriberCollection()
      {
          $eventSubscriberCollection = parent::getEventSubscriberCollection();
-        
+
          $eventSubscriberCollection->add(new AvailabilityNotificationSubscriber());
-        
+
          return $eventSubscriberCollection;
      }
 }
@@ -156,7 +156,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
      public function provideBusinessLayerDependencies(Container $container)
      {
          $container = parent::provideBusinessLayerDependencies($container);
-        
+
          $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
              $mailCollection
              ...
@@ -165,7 +165,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
              ->add(new AvailabilityNotificationMailTypePlugin())
              ...
              ;
-    
+
             return $mailCollection;
         });
         ...
@@ -344,7 +344,7 @@ To start feature integration, integrate the required feature:
 | Mailing and Notifications | {{site.version}}   | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
 | Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Product                   | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
-| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                                      |
+| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules using Composer
 

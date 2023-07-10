@@ -64,11 +64,11 @@ console transfer:generate
 
 Before starting the migration, make sure that Webpack is v5; if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-upgrade-to-webpack-v5.html) is required.
 
-## 3) Update NPM dependencies
+## 3) Update npm dependencies
 
 {% info_block infoBox "Info" %}
 
-Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/).
+Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download).
 
 {% endinfo_block %}
 

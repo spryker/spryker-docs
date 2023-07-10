@@ -31,7 +31,7 @@ namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
 
 use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
-use Spryker\Glue\UsersBackendApi\Plugin\GlueJsonApiConvention\UserByWarehouseUserAssignmentResourceRelationshipPlugin;
+use Spryker\Glue\UsersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\UserByWarehouseUserAssignmentBackendResourceRelationshipPlugin;
 use Spryker\Glue\WarehouseUsersBackendApi\WarehouseUsersBackendApiConfig;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
@@ -46,7 +46,7 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
     ): ResourceRelationshipCollectionInterface {
         $resourceRelationshipCollection->addRelationship(
             WarehouseUsersBackendApiConfig::RESOURCE_TYPE_WAREHOUSE_USER_ASSIGNMENTS,
-            new UserByWarehouseUserAssignmentResourceRelationshipPlugin(),
+            new UserByWarehouseUserAssignmentBackendResourceRelationshipPlugin(),
         );
 
         return $resourceRelationshipCollection;

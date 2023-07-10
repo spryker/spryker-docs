@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  |
 
 ### 1) Install the required modules using Composer
 
@@ -82,14 +82,20 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
 | PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
 | PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
-| ApiPushNotificationSubscriptionAttributes            | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionAttributesTransfer            |
-| ApiPushNotificationGroupAttributes                   | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupAttributesTransfer                   |
+| ApiPushNotificationSubscriptionsAttributes           | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionsAttributesTransfer           |
+| ApiPushNotificationGroupsAttributes                  | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
+| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequest                                                  |
+| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollection                                 |
+| Sort                                                 | class | created | src/Generated/Shared/Transfer/Sort                                                         |
+| Pagination                                           | class | created | src/Generated/Shared/Transfer/Pagination                                                   |
+| ApiPushNotificationProvidersAttributes               | class | created | src/Generated/Shared/Transfer/ApiPushNotificationProvidersAttributes                       |
+| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
 
 {% endinfo_block %}
 
 ### 3) Set up configuration
 
-1. To make the `push-notification-subscriptions` resource protected, adjust the protected paths configuration:
+1. To make the `push-notification-subscriptions` and `push-notification-providers` resource protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -110,6 +116,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
         return [
             '/push-notification-subscriptions' => [
                 'isRegularExpression' => false,
+            ],
+            '/\/push-notification-providers.*/' => [
+                'isRegularExpression' => true,
             ],
         ];
     }
@@ -166,8 +175,8 @@ web-push generate-vapid-keys --json
 1. Append glossary according to your configuration:
 
 ```csv
-push_notification.validation.error.push_notification_provider_not_found,Push notification provider name is not found.,en_US
-push_notification.validation.error.push_notification_provider_not_found,Der Anbietername der Push-Benachrichtigung wurde nicht gefundenn.,de_DE
+push_notification.validation.error.push_notification_provider_not_found,The push notification provider was not found.,en_US
+push_notification.validation.error.push_notification_provider_not_found,Der Push-Benachrichtigungsanbieters wurde nicht gefunden.,de_DE
 push_notification.validation.error.push_notification_not_found,Push notification not found.,en_US
 push_notification.validation.error.push_notification_not_found,Push-Nachricht nicht gefunden.,de_DE
 push_notification.validation.error.push_notification_provider_already_exists,Push notification provider already exists.,en_US
@@ -180,6 +189,18 @@ push_notification_web_push_php.validation.error.invalid_payload_structure,Invali
 push_notification_web_push_php.validation.error.invalid_payload_structure,Ungültige Nutzlaststruktur.,de_DE
 push_notification_web_push_php.validation.error.payload_length_exceeded,The maximum payload length exceeded.,en_US
 push_notification_web_push_php.validation.error.payload_length_exceeded,Die maximale Länge der Nutzlast wurde überschritten.,de_DE
+push_notification.validation.push_notification_provider_name_exists,A push notification provider with the same name already exists.,en_US
+push_notification.validation.push_notification_provider_name_exists,Ein Push-Benachrichtigungsanbieter mit demselben Namen ist bereits vorhanden.,de_DE
+push_notification.validation.push_notification_provider_name_wrong_length,A push notification provider name must have length from %min% to %max% characters.,en_US
+push_notification.validation.push_notification_provider_name_wrong_length,Ein Push-Benachrichtigungsanbietername muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+push_notification.validation.push_notification_provider_name_is_not_unique,A push notification provider with the same name already exists in request.,en_US
+push_notification.validation.push_notification_provider_name_is_not_unique,Ein Push-Benachrichtigungsanbieter mit demselben Namen ist bereits in der Anfrage vorhanden.,de_DE
+push_notification.validation.push_notification_exists,Unable to delete push notification provider while push notification exists.,en_US
+push_notification.validation.push_notification_exists,Der Push-Benachrichtigungsanbieter kann nicht gelöscht werden solange Push-Benachrichtigungen vorhanden sind.,de_DE
+push_notification.validation.push_notification_subscription_exists,Unable to delete push notification provider while push notification subscription exists.,en_US
+push_notification.validation.push_notification_subscription_exists,Der Push-Benachrichtigungsanbieter kann nicht gelöscht werden solange Push-Benachrichtigungsabonnements vorhanden sind.,de_DE
+push_notification.validation.wrong_request_body,Wrong request body.,en_US
+push_notification.validation.wrong_request_body,Falscher Anforderungstext.,de_DE
 ```
 
 2. Import data:
@@ -282,7 +303,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 Ensure that the installer plugin works correctly:
 
-1. Execute install plugins: 
+1. Execute install plugins:
 ```bash
 docker/sdk console setup:init-db
 ```
@@ -317,7 +338,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
      * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
-    { 
+    {
         return [
             new DeleteExpiredPushNotificationSubscriptionConsole(),
             new SendPushNotificationConsole(),
@@ -329,9 +350,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 4. To enable the Backend API, register the plugin:
 
-| PLUGIN                                     | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
-|--------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| PushNotificationSubscriptionResourcePlugin | Registers the `push-notification-subscriptions` resource. |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication |
+| PLUGIN                                             | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                       |
+|----------------------------------------------------|------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| PushNotificationSubscriptionsBackendResourcePlugin | Registers the `push-notification-subscriptions` resource.  |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication |
+| PushNotificationProvidersBackendResourcePlugin     | Registers the `push-notification-providers` resource.      |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -342,6 +364,7 @@ namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication\PushNotificationSubscriptionsBackendResourcePlugin;
+use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationProvidersBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -352,6 +375,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     {
         return [
             new PushNotificationSubscriptionsBackendResourcePlugin(),
+            new PushNotificationProvidersBackendResourcePlugin(),
         ];
     }
 }
@@ -638,7 +662,7 @@ self.addEventListener('push', function (event) {
 
 5. Setup credentials:
    1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your `VAPID` public key.
-   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system. 
+   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system.
 6. Run the local HTTP server with the demo app:
 ```bash
 php -S localhost:8000

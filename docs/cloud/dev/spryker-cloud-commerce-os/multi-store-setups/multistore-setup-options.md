@@ -1,6 +1,6 @@
 ---
-title: Multistore setup options
-description: Learn about all the setup options you have for a multistore environment.
+title: Multi-store setup options
+description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
 related:
   - title: Add and remove databases of stores
@@ -9,15 +9,15 @@ related:
     link: docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
 ---
 
-This document outlines the various options available for a multistore setup and is essential to review when defining the architecture for your project and prior to implementing a new store. 
+This document outlines the various options available for a multi-store setup and is essential to review when defining the architecture for your project and prior to implementing a new store. 
 
 Keep in mind that the definition of a store can vary depending on the business use case. For example, it can refer to a region, market, country, or physical store.
 
-## Assess whether your shop is fit for Spryker Multistore
+## Assess whether your shop is fit for Spryker Multi-Store
 
 When planning multiple stores, it is crucial to determine whether your project supports the Spryker Multistore solution and assess whether it is necessary for your business needs.
 
-The Spryker Multistore solution is designed to represent several business channels on a single platform. These channels include:
+The Spryker Multi-Store solution is designed to represent several business channels on a single platform. These channels include:
 
 - Localization: Involves supporting different locales, currencies, and languages for each store to ensure customers see the correct information and pricing based on their location. The localization channel can include the following:
 
@@ -56,7 +56,13 @@ When setting up multiple stores, we recommended to group stores that share the s
 This setup has the following characteristics:
 
 - One store or multiple stores. 
-- Each store has a dedicated index for ES and its own key-value storage namespace (Redis).
+- Each store has a dedicated index for ES and its own key-value storage namespace (Redis). 
+{% info_block infoBox "Info" %}
+
+While the search index and key-value storages are shared resources, you can have multiple indexes within the same search instance and multiple namespaces in Redis.
+
+{% endinfo_block %}
+
 - One shared database.
 - One region with multiple stores.
 - Shared codebase.
@@ -82,7 +88,7 @@ The following table provides details on infrastructure for this setup:
 | What | How |
 |------|-----|
 | DB     | Shared    |
-| Key-value storage (Redis) and Search (OpenSearch/ElasticCache) services     | Shared    |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Shared    |
 | Spryker Storefront Yves     |Shared     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
 | Complexity of rollout     | Low   |
@@ -96,6 +102,13 @@ This setup has the following characteristics:
 
 - Multiple stores. 
 - Each store has a dedicated Elasticsearch index and its own Redis key-value storage namespace.
+
+{% info_block infoBox "Info" %}
+
+While the search index and key-value storages are shared resources, you can have multiple indexes within the same search instance and multiple namespaces in Redis.
+
+{% endinfo_block %}
+
 - Virtual separated database per store. For details on how to add virtual databases to your store, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% info_block infoBox "Info" %}
@@ -119,7 +132,7 @@ The following table provides details on the infrastructure for this setup:
 | What | How |
 |------|-----|
 | DB     | Separate    |
-| Key-value storage (Redis) and search (OpenSearch/ElasticCache) services     | Shared    |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Shared    |
 | Spryker Storefront Yves     |Shared     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
 | Complexity of rollout     | Medium   |
@@ -138,7 +151,7 @@ You can apply the virtually isolated database to setup one and setup three too. 
 This setup has the following characteristics:
 
 - Multiple stores. 
-- Each store has dedicated search and key-value storage services. 
+- Each store has dedicated key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services. 
 - Separate database per account.
 - Allows for different regions.
 - Lets you use themes for a different visual look and feel.
@@ -173,7 +186,7 @@ The following table provides details on the infrastructure for this setup:
 | What | How |
 |------|-----|
 | DB     | Separate    |
-| Key-value storage (Redis) and search (OpenSearch/ElasticCache) services     | Separate    |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Separate    |
 | Spryker Storefront Yves     |Separate     |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Separate   |
 | Complexity of rollout     | High   |
@@ -186,10 +199,10 @@ The following tables contain high-level criteria that sum up the setups describe
 
 **Infrastructure details:**
 
-| What                                                                   | Setup 1 | Setup 2  | Setup 2  |
+| What                                                                   | Setup 1 | Setup 2  | Setup 3  |
 |------------------------------------------------------------------------|---------|----------|----------|
 | DB                                                                     | Shared  | Separate | Separate |
-| Ke-value storage (Redis) and search (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |
+| Ke-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |
 | Spryker Storefront Yves                                                | Shared  | Shared   | Separate |
 | Spryker Commerce OS                                                    | Shared  | Shared   | Separate |
 | Complexity of rollout                                                  | Low     | Medium   | High     |
@@ -228,10 +241,10 @@ If you anticipate a high load, it's essential to consult and obtain guidance fro
 |  | Setup 1  | Setup 2  | Setup 3  |
 |------|---|---|---|
 | ACCESSIBILITY     | <ul><li>Data is separated only on the application level.</li><li>Complexity in data separation in the Back Office.</li></ul>  | Full data separation | Full data separation  |
-| MAINTAINABILITY     |<ul><li>Not all features fully support multistore in one database. Some features have to be customized as multi-country</li><li>New codebase is rolled out to all countries at once.</li></ul>   |<ul><li>Import of each country’s data into its own database only, so there is no shared catalog data.</li> <li>New codebase is rolled out to all countries at once.</li></ul>   |<ul><li>Data import has to be executed on all environments.</li><li>It is impossible to roll out the codebase to all regions at the same time.</li></ul>   |
+| MAINTAINABILITY     |<ul><li>Not all features fully support Multi-Store in one database. Some features have to be customized as multi-country</li><li>New codebase is rolled out to all countries at once.</li></ul>   |<ul><li>Import of each country’s data into its own database only, so there is no shared catalog data.</li> <li>New codebase is rolled out to all countries at once.</li></ul>   |<ul><li>Data import has to be executed on all environments.</li><li>It is impossible to roll out the codebase to all regions at the same time.</li></ul>   |
 | PERFORMANCE     |Infrastructure is subject to more frequent scaling up in case of higher loads.   | Infrastructure is subject to more frequent scaling up in case of higher loads.  |Isolated AWS accounts.   |
 
 ## Next steps
 
-- [Implement a new store for your multistore environment](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
+- [Implement a new store for your multi-store environment](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
 - [Check your and Spryker's tasks when setting up a new store](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html)

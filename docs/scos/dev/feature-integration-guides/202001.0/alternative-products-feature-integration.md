@@ -67,7 +67,7 @@ Adjust the schema definition so that entity changes trigger the events.
  </database>
  ```
     
-Set up synchronization queue pools so that non-multistore entities (not store specific entities) get synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 

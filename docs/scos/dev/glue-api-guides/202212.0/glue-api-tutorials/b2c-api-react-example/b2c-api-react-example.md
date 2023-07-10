@@ -52,7 +52,7 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 
 | API | REFERENCE DOCUMENTS |
 | --- | --- |
-| Search API | [Catalog search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-search-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |
+| Search API | [Catalog search](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |
 | Category API | [Retrieving category trees](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html) |
 | Product API | [Retrieving abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)<br>[Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html) |
 | Product Availability API | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html)<br>[Retrieve concrete product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) |

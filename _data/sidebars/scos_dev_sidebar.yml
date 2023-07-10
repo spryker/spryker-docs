@@ -2746,7 +2746,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
       include_versions:
       - "202204.0"
-      - "202212.0"
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
@@ -2786,10 +2785,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
-    - title: Migration Guide - Offer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-offer.html
-    - title: Migration Guide - OfferGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
     - title: Migration Guide - RabbitMQ
@@ -4187,6 +4182,11 @@ entries:
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    - title: Integrate Zed API
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api.html
+      nested:
+        - title: Integrate Zed API for merchant relationships
+          url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
     - title: Authorization Enabler
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
     - title: Basic SEO techniques

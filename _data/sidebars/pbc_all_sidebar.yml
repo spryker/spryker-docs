@@ -1418,6 +1418,10 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-productmerchantportalgui-module.html
                       - title: ProductOfferPricesRestApi
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-productofferpricesrestapi-module.html
+                      - title: Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-offer-module.html
+                      - title: OfferGui
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-offergui-module.html
               - title: Import data
                 nested:
                   - title: "combined_merchant_product_offer.csv"

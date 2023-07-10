@@ -1,4 +1,4 @@
-name: Internal contributor of the month
+name: Internal Contributor of the Month
 
 on:
   push:
@@ -6,19 +6,19 @@ on:
       - 'contributor-workflow'
 
 jobs:
-  determine-internal-contributor:
+  determine-contributor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Determine internal contributor
+      - name: Determine contributor
         id: determine
         run: |
-          # Set the start and end dates
-          START_DATE="2023-05-01"
-          END_DATE="2023-05-31"
-          MONTH_NAME="May"
+          # Set the start and end dates for June 2023
+          START_DATE="2023-06-01"
+          END_DATE="2023-06-30"
+          MONTH_NAME="June"
 
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
@@ -32,20 +32,22 @@ jobs:
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and .base.ref == "master" and (.labels[].name | test("^contributor$")) | not)) | map(select(.user.login | IN($EXCLUDED_USERS[]; .))) | .[].user.login')
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and (.labels[].name | test("^contributor$")) | not)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
             fi
 
             for USER in $PRS; do
-              PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+              if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
+                PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+              fi
             done
 
             ((PAGE++))
           done
 
-          # Determine the top internal contributor
+          # Determine the top contributor
           MAX_COUNT=0
           TOP_CONTRIBUTORS=()
 

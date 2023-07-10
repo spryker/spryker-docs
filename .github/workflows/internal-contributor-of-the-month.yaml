@@ -32,16 +32,14 @@ jobs:
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and .base.ref == "master" and (.labels[].name | test("^contributor$")) | not)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
             fi
 
             for USER in $PRS; do
-              if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-                PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
-              fi
+              PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
             done
 
             ((PAGE++))

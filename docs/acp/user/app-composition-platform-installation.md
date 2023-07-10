@@ -40,7 +40,7 @@ To make your project ACP-ready, different update steps are necessary depending o
 - SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html): All the changes required for ACP readiness are already included, but you should still verify them at the project level.
 - Older versions: To get the project ACP-ready, you should complete all steps described in this document.
 
-{% info_block infoBox "Product version ealier than 202211.0" %}
+{% info_block infoBox "Product version earlier than 202211.0" %}
 
 If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
 
@@ -62,8 +62,7 @@ Starting with the Spryker product release [202211.0](/docs/scos/user/intro-to-sp
 #### 2. App modules
 
 {% info_block warningBox "Apps- and PBC-specific modules" %}
-
-Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html) you intend to use via ACP, you will need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
+Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use via ACP, you will need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
 
 {% endinfo_block %}
 

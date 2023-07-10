@@ -21,9 +21,11 @@ jobs:
           END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
           MONTH_NAME=$(date -d "last month" +%B)
 
-          echo "Start Date: $START_DATE"
-          echo "End Date: $END_DATE"
-          echo "Month Name: $MONTH_NAME"
+          # Print the dates to the log
+          echo "::debug::Start Date: $START_DATE"
+          echo "::debug::End Date: $END_DATE"
+          echo "::debug::Month Name: $MONTH_NAME"
+          
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 

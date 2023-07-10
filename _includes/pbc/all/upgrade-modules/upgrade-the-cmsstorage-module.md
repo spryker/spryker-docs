@@ -2,7 +2,7 @@
 
 ## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the `CmsStorage` module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the `CmsStorage` module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 The main BC breaking changes are:
 

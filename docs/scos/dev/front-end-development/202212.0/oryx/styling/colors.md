@@ -15,7 +15,9 @@ The color system comes with semantic color types and a consistent number of colo
 
 The color palette provides a number of colors that you can use to quickly setup an Oryx application with the color of your choice. This is particular useful to demonstrate and experience how consistent the color system is applied cross all components. All colors in the color palette are fully accessible by default, both in light and dark mode.
 
-The color palette contains all the colors provided by the [Radix color system](https://www.radix-ui.com/docs/colors/overview/installation), an open source colors system. Additionally, a "Spryker green" and "Spryker gray" is added.
+Creating fully accessible colors is not an easy task to do, which is why we've added a 3rd party open source library: [Radix](https://www.radix-ui.com/docs/colors/palette-composition/scales). Radix contains a wide range of colors and neutrals that can be configured in Oryx.
+
+Spryker green and gray are the only custom colors that we're added on top of the Radix color system.
 
 ### Color contrast
 

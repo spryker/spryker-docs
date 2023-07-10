@@ -38,8 +38,10 @@ jobs:
               break
             fi
 
-            for USER in $PRS; do
-              PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+             for USER in $PRS; do
+              if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
+                PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
+              fi
             done
 
             ((PAGE++))

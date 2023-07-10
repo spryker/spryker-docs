@@ -1543,7 +1543,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Discontinued Products
         url: /docs/scos/dev/feature-integration-guides/glue-api/discontinued-products-api-feature-integration.html
         include_versions:
@@ -3901,7 +3900,7 @@ entries:
         - title: Integrate the Glue JSON:API convention
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
         - title: Integrate the protected endpoints authorization
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html                                                  
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Silex Replacement
@@ -4176,6 +4175,8 @@ entries:
     - title: Integrate development tools
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-development-tools.html
       nested:
+      - title: "Glue API: Development tools"
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
       - title: SCSS linter

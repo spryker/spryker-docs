@@ -6,7 +6,7 @@ on:
       - 'contributor-workflow'
 
 jobs:
-  determine-contributor:
+  determine-internal-contributor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -47,7 +47,7 @@ jobs:
             ((PAGE++))
           done
 
-          # Determine the top contributor
+          # Determine the top internal contributor
           MAX_COUNT=0
           TOP_CONTRIBUTORS=()
 

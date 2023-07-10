@@ -35,11 +35,11 @@ The values are based on design tokens, which can be configured in a theme. Theme
 
 Application themes in Oryx are typically configured with relative sizes for font and line height, using `rem` or `em` units. In web development, using `rem` for font size and `em` for line height offers a flexible and proportional approach to typography. These units ensure consistent and harmonious typography throughout the components on a page.
 
-### `rem` for Font Size
+### `rem` for font size
 
 The `rem` unit, short for "root em" is relative to the root font size of the document. By defining the root font size all other font sizes specified using `rem` adapt proportionally.
 
-For example, if the font size token of the `h1` is set to `1.571rem`, the font size will become `22px` if the root font-size is `14px` (`14px * 1.571`).
+For example, if the font size token of a `h3` is set to `1.2rem`, and the root font size is `15px`, the calculated font size for the `h3` becomes `18px` (`1.2 * 15`).
 
 Using `rem` for font size provides several benefits:
 
@@ -47,11 +47,11 @@ Using `rem` for font size provides several benefits:
 2. Accessibility: Users can adjust the overall font size in their browser settings without affecting layout or readability.
 3. Ease of Maintenance: Adjusting the root font size automatically cascades changes to all elements using `rem`, reducing manual adjustments.
 
-### `em` for Line Height
+### `em` for line height
 
 The `em` unit, short for "element `em`," is relative to the font size of the current element. When specifying line heights using `em`, the value is multiplied by the font size to determine the final line height.
 
-For example, if the line height token of the `h1` is set to `1.364em`, the line height will become `30px` if the font size is `22px`. The font size can be driven by a `rem` unit, the browser will first calculate the rem value of the font size before calculating the line height.
+For example, if the line height token of a `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px` (`1.5 * 18`). The font size can be driven by a `rem` unit, the browser will first calculate the rem value of the font size before calculating the line height.
 
 Using `em` for line height offers the following advantages:
 
@@ -73,7 +73,7 @@ Oryx provides a number of heading and paragraph styles that are used in the desi
 - bold
 - caption
 
-Each style is configurable by design tokens, using the following variables:
+Each style of components and elements below is configurable by design tokens, using the following variables for h1 for example:
 
 - `--oryx-typography-h1-size`
 - `--oryx-typography-h1-weight`

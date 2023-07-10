@@ -12,13 +12,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Determine contributor
+      - name: Determine external contributor
         id: determine
         run: |
           # Set the start and end dates for the previous month
-          START_DATE=$(date -d "last month" +%Y-%m-01)
-          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
-          MONTH_NAME=$(date -d "last month" +%B)
+          # START_DATE=$(date -d "last month" +%Y-%m-01)
+          # END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
+          # MONTH_NAME=$(date -d "last month" +%B)
+
+          # Set the start and end dates for June 2023
+          START_DATE="2023-05-01"
+          END_DATE="2023-05-31"
+          MONTH_NAME="May"
 
           # Count PRs for each user
           declare -A PR_COUNTS=()

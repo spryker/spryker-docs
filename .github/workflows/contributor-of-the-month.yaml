@@ -14,19 +14,12 @@ jobs:
 
       - name: Determine contributor
         id: determine
-        shell: bash
         run: |
-          # Determine the start and end dates of the previous month
-          START_DATE=$(date -d "last month" +%Y-%m-01)
-          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
-          MONTH_NAME=$(date -d "last month" +%B)
+          # Set the start and end dates for the previous month
+          START_DATE=$(date -u -d "last month" +%Y-%m-01T00:00:00Z)
+          END_DATE=$(date -u -d "last month +1 month -1 day" +%Y-%m-%dT23:59:59Z)
+          MONTH_NAME=$(date -u -d "last month" +%B)
 
-          # Write the dates to a file
-          echo "Start Date: $START_DATE" > dates.txt
-          echo "End Date: $END_DATE" >> dates.txt
-          echo "Month Name: $MONTH_NAME" >> dates.txt
-
-          
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
@@ -36,14 +29,10 @@ jobs:
           PAGE=1
           while : ; do
             # Fetch merged pull requests within the specified date range
-            PRS_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
-                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100")
-
-            PRS=$(echo "$PRS_JSON" | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
-
-            # Print out the merged_at of the first PR
-            echo "Sample merged_at: $(echo "$PRS_JSON" | jq -r '.[0].merged_at')"
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break

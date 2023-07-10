@@ -1,4 +1,4 @@
-name: Internal Contributor of the Month
+name: External contributor of the month
 
 on:
   push:
@@ -16,12 +16,9 @@ jobs:
         id: determine
         run: |
           # Set the start and end dates for the previous month
-          START_DATE=$(date -u -d "last month" +%Y-%m-01T00:00:00Z)
-          END_DATE=$(date -u -d "last month +1 month -1 day" +%Y-%m-%dT23:59:59Z)
-          MONTH_NAME=$(date -u -d "last month" +%B)
-
-          # Exclude certain users
-          EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
+          START_DATE=$(date -d "last month" +%Y-%m-01)
+          END_DATE=$(date -d "last month +1 month -1 day" +%Y-%m-%d)
+          MONTH_NAME=$(date -d "last month" +%B)
 
           # Count PRs for each user
           declare -A PR_COUNTS=()
@@ -32,16 +29,14 @@ jobs:
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
                    "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END)) | .[].user.login')
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and (.labels[].name | contains("contributor")))) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
             fi
 
             for USER in $PRS; do
-              if [[ ! " ${EXCLUDED_USERS[@]} " =~ " ${USER} " ]]; then
-                PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
-              fi
+              PR_COUNTS[$USER]=$((PR_COUNTS[$USER]+1))
             done
 
             ((PAGE++))
@@ -62,7 +57,7 @@ jobs:
           done
 
           TOP_CONTRIBUTORS_LIST=$(IFS=,; echo "${TOP_CONTRIBUTORS[*]}")
-          TOP_CONTRIBUTORS_TEXT="The top contributor(s) of $MONTH_NAME: $TOP_CONTRIBUTORS_LIST (PRs: $MAX_COUNT)"
+          TOP_CONTRIBUTORS_TEXT="The best external contributor(s) of $MONTH_NAME: $TOP_CONTRIBUTORS_LIST (PRs: $MAX_COUNT)"
 
           echo "TOP_CONTRIBUTORS_TEXT=$TOP_CONTRIBUTORS_TEXT" >> $GITHUB_ENV
 

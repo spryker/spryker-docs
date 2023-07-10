@@ -35,4 +35,4 @@ If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Rev
 {% endinfo_block %}
 
 ## Next step
-[Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{page.version}/third-party-integrations/integrate-bazaarvoice.html)
+[Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html)

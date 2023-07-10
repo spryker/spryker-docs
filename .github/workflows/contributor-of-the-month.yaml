@@ -19,8 +19,6 @@ jobs:
           START_DATE=$(TZ=UTC date -d "last month" +%Y-%m-01)
           END_DATE=$(TZ=UTC date -d "last month +1 month -1 day" +%Y-%m-%d)
           MONTH_NAME=$(TZ=UTC date -d "last month" +%B)
-
-
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here
 
@@ -89,3 +87,8 @@ jobs:
 
           # Print the top contributor(s) of the month
           echo "$TOP_CONTRIBUTORS_TEXT"
+          
+          echo "Start Date: $START_DATE"
+          echo "End Date: $END_DATE"
+          echo "Sample merged_at: $(echo "$PRS" | jq -r '.[0].merged_at')"
+

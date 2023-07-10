@@ -55,10 +55,10 @@ Ensure that the following modules have been updated:
 {% endinfo_block %}
 
 ```shell
-composer require --dev spryker/profiler
+composer require --dev spryker/profiler --ignore-platform-reqs
 ```
 
-### 4) Set up behavior
+### Set up behavior
 
 1. For `Yves` application, register the following plugins:
 
@@ -188,3 +188,22 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
     }
 }
 ```
+
+# Generate transfers
+
+Run the `console transfer:generate` command to generate all the necessary transfer objects.
+
+
+# Enable the configuration
+
+Module Profile works as a part of Web Profiler feature. By default, Web Profiler is disabled.
+To enable Web Profiler, please update `config/Shared/config_default-docker.dev.php` configuration file.
+
+```php
+if (interface_exists(WebProfilerConstants::class, true)) {
+    $config[WebProfilerConstants::IS_WEB_PROFILER_ENABLED]
+        = $config[WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED]
+        = true;
+}
+```
+

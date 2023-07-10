@@ -174,6 +174,9 @@ console transfer:generate
 8. Add configuration to `config/Shared/config_default.php`:
 
 ```php
+// >>> Security Blocker
+$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_SCHEME] = 'tcp://';
+
 // >>> Security Blocker Storefront Agent
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL] = 900;

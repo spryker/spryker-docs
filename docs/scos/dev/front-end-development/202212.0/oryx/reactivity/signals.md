@@ -2,7 +2,7 @@
 
 ## Overview
 
-Signals are crucial tools within the Oryx framework, offering a clean and efficient reactivity API for component design. They allow for the declarative formulation of component logic while seamlessly integrating with observables from domain services.
+Signals are a crucial tool within the Oryx framework, offering a clean and efficient reactivity API for components. They allow for the declarative formulation of component logic while seamlessly integrating with observables from domain services.
 
 ## Implementation of Signals in Oryx
 
@@ -30,11 +30,9 @@ Creating a signal from an observable:
 const values = signal(observable$);
 ```
 
-#### Signal Options
+You can initialize signals with options to adjust their behavior:
 
-Signal options are settings that you can use to customize your signals.
-
-- `equal` function: This option allows you to compare two values and decide if they are equal. It's a function that takes two inputs and should return true if they are equal and false if they're not.
+- `equal` function:This option allows you to compare two values and determine their equality. It's a function that takes two inputs and returns true if they're equal and false if not. This is particularly useful when you want to control when the signal updates. By defining how values are considered equal, you can prevent unnecessary updates when the new value is effectively the same as the old one, according to your equality logic. This can help improve performance by reducing redundant computations and re-renders.
 
 - `initialValue` option: This is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
 
@@ -76,9 +74,7 @@ const counter = effect(() => {
 });
 ```
 
-#### Effect Options
-
-Effect options let you adjust how your effects function.
+You can configure effects using options to modify their behavior:
 
 - `defer`: If this is set to true, your effect won't run until you explicitly call the `start()` method.
 - `async`: Set this to true if you want your effect to run asynchronously.

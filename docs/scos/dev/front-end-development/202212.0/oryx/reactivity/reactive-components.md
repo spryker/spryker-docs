@@ -63,7 +63,9 @@ export class ProductPriceComponent {
 
 ## Multiple data streams
 
-Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a _local_ price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. You can use both signals and RxJS decorator to combine the various streams. They can combine multiple observables and operate on the combined results.
+Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a _local_ price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. For managing these streams, you can leverage signals, which have the ability to combine multiple observables and operate on the combined results.
+
+_Note: This guide emphasizes the use of signals, however, if you are experienced with RxJS, its operators can be applied to manage more complex data stream operations._
 
 In the following example, `ProductPriceComponent` observes the product data from `ProductService` and _combines_ it with the formatted price given by `PriceService`.
 

@@ -166,6 +166,8 @@ entries:
             url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html
           - title: Spelling
             url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html
+          - title: Word list
+            url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/word-list.html
 
       - title: Add and edit diagrams
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html

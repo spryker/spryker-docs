@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
-last_updated: Jun 27, 2023
+last_updated: Jul 04, 2023
 template: concept-topic-template
 ---
 
@@ -15,7 +15,7 @@ Administrators can place a malicious payload into the description section of new
 
 ### Affected modules
 
-`spryker/product-management`: 0.19.3 - 0.19.35 
+`spryker/product-management`: 0.19.3-0.19.35 
 
 ### Introduced changes
 
@@ -64,7 +64,6 @@ To implement a fix for this vulnerability, upgrade the company page module to ve
 composer require spryker-shop/company-page:"~2.22.0"
 composer show spryker-shop/company-page # Verify the version
 ```
-
 
 ## Unvalidated URL redirection
 
@@ -376,11 +375,11 @@ The parameters related to the address field had insufficient server-side input v
 
 ### Affected modules
 
-`spryker-shop/customer-page`: 0.1.0 - 2.41.0
-`spryker-shop/company-page`: 0.0.1 - 2.22.0
-`spryker/customer`: 0.20.0 - 7.51.2
-`spryker/company-unit-address-gui`: 0.1.0 - 1.3.0
-`spryker/merchant-profile-gui`: 0.1.0 - 1.2.0
+* `spryker-shop/customer-page`: 0.1.0-2.41.0
+* `spryker-shop/company-page`: 0.0.1-2.22.0
+* `spryker/customer`: 0.20.0-7.51.2
+* `spryker/company-unit-address-gui`: 0.1.0-1.3.0
+* `spryker/merchant-profile-gui`: 0.1.0-1.2.0
 
 ### Introduced changes
 
@@ -398,7 +397,8 @@ composer show spryker-shop/customer-page # Verify the version
 ```
 
 2. Add the `SanitizeXssTypeExtensionFormPlugin` plugin to `FormDependencyProvider`:
-src/Pyz/Yves/Form/FormDependencyProvider.php
+
+**src/Pyz/Yves/Form/FormDependencyProvider.php**
 
 ```bash
 <?php
@@ -438,26 +438,26 @@ composer show spryker-shop/company-page # Verify the version
 
 5. Upgrade the `spryker/customer` module:
 
-5.1 If your version of `spryker/customer` is 7.42.0 and later, update it to version 7.51.3:
+   1. If your version of `spryker/customer` is 7.42.0 and later, update it to version 7.51.3:
 
-```bash
-composer require spryker/customer:"~7.51.3"
-composer show spryker/customer # Verify the version
-```
+    ```bash
+    composer require spryker/customer:"~7.51.3"
+    composer show spryker/customer # Verify the version
+    ```
 
-5.2 If your version of `spryker/customer` is earlier than 7.42.0, update it to version 7.42.1:
+   2. If your version of `spryker/customer` is earlier than 7.42.0, update it to version 7.42.1:
 
-```bash
-composer require spryker/customer:"~7.42.1"
-composer show spryker/customer # Verify the version
-```
+    ```bash
+    composer require spryker/customer:"~7.42.1"
+    composer show spryker/customer # Verify the version
+    ```
 
-5.3 If your version of `spryker/customer` is earlier than 7.50.0, update it to version 7.50.1:
+   3. If your version of `spryker/customer` is earlier than 7.50.0, update it to version 7.50.1:
 
-```bash
-composer require spryker/customer:"~7.50.1"
-composer show spryker/customer # Verify the version
-```
+    ```bash
+    composer require spryker/customer:"~7.50.1"
+    composer show spryker/customer # Verify the version
+    ```
 
 6. Upgrade the `spryker/company-unit-address-gui` module to version 1.3.1:
 
@@ -475,14 +475,14 @@ composer show spryker/merchant-profile-gui # Verify the version
 
 ## Outdated third-party library guzzlehttp/psr7
 
-An outdated version of the _guzzlehttp/psr7_ library was identified to affect Spryker’s applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could allow an attacker to sneak in a newline (\n) into both the header names and values (CVE-2023-29197). 
+An outdated version of the `guzzlehttp/psr7` library was identified to affect Spryker’s applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could let an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197). 
 
 ### Affected modules
 
-`spryker/guzzle`: 0.20.0 - 2.4.0
-`spryker/message-broker-aws`: 1.0.0 - 1.4.2
-`spryker/secrets-manager-aws`: 1.0.0 - 1.0.1
-`spryker/oauth-auth0` : 1.0.0
+* `spryker/guzzle`: 0.20.0-2.4.0
+* `spryker/message-broker-aws`: 1.0.0-1.4.2
+* `spryker/secrets-manager-aws`: 1.0.0-1.0.1
+* `spryker/oauth-auth0` : 1.0.0
 
 ### Introduced changes
 
@@ -518,4 +518,94 @@ composer show spryker/secrets-manager-aws # Verify the version
 ```bash
 composer require spryker/oauth-auth0:"^1.0.1"
 composer show spryker/oauth-auth0 # Verify the version
+```
+
+## Missing security HTTP headers
+
+Security-related HTTP headers were missing from Spryker’s applications. Adding these headers improves the overall security posture of the applications because they implement an additional layer of protection against common web application attacks.
+
+### Affected modules
+
+* `spryker/event-dispatcher`: <=1.4.0
+* `spryker/glue-backend-api-application`: <=1.3.0
+* `spryker/glue-storefront-api-application`: <=1.2.0
+* `spryker/http`: <=1.10.0
+* `spryker/merchant-portal-application`: <=1.1.0
+
+### Introduced changes
+
+The following security-related HTTP headers can be implemented:
+* `Strict-Transport-Security`
+* `Cache-Control`
+* `X-Content-Type-Options`
+* `X-Frame-Options`
+* `X-XSS-Protection`
+* `Content-Security-Policy`
+
+### How to get the fix
+
+To implement a fix for this vulnerability: 
+
+1. Update the event-dispatcher, glue-backend-api-application, glue-storefront-api-application, HTTP and merchant-portal-application modules:
+
+```bash
+composer update spryker/event-dispatcher spryker/glue-backend-api-application spryker/glue-storefront-api-application spryker/http spryker/merchant-portal-application
+```
+
+2. Register `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` in `Pyz\Glue\EventDispatcher::getEventDispatcherPlugins()`.
+
+3. Register `Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin` in `Pyz\Glue\GlueBackendApiApplication::getResponseFormatterPlugins()`.
+
+4. In `Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider::getResponseFormatterPlugins()`, register `Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin`.
+
+5. In `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`.
+
+6. In `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Yves\Http\Plugin\EventDispatcher\EnvironmentInfoHeaderEventDispatcherPlugin`.
+
+7. Remove deprecated `Spryker\Yves\Http\Plugin\EventDispatcher\HeaderEventDispatcherPlugin` from `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
+
+8. In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`.
+
+9.  In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`, register `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\EnvironmentInfoHeaderEventDispatcherPlugin`.
+
+10. In `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getMerchantPortalEventDispatcherPlugins()`, register `Spryker\Zed\MerchantPortalApplication\Communication\Plugin\EventDispatcher\HeadersSecurityEventDispatcherPlugin`.
+
+11. Remove deprecated `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\HeaderEventDispatcherPlugin` from `Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`.
+
+12. In `Pyz\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider::getMerchantPortalApplicationPlugins()`, register `Spryker\Zed\EventDispatcher\Communication\Plugin\MerchantPortalApplication\MerchantPortalEventDispatcherApplicationPlugin`.
+
+13. Overwrite `Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationConfig::getSecurityHeaders()` and `Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConfig::getSecurityHeaders()` to set Cache-Control security header:
+
+```bash
+/**
+ * @return array<string, string>
+ */
+public function getSecurityHeaders(): array
+{
+    return array_merge(
+        parent::getSecurityHeaders(),
+        ['Cache-Control' => 'no-cache, private'],
+    );
+}
+```
+
+14. Adjust `config/Shared/config_default.php` to add cache control configuration. To see the list of available directives, check `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin`.
+
+```bash
+use Spryker\Shared\Http\HttpConstants;
+
+$config[HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG] = [
+   'public' = true,
+   'max-age' = 3600,
+];
+
+$config[HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG] = [
+   'public' = true,
+   'max-age' = 3600,
+];
+
+$config[HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG] = [
+   'public' = true,
+   'max-age' = 3600,
+];
 ```

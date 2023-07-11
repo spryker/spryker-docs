@@ -33,7 +33,7 @@ The most important about password security is to not save it in plain text. Ther
 
 ## Secrets
 
-Store a secret in a secrets management system. Check the next article about [Add variables in the Parameter Store](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
+Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. 
 
 ## Encrypted communication
 

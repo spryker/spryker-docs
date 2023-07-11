@@ -44,7 +44,7 @@ The Glue allows you to use the power of the Spryker Commerce OS in a variety of 
 ### Catalog Browsing
 The catalog browsing endpoints allow you to request search results and also use the Elasticsearch facet implementation. Furthermore, you can retrieve product-related information beyond price and category, including product labels and relations.
 
-**Documentation**: [Catalog Search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-search-the-product-catalog.html).
+**Documentation**: [Catalog Search](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html).
 
 ### Login/Registration
 Endpoints ensure access-token login and retrieval. Customers can also register and request new passwords in case they forgot or want to change their current password.

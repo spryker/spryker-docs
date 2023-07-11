@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Approval Proces feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -68,6 +68,34 @@ class QuoteApprovalConfig extends SprykerQuoteApprovalConfig
 Make sure that the configuration returns the billing address and payment keys.
 
 {% endinfo_block %}
+
+If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/multiple-carts-feature-overview.html), add the following configuration to your project:
+
+**src/Pyz/Client/MultiCart/MultiCartConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\MultiCart;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Client\MultiCart\MultiCartConfig as SprykerMultiCartConfig;
+
+class MultiCartConfig extends SprykerMultiCartConfig
+{
+    /**
+     * @return array<string|array<string>>
+     */
+    public function getQuoteFieldsAllowedForCustomerQuoteCollectionInSession(): array
+    {
+        return array_merge(parent::getQuoteFieldsAllowedForCustomerQuoteCollectionInSession(), [
+            ...
+            QuoteTransfer::QUOTE_APPROVALS,
+            ...
+        ]);
+    }
+}
+```
 
 ### 3) Set up database schema and transfer objects
 

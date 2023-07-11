@@ -31,10 +31,10 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 
 ## Content Management
 
-* [Coremedia](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/coremedia.html)
-* [E-Spirit](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/e-spirit.html)
-* [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/magnolia.html)
-* [Styla](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/styla.html)
+* [Coremedia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/coremedia.html)
+* [E-Spirit](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/e-spirit.html)
+* [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/magnolia.html)
+* [Styla](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/styla.html)
 
 ## Customer Service
 

@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/front-end-development.html
 ---
 
-This section contains overviews and instructions for frontend developing on the the Spryker Commerce OS. It includes the following components and topics:
+This section contains overviews and instructions for frontend development on the Spryker Commerce OS. It includes the following components and topics:
 * [Zed](/docs/scos/dev/front-end-development/{{page.version}}/zed/zed.html)
 * [Yves](/docs/scos/dev/front-end-development/{{page.version}}/yves/yves.html)
 * [Migration guide – Remove support of IE11](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-remove-support-of-ie11.html)

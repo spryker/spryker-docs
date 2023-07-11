@@ -12,7 +12,7 @@ Signals are a crucial tool within the Oryx framework, offering a clean and effic
 
 The Oryx implementation of signals has a core mechanism and a simplified API. The core is well-suited for advanced usage, while the simplified API is sufficiently robust for most components. This documentation will focus on the simplified API.
 
-### Creating Signals
+### Creating signals
 
 To create a signal, use the `signal()` function. This function can either take a raw value or accept an observable.
 

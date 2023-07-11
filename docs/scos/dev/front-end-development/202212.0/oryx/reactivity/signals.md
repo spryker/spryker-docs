@@ -36,7 +36,7 @@ const values = signal(observable$);
 
 You can initialize signals with options to adjust their behavior:
 
-- `equal` function: This option allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal updates, avoiding unnecessary updates and performance costs when new and old values are practically identical.
+- The `equal` function: This option allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal updates, avoiding unnecessary updates and performance costs when new and old values are practically identical.
 
 - `initialValue` option: This is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
 

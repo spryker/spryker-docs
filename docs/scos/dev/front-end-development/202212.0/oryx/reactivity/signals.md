@@ -91,7 +91,7 @@ const counter = effect(() => {
 }, { defer: true, async: true });
 ```
 
-## Using Signals in Components
+## Using signals in components
 
 ### @signalAware directive
 

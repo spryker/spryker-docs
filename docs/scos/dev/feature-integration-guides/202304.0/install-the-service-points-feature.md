@@ -1,7 +1,7 @@
 ---
 title: Install the Service Points feature
 description: Learn how to integrate the Service Points feature into your project
-last_updated: June 20, 2023
+last_updated: July 05, 2023
 template: feature-integration-guide-template
 ---
 

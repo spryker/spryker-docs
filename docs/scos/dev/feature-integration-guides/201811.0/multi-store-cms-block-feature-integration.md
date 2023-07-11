@@ -12,11 +12,11 @@ related:
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
   - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
   - title: Migration Guide - CMS Block Collector
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html
   - title: Migration Guide - CMS Block GUI
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html
 ---
 
 To prepare your project to work with multi-store CMS Blocks, the following minimum module versions are required:

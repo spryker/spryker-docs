@@ -37,12 +37,12 @@ Blocks help to place content in certain places in your template, so you can easi
                 <li class="mr-title">Developer</li>
                 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-product-cms-block.html" class="mr-link">Install and configure a Product Block</a></li>
 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-category-cms-blocks.html" class="mr-link">Install and configure a Category Block</a></li>
-<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulecategoryconnector-migration-console.html" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulecategoryconnector-migration-console.html" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
     </ul>
         </div>
         <!-- col2 -->

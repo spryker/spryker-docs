@@ -20,7 +20,7 @@ To separate products by stores, follow the steps below.
 ## Prerequisites
 
 This example is convenient to consider on the basis of the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
-Follow the [installation guide](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html) to set it up.
+Follow the [installation guide](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html) to set it up.
 
 ## 1. Add the AclEntity package to the system
 

@@ -81,7 +81,7 @@ const counter = effect(() => {
 You can configure effects using options to modify their behavior:
 
 - `defer`: If this is set to true, your effect won't run until you explicitly call the `start()` method.
-- `async`: Set this to true if you want your effect to run asynchronously.
+- `async`: Set this to `true` if you want your effect to run asynchronously.
 
 Example:
 

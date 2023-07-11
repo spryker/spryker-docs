@@ -62,7 +62,7 @@ Computed signals can also convert observables to signals transparently:
 const counter = computed(() => productService.get({ sku: productSku() }));
 ```
 
-In the example above, `productSku` is a signal, and `productService.get` returns an observable.
+In the preceding example, `productSku` is a signal, and `productService.get` returns an observable.
 
 Computed signals can use the same set of options as regular signals.
 

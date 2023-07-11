@@ -31,6 +31,10 @@ This document describes the data security guidelines you need to implement on th
 
 The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
 
+## Secrets
+
+Store a secret in a secrets management system. Check the next article about [Add variables in the Parameter Store](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
+
 ## Encrypted communication
 
 As HTTP is a textual protocol having no built-in encryption, passwords and customer personal data are transferred to shops in plain text. So, a good practice is to configure and implement transport layer security (TLS), which is widely known to most users as HTTPS.

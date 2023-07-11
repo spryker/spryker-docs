@@ -13,7 +13,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                     |
 |----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core   | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)  |
+| Spryker Core   | {{site.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 ### 1) Install the required modules using Composer
 
@@ -135,6 +135,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly and that you can access the endpoint, see [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
+To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/scos/dev/glue-api-guides/{{site.version}}/routing/create-backend-resources.html).
 
 {% endinfo_block %}

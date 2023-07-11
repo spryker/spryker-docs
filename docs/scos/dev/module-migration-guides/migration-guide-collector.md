@@ -29,9 +29,6 @@ redirect_from:
   - docs/scos/dev/module-migration-guides/202005.0/migration-guide-collector.html
   - docs/scos/dev/module-migration-guides/202009.0/migration-guide-collector.html
   - docs/scos/dev/module-migration-guides/202108.0/migration-guide-collector.html
-related:
-  - title: Migration guide - Touch
-    link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-collector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-collector-module.md -->

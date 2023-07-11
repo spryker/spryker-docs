@@ -15,7 +15,7 @@ This document provides details about how to set up the Spryker Merchant Portal.
 To start using Merchant Portal, install Spryker Demo Shop:
 
 1. For the Marketplace project installation, use [this repository](https://github.com/spryker-shop/suite).  
-2. [Install the project](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+2. [Install the project](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 
 ## Requirements

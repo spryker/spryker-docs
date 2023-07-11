@@ -24,7 +24,7 @@ In a marketplace, multiple merchants can sell the same product. That's why, inst
 * Views offers
 * Approves and denies offers
 
-For detailed instructions about managing offers, see [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/offers/managing-merchant-product-offers.html).
+For detailed instructions about managing offers, see [Managing merchant product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html).
 
 ## Order management
 
@@ -39,7 +39,7 @@ Since many merchants sell products simultaneously, the order management of a mar
 * Comments on marketplace orders.
 * Edits billing addresses of marketplace orders.
 
-For detailed instructions on managing orders, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/orders/managing-marketplace-orders.html).
+For detailed instructions on managing orders, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
 
 ### Return management
 
@@ -55,7 +55,7 @@ For detailed instructions on managing returns, see [Managing marketplace returns
 
 In an [enterprise marketplace business model](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html), apart from managing the marketplace, a marketplace operator sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html). In the Back Office, they manage their orders and returns in **Sales&nbsp;<span aria-label="and then">></span> My Orders** and **Sales&nbsp;<span aria-label="and then">></span> My returns** sections, respectively. With their own orders, they can perform the same actions as they do with other merchants' as described in [Order management](#order-management) and [Return management](#return-management). Apart from that, they can create and edit shipments for their orders.
 
-For detailed instructions about managing main merchant orders and returns, see [Managing main merchant orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-main-merchant-orders.html) and [Managing main merchant returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html).
+For detailed instructions about managing main merchant orders and returns, see [Managing main merchant orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html) and [Managing main merchant returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html).
 
 ## Read next
 

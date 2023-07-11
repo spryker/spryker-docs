@@ -4,9 +4,7 @@ Descriptions: System infrastructure requirements for the Spryker Marketplace wit
 template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/setup/system-requirements.html
-related:
-  - title: Infrastructure requirements
-    link: docs/marketplace/dev/setup/page.version/infrastructure-requirements.html
+  - /docs/marketplace/dev/setup/202212.0/infrastructure-requirements.html
 ---
 | OPERATING SYSTEM                              | NATIVE: LinuxOnly via VM: MacOS and MS Windows               |
 |-----------------------------------------------| ------------------------------------------------------------ |

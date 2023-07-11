@@ -56,7 +56,13 @@ When setting up multiple stores, we recommended to group stores that share the s
 This setup has the following characteristics:
 
 - One store or multiple stores. 
-- Each store has a dedicated index for ES and its own key-value storage namespace (Redis).
+- Each store has a dedicated index for ES and its own key-value storage namespace (Redis). 
+{% info_block infoBox "Info" %}
+
+While the search index and key-value storages are shared resources, you can have multiple indexes within the same search instance and multiple namespaces in Redis.
+
+{% endinfo_block %}
+
 - One shared database.
 - One region with multiple stores.
 - Shared codebase.
@@ -96,6 +102,13 @@ This setup has the following characteristics:
 
 - Multiple stores. 
 - Each store has a dedicated Elasticsearch index and its own Redis key-value storage namespace.
+
+{% info_block infoBox "Info" %}
+
+While the search index and key-value storages are shared resources, you can have multiple indexes within the same search instance and multiple namespaces in Redis.
+
+{% endinfo_block %}
+
 - Virtual separated database per store. For details on how to add virtual databases to your store, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% info_block infoBox "Info" %}

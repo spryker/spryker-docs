@@ -12,7 +12,7 @@ redirect_from:
 
 {% info_block warningBox "Security" %}
 
-Debugging mode should be turned off once debugging is completed. Leaving it permanently enabled can lead to disclosure of sensitive information.
+Once debugging is completed, turn off debugging mode. Leaving it permanently enabled can lead to the disclosure of sensitive information.
     
 {% endinfo_block %}
 

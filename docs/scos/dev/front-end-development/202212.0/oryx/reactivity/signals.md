@@ -108,9 +108,8 @@ Some Oryx domain components are not using this decorator directly, as it is alre
 The `@elementEffect` directive integrates effects with component lifecycles for seamless management. It activates an effect when a component is connected to the DOM and deactivates it once the component is disconnected.
 
 ```ts
-import { elementEffect } from 'oryx';
-
 class MyComponent extends LitElement {
+  /* ... */  
   @elementEffect()
   logProductCode = () => console.log('Product code ', this.$product().code);
 }

@@ -148,4 +148,4 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 }
 ```
 
-To verify that everything is set up correctly, and you can access the endpoint, see [How to create a storefront resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html) or [How to create a backend resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html).
+To verify that everything is set up correctly, and you can access the endpoint, see [Create storefront resources](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-storefront-resources.html) or [Create backend resources](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-backend-resources.html).

@@ -112,8 +112,8 @@ import { elementEffect } from 'oryx';
 
 class MyComponent extends LitElement {
   @elementEffect()
-  logConnected = () => console.log('Component connected to DOM.');
+  logProductCode = () => console.log('Product code ', this.$product().code);
 }
 ```
 
-In the above example, the `logConnected` effect will automatically start when `MyComponent` is connected to the DOM, logging the message. Once the component is disconnected from the DOM, the effect will automatically stop. This directive simplifies effect management by automatically linking them to component lifecycles, making your component code cleaner and easier to manage.
+In the above example, the `logProductCode` effect will automatically start when `MyComponent` is connected to the DOM, logging the product code everytime $product signal will update. Once the component is disconnected from the DOM, the effect will automatically stop. This directive simplifies effect management by automatically linking them to component lifecycles, making your component code cleaner and easier to manage.

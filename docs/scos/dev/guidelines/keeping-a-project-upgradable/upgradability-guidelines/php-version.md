@@ -9,30 +9,33 @@ This guide describes how to resolve issues surrounding the allowed and consisten
 ## Problem description
 
 The PHP version is declared in different configuration files and used by dependencies.
-You need to be sure that all those items have a PHP version that is consistent and supported by Spryker..
+You need to be sure that all those items have a PHP versions that are consistent and supported by [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html).
 
 PHP versions are checked in:
 - `composer.json`
 - Config deploy files `deploy.**.yml`
-- Installed PHP version
-- [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) php versions
+- [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP versions
 
-## Example of code that causes an upgradability error
+## An example of correct code
 
-composer.json
+The PHP version in your deploy files should correspond to the PHP version declared in `composer.json` and the supported PHP version by [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html).
+
+`composer.json`:
+
 ```json
 {
   "name": "spryker-shop/b2c-demo-shop",
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": ">=8.2",
+    "php": ">=8.0",
     ...
   }
 }
 ```
 
-deploy.dev.yaml
+`deploy.yml`:
+
 ```yaml
 ...
 image:
@@ -44,34 +47,114 @@ image:
 ...
 ```
 
-### Related error in the Evaluator output
+## Example of an Evaluator error message
+
+Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `composer.json` file:
 
 ```shell
 ===================
 PHP VERSION CHECKER
 ===================
 
-+---+-----------------------------------------------------------------------------+--------------------------------------------------------+
-| # | Message                                                                     | Target                                                 |
-+---+-----------------------------------------------------------------------------+--------------------------------------------------------+
-| 1 | Composer json PHP constraint ">=8.1" does not match allowed php versions    | tests/Acceptance/_data/InvalidProject/composer.json    |
-+---+-----------------------------------------------------------------------------+--------------------------------------------------------+
-| 2 | The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12" | tests/Acceptance/_data/InvalidProject/deploy.yml       |
-|   | The image tag must contain an allowed PHP version (image:abc-8.0)                  |                                                        |
-+---+-----------------------------------------------------------------------------+--------------------------------------------------------+
-| 3 | Not all the targets have same PHP versions                                  | Current php version $phpVersion: php7.4                     |
-|   |                                                                             | tests/Acceptance/_data/InvalidProject/composer.json: - |
-|   |                                                                             | tests/Acceptance/_data/InvalidProject/deploy**.yml: -  |
-|   |                                                                             | SDK php versions: php7.4, php8.0                       |
-+---+-----------------------------------------------------------------------------+--------------------------------------------------------+
++---+------------------------------------------------------------------------+---------------------------------+
+| # | Message                                                                | Target                          |
++---+------------------------------------------------------------------------+---------------------------------+
+| 1 | Composer json PHP constraint "7.2" does not match allowed PHP versions | <path_to_project>/composer.json |
++---+------------------------------------------------------------------------+---------------------------------+
 ```
+
+A `composer.json` file that produces the error message:
+
+```json
+{
+  "name": "spryker-shop/b2c-demo-shop",
+  "description": "Spryker B2C Demo Shop",
+  "license": "proprietary",
+  "require": {
+    "php": "7.2",
+    ...
+  }
+}
+```
+
+Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `deploy.yml` file.
+
+```shell
+===================
+PHP VERSION CHECKER
+===================
+
++---+-----------------------------------------------------------------------------------+------------------------------+
+| # | Message                                                                           | Target                       |
++---+-----------------------------------------------------------------------------------+------------------------------+
+| 1 | The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12" | <path_to_project>/deploy.yml |
+|   | The image tag must contain an allowed PHP version (image:abc-8.0)                 |                              |
++---+-----------------------------------------------------------------------------------+------------------------------+
+```
+
+A `deploy.yml` file that produces the error message:
+
+```yaml
+...
+image:
+    tag: spryker/php:7.2
+    php:
+        ini:
+            "opcache.revalidate_freq": 0
+            "opcache.validate_timestamps": 0
+...
+```
+
+Below is an example of inconsistent PHP versions being used in the `composer.json` and `deploy.yml` files:
+
+```shell
+===================
+PHP VERSION CHECKER
+===================
+
++---+--------------------------------------------+--------------------------------------------------------+
+| # | Message                                    | Target                                                 |
++---+--------------------------------------------+--------------------------------------------------------+
+| 1 | Not all the targets have the same PHP versions | Current php version $phpVersion: php7.2                |
+|   |                                            | tests/Acceptance/_data/InvalidProject/composer.json: - |
+|   |                                            | tests/Acceptance/_data/InvalidProject/deploy**.yml: -  |
+|   |                                            | SDK php versions: php7.2, php8.2                       |
++---+--------------------------------------------+--------------------------------------------------------+
+```
+
+The `composer.json` file uses PHP version `7.2`:
+
+```json
+{
+  "name": "spryker-shop/b2c-demo-shop",
+  "description": "Spryker B2C Demo Shop",
+  "license": "proprietary",
+  "require": {
+    "php": "7.2",
+    ...
+  }
+}
+```
+
+The `deploy.yml` file uses PHP version `8.2`:
+
+```yaml
+...
+image:
+    tag: spryker/php:8.2
+    php:
+        ini:
+            "opcache.revalidate_freq": 0
+            "opcache.validate_timestamps": 0
+...
+```
+
+Inconsistent PHP versions produces the error message output.
 
 ### Resolving the error
 
 To resolve the issue:
-1. Use a PHP version that is allowed in:
+1. Use a supported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version.
+2. Make sure that all the files contain the consistent PHP version declaration:
    - `composer.json`
    - Config deploy files `deploy.**.yml`
-   - Installed PHP version
-   - SDK php versions
-2. Make sure that all the items above have consistent PHP versions.

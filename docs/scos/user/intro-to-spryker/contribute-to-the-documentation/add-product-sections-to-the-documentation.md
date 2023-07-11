@@ -33,7 +33,7 @@ In the `/docs` directory, create a folder for your project and a folder designat
 
 In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *acp* product with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
-To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html#sidebars).
+To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html#sidebars).
 
 ## 3. Add the product to the configuration
 

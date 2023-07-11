@@ -4,24 +4,88 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This document explains how you can bypass issues with additional logic inside the dependency provider’s methods.
+The *Additional logic in dependency provider* check checks the way plugins are registered in the dependency provider on the project level.
 
 ## Problem description
 
-On the project level, developers use `if` constructs with variety of expressions in dependency providers to register the plugins in particular cases only.
+At the project level, developers use `if` structures with diverse expressions in dependency providers to selectively register plugins in specific cases.
 
-Not all possible expressions are needed inside of the `if` statements for plugin registration and not all of them are supported. This check verifies that if an `if` construct is used for plugin registration, then only one of the following expressions is used:
+The expressions utilized within the `if` statements should not overly complicate the logic within the dependency provider.
+This check ensures that if an `if` structure is used for plugin registration, only one of the subsequent expressions is used:
 
-`class_exists` it is allowed for BC reasons
+1. `class_exists` function call
+
+Usage of the `class_exists` function call inside of the `if` statement is allowed for BC reasons only.
+
+Below is an example of the `class_exists` function call inside of the `if` statement:
 
 ```php
-class_exists(\Foo\Bar::class) function call
+namespace Pyz\Zed\Form;
+
+use Spryker\Zed\WebProfiler\Communication\Plugin\Form\WebProfilerFormPlugin;
+
+class FormDependencyProvider extends SprykerFormDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface>
+     */
+    protected function getFormPlugins(): array
+    {
+        $formPlugins = [];
+
+        if (class_exists(WebProfilerFormPlugin::class)) {
+            $formPlugins[] = new WebProfilerFormPlugin();
+        }
+
+        return $formPlugins;
+    }
+}
 ```
 
-`isDevelopment` function calls - it is allowed for plugins that are needed in development mode only (e.g. profiling, debug, etc.)
+2. `isDevelopment` function call
+
+The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only (e.g. profiling, debug, etc.).
     
 ```php
-$this->getConfig()->isDevelopmentConsoleCommandsEnabled() function calls 
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Development\Communication\Console\CodeTestConsole;
+use Spryker\Zed\Kernel\Container;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [];
+        
+        if ($this->getConfig()->isDevelopmentConsoleCommandsEnabled()) {
+            $commands[] = new CodeTestConsole();
+        }
+
+        return $commands;
+    }
+}
+```
+
+## Example of an Evaluator error message
+
+```bash
+======================
+MULTIDIMENSIONAL ARRAY
+======================
+
++---+------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+| # | Message                                                                            | Target                                                            |
++---+------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+| 1 | The condition statement if ($alwaysTrue) {} is forbidden in the DependencyProvider | <path_to_project>/Pyz/Zed/Checkout/CheckoutDependencyProvider.php |
++---+------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+
 ```
 
 ## Example of code that causes an upgradability error
@@ -29,48 +93,32 @@ $this->getConfig()->isDevelopmentConsoleCommandsEnabled() function calls
 The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in the `if` construct `$alwaysAddPlugin`.
 
 ```php
-use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
+namespace Pyz\Zed\Form;
+
+use Spryker\Zed\WebProfiler\Communication\Plugin\Form\WebProfilerFormPlugin;
 
 class FormDependencyProvider extends SprykerFormDependencyProvider
 {
-    ...
-    
+    /**
+     * @return array<\Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface>
+     */
     protected function getFormPlugins(): array
     {
-        $plugins = [
-            new ValidatorExtensionFormPlugin(),
-        ];
-        
-        $plugins[] = new CsrfFormPlugin();
-        
-        $alwaysAddPlugin = true;
+        $formPlugins = [];
+        $alwaysTrue = true;
 
-        if ($alwaysAddPlugin) {
-            $plugins[] = new WebProfilerFormPlugin();
+        if ($alwaysTrue) {
+            $formPlugins[] = new WebProfilerFormPlugin();
         }
-        
-        return $plugins;
+
+        return $formPlugins;
     }
 }
 ```
 
-### Related error in the Evaluator output
-
-```bash
-======================
-MULTIDIMENSIONAL ARRAY
-======================
-
-+---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-| # | Message                                                                                              | Target                                                                     |
-+---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-| 1 | The condition statement if ($alwaysAddPlugin) {} is forbidden in the DependencyProvider              | /spryker/b2c-demo-shop/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php |
-+---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-
-```
-
 ### Resolving the error
 
-To resolve the error provided in the example, try the following in the provided order:
-1. Try to avoid using conditions in the dependency providers.
+To resolve the issue:
+
+1. Try to avoid the usage of conditions in the dependency providers.
 2. Use only the supported expressions in the `if` construct.

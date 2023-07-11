@@ -32,7 +32,7 @@ In order to work closely with Heroku, make sure to [install heroku console](http
 ## Applications
 
 In our example, Redis and Elasticsearch add-ons are attached to Yves (front-end application), while the database add-on is attached to Zed (back-end application).<br>
-Please make sure to install proper version of ES and Redis, refer to [installation guide](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html).<br>
+Please make sure to install proper version of ES and Redis, refer to [installation guide](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html).<br>
 Install required add-ons only in one application, and copy configuration string to the other one.
 
 The application you setup will be sharing the add-ons between them so you are free to set it up to your needs.

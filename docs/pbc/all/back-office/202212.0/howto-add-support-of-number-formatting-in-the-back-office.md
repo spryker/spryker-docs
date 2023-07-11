@@ -15,7 +15,7 @@ To add support of number formatting in the Back Office, integrate the following 
 
 | NAME   | REQUIRED | VERSION   | INTEGRATION  GUIDE    |
 |--|-----------|-------|--------------------------|
-| Spryker Core          |         &#9989;        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                           |
+| Spryker Core          |         &#9989;        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
 | Promotions & Discounts |    | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html)     |
 | Product Options |    | {{site.version}} | [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/product-options-feature-walkthrough.html)                           |
 | Product + Order Management|   | {{site.version}} | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |

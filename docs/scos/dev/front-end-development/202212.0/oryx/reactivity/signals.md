@@ -46,7 +46,7 @@ Here's an example of using options:
 const values = signal(observable$, { initialValue: 1, equal: (a, b) => a === b });
 ```
 
-### Computed Signals
+### Computed signals
 
 A computed signal derives its value from other signals. It automatically reevaluates its value when any of the signals it depends on changes.
 

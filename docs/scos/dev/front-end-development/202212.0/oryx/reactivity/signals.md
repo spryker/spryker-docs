@@ -32,7 +32,7 @@ const values = signal(observable$);
 
 You can initialize signals with options to adjust their behavior:
 
-- `equal` function:This option allows you to compare two values and determine their equality. It's a function that takes two inputs and returns true if they're equal and false if not. This is particularly useful when you want to control when the signal updates. By defining how values are considered equal, you can prevent unnecessary updates when the new value is effectively the same as the old one, according to your equality logic. This can help improve performance by reducing redundant computations and re-renders.
+- `equal` function: This option allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal updates, avoiding unnecessary updates and performance costs when new and old values are practically identical.
 
 - `initialValue` option: This is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
 
@@ -87,7 +87,9 @@ const counter = effect(() => {
 }, { defer: true, async: true });
 ```
 
-### Using Signals in Components
+## Using Signals in Components
+
+### @signalAware directive
 
 The `@signalAware` decorator provides additional functionality when using signals in components.
 
@@ -101,3 +103,17 @@ When used, the component will automatically detect signals and render changes wh
 
 Some Oryx domain components are not using this decorator directly, as it is already applied to some common domain mixins (eg. `ContentMixin`, `ProductMixin`, etc.).
 
+### `@elementEffect` Directive
+
+The `@elementEffect` directive integrates effects with component lifecycles for seamless management. It activates an effect when a component is connected to the DOM and deactivates it once the component is disconnected.
+
+```ts
+import { elementEffect } from 'oryx';
+
+class MyComponent extends LitElement {
+  @elementEffect()
+  logConnected = () => console.log('Component connected to DOM.');
+}
+```
+
+In the above example, the `logConnected` effect will automatically start when `MyComponent` is connected to the DOM, logging the message. Once the component is disconnected from the DOM, the effect will automatically stop. This directive simplifies effect management by automatically linking them to component lifecycles, making your component code cleaner and easier to manage.

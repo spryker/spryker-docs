@@ -119,4 +119,4 @@ class MyComponent extends LitElement {
 }
 ```
 
-In the above example, the `logProductCode` effect will automatically start when `MyComponent` is connected to the DOM, logging the product code everytime $product signal will update. Once the component is disconnected from the DOM, the effect will automatically stop. This directive simplifies effect management by automatically linking them to component lifecycles, making your component code cleaner and easier to manage.
+In the above example, the `logProductCode` effect starts automatically as soon as `MyComponent` connects to the DOM. It logs the product code each time the `$product` signal updates. When `MyComponent` disconnects from the DOM, the effect stops. This directive simplifies effect management by automatically linking them to component lifecycles, making your component code cleaner and easier to manage.

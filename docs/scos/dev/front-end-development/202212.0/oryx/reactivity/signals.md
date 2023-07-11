@@ -5,7 +5,6 @@ template: concept-topic-template
 last_updated: Jul 11, 2023
 ---
 
-## Overview
 
 Signals are a crucial tool within the Oryx framework, offering a clean and efficient reactivity API for components. They allow for the declarative formulation of component logic while seamlessly integrating with observables from domain services.
 

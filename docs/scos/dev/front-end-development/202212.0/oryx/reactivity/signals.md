@@ -107,7 +107,7 @@ When used, the component will automatically detect signals and render changes wh
 
 Some Oryx domain components are not using this decorator directly, as it is already applied to some common domain mixins (eg. `ContentMixin`, `ProductMixin`, etc.).
 
-### `@elementEffect` Directive
+### `@elementEffect` directive
 
 The `@elementEffect` directive integrates effects with component lifecycles for seamless management. It activates an effect when a component is connected to the DOM and deactivates it once the component is disconnected.
 

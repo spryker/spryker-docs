@@ -57,13 +57,13 @@ mkdir spryker-shop && cd spryker-shop
     * B2C Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./
     ```
 
     * B2B Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./
     ```
 
     * B2C Marketplace Demo Shop

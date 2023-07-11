@@ -10,7 +10,7 @@ Signals are a crucial tool within the Oryx framework, offering a clean and effic
 
 ## Implementation of Signals in Oryx
 
-The Oryx implementation of signals has a core mechanism and a simplified API. The core is well-suited for advanced usage, while the simplified API is sufficiently robust for most components. This documentation will focus on the simplified API.
+The Oryx implementation of signals has a core mechanism and a simplified API. The core is well-suited for advanced usage, while the simplified API is sufficiently robust for most components. This document focuses on the simplified API.
 
 ### Creating signals
 

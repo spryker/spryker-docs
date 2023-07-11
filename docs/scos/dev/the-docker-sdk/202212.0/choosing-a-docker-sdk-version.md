@@ -198,7 +198,8 @@ cd ..
 #### CI validation
 
 If you're using CI, we highly recommend you ensure that the reference and submodule hashes are matching.
-Exmaple of the code could be like this:
+
+The following is an example of what the code can look like:
 ```bash
 - git submodule | grep docker | grep `cat .git.docker` || (echo "Installed submodule hash doesn't match the reference hash from .git.docker"; exit 1)
 ```

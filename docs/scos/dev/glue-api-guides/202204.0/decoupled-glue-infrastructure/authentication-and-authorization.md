@@ -4,10 +4,10 @@ description: Information about Glue API authentication and authorization.
 last_updated: Oct 23, 2022
 template: glue-api-storefront-guide-template
 related:
-  - title: How to create grant type parameters
-    link: docs/scos/dev/glue-api-guides/page.version/decoupled-glue-infrastructure/how-to-guides/how-to-create-grant-type-parameters.html
+  - title: Create grant type parameters
+    link: docs/scos/dev/glue-api-guides/page.version/decoupled-glue-infrastructure/how-to-guides/create-grant-type-parameters.html
   - title: How to use authentication server
-    link: docs/scos/dev/glue-api-guides/page.version/decoupled-glue-infrastructure/how-to-guides/how-to-use-an-authentication-server.html
+    link: docs/scos/dev/glue-api-guides/page.version/decoupled-glue-infrastructure/how-to-guides/use-authentication-servers-with-glue-api.html
 redirect_from:
     - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
 ---
@@ -62,4 +62,4 @@ Response sample with an error:
 }
 ```
 
-For more details, see [How to create protected endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html)
+For more details, see [Create protected Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/create-protected-glue-api-endpoints.html)

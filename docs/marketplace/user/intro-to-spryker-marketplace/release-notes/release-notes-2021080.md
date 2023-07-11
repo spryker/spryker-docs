@@ -171,12 +171,12 @@ To ensure a smooth merchant onboarding process and overall Marketplacesetup, weâ
 
 These are the new data importers available in our data import framework:
 * Product offers: The operator can provide a template to the merchants so that they can add all offer-related information in one file that can be imported afterward. Documentation: [File details: combined_merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html).
-* Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-data/file-details-merchant-order-status.csv.html).
+* Merchant Order items status. Documentation: [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html).
 
 ### Data export
 The new merchant order exporter lets you export information like orders, order items, and expenses.
 
-Documentation: [Data export Merchant Orders CSV files format](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-data/data-export-merchant-orders-csv-files-format.html)
+Documentation: [Data export Merchant Orders CSV files format](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/import-and-export-data/export-file-details-merchant-orders.csv.html)
 
 ## Technical enhancements
 

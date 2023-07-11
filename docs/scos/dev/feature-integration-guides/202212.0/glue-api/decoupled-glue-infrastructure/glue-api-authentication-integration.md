@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
+  - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
 ---
 
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.

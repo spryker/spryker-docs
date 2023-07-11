@@ -20,3 +20,9 @@ For details about building your import files, choose the Demo Shop category you 
 * [Special Product Types](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html): to import all the necessary data related to the special product types information in the online store. For example, this category includes data about gift cards and product options.
 * [Navigation Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/navigation-setup.html): to import all the necessary data related to the navigation in the online store.
 * [Content Management](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/content-management.html): to import all the necessary data related to content elements in the online store.  For example, this category includes data about CMS pages, blocks, and templates.
+
+{% info_block warningBox "Warning" %}
+
+As the data importers’ execution has certain dependencies, you must follow the correct [execution order of data importers](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html).
+
+{% endinfo_block %}

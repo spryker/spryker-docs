@@ -30,17 +30,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-multi-currency.html  
-related:
-  - title: Upgrade the Currency
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
-  - title: Upgrade the Sales
-    link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
-  - title: Upgrade the Price
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
-  - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html
-  - title: Upgrade the Shipment
-    link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 ---
 
 This article provides a whole overview of what needs to be done to have the multi-currency feature running in your Spryker shop. The multi-currency feature affects many Spryker modules so we split it into smaller parts. Here you will find the information that will help get you started with the multi-currency feature.
@@ -61,7 +50,7 @@ composer update spryker/*
 
 2. The Orders now includes currency iso code, which is used when order is displayed to format price. We have changed `OrderSaver` and how prices are formatted for Order in Yves and Zed:
 
-   * **Sales >= 8.** — see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) for more details.
+   * **Sales >= 8.** — see [Migration Guide - Sales](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html) for more details.
    * **Quote >= 1.1.** — stores current currency when quote is persisted.
 
 3. **Discount** module has undergone big changes. Specifically, the way fixed discount calculation works has been changed. The way the amount is entered in Zed form has been changed as well (the amount requires currency now). Decision rules that MUST be built with currency/price mode decision rule include:
@@ -89,10 +78,10 @@ composer update spryker/*
    * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
    * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html).
    * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html). New forms and views have been added.
-   * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html).
-   * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html).
+   * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/pbc/all/product-relationship-management/202212.0/install-and-upgrade/upgrade-the-productrelation-module.html).
+   * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/pbc/all/product-relationship-management/202212.0/install-and-upgrade/upgrade-the-productrelationcollector-module.html).
    * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).
-   * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html).
+   * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html).
    * **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html).
 
 6. Regarding the Product Options, the way the price is entered in Zed Admin UI has been changed to support multi-currency behavior. Now Collector collects prices by store and cart checkout has been amended to support multi-currency product options.

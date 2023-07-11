@@ -76,16 +76,9 @@ When customers pay with PayPal, a shop owner can do the following:
 - Cancel the entire customer order, that is, void the existing preauthorization. In this case, the customer is not charged anything.
 - Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items.
 
-## Prerequisites to use Payone in your project
+## Next steps
 
-The Payone app requires the following Spryker modules:
+[Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
 
-* `spryker/message-broker: ^1.3.0`
-* `spryker/message-broker-aws: ^1.3.2`
-* `spryker/payment: ^5.10.0`
-* `spryker/sales: ^11.32.0`
-* `spryker/sales-return: ^1.4.0`
-* `spryker-shop/checkout-page: ^3.21.0`
-* `spryker-shop/payment-page: ^1.2.0`
-* `spryker/oms: ^11.21.0`
-* `spryker/sales-payment: ^1.2.0`
+
+

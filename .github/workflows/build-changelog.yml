@@ -24,6 +24,10 @@ jobs:
                 {
                     "title": "## Updated pages",
                     "labels": ["updated"]
+                },
+                {
+                    "title": "## Small changes",
+                    "labels": ["small changes"]
                 }
               ]
             }'

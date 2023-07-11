@@ -55,7 +55,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B and B2C deploy file examples for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) environments in the table:
+Find B2B and B2C deploy file examples for [development](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#demo-mode) environments in the table:
 
 | DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |
@@ -323,7 +323,7 @@ image:
 Defines Node.js settings.
 
 * `image: node: version:`—defines a Node.js version. Supports only major versions that are greater than the default one. The default version is `12`.
-* `image: node: npm`—defines an NPM version. Supports only major versions that are greater than the default one. The default version is `6`.
+* `image: node: npm`—defines a npm version. Supports only major versions that are greater than the default one. The default version is `6`.
 * `image: node: distro:`—defines a Linux distribution for the Node Docker image. Should be equal to your base PHP image. Possible values are `alpine` and `debian`. This variable is optional with the default value of `alpine`.
 
 ```yaml

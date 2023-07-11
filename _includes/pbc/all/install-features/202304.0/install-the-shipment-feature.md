@@ -24,7 +24,7 @@ To start the feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  |
 
 ### 1) Install the required modules using Composer
 
@@ -636,7 +636,7 @@ console data:import shipment-method-shipment-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_shipment_method`, `spy_shipment_method_price`, 
+Make sure that the configured data has been added to the `spy_shipment_method`, `spy_shipment_method_price`,
 `spy_shipment_method_store`, `spy_shipment_type`, and `spy_shipment_type_store` tables in the database.
 
 {% endinfo_block %}
@@ -700,7 +700,7 @@ class ShipmentTypeDataImportConfig extends SprykerShipmentTypeDataImportConfig
     {
         return $this->buildImporterConfiguration('shipment_type_store.csv', static::IMPORT_TYPE_SHIPMENT_TYPE_STORE);
     }
-    
+
     /**
      * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
      */
@@ -882,5 +882,5 @@ Make sure that you can send the following requests:
         }
     }
     ```
-      
+
 {% endinfo_block %}

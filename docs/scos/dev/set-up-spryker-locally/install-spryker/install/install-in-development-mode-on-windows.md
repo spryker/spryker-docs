@@ -29,7 +29,7 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 * [Install Docker prerequisites on Windows with WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 
-## Install Spryker in Development mode on Windows
+## Clone a Demo Shop and the Docker SDK
 
 {% info_block warningBox "Filesystems" %}
 

@@ -4,7 +4,7 @@ description: The Push Notifications feature lets you receive push notifications
 last_updated: Feb 2, 2023
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/user/features/202304.0/push-notification-feature-overview.html
+  - /docs/scos/user/features/202400.0/push-notification-feature-overview.html
 ---
 
 The *Push Notification* feature lets users subscribe to the web push notifications, which are sent from the server to all registered subscriptions.
@@ -47,4 +47,4 @@ The following sequence diagram shows how sending and receiving push notification
 
 |INSTALLATION GUIDES | 
 |---------|
-| [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html) |
+| [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/202400.0/install-the-push-notification-feature.html) |

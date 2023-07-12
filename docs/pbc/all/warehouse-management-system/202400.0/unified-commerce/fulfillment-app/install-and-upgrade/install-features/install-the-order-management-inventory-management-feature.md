@@ -8,4 +8,4 @@ redirect_from:
 
 ---
 
-{% include pbc/all/install-features/202304.0/install-the-order-management-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-order-management-inventory-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-order-management-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-order-management-inventory-management-feature.md -->

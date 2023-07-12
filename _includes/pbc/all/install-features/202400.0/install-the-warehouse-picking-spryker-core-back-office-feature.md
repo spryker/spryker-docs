@@ -1,12 +1,12 @@
 
 
 
-This document describes how to integrate the Warehouse picking + [Spryker Core Back Office](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse picking + [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the Warehouse Picking + Spryker Core Back Office feature.
-
+To start feature integration, integrate the required features:
 
 ### Prerequisites
 
@@ -14,8 +14,8 @@ To start feature integration, integrate the required features:
 
 | NAME                     | VERSION          | INTEGRATION GUIDE                                                                                                                                            |
 |--------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse Picking        | {{page.version}} | [Warehouse Picking feature integration](/docs/uc/all/fulfilment-app/{{page.version}}/install-and-upgrade/install-features/install-the-warehouse-picking-feature.html)               |
-| Spryker Core Back Office | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Warehouse Picking        | {{site.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-picking-feature.html)               |
+| Spryker Core Back Office | {{site.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

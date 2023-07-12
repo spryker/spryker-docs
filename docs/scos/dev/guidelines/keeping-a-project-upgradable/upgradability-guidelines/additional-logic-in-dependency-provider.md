@@ -80,7 +80,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 MULTIDIMENSIONAL ARRAY
 ======================
 
-Message: The condition statement if ($alwaysTrue) {} is forbidden in the DependencyProvider
+Message: The if ($alwaysTrue) {} condition statement is forbidden in DependencyProvider
 Target:  <path_to_project>/Pyz/Zed/Checkout/CheckoutDependencyProvider.php
 
 ```

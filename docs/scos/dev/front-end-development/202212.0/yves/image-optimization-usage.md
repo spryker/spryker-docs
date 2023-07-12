@@ -41,7 +41,7 @@ npm run yves:images-optimization
 npm run yves:images-optimization:replace
 ```
 
-If you set the mode value to `true` — for example, `production: true` — when you run `npm run yves:production`, 
+If you set the mode value to `true`—for example, `production: true`—when you run `npm run yves:production`, 
 the build is executed with optimized images by default, and they are added to the `public` folder.
 
 **frontend/settings.js**

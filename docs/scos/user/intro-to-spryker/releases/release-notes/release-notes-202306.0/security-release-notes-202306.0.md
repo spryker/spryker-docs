@@ -111,7 +111,7 @@ composer show spryker/kernel # Verify the version
 
 ## Brute-force Attacks in the Storefront and Back Office
 
-The Storefront, Back Office and Merchant portals were prone to brute-force attacks. By exploiting this type of vulnerability, an attacker was able to systematically attempt different combinations of usernames and passwords against the login pages of the affected portals until a valid combination is identified.
+The Storefront, Back Office, and Merchant portals were prone to brute-force attacks. By exploiting this type of vulnerability, an attacker was able to systematically attempt different combinations of usernames and passwords against the login pages of the affected portals until a valid combination is identified.
 
 ### Affected modules
 

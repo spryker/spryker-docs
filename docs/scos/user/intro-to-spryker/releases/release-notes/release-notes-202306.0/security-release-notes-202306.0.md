@@ -230,9 +230,6 @@ use Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker\BackofficeUs
 use Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker\AgentSecurityBlockerConfigurationSettingsExpanderPlugin;
 use Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin;
 
-/**
- * @method \Spryker\Client\SecurityBlocker\SecurityBlockerConfig getConfig()
- */
 class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
     /**

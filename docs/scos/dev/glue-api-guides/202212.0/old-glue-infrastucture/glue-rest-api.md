@@ -16,6 +16,12 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/reference-information-glueapplication-errors.html
 ---
 
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, please check [new document](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
+
 The Spryker Glue REST API is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS Backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ![Glue REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+REST+API/glue-rest-api.jpg)

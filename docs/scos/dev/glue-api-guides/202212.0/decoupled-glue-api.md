@@ -17,14 +17,14 @@ OOTB Spryker Commerce OS provides 3 API applications:
 There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the old [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html)
 
 ### Possibility to create new API applications
-With the current infrastructure projects can easily [create](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/create-glue-api-applications.html) their own API applications that would be completely separated from others. This means that resources can be added only to the new application and users will not be able to access them with existing ones.
+With the current infrastructure projects can easily [create](/docs/scos/dev/glue-api-guides/{{page.version}}/create-glue-api-applications.html) their own API applications that would be completely separated from others. This means that resources can be added only to the new application and users will not be able to access them with existing ones.
 
 ### Decoupling from conventions
 Old Glue API was tightly coupled with a JSON:API convention and all resources have to follow it. With a current infrastructure resources can use any implemented conventions, create new one or even not use any. In this case "no convention" approach will be used and request and response will be formatted as a plain json. More details can be found [here](/docs/scos/dev/glue-api-guides/{{page.version}}/create-and-change-glue-api-conventions.html)
 
 ### New type of application - Glue Backend API application
 With the current setup OOTB we have an additional Glue Backend API (BAPI) application that is meant to be an API application for our backoffice. This means that with this new application, infrastructure has a direct access to Zed facades from BAPI resources. Also OOTB we have a separate `/token` resource specifically for BAPI that is uses Backoffice users credentials to issue a token for BAPI resource.
-More details about difference between SAPI and BAPI can be found [here](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html)
+More details about difference between SAPI and BAPI can be found [here](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-and-storefront-api-module-differences.html)
 
 ### Authentication servers
 Current infrastructure allows switching between different authentication servers. This can be useful if you want to use e.g. Auth0 or any other server in addition to implemented servers.

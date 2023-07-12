@@ -16,6 +16,12 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
 ---
 
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, please check [new document](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
+
 This page lists the generic errors that originate from the Glue Application. These errors can occur for any resource, and they are always the same for all the resources.
 
 | ERROR | DESCRIPTION |

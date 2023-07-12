@@ -1,14 +1,16 @@
 ---
-title: Import tax sets for shipment methods
+title: "Import file details: shipment.csv"
 last_updated: Aug 2, 2022
 template: data-import-template
+redirect_from:
+  - /docs/pbc/all/tax-management/202212.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html
 ---
 
 This document describes how to import taxes for shipment methods via  `shipment.csv`. To import full information for shipment methods, see [File details - shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html).
 
 ## Import file dependencies
 
-[tax.csv](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets.html)
+[tax.csv](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
 
 
 ## Import file parameters
@@ -28,5 +30,5 @@ data:import:shipment
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.md/Template_shipment.csv) | Import file template with headers only. |
-| [shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.md/shipment.csv) | Exemplary import file with the Demo Shop data. |
+| [template_shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-file-details-shipment.csv.md/Template_shipment.csv) | Import file template with headers only. |
+| [shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-file-details-shipment.csv.md/shipment.csv) | Exemplary import file with the Demo Shop data. |

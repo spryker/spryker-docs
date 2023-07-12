@@ -75,7 +75,7 @@ appBuilder().withTheme({
 });
 ```
 
-### Configure custom colors
+## Configure custom colors
 
 The palette provides a range of colors and can be conveniently applied. But there's a good change that your exact color of choice is not provided by the pallette. You can configure exact colors using an extended configuration.
 

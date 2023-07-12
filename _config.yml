@@ -171,6 +171,11 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
   -
+     scope:
+       path: "docs/uc"
+     values:
+       product: "uc"
+  -
     scope:
       path: "docs/uc/all"
     values:

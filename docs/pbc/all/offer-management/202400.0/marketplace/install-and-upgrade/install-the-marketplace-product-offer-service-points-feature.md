@@ -1,6 +1,6 @@
 ---
 title: Install the Marketplace Product Offer + Service Points feature
-description: Install the Marketplace Product Offer + Service Points feature
+description: Install the Marketplace Product Offer + Service Points feature     
 last_updated: July 05, 2023
 template: feature-integration-guide-template
 redirect_from:

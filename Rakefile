@@ -220,6 +220,7 @@ task :check_pbc do
     /docs\/scu\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
     /docs\/uc\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

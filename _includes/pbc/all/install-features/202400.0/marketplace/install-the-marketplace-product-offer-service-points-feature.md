@@ -4,7 +4,7 @@ This document describes how to integrate the Marketplace Product Offer + Service
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Product Offer + Product Offer Service Points feature core.
+Follow the steps below to install the Marketplace Product Offer + Service Points feature core.
 
 ### Prerequisites
 

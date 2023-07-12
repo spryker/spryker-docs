@@ -49,43 +49,48 @@ Recommended: `/home/jdoe/workspace/project`.
 
     * B2C Demo Shop:
 
-    ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
-    ```
-
-    * B2B Demo Shop:
-
-    ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
-    ```
-
-5. Depending on the Demo Shop you've cloned, navigate into the cloned folder:
-
-    * B2C Demo Shop:
-
-    ```bash
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop && \
     cd b2c-demo-shop
     ```
 
     * B2B Demo Shop:
 
-    ```bash
-    cd b2b-demo-shop
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop && \
+    cd b2c-demo-shop
+    ```
+
+    * B2C Marketplace Demo Shop
+
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2c-demo-marketplace && \
+    cd b2c-demo-marketplace
+    ```
+
+    * B2B Marketplace Demo Shop
+
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2b-demo-marketplace & \
+    cd b2b-demo-marketplace
     ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you are in the correct folder by running the `pwd` command.
+Make sure that you are in the Demo Shop's folder by running the `pwd` command.
 
 {% endinfo_block %}
 
-6. Clone the Docker SDK:
+5. Clone the Docker SDK:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-7. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
+## Configure and start the instance
+
+
+1. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
 
 ```text
 ...
@@ -94,13 +99,13 @@ xdebug.remote_host=host.docker.internal
 xdebug.client_host=host.docker.internal
 ```
 
-8. Add your user to the `docker` group:
+2. Add your user to the `docker` group:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-9. Bootstrap local docker setup:
+3. Bootstrap local docker setup:
 
 ```bash
 docker/sdk bootstrap deploy.dev.yml
@@ -112,7 +117,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 
-10. Update the hosts file based on the output of the previous step:
+4. Update the hosts file based on the output of the previous step:
     1. Open the Start menu.
     2. In the search field, enter `Notepad`.
     3. Right-click **Notepad** and select **Run as administrator**.
@@ -132,7 +137,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     9. Click **File&nbsp;<span aria-label="and then">></span> Save**.
     10. Close the file.
 
-11. Build and start the instance:
+5. Build and start the instance:
 
 ```bash
 docker/sdk up

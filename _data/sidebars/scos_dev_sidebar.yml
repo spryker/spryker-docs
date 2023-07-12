@@ -3244,6 +3244,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+      - title: Image optimization usage
+        url: /docs/scos/dev/front-end-development/yves/image-optimization-usage.html
     - title: Oryx
       url: /docs/scos/dev/front-end-development/oryx/oryx.html
       include_versions:

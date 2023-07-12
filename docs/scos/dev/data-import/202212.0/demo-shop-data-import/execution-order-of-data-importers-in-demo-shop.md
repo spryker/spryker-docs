@@ -49,7 +49,7 @@ The following list illustrates the order followed to run the data importers and 
   * [product-image](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-image.csv.html)
   * [product-price](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
   * [product-price-schedule](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price-schedule.csv.html)
-  * [product-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html)
+  * [product-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-product-stock.csv.html)
 * Special Products:
   * [product-option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html)
   * [product-option-price](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/file-details-product-option-price.csv.html)

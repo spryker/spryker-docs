@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202212.0/import-and-export-data/import-content-management-system-data.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Cart and Checkout PBC.
+To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Content Management System PBC.
 
 The CMS data import category contains data required to create and manage content elements like CMS pages or blocks.
 

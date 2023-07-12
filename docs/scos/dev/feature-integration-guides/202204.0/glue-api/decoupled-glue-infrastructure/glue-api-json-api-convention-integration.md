@@ -20,7 +20,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
+| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -29,13 +29,13 @@ Add the following plugins to the `package.json` and install them using the `npm 
 "yves:images-optimization:replace": "node ./frontend/libs/images-optimization-build --replace",
 ```
 
-2. Run the following command to create the folder with optimized images (`project/frontend/assets/%namespace%/%theme%/images/optimized-images`): 
+2. Create the folder with optimized images (`project/frontend/assets/%namespace%/%theme%/images/optimized-images`): 
 
 ```bash
 npm run yves:images-optimization
 ```
 
-3. Run the following command to replace original images with optimized ones:
+3. Replace original images with optimized ones:
 
 ```bash
 npm run yves:images-optimization:replace

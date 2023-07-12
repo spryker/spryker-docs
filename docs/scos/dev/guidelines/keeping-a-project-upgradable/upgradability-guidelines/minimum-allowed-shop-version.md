@@ -30,7 +30,7 @@ MINIMUM ALLOWED SHOP VERSION
 
 ## Example of code that causes an evaluator error
 
-Below is an example of when the used Spryker package version doesn't correspond to the minimum required version:
+The following is an example of when the used Spryker package version doesn't correspond to the minimum required version:
 
 ```shell
 ============================

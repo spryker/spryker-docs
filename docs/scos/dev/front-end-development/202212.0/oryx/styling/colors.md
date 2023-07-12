@@ -54,7 +54,6 @@ The Radix color system provides 15 color scales that are designed with a white f
 
 The color values can be of any supported color in the web platform, such as named colors ('red' or 'blue'), hex color, hcl, or rba. Oryx doesn't interfere with the provided colors but uses them as-is.
 
-## Custom the colors
 
 ### Configure a color from the color palette
 

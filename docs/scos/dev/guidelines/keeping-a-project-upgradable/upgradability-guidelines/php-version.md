@@ -81,7 +81,7 @@ Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/doc
 PHP VERSION CHECKER
 ===================
 
-Message: The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12"
+Message: The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12".
          The image tag must contain an allowed PHP version (image:abc-8.0)
 Target:  <path_to_project>/deploy.yml
 ```

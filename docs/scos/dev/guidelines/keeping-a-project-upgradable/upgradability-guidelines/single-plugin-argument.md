@@ -26,10 +26,10 @@ Supported argument types:
 SINGLE PLUGIN ARGUMENT
 ======================
 
-Message: Plugin \Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin
+Message: The "\Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin" plugin
          should not have unsupported constructor parameters.
          Supported argument types: int, float, string, const, bool, int, usage of new statement to
-         instantiate a class (without further methods calls)
+         instantiate a class (without further methods calls).
 Target:  <path_to_class>\ConsoleDependencyProvider::getMonitoringConsoleMethod
 ```
 

@@ -243,24 +243,30 @@ class StepFactory extends SprykerShopStepFactory
 	 */
 	public function createStepCollection()
 	{
-		$stepCollection = new StepCollection(
+		return new StepCollection(
 			$this->getUrlGenerator(),
-			CheckoutPageRouteProviderPlugin::CHECKOUT_ERROR
+			CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_ERROR
 		);
-
-		$stepCollection
-			->addStep($this->createEntryStep())
-			->addStep($this->createCustomerStep())
-			->addStep($this->createAddressStep())
-			->addStep($this->createShipmentStep())
-			->addStep($this->createPaymentStep())
-			->addStep($this->createVoucherStep())
-			->addStep($this->createSummaryStep())
-			->addStep($this->createPlaceOrderStep())
-			->addStep($this->createSuccessStep());
-
-		return $stepCollection;
 	}
+
+	/**
+     	 * @return array<\Spryker\Yves\StepEngine\Dependency\Step\StepInterface>
+     	 */
+	public function getSteps(): array
+    	{
+        	return [
+			$this->createEntryStep(),
+			$this->createCustomerStep(),
+			$this->createAddressStep(),
+			$this->createShipmentStep().
+            		$this->createPaymentStep(),
+			$this->createVoucherStep(),
+            		$this->createSummaryStep(),
+            		$this->createPlaceOrderStep(),
+            		$this->createSuccessStep(),
+			$this->createErrorStep(),
+        	];
+    	}
 
 	/**
 	 * @return \Pyz\Yves\CheckoutPage\Process\Steps\VoucherStep

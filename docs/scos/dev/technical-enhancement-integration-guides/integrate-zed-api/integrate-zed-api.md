@@ -1,3 +1,11 @@
+---
+title: Integrate Zed API
+description: Integrate the Zed API into your project
+template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202212.0/backend-api-feature-integration.html
+---
+
 
 
 This document describes how to integrate the Zed API feature into a Spryker project.
@@ -12,10 +20,9 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME    | VERSION    | INTEGRATION GUIDE            |
 |---------------| ----------------- |------------------------|
-| Spryker Core  | {{page.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Spryker Core  | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 ### 1) Install the required modules using Composer
-<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 Install the required modules:
 

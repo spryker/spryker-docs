@@ -1,5 +1,5 @@
 ---
-title: Import product catalog data
+title: Product Information Management data import
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-setup
@@ -10,17 +10,17 @@ redirect_from:
   - /docs/catalog-setup
   - /docs/en/catalog-setup
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/catalog-setup.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/import-and-export-data/import-product-catalog-data.html
 ---
 
-*Catalog Setup* contains data required to sell products and build their main structure.
-
-{% info_block warningBox "Important" %}
+{% info_block warningBox "Order of data import" %}
 
 We recommend setting up the Catalog after having done the [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) (which provides the overall structure of the store).
 
 {% endinfo_block %}
 
-This section will help you import the necessary product-related data to be able to sell products/services in your online store. We have structured it into four main categories focusing on the following topics:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
+
 
 * [Categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/categories-data-import.html)
 * [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)

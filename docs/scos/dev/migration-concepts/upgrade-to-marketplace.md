@@ -1,12 +1,14 @@
 ---
-title: "How-To: Upgrade Spryker instance to the Marketplace"
+title: Upgrade to Marketplace
 description: This document provides details how to upgrade Spryker instance to the Marketplace.
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
 ---
 
 This document describes how to upgrade the existing instance of Spryker Shop to the Marketplace.
 
-## 1) Add core features
+## 1. Add core features
 
 Implement the features and functionality of the Marketplace by following the integration guides from the following table.
 
@@ -27,7 +29,7 @@ Implement the features and functionality of the Marketplace by following the int
 | [Marketplace Shipment](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-shipment-feature-integration.html) | The Marketplace orders are split into several shipments based on the merchants from which the items were bought. Merchants can see their shipments only. |
 | [Marketplace Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) | Order returns management enhancement for OMS. |
 
-## 2) Add MerchantPortal features
+## 2. Add MerchantPortal features
 
 Follow feature integration guides from the table that provides functionality for MerchantPortal Application.
 
@@ -40,7 +42,10 @@ Follow feature integration guides from the table that provides functionality for
 | [Marketplace Merchant Portal Order Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                  | Allows merchants to manage their orders in the Merchant Portal.                                                                         |
 | [ACL](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-acl-feature.html)                                                                                                    | Allows managing access to HTTP endpoints and Persistence entities.                                                                      |
 
-## 3) Build app
+## 3. Build and start the instance
 
-Please rebuild your app in order to apply all the changes regarding database entities, data imports, search engine indexes, UI assets.
-Depending on the virtualization solution you use, use the recommendations in [Docker based instance build](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+Rebuild your app in order to apply all the changes regarding database entities, data imports, search engine indexes, UI assets:
+
+```shell
+docker/sdk up
+```

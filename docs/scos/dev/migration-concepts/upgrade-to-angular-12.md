@@ -1,20 +1,21 @@
 ---
-title: Migration guide - Upgrade to Angular v12
+title: Upgrade to Angular 12
 description: Use the guide to update versions of the Angular and related modules.
 template: module-migration-guide-template
 redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/migration-guide-upgrade-to-angular-v12.html
+  - /docs/marketplace/dev/technical-enhancement/202212.0/migration-guide-upgrade-to-angular-v12.html
 ---
 
 ## Upgrading from version 9.* to version 12.*
 
 This document shows how to upgrade Angular to version 12 in your Spryker project.
 
-### Overview 
+### Overview
 
 Every six months, the Angular community releases a major update, and on 12th May 2021 version 12 of Angular was released.
 
-A version upgrade is necessary for improved performance, stability, and security. Stability allows reusable components and tools and makes medium and large applications thrive and shine. 
+A version upgrade is necessary for improved performance, stability, and security. Stability allows reusable components and tools and makes medium and large applications thrive and shine.
 
 Angular provides regular updates to ensure stability and security. These are major, minor, and small patches. An upgrade from an existing version to a newer version always requires time and changes to the code.
 
@@ -282,7 +283,7 @@ module.exports = { ...nxPreset };
     "defaultProject": "merchant-portal"
 }
 ```
-</details> 
+</details>
 
 `jest.config.js` in the `frontend/merchant-portal/` folder:
 
@@ -323,7 +324,7 @@ import 'jest-preset-angular/setup-jest';
 
 1. Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in `tsconfig.mp.json`:
 
-**tsconfig.mp.json** 
+**tsconfig.mp.json**
 
 ```json
 "extends": "./tsconfig.base.json",

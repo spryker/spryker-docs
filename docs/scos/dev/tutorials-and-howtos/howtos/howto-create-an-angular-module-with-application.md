@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create a new Angular module with application"
+title: "HowTo: Create an Angular module with application"
 last_updated: Jan 17, 2023
 description: This document shows how to create a new Angular module with the application
 template: howto-guide-template
@@ -21,7 +21,7 @@ A new Angular module needs a proper scaffolding structure.
 The necessary list of files is provided in the [Project structure document, Module structure section](/docs/marketplace/dev/front-end/{{site.version}}/project-structure.html#module-structure).
 Each new Angular module can contain its own set of Twig Web Components.
 
-## 2) Register a new Angular module
+## 2) Register aт Angular module
 
 To register components, a special Angular module is created. The `components.module.ts` file contains a list of all Angular components exposed as Web Components.
 

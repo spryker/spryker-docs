@@ -7,23 +7,12 @@ entries:
       - title: Setup
         url: /docs/marketplace/dev/setup/setup.html
         include_versions:
+        - "202204.0"
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
-            include_versions:
-            - "202204.0"
-
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
-          - title: Setup
-            url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
 
       - title: Marketplace architecture overview
         url: /docs/marketplace/dev/architecture-overview/architecture-overview.html
@@ -1435,9 +1424,6 @@ entries:
         url: /docs/marketplace/dev/howtos/howtos.html
         nested:
 
-          - title: "How-To: Upgrade Spryker instance to the Marketplace"
-            url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
-
           - title: "How-To: Create a new Angular module with application"
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-angular-module-with-application.html
 
@@ -1447,20 +1433,11 @@ entries:
           - title: "How-To: Create a new Gui table column type"
             url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
 
-          - title: "How-To: Create a new Gui table filter type"
-            url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
-
       - title: Technical enhancement guides
         url: /docs/marketplace/dev/technical-enhancement/technical-enhancement.html
+        include_versions:
+        - "202204.0"
         nested:
 
           - title: "Migration guide - Upgrade to Angular v12"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
-          - title: "Migration guide - Upgrade to Angular v15"
-            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v15.html
-            include_versions:
-            - "202304.0"

@@ -1,7 +1,9 @@
 ---
-title: "How-To: Create a new Gui table column type"
+title: Create Gui table column types
 description: This articles provides details how to create a new Gui table column type
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
 ---
 
 This document describes how to add new column types to a Gui table.

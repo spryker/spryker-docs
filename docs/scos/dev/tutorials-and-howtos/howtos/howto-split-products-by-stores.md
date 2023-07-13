@@ -1,7 +1,9 @@
 ---
-title: "How-To: Split products by stores"
+title: "HowTo: Split products by stores"
 description: This document provides details about how to split products by stores.
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
 related:
     - title: Persistence ACL feature walkthrough
       link: docs/marketplace/dev/feature-walkthroughs/page.version/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html

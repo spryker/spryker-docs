@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Upgrade to Angular v15
+title: Upgrade to Angular 15
 description: Use the guide to update versions of the Angular and related modules.
 last_updated: Mar 24, 2023
 template: module-migration-guide-template
@@ -32,9 +32,9 @@ So the update requires a major release for these modules:
 
 ### 1) Update modules
 
-1. Upgrade modules to the new version: 
+1. Upgrade modules to the new version:
 
-The marketplace modules must correspond to the following versions: 
+The marketplace modules must correspond to the following versions:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
@@ -72,9 +72,9 @@ Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download).
 
 {% endinfo_block %}
 
-1. In `package.json`, do the following: 
+1. In `package.json`, do the following:
 
-   1. Update or add the following dependencies: 
+   1. Update or add the following dependencies:
 
         ```json
         {
@@ -151,7 +151,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 1. In `frontend/merchant-portal` folder, do the following:
 
-   1. Rename the `jest.config.js` file to `jest.config.ts` and replace its content with the following: 
+   1. Rename the `jest.config.js` file to `jest.config.ts` and replace its content with the following:
 
         ```ts
         export default {
@@ -174,7 +174,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
             passWithNoTests: true,
         };
         ```
-   
+
    2. In `jest.preset.js`, replace its content with the following:
 
         ```js
@@ -210,7 +210,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
             ]
         }
         ```
-   
+
    4. In `webpack.config.ts`, add aliases to resolve imports paths in `.less` files:
 
         ```js
@@ -220,7 +220,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
         };
         ```
 
-2. In `angular.json`, add the following changes: 
+2. In `angular.json`, add the following changes:
 
    1. Update the `test` section:
 
@@ -235,16 +235,16 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
         // must be
         "outputs": ["{projectRoot}/coverage"]
         ```
-    
+
    2. Remove the `defaultProject` section.
-   
+
 3. Add the `.angular` folder to `.gitignore` and `.prettierignore` files:
 
 ```text
 /.angular/
 ```
 
-4. In `nx.json`, replace its content with the following: 
+4. In `nx.json`, replace its content with the following:
 
 ```json
 {
@@ -278,7 +278,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-5. In `tsconfig.base.json`, add the following changes: 
+5. In `tsconfig.base.json`, add the following changes:
    1. In `compilerOptions` section, change the `target` property and add the new `useDefineForClassFields` property.
    2. In `exclude` section, add the `"**/*.test.ts"` file extension.
 
@@ -296,7 +296,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-6. In `tsconfig.mp.json`, add the `"src/Pyz/Zed/ZedUi/Presentation/Components/environments/environment.prod.ts"` path to the `include` section: 
+6. In `tsconfig.mp.json`, add the `"src/Pyz/Zed/ZedUi/Presentation/Components/environments/environment.prod.ts"` path to the `include` section:
 
 ```json
 {
@@ -317,7 +317,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
    - `tslint.mp-githook.json`
    - `tslint.mp.json`
 
-2. Add a new `.eslintrc.mp.json` file to the root folder with the following content: 
+2. Add a new `.eslintrc.mp.json` file to the root folder with the following content:
 
 ```json
 {
@@ -422,7 +422,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 },
 ```
 
-4. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
+4. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section:
 
 ```json
 {
@@ -436,7 +436,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-5. Make sure to replace `tslint` disable comments with `eslint`—for example: 
+5. Make sure to replace `tslint` disable comments with `eslint`—for example:
 
 ```ts
 /* tslint:disable:no-unnecessary-class */

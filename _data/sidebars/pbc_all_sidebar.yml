@@ -1241,6 +1241,8 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-modules.html
                   - title: Create Gui table filter types
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html
+                  - title: Create Gui table column types
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-table-column-types.html
                   - title: Create Gui tables
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-tables.html
                   - title: Extend Gui tables

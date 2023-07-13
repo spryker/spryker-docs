@@ -12,13 +12,13 @@ To start feature integration, integrate the following required features:
 
 | NAME          | VERSION          | INTEGRATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
- | Product Offer | {{site.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
- | Shipment      | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                   |
+ | Product Offer | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+ | Shipment      | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/enhanced-click-and-collect/install-and-upgrade/install-the-shipment-feature.html)                   |
 
 ## 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/product-offer-shipment:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-offer-shipment:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

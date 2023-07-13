@@ -1,7 +1,7 @@
 
 
 
-This document describes how to ingrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -10,7 +10,7 @@ The following features integration guide expects the basic feature to be in plac
 The current feature integration guide adds the following functionality:
 
 * [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html)
-* [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html)
+* [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html)
 
 {% endinfo_block %}
 
@@ -24,8 +24,8 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                       |
 |--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html) 
-| Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
+| Order Management     | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) 
+| Inventory Management | {{page.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-inventory-management-feature.md) |
 
 
 ### 1) Set up behavior

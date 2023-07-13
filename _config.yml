@@ -264,7 +264,7 @@ versioned_categories:
   uc:
     all:
       - enhanced-click-collect
-      - fulfilment-app
+      - fulfillment-app
 
 
 # these are defaults used for the front matter for these file types

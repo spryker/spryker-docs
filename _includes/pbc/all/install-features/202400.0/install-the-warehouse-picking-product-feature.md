@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Warehouse picking + [Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse picking + [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -14,7 +14,7 @@ To start feature integration, integrate the required features:
 | NAME              | VERSION          | INTEGRATION GUIDE                                                                                                                                                 |
 |-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse Picking | {{page.version}} | [Warehouse Picking feature integration](/docs/pbc/all/install-features/{{page.version}}/install-the-warehouse-picking-order-management-feature.html)                    |
-| Product           | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Product           | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 
 ## 1) Install the required modules using Composer

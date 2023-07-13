@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Push Notification feature](/docs/scos/user/features/202304.0/push-notification-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Push Notification feature](/docs/uc/all/fulfillment-app/page.version/push-notification-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 

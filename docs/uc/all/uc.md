@@ -7,8 +7,3 @@ template: concept-topic-template
 Unified Commerce (UC) encloses a certain functionality with the Spryker system.
 
 This section is in beta because not all Unified Commerce-related documents are covered. All necessary documentation is planned to be added at the time of the winter 2024 release.
-
-| NAME | DESCRIPTION | BENEFITS |
-| --- | --- | --- |
-|Enhanced Click & Collect|||
-|Fulfilment App|||

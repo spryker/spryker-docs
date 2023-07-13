@@ -1,6 +1,6 @@
 ---
 title: Security updates
-description: Learn about security updates that happened to the Spryker Commerce OS.
+description: Learn about the security updates that happened to the Spryker Commerce OS.
 last_updated: Jul 12, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-updates

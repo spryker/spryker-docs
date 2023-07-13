@@ -245,7 +245,7 @@ class StepFactory extends SprykerShopStepFactory
 	{
 		return new StepCollection(
 			$this->getUrlGenerator(),
-			CheckoutPageRouteProviderPlugin::CHECKOUT_ERROR
+			CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_ERROR
 		);
 	}
 

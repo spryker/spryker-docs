@@ -1,9 +1,9 @@
 ---
-title: Glue API - Glue documentation generation
+title: "Decoupled Glue infrastructure: Integrate the documentation generator"
 description: Integrate the Glue documentation generation into your project
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
 ---
 
 This document describes how to integrate the Glue documentation generation into a Spryker project.
@@ -18,7 +18,7 @@ To start the integration of the feature, overview and install the necessary feat
 
 | NAME                                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                           |
 |----------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html)  |
+| Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html)  |
 
 
 ### 1) Install the required modules using Composer
@@ -275,4 +275,4 @@ A sure sign that `JsonApiSchemaFormatterPlugin` and `RestApiSchemaFormatterPlugi
 {% endinfo_block %}
 ```
 
-For more details, see [Document Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/document-glue-api-endpoints.html).
+For more details, see [Document Glue API endpoints](/docs/scos/dev/glue-api-guides/{{site.version}}/document-glue-api-endpoints.html).

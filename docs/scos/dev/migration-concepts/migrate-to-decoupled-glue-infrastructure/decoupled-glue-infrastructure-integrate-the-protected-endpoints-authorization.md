@@ -1,10 +1,10 @@
 ---
-title: Glue API - Authorization protected endpoints integration
+title: "Decoupled Glue infrastructure: Integrate the protected endpoints authorization"
 description: This document describes how to use the protected endpoints authorization strategy for storefront API and backend API applications in a Spryker project.
 last_updated: October 21, 2022
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html
 ---
 
 This document describes how to use a protected endpoints authorization strategy for storefront API and backend API applications in a Spryker project.
@@ -19,7 +19,7 @@ To start feature integration, overview and install the necessary feature:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html) |
+| Glue Authentication | {{site.version}} | [Glue Authentication itegration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -163,4 +163,4 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-To verify that everything is set up correctly and the route is protected, see [Create protected Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/create-protected-glue-api-endpoints.html).
+To verify that everything is set up correctly and the route is protected, see [Create protected Glue API endpoints](/docs/scos/dev/glue-api-guides/{{site.version}}/create-protected-glue-api-endpoints.html).

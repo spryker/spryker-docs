@@ -1,7 +1,7 @@
 ---
 title: Security updates
-description: This article contains information about the security updates that happened to the Spryker Commerce OS.
-last_updated: Jun 16, 2021
+description: Learn about security updates that happened to the Spryker Commerce OS.
+last_updated: Jul 12, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-updates
 originalArticleId: 52f64151-dd88-406c-8408-9c08d9c0bb2d

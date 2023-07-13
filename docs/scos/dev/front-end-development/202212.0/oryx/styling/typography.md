@@ -5,17 +5,17 @@ last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
-Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also plays an important role in how the page structure is perceived. Big headers typically go first and are perceived more important, where as smaller text seems less important.
+Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also plays an important role in how the page structure is perceived. Big headers typically go first and are perceived as more important, whereas smaller text seems less important.
 
-The typography system allows to setup font size, weight and line height globally. Components do not define _values_ for fonts directly in their CSS, but use _design tokens_ to connect to the font values. Design tokens are (CSS) variables that can be configured in your project implementation.
+The typography system lets you setup font size, weight and line height globally. Components do not define _values_ for fonts directly in their CSS, but use _design tokens_ to connect to the font values. Design tokens are CSS variables that can be configured in your project implementation.
 
-As all design tokens, the typography system is configurable by themes, so that a selection for a certain theme will apply a unique set of typography settings to all components.
+As all design tokens, the typography system is configurable by themes, so that a selection for a certain theme applies a unique set of typography settings to all components.
 
 ## Global font settings
 
-Oryx is based on web components, using the shadow DOM. The shadow DOM won't leak out any styles outside a component and components won't inherit styles from ancestor elements. There are however a few exceptions to this. Font face and size, line height and color are among the few CSS properties that actually cascade down the shadow DOM. This allows for defining those rules high up in the DOM tree.
+Oryx is based on web components, using the shadow DOM. The shadow DOM doesn't leak out any styles outside a component and components don't inherit styles from ancestor elements. However, there are a few exceptions to this. Font face and size, line height and color are the few CSS properties that cascade down the shadow DOM. This lets you define those rules high up in the DOM tree.
 
-Because of this, most design system components do not require specific typography as they will inherit those from an ancestor elements. The basis typography configuration can therefore be provided in the root of the application. Oryx applications use the `<oryx-app>` component which provide this setup:
+Because of this, most design system components do not require specific typography, as they inherit those from ancestor elements. The basis typography configuration can therefore be provided in the root of the application. Oryx applications use the `<oryx-app>` component which provides this setup:
 
 ```css
 :host {
@@ -25,9 +25,15 @@ Because of this, most design system components do not require specific typograph
 }
 ```
 
-The values are based on design tokens, which can be configured in a theme. Themes provide a mechanism to have screen size specific tokens, which allows the components to have different typography for small, medium and large screens.
+The values are based on design tokens, which can be configured in a theme. Themes provide a mechanism to have screen size specific tokens, which enables the components to have different typography for small, medium, and large screens.
 
-**Note**: Setting the _root font size_ is an exception in Oryx; Oryx tries to not have any opinion about the root element, and only provides styles to the `oryx-app` component. The `rem` unit however requires a setup of the root font-size in the web page. To ensure a configurable approach, Oryx uses the `ThemeMetaInitializer` to accomplish this.
+{% info_block infoBox "Reading tip" %}
+
+Setting the _root font size_ is an exception in Oryx. Oryx tries to not have any opinion about the root element, and only provides styles to the `oryx-app` component. However, the `rem` unit requires a setup of the root font-size in the web page. To ensure a configurable approach, Oryx uses the `ThemeMetaInitializer` to accomplish this.
+
+{% endinfo_block %}
+
+
 
 <!-- TODO: we will add more information on the DefaultThemeMetaInitializer going forward in our docs -->
 
@@ -37,21 +43,21 @@ Application themes in Oryx are typically configured with relative sizes for font
 
 ### `rem` for font size
 
-The `rem` unit, short for "root em" is relative to the root font size of the document. By defining the root font size all other font sizes specified using `rem` adapt proportionally.
+The `rem` unit, short for *root em*, is relative to the root font size of the document. By defining the root font size, all other font sizes specified using `rem` adapt proportionally.
 
-For example, if the font size token of a `h3` is set to `1.2rem`, and the root font size is `15px`, the calculated font size for the `h3` becomes `18px` (`1.2 * 15`).
+For example, if the font size token of an `h3` is set to `1.2rem`, and the root font size is `15px`, the calculated font size for the `h3` becomes `18px`: `1.2 * 15`.
 
 Using `rem` for font size provides several benefits:
 
-1. Consistency: Font sizes scale consistently across elements, maintaining proportional typography.
-2. Accessibility: Users can adjust the overall font size in their browser settings without affecting layout or readability.
-3. Ease of Maintenance: Adjusting the root font size automatically cascades changes to all elements using `rem`, reducing manual adjustments.
+1. Consistency: font sizes scale consistently across elements, maintaining proportional typography.
+2. Accessibility: users can adjust the overall font size in their browser settings without affecting layout or readability.
+3. Ease of Maintenance: adjusting the root font size automatically cascades changes to all elements using `rem`, reducing manual adjustments.
 
 ### `em` for line height
 
-The `em` unit, short for "element `em`," is relative to the font size of the current element. When specifying line heights using `em`, the value is multiplied by the font size to determine the final line height.
+The `em` unit, short for *element em*, is relative to the font size of the current element. When line height is defined using `em`, to determine the final line height, the value is multiplied by the font size.
 
-For example, if the line height token of a `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px` (`1.5 * 18`). The font size can be driven by a `rem` unit, the browser will first calculate the rem value of the font size before calculating the line height.
+For example, if the line height token of an `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px`: `1.5 * 18`. The font size can be driven by a `rem` unit, the browser calculates the rem value of the font size before calculating the line height.
 
 Using `em` for line height offers the following advantages:
 

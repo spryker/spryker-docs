@@ -53,7 +53,6 @@ Decoupled Glue API infrastructure is implemented in the same layer of Spryker Co
 Logically, the Glue layer can be divided into separate parts:
 
 * **`GlueApplication` module**: The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (for example, `http://mysprykershop.com/resource/1`), selects a proper application based on a bootstrap file, does content negotiation, and selects applicable convention if one exists, proxy request to the proper convention or uses default flow. Also, this module is used for the fallback to the old Glue API.
-
 * **GlueStorefrontApiApplication module**: The `GlueStorefrontApiApplication` module is used for wiring everything related to the Glue Storefront API resources and routes processing. All resources, routes, application plugins, and the rest of required plugin stacks are wired into this module.
 * **GlueBackendApiApplication module**: The `GlueBackendApiApplication` module is used for wiring everything related to the Glue Backend API resources and routes processing. All resources, routes, application plugins and the rest of required plugin stacks are wired into this module.
 * **Convention module**: Each convention module represents some specific convention and should include all required functionality to format API requests according to this convention. Out of the box, Spryker provides a `GlueJsonApiConvention` module that represents JSON:API convention.

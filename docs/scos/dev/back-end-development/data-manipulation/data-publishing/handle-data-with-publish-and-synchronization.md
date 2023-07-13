@@ -1034,106 +1034,92 @@ This section describes how to read the data from Redis.
 
 To read the data from Redis, create the following:
 
-Create client interface in `Pyz\Client\HelloWorld\HelloWorldClientInterface.php`
+Create client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`
 
 ```php
 <?php
 
-namespace Pyz\Client\HelloWorld;
+namespace Pyz\Client\HelloWorldStorage;
 
-use Generated\Shared\Transfer\HelloWorldStorageItemsTransfer;
 use Generated\Shared\Transfer\HelloWorldStorageTransfer;
 
-interface HelloWorldClientInterface
+interface HelloWorldStorageClientInterface
 {
-    public function getMessages(): HelloWorldStorageItemsTransfer;
-
+    /**
+     * @param int $idMessage
+     *
+     * @return \Generated\Shared\Transfer\HelloWorldStorageTransfer
+     */
     public function getMessageById(int $messageId): HelloWorldStorageTransfer;
 }
 ```
 
-Create client in `Pyz\Client\HelloWorld\HelloWorldClient.php`
+Create client in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClient.php`
 ```php
 <?php
 
-namespace Pyz\Client\HelloWorld;
+namespace Pyz\Client\HelloWorldStorage;
 
-use Generated\Shared\Transfer\HelloWorldStorageItemsTransfer;
 use Generated\Shared\Transfer\HelloWorldStorageTransfer;
 use Spryker\Client\Kernel\AbstractClient;
-use Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException;
-
 
 /**
- * @method \Pyz\Client\HelloWorld\HelloWorldFactory getFactory()
+ * @method \Pyz\Client\HelloWorldStorage\HelloWorldStorageFactory getFactory()
  */
-class HelloWorldClient extends AbstractClient implements HelloWorldClientInterface
+class HelloWorldStorageClient extends AbstractClient implements HelloWorldStorageClientInterface
 {
     /**
-     * @throws ContainerKeyNotFoundException
+     * @param int $idMessage
+     *
+     * @return \Generated\Shared\Transfer\HelloWorldStorageTransfer
      */
-    public function getMessageById(int $messageId): HelloWorldStorageTransfer
+    public function getMessageById(int $idMessage): HelloWorldStorageTransfer
     {
         return $this->getFactory()
             ->createMessageStorageReader()
             ->getMessageById($messageId);
     }
-
-    /**
-     * @return HelloWorldStorageItemsTransfer
-     * @throws ContainerKeyNotFoundException
-     */
-    public function getMessages(): HelloWorldStorageItemsTransfer
-    {
-        return $this->getFactory()
-            ->createMessageStorageReader()
-            ->getMessages();
-    }
 }
 
 ```
 
-Add the factory `Pyz/Client/HelloWorld/HelloWorldFactory.php` for `$this->getFactory()` method call within the `HelloWorldClient` methods
+Add the factory `Pyz/Client/HelloWorldStorage/HelloWorldStorageFactory.php` for `$this->getFactory()` method call within the `HelloWorldStorageClient` methods
 
 ```php
 <?php
 
-namespace Pyz\Client\HelloWorld;
+namespace Pyz\Client\HelloWorldStorage;
 
-use Pyz\Client\HelloWorld\Dependency\Client\HelloWorldToZedRequestClientInterface;
-use Pyz\Client\HelloWorld\Storage\MessageStorageReader;
-use Pyz\Client\HelloWorld\Zed\HelloWorldZedStub;
-use Pyz\Client\HelloWorld\Zed\HelloWorldZedStubInterface;
+use Pyz\Client\HelloWorldStorage\Reader\MessageStorageReader;
+use Pyz\Client\HelloWorldStorage\Reader\MessageStorageReaderInterface;
 use Spryker\Client\Kernel\AbstractFactory;
-use Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException;
 use Spryker\Client\Storage\StorageClientInterface;
 use Spryker\Service\Synchronization\SynchronizationServiceInterface;
 
-class HelloWorldFactory extends AbstractFactory
+class HelloWorldStorageFactory extends AbstractFactory
 {
     /**
-     * @throws ContainerKeyNotFoundException
+     * @return \Pyz\Client\HelloWorldStorage\Reader\MessageStorageReaderInterface
      */
-    public function createMessageStorageReader(): MessageStorageReader
+    public function createMessageStorageReader(): MessageStorageReaderInterface
     {
-        return new MessageStorageReader($this->getSyncService(), $this->getStorageClient());
-    }
-
-
-    /**
-     * @throws ContainerKeyNotFoundException
-     */
-    private function getSyncService(): SynchronizationServiceInterface
-    {
-      return  $this->getProvidedDependency(HelloWorldDependencyProvider::CLIENT_HELLO_WORLD_SYNC_SERVICE);
+        return new MessageStorageReader($this->getSynchronizationService(), $this->getStorageClient());
     }
 
     /**
-     * @throws ContainerKeyNotFoundException
+     * @return \Spryker\Service\Synchronization\SynchronizationServiceInterface
      */
-    private function getStorageClient(): StorageClientInterface
+    public function getSynchronizationService(): SynchronizationServiceInterface
     {
-      return  $this->getProvidedDependency(HelloWorldDependencyProvider::CLIENT_HELLO_WORLD_REDIS_CLIENT);
+      return  $this->getProvidedDependency(HelloWorldStorageDependencyProvider::SERVICE_SYNCHRONIZATION);
+    }
+
+    /**
+     * @return \Spryker\Client\Storage\StorageClientInterface
+     */
+    public function getStorageClient(): StorageClientInterface
+    {
+      return  $this->getProvidedDependency(HelloWorldStorageDependencyProvider::CLIENT_STORAGE);
     }
 }
 
@@ -1141,47 +1127,68 @@ class HelloWorldFactory extends AbstractFactory
 
 The HelloWorldFactory needs a dependency provider to handle dependencies required by the redis / reader classes
 
-Add `Pyz/Client/HelloWorld/HelloWorldDependencyProvider.php`
+Add `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php`
 
 ```php
 <?php
 
-namespace Pyz\Client\HelloWorld;
+namespace Pyz\Client\HelloWorldStorage;
 
 use Spryker\Client\Kernel\AbstractDependencyProvider;
 use Spryker\Client\Kernel\Container;
-use Spryker\Service\Container\Exception\FrozenServiceException;
 
-class HelloWorldDependencyProvider extends AbstractDependencyProvider
+class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
 {
-    public const CLIENT_HELLO_WORLD = 'CLIENT_HELLO_WORLD';
-    public const CLIENT_HELLO_WORLD_REDIS_CLIENT = 'CLIENT_HELLO_WORLD_REDIS_CLIENT';
-    public const CLIENT_HELLO_WORLD_SYNC_SERVICE = 'CLIENT_HELLO_WORLD_SYNC_SERVICE';
+    /**
+     * @var string
+     */
+    public const CLIENT_STORAGE = 'CLIENT_STORAGE';
 
+    /**
+     * @var string
+     */
+    public const SERVICE_SYNCHRONIZATION = 'SERVICE_SYNCHRONIZATION';
+
+    /**
+     * @param \Spryker\Client\Kernel\Container $container
+     *
+     * @return \Spryker\Client\Kernel\Container
+     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
-        $container = $this->addMessageStorageDependencies($container);
+        $container = $this->addStorageClient($container);
+        $container = $this->addSynchronizationService($container);
 
         return $container;
     }
 
     /**
-     * @throws FrozenServiceException
+     * @param \Spryker\Client\Kernel\Container $container
+     *
+     * @return \Spryker\Client\Kernel\Container
      */
-    protected function addMessageStorageDependencies(Container $container): Container
+    protected function addStorageClient(Container $container): Container
     {
-
-        $container->set(static::CLIENT_HELLO_WORLD_REDIS_CLIENT, function (Container $container) {
+        $container->set(static::CLIENT_STORAGE, function (Container $container) {
             return $container->getLocator()->storage()->client();
         });
 
-        $container->set(static::CLIENT_HELLO_WORLD_SYNC_SERVICE, function (Container $container) {
+        return $container;
+    }
+    
+    /**
+     * @param \Spryker\Client\Kernel\Container $container
+     *
+     * @return \Spryker\Client\Kernel\Container
+     */
+    protected function addSynchronizationService(Container $container): Container
+    {
+        $container->set(static::SERVICE_SYNCHRONIZATION, function (Container $container) {
             return $container->getLocator()->synchronization()->service();
         });
 
-        return  $container;
-
+        return $container;
     }
 }
 
@@ -1195,18 +1202,14 @@ Update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storag
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="HelloWorldStorage">
-        <property name="name" type="string" />
-        <property name="message" type="string" />
-        <property name="id" type="integer" />
-    </transfer>
 
-    <transfer name="HelloWorldStorageItems">
-        <property name="items" type="HelloWorldStorage[]" singular="HelloWorldStorage" />
-    </transfer>
+   <transfer name="HelloWorldStorage">
+      <property name="id" type="int" />
+      <property name="name" type="string" />
+      <property name="message" type="string" />
+   </transfer>
 
 </transfers>
-
 ```
 
 Run the transfer generate command
@@ -1215,33 +1218,34 @@ Run the transfer generate command
 ```
 
 
-- Add `Pyz\Client\Storage\MessageStorageReaderInterface.php` interface
+- Add `Pyz\Client\Reader\MessageStorageReaderInterface.php` interface
 
 ```php
 <?php
 
-namespace Pyz\Client\HelloWorld\Storage;
+namespace Pyz\Client\HelloWorldStorage\Reader;
 
 use Generated\Shared\Transfer\HelloWorldStorageTransfer;
 
 interface MessageStorageReaderInterface
 {
-
-    public function getMessages(): HelloWorldStorageItemsTransfer
-
+    /**
+     * @param int $idMessage
+     *
+     * @return \Generated\Shared\Transfer\HelloWorldStorageTransfer
+     */
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
 
-- Add `Pyz\Client\Storage\MessageStorageReader.php` class:
+- Add `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class:
 
 ```php
 <?php
 
-namespace Pyz\Client\HelloWorld\Storage;
+namespace Pyz\Client\HelloWorldStorage\Reader;
 
 use ArrayObject;
-use Generated\Shared\Transfer\HelloWorldStorageItemsTransfer;
 use Generated\Shared\Transfer\SynchronizationDataTransfer;
 use Generated\Shared\Transfer\HelloWorldStorageTransfer;
 use Spryker\Client\Storage\StorageClientInterface;
@@ -1249,21 +1253,39 @@ use Spryker\Service\Synchronization\SynchronizationServiceInterface;
 
 class MessageStorageReader implements MessageStorageReaderInterface
 {
-    protected SynchronizationServiceInterface $syncService;
+    /**
+     * @var \Spryker\Service\Synchronization\SynchronizationServiceInterface
+     */
+    protected SynchronizationServiceInterface $synchronizationService;
+    
+    /**
+     * @var \Spryker\Client\Storage\StorageClientInterface
+     */
     protected StorageClientInterface $storageClient;
 
-    public function __construct(SynchronizationServiceInterface $syncService, StorageClientInterface $storageClient)
-    {
-        $this->syncService = $syncService;
+    /**
+     * @param \Spryker\Service\Synchronization\SynchronizationServiceInterface $synchronizationService
+     * @param \Spryker\Client\Storage\StorageClientInterface $storageClient
+     */
+    public function __construct(
+        SynchronizationServiceInterface $synchronizationService,
+        StorageClientInterface $storageClient
+    ) {
+        $this->synchronizationService = $synchronizationService;
         $this->storageClient = $storageClient;
     }
-
+    /**
+     * @param int $idMessage
+     *
+     * @return \Generated\Shared\Transfer\HelloWorldStorageTransfer
+     */
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer
     {
         $syncDataTransfer = new SynchronizationDataTransfer();
         $syncDataTransfer->setReference($idMessage);
 
-        $key = $this->syncService->getStorageKeyBuilder('message')
+        $key = $this->synchronizationService
+            ->getStorageKeyBuilder('message')
             ->generateKey($syncDataTransfer);
 
         $data = $this->storageClient->get($key);
@@ -1273,69 +1295,25 @@ class MessageStorageReader implements MessageStorageReaderInterface
 
         return $messageStorageTransfer;
     }
-
-    public function getMessages(): HelloWorldStorageItemsTransfer
-    {
-        $helloWorldKeys = $this->storageClient->getKeys('message:*');
-
-        $messageStorageItemsTransfer = new HelloWorldStorageItemsTransfer();
-
-        $items = [];
-        foreach ($helloWorldKeys as $helloWorldKey) {
-            $items[] = $this->storageClient->get(str_replace('kv:', '', $helloWorldKey));
-        }
-
-        $transfers = [];
-        foreach ($items as $item) {
-            $itemTransfer = new HelloWorldStorageTransfer();
-            $itemTransfer->setName($item['name']);
-            $itemTransfer->setMessage($item['message']);
-            $itemTransfer->setId($item['id']);
-            $transfers[] = $itemTransfer;
-        }
-
-        $messageStorageItemsTransfer->setItems(new ArrayObject($transfers));
-
-        return $messageStorageItemsTransfer;
-    }
 }
 ```
 
-Add another endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`
+Add an endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`
 
 ```php
-/**
-     * @param int $messageId
-     * @return JsonResponse
-     * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
+    /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * 
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function searchAction(Request $request): JsonResponse
     {
-        // get the client
-        $client = new HelloWorldClient();
-        $id = $request->get('id');
-        $message = $client->getMessageById($id);
+        $client = new HelloWorldStorageClient();
+        $message = $client->getMessageById($request->get('id'));
 
         return $this->jsonResponse([
             'status' => 'success',
             'message' =>  $message->toArray()
-        ]);
-    }
-
-
-    /**
-     * @return JsonResponse
-     * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
-     */
-    public function allAction(): JsonResponse
-    {
-        // get the client
-        $client = new HelloWorldClient();
-        $message = $client->getMessages();
-
-        return $this->jsonResponse([
-            'status' => 'success',
-            'messages' =>  $message->toArray()
         ]);
     }
 ```
@@ -1345,16 +1323,11 @@ Update the routes for back office using the following command:
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
-You should now have another 2 urls to get messages from redis storage via the newly created HelloWorldClient
+You should now have another endpoint to get message from redis storage via the newly created HelloWorldClient
 
 Check the redis-commander to get an id of a message object that actually exists. 
 
 Then access it via this endpoint 
 ```
 http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]
-```
-
-To return more than one message from redis use the multi endpoint
-```
-http://[YOUR_BACKOFFICE_URL]/hello-world/index/all
 ```

@@ -39,7 +39,7 @@ The following schema  represents module relations of the _Quick Order_ page:
 
 </div>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|

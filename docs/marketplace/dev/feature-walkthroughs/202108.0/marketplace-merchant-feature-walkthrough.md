@@ -47,7 +47,7 @@ The following diagram illustrates the domain model of the Marketplace Merchant f
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/73486462-e9d3-4eb2-93ef-a5cde49cce98.png?utm_medium=live&utm_source=custom)
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 | --- | --- | --- |

@@ -1,8 +1,9 @@
 ---
 title: Spryks
 description: The Spryk code generator is a tool developed to ease the process of generating pieces of code on core and project level.
-last_updated: Jun 30, 2022
+last_updated: Jan 23, 2023
 template: concept-topic-template
+keywords: AddModule
 originalLink: https://documentation.spryker.com/2021080/docs/spryk
 originalArticleId: 75d7b12b-6bf1-4ace-a09d-37033947d5e5
 redirect_from:
@@ -40,9 +41,9 @@ The majority of Spryks need to execute other Spryks before the called Spryk can 
 
 We support the following Spryk definition types:
 
-* **Template definitions.** A template definition adds a new file to your file system and uses Twig as a render engine, which enables you to create files from templates with placeholders. A template definition needs at least a template argument defined. The argument tells Spryk which template to use. Template definitions can have as many arguments as needed.
-* **Structure definitions.** A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
-* **Method definitions.** A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do their job.
+* *Template definitions.* A template definition adds a new file to your file system and uses Twig as a render engine, which enables you to create files from templates with placeholders. A template definition needs at least a template argument defined. The argument tells Spryk which template to use. Template definitions can have as many arguments as needed.
+* *Structure definitions.* A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
+* *Method definitions.* A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do its job.
 
 ## Install Spryk
 
@@ -80,16 +81,15 @@ There are two commands for Spryk Console: `SprykDumpConsole` and `SprykRunConsol
 
 | COMMAND      | DESCRIPTION |
 | ----------- | ----------- |
-| vendor/bin/console spryk-dump      | Lists top level Spryks       |
-| vendor/bin/spryk-dump {SPRYK NAME} | Lists all options available for a specific Spryk |
-| vendor/bin/spryk-dump --level=all | Lists all available Spryks |
-| vendor/bin/console spryk-run   | Runs all Spryks in your project        |
-| vendor/bin/console spryk-run {SPRYK NAME}  | Executes a single specific Spryk      |
-| vendor/bin/spryk-build | Reflects changes in Spryk arguments and generates a new cache for them |
+| vendor/bin/console spryk:dump      | Lists top level Spryks.       |
+| vendor/bin/console spryk:dump {SPRYK NAME} | Lists all options available for a specific Spryk. |
+| vendor/bin/console spryk:dump --level=all | Lists all available Spryks. |
+| vendor/bin/console spryk:run {SPRYK NAME}  | Executes a single specific Spryk.      |
+| vendor/bin/console spryk:build | Reflects changes in Spryk arguments and generates a new cache for them. |
 
 </div>
 
-When you run a Spryk, the console asks you to provide all the needed arguments to build the Spryk. You can print all possible arguments to the console by using the `--{argument name}={argument value}` key.
+When you run a Spryk, the console asks you to provide all the needed arguments to build the Spryk, providing a default value when possible.
 
 ### SprykGUI
 
@@ -98,8 +98,13 @@ This is a Graphical User Interface (GUI) built inside the Back Office applicatio
 ```bash
 composer require --dev spryker-sdk/spryk-gui
 ```
+{% info_block infoBox "Info" %}
 
-Once SprykGUI is installed, you can navigate to it through the Back Office. There you can find the list of all the available definitions, and after you have clicked on one of them, the form where you can enter the arguments appears.
+We recommend installing it as a development dependency, since changes in the code on the production environment must not be allowed, and may lead to a nonworking application.
+
+{% endinfo_block %}
+
+Once SprykGUI is installed, you can navigate to it through the Back Office. There, you can find the list of all the available definitions, and after you have clicked on one of them, the form where you can enter the arguments appears.
 
 ## Core and Project modes
 
@@ -108,7 +113,7 @@ The difference between the Core and Project modes is the place where your code i
 - *Core* has the `vendor/spryker/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path;
 - *Project* has the `src/{% raw %}{{{% endraw %} organization {% raw %}}}{% endraw %}/ root` path.
 
-You should put the organization option into the namespaces config files (Core or Project).
+Put the organization option into the namespaces config files (Core or Project).
 
 {% info_block warningBox "Warning" %}
 
@@ -119,18 +124,18 @@ Not all Spryk definitions can be run on Project layers.
 ### How to change the mode
 
 By default, all Spryk definitions run in the *Project* mode. To use the *Core* mode, run
-the command
+the command:
 
 ```bash
 console spryk:run {% raw %}{{{% endraw %} SprykName {% raw %}}}{% endraw %}
 ```
 
 with the `--mode='core'` argument in CLI.
-Afterwards, Spryk uses the *Core* mode and an appropriate root path.
+Afterward, Spryk uses the *Core* mode and an appropriate root path.
 
 ## Create a definition
 
-As the whole tool is covered by tests, you should also start to create your own definition by adding a test. To only add a new definition configuration, start by adding an integration test. You also need to add the name of the definition you want to test (for example, *AddMySuperNiceFile*), and the assertion to have this file created after you have executed the test.
+As the whole tool is covered by tests, you need also to start creating your own definition by adding a test. To only add a new definition configuration, start by adding an integration test. You also need to add the name of the definition you want to test—for example, *`ADD_MY_SUPER_NICE_FILE`*—and the assertion to have this file created after you have executed the test.
 
 Once done, run the integration tests with the following command and see if the test fails:
 

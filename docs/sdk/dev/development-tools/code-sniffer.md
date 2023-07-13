@@ -51,7 +51,7 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
-To correspond to [PSR-2 standards](http://www.php-fig.org/psr/psr-2/), we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+To correspond to PSR-2<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
 Code Sniffer is a very powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues, and can also auto-fix the majority of them (when used with the `-f` option).
 
@@ -71,7 +71,7 @@ $ vendor/bin/console code:sniff:style
 	$ vendor/bin/console code:sniff:style ... -s Spryker.Commenting.FullyQualifiedClassNameInDocBlock
 ```
 
-There are two levels of the Sniffer's severity: Level 1 (normal, used by default) and Level 2 (strict). Level 2 was added to support an additional check of extra complexity. It is recommended to use it for the development of Core modules. A full list of the included snippets can be found on [GitHub](https://github.com/spryker/code-sniffer/tree/master/docs).
+There are two levels of the Sniffer's severity: Level 1 (normal, used by default) and Level 2 (strict). Level 2 was added to support an additional check of extra complexity. It is recommended to use it for the development of Core modules. A full list of the included sniffs can be found on [GitHub](https://github.com/spryker/code-sniffer/tree/master/docs/sniffs.md).
 
 ```php
 	// Run code sniffer with Level 1

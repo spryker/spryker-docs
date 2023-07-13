@@ -18,9 +18,9 @@ redirect_from:
   - /v4/docs/en/standard-filters-backend-and-frontend-technical-details
 related:
   - title: Category Filters feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/category-filters-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html
   - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
+    link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
 ## Backend technical details
@@ -31,7 +31,7 @@ The backend part of the Standard Filters feature is located in the following mod
 * ProductCategoryFilterGui (`spryker/product-category-filter-gui`)
 * ProductCategoryFilterStorage (`spryker/product-category-filter-storage`)
 
-Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/search-and-filters/managing-category-filters.html).
+Category Filters management is described in the [Back Office guide](/docs/pbc/all/search/{{site.version}}/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html).
 
 ## Frontend technical details
 

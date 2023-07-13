@@ -7,9 +7,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | Glue Application feature integration |
-| Multiple Carts | {{site.version}} | Install the Multiple Carts feature |
-| Cart | {{site.version}} | Cart feature integration |
+| Spryker Core | {{page.version}} | Glue Application feature integration |
+| Multiple Carts | {{page.version}} | Install the Multiple Carts feature |
+| Cart | {{page.version}} | Cart feature integration |
 
 ## 1) Install the required modules using Composer
 
@@ -42,7 +42,7 @@ console transfer:generate
 Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | `RestCartsAttributesTransfer:name` | property | added | `src/Generated/Shared/Transfer/RestCartsAttributesTransfer` |
 | `RestCartsAttributesTransfer:isDefault` | property | added | `src/Generated/Shared/Transfer/RestCartsAttributesTransfer` |
@@ -51,7 +51,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 On a project level, install the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `QuoteCreatorPlugin` | Creates a quote for a customer. | None | `Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi` |
 

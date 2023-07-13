@@ -62,7 +62,7 @@ To implement this approach, you need to create the Service product option and ti
 To create the product option, do the following:
 
 1. Go to the **Catalog&nbsp;<span aria-label="and then">></span> Product Options** section and click **Create product option** in the top right corner.
-2. Populate all necessary fields in **General** tab. See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) for details on the fields and their values.
+2. Populate all necessary fields in **General** tab. See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html#creating-a-product-option) for details on the fields and their values.
 3. In the **Products** tab, find the product you want to tie the option to, and check the checkbox in the very right column of the table with the product.
 4. Click **Save**. The product option is now created and appears in the **Product option list** on the **Catalog&nbsp;<span aria-label="and then">></span> Product Options** page.
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.

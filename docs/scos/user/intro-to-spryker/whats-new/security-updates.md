@@ -23,6 +23,8 @@ redirect_from:
   - /v6/docs/security-updates
   - /v6/docs/en/security-updates
 related:
+  - title: Security release notes 202212.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
   - title: Security release notes 202108.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
   - title: "Security release notes: 202102.0 SEC"

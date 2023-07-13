@@ -1,11 +1,11 @@
 
 
-This document describes how to integrate the Checkout feature into a Spryker project. 
 
+This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html) feature into a Spryker project. 
 
 {% info_block warningBox %}
 
-This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html) functionality.
+This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) functionality.
 
 {% endinfo_block %}
 
@@ -16,23 +16,23 @@ Follow the steps below to install the Checkout feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Cart | {{site.version}} |
-| Checkout |  {{site.version}} |
-| Order Management | {{site.version}}  |
-| Prices | {{site.version}}  |
-| Spryker Core | {{site.version}} |
-| Tax | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Checkout |  {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| Prices | {{page.version}}  | [Integrate the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Tax | {{page.version}} | |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/order-threshold:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -51,7 +51,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -67,10 +67,6 @@ Ensure that you've triggered the following changes by checking the database:
 | spy_sales_order_threshold | table |
 | spy_sales_order_threshold_tax_set | table |
 | spy_sales_order_threshold_type | table |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Ensure that you've triggered the following changes in transfer objects:
 
@@ -129,7 +125,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
+In the database, ensure that the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -140,7 +136,6 @@ Import the following data.
 #### Import infrastructural data
 
 Import infrastructural data as follows:
-
 
 1. Install the plugin:
 
@@ -209,7 +204,7 @@ DE,CHF,soft-minimum-threshold,200000,,
 DE,CHF,hard-maximum-threshold,320000,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | store| mandatory |string  | DE | The store where the sales order threshold is applicable.  |
 | currency | mandatory | string | EUR | The currency for which the sales order threshold is applicable. |
@@ -254,7 +249,7 @@ console data:import sales-order-threshold
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, in the database, the configured data has been added to the `spy_sales_order_threshold` table.
+In the database, ensure that the configured data has been added to the `spy_sales_order_threshold` table.
 
 {% endinfo_block %}
 
@@ -290,7 +285,6 @@ MOV Taxes,Slovenia,Slovenia Standard,22
 ```bash
 console data:import:tax
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -495,44 +489,42 @@ class SalesOrderThresholdGuiDependencyProvider extends SprykerSalesOrderThreshol
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Ensure the following:
 
-*     After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` has an item with a threshold expense type.
-*     After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` doesn't have an item with a threshold expense type.
-*     After adding an item to the cart, if the order subtotal is below the defined global threshold, the defined threshold message is displayed on the *Cart* page.
-*     If the order subtotal is below the defined hard global threshold, you cannot place it.
-*     If the order subtotal is above the defined maximum hard global threshold, you cannot place it.
-*     If the order subtotal is below the defined soft global threshold, you cannot place it, and the threshold expenses are saved to the `spy_sales_expense` table.
-*     If the order subtotal is below the defined soft global threshold with a fixed or flexible fee, the threshold fee is added to the order.
-*     *Edit Global threshold* page in Back Office contains settings for:
-    *         Hard threshold
-    *         Hard maximum threshold
-    *         Soft threshold with a message
-    *         Soft threshold with a fixed fee
-    *         Soft threshold with a flexible fee
-
+* After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` has an item with a threshold expense type.
+* After adding an item to the cart, if the quote subtotal is below the defined global threshold, `QuoteTransfer.expenses[]` doesn't have an item with a threshold expense type.
+* After adding an item to the cart, if the order subtotal is below the defined global threshold, the defined threshold message is displayed on the *Cart* page.
+* If the order subtotal is below the defined hard global threshold, you cannot place it.
+* If the order subtotal is above the defined maximum hard global threshold, you cannot place it.
+* If the order subtotal is below the defined soft global threshold, you cannot place it, and the threshold expenses are saved to the `spy_sales_expense` table.
+* If the order subtotal is below the defined soft global threshold with a fixed or flexible fee, the threshold fee is added to the order.
+* The *Edit Global threshold* page in Back Office contains settings for the following:
+    * Hard threshold
+    * Hard maximum threshold
+    * Soft threshold with a message
+    * Soft threshold with a fixed fee
+    * Soft threshold with a flexible fee
 
 {% endinfo_block %}
 
+## Install feature frontend
 
-## Install feature front end
-
-Follow the steps below to install the Checkout feature front end.
+Follow the steps below to install the Checkout feature frontend.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required feature:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/order-threshold:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -544,7 +536,6 @@ Ensure that the following modules have been installed:
 | SalesOrderThresholdWidget | vendor/spryker-shop/sales-order-threshold-widget |
 
 {% endinfo_block %}
-
 
 ### 2) Add translations
 
@@ -583,7 +574,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that in the database, the configured data has been added to the `spy_glossary` table.
+In the database, ensure that the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -631,9 +622,9 @@ console frontend:yves:build
 
 Ensure that the `SalesOrderThresholdWidget` widget has been registered:
 
-1.     Define a minimum soft global threshold.
-2.     Create a cart with a subtotal that is below the threshold.
-3.     The threshold fee should be added to the cart automatically.
+1. Define a minimum soft global threshold.
+2. Create a cart with a subtotal that is below the threshold.
+3. The threshold fee should be added to the cart automatically.
 
 {% endinfo_block %}
 
@@ -643,4 +634,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue API: Checkout |  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout |  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

@@ -1,20 +1,22 @@
 
 
+
+This document describes how to integrate the CMS + Catalog feature into a Spryker project.
+
 ## Install feature core
+
 Follow the steps below to install the CMS + Catalog feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Catalog | {{site.version}} |
-| Cms | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Catalog | {{page.version}} |  |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
-### 1) Set up behavior
-
-#### Configure the CMS page search query.
+### 1) Configure the CMS page search query
 
 Add the following Query Expander Plugins to your project:
 
@@ -35,7 +37,8 @@ Add the following Result Formatter Plugins to your project:
 | PaginatedCmsPageResultFormatterPlugin | Formats the pagination-related raw search result data. | None |  \Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\PaginatedCmsPageResultFormatterPlugin |
 | RawCmsPageSearchResultFormatterPlugin | Formats the CMS page hits related raw search result data. | None |  \Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\RawCmsPageSearchResultFormatterPlugin |
 
-**src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -83,14 +86,15 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
  }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
-Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations (filtered, sorted, and paginated correctly).
+Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations—filtered, sorted, and paginated correctly.
 
 {% endinfo_block %}
 
-#### Configure the CMS page search count query
+### Configure the CMS page search count query
 
 Add the following plugins to your project:
 
@@ -133,7 +137,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations (filtered correctly).
+Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations—filtered correctly.
 
 {% endinfo_block %}
 
@@ -182,28 +186,29 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
+Once you have finished the full integration of the feature, make sure that the actual count of products, as a result, matches the expectations (filtered correctly).
 
 {% endinfo_block %}
 
 ## Install feature frontend
+
 Follow the steps below to install the CMS + Catalog feature frontend.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Catalog | {{site.version}} |
-| Cms | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Catalog | {{page.version}} |  |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/catalog:"{{site.version}}" spryker-feature/cms:"{{site.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/catalog:"{{page.version}}" spryker-feature/cms:"{{page.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -220,7 +225,7 @@ Make sure that the following modules were installed:
 
 ### 2) Add translations
 
-Append glossary according to your language configuration:
+1. Append glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
 
@@ -239,7 +244,7 @@ cms.page.itemsFound,Artikel gefunden,de_DE
 cms.page.itemsFound,Items found,en_US
 ```
 
-Run the following console command to import it
+2. Import glossary:
 
 ```bash
 shelldata:console data:import glossary
@@ -251,9 +256,7 @@ Make sure that in the database the configured data is added to the `spy_glossary
 
 {% endinfo_block %}
 
-### 3) Enable controllers
-
-#### Route list
+### 3) Enable controllers: Route list
 
 Register the following route provider plugins:
 
@@ -287,13 +290,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by opening the CMS search page with, for example: `http://mysprykershop.com/search/cms`.
+Verify the changes by opening the CMS search page with—for example, `http://mysprykershop.com/search/cms`.
 
 {% endinfo_block %}
 
-### 4)Set up widgets
-
-#### Configure widgets
+### 4) Configure widgets
 
 Add the following plugins to your project:
 
@@ -333,7 +334,7 @@ Make sure that one tab item is displayed correctly per each registered plugin, a
 
 {% endinfo_block %}
 
-#### Enable widgets
+### 5) Enable widgets
 
 Register the following global widgets:
 

@@ -222,7 +222,7 @@ DE,CHF,soft-minimum-threshold,200000,,
 DE,CHF,hard-maximum-threshold,320000,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | store| mandatory |string  | DE | The store where the sales order threshold is applicable.  |
 | currency | mandatory | string | EUR | The currency for which the sales order threshold is applicable. |

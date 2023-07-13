@@ -38,7 +38,7 @@ This section describes attributes you see and enter when editing search preferen
 
 ### ATTRIBUTE KEY
 
-A [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) to which the search preferences are assigned. The values of the product attribute are used to search products by. For example, the `color` attribute is added to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
+A [product attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) to which the search preferences are assigned. The values of the product attribute are used to search products by. For example, the `color` attribute is added to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
 
 ### FULL TEXT
 

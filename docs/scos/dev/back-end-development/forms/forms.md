@@ -39,13 +39,13 @@ The following modules are related to the service:
 * `spryker/form-extension`
 * `spryker/validator`
 * `spryker/validator-extension`
-    
+
 ## Installation
 
 For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
 
-* [Migration Guide - Form](/docs/scos/dev/module-migration-guides/migration-guide-form.html)
-* [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html)
+* [Migration Guide - Form](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-form-module.html)
+* [Migration Guide - Validator](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html)
 
 ## Extending the form
 

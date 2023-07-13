@@ -20,7 +20,7 @@ related:
   - title: Docker environment infrastructure
     link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
+    link: docs/scos/dev/the-docker-sdk/page.version/configure-services.html
   - title: Docker SDK configuration reference
     link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version

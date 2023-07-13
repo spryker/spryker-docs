@@ -111,7 +111,7 @@ Adjust the schema definition so that entity changes trigger events.
 <br>
 </details>
 
-Set up synchronization queue pools so that non-multistore entities (not store specific entities) can be synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store specific entities) can be synchronized among stores:
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductList/Persistence/Propel/Schema/spy_product_list.schema.xml</summary>
 
@@ -724,7 +724,7 @@ pl-007,177_25913296
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `product_list_key` | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
 |`concrete_sku`|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|

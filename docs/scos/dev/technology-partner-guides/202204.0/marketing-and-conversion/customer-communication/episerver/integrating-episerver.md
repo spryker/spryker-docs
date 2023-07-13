@@ -24,7 +24,7 @@ related:
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
-Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 

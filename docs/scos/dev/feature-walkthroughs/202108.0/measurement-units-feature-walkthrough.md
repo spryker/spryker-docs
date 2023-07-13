@@ -27,10 +27,10 @@ The following schema illustrates relations between alternative products:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES |
 |---------|---------|
-| [Product measurement unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html)  | [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)  |
+| [Product measurement unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html)  | [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)  |
 | [Quick order + measurement units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-measurement-units-feature-integration.html) | [Retrieving sales units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)  |
 | [Glue API: Measurement units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)  |   |

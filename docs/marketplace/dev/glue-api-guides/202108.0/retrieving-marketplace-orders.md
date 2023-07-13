@@ -1427,7 +1427,7 @@ To retrieve detailed information about an order, send the request:
 | items.salesUnit | String| Sales unit to be used for the item amount calculation.|
 | items.amount | String| |
 | items.metadata   | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes   | String  | [Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes   | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image     | String  | Product image URL.   |
 
 

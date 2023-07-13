@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **discount_voucher.csv** file to configure Discount Voucher information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 <div>
@@ -42,7 +42,7 @@ If a quantity is equal to or greater than 1, then` random_generated_code_length`
 
 Field `voucher_batch` is necessary when different vouchers belong to the same voucher pool. It must have been previously created during *discount.csv* import, then the batch value must be a different number for each row in the file.
   
- ## Template File & Content Example
+ ## Import template file and content example
 A template and an example of the *discount_voucher.csv*  file can be downloaded here:
 
 | File | Description |

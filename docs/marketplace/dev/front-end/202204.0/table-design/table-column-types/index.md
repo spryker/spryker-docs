@@ -175,7 +175,7 @@ export interface TableColumnComponent<C = any> {
 
 export interface ColumnTypeOptions {
     /** Is it required */
-    required?: boolean;
+    REQUIRED: boolean;
     /** Expected type. Specify exact type in {@link value} prop */
     type?: ColumnTypeOptionsType;
     /** Value type. See {@link ColumnTypeOptionsType} for more details.

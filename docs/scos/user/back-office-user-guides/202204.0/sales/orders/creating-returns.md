@@ -5,17 +5,13 @@ template: back-office-user-guide-template
 related:
   - title: Viewing returns of an order
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
-  - title: Managing returns
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
   - title: Changing the state of order items in returns
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/changing-the-state-of-order-items-in-returns.html
-  - title: Return Management feature overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
 ---
 
 This document describes how to create returns in the Back Office.
 
-If a sales order item is [returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. On the Storefront, only registered users can create returns. In the Back Office, you can create returns for both the registered and guest users.
+If a sales order item is [returnable](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html), you can create a return for it. On the Storefront, only registered users can create returns. In the Back Office, you can create returns for both the registered and guest users.
 
 ## Prerequisites
 
@@ -31,9 +27,9 @@ To start managing orders, go to **Sales&nbsp;<span aria-label="and then">></span
 
 {% info_block warningBox "Returning bundles" %}
 
-You can only return separate items in a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html), not the bundle itself.
+You can only return separate items in a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), not the bundle itself.
 
-You can return [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) only as a single item.
+You can return [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html) only as a single item.
 
 {% endinfo_block %}
 

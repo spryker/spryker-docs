@@ -113,7 +113,7 @@ mr-010,restrictions-merchant,Sales-under-400,"Sales-under-400"
 mr-011,restrictions-merchant,Sales,Sales;Sales-under-400
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  merchant_relation_key | optional | string | mr-002 | A reference used for the merchant relationship data import. |
 |  merchant_key | mandatory | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |

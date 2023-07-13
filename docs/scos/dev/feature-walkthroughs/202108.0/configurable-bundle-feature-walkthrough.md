@@ -31,14 +31,14 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 </div>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
 | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) | [ConfigurableBundle migration guide](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html) | [Retrieving configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html) | [HowTo: Render configurable bundle templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)  |
 | [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) | [ConfigurableBundleStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html) |   |   |
 | [Product Lists + Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-catalog-feature-integration.html)  | [ProductListGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html) |   |   |
-| [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html)  | [MerchantRelationshipProductListGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html)  |   |   |
+| [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html)  | [MerchantRelationshipProductListGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html)  |   |   |
 | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |   |   |   |
 | [Product Images + Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-images-configurable-bundle-feature-integration.html)  |   |   |   |
 | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |   |   |   |

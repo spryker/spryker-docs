@@ -1,5 +1,5 @@
 ---
-title: File details - glossary.csv
+title: "File details: glossary.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv
@@ -9,9 +9,12 @@ redirect_from:
   - /2021080/docs/en/file-details-glossarycsv
   - /docs/file-details-glossarycsv
   - /docs/en/file-details-glossarycsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `glossary.csv` file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) information in your Spryker Demo Shop.
+This document describes the `glossary.csv` file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/add-translations.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -21,7 +24,7 @@ data:import:glossary
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -35,7 +38,7 @@ This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

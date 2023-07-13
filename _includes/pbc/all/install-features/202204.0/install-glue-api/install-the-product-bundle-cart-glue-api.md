@@ -9,13 +9,13 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product Bundles |{{site.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-bundles-feature-integration.html)|
-| Cart |{{site.version}}| [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product Bundles |{{page.version}}| [Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Cart |{{page.version}}| [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 ```bash
 composer require spryker/product-bundle-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
@@ -25,7 +25,7 @@ composer require spryker/product-bundle-carts-rest-api:"^1.0.0" --update-with-de
 
 Ensure that the following module has been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY 
 | --- | --- |
 | ProductBundleCartsRestApi | vendor/spryker/product-bundle-carts-rest-api |
 
@@ -41,7 +41,7 @@ console transfer:generate
 
 Ensure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestErrorMessageTransfer | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer |
 | ItemTransfer| class |created| src/Generated/Shared/Transfer/ItemTransfer|
@@ -58,7 +58,7 @@ Ensure that the following changes have been applied in the transfer objects:
 
 Activate the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |       
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |       
 | --- | --- | --- | --- |
 | ProductBundleCartItemFilterPlugin | Filters bundle items off the list of simple cart items. | None | Spryker\Glue\ProductBundleCartsRestApi\Plugin\CartsRestApi |
 | BundleItemByQuoteResourceRelationshipPlugin |Adds the `bundle-items` resource as a relationship by `QuoteTransfer` provided as a payload. |None |Spryker\Glue\ProductBundleCartsRestApi\Plugin\GlueApplication|
@@ -213,5 +213,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Products | ✓ | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundles-feature-integration.html)|
+| Products | ✓ | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)|

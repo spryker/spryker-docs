@@ -491,7 +491,7 @@ sku,merchant_reference,is_shared
 ```
 </details>
 
-| COLUMN  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
+| COLUMN  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION  |
 | ------------ | ------------ | -------- | --------------- | ------------------------ |
 | sku                | &check;      | string    | 091                  | Product identifier.                                          |
 | merchant_reference | &check;      | string    | roan-gmbh-und-co-k-g | Merchant identifier.                                         |

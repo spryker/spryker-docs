@@ -38,7 +38,7 @@ You can add voucher codes while editing the discount entity.
 And you can also do the following:
 1. On the **Overview of Discounts** page, click **Add code** in the _Actions_ column.
   You are redirected to the **Voucher codes** tab of the **Edit Discount** page.
-  Follow the steps described in [Creating a Discount Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
+  Follow the steps described in [Creating a Discount Voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 2. Once the codes are generated, click **Save**.
 
 ## Activating and Deactivating Discounts

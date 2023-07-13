@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/impersonating-customers-as-an-agent-assist
   - /docs/impersonating-customers-as-an-agent-assist
   - /docs/en/impersonating-customers-as-an-agent-assist
-  - /docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
@@ -29,7 +29,7 @@ Impersonating a customer allows an [agent assist](/docs/pbc/all/user-management/
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
 
 * [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
 
@@ -98,7 +98,7 @@ Request sample: impersonate a customer
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| tokenType | String | Type of the [authentication token](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html). Set this type when sending a request with the token. |
+| tokenType | String | Type of the [authentication token](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html). Set this type when sending a request with the token. |
 | expiresIn | Integer | The time in seconds in which the token expires. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the impersonated customer. |
 | refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |
@@ -116,10 +116,10 @@ To view generic errors that originate from the Glue Application, see [Reference 
 ## Next steps
 
 After you’ve authenticated as a customer, you can impersonate them:
-* [Manage carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)
+* [Manage carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
+* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)  
 
 Also, you can [refresh the agent assist authentication token](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html#refresh-an-agent-assist-authentication-token) or [revoke the agent assist refresh token](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/202204.0/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,10 +12,10 @@ To start feature integration, overview and install the necessary features:
 
 | NAME         | EXPECTED DIRECTORY | INTEGRATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)           |
-| Cart         | {{site.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                 |
-| Checkout     | {{site.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)         |
+| Spryker Core | {{page.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product      | {{page.version}}   | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
+| Checkout     | {{page.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
 
 ### Install feature
 
@@ -23,8 +23,8 @@ The Splittable Order Items feature is shipped with following modules:
 
 | MODULE | DESCRIPTION |
 | --- | --- |
-| [DiscountExtension](https://github.com/spryker/spryker/tree/master/Bundles/DiscountExtension) | Provides extension plugins for the `Discount` module. |
-| [SalesQuantity](https://github.com/spryker/spryker/tree/master/Bundles/SalesQuantity)| Provides support in handling and configuring quantity for sales orders and items. |
+| [DiscountExtension](https://github.com/spryker/discount-extension) | Provides extension plugins for the `Discount` module. |
+| [SalesQuantity](https://github.com/spryker/sales-quantity)| Provides support in handling and configuring quantity for sales orders and items. |
 
 To install the Splittable Order Items feature, follow the steps below:
 

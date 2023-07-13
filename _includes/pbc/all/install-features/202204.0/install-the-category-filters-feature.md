@@ -1,30 +1,51 @@
 
 
+
+This document describes how to integrate the [Category Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/category-filters-overview.html) into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Category Filters feature core.
+
 ## Prerequisites
 
-To prepare your project to work with Category Filters:
+Prepare your project to work with Category Filter:
 
-1. Require the Category Filters modules in your composer by running:
+1. Require Category Filters' modules in your Сomposer:
 *  `composer require spryker/product-category-filter`
 *  `composer require spryker/product-category-filter-collector`
 *  `composer require spryker/product-category-filter-gui`
 
-2.  Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
+2. Install the new database tables by running `vendor/bin/console propel:diff`. Propel generates a migration file with the changes.
 
-3. Run `vendor/bin/console propel:migrate` to apply the database changes.
-4. Generate ORM models by running `vendor/bin/console propel:model:build`.
-This command will generate some new classes in your project under the `  \Orm\Zed\ProductCategoryFilter\Persistence namespace`.
-It is important to make sure that they extend the base classes from the Spryker core, for example:
+3. Apply the database changes:
+```bash
+vendor/bin/console propel:migrate
+```
+
+4. Generate ORM models: 
+```bash
+vendor/bin/console propel:model:build
+```
+This command generates some new classes in your project under the `\Orm\Zed\ProductCategoryFilter\Persistence namespace`. 
+
+{% info_block warningBox "Verification" %}
+
+Make sure that they extend the base classes from the Spryker core—for example:
 
 * `\Orm\Zed\ProductCategoryFilter\Persistence\SpyProductCategoryFilter` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilter`
 
 * `\Orm\Zed\ProductReview\Persistence\SpyProductCategoryFilterQuery` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilterQuery`
 
-5. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
+{% endinfo_block %}
+
+5. Generate the new transfer objects:
+```bash
+vendor/bin/console transfer:generate
+```
 6. Activate the product category filters collector by adding `ProductCategoryFilterCollectorPlugin` to the Storage Collector plugin stack.
 
-<details open>
-<summary markdown='span'>Example: collector plugin list extension</summary>
+**Example: collector plugin list extension:**
 
 ```php
 <?php
@@ -60,16 +81,18 @@ It is important to make sure that they extend the base classes from the Spryker 
         }
     }
 ```
-</details>
 
-1. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build zed
+7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build Zed
 for older versions) for that.
-2. Update Zed’s navigation cache to show the new items for the Product Category Filter management user interface by running `vendor/bin/console application:build-navigation-cache`.
+8. Update Zed's navigation cache to show the new items for the Product Category Filter management user interface:
+```bash
+vendor/bin/console application:build-navigation-cache
+```
 
-You should now be able to use the Zed UI of Category Filters to re-order, remove or add search filters to specific categories, and the collectors should also be able to push those category settings to storage.
-Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for frontend implementation example and the general idea.
+Now you can use the Zed UI of Category Filters to reorder, remove, or add search filters to specific categories. The collectors also can push those category settings to storage.
+For the frontend implementation example and the general idea, check out our [`demoshop` implementation](https://github.com/spryker/demoshop).
 
-### Updating filters for a category
+### Update filters for a category
 
 To use the setup category filter, `CatalogController::indexAction` needs to call `ProductCategoryFilterClient::updateFacetsByCategory`.
 
@@ -133,7 +156,7 @@ class CatalogController extends AbstractController
 }
 ```
 
-It is also necessary to add `ProductCategoryFilterClient` to `CatalogFactory`:
+Add `ProductCategoryFilterClient` to `CatalogFactory`:
 
 ```php
 <?php

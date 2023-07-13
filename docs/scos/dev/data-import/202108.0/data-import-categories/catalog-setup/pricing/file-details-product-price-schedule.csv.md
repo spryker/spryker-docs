@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-price-schedulecsv
   - /docs/file-details-product-price-schedulecsv
   - /docs/en/file-details-product-price-schedulecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.

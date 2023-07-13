@@ -1,4 +1,4 @@
-version: "202204.0"
+version: "202212.0"
 
 repository: spryker/spryker-docs
 
@@ -150,14 +150,14 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/paas-plus"
+       path: "docs/scu"
      values:
-       product: "platform-as-a-service-plus"
+       product: "scu"
   -
      scope:
-       path: "docs/paas-plus/dev"
+       path: "docs/scu/dev"
      values:
-       sidebar: "paas_plus_dev_sidebar"
+       sidebar: "scu_dev_sidebar"
        role: "dev"
   -
      scope:
@@ -181,7 +181,8 @@ versions:
   '202009.0': '202009.0'
   '202108.0': '202108.0'
   '202204.0': '202204.0'
-  '202212.0': 'Upcoming release'
+  '202212.0': '202212.0'
+  '202304.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -206,6 +207,7 @@ versioned_categories:
       - back-office-user-guides
       - technology-partners
       - shop-user-guides
+      - overview-of-features
     dev:
       - feature-walkthroughs
       - feature-integration-guides
@@ -219,12 +221,35 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
       - system-requirements
+      - front-end-development
   pbc:
     all:
+      - back-office
+      - cart-and-checkout
+      - carrier-management
       - content-management-system
-      - identity-access-management      
+      - customer-relationship-management
+      - discount-management
+      - emails
+      - gift-cards
+      - identity-access-management
+      - merchant-management
+      - miscellaneous
+      - offer-management
+      - order-management-system
+      - price-management
+      - payment-service-provider
+      - product-information-management
+      - product-relationship-management
+      - punchout
+      - return-management
+      - ratings-reviews
+      - request-for-quote
+      - search
+      - shopping-list-and-wishlist
+      - tax-management
       - user-management
-
+      - warehouse-management-system
 
 
 # these are defaults used for the front matter for these file types
@@ -237,7 +262,7 @@ sidebars:
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - paas_plus_dev_sidebar
+  - scu_dev_sidebar
   - pbc_all_sidebar
 
 description: "Spryker documentation center."
@@ -257,6 +282,8 @@ algolia:
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   max_record_size: 20000
   indices:
+    - name: 'pbc_all'
+      title: 'Packaged Business Capabilities'
     - name: 'scos_user'
       title: 'SCOS User'
     - name: 'scos_dev'
@@ -271,10 +298,8 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'pbc_all'
-      title: 'Packaged Business Capabilities'
-    - name: 'paas_plus_dev'
-      title: 'PaaS+'
+    - name: 'scu_dev'
+      title: 'SCU Developer'
 sass:
     sass_dir: css
     style: compressed

@@ -1,25 +1,25 @@
 
 
-This document describes how to integrate the [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
-To install the Category Management feature core, follow the steps below.
+Follow the steps below to install the Category Management feature core.
 
 ### Prerequisites
 
-Overview and install the necessary features.
+To start feature integration, integrate the required feature:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -215,7 +215,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ### 3) Set up database schema and transfer objects 
 
-1.  Adjust the schema definition so that entity changes trigger the events:
+1. Adjust the schema definition so that entity changes trigger the events:
 
 **src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml**
 
@@ -332,10 +332,6 @@ Make sure that the following changes have been applied in the database.
 |spy_category_image_set_to_category_image | table | created |
 |spy_category_image_storage | table | created|
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that propel entities have been generated successfully by checking their existence.
 
 {% endinfo_block %}
@@ -361,7 +357,6 @@ Make sure that propel entities have been generated successfully by checking thei
 | src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php | Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery |
 | src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php | Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage |
 | src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php | Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorageQuery|
-
 
 {% info_block warningBox "Verification" %}
 
@@ -399,7 +394,7 @@ Make sure that the following changes have been implemented in transfer objects:
 
 ### 3) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -446,9 +441,9 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 
 ### 5) Configure export to Redis and Elasticsearch
 
-Configure tables to be published to the `spy_category_image_storage`, `spy_category_node_storage`, `spy_category_tree_storage`, and`spy_category_node_page_search` and synchronized to the Storage on create, edit, and delete changes:
+Configure tables to be published to `spy_category_image_storage`, `spy_category_node_storage`, `spy_category_tree_storage`, and `spy_category_node_page_search` and synchronized to the Storage on create, edit, and delete changes:
 
-1.  Set up publisher plugins:
+1. Set up publisher plugins:
 
 |PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE|
 |--- | --- | --- | ---|
@@ -477,7 +472,7 @@ Configure tables to be published to the `spy_category_image_storage`, `spy_cate
 |CategoryTemplateWritePublisherPlugin | Publishes category node page search data by the`SpyCategoryTemplate` entity events. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher\CategoryTemplate |
 
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
@@ -570,11 +565,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 2. Set up event listeners:
 
-
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | CategoryImageStorageEventSubscriber | Registers listeners that are responsible for publishing category image information to storage when a related entity changes. |  | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber |
-
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -695,20 +688,12 @@ Make sure that the `category-node` and `category-tree` trigger plugins work corr
 4.  Make sure that the `spy_category_node_storage` and `spy_category_tree_storage` tables have been filled with respective data.
 5.  Make sure that, in your system, storage entries are displayed with `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that *category-node*, *category-tree* synchronization plugins works correctly:
 
-1.  Fill the `spy_category_node_storage`, `spy_category_tree_storage` tables with some data.
+1.  Fill the `spy_category_node_storage` and `spy_category_tree_storage` tables with some data.
 2.  Run the `console sync:data -r category_node` command.
 3.  Run the `console sync:data -r category_tree` command.
 4.  Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
-
-{% endinfo_block %}    
-
-{% info_block warningBox "Verification" %}
 
 Make sure that when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
 
@@ -759,7 +744,6 @@ Make sure that when a category is created or edited through ORM, it is exported 
    ]
 }
 ```
-
 
 <details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
 
@@ -830,7 +814,6 @@ Make sure that when a category is created or edited through ORM, it is exported 
 }
 ```
 </details>
-
 
 **EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us**
 
@@ -905,11 +888,9 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 {% endinfo_block %}
 
-
 ### 6) Import data
 
 1.  Prepare your data according to your requirements using our demo data:
-
 
 **data/import/common/common/category.csv**
 
@@ -918,24 +899,24 @@ category_key,parent_category_key,name.de_DE,name.en_US,meta_title.de_DE,meta_tit
 cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,1,1,1,0,1,90,Catalog (default)
 ```
 
-|COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
+|COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
-| category_key | ✓ | string | cameras-and-camcorder | Sluggable name of the category. |
+| category_key | &check; | string | cameras-and-camcorder | Sluggable name of the category. |
 | parent_category_key | | string | demoshop | Sluggable name of the parent category. |
-| name.de_DE | ✓ | string | Kameras & Camcorders | Human-readable name of the category (de). |
-| name.en_US | ✓ | string | Cameras & Camcorders | Human-readable name of the category (en). |
-| meta_title.de_DE | ✓ | string | Kameras & Camcorders | Human-readable title for category (de). |
-| meta_title.en_US | ✓ | string | Cameras & Camcorders | A Human-readable title for category (en). |
-| meta_description.de_DE | ✓ | string | Kameras & Camcorders | A Human-readable description for category (de). |
-| meta_description.en_US | ✓ | string | Cameras & Camcorders | A Human-readable description for category (en). |
-| meta_keywords.de_DE | ✓ | string | Kameras & Camcorders | A Human-readable keywords for category (de). |
-| meta_keywords.en_US | ✓ | string | Cameras & Camcorders | A Human-readable keywords for category (en). |
+| name.de_DE | &check; | string | Kameras & Camcorders | Human-readable name of the category (de). |
+| name.en_US | &check; | string | Cameras & Camcorders | Human-readable name of the category (en). |
+| meta_title.de_DE | &check; | string | Kameras & Camcorders | Human-readable title for category (de). |
+| meta_title.en_US | &check; | string | Cameras & Camcorders | A Human-readable title for category (en). |
+| meta_description.de_DE | &check; | string | Kameras & Camcorders | A Human-readable description for category (de). |
+| meta_description.en_US | &check; | string | Cameras & Camcorders | A Human-readable description for category (en). |
+| meta_keywords.de_DE | &check; | string | Kameras & Camcorders | A Human-readable keywords for category (de). |
+| meta_keywords.en_US | &check; | string | Cameras & Camcorders | A Human-readable keywords for category (en). |
 | is_active | | bool | 1 | Defines if the category is active. |
 | is_in_menu ||  bool | 1 | Defines if the category is displayed in the menu on the Storefront. |
 | is_searchable | | bool | 1 | Defines if the category is displayed in the search. If the value is `0`, the category cannot be found in the catalog search. |
 | is_root ||  bool | 0 | Defines if the category. is a root category: `0` – non-root category, `1` – root category. |
 | is_main ||  bool | 1 | Defines if the category is main. |
-| node_order ||  int | 90 | When displayed with other categories, defines their order based on the comparison of this parameter’s values. |
+| node_order ||  int | 90 | When displayed with other categories, defines their order based on the comparison of this parameter's values. |
 | template_name | | string | Catalog (default) | Human-readable name of the category template. |
 
 
@@ -948,9 +929,9 @@ demoshop,DE,
 
 |COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
-| category_key | ✓ | string | demoshop | Sluggable name of the category. |
+| category_key | &check; | string | demoshop | Sluggable name of the category. |
 | included_store_names| |  string | DE | List of the store names to link to the category. |
-| excluded_store_names |   | string | "US,AT" | List of the store names to unlink from the category. |
+| excluded_store_names | | string | "US,AT" | List of the store names to unlink from the category. |
 
 **data/import/category_template.csv**
 
@@ -961,8 +942,8 @@ template_name,template_path
 
 |COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
-| template_name | ✓ | string | My category template | A human-readable name of the category template. |
-| template_path | ✓ | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
+| template_name | &check; | string | My category template | A human-readable name of the category template. |
+| template_path | &check; | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
 
 2. Register the following data import plugins:
 
@@ -1068,7 +1049,7 @@ Add the following plugins to your project:
 | UrlStorageCategoryNodeMapperPlugin| If `UrlStorageTransfer.fkResourceCategorynode` is provided, maps the category node storage data to `UrlStorageResourceMapTransfer`. | | Spryker\Client\CategoryStorage\Plugin |
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+<details open ><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1209,35 +1190,31 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you’ve integrated category image handling successfully, check that, in the Back Office, you can manage category images when creating and editing categories.
+To make sure that you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
+
+Make sure you've integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
 
 {% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
+## Install feature frontend
 
-Make sure you’ve integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
-
-{% endinfo_block %}
-
-## Install feature front end
-
-To install the Category Management feature front end, follow the steps below.
+Follow the steps below to install the Category Management feature frontend.
 
 ### Prerequisites
 
-Overview and install the following features.
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}}|
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}}| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1258,8 +1235,6 @@ Register the following global widgets:
 | WIDGET | DESCRIPTION | NAMESPACE |
 |--- | --- | --- |
 | CategoryImageStorageWidget | Finds the given category image set in Storage and displays its first image in a given size format. | SprykerShop\Yves\CategoryImageStorageWidget\Widget|
-
-
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 ```php
@@ -1302,8 +1277,6 @@ Add the following plugins to your project:
 |--- | --- | --- | --- |
 | CategoryTwigPlugin| Defines the `categories` variable for a global usage in twig files.| | SprykerShop\Yves\CategoryWidget\Plugin\Twig |
 
-
-
 **src/Pyz/Yves/Twig/TwigDependencyProvider.php**
 
 ```php
@@ -1340,6 +1313,6 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/catalog-category-management-feature-integration.html) |
-| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|
+| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
+| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

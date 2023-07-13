@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-navigationcsv
   - /docs/file-details-navigationcsv
   - /docs/en/file-details-navigationcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `navigation.csv` file to configure [Navigation](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html) information in your Spryker Demo Shop.

@@ -10,15 +10,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/product-groups: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -60,7 +60,7 @@ Make sure that the following modules have been installed:
 </database>
 ```
 
-2. Set up synchronization queue pools so non-multistore entities (not store specific entities) will be synchronized among stores:
+2. Set up synchronization queue pools so non-multi-store entities (not store specific entities) will be synchronized among stores:
 
 **src/Pyz/Zed/ProductGroupStorage/Persistence/Propel/Schema/spy_product_group_storage.schema.xml**
 
@@ -135,7 +135,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 Set up the following plugin(s):
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductGroupStorageEventSubscriber | Registers listeners that are responsible to publish product abstract group storage entity changes when a related entity change event occurs. | None | Spryker\Zed\ProductGroupStorage\Communication\Plugin\Event\Subscriber |
 
@@ -234,7 +234,7 @@ group_key_2,005,1
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | group_key | Yes | string | group_key_1 | Unique product group identifier. |
 | abstract_sku | Yes | string  | 001 | SKU of an abstract product. |
@@ -253,7 +253,7 @@ Make sure that the configured data has been added to the `spy_product_group` and
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install Product group feature front end.
 
@@ -263,8 +263,8 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 
 ### 1) Install the required modules using Composer
@@ -272,7 +272,7 @@ Overview and install the necessary features before beginning the integration ste
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/product-groups: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -351,6 +351,6 @@ Make sure that `ProductGroupColorWidget` has been registered:
 
 | FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |
-| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
-| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-group-cart-feature-integration.html)  |
+| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html) |
+| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |

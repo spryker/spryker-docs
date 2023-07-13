@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and Synchronize and multi-store shop systems
+  - title: Publish and synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
@@ -380,10 +380,10 @@ Now, you can manually trigger events. For this, do the following:
 1.  Stop all cron jobs or disable background queue processing in Jenkins:
 
 ```bash
-vendor/bin/console schedule:suspend
+vendor/bin/console scheduler:suspend
 ```
 
-2. Create a controller class as follows and run it.
+2. Create a controller class as follows and run it by navigating to `http://[YOUR_BACKOFFICE_URL]/hello-world`.
 
 ```php
 <?php
@@ -511,24 +511,31 @@ To synchronize data with Redis, an intermediate Zed database table is required. 
 
 Follow the steps to create the table:
 
-1. Create the table schema file:
+1. Create the table schema `Pyz\Zed\HelloWorldStorage\Persistance\Propel\Schema\spy_hello_world_storage.schema.xml`:
 
 ```xml
 {% raw %}
-<table name="spy_hello_world_message_storage" idMethod="native" allowPkInsert="true">
-    <column name="id_hello_world_message_storage" type="BIGINT" autoIncrement="true" primaryKey="true"/>
-    <column name="fk_hello_world_message" type="INTEGER" required="true"/>
-    <index name="spy_hello_world_message_storage-fk_hello_world_message">
-        <index-column name="fk_hello_world_message"/>
-    </index>
-    <behavior name="synchronization">
-        <parameter name="resource" value="message"/>
-        <parameter name="key_suffix_column" value="fk_hello_world_message"/>
-        <parameter name="queue_group" value="sync.storage.hello"/>
-    </behavior>
-    <behavior name="timestampable"/>
-        <id-method-parameter value="spy_hello_world_message_storage_pk_seq"/>
-</table>
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\HelloWorldStorage\Persistence" package="src.Orm.Zed.HelloWorldStorage.Persistence">
+
+   <table name="spy_hello_world_message_storage" identifierQuoting="true">
+      <column name="id_hello_world_message_storage" type="BIGINT" autoIncrement="true" primaryKey="true"/>
+      <column name="fk_hello_world_message" type="INTEGER" required="true"/>
+      <index name="spy_hello_world_message_storage-fk_hello_world_message">
+         <index-column name="fk_hello_world_message"/>
+      </index>
+      <id-method-parameter value="spy_hello_world_message_storage_pk_seq"/>
+      <behavior name="synchronization">
+         <parameter name="resource" value="message"/>
+         <parameter name="store" required="false"/>
+         <parameter name="key_suffix_column" value="fk_hello_world_message"/>
+         <parameter name="queue_group" value="sync.storage.hello"/>
+      </behavior>
+      <behavior name="timestampable"/>
+   </table>
+</database>
 {% endraw %}
 ```
 
@@ -604,8 +611,13 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
      */
     public function writeCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {
@@ -646,8 +658,13 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
      */
     public function deleteCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {
@@ -678,6 +695,9 @@ namespace Pyz\Zed\HelloWorldStorage\Business;
 
 use Spryker\Zed\Kernel\Business\AbstractFacade;
 
+/**
+ * @method \Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory getFactory();
+ */
 class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorageFacadeInterface
 {
     /**
@@ -706,7 +726,88 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
 }
 ```
 
-4. Refactor the publisher classes and call the Facade methods:
+4. To connect the facade methods to the business logic in the Writer and Deleter, create the Business factory that creates the Writer and Deleter objects. We also recommend creating interfaces for these objects.
+
+Create `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`.
+
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorldStorage\Business;
+
+use Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleter;
+use Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface;
+use Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriter;
+use Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface;
+use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
+
+
+
+class HelloWorldStorageBusinessFactory extends AbstractBusinessFactory
+{
+
+    /**
+     * @return HelloWorldStorageWriterInterface
+     */
+    public function createHelloWorldMessageStorageWriter(): HelloWorldStorageWriterInterface
+    {
+        return new HelloWorldStorageWriter();
+    }
+
+    /**
+     * @return HelloWorldStorageDeleterInterface
+     */
+
+    public function createHelloWorldMessageStorageDeleter(): HelloWorldStorageDeleterInterface
+    {
+        return new HelloWorldStorageDeleter();
+    }
+}
+
+```
+
+As you see, these methods return interfaces.
+
+In `src\Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface.php`, create the interfaces.
+
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorldStorage\Business\Writer;
+
+interface HelloWorldStorageWriterInterface
+{
+	/**
+	 * @param   \Generated\Shared\Transfer\EventEntityTransfer[]  $eventTransfers
+	 *
+	 * @return void
+	 */
+	public function writeCollectionByHelloWorldEvents(array $eventTransfers): void;
+}
+
+```
+
+Create `src\Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface.php`.
+
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorldStorage\Business\Deleter;
+
+interface HelloWorldStorageDeleterInterface
+{
+	/**
+	 * @param   \Generated\Shared\Transfer\EventEntityTransfer[]  $eventTransfers
+	 *
+	 * @return void
+	 */
+	public function deleteCollectionByHelloWorldEvents(array $eventTransfers): void;
+}
+
+```
+
+
+5. Refactor the publisher classes and call the Facade methods:
 
 ```php
 <?php

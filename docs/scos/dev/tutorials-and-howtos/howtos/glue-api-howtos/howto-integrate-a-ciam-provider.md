@@ -4,7 +4,7 @@ description: Learn how to integrate CIAM into a Spryker project
 last_updated: Nov 9, 2022
 template: howto-guide-template
 ---
- 
+
 This document describes how to integrate a third-party _customer identity and access management (CIAM)_ provider into a Spryker project.
 
 The following steps help you integrate between a Spryker project and CIAM leveraging standard APIs that the CIAM provider exposes, which can be used in the context of a customer whose data is to be read or updated.
@@ -13,7 +13,7 @@ Depending on your requirements, the integration can either extend the existing a
 
 ## Prerequisites
 
-We recommend using JWT-based tokens to transfer required customer data between CIAM and Spryker for more details about JWT, see [JSON Web Tokens](https://auth0.com/docs/secure/tokens/json-web-tokens). 
+We recommend using JWT-based tokens to transfer required customer data between CIAM and Spryker for more details about JWT, see [JSON Web Tokens](https://auth0.com/docs/secure/tokens/json-web-tokens).
 
 There is a ready PHP-based library that provides JWT decoding such as [firebase/php-jwt](https://packagist.org/packages/firebase/php-jwt).
 
@@ -24,14 +24,14 @@ Install the required modules:
 {% info_block infoBox %}
 
 The following library is a suggestion, not a requirement.
- 
+
 {% endinfo_block %}
 
 ```bash
 composer require "firebase/php-jwt": "^5.4" --update-with-dependencies
 ```
 
-For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-backend-api//glue-api-authentication-integration.html).
+For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
 ## Module dependency graph
 
@@ -41,7 +41,7 @@ The following diagram illustrates the dependencies between the core modules and 
 
 ## 1. Create the CIAM provider module
 
-Create a separate CIAM provider Client layer with the following structure: 
+Create a separate CIAM provider Client layer with the following structure:
 
 ```
 + Client/
@@ -57,7 +57,7 @@ Create a separate CIAM provider Client layer with the following structure:
       + CiamDataReaderInterface.php
     + CiamClient.php
     + CiamClientInterface.php  
-    + CiamConfig.php 
+    + CiamConfig.php
   ...
 ```
 
@@ -127,7 +127,7 @@ class CiamTokenDecoder implements CiamTokenDecoderInterface
 ```
 </details>
 
-In relation to the CIAM provider module, you need to add a service as well to extract and parse the token from the authorization header. 
+In relation to the CIAM provider module, you need to add a service as well to extract and parse the token from the authorization header.
 
 The logic falls under `Pyz/Service/<CIAM Provider>`:
 ```php
@@ -234,7 +234,7 @@ The following are the Customer `Zed` layer's touchpoints required to be extended
   + Customer/
     + Business/
         + Customer
-          + CustomerCreator.php // [Created Class] Validates the required attributes, checks whether a customer exists or not, and triggers the customer creation from the entity manager accordingly 
+          + CustomerCreator.php // [Created Class] Validates the required attributes, checks whether a customer exists or not, and triggers the customer creation from the entity manager accordingly
           + CustomerCreatorInterface.php [Created Interface]
         + CustomerBusinessFactory.php // [Extended Class]
         + CustomerFacade.php  // [Extended Class]
@@ -248,7 +248,7 @@ The following are the Customer `Zed` layer's touchpoints required to be extended
   ...
 ```
 
-The extended functionality here must not be complex and must not include any extra logic apart from validation of the required attributes and the customer entity creation. 
+The extended functionality here must not be complex and must not include any extra logic apart from validation of the required attributes and the customer entity creation.
 
 The following is an example of the create customer functionality in `CustomerCreator.php`:
 
@@ -257,7 +257,7 @@ The following is an example of the create customer functionality in `CustomerCre
     public function createCustomer(CustomerTransfer $customerTransfer): CustomerResponseTransfer
     {
         $customerTransfer->require<RequiredAttributes>();
-   
+
 
         $existingCustomerTransfer = $this->customerRepository->findCustomerBy<attribute>($customerTransfer->getCustomer<attribute>());
 
@@ -296,7 +296,7 @@ In the `OauthApi` module, extend the access token validation step with your CIAM
   ...
 ```
 
-Adjust `OauthApiFactory` and `OauthApiDependencyProvider` to include the CIAM provider service. 
+Adjust `OauthApiFactory` and `OauthApiDependencyProvider` to include the CIAM provider service.
 In the implementation example, it is `Pyz\Service\CiamProvider\CiamProviderServiceInterface`.
 
 The following example extends `AccessTokenValidator` to validate the authorization header using the CIAM provider parser:
@@ -332,18 +332,18 @@ You can also extend `GlueRequestCustomerTransfer` with Ciam Provider's attribute
 The logic within the `CiamTokenUserRequestBuilderInterface` implementation must combine the usage of the previously implemented steps.
 It triggers the CIAM token parser, the CIAM token decoder, and the Customer creator.
 
-The folder structure is similar to the following: 
+The folder structure is similar to the following:
 
 ```
 + Glue/
   + CiamProviderRestApi/
     + Plugin/
         + GlueApplication/
-          + CiamProviderRequestValidatorPlugin.php // Triggers CiamTokenValidator 
+          + CiamProviderRequestValidatorPlugin.php // Triggers CiamTokenValidator
           + CiamTokenUserRequestBuilderPlugin.php // Triggers CiamTokenUserRequestBuilder
     + Processor/
         + RequestBuilder/
-          + CiamTokenUserRequestBuilder.php // Parses and decodes the token; then, it maps the token's attributes to the customer transfer and triggers the create customer functionality 
+          + CiamTokenUserRequestBuilder.php // Parses and decodes the token; then, it maps the token's attributes to the customer transfer and triggers the create customer functionality
           + CiamTokenUserRequestBuilderInterface.php
         + Mapper/
           + CustomerMapper.php // Maps customer attributes from CiamProviderToken Transfer to Customer Transfer to be used in the customer creator
@@ -386,11 +386,11 @@ public function buildRequest(GlueRequestTransfer $glueRequestTransfer): GlueRequ
         if (!$customerResponseTransfer->getIsSuccess()) {
             return null;
         }
-        
+
         $glueRequestCustomerTransfer = (new GlueRequestCustomerTransfer())
             ->setNaturalIdentifier($customerResponseTransfer->getCustomerTransfer()->getCustomerReference())
             ->setCiampProviderToken($ciamToken);
-            
+
         return $glueRequestTransfer->setRequestCustomer($glueRequestCustomerTransfer);
     }
 ```
@@ -420,5 +420,3 @@ Example:
 ```
 
 You've successfully extended the authorization process to include your CIAM provider authentication into the process.
-
-

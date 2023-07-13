@@ -1,15 +1,21 @@
 
+This document describes how to integrate Alternative Products + Inventory Management into a Spryker project.
+
+
+This document describes how to integrate Alternative Products + Inventory Management into a Spryker project.
 
 ## Install feature core
+
+Follow the steps below to install the Alternative Products + Inventory Management feature core.
 
 ### Prerequisites
 
 To start feature integration, review and install the necessary features:
 
-| NAME | VERSION |
-|---|---|
-|Alternative Products|{{site.version}}|
-|Inventory Management|{{site.version}}|
+| NAME | VERSION | INTEGRATION GUIDE |
+|---|---|---|
+|Alternative Products|{{page.version}}| [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
+|Inventory Management|{{page.version}}| [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ### 1) Set up behavior
 
@@ -17,8 +23,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|AvailabilityCheckAlternativeProductApplicablePlugin|Checks if product alternatives should be shown for the product.|None|`Spryker\Zed\Availability\Communication\Plugin\ProductAlternative|
-|AvailabilityCheckAlternativeProductApplicablePlugin|Checks if product alternatives should be shown for the product.|Expects SKU and `IdProductAbstract` to be set for the ProductViewTransfer.|Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage|
+|AvailabilityCheckAlternativeProductApplicablePlugin|Checks whether product alternatives are to be shown for the product.|None|`Spryker\Zed\Availability\Communication\Plugin\ProductAlternative|
+|AvailabilityCheckAlternativeProductApplicablePlugin|Checks whether product alternatives are to be shown for the product.|Expects SKU and `IdProductAbstract` to be set for `ProductViewTransfer`.|Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage|
 
 **src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php**
 
@@ -70,6 +76,6 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 
 {% info_block warningBox “Verification” %}
 
-Make sure that you can see alternatives for not available products on the product detail page.
+Make sure you can see alternatives for unavailable products on the product detail page.
 
 {% endinfo_block %}

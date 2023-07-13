@@ -42,7 +42,7 @@ Here is another example of the connection between company roles and permissions:
 * After the company account has been approved, this first company user becomes the company administrator.
 * Therefore, one of the roles within the company is an administrator who has all the permissions with regard to the company profile creation and management, user accounts, and user rights.
 
-One and the same user can have several Company Roles assigned to them. It means that the same user can be a junior sales manager and team leader, which in its turn implies that this user has permissions assigned to both roles: junior sales manager and team leader. 
+One and the same user can have several Company Roles assigned to them. It means that the same user can be a junior sales manager and team leader, which in its turn implies that this user has permissions assigned to both roles: junior sales manager and team leader.
 
 {% info_block infoBox %}
 
@@ -140,14 +140,14 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Add item to cart**—allows adding products to the cart. Without this permission, the user gets the "This action is forbidden" error when trying to add the product to the cart.
   - **Change item in cart**—allows changing products in the cart (changing the quantity or adding notes).
   - **Remove item from cart**—allows deleting the products from the cart.
-  - **Place Order**—allows placing the order. Without this permission enabled, a user gets an error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to place an order.
-  - **Buy up to grand total (Requires "Send cart for approval")**—sets a limit for the grand total of the cart. If the amount in the cart is larger than the limit set in this permission, the user can't proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
-  - **Approve up to grand total**—with this permission enabled, a user can approve the cart. For more details, see [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
+  - **Place Order**—allows placing the order. Without this permission enabled, a user gets an error when trying to submit the order. If the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to place an order.
+  - **Buy up to grand total (Requires "Send cart for approval")**—sets a limit for the grand total of the cart. If the amount in the cart is larger than the limit set in this permission, the user can't proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html) feature.
+  - **Approve up to grand total**—with this permission enabled, a user can approve the cart. For more details, see [Approval Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html).
   - **View Business Unit orders**—with this permission enabled, a user can see not only their own orders but also the orders of their business unit.
   - **View Company orders**—with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their company.
-  - **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
+  - **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html) for more details.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

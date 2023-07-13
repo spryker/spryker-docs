@@ -32,7 +32,7 @@ related:
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
   - title: Merchant Custom Prices feature overview
-    link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html
+    link: docs/pbc/all/price-management/page.version/base-shop/merchant-custom-prices-feature-overview.html
   - title: Password Management overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
 ---

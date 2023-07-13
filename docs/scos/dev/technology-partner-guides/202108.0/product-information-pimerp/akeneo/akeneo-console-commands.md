@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/akeneo-console-commands
   - /docs/akeneo-console-commands
   - /docs/en/akeneo-console-commands
+  - /docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo/akeneo-console-commands.html
 ---
 
 The following console commands are available in your project after successful [installation](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html) of the Akeneo module. Run them one by one.

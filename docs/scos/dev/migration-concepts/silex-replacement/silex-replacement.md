@@ -41,7 +41,7 @@ We added a new Spryker application to replace Silex and a container to replace P
 
 To avoid forcing an immediate update of the majority of modules, we introduced several small changes, which are backward compatible.
 
-As Silex was an instance of Pimple with all services attached to, we introduced our own _Container_ that implemented the `ContainerInterface` from [PSR-11](https://www.php-fig.org/psr/psr-11/). Additionally, we added a mock class for Pimple that further extended the Container. The mock class allows us to keep using the `\Pimple;` `USE` statement without the `pimple/pimple` package. In this case, we don't have to refactor the code that has Pimple dependencies and all the changes are backward compatible.
+As Silex was an instance of Pimple with all services attached to, we introduced our own _Container_ that implemented the `ContainerInterface` from PSR-11<!--](https://www.php-fig.org/psr/psr-11/) check if it works before restoring -->. Additionally, we added a mock class for Pimple that further extended the Container. The mock class allows us to keep using the `\Pimple;` `USE` statement without the `pimple/pimple` package. In this case, we don't have to refactor the code that has Pimple dependencies and all the changes are backward compatible.
 
 {% info_block warningBox %}
 
@@ -108,23 +108,23 @@ Update the following modules using the provided migration guides:
 
 | MODULE | MIGRATION GUIDE |
 | --- | --- |
-| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html) |
-| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html) |
-| Form | [Migration guide - Form](/docs/scos/dev/module-migration-guides/migration-guide-form.html) |
-| Http | [Migration guide - Http](/docs/scos/dev/module-migration-guides/migration-guide-http.html) |
-| Locale | [Migration guide - Locale](/docs/scos/dev/module-migration-guides/migration-guide-locale.html) |
-| Propel | [Migration guide - Propel](/docs/scos/dev/module-migration-guides/migration-guide-propel.html) |
-| Messenger | [Migration guide - Messenger](/docs/scos/dev/module-migration-guides/migration-guide-messenger.html) |
-| Router | [Migration guide - Router](/docs/scos/dev/module-migration-guides/migration-guide-router.html) |
-| Security | [Migration guide -Security](/docs/scos/dev/module-migration-guides/migration-guide-security.html) |
-| Session | [Migration guide - Session](/docs/scos/dev/module-migration-guides/migration-guide-session.html) |
-| Store | [Migration guide - Store](/docs/scos/dev/module-migration-guides/migration-guide-store.html) |
-| Translator | [Migration guide - Translator](/docs/scos/dev/module-migration-guides/migration-guide-translator.html) |
-| Twig | [Migration guide -Twig](/docs/scos/dev/module-migration-guides/migration-guide-twig.html) |
-| Validator | [Migration guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html) |
-| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html) |
+| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html) |
+| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html) |
+| Form | [Migration guide - Form](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-form-module.html) |
+| Http | [Migration guide - Http](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-http-module.html) |
+| Locale | [Migration guide - Locale](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-locale-module.html) |
+| Propel | [Migration guide - Propel](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-propel-module.html) |
+| Messenger | [Migration guide - Messenger](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-messenger-module.html) |
+| Router | [Migration guide - Router](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-router-module.html) |
+| Security | [Migration guide -Security](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-security-module.html) |
+| Session | [Migration guide - Session](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-session-module.html) |
+| Store | [Migration guide - Store](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-store-module.html) |
+| Translator | [Migration guide - Translator](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-translator-module.html) |
+| Twig | [Migration guide -Twig](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-twig-module.html) |
+| Validator | [Migration guide - Validator](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html) |
+| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html) |
 
-You've replaced silex.
+You've replaced Silex.
 
 ### Removing Silex
 

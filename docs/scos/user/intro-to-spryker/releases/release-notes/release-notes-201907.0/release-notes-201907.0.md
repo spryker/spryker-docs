@@ -148,7 +148,7 @@ In many cases, you may decide to provide your buyers and users with alternative 
 
 **Documentation**:
 
-* [Interact with third party payment providers using Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html)
+* [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{site.version}}/interact-with-third-party-payment-providers-using-glue-api.html)
 * [B2B-B2C Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/201907.0/checking-out/checking-out-purchases.html)
 
 Additionally, the following APIs were modified to support B2B use cases (they work now both for B2C and B2B) :
@@ -260,7 +260,7 @@ We have extended our Payone module with the cash-on-delivery payment method. Thi
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
+**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:
@@ -285,7 +285,7 @@ We now have a new integration of our new partner Episerver and their online plat
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method ratenkauf by easyCredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
+**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html)
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:
@@ -297,7 +297,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
+**Documentation**: [CrefoPay](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/crefopay/install-and-configure-crefopay.html)
 
 ***
 ## Technical Enhancements
@@ -323,4 +323,3 @@ code:constraint:modules.
 ### Code Quality
 We have updated Spryker tooling to support PHPStan 0.11, which help us and projects to bring the code quality to the new level. New features are described in the PHPStan release notes.
  
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

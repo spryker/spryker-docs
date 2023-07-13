@@ -40,7 +40,7 @@ The following guide relies on your knowledge of the structure of the Glue REST A
 
 * [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
 * [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html).
-* [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
+* [Integrate Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 {% info_block infoBox %}
 
@@ -48,7 +48,7 @@ If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/us
 
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
 
-For more details, see [Database schema for product attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% endinfo_block %}
 
@@ -108,10 +108,10 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 
 ## 2. Put data
 
-If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you have added in step 1. 
+If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you have added in step 1.
 Automatic conversion occurs when the attribute name defined in the REST transfer matches exactly the name of the respective field in the storage transfer.
 
-In more complicated cases, to pull data from alternative storage or map data differently from what auto-mapping does, you need to override the processor classes. 
+In more complicated cases, to pull data from alternative storage or map data differently from what auto-mapping does, you need to override the processor classes.
 To add the `manufacturerCountry` attribute data, override the `AbstractProductsResourceMapper` class by extending the `ProductsRestApi` module, which implements the Products API:
 
 1. Create the `src/Pyz/Glue/ProductsRestApi` directory.

@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Prices | {{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 
 
@@ -752,7 +752,7 @@ offer418,DEFAULT,DE,CHF,32000,27000,"[{""quantity"":4,""net_price"":15000,""gros
 
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | &check; | string | offer1 | Product offer reference that will have these prices |
 | price_type | &check; | string | DEFAULT | Sets price type to product offer price |

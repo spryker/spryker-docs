@@ -5,7 +5,7 @@ related:
   - title: Migration Guide - Session
     link: docs/scos/dev/module-migration-guides/migration-guide-session.html
 redirect_ from:
-  - /docs/scos/dev/technology-partner-guides/202108.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with���vagrant.html
+  - /docs/scos/dev/technology-partner-guides/202108.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with-vagrant.html
 ---
 
 {% info_block infoBox "New Relic installation in Docker based projects" %}

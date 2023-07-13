@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-stock-management) information in your Spryker shop.
@@ -22,7 +24,7 @@ data:import product-offer-stock
 
 The file should have the following parameters:
 
-| PARAMETER     | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION        |
+| PARAMETER     | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION        |
 | ------------- | ---------- | ------- | ------------- | ---------------------------- | ----------------------- |
 | product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
 | stock_name              | &check;             | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                                           |
@@ -34,7 +36,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
-- [warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html)
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html)
 
 ## Import template file and content example
 

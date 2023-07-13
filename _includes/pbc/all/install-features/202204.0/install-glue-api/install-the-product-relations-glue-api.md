@@ -9,14 +9,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|
-|Spryker Core| {{site.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product Relation| {{site.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-relations-feature-integration.html)|
-|Cart| {{site.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) ||
-Product| {{site.version}} |[Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)|
+|Spryker Core| {{page.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product Relation| {{page.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relations-feature-integration.html)|
+|Cart| {{page.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) ||
+Product| {{page.version}} |[Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-products-rest-api:"^1.0.0" --update-with-dependencies

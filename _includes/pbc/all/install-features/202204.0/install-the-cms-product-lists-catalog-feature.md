@@ -1,21 +1,26 @@
 
 
-## Install Feature Core
+
+This document describes how to integrate the CMS + Product Lists + Catalog feature into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the CMS + Product Lists + Catalog feature core.
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Cms | {{site.version}} |
-| Product lists | {{site.version}} |
-| Catalog | {{site.version}} |
-| Customer | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- |  --- |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) | 
+| Product Lists | {{page.version}} | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) | 
+| Catalog | {{page.version}} | | 
+| Customer | {{page.version}} | | 
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/customer-catalog:"^1.0.0" --update-with-dependencies
@@ -31,9 +36,7 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-## Set up behavior
-
-#### Configure the catalog search count query
+### Configure the catalog search count query
 
 Add the following plugins to your project:
 

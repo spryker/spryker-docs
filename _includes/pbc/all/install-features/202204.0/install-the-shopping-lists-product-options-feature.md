@@ -8,12 +8,12 @@ To start feature integration, review ad install the necessary features.
 
 | NAME | VERSION |
 |---|---|
-|Product Options|{{site.version}}|
-|Shopping Lists|{{site.version}}|
+|Product Options|{{page.version}}|
+|Shopping Lists|{{page.version}}|
 
 ### 1) Install the required modules by bsing Composer
 
-Run the following command to install the required modules:
+
 ```bash
 composer require spryker-feature/shopping-list-product-option-connector:"^1.0.0" --update-with-dependencies
 ```
@@ -136,8 +136,8 @@ Please review and install the necessary features before beginning the integratio
 
 | NAME | VERSION |
 |---|---|
-|Spryker Core |{{site.version}}|
-|Product Options|{{site.version}}|
+|Spryker Core |{{page.version}}|
+|Product Options|{{page.version}}|
 
 ### 1) Add translations
 

@@ -11,7 +11,7 @@ The _Packaging Units_ feature defines if a packaging unit holds a fixed amount o
 To learn more about the feature and to find out how end users use it, see [Packaging Units feature overview](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|

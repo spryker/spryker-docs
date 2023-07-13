@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 |--------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core             | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                         |
 | Marketplace Product      | {{page.version}}   | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)           |
-| Product Approval Process | {{page.version}}   | [Product Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-approval-process-feature-integration.html) |
+| Product Approval Process | {{page.version}}   | [Product Approval Process feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) |
 
 
 ### 1) Install the required modules using Сomposer

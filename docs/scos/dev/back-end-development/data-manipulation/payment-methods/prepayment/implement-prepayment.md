@@ -23,28 +23,17 @@ redirect_from:
   - /v1/docs/ht-implement-prepayment
   - /v1/docs/en/ht-implement-prepayment
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-related:
-  - title: Implement prepayment in frontend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
-  - title: Implement prepayment in backend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
-  - title: Implement prepayment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
-  - title: Integrate Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
-  - title: Test the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
 This document describes the steps that you need to consider to implement the prepayment method without integrating with a third-party payment service provider.
 
 This HowTo section shows how to add a new module called `PaymentMethods`.
 
-If this is your first time creating a new module, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html).
+If this is your first time creating a new module, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
 {% info_block infoBox "Implementation order" %}
 
-The order of the implementation steps does not matter; however, ensure to complete all the steps.
+The order of the implementation steps does not matter; however, be sure to complete all the steps.
 
 {% endinfo_block %}
 

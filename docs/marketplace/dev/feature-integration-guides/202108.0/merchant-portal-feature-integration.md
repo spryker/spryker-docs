@@ -15,7 +15,7 @@ See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev
 
 ## Environment requirements
 
-- NodeJs v12+
+- Node.js v12+
 - Yarn v2 (or latest Yarn v1)
 - Spryker supported PHP version (7.3, 7.4)
 - Host for Zed application
@@ -393,5 +393,5 @@ Integrate the following related features:
 | Merchant Portal - Marketplace Order Management                                                            |                           | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                                                                                                                     |
 | Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                           | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
 | Merchant Portal - Marketplace Product + Inventory Management                                              |                           | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)                                                                                           |
-| Merchant Portal - Marketplace Product Option Management                                                   |                           | [Merchant Portal - Marketplace Product Option Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-option-management-feature-integration.html)                                                                                                                   |
+| Merchant Portal - Marketplace Product Options Management                                                   |                           | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)                                                                                                                   |
 | Merchant Portal - Marketplace Product + Tax                                                               |                           | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)                                                                                                                             |

@@ -1,5 +1,6 @@
 
 
+
 This document describes how to add *multiple abstract products as promotional products* to the [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) feature.
 
 ## Install feature core
@@ -67,10 +68,10 @@ Ensure that the following changes have been triggered in transfer objects:
 | RestPromotionalItemsAttributes.skus | property | created | src/Generated/Shared/Transfer/RestPromotionalItemsAttributesTransfer       |
 | ProductView.promotionItem           | property | created | src/Generated/Shared/Transfer/ProductViewTransfer                          |
 
-Ensure that the *ABSTRACT PRODUCT SKU(S)** field is displayed, and it accepts a comma-separated list:
+Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and it accepts a comma-separated list:
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount** and select **Create new discount**. 
 2. On the **Create new discount** page, in the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
-3. Ensure that the **ABSTRACT PRODUCT SKU(S)** field appears and add to it a comma-separated list of abstract product SKUs.
+3. Ensure that the **ABSTRACT PRODUCT SKU(S)** field appears. Add to it a comma-separated list of abstract product SKUs.
 
 {% endinfo_block %}
 
@@ -93,7 +94,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that in the database the configured data are added to the `spy_glossary` table.
+Ensure that in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -111,7 +112,7 @@ Ensure that all labels and help tooltips in the **Discount** form has English an
 
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 2. **Create new discount** or **Edit** an existing one.
-3. Check labels and help tooltips on the **Create new discount** or **Edit discount** page.
+3. On the **Create new discount** or **Edit discount** page, check labels and help tooltips 
 
 {% endinfo_block %}
 
@@ -121,7 +122,7 @@ Set up the following behaviors:
 
 | PLUGIN                                                      | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                                                                            |
 |-------------------------------------------------------------|----------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------|
-| DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin | Adds discount promotion form name postfix to the Add To Cart form.   | None          | SprykerShop\Yves\DiscountPromotionWidget\Plugin\CartPage\DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin |
+| DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin | Adds discount promotion form name postfix to the **Add To Cart** form.   | None          | SprykerShop\Yves\DiscountPromotionWidget\Plugin\CartPage\DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin |
 
 **src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
@@ -151,7 +152,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 Ensure that the plugin works correctly:
  
-1. [Create a discount](/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html).
+1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
 3. Add **ABSTRACT PRODUCT SKU**.
 4. Create another discount with one or more identic promotional products.
@@ -173,8 +174,8 @@ console frontend:zed:build
 
 Ensure that you can create a discount with multiple promotional products:
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
-2. Click **Create new discount** or **Edit** next to the existing discount.
-3. Check that you can see the **Discount** form on the **Create new discount** or **Edit discount** page.
+2. On the **Create new discount** or **Edit discount** page, click **Create new discount** or **Edit**.
+3. On the **Create new discount** or **Edit discount** page, check that you can see the **Discount** form. 
 4. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
 5. Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and that it accepts a comma-separated list.
 6. Enter several abstract product SKUs and save the discount.

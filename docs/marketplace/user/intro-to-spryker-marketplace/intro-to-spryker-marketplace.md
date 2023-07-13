@@ -2,6 +2,8 @@
 title: Intro to Spryker Marketplace
 description: This document is an overview of Spryker Marketplace
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
 ---
 
 

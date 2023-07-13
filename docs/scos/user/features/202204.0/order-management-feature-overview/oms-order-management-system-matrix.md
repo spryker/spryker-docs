@@ -17,8 +17,6 @@ The *OMS Matrix* gives you a quick overview of all orders and their current stat
 
 It is a view into all sales order items and their current states. The matrix shows how many items exist per state and how long they stay here already.
 
-Many start-ups in the ecommerce world have gone through an automation approach to their order processing as described by Fabian Wesner in his blog post ([Introduction to Automated Order Management for E-commerce Startups](https://insights.project-a.com/introduction-to-automated-order-management-for-e-commerce-startups-7f756043c413)).
-
 They have started highly manually: every step from order to fulfillment was done by a support team. A typical culture of heroes. With the increasing amount of sales orders, the entire process or subprocesses have been automated—for example with a lot of if-then-else statements. This easily ends up in unmaintainable spaghetti code. Others have introduced an ERP system, which results in a distributed logic between shop and ERP. In both cases, the documentation of the implemented process can only be found in the code and development efficiency decreases with the increasing complexity. But this has also an effect on operations: Support teams need to use many tools to understand the flow of a sales order. Process insight and process performance indicators are missing. Typically, there is a set of KPI aggregated in a data warehouse, but KPI reflects a result, if you want to understand why a specific result was realized, Process Performance Indicators let you dig deeper.
 
 ## Process Management as a solution?

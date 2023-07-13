@@ -5,8 +5,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product | 201907.0 | [Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Spryker Core | 201907.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product | 201907.0 | [Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Tax | 201907.0 |  |
 
 ### 1) Install the required modules using Composer
@@ -20,7 +20,7 @@ composer require spryker/product-tax-sets-rest-api:"^2.0.0" --update-with-depend
 
 Make sure that the following module has been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | `ProductTaxSetsRestApi` | `vendor/spryker/product-tax-sets-rest-api` |  
 </div></section>
@@ -46,7 +46,7 @@ Make sure that the following changes have been applied by checking your database
 <section contenteditable="false" class="warningBox"><div class="content">
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | `RestProductTaxRateTransfer` | class | created | `src/Generated/Shared/Transfer/RestProductTaxRateTransfer` |
 | `RestProductTaxSetsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestProductTaxSetsAttributesTransfer` |
@@ -71,7 +71,7 @@ Make sure that the `uuid` field is populated for all records in the `spy_tax_set
 #### Enable resource and relationship
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `ProductTaxSetsResourceRoutePlugin` | Registers the `product-tax` resource. | None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication` |
 | `ProductTaxSetByProductAbstractSkuResourceRelationshipPlugin` | Adds the `product-tax-sets` resource as a relationship to the `abstract-product` resource. |  None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication` |
@@ -130,7 +130,7 @@ Make sure that the following endpoint is available:<br>`http://mysprykershop.com
 
 **See also:**
 
-* [Tax Management](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
+* [Tax Management](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
 
  
 *Last review date: Mar 21, 2019*

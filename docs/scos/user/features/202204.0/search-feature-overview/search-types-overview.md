@@ -29,7 +29,7 @@ If you set up a multi-language store, the search function automatically checks a
 ## Textual search
 By default, all content on CMS and Product Pages, such as product name, description text, or allocated attributes, is searchable. Additionally, Product attributes can be boosted in the search results. You can easily define which products or content to include in or exclude from the full-text search.
 
-For details about how you can manage the search preferences, see [Managing search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-search-preferences.html).
+For details about how you can manage the search preferences, see [Managing search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/define-search-preferences.html).
 
 ## Current constraints
 
@@ -38,11 +38,11 @@ The feature has the following functional constraints:
 * Search preference attributes are shared across all the stores in a project.
 * You cannot define a search preference for a single store.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-search-preferences.html)  |
+| [Manage search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/define-search-preferences.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

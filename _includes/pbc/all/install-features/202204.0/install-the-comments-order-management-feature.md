@@ -1,19 +1,24 @@
 
 
+
+This document describes how to integrate the Comments + Order Management feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Comments + Order Management feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features 
 
-| NAME | VERSION |
-| --- | --- |
-| Comment | {{site.version}} |
-| Order Management | {{site.version}} |
+| NAME | VERSION | INSTALLATION GUIDES|
+| --- | --- | --- |
+| Comments | {{page.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/comment-sales-connector:"^1.0.0" --update-with-dependencies
@@ -69,7 +74,7 @@ Make sure that the Order detail page in Zed contains a block with comments.
 
 ### 3) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate

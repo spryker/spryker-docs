@@ -37,7 +37,7 @@ The following schema illustrates the Marketplace Shipment domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/bc12cbec-87e4-4913-9885-e1986df6f464.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

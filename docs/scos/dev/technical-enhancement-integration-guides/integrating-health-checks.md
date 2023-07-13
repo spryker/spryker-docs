@@ -17,9 +17,6 @@ redirect_from:
   - /v4/docs/health-checks
   - /v4/docs/en/health-checks
   - /docs/scos/dev/technical-enhancements/health-checks.html
-related:
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
 ## General information

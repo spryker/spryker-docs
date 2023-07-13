@@ -3,9 +3,6 @@ title: Glue API - Authentication integration
 description: Create an authentication token for the Storefront and Backend API applications in a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-authentication-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-authentication-integration.html
 ---
 
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
@@ -20,8 +17,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
-| Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
+| Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
+| Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -188,7 +185,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             new UserRequestValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
      */
@@ -226,7 +223,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
             new CustomerRequestBuilderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Glue\GlueStorefrontApiApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface>
      */
@@ -236,7 +233,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
             new AccessTokenValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
      */
@@ -329,7 +326,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new CustomerOauthUserProviderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface>
      */
@@ -350,7 +347,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
             new UserOauthScopeProviderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRequestGrantTypeConfigurationProviderPluginInterface>
      */
@@ -379,9 +376,9 @@ vendor/bin/console setup:init-db
     ```sql
     SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
     ```
-      
+
   2. Check that the output contains one record.
-    
+
 
 * Ensure that you can authenticate as a customer:
   1. Send the request:
@@ -394,7 +391,7 @@ vendor/bin/console setup:init-db
 
     grant_type=password&username={customer_username}&password={customer_password}
     ```
-    
+
   2. Check that the output contains the 201 response with a valid token.
 
 * Ensure that you can authenticate as a user:

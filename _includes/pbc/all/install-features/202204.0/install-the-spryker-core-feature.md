@@ -17,10 +17,10 @@ Follow the steps below to install the Spryker Core feature core.
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
-composer require "spryker-feature/spryker-core":"{{site.version}}" --update-with-dependencies
+composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -658,16 +658,16 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the front end of the Spryker Core feature.
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
-composer require "spryker-feature/spryker-core": "{{site.version}}"
+composer require "spryker-feature/spryker-core": "{{page.version}}"
 ```
 
 ### 2) Set up configuration

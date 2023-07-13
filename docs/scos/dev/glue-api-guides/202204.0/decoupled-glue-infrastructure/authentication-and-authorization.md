@@ -4,15 +4,15 @@ description: Information about Glue API authentication and authorization.
 last_updated: Oct 23, 2022
 template: glue-api-storefront-guide-template
 related:
-  - title: How to create grant type parameters
-    link: docs/scos/dev/glue-api-guides/page.version/glue-backend-api/how-to-guides/create-grant-type-parameters.html
+  - title: Create grant type parameters
+    link: docs/scos/dev/glue-api-guides/page.version/decoupled-glue-infrastructure/how-to-guides/create-grant-type-parameters.html
   - title: How to use authentication server
-    link: docs/scos/dev/glue-api-guides/page.version/glue-backend-api/how-to-guides/using-authentication-server.html
+    link: docs/scos/dev/glue-api-guides/page.version/decoupled-glue-infrastructure/how-to-guides/use-authentication-servers-with-glue-api.html
 redirect_from:
     - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
 ---
 
-For authentication, Spryker implements the [OAuth 2.0 mechanism](https://tools.ietf.org/html/rfc6749). On the REST API level, it is represented by the Login API.
+For authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.
 
 To get access to a protected resource, a user obtains an *access token*. An access token is a JSON Web Token used to identify a user during API calls. Then, they pass the token in the request header.
 
@@ -30,7 +30,7 @@ Expired tokens are stored in the database, and you can configure them to be dele
 
 ## Authentication in the storefront and backend applications
 
-Below, you can find information about [the differences between backend and storefront API modules](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html) and [Authentication integration.](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html).
+Below, you can find information about [the differences between backend and storefront API modules](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html) and [Authentication integration.](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
 In the Storefront, authentication is used to authenticate as a *customer*, and the Backend is used to authenticate as a *user*.
 
@@ -62,7 +62,4 @@ Response sample with an error:
 }
 ```
 
-For more details, see [How to create protected endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html)
-
-
-
+For more details, see [Create protected Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/create-protected-glue-api-endpoints.html)

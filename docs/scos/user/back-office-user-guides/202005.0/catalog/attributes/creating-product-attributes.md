@@ -45,6 +45,6 @@ For a new product in your store, you need to create both super attribute and pro
 If you want to apply this translation to other languages, click **Copy to other languages** icon next to the translation field.
 ***
 **What's next?**
-Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) article.
+Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) article.
 
 Review the [References](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/references/reference-information-attributes.html) section to learn more about the attributes you populate for the Attribute entity and the examples of how the attributes are used.

@@ -1,7 +1,7 @@
 ---
 title: Integrate elastic computing
 description: Learn how to integrate elastic computing.
-last_updated: May 16, 2022
+last_updated: Jan 23, 2023
 template: concept-topic-template
 ---
 
@@ -21,8 +21,6 @@ use Spryker\Zed\Monitoring\MonitoringConfig as BaseMonitoringConfig;
 class MonitoringConfig extends BaseMonitoringConfig
 {
     /**
-     * @api
-     *
      * @return array<string>
      */
     public function getGroupedByArgumentTransactions(): array
@@ -34,11 +32,22 @@ class MonitoringConfig extends BaseMonitoringConfig
 
 3. In `Pyz\Zed\Monitoring\Business\MonitoringBusinessFactory`, enable `FirstArgumentMonitoringConsoleTransactionNamingStrategy` to be used for transaction naming.
 ```php
-public function getMonitoringTransactionNamingStrategies(): array
+    /**
+     * @return array<\Spryker\Zed\Monitoring\Business\MonitoringTransactionNamingStrategy\MonitoringTransactionNamingStrategyInterface>
+     */
+    public function getMonitoringTransactionNamingStrategies(): array
     {
         return [
-            return new FirstArgumentMonitoringConsoleTransactionNamingStrategy($this->getConfig()->getGroupedByArgumentTransactions());
+            $this->createFirstArgumentMonitoringConsoleTransactionNamingStrategy(),
         ];
+    }
+
+    /**
+     * @return \Spryker\Zed\Monitoring\Business\MonitoringTransactionNamingStrategy\MonitoringTransactionNamingStrategyInterface
+     */
+    public function createFirstArgumentMonitoringConsoleTransactionNamingStrategy(): MonitoringTransactionNamingStrategyInterface
+    {
+        return new FirstArgumentMonitoringConsoleTransactionNamingStrategy($this->getConfig()->getGroupedByArgumentTransactions());
     }
 ```
 
@@ -86,6 +95,7 @@ class DataImportConfig extends SprykerDataImportConfig
 ```
 
 2. In `src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php`, adjust the creation of the data importer. The updated data importer uses `DataSetStepBrokerElasticBatchTransactionAware` and its writer steps receive  `MemoryAllocatedElasticBatch`.
+
 ```php
 /**
  * @method \Pyz\Zed\DataImport\DataImportConfig getConfig()
@@ -117,6 +127,8 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 ```
 
 3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it is full.
+
+
 ```php
 <?php
 /**
@@ -217,7 +229,12 @@ class GlossaryWriterStep extends PublishAwareStep implements DataImportStepInter
         $this->addPublishEvents(GlossaryStorageConfig::GLOSSARY_KEY_PUBLISH_WRITE, $glossaryTranslationEntity->getFkGlossaryKey());
     }
 }
+
 ```
+
+
+<!--
+
 
 ## Integrate scalable application infrastructure for publish and sync workers
 
@@ -251,6 +268,8 @@ class QueueConfig extends SprykerQueueConfig
 ```
 
 As a result, the worker spawns a group of processes per each non-empty queue based on the number of messages and available RAM.
+
+-->
 
 ## Integrate Storage caching for primary-replica database setups
 

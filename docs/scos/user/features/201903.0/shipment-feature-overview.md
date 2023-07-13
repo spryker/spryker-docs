@@ -53,7 +53,7 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

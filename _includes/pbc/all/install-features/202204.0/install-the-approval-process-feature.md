@@ -1,29 +1,32 @@
 
 
+
+This document describes how to integrate the [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html) into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Approval Process feature core.
 
 ### Prerequisites
 
 To start feature integration, review and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Company Account | {{site.version}}|
-| Shared Carts | {{site.version}} |
-| Checkout | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION |INTEGRATION GUIDE |
+| --- | --- | --- |
+| Company Account | {{page.version}}| [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
+| Shared Carts | {{page.version}} | [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
+| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
-
 ```bash
-composer require spryker-feature/approval-process:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/approval-process:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules are installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -69,7 +72,7 @@ Make sure that the configuration returns the billing address and payment keys.
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -83,10 +86,6 @@ Make sure that the following changes were applied by checking your database:
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_quote_approval | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes were applied in transfer objects:
 
@@ -111,13 +110,13 @@ quote_approval.request.send,Send Request,en_US
 quote_approval.request.send,Anfrage Senden,de_DE
 quote_approval.remove,Cancel Request,en_US
 quote_approval.remove,Anfrage Abbrechen,de_DE
-quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit, please send your cart for approval or contact your manager.",en_US
+quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit; please send your cart for approval or contact your manager.",en_US
 quote_approval.cart.require_approval,"Sie können diese Bestellung aufgrund Ihres Einkaufslimits nicht aufgeben. Senden Sie Ihren Einkaufswagen zur Genehmigung oder wenden Sie sich an Ihren Kontakmanager.",de_DE
 quote_approval.cart.waiting_approval,"You can't place this order due to pending approval request.",en_US
 quote_approval.cart.waiting_approval,"Sie können diese Bestellung aufgrund einer ausstehenden Genehmigungsanfrage nicht aufgeben.",de_DE
 quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request due to approver limit.",en_US
 quote_approval.create.approver_cant_approve_quote,"Der ausgewählte Manager kann Ihre Anfrage aufgrund des Genehmigungslimits nicht genehmigen.",de_DE
-quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because it's amount higher that your Approver limit.",en_US
+quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because its amount is higher than your Approver limit.",en_US
 quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit ist.",de_DE
 quote_approval.create.quote_already_approved,"This Cart was already approved.",en_US
 quote_approval.create.quote_already_approved,"Dieser Einkaufswagen wurde schon zur Genehmigung gesendet.",de_DE
@@ -127,13 +126,13 @@ quote_approval.create.quote_already_cancelled,"You can't work with this Cart it 
 quote_approval.create.quote_already_cancelled,"Sie können nicht mit diesem Einkaufswagen arbeiten, er wurde schon dem anderen Manager gesendet.",de_DE
 quote_approval.create.quote_already_waiting_for_approval,"This Cart was already sent for approval.",en_US
 quote_approval.create.quote_already_waiting_for_approval,"",de_DE
-quote_approval.create.only_quote_owner_can_send_request,"You can't sent Cart for Approval, only Cart owner can do it.",en_US
+quote_approval.create.only_quote_owner_can_send_request,"You can't send Cart for Approval, only Cart owner can do it.",en_US
 quote_approval.create.only_quote_owner_can_send_request,"Sie können den Einkaufswagen zur Genehmigung nicht senden, das kann nur Inhaber des Einkaufswagens machen.",de_DE
 quote_approval.cancel.do_not_have_permission,"You don't have permissions to cancel Approval request.",en_US
 quote_approval.cancel.do_not_have_permission,"Sie haben nicht die notwendigen Rechte um die Genehmigungsanfrage zu abbrechen.",de_DE
 quote_approval.request.approval_by,by,en_US
 quote_approval.request.approval_by,von,de_DE
-quote_approval.created,"Your request for Approval was send to %first_name% %last_name%.",en_US
+quote_approval.created,"Your request for Approval was sent to %first_name% %last_name%.",en_US
 quote_approval.created,"Ihre Anfrage zur Genehmigung wurde an %first_name% %last_name% gesendet.",de_DE
 quote_approval.removed,"Your request for Approval was canceled.",en_US
 quote_approval.removed,"Ihre Genehmigungsanfrage wurde abgebrochen.",de_DE
@@ -145,7 +144,7 @@ quote_approval.request.declined_by,Declined by,en_US
 quote_approval.request.declined_by,Abgelehnt um,de_DE
 ```
 
-To import the glossary data, run the following console command:
+Import the glossary data:
 
 ```bash
 console data:import glossary
@@ -153,10 +152,13 @@ console data:import glossary
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the `spy_glossary` table in the database.
+
 {% endinfo_block %}
 
 ### 4) Set up behavior
+
+Setting up behavior is not a single step. To set it up, follow the steps in the following subsections.
 
 #### Set up permission integration
 
@@ -164,11 +166,11 @@ Register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ApproveQuotePermissionPlugin | Checks if the customer can approve the quote in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
-| PlaceOrderPermissionPlugin | Checks if the customer can place an order in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
-| RequestQuoteApprovalPermissionPlugin | Checks if the customer can request for approval in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
-| ApproveQuotePermissionPlugin | Checks if the customer can approve quote approval in the Zed layer. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Permission |
-| PlaceOrderPermissionPlugin | Checks if the customer can place an order in the Zed layer. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Permission |
+| ApproveQuotePermissionPlugin | Checks whether the customer can approve the quote in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
+| PlaceOrderPermissionPlugin | Checks whether the customer can place an order in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
+| RequestQuoteApprovalPermissionPlugin | Checks whether the customer can request for approval in the client layer. | None | Spryker\Client\QuoteApproval\Plugin\Permission |
+| ApproveQuotePermissionPlugin | Checks whether the customer can approve quote approval in the Zed layer. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Permission |
+| PlaceOrderPermissionPlugin | Checks whether the customer can place an order in the Zed layer. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Permission |
 | SanitizeQuoteApprovalQuoteLockPreResetPlugin | Allows complete removal of all the approval process-related data from the quote on cart lock reset. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\Cart |
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
@@ -251,15 +253,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 #### Synchronize permission plugins with storage:
 
-Go to the Back Office, **Maintenance** menu, and click **Sync permissions**.
-
 {% info_block warningBox "Verification" %}
 
-Check that the customer with the permission `RequestQuoteApprovalPermission` can request for approval.
-
-Check that the customer with the permission `ApproveQuotePermission` can approve the request.
-
-Check that the customer with the permission `PlaceOrderPermissionPlugin` can place an order from the quote with the approved request for approval.
+In the Back Office, in the **Maintenance** menu, click **Sync permissions** and check the following: 
+* The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
+* The customer, with the  `ApproveQuotePermission` permission, can approve the request.
+* The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.
 
 Check that when you reset the cart lock, all the approval process-related data is removed from the quote.
 
@@ -275,7 +274,8 @@ Register the following plugins:
 | RemoveQuoteApprovalsBeforeQuoteDeletePlugin | Removes quote approvals from the database before the quote deletion. | None |  Spryker\Zed\QuoteApproval\Communication\Plugin\Quote |
 | QuoteApprovalQuoteFieldsAllowedForSavingProviderPlugin | Returns required quote fields from the configuration if the approval request is not canceled. |None | Spryker\Zed\QuoteApproval\Communication\Plugin\Quote |
 
-**src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -320,14 +320,14 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the quote will be expanded with data from database table `spy_quote_approval` on quote loading.
-
-Make sure that the records from the database table `spy_quote_approval` related to the quote will be removed before the quote deletion.
-
-Make sure that the billing address and payment are saved with the quote in the `spy_quote` table after sending an approval request.
+Make sure the following:
+* The quote is expanded with data from the database table `spy_quote_approval` on quote loading.
+* The records from the database table `spy_quote_approval` related to the quote are removed before the quote deletion.
+* The billing address and payment are saved with the quote in the `spy_quote` table after sending an approval request.
 
 {% endinfo_block %}
 
@@ -337,7 +337,7 @@ Register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| QuoteApprovalCheckoutPreConditionPlugin | Checks if the quote is ready to checkout.| None |  Spryker\Zed\QuoteApproval\Communication\Plugin\Checkout |
+| QuoteApprovalCheckoutPreConditionPlugin | Checks whether the quote is ready for checkout.| None |  Spryker\Zed\QuoteApproval\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
@@ -371,29 +371,29 @@ Check that the customer without `PlaceOrderPermission` cannot proceed to checkou
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
+
+Follow the steps below to install the Approval Process feature frontend.
 
 ### Prerequisites
 
 To start feature integration, review and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Cart | {{site.version}} |
-| Checkout | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION |INTEGRATION GUIDE|
+| --- | --- | --- |
+| Cart | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
+| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
+| Spryker Core | {{page.version}}  |[Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
-
 ```bash
-composer require spryker-feature/approval-process: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/approval-process: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following module is installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -403,7 +403,7 @@ Make sure that the following modules were installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -444,7 +444,7 @@ quote_approval_widget.cart.success_message.canceled,"Request from %first_name% %
 quote_approval_widget.cart.success_message.canceled,"Anfrage von %first_name% %last_name% wurde erfolgreich abgebrochen",de_DE
 ```
 
-Run the following console command to import the glossary data:
+2. Import the glossary data:
 
 ```bash
 console data:import glossary
@@ -456,17 +456,14 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 {% endinfo_block %}
 
-
-### 3) Set up behavior
-
-#### Set up permission integration
+### 3) Set up permission integration
 
 Register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| QuoteApprovalCheckerCheckoutAddressStepEnterPreCheckPlugin | Checks if the quote approval status is approved or waiting on the address step of checkout. | None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage |
-| QuoteApprovalCheckerCheckoutPaymentStepEnterPreCheckPlugin | Checks if the quote approval status is approved or waiting on the payment step of checkout. | None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage |
+| QuoteApprovalCheckerCheckoutAddressStepEnterPreCheckPlugin | Checks whether the quote approval status is approved or waiting on the address step of checkout. | None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage |
+| QuoteApprovalCheckerCheckoutPaymentStepEnterPreCheckPlugin | Checks whether the quote approval status is approved or waiting on the payment step of checkout. | None | SprykerShop\Yves\QuoteApprovalWidget\Plugin\CheckoutPage |
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
@@ -508,12 +505,11 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Check that the customer with the sent approval request cannot open the address step on the cart page.
-
-Check that the customer with the sent approval request cannot open the payment step on the cart page.
+Check that the customer with the sent approval request can't do the following:
+* Can't open the address step on the cart page.
+* Can't open the payment step on the cart page.
 
 {% endinfo_block %}
-
 
 ### 4) Set up widgets
 
@@ -553,7 +549,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable the Javascript and CSS changes:
+Enable the Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -561,17 +557,17 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugin was registered:
+Make sure that the following plugin has been registered:
 
 1. Open Yves and log in to the customer account.
-2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, `ApproveQuotePermission` permissions to any role related to the current customer.
-3. Add the record to the `spy_quote_approval` for the current customer quote id and current customer company user as an approver.
+2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, and `ApproveQuotePermission` permissions to any role related to the current customer.
+3. Add the record to the `spy_quote_approval` for the current customer quote ID and current customer company user as an approver.
 
 | MODULE | TEST |
 | --- | --- |
-| QuoteApprovalStatusWidget | Hover over the multicart list in the header: should contain quote approval status column.<br>Open the `https://mysprykershop.com/multi-cart/`, table should contain the quote approval status column. |
-| QuoteApproveRequestWidget | Open the `https://mysprykershop.com/checkout/summary/` - should contain widget request for approval with list approvers. |
-| QuoteApprovalWidget | Open the `https://mysprykershop.com/cart/` - should contain widget approver functionality with buttons to approve or decline. |
+| QuoteApprovalStatusWidget | Hover over the multicart list in the header—it contains the quote approval status column.<br>Open the `https://mysprykershop.com/multi-cart/`, table contains the quote approval status column. |
+| QuoteApproveRequestWidget | Open `https://mysprykershop.com/checkout/summary/`—it contains the widget request for approval with list approvers. |
+| QuoteApprovalWidget | Open `https://mysprykershop.com/cart/`—it contains the widget approver functionality with buttons to approve or decline. |
 
 {% endinfo_block %}
 
@@ -611,12 +607,13 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugin was registered:
+Make sure that the following plugin is registered:
 
 1. Open Yves and log in to the customer account.
-2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, `ApproveQuotePermission` permissions to any role related to current customer.
-3. Add the record to the `spy_quote_approval` for the current customer quote id and current customer company user as an approver.
-4. Open `https://mysprykershop.com/cart/` - Click "Approve" button. Quote approval status should become approved and the "proceed to checkout" button must be displayed.
-Create a new quote with items. Open ` https://mysprykershop.com/cart/`  - Click "Request for Approval" button. Quote approval status should become waiting and approver functionality must be shown.
+2. Open `https://mysprykershop.com/company/company-role/`.
+3. Assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, and `ApproveQuotePermission` permissions to any role related to the current customer.
+4. Add the record to `spy_quote_approval` for the current customer quote ID and current customer company user as an approver.
+5. Open `https://mysprykershop.com/cart/` and click the **Approve** button. The quote approval status becomes _approved_, and the **Proceed to checkout** button is displayed.
+Create a new quote with items. Open ` https://mysprykershop.com/cart/` and click the **Request for Approval** button. The quote approval status becomes _waiting_, and the approver functionality is shown.
 
 {% endinfo_block %}

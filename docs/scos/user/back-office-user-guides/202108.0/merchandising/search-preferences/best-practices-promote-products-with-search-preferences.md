@@ -12,7 +12,7 @@ For example, there is a new camera *Supracam focus* which is popular on the mark
 
 2. Create the *Supracam focus* abstract product and its variants. See [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 
-3. Assign the *video_recording* product attribute to the *Supracam focus* product variant. For instructions, see [Assign product attributes to product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html) or [Assign product attributes to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html).
+3. Assign the *video_recording* product attribute to the *Supracam focus* product variant. For instructions, see [Assign product attributes to product variants](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html) or [Assign product attributes to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products.html).
 
 You know that customers are very interested in a device with such properties and they might search for products by them.
 

@@ -22,7 +22,7 @@ redirect_from:
   - /v2/docs/en/adding-navigation-in-zed
   - /v1/docs/adding-navigation-in-zed
   - /v1/docs/en/adding-navigation-in-zed
-  - /docs/scos/dev/back-end-development/extending-spryker/adding-navigation-in-the-back-office.html
+  - /docs/scos/dev/back-end-development/extend-spryker/adding-navigation-in-the-back-office.html
   - /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
 related: 
   - title: Zed overview

@@ -8,7 +8,10 @@ template: howto-guide-template
 This document describes how to switch from using a shared database to dedicated databases for stores. In the following instructions, DE and AT stores are used as examples. When following the instructions, adjust the configuration to your needs.
 
 ## Prerequisites
+
 Update the Docker SDK to [version 1.48.0](https://github.com/spryker/docker-sdk/releases/tag/1.48.0) or higher.
+
+For cloud environments, make sure your project supports a [separated setup](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html#separated-setup).
 
 ## Define databases
 
@@ -85,6 +88,7 @@ if (!empty($paasServices['databases'])) {
 ```
 
 ## Configure key-value storage
+
 In `config/Shared/config_default.php`,  extend the key-value configuration:
 
 ```php
@@ -144,7 +148,7 @@ return array_intersect_key($stores, [APPLICATION_STORE => []]); //3
 In `config/install/*`, adjust installation recipes as follows:
 
 1. Adjust `destructive.yml` to execute per defined stores.
-2. In all the installation recipes, adjust the `import-demodata:`` section to execute per store instead of region.
+2. In all the installation recipes, adjust the `import-demodata:` section to execute per store instead of region.
 
 ```yaml
 env:
@@ -241,6 +245,6 @@ In `data/import/local/*`, create dedicated data import configuration files per s
 
 {% info_block infoBox "Location for import config files in a production environment" %}
 
-For production environments, the data import files are in `data/import/production/*``.
+For production environments, the data import files are in `data/import/production/*`.
 
 {% endinfo_block %}

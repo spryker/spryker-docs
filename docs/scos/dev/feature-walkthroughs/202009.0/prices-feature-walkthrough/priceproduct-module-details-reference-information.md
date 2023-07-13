@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/priceproduct-module-details-reference-information
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module. 
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module. 
 
 ## Price dimension
 Starting from vesion 2.0.0 of the PriceProduct module, to save BC, we have implemented *Default Price Dimension* inside the  PriceProduct, so all prices imported by new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.

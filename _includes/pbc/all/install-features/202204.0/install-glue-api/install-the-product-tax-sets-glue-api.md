@@ -1,33 +1,36 @@
 
 
 ## Install feature API
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | 201903.0 |Feature API |
 | Product | 201903.0 |Feature API |
 | Tax | 201903.0 | |
 
 ### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker/product-tax-sets-rest-api:"^1.0.6" spryker/products-product-tax-sets-resource-relationship:"^1.0.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | `ProductTaxSetsRestApi` | `vendor/spryker/product-tax-sets-rest-api` |
 |`ProductsProductTaxSetsResourceRelationship`  | `vendor/spryker/products-product-tax-sets-resource-relationship` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
-Run the following command to apply database changes and generate entity and transfer changes:
+
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -35,27 +38,27 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have been applied by checking your database.
 
-| Database entity | Type | Event |
+| DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | `spy_tax_set.uuid` | column |added  |
-</div></section>
 
-<section contenteditable="false" class="warningBox"><div class="content">
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 |`RestProductTaxRateTransfer`  | class | created | `src/Generated/Shared/Transfer/RestProductTaxRateTransfer` |
 | `RestProductTaxSetsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestProductTaxSetsAttributesTransfer` |
 |`TaxSetTransfer.uuid`  |property| added | `src/Generated/Shared/Transfer/TaxSetTransfer` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Set up Behavior
-#### Generate UUIDs for existing records
-Run the following command:
+
+Generate UUIDs for existing records:
 
 ```bash
 console tax-sets:uuid:update
@@ -63,13 +66,20 @@ console tax-sets:uuid:update
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the uuid field is filled out for all records in the `spy_tax_set` table. You can run the following SQL-query for it and make sure that the result is 0 records.<br>`SELECT COUNT(*
-{% endinfo_block %} FROM spy_tax_set WHERE uuid IS NULL;`)
+Make sure that the `uuid` field is filled out for all records in the `spy_tax_set` table. 
+You can run the following SQL query for it and make sure that the result is 0 records:
+
+```sql
+SELECT COUNT(*FROM spy_tax_set WHERE uuid IS NULL;
+```
+
+{% endinfo_block %} 
 
 #### Enable resource and relationship
+
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `ProductTaxSetsResourceRoutePlugin` | Registers product tax resource. | None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin` |
 | `ProductsProductTaxSetsResourceRelationshipPlugin` | Adds product tax sets resource as a relationship to abstract product resource. | None | `Spryker\Glue\ProductsProductTaxSetsResourceRelationship\Plugin` |
@@ -118,14 +128,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<br>
 </details>
 
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets`</li></ul><br>
+
+Make sure that the following endpoint is available: `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-tax-sets`
+
 Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-tax-sets`. Make sure that the response includes relationships to the `product-tax-sets` resources.
+
 {% endinfo_block %}
-
-<!-- Last review date: Mar 21, 2019 -->
-
-[//]: # (by Tihran Voitov, Yuliia Boiko)

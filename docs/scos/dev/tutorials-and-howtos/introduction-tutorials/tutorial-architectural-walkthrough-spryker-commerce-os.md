@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/tutorial-architecture-walkthrough-scos
   - /v1/docs/tutorial-architecture-walkthrough-scos
   - /v1/docs/en/tutorial-architecture-walkthrough-scos
+  - /tutorials/introduction/tutorial-architecture-walkthrough-scos.htm
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html
@@ -294,7 +295,7 @@ When accessing a URL in Zed UI, the action responds to the requests, and then it
 Transfer objects are a great way to send data from Yves to Zed and to communicate between different objects in general. Transfer object definitions are located in the `Shared` directories because these objects are shared between Yves and Zed.
 
 To add a `HelloSpryker` transfer, follow these steps:
-1. Add a new folder inside `/src/Shared` and call it `HelloSpryker`. 
+1. Add a new folder inside `/src/Pyz/Shared` and call it `HelloSpryker`. 
 2. Add another folder called `Transfer`.
 3. To define their transfer objects' schemas, XML is used. Therefore, inside the `Transfer` directory, add an XML file and call it `hello_spryker.transfer.xml`.
 4. Add the following transfer schema:
@@ -455,7 +456,7 @@ public function createZedHelloSprykerStub()
 */
 protected function getZedRequestClient()
 {
-    return $this->getProvidedDependency(HelloSprykerDependencyProvider::CLIENT_ZED_R EQUEST);
+    return $this->getProvidedDependency(HelloSprykerDependencyProvider::CLIENT_ZED_REQUEST);
 }								
 ```							
 
@@ -718,7 +719,7 @@ As mentioned before, dependency providers provide dependencies at a module level
 
 {% info_block infoBox "Info" %}
 
-Bild a business later inside `StringReverser` with a facade and a model to reverse the string.
+Build a business layer inside `StringReverser` with a facade and a model to reverse the string.
 
 {% endinfo_block %}
 
@@ -771,7 +772,7 @@ class HelloSprykerDependencyProvider extends AbstractBundleDependencyProvider
 */
 protected function getStringReverserFacade()
 {
-    return $this->getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRIN G_REVERSER);
+    return $this->getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRING_REVERSER);
 }						
 ```
 

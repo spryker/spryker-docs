@@ -2,11 +2,11 @@
 
 The Gift Cards feature is shipped with the following modules:
 
-* **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy.
+* **GiftCard**: implements the basic functionality of the Gift Cards feature as well as the Replacement value-checking strategy.
 
 * **GiftCardBalance**: implements gift card Balance value-checking strategy<.
 
-* **GiftCardMailConnector**: responsible for sending e-mails on gift cards usage (balance change) as well as gift cards codes delivery.
+* **GiftCardMailConnector**: responsible for sending e-mails on gift card usage (balance change) and delivery of gift card codes.
 
 * **Nopayment**: implements payment methods if the price to pay is fully covered by a gift card.
 
@@ -21,7 +21,7 @@ spryker/gift-card-mail-connector:"^1.0.0" spryker/nopayment:"^4.0.0"
 spryker/product-management:"^0.12.0"
 ```
 
-3. Enable necessary plugins. See the table below for information on available plugins, where to install them and value checking strategies they are used for.
+1. Enable necessary plugins. See the following table for information about available plugins, where to install them, and the value-checking strategies they are used for.
 
 
 | PLUGIN | DESCRIPTION | WHERE TO INSTALL | STRATEGY |

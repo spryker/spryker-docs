@@ -835,6 +835,6 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 If an additional validation for input fields that are filled by a customer is needed, we recommend creating a plugin that implements `\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface`.
 The plugin must be added to the `Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutPreConditions()` method.
 
-For more details, see [Checkout process review and implementation](/docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-process-review-and-implementation.html).
+For more details, see [Checkout process review and implementation](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/checkout-process-review-and-implementation.html).
 
 {% endinfo_block %}

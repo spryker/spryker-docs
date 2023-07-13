@@ -11,9 +11,6 @@ redirect_from:
   - /docs/managing-filter-preferences
   - /docs/en/managing-filter-preferences
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-and-filters/managing-filter-preferences.html
-related:
-  - title: Managing Search Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 This documents describes how to create filters and define preferences for them in the Back Office.
@@ -21,7 +18,7 @@ This documents describes how to create filters and define preferences for them i
 ## Prerequisites
 
 1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the filter that you are going to create.
-2. [Assign the product attribute to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html) or [assign the product attribute to an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html).
+2. [Assign the product attribute to a product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html) or [assign the product attribute to an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products.html).
 3. To start working with category filter, go to **Merchandising&nbsp;<span aria-label="and then">></span> Filter Preferences**.
 
 Review the [reference information](#reference-information-create-a-category-filter-and-define-its-filter-preferences) before you start, or look up the necessary information as you go through the process.

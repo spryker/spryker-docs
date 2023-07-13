@@ -9,7 +9,7 @@ The _Customer Account Management_ feature enables a wide range of management opt
 
 To learn more about the feature and to find out how end users use it, see [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) for business users.
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|---|

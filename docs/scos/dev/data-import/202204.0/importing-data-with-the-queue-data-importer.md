@@ -1,6 +1,6 @@
 ---
 title: Importing data with the queue data importer
-description: This article describes the process of importing data with the Queue Data Importer in the Spryker OS.
+description: This document describes the process of importing data with the Queue Data Importer in the Spryker OS.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-queue-data-importer
@@ -15,13 +15,13 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/queue-data-import-feature-integration.html
 ---
 
-Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
+Queue data import lets you import data through message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
 
 * Parallel message consumption by multiple consumers using round-robin.
 * Fast transmitting of large amounts of data.
 * Bulk message processing.
 
-Also, queue data import allows you to use different import groups.
+Also, queue data import lets you use different import groups.
 
 ## Why do you need it?
 
@@ -36,16 +36,16 @@ Queue data import is designed to be done in two separate steps.
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
 2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html). 
 
-## Exporting data from CSV to queue
+## Importing data from CSV to queue
 
-If your provide data in the .CSV format, you can import it to the queues.
+If the provided data is in the CSV format, you can import it to the queues.
 The [DataImport](https://github.com/spryker/data-import) module has classes responsible for providing the preconfigured queue writer instances to the data import facilities. It is configured on the project level.
 
 To import data into a message queue, use an instance of `Spryker\Zed\DataImport\Business\DataWriter\QueueWriter\QueueWriter` as a data writer during import. 
 
 Do the following:
 1. Provide two pieces of configuration to a queue writer's `::write()` method:
-* Queue name—the name of the resource-based queue, which stores the imported data between the steps (for example, `import.product_abstract`).
+* Queue name—the name of the resource-based queue, which stores the imported data between the steps—for example, `import.product_abstract`ß.
 * Chunk size—the size of the chunks in which data is written to a queue.
 2. Define a dedicated configuration method in `Pyz\Zed\DataImport\DataImportConfig`:
 
@@ -81,7 +81,7 @@ Here, you specify the names for the queues:
 
 3. Specify the name for the method, which creates an instance of `DataImportQueueWriterConfigurationTransfer` and initializes it with the main queue name and the size of a chunk data is written in.
 
-4. Create a plugin class, which configures and hooks up queue writer with the data importer. This plugin must extend `Spryker\Zed\DataImport\Communication\Plugin\AbstractQueueWriterPlugin` and has to provide implementations for its two abstract methods:
+4. Create a plugin class, which configures and hooks up a queue writer with the data importer. This plugin must extend `Spryker\Zed\DataImport\Communication\Plugin\AbstractQueueWriterPlugin` and has to provide implementations for its two abstract methods:
 
 **Pyz\Zed\DataImport\Communication\Plugin\ProductAbstract\ProductAbstractQueueWriterPlugin**
 
@@ -108,7 +108,7 @@ class ProductAbstractQueueWriterPlugin extends AbstractQueueWriterPlugin
 }
 ```
 
-The plugin should call the newly created method from the config class, thus providing the configuration values to the queue writer instance.
+The plugin calls the newly created method from the config class, thus providing the configuration values to the queue writer instance.
 
 {% info_block warningBox "Note" %}
 
@@ -116,7 +116,7 @@ Create additional plugins for other resources, should they need to be imported w
 
 {% endinfo_block %}
 
-5. Add the names of the new queues to the `RabbitMq` module configuration class. In `Pyz\Client\RabbitMq\RabbitMqConfig`, register the new queues for the resource.
+1. Add the names of the new queues to the `RabbitMq` module configuration class. In `Pyz\Client\RabbitMq\RabbitMqConfig`, register the new queues for the resource.
 
 **Pyz\Client\RabbitMq\RabbitMqConfig**
 
@@ -190,10 +190,10 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 ```
 </details>
 
-Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups allow you to run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.
+Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups let you run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.
 {% info_block warningBox "Note" %}
 
-We not recommend using the QUEUE_READERS group. This executes all the configured queue importers during one import run. Because in a lot of scenarios the order, in which the data is imported, matters and because of the possibility of the race condition, this can lead to various malfunctions or inconsistencies in the imported data. We recommend structuring the import process in a way that would allow importing data via the message queues apart from other imported resources.
+We not recommend using the QUEUE_READERS group. This executes all the configured queue importers during one import run. Because in a lot of scenarios the order, in which the data is imported, matters and because of the possibility of the race condition, this can lead to various malfunctions or inconsistencies in the imported data. We recommend structuring the import process in a way that would allow importing data through the message queues apart from other imported resources.
 
 {% endinfo_block %}
 
@@ -215,7 +215,7 @@ vendor/bin/console data:import:product-abstract --group=QUEUE_WRITERS
 
 {% info_block warningBox "Note" %}
 
-We also recommend preparing the properly structured data for the import in queues from the very beginning instead of actually importing it from CSV, XML, etc., as the first step. In this case, a queue can be treated as an original source of data for import which would make the overall process more convenient. 
+We also recommend preparing the properly structured data for the import in queues from the very beginning instead of actually importing it from CSV or XML as the first step. In this case, a queue can be treated as an original source of data for import which would make the overall process more convenient. 
 
 {% endinfo_block %}
 

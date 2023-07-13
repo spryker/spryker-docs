@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **warehouse.csv** file to configure [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -33,7 +33,7 @@ The *warehouse.csv* file replaces *stock.csv* previously used.
 By default, *warehouse.csv* exists only in folder `…/vendor/spryker/stock-data-import/data/import/warehouse.csv`, but can be also be copied into `…/data/import` folder. 
 
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *warehouse.csv* file can be downloaded here:
 
 | File | Description |

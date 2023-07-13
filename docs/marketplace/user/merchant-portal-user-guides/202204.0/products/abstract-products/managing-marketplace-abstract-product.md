@@ -56,7 +56,7 @@ To edit the existing marketplace abstract product:
 
 ### Reference information: [Product name] drawer, Abstract Product Details tab
 
-| ATTRIBUTE   | DESCRIPTION  | REQUIRED? |
+| ATTRIBUTE   | DESCRIPTION  | REQUIRED |
 | ----------- | -------------- | --------- |
 | Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |
@@ -65,7 +65,7 @@ To edit the existing marketplace abstract product:
 | Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |
 | Images      | In this pane, you can manage image sets for your abstract product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html) for more details. |           |
 | Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for more details. |           |
-| Categories  | Defines the [categories](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) the product is displayed in. |           |
+| Categories  | Defines the [categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) the product is displayed in. |           |
 | SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) for more details. |           |
 
 ## Sending the product for approval

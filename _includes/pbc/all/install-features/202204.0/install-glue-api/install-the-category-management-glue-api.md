@@ -9,13 +9,12 @@ To start feature integration, overview and install the necessary features:
 
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
-| Spryker Core | {{site.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Category Management | {{site.version}} | |
+| Spryker Core | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Category Management | {{page.version}} | |
 
 
 ## 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
 ```
 composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 ```
@@ -31,8 +30,6 @@ Make sure that the following module has been installed:
 {% endinfo_block %}
 
 ## 2) Set up configuration
-
-Set up the following configuration
 
 **src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php**
 
@@ -61,9 +58,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 ```
 
 
-## 3) Set up transfer objects
-
-Generate transfer changes:
+## 3) Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -91,7 +86,6 @@ Activate the following plugins:
 |CategoryResourceRoutePlugin| Registers the `category-nodes` resource.| | Spryker\Glue\CategoriesRestApi\Plugin |
 |CategoryNodeRestUrlResolverAttributesTransferProviderPlugin| Maps the data for `RestUrlResolverAttributesTransfer` from `UrlStorageTransfer`.| | Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi|
 
-
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
@@ -117,7 +111,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 
 **src/Pyz/Glue/UrlsRestApi/UrlsRestApiDependencyProvider.php**
 
@@ -147,8 +140,7 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-
-*   `https://glue.mysprykershop.com/category-trees`
-*   `https://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/category-trees`
+* `https://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}

@@ -8,15 +8,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Resource Sharing | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Resource Sharing | {{page.version}} |
 |   |   |
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/persistent-cart-sharing: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/persistent-cart-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -42,7 +42,7 @@ console transfer:generate
 
 Make sure that the following changes in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ResourceShareData.idQuote | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
 | ResourceShareData.ownerCompanyUserId | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
@@ -58,16 +58,16 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Resource Sharing | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Resource Sharing | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/persistent-cart-sharing: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/persistent-cart-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

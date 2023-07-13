@@ -5,6 +5,9 @@ template: howto-guide-template
 redirect_from:
     - /docs/scos/dev/sdk/initializing-and-running-workflows.html
 ---
+# Workflow SDK tool
+
+## How to initialize and run workflows
 
 To initialize a project with a specific workflow, execute the following command:
 
@@ -12,7 +15,7 @@ To initialize a project with a specific workflow, execute the following command:
 spryker-sdk init:sdk:project --workflow={workflowName}
 ```
 
-If the project has already been initialized with the `spryker-sdk init:sdk:project` command, you can manually add a workflow to the project config file `{projectDir}/.ssdk/settings`:
+If the project has already been initialized with the `spryker-sdk init:sdk:project` command, you can manually add workflow to the project config file `{projectDir}/.ssdk/settings`:
 
 ```yaml
 # {projectDir}/.ssdk/settings
@@ -22,7 +25,11 @@ workflow:
 ```
 
 ---
-**Note:** The project is limited to the workflows specified during initialization.
+{% info_block warningBox Project Limits %}
+
+The project is limited to the workflows specified during initialization.
+
+{% endinfo_block %}```
 ---
 
 To run a workflow, execute the following command in the project directory:
@@ -33,7 +40,11 @@ spryker-sdk sdk:workflow:run {workflowName}
 You can start any workflow by providing its name in the `sdk:workflow:run` command.
 
 ---
-**Note:** Two identical top-level workflows can't run inside the same project.
+{% info_block warningBox Identical workflow exclusion %}
+
+Two identical top-level workflows can't run inside the same project.
+
+{% endinfo_block %}```
 ---
 
 ## Commands
@@ -53,7 +64,11 @@ There are the following commands for the workflow:
   spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
   ```
   ---
-  **Note:** If you initialize workflows for the project, you can use only these workflows.
+{% info_block warningBox Workflow Initialization %}
+
+If you initialize workflows for the project, you can use only these workflows.
+
+{% endinfo_block %}
   ---
 - To run the workflow process:
   ```bash
@@ -62,13 +77,13 @@ There are the following commands for the workflow:
 
 ## Configuration reference
 
-In the SDK directory, the workflows are defined in the workflow YAML files, located in either `config/packages`, or in the configuration of extension bundles.
+In the SDK directory, the workflows are defined in the workflow YAML files, located  either in `config/packages`, or in the configuration of extension bundles.
 
 See the basic workflow documentation in the [Symfony docs](https://symfony.com/doc/current/workflow.html).
 
-Additionally, you can configure and extend the workflow behavior by providing specific metadata options:
+Additionally, you can configure and extend the workflow behavior by providing some specific metadata options:
 - `transitionResolver`: `sdk:workflow:run`. The `service` should implement `\SprykerSdk\SdkContracts\Workflow\TransitionResolverInterface` as shown in the [example workflow definition](#example-workflow-definition).
-- `allowToFail: true`: `sdk:workflow:run`. Sets the next place if the task failed.
+- `allowToFail: true`: `sdk:workflow:run`. Sets the next place if task failed.
 - `re-run: true`: `sdk:workflow:run`. Runs the workflow multiple times when the current one has finished.
 - `run: single`: `sdk:workflow:run`. Runs only a single transition and exits. If this setting is omitted, the task runs available transitions one by one, asking which one to run if multiple possible variants exist.
 - `before: service_name`. The service `service_name` should implement `\SprykerSdk\Sdk\Extension\Dependency\Event\WorkflowEventHandlerInterface` and is called before the transition occurs.
@@ -79,7 +94,6 @@ Additionally, you can configure and extend the workflow behavior by providing sp
 - `workflowAfter: workflow_name`. The workflow `workflow_name` runs inside the transition after the task is executed and should end before finishing the transition.
 
 <a name="example-workflow-definition"></a>
-
 <details>
 <summary>Example workflow definition in `workflow.yaml`</summary>
 

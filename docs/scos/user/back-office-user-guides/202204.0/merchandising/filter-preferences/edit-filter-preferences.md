@@ -32,6 +32,6 @@ Review the [reference information](#reference-information-edit-filter-preference
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| ATTRIBUTE KEY | The [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) this filter is filtering products by. You can use a different attribute only by [creating a category filter](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html) from scratch. |
+| ATTRIBUTE KEY | The [product attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) this filter is filtering products by. You can use a different attribute only by [creating a category filter](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html) from scratch. |
 | FILTER TYPE | Defines how customers select filter values. For more details, see [Filter types](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html#filter-types).  |
 | FILTER NAME | Name of the filter on the Storefront. |

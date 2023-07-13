@@ -10,13 +10,13 @@ redirect_from:
   - /v3/docs/en/abstract-and-concrete-products
 related:
   - title: Creating Abstract Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - title: Editing an Abstract Product
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/editing-abstract-products.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
   - title: Editing Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
@@ -48,4 +48,4 @@ Let's start learning how the products are created by reviewing a real-life examp
 
 You have a new product in your store. The new product is a Smartphone that goes in three colors: red, green, and orange. Those colors are product variants.
 
-So first you create an abstract product. See the [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) article.
+So first you create an abstract product. See the [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) article.

@@ -1,8 +1,0 @@
-title: Platform as a Service Plus Developer Guides
-entries:
-  - product: Platform as a Service Plus
-    nested:
-      - title: Platform as a Service Plus
-        url: /docs/paas-plus/dev/platform-as-a-service-plus.html
-      - title: Onboarding to PaaS+
-        url: /docs/paas-plus/dev/onboarding-to-paas-plus.html        

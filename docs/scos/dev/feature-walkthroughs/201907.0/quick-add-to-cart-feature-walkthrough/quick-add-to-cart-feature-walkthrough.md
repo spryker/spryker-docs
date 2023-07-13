@@ -28,7 +28,7 @@ The following schema illustrates relations  in the Quick Order feature:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES |TUTORIALS AND HOWTOS |
 |---|---|---|

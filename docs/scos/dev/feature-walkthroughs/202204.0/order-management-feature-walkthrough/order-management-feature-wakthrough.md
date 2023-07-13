@@ -29,15 +29,15 @@ The following scheme illustrates relations between **Shipment**, **ShipmentGui**
 
 </div>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
 | [Custom Order Reference feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/custom-order-reference-feature-integration.html) | [Split delivery migration concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html) | [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html) | [HowTo: Disable split delivery in Yves interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) | [Sales module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) |
 | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) | [Upgrade the ManualOrderEntryGui module](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html) |  | [HowTo: Emailing invoices using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html) | [Custom order reference- module relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/custom-order-reference-module-relations.html) |
-| [Quick Order + Non-splittable Products feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) |  |  |  |  |
+| [Quick Order + Non-splittable Products feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) |  |  |  |  |
 | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |  |  |  |  |
 |[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |
 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |  |  |  |  |
 | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |  |  |  |  |
-| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html) |  |  |  |  |
+| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |  |  |  |  |

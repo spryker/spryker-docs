@@ -147,6 +147,6 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 {% info_block infoBox %}
 
-For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html).
+For information on how to eliminate Silex Validator, see  [Migration Guide - Validator](/docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html).
 
 {% endinfo_block %}

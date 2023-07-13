@@ -60,7 +60,7 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, and [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for their products.
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
 | -------------------- | ----------------------- |

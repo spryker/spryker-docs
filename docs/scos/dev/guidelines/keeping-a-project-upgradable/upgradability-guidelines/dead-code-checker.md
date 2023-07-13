@@ -20,7 +20,7 @@ If desired, you have the option to disable the dead code checker for a particula
 DEAD CODE CHECKER
 =================
 
-Message: Class "Pyz/Zed/Single/Communication/Plugin/SinglePlugin" is not used in project
+Message: The class "Pyz/Zed/Single/Communication/Plugin/SinglePlugin" is not used in the project.
 Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
 ```
 

@@ -56,7 +56,7 @@ Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/doc
 PHP VERSION CHECKER
 ===================
 
-Message: Composer json PHP constraint "7.2" does not match allowed PHP versions
+Message: Composer json PHP constraint 7.2 does not match allowed PHP versions.
 Target:  <path_to_project>/composer.json
 ```
 

@@ -1080,7 +1080,6 @@ class HelloWorldStorageClient extends AbstractClient implements HelloWorldStorag
             ->getMessageById($messageId);
     }
 }
-
 ```
 
 Add the factory `Pyz/Client/HelloWorldStorage/HelloWorldStorageFactory.php` for `$this->getFactory()` method call within the `HelloWorldStorageClient` methods
@@ -1122,7 +1121,6 @@ class HelloWorldStorageFactory extends AbstractFactory
       return  $this->getProvidedDependency(HelloWorldStorageDependencyProvider::CLIENT_STORAGE);
     }
 }
-
 ```
 
 The HelloWorldFactory needs a dependency provider to handle dependencies required by the redis / reader classes
@@ -1191,8 +1189,6 @@ class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 }
-
-
 ```
 
 Update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storage.transfer.xml` to add an array of items that can be returned
@@ -1216,7 +1212,6 @@ Run the transfer generate command
 ```bash
     docker/sdk console transfer:generate
 ```
-
 
 - Add `Pyz\Client\Reader\MessageStorageReaderInterface.php` interface
 

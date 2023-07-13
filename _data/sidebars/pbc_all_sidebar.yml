@@ -2379,8 +2379,9 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/float-stock-for-products-migration-concept.html
                   - title: Replace the CodeItNow module with the BarcodeLaminas module
                     url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html
+
               - title: Import and export data
-                url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-product-catalog-data.html
+                url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-information-management-data-import.html
                 nested:
                   - title: Import product data with a single file
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-product-data-with-a-single-file.html

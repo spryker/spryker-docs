@@ -94,8 +94,8 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/discount | 8.0.0 | [Migration Guide - Discount](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discount-module.html) |
 | spryker/discount-promotion | 2.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html) |
 | spryker/manual-order-entry-gui | 0.6.0 | [Migration Guide - ManualOrderEntryGui](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html) |
-| spryker/offer | 0.2.0 | [Migration Guide - Offer](/docs/scos/dev/module-migration-guides/migration-guide-offer.html) |
-| spryker/offer-gui | 0.2.0 | [Migration Guide - OfferGui](/docs/scos/dev/module-migration-guides/migration-guide-offergui.html) |
+| spryker/offer | 0.2.0 | [Migration Guide - Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-offer-module.html) |
+| spryker/offer-gui | 0.2.0 | [Migration Guide - OfferGui](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-offergui-module.html) |
 | spryker/oms | 9.0.0 | [Migration Guide - Oms](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) |
 | spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html) |

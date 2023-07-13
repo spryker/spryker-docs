@@ -1,11 +1,11 @@
 ---
-title: Glue API - Glue JSON:API Convention integration
+title: "Decoupled Glue infrastructure: Integrate the Glue JSON:API convention"
 description: Integrate the Glue JSON:API convention for Storefront API application into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
 ---
 
 This document describes how to integrate the Glue JSON:API convention for Storefront API application into a Spryker project.
@@ -20,7 +20,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
+| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -148,4 +148,4 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 }
 ```
 
-To verify that everything is set up correctly, and you can access the endpoint, see [Create storefront resources](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-storefront-resources.html) or [Create backend resources](/docs/scos/dev/glue-api-guides/{{page.version}}/routing/create-backend-resources.html).
+To verify that everything is set up correctly, and you can access the endpoint, see [Create storefront resources](/docs/scos/dev/glue-api-guides/{{site.version}}/routing/create-storefront-resources.html) or [Create backend resources](/docs/scos/dev/glue-api-guides/{{site.version}}/routing/create-backend-resources.html).

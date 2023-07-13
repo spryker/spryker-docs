@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Offer
+title: Upgrade the Offer module
 description: Use the guide to learn how to update the Offer module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-offer.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-offer.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-offer.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-offer.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-offer-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-offer-module.md -->

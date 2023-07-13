@@ -101,7 +101,8 @@ task :check_cloud do
     /docs\/scu\/.+/,
     /docs\/pbc\/.+/,
     /docs\/acp\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/sdk\/.+/,
+    /docs\/uc\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

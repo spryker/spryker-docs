@@ -121,7 +121,7 @@ In April 2023, we have added and updated the following pages:
     - [Install the Warehouse picking + Inventory Management feature](/docs/uc/all/fulfillment-app/202400.0/install-and-upgrade/install-features/install-the-warehouse-picking-inventory-management-feature.html)
     - [Install the Warehouse picking + Order Management feature](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-order-management-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/uc/all/fulfillment-app/202400.0/install-and-upgrade/install-features/install-the-warehouse-picking-order-management-feature.html)
-   - [Install the Warehouse picking + Shipment feature](/docs/uc/all/fulfillment-app/202400.0/install-and-upgrade/install-features/install-the-warehouse-picking-shipment-feature.html.html)
+   - [Install the Warehouse picking + Shipment feature](/docs/uc/all/fulfillment-app/202400.0/install-and-upgrade/install-features/install-the-warehouse-picking-shipment-feature.html)
    - [Install the Warehouse picking + Spryker Core Back Office feature](/docs/uc/all/fulfillment-app/202400.0/install-and-upgrade/install-features/install-the-warehouse-picking-spryker-core-back-office-feature.html)
 - [Security release notes 202304.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html)
 - [Releases vs Customization types](/docs/sdk/dev/releases-vs-customization-types.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.

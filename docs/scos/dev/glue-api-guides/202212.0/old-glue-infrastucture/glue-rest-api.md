@@ -1,6 +1,6 @@
 ---
 title: Glue REST API
-last_updated: Jun 16, 2021
+last_updated: Jul 13, 2023
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-rest-api
 originalArticleId: 0556fe67-9243-4b84-b81f-8e417ca3d270
@@ -18,11 +18,11 @@ related:
 
 {% info_block warningBox %}
 
-This is a document related to the Old Glue infrastructure. For the new one, please check [new document](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
 
 {% endinfo_block %}
 
-The Spryker Glue REST API is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS Backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+The *Spryker Glue REST API* is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS Backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ![Glue REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+REST+API/glue-rest-api.jpg)
 
@@ -45,11 +45,11 @@ For more details, see REST API reference:
 
 To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technology perspective, it is based on our customers' interests. The app is single-page application based on a React JS library.
 
-It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html), is leveraged via dedicated endpoints to deliver catalog search functionality with auto-completion, auto-suggestion, facets, sorting, and pagination.
+It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html), is leveraged through dedicated endpoints to deliver catalog search functionality with auto-completion, auto-suggestion, facets, sorting, and pagination.
 
 {% info_block infoBox %}
 
-[Install and run!](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html)
+For more deatails aboutinstalling and running, see [B2C API React example](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html).
 
 {% endinfo_block %}
 

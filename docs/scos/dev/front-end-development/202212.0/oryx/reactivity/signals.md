@@ -93,6 +93,8 @@ const counter = effect(() => {
 
 ## Using signals in components
 
+Oryx provides directives like `@signalAware` and `@elementEffect` to seamlessly integrate signals and effects with Lit components. These directives help manage reactivity and side effects, leading to cleaner and more efficient code.
+
 ### @signalAware directive
 
 The `@signalAware` decorator provides additional functionality when using signals in components.

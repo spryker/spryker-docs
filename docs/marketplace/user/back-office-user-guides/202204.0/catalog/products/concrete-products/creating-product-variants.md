@@ -8,8 +8,6 @@ redirect_from:
 related:
   - title: Managing products
     link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
-  - title: Editing product variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
@@ -51,13 +49,13 @@ To create a product variant:
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
-6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
-To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 

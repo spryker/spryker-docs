@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
   - title: Marketplace Merchant feature overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 redirect_from:
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
 ---
@@ -24,7 +26,7 @@ data:import merchant
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | merchant_reference | &check; | String |   |  Unique | Identifier of the merchant in the system. |
 | merchant_name | &check; | String |   |   | The name of the merchant. |

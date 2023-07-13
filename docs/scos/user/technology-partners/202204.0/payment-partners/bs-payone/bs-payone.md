@@ -31,7 +31,7 @@ related:
 
 ## Partner Information
 
-[ABOUT BS PAYONE](https://www.payone.com/)
+[ABOUT BS PAYONE](https://www.payone.com/DE-en)
 
 BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments.
 

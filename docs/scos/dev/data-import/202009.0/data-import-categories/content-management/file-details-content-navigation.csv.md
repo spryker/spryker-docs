@@ -12,7 +12,7 @@ redirect_from:
 
 This article contains content of the content_navigation.csv file to configure [Content Navigation](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
+## Import file parameters
 These are the header fields to be included in the .csv file:
 
 
@@ -33,11 +33,11 @@ This file has the following dependencies:
 
 * [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) 
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example **content_navigation.csv** file can be downloaded here:
 
 
-| File(s) | Description |
+| FILES | Description |
 | --- | --- |
 | [content_navigation.csv Template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_navigation.csv) | Content Navigation CSV template file (empty content, contains headers only). |
 | [content_navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_navigation.csv) | Content Navigation CSV file containing a Demo Shop data sample. |

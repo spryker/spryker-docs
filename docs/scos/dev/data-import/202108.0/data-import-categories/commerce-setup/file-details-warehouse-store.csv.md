@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-warehouse-storecsv
   - /docs/file-details-warehouse-storecsv
   - /docs/en/file-details-warehouse-storecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.

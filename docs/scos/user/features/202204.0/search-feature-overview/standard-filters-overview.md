@@ -41,11 +41,11 @@ Filter preferences can be configured in the **Back Office&nbsp;<span aria-label=
 ## Current constraints
 Price Range Filter is not supported with the Merchant Relations, that is why this filter is not included in the B2B demo shop. However, in [the B2C demo shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops), you can still filter the products using the price range filter.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html)  |
+| [Manage filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

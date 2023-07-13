@@ -372,7 +372,7 @@ services:
 
 ## Blackfire
 
-[Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
+Blackfire is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
 
 ### Configure Blackfire
 
@@ -496,7 +496,7 @@ image:
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
+![screenshot](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/configure-services.md/new-relic-apms.png)
 
 
 {% info_block infoBox %}
@@ -577,23 +577,17 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 
 With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned with the `getMonitoringExtensions()` function, the Monitoring class includes New Relic. Now applications are displayed as separate APMs, and an appropriate endpoint or class is displayed with each transaction.
 
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
+![screenshot](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/configure-services.md/new-relic-transactions.png)
 
 
 
 ## Webdriver
 
-ChromeDriver is provided as a web driver service by default, but you can switch to PhantomJS as described in the following sections.
+PhantomJS is provided as a webdriver service by default, but you can switch to ChromeDriver as described below.
 
 ### ChromeDriver
 
 [ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and a [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.  
-
-{% info_block infoBox "Default service" %}
-
-Chromedriver is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you've previously switched to another WebDriver.
-
-{% endinfo_block %}
 
 #### Configure ChromeDriver
 

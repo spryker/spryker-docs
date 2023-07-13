@@ -1,5 +1,5 @@
 ---
-title: File details - product_search_attribute_map.csv
+title: "File details: product_search_attribute_map.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attribute-mapcsv
@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-search-attribute-mapcsv
   - /docs/file-details-product-search-attribute-mapcsv
   - /docs/en/file-details-product-search-attribute-mapcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_search_attribute_map.csv` file to configure Product Search Attribute Map information in your Spryker Demo Shop.
@@ -21,7 +24,7 @@ data:import:product-search-attribute-map
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -30,7 +33,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html).
+This file has the following dependency: [product_attribute_key.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html).
 
 ## Additional information
 
@@ -38,7 +41,7 @@ This file maps the product attributes that are imported in the `product_attribut
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

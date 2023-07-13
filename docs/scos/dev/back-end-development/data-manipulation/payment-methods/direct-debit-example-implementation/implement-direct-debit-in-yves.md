@@ -39,7 +39,7 @@ related:
 The first step of the Direct Debit payment method implementation is setting it up on Yves. This document provides step-by-step instructions on how to do that.
 
 ## Prerequisites
-Before proceeding with the first step, the form creation, add a new module on the project level in Yves—for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html). 
+Before proceeding with the first step, the form creation, add a new module on the project level in Yves—for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html). 
 
 Create a `Form` folder in the module.
 

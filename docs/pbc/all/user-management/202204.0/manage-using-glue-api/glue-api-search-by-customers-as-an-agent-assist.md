@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/searching-by-customers-as-an-agent-assist
   - /docs/searching-by-customers-as-an-agent-assist
   - /docs/en/searching-by-customers-as-an-agent-assist
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
@@ -27,7 +28,7 @@ Search by customers to find out information about them. This endpoint is mostly 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
 * [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
 * [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 

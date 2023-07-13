@@ -12,10 +12,10 @@ This endpoint lets you manage guest cart items.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html)
-* [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
+* [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Glue API: Marketplace Product Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 
 
@@ -281,7 +281,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) to learn more.
 {% endinfo_block %}
 
 {% info_block infoBox "Product options" %}
@@ -1740,7 +1740,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 For the attributes of the included resources, see:
 * [Retrieve a guest cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
-* [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
+* [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
 * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
@@ -1756,8 +1756,8 @@ To change item quantity, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
-| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
 
@@ -1819,14 +1819,14 @@ To remove an item from a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
-| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| {% raw %}***{{guest_cart_id}}***{% endraw %}| Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| {% raw %}***{{groupKey}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 Request sample: remove an item from a guest cart
 

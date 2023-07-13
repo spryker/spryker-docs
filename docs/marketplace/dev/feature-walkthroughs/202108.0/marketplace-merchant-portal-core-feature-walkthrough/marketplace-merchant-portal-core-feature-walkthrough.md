@@ -68,7 +68,7 @@ To learn more about Table design, see [Table design](/docs/marketplace/dev/front
 
 {% endinfo_block %}
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|

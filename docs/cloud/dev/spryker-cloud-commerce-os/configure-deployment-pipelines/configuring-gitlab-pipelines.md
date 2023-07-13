@@ -7,6 +7,7 @@ originalArticleId: ed39b199-299a-4ad0-87c0-b259c5c171f0
 redirect_from:
   - /docs/configuring-gitlab-pipelines
   - /docs/en/configuring-gitlab-pipelines
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-gitlab-pipelines.html
 ---
 
 This document describes how to configure continuous integration using GitLab Pipelines.

@@ -25,7 +25,7 @@ In terms of the way a discount is calculated, there are two types of discounts: 
 * * *
 **What's next?**
 To know how the discounts are created and managed, see the following articles:
-* [Creating a Discount Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html)
+* [Creating a Discount Voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 * [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html)
 * [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html)
 

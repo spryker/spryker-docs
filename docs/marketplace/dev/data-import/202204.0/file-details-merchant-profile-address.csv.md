@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
   - title: Marketplace Merchant feature overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_profile_address.csv` file to configure [merchant profile addresses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
@@ -22,7 +24,7 @@ data:import merchant-profile-address
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ----- | ------------- | ----------- | ---- |
 | merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system.                    |
 | country_iso2_code  |               | String   |                   |                              | Currency ISO code.  For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html). |

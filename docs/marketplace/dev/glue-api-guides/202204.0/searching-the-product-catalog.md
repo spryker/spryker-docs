@@ -15,7 +15,7 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html#install-feature-api).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html#install-feature-api).
 
 ## Search by products
 
@@ -5006,7 +5006,7 @@ To search by products, send the request:
                                 "value": 1,
                                 "doc_count": 43
                             },
-                    
+
                             {
                                 "value": 14,
                                 "doc_count": 1
@@ -7273,7 +7273,7 @@ To search by products, send the request:
 
 For details of the included resources, see:
 
-- [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
+- [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
 - [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 - [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 

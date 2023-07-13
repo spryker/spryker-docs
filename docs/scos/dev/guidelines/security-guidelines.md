@@ -25,11 +25,15 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) and [PaaS+](/docs/paas-plus/dev/platform-as-a-service-plus.html) environments.
+This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) and PaaS environments.
 
 ## Passwords
 
 The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
+
+## Secrets
+
+Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. 
 
 ## Encrypted communication
 
@@ -122,7 +126,7 @@ Debug mode is configured with the following:
 
 To sum up, the main points to keep the data secure are the following:
 
-* Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) in your team.
+* Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf) in your team.
 * Check the presence of security-related HTTP headers.
 * Check cookie settings.
 * Configure TLS.

@@ -16,7 +16,7 @@ related:
 The Discount API enables shop owners to add free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price. Discounts can be applied to a purchase in **2** ways:
 
 1. Discounts applied to carts based on certain conditions, called [cart rules](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html#creating-a-cart-rule-discount);
-2. Price reductions provided when redeeming a [discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
+2. Price reductions provided when redeeming a [discount voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 Discounts provided based on *cart rules* are calculated and taken into account automatically. *Vouchers*, on the other hand, need to be applied by customers explicitly. For this purpose, the *Discounts API* allows:
 

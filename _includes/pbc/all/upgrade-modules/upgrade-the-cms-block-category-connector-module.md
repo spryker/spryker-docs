@@ -32,7 +32,7 @@ You can skip this step if you don't have data in `spy_cms_block_category_connect
 {% endinfo_block %}
 
 We prepared a migration script to migrate relations to Category.
-The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html).
+The script can be found in [Migration Guide - CMS Block Category Connector Console](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html).
 Copy the script to `src/Pyz/Zed/CmsBlockCategoryConnector/Communication/Console/CmsBlockCategoryPosition.php` and register it in `Pyz\Zed\Console\ConsoleDependencyProvider`.
 Check that the script covers your `Category and CmsBlockCategoryConnector` configuration.
 

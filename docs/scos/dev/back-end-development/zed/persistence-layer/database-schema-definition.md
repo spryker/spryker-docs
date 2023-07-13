@@ -177,6 +177,29 @@ To leverage this mechanism, you can create a migration file—for example, `Prop
 
 This migration is applied only once and is registered in the `propel_migration table`.
 
+## Migrate to specific version
+
+{% info_block warningBox "Warning" %}
+
+Functionality is available only with versions later than `202212.0`.
+
+{% endinfo_block %}
+
+Spryker allows migration to a specific version by using the `migrate-to-version` option with the `propel:migrate` command. The option defines the version to migrate the database to and expects value that can be taken from the `version` column in the `propel_migration` table.
+
+For example:
+```bash
+vendor/bin/console propel:migrate --migrate-to-version=1622797441
+```
+
+Depending on the current database version, the command either migrates or rolls back to the given version.
+
+To check the current version, use the `propel:migration:check` command with the `last-version` option. The option lets you receive the version of the last executed migration.
+
+```bash
+vendor/bin/console propel:migration:check --last-version
+```
+
 ## Related Spryks
 
 You can use the following definitions to generate related code:

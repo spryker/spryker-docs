@@ -1,5 +1,5 @@
 ---
-title: File details - payment_method_store.csv
+title: "File details: payment_method_store.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-payment-method-storecsv
@@ -12,6 +12,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `payment_method_store.csv` file to configure Payment Method Store information in your Spryker Demo Shop.
@@ -24,11 +27,11 @@ data:import:payment-method-store
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
-| payment_method_key | &check; | String | Value should be imported from the [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html) file. | Identifier of the payment method. |
+| payment_method_key | &check; | String | Value must be imported from the [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html) file. | Identifier of the payment method. |
 | store | &check; | String | Value must be within an existing store name, set in the *store.php* configuration file of the demo shop PHP project. | Name of the store. |
 
 
@@ -37,11 +40,11 @@ The file should have the following parameters:
 This file has the following dependencies:
 
 * [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
+* The `stores.php` configuration file of the demo shop PHP project
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

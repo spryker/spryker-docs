@@ -1,7 +1,7 @@
 ---
 title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException - Channel connection is closed
 description: Learn how to fix the issue when events are not consumed or are consumed slowly.
-last_updated: Jun 16, 2021
+last_updated: May 3, 2023
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rabbitmq-zedcritical-phpamqplibexceptionamqpchannelclosedexception-channel-connection-is-closed
 originalArticleId: 39daf8b8-9e73-4c76-a6ee-372d3e5bbca6
@@ -43,30 +43,24 @@ related:
 
 ## Description
 
-Events are not consumed or are consumed slowly. In RabbitMQ exception.log, the following exception can be found:
+Events are not consumed or are consumed much slower than normal. In RabbitMQ exception.log, the following exception can be found (often also with Broken Pipe reference):
 
-```
+```php
 Zed.CRITICAL: PhpAmqpLib\Exception\AMQPChannelClosedException - Channel connection is closed.
 ```
 
 ## Cause
 
-The exact reason for the error is unknown, but we've noticed that it occurs predominantly in large Spryker environments with many product updates.  We continue to explore the root cause.
+There are several potential reasons for this error. The most common cause is that during P&S chunks take too much time to be processed and RabbitMQ is closing its TCP connection as it anticipates either a timeout or no further connection to happen.
 
 ## Solution
 
-We have discovered two options that helped to resolve the error:
+It is best to profile the job where you are experiencing this error to understand what exactly makes processing the chunks expensive. Temporary mitigation of the issue might be possible as explained below:
 
-**1. Implementing RabbitMQ lazy queues**
-One possible solution can be implementing RabbitMQ lazy queues to reduce RAM usage. This is already implemented for PaaS customers.
-Configuring RabbitMQ to put messages on disk and load them into memory only when they are needed (lazy queuing) can help. For instructions on how to do this, see the CloudAMQ article [Stopping the stampeding herd problem with lazy queues](https://www.cloudamqp.com/blog/2017-07-05-solving-the-thundering-herd-problem-with-lazy-queues.html).
+**Adjusting CHUNK_SIZE**
 
-**2. Adjusting CHUNK_SIZE**
-Using smaller chunk sizes for export and storage sync in RabbitMQ might also help to alleviate the issue. Include the following values in the config file used:
+Using smaller chunk sizes might help to alleviate the issue because it reduces the time until a chunk is fully processed. If you are running a standard publishing setup, you can adjust the following value in `config_default.php`. 
 
-```
-$config[SynchronizationConstants::EXPORT_MESSAGE_CHUNK_SIZE] = 200;
-$config[SynchronizationConstants::DEFAULT_SYNC_STORAGE_MESSAGE_CHUNK_SIZE] = 200;
-$config[SynchronizationConstants::DEFAULT_SYNC_SEARCH_QUEUE_MESSAGE_CHUNK_SIZE] = 200;
+```php
 $config[EventConstants::EVENT_CHUNK] = 200;
 ```

@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and Synchronize and multi-store shop systems
+  - title: Publish and synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
@@ -380,7 +380,7 @@ Now, you can manually trigger events. For this, do the following:
 1.  Stop all cron jobs or disable background queue processing in Jenkins:
 
 ```bash
-vendor/bin/console schedule:suspend
+vendor/bin/console scheduler:suspend
 ```
 
 2. Create a controller class as follows and run it by navigating to `http://[YOUR_BACKOFFICE_URL]/hello-world`.
@@ -611,8 +611,13 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
      */
     public function writeCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {
@@ -653,8 +658,13 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
      */
     public function deleteCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {
@@ -716,9 +726,9 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
 }
 ```
 
-4. In order to connect the facade methods to the business logic in the Writer and Deleter, we need to create the Business factory that created the Writer abd Deleter objects. We also need to create interfaces for these objects.
+4. To connect the facade methods to the business logic in the Writer and Deleter, create the Business factory that creates the Writer and Deleter objects. We also recommend creating interfaces for these objects.
 
-Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`
+Create `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`.
 
 ```php
 <?php
@@ -756,9 +766,9 @@ class HelloWorldStorageBusinessFactory extends AbstractBusinessFactory
 
 ```
 
-As you see, these methods return interfaces, so let's create them.
+As you see, these methods return interfaces.
 
-Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface.php`
+In `src\Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface.php`, create the interfaces.
 
 ```php
 <?php
@@ -777,7 +787,7 @@ interface HelloWorldStorageWriterInterface
 
 ```
 
-Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface.php`
+Create `src\Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface.php`.
 
 ```php
 <?php

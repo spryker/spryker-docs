@@ -11,7 +11,7 @@ The _Navigation_ feature enables product catalog managers to create intuitive na
 To learn more about the feature and to find out how end users use it, see [Navigation feature overview](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|

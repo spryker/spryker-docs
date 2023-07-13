@@ -101,11 +101,11 @@ Bundle product information is stored to `spy_sales_order_item_bundle`. When orde
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

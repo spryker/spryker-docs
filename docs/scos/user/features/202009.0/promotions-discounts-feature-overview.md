@@ -21,7 +21,7 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A product catalog manager selects a discount type when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager selects a discount type when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
 ## Voucher
 
@@ -36,7 +36,7 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can eneter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a product catalog manager can create a voucher in the Back Office.
+See [Creating a Voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) to learn how a product catalog manager can create a voucher in the Back Office.
 
 ## Cart Rule
 
@@ -158,13 +158,13 @@ See examples in the table below.
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount Exclusiveness
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive Discount
@@ -203,5 +203,5 @@ Validity interval is a time period during which a discount is active and can be 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)

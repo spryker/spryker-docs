@@ -18,7 +18,7 @@ redirect_from:
 
 To start working with products:
 
-1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+1. To create product variants of abstract products, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 2. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
@@ -61,7 +61,7 @@ The following table describes the attributes you enter and select when defining 
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
 
 ## Defining prices
@@ -82,10 +82,10 @@ The following table describes the attributes you enter and select when defining 
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
+|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) the price you enter here. |
 |Default<br>Original | Default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| Tax Set | Conditions under which the product will be taxed.<br> For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html).|
+| Tax Set | Conditions under which the product will be taxed.<br> For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).|
 
 ## Defining product variants
 
@@ -101,7 +101,7 @@ On the **Variants** tab, define product variants:
 
 ### Reference information: Defining product variants
 
-On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
+On the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [edit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

@@ -6,7 +6,7 @@ In this new version of the **ProductBundle** module, we have added support of de
 
 {% info_block errorBox %}
 
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html).
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html).
 
 {% endinfo_block %}
 
@@ -45,7 +45,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 ## Upgrading from version 3.* to version 4.*
 
-In version 4 we have added support for multi-currency. First, make sure that you [migrated the Price module](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html). If you extended `ProductBundleCartExpander`, then you have to adapt some code because we changed the way the price is selected for added bundle products, check the core changes and adapt accordingly. We have also added a new plugin to handle a cart reload event.
+In version 4 we have added support for multi-currency. First, make sure that you [migrated the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html). If you extended `ProductBundleCartExpander`, then you have to adapt some code because we changed the way the price is selected for added bundle products, check the core changes and adapt accordingly. We have also added a new plugin to handle a cart reload event.
 
 You will also need to add the `\Spryker\Zed\ProductBundle\Communication\Plugin\Cart\CartBundleItemsPreReloadPlugin` plugin to `\Pyz\Zed\Cart\CartDependencyProvider::getPreReloadPlugins()`. This ensures that bundle items are correctly updated when the currency is changed and cart reload is invoked.
 

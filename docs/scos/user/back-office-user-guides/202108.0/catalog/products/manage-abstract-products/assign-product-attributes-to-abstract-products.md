@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 
 This document describes how to assign product attributes to abstract products in the Back Office.
 
-By assigning a product attribute to an abstract product, you assign it to all its variants. This is useful when you have an abstract product has a lot of variants with the same attribute value. Alternatively, you can [assign product attributes to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html).
+By assigning a product attribute to an abstract product, you assign it to all its variants. This is useful when you have an abstract product has a lot of variants with the same attribute value. Alternatively, you can [assign product attributes to a product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html).
 
 ## Prerequisites
 

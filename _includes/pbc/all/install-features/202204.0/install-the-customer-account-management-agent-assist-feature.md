@@ -11,13 +11,13 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Customer Account ManagemenT | {{site.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
-| Agent Assist | {{site.version}} | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html) |
+| Customer Account ManagemenT | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Agent Assist | {{page.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html) |
 
 
 ## 1) Install the required modules using composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies
@@ -209,6 +209,6 @@ Install the following related features:
 
 | FEATURE | INTEGRATION GUIDE |
 | --- | --- |
-| Customer Account Management | [Customer Acount Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
-| Agent Assist | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html) |
-| Agent Assist API | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-agent-assist-feature-integration.html) |
+| Customer Account Management | [Customer Acount Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Agent Assist | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html) |
+| Agent Assist API | [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html) |

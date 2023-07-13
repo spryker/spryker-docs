@@ -88,7 +88,7 @@ Merchant order uses its own totals based on order totals, restricted by the Merc
 
 The *merchant order total* is the sum of the totals of items of an order relating to the merchant order.
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES                                                                                                                                                                                              |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|--------|

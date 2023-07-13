@@ -10,7 +10,7 @@ End of November 2022, Spryker will release a new version of its Demo Shops, whic
 
 ## Impacts
 
-Backwards compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you will not experience any upgradeability issues.
+Backwards compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you will not experience any upgradability issues.
 
 ## Migration steps
 
@@ -22,8 +22,8 @@ Use the major lock `^` or the minor lock `~` if you have changes on the project 
 ```php
 spryker/cms-block-gui => 2.8.0
 codeception/codeception => 4.1.24
-codeception/lib-innerbrowser => 1.3.3
-codeception/module-phpbrowser => 1.0.1
+codeception/lib-innerbrowser => 1.3.4
+codeception/module-phpbrowser => 1.0.2
 psalm/phar => 4.3.1
 roave/better-reflection => 5.0.0
 spryker-sdk/benchmark => 0.2.2
@@ -33,7 +33,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 2. Change the PHP version in `composer.json`:
 
-`config.platform.php => 8.0`
+`config.platform.php => 8.0.12`
 
 3. Make sure there are no project-specific changes in the following repositories, and remove them from your `composer.json`:
 

@@ -12,7 +12,7 @@ To learn more about the feature and to find out how end users use it, see [File 
 
 
 
-## Related Developer articles
+## Related Developer documents
 
 | TECHNICAL ENHANCEMENTS |
 |---------|

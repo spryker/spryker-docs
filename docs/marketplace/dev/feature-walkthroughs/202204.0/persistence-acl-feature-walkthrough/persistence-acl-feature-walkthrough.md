@@ -71,11 +71,11 @@ A query sent to the database is intercepted and modified with additional joins t
 - [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html)
 - [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | REFERENCES  | HOWTOS  |
 |---------|---------|---------|
-| [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html)   | [Persistence ACL feature configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html) | [HowTo: Split products by stores](/docs/marketplace/dev/howtos/how-to-split-products-by-stores.html)|
+| [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html)   | [Persistence ACL feature configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html) | [HowTo: Split products by stores](/docs/marketplace/dev/howtos/how-to-split-products-by-stores.html)|
 |  | [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) |    |
 |  | [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) |    |
 |  | [Global scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html) |    |

@@ -1,20 +1,26 @@
 
 
+
+This document describes how to integrate the Comments + Order Management feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Comments + Order Management feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Order Management | {{site.version}} |
-| Company Account | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)|
+| Company Account | {{page.version}} | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/company-sales-connector: "^1.0.0" spryker/company-business-unit-sales-connector: "^1.0.0" --update-with-dependencies
@@ -33,7 +39,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -53,10 +59,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_sales_order.company_uuid | column | created |
 | spy_sales_order.company_business_unit_uuid | column | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -70,7 +72,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -81,7 +83,7 @@ permission.name.SeeBusinessUnitOrdersPermissionPlugin,View Business Unit orders,
 permission.name.SeeBusinessUnitOrdersPermissionPlugin,Bestellungen von Geschäftsbereichen anzeigen,de_DE
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -135,7 +137,7 @@ Check `spy_sales_order` table and make sure that `company_uuid` and `company_bus
 
 {% endinfo_block %}
 
-Register permission plugins at Zed layer.
+Register permission plugins at the `Zed` layer.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -170,12 +172,12 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Navigate to Backoffice UI → Maintenance → Sync permissions.
-Make sure that you see rows with plugin names at `spy_permission` table.
+In the Back Office, navigate to **Maintenance > Sync permissions**.
+Make sure that you see rows with plugin names in the `spy_permission` table.
 
 {% endinfo_block %}
 
-Register permission plugins at Client layer.
+Register permission plugins at the `Client` layer.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -210,8 +212,8 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Re-login (or log in) as a Company Admin and navigate to `http://www.mysprykershop.com/en/company/company-role`.
-Press **Edit** button for some role and make sure that you are able to assign following permissions:
+Relogin or log in as a company admin and navigate to `https://www.mysprykershop.com/en/company/company-role`.
+For any role, click the **Edit** button and make sure that you can assign following permissions:
 
 * View Company orders
 * View Business Unit orders
@@ -307,15 +309,16 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ## Install feature frontend
 
+Follow the steps below to install the Comments + Order Management feature frontend.
+
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Customer Account Management | {{site.version}} |
-| Company Account | {{site.version}} |
-
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Company Account | {{page.version}} | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)
 
 Append glossary according to your configuration:
 
@@ -390,8 +393,10 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Log in as a company user. Navigate to Order History page (`http://www.mysprykershop.com/en/customer/order`), and make sure that search form contains Business Unit dropdown.
-Make sure that you are able to choose a certain business unit or company option at respective dropdown according to company user role permissions assigned.
-Make sure that you are able to search and filter through the own / business unit/company orders.
+Log in as a company user. Navigate to the **Order History** page (`https://www.mysprykershop.com/en/customer/order`), and make sure that the search form contains the **Business Unit** dropdown.
+
+Make sure that you can choose a certain business unit or company option in the respective dropdown according to the company user role permissions assigned.
+
+Make sure that you can search and filter through the own / business unit / company orders.
 
 {% endinfo_block %}

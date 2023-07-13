@@ -210,7 +210,7 @@ quote-23,Spryker--5,READ_ONLY
 <br>
 </details>
 
-| Column |REQUIRED? | Data Type |Data Example  |Data explanation  |
+| Column |REQUIRED | Data Type |Data Example  |Data explanation  |
 | --- | --- | --- | --- | --- |
 | `quote_key` |mandatory |  string|quote-22  | Key that will identify the quote to add data to. |
 | `company_user_key` | mandatory |  string| Spryker--1|Key that will identify the company user that the quote is shared with.  |

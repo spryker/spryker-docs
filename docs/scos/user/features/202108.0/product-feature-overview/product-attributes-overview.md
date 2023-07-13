@@ -57,7 +57,7 @@ Product variants of the same abstract product can differ by different super attr
 ## Predefined product attribute values
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes.
 
-A Back Office user can configure configure a product attribute to accept only predefined values. In this case, when [assigning product attributes to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html), they choose from the predefined values. Otherwise, they can enter any value for the attribute.
+A Back Office user can configure configure a product attribute to accept only predefined values. In this case, when [assigning product attributes to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products.html), they choose from the predefined values. Otherwise, they can enter any value for the attribute.
 
 ## Product attribute translations
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized.
@@ -164,7 +164,7 @@ We recommend defining all the atributes you want to use.
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

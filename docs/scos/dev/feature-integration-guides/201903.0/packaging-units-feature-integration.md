@@ -114,7 +114,7 @@ Adjust the schema definition so that entity changes can trigger events.
 ```
 </details>
 
-Set up synchronization queue pools so that non-multistore entities (not store-specific entities) can be synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) can be synchronized among stores:
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_abstract_packaging_storage.schema.xml</summary>
@@ -402,7 +402,7 @@ packaging_unit_type.pack_500.name
 ```
 </details>
 
-| Column | REQUIRED? |Data Type  |Data Example  |Data Explanation  |
+| Column | REQUIRED |Data Type  |Data Example  |Data Explanation  |
 | --- | --- | --- | --- | --- |
 | `name` |  mandatory|string  | `packaging_unit_type.ring_500.name` |Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales.  |
 
@@ -468,7 +468,7 @@ concrete_sku,is_lead_product,has_lead_product,packaging_unit_type_name,default_a
 </details>
 
 <div>
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 | Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales. |
 | `is_lead_product` | mandatory | bool integer | 1 | Decides if the current concrete_sku is the lead concrete product of the product abstract. Exactly 1 concrete product has to be a lead product in a packaging unit-based product abstract. |

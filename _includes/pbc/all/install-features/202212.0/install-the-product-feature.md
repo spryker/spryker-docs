@@ -18,15 +18,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
-| Prices | {{site.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+| Prices | {{page.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -281,14 +281,14 @@ Overview and install the necessary features before beginning the integration ste
 
 | NANE | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

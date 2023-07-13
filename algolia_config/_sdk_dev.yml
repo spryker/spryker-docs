@@ -3,13 +3,14 @@ algolia:
   files_to_exclude:
     - index.md
     - 404.md
+    - 403.md
     - search.md
     - docs/marketplace/user/**/*.md
     - docs/marketplace/dev/**/*.md
     - docs/scos/user/**/*.md
     - docs/scos/dev/**/*.md
-    - docs/paas-plus/dev/**/*.md
-    - docs/cloud/dev**/*.md    
+    - docs/scu/dev/**/*.md
+    - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md  
     - docs/acp/user/**/*.md        
     - docs/fes/dev/**/*.md
     - docs/pbc/all/**/*.md

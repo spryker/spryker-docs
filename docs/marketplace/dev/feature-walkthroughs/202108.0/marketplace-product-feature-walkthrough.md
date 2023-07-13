@@ -41,7 +41,7 @@ The following schema illustrates the Marketplace Product domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/80809f75-1f94-4f19-9cfd-e39235026e89.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|

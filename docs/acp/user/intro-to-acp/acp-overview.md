@@ -1,20 +1,24 @@
 ---
 title: App Composition Platform overview
-description: Learn about the App Orchestration Platform and how you can use it.
+description: Learn about the App Orchestration Platform and how to use it.
 template: concept-topic-template
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
+keywords: acp
 ---
 
-The App Composition Platform (ACP) lets [PaaS+](/docs/paas-plus/dev/platform-as-a-service-plus.html) customers connect, configure, and use the available third-party services, or apps, in their application with a click of a button, without development efforts from their side.
+The App Composition Platform (ACP) lets Spryker Cloud Commerce Operating System (SCCOS) customers connect, configure, and use the available third-party services via apps, in their application with the click of a button, with no or low development efforts from their side.
 
 ![ACP](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop.png)
 
+<a name="supported-apps"></a>
+
 The following apps are supported:
 
-- [Payone](/docs/acp/user/apps/payone.html), a Payment Service Provider (PSP)
-- [Usercentrics](/docs/acp/user/apps/usercentrics.html), a Consent Management Platform (CMP)
-- [Bazaarvoice](/docs/acp/user/apps/bazaarvoice.html), a platform for User-Generated Content (UGC)
+- [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/integrate-algolia.html), a Search Engine
+- [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html), a Payment Service Provider (PSP)
+- [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html), a Consent Management Platform (CMP)
+- [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), a platform for User-Generated Content (UGC)
 
 Spryker builds all integrations of the apps and provides them in a secure and no-code way for the SCCOS.
 
@@ -26,19 +30,25 @@ The ACP has the following advantages:
 - Contains only approved and secure apps
 - Always up-to-date apps
 
-## Accessing the ACP catalog
+## Installing the ACP catalog
 
-The ACP catalog is a page inside the Back Office that contains the list of applications you can connect to your shop.
-You can access the ACP catalog only if you are the SCCOS customer. If you were onboarded after March 31st, 2022, you get the ACP catalog integrated into your Back Office by default. If you were onboarded earlier, [contact us](https://support.spryker.com/). Once you complete the installation, the ACP catalog appears in the Back Office:
+With the latest Spryker product release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet. 
 
-![aop-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
+You can access the ACP catalog only if you are a SCCOS customer and have additionally been enabled for ACP, which means that your SCCOS is properly set up and registered with the ACP. Check [ACP installation](/docs/acp/user/app-composition-platform-installation.html) for details on how to install and enable the ACP catalog for your version of SCCOS.
+
+{% info_block warningBox "Info" %}
+
+The actions and level of effort required to make your project ACP-ready may vary depending on the update status of your SCCOS module versions.
+
+{% endinfo_block %}
+
 
 ## Using an app from the ACP catalog
 
 In most cases, to try an app from the ACP catalog, you do the following:
 
-1. In the ACP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button on the app details page. This takes you to the configuration page of the newly connected app. There you can find a link to the app provider's website in case you need to register with them.
-2. On the app provider's website, you obtain the necessary credentials.
+1. In the ACP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button on the app details page. You are redirected to the configuration page of the newly connected app. You can find a link to the app provider's website if you need to register with them.
+2. You obtain the necessary credentials on the app provider's website.
 3. In the Spryker ACP catalog, on the selected app details page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
 
 {% info_block infoBox "Info" %}
@@ -48,3 +58,6 @@ Make sure you check the configuration guidelines for the app you need because ad
 {% endinfo_block %}
 
 That's it! You are all set to try the app out.
+
+## Next steps
+To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/acp/user/app-composition-platform-installation.html#getting-sccos-acp-ready).

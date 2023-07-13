@@ -47,7 +47,7 @@ Spryker is a Commerce Operating System, mainly composed of several applications,
 
 * *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/components).
 * *Back Office*—an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
-* *Storefront API*—an application providing resources for customers' interaction, provided by Glue Application Layer, based on [JSON API convention](https://jsonapi.org/).
+* *Storefront API*—an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
 
 The following diagram shows the conceptual parts of the application and their connections:
 
@@ -112,6 +112,6 @@ For more details on how Publish & Sync works, see [Publish and Synchronization](
 
 ## Where to go from here?
 
-* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html).
+* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html).
 * To know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/architecture/programming-concepts.html).
 

@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/mailing-notifications-feature-overview
   - /docs/mailing-notifications-feature-overview
   - /docs/en/mailing-notifications-feature-overview
+  - /docs/scos/user/features/202204.0/mailing-and-notifications-feature-overview.html
 ---
 
 The *Mailing & Notifications* feature lets you manage newsletters and notifications.

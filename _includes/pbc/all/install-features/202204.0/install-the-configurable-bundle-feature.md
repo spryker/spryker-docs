@@ -1,24 +1,29 @@
 
 
+
+This document describes how to integrate the [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Configurable Bundle feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core	 | {{site.version}} |
-| Cart | {{site.version}} |
-| Product | {{site.version}} |
-| Product Lists	 | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | ---| --- |
+| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Product Lists	 | {{page.version}} | Product Lists feature integration | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle:"^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -41,7 +46,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up database schema and transfer objects
 
-Adjust the schema definition so that entity changes will trigger the events:
+Adjust the schema definition so that entity changes trigger the events:
 
 **src/Pyz/Zed/ConfigurableBundle/Persistence/Propel/Schema/spy_configurable_bundle.schema.xml**
 
@@ -104,7 +109,7 @@ Adjust the schema definition so that entity changes will trigger the events:
 </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -123,10 +128,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_sales_order_configured_bundle_item | table | created |
 | spy_configurable_bundle_template_storage | table | created |
 | spy_configurable_bundle_template_page_search | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -168,23 +169,21 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add translations
-
-#### Yves translations
+### 3) Add Yves translations
 
 {% info_block infoBox %}
 
-Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field, e.g.: `configurable_bundle.templates.my-bundle.name`.
+Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field—for example, `configurable_bundle.templates.my-bundle.name`.
 
 Same rule is applied for configurable bundle template slots: `spy_configurable_bundle_template_slot.name` → `spy_configurable_bundle.template_slots.my-slot.name`
 
-Name is represented by a slugified version of a name for default locale, e.g.: Configurable Bundle "All In" → `configurable-bundle-all-in`.
+Name is represented by a slugified version of a name for default locale—for example, Configurable Bundle "All In" → `configurable-bundle-all-in`.
 
 {% endinfo_block %}
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
-<details open>
+<details>
 <summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
@@ -263,7 +262,11 @@ configurable_bundle_page.configurator.product_became_unavailable,Product with SK
 ```
 </details>
 
-Please note, that if you have any configurable bundle entities already present or coming from data import, then you'll also need to provide translations for templates and slots as given in example below.
+{% info_block infoBox "Note" %}
+
+If you have any configurable bundle entities already present or coming from data import, then you'll also need to provide translations for templates and slots as given in the following example.
+
+{% endinfo_block %}
 
 **src/data/import/glossary.csv**
 
@@ -286,7 +289,7 @@ configurable_bundle.template_slots.slot-6.name,Slot 6,en_US
 configurable_bundle.template_slots.slot-6.name,Slot 6,de_DE
 ```
 
-Run the following console command to import data:
+1. Import data:
 
 ```bash
 console data:import glossary
@@ -298,9 +301,9 @@ Make sure that in the database, the configured data are added to the `spy_glossa
 
 {% endinfo_block %}
 
-#### Zed translations
+### 4) Add Zed translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -308,11 +311,11 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you make an order from a cart with a configured bundles, bundle name is translated on the order page in Zed.
+Make sure that when you make an order from a cart with configured bundles, the bundle name is translated on the order page in Zed.
 
 {% endinfo_block %}
 
-### 4) Set up search
+### 5) Set up search
 
 Add the page map plugin for the *configurable bundle template* entity.
 
@@ -386,9 +389,9 @@ class ConfigurableBundlePageSearchDependencyProvider extends SprykerConfigurable
 }
 ```
 
-### 5) Configure export to Redis and Elasticsearch
+### 6) Configure export to Redis and Elasticsearch
 
-This step will publish tables on change (create, edit) to the spy_configurable_bundle_template_storage and synchronize the data to Storage.
+This step publishes tables on change (create, edit) to `spy_configurable_bundle_template_storage` and synchronizes the data to Storage.
 
 #### Set up event listeners
 
@@ -494,7 +497,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin | Allows populating empty storage table with data. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
+| ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin | Allows populating an empty storage table with data. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
 | ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin | Allows populating empty search table with data. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
 | ConfigurableBundleTemplateSynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. | None | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Synchronization |
 | ConfigurableBundleTemplatePageSynchronizationDataBulkPlugin | Allows synchronizing all of the content into Search. | None | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Synchronization |
@@ -598,14 +601,13 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that when you added some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and run `console trigger:event -r configurable_bundle_template` command, the changes reflect in `spy_configurable_bundle_template_storage`  and  `spy_configurable_bundle_template_page_search` tables.
+1. Make sure that when you add some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and the `console trigger:event -r configurable_bundle_template` command, the changes reflect in the `spy_configurable_bundle_template_storage` and `spy_configurable_bundle_template_page_search` tables.
 
-2. Make sure that after step #1 or after command `console sync:data configurable_bundle_template` execution data is exported:
+2. Make sure that after taking the preceding step or after running the `console sync:data configurable_bundle_template` command, the execution data is exported from the following tables:
+   * From `spy_configurable_bundle_template_storage` table to Redis.
+   * From `spy_configurable_bundle_template_page_search` table to Elasticsearch.
 
-* from `spy_configurable_bundle_template_storage` table to Redis
-* from `spy_configurable_bundle_template_page_search` table to Elasticsearch
-
-3. Make sure that when a configurable bundle template (or template slot) created or edited through ORM, it is exported to Redis or Elasticsearch accordingly.
+3. Make sure that when a configurable bundle template or template slot is created or edited through ORM, it is exported to Redis or Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
@@ -652,9 +654,7 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 {% endinfo_block %}
 
-### 6) Import data
-
-#### Import configurable bundles data
+### 9) Import configurable bundles data
 
 Prepare your data according to your requirements using our demo data:
 
@@ -666,7 +666,7 @@ t000001,8d8510d8-59fe-5289-8a65-19f0c35a0089,configurable_bundle.templates.confi
 t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smartstation.name,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
 | configurable_bundle_template_uuid | optional | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
@@ -685,7 +685,7 @@ s000005,configurable_bundle.template_slots.slot-5.name,9626de80-6caa-57a9-a683-2
 s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a4a18558aa75,t000002,pl-014
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_slot_key | mandatory | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
 | configurable_bundle_template_slot_name | mandatory | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
@@ -723,7 +723,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import configurable-bundle-template
@@ -732,11 +732,11 @@ console data:import configurable-bundle-template-slot
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configurable bundle data is added to the `spy_configurable_bundle_template`, `spy_configurable_bundle_template_slot`  tables in the database.
+Make sure that the configurable bundle data is added to the `spy_configurable_bundle_template`, `spy_configurable_bundle_template_slot` tables in the database.
 
 {% endinfo_block %}
 
-To add a new point into navigation, adjust import data:
+To add a new point to navigation, adjust the import data:
 
 **data/import/navigation_node.csv**
 
@@ -747,11 +747,11 @@ MAIN_NAVIGATION,node_key_48,node_key_18,link,Configurable Bundle List,/en/config
 
 {% info_block infoBox "Info" %}
 
-Don't forget to replace sample node keys with ones relevant for your project.
+Don't forget to replace sample node keys with ones relevant to your project.
 
 {% endinfo_block %}
 
-Run the following command to import data:
+Import data:
 
 ```bash
 console data:import navigation-node
@@ -764,6 +764,8 @@ Navigate to your shop and make sure you can see a new item in the navigation men
 {% endinfo_block %}
 
 ### 7) Set up behavior
+
+Set up the following behaviors.
 
 #### Set up configurable bundles workflow
 
@@ -818,14 +820,14 @@ Make sure that when you place an order with a configured bundle:
 
 {% endinfo_block %}
 
-#### Register Pre-load, Pre-check and Expander Plugins for the Cart Module
+#### Register preload, precheck. and expander plugins for the Cart module
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CartConfigurableBundlePreReloadPlugin | Removes items from the QuoteTransfer if its configurable bundle template was removed or became inactive. | None |Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart |
+| CartConfigurableBundlePreReloadPlugin | Removes items from the `QuoteTransfer` if its configurable bundle template is removed or becomes inactive. | None |Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart |
 | ConfiguredBundleQuantityPostSavePlugin | Applies to items that have configurable properties. Updates configured bundle quantity. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
 | ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin | Applies to items that have configurable properties. Updates configured bundle quantity per slot. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
-| ConfiguredBundleQuantityCartTerminationPlugin | Terminates add/remove product to the cart process if configured bundle quantity is not proportional to product quantity. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityCartTerminationPlugin | Terminates add or remove product to the cart process if configured bundle quantity is not proportional to product quantity. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
 | ConfiguredBundleTemplateSlotCombinationPreCheckPlugin | Checks configurable bundle template/slot combinations. Adds error message if wrong combinations found. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
 | ConfiguredBundleQuantityPerSlotItemExpanderPlugin | Expands configured bundle items with the quantity per slot. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
 | ConfiguredBundleGroupKeyItemExpanderPlugin | Expands items with configured bundle property with the group key. | None | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
@@ -917,31 +919,17 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that deleted or deactivated configured bundles are removed from the cart.
+* Make sure that deleted or deactivated configured bundles are removed from the cart.
 
-{% endinfo_block %}
+* Make sure after updating the configured bundle quantity on the cart page:
+  * The quantity of each item in the bundle has changed.
+  * The quantity of bundle has changed.
 
-{% info_block warningBox "Verification" %}
-
-Make sure after updating the configured bundle quantity on cart page:
-
-* The quantity of each item in the bundle has changed.
-* The quantity of bundle has changed.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-* Make clean up for the configured bundle item (in `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`;
-* Reload cart page;
-* Make sure that `ConfiguredBundleItem::quantityPerSlot` is not null.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-* Set the wrong quantity to `ConfiguredBundle::quantity` for the configured bundle item.
-* Make sure that after updating the configured bundle quantity on cart page error flash message shown.
+* Do the following:
+  1. Make clean up for the configured bundle item (in the `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`. 
+  2. Reload the cart page and make sure that `ConfiguredBundleItem::quantityPerSlot` is not null.
+  3. For the configured bundle item, set the wrong quantity to `ConfiguredBundle::quantity`.
+  4. Make sure that after updating the configured bundle quantity on the cart page error flash message is displayed.
 
 {% endinfo_block %}
 
@@ -983,19 +971,21 @@ Make sure an error occurs while deleting a product list that was assigned to a s
 
 ### 8) Configure Zed UI
 
+To configure Zed UI, register plugins for `ConfigurableBundleGui` and `ProductListGui` modules as follows.
+
 #### Register plugins for the ConfigurableBundleGui module
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin | Expands **Slot Edit** page tabs with additional product list management tabs. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin | Expands **Slot Edit** form with Product List assignment subforms.  | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin | Expands options for **Slot Edit** form with Product List management data. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin | Expands the **Slot Edit** page tabs with additional product list management tabs. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin | Expands the **Slot Edit** form with Product List assignment subforms.  | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin | Expands options for the **Slot Edit** form with Product List management data. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
 | ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin | Handles Product Concrete Relation CSV file upload. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin | Provides subtabs for the Assign Products tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin | Provides tables for the Assign Products tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin | Provides subtabs for the **Assign Products** tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin | Provides tables for the **Assign Products** tab. | None | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
 
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Zed/ConfigurableBundleGui/ConfigurableBundleGuiDependencyProvider.php</summary>
 
 ```php
@@ -1078,10 +1068,7 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
 
 {% info_block warningBox "Verification" %}
 
-Make sure that on configurable bundle template slot edit page (`http://zed.mysprykershop.com/configurable-bundle-gui/slot/edit?id-configurable-bundle-template-slot=1`):
-
-* **Assign Categories** tab exists.
-* **Assign Products** tab exists.
+On the configurable bundle template slot edit page (`https://zed.mysprykershop.com/configurable-bundle-gui/slot/edit?id-configurable-bundle-template-slot=1`), make sure that the **Assign Categories** and **Assign Products** tabs are displayed.
 
 {% endinfo_block %}
 
@@ -1129,15 +1116,15 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  **Configurable Bundle Templates** button exists on **Overview of Product lists** (`http://zed.mysprykershop.com/product-list-gui`) page.
+On the **Overview of Product lists** (`http://zed.mysprykershop.com/product-list-gui`) page, make sure that the **Configurable Bundle Templates** button is displayed.
 
-Make sure that **Used by** table is populated by configurable bundle template slots on **Edit Product List** page  (in cases of relationship).
+On the **Edit Product List** page, make sure that the **Used by** table is populated by configurable bundle template slots in cases of relationship.
 
 {% endinfo_block %}
 
-### 9) Build Zed UI frontend
+### 10) Build Zed UI frontend
 
-Run the following command to enable Javascript and CSS changes for Zed:
+Enable Javascript and CSS changes for Zed:
 
 ```bash
 console frontend:zed:build
@@ -1147,21 +1134,21 @@ console frontend:zed:build
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Follow the steps below to install the Configurable Bundle feature frontend
 
-| Feature | Version |
-| --- | --- |
-| Spryker Core | {{site.version}} |
-| Cart | {{site.version}} |
-| Product | {{site.version}} |
-| Prices | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | ---| --- |
+| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Prices | {{page.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle: "^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/configurable-bundle: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1175,9 +1162,7 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Enable controllers
-
-#### Router List
+### 2) Enable controllers: Router List
 
 Register router plugins:
 
@@ -1214,9 +1199,9 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the `ConfigurableBundleWidgetRouteProviderPlugin`, make sure that you can change the quantity and remove the configurable bundle from the cart.
+Verify `ConfigurableBundleWidgetRouteProviderPlugin`: make sure that you can change the quantity and remove the configurable bundle from the cart.
 
-Verify the `ConfigurableBundlePageRouteProviderPlugin`, make sure that you can navigate to `/configurator/template-selection` page.
+Verify `ConfigurableBundlePageRouteProviderPlugin`: make sure that you can navigate to `/configurator/template-selection` page.
 
 {% endinfo_block %}
 
@@ -1255,7 +1240,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1267,7 +1252,7 @@ Make sure that the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |
-| QuoteConfiguredBundleWidget | Go to the cart (`http://mysprykershop.com/cart`) with a configured bundle, make sure that you see items grouped by the configured bundle. |
+| QuoteConfiguredBundleWidget | Go to the cart (`https://mysprykershop.com/cart`) with a configured bundle, make sure that you see items grouped by the configured bundle. |
 | OrderConfiguredBundleWidget | Go to the order that was made from a cart with a configured bundle, make sure that you see items grouped by the configured bundle. |
 
 {% endinfo_block %}
@@ -1303,6 +1288,6 @@ class ConfigurableBundleWidgetConfig extends SprykerShopConfigurableBundleWidget
 
 {% info_block warningBox "Verification" %}
 
-Make sure that each configured bundle on the cart (`http://mysprykershop.com/cart`) contains a block with quantity input.
+Make sure that each configured bundle on the cart (`https://mysprykershop.com/cart`) contains a block with quantity input.
 
 {% endinfo_block %}

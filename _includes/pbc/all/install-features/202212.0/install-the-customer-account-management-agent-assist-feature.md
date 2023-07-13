@@ -5,17 +5,17 @@ This document describes how to integrate the Customer Account Management + Agent
 ## Install feature core
 
 Follow the steps below to install the Customer Account Management + Agent Assist feature core.
- 
+
 ### Prerequisites
 
 To start the feature integration, overview and install the necessary features:
 
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                  |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Account ManagemenT | {{site.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
-| Agent Assist                | {{site.version}} | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html)                               |
+| Customer Account ManagemenT | {{page.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Agent Assist                | {{page.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html)                               |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies
@@ -99,14 +99,15 @@ Ensure that the following changes have been applied in the transfer objects:
 
 Activate the following plugins:
 
-| PLUGIN                                                      | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                    |
-|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| AgentOauthUserProviderPlugin                                | Authenticates an Agent, reads Agent data and provides it for the access token.          | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth   |
-| AgentOauthScopeProviderPlugin                               | Provides the Agent scopes.                                                              | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth   |
-| AgentCredentialsOauthGrantTypeConfigurationProviderPlugin   | Provides configuration of the`agent_credentials` grant type.                            | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth   |
-| UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin  | Updates agent's session data in storage if access is granted and an agent is logged in. | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage  |
+| PLUGIN                                                     | SPECIFICATION                                                                                                       | PREREQUISITES | NAMESPACE                                                        |
+|------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
+| AgentOauthUserProviderPlugin                               | Authenticates an agent, reads the agent's data and provides it for the access token.                                      | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| AgentOauthScopeProviderPlugin                              | Provides the agent scopes.                                                                                          | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| AgentCredentialsOauthGrantTypeConfigurationProviderPlugin  | Provides configuration of the`agent_credentials` grant type.                                                        | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin | Updates agent's session data in storage if access is granted and an agent is logged in.                             | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage      |
+| CustomerUpdateSessionPostImpersonationPlugin               | Updates customer's session data in storage if a given customer is valid after the session impersonation is started. | None          | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage  |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -154,33 +155,9 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 </details>
 
-**src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\CustomerPage;
-
-use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
-use SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage\UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin;
-
-class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
-{
-    /**
-     * @return array<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\AfterCustomerAuthenticationSuccessPluginInterface>
-     */
-    protected function getAfterCustomerAuthenticationSuccessPlugins(): array
-    {
-        return [
-            new UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin(),
-        ];
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
-Ensure that the Agent can get the access token with valid credentials by sending the request:
+Ensure that the agent can get the access token with valid credentials by sending the request:
 
 **Request sample**
 
@@ -218,6 +195,77 @@ Ensure that the Agent can get the access token with valid credentials by sending
 }
 ```
 
+{% endinfo_block %}
+
+**src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CustomerPage;
+
+use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
+use SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage\UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin;
+
+class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\AfterCustomerAuthenticationSuccessPluginInterface>
+     */
+    protected function getAfterCustomerAuthenticationSuccessPlugins(): array
+    {
+        return [
+            new UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Log in as an agent.
+2. Log in as a customer.
+3. Ensure that the agent's session data in storage is created or updated:
+    - If session data is stored in Redis, ensure that the following Redis key exists and contains data:
+      `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
+    - If session data is stored in a file, ensure that a file in the following path exists and contains data:
+      `data/session/session:agent:{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}`
+
+{% endinfo_block %}
+
+**src/Pyz/Yves/AgentPage/AgentPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\AgentPage;
+
+use SprykerShop\Yves\AgentPage\AgentPageDependencyProvider as SprykerAgentPageDependencyProvider;
+use SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage\CustomerUpdateSessionPostImpersonationPlugin;
+
+class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
+{
+    /**
+     * @return list<\SprykerShop\Yves\AgentPageExtension\Dependency\Plugin\SessionPostImpersonationPluginInterface>
+     */
+    protected function getSessionPostImpersonationPlugins(): array
+    {
+        return [
+            new CustomerUpdateSessionPostImpersonationPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Log in as an agent.
+2. Start impersonation session as a customer.
+3. Ensure that the customer's session data in storage is created or updated:
+   - If session data is stored in Redis, ensure that the following Redis key exists and contains data:
+     `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`
+   - If session data is stored in a file, ensure that a file in the following path exists and contains data:
+     `data/session/session:customer:{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
@@ -227,6 +275,6 @@ Install the following related features:
 
 | FEATURE                     | INTEGRATION GUIDE                                                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Account Management | [Customer Acount Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
-| Agent Assist                | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html)                              |
-| Agent Assist API            | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-agent-assist-feature-integration.html)  |
+| Customer Account Management | [Customer Acount Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Agent Assist                | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html)                              |
+| Agent Assist API            | [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)  |

@@ -58,7 +58,7 @@ Example:
 suites:
     SuiteName:
         path: path/to/tests
-        class_name: Module{Layer}Tester
+        actor: Module{Layer}Tester
         modules:
             enabled:
                 - \SprykerTest\Shared\Testify\Helper\ConfigHelper

@@ -33,7 +33,7 @@ To create a merchant relation:
 4. Select the business unit owner based on the company you selected and assigned business unit(s) based on the business unit owner.
 5. Once done, click **Save**.
 
-The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a Product Variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html) for more details).
+The merchant is created and can be used to create merchant specific prices (see [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) and [Creating a Product Variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing Merchant Relationships Thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html) for more details).
 ***
 ## Sorting the Merchant Relation Table
 

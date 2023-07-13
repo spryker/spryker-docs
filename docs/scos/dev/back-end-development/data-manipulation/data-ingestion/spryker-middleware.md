@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/spryker-middleware
   - /v1/docs/spryker-middleware
   - /v1/docs/en/spryker-middleware
+  - /spryker-middleware.htm
 ---
 
 ## Overview
@@ -335,7 +336,7 @@ public function provideBusinessLayerDependencies(Container $container)
 {
    $container = parent::provideBusinessLayerDependencies($container);
    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export);
+       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export');
 
        return $commandCollection;
    });
@@ -355,7 +356,7 @@ By default, Middleware supports two strategies:
 
 | STRATEGY | DESCRIPTION |
 | --- | --- |
-| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are mentioned in the mapper configuration from the payload. |
+| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are not mentioned in the mapper configuration from the payload. |
 | SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy copies keys with values which are not mentioned in the mapper configuration from the payload. |
 
 There are five ways to set mapper rules:
@@ -442,7 +443,7 @@ $payload = [
 				'delivery' => [ //DynamicArrayMapRule
 						'delivery',
 						'dynamicItemMap' => [
-							'&locale; => 'is_allowed',
+							'locale' => 'is_allowed',
 						],
 					],
 				'delivery' => [ //ArrayMapRule

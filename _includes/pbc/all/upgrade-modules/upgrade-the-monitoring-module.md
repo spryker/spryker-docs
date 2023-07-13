@@ -2,9 +2,9 @@
 
 ## Upgrading from version 1.* to version 2.*
 
-For BC reasons, the initial version of this module had dependencies to the`spryker/new-relic` and `spryker/new-relic-api` modules.
+For BC reasons, the initial version of this module had dependencies to the `spryker/new-relic` and `spryker/new-relic-api` modules.
 
-In this version, we have removed this hard dependency. If you still want to use New Relic as a monitoring service you can use the `spryker-eco/new-relic` module by running the command:
+In this version, we have removed this hard dependency. If you still want to use New Relic as a monitoring service you can use the `spryker-eco/new-relic` module:
 
 ```bash
 composer require spryker-eco/new-relic
@@ -12,7 +12,7 @@ composer require spryker-eco/new-relic
 
 This will download the New Relic monitoring extension.
 
-To enable the New Relic monitoring extension, add it to  `MonitoringDependencyProvider` in your project:
+To enable the New Relic monitoring extension, add it to `MonitoringDependencyProvider` in your project:
 
 ```php
 <?php
@@ -35,7 +35,7 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 }
 ```
 
-Meanwhile, if you want to log a console command,  modify the `src/Pyz/Zed/Console/ConsoleDependencyProvider.php` file.
+Meanwhile, if you want to log a console command, modify the `src/Pyz/Zed/Console/ConsoleDependencyProvider.php` file:
 
 ```php
 protected function getConsoleCommands(Container $container)
@@ -66,7 +66,7 @@ public function getEventSubscriber(Container $container)
 If you want to record deployments, add the following code to your local configuration:
 
 ```php
-$config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEWRELIC_API_KEY] = 'YOUR_API_KEY';
+$config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_API_KEY] = 'YOUR_API_KEY';
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_DEPLOYMENT_API_URL] = 'https://api.newrelic.com/v2/applications/%s/deployments.json';
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY] = [
 	'store1'    => '12345',
@@ -75,4 +75,8 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 ];
 ```
 
-For more details, see [Performance Monitoring - New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html).
+In order to find ApplicationIDs used in `NEW_RELIC_APPLICATION_ID_ARRAY`, please refer to [Get app and other IDs in New Relic](https://docs.newrelic.com/docs/apis/rest-api-v2/get-started/get-app-other-ids-new-relic-one/#apm).
+
+To get `YOUR_API_KEY` key, please refer to [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/#user-api-key).
+
+For more details, see [Performance Monitoring - New Relic](/docs/pbc/all/miscellaneous/{{site.version}}/third-party-integrations/operational-tools-monitoring-legal/new-relic.html).

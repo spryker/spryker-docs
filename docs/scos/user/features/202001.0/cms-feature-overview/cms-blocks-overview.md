@@ -33,12 +33,12 @@ Blocks help to place content in certain places in your template, so you can easi
 - Developer:
     - [Install and configure a Product Block](/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-product-cms-block.html)
     - [Install and configure a Category Block](/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-category-cms-blocks.html)
-    - [Migrate the CMS Collector module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html)
-    - [Migrate the CMS Block module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-1-to-version-2)
-    - [Migrate the CMS Block Category Connector module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html)
-    - [Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockcategoryconnector-migration-console.html)
-    - [Migrate the CMS Block Collector  module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html)
-    - [Migrate the CMS Block GUI  module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html)
+    - [Migrate the CMS Collector module from version 1.* to version 2.*](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html)
+    - [Migrate the CMS Block module from version 1.* to version 2.*](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-1-to-version-2)
+    - [Migrate the CMS Block Category Connector module from version 1.* to version 2.*](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html)
+    - [Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulecategoryconnector-migration-console.html)
+    - [Migrate the CMS Block Collector  module from version 1.* to version 2.*](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html)
+    - [Migrate the CMS Block GUI  module from version 1.* to version 2.*](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html)
 
 - Back Office User:
     - [Create CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html)

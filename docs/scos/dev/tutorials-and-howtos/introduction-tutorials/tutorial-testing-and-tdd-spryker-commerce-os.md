@@ -54,7 +54,7 @@ paths:
     tests: .
     data: _data
     support: _support
-    log: _output
+    output: _output
 
 coverage:
     enabled: true
@@ -64,7 +64,7 @@ coverage:
 suites:
     Business:
         path: Business
-        class_name: StringReverserBusinessTester
+        actor: StringReverserBusinessTester
         modules:
             enabled:
                 - Asserts

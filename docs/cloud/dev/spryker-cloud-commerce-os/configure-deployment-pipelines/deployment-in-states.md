@@ -12,6 +12,13 @@ redirect_from:
 
 When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states that an application goes through during a deployment, potential issues, and what you need to do to avoid them.
 
+{% info_block infoBox %}
+
+The described issues are directly related to how changes are introduced in a project. You can  easily avoid them by respecting backward compatibility and using feature flags.
+
+{% endinfo_block %}
+
+
 ## Pipelines in SCCOS
 
 To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html).

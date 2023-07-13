@@ -29,7 +29,7 @@ Tax sets can be applied to abstract product, product option and shipment:
 
 | ENTITY | INSTRUCTIONS ON DEFINING TAX SETS FOR THE ENTITY IN THE BACK OFFICE  | DETAILS ON THE IMPORT FILE TO IMPORT TAX SETS FOR THE ENTITY |
 | --- | --- | --- |
-| Abstract product | [Defining prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#defining-prices) | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv) |
+| Abstract product | [Defining prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#defining-prices) | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv) |
 | Product option | [Creating a product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-a-product-option.html#creating-a-product-option) | [File details: product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) |
 | Shipment | [Creating a delivery method](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#creating-a-delivery-method) | [File details: shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
 
@@ -52,7 +52,7 @@ The described values are defined in the **Back Office** > **Taxes** section.
 ![Tax section](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/taxes-section.gif)
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

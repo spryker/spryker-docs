@@ -8,12 +8,10 @@ To start feature integration, overview and install the necessary features:
 
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |
-| Spryker Core | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| CMS          | {{site.version}}  | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html) |
+| Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/cms-pages-rest-api spryker/content-product-abstract-lists-rest-api spryker/cms-pages-content-banners-resource-relationship --update-with-dependencies
@@ -43,17 +41,14 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in the database:
+Make sure the following:
+* The changes have been applied in the database:
 
 | DATABASE ENTRY    | TYPE  | EVENT   |
 | -------------- | ---- | ------ |
 | spy_cms_page.uuid | field | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied in the transfer objects:
+* The changes have been applied in the transfer objects:
 
 | TRANSFER  | TYPE     | EVENT   | PATH |
 | ------------- | ------ | ------ | ----------------------- |
@@ -178,17 +173,17 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `cms-pages` resource is available by sending the request:`GET https://glue.mysprykershop.com/cms-pages`.
+Ensure the following:
+* The `cms-pages` resource is available by sending the request: `GET https://glue.mysprykershop.com/cms-pages`.
+* The `content-product-abstract-lists` resource is available by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists/{% raw %}{{{% endraw %}abstract_product_list_key{% raw %}}}{% endraw %}`.
 
-Make sure that the `content-product-abstract-lists` resource is available by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists/{% raw %}{{{% endraw %}abstract_product_list_key{% raw %}}}{% endraw %}`.
+* The `abstract-products` resource is available with `content-product-abstract-lists` as a parent by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists/{% raw %}{{{% endraw %}abstract_product_list_key{% raw %}}}{% endraw %}/abstract-product`.
 
-Make sure that the `abstract-products` resource is available with `content-product-abstract-lists` as a parent by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists/{% raw %}{{{% endraw %}abstract_product_list_key{% raw %}}}{% endraw %}/abstract-product`.
+* You can retrieve the banners added to a CMS page by sending the request: `GET https://glue.mysprykershop.com/cms-pages?includes=content-banners`
 
-Make sure that you can retrieve the banners added to a CMS page by sending the request: `GET https://glue.mysprykershop.com/cms-pages?includes=content-banners`
+* You can retrieve the product abstract lists added to a CMS page by sending the request:`GET https://glue.mysprykershop.com/cms-pages?includes=content-product-abstract-lists`.
 
-Make sure that you can retrieve the product abstract lists added to a CMS page by sending the request:`GET https://glue.mysprykershop.com/cms-pages?includes=content-product-abstract-lists`.
-
-Make sure that you can retrieve the abstract products added to an abstract product list by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists?includes=abstract-products`.
+* You can retrieve the abstract products added to an abstract product list by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists?includes=abstract-products`.
 
 {% endinfo_block %}
 
@@ -198,5 +193,5 @@ Integrate the following related features:
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ---------- | ----------------- | ---------------------------- |
-| Content items |                                  | [Content Items feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/content-items-feature-integration.html) |
-| CMS           | ✓                                | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html) |
+| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |
+| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |

@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_abstract.csv** file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -56,7 +56,7 @@ For each attribute, where N is a number starting in 1, it is mandatory to have b
 
 The amount of attributes is not limited. 
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_abstract.csv*  file can be downloaded here:
 
 | File | Description |

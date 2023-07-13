@@ -12,7 +12,7 @@ related:
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
   - title: Editing Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
@@ -63,9 +63,9 @@ Gross prices are prices after tax, while net prices are prices before tax.
     On the **Create a Product > Variants** tab, your task is to select at least one super attribute from the list and enter the values that define the difference between your product variants.
 As described in the example, you have a smartphone that goes in three colors. Thus the color is your super attribute.
     1. Select the **color** checkbox.
-    2. Then select red, green, and orange from the drop-down list, or you can start typing the color and select the needed one from autosuggestion (the colors are your concrete products). See the [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) article to know more about super attributes.
+    2. Then select red, green, and orange from the drop-down list, or you can start typing the color and select the needed one from autosuggestion (the colors are your concrete products). See the [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) article to know more about super attributes.
     {% info_block warningBox "Note" %}
-If you are on the Variants tab and do not see the needed super attributes, you can go and create one in the separate tab. See the [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html
+If you are on the Variants tab and do not see the needed super attributes, you can go and create one in the separate tab. See the [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html
 {% endinfo_block %} article.)
  6. Click **Next** or select the **SEO** tab.
  7. **Optionally:** On the **Create a Product > SEO** tab, enter meta information to describe the page's content.

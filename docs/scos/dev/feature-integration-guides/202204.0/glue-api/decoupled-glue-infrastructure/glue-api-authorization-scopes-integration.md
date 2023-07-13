@@ -5,7 +5,7 @@ last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/authorization-scopes-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-scopes-integration.html
 ---
 
 This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
@@ -20,7 +20,7 @@ To start feature integration, overview and install the necessary feature:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html) |
+| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
 
 ### 1) Set up transfer objects
 
@@ -150,4 +150,4 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html).
+To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/{{page.version}}/use-glue-api-authorization-scopes.html).

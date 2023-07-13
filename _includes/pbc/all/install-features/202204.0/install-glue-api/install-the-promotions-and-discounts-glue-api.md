@@ -8,9 +8,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | {{site.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Promotions & Discounts | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/202204.0/promotions-and-discounts-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/202204.0/promotions-and-discounts-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -680,7 +680,7 @@ Verify that the `PromotionItemByQuoteTransferResourceRelationshipPlugin` and `Pr
 
 Prerequisites:
 
-* [Create a discount for the product](/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html). The discount application type should be promotional product.
+* [Create a discount for the product](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html). The discount application type should be promotional product.
 * Create a cart.
 
 Add items to the cart to satisfy the conditions of the discount rule:
@@ -850,7 +850,7 @@ Verify the `DiscountPromotionCartItemExpanderPlugin` and `DiscountPromotionCartI
 
 Prerequisites:
 
-* [Create a discount])(/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html). Discount application type should be promotional product.
+* [Create a discount])(/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html). Discount application type should be promotional product.
 * Create a cart with items that satisfy the conditions of the discount rule.
 * Get a concrete promotional product SKU.
 

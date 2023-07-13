@@ -8,15 +8,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-| Merchant | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Merchant | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-contracts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/merchant-contracts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -56,7 +56,7 @@ Make sure that the following changes by checking your database:
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | MerchantRelationship | class | created | src/Generated/Shared/Transfer/MerchantRelationshipTransfer |
 | SpyMerchantRelationshipEntity | class | created | src/Generated/Shared/Transfer/SpyMerchantRelationshipEntityTransfer |
@@ -100,7 +100,7 @@ mr-010,restrictions-merchant,Sales-under-400,"Sales-under-400"
 mr-011,restrictions-merchant,Sales,Sales;Sales-under-400
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  merchant_relation_key | optional | string | mr-002 | A reference used for the merchant relationship data import. |
 |  merchant_key | mandatory | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |

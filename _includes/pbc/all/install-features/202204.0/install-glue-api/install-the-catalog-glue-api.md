@@ -8,15 +8,13 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Search | {{site.version}} |  |
-| Catalog | {{site.version}} |  |
-| Product | {{site.version}} | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Catalog + Price | {{site.version}} |  |
+| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Search | {{page.version}} |  |
+| Catalog | {{page.version}} |  |
+| Product | {{page.version}} | [Product API feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Catalog + Price | {{page.version}} |  |
 
 ### 1) Install the required modules using Composer
-
-Run the following command to install the required modules:
 
 ```bash
 composer require spryker/catalog-search-rest-api:"^2.1.2" spryker/catalog-search-products-resource-relationship:"^1.1.0" --update-with-dependencies
@@ -33,9 +31,7 @@ Make sure that the following modules are installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
-
-Run the following command to generate transfer changes:
+### 2) Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -64,9 +60,7 @@ Make sure that the following changes have occurred in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
-
-#### Enable resources and relationships
+### 3) Enable resources and relationships
 
 Activate the following plugins:
 
@@ -77,7 +71,8 @@ Activate the following plugins:
 | CatalogSearchResourceRoutePlugin | Registers the `search` resource. | None | Spryker\Glue\CatalogSearchRestApi\Plugin |
 | CatalogSearchSuggestionsResourceRoutePlugin | Registers the `search-suggestions` resource. | None | Spryker\Glue\CatalogSearchRestApi\Plugin |
 
-**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -126,19 +121,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 	}
 }
 ```
+</details>
 
 {% info_block warningBox “Verification” %}
 
-If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoutePlugin` are installed correctly, the following endpoints should now be available:
-`https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
-`https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
+If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoutePlugin` are installed correctly, the following endpoints are available:
+* `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
 
-{% endinfo_block %}
-
-{% info_block warningBox “Verification” %}
-
-To make sure that `CatalogSearchAbstractProductsResourceRelationshipPlugin` and `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` are functioning correctly, do the following:
-Send a request to `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.
-Send a request to `https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.
+Ensure that `CatalogSearchAbstractProductsResourceRelationshipPlugin` and `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` work correctly:
+1. Send a request to `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.
+2. Send a request to `https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.
 
 {% endinfo_block %}

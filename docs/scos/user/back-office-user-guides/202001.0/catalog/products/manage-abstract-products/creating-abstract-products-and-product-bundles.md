@@ -62,11 +62,11 @@ According to the use case described in the Abstract and Concrete Products articl
     On the **Create a Product > Variants** tab, your task is to select at least one super attribute from the list and enter the values that define the difference between your product variants.
     As described in the example, you have a smartphone that goes in three colors. Thus the color is your super attribute.
     1. Select the **color** checkbox.
-    2. Then select red, green, and orange from the drop-down list, or you can start typing the color and select the needed one from autosuggestion (the colors are your concrete products). See  [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) to know more about super attributes.
+    2. Then select red, green, and orange from the drop-down list, or you can start typing the color and select the needed one from autosuggestion (the colors are your concrete products). See  [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) to know more about super attributes.
 
     {% info_block warningBox "Note" %}
 
-    If you are on the Variants tab and do not see the needed super attributes, you can go and create one in the separate tab. See [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for more details.
+    If you are on the Variants tab and do not see the needed super attributes, you can go and create one in the separate tab. See [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) for more details.
     
     {% endinfo_block %}
 

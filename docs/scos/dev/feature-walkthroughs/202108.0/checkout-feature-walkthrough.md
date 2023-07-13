@@ -22,9 +22,9 @@ The following diagram shows the relations of the entities in the order threshold
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|
-| [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) |   |
+| [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
+| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) |   |

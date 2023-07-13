@@ -76,7 +76,7 @@ This will move the address to Unassigned addresses section.
 
 ![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

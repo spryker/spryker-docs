@@ -64,11 +64,11 @@ spryker-sdk --mode=docker /bin/bash
 
 ## SDK helper
 
-Inside the container, you can find the SDK helper with useful commands, shortcuts, and aliases.
+Inside the container, you can find the SDK helper which has useful commands, shortcuts, and aliases.
 
-### Refreshing state after switching to a new branch
+### Refreshing the state after switching to a new branch
 
-To refresh state after switching to a new branch, run the following command:
+To refresh the state of the SDK after switching to a new branch, run the following command:
 
 ```shell
 spryker-sdk --mode=docker sdk --refresh
@@ -102,7 +102,7 @@ For details on the project configuration management, see the [Symfony configurat
 
 ## Troubleshooting issues with the Docker container
 If you face issues with:
-- pulling container from the Docker registry,
+- pulling the container from the Docker registry,
 - file permissions and ownership on files created by the SDK,
 
-you can build your own container from the SDK sources. Refer to [Building flavored Spryker SDKs](/docs/sdk/dev/building-flavored-spryker-sdks.html) for details.
+you can build your own container from SDK sources. Refer to [Building flavored Spryker SDKs](/docs/sdk/dev/building-flavored-spryker-sdks.html) for details.

@@ -15,7 +15,7 @@ This document provides details how to build the frontend part of the Merchant Po
 Spryker uses [webpack](https://webpack.js.org/guides/getting-started/) to build frontend.
 At its core, webpack is a static module bundler for modern JavaScript applications. As webpack processes an application, it builds an internal dependency graph that maps every module that the project requires and generates one or more bundles.
 - All related configs are located in the `/frontend/merchant-portal` folder.
-- The built-in frontend stuff (css, fonts, images, js) is in the `/public/Backoffice/assets` folder.
+- The built-in frontend stuff (css, fonts, images, js) is in the `/public/MerchantPortal/assets` folder.
 
 Modules for Merchant Portal are split into composer modules, and each module has its own application in the form of an Angular Module with Angular+Web Components.
 Every module has an entry point called `entry.ts` that is collected during the build as webpack entries and included in the Merchant Portal build as a chunk.

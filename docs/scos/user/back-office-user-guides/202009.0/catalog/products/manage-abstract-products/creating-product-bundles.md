@@ -26,7 +26,7 @@ For example, if your product is a smartphone, you can set it up to be sold with 
 **To create a product bundle:**
 
 1. Select **Create Bundle Product**.
-2. On the *Create a Product* page, do the procedure described in [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+2. On the *Create a Product* page, do the procedure described in [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 3. Populate the **General**, **Price & Tax**, **SEO**, and **Image** tabs.
 4. Click **Save**.
     The only difference is that you do not define the product variants for the bundle.

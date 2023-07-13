@@ -49,9 +49,9 @@ The *Discontinued* product label is added when you discontinue a product. The la
 The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to learn more.
 
 * *NEW*
-The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn more.
 * *SALE*
-The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn more.
 
 {% info_block infoBox "Prices" %}
 
@@ -155,7 +155,7 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 
 ![Filter product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/filter-labels-yves.png)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

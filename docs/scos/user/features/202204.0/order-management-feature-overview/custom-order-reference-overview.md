@@ -51,16 +51,16 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 ## Custom Order Reference with the RFQ, approval process, and share cart by a link
 If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, you still can add and update the customer order reference for the locked cart.
 
-In the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
+In the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
+When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
 
 
 ## Current constraints
 
 If you added a custom order reference to the cart, submitted a request for quote, and then converted the RFQ to the cart, the custom order reference will be removed. Thus, you will need to add the reference once the RFQ has been converted to the cart.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

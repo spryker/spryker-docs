@@ -31,11 +31,10 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 
 ## Content Management
 
-* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)
-* [Coremedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
-* [E-Spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html)
-* [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)
-* [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html)
+* [Coremedia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/coremedia.html)
+* [E-Spirit](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/e-spirit.html)
+* [Magnolia](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/magnolia.html)
+* [Styla](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/third-party-integrations/styla.html)
 
 ## Customer Service
 
@@ -77,7 +76,6 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 ## Personalization & Cross-Selling
 
 <!--* [8Select](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
 * [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
 * [Nosto](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
@@ -123,11 +121,3 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [ratenkauf by easyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
-
- ## Product Information (PIM/ERP)
-
-* [Akeneo](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo.html)
-* [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
-<!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
-<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->
-<!--* [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)-->

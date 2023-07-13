@@ -9,12 +9,12 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product | {{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} |[Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ## 1) Install required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/product-bundles --update-with-dependencies
@@ -70,7 +70,7 @@ Set up database schema and transfer objects:
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           name="zed"
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-          namespace="OrmZedProductBundleStoragePersistence" package="src.Orm.Zed.ProductBundleStorage.Persistence">
+          namespace="Orm\Zed\ProductBundleStorage\Persistence" package="src.Orm.Zed.ProductBundleStorage.Persistence">
 
     <table name="spy_product_bundle_storage">
         <behavior name="synchronization">
@@ -294,4 +294,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/user/technology-partners/{{site.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |
+| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |

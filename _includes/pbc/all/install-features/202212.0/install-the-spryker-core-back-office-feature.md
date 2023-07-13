@@ -14,7 +14,7 @@ Ensure that the related features are installed:
 
 | NAME                                                                                                             | VERSION          |
 |------------------------------------------------------------------------------------------------------------------|------------------|
-| [Spryker Core](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | {{site.version}} |
+| [Spryker Core](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | {{page.version}} |
 
 
 ## 1) Install the required modules using Composer
@@ -22,7 +22,7 @@ Ensure that the related features are installed:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/spryker-core-back-office:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core-back-office:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

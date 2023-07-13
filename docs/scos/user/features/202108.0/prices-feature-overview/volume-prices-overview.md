@@ -134,11 +134,11 @@ The feature has the following functional constraints which are going to be resol
 
 * Volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)  |
+| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/adding-volume-prices-to-abstract-products.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

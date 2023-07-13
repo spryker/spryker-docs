@@ -1,15 +1,20 @@
 
 
+
+This document describes how to integrate the Comments + Persistent Cart feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Comments + Persistent Cart feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features 
 
-| NAME | VERSION |
-| --- | --- |
-| Comments | {{site.version}} |
-| Persistent Cart | {{site.version}} |
+| NAME | VERSION | INSTALLATION GUIDES|
+| --- | --- | --- |
+| Comments | {{page.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| Persistent Cart | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -51,14 +56,16 @@ Make sure that `QuoteTransfer::commentThread` contains information about comment
 
 ## Install feature frontend
 
+Follow the steps below to install the Comments + Persistent Cart feature frontend.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features 
 
-| NAME | VERSION |
-| --- | --- |
-| Comments | {{site.version}} |
-| Cart | {{site.version}} |
+| NAME | VERSION | INSTALLATION GUIDES|
+| --- | --- | --- |
+| Comments | {{page.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 
 ### 1) Set up behavior
 

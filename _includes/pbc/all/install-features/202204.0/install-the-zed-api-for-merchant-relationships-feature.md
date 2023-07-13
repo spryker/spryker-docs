@@ -12,9 +12,9 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME   | VERSION    | INTEGRATION GUIDE   |
 |-------------------------|-------------------|---------------------------|
-| Zed API                     | {{site.version}}  | [Zed API feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/zed-api-feature-integration.html)                                          |
-| Merchants and Merchant Relations | {{site.version}}  | [Merchants and Merchant Relations feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchants-and-merchant-relations-feature-integration.html) |
-| Spryker Core                    | {{site.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                        |
+| Zed API                     | {{page.version}}  | [Zed API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/zed-api-feature-integration.html)                                          |
+| Merchants and Merchant Relations | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchants-and-merchant-relations-feature.html) |
+| Spryker Core                    | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                        |
 
 ### 1) Install the required modules using Composer
 

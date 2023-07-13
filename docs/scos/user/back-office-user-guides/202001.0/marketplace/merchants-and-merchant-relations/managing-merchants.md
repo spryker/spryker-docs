@@ -47,4 +47,4 @@ This action cannot be undone and will erase all the merchant relations and other
 **What's next?**
 Once you have the merchant record available in the system, you can proceed with creating a merchant relation.
 
-See [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.
+See [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/edit-merchant-relations.html) to know how you create those.

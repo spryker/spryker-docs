@@ -8,15 +8,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Return Management | {{site.version}} | [Return Management feature integration](/docs/scos/dev/feature-integration-guides/202204.0/return-management-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Return Management | {{page.version}} | [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker/sales-returns-rest-api:"{{site.version}}" --update-with-dependencies
+composer require spryker/sales-returns-rest-api:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

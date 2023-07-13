@@ -25,24 +25,3 @@ See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
 ## Integration into Docker-based projects
 
 For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#mariadb).
-
-## Integration into DevVM-based projects
-
-{% info_block warningBox "Warning" %}
-
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
-
-{% endinfo_block %}
-
-To integrate MariaDB into a DevVM-based project:
-
-1. Update Vagrant to version 3.2.0 or higher.
-2. Update `config_*.php` as follows:
-
-```php
-<?php
-$config[PropelConstants::ZED_DB_ENGINE] = PropelConfig::DB_ENGINE_MYSQL;
-$config[PropelConstants::ZED_DB_PORT] = 3306;
-```
-
-You've switched your database engine to MariaDB.

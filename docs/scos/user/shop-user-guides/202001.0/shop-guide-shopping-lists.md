@@ -131,7 +131,7 @@ To share a shopping list:
 
 {% info_block infoBox %}
 
-See [Permissions Management for Shared Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html#permissions-management-for-shared-shopping-lists) to learn more about types of shopping list access rights.
+See [Permissions Management for Shared Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html#permissions-management-for-shared-shopping-lists) to learn more about types of shopping list access rights.
 
 {% endinfo_block %}
 

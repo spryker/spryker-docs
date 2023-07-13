@@ -14,14 +14,15 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This article describes how to add product variants and product images to an existing cart.
+This document describes how to add product variants and product images to an existing cart.
+
 {% endinfo_block %}
 
-## Prerequisites:
+## Prerequisites
 
-Before starting make sure you are familiar with the concept of Spryker Super Attributes.
+Before starting make sure you are familiar with the concept of [Spryker Super Attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html#super-attributes).
 
-## UI Changes:
+## UI Changes
 
 Cart now supports changing the items in the cart by modifying their attributes. If we have a wrong T-Shirt size in the cart we will be able to change it.
 
@@ -41,7 +42,7 @@ To support  images in a cart,  install the optional module `ProductImageCartConn
 composer require spryker/product-image-cart-connector
 ```
 
-This module will provide the `ProductImageCartPlugin` that you will have to register later in your shop `CartDependencyProvider` like in a snippet below:
+This module provides `ProductImageCartPlugin` that you have to register later in your shop `CartDependencyProvider` like in the following snippet:
 
 ```php
 /**
@@ -83,8 +84,9 @@ Make sure the `ExpandBundleItemsWithImagesPlugin` is registered after the `Expan
 
 #### Cart variants
 
-Spryker provides the `CartVariant` module for this purpose.
-To install the `CartVariant` module, run:
+For this purpose, Spryker provides the `CartVariant` module.
+
+Install the `CartVariant` module:
 
 ```bash
 composer require spryker/cart-variant

@@ -1,6 +1,6 @@
 
 
-For example let's create alternative checkout workflow which would only save order in database without any additional checks or calculations.
+For example, let's create an alternative checkout workflow that only saves an order in a database without any additional checks or calculations.
 
 To define an alternative checkout workflow, add a constant to `\Pyz\Shared\Checkout\CheckoutConstants`:
 
@@ -32,7 +32,7 @@ protected function getCheckoutWorkflows(Container $container)
 }
 ```
 
-After this, pass workflow id as a second parameter in the `placeOrder()` call of `CheckoutFacade`.
+After this, in the `placeOrder()` call of `CheckoutFacade`, pass the workflow ID as a second parameter 
 
 ```bash
 $this->getCheckoutFacade()->placeOrder($quoteTransfer, CheckoutConstants::KEY_WORKFLOW_ALTERNATIVE_CHECKOUT);

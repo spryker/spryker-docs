@@ -8,14 +8,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Customer Account Management | {{site.version}} |
-| ProductImage | {{site.version}} |
-| ProductsRestApi | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Customer Account Management | {{page.version}} |
+| ProductImage | {{page.version}} |
+| ProductsRestApi | {{page.version}} |
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/product-image-sets-rest-api:"^1.0.3" --update-with-dependencies

@@ -5,20 +5,43 @@ template: concept-topic-template
 redirect_from: 
     - /docs/sdk/dev/sdk-conventions.com
 ---
-The Spryker SDK aims to provide a single entry point to accelerate your productivity working with Spryker. The Spryker SDK provides tools to validate the existing code, implement new features with Spryker, and go live with your project.
+The Spryker SDK aims to provide a single entry point to accelerate your productivity while working with Spryker. The Spryker SDK provides tools to validate existing code, implement new features with Spryker, and go live with your project.
+
+## Requirements
+- Make sure an auth file is available for the [Composer](https://getcomposer.org/doc/articles/authentication-for-private-packages.md).
+- If you're using a MacOS computer, install **Coreutils**.
+  ```shell
+  brew install coreutils
+  ```
+- Installed [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
 ## Installation
 
-1. Ensure the `auth` file is available for composer. See [Authentication for privately hosted packages and repositories](https://getcomposer.org/doc/articles/authentication-for-private-packages.md) for details.
-2. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
-3. Download the `installer.sh` file from [the latest release](https://github.com/spryker-sdk/sdk/releases).
-4. Run `installer.sh </path/to/install/sdk/in>`.
-5. Optional: To add spryker-sdk as an alias if you use Bash or Zsh, execute `"add alias spryker-sdk='</path/to/install/sdk/in>/bin/spryker-sdk.sh'" >> ~/.bashrc && source ~/.bashrc` for Bash or `"alias spryker-sdk=\"</path/to/install/sdk/in>/bin/spryker-sdk.sh\"" >> ~/.zshrc  && source ~/.zshrc` for Zsh.c
+### Manual installation
+- Download the **installer.sh** from the latest release at https://github.com/spryker-sdk/sdk/releases.
+- Run 
+  ```shell
+  installer.sh </path/to/install/sdk/in>
+  ```
+- Follow the installer's instructions.
+- Alias **spryker-sdk** should be set and **SPRYKER_SDK_PATH** env variable should be exported.
+
+
+### Installation command
+Install sdk into the current dir.
+```shell
+PATH_TO_SDK=$(pwd) \
+&& curl -fL github.com/spryker-sdk/sdk/releases/latest/download/installer.sh -O \
+&& chmod +x installer.sh \
+&& ./installer.sh "${PATH_TO_SDK}" \
+&& rm -f installer.sh \
+&& if [ -e ~/.zshrc ]; then source ~/.zshrc; else source ~/.bashrc; fi; \
+echo "Current SDK version: $(spryker-sdk --version)"
+```
 
 ## Getting started
 
-Run `sdk:setting:set` to set up your local settings.
+To get an overview on the available capabilities of the Spryker SDK please run **spryker-sdk list**.
 
-To get an overview of the available capabilities of the Spryker SDK, run `spryker-sdk list`.
-
-You can execute any task by running `spryker-sdk <task-id>` from the project root folder. To get information about the options that you can pass into the task, run `bin/consolespryker-sdk <task-id> -h`.
+Any task can be executed by running **spryker-sdk \<task-id\>** from project root folder.
+Using **bin/console spryker-sdk \<task-id\> -h** will give a description on what options can be passed into the task.

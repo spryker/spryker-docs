@@ -44,7 +44,7 @@ The following table describes the attributes you enter and select when editing g
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | Name that's displayed for the product on the Storefront. |
 | Description | Description that's displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html).</li></ul><br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html).</li></ul><br> You can either select no dates or both. |
 
 ## Editing prices of an abstract product
 
@@ -64,7 +64,7 @@ The following table describes the attributes you enter and select when editing p
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
+|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) the price you enter here. |
 |Default<br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 |Add Product Volume Price<br>Edit Product Volume Price| This option lets you define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||&check;|

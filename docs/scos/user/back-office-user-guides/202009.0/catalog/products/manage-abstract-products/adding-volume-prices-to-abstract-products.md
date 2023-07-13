@@ -15,7 +15,7 @@ This document describes how to add volume prices to abstract products.
 
 To start working with abstract products, go to  **Catalog > Products**.
 
-Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product).
+Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/editing-abstract-products.html#editing-prices-of-an-abstract-product).
 
 Review the attributes description before you start, or look up the necessary information as you go through the process. 
 

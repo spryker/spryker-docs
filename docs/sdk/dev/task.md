@@ -108,7 +108,7 @@ To update all of the existing tasks, run the following command:
 ```bash
 sdk:update:all
 ```
-After you run this command, the [lifecycle events](/docs/sdk/dev/task-lifecycle-management.html) are triggered.
+After you run this command, [lifecycle events](/docs/sdk/dev/task-lifecycle-management.html) are triggered.
 
 ## How to use tasks in the workflows
 

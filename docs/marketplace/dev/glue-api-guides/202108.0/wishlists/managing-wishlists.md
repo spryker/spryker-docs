@@ -20,7 +20,7 @@ To create a wishlist, send the request:
 
 ### Request
 
-| HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
+| HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ---------- | -------- | -------- | -------------- |
 | Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
@@ -94,7 +94,7 @@ To retrieve all wishlists of a customer, send the request:
 | GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products | Retrieve all the wishlists of a customer with wishlist items and respective concrete products. |
 | GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels. |
 
-| HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
+| HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
 | Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 

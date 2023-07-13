@@ -65,7 +65,7 @@ Services:
 * [Risk Check](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
 * [Store Order](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

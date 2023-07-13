@@ -365,7 +365,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 </details>
 
 
-| Column | REQUIRED? | Data Type | Data Example |
+| Column | REQUIRED | Data Type | Data Example |
 | --- | --- | --- | --- |
 | `business_unit_key` | mandatory | string | `Sales_Department` |
 | `username` | mandatory | string | `user_1` |
@@ -739,7 +739,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 </details>
 
 
-| Column | REQUIRED? | Data Type | Data Example |
+| Column | REQUIRED | Data Type | Data Example |
 | --- | --- | --- | --- |
 | `connection_name` | mandatory | string | `Client 1 - cXml - User 1` |
 | default_supplier_id | mandatory | string | `323332` |
@@ -1194,7 +1194,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `connection_name` | mandatory | string | `Client 1 - cXml - User 1` | Name of the PunchoutCatalog connection. |
 | `business_unit_key` | mandatory | string | `Sales_Department` | Allows customers to configure in which BU the new company user should be created (dynamic login mode) |

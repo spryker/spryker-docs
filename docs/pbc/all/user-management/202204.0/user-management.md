@@ -2,7 +2,6 @@
 title: Users Management
 description: User Management capability lets you manage Back Office users.
 last_updated: Aug 20, 2021
-description:
 template: concept-topic-template
 ---
 
@@ -29,11 +28,23 @@ An agent assist is a Back Office user that has permissions to act on customers' 
 
 For more details about the agent assist feature, see the [Agent assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html)
 
-## Related Business User articles
+## Installation
+
+To install the User Management capability, do the following:
+
+1. Install the required modules:
+```bash
+composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
+```
+2. Follow the integration guides for the individual features:
+* [User Management](#related-developer-documents).
+* [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html#related-developer-documents)
+
+## Related Business User documents
 
 | OVERVIEWS | BACK OFFICE USER GUIDES|
 | - |---|
-| [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) | ["Best practices: Manage users and their permissions with roles and groups"](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)|
+| [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) | [Best practices: Manage users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)|
 | | [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/create-user-roles.html) |
 | | [Edit user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/edit-user-roles.html) |
 | | [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html) |
@@ -43,9 +54,8 @@ For more details about the agent assist feature, see the [Agent assist feature o
 | | [Assign and deassign customers from users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html) |
 | | [Delete users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/delete-users.html) |
 
-## Related Developer articles
+## Related Developer documents
 
-| OVERVIEWS | GLUE API GUIDES |
+| OVERVIEWS | INSTALLATION GUIDES |
 | - | - |
-| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html) | [Search by customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html) |
-| | [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) |
+| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html) | [Install the ACL feature](/docs/pbc/all/user-management/202204.0/install-and-upgrade/install-the-acl-feature.html)

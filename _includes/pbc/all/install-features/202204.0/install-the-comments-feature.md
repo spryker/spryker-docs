@@ -1,20 +1,27 @@
 
 
+
+This document describes how to integrate the [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html) into a Spryker project.
+
 ## Install feature core
 
+Follow the steps below to install the Comments feature core.
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+
+Install the required modules:
 
 ```bash
-composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -29,12 +36,12 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
+
 Add the following configuration to your project:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 | CommentConfig::getAvailableCommentTags() | Used to allow saving comment tags to the database. | Pyz\Shared\Comment |
-| A regular expression (See below in `config/Shared/config_default.php`) | Used to close access for not logged customers. | None |
 
 **src/Pyz/Zed/Comment/CommentConfig.php**
 
@@ -62,7 +69,7 @@ class CommentConfig extends SprykerCommentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you add/remove comment tag (listed in config to comment is allowed.)
+Make sure that when you add or remove a comment tag listed in the config to comment is allowed.
 
 {% endinfo_block %}
 
@@ -77,13 +84,13 @@ $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^(/en|/de)?/comment($|/
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `mysprykershop.com/comment` with a guest user redirects to login page.
+Make sure that `mysprykershop.com/comment` with a guest user redirects to the login page.
 
 {% endinfo_block %}
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -100,10 +107,6 @@ Make sure that the following changes were applied by checking your database:
 | spy_comment_tag | table | created |
 | spy_comment_thread | table | created |
 | spy_comment_to_comment_tag | table | created |
-|   |   |   |
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects:
 
@@ -124,6 +127,7 @@ Make sure that the following changes in transfer objects:
 {% endinfo_block %}
 
 ### 4) Add translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -143,7 +147,7 @@ comment.validation.error.comment_tag_not_available,Comment tag not available.,en
 comment.validation.error.comment_tag_not_available,Kommentar-Tag nicht verfügbar.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -155,9 +159,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 
 {% endinfo_block %}
 
-### 5) Set up behavior
-
-#### Set up comment workflow
+### 5) Set up comment workflow
 
 Enable the following behaviors by registering the plugins:
 
@@ -196,18 +198,20 @@ Make sure that `spy_comment`, `spy_comment_thread`, and `spy_comment_to_comment_
 
 ## Install feature frontend
 
+Follow the steps below to install the Comments feature frontend.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/comments: "^201907.0" --update-with-dependencies
@@ -264,7 +268,7 @@ comment_widget.tags.important,Important,en_US
 comment_widget.tags.important,Wichtig,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -276,9 +280,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 
 {% endinfo_block %}
 
-### 3) Enable controllers
-
-#### Route List
+### 3) Enable controllers: Route List
 
 Register the following route provider plugins:
 
@@ -312,7 +314,9 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the `CommentWidgetRouteProviderPlugin`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`<br>Make sure that the error flash message was shown.
+Verify `CommentWidgetRouteProviderPlugin`:
+1. Log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`.
+2. Make sure that the error flash message is shown.
 
 {% endinfo_block %}
 
@@ -348,7 +352,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

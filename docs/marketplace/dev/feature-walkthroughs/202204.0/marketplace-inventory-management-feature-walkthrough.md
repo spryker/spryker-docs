@@ -38,7 +38,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/7be7c0cf-b4d5-41c5-bfc3-e30b76efce31.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES |DATA IMPORT |
 |---------|---------|

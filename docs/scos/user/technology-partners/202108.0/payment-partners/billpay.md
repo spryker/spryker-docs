@@ -49,7 +49,7 @@ You will also need your Merchant ID, Portal ID and security key - all provided b
 
 Additional important information can be found in the Billpay documentation - [https://www.billpay.de/en/shopintegration/techdocs/](https://www.billpay.de/en/shopintegration/techdocs/).
 
-To integrate Billpay make sure you familiar with concept of [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html).
+To integrate Billpay make sure you familiar with concept of [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html).
 
 ## Installation
 

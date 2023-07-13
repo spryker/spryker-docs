@@ -13,8 +13,8 @@ redirect_from:
 With the CMS draft feature the Back Office user can create drafts of CMS pages without affecting the current live version of the page. It is possible to preview draft version of content before publishing it to see how the page will look like when it is live. This article will tell you how to enable the preview draft page feature.
 
 ## Prerequisites
-* Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/scos/dev/module-migration-guides/migration-guide-cms.html).
-* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html).
+* Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html).
+* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html).
 * If you do not have the `spryker/cms-collector` module installed, register your CMS page data expander plugins to the `spryker/cms` module in the `CmsDependencyProvider` dependency provider.
 
 <details open>

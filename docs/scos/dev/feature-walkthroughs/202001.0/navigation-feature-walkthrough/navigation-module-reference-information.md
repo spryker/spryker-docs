@@ -13,9 +13,9 @@ related:
   - title: Managing Navigation Elements
     link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html
   - title: Migration Guide - Navigation
-    link: docs/scos/dev/module-migration-guides/migration-guide-navigation.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
   - title: Migration Guide - NavigationGui
-    link: docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
   - title: Navigation Module Integration
     link: docs/scos/dev/feature-integration-guides/page.version/navigation-module-integration.html
 ---

@@ -1,5 +1,5 @@
 ---
-title: File details - customer.csv
+title: "File details: customer.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-customercsv
@@ -12,6 +12,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-customer.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `customer.csv` file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
@@ -24,22 +27,22 @@ data:import:customer
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | customer_reference | &check; | String |  Must be unique and end with a number. | Reference of the Customer. |
 | locale_name |  | String |  | Locale name. |
-| phone |  | String |  | Customer’s phone number. |
-| email | &check; | String | Must be unique. | Customer’s e-mail. |
+| phone |  | String |  | Customer's phone number. |
+| email | &check; | String | Must be unique. | Customer's e-mail. |
 | salutation | &check; | String | Values must be:<ul><li>Mr</li><li>Mrs</li><li>Dr, or </li><li>Ms</li></ul> | The value must be within the list of values predefined in the `spyCustomerTableMap.php` file. | Used salutation. |
-| first_name | &check; | String |   | Customer’s first name. |
-| last_name | &check; | String |   | Customer’s last name. |
-| company |  | String |   | Customer’s Company |
-| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer’s gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
-| date_of_birth |  | Date |   | Customer’s date of birth. |
-| password |  | String |  | Customer’s password. |
-| registered |  | Date |  | Customer’s date of registration. |
+| first_name | &check; | String |   | Customer's first name. |
+| last_name | &check; | String |   | Customer's last name. |
+| company |  | String |   | Customer's Company |
+| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer's gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
+| date_of_birth |  | Date |   | Customer's date of birth. |
+| password |  | String |  | Customer's password. |
+| registered |  | Date |  | Customer's date of registration. |
 
 
 ## Import file dependencies
@@ -48,7 +51,7 @@ This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

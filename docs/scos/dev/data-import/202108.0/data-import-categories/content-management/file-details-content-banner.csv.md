@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-content-bannercsv
   - /docs/file-details-content-bannercsv
   - /docs/en/file-details-content-bannercsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `content_banner.csv` file to configure [Content Banner](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.

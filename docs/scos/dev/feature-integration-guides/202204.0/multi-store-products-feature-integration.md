@@ -17,9 +17,9 @@ related:
   - title: Migration Guide - Touch
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
   - title: Migration Guide - Product
-    link: docs/scos/dev/module-migration-guides/migration-guide-product.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Migration Guide - ProductManagement
-    link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->

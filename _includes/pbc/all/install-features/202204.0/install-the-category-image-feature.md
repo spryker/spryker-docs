@@ -1,22 +1,27 @@
 
 
+
+This document describes how to integrate the Category Image feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Category Image feature core.
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -32,8 +37,8 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-
 ### 2) Set up database schema and transfer objects
+
 Adjust the schema definition so entity changes will trigger events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
@@ -68,7 +73,7 @@ Adjust the schema definition so entity changes will trigger events.
     </database>
 ```
 
-Set up synchronization queue pools so that non-multistore entities (not store specific entities) are synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml**
 
@@ -88,7 +93,7 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
     </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -106,11 +111,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_category_image_set_to_category_image | table | created |
 | spy_category_image_storage | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox “Verification” %}
-
-
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
 | CLASS PATH | EXTENDS |
@@ -124,10 +124,6 @@ Make sure that propel entities have been generated successfully by checking thei
 | src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php | Spryker\\Zed\\CategoryImageStorage\\Persistence\\Propel\\AbstractSpyCategoryImageStorage |
 | src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php | Spryker\\Zed\\CategoryImageStorage\\Persistence\\Propel\\AbstractSpyCategoryImageStorageQuery |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes have been implemented in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -138,14 +134,15 @@ Make sure that the following changes have been implemented in transfer objects:
 
 {% endinfo_block %}
 
-
 ### 3) Configure export to Redis
+
+To configure export to Redis, you need to complete all the steps provided in the following sections.
 
 #### Set up event listeners
 
 {% info_block infoBox %}
 
-In this step, you will enable publishing of table changes (create, edit, delete to `spy_category_image_storage` and synchronization of data to Storage.)
+In this step, you enable publishing of table changes (create, edit, delete to `spy_category_image_storage` and synchronization of data to Storage.)
 
 {% endinfo_block %}
 
@@ -231,7 +228,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox “Verification” %}
 
-Make sure that when a category image is created, updated or deleted, it is exported or removed from Redis accordingly.
+Make sure that when a category image is created, updated, or deleted, it is exported or removed from Redis accordingly.
 
 {% endinfo_block %}
 
@@ -263,7 +260,7 @@ Make sure that when a category image is created, updated or deleted, it is expor
 
 {% info_block infoBox %}
 
-In this step, category template will be configured to be able to display category images.
+In this step, the category template is configured to display category images.
 
 {% endinfo_block %}
 
@@ -279,9 +276,9 @@ template_name,template_path
 | COLUMN | IS REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_name | mandatory | string | My category template | A human readable name of the category template. |
-| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
+| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | A category template path that is used to display a category page. |
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import:category-template
@@ -290,6 +287,7 @@ console data:import:category-template
 {% info_block warningBox “Verification” %}
 
 Make sure that in the database the configured data is added to the `spy_category_template` table.
+
 {% endinfo_block %}
 
 ### 5) Set up behavior
@@ -305,7 +303,8 @@ Add the following plugins to your project:
 | CategoryImageFormPlugin | Extends create/edit category forms with category image set related fields. | None | \Spryker\Zed\CategoryImageGui\Communication\Plugin |
 | CategoryImageFormTabExpanderPlugin | Extends create/edit category tabs with category image set related item. | None | \Spryker\Zed\CategoryImageGui\Communication\Plugin |
 
-**src/Pyz/Zed/Category/CategoryDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -388,6 +387,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox “Verification” %}
 
@@ -397,21 +397,23 @@ Make sure that category image handling is integrated successfully by going to Ze
 
 ## Install feature frontend
 
+Follow the steps below to install the Category Image feature frontend.
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME | VERSION |
-| --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -425,6 +427,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up widgets
+
 Register the following global widgets:
 
 | WIDGET | DESCRIPTION | NAMESPACE |

@@ -254,6 +254,7 @@ task :check_uc do
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
     /docs\/pbc\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/uc\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

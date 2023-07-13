@@ -47,4 +47,5 @@ The following sequence diagram shows how sending and receiving push notification
 
 |INSTALLATION GUIDES | 
 |---------|
-| [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/202400.0/install-the-push-notification-feature.html) |
+| [Install the Push Notification feature](/docs/uc/all/fulfillment-app/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) |
+ 

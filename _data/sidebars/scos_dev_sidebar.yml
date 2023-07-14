@@ -2861,6 +2861,10 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+    - title: Marketplace data import
+      url: /docs/scos/dev/data-import/marketplace-data-import.html
+      include_versions:
+      - "202212.0"
     - title: "Tutorial: Replace a default data importer with the queue data importer"
       url: /docs/scos/dev/data-import/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html
       include_versions:

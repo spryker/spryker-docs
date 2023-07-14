@@ -255,7 +255,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
@@ -846,73 +845,42 @@ entries:
             - "202204.0"
       - title: Data import
         url: /docs/marketplace/dev/data-import/data-import.html
+        include_versions:
+        - "202108.0"
+        - "202204.0"
         nested:
           - title: Marketplace setup
             url: /docs/marketplace/dev/data-import/marketplace-setup.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-profile.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-profile-address.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-open-hours-week-day-schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant_open_hours_date_schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-category.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-category.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-store.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-oms-process.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-order-status.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-order-status.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant_product_approval_status_default.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html
@@ -921,21 +889,12 @@ entries:
 
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant_user.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-user.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-offer-shopping-list.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
@@ -944,45 +903,24 @@ entries:
 
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-product-offer-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-offer-validity.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-validity.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: combined-merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-product.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-price.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-price.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
       - title: Front-end
         url: /docs/marketplace/dev/front-end/front-end.html

@@ -1,13 +1,13 @@
 ---
 title: "Oryx: Color system"
-description: Color design tokens are used for a consistent design system through the components in Oryx applications
+description: Color design tokens are used for a consistent design system throughout the components in Oryx applications
 last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
-An important part of the application user interface are the colors. Colors are used everywhere throughout components and are important for a good user experience. To ensure that you can adjust the colors to your needs throughout the application, a configurable color system is provided.
+Colors are used everywhere throughout UI components and are important for a good user experience. To enable you to adjust colors to your needs throughout the application, Oryx provides a configurable color system.
 
-The color system lets you set up the color values globally as well as override them per component. Components do not define _values_ for colors directly in their CSS but use _design tokens_. Design tokens are (CSS) variables that are provided by themes, which you can customize in your project.
+The color system lets you set up color values globally and override them per component. Components do not define _values_ for colors directly in their CSS but use _design tokens_. Design tokens are CSS variables that are provided by themes, which you can customize in your project.
 
 The color system comes with semantic color types and a consistent number of color steps. This results in a consistent naming system throughout all the components. The actual colors for those groups are not relevant for the color system and are part of the theme configuration. This lets you configure the colors in a global theme.
 

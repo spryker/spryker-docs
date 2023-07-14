@@ -1032,9 +1032,9 @@ Follow the steps to check the data in Redis:
 
 This section describes how to read the data from Redis.
 
-To read the data from Redis, create the following:
+To read the data from Redis, follow these steps:
 
-Create client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`
+1. Create the client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`:
 
 ```php
 <?php
@@ -1054,7 +1054,7 @@ interface HelloWorldStorageClientInterface
 }
 ```
 
-Create client in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClient.php`
+2. Create the client in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClient.php`
 ```php
 <?php
 
@@ -1082,7 +1082,7 @@ class HelloWorldStorageClient extends AbstractClient implements HelloWorldStorag
 }
 ```
 
-Add the factory `Pyz/Client/HelloWorldStorage/HelloWorldStorageFactory.php` for `$this->getFactory()` method call within the `HelloWorldStorageClient` methods
+3. Add the factory `Pyz/Client/HelloWorldStorage/HelloWorldStorageFactory.php` for `$this->getFactory()` method call within the `HelloWorldStorageClient` methods:
 
 ```php
 <?php
@@ -1123,9 +1123,7 @@ class HelloWorldStorageFactory extends AbstractFactory
 }
 ```
 
-The HelloWorldFactory needs a dependency provider to handle dependencies required by the redis / reader classes
-
-Add `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php`
+4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the Redis and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider:
 
 ```php
 <?php
@@ -1191,7 +1189,7 @@ class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
 }
 ```
 
-Update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storage.transfer.xml` to add an array of items that can be returned
+5. To add an array of items that can be returned, update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storage.transfer.xml`: 
 
 ```xml
 <?xml version="1.0"?>
@@ -1208,12 +1206,13 @@ Update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storag
 </transfers>
 ```
 
-Run the transfer generate command
+	1. Run the following command:
+
 ```bash
     docker/sdk console transfer:generate
 ```
 
-- Add `Pyz\Client\Reader\MessageStorageReaderInterface.php` interface
+	2. Add the `Pyz\Client\Reader\MessageStorageReaderInterface.php` interface:
 
 ```php
 <?php
@@ -1232,8 +1231,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
-
-- Add `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class:
+	3. Add `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class:
 
 ```php
 <?php
@@ -1293,7 +1291,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
 }
 ```
 
-Add an endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`
+	4. Add an endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`:
 
 ```php
     /**
@@ -1318,11 +1316,10 @@ Update the routes for back office using the following command:
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
-You should now have another endpoint to get message from redis storage via the newly created HelloWorldClient
+You should now have another endpoint to get a message from the Redis storage via the newly created HelloWorldClient.
 
-Check the redis-commander to get an id of a message object that actually exists. 
+Check the redis-commander to get ID of a message object that actually exists. Then access the message via the following endpoint:
 
-Then access it via this endpoint 
 ```
 http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]
 ```

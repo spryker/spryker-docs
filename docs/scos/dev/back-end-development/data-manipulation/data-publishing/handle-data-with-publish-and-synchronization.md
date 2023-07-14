@@ -1,7 +1,7 @@
 ---
 title: Handle data with Publish and Synchronization
 description: Use the tutorial to understand how Publish and Synchronization work and how to export data using a particular example.
-last_updated: April 22, 2022
+last_updated: July 14, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/handling-data-with-publish-and-synchronization
 originalArticleId: 67658ab1-da03-4cec-a059-2cd5d41c48df

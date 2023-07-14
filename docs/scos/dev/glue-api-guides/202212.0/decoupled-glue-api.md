@@ -69,7 +69,7 @@ Glue executes a few steps in order to execute a request:
 
 Upon receiving an API request, an API context transfer is created where we set up basic request data like host, path, and method. It can be used to select a required application from the provided applications list. After that, `ApiApplicationProxy` is used to bootstrap and run the selected application. If the selected application plugin is the instance of `RequestFlowAgnosticApiApplication`, the direct flow is used, and no additional Glue logic is executed. It's useful if we need to create a simple API application that just returns result of execution as is. If the application plugin is the instance of `RequestFlowAwareApiApplication`, we execute the whole request flow.
 
-### Application bootstraping and running
+### Application bootstrapping and running
 Upon receiving an API request, an API context transfer will be created where we setup basic request data like host, path and method. It can be used to select a required application from provided applications list. After that `ApiApplicationProxy` will be used to bootstrap and run selected application. If selected application plugin is instance of `RequestFlowAgnosticApiApplication` the direct flow will be used and no additional Glue logic will be executed. It's useful if we need to create a simple API application that will just return result of execution as is.
 In the case if application plugin is instance of `RequestFlowAwareApiApplication` we execute a whole request flow.
 ### Request flow preparation

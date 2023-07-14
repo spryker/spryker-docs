@@ -100,8 +100,7 @@ task :check_cloud do
     /docs\/scu\/.+/,
     /docs\/pbc\/.+/,
     /docs\/acp\/.+/,
-    /docs\/sdk\/.+/,
-    /docs\/uc\/.+/
+    /docs\/sdk\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -214,8 +213,7 @@ task :check_pbc do
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
+    /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

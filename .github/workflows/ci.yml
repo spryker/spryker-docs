@@ -257,7 +257,7 @@ jobs:
 
       - run: bundle exec rake check_pbc
 
-    link_validation_check_sdk:
+  link_validation_check_sdk:
     name: Links validation (check_sdk)
     needs: jekyll_build
     runs-on: ubuntu-latest

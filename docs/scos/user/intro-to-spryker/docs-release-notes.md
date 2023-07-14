@@ -25,8 +25,8 @@ In June 2023, we have added and updated the following pages:
 ## Updated pages
 - [Shipment feature integration guide](/docs/pbc/all/carrier-management/202400.0/unified-commerce/install-and-upgrade/install-the-shipment-feature.html).
 - [Environments overview](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html).
-- [Spryker Core Back Office + Warehouse User Management feature integration guide](/docs/pbc/all/back-office/202400.0/unified-commerce/install-the-spryker-core-back-office-warehouse-user-management-feature.html).
-- [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202400.0/unified-commerce/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html).
+- [Spryker Core Back Office + Warehouse User Management feature integration guide](/docs/pbc/all/back-office/202400.0/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html).
+- [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 - [Warehouse picking feature integration guide](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/push-notification/202400.0/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html).
 - [Product offer shipment feature integration guide](/docs/pbc/all/offer-management/202400.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).

@@ -619,17 +619,17 @@ public function getSecurityHeaders(): array
 use Spryker\Shared\Http\HttpConstants;
 
 $config[HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' = true,
-   'max-age' = 3600,
+   'public' => true,
+   'max-age' => 3600,
 ];
 
 $config[HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' = true,
-   'max-age' = 3600,
+   'public' => true,
+   'max-age' => 3600,
 ];
 
 $config[HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' = true,
-   'max-age' = 3600,
+   'public' => true,
+   'max-age' => 3600,
 ];
 ```

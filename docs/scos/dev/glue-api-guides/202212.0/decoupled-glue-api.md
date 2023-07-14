@@ -44,7 +44,7 @@ Decoupled Glue API infrastructure is implemented the same layer of Spryker Comme
 
 Logically, the Glue layer can be divided into separate parts:
 * **GlueApplication module**
-  <br>The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (e.g. `http://mysprykershop.com/resource/1`), select a proper application based on bootstrap file, does content negotiation and select applicable convention if one exists, proxy request to the proper convention or uses default flow. Also this module is used for the fallback to the old Glue API.
+  <br>The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (e.g. `http://mysprykershop.com/resource/1`), selects a proper application based on bootstrap file, does content negotiation and selects applicable convention and executes request flow. Also this module is used for the fallback to the old Glue API.
 
 * **GlueStorefrontApiApplication module**
   <br>The `GlueStorefrontApiApplication` module is used to wire everything related to the Glue Storefront API resources/routes processing. All resources, routes, application plugins and the rest of required plugin stacks are wired into this module.
@@ -57,15 +57,15 @@ Logically, the Glue layer can be divided into separate parts:
 
 
 * **Resource modules**
-  <br>Each `Resource` module implements a separate resource or a set of resources for specific application. Resource module MUST be dedicated to specific application, but can use different conventions. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed via RPC call) for the Glue Storefront API application or it can communicate with a Zed directly via Facades for the Glue Backend API application. The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a `GlueResponseTransfer` object. All formatting and processing will be done by convention or selected application module.
+  <br>A `Resource` module implements a separate resource or a set of resources for specific application. Resource module MUST be dedicated to specific application, but can use different conventions. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed via RPC call) for the Glue Storefront API application or it can communicate with a Zed directly via Facades for the Glue Backend API application. The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a `GlueResponseTransfer` object. All formatting and processing will be done by convention or selected application module.
 
 * **Relationship modules**
-  <br>Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data of related resources. OOTB only applicable for resources that are using JSON:API convention.
+  <br>Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data from related resources. OOTB only applicable for resources that are using JSON:API convention.
 
-To be able to process API requests correctly, Resource modules need to implement resource plugins that facilitate routing of requests to the module. Such plugins need to be registered in the application they are related to. Also plugins must implement a convention resource interface if it must implement one.
+To be able to process API requests correctly, the `Resource` modules need to implement resource plugins that facilitate routing of requests to the module. Such plugins need to be registered in the application they are related to. Also plugins must implement a convention resource interface if it must implement one.
 
 ## Request flow
-
+Glue executes a few steps in order to execute a request:
 ### Application bootstraping and running
 Upon receiving an API request, an API context transfer will be created where we setup basic request data like host, path and method. It can be used to select a required application from provided applications list. After that `ApiApplicationProxy` will be used to bootstrap and run selected application. If selected application plugin is instance of `RequestFlowAgnosticApiApplication` the direct flow will be used and no additional Glue logic will be executed. It's useful if we need to create a simple API application that will just return result of execution as is.
 In the case if application plugin is instance of `RequestFlowAwareApiApplication` we execute a whole request flow.

@@ -47,5 +47,5 @@ The following sequence diagram shows how sending and receiving push notification
 
 |INSTALLATION GUIDES | 
 |---------|
-| [Install the Push Notification feature](/docs/uc/all/fulfillment-app/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) |
+| [Install the Push Notification feature](/docs/pbc/all/push-notification/{{page.version}}/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html) |
  

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Push Notification feature](/docs/uc/all/fulfillment-app/page.version/push-notification-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Push Notification feature](/docs/pbc/all/push-notification/{{page.version}}/unified-commerce/push-notification-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 

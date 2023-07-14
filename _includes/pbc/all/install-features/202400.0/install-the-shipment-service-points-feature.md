@@ -15,7 +15,7 @@ To start feature integration, integrate the required features:
 | NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Shipment       | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/enhanced-click-and-collect/install-and-upgrade/install-the-shipment-feature.html)  |
-| Service Points | {{page.version}} | [Service Points feature integration](/docs/uc/all/enhanced-click-collect/{{page.version}}/install-and-upgrade/install-features/install-the-service-points-feature.html) |
+| Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/service-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html) |
 
 ## 1) Install the required modules using Composer
 

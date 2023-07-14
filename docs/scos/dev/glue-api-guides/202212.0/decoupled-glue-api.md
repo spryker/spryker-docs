@@ -28,7 +28,7 @@ Old Glue API was tightly coupled with a JSON:API convention, and all resources h
 
 ### New type of application: Glue Backend API application
 
-With the current setup out of the box, we have an additional Glue Backend API (BAPI) application that is meant to be an API application for our Back Office. This means that with this new application, infrastructure has direct access to Zed facades from BAPI resources. Also, out of the box, we have a separate `/token` resource specifically for BAPI that uses Back Office users' credentials to issue a token for BAPI resource.
+With the current setup out of the box, we have an additional Glue Backend API (BAPI) application that is meant to be an API application for our Back Office. This means that with this new application, infrastructure has direct access to Zed facades from BAPI resources. Also, out of the box, we have a separate `/token` resource specifically for BAPI that uses Back Office users' credentials to issue a token for a BAPI resource.
 
 For more details about the difference between SAPI and BAPI, refere to [Backend and storefront API module differences](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-and-storefront-api-module-differences.html).
 
@@ -59,10 +59,12 @@ Logically, the Glue layer can be divided into separate parts:
 * **Resource modules**: A `Resource` module implements a separate resource or a set of resources for a specific application. `Resource` module *must* be dedicated to a specific application but can use different conventions. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search, or Spryker Commerce OS (Zed through RPC call) for the Glue Storefront API application, or it can communicate with a Zed directly through Facades for the Glue Backend API application. The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a `GlueResponseTransfer` object. All formatting and processing are done by the convention or selected application module.
 * **Relationship modules**: Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data from related resources. OOTB only applicable for resources that are using JSON:API convention.
 
-To be able to process API requests correctly, Resource modules need to implement resource plugins that facilitate the routing of requests to the module. Such plugins need to be registered in the application they are related to. Also plugins must implement a convention resource interface if it must implement one.
+To be able to process API requests correctly, the `Resource` modules need to implement resource plugins that facilitate the routing of requests to the module. Such plugins need to be registered in the application they are related to. Also plugins must implement a convention resource interface if it must implement one.
 
 ## Request flow
+
 Glue executes a few steps in order to execute a request:
+
 ### Application bootstrapping and running
 
 Upon receiving an API request, an API context transfer is created where we set up basic request data like host, path, and method. It can be used to select a required application from the provided applications list. After that, `ApiApplicationProxy` is used to bootstrap and run the selected application. If the selected application plugin is the instance of `RequestFlowAgnosticApiApplication`, the direct flow is used, and no additional Glue logic is executed. It's useful if we need to create a simple API application that just returns result of execution as is. If the application plugin is the instance of `RequestFlowAwareApiApplication`, we execute the whole request flow.

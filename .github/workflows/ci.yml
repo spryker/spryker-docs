@@ -257,35 +257,7 @@ jobs:
 
       - run: bundle exec rake check_pbc
 
-  link_validation_check_uc:
-    name: Links validation (check_uc)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          ruby-version: 2.6
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: $-check_uc-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_uc
-
-  link_validation_check_sdk:
+    link_validation_check_sdk:
     name: Links validation (check_sdk)
     needs: jekyll_build
     runs-on: ubuntu-latest
@@ -367,9 +339,6 @@ jobs:
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scu_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_uc_all.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
 

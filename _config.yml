@@ -170,17 +170,6 @@ defaults:
     values:
       sidebar: "pbc_all_sidebar"
       role: "all"
-  -
-     scope:
-       path: "docs/uc"
-     values:
-       product: "uc"
-  -
-    scope:
-      path: "docs/uc/all"
-    values:
-      sidebar: "uc_all_sidebar"
-      role: "all"
 
 versions:
   '201811.0': '201811.0'
@@ -261,10 +250,10 @@ versioned_categories:
       - tax-management
       - user-management
       - warehouse-management-system
-  uc:
-    all:
-      - enhanced-click-collect
-      - fulfillment-app
+      - push notification
+      - warehouse-picking
+      - service-points
+
 
 
 # these are defaults used for the front matter for these file types
@@ -279,7 +268,6 @@ sidebars:
   - acp_user_sidebar
   - scu_dev_sidebar
   - pbc_all_sidebar
-  - uc_all_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -316,8 +304,6 @@ algolia:
       title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
-    - name: 'uc_all'
-      title: 'Unified Commerce'
 sass:
     sass_dir: css
     style: compressed

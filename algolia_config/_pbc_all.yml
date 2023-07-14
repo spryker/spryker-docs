@@ -14,4 +14,3 @@ algolia:
     - docs/fes/dev/**/*.md
     - docs/acp/user/**/*.md
     - docs/sdk/dev/**/*.md
-    - docs/uc/all/**/*.md

@@ -12,7 +12,7 @@ template: howto-guide-template
 
 {% endinfo_block %}
 
-`PaaS` uses an `AWS S3 bucket` for storing heavy assets or other files, the size of `S3` is flexible therefore it should not be
+`Spryker Cloud` uses an `AWS S3 bucket` for storing heavy assets or other files, the size of `S3` is flexible therefore it should not be
 an issue to migrate heavy assets to other files.
 
 1. Request the customer to provide archived assets and upload that to the `S3 bucket` on your own **OR** ask
@@ -26,5 +26,5 @@ an issue to migrate heavy assets to other files.
     ```bash
     console publisher:trigger-events -r product_abstract_image,product_concrete_image,configurable_bundle_template_image,category_image
     ```
-4. Due to infra side is fully managed by Spryker a ticket about adding CDN should be created in [SalesForce portal](http://support.spryker.com)
-    to Operation team. All further communication with a requestor is carried out in scope of a ticket.
+4. Due to infra side is fully managed by Spryker you should create a ticket about adding CDN in [SalesForce portal](http://support.spryker.com)
+    to the Operation team. All further communication with a requestor is carried out in scope of a ticket.

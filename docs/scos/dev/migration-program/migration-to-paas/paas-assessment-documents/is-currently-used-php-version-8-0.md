@@ -14,7 +14,7 @@ template: howto-guide-template
 
 ## Description
 
-In this assessment part, we need to verify whether the project code is compatible with PHP 8.0.
+In this assessment part, you need to verify whether the project code is compatible with PHP 8.0.
 
 There are two options **PHPCompatibility** and **Rector** it’s up to the developer which one to choose.
 

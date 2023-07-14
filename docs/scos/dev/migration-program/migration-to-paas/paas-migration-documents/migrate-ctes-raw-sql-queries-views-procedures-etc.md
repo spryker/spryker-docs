@@ -22,7 +22,7 @@ in place if the performance is efficient enough.
     * temporary tables
     * materialised views
     * etc.
-4. Procedures and Functions have to be doubled checked individually since there might be compatibility issues between DB providers
+4. Procedures and Functions have to be doubled checked individually since there might be compatibility issues between RDBMSs
     different from `MariaDB`.
 
 ## Example of similar CTE and bulk insert query

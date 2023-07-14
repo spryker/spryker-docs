@@ -18,4 +18,4 @@ template: howto-guide-template
     * Add to Cart;
     * Checkout (test new steps);
     * Place order.
-* Ensure tests are running in the pipeline and green.
+* Ensure tests are running in the pipeline and are green.

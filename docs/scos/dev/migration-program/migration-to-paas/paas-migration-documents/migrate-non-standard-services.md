@@ -13,15 +13,15 @@ template: howto-guide-template
 {% endinfo_block %}
 
 The current statement is that all non-standard services used on the project have to be dropped and the application has to be
-reworked to be compatible with `Spryker PaaS` services.
+reworked to be compatible with `Spryker Cloud` services.
 
-In case it’s not possible to drop usage of some services that are not supported by `Spryker PaaS` then the issue
-has to be escalated further to Solution Architecture department. Since in this case we should think about usage of
+In case it’s not possible to drop usage of some services that are not supported by `Spryker Cloud` then you should escalate the issue
+further to Solution Architecture department. Since in this case we should think about usage of
 third-party services via `VPN` or `AWS private link`.
 
 Depending on a location (on-premise or another cloud provider) of such a non-standard service and necessity to be a part of
 current solution we can propose to initiate a `Site-To-Site VPN` connection between these areas. It is reachable in a way of
-creating a ticket about setting `S2S VPN` connection in [SalesForce portal](http://support.spryker.com) to Operation team.
+creating a ticket about setting `S2S VPN` connection in [SalesForce portal](http://support.spryker.com) to the Operation team.
 
 Here is the example of information is required to be filled out in a form to proceed a ticket:
 

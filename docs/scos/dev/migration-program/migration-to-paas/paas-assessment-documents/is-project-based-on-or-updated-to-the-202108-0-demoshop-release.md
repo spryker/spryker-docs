@@ -44,7 +44,7 @@ Backend
 1. No project customization:
     1. Approximately 2h to 4h per major.
     2. For a per-module estimation, see the the needed modules' upgrade guides.
-    3. Approximately 0.25h per minor or patch.
+    3. Approximately 1h per minor or patch.
 2. Project customization:
     1. Approximately {1.i} * PCM * PODM per major.
     2. Approximately {1.ii} * PCM * PODM per major

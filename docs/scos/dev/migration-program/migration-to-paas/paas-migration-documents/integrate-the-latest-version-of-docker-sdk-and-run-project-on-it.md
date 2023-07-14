@@ -16,7 +16,7 @@ template: howto-guide-template
     and the following [example](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
 2. Boot local development environment based on newly created deploy file and ensure that the local env is working well.
 3. In sync with the cloud engineer check the naming of hosts for services per each environment.
-4. Deploy other environments in Spryker PaaS and ensure they are running well with new/updated boot files.
+4. Deploy other environments in Spryker Cloud and ensure they are running well with new/updated boot files.
    The first deployment of any environment has to be in destructive mode.
 5. Custom applications have to be added by DevOps, the following instructions are needed in case it is not part of Spryker applications:
     * app name;
@@ -33,4 +33,4 @@ template: howto-guide-template
     * Backoffice;
     * Backend-gateway;
     * Merchant-portal.
-7. Custom services have to be replaced by default with Spryker PaaS services, see details [here](/docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-non-standard-services.html).
+7. Custom services have to be replaced by default with Spryker Cloud services, see details [here](/docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-non-standard-services.html).

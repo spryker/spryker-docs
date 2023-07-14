@@ -34,7 +34,7 @@ If a service wasn't migrated from on-premise to cloud and remain to work on a cu
 
 The shop switching assumes a recreation of existing url references from on-premise to cloud. Based on who manages the domain zone (customer or Spryker), the switching time may vary.
 
-Because the infrastructure is fully managed by Spryker, a ticket about endpoints update should be created in [SalesForce portal](http://support.spryker.com) to Operation team. All further communication with a customer is carried out by any preferable channel, such as slack/email etc
+Because the infrastructure is fully managed by Spryker, you should create a ticket about endpoints update in [SalesForce portal](http://support.spryker.com) to Operation team. All further communication with a customer is carried out by any preferable channel, such as slack/email etc
 
 ## Formula for calculating the migration effort
 

@@ -17,6 +17,8 @@ $config[ServiceApiConstants::API_SECRET] = env('SERVICE_API_SECRET');
 By default, the `env()` function is used to get the environment variable value, but a custom
 function may be used for this purpose too.
 
+Environment variables should be created in the cloud environments by a Spryker Cloud engineer. To request environment variables creation you should create a ticket in [SalesForce portal](http://support.spryker.com) to the Operation team.
+
 ## Resources for assessment
 
 * Backend

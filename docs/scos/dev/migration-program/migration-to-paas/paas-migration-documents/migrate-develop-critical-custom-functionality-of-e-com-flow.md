@@ -18,4 +18,4 @@ template: howto-guide-template
     * Data export;
     * Data recalculation;
     * etc.
-* Ensure tests are running in the pipeline and green.
+* Ensure tests are running in the pipeline and are green.

@@ -3310,6 +3310,12 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
+        - title: Styling
+          include_versions:
+          - "202212.0"
+          nested:
+          - title: "Color system"
+            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
       include version:

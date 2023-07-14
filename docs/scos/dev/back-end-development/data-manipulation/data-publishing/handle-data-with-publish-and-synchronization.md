@@ -50,7 +50,7 @@ Follow these steps to create the following:
 1. Create the `HelloWorld` module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing.
 
 2. Create `spy_hello_world_message` table in the database:<br>
-   a. In the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
+   1. In the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
 
     ```xml
     {% raw %}
@@ -66,13 +66,13 @@ Follow these steps to create the following:
     {% endraw %}
 
     ```
-    b. Based on the schema, create the table in the database:
+    2. Based on the schema, create the table in the database:
 
     ```bash
     console propel:install
     ```
     
-    c. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
+    3. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
 
 {% info_block infoBox "Naming conventions" %}
 
@@ -511,7 +511,7 @@ To synchronize data with Redis, an intermediate Zed database table is required. 
 
 Follow the steps to create the table:
 
-1. Create the table schema file in `Pyz\Zed\HelloWorldStorage\Persistance\Propel\Schema\spy_hello_world_storage.schema.xml`:
+1. Create the table schema file in `Pyz\Zed\HelloWorldStorage\Persistance\Propel\Schema\spy_hello_world_storage.schema.xml`.
 
 ```xml
 {% raw %}
@@ -640,7 +640,7 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
 }
 ```
 
-2. Create the `HelloWorldStorageDeleter` model and implement the following method:
+2. Create the `HelloWorldStorageDeleter` model and implement the following method.
 
 ```php
 <?php
@@ -686,7 +686,7 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
 }
 ```
 
-3. Create the two facade methods to expose the model:
+3. Create the two facade methods to expose the model.
 
 ```php
 <?php
@@ -886,7 +886,7 @@ This section describes how to create the queue to synchronize data to Redis.
 
 To create the `sync.storage.hello` queue, do the following:
 
-1. Adjust `\Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig`:
+1. Adjust `\Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig`.
 
 ```php
 namespace Pyz\Shared\HelloWorldStorage;
@@ -906,7 +906,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
 }   
 ```
 
-2. Adjust the RabbitMQ configuration with the newly introduced queue:
+2. Adjust the RabbitMQ configuration with the newly introduced queue.
 
 ```php
 <?php
@@ -939,7 +939,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
-3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`:
+3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`.
 
 ```php
 <?php
@@ -964,7 +964,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-1. To update the table, run the `IndexController` class created in [step 4](#publishers) 
+4. To update the table, run the `IndexController` class created in [step 4](#publishers).
 
 {% info_block warningBox "Verification" %}
 
@@ -1034,7 +1034,7 @@ This section describes how to read the data from Redis.
 
 To read the data from Redis, follow these steps:
 
-1. Create the client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`:
+1. Create the client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`.
 
 ```php
 <?php
@@ -1054,7 +1054,8 @@ interface HelloWorldStorageClientInterface
 }
 ```
 
-2. Create the client in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClient.php`
+2. Create the client in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClient.php`.
+
 ```php
 <?php
 
@@ -1082,7 +1083,7 @@ class HelloWorldStorageClient extends AbstractClient implements HelloWorldStorag
 }
 ```
 
-3. Add the factory `Pyz/Client/HelloWorldStorage/HelloWorldStorageFactory.php` for `$this->getFactory()` method call within the `HelloWorldStorageClient` methods:
+3. Add the factory `Pyz/Client/HelloWorldStorage/HelloWorldStorageFactory.php` for `$this->getFactory()` method call within the `HelloWorldStorageClient` methods.
 
 ```php
 <?php
@@ -1123,7 +1124,7 @@ class HelloWorldStorageFactory extends AbstractFactory
 }
 ```
 
-4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the Redis and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider:
+4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the Redis and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider.
 
 ```php
 <?php
@@ -1206,13 +1207,13 @@ class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
 </transfers>
 ```
 
-	1. Run the following command:
+6. Run the following command:
 
 ```bash
     docker/sdk console transfer:generate
 ```
 
-	2. Add the `Pyz\Client\Reader\MessageStorageReaderInterface.php` interface:
+7. Add the `Pyz\Client\Reader\MessageStorageReaderInterface.php` interface.
 
 ```php
 <?php
@@ -1231,7 +1232,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
-	3. Add `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class:
+8. Add the `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class.
 
 ```php
 <?php
@@ -1291,7 +1292,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
 }
 ```
 
-	4. Add an endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`:
+9. Add thr endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`.
 
 ```php
     /**
@@ -1311,14 +1312,15 @@ class MessageStorageReader implements MessageStorageReaderInterface
     }
 ```
 
-Update the routes for back office using the following command: 
+Update the routes for the Back Office using the following command: 
+
 ```
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
 You should now have another endpoint to get a message from the Redis storage via the newly created HelloWorldClient.
 
-Check the redis-commander to get ID of a message object that actually exists. Then access the message via the following endpoint:
+Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint:
 
 ```
 http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]

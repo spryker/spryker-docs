@@ -8,7 +8,7 @@ This document describes how to import taxes for shipment methods via  `shipment.
 
 ## Import file dependencies
 
-[tax.csv](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-tax-sets.html)
+[tax.csv](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
 
 
 ## Import file parameters

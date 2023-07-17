@@ -60,6 +60,6 @@ By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data
 
 ## Next steps
 
-* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-address.csv.html)
-* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-store.csv.html)
-* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html)
+* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-address.csv.html)
+* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-store.csv.html)
+* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-product-stock.csv.html)

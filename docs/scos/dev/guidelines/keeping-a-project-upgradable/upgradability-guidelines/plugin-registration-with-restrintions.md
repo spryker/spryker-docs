@@ -58,7 +58,7 @@ Below is an example of the annotation syntax needed to register a plugin only af
 PLUGINS REGISTRATION WITH RESTRICTIONS CHECKER
 ==============================================
 
-Message: Restriction rule does not match the pattern "/^\* - (before|after) \{@link (?<class>.+)\}( .*\.|)$/"
+Message: Restriction rule does not match the pattern "/^\* - (before|after) \{@link (?<class>.+)\}( .*\.|)$/".
 Target:  CategoryDependencyProvider.php
 ```
 

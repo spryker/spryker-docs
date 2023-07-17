@@ -6,6 +6,7 @@ redirect_from:
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html
    - /docs/pbc/all/payment-service-providers/payone/payone.html
+   - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
 ---
 
 The [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) app lets your customers make payments with common payment methods, such as credit card and PayPal.
@@ -79,6 +80,3 @@ When customers pay with PayPal, a shop owner can do the following:
 ## Next steps
 
 [Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
-
-
-

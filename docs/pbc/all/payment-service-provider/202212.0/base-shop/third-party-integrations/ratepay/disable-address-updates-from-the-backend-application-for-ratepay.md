@@ -6,13 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-disable-address-updates
 originalArticleId: a9f1412a-e53b-4ff3-b0af-a79370c3db2e
 redirect_from:
-  - /2021080/docs/ratepay-disable-address-updates
-  - /2021080/docs/en/ratepay-disable-address-updates
-  - /docs/ratepay-disable-address-updates
-  - /docs/en/ratepay-disable-address-updates
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-how-to-disable-address-updates-from-the-backend-application.html
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/ratepay-how-to-disable-address-updates-from-the-backend-application.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html

@@ -6,13 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-direct-debit
 originalArticleId: 5b1a8407-02f1-418e-9f69-98643224753c
 redirect_from:
-  - /2021080/docs/ratepay-direct-debit
-  - /2021080/docs/en/ratepay-direct-debit
-  - /docs/ratepay-direct-debit
-  - /docs/en/ratepay-direct-debit
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html

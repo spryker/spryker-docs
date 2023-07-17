@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-integration-into-project
 originalArticleId: 8fa76fed-cfb3-4524-a570-79fa5d1e4859
 redirect_from:
-  - /2021080/docs/ratenkauf-integration-into-project
-  - /2021080/docs/en/ratenkauf-integration-into-project
-  - /docs/ratenkauf-integration-into-project
-  - /docs/en/ratenkauf-integration-into-project
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
 related:
   - title: ratenkauf by easyCredit
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html

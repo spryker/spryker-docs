@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-cash-on-delivery
 originalArticleId: e68a44fe-8cfe-4199-a3d0-537c04107688
 redirect_from:
-  - /2021080/docs/payone-cash-on-delivery
-  - /2021080/docs/en/payone-cash-on-delivery
-  - /docs/payone-cash-on-delivery
-  - /docs/en/payone-cash-on-delivery
   - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/manual-integration/payone-cash-on-delivery.html
 related:
   - title: PayOne - Authorization and Preauthorization Capture Flows
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html

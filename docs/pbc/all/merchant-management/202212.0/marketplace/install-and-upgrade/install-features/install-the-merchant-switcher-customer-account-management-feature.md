@@ -1,5 +1,5 @@
 ---
-title: Merchant Switcher + Customer Account Management feature integration
+title: Install the Merchant Switcher + Customer Account Management feature
 last_updated: Jan 06, 2021
 description: This document describes the process how to integrate the Merchant Switcher + Customer Account Management feature into a Spryker project.
 template: feature-integration-guide-template

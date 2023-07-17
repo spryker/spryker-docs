@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-v1-1
 originalArticleId: ffd53037-46a0-410e-941c-eb9cd4c3ff22
 redirect_from:
-  - /2021080/docs/payone-v1-1
-  - /2021080/docs/en/payone-v1-1
-  - /docs/payone-v1-1
-  - /docs/en/payone-v1-1
   - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/bs-payone.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/manual-integration/payone-manual-integration.html
 related:
   - title: PayOne - Integration into the SCOS Project
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html

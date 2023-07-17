@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-risk-check-address-check-scos
 originalArticleId: 38b985f4-811e-4e38-8f43-c7863cb5add2
 redirect_from:
-  - /2021080/docs/payone-risk-check-address-check-scos
-  - /2021080/docs/en/payone-risk-check-address-check-scos
-  - /docs/payone-risk-check-address-check-scos
-  - /docs/en/payone-risk-check-address-check-scos
   - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/manual-integration/payone-risk-check-and-address-check.html
 related:
   - title: PayOne - Cash on Delivery
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html

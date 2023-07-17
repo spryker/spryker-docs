@@ -395,6 +395,8 @@ entries:
                     nested:
                       - title: Marketplace Cart
                         url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-marketplace-cart-feature.html
+                      - title: Cart + Marketplace Product
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-cart-marketplace-product-feature.html
                       - title: Cart + Marketplace Product Offer
                         url: /docs/pbc/all/cart-and-checkout/marketplace/install/install-features/install-the-cart-marketplace-product-offer-feature.html
                       - title: Cart + Marketplace Product Options
@@ -2630,6 +2632,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html
                       - title: Marketplace Product
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html
+                      - title: Marketplace Product + Cart
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-cart-feature.html                        
                       - title: Marketplace Product + Inventory Management
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html
                       - title: Marketplace Product + Marketplace Product Offer

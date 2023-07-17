@@ -6,13 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-payment-workflow
 originalArticleId: 9e0777dc-e660-4a9c-b2e0-0b8cf7adabb2
 redirect_from:
-  - /2021080/docs/ratepay-payment-workflow
-  - /2021080/docs/en/ratepay-payment-workflow
-  - /docs/ratepay-payment-workflow
-  - /docs/en/ratepay-payment-workflow
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/ratepay-payment-workflow.html
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-payment-workflow.html
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/ratepay-payment-workflow.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/ratepay-payment-workflow.html
 related:
   - title: RatePay facade methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html

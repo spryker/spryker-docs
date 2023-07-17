@@ -4,6 +4,7 @@ description: Learn how you can disconnect the Payone app from your Spryker shop
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/disconnect-payone.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
 ---
 
 Disconnecting Payone from your store removes its payment methods from the store configuration. However, you can disconnect Payone only if there are no open orders that still use the Payone payment methods.

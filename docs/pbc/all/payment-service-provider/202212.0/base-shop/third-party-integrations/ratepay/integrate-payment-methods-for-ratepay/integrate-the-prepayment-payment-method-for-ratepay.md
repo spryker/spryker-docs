@@ -6,13 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-prepayment
 originalArticleId: a4c45f04-f178-4d8f-aee3-79cc0a24106d
 redirect_from:
-  - /2021080/docs/ratepay-prepayment
-  - /2021080/docs/en/ratepay-prepayment
-  - /docs/ratepay-prepayment
-  - /docs/en/ratepay-prepayment
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-prepayment-payment-method-for-ratepay.html
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-prepayment-payment-method-for-ratepay.html
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-prepayment-payment-method-for-ratepay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html

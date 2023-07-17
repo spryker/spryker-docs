@@ -6,13 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-facade
 originalArticleId: eabf3483-95ab-4ced-91e5-4dd2dd2211db
 redirect_from:
-  - /2021080/docs/ratepay-facade
-  - /2021080/docs/en/ratepay-facade
-  - /docs/ratepay-facade
-  - /docs/en/ratepay-facade
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/ratepay-facade-methods.html
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-facade-methods.html
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/ratepay-facade-methods.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/ratepay-facade-methods.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html

@@ -6,13 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay-structure-diag
 originalArticleId: dfe4133a-18c0-447b-b932-14d3ff410480
 redirect_from:
-  - /2021080/docs/ratepay-structure-diag
-  - /2021080/docs/en/ratepay-structure-diag
-  - /docs/ratepay-structure-diag
-  - /docs/en/ratepay-structure-diag
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
   - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html
 related:
   - title: RatePay facade methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html

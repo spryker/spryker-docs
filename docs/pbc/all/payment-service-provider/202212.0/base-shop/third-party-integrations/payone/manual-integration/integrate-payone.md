@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-integration-with-project-scos
 originalArticleId: a86017aa-d5ce-44cf-b568-6cda73261766
 redirect_from:
-  - /2021080/docs/payone-integration-with-project-scos
-  - /2021080/docs/en/payone-integration-with-project-scos
-  - /docs/payone-integration-with-project-scos
-  - /docs/en/payone-integration-with-project-scos
   - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/manual-integration/integrate-payone.html
 related:
   - title: PayOne - Cash on Delivery
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html
@@ -32,7 +29,7 @@ related:
 
 {% info_block errorBox %}
 
-There is currently an issue when using giftcards with PayOne. Our team is developing a fix for it.
+PayOne is not compatible with gift cards. We will update this document once the issue is resolved.
 
 {% endinfo_block %}
 

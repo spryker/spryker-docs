@@ -309,13 +309,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Switcher + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Switcher + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
@@ -327,7 +325,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html

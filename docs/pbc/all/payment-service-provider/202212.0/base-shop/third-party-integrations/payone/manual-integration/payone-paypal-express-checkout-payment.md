@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-paypal-express-checkout-scos
 originalArticleId: 77d504fd-b731-4eb8-86a0-5435630900f8
 redirect_from:
-  - /2021080/docs/payone-paypal-express-checkout-scos
-  - /2021080/docs/en/payone-paypal-express-checkout-scos
-  - /docs/payone-paypal-express-checkout-scos
-  - /docs/en/payone-paypal-express-checkout-scos
   - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-paypal-express-checkout-payment.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/manual-integration/payone-paypal-express-checkout-payment.html
 ---
 
 The payment using PayPal requires a redirect to the PayPal website. When customers are redirected to PayPal's website, they have to authorize and after that either cancel or validate the transaction.

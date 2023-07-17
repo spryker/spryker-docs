@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay
 originalArticleId: 76f600d9-1b7f-4a0a-81e6-4c2dc466063c
 redirect_from:
-  - /2021080/docs/ratepay
-  - /2021080/docs/en/ratepay
-  - /docs/ratepay
-  - /docs/en/ratepay
   - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratepay/ratepay.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html

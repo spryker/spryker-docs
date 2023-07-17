@@ -6,12 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-by-easycredit-installation-and-configuration
 originalArticleId: fb3e79f2-a44a-464f-8b12-29f294b1adfd
 redirect_from:
-  - /2021080/docs/ratenkauf-by-easycredit-installation-and-configuration
-  - /2021080/docs/en/ratenkauf-by-easycredit-installation-and-configuration
-  - /docs/ratenkauf-by-easycredit-installation-and-configuration
-  - /docs/en/ratenkauf-by-easycredit-installation-and-configuration
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
 related:
   - title: ratenkauf by easyCredit
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html

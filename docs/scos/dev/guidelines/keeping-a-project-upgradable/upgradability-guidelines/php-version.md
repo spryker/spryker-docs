@@ -57,7 +57,7 @@ PHP VERSION CHECKER
 ===================
 
 Message: Composer json PHP constraint 7.2 does not match allowed PHP versions.
-Target:  <path_to_project>/composer.json
+Target: `{PATH_TO_PROJECT}/composer.json`
 ```
 
 A `composer.json` file that produces the error message:

@@ -19,7 +19,7 @@ MULTIDIMENSIONAL ARRAY
 ======================
 
 Message: Reached max level of nesting for the plugin registration in the {FormDependencyProvider::getPlugins()}.
-         The maximum allowed nesting level is 2. Please, refactor code, otherwise it will cause upgradability issues in the future.
+         The maximum allowed nesting level is 2. Refactor the code; otherwise, it can cause upgradability issues in the future.
 Target:  Pyz\Yves\Module\ModuleDependencyProvider
 ```
 

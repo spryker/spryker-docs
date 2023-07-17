@@ -29,7 +29,7 @@ The values are based on design tokens, which can be configured in a theme. Theme
 
 {% info_block infoBox "Reading tip" %}
 
-Setting the _root font size_ is an exception in Oryx. Oryx tries to not have any opinion about the root element, and only provides styles to the `oryx-app` component. However, the `rem` unit requires a setup of the root font-size in the web page. To ensure a configurable approach, Oryx uses the `ThemeMetaInitializer` to accomplish this.
+Setting the _root font size_ is an exception in Oryx. Oryx tries to not have any opinion about the root element, and only provides styles to the `oryx-app` component. However, the `rem` unit requires the root font-size to be set up in the web page. To ensure a configurable approach, Oryx uses the `ThemeMetaInitializer` to accomplish this.
 
 {% endinfo_block %}
 

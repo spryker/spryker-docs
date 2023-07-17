@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
+  - /docs/pbc/all/warehouse-management-system/202212.0/base-shop/import-data/file-details-warehouse.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
@@ -58,6 +59,6 @@ By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data
 
 ## Next steps
 
-* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-address.csv.html)
-* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-store.csv.html)
-* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html)
+* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-address.csv.html)
+* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-store.csv.html)
+* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-product-stock.csv.html)

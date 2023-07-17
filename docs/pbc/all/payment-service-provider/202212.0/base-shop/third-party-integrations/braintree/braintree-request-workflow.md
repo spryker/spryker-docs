@@ -6,12 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/braintree-workflow
 originalArticleId: 9cfdb1b2-c552-40f0-9856-f39230b79e90
 redirect_from:
-  - /2021080/docs/braintree-workflow
-  - /2021080/docs/en/braintree-workflow
-  - /docs/braintree-workflow
-  - /docs/en/braintree-workflow
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/braintree/braintree-request-workflow.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/braintree/braintree-request-workflow.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/braintree/braintree-request-workflow.html
 related:
   - title: Installing and configuring Braintree
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html

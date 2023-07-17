@@ -5,12 +5,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-installation-and-configuration
 originalArticleId: 7d6fd0b4-0e5e-41ac-9788-0361d3252a58
 redirect_from:
-  - /2021080/docs/computop-installation-and-configuration
-  - /2021080/docs/en/computop-installation-and-configuration
-  - /docs/computop-installation-and-configuration
-  - /docs/en/computop-installation-and-configuration
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/installing-and-configuring-computop.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/installing-and-configuring-computop.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/install-and-configure-computop.html
 ---
 
 This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.

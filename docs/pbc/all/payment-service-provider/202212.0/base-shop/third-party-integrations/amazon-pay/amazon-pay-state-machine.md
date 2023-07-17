@@ -6,13 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-state-machine
 originalArticleId: 95d68099-5bb5-4423-8945-b0cdbcc01384
 redirect_from:
-  - /2021080/docs/amazon-pay-state-machine
-  - /2021080/docs/en/amazon-pay-state-machine
-  - /docs/amazon-pay-state-machine
-  - /docs/en/amazon-pay-state-machine
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/amazon-pay-state-machine.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/amazon-pay/amazon-pay-state-machine.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/amazon-pay/amazon-pay-state-machine.html
 related:
   - title: Handling orders with Amazon Pay API
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html

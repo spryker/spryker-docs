@@ -6,12 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-paydirekt
 originalArticleId: a4c9059f-8244-4c34-b7e9-9bf7d5998f2e
 redirect_from:
-  - /2021080/docs/computop-paydirekt
-  - /2021080/docs/en/computop-paydirekt
-  - /docs/computop-paydirekt
-  - /docs/en/computop-paydirekt
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html

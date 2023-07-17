@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/arvato-risk-check
 originalArticleId: 41dea1fe-a5d6-4641-b29a-7dc2091129fe
 redirect_from:
-  - /2021080/docs/arvato-risk-check
-  - /2021080/docs/en/arvato-risk-check
-  - /docs/arvato-risk-check
-  - /docs/en/arvato-risk-check
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/arvato/arvato-risk-check.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/arvato/arvato-risk-check.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato-store-order.html

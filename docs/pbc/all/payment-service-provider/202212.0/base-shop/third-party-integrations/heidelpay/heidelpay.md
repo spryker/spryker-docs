@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/heidelpay
   - /industry_partners/payment/heidelpay/heidelpay.htm
   - /docs/scos/user/technology-partners/202212.0/payment-partners/heidelpay.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/heidelpay/heidelpay.html
 ---
 
 ## Partner Information

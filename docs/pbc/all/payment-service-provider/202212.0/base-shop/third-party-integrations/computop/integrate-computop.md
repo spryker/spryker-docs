@@ -5,11 +5,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-integration-into-project
 originalArticleId: dee3b189-78b2-4dd2-ae97-45506831a9b8
 redirect_from:
-  - /2021080/docs/computop-integration-into-project
-  - /2021080/docs/en/computop-integration-into-project
-  - /docs/computop-integration-into-project
-  - /docs/en/computop-integration-into-project
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-computop.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/integrate-computop.html
 ---
 
 {% info_block errorBox %}

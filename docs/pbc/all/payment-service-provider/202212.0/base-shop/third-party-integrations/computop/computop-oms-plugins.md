@@ -6,12 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-oms-details
 originalArticleId: 24fc01dc-bae5-4689-a6bb-c93a26e07dba
 redirect_from:
-  - /2021080/docs/computop-oms-details
-  - /2021080/docs/en/computop-oms-details
-  - /docs/computop-oms-details
-  - /docs/en/computop-oms-details
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/computop-oms-plugins.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/computop-oms-plugins.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/computop-oms-plugins.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/amazon-order-reference-information
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
 related:
   - title: Handling orders with Amazon Pay API
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html

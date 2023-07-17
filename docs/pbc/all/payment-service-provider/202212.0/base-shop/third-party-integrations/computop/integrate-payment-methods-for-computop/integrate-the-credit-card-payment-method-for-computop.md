@@ -6,13 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-credit-card
 originalArticleId: 682d66ae-585b-4de5-bfad-3ab51281697f
 redirect_from:
-  - /2021080/docs/computop-credit-card
-  - /2021080/docs/en/computop-credit-card
-  - /docs/computop-credit-card
-  - /docs/en/computop-credit-card
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html

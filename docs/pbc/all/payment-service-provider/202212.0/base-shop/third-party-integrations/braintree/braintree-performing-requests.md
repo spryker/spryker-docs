@@ -6,12 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/braintree-performing-requests
 originalArticleId: 866b7c18-891a-45db-bc3d-8ac04b89ee80
 redirect_from:
-  - /2021080/docs/braintree-performing-requests
-  - /2021080/docs/en/braintree-performing-requests
-  - /docs/braintree-performing-requests
-  - /docs/en/braintree-performing-requests
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/braintree/braintree-performing-requests.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/braintree/braintree-performing-requests.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/braintree/braintree-performing-requests.html
 related:
   - title: Installing and configuring Braintree
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html

@@ -6,13 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-sandbox-simulations
 originalArticleId: c664cbf9-33b1-409f-be65-5785f7299e35
 redirect_from:
-  - /2021080/docs/amazon-sandbox-simulations
-  - /2021080/docs/en/amazon-sandbox-simulations
-  - /docs/amazon-sandbox-simulations
-  - /docs/en/amazon-sandbox-simulations
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
 related:
   - title: Handling orders with Amazon Pay API
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html

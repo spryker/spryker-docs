@@ -6,13 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-crif
 originalArticleId: 9e295864-bffd-4b37-b8a8-33c413bc46db
 redirect_from:
-  - /2021080/docs/computop-crif
-  - /2021080/docs/en/computop-crif
-  - /docs/computop-crif
-  - /docs/en/computop-crif
   - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html

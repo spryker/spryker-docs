@@ -6,14 +6,11 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-sofort
 originalArticleId: 0d22997c-4a0c-4a8d-8031-e705869d05b8
 redirect_from:
-  - /2021080/docs/computop-sofort
-  - /2021080/docs/en/computop-sofort
-  - /docs/computop-sofort
-  - /docs/en/computop-sofort
   - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html

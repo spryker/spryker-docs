@@ -6,11 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/braintree-integration
 originalArticleId: bde8e23d-6b95-420a-aefd-151293c40786
 redirect_from:
-  - /2021080/docs/braintree-integration
-  - /2021080/docs/en/braintree-integration
-  - /docs/braintree-integration
-  - /docs/en/braintree-integration
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/braintree/integrating-braintree.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/braintree/integrate-braintree.html
 related:
   - title: Installing and configuring Braintree
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html

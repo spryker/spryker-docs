@@ -6,12 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/adyen-configuration
 originalArticleId: 2966816e-71e5-4460-8366-ce775e0712a9
 redirect_from:
-  - /2021080/docs/adyen-configuration
-  - /2021080/docs/en/adyen-configuration
-  - /docs/adyen-configuration
-  - /docs/en/adyen-configuration
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/adyen/installing-and-configuring-adyen.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/adyen/installing-and-configuring-adyen.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/adyen/install-and-configure-adyen.html
 related:
   - title: Integrating Adyen
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen.html

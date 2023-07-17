@@ -6,12 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/arvato-store-order-2-0
 originalArticleId: 24cf640b-da52-4d4e-a912-ceacb443f1cd
 redirect_from:
-  - /2021080/docs/arvato-store-order-2-0
-  - /2021080/docs/en/arvato-store-order-2-0
-  - /docs/arvato-store-order-2-0
-  - /docs/en/arvato-store-order-2-0
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/arvato/arvato-store-order.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/arvato/arvato-store-order.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/arvato/arvato-store-order.html
+related:
 related:
   - title: Arvato
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato.html

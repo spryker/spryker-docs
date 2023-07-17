@@ -6,11 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/arvato-installation-configuration
 originalArticleId: 01e4a638-f2ea-4974-8f55-ee85d8745298
 redirect_from:
-  - /2021080/docs/arvato-installation-configuration
-  - /2021080/docs/en/arvato-installation-configuration
-  - /docs/arvato-installation-configuration
-  - /docs/en/arvato-installation-configuration
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/arvato/installing-and-configuring-arvato.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/arvato/install-and-configure-arvato.html
+related:
 related:
   - title: Arvato - Store Order 2.0
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato-store-order.html

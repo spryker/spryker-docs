@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/crefopay-provided-payment-methods
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/crefopay-payment-methods.html
   - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/crefopay/crefopay-payment-methods.html
+  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/crefopay/crefopay-payment-methods.html
 related:
   - title: Integrating CrefoPay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/integrate-crefopay.html

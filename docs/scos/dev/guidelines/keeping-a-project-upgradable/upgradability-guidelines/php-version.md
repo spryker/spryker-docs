@@ -83,7 +83,7 @@ PHP VERSION CHECKER
 
 Message: The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12".
          The image tag must contain an allowed PHP version (image:abc-8.0)
-Target:  <path_to_project>/deploy.yml
+Target: {PATH_TO_PROJECT}/deploy.yml
 ```
 
 A `deploy.yml` file that produces the error message:

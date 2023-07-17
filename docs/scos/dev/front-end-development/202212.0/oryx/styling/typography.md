@@ -97,7 +97,7 @@ A valid structure, however, might conflict with the UI design. UI designers use 
 
 An example would be a two-column layout, where the content in both sections has the same visual weight. However, based on their position, the content on the left (in a left-to-right context) is automatically of more importance.
 
-To allow for a solution that can cope with both the right semantic structure and the visual design, heading elements might be styles with conflicting heading style rules. The following is an example:
+To allow for a solution that can cope with both the right semantic structure and the visual design, heading elements might be styled with conflicting heading style rules. The following is an example:
 
 <h2>Cart totals</h2>
 <style>

@@ -1,5 +1,5 @@
 ---
-title: Are performance and security guidelines implemented?
+title: Assess the implementation of performance and security guidelines
 description: This document allows you to assess if performance and security guidelines are implemented.
 template: howto-guide-template
 ---

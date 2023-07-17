@@ -1,5 +1,5 @@
 ---
-title: Is the latest version of Docker SDK installed?
+title: Assess the state of the Docker SDK
 description: This document allows you to assess if the latest version of Docker SDK is installed in a project.
 template: howto-guide-template
 ---
@@ -23,11 +23,11 @@ It should be pointed to `git@github.com:spryker/docker-sdk.git`.
 
 1. In the project's root, check if the `docker` folder exists.
     If it’s missing, the Docker SDK *is not used*.
-2. If the `docker` folder exists, compare its content to the content of the folder in the [Docker SDK repository](https://github.com/spryker/docker-sdk). They should looks similar.
+2. If the `docker` folder exists, compare its content to the content of the folder in the [Docker SDK repository](https://github.com/spryker/docker-sdk). They should look similar.
 3. Check if the Docker SDK is integrated correctly based on the [integration instructions](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html#prerequisites).
     Based on the assessment from steps 2-3, you should be able to identify if the Docker SDK is used.
 4. Check the version of the Docker SDK by looking up the hash commit of the Docker SDK repository in the prerequisites.
-5. Use hash commit and [Docker SDK repo](https://github.com/spryker/docker-sdk) to understand which version is used.
+5. To figure out how outdated the Docker SDK is in the project, compare the date of the latest commit from the prerequisites to the Docker SDK's [releases](https://github.com/spryker/docker-sdk/releases).
 
 
 ## Resources for assessment

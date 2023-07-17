@@ -1,5 +1,5 @@
 ---
-title: Is latest version of Docker SDK integrated and project is running on Docker SDK?
+title: Assess the deploy configuration
 description: This document allows you to assess if the latest version of Docker SDK is integrated in a project.
 template: howto-guide-template
 ---

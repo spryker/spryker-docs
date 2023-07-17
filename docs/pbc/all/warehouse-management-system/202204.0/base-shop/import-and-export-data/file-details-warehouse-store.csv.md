@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
+  - /docs/pbc/all/warehouse-management-system/202212.0/base-shop/import-data/file-details-warehouse-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
@@ -23,7 +24,7 @@ This document describes the `warehouse_store.csv` file to configure the relation
 
 ## Import file dependencies
 
-* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html)
+* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
 * `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Import file parameters
@@ -31,7 +32,7 @@ This document describes the `warehouse_store.csv` file to configure the relation
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | ✓ | String | Must be a valid warehouse name imported from [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html). | Name of the warehouse. |
+| warehouse_name | ✓ | String | Must be a valid warehouse name imported from [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html). | Name of the warehouse. |
 | store_name | ✓ | String | Must be a valid store name imported from the existing `stores.php` configuration file of demo shop PHP project. | Name of the store. |
 
 

@@ -1,28 +1,26 @@
 ---
-title: Is currently used PHP Version >=8.0?
+title: Check if the PHP version used is 8.0 or higher
 description: This document allows you to assess if a project uses PHP Version >=8.0.
 template: howto-guide-template
 ---
 
-# Is currently used PHP Version >=8.0?
 
-{% info_block infoBox %}
 
-## Resources for assessment Backend
+## Resources for assessment 
 
-{% endinfo_block %}
+Backend
 
 ## Description
 
-In this assessment part, you need to verify whether the project code is compatible with PHP 8.0.
+In this assessment step, you need to check if the project is compatible with PHP 8.0.
 
-There are two options **PHPCompatibility** and **Rector** it’s up to the developer which one to choose.
+You can check it using PHPCompatibility or Rector. PHPCompatibility identifies the code that's incompatible with PHP 8.0. Rector highlights the violations that are still compatible with PHP 8.0 but are supposed to be done in a different way. We recommend using Rector for auto-upgrading from earlier versions of PHP to 8.0.
 
-### PHPCompatibility
 
-PHPCompatibility checks for only incompatible code which definitely won’t work with PHP 8.0.
+## Check PHP 8.0 compatibility using PHPCompatibility
 
 1. If phpcs sniffer is not installed, install it.
+
 2. Require the `php-compatibility` package:
 
 ```bash
@@ -39,12 +37,12 @@ vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compat
 ```bash
 vendor/bin/phpcs -p src/ --standard=PHPCompatibility  --runtime-set testVersion 8.0
 ```
+    This returns the code that's not compatible with PHP 8.0.
 
-### Rector
+## Check PHP 8.0 compatibility using Rector
 
-Rector highlights the violations that are still compatible with PHP 8.0 but are supposed to be done in a different way. We recommend using Rector for auto-upgrading from earlier version of PHP to 8.0.
 
-1. Require `rector` package:
+1. Require the `rector` package:
 ```bash
 composer require rector/rector --dev --ignore-platform-reqs
 ```
@@ -55,7 +53,7 @@ composer require rector/rector --dev --ignore-platform-reqs
 vendor/bin/rector init
 ```
 
-3. In `rector.php`, specify the PHP version to upgrade to:
+3. In `rector.php`, specify the PHP version you want to upgrade the project to. The version is 8.0 in this example:
 ```php
 <?php
 
@@ -74,7 +72,7 @@ vendor/bin/rector init
   };
 ```
 
-4. To see the list of incompatible parts of the application, run `rector` in the dry-run mode :
+4. To see the incompatible parts of the application, run `rector` in the dry-run mode:
 
 ```bash
 vendor/bin/rector process src --dry-run

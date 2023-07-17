@@ -33,8 +33,6 @@ Setting the _root font size_ is an exception in Oryx. Oryx tries to not have any
 
 {% endinfo_block %}
 
-
-
 <!-- TODO: we will add more information on the DefaultThemeMetaInitializer going forward in our docs -->
 
 ## Relative font size and line height
@@ -43,7 +41,7 @@ Application themes in Oryx are typically configured with relative sizes for font
 
 ### `rem` for font size
 
-The `rem` unit, short for *root em*, is relative to the root font size of the document. By defining the root font size, all other font sizes specified using `rem` adapt proportionally.
+The `rem` unit, short for _root em_, is relative to the root font size of the document. By defining the root font size, all other font sizes specified using `rem` adapt proportionally.
 
 For example, if the font size token of an `h3` is set to `1.2rem`, and the root font size is `15px`, the calculated font size for the `h3` becomes `18px`: `1.2 * 15`.
 
@@ -55,7 +53,7 @@ Using `rem` for font size provides several benefits:
 
 ### `em` for line height
 
-The `em` unit, short for *element em*, is relative to the font size of the current element. When line height is defined using `em`, to determine the final line height, the value is multiplied by the font size.
+The `em` unit, short for _element em_, is relative to the font size of the current element. When line height is defined using `em`, to determine the final line height, the value is multiplied by the font size.
 
 For example, if the line height token of an `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px`: `1.5 * 18`. The font size can be driven by a `rem` unit, the browser calculates the rem value of the font size before calculating the line height.
 
@@ -67,7 +65,7 @@ Using `em` for line height offers the following advantages:
 
 ## Headings
 
-HTML supports heading elements up to level 6: `<h1>`, `<h2>`, `<h3>`, etc. The headings play an important role in the structure of an HTML page. It is used by screen readers and crawlers to better understand the content and their coherence. Designers, however, have more tools than headings alone to a apply structure, using layout and alternative UI elements.
+HTML supports heading elements up to level 6: `<h1>`, `<h2>`, `<h3>`, etc. The headings play an important role in the structure of an HTML page. It is used by screen readers and crawlers to better understand the content and their coherence.
 
 Oryx provides a number of heading and paragraph styles that are used in the design system and components:
 

@@ -81,7 +81,7 @@ MULTIDIMENSIONAL ARRAY
 ======================
 
 Message: The if ($alwaysTrue) {} condition statement is forbidden in DependencyProvider
-Target:  <path_to_project>/Pyz/Zed/Checkout/CheckoutDependencyProvider.php
+Target:  {PATH_TO_PROJECT}/Pyz/Zed/Checkout/CheckoutDependencyProvider.php
 
 ```
 

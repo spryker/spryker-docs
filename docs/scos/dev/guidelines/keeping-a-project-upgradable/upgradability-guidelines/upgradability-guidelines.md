@@ -14,13 +14,8 @@ Example:
 DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER
 ============================================
 
-+---+----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| # | Message                                                                                | Target                                                                                                                   |
-+---+----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-| 1 | The condition statement if (!static::IS_DEV) {} is forbidden in the DependencyProvider | tests/Acceptance/_data/InvalidProject/src/Pyz/Zed/Console/ConsoleDependencyProvider.php |
-+---+----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-
-
+Message: In DependencyProvider, the "if (!static::IS_DEV) {}" conditional statement is forbidden.
+Target:  tests/Acceptance/_data/InvalidProject/src/Pyz/Zed/Console/ConsoleDependencyProvider.php
 ```
 
 In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. The table bellow describes the error and documentation about it.

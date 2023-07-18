@@ -220,7 +220,7 @@ You will receive the following error response because a non-creatable field `iso
   {
     "message": "Modification of immutable field `iso3_code` is prohibited.",
     "status": 400,
-    "code": "505"
+    "code": "1304"
   }
 ]
 ```
@@ -241,7 +241,7 @@ Otherwise, you will receive the following response:
     {
         "message": "Failed to persist the data. Please verify the provided data and try again. Entry is duplicated.",
         "status": 400,
-        "code": "511"
+        "code": "1309"
     }
 ]
 ```
@@ -329,7 +329,7 @@ You will receive the following error response because a non-editable field `iso3
   {
     "message": "Modification of immutable field `iso3_code` is prohibited.",
     "status": 400,
-    "code": "505"
+    "code": "1304"
   }
 ]
 ```
@@ -345,7 +345,7 @@ If `id_country` is not provided you will get the following response:
   {
     "message": "Incomplete Request - missing identifier.",
     "status": 400,
-    "code": "512"
+    "code": "1310"
   }
 ]
 ```
@@ -357,7 +357,7 @@ If `id_country` is not found you will get the following response:
   {
     "message": "The entity could not be found in the database.",
     "status": 404,
-    "code": "504"
+    "code": "1303"
   }
 ]
 ```
@@ -454,3 +454,20 @@ adhering to the standards outlined in the `PUT` request RFC. It's crucial to adh
 to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
+
+#### Error codes
+
+Bellow you can find a list of error codes that you can receive when sending `GET`, `POST`, `PATCH` or `PUT` requests.
+
+| Error code | Message | Description |
+| --- | --- | --- |
+| 1301 | Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: `{'data':[{...},{...},..]}` | The request body is not valid. Please review the data format for validity. Ensure that the data is provided in the correct format. An example request body would be: `{'data':[{...data entity...},{...data entity...},...]}`. `data` If the data format is invalid or missing, an error message will be displayed. |
+| 1302 | Failed to persist the data. Please verify the provided data and try again. | The data could not be persisted in the database. Please verify the provided data entities and try again. |
+| 1303 | The entity could not be found in the database. | The requested entity could not be found in the database for retrieval or update. |
+| 1304 | Modification of immutable field `field` is prohibited. | The field is prohibited from being modified. Please check the configuration for this field.  |
+| 1305 | Invalid data type for field: `field` |  The specified field has an incorrect type. Please check the configuration for this field and correct the value. | 
+| 1306 | Invalid data value for field: `field`, row number: `row`. Field rules: `validation rules`. | The error indicates a data row and a field that does not comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`. |
+| 1307 | The required field must not be empty. Field: `field` | The specified field is required according to the configuration. The field was not provided. Please check the data you are sending and try again. |
+| 1308 | Entity not found by identifier, and new identifier can not be persisted. Please update the request. | The entity could not be found using the provided identifier, and a new identifier cannot be persisted. Please update your request accordingly or check configuration for identifier field. | 
+| 1309 | Failed to persist the data. Please verify the provided data and try again. Entry is duplicated. | Failed to persist the data. Please verify the provided data and try again. This error may occur if a record with the same information already exists in the database. |
+| 1310 | Incomplete Request - missing identifier. | The request is incomplete. The identifier is missing. Please check the request and try again. |

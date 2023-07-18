@@ -28,5 +28,5 @@ data:import:shipment
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-file-details-shipment.csv.md/Template_shipment.csv) | Import file template with headers only. |
-| [shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-file-details-shipment.csv.md/shipment.csv) | Exemplary import file with the Demo Shop data. |
+| [template_shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.md/Template_shipment.csv) | Import file template with headers only. |
+| [shipment.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.md/shipment.csv) | Exemplary import file with the Demo Shop data. |

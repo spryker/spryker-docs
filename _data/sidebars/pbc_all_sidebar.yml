@@ -1,4 +1,4 @@
-title: PBC guides
+title: PBC guides 
 entries:
   - product: PBC
     nested:
@@ -12,14 +12,6 @@ entries:
             url: /docs/pbc/all/back-office/back-office-translations-overview.html
           - title: Install the Spryker Core Back Office feature
             url: /docs/pbc/all/back-office/install-the-spryker-core-back-office-feature.html
-          - title: Install the Warehouse User Management feature
-            url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-the-warehouse-user-management-feature.html
-            include_versions:
-            - "202304.0"
-          - title: Install the Spryker Core Back Office + Warehouse User Management feature
-            url: /docs/pbc/all/back-office/install-spryker-core-back-office-warehouse-user-management-feature.html
-            include_versions:
-            - "202304.0"
           - title: "HowTo: Add support of number formatting in the Back Office"
             url: /docs/pbc/all/back-office/howto-add-support-of-number-formatting-in-the-back-office.html
           - title: Manage in the Back Office
@@ -192,14 +184,6 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
                       - title: Cart + Non-splittable Products
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
-                      - title: Cart Notes
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html
-                        include_versions:
-                        - "202304.0"
-                      - title: Cart + Prices
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-prices-feature.html
-                        include_versions:
-                        - "202304.0"
                       - title: Cart + Product
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-feature.html
                       - title: Cart + Product Bundles
@@ -474,10 +458,6 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
                       - title: Content Items
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
-                      - title: File Manager
-                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html
-                        include_versions:
-                        - "202304.0"
                       - title: Navigation
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
                       - title: Product Sets
@@ -3343,10 +3323,6 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
                       - title: Inventory Management + Alternative Products
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
-                      - title: Order Management + Inventory Management
-                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
-                        include_versions:
-                        - "202304.0"
                       - title: Availability Notification Glue API
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
                       - title: Inventory Management Glue API

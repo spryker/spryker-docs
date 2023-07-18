@@ -5,7 +5,7 @@ last_updated: May 10, 2022
 template: glue-api-storefront-guide-template
 related: 
   - title: Reference information- GlueApplication errors
-    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrasrtucture/reference-information-glueapplication-errors.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
 ---
 
 {% info_block warningBox %}

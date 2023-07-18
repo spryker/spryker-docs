@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/versioning-rest-api-resources.html
 related:
   - title: Glue infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrasrtucture/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
 ---
 
 In the course of the development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.

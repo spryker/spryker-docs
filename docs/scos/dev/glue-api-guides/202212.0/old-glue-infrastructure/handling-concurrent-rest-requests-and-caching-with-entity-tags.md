@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
 related:
   - title: Glue Infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrasrtucture/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
   - title: Shared Cart Feature Overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---

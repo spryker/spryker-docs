@@ -25,7 +25,7 @@ related:
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
   - title: Glue infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrasrtucture/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Glue API modules that provide the relevant functionality on your project level.

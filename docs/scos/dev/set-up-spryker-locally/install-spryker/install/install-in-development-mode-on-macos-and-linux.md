@@ -47,38 +47,37 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 ## Clone a Demo Shop and the Docker SDK
 
 1. Open a terminal.
-2. Create a folder for the project and navigate into it:
-```bash
-mkdir spryker-shop && cd spryker-shop
-```
-
-3. Clone *one* of the following Demo Shops:
+2. Clone *one* of the following Demo Shops and navigate into its folder:
 
     * B2C Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop && \
+    cd b2c-demo-shop
     ```
 
     * B2B Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop && \
+    cd b2c-demo-shop
     ```
 
     * B2C Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202212.0-p2 --single-branch ./
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2c-demo-marketplace && \
+    cd b2c-demo-marketplace
     ```
 
     * B2B Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2b-demo-marketplace && \
+    cd b2b-demo-marketplace
     ```    
 
-5. Clone the Docker SDK:
+3. Clone the Docker SDK:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker

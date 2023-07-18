@@ -1173,7 +1173,7 @@ entries:
                       - title: Merchant Switcher + Customer Account Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html
                       - title: Merchant Switcher + Wishlist
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html                                                                        
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Merchant
@@ -1706,12 +1706,12 @@ entries:
                           - title: Payment
                             url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/upgrade-the-payment-module.html
                   - title: Import and export data
-                    url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/import-and-export-payment-service-provider-data.html
+                    url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
                     nested:
                       - title: File details - payment_method.csv
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/file-details-payment-method.csv.html
+                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method.csv.html
                       - title: File details - payment_method_store.csv
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/file-details-payment-method-store.csv.html
+                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html
                   - title: Manage in the Back Office
                     url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                     nested:

@@ -739,31 +739,31 @@ entries:
       - "202212.0"
       nested:
       - title: Glue REST API
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/glue-rest-api.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-rest-api.html
         include_versions:
         - "202212.0"
       - title: Glue infrastructure
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/glue-infrastructure.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-infrastructure.html
         include_versions:
         - "202212.0"
       - title: Handling concurrent REST requests and caching with entity tags
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
         include_versions:
         - "202212.0"
       - title: Resolving search engine friendly URLs
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/resolving-search-engine-friendly-urls.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
       - title: Reference information - GlueApplication errors
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/reference-information-glueapplication-errors.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/reference-information-glueapplication-errors.html
         include_versions:
         - "202212.0"
       - title:  REST API B2B Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/rest-api-b2b-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-reference.html
         include_versions:
         - "202212.0"
       - title: REST API B2C Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastucture/rest-api-b2c-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-reference.html
         include_versions:
         - "202212.0"
     - title: Routing

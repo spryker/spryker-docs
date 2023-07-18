@@ -1168,6 +1168,12 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-tax-feature.html
                       - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
+                      - title: Merchant Switcher
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html
+                      - title: Merchant Switcher + Customer Account Management
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html
+                      - title: Merchant Switcher + Wishlist
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html                                                                        
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Merchant

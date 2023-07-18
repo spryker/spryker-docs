@@ -1,5 +1,5 @@
 ---
-title: Reference information- GlueApplication errors
+title: Reference information - GlueApplication errors
 description: Find out what common GlueAplication errors you can come across when sending and receiving data via the Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

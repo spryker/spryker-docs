@@ -12,9 +12,10 @@ redirect_from:
 
 {% info_block warningBox %}
 
-This part of this document related to the Old Glue infrastructure. For the new one, please check [new document](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+This part of this document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
 
 {% endinfo_block %}
+
 This section contains a collection of guides for working with the Old Spryker Glue API:
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html)
 * [Rest API B2C reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-b2c-reference.html)  

@@ -1,16 +1,4 @@
----
-title: Glue API - Product rating & reviews feature integration
-description: This guide contains step-by-step instructions on integrating Product Rating & Reviews API feature into a Spryker-based project.
-last_updated: Jul 17, 2023
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-rating-reviews-feature-integration
-originalArticleId: 6634ada1-2f5a-454b-a5b3-9319b7e90cbf
-redirect_from:
-  - /2021080/docs/glue-api-product-rating-reviews-feature-integration
-  - /2021080/docs/en/glue-api-product-rating-reviews-feature-integration
-  - /docs/glue-api-product-rating-reviews-feature-integration
-  - /docs/en/glue-api-product-rating-reviews-feature-integration
----
+
 
 ## Install feature API
 

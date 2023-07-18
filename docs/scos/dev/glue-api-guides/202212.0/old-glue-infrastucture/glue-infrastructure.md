@@ -433,6 +433,7 @@ In addition to HTTP Status codes, Glue can return additional error codes to dist
 |  1001-1099    | Guest Cart API |
 | 1101-1199 |  Checkout API|
 |  1201-1299| Product Labels API     |
+|  1301-1399| Dynamic Data API     |
 
 ### Data formatting
 

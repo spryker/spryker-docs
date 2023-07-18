@@ -11,7 +11,7 @@ The _Return Management_ feature allows you to create and manage returns for a sa
 To learn more about the feature and to find out how end users use it, see [Return Management feature overview](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|

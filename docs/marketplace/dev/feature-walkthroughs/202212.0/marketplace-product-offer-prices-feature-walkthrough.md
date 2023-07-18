@@ -4,7 +4,7 @@ description: The Marketplace Product Offer Prices feature lets Marketplace merch
 template: feature-walkthrough-template
 ---
 
-With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
+With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html).
 
 Merchants can define the prices for each product offer. If no price for the product offer is specified, a default price from the concrete product is used.
 
@@ -12,7 +12,7 @@ Price types (for example,gross price, net price) are assigned to each price, and
 
 A new price type can be added by importing price data. The price type in the CSV file will be added or updated.
 
-To learn more details about prices import file, see: [File details: product_price.csv](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-product-price.csv.html)
+To learn more details about prices import file, see: [File details: product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
 
 Depending on the price mode selected by a customer in Storefront, the price can have gross or net value. You can run your shop in both modes as well as select net mode for business customers, for example.
 
@@ -22,11 +22,11 @@ To support product offer prices, a *PriceProductOffer* database table has been a
 
 In addition, product offers support volume prices. Merchants can now enter volume prices for product offers, and customers will see the corresponding price on their Storefront based on the quantity they have chosen. The volume prices for product offers work the same as the volume prices for products.
 
-To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/{{page.version}}/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
+To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/volume-prices-overview.html)
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Product offer price](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html#product-offer-price) overview for business users.
+To learn more about the feature and to find out how end users use it, see [Product offer price](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html#product-offer-price) overview for business users.
 
 {% endinfo_block %}
 
@@ -61,9 +61,9 @@ The following schema illustrates the Marketplace Product Offer Prices domain mod
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
-| [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)          | [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)           |
-|[Glue API: Marketplace Product Offer Prices integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)           |           |           |
+| [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)          | [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/file-details-price-product-offer.csv.html)           |
+|[Glue API: Marketplace Product Offer Prices integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)           |           |           |

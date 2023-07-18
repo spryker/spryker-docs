@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/inventory-management-feature-integration
 related:
   - title: Inventory Management feature overview
-    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
+    link: docs/scos/user/features/page.version/base-shop/inventory-management-feature-overview.html
 ---
 
 This document describes how to ingrate the [Inventory Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
@@ -245,7 +245,7 @@ Sony Experts MER000006 Warehouse 1,1
 ```
 
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | name | mandatory | string | Warehouse1 | Name of the warehouse. |
  |is_active |mandatory |bool |1 |Defines if the warehouse is active. |
@@ -261,7 +261,7 @@ Warehouse2,US
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | warehouse_name | mandatory | string | Warehouse1 | Name of the warehouse. |
 | store_name | mandatory | string | DE | Name of the store the warehouse will be available in. |
@@ -279,7 +279,7 @@ Budget Cameras MER000005 Warehouse 1,Kurfuerstendamm 96,,,89077,Ulm Weststadt,,D
 Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48 41 25,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | warehouse_name | mandatory | string | Warehouse1 | Warehouse name. |
 | address1 | mandatory | string | Hallesches Ufer 71 | The first line of the warehouse address. |

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{site.version}}/availability-notification-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/availability-notification-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -14,9 +14,9 @@ To start feature integration, integrate the required features:
 | NAME                      | VERSION            | INTEGRATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mailing and Notifications | {{site.version}}   | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
-| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Product                   | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
-| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                                      |
+| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules using Composer
 
@@ -103,9 +103,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
      public function getEventSubscriberCollection()
      {
          $eventSubscriberCollection = parent::getEventSubscriberCollection();
-        
+
          $eventSubscriberCollection->add(new AvailabilityNotificationSubscriber());
-        
+
          return $eventSubscriberCollection;
      }
 }
@@ -156,7 +156,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
      public function provideBusinessLayerDependencies(Container $container)
      {
          $container = parent::provideBusinessLayerDependencies($container);
-        
+
          $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
              $mailCollection
              ...
@@ -165,7 +165,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
              ->add(new AvailabilityNotificationMailTypePlugin())
              ...
              ;
-    
+
             return $mailCollection;
         });
         ...
@@ -261,7 +261,7 @@ You can define stores to Yves hosts mapping. This allows generating correct URLs
 
 {% endinfo_block %}
 
-Add the following configuration to your project:
+1. Add the following configuration to your project:
 
 | CONFIGURATION                                                 | SPECIFICATION                                                                                                                                            | NAMESPACE                               |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -280,6 +280,25 @@ $config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
     'AT' => getenv('SPRYKER_YVES_HOST_AT'),
     'US' => getenv('SPRYKER_YVES_HOST_US'),
 ];
+```
+
+2. To set YVES host environment variables, adjust your deploy file:
+
+**deploy.*.yml**
+
+```yaml
+version: "0.1"
+
+namespace: spryker_demo
+tag: '1.0'
+
+environment: docker.dev
+image:
+    environment:
+        SPRYKER_YVES_HOST_DE: yves.de.spryker.local
+        SPRYKER_YVES_HOST_AT: yves.at.spryker.local
+        SPRYKER_YVES_HOST_US: yves.us.spryker.local
+...
 ```
 
 {% info_block infoBox %}
@@ -323,9 +342,9 @@ To start feature integration, integrate the required feature:
 | NAME                      | VERSION            | INTEGRATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mailing and Notifications | {{site.version}}   | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
-| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Product                   | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
-| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                                      |
+| Spryker Core              | {{site.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules using Composer
 

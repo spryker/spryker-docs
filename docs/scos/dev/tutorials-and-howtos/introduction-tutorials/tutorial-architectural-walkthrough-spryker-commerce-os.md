@@ -456,7 +456,7 @@ public function createZedHelloSprykerStub()
 */
 protected function getZedRequestClient()
 {
-    return $this->getProvidedDependency(HelloSprykerDependencyProvider::CLIENT_ZED_R EQUEST);
+    return $this->getProvidedDependency(HelloSprykerDependencyProvider::CLIENT_ZED_REQUEST);
 }								
 ```							
 
@@ -719,7 +719,7 @@ As mentioned before, dependency providers provide dependencies at a module level
 
 {% info_block infoBox "Info" %}
 
-Bild a business later inside `StringReverser` with a facade and a model to reverse the string.
+Build a business layer inside `StringReverser` with a facade and a model to reverse the string.
 
 {% endinfo_block %}
 
@@ -772,7 +772,7 @@ class HelloSprykerDependencyProvider extends AbstractBundleDependencyProvider
 */
 protected function getStringReverserFacade()
 {
-    return $this->getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRIN G_REVERSER);
+    return $this->getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRING_REVERSER);
 }						
 ```
 

@@ -16,9 +16,9 @@ To start using Merchant Portal, install Spryker demo-shop:
 1. Use [this repository](https://github.com/spryker-shop/suite) for the Marketplace project installation.  
 2. Install the project using one of the following guides:
 
-* [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
-* [Installing Spryker with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html)
-* [Installing Spryker without Development Virtual Machine or Docker](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html)
+* [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html)
+* [Installing Spryker with Development Virtual Machine](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html)
+* [Installing Spryker without Development Virtual Machine or Docker](/docs/scos/dev/set-up-spryker-locally/installing-spryker-without-development-virtual-machine-or-docker.html)
 
 
 ## Requirements
@@ -32,8 +32,8 @@ To build Merchant Portal, install or update the following tools:
 
 The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are:  
 
-- Minimum NodeJS version is v12.
-- NPM is replaced by Yarn v2 with Workspaces.
+- Minimum Node.js version is v12.
+- npm is replaced by Yarn v2 with Workspaces.
 
 Using a "unified" approach, all frontend dependencies must be installed in one step
 

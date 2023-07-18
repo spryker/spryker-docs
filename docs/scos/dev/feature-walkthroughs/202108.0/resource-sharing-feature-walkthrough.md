@@ -11,7 +11,7 @@ The _Resource Sharing_ allows creating a unique URL for any entity in the Spryke
 To learn more about the feature and to find out how end users use it, see [Resource Sharing feature overview](/docs/scos/user/features/{{page.version}}/resource-sharing-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

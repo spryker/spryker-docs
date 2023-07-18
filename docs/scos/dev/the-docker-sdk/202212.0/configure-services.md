@@ -21,6 +21,7 @@ redirect_from:
   - /scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
   - /scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html  
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
@@ -207,7 +208,7 @@ docker/sdk up --build --data
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
 
 ### Configure ElasticSearch

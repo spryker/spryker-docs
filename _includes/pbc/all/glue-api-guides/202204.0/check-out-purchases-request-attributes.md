@@ -5,7 +5,7 @@
 | customer.email | String | &check; | Customer's email address. |
 | customer.firstName | String | &check; | Customer's first name. |
 | customer.lastName | String | &check; | Customer's last name. |
-| idCart | String | &check; | Unique identifier of the customer's [cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) to check out. |
+| idCart | String | &check; | Unique identifier of the customer's [cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) to check out. |
 | billingAddress | Object | &check; | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
 | billingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |

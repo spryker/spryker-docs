@@ -246,7 +246,7 @@ mr-003,,051_29567823,DEFAULT,DE,CHF,12433,13833
 mr-003,,051_30107816,DEFAULT,DE,CHF,12533,10333
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 |`merchant_relation_key` | mandatory | string | mr-001 | Unique identifier used to identify a merchant contract. |
 | `abstract_sku` | mandatory (optional if `concrete_sku` provided) | string(unique) | 051 | Existing abstract product SKU to assign to the product list. |

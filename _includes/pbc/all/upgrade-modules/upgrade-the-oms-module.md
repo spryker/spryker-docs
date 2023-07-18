@@ -6,7 +6,7 @@ In this new version of the **OMS** module, we have added support of decimal stoc
 
 {% info_block errorBox %}
 
-This release is a part of the Decimal Stock concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/decimal-stock-migration-concept.html).
+This release is a part of the Decimal Stock concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html).
 
 {% endinfo_block %}
 
@@ -150,7 +150,7 @@ CREATE TABLE "spy_oms_product_reservation_last_exported_version"
 
 In version 7, OMS no longer uses `SalesAggregator` to calculate totals; it is now done via the `Calculator` module. Therefore, there is no more dependency with `SalesAggregator`.
 The `Spryker\Zed\Oms\Business\Mail\MailHandler` dependency to `SalesAggregatorFacade` was replaced with `SalesFacade`.
-To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
+To learn how to migrate to the new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
 
 ## Upgrading from version 3.* to version 4.*
 

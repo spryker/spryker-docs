@@ -1096,7 +1096,7 @@ concrete_sku,configurator_key,is_complete,default_configuration,default_display_
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | concrete_sku | ✓ | string | 093_24495843 | Unique product identifier. |
 | configurator_key | ✓ | string | DATE_TIME_CONFIGURATOR | Unique identifier of a product configurator to be used for this product. |

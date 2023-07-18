@@ -152,7 +152,7 @@ defaults:
      scope:
        path: "docs/scu"
      values:
-       product: "spryker-code-upgrader"
+       product: "scu"
   -
      scope:
        path: "docs/scu/dev"
@@ -171,7 +171,6 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
-
 versions:
   '201811.0': '201811.0'
   '201903.0': '201903.0'
@@ -183,6 +182,7 @@ versions:
   '202204.0': '202204.0'
   '202212.0': '202212.0'
   '202304.0': 'Upcoming release'
+  '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -221,8 +221,10 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
       - system-requirements
+      - front-end-development
   pbc:
     all:
+      - back-office
       - cart-and-checkout
       - carrier-management
       - content-management-system
@@ -231,8 +233,12 @@ versioned_categories:
       - emails
       - gift-cards
       - identity-access-management
+      - merchant-management
+      - miscellaneous
+      - offer-management
       - order-management-system
       - price-management
+      - payment-service-provider
       - product-information-management
       - product-relationship-management
       - punchout
@@ -244,6 +250,10 @@ versioned_categories:
       - tax-management
       - user-management
       - warehouse-management-system
+      - push notification
+      - warehouse-picking
+      - service-points
+
 
 
 # these are defaults used for the front matter for these file types
@@ -293,7 +303,7 @@ algolia:
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'scu_dev'
-      title: 'Cloud Developer'
+      title: 'SCU Developer'
 sass:
     sass_dir: css
     style: compressed

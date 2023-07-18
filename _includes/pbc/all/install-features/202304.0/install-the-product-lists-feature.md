@@ -11,9 +11,9 @@ Follow the steps below to install the Product Lists feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE| 
+| NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{site.version}}  | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
 
@@ -103,7 +103,7 @@ Make sure that the following modules have been installed:
  </database>
 ```
 
-3. Set up synchronization queue pools so that non-multistore entities (not store-specific entities) are synchronized among stores:
+3. Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/ProductListStorage/Persistence/Propel/Schema/spy_product_list_storage.schema.xml**
 
@@ -480,7 +480,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 "pl-008","No Smartwatches","blacklist"
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string (unique) | pl-001 |  A unique identifier used to identify a product list. |
 |name|mandatory|string|All computers| A custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
@@ -548,7 +548,7 @@ pl-004,smartphones
 pl-008,smartwatches
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
 |category_key|mandatory|string|computer| An existing category identifier to be assigned to the product list.|
@@ -645,7 +645,7 @@ pl-007,177_25913296
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
 |concrete_sku|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|

@@ -12,7 +12,7 @@ To learn more about the feature and to find out how end users use it, see [Custo
 
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|

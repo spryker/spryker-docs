@@ -11,7 +11,7 @@ The _Agent Assist_ feature allows adding an agent, a person who assists customer
 To learn more about the feature and to find out how end users use it, see [Agent Assist feature overview](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|

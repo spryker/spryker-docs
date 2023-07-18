@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Upgrade to Angular v15
 description: Use the guide to update versions of the Angular and related modules.
-last_updated: Jan 12, 2023
+last_updated: Mar 24, 2023
 template: module-migration-guide-template
 ---
 
@@ -62,13 +62,13 @@ console transfer:generate
 
 ## 2) Update Webpack
 
-Before starting the migration, make sure that Webpack is v5; if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html) is required.
+Before starting the migration, make sure that Webpack is v5; if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-upgrade-to-webpack-v5.html) is required.
 
-## 3) Update NPM dependencies
+## 3) Update npm dependencies
 
 {% info_block infoBox "Info" %}
 
-Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/).
+Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download).
 
 {% endinfo_block %}
 
@@ -422,9 +422,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 },
 ```
 
-4. In `package.json`, rename the `mp:lint` script to the `mp:eslint`. 
-
-5. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
+4. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
 
 ```json
 {
@@ -438,7 +436,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-6. Make sure to replace `tslint` disable comments with `eslint`—for example: 
+5. Make sure to replace `tslint` disable comments with `eslint`—for example: 
 
 ```ts
 /* tslint:disable:no-unnecessary-class */

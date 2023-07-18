@@ -157,7 +157,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Set up synchronization queue pools to synchronize non-multistore entities (not store-specific entities) among stores:
+Set up synchronization queue pools to synchronize non-multi-store entities (not store-specific entities) among stores:
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageConfig.php**
 
@@ -274,7 +274,7 @@ DE--7,BoB-Hotel-Kudamm,business-unit-kudamm-1,0
 DE--7,spryker_systems,spryker_systems_HQ,0
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | customer_reference | mandatory | string | DE--6 | Identifies a customer to add data to. |
 | company_key | mandatory | string | BoB-Hotel-Mitte | Identifies a company to add data to. |

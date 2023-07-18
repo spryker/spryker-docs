@@ -32,7 +32,7 @@ Glue API lets you validate requests sent to REST endpoints. It lets you check wh
 
 ## Install the `RestRequestValidation` module
 
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html).
 
 ## Use default validation schema
 

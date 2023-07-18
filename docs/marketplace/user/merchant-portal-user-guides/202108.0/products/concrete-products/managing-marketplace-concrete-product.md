@@ -54,7 +54,7 @@ To edit an existing marketplace concrete product:
 
 ### Reference information: Concrete Product SKU, Name page
 
-| PANE    | ATTRIBUTE     | DESCRIPTION | REQUIRED? |
+| PANE    | ATTRIBUTE     | DESCRIPTION | REQUIRED |
 | -------------- | ---------------- | ----------- | --------- |
 | Status         |                  | Defines the status of the concrete product. |           |
 |                |  Concrete Product is online    | The selected checkbox makes the product active and available in store. |               |

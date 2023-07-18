@@ -33,9 +33,9 @@ For detailed information on the modules that provide the API functionality and r
 
 You can purchase a gift card as a regular product. To do that:
 
-1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
-2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/submit-checkout-data.html#submit-checkout-data).
-3. [Place the order](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order).
+1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
+2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html#submit-checkout-data).
+3. [Place the order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order).
 
 After placing the order, you receive the gift card code to the email address specified in the checkout. You can redeem this code to pay for the products.
 
@@ -50,7 +50,7 @@ To redeem a gift card, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
 
 ### Request
 
@@ -148,7 +148,7 @@ Response sample: redeem a gift card in a guest cart
 }
 ```
 
-For the guest cart attributes, see [Creating Guest Carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart).
+For the guest cart attributes, see [Creating Guest Carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart).
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

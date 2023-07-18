@@ -33,7 +33,7 @@ With order thresholds, you can:
 * Ensure that the cost of items sold is not too high for each transaction, which, in the long run, can make your business more profitable
 * Support promotional campaigns, for example, by offering free shipping for orders above a threshold
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **cms_page_store.csv** file to configure CMS Page Store information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -26,7 +26,7 @@ This file has the following dependencies:
 *     [cms_page.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-page.csv.html)
 *     *stores.php* configuration file of the demo shop PHP project
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *cms_page_store.csv*  file can be downloaded here:
 
 | File | Description |

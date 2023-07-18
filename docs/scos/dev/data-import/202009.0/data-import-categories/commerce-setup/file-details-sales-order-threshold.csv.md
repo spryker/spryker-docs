@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **sales_order_threshold.csv** file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -31,7 +31,7 @@ This file has the following dependencies:
 *  [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 *  s*tores.php* configuration file of the demo shop PHP project
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *sales_order_threshold.csv* file can be downloaded here:
 
 | File | Description |

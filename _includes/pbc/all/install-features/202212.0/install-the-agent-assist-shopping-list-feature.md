@@ -8,9 +8,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME          | VERSION | INTEGRATION GUIDE                                            |
 | ------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core  | master  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core  | master  | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Agent Assist  | master  | [Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html) |
-| Shopping List | master  | [Shopping lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/install-and-upgrade/integrate-the-shopping-lists-feature.html) |
+| Shopping List | master  | [Shopping lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
 
 ## 1) Set up behavior
 

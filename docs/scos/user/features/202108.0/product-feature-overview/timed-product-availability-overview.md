@@ -41,7 +41,7 @@ The following table shows possible usage scenarios with the TTL feature and resu
 | "Valid to" is set in the past | Product will be deactivated shortly. |
 | "Valid from" is set, "Valid to" is set and lies in the future, the product is deactivated manually | Message saying that the product will be activated because of setting "Valid from" and "Valid to" time.|
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

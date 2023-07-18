@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-product-restrictions-feature-integration.html
 related:
   - title: Configurable Bundle feature integration
-    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product feature integration
-    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product Lists feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
   - title: Prices feature integration

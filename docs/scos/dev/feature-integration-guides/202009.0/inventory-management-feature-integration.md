@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/inventory-management-feature-integration
 related:
   - title: Inventory Management feature overview
-    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
+    link: docs/scos/user/features/page.version/base-shop/inventory-management-feature-overview.html
 ---
 
 {% info_block errorBox %}

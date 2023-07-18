@@ -41,7 +41,7 @@ The concerns for the product price calculation are the following :
 
 price for the options that were selected for the product (e.g.: frame, fabric, etc.)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

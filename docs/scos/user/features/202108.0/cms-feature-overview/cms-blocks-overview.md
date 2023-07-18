@@ -59,7 +59,7 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 --->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

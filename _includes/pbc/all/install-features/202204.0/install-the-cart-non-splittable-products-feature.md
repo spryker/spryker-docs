@@ -13,8 +13,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |
-| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Non-splittable Products |{{page.version}} | [Install the Cart + Non-splittable Products feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html) |
+| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Non-splittable Products |{{page.version}} | [Install the Cart + Non-splittable Products feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html) |
 
 ### 1) Adjust concrete product quantity
 

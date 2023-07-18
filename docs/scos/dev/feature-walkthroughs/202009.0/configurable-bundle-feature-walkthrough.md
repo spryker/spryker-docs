@@ -39,7 +39,7 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 </div>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|

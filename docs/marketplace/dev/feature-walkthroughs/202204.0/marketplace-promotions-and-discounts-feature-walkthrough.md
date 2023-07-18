@@ -25,8 +25,8 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantSalesOrderExtension](https://github.com/spryker/merchant-sales-order-extension) | Provides plugin interfaces for the `MerchantSalesOrder` module. |
 | [MerchantSalesOrder](https://github.com/spryker/merchant-sales-order) | Links merchant to sales orders. |
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES|
+| INSTALLATION GUIDES|
 | -------------- |
 | [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) |

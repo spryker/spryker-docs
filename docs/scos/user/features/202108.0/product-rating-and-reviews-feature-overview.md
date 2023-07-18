@@ -36,7 +36,7 @@ For more details about managing ratings and reviews, check the video:
 
 {% wistia efvyq9vfb8 720 480 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

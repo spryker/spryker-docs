@@ -4,9 +4,9 @@ description: This document describes what you can do in the My account area of t
 template: back-office-user-guide-template
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Merchant users overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/merchant-users-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 This document describes how to manage merchant user account details in the Merchant Portal.

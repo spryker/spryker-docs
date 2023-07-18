@@ -12,11 +12,11 @@ Before you can start managing the upgrades of your project with Spryker Code Upg
 
 The Upgrader provides automatic minor and patch updates for the current version of each module. Since most updates are released for the latest module versions, modules need to be of the latest major version to receive updates.
 
-## Make your code is compliant with Spryker Quality Gate
+To ensure that your project is suitable for the requirement, update all `spryker-feature-*` packages in composer.json to version `2022.04` or higher.
 
-Spryker Quality Gate contains code checkers that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
+## Make sure your code is compliant with Upgradability Guidelines
 
-For instructions on making code compliant with the guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
+Spryker Upgradability Guidelines contain rules that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
 
 ## Implement E2E testing in development workflow
 
@@ -30,13 +30,29 @@ Currently, the Upgrader supports GitHub, GitLab and Azure. If you want to use a 
 
 The Upgrader does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
 
+## Optional: Ensure your code is compliant with the supported extensions scenarios.
+
+To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
+
 ## Migrate to Spryker Cloud Commerce OS
 
-The upgrader supports only the projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
+The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
 
-## Update PHP to version 7.4 or higher
+## Minimum technical requirements
 
-The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
+To ensure a smooth experience, please make sure that your environments meet the minimum technical requirements outlined below:
+
+* PHP 7.4+. The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
+* Composer 2.1+
+* Git 2.24+
+
+## Optional: Implement headless design
+
+The Upgrader does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
+
+## Optional: Ensure your code is compliant with the supported extensions scenarios.
+
+To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#Follow the upgradability best practices).
 
 ## Next steps
 

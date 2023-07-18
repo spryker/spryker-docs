@@ -362,7 +362,6 @@ Prepare your data according to your requirements using our demo data:
 
 ```yaml
 name,code,default_precision
-measurement_units.item.name,ITEM,1
 measurement_units.standard.weight.kilo.name,KILO,1
 measurement_units.standard.weight.gram.name,GRAM,1
 measurement_units.standard.weight.tone.name,TONE,1000
@@ -987,49 +986,28 @@ Register the following plugins to enable widgets:
 | ProductMeasurementUnitWidgetPlugin | Allows customers to select sales units for the product when adding to cart. |None  | SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage |
 |QuantitySalesUnitWidgetPlugin|Displays selected sales unit information for products on the cart overview page.|None|SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage|
 
-**src/Pyz/Yves/ProductDetailPage/ProductDetailPageDependencyProvider.php**
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\ProductDetailPage;
+namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\ProductDetailPage\ProductDetailPageDependencyProvider as SprykerShopProductDetailPageDependencyProvider;
 use SprykerShop\Yves\ProductMeasurementUnitWidget\Widget\ManageProductMeasurementUnitWidget;
-
-class ProductDetailPageDependencyProvider extends SprykerShopProductDetailPageDependencyProvider
-{
-    /**
-     * @return \Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface[]
-     */
-    protected function getProductDetailPageWidgetPlugins(): array
-    {
-        return [
-            ManageProductMeasurementUnitWidget::class,
-        ];
-    }
-}
-```
-
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\CartPage;
-
-use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
 use SprykerShop\Yves\ProductMeasurementUnitWidget\Widget\CartProductMeasurementUnitQuantitySelectorWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
-class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return array
+     * @return string[]
      */
-    protected function getCartPageWidgetPlugins(): array
+    protected function getGlobalWidgets(): array
     {
         return [
             CartProductMeasurementUnitQuantitySelectorWidget::class,
+            ManageProductMeasurementUnitWidget::class,
         ];
     }
 }

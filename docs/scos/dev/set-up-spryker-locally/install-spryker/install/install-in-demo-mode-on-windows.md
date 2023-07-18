@@ -59,7 +59,7 @@ Depending on the needed WSL version, follow one of the guides:
     * B2B Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2b-demo-marketplace & \
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2b-demo-marketplace && \
     cd b2b-demo-marketplace
     ```
 

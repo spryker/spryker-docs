@@ -18,7 +18,7 @@ If searching by merchant name in the search field, products and offers of the re
 
 ## Product Details pages
 
-On the **Product Details** page, the **Sold by** section contains the [marketplace products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html) and the [offers](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
+On the **Product Details** page, the **Sold by** section contains the [marketplace products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html) and the [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
 
 ![Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/product-details-page.png)
 

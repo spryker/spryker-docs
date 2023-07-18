@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:
   - title: Managing main merchant orders
-    link: docs/pbc/all/order-management-system/page.version/marketplace/manage-main-merchant-orders.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
   - title: Managing main merchant returns
     link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
 ---

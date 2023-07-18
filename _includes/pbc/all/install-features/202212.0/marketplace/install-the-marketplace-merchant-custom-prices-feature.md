@@ -233,7 +233,7 @@ Make sure that you can delete the customer price.
 
 {% info_block warningBox %}
 
-This option is only available if you have the [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) installed.
+This option is only available if you have the [Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) installed.
 
 {% endinfo_block %}
 

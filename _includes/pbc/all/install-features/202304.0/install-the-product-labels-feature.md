@@ -11,9 +11,9 @@ Follow the steps below to install the Alternative Products feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME         | VERSION           | INTEGRATION GUIDE                                                                                                                                                  | 
+| NAME         | VERSION           | INTEGRATION GUIDE                                                                                                                                                  |
 |--------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                               |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                               |
 | Product      | {{site.version}}  | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
@@ -249,7 +249,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductLabelDictionaryStorageDeletePublisherPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
@@ -448,7 +448,7 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 
 Ensure that the product label new works:
 
-1. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**. 
+1. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 2. To create a product, click **Create a Product**.
 3. In the **NEW FROM** and **NEW TO** fields, enter dates so that the current date is between the entered ones.
 4. Clisk **Save**.
@@ -559,9 +559,9 @@ Follow the steps below to install the feature frontend.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE| 
+| NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ### 1) Install the required modules using Composer

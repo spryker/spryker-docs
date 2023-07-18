@@ -39,7 +39,6 @@ commonOptions = {
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
     /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
-    /blackfire.io\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
@@ -53,6 +52,7 @@ commonOptions = {
     /twitter.com\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
+    /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/
   ],
@@ -118,7 +118,8 @@ task :check_mp_dev do
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/sdk\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202304\.0\/.+/
+    /docs\/marketplace\/\w+\/[\w-]+\/202304\.0\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -135,7 +136,8 @@ task :check_mp_user do
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/pbc\/.+/,
     /docs\/sdk\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202304\.0\/.+/
+    /docs\/marketplace\/\w+\/[\w-]+\/202304\.0\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -159,7 +161,8 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202304\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202304\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -183,7 +186,8 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202304\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202304\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -213,7 +217,8 @@ task :check_pbc do
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/
+    /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

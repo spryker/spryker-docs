@@ -30,7 +30,7 @@ The *Spryker Glue REST API* is a JSON REST API that is an application of the Spr
 
 The Spryker API infrastructure, which is implemented as a separate layer of the SCCOS, is called Glue. Glue is responsible for providing API endpoints, processing requests, and for communicating with other layers of the OS.
 
-For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html).
+For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-infrastructure.html).
 
 ## REST API
 
@@ -38,8 +38,8 @@ The Glue REST API comes with a set of predefined APIs, which you can extend or a
 
 For more details, see REST API reference:
 
-* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2b-reference.html)
-* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2c-reference.html)
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastucture/rest-api-b2b-reference.html)
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastucture/rest-api-b2c-reference.html)
 
 ## B2C API React example
 

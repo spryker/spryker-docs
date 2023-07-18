@@ -32,7 +32,7 @@ Spryker Glue REST API comes with a set of predefined APIs out of the box. You ca
 
 {% info_block infoBox %}
 
-The following guide relies on your knowledge of the structure of the Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
+The following guide relies on your knowledge of the structure of the Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 

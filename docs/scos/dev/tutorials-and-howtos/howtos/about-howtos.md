@@ -34,7 +34,7 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 
 
 
-**Glue API HowTos**  provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html). These guides walk you through the following topics:
+**Glue API HowTos**  provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastucture/glue-rest-api.html). These guides walk you through the following topics:
 
 * [Configuring visibility of the included section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html)
 * [Configuring Glue for cross-origin requests](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html)

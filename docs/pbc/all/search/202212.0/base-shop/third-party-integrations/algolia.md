@@ -64,12 +64,20 @@ Here is an example of product data stored in Algolia:
 {
   "sku": "017_21748906",
   "name": "Sony Cyber-shot DSC-W800",
+  "abstract_name": "Sony Cyber-shot DSC-W800",
   "description": "Styled for your pocket Precision photography meets the portability of a smartphone. The W800 is small enough to take great photos, look good while doing it, and slip in your pocket. Shooting great photos and videos is easy with the W800. Buttons are positioned for ease of use, while a dedicated movie button makes shooting movies simple. The vivid 2.7-type Clear Photo LCD display screen lets you view your stills and play back movies with minimal effort. Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound. Breathe new life into a picture by using built-in Picture Effect technology. There’s a range of modes to choose from – you don’t even have to download image-editing software.",
   "url": "/en/sony-cyber-shot-dsc-w800-17",
   "product_abstract_sku": "017",
   "rating": 4.5,
   "keywords": "Sony,Entertainment Electronics",
-  "image": "https://images.icecat.biz/img/norm/high/21748906-Sony.jpg",
+  "images": {
+    "default": [
+      {
+        "small": "https://images.icecat.biz/img/norm/medium/21748906-Sony.jpg",
+        "large": "https://images.icecat.biz/img/norm/high/21748906-Sony.jpg"
+      }
+    ]
+  },
   "category": [
     "Demoshop",
     "Cameras & Camcorders",
@@ -90,18 +98,33 @@ Here is an example of product data stored in Algolia:
     "upcs": "0013803252897",
     "usb_version": "2"
   },
-  "merchants": [ // Marketplace only
-    "Video King1",
+  "merchant_name": [ // Marketplace only
+    "Video King",
     "Budget Cameras"
   ],
-  "prices": {
+  "merchant_reference": [ // Marketplace only
+    "MER000002",
+    "MER000005"
+  ],
+  "search_metadata": [], // Put inside this list all your ranking attributes
+  "concrete_prices": {
     "eur": {
-      "gross": 276559,
-      "net": 248903
+      "gross": 345699,
+      "net": 311129
     },
     "chf": {
-      "gross": 318043,
-      "net": 286238
+      "gross": 397554,
+      "net": 357798
+    }
+  },
+  "prices": {
+    "eur": {
+      "gross": 345699,
+      "net": 311129
+    },
+    "chf": {
+      "gross": 397554,
+      "net": 357798
     }
   },
   "objectID": "017_21748906"

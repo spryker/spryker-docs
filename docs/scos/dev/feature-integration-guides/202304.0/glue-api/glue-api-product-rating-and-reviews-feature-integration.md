@@ -212,37 +212,6 @@ Make sure that the following endpoint is available:
 
 {% endinfo_block %}
 
-#### Enable query expanders
-Activate the following plugins:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| FilterByIdProductReviewQueryExpanderPlugin |  | None | Spryker\Client\ProductReviewSearch\Plugin\Search |
-
-**src/Pyz/Client/ProductReview/ProductReviewDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\ProductReview;
-
-use Spryker\Client\ProductReviewSearch\Plugin\Search\FilterByIdProductReviewQueryExpanderPlugin;
-
-class ProductReviewDependencyProvider extends SprykerProductReviewDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function getProductReviewsQueryExpanderPlugins(): array
-    {
-        $productReviewQueryExpanderPlugins = parent::getProductReviewsQueryExpanderPlugins();
-        $productReviewQueryExpanderPlugins[] = new FilterByIdProductReviewQueryExpanderPlugin();
-
-        return $productReviewQueryExpanderPlugins;
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:

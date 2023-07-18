@@ -57,7 +57,6 @@ Make sure that the following changes have been applied in the transfer objects:
 |----------------------------------------| --- | --- |----------------------------------------------------------------------|
 | RestProductReviewsAttributesTransfer   | class | created | src/Generated/Shared/Transfer/RestProductReviewsAttributesTransfer   |
 | BulkProductReviewSearchRequestTransfer | class | created | src/Generated/Shared/Transfer/BulkProductReviewSearchRequestTransfer |
-| ProductReviewTransfer                  | class | created | src/Generated/Shared/Transfer/ProductReviewTransfer                          |
 | StoreTransfer                          | class | created | src/Generated/Shared/Transfer/StoreTransfer                          |
 
 {% endinfo_block %}

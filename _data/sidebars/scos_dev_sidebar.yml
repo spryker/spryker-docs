@@ -977,7 +977,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Discontinued Products
         url: /docs/scos/dev/feature-integration-guides/glue-api/discontinued-products-api-feature-integration.html
         include_versions:
@@ -2181,7 +2180,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
       include_versions:
       - "202204.0"
-      - "202212.0"
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
@@ -2221,10 +2219,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
-    - title: Migration Guide - Offer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-offer.html
-    - title: Migration Guide - OfferGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
     - title: Migration Guide - RabbitMQ
@@ -3244,6 +3238,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+      - title: Image optimization usage
+        url: /docs/scos/dev/front-end-development/yves/image-optimization-usage.html
     - title: Oryx
       url: /docs/scos/dev/front-end-development/oryx/oryx.html
       include_versions:
@@ -3300,6 +3296,12 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
+        - title: Styling
+          include_versions:
+          - "202212.0"
+          nested:
+          - title: "Color system"
+            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
       include version:
@@ -3323,6 +3325,20 @@ entries:
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
+    - title: Migrate to decoupled Glue infrastructure
+      nested:
+        - title: Integrate Storefront and Backend Glue API applications
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
+        - title: Integrate the authentication
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+        - title: Integrate the authorization scopes
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
+        - title: Integrate the documentation generator
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
+        - title: Integrate the Glue JSON:API convention
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
+        - title: Integrate the protected endpoints authorization
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Silex Replacement
@@ -3597,6 +3613,8 @@ entries:
     - title: Integrate development tools
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-development-tools.html
       nested:
+      - title: "Glue API: Development tools"
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
       - title: SCSS linter
@@ -3607,6 +3625,11 @@ entries:
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    - title: Integrate Zed API
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api.html
+      nested:
+        - title: Integrate Zed API for merchant relationships
+          url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
     - title: Authorization Enabler
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
     - title: Basic SEO techniques

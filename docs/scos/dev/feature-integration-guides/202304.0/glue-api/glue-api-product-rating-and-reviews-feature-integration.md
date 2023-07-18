@@ -28,7 +28,7 @@ To start feature integration, overview and install the necessary features:
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker/product-reviews-rest-api:"^1.0.0" --update-with-dependencies
+composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -53,10 +53,12 @@ console transfer:generate
 
 Make sure that the following changes have been applied in the transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| RestProductReviewsAttributesTransfer | class | created |src/Generated/Shared/Transfer/RestProductReviewsAttributesTransfer |
-| BulkProductReviewSearchRequestTransfer | class | created |src/Generated/Shared/Transfer/BulkProductReviewSearchRequestTransfer|
+| TRANSFER                               | TYPE | EVENT | PATH                                                                 |
+|----------------------------------------| --- | --- |----------------------------------------------------------------------|
+| RestProductReviewsAttributesTransfer   | class | created | src/Generated/Shared/Transfer/RestProductReviewsAttributesTransfer   |
+| BulkProductReviewSearchRequestTransfer | class | created | src/Generated/Shared/Transfer/BulkProductReviewSearchRequestTransfer |
+| ProductReviewTransfer                  | class | created | src/Generated/Shared/Transfer/ProductReviewTransfer                          |
+| StoreTransfer                          | class | created | src/Generated/Shared/Transfer/StoreTransfer                          |
 
 {% endinfo_block %}
 

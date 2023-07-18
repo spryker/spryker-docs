@@ -129,8 +129,7 @@ button:hover {
 }
 ```
 
-This example works consistently with all colors. The buttons have a white foreground color on a colorful background. In case the background color is bright, the foreground color becomes black.
+The example shows the usage of design tokens in CSS. The primary color is defined for the default state of the the button background color. When the user hovers over the button, the 400 color shade is used. It works consistently with all colors. The buttons have a white foreground color on a colorful background. In case the background color is bright, the foreground color becomes black.
 
-The following example shows the usage of design tokens in CSS. The primary color is defined for the default state of the the button background color. When the user hovers over the button, the 400 color shade is used.
 
 ?

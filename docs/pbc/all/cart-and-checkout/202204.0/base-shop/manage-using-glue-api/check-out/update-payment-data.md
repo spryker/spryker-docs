@@ -29,7 +29,7 @@ When [checking out purchases](/docs/pbc/all/cart-and-checkout/{{site.version}}/b
 
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see the payment service provider's API reference.
 
-The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html#implement-payload-processor-plugin) to learn more.
+The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/pbc/all/payment-service-provider/{{site.version}}/spryker-pay/base-shop/interact-with-third-party-payment-providers-using-glue-api.html#implement-payload-processor-plugin) to learn more.
 
 
 **Interaction Diagram**
@@ -87,7 +87,7 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| paymentIdentifier | String |  | The Unique payment ID. To get it, [place. an order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html#implement-payload-processor-plugin). |
+| paymentIdentifier | String |  | The Unique payment ID. To get it, [place. an order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/pbc/all/payment-service-provider/{{site.version}}/spryker-pay/base-shop/interact-with-third-party-payment-providers-using-glue-api.html#implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
 
 

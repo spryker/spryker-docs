@@ -25,7 +25,6 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
 
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies
@@ -42,7 +41,7 @@ Make sure that the following module was installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -59,9 +58,6 @@ Make sure that the following changes have been applied in the transfer objects:
 | BulkProductReviewSearchRequestTransfer | class | created | src/Generated/Shared/Transfer/BulkProductReviewSearchRequestTransfer |
 | StoreTransfer                          | class | created | src/Generated/Shared/Transfer/StoreTransfer                          |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:
 
@@ -76,7 +72,7 @@ Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are e
 
 #### Reload data to storage
 
-Run the following commands to reload abstract and product data to storage.
+Reload abstract and product data to storage.
 
 ```bash
 console event:trigger -r product_abstract
@@ -209,9 +205,6 @@ Make sure that the following endpoint is available:
 ```
 </details>
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
@@ -480,9 +473,6 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
 ```
 </details>
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 

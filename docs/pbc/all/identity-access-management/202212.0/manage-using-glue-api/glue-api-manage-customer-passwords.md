@@ -36,7 +36,7 @@ related:
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Password Management overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/password-management-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password.

@@ -732,164 +732,164 @@ entries:
         include_versions:
         - "202212.0"
         nested:
-          - title: Reorder feature overview
-            url: /docs/pbc/all/customer-relationship-management/reorder-feature-overview.html
-          - title: Install and upgrade
+          - title: Base shop
             nested:
-              - title: Install features
+              - title: Reorder feature overview
+                url: /docs/pbc/all/customer-relationship-management/base-shop/reorder-feature-overview.html
+              - title: Install and upgrade
                 nested:
-                  - title: Company Account
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-feature.html
-                  - title: Company Account + Order Management
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
-                  - title: Customer Access
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-access-feature.html
-                  - title: Customer Account Management + Agent Assist
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
-                  - title: Customer Account Management
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
-                  - title: Customer Account Management + Order Management
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
-              - title: Install Glue API
+                  - title: Install features
+                    nested:
+                      - title: Company Account
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html
+                      - title: Company Account + Order Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
+                      - title: Customer Access
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html
+                      - title: Customer Account Management + Agent Assist
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
+                      - title: Customer Account Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+                      - title: Customer Account Management + Order Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Company Account
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                      - title: Customer Account Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: BusinessOnBehalfDataImport
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.html
+                      - title: CompanyBusinessUnit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companybusinessunit-module.html
+                      - title: CompanyUser
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html
+                      - title: CompanyUserAuthRestApi
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuserauthrestapi-module.html
+                      - title: CompanyUsersRestApi
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyusersrestapi-module.html
+                      - title: Customer
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customer-module.html
+                      - title: CustomerPage
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
+                      - title: CustomerReorderWidget
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
+                      - title: SharedCartPage
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
+              - title: Company Account feature overview
+                url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-account-feature-overview.html
                 nested:
-                  - title: Company Account
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
-                  - title: Customer Account Management
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
-              - title: Upgrade modules
+                  - title: Business on Behalf
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/business-on-behalf-overview.html
+                  - title: Business Units
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/business-units-overview.html
+                  - title: Company Accounts
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.html
+                  - title: Company user roles and permissions
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+                  - title: Customer Login by Token
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/customer-login-by-token-overview.html
+              - title: Customer Account Management
+                url: /docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
                 nested:
-                  - title: BusinessOnBehalfDataImport
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.html
-                  - title: CompanyBusinessUnit
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companybusinessunit-module.html
-                  - title: CompanyUser
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html
-                  - title: CompanyUserAuthRestApi
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyuserauthrestapi-module.html
-                  - title: CompanyUsersRestApi
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyusersrestapi-module.html
-                  - title: Customer
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customer-module.html
-                  - title: CustomerPage
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
-                  - title: CustomerReorderWidget
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
-                  - title: SharedCartPage
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
-          - title: Company Account feature overview
-            url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-account-feature-overview.html
-            nested:
-              - title: Business on Behalf
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
-              - title: Business Units
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-units-overview.html
-              - title: Company Accounts
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-accounts-overview.html
-              - title: Company user roles and permissions
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-user-roles-and-permissions-overview.html
-              - title: Customer Login by Token
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/customer-login-by-token-overview.html
-          - title: Customer Account Management
-            url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-            nested:
-              - title: Customer Accounts
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-accounts-overview.html
-              - title: Customer Groups
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-groups-overview.html
-              - title: Customer Login
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-login-overview.html
-              - title: Customer Registration
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-registration-overview.html
-              - title: Password Management
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management-overview.html
-          - title: Customer Access feature overview
-            url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
-          - title: Manage in the Back Office
-            url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
-            include_versions:
-            - "202212.0"
-            nested:
-              - title: Manage customers
+                  - title: Customer Accounts
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.html
+                  - title: Customer Groups
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
+                  - title: Customer Login
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-login-overview.html
+                  - title: Customer Registration
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-registration-overview.html
+                  - title: Password Management
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/password-management-overview.html
+              - title: Customer Access feature overview
+                url: /docs/pbc/all/customer-relationship-management/base-shop/customer-access-feature-overview.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
-                  - title: Create
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/create-customers.html
-                  - title: Edit
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customers.html
-                  - title: View
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/view-customers.html
-                  - title: Add notes to customers
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-notes-to-customers.html
-                  - title: Add customer addresses
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-customer-addresses.html
-                  - title: Edit customer addresses
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html
-              - title: Manage customer access
-                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-access.html
-              - title: Manage customer groups
-                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-groups.html
-              - title: Manage companies
-                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-companies.html
-              - title: Manage company units
+                  - title: Manage customers
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/customers/create-customers.html
+                      - title: Edit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/customers/edit-customers.html
+                      - title: View
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/customers/view-customers.html
+                      - title: Add notes to customers
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/customers/add-notes-to-customers.html
+                      - title: Add customer addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html
+                      - title: Edit customer addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/customers/edit-customer-addresses.html
+                  - title: Manage customer access
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/manage-customer-access.html
+                  - title: Manage customer groups
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/manage-customer-groups.html
+                  - title: Manage companies
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/manage-companies.html
+                  - title: Manage company units
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-units/create-company-units.html
+                      - title: Edit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-units/edit-company-units.html
+                  - title: Manage company unit addresses
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html
+                      - title: Edit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html
+                  - title: Manage company roles
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html
+                      - title: Edit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html
+                  - title: Manage company users
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-users/create-company-users.html
+                      - title: Edit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/company-users/edit-company-users.html
+              - title: Manage using Glue API
                 nested:
-                  - title: Create
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-units/create-company-units.html
-                  - title: Edit
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-units/edit-company-units.html
-              - title: Manage company unit addresses
+                  - title: Company account
+                    nested:
+                      - title: Search by company users
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
+                      - title: Retrieve company users
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                      - title: Retrieve companies
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
+                      - title: Retrieve business units
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
+                      - title: Retrieve company roles
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
+                      - title: Retrieve business unit addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
+                  - title: Customers
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
+                    nested:
+                      - title: Manage customer addresses
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
+                      - title: Retrieve customer orders
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+                  - title: Manage customer access to Glue API resources
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+              - title: Generate login tokens
+                url: /docs/pbc/all/customer-relationship-management/base-shop/generate-login-tokens.html
+              - title: Domain model and relationships
                 nested:
-                  - title: Create
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html
-                  - title: Edit
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html
-              - title: Manage company roles
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-roles/create-company-roles.html
-                  - title: Edit
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-roles/edit-company-roles.html
-              - title: Manage company users
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-users/create-company-users.html
-                  - title: Edit
-                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-users/edit-company-users.html
-          - title: Manage using Glue API
-            nested:
-              - title: Company account
-                nested:
-                  - title: Search by company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
-                  - title: Retrieve company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
-                  - title: Retrieve companies
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
-                  - title: Retrieve business units
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
-                  - title: Retrieve company roles
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
-                  - title: Retrieve business unit addresses
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
-              - title: Customers
-                url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customers.html
-                nested:
-                  - title: Manage customer addresses
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
-                  - title: Retrieve customer orders
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
-              - title: Manage customer access to Glue API resources
-                url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
-          - title: Generate login tokens
-            url: /docs/pbc/all/customer-relationship-management/generate-login-tokens.html
-          - title: Domain model and relationships
-            nested:
-              - title: "Company account: module relations"
-                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/company-account-module-relations.html
-              - title: "Customer Login by Token: reference information"
-                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-login-by-token-reference-information.html
-              - title: "Customer module overview: reference information"
-                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-module-overview-reference-information.html
-          - title: "File details: customer.csv"
-            url: /docs/pbc/all/customer-relationship-management/file-details-customer.csv.html
+                  - title: "Company account: module relations"
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/company-account-module-relations.html
+                  - title: "Customer Login by Token: reference information"
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html
+                  - title: "Customer module overview: reference information"
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
+              - title: "File details: customer.csv"
+                url: /docs/pbc/all/customer-relationship-management/base-shop/file-details-customer.csv.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -1173,7 +1173,7 @@ entries:
                       - title: Merchant Switcher + Customer Account Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html
                       - title: Merchant Switcher + Wishlist
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html                                                                        
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Merchant

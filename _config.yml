@@ -207,6 +207,7 @@ versioned_categories:
       - back-office-user-guides
       - technology-partners
       - shop-user-guides
+      - overview-of-features
     dev:
       - feature-walkthroughs
       - feature-integration-guides

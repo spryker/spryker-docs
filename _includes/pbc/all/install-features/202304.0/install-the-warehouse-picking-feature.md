@@ -1,3 +1,6 @@
+
+
+
 This document describes how to integrate the Warehouse picking feature into a Spryker project.
 
 ## Install feature core
@@ -13,7 +16,7 @@ To start feature integration, integrate the required features:
 | Warehouse User Management               | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)                     |
 | Order Management + Inventory Management | {{site.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-order-management-and-inventory-management-feature.html) |
 | Shipment                                | {{site.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                                       |
-| Picker User Login                       | {{site.version}} |                                                                                                                                                                                    |
+| Picker User Login                       | {{site.version}} | [Install the Picker User Login feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-picker-user-login-feature.html)                         |
 
 ### 1) Install the required modules using Composer
 

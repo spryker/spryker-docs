@@ -656,4 +656,4 @@ Resolve a search engine friendly URL of a merchant page. For details, see [Resol
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

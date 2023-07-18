@@ -16,7 +16,7 @@ Out of the box, Spryker Commerce OS provides three API applications:
 
 ## Difference between Decoupled Glue Api and the old Glue API
 
-There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the old [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-rest-api.html).
+There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the old [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-rest-api.html).
 
 ### Possibility to create new API applications
 
@@ -35,7 +35,7 @@ For more details about the difference between SAPI and BAPI, refer to [Backend a
 ### Authentication servers
 Current infrastructure lets you switch between different authentication servers. For example, this can be useful if you want to use Auth0 or any other server in addition to implemented servers.
 
-For more details and examples, see [Use authentication servers with Glue API](docs/scos/dev/glue-api-guides/{{page.version}}/use-authentication-servers-with-glue-api.html).
+For more details and examples, see [Use authentication servers with Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/use-authentication-servers-with-glue-api.html).
 
 
 ## Glue Storefront API

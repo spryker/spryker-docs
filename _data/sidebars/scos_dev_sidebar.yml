@@ -661,21 +661,37 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-
-
-
-
-
-
   - title: Glue API guides
     url: /docs/scos/dev/glue-api-guides/glue-api-guides.html
     nested:
     - title: Glue REST API
       url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Glue Spryks
       url: /docs/scos/dev/glue-api-guides/glue-spryks.html
+    - title: Decoupled Glue API
+      url: /docs/scos/dev/glue-api-guides/decoupled-glue-api.html
+      include_versions:
+        - "202212.0"
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Decoupled Glue infrastructure
       include_versions:
       - "202204.0"
@@ -684,13 +700,68 @@ entries:
       nested:
         - title: Backend and Storefront API module differences
           url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
+          include_versions:
+          - "202204.0"
         - title: Create Glue API applications
           url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/create-glue-api-applications.html
+          include_versions:
+          - "202204.0"
         - title: Authentication and authorization
           url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/authentication-and-authorization.html
+          include_versions:
+          - "202204.0"
         - title: Security and authentication
           url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/security-and-authentication.html
-
+          include_versions:
+          - "202204.0"
+    - title: Backend and Storefront API module differences
+      url: /docs/scos/dev/glue-api-guides/backend-and-storefront-api-module-differences.html
+      include_versions:
+      - "202212.0"
+    - title: Create Glue API applications
+      url: /docs/scos/dev/glue-api-guides/create-glue-api-applications.html
+      include_versions:
+      - "202212.0"
+    - title: Authentication and authorization
+      url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
+      include_versions:
+      - "202212.0"
+    - title: Security and authentication
+      url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
+      include_versions:
+      - "202212.0"
+    - title: Old Glue infrastructure
+      include_versions:
+      - "202212.0"
+      nested:
+      - title: Glue REST API
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-rest-api.html
+        include_versions:
+        - "202212.0"
+      - title: Glue infrastructure
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-infrastructure.html
+        include_versions:
+        - "202212.0"
+      - title: Handling concurrent REST requests and caching with entity tags
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+        include_versions:
+        - "202212.0"
+      - title: Resolving search engine friendly URLs
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
+        include_versions:
+        - "202212.0"
+      - title: Reference information - GlueApplication errors
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/reference-information-glueapplication-errors.html
+        include_versions:
+        - "202212.0"
+      - title:  REST API B2B Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-reference.html
+        include_versions:
+        - "202212.0"
+      - title: REST API B2C Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-reference.html
+        include_versions:
+        - "202212.0"
     - title: Routing
       include_versions:
       - "202204.0"
@@ -703,7 +774,6 @@ entries:
           url: /docs/scos/dev/glue-api-guides/routing/create-backend-resources.html
         - title: Create routes
           url: /docs/scos/dev/glue-api-guides/routing/create-routes.html
-
     - title: Create and change Glue API conventions
       url: /docs/scos/dev/glue-api-guides/create-and-change-glue-api-conventions.html
       include_versions:
@@ -712,6 +782,9 @@ entries:
       - "202307.0"
     - title: Create Glue API authorization strategies
       url: /docs/scos/dev/glue-api-guides/create-glue-api-authorization-strategies.html
+      include_versions:
+      - "202204.0"
+      - "202212.0"
     - title: Create Glue API resources with parent-child relationships
       url: /docs/scos/dev/glue-api-guides/create-glue-api-resources-with-parent-child-relationships.html
       include_versions:
@@ -744,8 +817,21 @@ entries:
       - "202307.0"
     - title: Handling concurrent REST requests and caching with entity tags
       url: /docs/scos/dev/glue-api-guides/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Resolving search engine friendly URLs
       url: /docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Use authentication servers with Glue API
       url: /docs/scos/dev/glue-api-guides/use-authentication-servers-with-glue-api.html
       include_versions:
@@ -825,14 +911,25 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      nested:
+      - title: Managing customer addresses
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Retrieving customer orders
+        url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
     - title: Managing B2B account
-      url: /docs/scos/dev/glue-api-guidesmanaging-b2b-account/managing-b2b-account.html
+      url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-b2b-account.html
       include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       - "202204.0"
       nested:
         - title: Searching by company users
@@ -847,14 +944,20 @@ entries:
           url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
         - title: Retrieving business unit addresses
           url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html
-
-
+    - title: Retrieving store configuration
+      url: /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Retrieve related products
       url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
       include_versions:
-      - "202009.0"
-      - "201907.0"
-      - "202108.0"
       - "202204.0"
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
@@ -877,13 +980,6 @@ entries:
       - "201907.0"
       - "202108.0"
       - "202204.0"
-
-
-
-
-
-
-
   - title: Feature integration guides
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
     nested:

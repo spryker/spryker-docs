@@ -17,7 +17,7 @@ jobs:
         run: |
           # Set the start and end dates for June 2023
           START_DATE="2023-05-01"
-          END_DATE="2023-06-30"
+          END_DATE="2023-05-30"
           MONTH_NAME="June"
 
           # Exclude certain users

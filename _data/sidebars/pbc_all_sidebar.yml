@@ -5,6 +5,7 @@ entries:
       - title: Back Office
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Spryker Core Back Office feature overview
             url: /docs/pbc/all/back-office/spryker-core-back-office-feature-overview.html
@@ -56,6 +57,7 @@ entries:
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: Add carrier companies
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
@@ -117,6 +119,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Shipment feature overview
                 url: /docs/pbc/all/carrier-management/marketplace/marketplace-shipment-feature-overview.html
@@ -238,6 +241,7 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                   - title: Install Glue API
                     nested:
                       - title: Install the Cart Glue API
@@ -308,6 +312,7 @@ entries:
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
@@ -317,6 +322,7 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
                     include_versions:
                     - "202212.0"
+                    - "202307.0"
               - title: Manage using Glue API
                 nested:
                   - title: Check out purchases
@@ -372,6 +378,7 @@ entries:
             url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-overview.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Install
                 nested:
@@ -462,6 +469,7 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
                         include_versions:
                           - "202212.0"
+                          - "202307.0"
                   - title: Install Glue API
                     nested:
                       - title: CMS
@@ -592,6 +600,7 @@ entries:
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: "Best practices: Add content to the Storefront pages using templates and slots"
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
@@ -722,6 +731,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
@@ -729,6 +739,7 @@ entries:
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Reorder feature overview
             url: /docs/pbc/all/customer-relationship-management/reorder-feature-overview.html
@@ -806,6 +817,7 @@ entries:
             url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Manage customers
                 nested:
@@ -911,6 +923,7 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-multiple-abstract-products-as-promotional-products-discounts-feature.html
                     include_versions:
                     - "202212.0"
+                    - "202307.0"
                   - title: Upgrade the Discount module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
                   - title: Upgrade the DiscountCalculatorConnector module
@@ -971,6 +984,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Promotions & Discounts feature overview
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-overview.html
@@ -985,6 +999,7 @@ entries:
             url: /docs/pbc/all/emails/install-the-mailing-and-notifications-feature.html
             include_versions:
             - "202212.0"
+            - "202307.0"
           - title: "HowTo: Create and register a MailTypePlugin"
             url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
           - title: "HowTo: Create and register a mail provider"
@@ -996,6 +1011,7 @@ entries:
           - title: Third-party integrations
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Inxmail
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail.html
@@ -1083,6 +1099,7 @@ entries:
         url: /docs/pbc/all/merchant-management/merchant-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -1199,6 +1216,7 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: Manage merchants
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants.html
@@ -1244,6 +1262,7 @@ entries:
       - title: Miscallaneous
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -1381,6 +1400,7 @@ entries:
         url: /docs/pbc/all/offer-management/offer-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Marketplace
             nested:
@@ -1455,6 +1475,7 @@ entries:
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -1674,6 +1695,7 @@ entries:
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Payments feature overview
             url: /docs/pbc/all/payment-service-provider/payments-feature-overview.html
@@ -1703,6 +1725,7 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Edit payment methods
                 url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html
@@ -1718,6 +1741,7 @@ entries:
             url: /docs/pbc/all/payment-service-provider/third-party-integrations/payment-service-provider-integrations.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Adyen
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/adyen.html
@@ -2001,6 +2025,7 @@ entries:
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-per-merchant-relation-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                       - title: Product Price Glue API
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
                   - title: Upgrade modules
@@ -2080,6 +2105,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
@@ -2188,6 +2214,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                       - title: Category Management + CMS
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
                       - title: Category Management + Promotions and Discounts
@@ -2206,6 +2233,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-multi-store-products-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                       - title: Packaging Units
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
@@ -2589,6 +2617,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Product feature overview
                 url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.html
@@ -2710,6 +2739,7 @@ entries:
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -2769,6 +2799,7 @@ entries:
         url: /docs/pbc/all/punchout/punchout-catalogs.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Punchout Catalogs overview
             url: /docs/pbc/all/punchout/punchout-catalogs-overview.html
@@ -2899,6 +2930,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Return Management feature overview
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.html
@@ -2912,6 +2944,7 @@ entries:
                 url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/log-into-the-back-office.html
                 include_versions:
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: Main merchant returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
@@ -2925,6 +2958,7 @@ entries:
         url: /docs/pbc/all/search/search.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -3042,6 +3076,7 @@ entries:
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/configure-algolia.html
                   include_versions:
                   - "202212.0"
+                  - "202307.0"
                 - title: Disconnect Algolia
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/disconnect-algolia.html
               - title: Best practices
@@ -3134,6 +3169,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Shopping Lists feature overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-shopping-lists-feature-overview.html
@@ -3239,6 +3275,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
@@ -3333,6 +3370,7 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
               - title: Import and export data
                 url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
                 nested:
@@ -3383,6 +3421,7 @@ entries:
             url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Install features
                 nested:

@@ -10,7 +10,7 @@ SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sideba
 TITLES=("ACP User" "Cloud Dev" "Marketplace Dev" "Marketplace User" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
 
 # Define the folders to ignore
-IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0" "202304.0")
+IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0")
 
 # Define output file path
 OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"
@@ -26,8 +26,8 @@ for i in "${!SIDEBARS[@]}"; do
 
   # Find missing files in folder; overview-of-features.md files are intenionally exluded from the sidebar; index.md files are skipped as these are used implicitly.
   missing_files=($(find "$folder" -type f -name "*.md" \
-  -not -path "*/overview-of-features/202204.0/overview-of-features.md" \
-    -not -path "*/overview-of-features/202212.0/overview-of-features.md" \
+  -not -path "*/overview-of-features/202212.0/overview-of-features.md" \
+    -not -path "*/overview-of-features/202307.0/overview-of-features.md" \
     -not -name "index.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | \
     while IFS= read -r -d '' file_path; do
     ignored=false

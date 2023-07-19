@@ -12,7 +12,7 @@ In June 2023, we have added and updated the following pages:
 - [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-presets.html): Learn how you can use presets to install predefined applications.
 - [Service Points feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202400.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
-- [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202304.0/glue-api/install-backend-api-glue-json-api-convention.html).
+- [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html).
 - Documentation on shipment data import:
     - [File details - shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/202400.0/unified-commerce/import-and-export-data/file-details-shipment-method-shipment-type.csv.html).
     - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/202400.0/unified-commerce/import-and-export-data/file-details-shipment-type-store.csv.html).
@@ -117,7 +117,7 @@ In April 2023, we have added and updated the following pages:
 - [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-    - [Install the Picker user login feature](/docs/scos/dev/feature-integration-guides/202304.0/install-the-picker-user-login-feature.html)
+    - [Install the Picker user login feature](/docs/scos/dev/feature-integration-guides/202307.0/install-the-picker-user-login-feature.html)
     - [Install the Warehouse picking + Inventory Management feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-inventory-management-feature.html)
     - [Install the Warehouse picking + Order Management feature](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-order-management-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-order-management-feature.html)
@@ -128,8 +128,8 @@ In April 2023, we have added and updated the following pages:
 
 ### Updated pages
 - [Install the Spryker Core Back Office + Warehouse User Management feature](/docs/pbc/all/back-office/202400.0/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html)
-- [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202304.0/install-the-spryker-core-back-office-feature.html)
-- [Product + Category feature integration](/docs/pbc/all/product-information-management/202304.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html)
+- [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202307.0/install-the-spryker-core-back-office-feature.html)
+- [Product + Category feature integration](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html)
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202400.0/unified-commerce//install-and-upgrade/install-the-shipment-feature.html)
 
 For more details about the latest additions and updates to the Spryker docs, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

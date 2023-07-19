@@ -22,4 +22,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202304.0/install-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-customer-account-management-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-customer-account-management-feature.md -->

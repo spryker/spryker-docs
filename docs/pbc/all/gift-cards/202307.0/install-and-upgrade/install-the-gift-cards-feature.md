@@ -17,4 +17,4 @@ redirect_from:
   - /docs/pbc/all/gift-cards/202304.0/install-and-upgrade/install-the-gift-cards-feature.html 
 ---
 
-{% include pbc/all/install-features/202304.0/install-the-gift-cards-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-gift-cards-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-gift-cards-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-gift-cards-feature.md -->

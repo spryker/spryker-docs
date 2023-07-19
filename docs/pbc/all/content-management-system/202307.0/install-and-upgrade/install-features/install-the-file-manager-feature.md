@@ -10,4 +10,4 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202304.0/install-and-upgrade/install-features/install-the-file-manager-feature.html
 ---
 
-{% include pbc/all/install-features/202304.0/install-the-file-manager-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-file-manager-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-file-manager-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-file-manager-feature.md -->

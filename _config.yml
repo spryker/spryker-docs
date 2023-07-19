@@ -181,7 +181,7 @@ versions:
   '202108.0': '202108.0'
   '202204.0': '202204.0'
   '202212.0': '202212.0'
-  '202304.0': 'Upcoming release'
+  '202307.0': '202307.0'
   '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories

@@ -93,3 +93,5 @@ jobs:
 
           # Print the top contributor(s) of the month
           echo "$TOP_CONTRIBUTORS_TEXT"
+          echo "Filtered PRs: $PRS"
+

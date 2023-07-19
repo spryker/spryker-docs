@@ -2801,6 +2801,7 @@ entries:
               - title: Install the Product Rating and Reviews Glue API
                 url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
           - title: Import and export data
+            url: /docs/pbc/all/ratings-reviews/import-and-export-data/ratings-and-reviews-data-import.html
             nested:
               - title: File details- product_review.csv
                 url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
@@ -3004,11 +3005,12 @@ entries:
                   - title: Search the product catalog
                     url: /docs/pbc/all/search/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
               - title: Import and export data
+                url: /docs/pbc/all/search/base-shop/import-and-export-data/search-data-import.html
                 nested:
                   - title: "File details: product_search_attribute_map.csv"
-                    url: /docs/pbc/all/search/base-shop/import-data/file-details-product-search-attribute-map.csv.html
+                    url: /docs/pbc/all/search/base-shop/import-and-export-data/file-details-product-search-attribute-map.csv.html
                   - title: "File details: product_search_attribute.csv"
-                    url: /docs/pbc/all/search/base-shop/import-data/file-details-product-search-attribute.csv.html
+                    url: /docs/pbc/all/search/base-shop/import-and-export-data/file-details-product-search-attribute.csv.html
               - title: Tutorials and Howtos
                 nested:
                   - title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
@@ -3211,15 +3213,16 @@ entries:
                   - title: Retrieve tax sets when retrieving abstract products
                     url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
               - title: Import and export data
+                url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/tax-management-data-import.html
                 nested:
-                  - title: Import tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets.html
-                  - title: Import tax sets for abstract products
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets-for-abstract-products.html
-                  - title: Import tax sets for product options
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets-for-product-options.html
-                  - title: Import tax sets for shipment methoods
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-tax-sets-for-shipment-methods.html
+                  - title: "Import file details: tax_sets.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
+                  - title: "Import file details: product_abstract.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
+                  - title: "Import file details: product_option.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-product-option.csv.html
+                  - title: "Import file details: shipment.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-shipment.csv.html
               - title: Extend and customize
                 url: /docs/pbc/all/tax-management/base-shop/extend-and-customize/tax-module-reference-information.html
               - title: Domain model and relationships
@@ -3330,16 +3333,17 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
                         include_versions:
                         - "202212.0"
-              - title: Import data
+              - title: Import and export data
+                url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
                 nested:
                   - title: File details - warehouse.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-warehouse.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse.csv.html
                   - title: File details - warehouse_address.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-warehouse-address.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse-address.csv.html
                   - title: File details - warehouse_store.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-warehouse-store.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse-store.csv.html
                   - title: File details - product_stock.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-product-stock.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-product-stock.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:

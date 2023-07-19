@@ -3,10 +3,10 @@ name: External Contributor of the Month
 on:
   push:
     branches:
-      - 'contributor-workflow'
+      - internal-contributor-workflow'
 
 jobs:
-  determine-contributor:
+  determine-internal-contributor:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

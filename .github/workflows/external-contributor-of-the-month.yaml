@@ -86,5 +86,5 @@ jobs:
           echo "Contributors of $MONTH_NAME:"
           echo -e "$CONTRIBUTORS"
 
-          # Print the top contributor(s) of the month
+          # Print the top internal contributor(s) of the month
           echo "$TOP_CONTRIBUTORS_TEXT"

@@ -1,25 +1,29 @@
 
 
-## Install feature API
+This document describes how to integrate the [Product Raiting and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Product Raiting and Review Glue API feature core.
+
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features and Glue APIs:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product Rating & Reviews  | {{page.version}} |  |
+| Spryker Core Glue API | {{page.version}} | [Install the Spryker Core Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product Rating & Reviews  | {{page.version}} | [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) |
 
 ### 1) Install the required modules using Composer
-
 
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following module was installed:
+Make sure that the following module has been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -56,9 +60,7 @@ Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are e
 
 {% endinfo_block %}
 
-### 3) Set up behavior
-
-#### Reload data to storage
+### 3) Reload data to storage
 
 Reload abstract and product data to storage.
 
@@ -75,7 +77,7 @@ Make sure that there is data in Redis with keys:
 
 {% endinfo_block %}
 
-#### Enable resources
+### 4) Enable resources
 
 Activate the following plugins:
 
@@ -109,10 +111,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following endpoint is available:
-`https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
+Make sure that the following endpoints are available:
+* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json
@@ -193,11 +195,9 @@ Make sure that the following endpoint is available:
 ```
 </details>
 
+* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
-Make sure that the following endpoint is available:
-`https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
-
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json
@@ -221,7 +221,7 @@ Make sure that the following endpoint is available:
 
 {% endinfo_block %}
 
-#### Enable relationships
+### 5) Enable relationships
 
 Activate the following plugins:
 
@@ -306,13 +306,13 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-reviews`.
+1. Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 
-Make sure that the response contains product-reviews as a relationship and product-reviews data included.
+2. Make sure that the response contains `product-reviews` as a relationship and `product-reviews` data included.
 
-Make sure that `averageRating` and `reviewCount` attributes are present in concrete-products and abstract-products resources attributes section.
+3. Make sure that `averageRating` and `reviewCount` attributes are present in concrete-products and abstract-products resources attributes section.
 
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json
@@ -462,11 +462,11 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
 </details>
 
 
-Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
+4. Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 
-Make sure that the response contains product-reviews as a relationship and product-reviews data included.
+5. Make sure that the response contains `product-reviews` as a relationship and `product-reviews` data included.
 
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json

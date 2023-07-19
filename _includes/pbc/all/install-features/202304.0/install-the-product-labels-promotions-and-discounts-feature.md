@@ -15,7 +15,7 @@ To start feature integration, integrate the required features:
 |------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Promotions & Discounts | {{site.version}}   | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html) |
 | Product Labels         | {{site.version}}   | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-labels-feature-integration.html)                   |
-| Spryker Core           | {{site.version}}   | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                       |
+| Spryker Core           | {{site.version}}   | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                       |
 
 ### 1) Set up behavior
 

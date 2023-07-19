@@ -60,9 +60,9 @@ To keep our docs consistent, we have templates for all types of documents. The t
 | [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html) or [technical articles](/docs/marketplace/dev/front-end/{{site.version}}/angular-components.html). |
 | [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-agent-assist-feature.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
 | [glue-api-storefront-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/glue-api-storefront-guide-template.md) | Use this template for creating [Glue API guides](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-users.html). |
-| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/scos/dev/data-export/{{site.version}}/data-export-orders-.csv-files-format.html). |
+| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/import-and-export-data/export-file-details-orders.csv.html). |
 | [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant-category.csv.html). |
-| [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html#upgrading-from-version-1-to-version-2). |
+| [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html#upgrading-from-version-1-to-version-2). |
 | [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
 | [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html). |
 | [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
@@ -91,7 +91,7 @@ related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
   - title: Sales Data Export feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 ```
 
@@ -210,7 +210,7 @@ To delete an unnecessary or outdated page from the website, make sure to set up 
 This section contains most coming issues that you may face while working with docs and expected ways how to resolve the problem.
 
 ### Filename too long in Git for Windows
-If you face the “Filename too long” error, or an error like this one *“spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)”*, run the following command to circumvent it:
+If you face the “Filename too long” error, or an error like this one *“spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)”*, run the following command to circumvent it:
 
 ```bash
 git config --system core.longpaths true

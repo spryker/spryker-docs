@@ -9,7 +9,7 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME |  VERSION |  INTEGRATION GUIDE |
 | - |  - |  -  |
-| Glue API: Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Cart |  {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Uuid generation console | {{page.version}} | [Uuid Generation Console feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/uuid-generation-console-feature-integration.html) |
 
@@ -109,7 +109,7 @@ The result should be 0 records.
 
 * `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
+For more details, see the `configure` function in [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

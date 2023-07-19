@@ -44,7 +44,7 @@ The Glue allows you to use the power of the Spryker Commerce OS in a variety of 
 ### Catalog Browsing
 The catalog browsing endpoints allow you to request search results and also use the Elasticsearch facet implementation. Furthermore, you can retrieve product-related information beyond price and category, including product labels and relations.
 
-**Documentation**: [Catalog Search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-search-the-product-catalog.html).
+**Documentation**: [Catalog Search](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html).
 
 ### Login/Registration
 Endpoints ensure access-token login and retrieval. Customers can also register and request new passwords in case they forgot or want to change their current password.
@@ -72,8 +72,8 @@ Your customers can benefit from the same shop experience with the customer accou
 To help you keep track of your API development, we implemented a simple command that will create a YAML file to be used in your Swagger implementation to share the progress of development in your company.
 
 **Documentation**:
-* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2b-reference.html).
-* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2c-reference.html)
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-reference.html).
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2c-reference.html)
 
 ## B2C API React Example
 ![B2C API React example](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image2.png)

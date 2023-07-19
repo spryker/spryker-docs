@@ -43,4 +43,4 @@ Follow feature integration guides from the table that provides functionality for
 ## 3) Build app
 
 Please rebuild your app in order to apply all the changes regarding database entities, data imports, search engine indexes, UI assets.
-Depending on the virtualization solution you use, use the recommendations in [Docker based instance build](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+Depending on the virtualization solution you use, use the recommendations in [Docker based instance build](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).

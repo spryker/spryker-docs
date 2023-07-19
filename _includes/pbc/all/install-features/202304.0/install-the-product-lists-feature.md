@@ -11,9 +11,9 @@ Follow the steps below to install the Product Lists feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE| 
+| NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{site.version}}  | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
 

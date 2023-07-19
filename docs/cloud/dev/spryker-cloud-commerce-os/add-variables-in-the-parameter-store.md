@@ -20,10 +20,32 @@ This feature is part of a gradual rollout and will be available to everyone even
 
 {% endinfo_block %}
 
+## Customer-owned and Spryker-owned variables
+
+There are two types of environment variables in the Spryker Cloud Commerce OS: those owned by the customer and those owned by Spryker.
+
+Customer-owned variables are created and managed by you—the onboarded customer or implementation partner. You have full control over these variables and can add or edit them according to your needs. However, keep in mind that changes to these variables don't automatically propagate into the running environment. To apply changes made to your environment variables, you need to run an ECS-updater-* pipeline to bring them to the containers (full re-deploy would also do the trick, of course). This process doesn't require intervention of the Spryker Cloud or support team.
+
+If there is a need to modify a Spryker-owned environment variable, it must be done through the Spryker Cloud or support team, as it needs to be coordinated with our DevOps team to ensure proper application and consistency.
+
+By adhering to these guidelines, you can effectively manage your environment variables without risking the system stability. It also helps in maintaining a seamless experience while working with the Spryker Cloud Commerce OS.
+
+Please remember that improper management of environment variables can lead to unexpected issues. Therefore, it is recommended to consult the Spryker Cloud or support team for any complex or system-critical changes.
 
 ## Naming convention for variables
 
 Variables must follow this naming convention: `/{project}/{environment}/{type}/{bucket}/{grant}/{variable_name}`.
+
+{% info_block warningBox "Reserved variables" %}
+
+Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you can't define your own variables using these names.
+<BR> The reserved variable names are the following:
+* `DUMMY_INIT`
+* `SPRYKER_*`
+
+If you are already using these reserved variables in your code, you need to change their names to avoid any service issues.
+
+{% endinfo_block %}
 
 Placeholder description:
 
@@ -46,7 +68,6 @@ Path examples:
 * /fashion_club_store/staging/config/common/limited/composer_pass
 
 * /deans_jeans/prod/config/app/public/mail_host
-
 
 ## Variable path hierarchy
 
@@ -86,12 +107,6 @@ The following variables are arranged from lower to higher priority:
 
 The following sections describe how to add parameters and secrets for different resources.
 
-{% info_block warningBox "Propagation of variables" %}
-
-To make variables available in your Jenkins instance, we need to terraform your added or changed variables. To do this, create a [support case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests).
-
-{% endinfo_block %}
-
 ### Add parameters to all resource types
 
 1. In the AWS Management Console, go to **Services&nbsp;<span aria-label="and then">></span> Parameter Store**.
@@ -105,7 +120,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
-9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -124,7 +139,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -143,7 +158,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **ECS-updater-{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -162,7 +177,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
-9. On the **Pipelines** page, select the **ECS-updater-{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.    
@@ -183,7 +198,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.  

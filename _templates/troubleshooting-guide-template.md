@@ -14,7 +14,7 @@ Every troubleshooting article should have its own page in the respective section
 
 ## Title
 
-<!-- Summary of the issue, e.g. Unable to resolve hosts for RabbitMq -->
+<!-- Summary of the issue, e.g., Unable to resolve hosts for RabbitMq -->
 
 ## {Description}
 

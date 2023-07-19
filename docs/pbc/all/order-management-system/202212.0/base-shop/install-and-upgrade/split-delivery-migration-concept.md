@@ -67,7 +67,7 @@ The following table lists the modules affected by the Split Delivery update:
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/sales` | 11.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html#upgrading-from-version-10-to-version-1100) |
+| `spryker/sales` | 11.0.0 | [Migration Guide - Sales](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html#upgrading-from-version-10-to-version-1100) |
 | `spryker/shipment` | 7.0.0 | [Migration Guide - Shipment](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7) |
 | `spryker-shop/checkout-page` | 3.0.0 | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html#upgrading-from-version-2-to-version-3) |
 | `spryker-shop/customer-page` | 2.0.0 | [Migration Guide - CustomerPage](/docs/pbc/all/customer-relationship-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html#upgrading-from-version-1-to-version-200) |

@@ -26,7 +26,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 | Mailing and Notifications | {{page.version}} | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
 | Persistent Cart | {{page.version}} |  |
@@ -956,7 +956,7 @@ vendor/bin/console scheduler:resume
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you've set up the invoice-related configuration: 
+Make sure that you've set up the invoice-related configuration:
 1. Move at least one item in an order to the `invoice generated` state.
 2. Make sure that, according to your `DummyInvoice01.xml` and `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` configuration, the correct order invoice template has been assigned to the order (`spy_sales_order_invoice`).
 

@@ -15,6 +15,12 @@ related:
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
+
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
@@ -152,4 +158,4 @@ Using the information from the response and the Glue server name, you can constr
 | 2801 | The `url` parameter is missing. |
 | 2802 | The provided URL does not exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

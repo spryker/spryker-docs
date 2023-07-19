@@ -14,8 +14,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/rest-api-reference.html
 related: 
   - title: Reference information- GlueApplication errors
-    link: docs/scos/dev/glue-api-guides/page.version/reference-information-glueapplication-errors.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
 ---
+
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
 
 This document provides an overview of REST API endpoints provided by the Spryker B2C Demo Shop by default. For each endpoint, you will find its URL relative to the server, REST request parameters, as well as the appropriate request and response data formats.
 

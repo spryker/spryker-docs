@@ -798,12 +798,12 @@ entries:
       - "202204.0"
       - "202212.0"
     - title: Create JSON:API relationships
-      url: /docs/scos/dev/glue-api-guides/create-protected-glue-api-endpoints.html
+      url: /docs/scos/dev/glue-api-guides/create-json-api-relationships.html
       include_versions:
       - "202204.0"
       - "202212.0"
     - title: Create protected Glue API endpoints
-      url: /docs/scos/dev/glue-api-guides/create-json-api-relationships.html
+      url: /docs/scos/dev/glue-api-guides/create-protected-glue-api-endpoints.html
       include_versions:
       - "202204.0"
       - "202212.0"

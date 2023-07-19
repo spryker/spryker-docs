@@ -228,4 +228,4 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | 104 | Cart uuid is missing. |
 | 109 | Anonymous customer unique ID is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -3,6 +3,8 @@ title: Migration guide - Upgrade to Angular v15
 description: Use the guide to update versions of the Angular and related modules.
 last_updated: Mar 24, 2023
 template: module-migration-guide-template
+redirect_from:
+    - /docs/marketplace/dev/technical-enhancement/202304.0/migration-guide-upgrade-to-angular-v15.html
 ---
 
 ## Upgrading Angular from version 12.* to version 15.*

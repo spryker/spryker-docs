@@ -5,6 +5,7 @@ Descriptions: System infrastructure requirements for the Spryker Marketplace wit
 template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/setup/system-requirements.html
+  - /docs/marketplace/dev/setup/202304.0/system-requirements.html
 related:
   - title: Infrastructure requirements
     link: docs/marketplace/dev/setup/page.version/infrastructure-requirements.html

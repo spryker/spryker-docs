@@ -18,12 +18,14 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Setup
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
       - title: Marketplace architecture overview
         url: /docs/marketplace/dev/architecture-overview/architecture-overview.html
@@ -62,6 +64,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
               - title: Rendering product offers on the Storefront
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html
@@ -69,6 +72,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
               - title: Product Offer storage
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-storage.html
@@ -76,6 +80,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
               - title: Product Offer store relation
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-store-relation.html
@@ -83,6 +88,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
               - title: Product Offer validity dates
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
@@ -90,6 +96,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
@@ -127,6 +134,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
@@ -151,6 +159,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Marketplace Product Options
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
@@ -181,6 +190,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
             nested:
 
@@ -267,6 +277,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
@@ -322,12 +333,14 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Merchant Switcher + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Merchant Switcher + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
@@ -340,6 +353,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
@@ -494,6 +508,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
@@ -513,6 +528,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
@@ -520,6 +536,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Merchant Portal - Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-order-management-feature-integration.html
@@ -648,12 +665,14 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: REST API Marketplace B2B reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Abstract products
             include_versions:
@@ -767,6 +786,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
           - title: Shopping lists
             url: /docs/marketplace/dev/glue-api-guides/shopping-lists/marketplace-shopping-lists.html
@@ -819,6 +839,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
@@ -832,6 +853,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: Shopping lists
             include_versions:
@@ -844,6 +866,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
               - title: Managing shopping list items
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
@@ -864,6 +887,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "File details: merchant.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
@@ -1005,6 +1029,7 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
             nested:
 
               - title: "Migration guide - Extending the project"
@@ -1012,12 +1037,14 @@ entries:
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
 
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
             nested:
 
               - title: "Table Column Types"
@@ -1025,6 +1052,7 @@ entries:
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "Autocomplete"
@@ -1032,60 +1060,70 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Chip"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Date"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Dynamic"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Image"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Input"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "List"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Select"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Text"
                     url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Table Features"
                 url: /docs/marketplace/dev/front-end/table-design/table-features/
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "Batch Actions"
@@ -1093,6 +1131,7 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Editable"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
@@ -1102,48 +1141,56 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Row Actions"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Search"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Selectable"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Settings"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Sync State"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Title"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Total"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Table Filters"
                 url: /docs/marketplace/dev/front-end/table-design/table-filters/
@@ -1151,6 +1198,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "Date Range"
@@ -1158,18 +1206,21 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Select"
                     url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Tree Select"
                     url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Table Configuration"
                 url: /docs/marketplace/dev/front-end/table-design/table-configuration.html
@@ -1181,6 +1232,7 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
             nested:
 
               - title: "Actions"
@@ -1188,6 +1240,7 @@ entries:
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "Close Drawer"
@@ -1195,54 +1248,63 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Drawer"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "HTTP"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Notification"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Redirect"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Refresh Drawer"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Refresh Parent Table"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Refresh Table"
                     url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Cache"
                 url: /docs/marketplace/dev/front-end/ui-components-library/cache/
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "Static"
@@ -1250,12 +1312,14 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Data Transformers"
                 url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "Collate"
@@ -1263,6 +1327,7 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
                     nested:
 
                       - title: "Data Configurators"
@@ -1308,48 +1373,56 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Chain"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Date-parse"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Date-serialize"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Lens"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Object-map"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Pluck"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Datasources"
                 url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "HTTP"
@@ -1357,24 +1430,28 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Inline"
                     url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Inline Table"
                     url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
               - title: "Persistence"
                 url: /docs/marketplace/dev/front-end/ui-components-library/persistence/
                 include_versions:
                 - "202204.0"
                 - "202212.0"
+                - "202307.0"
                 nested:
 
                   - title: "In Memory"
@@ -1382,54 +1459,63 @@ entries:
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Local Storage"
                     url: /docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
                   - title: "Url"
                     url: /docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html
                     include_versions:
                     - "202204.0"
                     - "202212.0"
+                    - "202307.0"
 
           - title: "Angular Components"
             url: /docs/marketplace/dev/front-end/angular-components.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "Angular Services"
             url: /docs/marketplace/dev/front-end/angular-services.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "Building the project"
             url: /docs/marketplace/dev/front-end/building-the-project.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "Project structure"
             url: /docs/marketplace/dev/front-end/project-structure.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "Setting up the Merchant Portal"
             url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "Web components"
             url: /docs/marketplace/dev/front-end/web-components.html
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
       - title: HowTos
         url: /docs/marketplace/dev/howtos/howtos.html
@@ -1459,8 +1545,9 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202307.0"
 
           - title: "Migration guide - Upgrade to Angular v15"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v15.html
             include_versions:
-            - "202304.0"
+            - "202307.0"

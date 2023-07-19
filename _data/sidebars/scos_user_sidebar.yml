@@ -258,6 +258,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
     - title: Multiple Carts
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
       include_versions:
@@ -334,7 +335,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
-        - "202212.0"
+        - "202307.0"
       - title: Business on behalf
         url: /docs/scos/user/features/company-account-feature-overview/business-on-behalf-overview.html
         include_versions:
@@ -346,6 +347,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
     - title: Comments
       url: /docs/scos/user/features/comments-feature-overview.html
       include_versions:
@@ -450,6 +452,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Customer registration
         url: /docs/scos/user/features/customer-account-management-feature-overview/customer-registration-overview.html
         include_versions:
@@ -457,6 +460,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Customer login
         url: /docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html
         include_versions:
@@ -469,6 +473,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Password management
         url: /docs/scos/user/features/customer-account-management-feature-overview/password-management-overview.html
       - title: Customer groups
@@ -576,6 +581,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Order cancellation
         url: /docs/scos/user/features/order-management-feature-overview/order-cancellation-overview.html
         include_versions:
@@ -584,6 +590,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Splittable order items
         url: /docs/scos/user/features/order-management-feature-overview/splittable-order-items-overview.html
       - title: Split delivery
@@ -595,6 +602,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: OMS (Order management system) matrix
         url: /docs/scos/user/features/order-management-feature-overview/oms-order-management-system-matrix.html
       - title: Custom order reference
@@ -605,6 +613,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
     - title: Packaging Units
       url: /docs/scos/user/features/packaging-units-feature-overview.html
       include_versions:
@@ -674,6 +683,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Timed product availability
         url: /docs/scos/user/features/product-feature-overview/timed-product-availability-overview.html
       - title: Product images overview
@@ -686,6 +696,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
     - title: Product Barcode
       url: /docs/scos/user/features/product-barcode-feature-overview.html
       include_versions:
@@ -770,7 +781,7 @@ entries:
     - title: Push Notification
       url: /docs/scos/user/features/push-notification-feature-overview.html
       include_versions:
-      - "202304.0"
+      - "202400.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
       include_versions:
@@ -860,6 +871,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Search Preferences
         url: /docs/scos/user/features/search-feature-overview/search-preferences.html
         include_versions:
@@ -885,6 +897,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Search types
         url: /docs/scos/user/features/search-feature-overview/search-types-overview.html
         include_versions:
@@ -896,6 +909,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Standard Filters (Size, Type, Color, Etc...)
         url: /docs/scos/user/features/search-feature-overview/standard-filters-size-type-color-etc.html
         include_versions:
@@ -2662,18 +2676,21 @@ entries:
           - "202108.0"
           - "202204.0"
           - "202212.0"
+          - "202307.0"
         - title: Edit configurable bundle templates
           url: /docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html
           include_versions:
           - "202108.0"
           - "202204.0"
           - "202212.0"
+          - "202307.0"
         - title: Edit slots in configurable bundle templates
           url: /docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
           include_versions:
           - "202108.0"
           - "202204.0"
           - "202212.0"
+          - "202307.0"
         - title: Creating configurable bundle templates
           url: /docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
           include_versions:
@@ -2802,6 +2819,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
         - "202009.0"
         url: /docs/scos/user/back-office-user-guides/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
       - title: Managing user roles
@@ -2809,6 +2827,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
         - "202009.0"
         nested:
         - title: Creating user roles
@@ -2820,6 +2839,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
         - "202009.0"
         nested:
         - title: Creating user groups
@@ -2831,6 +2851,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
         - "202009.0"
         nested:
         - title: Creating users
@@ -3179,6 +3200,7 @@ entries:
           - "202108.0"
           - "202204.0"
           - "202212.0"
+          - "202307.0"
         - title: Managing merchant order thresholds
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-merchant-order-thresholds.html
           include_versions:
@@ -3349,6 +3371,7 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+      - "202307.0"
       nested:
       - title: Personalization and cross-selling
         nested:
@@ -3372,6 +3395,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
         nested:
         - title: Episerver
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver.html
@@ -3577,6 +3601,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Akeneo
         url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo.html
         include_versions:
@@ -3584,6 +3609,7 @@ entries:
         - "202108.0"
         - "202204.0"
         - "202212.0"
+        - "202307.0"
       - title: Xentral
         url: /docs/scos/user/technology-partners/product-information-pimerp/xentral.html
       - title: Censhare

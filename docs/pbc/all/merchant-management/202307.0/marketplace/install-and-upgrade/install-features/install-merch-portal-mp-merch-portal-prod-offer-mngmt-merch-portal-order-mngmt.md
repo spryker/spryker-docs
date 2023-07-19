@@ -3,7 +3,7 @@ title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + 
 last_updated: Sep 13, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature into a Spryker project.
 template: feature-integration-guide-template
-redirect_from
+redirect_from:
    - /docs/marketplace/dev/feature-integration-guides/202212.0/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
 ---
 

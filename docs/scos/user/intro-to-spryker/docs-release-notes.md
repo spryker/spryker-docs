@@ -117,7 +117,7 @@ In April 2023, we have added and updated the following pages:
 - [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-    - [Install the Picker user login feature](/docs/scos/dev/feature-integration-guides/202307.0/install-the-picker-user-login-feature.html)
+    - [Install the Picker user login feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html)
     - [Install the Warehouse picking + Inventory Management feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-inventory-management-feature.html)
     - [Install the Warehouse picking + Order Management feature](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-order-management-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-order-management-feature.html)

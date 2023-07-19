@@ -65,16 +65,345 @@ Child processes are killed at the end of each minute, which means those batches 
 
 Two ways are possible
 
-1. Applying a patch, although it may require conflict resolution, since it is applied on project level and each project may have unique customisations already in place.
+1. Applying a patch, although it may require conflict resolution, since it is applied on project level and each project may have unique customisations already in place. Please see attached diffs fror an example implementation. [Here's a diff](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff).
 
 ```bash
 git apply one-worker.diff
 ```
 
-2. Integrating it manually, using the patch as a source.
+2. Integrating it manually, using the patch as a source and the following sections as guide.
 
 
-Please see attached diffs fror an example implementation. [Here's a diff](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff).
+### A new Worker implementation
+
+This is a completely custom implementation, which doesn't extend anything and built based on the ideas described above.
+
+Mainly, new implementation provides such features as: 
+- spawns only single process per loop iteration
+- checks free system memory before each launch
+- ignores processes limits per queue in favour of one limit of simultaneously running processes (process pool size)
+- doesn't wait for child processes to finish, this is not elegant solution, but it works and there are few recommendations how to mitigate potential risks related to that
+- it also gathers statistics and processes output for build a summary report at the end of each Worker invokation
+
+<details open>
+<summary>src/Pyz/Zed/Queue/Business/Worker/NewWorker.php</summary>
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
+
+namespace Pyz\Zed\Queue\Business\Worker;
+
+use Psr\Log\LoggerInterface;
+use Pyz\Zed\Queue\Business\Strategy\QueueProcessingStrategyInterface;
+use Pyz\Zed\Queue\Business\SystemResources\SystemResourcesManagerInterface;
+use Pyz\Zed\Queue\QueueConfig;
+use SplFixedArray;
+use Spryker\Client\Queue\QueueClientInterface;
+use Spryker\Zed\Queue\Business\Process\ProcessManagerInterface;
+use Spryker\Zed\Queue\Business\SignalHandler\SignalDispatcherInterface;
+use Spryker\Zed\Queue\Business\Worker\WorkerInterface;
+use Spryker\Zed\Queue\Communication\Console\QueueWorkerConsole;
+
+class NewWorker implements WorkerInterface
+{
+    /**
+     * @var \Spryker\Zed\Queue\Business\Process\ProcessManagerInterface
+     */
+    protected ProcessManagerInterface $processManager;
+
+    /**
+     * @var \Pyz\Zed\Queue\QueueConfig
+     */
+    protected QueueConfig $queueConfig;
+
+    /**
+     * @var \Spryker\Client\Queue\QueueClientInterface
+     */
+    protected QueueClientInterface $queueClient;
+
+    /**
+     * @var array<string>
+     */
+    protected array $queueNames;
+
+    /**
+     * @var \Spryker\Zed\Queue\Business\SignalHandler\SignalDispatcherInterface
+     */
+    protected SignalDispatcherInterface $signalDispatcher;
+
+    /**
+     * @var \Psr\Log\LoggerInterface
+     */
+    protected LoggerInterface $logger;
+
+    /**
+     * @var \Pyz\Zed\Queue\Business\Strategy\QueueProcessingStrategyInterface
+     */
+    protected QueueProcessingStrategyInterface $queueProcessingStrategy;
+
+    /**
+     * @var \SplFixedArray<\Symfony\Component\Process\Process>
+     */
+    protected SplFixedArray $processes;
+
+    /**
+     * @var int
+     */
+    private int $runningProcessesCount = 0;
+
+    /**
+     * @var \Pyz\Zed\Queue\Business\Worker\WorkerStats
+     */
+    private WorkerStats $stats;
+
+    /**
+     * @var \Pyz\Zed\Queue\Business\SystemResources\SystemResourcesManagerInterface
+     */
+    private SystemResourcesManagerInterface $sysResManager;
+
+    /**
+     * @var array<string, float>
+     */
+    private array $timers = [];
+
+    public function __construct(
+        ProcessManagerInterface $processManager,
+        QueueConfig $queueConfig,
+        QueueClientInterface $queueClient,
+        array $queueNames,
+        QueueProcessingStrategyInterface $queueProcessingStrategy,
+        SignalDispatcherInterface $signalDispatcher,
+        SystemResourcesManagerInterface $sysResManager,
+        LoggerInterface $logger
+    ) {
+        $this->processManager = $processManager;
+        $this->queueConfig = $queueConfig;
+        $this->queueClient = $queueClient;
+        $this->queueNames = $queueNames;
+        $this->queueProcessingStrategy = $queueProcessingStrategy;
+        $this->signalDispatcher = $signalDispatcher;
+        $this->signalDispatcher->dispatch($this->queueConfig->getSignalsForGracefulWorkerShutdown());
+        $this->sysResManager = $sysResManager;
+        $this->logger = $logger;
+
+        $this->processes = new SplFixedArray($this->queueConfig->getQueueWorkerMaxProcesses());
+        $this->stats = new WorkerStats();
+    }
+
+    /**
+     * @param string $timerName
+     * @param string $message
+     * @param string $level
+     * @param int $intervalSec
+     *
+     * @return void
+     */
+    protected function logNotOftenThan(string $timerName, string $message, string $level = 'debug', int $intervalSec = 1): void
+    {
+        if (microtime(true) - ($this->timers[$timerName] ?? 0) >= $intervalSec) {
+            $this->timers[$timerName] = microtime(true);
+            $this->logger->$level($message);
+        }
+    }
+
+    /**
+     * @param string $command
+     * @param array<string, mixed> $options
+     *
+     * @return void
+     */
+    public function start(string $command, array $options = []): void
+    {
+        $maxThreshold = $this->queueConfig->getQueueWorkerMaxThreshold();
+        $delayIntervalMilliseconds = $this->queueConfig->getQueueWorkerInterval();
+        $shouldIgnoreZeroMemory = $this->queueConfig->shouldIgnoreNotDetectedFreeMemory();
+
+        $startTime = microtime(true);
+        $lastStart = 0;
+        $maxMemGrowthFactor = 0;
+
+        while (microtime(true) - $startTime < $maxThreshold) {
+            $this->stats->addCycle();
+
+            if (!$this->sysResManager->enoughResources($shouldIgnoreZeroMemory)) {
+                $this->logNotOftenThan('no-mem', 'NO MEMORY');
+                $this->stats->addNoMemCycle()->addSkipCycle();
+
+                continue;
+            }
+
+            $freeIndex = $this->removeFinishedProcesses();
+            if ($freeIndex === null) {
+                $this->logNotOftenThan(
+                    'no-proc',
+                    sprintf('BUSY: no free slots available for a new process, waiting'),
+                );
+
+                $this->stats
+                    ->addNoSlotCycle()
+                    ->addSkipCycle();
+            } elseif ((microtime(true) - $lastStart) * 1000 > $delayIntervalMilliseconds) {
+                $lastStart = microtime(true);
+                $this->executeQueueProcessingStrategy($freeIndex);
+            } else {
+                $this->stats
+                    ->addCooldownCycle()
+                    ->addSkipCycle();
+            }
+
+            $this->logNotOftenThan(
+                'time-mem',
+                sprintf('TIME: %0.2f sec' . "\n", microtime(true) - $startTime) .
+                sprintf('FREE MEM = %d MB', $this->sysResManager->getFreeMemory()),
+                'info',
+            );
+
+            $ownMemGrowthFactor = $this->sysResManager->getOwnPeakMemoryGrowth();
+            $maxMemGrowthFactor = max($ownMemGrowthFactor, $maxMemGrowthFactor);
+            $this->logNotOftenThan(
+                'own-mem',
+                sprintf('OWN MEM: GROWTH FACTOR = %d%%', $ownMemGrowthFactor),
+                'info',
+            );
+            if ($ownMemGrowthFactor > $this->queueConfig->maxAllowedWorkerMemoryGrowthFactor()) {
+                $this->logger->emergency(sprintf('Worker memory grew more than %d%%, probably a memory leak, exiting', $ownMemGrowthFactor));
+
+                break;
+            }
+        }
+
+        // to re-scan previously logged processes and update stats
+        $this->removeFinishedProcesses();
+        $this->processManager->flushIdleProcesses();
+
+        $this->logger->info('DONE');
+        $this->logger->info(var_export($this->stats->getStats(), true));
+        $this->logger->info(sprintf('Success Rate = %d%%', $this->stats->getSuccessRate()));
+        $this->logger->info(var_export($this->stats->getCycleEfficiency(), true));
+        $this->logger->info(sprintf('Worker memory growth factor = %d%%', $maxMemGrowthFactor));
+    }
+
+    /**
+     * Runs as many times as it can per X minutes
+     *
+     * Strategy defines:
+     *  - what to run and how many
+     *  - what is current and next proc
+     *  - what it needs to make a decision
+     *
+     * Strategy can be different, later on we can inject some
+     * smart strategy that will delegate actual processing to another one
+     * depending on something
+     *
+     * @param int $freeIndex
+     *
+     * @return void
+     */
+    protected function executeQueueProcessingStrategy(int $freeIndex): void
+    {
+        $queueTransfer = $this->queueProcessingStrategy->getNextQueue();
+        if (!$queueTransfer) {
+            $this->logger->debug('EMPTY: no more queues to process');
+            $this->stats->addEmptyCycle()->addSkipCycle();
+
+            return;
+        }
+
+        $this->logger->info(sprintf(
+            'RUN [%d +1] %s:%s',
+            $this->runningProcessesCount,
+            $queueTransfer->getStoreName(),
+            $queueTransfer->getQueueName(),
+        ));
+
+        $process = $this->processManager->triggerQueueProcess(
+            sprintf(
+                'APPLICATION_STORE=%s %s %s',
+                $queueTransfer->getStoreName(),
+                QueueWorkerConsole::QUEUE_RUNNER_COMMAND,
+                $queueTransfer->getQueueName(),
+            ),
+            sprintf('%s.%s', $queueTransfer->getStoreName(), $queueTransfer->getQueueName()),
+        );
+
+        $this->processes[$freeIndex] = $process;
+        $this->runningProcessesCount++;
+
+        $this->stats->addProcQty('new');
+        $this->stats->addQueueQty($queueTransfer->getQueueName());
+        $this->stats->addStoreQty($queueTransfer->getStoreName());
+        $this->stats->addQueueQty(sprintf('%s:%s', $queueTransfer->getStoreName(), $queueTransfer->getQueueName()));
+    }
+
+    /**
+     * Removes finished processes from the processes array
+     * Returns the first index of the array that is available for new processes
+     *
+     * @return int|null
+     */
+    protected function removeFinishedProcesses(): ?int
+    {
+        $freeIndex = -1;
+        $runningProcCount = 0;
+
+        foreach ($this->processes as $idx => $process) {
+            if (!$process) {
+                $freeIndex = $freeIndex >= 0 ? $freeIndex : $idx;
+
+                continue;
+            }
+
+            if ($process->isRunning()) {
+                $runningProcCount++;
+
+                continue;
+            }
+
+            unset($this->processes[$idx]); // won't affect foreach
+
+            $freeIndex = $freeIndex >= 0 ? $freeIndex : $idx;
+
+            $this->logger->debug(sprintf('DONE %s', $process->getExitCodeText()));
+            if ($process->getExitCode() !== 0) {
+                $this->stats->addProcQty('failed');
+
+                $this->logger->error(sprintf('> --- FREE: %d MB', $this->sysResManager->getFreeMemory()));
+                $this->logger->error($process->getCommandLine());
+                $this->logger->error('Std output:' . $process->getOutput());
+                $this->logger->error('Error output: ' . $process->getErrorOutput());
+                $this->logger->error('< ---');
+            }
+
+            $this->stats->addErrorQty($process->getExitCodeText());
+        }
+
+        if ($this->runningProcessesCount !== $runningProcCount) {
+            $this->logger->info(sprintf('RUNNING PROC = %d', $runningProcCount));
+        }
+
+        // current vs previous
+        $this->stats->addProcQty('max', (int)max($this->runningProcessesCount, $runningProcCount));
+
+        $this->runningProcessesCount = $runningProcCount; // current
+
+        return $runningProcCount === $this->processes->count() ?
+            null :
+            $freeIndex;
+    }
+}
+```
+</details>
+
+### Configuration
+
+#### Enable/Disable custom Worker
 
 In the project the functionality can be activated and deactivated using the following configuration flag:
 
@@ -88,6 +417,70 @@ You can set the flag by setting the following environment variable:
 QUEUE_ONE_WORKER_ALL_STORES
 ```
 
+#### The Pool Size
+
+```php
+$config[QueueConstants::QUEUE_WORKER_MAX_PROCESSES] = (int)getenv('QUEUE_ONE_WORKER_POOL_SIZE') ?? 10;
+```
+
+Defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run simultaneously within Worker regardless of number of stores or queuues.
+
+
+#### Free Memory Buffer
+
+```php
+$config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = (int)getenv('QUEUE_WORKER_FREE_MEMORY_BUFFER') ?: 750;
+```
+
+Defines amount of free memory (in megabytes) which must be available in EC2 instance in order to spawn a new child process for a queue. Measured before spawning each child process.
+
+- we should always allow system to have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which is not easily predictable, therefore - this buffer must be set with such ideas in mind
+    
+    - to accomodate a new process it is going to launch
+    - to leave a space for sporadic memory consumption change of already running processes
+
+- when there's not enough memory - Worker will wait (non-blocking, while doing other things like queue scanning, etc) with corresponding logging and statistic accumulation for further CLI report generation (as mentioned in the sections above)
+
+- we can decide what to do when there was a rare error when the Worker could not detect available memory: either assume it is zero and wait until it can read this info, meaning no processes will be launched during this period of time, or to throw an exception considering this is a critical information for further processing, this behaviour can be configured with the following flag
+
+
+```php
+$config[QueueConstants::QUEUE_WORKER_IGNORE_MEM_READ_FAILURE] = false; // default false - meaning there will be exception if Worker can't read system memory info
+```
+
+#### Other Important Parameters
+
+```php
+$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 3600; // default is 60 seconds, 1 minute, it is safe to have it 1h instead
+```
+
+How much more memory Worker can consume compared to its starting memory consumption, before it is considered critical, this setting is useful to detect a memory leak, if such a thing happens during a period of long running Worker execution. 
+
+In such case Worker will finish it's execution and Jenkins will be responsible for spawning a new instance.
+
+```php
+$config[QueueConstants::QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR] = 50; // in percent %
+```
+
+
+# When to use and when not to use it?
+
+Currently this solution proved to be useful for multi-store setup environments with more than 2 stores operated within single AWS region, although projects with only 2 stores can benefit with this solution as well.
+
+At the same time it worth mentioning that for single store setup - it doesn't make sense to apply this customisation. Because it won't hurt, but also won't provide any significant benefits in performance, only better logging.
+
+To summarise
+
+- this HowTo can be applied to multi-store setup with at least 2 stores within one AWS region to gain such benefits as potential cost reduction from scaling down Jenkins instance or to speed Publish and Synchronise processing instead.
+
+- it can't help much for single store setups or for multi-store setup where each store is hosted in a different AWS region.
+
+
 # Summary
 
 The proposed solution was developed was tested in a project environment. It has shown positive results, with significant improvements in data-import processing time. While this solution is suitable for small to medium projects, it has the potential to be applied universally. Code Examples can be found in the attached diff files that show the implementation in a project.
+
+
+{% info_block warningBox "Important Note" %}
+While this solution can be used to either save cloud costs because of down-scaling Jenkins instance or speed up background processing, it is not guaranteed, because each project is unique and EC2 ("Jenkins" jobs) instance performance also depends on other jobs like data import and custom plugins which may affect performance significantly.
+{% endinfo_block %}

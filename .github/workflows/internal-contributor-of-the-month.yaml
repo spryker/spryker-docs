@@ -1,4 +1,4 @@
-name: Internal Contributor of the Month
+name: External Contributor of the Month
 
 on:
   push:
@@ -31,8 +31,8 @@ jobs:
             # Fetch merged pull requests within the specified date range
             PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                    -H "Accept: application/vnd.github.v3+json" \
-                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&base=master&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and (.labels[].name | test("^contributor$")) | not)) | .[].user.login')
+                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&sort=created&direction=desc&merge_state=merged&page=$PAGE&per_page=100" \
+                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.merged_at >= $START and .merged_at <= $END and (.labels[].name | test("Contributor")))) | .[].user.login')
 
             if [ -z "$PRS" ]; then
               break
@@ -62,7 +62,7 @@ jobs:
           done
 
           TOP_CONTRIBUTORS_LIST=$(IFS=,; echo "${TOP_CONTRIBUTORS[*]}")
-          TOP_CONTRIBUTORS_TEXT="The top contributor(s) of $MONTH_NAME: $TOP_CONTRIBUTORS_LIST (PRs: $MAX_COUNT)"
+          TOP_CONTRIBUTORS_TEXT="The top external contributor(s) of $MONTH_NAME: $TOP_CONTRIBUTORS_LIST (PRs: $MAX_COUNT)"
 
           echo "TOP_CONTRIBUTORS_TEXT=$TOP_CONTRIBUTORS_TEXT" >> $GITHUB_ENV
 
@@ -82,9 +82,9 @@ jobs:
           MONTH_NAME="${{ env.MONTH_NAME }}"
           TOP_CONTRIBUTORS_TEXT="${{ env.TOP_CONTRIBUTORS_TEXT }}"
 
-          # Print all contributors of the month and the number of PRs they created
-          echo "Contributors of $MONTH_NAME:"
+          # Print all external contributors of the month and the number of PRs they created
+          echo "External Contributors of $MONTH_NAME:"
           echo -e "$CONTRIBUTORS"
 
-          # Print the top contributor(s) of the month
+          # Print the top external contributor(s) of the month
           echo "$TOP_CONTRIBUTORS_TEXT"

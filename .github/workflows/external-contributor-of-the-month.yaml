@@ -29,10 +29,11 @@ jobs:
           PAGE=1
           while : ; do
             # Fetch merged pull requests within the specified date range
-            PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                   -H "Accept: application/vnd.github.v3+json" \
-                   "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&sort=created&direction=desc&per_page=100&page=$PAGE" \
-                   | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.labels[].name == "contributor")) | .[].user.login')
+          PRS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                -H "Accept: application/vnd.github.v3+json" \
+                "https://api.github.com/repos/spryker/spryker-docs/pulls?state=closed&sort=created&direction=desc&per_page=100&page=$PAGE" \
+                | jq -r --arg START "$START_DATE" --arg END "$END_DATE" 'map(select(.labels[].name == "contributor" and (.merged_at >= $START and .merged_at <= $END))) | .[].user.login')
+
 
             if [ -z "$PRS" ]; then
               break

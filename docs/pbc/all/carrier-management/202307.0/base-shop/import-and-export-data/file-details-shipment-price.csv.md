@@ -9,7 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-shipment-pricecsv
   - /docs/file-details-shipment-pricecsv
   - /docs/en/file-details-shipment-pricecsv
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html  
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html  
   - /docs/pbc/all/carrier-management/202212.0/import-and-export-data/file-details-shipment-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop

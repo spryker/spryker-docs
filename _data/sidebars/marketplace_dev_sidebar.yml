@@ -24,8 +24,6 @@ entries:
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
             include_versions:
             - "202204.0"
-            - "202212.0"
-            - "202307.0"
 
       - title: Marketplace architecture overview
         url: /docs/marketplace/dev/architecture-overview/architecture-overview.html
@@ -63,8 +61,6 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
-                - "202307.0"
 
               - title: Rendering product offers on the Storefront
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html
@@ -158,8 +154,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202307.0"
 
           - title: Marketplace Product Options
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
@@ -501,14 +495,15 @@ entries:
 
           - title: Merchant Portal feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Merchant Portal - Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202307.0"
 
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
@@ -527,16 +522,12 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202307.0"
 
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202307.0"
 
           - title: Merchant Portal - Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-order-management-feature-integration.html
@@ -749,6 +740,9 @@ entries:
 
           - title: Merchants
             url: /docs/marketplace/dev/glue-api-guides/merchants/merchants.html
+                include_versions:
+                - "202108.0"
+                - "202204.0"
             nested:
               - title: Retrieving merchants
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html

@@ -23,7 +23,7 @@ To start feature integration, integrate the required features:
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                            |
 | Spryker Core BO      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)                     |
-| Acl                  | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html)                                                      |
+| Acl                  | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                      |
 
 ###  1) Install the required modules using Composer
 

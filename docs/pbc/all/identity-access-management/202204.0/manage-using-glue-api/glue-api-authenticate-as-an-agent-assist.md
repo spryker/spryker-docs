@@ -12,22 +12,22 @@ redirect_from:
   - /docs/en/authenticating-as-an-agent-assist
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
-Log into the Storefront as an [agent assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.
+Log into the Storefront as an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
 
 * [Install the Customer Account Management + Agent Assist feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
 
@@ -111,5 +111,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 ## Next steps
 
 After you’ve authenticated in as an agent assist, you can:
-* [Search by customers](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html#search-by-customers)
-* [Impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer)
+* [Search by customers](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html#search-by-customers)
+* [Impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer)

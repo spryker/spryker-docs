@@ -552,7 +552,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 ## 6. Set up users
 At this stage, the Persistence Acl feature is installed and configured to support the desired case.
 The only thing left is to add an appropriate group (_DE product manager_ or _AT product manager_) to the required user.
-You can do this through the Back Office. For details about how you can do that, see [Managing groups](/docs/pbc/all/user-management/{{site.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html)  Make sure to [assign corresponding `AclRule`](/docs/pbc/all/user-management/{{site.version}}/user-and-rights-overview.html) to the roles as well.
+You can do this through the Back Office. For details about how you can do that, see [Managing groups](/docs/pbc/all/user-management/{{site.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html)  Make sure to [assign corresponding `AclRule`](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html) to the roles as well.
 
 When you add the _DE product manager_ group to a user, only `Products` related to the DE store become available to that user.
 If the user needs access to both DE and AT stores, add two groups,_DE product manager_ and _AT product manager_, at once.

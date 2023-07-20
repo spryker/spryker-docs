@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/agent-assist-feature-integration.html
 related:
   - title: Install the Agent Assist Glue API
-    link: docs/pbc/all/user-management/page.version/install-and-upgrade/install-the-agent-assist-glue-api.html
+    link: docs/pbc/all/user-management/page.version/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html
   - title: Agent Assist feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---

@@ -893,7 +893,7 @@ entries:
           - title: Marketplace
             nested:
               - title: Install the Customer Account Management + Merchant Switcher feature
-                url: /docs/pbc/all/customer-relationship-management/marketplace/install-the-merchant-switcher-customer-account-management-feature.html
+                url: /docs/pbc/all/customer-relationship-management/marketplace/install-the-customer-account-management-merchant-switcher-feature.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -2103,6 +2103,8 @@ entries:
             nested:
               - title: Marketplace Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
+              - title: Marketplace Product Offer Prices feature overview
+                url: /docs/pbc/all/price-management/marketplace/marketplace-product-offer-prices-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -2129,8 +2131,12 @@ entries:
                     url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
               - title: Retrieve product offer prices using Glue API
                 url: /docs/pbc/all/price-management/marketplace/glue-api-retrieve-product-offer-prices.html
-              - title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
-                url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
+              - title: Domain model and relationships
+                nested:
+                  - title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
+                    url: /docs/pbc/all/price-management/marketplace/domain-model-and-relationships/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
+                  - title: "Marketplace Product Offer Prices feature: Domain model and relationships"
+                    url: /docs/pbc/all/price-management/marketplace/domain-model-and-relationships/marketplace-product-offer-prices-feature-domain-model-and-relationships.html
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
@@ -3169,6 +3175,9 @@ entries:
                         url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html
                       - title: Marketplace Wishlist
                         url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html
+                      - title: Wishlist + Merchant Switcher
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-features/install-the-wishlist-merchant-switcher-feature.html
+
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Shopping Lists
@@ -3267,55 +3276,64 @@ entries:
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
         nested:
-          - title: Agent Assist feature overview
-            url: /docs/pbc/all/user-management/agent-assist-feature-overview.html
-          - title: User and rights overview
-            url: /docs/pbc/all/user-management/user-and-rights-overview.html
-          - title: Install and upgrade
+          - title: Base shop
             nested:
-              - title: Install the ACL feature
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-acl-feature.html
-              - title: Install the Agent Assist feature
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-feature.html
-              - title: Install the Agent Assist + Cart feature
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-cart-feature.html
-              - title: Install the Agent Assist + Shopping List feature
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
-              - title: Install the Agent Assist Glue API
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
-          - title: Manage in the Back Office
-            url: /docs/pbc/all/user-management/manage-in-the-back-office/log-into-the-back-office.html
+              - title: Agent Assist feature overview
+                url: /docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.html
+              - title: User and rights overview
+                url: /docs/pbc/all/user-management/base-shop/user-and-rights-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install the ACL feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-acl-feature.html
+                  - title: Install the Agent Assist feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-feature.html
+                  - title: Install the Agent Assist + Cart feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-cart-feature.html
+                  - title: Install the Agent Assist + Shopping List feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
+                  - title: Install the Agent Assist Glue API
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                nested:
+                  - title: "Best practices: Manage users and their permissions with roles and groups"
+                    url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
+                  - title: Manage user roles
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html
+                      - title: Edit
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
+                  - title: Manage user groups
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html
+                      - title: Edit
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
+                  - title: Manage users
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/create-users.html
+                      - title: Edit
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/edit-users.html
+                      - title: Assign and deassign customers
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
+                      - title: Delete
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/delete-users.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Search by customers as an agent assist
+                    url: /docs/pbc/all/user-management/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+                  - title: Impersonate customers as an agent assist
+                    url: /docs/pbc/all/user-management/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+
+          - title: Marketplace
             nested:
-              - title: "Best practices: Manage users and their permissions with roles and groups"
-                url: /docs/pbc/all/user-management/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
-              - title: Manage user roles
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-roles/create-user-roles.html
-                  - title: Edit
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
-              - title: Manage user groups
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-groups/create-user-groups.html
-                  - title: Edit
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
-              - title: Manage users
-                nested:
-                  - title: Create
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/create-users.html
-                  - title: Edit
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/edit-users.html
-                  - title: Assign and deassign customers
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
-                  - title: Delete
-                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/delete-users.html
-          - title: Manage using Glue API
-            nested:
-              - title: Search by customers as an agent assist
-                url: /docs/pbc/all/user-management/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
-              - title: Impersonate customers as an agent assist
-                url: /docs/pbc/all/user-management/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+              
+
+
+
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
         nested:

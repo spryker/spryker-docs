@@ -50,7 +50,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
-- [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
+- [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html)
 - [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/spryker-pay/base-shop/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)

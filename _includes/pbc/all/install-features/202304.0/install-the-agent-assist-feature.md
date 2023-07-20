@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

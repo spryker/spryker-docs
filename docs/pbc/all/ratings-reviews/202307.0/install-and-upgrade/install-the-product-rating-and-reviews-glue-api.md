@@ -26,4 +26,4 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
-{% include pbc/all/install-features/202304.0/install-glue-api/install-the-product-rating-and-reviews-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-glue-api/install-the-product-rating-and-reviews-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-product-rating-and-reviews-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-product-rating-and-reviews-glue-api.md -->

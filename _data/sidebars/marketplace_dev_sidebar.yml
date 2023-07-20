@@ -5,7 +5,7 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
-        url: /docs/marketplace/dev/setup/setup.html
+        url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
         include_versions:
         - "202204.0"
         nested:
@@ -1354,12 +1354,3 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
-            
-      - title: Technical enhancement guides
-        url: /docs/marketplace/dev/technical-enhancement/technical-enhancement.html
-        include_versions:
-        - "202204.0"
-        nested:
-
-          - title: "Migration guide - Upgrade to Angular v12"
-            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html

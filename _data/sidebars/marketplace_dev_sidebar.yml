@@ -5,7 +5,7 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
-        url: /docs/marketplace/dev/setup/setup.html
+        url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
         include_versions:
         - "202204.0"
         nested:
@@ -843,7 +843,6 @@ entries:
       - title: Data import
         url: /docs/marketplace/dev/data-import/data-import.html
         include_versions:
-        - "202108.0"
         - "202204.0"
         nested:
           - title: Marketplace setup
@@ -1354,25 +1353,3 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
-
-      - title: HowTos
-        url: /docs/marketplace/dev/howtos/howtos.html
-        nested:
-
-          - title: "How-To: Create a new Angular module with application"
-            url: /docs/marketplace/dev/howtos/how-to-create-a-new-angular-module-with-application.html
-
-          - title: "How-To: Split products by stores"
-            url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-
-          - title: "How-To: Create a new Gui table column type"
-            url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
-
-      - title: Technical enhancement guides
-        url: /docs/marketplace/dev/technical-enhancement/technical-enhancement.html
-        include_versions:
-        - "202204.0"
-        nested:
-
-          - title: "Migration guide - Upgrade to Angular v12"
-            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html

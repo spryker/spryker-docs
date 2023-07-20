@@ -1,6 +1,6 @@
 ---
 title: Glue REST API
-last_updated: Jun 16, 2021
+last_updated: Jul 13, 2023
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-rest-api
 originalArticleId: 0556fe67-9243-4b84-b81f-8e417ca3d270
@@ -13,10 +13,16 @@ redirect_from:
   - /api/definition-api.htm
 related:
   - title: Reference information - GlueApplication errors
-    link: docs/scos/dev/glue-api-guides/page.version/reference-information-glueapplication-errors.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
 ---
 
-The Spryker Glue REST API is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS Backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+{% info_block warningBox %}
+
+This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
+
+The *Spryker Glue REST API* is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ![Glue REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+REST+API/glue-rest-api.jpg)
 
@@ -24,7 +30,7 @@ The Spryker Glue REST API is a JSON REST API that is an application of the Spryk
 
 The Spryker API infrastructure, which is implemented as a separate layer of the SCCOS, is called Glue. Glue is responsible for providing API endpoints, processing requests, and for communicating with other layers of the OS.
 
-For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html).
+For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
 
 ## REST API
 
@@ -32,25 +38,25 @@ The Glue REST API comes with a set of predefined APIs, which you can extend or a
 
 For more details, see REST API reference:
 
-* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2b-reference.html)
-* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2c-reference.html)
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-reference.html)
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2c-reference.html)
 
 ## B2C API React example
 
-To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technology perspective, it is based on our customers' interests. The app is single-page application based on a React JS library.
+To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technological perspective, it is based on our customers' interests. The app is single-page application based on a React JS library.
 
-It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html), is leveraged via dedicated endpoints to deliver catalog search functionality with auto-completion, auto-suggestion, facets, sorting, and pagination.
+It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html), is leveraged through dedicated endpoints to deliver catalog search functionality with autocompletion, autosuggestion, facets, sorting, and pagination.
 
 {% info_block infoBox %}
 
-[Install and run!](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html)
+For more deatails about installing and running, see [B2C API React example](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html).
 
 {% endinfo_block %}
 
 ### What can you use the REST API for?
 
 Glue API helps you to connect your Spryker Commerce OS with new or existing touch points. These touchpoints can be headless like voice commerce devices and chat bots, or they may come with a user interface like a mobile app. Alternative front ends also benefit from the APIs. Here are some examples:
-* New front end: Build a new front end or use a front-end framework like Progressive Web Apps and power it by the Glue API.
+* New frontend: Build a new frontend or use a frontend framework like Progressive Web Apps and power it by the Glue API.
 * Mobile app: a mobile app, no matter if it is native, hybrid or just a web-view, can support the same functionality as the existing demo shops do.
 * Voice commerce: Leverage the APIs for order history to inform your customers about the status of their delivery.
 * Chatbot: Use chatbots to identify the customer that are trying to reach out to you and help them answer basic questions about your products.

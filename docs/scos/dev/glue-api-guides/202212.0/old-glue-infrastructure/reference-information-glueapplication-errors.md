@@ -1,5 +1,5 @@
 ---
-title: Reference information- GlueApplication errors
+title: Reference information - GlueApplication errors
 description: Find out what common GlueAplication errors you can come across when sending and receiving data via the Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -13,8 +13,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/reference-information-glueapplication-errors.html
 related: 
   - title: Glue REST API
-    link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-rest-api.html
 ---
+
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
 
 This page lists the generic errors that originate from the Glue Application. These errors can occur for any resource, and they are always the same for all the resources.
 

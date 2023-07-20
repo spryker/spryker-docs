@@ -6,13 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-access-feature-overview
 originalArticleId: 06776bb5-8993-4d13-af9b-d1a1e9d317fe
 redirect_from:
-  - /2021080/docs/customer-access-feature-overview
-  - /2021080/docs/en/customer-access-feature-overview
-  - /docs/customer-access-feature-overview
-  - /docs/en/customer-access-feature-overview
   - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
   - /docs/scos/user/features/202212.0/customer-access-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/customer-access-feature-walkthrough.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/customer-access-feature-overview.html
 ---
 
 _Customer Access_ lets store administrators define whether certain information is visible to logged-out users.

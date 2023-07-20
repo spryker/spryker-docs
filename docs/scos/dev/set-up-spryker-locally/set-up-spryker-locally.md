@@ -7,6 +7,7 @@ redirect_from:
   - /docs/about-installation
   - /docs/scos/dev/setup/setup.html
   - /docs/marketplace/dev/setup/202212.0/setup.html
+  - /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This section contains instructions for installing Spryker Cloud Commerce OS (SCCOS) locally. Local instances are used for development, demos, and experimentation purposes. To launch a live shop, [contact us](https://spryker.com/contact-us-commerce/).

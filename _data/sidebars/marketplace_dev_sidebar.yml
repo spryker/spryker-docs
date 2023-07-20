@@ -843,7 +843,6 @@ entries:
       - title: Data import
         url: /docs/marketplace/dev/data-import/data-import.html
         include_versions:
-        - "202108.0"
         - "202204.0"
         nested:
           - title: Marketplace setup

@@ -477,7 +477,7 @@ Once all the steps of the ACP-enablement process are completed, the ACP catalog 
 
 Once your projecrt is ACP-enabled, you can start integrating the apps:
 
-- [Integrate Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/integrate-algolia.html)
+- [Integrate Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/integrate-algolia.html)
 - [Integrate Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
 - [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html)
 - [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html)

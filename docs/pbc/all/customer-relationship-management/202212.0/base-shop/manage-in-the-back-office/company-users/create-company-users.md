@@ -6,13 +6,10 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-users
 originalArticleId: ff15efb5-30c1-4b0e-b56d-596d90d40123
 redirect_from:
-  - /2021080/docs/managing-company-users
-  - /2021080/docs/en/managing-company-users
-  - /docs/managing-company-users
-  - /docs/en/managing-company-users
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-users.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-users.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/company-users/create-company-users.html
 related:
   - title: Edit company roles
     link: docs/scos/user/back-office-user-guides/202204.0/customer/company-users/edit-company-users.html

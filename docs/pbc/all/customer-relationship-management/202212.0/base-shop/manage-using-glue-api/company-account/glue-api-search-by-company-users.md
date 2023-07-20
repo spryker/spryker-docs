@@ -6,11 +6,8 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
 redirect_from:
-  - /2021080/docs/searching-by-company-users
-  - /2021080/docs/en/searching-by-company-users
-  - /docs/searching-by-company-users
-  - /docs/en/searching-by-company-users
   - /docs/scos/dev/glue-api-guides/202212.0/managing-b2b-account/searching-by-company-users.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
 related:
   - title: Retrieving companies
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
@@ -42,7 +39,7 @@ This endpoint allows [authenticated customers](/docs/pbc/all/identity-access-man
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve available company users
 

@@ -6,11 +6,8 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers
 originalArticleId: 32a86d51-5bdd-428b-8ae4-5929326f4a26
 redirect_from:
-  - /2021080/docs/managing-customers
-  - /2021080/docs/en/managing-customers
-  - /docs/managing-customers
-  - /docs/en/managing-customers
   - /docs/scos/user/back-office-user-guides/202212.0/customer/customer-customer-access-customer-groups/managing-customers.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/customers/create-customers.html
 related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html

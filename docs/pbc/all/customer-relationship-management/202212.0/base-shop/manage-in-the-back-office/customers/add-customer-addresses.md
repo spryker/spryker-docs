@@ -6,13 +6,10 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses
 originalArticleId: f4e8cd51-98cc-44d9-83aa-293f510d75a5
 redirect_from:
-  - /2021080/docs/managing-customer-addresses
-  - /2021080/docs/en/managing-customer-addresses
-  - /docs/managing-customer-addresses
-  - /docs/en/managing-customer-addresses
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/customers/add-customer-addresses.html
 related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html

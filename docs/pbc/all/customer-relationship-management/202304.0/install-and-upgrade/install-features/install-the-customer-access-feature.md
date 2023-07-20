@@ -1,5 +1,5 @@
 ---
-title: Customer Access feature integration
+title: Install the Customer Access feature
 description: The guide walks you through the process of installing the Customer Access feature in the project.
 last_updated: Mar 16, 2023
 template: feature-integration-guide-template

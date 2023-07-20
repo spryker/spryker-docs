@@ -6,15 +6,12 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
 originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
 redirect_from:
-  - /2021080/docs/managing-customer-addresses-via-glue-api
-  - /2021080/docs/en/managing-customer-addresses-via-glue-api
-  - /docs/managing-customer-addresses-via-glue-api
-  - /docs/en/managing-customer-addresses-via-glue-api
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/managing-customer-addresses.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
 related:
   - title: Managing Wishlists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
@@ -50,7 +47,7 @@ This endpoints allows retrieving and edit customer addresses.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 ## Add an address
 

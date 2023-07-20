@@ -6,13 +6,10 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-units
 originalArticleId: 6a9bb3d9-ef8f-444e-b5f7-7d6f964792c5
 redirect_from:
-  - /2021080/docs/managing-company-units
-  - /2021080/docs/en/managing-company-units
-  - /docs/managing-company-units
-  - /docs/en/managing-company-units
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-units.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-units.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/company-units/create-company-units.html
 related:
   - title: Business Units overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html

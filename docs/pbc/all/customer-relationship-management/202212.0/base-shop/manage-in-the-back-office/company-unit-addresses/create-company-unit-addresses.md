@@ -6,13 +6,10 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-unit-addresses
 originalArticleId: b3bbc8db-3448-4aa1-8d93-eb435113d36c
 redirect_from:
-  - /2021080/docs/managing-company-unit-addresses
-  - /2021080/docs/en/managing-company-unit-addresses
-  - /docs/managing-company-unit-addresses
-  - /docs/en/managing-company-unit-addresses
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-unit-addresses.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-unit-addresses.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-unit-addresses.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html
 related:
   - title: Business Units overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html

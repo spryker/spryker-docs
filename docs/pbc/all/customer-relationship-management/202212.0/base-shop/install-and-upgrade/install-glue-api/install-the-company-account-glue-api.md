@@ -1,19 +1,16 @@
 ---
-title: Glue API - Company Account feature integration
+title: Install the Company Account Glue API
 last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-company-account-api-feature-integration
 originalArticleId: 9c1b8007-286a-42f9-86cc-a173b87ca33e
 redirect_from:
-  - /2021080/docs/glue-api-company-account-api-feature-integration
-  - /2021080/docs/en/glue-api-company-account-api-feature-integration
-  - /docs/glue-api-company-account-api-feature-integration
-  - /docs/en/glue-api-company-account-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-company-account-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-company-account-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-company-account-feature-integration.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
 related:
-  - title: Company Account feature integration
+  - title: Install the Company Account feature
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html
   - title: "Glue API: Authenticating as a company user"
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html

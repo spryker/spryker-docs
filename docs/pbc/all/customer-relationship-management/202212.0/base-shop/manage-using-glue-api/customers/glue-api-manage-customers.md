@@ -6,13 +6,10 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
-  - /2021080/docs/managing-customers-via-glue-api
-  - /2021080/docs/en/managing-customers-via-glue-api
-  - /docs/managing-customers-via-glue-api
-  - /docs/en/managing-customers-via-glue-api
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/managing-customers.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-using-glue-api/customers/glue-api-manage-customers.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
@@ -48,7 +45,7 @@ In your development, these resources can help you:
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 
 ## Retrieve customers

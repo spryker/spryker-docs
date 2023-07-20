@@ -1,5 +1,5 @@
 ---
-title: Customer Account Management + Order Management feature integration
+title: Install the Customer Account Management + Order Management feature
 description: This guide provides step-by-step instruction on integrating Customer Account Management + Order Management feature into the Spryker-based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/customer-account-management-order-management-feature-integration
   - /docs/en/customer-account-management-order-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202212.0/customer-account-management-order-management-feature-integration.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-customer-account-management-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-customer-account-management-order-management-feature.md -->

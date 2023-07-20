@@ -6,13 +6,10 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-groups
 originalArticleId: 3540b410-11bf-4d1f-a9f6-306009db8740
 redirect_from:
-  - /2021080/docs/managing-customer-groups
-  - /2021080/docs/en/managing-customer-groups
-  - /docs/managing-customer-groups
-  - /docs/en/managing-customer-groups
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/manage-customer-groups.html
 related:
   - title: Customer Groups overview
     link: docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-groups-overview.html

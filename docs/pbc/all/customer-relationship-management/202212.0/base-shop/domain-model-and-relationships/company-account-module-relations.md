@@ -6,10 +6,9 @@ template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v7/docs/company-account-module-relations
 originalArticleId: c01aaea9-5602-4cb9-9d99-04d42aa2aa8a
 redirect_from:
-  - /v7/docs/company-account-module-relations
-  - /v7/docs/en/company-account-module-relations
   - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-module-relations.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/company-account-feature-walkthrough/company-account-module-relations.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/domain-model-and-relationships/company-account-module-relations.html
 ---
 
 The schema below illustrates relations between company, business unit, company unit address, and company user (customer).

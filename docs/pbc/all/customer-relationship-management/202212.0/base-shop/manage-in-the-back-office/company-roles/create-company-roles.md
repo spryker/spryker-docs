@@ -6,14 +6,11 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-roles
 originalArticleId: 3297455f-e357-4d29-94ae-0797c45f25a3
 redirect_from:
-  - /2021080/docs/managing-company-roles
-  - /2021080/docs/en/managing-company-roles
-  - /docs/managing-company-roles
-  - /docs/en/managing-company-roles
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/company-roles/create-company-roles.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/company-roles/create-company-roles.html
 related:
   - title: Managing Companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html

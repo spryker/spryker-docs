@@ -6,12 +6,9 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-orders
 originalArticleId: 4390b08b-349a-406e-8e41-983014e30ab5
 redirect_from:
-  - /2021080/docs/retrieving-customer-orders
-  - /2021080/docs/en/retrieving-customer-orders
-  - /docs/retrieving-customer-orders
-  - /docs/en/retrieving-customer-orders
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-orders.html
   - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/retrieving-customer-orders.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 related:
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html

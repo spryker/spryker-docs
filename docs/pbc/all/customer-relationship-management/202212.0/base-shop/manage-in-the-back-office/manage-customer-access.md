@@ -6,13 +6,10 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access
 originalArticleId: c74c94ad-1095-4299-8675-7128bf96d855
 redirect_from:
-  - /2021080/docs/managing-customer-access
-  - /2021080/docs/en/managing-customer-access
-  - /docs/managing-customer-access
-  - /docs/en/managing-customer-access
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
   - /docs/scos/user/back-office-user-guides/202212.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
+  - /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/manage-customer-access.html
 related:
   - title: Customer access feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-access-feature-overview.html

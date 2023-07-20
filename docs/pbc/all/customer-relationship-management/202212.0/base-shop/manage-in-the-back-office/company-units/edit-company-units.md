@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 redirect_from:
 - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
 - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-units.html
+- /docs/pbc/all/customer-relationship-management/202212.0/manage-in-the-back-office/company-units/edit-company-units.html
 related:
   - title: Business Units overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html

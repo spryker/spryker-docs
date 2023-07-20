@@ -5,17 +5,17 @@ last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
-Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also defines how a page structure is perceived. Big headers typically go first and are perceived as more important, whereas smaller text seems less important.
+Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also defines how page structure is perceived. Big headers typically go first and are perceived as more important, whereas smaller text seems less important.
 
-The typography system lets you set up font size, weight and line height globally. Components do not define _values_ for fonts directly in their CSS, but use _design tokens_ to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.
+The typography system lets you set up font size, weight, and line height globally. Components don't define _values_ for fonts directly in their CSS but use _design tokens_ to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.
 
-Like all design tokens, the typography system is configurable by themes, so that a selection of a certain theme applies a unique set of typography settings to all components.
+Like all design tokens, the typography system is configurable by themes, so that selecting of a certain theme applies a unique set of typography settings to all components.
 
 ## Global font settings
 
-Oryx is based on web components, using the shadow DOM. The shadow DOM doesn't leak out any styles outside a component and components don't inherit styles from ancestor elements. However, there are a few exceptions. Font face and size, line height and color are the few CSS properties that cascade down the shadow DOM. This lets you define those rules high up in the DOM tree.
+Oryx is based on web components, using the shadow DOM. The shadow DOM doesn't leak out any styles outside a component, and components don't inherit styles from ancestor elements. However, there are a few exceptions. Font face and size, line height and color are the few CSS properties that cascade down the shadow DOM. This lets you define those rules high up in the DOM tree.
 
-Because most design system components inehrit typography from ancestor elements, you can provide the basis typography configuration in the root of the application. Oryx applications use the `<oryx-app>` component which provides this setup:
+Because most design system components inehrit typography from ancestor elements, you can provide the basis typography configuration in the root of the application. Oryx applications use the `<oryx-app>` component, which provides this setup:
 
 ```css
 :host {
@@ -25,11 +25,11 @@ Because most design system components inehrit typography from ancestor elements,
 }
 ```
 
-The values are based on design tokens which can be configured in a theme. Themes provide a mechanism to have screen size specific tokens, which enables the components to have different typography for small, medium, and large screens.
+The values are based on design tokens, whcih can be configured in a theme. Themes provide a mechanism to have screen size specific tokens, which enables the components to have different typography for small, medium, and large screens.
 
-{% info_block infoBox "Reading tip" %}
+{% info_block infoBox "" %}
 
-Setting the _root font size_ is an exception in Oryx. Oryx avoids opinions about the root element and only provides styles to the `oryx-app` component. However, the `rem` unit requires the root font-size to be set up in the web page. To ensure a configurable approach, Oryx uses `ThemeMetaInitializer` to accomplish this.
+Setting the _root font size_ is an exception in Oryx. Oryx avoids opinions about the root element and only provides styles to the `oryx-app` component. However, the `rem` unit requires the root font size to be set up in a web page. To ensure a configurable approach, Oryx uses `ThemeMetaInitializer` to accomplish this.
 
 {% endinfo_block %}
 
@@ -59,19 +59,19 @@ For example, if the line height token of an `h3` is set to `1.5em`, and the font
 
 Using `em` for line height offers the following advantages:
 
-1. Proportional Line Heights: `em` adjusts line height proportionally to the font size, ensuring visually harmonious typography.
-2. Vertical Rhythm: `em` helps maintain a consistent vertical rhythm, creating a visually cohesive design.
-3. Flexible Adjustments: Modifying the font size of an element automatically adjusts its line height, facilitating quick and consistent changes.
+1. Proportional line heights: `em` adjusts line height proportionally to the font size, ensuring visually harmonious typography.
+2. Vertical rhythm: `em` helps maintain a consistent vertical rhythm, creating a visually cohesive design.
+3. Flexible adjustments: modifying the font size of an element automatically adjusts its line height, facilitating quick and consistent changes.
 
 ## Headings
 
-HTML supports heading elements up to level 6: `<h1>`, `<h2>`, `<h3>`, etc. Headings are used by screen readers and crawlers to better understand the content and their coherence.
+HTML supports heading elements up to level 6: `<h1>`, `<h2>`, `<h3>`, etc. Screen readers and crawlers use headings to better understand the content and their coherence.
 
 Oryx provides a number of heading and paragraph styles that are used in the design system and components:
 
 - body
 - small
-- H1, H2, H3, H4, H5, H6
+- h1, h2, h3, h4, h5, h6
 - subtitle
 - subtitle-small
 - bold
@@ -82,8 +82,6 @@ Each style of components and elements below is configurable by design tokens, us
 - `--oryx-typography-h1-size`
 - `--oryx-typography-h1-weight`
 - `--oryx-typography-h1-line`
-
-These design tokens are pretty self-explanatory.
 
 The headings get `margin: 0` to avoid any clashes in the component layout.
 

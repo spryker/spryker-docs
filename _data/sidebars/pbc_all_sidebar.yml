@@ -890,6 +890,10 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
               - title: "File details: customer.csv"
                 url: /docs/pbc/all/customer-relationship-management/base-shop/file-details-customer.csv.html
+          - title: Marketplace
+            nested:
+              - title: Install the Customer Account Management + Merchant Switcher feature
+                url: /docs/pbc/all/customer-relationship-management/marketplace/install-the-merchant-switcher-customer-account-management-feature.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

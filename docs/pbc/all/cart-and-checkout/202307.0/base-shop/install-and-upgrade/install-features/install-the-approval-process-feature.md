@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/approval-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/approval-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/approval-process-feature-integration.html
 related:
   - title: Install the Quotation Process + Approval Process feature
     link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html

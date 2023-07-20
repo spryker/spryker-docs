@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/shipment-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/shipment-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/shipment-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202312.0/shipment-cart-feature-integration.html
 related:
   - title: Shipment feature integration
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html

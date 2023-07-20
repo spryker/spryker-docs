@@ -2849,123 +2849,181 @@ entries:
                 - "202212.0"
               - title: Disconnect Algolia
                 url: /docs/pbc/all/search/algolia/disconnect-algolia.html
-          - title: Elasticsearch
-            url: /docs/pbc/all/search/elasticsearch/elasticsearch.html
+          - title: FACT-Finder
+            url: /docs/pbc/all/search/fact-finder/fact-finder.html
             nested:
-              - title: Install and Upgrade Elasticsearch
+              - title: Integrate FACT-Finder
                 nested:
-                  - title: Install Elasticsearch
+                  - title: Integrating FACT-Finder
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+                  - title: Installing and configuring FACT-Finder NG API
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+                  - title: Installing and configuring FACT-Finder
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+                  - title: Installing and configuring FACT-Finder web components
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+                  - title: Exporting product data for FACT-Finder
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+              - title: Use FACT-Finder
+                nested:
+                  - title: Using FACT-Finder campaigns
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+                  - title: Using FACT-Finder search
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+                  - title: Using FACT-Finder search suggestions
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+                  - title: Using FACT-Finder tracking
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+                  - title: Using FACT-Finder recommendation engine
+                    url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+          - title: Spryker Search
+            url: /docs/pbc/all/search/spryker-search/spryker-search.html
+            nested:
+              - title: Base shop
+                nested:
+                  - title: Search feature overview
+                    url: /docs/pbc/all/search/spryker-search/base-shop/search-feature-overview/search-feature-overview.html
                     nested:
-                      - title: Install the Catalog + Category Management feature
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/install-elasticsearch/install-the-catalog-category-management-feature.html
-                      - title: Install the Catalog + Order Management feature
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/install-elasticsearch/install-the-catalog-order-management-feature.html
-                      - title: Install the Search Widget for Concrete Products feature
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/install-elasticsearch/install-the-search-widget-for-concrete-products.html
-                      - title: Install the Catalog Glue API
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/install-elasticsearch/install-the-catalog-glue-api.html
-                  - title: Upgrade Elasticsearch
+                      - title: Category filters
+                        url: /docs/pbc/all/search/spryker-search/base-shop/search-feature-overview/category-filters-overview.html
+                      - title: Search types overview
+                        url: /docs/pbc/all/search/spryker-search/base-shop/search-feature-overview/search-types-overview.html
+                      - title: Standard filters
+                        url: /docs/pbc/all/search/spryker-search/base-shop/search-feature-overview/standard-filters-overview.html
+                  - title: Install and upgrade
                     nested:
+                      - title: Install feature and Glue API
+                        nested:
+                          - title: Install the Catalog + Category Management feature
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html
+                          - title: Install the Catalog + Order Management feature
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-order-management-feature.html
+                          - title: Install the Search Widget for Concrete Products feature
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-search-widget-for-concrete-products.html
+                          - title: Install the Catalog Glue API
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
+                      - title: Upgrade modules
+                        nested:
+                          - title: Catalog
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                          - title: CatalogSearchRestApi
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi–module.html
+                          - title: CategoryPageSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
+                          - title: CmsPageSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+                          - title: ProductLabelSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html
+                          - title: ProductListSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
+                          - title: ProductPageSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html
+                          - title: ProductReviewSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
+                          - title: ProductSetPageSearch
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
+                          - title: Search
+                            url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html
                       - title: Search migration concept
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/search-migration-concept.html
+                        url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/search-migration-concept.html
                       - title: Upgrade search initialization
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-search-initialization.html
-                      - title: Catalog
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-catalog-module.html
-                      - title: CatalogSearchRestApi
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-catalogsearchrestapi–module.html
-                      - title: CategoryPageSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-categorypagesearch-module.html
-                      - title: CmsPageSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-cmspagesearch-module.html
-                      - title: ProductLabelSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-productlabelsearch-module.html
-                      - title: ProductListSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-productlistsearch-module.html
-                      - title: ProductPageSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-productpagesearch-module.html
-                      - title: ProductReviewSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-productreviewsearch-module.html
-                      - title: ProductSetPageSearch
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-productsetpagesearch-module.html
-                      - title: Search
-                        url: /docs/pbc/all/search/install-and-upgrade-elasticsearch/upgrade-elasticsearch/upgrade-the-search–module.html
-              - title: Configure Elasticsearch
-                nested:
-                  - title: Define search preferences
-                    url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/define-search-preferences.html
-                  - title: Edit search preferences
-                    url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/edit-search-preferences.html
-                  - title: Filter preferences
-                    url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/filter-preferences/filter-preferences.html
+                        url: /docs/pbc/all/search/spryker-search/base-shop/install-and-upgrade/upgrade-search-initialization.html
+                  - title: Manage in the Back Office
                     nested:
-                      - title: Define
-                        url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/filter-preferences/define-filter-preferences.html
-                      - title: Edit
-                        url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/filter-preferences/edit-filter-preferences.html
-                      - title: Reorder
-                        url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/filter-preferences/reorder-filter-preferences.html
-                  - title: Category filters
-                    url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/category-filters.html
+                      - title: "Best practices: Promote products with search preferences"
+                        url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html
+                      - title: Define search preferences
+                        url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/define-search-preferences.html
+                      - title: Edit search preferences
+                        url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/edit-search-preferences.html
+                      - title: Filter preferences
+                        nested:
+                          - title: Define
+                            url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
+                          - title: Edit
+                            url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html
+                          - title: Reorder
+                            url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html
+                      - title: Category filters
+                        nested:
+                          - title: Assign and deassign filters from categories
+                            url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
+                          - title: Reorder category filters
+                            url: /docs/pbc/all/search/spryker-search/base-shop/manage-in-the-back-office/category-filters/reorder-category-filters.html
+                  - title: Manage using Glue API
                     nested:
-                      - title: Assign and deassign filters from categories
-                        url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/category-filters/assign-and-deassign-filters-from-categories.html
-                      - title: Reorder category filters
-                        url: /docs/pbc/all/search/elasticsearch/configure-elasticsearch/category-filters/reorder-category-filters.html
-              - title: Search via API # REDIRECTS DONE
-                url: /docs/pbc/all/search/elasticsearch/search-via-api/search-via-api.html
-              - title: Import data
+                      - title: Retrieve autocomplete and search suggestions
+                        url: /docs/pbc/all/search/spryker-search/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
+                      - title: Search the product catalog
+                        url: /docs/pbc/all/search/spryker-search/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
+                  - title: Import and export data
+                    nested:
+                      - title: "File details: product_search_attribute_map.csv"
+                        url: /docs/pbc/all/search/spryker-search/base-shop/import-and-export-data/file-details-product-search-attribute-map.csv.html
+                      - title: "File details: product_search_attribute.csv"
+                        url: /docs/pbc/all/search/spryker-search/base-shop/import-and-export-data/file-details-product-search-attribute.csv.html
+                  - title: Tutorials and Howtos
+                    nested:
+                      - title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
+                        nested:
+                          - title: "Tutorial: Boost cart-based search"
+                            url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-boost-cart-based-search.html
+                      - title: Configure a search query
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/configure-a-search-query.html
+                      - title: Configure Elasticsearch
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/configure-elasticsearch.html
+                      - title: Configure search features
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/configure-search-features.html
+                      - title: Configure search for multi-currency
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
+                      - title: Expand search data
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/expand-search-data.html
+                      - title: Facet filter overview and configuration
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
+                      - title: "Tutorial: Integrate any search engine into a project"
+                        url: /docs/pbc/all/search/spryker-search/base-shop/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
+                  - title: Third-party integrations
+                    nested:
+                    - title: Algolia
+                      url: /docs/pbc/all/search/spryker-search/base-shop/third-party-integrations/algolia.html
+                    - title: Integrate Algolia
+                      url: /docs/pbc/all/search/spryker-search/base-shop/third-party-integrations/integrate-algolia.html
+                    - title: Configure Algolia
+                      url: /docs/pbc/all/search/spryker-search/base-shop/third-party-integrations/configure-algolia.html
+                      include_versions:
+                      - "202212.0"
+                    - title: Disconnect Algolia
+                      url: /docs/pbc/all/search/spryker-search/base-shop/third-party-integrations/disconnect-algolia.html
+                  - title: Best practices
+                    url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/search-best-practices.html
+                    nested:
+                      - title: Data-driven ranking
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/data-driven-ranking.html
+                      - title: Full-text search
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/full-text-search.html
+                      - title: Generic faceted search
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/generic-faceted-search.html
+                      - title: Multi-term autocompletion
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/multi-term-auto-completion.html
+                      - title: Naive product-centric approach
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/naive-product-centric-approach.html
+                      - title: On-site search
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/on-site-search.html
+                      - title: Other best practices
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/other-best-practices.html
+                      - title: "Personalization: dynamic pricing"
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/personalization-dynamic-pricing.html
+                      - title: Precise search by super attributes
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/precise-search-by-super-attributes.html
+                      - title: Simple spelling suggestions
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/simple-spelling-suggestions.html
+                      - title: Usage-driven schema and document structure
+                        url: /docs/pbc/all/search/spryker-search/base-shop/best-practices/usage-driven-schema-and-document-structure.html
+              - title: Marketplace
                 nested:
-                  - title: "File details: product_search_attribute_map.csv"
-                    url: /docs/pbc/all/search/elasticsearch/import-data/file-details-product-search-attribute-map.csv.html
-                  - title: "File details: product_search_attribute.csv"
-                    url: /docs/pbc/all/search/elasticsearch/import-data/file-details-product-search-attribute.csv.html
-              - title: Tutorials and Howtos
-                nested:
-                  - title: Content and search - attribute-cart-based catalog personalization
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
-                  - title: Boost cart-based search
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/tutorial-boost-cart-based-search.html
-                  - title: Configure a search query
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/configure-a-search-query.html
-                  - title: Configure Elasticsearch
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/configure-elasticsearch.html
-                  - title: Configure search features
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/configure-search-features.html
-                  - title: Configure search for multi-currency
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/configure-search-for-multi-currency.html
-                  - title: Expand search data
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/expand-search-data.html
-                  - title: Facet filter overview and configuration
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/facet-filter-overview-and-configuration.html
-                  - title: Integrate any search engine into a project
-                    url: /docs/pbc/all/search/elasticsearch/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
-              - title: Best practices
-                nested:
-                  - title: Data-driven ranking
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/data-driven-ranking.html
-                  - title: Full-text search
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/full-text-search.html
-                  - title: Generic faceted search
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/generic-faceted-search.html
-                  - title: Multi-term autocompletion
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/multi-term-auto-completion.html
-                  - title: Naive product-centric approach
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/naive-product-centric-approach.html
-                  - title: On-site search
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/on-site-search.html
-                  - title: Other best practices
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/other-best-practices.html
-                  - title: "Personalization: dynamic pricing"
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/personalization-dynamic-pricing.html
-                  - title: Precise search by super attributes
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/precise-search-by-super-attributes.html
-                  - title: Promote products with search preferences
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/best-practices-promote-products-with-search-preferences.html
-                  - title: Simple spelling suggestions
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/simple-spelling-suggestions.html
-                  - title: Usage-driven schema and document structure
-                    url: /docs/pbc/all/search/elasticsearch/best-practices/usage-driven-schema-and-document-structure.html
+                  - title: "Glue API: Search the product catalog"
+                    url: /docs/pbc/all/search/spryker-search/marketplace/glue-api-search-the-product-catalog.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

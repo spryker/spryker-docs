@@ -4369,31 +4369,6 @@ entries:
       nested:
       - title: Analytics
         nested:
-        - title: FACT-Finder
-          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/fact-finder.html
-          include_versions:
-          - "202212.0"
-          nested:
-          - title: Installing and configuring FACT-Finder NG API
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
-          - title: Installing and configuring FACT-Finder
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
-          - title: Installing and configuring FACT-Finder web components
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
-          - title: Exporting product data for FACT-Finder
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
-          - title: Using FACT-Finder campaigns
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
-          - title: Using FACT-Finder search
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
-          - title: Using FACT-Finder search suggestions
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
-          - title: Using FACT-Finder tracking
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
-          - title: Integrating FACT-Finder
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
-          - title: Using FACT-Finder recommendation engine
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
         - title: Installing and configuring Minubo
           url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-confiugring-minubo.html
           include_versions:

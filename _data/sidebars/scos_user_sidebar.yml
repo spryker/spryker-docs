@@ -3388,8 +3388,6 @@ entries:
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html
       - title: Analytics
         nested:
-        - title: FACT-Finder
-          url: /docs/scos/user/technology-partners/marketing-and-conversion/analytics/fact-finder.html
         - title: Minubo
           url: /docs/scos/user/technology-partners/marketing-and-conversion/analytics/minubo.html
         - title: ChannelPilot Analytics

@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/202212.0/search-feature-overview/search-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/search-feature-walkthrough.html
+  - /docs/pbc/all/search/202212.0/search.html
 ---
 
 Let shoppers browse your catalog quickly with the highly flexible filter and search features. Integrated Search Providers allow you to include full-text search, auto-suggestions, and auto-completion. Set individual search preferences for multiple stores, and categorize your products by adding dynamic filters and facets to help your customers further refine the search results. In addition, you can also add more advanced filters that make use of the product’s metadata or promote a brand’s top-sellers or highly rated products.
@@ -15,7 +16,8 @@ Let shoppers browse your catalog quickly with the highly flexible filter and sea
 | Search Provider | Build & Maintened by | Available From | Business Model Supported | Suitable When | Can be Extended & Customized |
 | --- | --- | ---| ---| --- | -- |
 | [Algolia](/docs/pbc/all/search/{{page.version}}/algolia/algolia.html) | Spryker | App Composition Platform | B2B, B2C, Marketplace | Search is critical to your business and you want to tailor search results in real-time for your customers | From the Algolia back-office, the whole search experience can be tailored to your needs |
-| [Elasticsearch](/docs/pbc/all/search/{{page.version}}/elasticsearch/elasticsearch.html) | Spryker | Composer | B2B, B2C, Marketplace | Your Search needs are fairly standard and the out-of-the-box capabilities are enough. | Some part of the search experience can be adjusted inside the Spryker Back-Office, for rest you will need your development team to implement your needs in your Spryker project. |
+| [FACT-Finder](/docs/pbc/all/search/{{page.version}}/fact-finder/fact-finder.html) | Spryker | ECO Module | B2C | Search is critical to your business and you want to tailor search results in real-time for your customers | Some part of the search experience can be adjusted inside the FACT-Finder Back-Office, for rest you will need your development team to implement your needs in your Spryker project. |
+| [Spryker Search](/docs/pbc/all/search/{{page.version}}/spryker-search/spryker-search.html) | Spryker | Composer | B2B, B2C, Marketplace | Your Search needs are fairly standard and the out-of-the-box capabilities are enough. | Some part of the search experience can be adjusted inside the Spryker Back-Office, for rest you will need your development team to implement your needs in your Spryker project. |
 
 ## Search Experience for Your Customers
 

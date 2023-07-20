@@ -465,7 +465,7 @@ $config[QueueConstants::QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR] = 50; // in perce
 
 Currently this solution proved to be useful for multi-store setup environments with more than 2 stores operated within a single AWS region, although projects with only 2 stores can benefit with this solution as well.
 
-At the same time it worth mentioning that for single store setup - it doesn't make sense to apply this customization. Although there are no drawbacks, it won't provide any significant benefits in performance, just better logging.
+At the same time it worth mentioning that for it does not make sense to apply this customization for a single store setup. Although there are no drawbacks, it won't provide any significant benefits in performance, just better logging.
 
 
 - In summary, this HowTo can be applied to multi-store setup with at least 2 stores within one AWS region to gain such benefits as potential cost reduction from scaling down a Jenkins instance, or to speed Publish and Synchronize processing instead.

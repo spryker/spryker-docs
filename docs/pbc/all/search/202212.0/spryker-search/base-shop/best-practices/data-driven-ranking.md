@@ -24,28 +24,6 @@ redirect_from:
   - /v1/docs/en/data-driven-ranking
   - /docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
   - /docs/pbc/all/search/202212.0/base-shop/best-practices/data-driven-ranking.html
-related:
-  - title: Full-text search
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/full-text-search.html
-  - title: Generic faceted search
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/generic-faceted-search.html
-  - title: Precise search by super attributes
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/precise-search-by-super-attributes.html
-  - title: On-site search
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/on-site-search.html
-  - title: Other best practices
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/other-best-practices.html
-  - title: Multi-term autocompletion
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/multi-term-auto-completion.html
-  - title: Simple spelling suggestions
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/simple-spelling-suggestions.html
-  - title: Naive product centric approach
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/naive-product-centric-approach.html
-  - title: Personalization - dynamic pricing
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/personalization-dynamic-pricing.html
-  - title: Usage-driven schema and document structure
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/usage-driven-schema-and-document-structure.html
-
 ---
 
 When a query returns hundreds or thousands of results, the most relevant to the user products must be at the top of the search result page. Getting this right leads to a higher conversion probability and increases customer happiness. Implementing proper data-driven ranking, however, is usually very tricky because there might be large numbers of heuristics, which define what a good search result for a certain query is.

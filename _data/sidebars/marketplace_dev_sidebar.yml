@@ -340,6 +340,8 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
             include_versions:
               - "202204.0"
+              - "202212.0"
+              - "202307.0"
 
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
@@ -740,9 +742,9 @@ entries:
 
           - title: Merchants
             url: /docs/marketplace/dev/glue-api-guides/merchants/merchants.html
-                include_versions:
-                - "202108.0"
-                - "202204.0"
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Retrieving merchants
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html

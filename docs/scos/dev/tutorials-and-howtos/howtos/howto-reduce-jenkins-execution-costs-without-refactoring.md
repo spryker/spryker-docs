@@ -1,50 +1,48 @@
 ---
 title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
-description: Save Jenkins related costs or speedup background jobs processing by implementing a custom single Worker for all stores.
+description: Save Jenkins related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 last_updated: Jul 15, 2023
 template: howto-guide-template
-originalLink: ??
-originalArticleId: ??
 redirect_from:
 ---
 
 
 # The Challenge
 
-Our out-of-the-box (OOTB) system requires a specific command (Worker - `queue:worker:start`) to be continuously running for each store to process queues and ensure propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, etc. When these processes are not functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes. 
+Our out-of-the-box (OOTB) system requires a specific command (Worker - `queue:worker:start`) to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes are not functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes. 
 
 # Explanation
 
-By default, our system has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it becomes critical when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. Moreover, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
+By default, our system has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it becomes a potentially critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
 
-Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU utilisation are not generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers processing heavy messages for multiple stores simultaneously. 
+Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU utilization are not generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores. 
 
-There are two potential solutions to address this problem: application optimisation and better background job orchestration.
+There are two potential solutions to address this problem: application optimization and better background job orchestration.
 
 # Proposed Solution
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/OneWorker-diagram.png)
 
-The solution described here is targeted at small to medium projects but can be improved and applied universally, but it hasn't been tested fully in such conditions yet.
+The solution described here is targeted at small to medium projects but can be improved and applied universally. However, it hasn't been fully tested in such conditions yet.
 
 The proposed solution is to use one Worker (`queue:worker:start`) for all stores, regardless of the number of stores. Instead of executing these steps for one store within one process and having multiple processes for multiple stores, we can have one process that scans all queues for all stores and spawns child processes the same way as the OOTB solution. However, instead of determining the number of processes based on the presence of a single message, we can analyse the total number of messages in the queue to make an informed decision on how many processes should be launched at any given moment.
 
 ## The Process Pool
 
-In computer science, a pool refers to a collection of resources that are kept in memory and ready to use. In this context, we have a fixed-sized pool (fixed-size array) where new processes are only run if there is space available among the other running processes. This approach allows us to have better control over the number of processes launched by the OOTB solution, resulting in more predictable memory consumption.
+In computer science, a pool refers to a collection of resources that are kept in memory and ready to use. In this context, we have a fixed-sized pool (fixed-size array) where new processes are only ran if there is space available among the other running processes. This approach allows us to have better control over the number of processes launched by the OOTB solution, resulting in more predictable memory consumption.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/NewWorker+Flow.png)
 
-We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it is too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling up/down the EC2 instance.
+We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it is too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
 
-The following params exist:
+The following parameters exist:
 
 - pool size (default 5-10)
-- free mem buffer - min amount of RAM (MB) system should have in order to spawn a new child process (default 750mb)
+- free memory buffer - minimum amount of RAM (MB) the system should have in order to spawn a new child process (default 750mb)
 
 ## Worker Statistics and Logs
 
-With the proposed solution, we gather better statistics to understand the "health" of the worker and make informed decisions. We can track the number of tasks executed per queue/store, distribution of error codes, cycles, and various metrics related to skipping cycles, cooldown, available slots, and memory limitations. These statistics help us monitor performance, identify bottlenecks, and optimize resource allocation.
+With the proposed solution, we gather better statistics to understand the health of the worker and make informed decisions. We can track the number of tasks executed per queue/store, the distribution of error codes, cycles, and various metrics related to skipping cycles, cooldown, available slots, and memory limitations. These statistics help us monitor performance, identify bottlenecks, and optimize resource allocation.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/stats-log.png)
 
@@ -58,14 +56,14 @@ In addition to statistics, we also capture the output of children's processes in
 
 ## Edge Cases/Limitation
 
-Child processes are killed at the end of each minute, which means those batches that were in progress - will be abandoned and return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, please note that this is still experimental approach and may or may not improve in future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to 10s (rough estimate) - to reduce the number of messages that will be retried.
+Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, please note that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to 10s (rough estimate), to reduce the number of messages that will be retried.
 
 ## Implementation
 
 
-Two ways are possible
+There are two methods possible for implementing this:
 
-1. Applying a patch, although it may require conflict resolution, since it is applied on project level and each project may have unique customisations already in place. Please see attached diffs fror an example implementation. [Here's a diff](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff).
+1. Applying a patch, although it may require conflict resolution, since it is applied on project level and each project may have unique customizations already in place. See attached diffs for an example implementation. [Here's a diff](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff).
 
 ```bash
 git apply one-worker.diff
@@ -76,14 +74,14 @@ git apply one-worker.diff
 
 ### A new Worker implementation
 
-This is a completely custom implementation, which doesn't extend anything and built based on the ideas described above.
+This is a completely custom implementation, which doesn't extend anything and is built based on the ideas described above.
 
-Mainly, new implementation provides such features as: 
+The new implementation provides such features as: 
 - spawns only single process per loop iteration
 - checks free system memory before each launch
 - ignores processes limits per queue in favour of one limit of simultaneously running processes (process pool size)
-- doesn't wait for child processes to finish, this is not elegant solution, but it works and there are few recommendations how to mitigate potential risks related to that
-- it also gathers statistics and processes output for build a summary report at the end of each Worker invokation
+- doesn't wait for child processes to finish. This is not elegant solution, but it works and there are few recommendations on how to mitigate potential risks related to that
+- it also gathers statistics and processes output for build a summary report at the end of each Worker invocation
 
 <details open>
 <summary>src/Pyz/Zed/Queue/Business/Worker/NewWorker.php</summary>
@@ -405,7 +403,7 @@ class NewWorker implements WorkerInterface
 
 #### Enable/Disable custom Worker
 
-In the project the functionality can be activated and deactivated using the following configuration flag:
+In the project, the functionality can be activated and deactivated using the following configuration flag:
 
 ```php
 $config[QueueConstants::QUEUE_ONE_WORKER_ALL_STORES] = (bool)getenv('QUEUE_ONE_WORKER_ALL_STORES') ?? false;
@@ -432,31 +430,31 @@ Defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run si
 $config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = (int)getenv('QUEUE_WORKER_FREE_MEMORY_BUFFER') ?: 750;
 ```
 
-Defines amount of free memory (in megabytes) which must be available in EC2 instance in order to spawn a new child process for a queue. Measured before spawning each child process.
+Defines the minimum amount of free memory (in megabytes) which must be available in the EC2 instance in order to spawn a new child process for a queue. Measured before spawning each child process.
 
-- we should always allow system to have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which is not easily predictable, therefore - this buffer must be set with such ideas in mind
+- The system should always have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which is not easily predictable. Due to this, this buffer must be set with such limitations in mind.
     
     - to accomodate a new process it is going to launch
-    - to leave a space for sporadic memory consumption change of already running processes
+    - to leave space for any sporadic memory consumption change of already running processes
 
-- when there's not enough memory - Worker will wait (non-blocking, while doing other things like queue scanning, etc) with corresponding logging and statistic accumulation for further CLI report generation (as mentioned in the sections above)
+- when there's not enough memory, the Worker will wait (non-blocking, while doing other things like queue scanning, etc) with corresponding logging and statistic accumulation for further CLI report generation (as mentioned in the sections above)
 
-- we can decide what to do when there was a rare error when the Worker could not detect available memory: either assume it is zero and wait until it can read this info, meaning no processes will be launched during this period of time, or to throw an exception considering this is a critical information for further processing, this behaviour can be configured with the following flag
+- There are two options for when the Worker cannot detect the available memory: either assume it is zero and wait until it can read this info, meaning no processes will be launched during this period of time, or to throw an exception, considering this is critical information for further processing. This behavior can be configured with the following flag
 
 
 ```php
-$config[QueueConstants::QUEUE_WORKER_IGNORE_MEM_READ_FAILURE] = false; // default false - meaning there will be exception if Worker can't read system memory info
+$config[QueueConstants::QUEUE_WORKER_IGNORE_MEM_READ_FAILURE] = false; // default false - meaning there will be an exception if the Worker can't read the system memory info
 ```
 
 #### Other Important Parameters
 
 ```php
-$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 3600; // default is 60 seconds, 1 minute, it is safe to have it 1h instead
+$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 3600; // default is 60 seconds, 1 minute, it is safe to have it as 1 hour instead
 ```
 
-How much more memory Worker can consume compared to its starting memory consumption, before it is considered critical, this setting is useful to detect a memory leak, if such a thing happens during a period of long running Worker execution. 
+How much more memory Worker can consume compared to its starting memory consumption, before it is considered critical. This setting is useful to detect a memory leak, if such a thing happens during a period of long running Worker execution. 
 
-In such case Worker will finish it's execution and Jenkins will be responsible for spawning a new instance.
+In this case, the Worker will finish its execution and Jenkins will be responsible for spawning a new instance.
 
 ```php
 $config[QueueConstants::QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR] = 50; // in percent %
@@ -465,13 +463,12 @@ $config[QueueConstants::QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR] = 50; // in perce
 
 # When to use and when not to use it?
 
-Currently this solution proved to be useful for multi-store setup environments with more than 2 stores operated within single AWS region, although projects with only 2 stores can benefit with this solution as well.
+Currently this solution proved to be useful for multi-store setup environments with more than 2 stores operated within a single AWS region, although projects with only 2 stores can benefit with this solution as well.
 
-At the same time it worth mentioning that for single store setup - it doesn't make sense to apply this customisation. Because it won't hurt, but also won't provide any significant benefits in performance, only better logging.
+At the same time it worth mentioning that for single store setup - it doesn't make sense to apply this customization. Although there are no drawbacks, it won't provide any significant benefits in performance, just better logging.
 
-To summarise
 
-- this HowTo can be applied to multi-store setup with at least 2 stores within one AWS region to gain such benefits as potential cost reduction from scaling down Jenkins instance or to speed Publish and Synchronise processing instead.
+- In summary, this HowTo can be applied to multi-store setup with at least 2 stores within one AWS region to gain such benefits as potential cost reduction from scaling down a Jenkins instance, or to speed Publish and Synchronize processing instead.
 
 - it can't help much for single store setups or for multi-store setup where each store is hosted in a different AWS region.
 

@@ -15,6 +15,9 @@ redirect_from:
   - /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202212.0/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202212.0/base-shop/manage-in-the-back-office/create-tax-rates.html
+related:
+  - title: Tax feature overview
+    link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
 To create a [tax rate](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
@@ -37,4 +40,5 @@ This opens the **Edit Tax Rate** page with a success message displayed.
 ## Next steps
 
 * Assign tax rates to tax sets by [creating tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
+
 * Assign tax rates to existing tax sets by [editing tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-sets.html).

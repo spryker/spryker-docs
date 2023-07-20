@@ -11,34 +11,55 @@ redirect_from:
   - /docs/pbc/all/tax-management/202212.0/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
 ---
 
+
 The following schemas illustrates relations between modules when Avalara is integrated into different entities:
 
 <details><summary markdown='span'>Product and Cart entities</summary>
-  <div class="width-100">
-    ![avalara+tax+product.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+tax+product.png)
-  </div>
+
+<div class="width-100">
+
+![avalara+tax+product.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+tax+product.png)
+
+</div>
+
 </details>
 
 <details><summary markdown='span'>Calculation entity</summary>
-  <div class="width-100">
-    ![avatar+tax+integration+module+dependency+graph.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avatar+Tax+Integration+module+dependency+graph.png)
-  </div>
+
+<div class="width-100">
+
+![avatar+tax+integration+module+dependency+graph.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avatar+Tax+Integration+module+dependency+graph.png)
+
+</div>
+
 </details>
 
 <details><summary markdown='span'>Checkout entity</summary>
-  <div class="width-100">
-    ![avalara+Tax+checkout.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Tax+checkout.png)
-  </div>
+
+<div class="width-100">
+
+![avalara+Tax+checkout.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Tax+checkout.png)
+
+</div>
+
 </details>
 
 <details><summary markdown='span'>Sales order entity</summary>
-  <div class="width-100">
-    ![avalara+Sales+Order+dependency.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Sales+Order+dependency.png)
-  </div>
+
+<div class="width-100">
+
+![avalara+Sales+Order+dependency.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Sales+Order+dependency.png)
+
+</div>
+
 </details>
 
 <details><summary markdown='span'>Stock entity</summary>
-  <div class="width-100">
-    ![avalara+Stock+context.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Stock+context.png)
-  </div>
+
+<div class="width-100">
+
+![avalara+Stock+context.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/Reference+information%3A+Avalara+integration%E2%80%94module+relations/Avalara+Stock+context.png)
+
+</div>
+
 </details>

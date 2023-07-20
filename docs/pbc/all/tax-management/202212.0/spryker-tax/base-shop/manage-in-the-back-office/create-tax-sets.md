@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/administration/tax-sets/managing-tax-sets.html
   - /docs/pbc/all/tax-management/202212.0/manage-in-the-back-office/create-tax-sets.html
   - /docs/pbc/all/tax-management/202212.0/base-shop/manage-in-the-back-office/create-tax-sets.html
+related:
+  - title: Tax feature overview
+    link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
 This document describes how to create [tax sets](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office.
@@ -42,9 +45,15 @@ This opens the **Edit Tax Set** page with a success message displayed.
 ## Next steps
 
 * Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+
 * Assign a tax set to an existing abstract product by [editing abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
+
 * Assign a tax set to a product variant by [creating product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
+
 * Assign a tax set to an existing product variant by [editing product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html).
+
 * Assign a tax set to a product option by [creating product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html).
+
 * Assign a tax set to a threshold's fee by [managing threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html).
+
 * Assign a tax set to a delivery method by [creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

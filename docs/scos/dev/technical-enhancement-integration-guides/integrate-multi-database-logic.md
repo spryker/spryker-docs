@@ -28,8 +28,8 @@ regions:
                     name: Spryker No-Reply
                     email: no-reply@spryker.local
             databases:
-                eu-region-db-de:
-                eu-region-db-at:
+                eu-region-db-one:
+                eu-region-db-two:
 
 ...                
 ```

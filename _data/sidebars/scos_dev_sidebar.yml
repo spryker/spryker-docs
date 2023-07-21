@@ -1096,6 +1096,15 @@ entries:
       - title: Glue API - Development Tools
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-development-tools-feature-integration.html
         include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+        include_versions:
         - "202108.0"
         - "202204.0"
       - title: Glue API - Discontinued Products
@@ -1111,6 +1120,15 @@ entries:
         - "201907.0"
       - title: Glue API - Glue application
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
       - title: Glue API - Inventory Management
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html
         include_versions:
@@ -1286,6 +1304,15 @@ entries:
         - "201907.0"
       - title: Glue API - Wishlist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
       - title: Glue Backend API
         include_versions:
         - "201811.0"
@@ -2224,9 +2251,9 @@ entries:
       include_versions:
       - "202204.0"
     - title: Picker user login
-      url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
+      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html
       include_versions:
-        - "202307.0"
+        - "202400.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -4028,6 +4055,15 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+          include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
     - title: Order Management Erpoms
       include_versions:
       - "202204.0"

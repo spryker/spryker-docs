@@ -5,6 +5,7 @@ last_updated: June 22, 2023
 template: feature-integration-guide-template
 redirect_from: 
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api-integration.html
 ---
 
 This document describes how to integrate the Dynamic Data API into a Spryker project.

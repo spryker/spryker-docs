@@ -113,7 +113,7 @@ class NewWorker implements WorkerInterface
         // can be configured in config and/or using environment variable QUEUE_ONE_WORKER_POOL_SIZE, 
         // average recommended values are 5-10
         // defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run simultaneously 
-        // within NewWorker regardless of number of stores or queuues
+        // within NewWorker regardless of number of stores or queues
         $this->processes = new SplFixedArray($this->queueConfig->getQueueWorkerMaxProcesses());
     }
 
@@ -328,6 +328,7 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
 ### QueueScanner
 
 This component is responsible for reading information about queues, mainly - amount of messages.
+Key feature here - is cooldown period of default 5 seconds, it means that if all queues are empty, it won't re-scan those right await but will wait (non blocking) until cooldown timeout passes. Obviously it'll add up to 5s delay when new messages appear, but it won't be noticable, and as soon as there are always some messages present - the cooldown timeout is not applied. 
 
 <details open>
 <summary>src/Pyz/Zed/Queue/Business/QueueScanner.php</summary>
@@ -339,10 +340,7 @@ class QueueScanner implements QueueScannerInterface
 
     public function scanQueues(array $storeTransfers = [], int $emptyScanCooldownSeconds = 5): ArrayObject
     {
-        if (!static::$storeTransfers) {
-            static::$storeTransfers = $this->storeFacade->getAllStores();
-        }
-        $storeTransfers = $storeTransfers ?: static::$storeTransfers;
+        // ...
 
         $sinceLastScan = microtime(true) - $this->lastScanAt;
         $lastEmptyScanTimeoutPassed = $this->lastScanWasEmpty && ($sinceLastScan > $emptyScanCooldownSeconds);

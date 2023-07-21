@@ -1,7 +1,7 @@
 ---
 title: Glue infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship modules.
-last_updated: Jun 16, 2021
+last_updated: Jul 16, 2023
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-infrastructure
 originalArticleId: dd27e960-56f8-4be6-bc6b-b479c71c5e02
@@ -21,6 +21,12 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
 ---
 
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
+
 Spryker API infrastructure is implemented as a separate layer of Spryker Cloud Commerce OS, called Glue. It is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. The layer is implemented as a separate Spryker application, the same as Yves or Zed. It has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default). In addition to that, Glue has a separate programming namespace within Spryker Commerce OS, also called Glue.
 
 {% info_block infoBox %}
@@ -35,10 +41,8 @@ Consider studying the following documents before you begin:
 Logically, the Glue layer can be divided into 3 parts:
 * **GlueApplication module**
     <br>The `GlueApplication` module provides a framework for constructing API resources. It intercepts all HTTP requests at resource URLs (e.g. `http://mysprykershop.com/resource/1`), handles call semantics, verifies requests, and also provides several utility interfaces that can be used to construct API responses.
-
 * **Resource modules**
     <br>Each `Resource` module implements a separate resource or a set of resources. Such a module handles requests to a particular resource and provides them with responses. In the process of doing so, the module can communicate with the Storage, Search or Spryker Commerce OS (Zed). The modules do not handle request semantics or rules. Their only task is to provide the necessary data in a format that can be converted by the `GlueApplication` module into an API response.
-
 * **Relationship modules**
     <br>Such modules represent relationships between two different resources. Their task is to extend the response of one of the resources with data of related resources.
 
@@ -68,7 +72,7 @@ The plugin should not map the _OPTIONS_ verb which is mapped automatically.
 
 The plugin must provide routing information for the following:
 
-| --- | --- |
+| RESOURCE | DESCRIPTION |
 | --- | --- |
 | Resource Type | Type of the resource implemented by the current `Resource` module.  Resource types are extracted by Glue from the request URL. For example, if the URL is `/carts/1`, the resource type is `carts`. To be able to process calls to this URL, Glue will need a route plugin for the resource type _carts_. |
 | Controller Name | Name of the controller that handles a specific resource type. |
@@ -119,7 +123,7 @@ By default, all Resource modules are located in `vendor/spryker/resources-rest-a
 
 Recommended module structure:
 
-| ResourcesRestApi | DESCRIPTION |
+| RESOURCESRESTAPI | DESCRIPTION |
 | --- | --- |
 | `Glue/ResourcesRestApi/Controller` | Folder for resource controllers. Controllers are used to handle API requests and responses. Typically, includes the following: <ul><li>`FeatureResourcesController.php` - contains methods for handling HTTP verbs.</li></ul> |
 | `Glue/ResourcesRestApi/Dependency` | Bridges to clients from other modules. |
@@ -132,7 +136,7 @@ Recommended module structure:
 
 Also, a module should contain the transfer definition in `src/Pyz/Shared/ResourcesRestApi/Transfer`:
 
-| ResourcesRestApi | DESCRIPTION |
+| RESOURCESRESTAPI | DESCRIPTION |
 | --- | --- |
 | `resources_rest_api.transfer.xml` | Contains API transfer definitions. |
 
@@ -427,6 +431,7 @@ In addition to HTTP Status codes, Glue can return additional error codes to dist
 |  1001-1099    | Guest Cart API |
 | 1101-1199 |  Checkout API|
 |  1201-1299| Product Labels API     |
+|  1301-1399| Dynamic Data API     |
 
 ### Data formatting
 

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/comments-feature-integration
   - /docs/scos/dev/feature-integration-guides/202212.0/comments-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/comments-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-the-comments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-comments-feature.md -->

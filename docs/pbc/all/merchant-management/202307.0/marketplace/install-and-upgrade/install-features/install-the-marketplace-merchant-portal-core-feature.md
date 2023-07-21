@@ -7,6 +7,8 @@ template: feature-integration-guide-template
 redirect_from:
     - /docs/marketplace/dev/feature-integration-guides/202304.0/merchant-portal-feature-integration.html
     - /docs/pbc/all/merchant-management/202304.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
+    - /docs/marketplace/dev/feature-integration-guides/202307.0/feature-integration-guides.html
+    - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 related:
   - title: Merchant Portal overview
     link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html

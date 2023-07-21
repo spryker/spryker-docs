@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-quick-order-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/multiple-carts-quick-order-feature-integration.html  
   - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-quick-order-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/multiple-carts-quick-order-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-the-multiple-carts-quick-order-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-multiple-carts-quick-order-feature.md -->

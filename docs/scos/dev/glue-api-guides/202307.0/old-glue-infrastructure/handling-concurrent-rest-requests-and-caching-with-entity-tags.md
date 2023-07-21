@@ -12,10 +12,16 @@ redirect_from:
   - /docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
 related:
   - title: Glue Infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
   - title: Shared Cart Feature Overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
+
+{% info_block warningBox %}
+
+This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
 
 Some Spryker Glue API resources allow concurrent changes from multiple sources. For example, a shared cart can be changed by multiple users that act independently.
 
@@ -93,4 +99,4 @@ The following error responses can be returned by the server when a resource supp
 | 005 | Pre-condition required.<br>The `If-Match` header is missing. |
 | 006 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

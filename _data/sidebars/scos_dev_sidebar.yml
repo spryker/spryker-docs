@@ -681,6 +681,7 @@ entries:
       url: /docs/scos/dev/glue-api-guides/decoupled-glue-api.html
       include_versions:
         - "202212.0"
+        - "202307.0"
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
       include_versions:
@@ -695,8 +696,6 @@ entries:
     - title: Decoupled Glue infrastructure
       include_versions:
       - "202204.0"
-      - "202212.0"
-      - "202307.0"
       nested:
         - title: Backend and Storefront API module differences
           url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
@@ -718,50 +717,62 @@ entries:
       url: /docs/scos/dev/glue-api-guides/backend-and-storefront-api-module-differences.html
       include_versions:
       - "202212.0"
+      - "202307.0"
     - title: Create Glue API applications
       url: /docs/scos/dev/glue-api-guides/create-glue-api-applications.html
       include_versions:
       - "202212.0"
+      - "202307.0"
     - title: Authentication and authorization
       url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
       include_versions:
       - "202212.0"
+      - "202307.0"
     - title: Security and authentication
       url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
       include_versions:
       - "202212.0"
+      - "202307.0"
     - title: Old Glue infrastructure
       include_versions:
       - "202212.0"
+      - "202307.0"
       nested:
       - title: Glue REST API
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-rest-api.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: Glue infrastructure
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-infrastructure.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: Resolving search engine friendly URLs
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: Reference information - GlueApplication errors
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/reference-information-glueapplication-errors.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title:  REST API B2B Demo Shop reference
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-reference.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: REST API B2C Demo Shop reference
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-reference.html
         include_versions:
         - "202212.0"
+        - "202307.0"
     - title: Routing
       include_versions:
       - "202204.0"
@@ -785,6 +796,7 @@ entries:
       include_versions:
       - "202204.0"
       - "202212.0"
+      - "202307.0"
     - title: Create Glue API resources with parent-child relationships
       url: /docs/scos/dev/glue-api-guides/create-glue-api-resources-with-parent-child-relationships.html
       include_versions:
@@ -886,20 +898,14 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
-      - "202307.0"
     - title: REST API B2C Demo Shop reference
       url: /docs/scos/dev/glue-api-guides/rest-api-b2c-reference.html
       include_versions:
       - "202204.0"
-      - "202212.0"
-      - "202307.0"
     - title: REST API B2B Demo Shop reference
       url: /docs/scos/dev/glue-api-guides/rest-api-b2b-reference.html
       include_versions:
       - "202204.0"
-      - "202212.0"
-      - "202307.0"
     - title: Managing customers
       url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
       include_versions:

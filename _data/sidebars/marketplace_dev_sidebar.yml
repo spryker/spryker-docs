@@ -632,7 +632,6 @@ entries:
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: REST API Marketplace B2B reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
@@ -803,7 +802,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Retrieving Marketplace orders
             url: /docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
@@ -816,7 +814,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Shopping lists
             include_versions:
@@ -921,6 +918,7 @@ entries:
       - title: Front-end
         url: /docs/marketplace/dev/front-end/front-end.html
         include_versions:
+        - "202108.0"  
         nested:
 
           - title: "Extending the project"

@@ -889,7 +889,7 @@ entries:
                   - title: "Customer module overview: reference information"
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
               - title: "File details: customer.csv"
-                url: /docs/pbc/all/customer-relationship-management/base-shop/file-details-customer.csv.html
+                url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
           - title: Marketplace
             nested:
               - title: Install the Customer Account Management + Merchant Switcher feature
@@ -3101,6 +3101,13 @@ entries:
             nested:
               - title: "Glue API: Search the product catalog"
                 url: /docs/pbc/all/search/marketplace/glue-api-search-the-product-catalog.html
+              - title: "Glue API: Retrieve autocomplete and search suggestions"
+                url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
+
+
+
+
+
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -3330,7 +3337,7 @@ entries:
 
           - title: Marketplace
             nested:
-              
+
 
 
 

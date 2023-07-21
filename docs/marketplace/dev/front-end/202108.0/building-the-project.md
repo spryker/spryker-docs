@@ -4,9 +4,9 @@ description: This document provides details how to build the frontend part of th
 template: concept-topic-template
 related:
   - title: Project structure
-    link: docs/marketplace/dev/front-end/page.version/project-structure.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/project-structure.html
   - title: Setting up the Merchant Portal
-    link: docs/marketplace/dev/front-end/page.version/setting-up-the-merchant-portal.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/setting-up-the-merchant-portal.html
 ---
 
 This document provides details how to build the frontend part of the Merchant Portal.
@@ -21,7 +21,7 @@ Modules for Merchant Portal are split into composer modules, and each module has
 Every module has an entry point called `entry.ts` that is collected during the build as webpack entries and included in the Merchant Portal build as a chunk.
 Those chunk names are taken from the module name and then transformed into a `kebab-case`.
 
-General structure of the frontend modules in the Spryker Marketplace can be found in the [Module structure](/docs/marketplace/dev/front-end/{{page.version}}/project-structure.html#module-structure).
+General structure of the frontend modules in the Spryker Marketplace can be found in the [Module structure](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/project-structure.html#module-structure).
 
 The frontend of the Merchant Portal is built using the following commands:
 

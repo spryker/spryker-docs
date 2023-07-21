@@ -87,11 +87,11 @@ The headings get `margin: 0` to avoid any clashes in the component layout.
 
 ### Semantic HTML structure versus UI
 
-The semantic usage of heading elements, like h1 or h2, is important on the web. Crawlers and screen readers use the structure to interpreted the content. This is important to navigate the content, especially for those with limited sight; screen readers guide them and allow to skip sections which are not of interest. Consequently, if the structure is not well formatted, for example, when `h3` is followed by an `h5`, it is considered a violation of accessibility best practices.
+The semantic usage of heading elements, like h1 or h2, defines the structure, which crawlers and screen readers use to interpreted the content. This enables easier content navigation, especially for those with limited sight; screen readers guide and let them skip sections which are not of interest. Consequently, if the structure is not well formatted, for example, when `h3` is followed by an `h5`, it is considered a violation of accessibility best practices.
 
-A valid structure, however, might conflict with the UI design. UI designers use the headings in combination with layout, which means that their options are more advanced compared to the structure only. UI designers tend to ignore the structure and favor layout options to emphasize sections of the page.
+A valid structure, however, might conflict with the UI design. UI designers use the headings in combination with layout, which means that their options are more advanced compared to the structure only. UI designers tend to ignore the structure and favor layout options to emphasize sections of a page.
 
-An example would be a two-column layout, where the content in both sections has the same visual weight. However, based on their position, the content on the left (in a left-to-right context) is automatically of more importance.
+For example, in a two-column layout, content in both sections has the same visual weight. However, in a left-to-right context, the content on the left is automatically more important.
 
 To allow for a solution that can cope with both the right semantic structure and the visual design, heading elements might be styled with conflicting heading style rules. The following is an example:
 
@@ -104,4 +104,4 @@ To allow for a solution that can cope with both the right semantic structure and
   }
 </style>
 
-The `Cart totals` heading has a structure of `h2`, while the visual appearance uses the `h3` design tokens. This might look upside down, but it is intentionally done to have both a compliant and attractive UI.
+The `Cart totals` heading has a structure of `h2`, while the visual appearance uses the h3 design tokens. This might look upside down, but it's intentionally done to have both a compliant and attractive UI.

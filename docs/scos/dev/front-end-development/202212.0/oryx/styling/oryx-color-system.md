@@ -5,19 +5,17 @@ last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
-Colors are used everywhere throughout UI components and are important for a good user experience. To enable you to adjust colors to your needs throughout the application, Oryx provides a configurable color system.
+Colors are used everywhere throughout UI components and are important for a good user experience. To enable you to adjust colors throughout the application to your needs, Oryx provides a configurable color system.
 
-The color system lets you set up color values globally and override them per component. Components do not define _values_ for colors directly in their CSS but use _design tokens_. Design tokens are CSS variables that are provided by themes, which you can customize in your project.
+The color system lets you set up color values globally and override them per component. Components don't define _values_ for colors directly in their CSS but use _design tokens_. Design tokens are CSS variables that are provided by themes, which you can customize in your project.
 
 The color system comes with semantic color types and a consistent number of color steps. This results in a consistent naming system throughout all the components. The actual colors for those groups are not relevant for the color system and are part of the theme configuration. This lets you configure the colors in a global theme.
 
 ## Color palette
 
-The color palette provides a number of colors that you can use to quickly set up an Oryx application with the colors of your choice. This is particularly useful to demonstrate and experience how consistently the color system is applied cross all components. All colors in the color palette are fully accessible by default, both in light and dark mode.
+The color palette provides a number of colors that you can use to quickly set up an Oryx application with the colors of your choice. This is particularly useful to demonstrate and experience how consistently the color system is applied across all components. All colors in the color palette are fully accessible by default, both in light and dark modes.
 
-Creating fully accessible colors is not easy. Therefore, we added a third-party open-source library: [Radix](https://www.radix-ui.com/docs/colors/palette-composition/scales). Radix contains a wide range of colors and neutrals that can be configured in Oryx.
-
-Spryker green and gray are the only custom colors we added on top of the Radix color system.
+To enable you to create fully accessible colors, we added a third-party open-source library: [Radix](https://www.radix-ui.com/docs/colors/palette-composition/scales). Radix contains a wide range of colors and neutrals that can be configured in Oryx. Spryker green and gray are the only custom colors on top of the Radix color system.
 
 ### Color contrast
 
@@ -27,7 +25,7 @@ Color contrast is based on two colors. The color system provides 13 color shades
 
 ### Color mode
 
-Colors can be provided for both light and dark modes. The dark mode is another important feature for accessibility and is supported by all colors in the color palette. Oryx applications can automatically adapt to the device mode as well, but there's also the `ColorModeSelectorComponent` component that can be used to let the user manage the color mode manually.
+Colors can be provided for both light and dark modes. The dark mode is another important feature for accessibility and is supported by all colors in the color palette. Oryx applications can automatically adapt to the device mode, but you can also use the `ColorModeSelectorComponent` component to let the user manage the color mode manually.
 
 ## Semantic color types
 
@@ -35,11 +33,11 @@ There are eight semantic color types used in Oryx components:
 
 | TYPE      | DESCRIPTION                                                                                                                                                                                                                                     |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Primary   | Typically represents the brand color of a site. This color is used as the call-to-action color in many components.                                                                                                                              |
+| Primary   | Typically represents the brand color of a website. This color is used as the call-to-action color in many components.                                                                                                                              |
 | Secondary | Additional accent color that can be used for more color-full experiences. Oryx components rarely use the secondary color.                                                                                                                       |
-| Neutral   | Also known as "grays". The neutrals are used for the layout—for example, as a divider color or background color. The Radix color system provides different neutrals that pair nicely with the color of choice, also known as "natural pairing". |
-| Highlight | The highlight color is used to highlight a sale.                                                                                                                                                                                                |
-| Success   | The success color is one of the `AlertType` colors that is used in components that are driven by `AlertType`—for example, notification.                                                                                                                |
+| Neutral   | Also known as "grays". The neutrals are used for the layout—for example, as a divider or background color. The Radix color system provides different neutrals that pair nicely with the color of choice, also known as "natural pairing". |
+| Highlight | Used to highlight a sale.                                                                                                                                                                                                |
+| Success   | One of the `AlertType` colors that is used in components that are driven by `AlertType`—for example, notification.                                                                                                                |
 | Info      | Similar to Success.                                                                                                                                                                                                                             |
 | Warning   | Similar to Success.                                                                                                                                                                                                                             |
 | Error     | Similar to Success.                                                                                                                                                                                                                             |
@@ -50,12 +48,12 @@ Each color type comes in 13 values, also known as steps. Components might not us
 
 The steps count from 0 to 12. In light mode, the steps go from light to dark: the higher the number, the darker the color. In dark mode, this is reversed.
 
-The Radix color system provides 15 color scales that are designed with a white foreground text and 5 bright scales for black foreground text. The foreground color is provided by step 0. For the bright colors, this color is black, while for the other colors, it is white. In dark mode, this is reversed.
+The Radix color system provides 15 color scales that are designed with a white foreground text and 5 bright scales for black foreground text. The foreground color is provided by step 0. For the bright colors, this color is black, while for the other colors, it's white. In dark mode, this is reversed.
 
 The color values can be of any supported color in the web platform, such as named colors like `red` or `blue`, hex color, HCL, or RBA. Oryx doesn't interfere with the provided colors but uses them as-is.
 
 
-## Configure a color from the color palette
+## Configure colors from the color palette
 
 To change the colors in an Oryx application, you can configure the colors using the color palette. This is convenient and the recommended approach to quickly try out the color system.
 
@@ -130,6 +128,3 @@ button:hover {
 ```
 
 The example shows the usage of design tokens in CSS. The primary color is defined for the default state of the the button background color. When the user hovers over the button, the 400 color shade is used. It works consistently with all colors. The buttons have a white foreground color on a colorful background. In case the background color is bright, the foreground color becomes black.
-
-
-?

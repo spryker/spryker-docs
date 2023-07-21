@@ -108,7 +108,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 
 {% info_block infoBox %}
 
-`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
+`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

@@ -3077,4 +3077,4 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content` s
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

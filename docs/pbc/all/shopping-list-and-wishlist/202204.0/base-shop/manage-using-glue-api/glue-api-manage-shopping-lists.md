@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-shopping-lists/managing-shopping-lists.html
 related:
     - title: Glue API - Shopping Lists feature integration
-      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
+      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
     - title: Managing shopping list items
       link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
     - title: Shopping Lists feature overview
@@ -27,7 +27,7 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 

@@ -27,7 +27,7 @@ related:
   - title: Install B2C API React example
     link: docs/scos/dev/glue-api-guides/page.version/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
   - title: Glue REST API
-    link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-rest-api.html
 ---
 
 As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React example. It is a [React](https://reactjs.org/) single-page application based on a [webpack](https://webpack.js.org/) dev server, Typescript, [Redux](https://redux.js.org/), and Material UI.
@@ -52,7 +52,7 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 
 | API | REFERENCE DOCUMENTS |
 | --- | --- |
-| Search API | [Catalog search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-search-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |
+| Search API | [Catalog search](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/pbc/all/search/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |
 | Category API | [Retrieving category trees](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html) |
 | Product API | [Retrieving abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)<br>[Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html) |
 | Product Availability API | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html)<br>[Retrieve concrete product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) |
@@ -66,7 +66,7 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 | Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html) |
 | Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) |
-| Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
+| Store API | [Retrieving store configuration](/docs/pbc/all/miscellaneous/{{site.version}}/glue-api-retrieve-store-configuration.html) |
 
 ## Running the example application
 

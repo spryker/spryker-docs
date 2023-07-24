@@ -48,7 +48,7 @@ If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos
 
 Before installing Oryx, make sure that you have the following:
 
-* nodejs version 6.x LTS
+* Node.js version 6.x LTS
 * npm version >= 3.x or yarn version >= 0.19.x
 
 ### Setup

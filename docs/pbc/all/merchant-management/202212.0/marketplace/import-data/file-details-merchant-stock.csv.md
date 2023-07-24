@@ -17,15 +17,8 @@ This document describes the `merchant_stock.csv` file to configure [merchant sto
 
 ## Import file dependencies
 
-<<<<<<<< HEAD:docs/pbc/all/warehouse-management-system/202212.0/marketplace/import-data/file-details-merchant-stock.csv.md
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html)
-========
 - [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
-- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/import-and-export-data/file-details-warehouse.csv.html)
-
-
->>>>>>>> master:docs/pbc/all/merchant-management/202212.0/marketplace/import-data/file-details-merchant-stock.csv.md
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
 
 ## Import file parameters
 

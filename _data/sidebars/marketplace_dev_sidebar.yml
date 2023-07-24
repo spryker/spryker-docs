@@ -5,31 +5,14 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
-        url: /docs/marketplace/dev/setup/setup.html
+        url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
         include_versions:
+        - "202204.0"
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
-            include_versions:
-            - "202204.0"
-
-          - title: Infrastructure requirements
-            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
-          - title: Setup
-            url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
 
       - title: Marketplace architecture overview
         url: /docs/marketplace/dev/architecture-overview/architecture-overview.html
@@ -61,7 +44,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
             nested:
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
@@ -240,7 +222,7 @@ entries:
 
                   - title: GUI modules concept
                     url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
-                    
+
                   - title: Merchant User concept
                     url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
 
@@ -267,14 +249,12 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Dummy Payment integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html
@@ -329,13 +309,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Switcher + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Switcher + Customer Account Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
@@ -347,7 +325,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
@@ -404,43 +381,35 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202304.0"
 
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202304.0"
 
           - title: Marketplace Product Offer + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-cart-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Offer + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Offer + Quick Add to Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-quick-add-to-cart-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Options feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-feature-integration.html
@@ -557,6 +526,9 @@ entries:
 
           - title: Glue API
             url: /docs/marketplace/dev/feature-integration-guides/glue/glue.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: "Glue API: Marketplace Inventory Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
@@ -605,49 +577,42 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-wishlist-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Prices + Marketplace Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                
+
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
@@ -660,19 +625,6 @@ entries:
                 include_versions:
                 - "202204.0"
 
-
-      - title: Module migration guides
-        nested:
-          - title: MerchantProductOfferDataImport
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductofferdataimport.html
-          - title: MerchantProductOffersRestApi
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductoffersrestapi.html
-          - title: MerchantProductOfferStorage
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductofferstorage.html
-          - title: ProductMerchantPortalGui
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productmerchantportalgui.html
-          - title: ProductOfferPricesRestApi
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html
       - title: Glue API guides
         url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         nested:
@@ -742,7 +694,6 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Guest carts
             url: /docs/marketplace/dev/glue-api-guides/guest-carts/guest-carts.html
@@ -785,6 +736,9 @@ entries:
 
           - title: Product offers
             url: /docs/marketplace/dev/glue-api-guides/product-offers/product-offers.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Retrieving product offers
                 url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
@@ -837,7 +791,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Managing the returns
             url: /docs/marketplace/dev/glue-api-guides/managing-the-returns.html
@@ -889,73 +842,41 @@ entries:
             - "202204.0"
       - title: Data import
         url: /docs/marketplace/dev/data-import/data-import.html
+        include_versions:
+        - "202204.0"
         nested:
           - title: Marketplace setup
             url: /docs/marketplace/dev/data-import/marketplace-setup.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-profile.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-profile-address.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-open-hours-week-day-schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant_open_hours_date_schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-category.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-category.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-store.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-oms-process.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-order-status.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-order-status.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant_product_approval_status_default.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html
@@ -964,22 +885,12 @@ entries:
 
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant_user.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-user.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-offer-shopping-list.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
@@ -988,48 +899,24 @@ entries:
 
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: merchant-product-offer-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
-            - "202212.0"
 
           - title: "File details: product-offer-validity.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-validity.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
-            - "202212.0"
 
           - title: "File details: combined-merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-product.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-price.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-price.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-            include_versions:
-            - "202108.0"
-            - "202204.0"
 
       - title: Front-end
         url: /docs/marketplace/dev/front-end/front-end.html
@@ -1466,37 +1353,3 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
-
-      - title: HowTos
-        url: /docs/marketplace/dev/howtos/howtos.html
-        nested:
-
-          - title: "How-To: Upgrade Spryker instance to the Marketplace"
-            url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
-
-          - title: "How-To: Create a new Angular module with application"
-            url: /docs/marketplace/dev/howtos/how-to-create-a-new-angular-module-with-application.html
-
-          - title: "How-To: Split products by stores"
-            url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-
-          - title: "How-To: Create a new Gui table column type"
-            url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
-
-          - title: "How-To: Create a new Gui table filter type"
-            url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
-
-      - title: Technical enhancement guides
-        url: /docs/marketplace/dev/technical-enhancement/technical-enhancement.html
-        nested:
-
-          - title: "Migration guide - Upgrade to Angular v12"
-            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
-            include_versions:
-            - "202204.0"
-            - "202212.0"
-
-          - title: "Migration guide - Upgrade to Angular v15"
-            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v15.html
-            include_versions:
-            - "202304.0"

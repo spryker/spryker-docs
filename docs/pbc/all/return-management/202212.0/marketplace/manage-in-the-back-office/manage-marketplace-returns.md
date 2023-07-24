@@ -5,7 +5,7 @@ description: This guide explains how to manage marketplace returns in the Back O
 template: back-office-user-guide-template
 related:
     - title: Managing marketplace orders
-      link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/orders/managing-marketplace-orders.html
+      link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
     - title: Marketplace Return Management feature overview
       link: docs/pbc/all/return-management/page.version/marketplace/marketplace-return-management-feature-overview.html
 ---

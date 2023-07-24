@@ -25,14 +25,14 @@ related:
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
   - title: Glue infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
 ---
 
 Glue API lets you validate requests sent to REST endpoints. It lets you check whether all required fields are present and whether the type and format of the fields are correct.
 
 ## Install the `RestRequestValidation` module
 
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html).
 
 ## Use default validation schema
 

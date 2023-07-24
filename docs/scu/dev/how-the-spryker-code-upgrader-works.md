@@ -27,7 +27,7 @@ As modules depend on other modules, we tend to release them in groups. When the 
 
 Using `composer`, the Upgrader tool updates the modules in groups.
 
-Firstly it applies the security releases (the releases with security updates). For such releases only minor and patch versions are applied. The major releases will be applied after the module be updated to major version.
+Firstly it applies the security releases (the releases with security updates). For such releases only minor and patch versions are applied. The major releases will be applied after the module be updated to the major version.
 
 After updating the modules, the Upgrader tool returns the list of updated modules and proceeds to the next step.
 

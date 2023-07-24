@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Data Configurators
+title: "Collate data transformer: Data configurators"
 description: This document provides details about the Data Transformer Data Configurators service in the Components Library.
 template: concept-topic-template
 related:

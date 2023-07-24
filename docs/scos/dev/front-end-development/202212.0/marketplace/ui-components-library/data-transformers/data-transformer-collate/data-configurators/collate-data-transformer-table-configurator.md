@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Collate Configurator Table
+title: "Collate data transformer: Table configurator"
 description: This document provides details about the Data Transformer Collate Configurator Table service in the Components Library.
 template: concept-topic-template
 related:
@@ -7,11 +7,11 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/data-configurators/index.html
 ---
 
-This document explains the Data Transformer Collate Configurator Table service in the Components Library.
+This document explains the Table Configurator service in the Components Library.
 
 ## Overview
 
-Data Transformer Collate Configurator Table is an Angular Service that re-populates of data to a format suitable for filtering (`DataTransformerConfiguratorConfigT`).
+Table Configurator as a collate data transformer is an Angular Service that re-populates of data to a format suitable for filtering: `DataTransformerConfiguratorConfigT`.
 
 Check out an example usage of the Data Transformer Collate Configurator Table in the `@spryker/table` config:
 

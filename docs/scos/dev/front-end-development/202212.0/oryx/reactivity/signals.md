@@ -6,9 +6,9 @@ last_updated: Jul 11, 2023
 ---
 
 
-Signals are a crucial tool within the Oryx framework, offering a clean and efficient reactivity API for components. They allow for the declarative formulation of component logic while seamlessly integrating with observables from domain services.
+Signals offer a clean and efficient reactivity API for components in the Oryx framework. They allow for the declarative formulation of component logic while seamlessly integrating with observables from domain services.
 
-## Implementation of Signals in Oryx
+## Implementation of signals in Oryx
 
 The Oryx implementation of signals has a core mechanism and a simplified API. The core is well-suited for advanced usage, while the simplified API is sufficiently robust for most components. This document focuses on the simplified API.
 
@@ -36,9 +36,9 @@ const values = signal(observable$);
 
 You can initialize signals with options to adjust their behavior:
 
-- The `equal` function: This option allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal updates, avoiding unnecessary updates and performance costs when new and old values are practically identical.
+- `equal`: allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal updates, avoiding unnecessary updates and performance costs when new and old values are practically identical.
 
-- The `initialValue` option: This is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
+- `initialValue`: this option is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
 
 Here's an example of using options:
 
@@ -48,7 +48,7 @@ const values = signal(observable$, { initialValue: 1, equal: (a, b) => a === b }
 
 ### Computed signals
 
-A computed signal derives its value from other signals. It automatically reevaluates its value when any of the signals it depends on changes.
+A *computed signal* derives its value from other signals. When a signal it depends on changes, it automatically reevaluates its value.
 
 Here's an example of a computed signal:
 
@@ -80,8 +80,8 @@ const counter = effect(() => {
 
 You can configure effects using options to modify their behavior:
 
-- `defer`: If this is set to `true`, your effect doesn't run until you explicitly call the `start()` method.
-- `async`: Set this to `true` if you want your effect to run asynchronously.
+- `defer`: if set to `true`, the effect doesn't run until you explicitly call the `start()` method.
+- `async`: if set to `true`, the effect runs asynchronously.
 
 Example:
 

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/econda-integration-into-project
   - /docs/scod/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
 ---
 
 To integrate Econda, do the following.

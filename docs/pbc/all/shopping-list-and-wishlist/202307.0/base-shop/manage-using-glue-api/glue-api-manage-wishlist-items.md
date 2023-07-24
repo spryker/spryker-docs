@@ -4,8 +4,8 @@ description: Managing wishlist items via Glue API.
 last_updated: Nov 29, 2021
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-wishlists/managing-wishlist-items.html
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-using-glue-api/manage-wishlist-items-via-glue-api.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/manage-using-glue-api/manage-wishlist-items-via-glue-api.html
 related:
   - title: Managing wishlists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html

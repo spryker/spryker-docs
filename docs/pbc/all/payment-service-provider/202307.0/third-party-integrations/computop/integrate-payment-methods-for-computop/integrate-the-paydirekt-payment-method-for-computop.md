@@ -11,7 +11,7 @@ redirect_from:
   - /docs/computop-paydirekt
   - /docs/en/computop-paydirekt
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/computop.html

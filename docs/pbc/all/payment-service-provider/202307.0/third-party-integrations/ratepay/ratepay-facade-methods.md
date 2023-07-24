@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/ratepay-facade
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/ratepay-facade-methods.html
   - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-facade-methods.html
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/ratepay-facade-methods.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/ratepay/ratepay-facade-methods.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html

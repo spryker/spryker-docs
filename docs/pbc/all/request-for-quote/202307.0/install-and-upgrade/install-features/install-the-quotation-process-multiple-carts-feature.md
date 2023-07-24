@@ -9,6 +9,6 @@ redirect_from:
   - /2021080/docs/en/quotation-process-multiple-carts-feature-integration
   - /docs/quotation-process-multiple-carts-feature-integration
   - /docs/en/quotation-process-multiple-carts-feature-integratio
-  - /docs/scos/dev/feature-integration-guides/202212.0/quotation-process-multiple-carts-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/quotation-process-multiple-carts-feature-integration.html
 ---
-{% include pbc/all/install-features/202212.0/install-the-quotation-process-multiple-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-quotation-process-multiple-carts-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-quotation-process-multiple-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-quotation-process-multiple-carts-feature.md -->

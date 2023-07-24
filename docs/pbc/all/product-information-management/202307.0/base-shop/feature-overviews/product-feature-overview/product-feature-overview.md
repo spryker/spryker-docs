@@ -21,8 +21,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
   - /docs/product-quantity-restrictions
   - /docs/product-ttl
-  - /docs/scos/user/features/202212.0/product-feature-overview/product-feature-overview.html  
-  - /docs/pbc/all/product-information-management/202212.0/feature-overviews/product-feature-overview/product-feature-overview.html
+  - /docs/scos/user/features/202307.0/product-feature-overview/product-feature-overview.html  
+  - /docs/pbc/all/product-information-management/202307.0/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.

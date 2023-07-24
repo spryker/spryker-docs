@@ -4,7 +4,7 @@ last_updated: May 13, 2022
 description: This document describes the product_offer_shopping_list.csv file to configure shopping lists with product offers in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/marketplace/dev/data-import/202212.0/file-details-product-offer-shopping-list.csv.html
+  - /docs/marketplace/dev/data-import/202307.0/file-details-product-offer-shopping-list.csv.html
 related:
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html

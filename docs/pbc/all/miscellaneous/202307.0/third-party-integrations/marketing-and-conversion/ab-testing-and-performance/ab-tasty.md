@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/ab-tasty
   - /docs/ab-tasty
   - /docs/en/ab-tasty
-  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
+  - /docs/scos/user/technology-partners/202307.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-slots
   - /docs/managing-slots
   - /docs/en/managing-slots
-  - /docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/manage-slots.html
+  - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/manage-slots.html
 related:
   - title: Templates & Slots feature overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-file-tree
   - /docs/scos/user/back-office-user-guides/202200.0/content/file-manager/managing-file-tree.html
   - /docs/scos/user/back-office-user-guides/202204.0/content/file-manager/managing-file-tree.html  
-  - /docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/manage-file-tree.html  
+  - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/manage-file-tree.html  
 related:
   - title: Managing File List
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-file-list.html

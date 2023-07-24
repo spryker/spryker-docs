@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-returns
   - /docs/managing-returns
   - /docs/en/managing-returns
-  - /docs/pbc/all/return-management/202212.0/manage-in-the-back-office/manage-returns.html
+  - /docs/pbc/all/return-management/202307.0/manage-in-the-back-office/manage-returns.html
 related:
   - title: Creating returns
     link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/create-returns.html

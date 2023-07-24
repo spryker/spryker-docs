@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-product-options
   - /docs/en/managing-product-options
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-options/managing-product-options.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/product-options/managing-product-options.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/product-options/managing-product-options.html  
 related:
   - title: Product Options feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-options-feature-overview.html

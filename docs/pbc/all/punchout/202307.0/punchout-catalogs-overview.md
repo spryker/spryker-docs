@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/punchout-catalogs-overview
   - /docs/punchout-catalogs-overview
   - /docs/en/punchout-catalogs-overview
-  - /docs/scos/user/technology-partners/202212.0/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
+  - /docs/scos/user/technology-partners/202307.0/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
 ---
 
 A *Punchout* is a technology that connects a buyer's e-procurement software with an e-commerce shops, in our case - with the Spryker Commerce OS.

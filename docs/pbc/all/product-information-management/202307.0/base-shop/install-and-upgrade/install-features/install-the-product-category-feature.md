@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/product-category-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202304.0/product-category-feature-integration.html
   - /docs/pbc/all/product-information-management/202304.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html
 related:

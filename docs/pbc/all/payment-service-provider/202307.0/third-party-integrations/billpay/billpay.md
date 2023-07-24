@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/billpay
   - /docs/billpay
   - /docs/en/billpay
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/billpay.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/billpay.html
 ---
 
 ## Partner Information

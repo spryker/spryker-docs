@@ -11,12 +11,12 @@ redirect_from:
   - /docs/shopping-lists-product-options-feature-integration
   - /docs/en/shopping-lists-product-options-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-product-options-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/shopping-lists-product-options-feature-integration.html
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/install-the-shopping-lists-product-options-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/shopping-lists-product-options-feature-integration.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/base-shop/install-and-upgrade/install-the-shopping-lists-product-options-feature.html
 
 related:
   - title: Shopping Lists feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-shopping-lists-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shopping-lists-product-options-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-shopping-lists-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shopping-lists-product-options-feature.md -->

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/alternative-products-wishlist-feature-integration
   - /docs/en/alternative-products-wishlist-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/alternative-products-wishlist-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/alternative-products-wishlist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/alternative-products-wishlist-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-alternative-products-wishlist-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-alternative-products-wishlist-feature.md -->

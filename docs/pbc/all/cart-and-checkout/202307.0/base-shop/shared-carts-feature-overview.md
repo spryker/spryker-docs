@@ -6,8 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-overview
 originalArticleId: 85a7c630-a6ef-465f-80fd-176d1c5e0937
 redirect_from:
-  - /docs/scos/user/features/202212.0/shared-carts-feature-overview.html  
-  - /docs/scos/dev/feature-walkthroughs/202212.0/shared-carts-feature-walkthrough.html
+  - /docs/scos/user/features/202307.0/shared-carts-feature-overview.html  
+  - /docs/scos/dev/feature-walkthroughs/202307.0/shared-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html 
 ---
 

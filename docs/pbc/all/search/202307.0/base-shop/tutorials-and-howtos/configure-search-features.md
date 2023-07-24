@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/configuring-the-search-features
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/configure-search-features.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/configure-search-features.html
 related:
   - title: Configure Elasticsearch
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch

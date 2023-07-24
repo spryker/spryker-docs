@@ -3,7 +3,7 @@ title: Reorder category filters
 description: Learn how to reorder category filters in the Back Office
 template: back-office-user-guide-template
 redirect_from:
-- /docs/pbc/all/search/202212.0/manage-in-the-back-office/category-filters/reorder-category-filters.html
+- /docs/pbc/all/search/202307.0/manage-in-the-back-office/category-filters/reorder-category-filters.html
 related:
   - title: Assign and deassign filters from categories
     link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html

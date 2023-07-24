@@ -14,8 +14,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/scos/dev/glue-api-guides/201907.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/scos/dev/glue-api-guides/202005.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-categories/retrieving-category-nodes.html
+  - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 related:
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html

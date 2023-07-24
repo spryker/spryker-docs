@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-punch-out-connections
   - /docs/scos/user/back-office-user-guides/201811.0/punch-out/managing-punch-out-connections.html
   - /docs/scos/user/back-office-user-guides/201903.0/punch-out/managing-punch-out-connections.html
-  - /docs/scos/user/back-office-user-guides/202212.0/punch-out/managing-punch-out-connections.html
+  - /docs/scos/user/back-office-user-guides/202307.0/punch-out/managing-punch-out-connections.html
 related:
   - title: Managing transactions log
     link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html

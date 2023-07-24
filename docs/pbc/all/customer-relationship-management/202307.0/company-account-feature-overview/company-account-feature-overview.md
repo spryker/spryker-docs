@@ -12,9 +12,9 @@ redirect_from:
   - /docs/company-account
   - /docs/en/company-account
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-account-feature-overview.html
-  - /docs/scos/user/features/202212.0/company-account-feature-overview/company-account-feature-overview.html
+  - /docs/scos/user/features/202307.0/company-account-feature-overview/company-account-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
 ---
 
 A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, and confidential information.

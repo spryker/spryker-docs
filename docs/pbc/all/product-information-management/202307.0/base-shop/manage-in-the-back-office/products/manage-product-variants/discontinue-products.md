@@ -11,7 +11,7 @@ redirect_from:
   - /docs/discontinuing-products
   - /docs/en/discontinuing-products
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/discontinuing-products.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/products/manage-concrete-products/discontinuing-products.html
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/products/manage-concrete-products/discontinuing-products.html
 related:
   - title: Adding Product Alternatives
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html

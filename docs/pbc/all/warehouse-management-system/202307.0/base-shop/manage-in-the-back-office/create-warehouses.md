@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
   - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
   - /docs/scos/user/back-office-user-guides/201907.0/administration/warehouses/creating-warehouses.html
-  - /docs/scos/user/back-office-user-guides/202212.0/administration/warehouses/creating-warehouses.html
+  - /docs/scos/user/back-office-user-guides/202307.0/administration/warehouses/creating-warehouses.html
   - /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html
 related:
   - title: Inventory Management feature overview

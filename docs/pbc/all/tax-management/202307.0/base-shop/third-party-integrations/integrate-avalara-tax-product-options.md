@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-product-options-feature-integration
   - /docs/avalara-tax-product-options-feature-integration
   - /docs/en/avalara-tax-product-options-feature-integration
-  - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-product-options-feature-integration.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara-tax-product-options.html
+  - /docs/scos/user/technology-partners/202307.0/taxes/avalara-tax-product-options-feature-integration.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/taxes/avalara/integrating-avalara-tax-product-options.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

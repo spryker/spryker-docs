@@ -10,11 +10,11 @@ redirect_from:
   - /docs/shared-carts-feature-integration
   - /docs/en/shared-carts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shared-carts-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/shared-carts-feature-integration.html  
-  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/shared-carts-feature-integration.html  
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
 related:
   - title: Shared Cart feature overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-shared-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shared-carts-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-shared-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shared-carts-feature.md -->

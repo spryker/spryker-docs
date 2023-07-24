@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/payolution-integration-into-project
   - /docs/payolution-integration-into-project
   - /docs/en/payolution-integration-into-project
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/payolution/integrating-payolution.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/payolution/integrating-payolution.html
 related:
   - title: Installing and configuring Payolution
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/install-and-configure-payolution.html

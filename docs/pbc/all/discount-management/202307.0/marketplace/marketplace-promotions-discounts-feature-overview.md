@@ -3,8 +3,8 @@ title: Marketplace Promotions & Discounts feature overview
 description: This document contains concept information for the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-promotions-and-discounts-feature-overview.html
-  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-promotions-and-discounts-feature-walkthrough.html
+  - /docs/marketplace/user/features/202307.0/marketplace-promotions-and-discounts-feature-overview.html
+  - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-promotions-and-discounts-feature-walkthrough.html
 related:
     - title: Discount
       link: docs/pbc/all/discount-management/page.version/marketplace/marketplace-promotions-discounts-feature-overview.html

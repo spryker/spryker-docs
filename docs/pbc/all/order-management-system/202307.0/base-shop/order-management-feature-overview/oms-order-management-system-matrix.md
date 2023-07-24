@@ -11,7 +11,7 @@ redirect_from:
   - /docs/oms-matrix
   - /docs/en/oms-matrix
   - /docs/scos/user/features/202200.0/order-management-feature-overview/oms-order-management-system-matrix.html
-  - /docs/scos/user/features/202212.0/order-management-feature-overview/oms-order-management-system-matrix.html
+  - /docs/scos/user/features/202307.0/order-management-feature-overview/oms-order-management-system-matrix.html
 ---
 
 The *OMS Matrix* gives you a quick overview of all orders and their current statuses taken from the State Machine. It lets you see how many order items currently exist in each status and for how long they have been there. From this overview, you can easily go into details per status and order page.

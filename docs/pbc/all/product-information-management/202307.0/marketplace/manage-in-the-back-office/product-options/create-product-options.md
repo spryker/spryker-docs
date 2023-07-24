@@ -4,7 +4,7 @@ last_updated: Apr 21, 2021
 description: Use this procedure to create Marketplace Product Optionsgroups and values in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/marketplace/user/back-office-user-guides/202212.0/catalog/product-options/creating-product-options.html
+  - /docs/marketplace/user/back-office-user-guides/202307.0/catalog/product-options/creating-product-options.html
 related:
   - title: Managing product options
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/product-options/manage-product-options.html

@@ -11,8 +11,8 @@ redirect_from:
   - /docs/creating-product-attributes
   - /docs/en/creating-product-attributes
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/creating-product-attributes.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/attributes/creating-product-attributes.html  
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/attributes/create-product-attributes.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/attributes/creating-product-attributes.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/attributes/create-product-attributes.html  
 related:
   - title: Product Attributes
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html

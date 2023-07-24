@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-guest-cart-items
   - /docs/managing-guest-cart-items
   - /docs/en/managing-guest-cart-items
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/guest-carts/managing-guest-cart-items.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/guest-carts/managing-guest-cart-items.html
 related:
   - title: Manage guest carts
     link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
@@ -2626,7 +2626,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202307.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
 
 
 For the attributes of other included resources, see the following:

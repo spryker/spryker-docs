@@ -11,7 +11,7 @@ redirect_from:
   - /docs/retrieving-store-configuration
   - /docs/en/retrieving-store-configuration
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-store-configuration.html
-  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-store-configuration.html
+  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-store-configuration.html
 ---
 
 Depending on your project needs, you can set up a single store that serves all your business needs or have multiple stores designed for different applications or available in different countries. Regardless of how many stores you have, a store contains such generic configuration as the currencies that can be used in transactions, countries where a store is available, supported languages, and the time zone of the store.

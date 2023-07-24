@@ -11,7 +11,7 @@ redirect_from:
   - /docs/shipment-approval-process-feature-integration
   - /docs/en/shipment-approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-approval-process-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/shipment-approval-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/shipment-approval-process-feature-integration.html
 related:
   - title: Install the Approval Process feature
     link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
@@ -23,4 +23,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-shipment-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shipment-approval-process-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-shipment-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shipment-approval-process-feature.md -->

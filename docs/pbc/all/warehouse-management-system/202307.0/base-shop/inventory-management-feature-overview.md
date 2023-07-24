@@ -11,7 +11,7 @@ redirect_from:
   - /docs/inventory-management-feature-overview
   - /docs/en/inventory-management-feature-overview
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
-  - /docs/scos/user/features/202212.0/inventory-management-feature-overview.html
+  - /docs/scos/user/features/202307.0/inventory-management-feature-overview.html
   - /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html  
 ---
 

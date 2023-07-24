@@ -4,7 +4,7 @@ description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
 last_updated: Feb 23, 2023
 redirect_from:
-  - /docs/pbc/all/search/202212.0/third-party-integrations/integrate-algolia.html
+  - /docs/pbc/all/search/202307.0/third-party-integrations/integrate-algolia.html
 ---
 
 This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia.html) into a Spryker shop.

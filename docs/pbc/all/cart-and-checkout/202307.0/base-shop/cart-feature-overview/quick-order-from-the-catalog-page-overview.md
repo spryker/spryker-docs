@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/quick-order-from-the-catalog-page-overview
   - /docs/quick-order-from-the-catalog-page-overview
   - /docs/en/quick-order-from-the-catalog-page-overview
-  - /docs/scos/user/features/202212.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html  
+  - /docs/scos/user/features/202307.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html  
 ---
 
 Buyers can add simple products with one product variant to the cart directly from the Category page by clicking the **Add to cart** icon on the product card.

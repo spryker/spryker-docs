@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/t-cms
   - /v1/docs/en/t-cms
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-cms.html
-  - /docs/pbc/all/content-management-system/202212.0/tutorials-and-howtos/tutorial-cms.html
+  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/tutorial-cms.html
 related:
   - title: Implement URL routing in Yves
     link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html

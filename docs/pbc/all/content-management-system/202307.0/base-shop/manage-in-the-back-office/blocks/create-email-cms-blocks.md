@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-content-of-emails-via-cms-blocks
   - /docs/managing-content-of-emails-via-cms-blocks
   - /docs/en/managing-content-of-emails-via-cms-blocks
-  - /docs/scos/user/back-office-user-guides/202212.0/content/blocks/managing-content-of-emails-via-cms-blocks.html
+  - /docs/scos/user/back-office-user-guides/202307.0/content/blocks/managing-content-of-emails-via-cms-blocks.html
 related:
   - title: Email as a CMS block
     link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html

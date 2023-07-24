@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/channelpilot-analytics
   - /docs/channelpilot-analytics
   - /docs/en/channelpilot-analytics
-  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/channelpilot-analytics.html
+  - /docs/scos/user/technology-partners/202307.0/marketing-and-conversion/analytics/channelpilot-analytics.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

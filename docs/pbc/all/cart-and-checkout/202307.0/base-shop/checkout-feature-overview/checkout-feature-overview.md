@@ -6,9 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout
 originalArticleId: 7dcc5635-2a15-410c-9a0b-bc62a13dd3a1
 redirect_from:
-  - /docs/scos/user/features/202212.0/checkout-feature-overview/checkout-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/checkout-feature-walkthrough.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/scos/user/features/202307.0/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/checkout-feature-walkthrough.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.

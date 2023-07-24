@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/klarna-part-payment-flexible
   - /docs/klarna-part-payment-flexible
   - /docs/en/klarna-part-payment-flexible
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/klarna/klarna-part-payment-flexible.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/klarna/klarna-part-payment-flexible.html
 related:
   - title: Klarna
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarnaions/klarna/klarna.html

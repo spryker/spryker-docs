@@ -11,7 +11,7 @@ redirect_from:
   - /docs/retrieving-customer-orders
   - /docs/en/retrieving-customer-orders
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-orders.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/retrieving-customer-orders.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/retrieving-customer-orders.html
 related:
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html

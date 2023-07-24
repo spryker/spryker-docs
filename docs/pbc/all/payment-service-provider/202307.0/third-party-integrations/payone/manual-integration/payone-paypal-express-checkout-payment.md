@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/payone-paypal-express-checkout-scos
   - /docs/payone-paypal-express-checkout-scos
   - /docs/en/payone-paypal-express-checkout-scos
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-paypal-express-checkout-payment.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/bs-payone/scos-integration/payone-paypal-express-checkout-payment.html
 ---
 
 The payment using PayPal requires a redirect to the PayPal website. When customers are redirected to PayPal's website, they have to authorize and after that either cancel or validate the transaction.

@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/content-management
   - /docs/content-management
   - /docs/en/content-management
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/navigation-setup/navigation-setup.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/navigation-setup/navigation-setup.html
   - /docs/scos/dev/data-import/202108.0/data-import-categories/content-management/content-management.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/content-management.html
-  - /docs/pbc/all/content-management-system/202212.0/import-and-export-data/import-content-management-system-data.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/content-management/content-management.html
+  - /docs/pbc/all/content-management-system/202307.0/import-and-export-data/import-content-management-system-data.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Cart and Checkout PBC.

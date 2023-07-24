@@ -5,7 +5,7 @@ last_updated: May 20, 2022
 template: module-migration-guide-template
 redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-contentfilewidget.html
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-contentfilewidget-module.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-contentfilewidget-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-contentfilewidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-contentfilewidget-module.md -->

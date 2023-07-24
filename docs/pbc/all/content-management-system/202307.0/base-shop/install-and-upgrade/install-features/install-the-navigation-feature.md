@@ -10,11 +10,11 @@ redirect_from:
   - /2021080/docs/en/navigation-feature-integration
   - /docs/navigation-feature-integration
   - /docs/en/navigation-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/navigation-feature-integration.html
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/install-features/install-the-navigation-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/navigation-feature-integration.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/install-features/install-the-navigation-feature.html
 related:
     - title: Install the Navigation Glue API
       link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-navigation-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-navigation-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-navigation-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-navigation-feature.md -->

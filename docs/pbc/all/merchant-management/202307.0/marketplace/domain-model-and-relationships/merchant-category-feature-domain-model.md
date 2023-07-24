@@ -4,7 +4,7 @@ last_updated: Apr 23, 2021
 description: Merchant categories allows grouping merchants by categories.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/dev/feature-walkthroughs/202212.0/merchant-category-feature-walkthrough.html
+  - /docs/marketplace/dev/feature-walkthroughs/202307.0/merchant-category-feature-walkthrough.html
 ---
 
 The *Merchant Category* feature allows splitting merchants into various categories in order to extend business logic of the project.

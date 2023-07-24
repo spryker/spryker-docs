@@ -11,7 +11,7 @@ redirect_from:
   - /docs/configurable-bundle-feature-integration
   - /docs/en/configurable-bundle-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/configurable-bundle-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/configurable-bundle-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/configurable-bundle-feature-integration.html
 related:
   - title: Glue API - Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
@@ -33,4 +33,4 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-configurable-bundle-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-configurable-bundle-feature.md -->

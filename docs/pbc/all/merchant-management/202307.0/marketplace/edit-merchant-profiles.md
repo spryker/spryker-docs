@@ -4,7 +4,7 @@ last_updated: Jul 24, 2020
 description: This document describes how to edit merchant's profile details in the Merchant Portal.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/marketplace/user/merchant-portal-user-guides/202212.0/profile/editing-merchants-profile-details.html
+  - /docs/marketplace/user/merchant-portal-user-guides/202307.0/profile/editing-merchants-profile-details.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

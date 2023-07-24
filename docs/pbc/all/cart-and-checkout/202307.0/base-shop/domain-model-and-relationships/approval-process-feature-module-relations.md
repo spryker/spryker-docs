@@ -8,7 +8,7 @@ redirect_from:
   - /2021080/docs/en/approval-process-module-relations
   - /docs/approval-process-module-relations
   - /docs/en/approval-process-module-relations
-  - /docs/scos/dev/feature-walkthroughs/202212.0/approval-process-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/approval-process-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/approval-process-feature-module-relations.html
 ---
 

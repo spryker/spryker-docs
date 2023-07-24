@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/episerver
   - /docs/episerver
   - /docs/en/episerver
-  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/episerver.html
+  - /docs/scos/user/technology-partners/202307.0/marketing-and-conversion/customer-communication/episerver.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

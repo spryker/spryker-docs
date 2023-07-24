@@ -26,7 +26,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsstorage.html
   - /module_migration_guides/mg-cmsstorage.htm
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-cmsstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsstorage-module.md -->

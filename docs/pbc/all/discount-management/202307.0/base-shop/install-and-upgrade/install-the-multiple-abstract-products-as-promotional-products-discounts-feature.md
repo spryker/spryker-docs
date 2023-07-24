@@ -4,7 +4,7 @@ description: Add support of multiple abstract products as promotional products i
 last_updated: Aug 30, 2022
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202212.0/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-multiple-abstract-products-as-promotional-products-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-multiple-abstract-products-as-promotional-products-and-discounts-feature.md-->

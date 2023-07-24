@@ -13,8 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/cart-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/cart-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/cart-integration.html
 related:
@@ -22,4 +22,4 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cart-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-cart-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-cart-feature.md -->

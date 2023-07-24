@@ -10,7 +10,7 @@ redirect_from:
   - 2021080/docs/en/reference-information-shipment-method-plugins
   - /docs/reference-information-shipment-method-plugins
   - /docs/en/reference-information-shipment-method-plugins
-  - /docs/scos/dev/feature-walkthroughs/202212.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 related:
   - title: Migration Guide - Shipment
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html

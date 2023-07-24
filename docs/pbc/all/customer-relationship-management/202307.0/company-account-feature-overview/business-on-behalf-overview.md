@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/business-on-behalf-overview
   - /docs/business-on-behalf-overview
   - /docs/en/business-on-behalf-overview
-  - /docs/scos/user/features/202212.0/company-account-feature-overview/business-on-behalf-overview.html
+  - /docs/scos/user/features/202307.0/company-account-feature-overview/business-on-behalf-overview.html
 ---
 
 Every [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature lets you have multiple company users per customer account with the possibility to assign one company user to be a *default user*. This default user can switch between the assigned business units.

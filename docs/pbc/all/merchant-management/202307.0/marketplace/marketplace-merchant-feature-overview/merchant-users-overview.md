@@ -3,7 +3,7 @@ title: Merchant users overview
 description: This document contains concept information for The Merchant users feature in the Spryker Commerce OS.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/merchant-users-overview.html
+  - /docs/marketplace/user/features/202307.0/marketplace-merchant-feature-overview/merchant-users-overview.html
 related:
   - title: Managing merchant users
     link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchant-users.html

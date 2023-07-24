@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-customer-groups
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
-  - /docs/scos/user/back-office-user-guides/202212.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
+  - /docs/scos/user/back-office-user-guides/202307.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
 related:
   - title: Customer Groups overview
     link: docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-groups-overview.html

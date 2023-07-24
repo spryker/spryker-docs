@@ -24,4 +24,4 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->

@@ -13,10 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
-  - /docs/pbc/all/discount-management/202212.0/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html  
-  - /docs/pbc/all/discount-management/202212.0/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
+  - /docs/pbc/all/discount-management/202307.0/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html  
+  - /docs/pbc/all/discount-management/202307.0/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md -->

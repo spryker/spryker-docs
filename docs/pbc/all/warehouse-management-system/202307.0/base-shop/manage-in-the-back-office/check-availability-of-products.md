@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-products-availability
   - /docs/en/managing-products-availability
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/availability/managing-products-availability.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/availability/managing-products-availability.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/availability/managing-products-availability.html  
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-customer-access
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
-  - /docs/scos/user/back-office-user-guides/202212.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
+  - /docs/scos/user/back-office-user-guides/202307.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
 related:
   - title: Customer access feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/customer-access-feature-overview.html

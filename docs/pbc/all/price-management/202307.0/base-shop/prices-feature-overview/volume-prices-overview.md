@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/volume-prices-overview
   - /docs/volume-prices-overview
   - /docs/en/volume-prices-overview
-  - /docs/scos/user/features/202212.0/prices-feature-overview/volume-prices-overview.html
+  - /docs/scos/user/features/202307.0/prices-feature-overview/volume-prices-overview.html
   - /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
 ---
 

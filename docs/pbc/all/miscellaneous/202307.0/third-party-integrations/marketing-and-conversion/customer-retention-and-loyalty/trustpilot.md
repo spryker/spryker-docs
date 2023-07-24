@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/trustpilot
   - /docs/trustpilot
   - /docs/en/trustpilot
-  - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/trustpilot.html  
+  - /docs/scos/user/technology-partners/202307.0/customer-retention-and-loyalty/trustpilot.html  
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

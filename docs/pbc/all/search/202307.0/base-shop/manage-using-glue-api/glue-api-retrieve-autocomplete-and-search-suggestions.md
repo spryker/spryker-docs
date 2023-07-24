@@ -11,8 +11,8 @@ redirect_from:
   - /docs/retrieving-autocomplete-and-search-suggestions
   - /docs/en/retrieving-autocomplete-and-search-suggestions
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-autocomplete-and-search-suggestions.html
-  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-autocomplete-and-search-suggestions.html
-  - /docs/pbc/all/search/202212.0/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
+  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-autocomplete-and-search-suggestions.html
+  - /docs/pbc/all/search/202307.0/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
 related:
   - title: Searching the product catalog
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html

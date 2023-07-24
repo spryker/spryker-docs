@@ -11,7 +11,7 @@ redirect_from:
   - /docs/heidelpay-integration-scos
   - /docs/en/heidelpay-integration-scos
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/integrating-heidelpay.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/heidelpay/integrating-heidelpay.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/heidelpay/integrating-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/heidelpay.html

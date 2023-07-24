@@ -3,7 +3,7 @@ title: Add notes to customers
 description: Learn how to add notes to customers in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202212.0/customer/customers/add-notes-to-customers.html
+  - /docs/scos/user/back-office-user-guides/202307.0/customer/customers/add-notes-to-customers.html
 related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html

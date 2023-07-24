@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/nekom
   - /docs/nekom
   - /docs/en/nekom
-  - /docs/scos/user/technology-partners/202212.0/order-management-erpoms/nekom-cc-gmbh.html
+  - /docs/scos/user/technology-partners/202307.0/order-management-erpoms/nekom-cc-gmbh.html
 ---
 
 ## Partner Information

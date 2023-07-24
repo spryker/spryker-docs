@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/censhare-pim
   - /docs/censhare-pim
   - /docs/en/censhare-pim
-  - /docs/scos/user/technology-partners/202212.0/product-information-pimerp/censhare-pim.html
+  - /docs/scos/user/technology-partners/202307.0/product-information-pimerp/censhare-pim.html
 ---
 
 ## Partner Information

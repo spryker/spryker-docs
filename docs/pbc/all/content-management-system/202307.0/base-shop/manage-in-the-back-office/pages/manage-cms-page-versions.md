@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-cms-page-versions
   - /docs/en/managing-cms-page-versions
   - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-page-versions.html
-  - docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/pages/manage-cms-page-versions.html
+  - docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/pages/manage-cms-page-versions.html
 related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

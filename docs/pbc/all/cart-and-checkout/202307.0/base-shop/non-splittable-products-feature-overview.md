@@ -10,7 +10,7 @@ redirect_from:
   - /docs/product-quantity-restrictions-overview
   - /docs/en/product-quantity-restrictions-overview
   - /docs/scos/dev/feature-walkthroughs/201907.0/non-splittable-products-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202212.0/non-splittable-products-feature-walkthrough.html 
+  - /docs/scos/dev/feature-walkthroughs/202307.0/non-splittable-products-feature-walkthrough.html 
   - /docs/scos/user/features/202204.0/non-splittable-products-feature-overview.html 
 ---
 

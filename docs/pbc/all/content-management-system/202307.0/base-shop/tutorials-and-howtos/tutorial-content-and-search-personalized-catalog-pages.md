@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/t-content-search-personalized-catalog-page
   - /v1/docs/en/t-content-search-personalized-catalog-page
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
-  - /docs/pbc/all/content-management-system/202212.0/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
+  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
 related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

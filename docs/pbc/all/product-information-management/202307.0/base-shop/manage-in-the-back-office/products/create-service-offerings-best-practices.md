@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/creating-service-offerings
   - /docs/creating-service-offerings
   - /docs/en/creating-service-offerings
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/products/creating-service-offerings-best-practices.html
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/products/creating-service-offerings-best-practices.html
 ---
 
 This article describes how you can create products that can or have to include service assistance.

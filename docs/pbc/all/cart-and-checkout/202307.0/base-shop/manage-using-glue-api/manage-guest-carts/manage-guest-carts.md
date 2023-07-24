@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-guest-carts
   - /docs/managing-guest-carts
   - /docs/en/managing-guest-carts
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/guest-carts/managing-guest-carts.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/guest-carts/managing-guest-carts.html
   - /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
 related:
   - title: Manage guest cart items
@@ -987,7 +987,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/manage-guest-carts-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

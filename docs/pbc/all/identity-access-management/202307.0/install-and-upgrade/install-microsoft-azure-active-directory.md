@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/201907.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/202005.0/microsoft-azure-active-directory.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/microsoft-azure-active-directory.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/microsoft-azure-active-directory.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-microsoft-azure-active-directory.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-microsoft-azure-active-directory.md -->
+{% include pbc/all/install-features/202307.0/install-microsoft-azure-active-directory.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-microsoft-azure-active-directory.md -->

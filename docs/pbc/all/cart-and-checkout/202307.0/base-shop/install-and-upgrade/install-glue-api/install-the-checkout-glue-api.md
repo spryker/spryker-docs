@@ -10,8 +10,8 @@ redirect_from:
   - /docs/en/glue-api-checkout-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-checkout-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-checkout-feature-integration.html  
-  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-checkout-feature-integration.html  
+  - /docs/pbc/all/cart-and-checkout/202307.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html
@@ -23,4 +23,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html    
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-checkout-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-checkout-glue-api.md -->

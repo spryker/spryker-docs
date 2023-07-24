@@ -19,8 +19,8 @@ redirect_from:
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
-  - /docs/scos/user/features/202212.0/quotation-process-feature-overview.html  
-  - /docs/scos/dev/feature-walkthroughs/202212.0/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
+  - /docs/scos/user/features/202307.0/quotation-process-feature-overview.html  
+  - /docs/scos/dev/feature-walkthroughs/202307.0/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
   - /docs/pbc/all/request-for-quote/request-for-quote.html
 ---
 

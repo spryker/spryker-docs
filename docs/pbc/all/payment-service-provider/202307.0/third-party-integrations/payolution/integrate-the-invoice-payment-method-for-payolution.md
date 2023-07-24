@@ -11,7 +11,7 @@ redirect_from:
   - /docs/payolution-invoice
   - /docs/en/payolution-invoice
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
 related:
   - title: Installing and configuring Payolution
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/install-and-configure-payolution.html

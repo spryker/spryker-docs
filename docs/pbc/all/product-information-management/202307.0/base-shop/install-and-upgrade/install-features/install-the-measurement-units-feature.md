@@ -11,7 +11,7 @@ redirect_from:
   - /docs/product-measurement-unit-feature-integration
   - /docs/en/product-measurement-unit-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-unit-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-measurement-unit-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202009.0/product-measurement-unit-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-measurement-unit-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202001.0/product-measurement-unit-feature-integration.html

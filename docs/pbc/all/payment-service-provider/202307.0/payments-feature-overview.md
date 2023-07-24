@@ -11,7 +11,7 @@ redirect_from:
   - /docs/payments-feature-overview
   - /docs/en/payments-feature-overview
   - /docs/scos/user/features/202200.0/payments-feature-overview.html
-  - /docs/scos/user/features/202212.0/payments-feature-overview.html
+  - /docs/scos/user/features/202307.0/payments-feature-overview.html
 ---
 
 The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.

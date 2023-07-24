@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/e-spirit
   - /docs/e-spirit
   - /docs/en/e-spirit
-  - /docs/scos/user/technology-partners/202212.0/content-management/e-spirit.html
-  - /docs/pbc/all/content-management-system/202212.0/third-party-integrations/e-spirit.html
+  - /docs/scos/user/technology-partners/202307.0/content-management/e-spirit.html
+  - /docs/pbc/all/content-management-system/202307.0/third-party-integrations/e-spirit.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/201903.0/administration/payment-methods/managing-payment-methods.html
   - /docs/scos/user/back-office-user-guides/201907.0/administration/payment-methods/managing-payment-methods.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/managing-payment-methods.html
-  - /docs/scos/user/back-office-user-guides/202212.0/administration/payment-methods/edit-payment-methods.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/administration/payment-methods/edit-payment-methods.html  
 related:
   - title: Payments feature overview
     link: docs/pbc/all/payment-service-provider/page.version/payments-feature-overview.html

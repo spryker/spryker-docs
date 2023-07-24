@@ -13,7 +13,7 @@ redirect_from:
   - /docs/order-matrix-reference-information
   - /docs/scos/user/back-office-user-guides/202200.0/sales/order-matrix/viewing-the-order-matrix.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/order-matrix/viewing-the-order-matrix.html
-  - /docs/scos/user/back-office-user-guides/202212.0/sales/order-matrix/viewing-the-order-matrix.html
+  - /docs/scos/user/back-office-user-guides/202307.0/sales/order-matrix/viewing-the-order-matrix.html
 related:
   - title: Order Management feature overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html

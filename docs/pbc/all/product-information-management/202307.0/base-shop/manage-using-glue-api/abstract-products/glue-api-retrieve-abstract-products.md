@@ -11,8 +11,8 @@ redirect_from:
   - /docs/retrieving-abstract-products
   - /docs/en/retrieving-abstract-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/abstract-products/retrieving-abstract-products.html
-  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/abstract-products/retrieving-abstract-products.html
+  - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
 related:
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
@@ -1927,7 +1927,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 <a name="abstract-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/retrieve-an-abstract-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-an-abstract-product-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

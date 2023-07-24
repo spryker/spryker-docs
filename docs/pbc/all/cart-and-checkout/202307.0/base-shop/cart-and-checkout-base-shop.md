@@ -4,7 +4,7 @@ description: Cart and Checkout capability enables customers to create multiple c
 last_updated: Oct 2, 2022
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202212.0/cart-and-checkout.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/cart-and-checkout.html
 ---
 
 To learn about the base Cart and Checkout, see the following feature overviews:

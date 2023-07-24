@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/klarna
   - /docs/klarna
   - /docs/en/klarna
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/klarna.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/klarna.html
 related:
   - title: Klarna payment workflow
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-payment-workflow.html

@@ -4,7 +4,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/installing-and-configuring-seven-senders.html
   - /docs/scos/dev/technology-partner-guides/202204.0/shipment/seven-senders/installing-and-configuring-seven-senders.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/shipment/seven-senders/installing-and-configuring-seven-senders.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/shipment/seven-senders/installing-and-configuring-seven-senders.html
 
 ---
 

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-products
   - /docs/managing-products
   - /docs/en/managing-products
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/products/managing-products/managing-products.html
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/products/managing-products/managing-products.html
 related:
   - title: Discontinuing Products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html

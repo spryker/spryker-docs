@@ -14,7 +14,7 @@ redirect_from:
   - /2021080/docs/vault-for-tokens
   - /docs/vault-for-tokens
   - /docs/vault-for-tokens
-  - /docs/scos/dev/feature-walkthroughs/202212.0/spryker-core-feature-walkthrough/vault-for-tokens-overview.html  
+  - /docs/scos/dev/feature-walkthroughs/202307.0/spryker-core-feature-walkthrough/vault-for-tokens-overview.html  
 ---
 
 *Vault for Tokens* provides the functionality to store sensitive data. This feature doesn't have any GUI and consists of two modules: `Spryker.UtilEncryption` and `Spryker.Vault`.

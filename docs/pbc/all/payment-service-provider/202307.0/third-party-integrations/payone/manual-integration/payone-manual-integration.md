@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/payone-v1-1
   - /docs/payone-v1-1
   - /docs/en/payone-v1-1
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/bs-payone.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/bs-payone/bs-payone.html
 related:
   - title: PayOne - Integration into the SCOS Project
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html

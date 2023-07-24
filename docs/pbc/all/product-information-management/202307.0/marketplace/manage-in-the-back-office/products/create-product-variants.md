@@ -4,7 +4,7 @@ last_updated: Jul 27, 2021
 description: This guide explains how to create product variants in Marketplace.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/products/manage-concrete-products/creating-product-variants.html
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/products/manage-concrete-products/creating-product-variants.html
 related:
   - title: Managing products
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html

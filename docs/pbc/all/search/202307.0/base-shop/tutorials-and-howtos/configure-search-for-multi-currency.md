@@ -34,7 +34,7 @@ redirect_from:
   - /v2/docs/en/multicurrency-search
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/configure-search-for-multi-currency.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/configure-search-for-multi-currency.html
 related:
   - title: Migration Guide - Multi-Currency
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html

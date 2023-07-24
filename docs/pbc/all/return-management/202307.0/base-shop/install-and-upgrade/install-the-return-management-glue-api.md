@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-return-management-feature-integration
   - /docs/glue-api-return-management-feature-integration
   - /docs/en/glue-api-return-management-feature-integration
-  - /docs/pbc/all/return-management/202212.0/install-and-upgrade/install-the-return-management-glue-api.html
+  - /docs/pbc/all/return-management/202307.0/install-and-upgrade/install-the-return-management-glue-api.html
 related:
   - title: Return Management feature integration
     link: docs/pbc/all/return-management/page.version/install-and-upgrade/install-the-return-management-feature.html
@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/return-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-return-management-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-return-management-glue-api.md -->

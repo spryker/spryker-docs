@@ -132,7 +132,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 
-{% include pbc/all/glue-api-guides/202212.0/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/submit-checkout-data-request-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/submit-checkout-data-request-attributes.md -->
 
 
 
@@ -518,7 +518,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 
-{% include pbc/all/glue-api-guides/202212.0/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/submit-checkout-data-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/submit-checkout-data-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

@@ -4,7 +4,7 @@ last_updated: Apr 23, 2021
 description: This guide explains how to create and manage merchant records on the Merchants page.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/marketplace/user/back-office-user-guides/202212.0/marketplace/merchants/managing-merchants.html
+  - /docs/marketplace/user/back-office-user-guides/202307.0/marketplace/merchants/managing-merchants.html
 related:
   - title: Managing merchant users
     link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchant-users.html

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-cms-blocks
   - /docs/managing-cms-blocks
   - /docs/en/managing-cms-blocks
-  - /docs/scos/user/back-office-user-guides/202212.0/content/blocks/managing-cms-blocks.html
+  - /docs/scos/user/back-office-user-guides/202307.0/content/blocks/managing-cms-blocks.html
   - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/managing-cms-blocks.html
 related:
   - title: CMS blocks overview

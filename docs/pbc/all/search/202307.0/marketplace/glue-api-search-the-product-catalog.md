@@ -3,7 +3,7 @@ title: "Glue API: Search the product catalog"
 description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/marketplace/dev/glue-api-guides/202212.0/searching-the-product-catalog.html
+  - /docs/marketplace/dev/glue-api-guides/202307.0/searching-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
     link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html

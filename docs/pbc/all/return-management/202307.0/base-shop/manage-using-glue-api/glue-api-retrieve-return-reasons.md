@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-return-reasons
   - /docs/retrieving-return-reasons
   - /docs/en/retrieving-return-reasons
-  - /docs/pbc/all/return-management/202212.0/manage-using-glue-api/glue-api-retrieve-return-reasons.html
+  - /docs/pbc/all/return-management/202307.0/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html

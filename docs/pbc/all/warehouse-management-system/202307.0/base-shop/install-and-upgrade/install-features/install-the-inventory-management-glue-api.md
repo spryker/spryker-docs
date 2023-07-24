@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/glue-api-inventory-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-inventory-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-inventory-management-feature-integration.html
 related:
   - title: Install the Inventory Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/inventory-management-feature-integration.html
@@ -22,4 +22,4 @@ related:
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-inventory-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-inventory-management-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-inventory-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-inventory-management-glue-api.md -->

@@ -4,7 +4,7 @@ last_updated: Aug 13, 2021
 description: The Navigation module provides database structure and a public API to manage what's in the database, and a small toolkit for rendering navigation menus in the frontend
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/content-management-system/202212.0/extend-and-customize/navigation-module-reference-information.html
+  - /docs/pbc/all/content-management-system/202307.0/extend-and-customize/navigation-module-reference-information.html
 ---
 
 ## Overview

@@ -15,7 +15,7 @@ redirect_from:
   - /docs/printing-shopping-list
   - /docs/en/printing-shopping-list
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-list-printing-overview.html
-  - /docs/scos/user/features/202212.0/shopping-lists-feature-overview/shopping-list-printing-overview.html
+  - /docs/scos/user/features/202307.0/shopping-lists-feature-overview/shopping-list-printing-overview.html
 ---
 
 *Shopping lists* are used by companies to prepare and manage the list of products they intend to buy or the products that they buy regularly. Shopping lists are highly popular among restaurants, as they can easily prepare lists of food they order on a regular basis. However "digital" version of the shopping lists is not always convenient because, for example, restaurants, cafes, and bakeries prefer a paper version of the shopping list in the kitchen to collect handwritten notes or pin them to a wall, and subsequently make an order. *Shopping list printing* lets your customers print the list of products with barcodes they added to the shopping list in the webshop, as well as shopping lists shared with them. They can even order items from the printed shopping lists with the help of a barcode scanner.

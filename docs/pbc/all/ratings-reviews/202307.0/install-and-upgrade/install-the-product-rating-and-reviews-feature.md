@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/product-rating-reviews-feature-integration
   - /docs/product-rating-reviews-feature-integration
   - /docs/en/product-rating-reviews-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/product-rating-and-reviews-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/product-rating-and-reviews-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html  
 related:
   - title: Glue API - Product rating & reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
@@ -20,4 +20,4 @@ related:
   - title: Product Rating & Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
 ---
-{% include pbc/all/install-features/202212.0/install-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-rating-and-reviews-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-rating-and-reviews-feature.md -->

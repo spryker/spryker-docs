@@ -15,8 +15,8 @@ redirect_from:
   - /docs/product-set
   - /docs/en/product-set
   - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
-  - /docs/scos/user/features/202212.0/product-sets-feature-overview.html
-  - /docs/pbc/all/content-management-system/202212.0/product-sets-feature-overview.html
+  - /docs/scos/user/features/202307.0/product-sets-feature-overview.html
+  - /docs/pbc/all/content-management-system/202307.0/product-sets-feature-overview.html
 ---
 
 The *Product Sets* feature lets you create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.

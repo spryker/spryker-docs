@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/ratepay-payment-workflow
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/ratepay/ratepay-payment-workflow.html
   - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-payment-workflow.html
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay/ratepay-payment-workflow.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/ratepay/ratepay-payment-workflow.html
 related:
   - title: RatePay facade methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html

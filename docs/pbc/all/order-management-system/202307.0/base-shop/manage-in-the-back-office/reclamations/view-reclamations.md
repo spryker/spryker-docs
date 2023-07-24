@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-reclamations
   - /docs/en/managing-reclamations
   - /docs/scos/user/back-office-user-guides/202204.0/sales/reclamations/managing-reclamations.html
-  - /docs/scos/user/back-office-user-guides/202212.0/sales/reclamations/viewing-reclamations.html
+  - /docs/scos/user/back-office-user-guides/202307.0/sales/reclamations/viewing-reclamations.html
 related:
   - title: Creating reclamations
     link: docs/scos/user/back-office-user-guides/202204.0/sales/orders/creating-reclamations.html

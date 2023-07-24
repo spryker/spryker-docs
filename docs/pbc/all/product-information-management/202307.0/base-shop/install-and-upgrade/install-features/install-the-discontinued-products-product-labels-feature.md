@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/discontinued-products-product-labels-feature-integration
   - /docs/discontinued-products-product-labels-feature-integration
   - /docs/en/discontinued-products-product-labels-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/discontinued-products-product-labels-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/discontinued-products-product-labels-feature-integration.html
 related:
   - title: Product labels feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-discontinued-products-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-discontinued-products-product-labels-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-discontinued-products-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-discontinued-products-product-labels-feature.md -->

@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-discontinuedcsv
   - /docs/file-details-product-discontinuedcsv
   - /docs/en/file-details-product-discontinuedcsv
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

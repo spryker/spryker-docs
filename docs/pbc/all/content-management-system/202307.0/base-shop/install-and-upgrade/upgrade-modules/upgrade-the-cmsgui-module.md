@@ -21,6 +21,6 @@ redirect_from:
   - /v6/docs/en/mg-cms-gui
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
   - /module_migration_guides/mg-cms-gui.htm
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsgui-module.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsgui-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cmsgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsgui-module.md -->

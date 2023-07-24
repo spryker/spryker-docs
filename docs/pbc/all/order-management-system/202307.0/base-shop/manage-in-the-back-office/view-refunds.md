@@ -11,7 +11,7 @@ redirect_from:
   - /docs/viewing-refunds
   - /docs/en/viewing-refunds
   - /docs/scos/user/back-office-user-guides/202200.0/sales/refunds/viewing-refunds.html
-  - /docs/scos/user/back-office-user-guides/202212.0/sales/refunds/viewing-refunds.html
+  - /docs/scos/user/back-office-user-guides/202307.0/sales/refunds/viewing-refunds.html
 related:
   - title: Refunds feature overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/refunds-feature-overview.html

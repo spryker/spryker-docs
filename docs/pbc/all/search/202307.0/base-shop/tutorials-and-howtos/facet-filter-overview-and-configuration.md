@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/t-working-filter-facets
   - /v1/docs/en/t-working-filter-facets
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/facet-filter-overview-and-configuration.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 related:
   - title: Configure Elasticsearch
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html

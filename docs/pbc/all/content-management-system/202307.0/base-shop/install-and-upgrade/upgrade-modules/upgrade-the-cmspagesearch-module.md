@@ -26,7 +26,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmspagesearch.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmspagesearch.html
   - /module_migration_guides/mg-cmspagesearch.htm
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-cmspagesearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmspagesearch-module.md -->

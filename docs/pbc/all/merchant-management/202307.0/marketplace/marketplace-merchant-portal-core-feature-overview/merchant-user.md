@@ -3,7 +3,7 @@ title: Merchant User
 description: Merchant User in Merchant Portal.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
+  - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
 ---
 
 This document provides a short overview of Merchant User concept in the Spryker Marketplace.

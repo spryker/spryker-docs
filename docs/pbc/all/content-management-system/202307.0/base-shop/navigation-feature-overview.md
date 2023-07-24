@@ -11,10 +11,10 @@ redirect_from:
   - /docs/navigation-feature-overview
   - /docs/en/navigation-feature-overview
   - /docs/scos/user/features/202200.0/navigation-feature-overview.html
-  - /docs/scos/user/features/202212.0/navigation-feature-overview.html
+  - /docs/scos/user/features/202307.0/navigation-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202212.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html  
-  - /docs/pbc/all/content-management-system/202212.0/navigation-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html  
+  - /docs/pbc/all/content-management-system/202307.0/navigation-feature-overview.html
 ---
 
 The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront. Product catalog managers can create different types of navigation for different places of the shop. For example, they can add a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.

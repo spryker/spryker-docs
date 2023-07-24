@@ -20,7 +20,7 @@ redirect_from:
   - /v2/docs/en/checkout-process-review-and-implementation
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-process-review-and-implementation.html
   - /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-process-review-and-implementation.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/extend-and-customize/checkout-process-review-and-implementation.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/extend-and-customize/checkout-process-review-and-implementation.html
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html

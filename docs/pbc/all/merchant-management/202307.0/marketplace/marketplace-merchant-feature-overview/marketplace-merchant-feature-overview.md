@@ -3,7 +3,7 @@ title: Marketplace Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+  - /docs/marketplace/user/features/202307.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:
   - title: Managing merchants
     link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchants.html

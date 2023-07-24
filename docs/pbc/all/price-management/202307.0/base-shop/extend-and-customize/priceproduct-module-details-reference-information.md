@@ -4,7 +4,7 @@ last_updated: Aug 18, 2021
 description: This document provides the technical details of the PriceProduct module and price dimensions
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202212.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
   - /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
 ---
 

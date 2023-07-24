@@ -11,7 +11,7 @@ redirect_from:
   - /docs/multiple-carts-feature-integration
   - /docs/en/multiple-carts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/multiple-carts-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/multiple-carts-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202304.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html
   - /docs/scos/dev/feature-integration-guides/202307.0/multiple-carts-feature-integration.html
 related:

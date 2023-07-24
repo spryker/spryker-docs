@@ -10,8 +10,8 @@ redirect_from:
   - /docs/file-details-commentcsv
   - /docs/en/file-details-commentcsv
   - /docs/scos/dev/data-import/201907.0/data-import-categories/miscellaneous/file-details-comment.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/miscellaneous/file-details-comment.csv.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/import-and-export-data/file-details-comment.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/miscellaneous/file-details-comment.csv.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/import-and-export-data/file-details-comment.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/miscellaneous/file-details-comment.csv.html
 related:
   - title: Execution order of data importers in Demo Shop

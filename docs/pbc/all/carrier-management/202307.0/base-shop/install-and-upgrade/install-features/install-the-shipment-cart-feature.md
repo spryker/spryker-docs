@@ -11,11 +11,11 @@ redirect_from:
   - /docs/shipment-cart-feature-integration
   - /docs/en/shipment-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/shipment-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/shipment-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/shipment-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202312.0/shipment-cart-feature-integration.html
 related:
   - title: Shipment feature integration
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shipment-cart-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shipment-cart-feature.md -->

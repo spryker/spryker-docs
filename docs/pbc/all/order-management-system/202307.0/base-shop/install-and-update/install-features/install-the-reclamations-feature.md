@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/reclamations-feature-integration
   - /docs/reclamations-feature-integration
   - /docs/en/reclamations-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/reclamations-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/reclamations-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-reclamations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-reclamations-feature.md -->

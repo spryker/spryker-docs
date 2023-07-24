@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/configurable-bundle-order-management-feature-integration
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-configurable-bundle-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-configurable-bundle-order-management-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-configurable-bundle-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-configurable-bundle-order-management-feature.md -->

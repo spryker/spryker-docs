@@ -5,7 +5,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/expand-search-data.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/expand-search-data.html
 related:
   - title: Configure Elasticsearch
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html

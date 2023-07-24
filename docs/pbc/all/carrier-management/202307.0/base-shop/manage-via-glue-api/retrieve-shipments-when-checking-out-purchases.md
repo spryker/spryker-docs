@@ -119,7 +119,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 
-{% include pbc/all/glue-api-guides/202212.0/check-out-purchases-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/check-out-purchases-request-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/check-out-purchases-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/check-out-purchases-request-attributes.md -->
 
 
 
@@ -350,7 +350,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/update-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | If true, the customer is redirected to an external URL. |
 
-{% include pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202307.0/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/check-out-puchases-response-attributes-of-included-resources.md -->
 
 For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/retrieving-customer-orders.html#retrieve-customers-orders)
 

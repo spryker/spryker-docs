@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop
   - /docs/computop
   - /docs/en/computop
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/computop.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/computop.html
 related:
   - title: Integrating the Sofort payment method for Computop
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html

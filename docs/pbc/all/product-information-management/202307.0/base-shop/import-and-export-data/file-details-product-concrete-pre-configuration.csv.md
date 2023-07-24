@@ -11,7 +11,7 @@ redirect_from:
   - /docs/file-details-product-concrete-pre-configurationcsv
   - /docs/en/file-details-product-concrete-pre-configurationcsv
   - /docs/scos/dev/data-import/202200.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
   - /2021080/docs/configurable-product-data-import
   - /2021080/docs/en/configurable-product-data-import
   - /docs/configurable-product-data-import

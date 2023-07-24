@@ -4,4 +4,4 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-product-cart-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-product-cart-glue-api.md -->
+{% include pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-product-cart-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-product-cart-glue-api.md -->

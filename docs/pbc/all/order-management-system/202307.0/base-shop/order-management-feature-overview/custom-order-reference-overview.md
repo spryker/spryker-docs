@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/custom-order-reference-overview
   - /docs/custom-order-reference-overview
   - /docs/en/custom-order-reference-overview
-  - /docs/scos/user/features/202212.0/order-management-feature-overview/custom-order-reference-overview.html
+  - /docs/scos/user/features/202307.0/order-management-feature-overview/custom-order-reference-overview.html
 ---
 
 *Custom Order Reference* helps you control purchases and link the internal orders to external systems from your company using your external order reference. With the feature in place, you can add a custom order reference, such as an invoice, to the order on Yves.

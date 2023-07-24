@@ -9,8 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-payment-methodcsv
   - /docs/file-details-payment-methodcsv
   - /docs/en/file-details-payment-methodcsv
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-payment-method.csv.html
-  - /docs/pbc/all/payment-service-provider/202212.0/import-data/file-details-payment-method.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-payment-method.csv.html
+  - /docs/pbc/all/payment-service-provider/202307.0/import-data/file-details-payment-method.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-payment-method.csv.html
 related:
   - title: Execution order of data importers in Demo Shop

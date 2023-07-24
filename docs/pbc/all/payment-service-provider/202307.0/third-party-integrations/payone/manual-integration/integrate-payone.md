@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/payone-integration-with-project-scos
   - /docs/payone-integration-with-project-scos
   - /docs/en/payone-integration-with-project-scos
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
 related:
   - title: PayOne - Cash on Delivery
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html

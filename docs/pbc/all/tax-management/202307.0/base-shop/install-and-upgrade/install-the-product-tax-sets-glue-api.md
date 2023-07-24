@@ -9,7 +9,7 @@ redirect_from:
   - /v2/docs/product-tax-sets-api-feature-integration-201903
   - /v2/docs/en/product-tax-sets-api-feature-integration-201903
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/product-tax-sets-api-feature-integration.html
-  - /docs/pbc/all/tax-management/202212.0/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
+  - /docs/pbc/all/tax-management/202307.0/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-product-tax-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-product-tax-sets-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-product-tax-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-product-tax-sets-glue-api.md -->

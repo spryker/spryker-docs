@@ -3,7 +3,7 @@ title: Marketplace Product feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-product-feature-overview.html
+  - /docs/marketplace/user/features/202307.0/marketplace-product-feature-overview.html
 related:
   - title: Creating marketplace abstract product
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html

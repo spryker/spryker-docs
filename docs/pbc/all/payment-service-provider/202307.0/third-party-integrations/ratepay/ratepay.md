@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/ratepay
   - /docs/ratepay
   - /docs/en/ratepay
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/ratepay.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/ratepay.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html

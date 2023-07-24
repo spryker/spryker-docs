@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/abstract-products/retrieving-abstract-product-availability.html  
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/abstract-products/retrieving-abstract-product-availability.html  
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html

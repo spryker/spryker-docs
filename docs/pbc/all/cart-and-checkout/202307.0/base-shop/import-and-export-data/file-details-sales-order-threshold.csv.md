@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-sales-order-thresholdcsv
   - /docs/file-details-sales-order-thresholdcsv
   - /docs/en/file-details-sales-order-thresholdcsv
-  - /docs/pbc/all/cart-and-checkout/202212.0/import-and-export-data/file-details-sales-order-threshold.csv.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/import-and-export-data/file-details-sales-order-threshold.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-account-management-agent-assist-feature-integration
   - /docs/customer-account-management-agent-assist-feature-integration
   - /docs/en/customer-account-management-agent-assist-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/customer-account-management-agent-assist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/customer-account-management-agent-assist-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-customer-account-management-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-customer-account-management-agent-assist-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-customer-account-management-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-customer-account-management-agent-assist-feature.md -->

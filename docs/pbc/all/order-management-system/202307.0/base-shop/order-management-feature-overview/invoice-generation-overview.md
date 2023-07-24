@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/invoice-generation-overview
   - /docs/invoice-generation-overview
   - /docs/en/invoice-generation-overview
-  - /docs/scos/user/features/202212.0/order-management-feature-overview/invoice-generation-overview.html
+  - /docs/scos/user/features/202307.0/order-management-feature-overview/invoice-generation-overview.html
 ---
 
 Invoices can be generated and sent to customer’s email every time they place an order in the shop.

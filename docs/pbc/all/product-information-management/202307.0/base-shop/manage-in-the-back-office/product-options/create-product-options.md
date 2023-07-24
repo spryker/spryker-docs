@@ -11,7 +11,7 @@ redirect_from:
   - /docs/creating-a-product-option
   - /docs/en/creating-a-product-option
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-options/creating-product-options.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/product-options/creating-product-options.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/product-options/creating-product-options.html  
   - /docs/scos/user/back-office-user-guides/202005.0/catalog/product-options/create-product-options.html
 related:
   - title: Product Options feature overview

@@ -4,8 +4,8 @@ description: Learn how to add content items to CMS pages in the Back Office
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202212.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
-  - /docs/scos/user/back-office-user-guides/202212.0/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
+  - /docs/scos/user/back-office-user-guides/202307.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
+  - /docs/scos/user/back-office-user-guides/202307.0/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
 ---
 
 This document describes how to add content items to CMS blocks using the Back Office.

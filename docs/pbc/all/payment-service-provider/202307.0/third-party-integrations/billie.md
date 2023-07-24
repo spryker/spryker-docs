@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/billie
   - /docs/billie
   - /docs/en/billie
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/billie.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/billie.html
 ---
 
 ## Partner Information

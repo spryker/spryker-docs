@@ -29,7 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-pricecartconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-pricecartconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-pricecartconnector.html
 
   - /module_migration_guides/mg-price-cart-connector.htm
 related:

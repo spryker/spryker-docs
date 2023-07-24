@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/dotdigital
   - /docs/dotdigital
   - /docs/en/dotdigital
-  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/dotdigital.html
+  - /docs/scos/user/technology-partners/202307.0/marketing-and-conversion/customer-communication/dotdigital.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

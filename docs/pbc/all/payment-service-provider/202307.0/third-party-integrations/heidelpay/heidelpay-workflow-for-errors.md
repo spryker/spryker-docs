@@ -11,7 +11,7 @@ redirect_from:
   - /docs/heidelpay-error-workflow
   - /docs/en/heidelpay-error-workflow
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
 related:
   - title: Heidelpay
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/heidelpay.html

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/scheduled-prices-feature-integration
   - /docs/scheduled-prices-feature-integration
   - /docs/en/scheduled-prices-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/scheduled-prices-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/scheduled-prices-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-scheduled-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-scheduled-prices-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-scheduled-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-scheduled-prices-feature.md -->

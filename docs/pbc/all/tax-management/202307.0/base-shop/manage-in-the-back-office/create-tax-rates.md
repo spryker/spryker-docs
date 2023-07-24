@@ -11,9 +11,9 @@ redirect_from:
   - /docs/managing-tax-rates
   - /docs/en/managing-tax-rates
   - /docs/scos/user/back-office-user-guides/202200.0/administration/tax-rates/managing-tax-rates.html
-  - /docs/scos/user/back-office-user-guides/202212.0/administration/tax-rates/managing-tax-rates.html
+  - /docs/scos/user/back-office-user-guides/202307.0/administration/tax-rates/managing-tax-rates.html
   - /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
-  - /docs/pbc/all/tax-management/202212.0/manage-in-the-back-office/create-tax-rates.html
+  - /docs/pbc/all/tax-management/202307.0/manage-in-the-back-office/create-tax-rates.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

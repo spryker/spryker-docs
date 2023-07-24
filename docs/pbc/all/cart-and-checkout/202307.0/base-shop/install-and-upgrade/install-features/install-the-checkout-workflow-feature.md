@@ -9,8 +9,8 @@ redirect_from:
   - /2021080/docs/en/checkout-workflow-integration
   - /docs/checkout-workflow-integration
   - /docs/en/checkout-workflow-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/checkout-workflow-integration-guide.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-checkout-workflow-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/checkout-workflow-integration-guide.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-checkout-workflow-feature.html
   - /docs/scos/dev/feature-integration-guides/202307.0/checkout-workflow-integration-guide.html
 ---
-{% include pbc/all/install-features/202212.0/install-the-checkout-workflow.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-checkout-workflow.md -->
+{% include pbc/all/install-features/202307.0/install-the-checkout-workflow.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-checkout-workflow.md -->

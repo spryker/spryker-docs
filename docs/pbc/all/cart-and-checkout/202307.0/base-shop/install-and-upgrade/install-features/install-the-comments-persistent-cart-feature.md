@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/comments-persistent-cart-feature-integration
   - /docs/comments-persistent-cart-feature-integration
   - /docs/en/comments-persistent-cart-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/comments-persistent-cart-feature-integration.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/comments-persistent-cart-feature-integration.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-comments-persistent-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-comments-persistent-cart-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-comments-persistent-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-comments-persistent-cart-feature.md -->

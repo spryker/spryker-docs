@@ -54,7 +54,7 @@ redirect_from:
   - /v2/docs/en/search-40
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/configure-elasticsearch.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/configure-elasticsearch.html
 related:
   - title: Configure search for multi-currency
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html

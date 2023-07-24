@@ -9,8 +9,8 @@ redirect_from:
   - /2021080/docs/en/catalog-setup
   - /docs/catalog-setup
   - /docs/en/catalog-setup
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/catalog-setup.html
-  - /docs/pbc/all/product-information-management/202212.0/base-shop/import-and-export-data/import-product-catalog-data.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/catalog-setup.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/import-product-catalog-data.html
 ---
 
 {% info_block warningBox "Order of data import" %}

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/product-store-relation-feature-integration
   - /docs/en/product-store-relation-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-products-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/multi-store-products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/multi-store-products-feature-integration.html
 related:
   - title: Migration Guide - Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-collector.html

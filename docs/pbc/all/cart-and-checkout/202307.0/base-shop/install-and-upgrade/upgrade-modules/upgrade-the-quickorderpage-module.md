@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quickorderpage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quickorderpage.html
   - /module_migration_guides/mg-quick-order-page.htm
-  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-quickorderpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quickorderpage-module.md -->

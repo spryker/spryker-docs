@@ -11,7 +11,7 @@ redirect_from:
   - /docs/cms-pages-overview
   - /docs/en/cms-pages-overview
   - /docs/scos/user/features/202200.0/cms-feature-overview/cms-pages-overview.html
-  - /docs/scos/user/features/202212.0/cms-feature-overview/cms-pages-overview.html
+  - /docs/scos/user/features/202307.0/cms-feature-overview/cms-pages-overview.html
 ---
 
 A *CMS page* is an HTML page that you can create and edit in the Back Office using the WYSIWYG editor. The **About Us**, **Impressum**, **Terms**, **Contacts**, and **Conditions** pages are examples of CMS pages that you can create.

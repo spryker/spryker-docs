@@ -11,7 +11,7 @@ redirect_from:
   - /docs/creating-a-product-list
   - /docs/en/creating-a-product-list
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/creating-product-lists.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/product-lists/creating-product-lists.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/product-lists/creating-product-lists.html  
 ---
 
 This doc describes how to create product lists. Product lists are used to allow or deny companies access to products.

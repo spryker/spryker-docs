@@ -4,7 +4,7 @@ last_updated: Apr 23, 2021
 description: Merchant categories help you easily find relevant merchants.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/merchant-category-feature-overview.html
+  - /docs/marketplace/user/features/202307.0/merchant-category-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202307.0/merchant-category-feature-walkthrough.html
 ---
 

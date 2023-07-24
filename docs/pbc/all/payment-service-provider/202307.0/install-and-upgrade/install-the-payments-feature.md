@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/payments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/payments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/payments-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/payments-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/payments-feature-integration.html
 related:
   - title: Glue API - Payments feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-payments-feature-integration.html
@@ -23,4 +23,4 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/payments-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-payments-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-payments-feature.md -->

@@ -11,8 +11,8 @@ redirect_from:
   - /docs/en/file-details-product-stockcsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/stocks/stocks.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/stocks/stocks.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
   - /docs/pbc/all/warehouse-management-system/import-data/file-details-product-stock.csv.html
 related:
   - title: Execution order of data importers in Demo Shop

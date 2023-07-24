@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/paazl
   - /docs/scos/user/technology-partners/202200.0/shipment/paazl.html
   - /docs/scos/user/technology-partners/202204.0/shipment/paazl.html
-  - /docs/scos/user/technology-partners/202212.0/shipment/paazl.html  
+  - /docs/scos/user/technology-partners/202307.0/shipment/paazl.html  
 ---
 
 ## Partner Information

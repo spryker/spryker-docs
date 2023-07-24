@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/afterpay
   - /docs/afterpay
   - /docs/en/afterpay
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/afterpay.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/afterpay.html
 related:
   - title: Afterpay - Installation and Configuration
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/afterpay/install-and-configure-afterpay.html

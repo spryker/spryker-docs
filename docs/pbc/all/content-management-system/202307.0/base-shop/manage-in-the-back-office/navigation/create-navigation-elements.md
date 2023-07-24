@@ -9,7 +9,7 @@ redirect_from:
   - /docs/managing-navigation-elements
   - /docs/en/managing-navigation-elements
   - /docs/scos/user/back-office-user-guides/202200.0/content/navigation/managing-navigation-elements.html
-  - /docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/navigation/create-navigation-elements.html
+  - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/navigation/create-navigation-elements.html
 related:
   - title: Navigation feature overview
     link: docs/scos/user/features/page.version/navigation-feature-overview.html

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/amazon-pay
   - /docs/amazon-pay
   - /docs/en/amazon-pay
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/amazon-pay.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/amazon-pay.html
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html

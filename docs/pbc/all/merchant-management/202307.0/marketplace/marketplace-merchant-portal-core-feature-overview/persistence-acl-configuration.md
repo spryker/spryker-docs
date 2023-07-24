@@ -4,7 +4,7 @@ last_updated: Oct 20, 2021
 description: Learn how to you can configure Persistence ACL
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/dev/feature-walkthroughs/202212.0/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
+  - /docs/marketplace/dev/feature-walkthroughs/202307.0/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
 ---
 
 Merchant Portal comes with the pre-configured [Persistence ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html) feature to secure sensitive data.

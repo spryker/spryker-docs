@@ -13,7 +13,7 @@ redirect_from:
   - /v6/docs/tutorial-integrating-any-search-engine
   - /v6/docs/en/tutorial-integrating-any-search-engine
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
 ---
 
 In a Spryker-based project, you can use any external search provider instead of the default Elasticsearch. This tutorial shows how to replace the default Elasticsearch with any other search engine.

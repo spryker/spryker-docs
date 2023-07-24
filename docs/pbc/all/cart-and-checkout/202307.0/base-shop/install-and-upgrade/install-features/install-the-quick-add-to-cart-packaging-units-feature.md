@@ -11,7 +11,7 @@ redirect_from:
   - /docs/quick-order-packaging-units-feature-integration
   - /docs/en/quick-order-packaging-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-packaging-units-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/quick-add-to-cart-packaging-units-feature-integration.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/quick-add-to-cart-packaging-units-feature-integration.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html
 ---
-{% include pbc/all/install-features/202212.0/install-the-quick-add-to-cart-packaging-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-quick-add-to-cart-packaging-units-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-quick-add-to-cart-packaging-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-quick-add-to-cart-packaging-units-feature.md -->

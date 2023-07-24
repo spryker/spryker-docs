@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/baqend
   - /docs/baqend
   - /docs/en/baqend
-  - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/baqend.html  
+  - /docs/scos/user/technology-partners/202307.0/marketing-and-conversion/ab-testing-and-performance/baqend.html  
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

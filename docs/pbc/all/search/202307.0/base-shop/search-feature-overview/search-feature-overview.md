@@ -10,9 +10,9 @@ redirect_from:
   - /docs/search-summary
   - /docs/en/search-summary
   - /docs/scos/user/features/202200.0/search-feature-overview/search-feature-overview.html
-  - /docs/scos/user/features/202212.0/search-feature-overview/search-feature-overview.html
-  - /docs/pbc/all/search/202212.0/search-feature-overview/search-feature-walkthrough.html
-  - /docs/pbc/all/search/202212.0/search-feature-overview/search-feature-overview/search-feature-overview.html
+  - /docs/scos/user/features/202307.0/search-feature-overview/search-feature-overview.html
+  - /docs/pbc/all/search/202307.0/search-feature-overview/search-feature-walkthrough.html
+  - /docs/pbc/all/search/202307.0/search-feature-overview/search-feature-overview/search-feature-overview.html
 ---
 
 Spryker is shipped with Elasticsearch as the default search solution. Elasticsearch provides all the basic search functionalities. You can extend or customize it to fit your needs.

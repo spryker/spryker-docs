@@ -10,4 +10,4 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-product-offer-volume-prices-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-product-offer-volume-prices-glue-api.md -->
+{% include pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-product-offer-volume-prices-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-product-offer-volume-prices-glue-api.md -->

@@ -4,7 +4,7 @@ last_updated: Aug 13, 2021
 description: In this document, you can find commonly encountered cases of product restrictions behavior
 template: concept-topic-template
 redirect_from:
-  - docs/scos/dev/feature-walkthroughs/202212.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
+  - docs/scos/dev/feature-walkthroughs/202307.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
 ---
 
 <div class="width-100">

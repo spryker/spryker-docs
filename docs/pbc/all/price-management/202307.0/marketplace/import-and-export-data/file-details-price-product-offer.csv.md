@@ -4,7 +4,7 @@ last_updated: Feb 26, 2021
 description: This document describes the price-product-offer.csv file to configure merchant product offer price information in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/marketplace/dev/data-import/202212.0/file-details-price-product-offer.csv.html
+  - /docs/marketplace/dev/data-import/202307.0/file-details-price-product-offer.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html

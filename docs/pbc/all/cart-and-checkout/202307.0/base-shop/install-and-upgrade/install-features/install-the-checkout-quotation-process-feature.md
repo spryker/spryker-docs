@@ -10,11 +10,11 @@ redirect_from:
   - /2021080/docs/en/checkout-quotation-process-feature-integration
   - /docs/checkout-quotation-process-feature-integration
   - /docs/en/checkout-quotation-process-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/checkout-quotation-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/checkout-quotation-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/checkout-quotation-process-feature-integration.html
 related:
   - title: Install the Quotation Process feature
     link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-uuid-generation-console-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-uuid-generation-console-feature.md -->

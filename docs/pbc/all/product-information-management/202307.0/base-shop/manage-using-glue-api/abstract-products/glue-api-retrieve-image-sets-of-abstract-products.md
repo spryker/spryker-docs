@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/retrieving-image-sets-of-abstract-products
   - /docs/retrieving-image-sets-of-abstract-products
   - /docs/en/retrieving-image-sets-of-abstract-products
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
-  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+  - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html

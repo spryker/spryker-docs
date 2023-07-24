@@ -11,8 +11,8 @@ redirect_from:
   - /docs/cart-notes-overview
   - /docs/en/cart-notes-overview
   - /docs/scos/user/features/202200.0/cart-feature-overview/cart-notes-overview.html
-  - /docs/scos/user/features/202212.0/cart-feature-overview/cart-notes-overview.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/cart-feature-overview/cart-notes-overview.html  
+  - /docs/scos/user/features/202307.0/cart-feature-overview/cart-notes-overview.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/cart-feature-overview/cart-notes-overview.html  
 ---
 
 *Cart Notes* let Shop administrators include the **Notes** field on the **Cart** page. Customers can add notes to a particular item or the whole cart. For example, they can add special instructions about preparing and delivering an order.

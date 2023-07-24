@@ -21,7 +21,7 @@ redirect_from:
   - /v1/docs/boosting-cart-based-search
   - /v1/docs/en/boosting-cart-based-search
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-boosting-cart-based-search.html
-  - /docs/pbc/all/search/202212.0/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-boost-cart-based-search.html
+  - /docs/pbc/all/search/202307.0/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-boost-cart-based-search.html
 related:
   - title: Search feature overview
     link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html

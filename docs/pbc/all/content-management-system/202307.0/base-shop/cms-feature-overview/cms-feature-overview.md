@@ -11,9 +11,9 @@ redirect_from:
   - /docs/cms
   - /docs/en/cms
   - /docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
-  - /docs/scos/user/features/202212.0/cms-feature-overview/cms-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/cms-feature-walkthrough/cms-feature-walkthrough.html
-  - /docs/pbc/all/content-management-system/202212.0/cms-feature-overview/cms-feature-overview.html
+  - /docs/scos/user/features/202307.0/cms-feature-overview/cms-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/cms-feature-walkthrough/cms-feature-walkthrough.html
+  - /docs/pbc/all/content-management-system/202307.0/cms-feature-overview/cms-feature-overview.html
 ---
 
 The *CMS* feature is lets you create and manage the content of custom pages that are not part of the product catalog.

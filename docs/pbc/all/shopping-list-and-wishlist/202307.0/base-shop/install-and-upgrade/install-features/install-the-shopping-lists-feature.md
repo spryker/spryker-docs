@@ -10,8 +10,8 @@ redirect_from:
   - /docs/shopping-lists-feature-integration
   - /docs/en/shopping-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/shopping-lists-feature-integration.html
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/integrate-the-shopping-lists-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/shopping-lists-feature-integration.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/base-shop/install-and-upgrade/integrate-the-shopping-lists-feature.html
 related:
   - title: Glue API - Shopping Lists feature integration
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
@@ -25,4 +25,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shopping-lists-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shopping-lists-feature.md -->

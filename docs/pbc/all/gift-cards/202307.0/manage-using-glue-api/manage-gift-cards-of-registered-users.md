@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
 ---
 
 [Gift Card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.

@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/availability-notification-feature-overview
   - /docs/availability-notification-feature-overview
   - /docs/en/availability-notification-feature-overview
-  - /docs/scos/user/features/202212.0/availability-notification-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/checkout-feature-walkthrough.html
+  - /docs/scos/user/features/202307.0/availability-notification-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/checkout-feature-walkthrough.html
 ---
 
 When customers visit an out-of-stock product page, they usually search for the shop which has the product in stock. The Back Office user of the original store can replenish the stock; however, it does not mean that the customer is still there to buy it. The *Availability Notification* feature provides a way to notify you about the demand for the product, so you can prioritize the product replenishment and notify the customer once it is available again.

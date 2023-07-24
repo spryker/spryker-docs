@@ -9,8 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-product-search-attributecsv
   - /docs/file-details-product-search-attributecsv
   - /docs/en/file-details-product-search-attributecsv
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
-  - /docs/pbc/all/search/202212.0/import-and-export-data/file-details-product-search-attribute.csv.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
+  - /docs/pbc/all/search/202307.0/import-and-export-data/file-details-product-search-attribute.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

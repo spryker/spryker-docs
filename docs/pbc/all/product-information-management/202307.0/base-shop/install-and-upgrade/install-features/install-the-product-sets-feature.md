@@ -14,10 +14,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-sets-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-sets-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-sets-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/product-sets-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-sets-feature-integration.html
 related:
   - title: Product Sets feature overview
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-sets-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-sets-feature.md -->

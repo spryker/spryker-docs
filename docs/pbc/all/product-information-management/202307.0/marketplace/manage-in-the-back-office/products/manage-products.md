@@ -11,7 +11,7 @@ related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 redirect_from:
-  - /docs/marketplace/user/back-office-user-guides/202212.0/catalog/products/managing-products/managing-products.html
+  - /docs/marketplace/user/back-office-user-guides/202307.0/catalog/products/managing-products/managing-products.html
 ---
 
 This document describes how to manage abstract and concrete products.

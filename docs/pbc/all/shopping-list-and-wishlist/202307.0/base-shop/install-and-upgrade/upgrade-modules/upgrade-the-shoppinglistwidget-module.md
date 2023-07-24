@@ -29,8 +29,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shoppinglistwidget.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shoppinglistwidget.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-shoppinglistwidget.html  
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
+  - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-shoppinglistwidget.html  
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/base-shop/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglistwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglistwidget-module.md -->

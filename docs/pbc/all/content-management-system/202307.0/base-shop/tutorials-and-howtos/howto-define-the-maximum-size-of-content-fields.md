@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/howto-define-the-maxiumum-size-of-content-fields
   - /v6/docs/howto-define-the-maxiumum-size-of-content-fields
   - /v6/docs/en/howto-define-the-maxiumum-size-of-content-fields
-  - /docs/pbc/all/content-management-system/202212.0/tutorials-and-howtos/howto-define-the-maxiumum-size-of-content-fields.html
+  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-define-the-maxiumum-size-of-content-fields.html
 related:
   - title: CMS
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html

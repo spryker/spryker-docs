@@ -3,7 +3,7 @@ title: Marketplace Merchant Custom Prices feature overview
 description: This document contains concept information for the Marketplace Merchant Custom Prices feature.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-merchant-custom-prices-feature-overview.html
+  - /docs/marketplace/user/features/202307.0/marketplace-merchant-custom-prices-feature-overview.html
 related:
   - title: Managing marketplace abstract product prices
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html

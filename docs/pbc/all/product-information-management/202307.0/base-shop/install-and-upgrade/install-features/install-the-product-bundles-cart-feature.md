@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-bundles-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/product-bundles-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-bundles-cart-feature-integration.html
 related:
   - title: "Glue API: Product Bundle + Cart feature integration"
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
@@ -22,4 +22,4 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-bundles-cart-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-bundles-cart-feature.md -->

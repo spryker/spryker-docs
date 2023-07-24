@@ -11,8 +11,8 @@ redirect_from:
   - /docs/glue-api-wishlist-feature-integration
   - /docs/en/glue-api-wishlist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-wishlist-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-wishlist-feature-integration.html
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/install-the-wishlist-glue-api.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-wishlist-feature-integration.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202307.0/base-shop/install-and-upgrade/install-the-wishlist-glue-api.html
 
 related:
   - title: Managing wishlists
@@ -21,4 +21,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-wishlist-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-wishlist-glue-api.md -->

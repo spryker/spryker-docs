@@ -11,7 +11,7 @@ redirect_from:
   - /docs/company-account-feature-integration
   - /docs/en/company-account-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/company-account-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/company-account-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/company-account-feature-integration.html
 related:
   - title: Glue API - Company Account feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html

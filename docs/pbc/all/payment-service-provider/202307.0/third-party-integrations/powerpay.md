@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/powerpay
   - /docs/powerpay
   - /docs/en/powerpay
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/powerpay.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/powerpay.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

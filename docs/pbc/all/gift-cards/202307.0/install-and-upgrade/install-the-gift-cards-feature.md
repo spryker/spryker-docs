@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/gift-cards-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/gift-cards-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/gift-cards-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/gift-cards-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/gift-cards-feature-integration.html
   - /docs/pbc/all/gift-cards/202304.0/install-and-upgrade/install-the-gift-cards-feature.html 
 ---
 

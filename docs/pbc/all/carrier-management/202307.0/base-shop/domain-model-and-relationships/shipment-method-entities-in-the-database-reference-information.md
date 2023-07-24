@@ -10,7 +10,7 @@ redirect_from:
 - /docs/reference-information-shipment-method-entities-in-the-database
 - /docs/en/reference-information-shipment-method-entities-in-the-database
 - /docs/scos/dev/feature-walkthroughs/202204.0/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
-- /docs/scos/dev/feature-walkthroughs/202212.0/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
+- /docs/scos/dev/feature-walkthroughs/202307.0/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
 ---
 
 The following schema shows how the sales order and shipment method entities are modeled in the database:

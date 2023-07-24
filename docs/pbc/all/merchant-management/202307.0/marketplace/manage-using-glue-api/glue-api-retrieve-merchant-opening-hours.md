@@ -3,7 +3,7 @@ title: "Glue API: Retrieve merchant opening hours"
 description: Retrieve merchant opening hours via Glue API
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/marketplace/dev/glue-api-guides/202212.0/merchants/retrieving-merchant-opening-hours.html
+  - /docs/marketplace/dev/glue-api-guides/202307.0/merchants/retrieving-merchant-opening-hours.html
 related:
   - title: Retrieving merchants
     link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html

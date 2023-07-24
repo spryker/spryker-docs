@@ -5,7 +5,7 @@ description: The Quick Add to Cart feature allows adding multiple products to ca
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202307.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html  
   - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
 ---
 

@@ -4,7 +4,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-merchant-feature-integration.html
-  - /docs/marketplace/dev/feature-integration-guides/202212.0/glue/marketplace-merchant-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/202307.0/glue/marketplace-merchant-feature-integration.html
 ---
 
-{% include pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-merchant-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-merchant-glue-api.md -->
+{% include pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-merchant-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-merchant-glue-api.md -->

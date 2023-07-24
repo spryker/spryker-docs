@@ -10,7 +10,7 @@ redirect_from:
   - /docs/billpay-payment-methods
   - /docs/en/billpay-payment-methods
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
 related:
   - title: Billpay
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/billpay/billpay.html

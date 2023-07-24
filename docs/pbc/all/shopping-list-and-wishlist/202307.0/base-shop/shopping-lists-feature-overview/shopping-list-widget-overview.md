@@ -11,7 +11,7 @@ redirect_from:
   - /docs/shopping-list-widget-overview
   - /docs/en/shopping-list-widget-overview
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-list-widget-overview.html
-  - /docs/scos/user/features/202212.0/shopping-lists-feature-overview/shopping-list-widget-overview.html  
+  - /docs/scos/user/features/202307.0/shopping-lists-feature-overview/shopping-list-widget-overview.html  
 ---
 
 A *shopping list* is a list of items that a customer plans to buy. Many B2B customers compile shopping lists of items they buy regularly. Also, such customers often use multiple shopping lists to cover their specific purchasing needs. For example, cafes prefer using the *Shopping list* feature to create several shopping lists to save items they keep ordering every day or week.

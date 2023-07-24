@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/zenloop
   - /docs/zenloop
   - /docs/en/zenloop
-  - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/zenloop.html  
+  - /docs/scos/user/technology-partners/202307.0/customer-retention-and-loyalty/zenloop.html  
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

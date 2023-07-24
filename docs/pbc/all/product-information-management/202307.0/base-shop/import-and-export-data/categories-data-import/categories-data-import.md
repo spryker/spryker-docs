@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/categories
   - /docs/categories
   - /docs/en/categories
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/categories/categories.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/categories/categories.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to categories:

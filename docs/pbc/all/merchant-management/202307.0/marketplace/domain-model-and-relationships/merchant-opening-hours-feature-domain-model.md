@@ -3,7 +3,7 @@ title: "Merchant Opening Hours feature: Domain model"
 description: The Merchant Opening Hours lets you define opening hours for a merchant.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/dev/feature-walkthroughs/202212.0/merchant-opening-hours-feature-walkthrough.html
+  - /docs/marketplace/dev/feature-walkthroughs/202307.0/merchant-opening-hours-feature-walkthrough.html
 ---
 
 By using the 'Merchant Opening Hours' feature, merchants can save their opening hours in the system and make them accessible to customers. A merchant may have a weekday schedule, which is an opening schedule for every day of the week, as well as date-based exceptions, such as during the holiday season when opening hours may be different.

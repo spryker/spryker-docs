@@ -5,7 +5,7 @@ description: The Payments feature lets customers to pay for orders with none, on
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/payments-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/payments-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/payments-feature-walkthrough.html
 ---
 
 The _Payments_ feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.

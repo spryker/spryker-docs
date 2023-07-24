@@ -9,9 +9,9 @@ redirect_from:
   - /2021080/docs/en/discounts
   - /docs/discounts
   - /docs/en/discounts
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/discounts/discounts.html
-  - /docs/pbc/all/discount-management/202212.0/import-and-export-data/discount-import.html
-  - /docs/pbc/all/discount-management/202212.0/base-shop/import-and-export-data/discount-import.html
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/merchandising-setup/discounts/discounts.html
+  - /docs/pbc/all/discount-management/202307.0/import-and-export-data/discount-import.html
+  - /docs/pbc/all/discount-management/202307.0/base-shop/import-and-export-data/discount-import.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:

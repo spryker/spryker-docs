@@ -11,8 +11,8 @@ redirect_from:
   - /docs/retrieving-concrete-products
   - /docs/en/retrieving-concrete-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/concrete-products/retrieving-concrete-products.html
-  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/concrete-products/retrieving-concrete-products.html
+  - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 related:
   - title: Retrieve concrete product availability
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
@@ -1626,7 +1626,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

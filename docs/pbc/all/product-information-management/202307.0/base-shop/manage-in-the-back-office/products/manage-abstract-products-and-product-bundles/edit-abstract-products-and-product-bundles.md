@@ -11,7 +11,7 @@ redirect_from:
   - /docs/editing-abstract-products
   - /docs/en/editing-abstract-products
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/editing-abstract-products.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/products/manage-abstract-products/editing-abstract-products.html  
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/products/manage-abstract-products/editing-abstract-products.html  
 related:
   - title: Managing Products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-products.html

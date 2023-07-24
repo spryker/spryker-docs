@@ -13,8 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/catalog-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/catalog-category-management-feature-integration.html
-  - /docs/pbc/all/search/202212.0/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/catalog-category-management-feature-integration.html
+  - /docs/pbc/all/search/202307.0/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-catalog-category-management-feature.md -->

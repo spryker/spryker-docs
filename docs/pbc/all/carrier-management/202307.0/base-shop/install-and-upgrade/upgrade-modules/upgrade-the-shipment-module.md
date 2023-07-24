@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment
 originalArticleId: 4c1484d3-4e38-4cc1-b03f-82ef2136ec43
 redirect_from:
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-shipment.html
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html

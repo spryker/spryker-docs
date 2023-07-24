@@ -4,7 +4,7 @@ description: Learn how to add items with discounts to carts of registered users 
 last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/pbc/all/discount-management/202212.0/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+  - /docs/pbc/all/discount-management/202307.0/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
 ---
 
 This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
@@ -687,9 +687,9 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-registered-users-cart-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/add-items-to-a-registered-users-cart-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202307.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
 
 For the attributes of the other included resources, see the docs:
 

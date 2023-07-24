@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html
-  - /docs/pbc/all/content-management-system/202212.0/tutorials-and-howtos/howto-create-cms-templates.html
+  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-create-cms-templates.html
 related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

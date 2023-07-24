@@ -11,7 +11,7 @@ redirect_from:
   - /docs/quick-add-to-cart-feature-overview
   - /docs/en/quick-add-to-cart-feature-overview
   - /docs/scos/user/features/202200.0/quick-add-to-cart-feature-overview.html
-  - /docs/scos/user/features/202212.0/quick-add-to-cart-feature-overview.html
+  - /docs/scos/user/features/202307.0/quick-add-to-cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html
 ---
 

@@ -3,7 +3,7 @@ title: "Import file details: product_option.csv"
 last_updated: Aug 2, 2022
 template: data-import-template
 redirect_from:
-  - /docs/pbc/all/tax-management/202212.0/base-shop/import-and-export-data/import-file-details-product-option.csv.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-product-option.csv.html
 ---
 
 

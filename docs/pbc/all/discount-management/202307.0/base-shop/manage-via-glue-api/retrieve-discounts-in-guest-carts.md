@@ -4,7 +4,7 @@ description: Retrieve details about cart rules and vouchers in guest carts
 last_updated: July 25, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/pbc/all/discount-management/202212.0/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
+  - /docs/pbc/all/discount-management/202307.0/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
 ---
 
 This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. For full information on the endpoint, see [Manage guest carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html).
@@ -207,7 +207,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/manage-guest-carts-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

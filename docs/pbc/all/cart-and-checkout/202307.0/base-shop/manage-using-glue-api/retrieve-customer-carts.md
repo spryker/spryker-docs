@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-carts.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/retrieving-customer-carts.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/retrieving-customer-carts.html
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
@@ -1581,7 +1581,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202212.0/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/retrieve-customer-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-customer-carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

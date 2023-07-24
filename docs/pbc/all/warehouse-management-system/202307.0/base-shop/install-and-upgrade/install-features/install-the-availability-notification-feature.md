@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/availability-notification-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/availability-notification-feature-integration.html
   - /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-feature.html
   - /docs/pbc/all/warehouse-management-system/202304.0/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
 related:

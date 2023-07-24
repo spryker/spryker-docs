@@ -3,7 +3,7 @@ title: Main merchant
 description: This document contains concept information for the main merchant in the Spryker Commerce OS.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/main-merchant-concept.html
+  - /docs/marketplace/user/features/202307.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:
   - title: Managing main merchant orders
     link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html

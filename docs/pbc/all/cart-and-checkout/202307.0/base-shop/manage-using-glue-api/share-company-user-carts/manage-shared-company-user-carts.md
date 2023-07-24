@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-shared-company-user-carts
   - /docs/managing-shared-company-user-carts
   - /docs/en/managing-shared-company-user-carts
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
 related:
   - title: Share company user carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html

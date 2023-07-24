@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/202005.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/202200.0/checking-out/updating-payment-data.html
-  - /docs/scos/dev/glue-api-guides/202212.0/checking-out/updating-payment-data.html
+  - /docs/scos/dev/glue-api-guides/202307.0/checking-out/updating-payment-data.html
 related:
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html

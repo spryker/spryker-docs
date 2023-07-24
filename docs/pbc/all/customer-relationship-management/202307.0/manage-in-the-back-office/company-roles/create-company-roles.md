@@ -12,8 +12,8 @@ redirect_from:
   - /docs/en/managing-company-roles
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
-  - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-roles.html
-  - /docs/scos/user/back-office-user-guides/202212.0/customer/company-roles/create-company-roles.html
+  - /docs/scos/user/back-office-user-guides/202307.0/customer/company-account/managing-company-roles.html
+  - /docs/scos/user/back-office-user-guides/202307.0/customer/company-roles/create-company-roles.html
 related:
   - title: Managing Companies
     link: docs/pbc/all/customer-relationship-management/page.version/manage-in-the-back-office/manage-companies.html

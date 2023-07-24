@@ -4,7 +4,7 @@ last_updated: Apr 23, 2021
 description: This guide explains how Marketplace administrator can manage merchant users in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/marketplace/user/back-office-user-guides/202212.0/marketplace/merchants/managing-merchant-users.html
+  - /docs/marketplace/user/back-office-user-guides/202307.0/marketplace/merchants/managing-merchant-users.html
 related:
   - title: Managing merchants
     link: docs/marketplace/user/back-office-user-guides/202204.0/marketplace/merchants/managing-merchants.html

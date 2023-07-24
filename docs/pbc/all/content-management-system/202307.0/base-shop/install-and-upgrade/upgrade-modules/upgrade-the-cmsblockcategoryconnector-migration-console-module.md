@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms-block-category-connector-migration-console.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-category-connector-migration-console.html
   - /docs/scos/dev/module-migration-guides/migration-guide-migration-guide-cmsblockcategoryconnector-migration-console.html
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.html
 related:
   - title: Upgrade the CmsBlockCategoryConnector
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html

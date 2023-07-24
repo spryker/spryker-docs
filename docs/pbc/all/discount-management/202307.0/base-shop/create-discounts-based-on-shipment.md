@@ -17,7 +17,7 @@ redirect_from:
   - /v4/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /v4/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html  
-  - /docs/pbc/all/discount-management/202212.0/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+  - /docs/pbc/all/discount-management/202307.0/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
 related:
   - title: Shipment feature overview

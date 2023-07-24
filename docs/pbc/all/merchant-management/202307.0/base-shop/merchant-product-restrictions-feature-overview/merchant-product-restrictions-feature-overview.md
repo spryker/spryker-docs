@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/merchant-product-restrictions-feature-overview
   - /docs/merchant-product-restrictions-feature-overview
   - /docs/en/merchant-product-restrictions-feature-overview
-  - /docs/scos/user/features/202212.0/merchant-product-restrictions-feature-overview.html
+  - /docs/scos/user/features/202307.0/merchant-product-restrictions-feature-overview.html
 ---
 
 The _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.

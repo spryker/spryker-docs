@@ -12,10 +12,10 @@ redirect_from:
   - /docs/en/multi-store-cms-block-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-cms-block-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202108.0/multi-store-cms-block-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/multi-store-cms-block-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/multi-store-cms-block-feature-integration.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-multi-store-cms-block-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-multi-store-cms-block-feature.md -->

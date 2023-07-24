@@ -19,7 +19,7 @@ redirect_from:
   - /docs/international-tax-rates-sets-1
   - /docs/en/international-tax-rates-sets-1
   - /docs/scos/user/features/202200.0/tax-feature-overview.html
-  - /docs/scos/user/features/202212.0/tax-feature-overview.html
+  - /docs/scos/user/features/202307.0/tax-feature-overview.html
   - /docs/pbc/all/tax-management/tax-management.html
 ---
 

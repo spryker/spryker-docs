@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/payone-risk-check-address-check-scos
   - /docs/payone-risk-check-address-check-scos
   - /docs/en/payone-risk-check-address-check-scos
-  - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
+  - /docs/scos/user/technology-partners/202307.0/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
 related:
   - title: PayOne - Cash on Delivery
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html

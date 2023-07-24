@@ -11,7 +11,7 @@ redirect_from:
   - /docs/adyen-provided-payment-methods
   - /docs/en/adyen-provided-payment-methods
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/adyen/integrating-adyen-payment-methods.html
-  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/adyen/integrating-adyen-payment-methods.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/adyen/integrating-adyen-payment-methods.html
 related:
   - title: Installing and configuring Adyen
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/installing-and-configuring-adyen.html

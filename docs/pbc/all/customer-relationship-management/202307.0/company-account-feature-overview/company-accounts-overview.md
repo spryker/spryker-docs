@@ -11,7 +11,7 @@ redirect_from:
   - /docs/company-accounts-overview
   - /docs/en/company-accounts-overview
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-accounts-overview.html
-  - /docs/scos/user/features/202212.0/company-account-feature-overview/company-accounts-overview.html
+  - /docs/scos/user/features/202307.0/company-account-feature-overview/company-accounts-overview.html
 ---
 
 *Company accounts* let you build an organizational structure for your B2B business.

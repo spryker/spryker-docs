@@ -5,9 +5,9 @@ description: The Tax module is responsible for handling tax rates that can apply
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/reference-information-tax-module.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/tax-feature-walkthrough/reference-information-tax-module.html  
-  - /docs/scos/dev/feature-walkthroughs/202212.0/tax-feature-walkthrough/reference-information-tax-module.html
-  - /docs/pbc/all/tax-management/202212.0/extend-and-customize/tax-module-reference-information.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/tax-feature-walkthrough/reference-information-tax-module.html  
+  - /docs/scos/dev/feature-walkthroughs/202307.0/tax-feature-walkthrough/reference-information-tax-module.html
+  - /docs/pbc/all/tax-management/202307.0/extend-and-customize/tax-module-reference-information.html
 ---
 
 

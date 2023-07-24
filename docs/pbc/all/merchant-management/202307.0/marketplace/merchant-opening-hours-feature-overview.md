@@ -4,7 +4,7 @@ last_updated: Jul 27, 2021
 description: The Merchant Opening Hours feature lets you define opening hours for a merchant.
 template: concept-topic-template
 redirect_from:
-- /docs/marketplace/user/features/202212.0/merchant-opening-hours-feature-overview.html
+- /docs/marketplace/user/features/202307.0/merchant-opening-hours-feature-overview.html
 - /docs/marketplace/dev/feature-walkthroughs/202307.0/merchant-opening-hours-feature-walkthrough.html
 ---
 

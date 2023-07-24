@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-company-users
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-users.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-b2b-account/retrieving-company-users.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-b2b-account/retrieving-company-users.html
 related:
   - title: Retrieving companies
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html

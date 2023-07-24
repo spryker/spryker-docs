@@ -4,7 +4,7 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/marketplace/dev/data-import/202212.0/file-details-merchant.csv.html
+  - /docs/marketplace/dev/data-import/202307.0/file-details-merchant.csv.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
@@ -12,7 +12,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 redirect_from:
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
-  - /docs/marketplace/dev/data-import/202212.0/file-details-merchant.csv.html
+  - /docs/marketplace/dev/data-import/202307.0/file-details-merchant.csv.html
 ---
 
 This document describes the `merchant.csv` file to configure [merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.

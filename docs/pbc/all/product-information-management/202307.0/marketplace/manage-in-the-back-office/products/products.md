@@ -4,7 +4,7 @@ description: Explains abstract and concrete products
 last_updated: Jan 17, 2023
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/back-office-user-guides/202212.0/catalog/products/products.html
+  - /docs/marketplace/user/back-office-user-guides/202307.0/catalog/products/products.html
 ---
 This section describes how to manage your products:
 * [Manage abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/abstract-products.html)

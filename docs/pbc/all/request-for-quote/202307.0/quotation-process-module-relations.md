@@ -4,7 +4,7 @@ description: On this page, you can find module relations for the Quotation Proce
 template: feature-walkthrough-template
 last_updated: Jun 16, 2021
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202212.0/quotation-process-feature-walkthrough/quotation-process-module-relations.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/quotation-process-feature-walkthrough/quotation-process-module-relations.html
 ---
 
 On this page, you can find the module relations for the [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html) feature.

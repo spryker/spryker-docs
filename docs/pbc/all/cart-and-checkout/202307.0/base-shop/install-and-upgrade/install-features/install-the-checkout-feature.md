@@ -11,13 +11,13 @@ redirect_from:
   - /docs/checkout-feature-integration
   - /docs/en/checkout-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/checkout-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/checkout-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202307.0/checkout-feature-integration.html  
   - /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
   - /docs/scos/dev/feature-integration-guides/202307.0/checkout-feature-integration.html
 related:
   - title: Install the Checkout Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-checkout-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-checkout-feature.md -->

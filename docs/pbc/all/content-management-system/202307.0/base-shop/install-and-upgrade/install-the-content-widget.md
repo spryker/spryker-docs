@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/enabling-cms-widget
   - /docs/enabling-cms-widget
   - /docs/en/enabling-cms-widget/docs/scos/dev/feature-integration-guides/202200.0/enabling-the-content-widget.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/enabling-the-content-widget.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/enabling-the-content-widget.html
 ---
 
-{% include pbc/all/install-features/202212.0/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/enable-the-content-widget.md -->
+{% include pbc/all/install-features/202307.0/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/enable-the-content-widget.md -->

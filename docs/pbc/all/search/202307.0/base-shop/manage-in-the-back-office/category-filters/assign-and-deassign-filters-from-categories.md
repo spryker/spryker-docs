@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-category-filters
   - /docs/en/managing-category-filters
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
-  - /docs/pbc/all/search/202212.0/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
+  - /docs/pbc/all/search/202307.0/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
 related:
   - title: Reorder category filters
     link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/reorder-category-filters.html

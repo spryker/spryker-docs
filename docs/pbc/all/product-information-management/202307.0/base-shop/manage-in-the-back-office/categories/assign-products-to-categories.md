@@ -11,7 +11,7 @@ redirect_from:
   - /docs/assigning-products-to-categories
   - /docs/en/assigning-products-to-categories
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/assigning-products-to-categories.html
-  - /docs/scos/user/back-office-user-guides/202212.0/catalog/category/assigning-products-to-categories.html
+  - /docs/scos/user/back-office-user-guides/202307.0/catalog/category/assigning-products-to-categories.html
 
 related:
   - title: Creating Categories

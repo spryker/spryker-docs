@@ -17,7 +17,7 @@ redirect_from:
   - /2021080/docs/en/order-history-reference-information
   - /docs/order-history-reference-information
   - /docs/en/order-history-reference-information
-  - /docs/scos/user/features/202212.0/customer-account-management-feature-overview/customer-accounts-overview.html
+  - /docs/scos/user/features/202307.0/customer-account-management-feature-overview/customer-accounts-overview.html
 ---
 
 A *customer account* contains the following customer information about the Storefront:

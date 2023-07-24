@@ -5,7 +5,7 @@ description: The extensive Cart module lets your customers add products to their
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-module-reference-information.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/cart-feature-walkthrough/cart-module-reference-information.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/cart-feature-walkthrough/cart-module-reference-information.html
   - /docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html
 ---
 

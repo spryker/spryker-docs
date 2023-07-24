@@ -12,9 +12,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-tax.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-tax.csv.html
-  - /docs/pbc/all/tax-management/202212.0/import-and-export-data/import-file-details-tax-sets.csv.html
-  - /docs/pbc/all/tax-management/202212.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html#import-file-parameters
+  - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-tax.csv.html
+  - /docs/pbc/all/tax-management/202307.0/import-and-export-data/import-file-details-tax-sets.csv.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html#import-file-parameters
 ---
 
 This document describes the `tax.csv` file to configure the [tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/tax-feature-overview.html) information in your Spryker Demo Shop.

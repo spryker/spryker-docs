@@ -4,7 +4,7 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant_stock.csv file to configure merchant stock information in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/marketplace/dev/data-import/202212.0/file-details-merchant-stock.csv.html
+  - /docs/marketplace/dev/data-import/202307.0/file-details-merchant-stock.csv.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
@@ -17,7 +17,7 @@ This document describes the `merchant_stock.csv` file to configure [merchant sto
 
 ## Import file dependencies
 
-<<<<<<<< HEAD:docs/pbc/all/warehouse-management-system/202212.0/marketplace/import-data/file-details-merchant-stock.csv.md
+<<<<<<<< HEAD:docs/pbc/all/warehouse-management-system/202307.0/marketplace/import-data/file-details-merchant-stock.csv.md
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
 - [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
 ========
@@ -25,7 +25,7 @@ This document describes the `merchant_stock.csv` file to configure [merchant sto
 - [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/import-and-export-data/file-details-warehouse.csv.html)
 
 
->>>>>>>> master:docs/pbc/all/merchant-management/202212.0/marketplace/import-data/file-details-merchant-stock.csv.md
+>>>>>>>> master:docs/pbc/all/merchant-management/202307.0/marketplace/import-data/file-details-merchant-stock.csv.md
 
 ## Import file parameters
 

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-carts-of-registered-users
   - /docs/managing-carts-of-registered-users
   - /docs/en/managing-carts-of-registered-users
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 related:
   - title: Managing items in carts of registered users
@@ -1716,7 +1716,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 <a name="retrieve-a-registered-users-carts-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/retrieve-a-registered-users-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-registered-users-carts-response-attributes.md -->
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |

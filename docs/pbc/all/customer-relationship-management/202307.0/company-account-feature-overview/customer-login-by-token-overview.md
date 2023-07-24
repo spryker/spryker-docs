@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-login-by-token-overview
   - /docs/customer-login-by-token-overview
   - /docs/en/customer-login-by-token-overview
-  - /docs/scos/user/features/202212.0/company-account-feature-overview/customer-login-by-token-overview.html
+  - /docs/scos/user/features/202307.0/company-account-feature-overview/customer-login-by-token-overview.html
 ---
 
 *Customer Login* by Token feature lets B2B users log in to Spryker Shop using a token.

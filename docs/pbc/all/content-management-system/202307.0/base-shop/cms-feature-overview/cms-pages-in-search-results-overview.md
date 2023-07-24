@@ -14,7 +14,7 @@ redirect_from:
   - /2021080/docs/en/searching-within-cms-pages
   - /docs/searching-within-cms-pages
   - /docs/en/searching-within-cms-pages
-  - /docs/scos/user/features/202212.0/cms-feature-overview/cms-pages-in-search-results-overview.html
+  - /docs/scos/user/features/202307.0/cms-feature-overview/cms-pages-in-search-results-overview.html
 ---
 
 Most often, shop visitors search for products; however, they also might need other information, like terms and conditions, legal information, or contacts, which are contained on [CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html).

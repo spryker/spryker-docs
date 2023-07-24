@@ -3,7 +3,7 @@ title: Edit filter preferences
 description: Learn how to edit filter preferences in the Back Office
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/pbc/all/search/202212.0/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html
+  - /docs/pbc/all/search/202307.0/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html
 related:
   - title: Standard filters overview
     link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/standard-filters-overview.html

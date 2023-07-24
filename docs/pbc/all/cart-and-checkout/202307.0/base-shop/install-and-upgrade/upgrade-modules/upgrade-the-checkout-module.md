@@ -30,8 +30,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-checkout.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkout.html
   - /module_migration_guides/mg-checkout.htm
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-checkout.html
-  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
+  - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-checkout.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
 related:
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html

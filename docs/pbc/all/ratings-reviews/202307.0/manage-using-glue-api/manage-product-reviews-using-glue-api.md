@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-product-ratings-and-reviews.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/managing-product-ratings-and-reviews.html  
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/managing-product-ratings-and-reviews.html  
 related:
   - title: Product Rating and Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html

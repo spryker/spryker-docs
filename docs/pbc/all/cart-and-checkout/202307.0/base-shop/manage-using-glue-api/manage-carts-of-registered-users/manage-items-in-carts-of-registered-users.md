@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-items-in-carts-of-registered-users
   - /docs/managing-items-in-carts-of-registered-users
   - /docs/en/managing-items-in-carts-of-registered-users
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
@@ -2443,10 +2443,10 @@ It is the responsibility of the API Client to track whether the selected items a
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-registered-users-cart-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/add-items-to-a-registered-users-cart-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202307.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
 
 For the attributes of other included resources, see the following:
 

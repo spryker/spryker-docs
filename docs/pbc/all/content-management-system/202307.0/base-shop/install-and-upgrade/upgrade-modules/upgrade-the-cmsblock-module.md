@@ -29,6 +29,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblock.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblock.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblock.html
-  - /docs/pbc/all/content-management-system/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+  - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cmsblock-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblock-module.md -->

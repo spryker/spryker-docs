@@ -4,7 +4,7 @@ last_updated: Jun 07, 2021
 description: This document describes the merchant_oms_process.csv file to configure Merchant state machines in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/pbc/all/order-management-system/202212.0/marketplace/import-data/file-details-merchant_oms_process.csv.html
+  - /docs/pbc/all/order-management-system/202307.0/marketplace/import-data/file-details-merchant_oms_process.csv.html
 related:
   - title: Merchant Oms
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html

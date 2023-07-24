@@ -4,7 +4,7 @@ last_updated: Aug 19, 2021
 description: The Product feature lets you create products, manage their characteristics and settings.
 template: concept-topic-template
 redirect_from:
-- /docs/scos/user/features/202212.0/product-feature-overview/product-feature-overview.html
+- /docs/scos/user/features/202307.0/product-feature-overview/product-feature-overview.html
 ---
 
 The following diagram shows the relations between abstract products and product variants on the Storefront:

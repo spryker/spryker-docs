@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-availability-notification-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-availability-notification-feature-integration.html
 related:
   - title: Install the Availability Notification feature
     link: docs/scos/dev/feature-integration-guides/page.version/availability-notification-feature-integration.html
@@ -23,4 +23,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-availability-notification-glue-api.md -->
+{% include pbc/all/install-features/202307.0/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-availability-notification-glue-api.md -->

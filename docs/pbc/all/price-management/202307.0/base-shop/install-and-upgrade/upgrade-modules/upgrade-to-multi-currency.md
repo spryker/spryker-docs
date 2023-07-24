@@ -29,7 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-multi-currency.html  
+  - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-multi-currency.html  
 related:
   - title: Upgrade the Currency
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html

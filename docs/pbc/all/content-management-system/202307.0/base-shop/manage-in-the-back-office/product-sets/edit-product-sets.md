@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-product-sets
   - /docs/en/managing-product-sets
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-sets/managing-product-sets.html
-  - /docs/pbc/all/content-management-system/202212.0/manage-in-the-back-office/product-sets/edit-product-sets.html
+  - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/product-sets/edit-product-sets.html
 related:
   - title: Create product sets
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html

@@ -11,8 +11,8 @@ redirect_from:
   - /docs/retireving-abstract-product-list-content-items
   - /docs/en/retireving-abstract-product-list-content-items
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
-  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
-  - /docs/pbc/all/content-management-system/202212.0/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
+  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
+  - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
 related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html

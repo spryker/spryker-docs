@@ -4,7 +4,7 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant_store.csv file to configure merchant store information in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/marketplace/dev/data-import/202212.0/file-details-merchant-store.csv.html
+  - /docs/marketplace/dev/data-import/202307.0/file-details-merchant-store.csv.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

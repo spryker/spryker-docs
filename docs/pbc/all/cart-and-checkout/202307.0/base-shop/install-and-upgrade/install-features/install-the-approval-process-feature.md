@@ -11,7 +11,7 @@ redirect_from:
   - /docs/approval-process-feature-integration
   - /docs/en/approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/approval-process-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/approval-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/approval-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/approval-process-feature-integration.html
 related:
   - title: Install the Quotation Process + Approval Process feature
@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-approval-process-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-approval-process-feature.md -->

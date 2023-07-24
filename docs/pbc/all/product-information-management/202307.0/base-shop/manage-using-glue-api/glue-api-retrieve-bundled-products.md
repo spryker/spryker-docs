@@ -13,8 +13,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/retrieving-bundled-products.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-bundled-products.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/retrieving-bundled-products.html
-  - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/glue-api-retrieve-bundled-products.html
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-bundled-products.html
+  - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-bundled-products.html
 related:
   - title: Product Bundles feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-bundles-feature-overview.html

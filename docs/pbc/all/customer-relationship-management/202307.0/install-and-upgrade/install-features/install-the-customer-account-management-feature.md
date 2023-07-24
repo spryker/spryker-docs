@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/customer-account-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/customer-account-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/customer-account-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/customer-account-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/customer-account-management-feature-integration.html
 related:
   - title: Customer Account Management + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html

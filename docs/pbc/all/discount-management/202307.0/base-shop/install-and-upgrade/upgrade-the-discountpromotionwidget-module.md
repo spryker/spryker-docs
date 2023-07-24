@@ -29,8 +29,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discountpromotionwidget.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountpromotionwidget.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountpromotionwidget.html
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-discountpromotionwidget.html  
-  - /docs/pbc/all/discount-management/202212.0/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html  
+  - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-discountpromotionwidget.html  
+  - /docs/pbc/all/discount-management/202307.0/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html  
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountpromotionwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountpromotionwidget-module.md -->

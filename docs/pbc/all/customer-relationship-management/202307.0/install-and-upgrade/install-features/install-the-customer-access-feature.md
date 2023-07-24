@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-access-feature-integration
   - /docs/customer-access-feature-integration
   - /docs/en/customer-access-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202212.0/customer-access-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/customer-access-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202304.0/customer-account-management-feature-integration.html
 related:
   - title: Install the Customer Access Glue API

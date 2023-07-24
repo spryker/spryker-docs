@@ -1,147 +1,138 @@
-# Localization
+---
+title: "Oryx: Localization"
+description: Localizations are decoupled from component implementations
+template: concept-topic-template
+last_updated: July 23, 2023
+---
 
-It is important to localize texts in UI instead of shipping hardcoded texts.
+Localization is an important part of internationalization (`i18n`) and is concerned with creating variations of the same application in different locales.
 
-To achieve this, we provide the `@spryker-oryx/utilities` package which introduces lightweight i18n capabilities for vanilla JS and Lit components. It is free from dependencies on other oryx packages like `injector`, so you can freely depend on it from the most low-level packages like `@spryker-oryx/ui`.
+While most localized content is managed in other systems, like product or content management systems, components often use small text fragments in the UI. Examples are static site labels or aria labels
 
-For full i18n capabilities, integrate the `@spryker-oryx/i18n` package. The package includes the capabilities like the following:
+To ensure that all components can be customized and localized, Oryx does not provide _any_ hardcoded text. Instead, components use _tokens_ that function as a reference to a text. When there's not (localized) text available for such reference, Oryx renders the token in a human readable format.
 
-- Enables the loading of actual translation texts from projects
-- Enables the usage of pluralization, genders, etc. in translations with the support of the [ICU engine](https://unicode-org.github.io/icu/userguide/icu/i18n.html)
-- Provides regional translations with fallbacks
+## Translation keys
+
+Translation keys, also knows as "i18n tokens", are used to resolve a localized text. The tokens are created with the following conventions in mind:
+
+- tokens are written in english
+- tokens are written in kebab-case format, e.g. `my-token`
+- tokens are organized by domains, e.g. `cart.add-to-cart`
+- tokens support context variables, which are added inside angle brackets using with camelCase format, e.g. `cart.totals.<count>-items`
+
+## Resolve translations from translation resources
+
+The localization of labels is driven by the current language and the translation key. Translations are supposed to be provided as additional lazy loaded resources next to the component implementation, although they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded as external resource, they can be provided by an API (e.g. 3rd party service) or by static JSON files.
+
+Oryx uses the "current" language to "lookup" the available labels. When the language is `en`, the locales for English are being resolved.
+
+If a language resource can be resolved, the translation key is evaluated against the available translations in the resource, using all "parts" of the key. For example, if you have a translation key that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `decrease` that might affect multiple components throughout multiple components. This results in a consistent and convenient translation mechanism, while remaining flexible to add very specific translations for some components.
+
+## Auto-conversion of translation keys
+
+If a translation key does not match any of the translations, or if the i18n feature is not installed (which is a default behavior), the translation key is auto-converted to a human readable message.
+
+For example, if you have a token that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `decrease` that might affect multiple components throughout multiple components. This provides a consistent and convenient translation mechanism, while remaining flexible to add very specific localizations for some components.
+
+The table below shows a few examples to help you understand how the tokens are translated.
+
+| Token                       | Converted label |
+| --------------------------- | --------------- |
+| `cart.increase`             | Increase        |
+| `cart.add-to-cart`          | Add to cart     |
+| `cart.totals.<count>-items` | 5 items         |
+
+This mechanism allows Oryx to **not** distribute any localizations as standard package or as part of the boilerplate. The reason for this is that labels are quit opinionated and might change rapidly over time, which would cause breaking changes.For 90% of the cases the keys are fairly short and provide an OK experience.
+
+_**note:** The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provide some localizations, mainly for demonstration reasons. While it's perfectly fine to use this package for your own demo's or initial project implementation, it is not recommended to rely your production code on this labs package, since the labs package might introduce breaking changes over time (hence there's no major versioning for this package)._
 
 ## Install i18n package
 
-To add full capabilities of i18n, load `I18nFeature` into the oryx app and configure translation texts into the app via a loader function:
+To use the i18n package, you can add the `I18nFeature` to the app and configure translation resources using the loader function:
 
 ```ts
-import { app, coreFeature } from '@spryker-oryx/core';
-import { I18nFeature } from '@spryker-oryx/i18n';
+import { appBuilder } from "@spryker-oryx/application";
+import { I18nFeature } from "@spryker-oryx/i18n";
 
-app()
-  .withFeature(coreFeature)
+export const app = appBuilder()
   .withFeature(
     new I18nFeature({
       // Here as example we are loading translations from TS modules
       load: (localeId) => import(`../i18n/${localeId}.ts`), // <-- Required part
-    }))
+    })
+  )
   .create();
 ```
 
-This gives you full flexibility to how and where to load your translation texts from. The function returns a promise of a `{ default: I18nData }` type. [`I18nData`](libs/i18n/src/lib/i18n.loader.ts) is an object with tokens as keys, and the values are actual translation texts.
+This gives you full flexibility to how and where to load your translation texts from. The `load` function returns a promise of a `{ default: I18nData }` type.
 
-Example of a translation data in the form of a TS module:
+## Translation resources
+
+In order to translate text in Oryx, you can provide translation data in a TS module. You can also integrate those in data provided by a 3rd party translation engine.
 
 ```ts
 export default {
-  'domain.hello': 'Hola!',
+  increase: "Increase",
+
+  // using token parameters
+  "cart.entry.<quantity>-items": "x {quantity}",
+
+  // pluralization example
+  "order.<count>-items":
+    "Products ({count, plural, one {{count} item} other {{count} items}})",
 };
 ```
 
-## Tokens
-
-Tokens are used to define translation texts. To write tokens, follow the rules:
-
-- Use kebab-case format.
-- Prefix the main text with `domain.`. Example: `domain.my-text`.
-- For context variables, use camelCase with the tag syntax `<>`. Example: `domain.my-text-<varName>`.
-
-### Token lookups
-
-When a token is being translated, it is used as a key to find a needed translation text in currently used language data bundle:
-
-1. Check if the token exists in current data bundle.
-2. If it exists, return translation text.
-3. Otherwise, check in fallback language data bundle.
-4. If it exists, in the fallback bundle, return fallback translation text.
-5. Otherwise, start splitting the token by dot and perform lookups by traversing the token parts from the most specific to the less specific. For example, the first lookup is `domain.my-text`, and the second one is `my-text`.
-6. If found in current data bundle, return less specific translation text.
-7. Otherwise, perform a fallback transformation.
-
-### Token fallback transformation
-
-If a token translation is not found in any of the language data bundles, or if the i18n feature is not loaded (which is a default behavior), the token is auto-converted to a readable message as follows:
-
-1. Cut away everything before the right-most dot. For example, `cart.items-count-<count>` -> `items-count-<count>`.
-2. Replace all dashes (`-`) with spaces (` `). For example, `items-count-<count>` -> `items count <count>`.
-3. Capitalize the first letter. For example, `items count <count>` -> `Items count <count>`.
-4. Interpolate all the context variables within the token. For example, `Items count <count>` -> `Items count 5`.
-5. Trim the final string and return it.
-
-## Translation engine
-
-When a full i18n feature is used from `@spryker-oryx/i18n` package, translation texts can use the full power of standartized ICU message expressions:
-
-- [Message formatting](https://unicode-org.github.io/icu/userguide/format_parse/messages/)
-
-Optionally, other ICU capabilities may be loaded:
-
-- [Number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/)
-- [Date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/)
-
-### Message formatting
-
-ICU message formatting defines standard syntax to handle common translation cases:
+The translation engine is based on standardized [ICU message expressions](https://unicode-org.github.io/icu/userguide/format_parse/messages/). The ICU message format defines a standard syntax to handle common translation cases:
 
 - Pluralization: for example, `You have {count} {count, plural, one {item} other {items}} in cart`.
 - Selects: for example, `{gender, select, male {He} female {She} other {They}} invited you to party!`.
 
-## Localize texts in Lit components
+Other ICU capabilities, such as [number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/) or [date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/) can be loaded in addition. Most likely this is not needed in your project, since Oryx uses the standard [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) api that is widely supported.
 
-To localize texts inside lit components, use the [`i18n`](https://github.com/spryker/oryx/blob/development/libs/base/utilities/src/directives/i18n/i18n.directive.ts) lit-directive from the `@spryker-oryx/utilities` package:
+## Use the i18n directive in components
 
-```ts
-import { LitElement, html } from 'lit';
-import { i18n } from '@spryker-oryx/utilities';
+Localized content is using [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed, for example when the user uses the localization selector or when you use the `LocaleService.set()` api in code. All localized content in Oryx components is updated instantly without a page reload.
 
-class ExampleComponent extends LitElement {
-  protected override render() {
-    return html`<div>${i18n('domain.hello')}</div>`;
-  }
-}
-```
+To support such fine-grained reactivity, a frameworks specific implementation is required. Oryx provides a `i18n` lit-directive that is used inside components. Using this directive, ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can leverage the `I18nMixin` in your component implementation that will add the `@signalAware()` and expose the `i18n` function as a method on the component.
 
-For tokens with context you can pass context object as a second argument to the `i18n` directive:
+In the following code you see an example of using i18n in action in a Lit component. The tokens are used in both attributes and plain text, and the example demonstrates the usage with and without a token context.
 
 ```ts
-import { LitElement, html } from 'lit';
-import { i18n } from '@spryker-oryx/utilities';
+import { I18nMixin } from "@spryker-oryx/utilities";
 
-class ExampleComponent extends LitElement {
-  protected override render() {
-    return html`<div>${i18n('domain.hello-<name>', { name: 'world' })}</div>`;
+export class MyComponent extends I18nMixin(LitElement) {
+  protected override render(): TemplateResult {
+    return html`
+      <button aria-label=${this.i18n("site.my-token")}>
+        ${this.i18n("site.my-token-<count>", { count: 12 })}
+      </button>
+    `;
   }
 }
 ```
 
 ## Localize texts in vanilla JS components
 
-To localize texts in vanilla JS or TS, use the [`I18nService`](https://github.com/spryker/oryx/blob/development/libs/platform/i18n/src/lib/i18n/i18n.service.ts) service from the `@spryker-oryx/i18n` package:
+The i18n directive uses the `I18nService`. You can inject the `I18nService` in JS or TS using [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection.html). The service provides an observable that you can subscribe to.
 
 ```ts
-import { inject } from '@spryker-oryx/injector';
-import { I18nService } from '@spryker-oryx/i18n';
+import { inject } from "@spryker-oryx/injector";
+import { I18nService } from "@spryker-oryx/i18n";
 
 class Example {
   constructor(i18nService = inject(I18nService)) {
     i18nService
-      .translate('domain.hello')
+      .translate("domain.hello")
       .subscribe((text) => console.log(text));
   }
 }
 ```
 
-For tokens with context you can pass context object as a second argument to the `I18nService`:
+If a token requires a context, you can pass the context as a second argument to the `translate` method.
 
 ```ts
-import { inject } from '@spryker-oryx/injector';
-import { I18nService } from '@spryker-oryx/i18n';
-
-class Example {
-  constructor(i18nService = inject(I18nService)) {
-    i18nService
-      .translate('domain.hello-<name>', { name: 'world' }))
-      .subscribe((text) => console.log(text));
-  }
-}
+i18nService
+  .translate('domain.hello-<name>', { name: 'world' }))
+  .subscribe((text) => console.log(text));
 ```

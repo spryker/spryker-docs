@@ -171,7 +171,6 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
-
 versions:
   '201811.0': '201811.0'
   '201903.0': '201903.0'
@@ -183,6 +182,7 @@ versions:
   '202204.0': '202204.0'
   '202212.0': '202212.0'
   '202304.0': 'Upcoming release'
+  '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -250,6 +250,10 @@ versioned_categories:
       - tax-management
       - user-management
       - warehouse-management-system
+      - push notification
+      - warehouse-picking
+      - service-points
+
 
 
 # these are defaults used for the front matter for these file types

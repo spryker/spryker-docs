@@ -45,9 +45,9 @@ While the user navigates thorugh a single page application, it is crucial for co
 
 RxJS operates on data streams and updates them in memory, but it doesn't synchronize this to the UI automatically. Each JavaScript framework ships its own opinionated method to update the DOM. The selected method contributes significantly to the performance and user experience of the application.
 
-The components provided in the Oryx libraries are built with Lit. Lit provides a highly efficient system to only synchronize the minimum required updates to the DOM. When updates are loaded asynchronously, the UI needs to be updated every time new data is emitted. To make this as transparent as possible, the `@signalAware()` decorator is used in the UI components, m allowing for the use of `signals` when building UI, which automatically requests updates to the view when needed.
+The components provided in the Oryx libraries are built with Lit. Lit provides a highly efficient system to only synchronize the minimum required updates to the DOM. When updates are loaded asynchronously, the UI needs to be updated every time new data is emitted. To make this as transparent as possible, the `@signalAware()` decorator is used in the UI components, allowing for `signals` to be used when building UI, which automatically requests updates to the view when needed.
 
-The following example shows the usage of the `computed` signal. `Computed` wraps observable into `signal` that subscribes to the underlying observable automatically and triggers updating the view. This means that component developers do not need to worry about how the reactive system works under the hood.
+The following example shows the usage of the `computed` signal. `Computed` wraps an observable into `signal` that subscribes to the underlying observable automatically and triggers updating the view. This means that component developers do not need to worry about how the reactive system works under the hood.
 
 ```ts
 export class ProductPriceComponent {

@@ -95,7 +95,7 @@ const counter = effect(() => {
 
 Oryx provides directives like `@signalAware` and `@elementEffect` to seamlessly integrate signals and effects with Lit components. These directives help manage reactivity and side effects, leading to cleaner and more efficient code.
 
-### @signalAware directive
+### `@signalAware` directive
 
 The `@signalAware` decorator provides additional functionality when using signals in components.
 
@@ -104,10 +104,9 @@ The `@signalAware` decorator provides additional functionality when using signal
 class MyComponent extends LitElement {}
 ```
 
-This decorator is required to make your component work with signals as expected.
-When used, the component will automatically detect signals and render changes whenever a signal alters. It does this intelligently, considering only the signals relevant to the last render.
+This decorator is required to make a component work with signals as expected. With the decorator, the component automatically detects signals and renders changes whenever a signal alters. It does this intelligently, considering only the signals relevant to the last render.
 
-Some Oryx domain components are not using this decorator directly, as it is already applied to some common domain mixins (eg. `ContentMixin`, `ProductMixin`, etc.).
+Some Oryx domain components are not using this decorator directly, as it is already applied to some common domain mixins, like `ContentMixin` or `ProductMixin`.
 
 ### `@elementEffect` directive
 
@@ -121,4 +120,4 @@ class MyComponent extends LitElement {
 }
 ```
 
-In the above example, the `logProductCode` effect starts automatically as soon as `MyComponent` connects to the DOM. It logs the product code each time the `$product` signal updates. When `MyComponent` disconnects from the DOM, the effect stops. This directive simplifies effect management by automatically linking them to component lifecycles, making your component code cleaner and easier to manage.
+In the preceding example, the `logProductCode` effect starts automatically as soon as `MyComponent` connects to the DOM. It logs the product code each time the `$product` signal updates. When `MyComponent` disconnects from the DOM, the effect stops. 

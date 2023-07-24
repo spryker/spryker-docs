@@ -69,16 +69,7 @@ The **Reset Password** page opens.
 
 Your password is now updated. To log in, enter the new password in the login form.
 
-
-<!---
-## Logging out of the Merchant Portal
-
-To log out, in the top right corner of the Merchant Portal, click the user icon and then click **Logout**.
-
-![Logout of Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Login+and+logout/log-out-of-the-merchant-portal.gif)
--->
-
-**What’s Next?**
+## Next steps
 
 To have a quick overview of Merchant performance, see [Managing merchant's performance data](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/dashboard/managing-merchants-performance-data.html).
 

@@ -137,7 +137,7 @@ task :check_mp_user do
     /docs\/pbc\/.+/,
     /docs\/sdk\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202212\.0\/.+/
+    /docs\/marketplace\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

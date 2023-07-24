@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
    - /docs/marketplace/dev/feature-integration-guides/202307.0/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
    - /docs/marketplace/dev/feature-integration-guides/202307.0/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
+   - /docs/pbc/all/merchant-management/202307.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html
 ---
 
 {% include pbc/all/install-features/202307.0/marketplace/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/marketplace/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.md -->

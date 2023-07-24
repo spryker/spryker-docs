@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/resolving-search-engine-friendly-urls
   - /docs/resolving-search-engine-friendly-urls
   - /docs/en/resolving-search-engine-friendly-urls
+  - /docs/scos/dev/glue-api-guides/202307.0/resolving-search-engine-friendly-urls.html
 related:
   - title: Glue API - Spryker Core feature integration
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html

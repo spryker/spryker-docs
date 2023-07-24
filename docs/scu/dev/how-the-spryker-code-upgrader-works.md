@@ -25,11 +25,15 @@ As modules depend on other modules, we tend to release them in groups. When the 
 
 ### 2. Updates the modules and libraries
 
-Using `composer`, the Upgrader tool updates the modules in groups. After updating the modules, the Upgrader tool returns the list of updated modules and proceeds to the next step.
+Using `composer`, the Upgrader tool updates the modules in groups.
+
+Firstly it applies the security releases (the releases with security updates). For such releases only minor and patch versions are applied. The major releases will be applied after the module be updated to major version.
+
+After updating the modules, the Upgrader tool returns the list of updated modules and proceeds to the next step.
 
 If the Upgrader tool can’t update a module, it skips the module and the remaining groups. If all the groups failed to update, the Upgrader tool returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
 
-By default, the Upgrader tool updates only minor and patch versions. When the Upgrader tool finds a group with a [major release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it won't update it and informs you about that:
+By default, the Upgrader tool updates only minor and patch versions. When the Upgrader tool finds a group with a [major release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it won't update it and informs you about that (the exclusion only for the security major releases that silently skipped):
 
 ```bash
 There is a major release available for module spryker/merchant-product-approval. 

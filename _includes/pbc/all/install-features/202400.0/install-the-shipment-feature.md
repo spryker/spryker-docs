@@ -968,7 +968,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that during checkout on Shipment step you can only see shipment methods that has relation to active shipment types related to current store or shipment methods without shipment type relation:
+Make sure that during checkout on the Shipment step, you can only see shipment methods that have relation to active shipment types related to the current store or shipment methods without shipment type relation:
 
 1. Disable one of the shipment types by setting `isActive = 0` in `spy_shipment_type` DB table.
 2. Set its ID as `fk_shipment_type` in `spy_shipment_method_table`.

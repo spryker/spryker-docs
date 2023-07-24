@@ -1,7 +1,9 @@
 ---
-title: Data Transformer Pluck
-description: This document provides details about the Data Transformer Pluck service in the Components Library.
+title: Data Transformer Lens
+description: This document provides details about the Data Transformer Lens service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/pluck.lens
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html
@@ -13,38 +15,39 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/date-parse.html
   - title: Data Transformer Date-serialize
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/date-serialize.html
-  - title: Data Transformer Lens
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/lens.html
   - title: Data Transformer Object-map
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/object-map.html
+  - title: Data Transformer Pluck
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/pluck.html
 ---
 
-This document explains the Data Transformer Pluck service in the Components Library.
+This document explains the Data Transformer Lens service in the Components Library.
 
 ## Overview
 
-Data Transformer Pluck is an Angular Service that selects and returns a nested object by path via configuration.
+Data Transformer Lens is an Angular Service that updates nested objects by path using another Data Transformer set up with a configuration object.
 
-The following `datasource` example returns the value of the `three` key ('123') of the `data` input after receiving the response.
+In the following example `datasource` will return an object with the transformed `date`.
 
 Service configuration:
 
-- `path`—the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in Javascript.
+- `path`—the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
+- `transformer`—a Data Transformer that is set up with a configuration object.
 
 ```html
 <spy-select
     [datasource]="{
         type: 'inline',
         data: {
-            one: {
-                two: {
-                    three: '123',  
-                },
-            },
+            type: 'date',
+            date: '2020-09-24T15:20:08+02:00',
         },
         transform: {
-            type: 'pluck',
-            path: 'one.two.three',
+            type: 'lens',
+            path: 'date',
+            transformer: {
+                type: 'date-parse',
+            },
         },
     }"
 >
@@ -58,14 +61,14 @@ Register the service:
 ```ts
 declare module '@spryker/data-transformer' {
     interface DataTransformerRegistry {
-        pluck: PluckDataTransformerService;
+        lens: LensDataTransformerService;
     }
 }
 
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
-            pluck: PluckDataTransformerService,
+            lens: LensDataTransformerService,
         }),
     ],
 })
@@ -74,10 +77,11 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Data Transformer Pluck:
+Below you can find interfaces for the Data Transformer Lens:
 
 ```ts
-export interface PluckDataTransformerConfig extends DataTransformerConfig {
+export interface LensDataTransformerConfig extends DataTransformerConfig {
     path: string;
+    transformer: DataTransformerConfig;
 }
 ```

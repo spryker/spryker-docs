@@ -1,23 +1,25 @@
 ---
-title: Data Transformer Collate Filter Range
-description: This document provides details about the Data Transformer Collate Filter Range service in the Components Library.
+title: Data Transformer Collate Filter Text
+description: This document provides details about the Data Transformer Collate Filter Text service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/filters/text.html
 related:
   - title: Data Transformer Filters
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/index.html
   - title: Data Transformer Collate Filter Equals
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/equals.html
-  - title: Data Transformer Collate Filter Text
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/text.html
+  - title: Data Transformer Collate Filter Range
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/range.html
 ---
 
-This document explains the Data Transformer Collate Filter Range service in the Components Library.
+This document explains the Data Transformer Collate Filter Text service in the Components Library.
 
 ## Overview
 
-Data Transformer Collate Filter Range is an Angular Service that implements filtering to range of data values based on configuration.
+Data Transformer Collate Filter Text is an Angular Service that implements filtering to the text value of data based on configuration.
 
-Check out an example usage of the Data Transformer Collate Filter Range in the `@spryker/table` config:
+Check out an example usage of the Data Transformer Collate Filter Text in the `@spryker/table` config:
 
 ```html
 <spy-table
@@ -26,15 +28,9 @@ Check out an example usage of the Data Transformer Collate Filter Range in the `
             ...,                                               
             transform: {
                 ...,
-                filter: {
-                    select1: {
-                        type: 'range',
-                        propNames: 'col1',
-                    },
-                    select2: {
-                        type: 'range',
-                        propNames: ['col2', 'col1'],
-                    },
+                search: {
+                    type: 'text',
+                    propNames: ['col1', 'col2'],
                 },
             },
         },
@@ -50,7 +46,7 @@ Register the service:
 ```ts
 declare module '@spryker/data-transformer.collate' {
     interface DataTransformerFilterRegistry {
-        range: RangeDataTransformerFilterService;
+        text: TextDataTransformerFilterService;
     }
 }
 
@@ -60,7 +56,7 @@ declare module '@spryker/data-transformer.collate' {
             collate: CollateDataTransformerService,
         }),
         CollateDataTransformer.withFilters({
-            range: RangeDataTransformerFilterService,
+            text: TextDataTransformerFilterService,
         }),
     ],
 })
@@ -69,7 +65,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Data Transformer Collate Filter Range:
+Below you can find interfaces for the Data Transformer Collate Filter Text:
 
 ```ts
 interface DataTransformerFilterConfig {

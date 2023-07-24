@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Filters
+title: "Collate Data Transformers: Filters"
 description: This document provides details about the Data Transformer Filters service in the Components Library.
 template: concept-topic-template
 related:

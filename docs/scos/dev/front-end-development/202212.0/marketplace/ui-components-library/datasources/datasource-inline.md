@@ -2,6 +2,8 @@
 title: Datasource Inline
 description: This document provides details about the Datasource Inline service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-inline.html
 related:
   - title: Datasources
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/index.html

@@ -1,5 +1,5 @@
 ---
-title: Setting up the Merchant Portal
+title: Set up the Merchant Portal
 description: This document provides details about setting up Spryker Marketplace project.
 template: howto-guide-template
 related:

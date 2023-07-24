@@ -2,6 +2,8 @@
 title: Data Transformer Object-map
 description: This document provides details about the Data Transformer Object-map service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/object-map.html
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html

@@ -1,7 +1,9 @@
 ---
-title: Url Persistence Strategy
+title: URL persistence strategy
 description: This document provides details about the Url Persistence Strategy service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/persistence/url-persistence-strategy.html
 related:
   - title: Persistence
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/index.html

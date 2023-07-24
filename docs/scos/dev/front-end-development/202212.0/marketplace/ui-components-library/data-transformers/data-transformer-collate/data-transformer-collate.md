@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Collate
+title: "Data Transformer: Collate"
 description: This document provides details about the Data Transformer Collate service in the Components Library.
 template: concept-topic-template
 related:

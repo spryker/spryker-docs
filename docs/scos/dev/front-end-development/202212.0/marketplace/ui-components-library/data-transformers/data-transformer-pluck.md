@@ -1,7 +1,9 @@
 ---
-title: Data Transformer Date-serialize
-description: This document provides details about the Data Transformer Date-serialize service in the Components Library.
+title: Data Transformer Pluck
+description: This document provides details about the Data Transformer Pluck service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/pluck.html
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html
@@ -11,29 +13,40 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/chain.html
   - title: Data Transformer Date-parse
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/date-parse.html
+  - title: Data Transformer Date-serialize
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/date-serialize.html
   - title: Data Transformer Lens
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/lens.html
   - title: Data Transformer Object-map
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/object-map.html
-  - title: Data Transformer Pluck
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/pluck.html
 ---
 
-This document explains the Data Transformer Date-serialize service in the Components Library.
+This document explains the Data Transformer Pluck service in the Components Library.
 
 ## Overview
 
-Data Transformer Date-serialize is an Angular Service that serializes JS Date Object into a Date ISO string.
+Data Transformer Pluck is an Angular Service that selects and returns a nested object by path via configuration.
 
-In the following example, the `datasource` transforms `date` object into the serialized `date` string.
+The following `datasource` example returns the value of the `three` key ('123') of the `data` input after receiving the response.
+
+Service configuration:
+
+- `path`—the name of the property from which the value needs to be retrieved. The `path` may contain nested properties separated by dots, just like in Javascript.
 
 ```html
 <spy-select
     [datasource]="{
         type: 'inline',
-        data: Date.now(),
+        data: {
+            one: {
+                two: {
+                    three: '123',  
+                },
+            },
+        },
         transform: {
-            type: 'date-serialize'
+            type: 'pluck',
+            path: 'one.two.three',
         },
     }"
 >
@@ -47,14 +60,14 @@ Register the service:
 ```ts
 declare module '@spryker/data-transformer' {
     interface DataTransformerRegistry {
-        'date-serialize': DateSerializeDataTransformerConfig;
+        pluck: PluckDataTransformerService;
     }
 }
 
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
-            'date-serialize': DateSerializeDataTransformerService,
+            pluck: PluckDataTransformerService,
         }),
     ],
 })
@@ -63,8 +76,10 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Data Transformer Date-serialize:
+Below you can find interfaces for the Data Transformer Pluck:
 
 ```ts
-export interface DateSerializeDataTransformerConfig extends DataTransformerConfig {}
+export interface PluckDataTransformerConfig extends DataTransformerConfig {
+    path: string;
+}
 ```

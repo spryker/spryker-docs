@@ -3,9 +3,9 @@
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.<br>The current feature integration
-guide only adds the following functionalities:
+The following feature integration guide expects the basic feature to be in place.
 
+The current feature integration guide only adds the following functionalities:
 * Shipment Back Office UI
 * Delivery method per store
 * Shipment data import
@@ -220,7 +220,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 Configure tables to be published to `spy_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
 
-1.  In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module configuration:
+1. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module configuration:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -309,7 +309,7 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 | ShipmentTypeStoreWriterPublisherPlugin | Publishes shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
 | ShipmentTypePublisherTriggerPlugin     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -355,6 +355,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+</details>
 
 5. Set up synchronization plugins:
 
@@ -413,6 +414,7 @@ In Redis, make sure data is represented in the following format:
     "_timestamp": 1684933897.870368
 }
 ```
+
 {% endinfo_block %}
 
 ### 6) Import shipment methods
@@ -970,7 +972,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 Make sure that during checkout on the Shipment step, you can only see shipment methods that have relation to active shipment types related to the current store or shipment methods without shipment type relation:
 
-1. Deactivate one of the shipment types by setting `isActive = 0` in the `spy_shipment_type` DB table.
+1. In the `spy_shipment_type` DB table, set `isActive = 0` to deactivate one of the shipment types.
 2. Set its ID as `fk_shipment_type` in `spy_shipment_method_table`.
 3. In the Storefront, add an item to the cart, do a checkout, and proceed to the Shipment step.
 4. Check that there's no shipment method related to inactive shipment type in the shipment form.
@@ -1055,8 +1057,8 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
-| Product      | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
+| Product      | {{page.version}} | [Isntall the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
 

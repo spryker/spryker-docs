@@ -164,7 +164,7 @@ With the market showing an increasing number of marketplaces, Spryker has integr
 
 Customer payments can now be split in the background and assigned to the corresponding vendors when a client buys a product delivered by different vendors. This feature ensures customers can buy several units of the same product sold by different vendors while still going through the checkout with one single order and one single payment.
 
-**Documentation**: [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html).
+**Documentation**: [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/pbc/all/payment-service-provider/{{site.version}}/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html).
 
 ### Adyen
 Our recently finished Adyen integration covers a wide range of payment methods used both in the DACH region as well as outside of it, thus making sure customers can select the most appropriate payment method.

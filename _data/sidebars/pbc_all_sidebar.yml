@@ -423,6 +423,10 @@ entries:
         nested:
           - title: Base shop
             nested:
+              - title: What's changed
+                url: /docs/pbc/all/content-management-system/base-shop/whats-changed-in-cms.html
+                include_versions:
+                - "202204.0"
               - title: CMS feature overview
                 url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-feature-overview.html
                 nested:
@@ -1105,6 +1109,11 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
                   - title: Merchants and Merchant Relations
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchants-and-merchant-relations-feature.html
+                  - title: Upgrade the MerchantGui module
+                    url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
+                  - title: Upgrade the Merchant module
+                    url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
+              
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -1168,6 +1177,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-tax-feature.html
                       - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
+                      - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management
+                        url: /docs/pbc/all/merchant-management/202212.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html
                       - title: Merchant Switcher
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html
                       - title: Merchant Switcher + Customer Account Management
@@ -1295,7 +1306,7 @@ entries:
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
           - title: Retrieve store configuration using Glue API
-            url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-retrieve-protected-resources.html
+            url: /docs/pbc/all/miscellaneous/202212.0/glue-api-retrieve-store-configuration.html
           - title: Third-party integrations
             nested:
               - title: Customer service
@@ -2402,6 +2413,10 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
                       - title: Stock
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html
+                      - title: StockSalesConnector
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stocksalesconnector-module.html
+                        include_versions:
+                        - "202204.0"
                       - title: Touch
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
 
@@ -2628,6 +2643,8 @@ entries:
                 url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-approval-process-feature-overview.html
               - title: Marketplace Product Options feature overview
                 url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-options-feature-overview.html
+              - title: Marketplace Merchant Portal Product Management feature overview
+                url: /docs/pbc/all/product-information-management/marketplace/marketplace-merchant-portal-product-management-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -2740,6 +2757,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-approval-process-feature-domain-model-and-relationships.html
                       - title: Marketplace Product Options
                         url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-options-feature-domain-model-and-relationships.html
+              - title: "Marketplace Merchant Portal Product Management feature: Domain model and relationships"
+                url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-merchant-portal-product-management-feature-domain-model-and-relationships.html
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:

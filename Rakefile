@@ -216,7 +216,6 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
   ]

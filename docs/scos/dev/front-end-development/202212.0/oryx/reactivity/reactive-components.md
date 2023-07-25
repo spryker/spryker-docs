@@ -41,13 +41,13 @@ export class ProductPriceComponent {
 
 ## Updating data in the DOM
 
-While the user navigates thorugh a single page application, it is crucial for components to be updated accordingly. This section describes how data updates are propagated throughout the UI in Oryx.
+While the user navigates thorugh a single page application, it's crucial for components to be updated accordingly. This section describes how data updates are propagated throughout the UI in Oryx.
 
 RxJS operates on data streams and updates them in memory, but it doesn't synchronize this to the UI automatically. Each JavaScript framework ships its own opinionated method to update the DOM. The selected method contributes significantly to the performance and user experience of the application.
 
 The components provided in the Oryx libraries are built with Lit. Lit provides a highly efficient system to only synchronize the minimum required updates to the DOM. When updates are loaded asynchronously, the UI needs to be updated every time new data is emitted. To make this as transparent as possible, the `@signalAware()` decorator is used in the UI components, allowing for `signals` to be used when building UI, which automatically requests updates to the view when needed.
 
-The following example shows the usage of the `computed` signal. `Computed` wraps an observable into `signal` that subscribes to the underlying observable automatically and triggers updating the view. This means that component developers do not need to worry about how the reactive system works under the hood.
+The following example shows the usage of the `computed` signal. `Computed` wraps an observable into a `signal` that automatically subscribes to the underlying observable and triggers updating the view. This means that component developers don't need to worry about how the reactive system works under the hood.
 
 ```ts
 export class ProductPriceComponent {
@@ -66,9 +66,9 @@ export class ProductPriceComponent {
 Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a _local_ price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. For managing these streams, you can leverage signals, which have the ability to combine multiple observables and operate on the combined results.
 
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "RxJS operators instead of signals" %}
 
-This guide emphasizes the use of signals; however, if you are experienced with RxJS, its operators can be applied to manage more complex data stream operations.
+If you want to manage more complex data stream operations, you can apply RxJS operators instead of signals.
 
 {% endinfo_block %}
 
@@ -93,7 +93,7 @@ export class ProductPriceComponent {
 }
 ```
 
-In this example, the product data is observed from `ProductService`, by creating a `$product` signal. This means that, whenever the product and its route change, new product data is emitted and formatted. `PriceService` is used to format both the sales and original prices. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object, and exposed as a computed signal to the component.
+In the preceding example, the product data is observed from `ProductService` by creating a `$product` signal. Whenever the product and its route change, new product data is emitted and formatted. `PriceService` formats the sales and the original price. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object and exposed as a computed signal to the component.
 
 ## Next steps
 

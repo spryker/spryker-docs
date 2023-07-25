@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Pluck
+title: "Data Transformer: Pluck"
 description: This document provides details about the Data Transformer Pluck service in the Components Library.
 template: concept-topic-template
 redirect_from:

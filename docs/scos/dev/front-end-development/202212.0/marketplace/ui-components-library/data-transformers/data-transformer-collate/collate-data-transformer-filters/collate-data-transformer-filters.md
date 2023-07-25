@@ -1,7 +1,9 @@
 ---
-title: "Collate Data Transformers: Filters"
+title: "Collate data transformer: Filters"
 description: This document provides details about the Data Transformer Filters service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/filters/
 related:
   - title: Data Transformer Collate Filter Equals
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/equals.html

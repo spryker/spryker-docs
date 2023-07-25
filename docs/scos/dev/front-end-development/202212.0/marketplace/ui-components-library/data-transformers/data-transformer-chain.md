@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Chain
+title: "Data Transformer: Chain"
 description: This document provides details about the Data Transformer Chain service in the Components Library.
 template: concept-topic-template
 redirect_from:

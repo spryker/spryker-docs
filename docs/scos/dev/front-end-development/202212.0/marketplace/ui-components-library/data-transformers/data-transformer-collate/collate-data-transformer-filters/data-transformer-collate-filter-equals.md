@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Collate Filter Equals
+title: "Data transformer Collate filter: Equals"
 description: This document provides details about the Data Transformer Collate Filter Equals service in the Components Library.
 template: concept-topic-template
 redirect_from:

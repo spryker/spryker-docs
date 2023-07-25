@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Collate Filter Text
+title: "Data transformer Collate filter: Text"
 description: This document provides details about the Data Transformer Collate Filter Text service in the Components Library.
 template: concept-topic-template
 redirect_from:

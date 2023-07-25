@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Array-map
+title: "Data Transformer: Array-map"
 description: This document provides details about the Data Transformer Array-map service in the Components Library.
 template: concept-topic-template
 redirect_from:

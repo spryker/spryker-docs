@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Date-parse
+title: "Data Transformer: Date-parse"
 description: This document provides details about the Data Transformer Date-parse service in the Components Library.
 template: concept-topic-template
 redirect_from:

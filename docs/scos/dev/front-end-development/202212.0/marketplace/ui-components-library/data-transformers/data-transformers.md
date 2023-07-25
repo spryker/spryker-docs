@@ -3,6 +3,8 @@ title: Data Transformers
 last_updated: Jun 07, 2021
 description: This document provides details about the Data Transformers service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/
 related:
   - title: Data Transformer Array-map
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/array-map.html

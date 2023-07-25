@@ -1,5 +1,5 @@
 ---
-title: Data Transformer Lens
+title: "Data Transformer: Lens"
 description: This document provides details about the Data Transformer Lens service in the Components Library.
 template: concept-topic-template
 redirect_from:

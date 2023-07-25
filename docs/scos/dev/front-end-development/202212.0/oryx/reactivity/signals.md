@@ -7,7 +7,7 @@ last_updated: Jul 11, 2023
 
 Signals offer a clean and efficient reactivity API for components in the Oryx framework. Signals contain values that can change over time. Whenever a new value is received, the component is automatically updated by the signal in an efficient way.
 
-Signals provide a declarative syntax for component logic while seamlessly integrating with observables from domain services. This allows component developer to avoid the more complex and verbose logic of reactive programming.
+Signals provide a declarative syntax for component logic while seamlessly integrating with observables from domain services. This lets component developers avoid the more complex and verbose logic of reactive programming.
 
 ## Implementation of signals in Oryx
 
@@ -37,7 +37,7 @@ const values = signal(observable$);
 
 You can initialize signals with options to adjust their behavior:
 
-- `equal`: allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal update the component. It can be beneficial to avoid unnecessary updates to the components when new and old values are practically identical.
+- `equal`: allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives you control over when a signal updates the component. It can be beneficial to avoid unnecessary updates to the components when new and old values are practically identical.
 
 - `initialValue`: this option is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
 

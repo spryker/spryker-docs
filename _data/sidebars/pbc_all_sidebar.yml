@@ -1178,7 +1178,7 @@ entries:
                       - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management
-                        url: /docs/pbc/all/merchant-management/202212.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature.html
                       - title: Merchant Switcher
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html
                       - title: Merchant Switcher + Customer Account Management
@@ -1306,7 +1306,7 @@ entries:
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
           - title: Retrieve store configuration using Glue API
-            url: /docs/pbc/all/miscellaneous/202212.0/glue-api-retrieve-store-configuration.html
+            url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
           - title: Third-party integrations
             nested:
               - title: Customer service

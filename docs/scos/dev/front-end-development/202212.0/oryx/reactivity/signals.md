@@ -5,8 +5,9 @@ template: concept-topic-template
 last_updated: Jul 11, 2023
 ---
 
+Signals offer a clean and efficient reactivity API for components in the Oryx framework. Signals contain values that can change over time. Whenever a new value is received, the component is automatically updated by the signal in an efficient way.
 
-Signals offer a clean and efficient reactivity API for components in the Oryx framework. They allow for the declarative formulation of component logic while seamlessly integrating with observables from domain services.
+Signals provide a declarative syntax for component logic while seamlessly integrating with observables from domain services. This allows component developer to avoid the more complex and verbose logic of reactive programming.
 
 ## Implementation of signals in Oryx
 
@@ -36,19 +37,22 @@ const values = signal(observable$);
 
 You can initialize signals with options to adjust their behavior:
 
-- `equal`: allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal updates, avoiding unnecessary updates and performance costs when new and old values are practically identical.
+- `equal`: allows for a custom equality function between two consecutive signal values. By default, strict comparison is used. Implementing your own function gives control over when a signal update the component. It can be beneficial to avoid unnecessary updates to the components when new and old values are practically identical.
 
 - `initialValue`: this option is used when creating a signal from an observable. It sets the first value of the signal, so you don't have to wait for the observable to give a value.
 
 Here's an example of using options:
 
 ```ts
-const values = signal(observable$, { initialValue: 1, equal: (a, b) => a === b });
+const values = signal(observable$, {
+  initialValue: 1,
+  equal: (a, b) => a === b,
+});
 ```
 
 ### Computed signals
 
-A *computed signal* derives its value from other signals. When a signal it depends on changes, it automatically reevaluates its value.
+A _computed signal_ derives its value from other signals. When a signal it depends on changes, it automatically reevaluates its value.
 
 Here's an example of a computed signal:
 
@@ -74,7 +78,7 @@ Here's an example:
 
 ```ts
 const counter = effect(() => {
-    console.log('counter changed', counter());
+  console.log("counter changed", counter());
 });
 ```
 
@@ -86,9 +90,12 @@ You can configure effects using options to modify their behavior:
 Example:
 
 ```ts
-const counter = effect(() => {
-    console.log('counter changed', counter());
-}, { defer: true, async: true });
+const counter = effect(
+  () => {
+    console.log("counter changed", counter());
+  },
+  { defer: true, async: true }
+);
 ```
 
 ## Using signals in components
@@ -114,10 +121,10 @@ The `@elementEffect` directive integrates effects with component lifecycles for 
 
 ```ts
 class MyComponent extends LitElement {
-  /* ... */  
+  /* ... */
   @elementEffect()
-  logProductCode = () => console.log('Product code ', this.$product().code);
+  logProductCode = () => console.log("Product code ", this.$product().code);
 }
 ```
 
-In the preceding example, the `logProductCode` effect starts automatically as soon as `MyComponent` connects to the DOM. It logs the product code each time the `$product` signal updates. When `MyComponent` disconnects from the DOM, the effect stops. 
+In the preceding example, the `logProductCode` effect starts automatically as soon as `MyComponent` connects to the DOM. It logs the product code each time the `$product` signal updates. When `MyComponent` disconnects from the DOM, the effect stops.

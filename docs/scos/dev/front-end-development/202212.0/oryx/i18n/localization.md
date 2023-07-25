@@ -26,13 +26,13 @@ The localization of labels is driven by the current language and the translation
 
 Oryx uses the "current" language to "lookup" the available labels. When the language is `en`, the locales for English are being resolved.
 
-If a language resource can be resolved, the translation key is evaluated against the available translations in the resource, using all "parts" of the key. For example, if you have a translation key that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `decrease` that might affect multiple components throughout multiple components. This results in a consistent and convenient translation mechanism, while remaining flexible to add very specific translations for some components.
+If a language resource can be resolved, the translation key is evaluated against the available translations in the resource, using all "parts" of the key. For example, if you have a translation key that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`.
 
 ## Auto-conversion of translation keys
 
 If a translation key does not match any of the translations, or if the i18n feature is not installed (which is a default behavior), the translation key is auto-converted to a human readable message.
 
-For example, if you have a token that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `decrease` that might affect multiple components throughout multiple components. This provides a consistent and convenient translation mechanism, while remaining flexible to add very specific localizations for some components.
+For example, if you have a token that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `increase` that might affect multiple components throughout multiple components. This provides a consistent and convenient translation mechanism, while remaining flexible to add very specific localizations for some components.
 
 The table below shows a few examples to help you understand how the tokens are translated.
 
@@ -42,9 +42,9 @@ The table below shows a few examples to help you understand how the tokens are t
 | `cart.add-to-cart`          | Add to cart     |
 | `cart.totals.<count>-items` | 5 items         |
 
-This mechanism allows Oryx to **not** distribute any localizations as standard package or as part of the boilerplate. The reason for this is that labels are quit opinionated and might change rapidly over time, which would cause breaking changes.For 90% of the cases the keys are fairly short and provide an OK experience.
+This mechanism allows Oryx to **not** distribute any localizations as standard package or as part of the boilerplate. The reason for this is that labels are quit opinionated and might change rapidly over time, which would cause breaking changes. For 90% of the cases the keys are fairly short and provide an OK experience.
 
-_**note:** The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provide some localizations, mainly for demonstration reasons. While it's perfectly fine to use this package for your own demo's or initial project implementation, it is not recommended to rely your production code on this labs package, since the labs package might introduce breaking changes over time (hence there's no major versioning for this package)._
+_**note:** The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provide some localizations, mainly for demonstration reasons. More information on the labs package can be found att the [feature sets documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/feature-setes.html)._
 
 ## Install i18n package
 
@@ -95,6 +95,8 @@ Other ICU capabilities, such as [number formatting](https://unicode-org.github.i
 Localized content is using [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed, for example when the user uses the localization selector or when you use the `LocaleService.set()` api in code. All localized content in Oryx components is updated instantly without a page reload.
 
 To support such fine-grained reactivity, a frameworks specific implementation is required. Oryx provides a `i18n` lit-directive that is used inside components. Using this directive, ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can leverage the `I18nMixin` in your component implementation that will add the `@signalAware()` and expose the `i18n` function as a method on the component.
+
+<!-- TODO: add link to signal documentation once it's available so users can read about signals and @signalAware decorator -->
 
 In the following code you see an example of using i18n in action in a Lit component. The tokens are used in both attributes and plain text, and the example demonstrates the usage with and without a token context.
 

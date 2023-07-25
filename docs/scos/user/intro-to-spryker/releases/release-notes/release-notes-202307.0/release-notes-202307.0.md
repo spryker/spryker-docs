@@ -23,7 +23,7 @@ Proper input validation controls have been implemented for the vulnerable parame
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, update the `spryker/state-machine` module:
+To implement the fix for this vulnerability, update the `spryker/state-machine` module:
 
 1. If the version of `spryker/state-machine` is 2.16.2 or later, update it to version 2.18.0:
 

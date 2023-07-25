@@ -25,4 +25,4 @@ redirect_from:
   - /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
 ---
 
-{% include scos/dev/front-end-development/zed/202304.0/overriding-webpack-js-scss-for-zed-on-project-level.md %} <!-- To edit, see /_includes/scos/dev/front-end-development/zed/202304.0/overriding-webpack-js-scss-for-zed-on-project-level.md -->
+{% include scos/dev/front-end-development/zed/202307.0/overriding-webpack-js-scss-for-zed-on-project-level.md %} <!-- To edit, see /_includes/scos/dev/front-end-development/zed/202307.0/overriding-webpack-js-scss-for-zed-on-project-level.md -->

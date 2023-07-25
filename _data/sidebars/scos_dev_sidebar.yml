@@ -1947,7 +1947,7 @@ entries:
     - title: Product Offer Shipment
       url: /docs/scos/dev/feature-integration-guides/install-the-product-offer-shipment-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Product Options + Order Management
       url: /docs/scos/dev/feature-integration-guides/product-options-order-management-feature-integration.html
       include_versions:
@@ -1991,11 +1991,11 @@ entries:
     - title: Push Notification
       url: /docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Service Points
       url: /docs/scos/dev/feature-integration-guides/install-the-service-points-feature.html
       include_versions:
-        - "202304.0"
+        - "202307.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:
@@ -2215,7 +2215,7 @@ entries:
     - title: Picker user login
       url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
       include_versions:
-        - "202304.0"
+        - "202307.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -2227,23 +2227,23 @@ entries:
     - title: Warehouse picking + Inventory Management
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-inventory-management-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Warehouse picking + Order Management
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-order-management-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Warehouse picking + Product
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-product-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Warehouse picking + Shipment
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-shipment-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Warehouse picking + Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-spryker-core-back-office-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Spryker in Docker
       include_versions:
       - "201907.0"
@@ -2259,11 +2259,11 @@ entries:
     - title: Warehouse picking
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Warehouse User Management
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-user-management-feature.html
       include_versions:
-      - "202304.0"
+      - "202307.0"
     - title: Zed API
       url: /docs/scos/dev/feature-integration-guides/zed-api-feature-integration.html
       include_versions:

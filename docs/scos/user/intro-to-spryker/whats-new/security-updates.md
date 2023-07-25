@@ -25,8 +25,8 @@ redirect_from:
 related:
   - title: Security release notes 202306.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
-  - title: Security release notes 202304.0
-    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
+  - title: Security release notes 202307.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html
   - title: Security release notes 202212.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
   - title: Security release notes 202108.0

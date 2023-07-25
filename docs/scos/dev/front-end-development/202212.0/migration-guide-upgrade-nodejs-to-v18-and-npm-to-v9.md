@@ -4,7 +4,7 @@ last_updated: May 16, 2023
 description: Use this guide to upgrade Node.js to v18 and npm to v9.
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/front-end-development/202304.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
+  - /docs/scos/dev/front-end-development/202307.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
 ---
  
 This document provides instructions for upgrading Node.js to v18 and npm to v9.

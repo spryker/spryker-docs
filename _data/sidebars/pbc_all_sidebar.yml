@@ -1420,7 +1420,7 @@ entries:
               - title: Install and upgrade
                 nested:
                   - title: Install features
-                    nested: 
+                    nested:
                       - title: Marketplace Merchant Portal Product Offer Management - Merchant Portal
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management - Merchant Portal

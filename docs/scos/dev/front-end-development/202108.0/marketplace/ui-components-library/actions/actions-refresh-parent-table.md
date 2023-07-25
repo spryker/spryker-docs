@@ -38,7 +38,7 @@ Check out an example usage of the Actions Refresh Parent Table.
 
 Service configuration:
 
-- `rowActions`—the table row actions. For more details, see [Table Feature Row Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-features/table-feature-row-actions.html).  
+- `rowActions`—the table row actions. For more details, see [Table Feature Row Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html).  
 - `actions`—an array with actions configuration.  
 - `type`—an action type.  
 

@@ -2,6 +2,8 @@
 title: Actions Refresh Parent Table
 description: This document provides details about the Actions Refresh Parent Table service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-refresh-parent-table.html
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/index.html
@@ -38,7 +40,7 @@ Check out an example usage of the Actions Refresh Parent Table.
 
 Service configuration:
 
-- `rowActions`—the table row actions. For more details, see [Table Feature Row Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-features/table-feature-row-actions.html).  
+- `rowActions`—the table row actions. For more details, see [Table Feature Row Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html).  
 - `actions`—an array with actions configuration.  
 - `type`—an action type.  
 

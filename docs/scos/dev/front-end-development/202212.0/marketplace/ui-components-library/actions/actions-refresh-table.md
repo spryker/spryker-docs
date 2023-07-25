@@ -2,6 +2,8 @@
 title: Actions Refresh Table
 description: This document provides details about the Actions Refresh Table service in the Components Library.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-refresh-table.html
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/index.html

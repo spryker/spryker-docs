@@ -4,11 +4,11 @@ description: This document provides details about the Table Filter Select compon
 template: concept-topic-template
 related:
   - title: Table Filter extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filters/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/index.html
   - title: Table Filter Date Range
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filters/table-filter-date-range.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
   - title: Table Filter Tree Select
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filters/table-filter-tree-select.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter Select component in the Components Library.

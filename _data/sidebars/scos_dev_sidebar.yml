@@ -3409,153 +3409,146 @@ entries:
 
     - title: Marketplace
       nested:
-        - title: "Extending the project"
-          url: /docs/marketplace/dev/front-end/extending-the-project/
+        - title: Extend the Marketplace frontend
+          url: /docs/marketplace/dev/front-end/extend-the-marketplace-frontend.html
           include_versions:
           - "202204.0"
           - "202212.0"
-          nested:
-
-            - title: "Migration guide - Extending the project"
-              url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
-              include_versions:
-              - "202204.0"
-              - "202212.0"
 
         - title: "Table design"
-          url: /docs/marketplace/dev/front-end/table-design/
+          url: /docs/marketplace/dev/front-end/table-design/table-design.html
           include_versions:
           - "202204.0"
           - "202212.0"
           nested:
 
             - title: "Table Column Types"
-              url: /docs/marketplace/dev/front-end/table-design/table-column-types/
+              url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-extension.html
               include_versions:
               - "202204.0"
               - "202212.0"
               nested:
 
                 - title: "Autocomplete"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-autocomplete.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Chip"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-chip.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Date"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-date.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Dynamic"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-dynamic.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Image"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-image.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Input"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-input.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "List"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-list.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Select"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-select.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Text"
-                  url: /docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-column-type-extension/table-column-type-text.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
             - title: "Table Features"
-              url: /docs/marketplace/dev/front-end/table-design/table-features/
+              url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-extension.html
               include_versions:
               - "202204.0"
               - "202212.0"
               nested:
 
                 - title: "Batch Actions"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-batch-actions.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Editable"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-editable.html
 
                 - title: "Pagination"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-pagination.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Row Actions"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-row-actions.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Search"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-search.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Selectable"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-selectable.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Settings"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-settings.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Sync State"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-sync-state.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Title"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-title.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Total"
-                  url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-feature-extension/table-feature-total.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
             - title: "Table Filters"
-              url: /docs/marketplace/dev/front-end/table-design/table-filters/
+              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/
               include_versions:
               - "202108.0"
               - "202204.0"
@@ -3563,19 +3556,19 @@ entries:
               nested:
 
                 - title: "Date Range"
-                  url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/table-filter-date-range.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Select"
-                  url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/table-filter-select.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
 
                 - title: "Tree Select"
-                  url: /docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
+                  url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/table-filter-tree-select.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"

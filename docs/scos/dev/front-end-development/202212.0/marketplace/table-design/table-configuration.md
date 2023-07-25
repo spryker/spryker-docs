@@ -2,6 +2,7 @@
 title: Table Configuration
 description: This document provides details about the table configuration.
 template: concept-topic-template
+  - /docs/marketplace/dev/front-end/202212.0/table-design/table-configuration.html
 ---
 
 This document provides details about how to configure the table.
@@ -163,7 +164,7 @@ typeOptionsMappings: {
 // default text(table column value) and default color('red')—in other cases
 ```
 
-To get more details about the table columns, see [Column Types](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-types/).
+To get more details about the table columns, see [Column Types](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/).
 
 ## Interfaces
 

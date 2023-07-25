@@ -47,7 +47,7 @@ that are registered by the user and then configured using the Table Configuratio
 
 ### Features
 
-Every other piece of functionality is extracted into the [Table Feature](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-features/):
+Every other piece of functionality is extracted into the [Table Feature](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/):
 
 - A *Table Feature* is an Angular Component that encapsulates a specific extension of the Core Table.
 - Core Table contains specific placeholders in its view that Table Feature may target to render its piece of UI.
@@ -71,7 +71,7 @@ export class AppModule {}
 
 ### Columns
 
-Columns in a Table are defined by the [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-types/) and rendered within the columns (text, image, link).
+Columns in a Table are defined by the [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/) and rendered within the columns (text, image, link).
 A new Column Type may be created and registered to the table.
 
 A Column component must implement `TableColumn` interface with the defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
@@ -95,7 +95,7 @@ export class AppModule {}
 A Table Component does not contain any filters a table usually has (filtering, searching).
 The Core Table Component has just a view of the columns and data and has built-in sorting.
 
-To use [Filter components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filters/), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
+To use [Filter components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
 
 ```ts
 @NgModule({
@@ -117,8 +117,8 @@ There is a way to trigger some [Actions](/docs/scos/dev/front-end-development/{{
 
 A few common Table Features that can trigger actions are available in the UI library:
 
-- [Row actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-features/table-feature-row-actions.html)—renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
-- [Batch actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-features/table-feature-batch-actions.html)—allows triggering batch/multiple actions from rows.
+- [Row actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html)—renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
+- [Batch actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html)—allows triggering batch/multiple actions from rows.
 
 ## Interfaces
 

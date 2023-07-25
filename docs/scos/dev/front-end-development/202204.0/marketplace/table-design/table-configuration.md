@@ -163,7 +163,7 @@ typeOptionsMappings: {
 // default text(table column value) and default color('red')—in other cases
 ```
 
-To get more details about the table columns, see [Column Types](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-types/).
+To get more details about the table columns, see [Column Types](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/).
 
 ## Interfaces
 

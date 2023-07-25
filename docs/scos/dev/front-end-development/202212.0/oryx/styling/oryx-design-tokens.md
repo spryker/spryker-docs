@@ -34,7 +34,7 @@ The following example demonstrates how to avoid hardcoded style values and use d
 }
 ```
 
-CSS variables are inherited throughout all descendants, but you can override the value anywhere in the DOM three. The following example demonstrates how to override a design token anywhere in the DOM.
+CSS variables are inherited throughout all descendants, but you can override the value anywhere in the DOM tree. The following example demonstrates how to override a design token anywhere in the DOM.
 
 ```html
 <div style="--oryx-color-primary-9: red">
@@ -44,6 +44,6 @@ CSS variables are inherited throughout all descendants, but you can override the
 
 ## Themes
 
-Design tokens are organized in themes. This allows you to quickly switch from one theme to another as well as to create your own theme.
+Design tokens are organized in themes. Oryx provides a [preset package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) that provides standard themes to get your started. You can use a standard theme, customize a standard theme or bring your own.
 
 <!-- TODO: add a note link to the theme docs once its ready -->

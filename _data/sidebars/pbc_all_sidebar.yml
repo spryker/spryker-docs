@@ -6,6 +6,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202400.0"
         nested:
           - title: Spryker Core Back Office feature overview
             url: /docs/pbc/all/back-office/spryker-core-back-office-feature-overview.html
@@ -21,6 +22,11 @@ entries:
                 url: /docs/pbc/all/back-office/manage-in-the-back-office/view-dashboard.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
+        - "202400.0"
         nested:
           - title: Base shop
             nested:
@@ -137,6 +143,10 @@ entries:
                 url: /docs/pbc/all/carrier-management/marketplace/marketplace-shipment-feature-domain-model-and-relationships.html
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             url: /docs/pbc/all/cart-and-checkout/base-shop/cart-and-checkout-base-shop.html
@@ -425,6 +435,10 @@ entries:
 
       - title: Content Management System
         url: /docs/pbc/all/content-management-system/content-management-system.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -902,6 +916,10 @@ entries:
             url: /docs/pbc/all/customer-relationship-management/file-details-customer.csv.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -994,6 +1012,10 @@ entries:
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-domain-model-and-relationships.html
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Install the Mailing and Notifications feature
             url: /docs/pbc/all/emails/install-the-mailing-and-notifications-feature.html
@@ -1023,9 +1045,12 @@ entries:
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail-api-requests.html
               - title: Inxmail Order referenced commands
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail-order-referenced-commands.html
-
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -1052,6 +1077,10 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html
       - title: Identity Access Management
         url: /docs/pbc/all/identity-access-management/identity-access-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Glue API authentication and authorization
             url: /docs/pbc/all/identity-access-management/glue-api-authentication-and-authorization.html
@@ -1401,6 +1430,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202400.0"
         nested:
           - title: Marketplace
             nested:
@@ -1999,6 +2029,10 @@ entries:
             url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/unzer-domain-model-and-relationships.html
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -2139,6 +2173,10 @@ entries:
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -2820,6 +2858,10 @@ entries:
                 url: /docs/pbc/all/punchout/manage-in-the-back-office/manage-transactions-log.html
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: What's changed in Ratings and Reviews
             url: /docs/pbc/all/ratings-reviews/whats-changed-in-ratings-and-reviews.html
@@ -2865,6 +2907,10 @@ entries:
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -3109,7 +3155,11 @@ entries:
               - title: "Glue API: Search the product catalog"
                 url: /docs/pbc/all/search/marketplace/glue-api-search-the-product-catalog.html
       - title: Shopping List and Wishlist
-        url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
+        url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html\
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base Shop
             nested:
@@ -3214,6 +3264,10 @@ entries:
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -3281,6 +3335,10 @@ entries:
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
         nested:
           - title: Agent Assist feature overview
             url: /docs/pbc/all/user-management/agent-assist-feature-overview.html
@@ -3333,6 +3391,11 @@ entries:
                 url: /docs/pbc/all/user-management/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
+        include_versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
+        - "202400.0"
         nested:
           - title: Base shop
             nested:

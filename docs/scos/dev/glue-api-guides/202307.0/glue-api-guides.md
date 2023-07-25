@@ -4,6 +4,7 @@ description: Guides for developers working with the Spryker Glue API
 template: concept-topic-template
 redirect_from:
   - /docs/scoc/dev/glue-api-guides/{{page.version}}/index.html
+  - /docs/scos/dev/glue-api-guides/202307.0/glue-rest-api.html
 
 ---
 * [Decoupled Glue Api](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)

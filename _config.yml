@@ -242,17 +242,17 @@ versioned_categories:
       - product-information-management
       - product-relationship-management
       - punchout
+      - push-notification
       - return-management
       - ratings-reviews
       - request-for-quote
       - search
+      - service-points
       - shopping-list-and-wishlist
       - tax-management
       - user-management
       - warehouse-management-system
-      - push notification
       - warehouse-picking
-      - service-points
 
 
 

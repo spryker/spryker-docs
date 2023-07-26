@@ -21,13 +21,13 @@ Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/
 
 To assist in performance testing, we have a [load testing tool](https://github.com/spryker-sdk/load-testing). The tool contains predefined test scenarios that are specific to Spryker. Test runs based on Gatling.io, an open-source tool. Web UI helps to manage runs and multiple target projects are supported simultaneously.
 
-The tool can be used as a package integrated into the Spryker project or a standalone package. 
+The tool can be used as a package integrated into the Spryker project or as a standalone package. 
 
 ## What is Gatling?
 
 Gatling is a powerful performance testing tool that supports HTTP, WebSocket, Server-Sent-Events, and JMS. Gatling is built on top of Akka that enables thousands of virtual users on a single machine. Akka has a message-driven architecture, and this overrides the JVM limitation of handling many threads. Virtual users are not threads but messages.
 
-Gatling is capable of creating an immense amount of traffic from a single node, which helps to obtain the most precise information during the load testing.
+Gatling is capable of creating an immense amount of traffic from a single node, which helps obtain the most precise information during the load testing.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ It should be noted that the Spryker Suite already has these changes implemented 
 
 {% endinfo_block %}
 
-1. Require the *composer* package. This step is necessary if you are looking to implement the Gatling load testing tool into your project. This line will add the new package to your `composer.json` file. The `--dev` flag will install the requirements needed for development which have a version constraint (e.g. "spryker-sdk/load-testing": "^0.1.0").
+1. Requires the *composer* package. This step is necessary if you are looking to implement the Gatling load testing tool into your project. This line will add the new package to your `composer.json` file. The `--dev` flag will install the requirements needed for development which have a version constraint (e.g. "spryker-sdk/load-testing": "^0.1.0").
 
 ```bash
 composer require spryker-sdk/load-testing --dev
@@ -125,7 +125,7 @@ extensions:
 
 {% info_block infoBox %}
 
-This step is only needed for a new project, such as our B2C Demo Shop example. Otherwise, if you have a pre-existing project, once the above changes for integrating Gatling have been made, you merely need to re-built the application (such as with `docker/sdk up --build --assets --data`) to apply the changes.
+This step is only needed for a new project, such as our B2C Demo Shop example. Otherwise, if you have a pre-existing project, once the above changes for integrating Gatling have been made, you merely need to re-build the application (such as with `docker/sdk up --build --assets --data`) to apply the changes.
 
 {% endinfo_block %}
 
@@ -192,7 +192,7 @@ val httpProtocol = http
    .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 ```
 
-**usernamehere** and **passwordhere** should match the username and password used for your environment's basic authentication and not an account created within Spryker. This username and password are typically set up within your deploy file.
+**usernamehere** and **passwordhere** should match the username and password used for your environment's basic authentication, and not an account created within Spryker. This username and password are typically set up within your deploy file.
 
 ##### Generating product data
 
@@ -213,7 +213,7 @@ SELECT
 FROM `us-docker`.`spy_product_concrete_storage`; 
 ```
 
-This command parses through that JSON entry and extracts what we need. Once this information has been generated, it should be saved as `product_concrete.csv` and saved in the **/load-test-tool-dir/tests/_data** directory.
+This command parses through the JSON entry and extracts what we need. Once this information has been generated, it should be saved as `product_concrete.csv` and saved in the **/load-test-tool-dir/tests/_data** directory.
 
 ##### Generating customer data
 
@@ -286,7 +286,7 @@ console publish:trigger-events
 console queue:worker:start -s 
 ```
 
-You should have the fixtures loaded into the databases and can exit the CLI to install Gatling into the project. 
+You should have the fixtures loaded into the databases and can now exit the CLI to install Gatling into the project. 
 
 #### Alternative method to generate local fixtures.
 
@@ -328,7 +328,7 @@ APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -
 4. Once the build steps have been added, you can `Save` to be taken to the project status page for the newly-created job. As this is a job that you only need to run once and no schedule was set, you can select the `Build Now` option.
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRTLzDFMolgcaZ_xE-nKMNBEiIDXkSjwEiInkEIJL3ZbMbIY5ygKXqc-7eE_H5N2X-m7ap1l8s=w1920-h919)
 
-5. With the job set to build and run, it will build a new workspace for the tasks and run each build step that you specified. Once the build has successfully completed, you can review the `Console Output` and then remove the project `Delete Project` once you as finished if you no longer need it.
+5. With the job set to build and run, it will build a new workspace for the tasks and run each build step that you specified. Once the build has successfully completed, you can review the `Console Output` and then remove the project with `Delete Project` once you are finished, if you no longer need it.
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSJmYXg2MyBlTWGbCU6BtzL4ye4y2YOiKNFSobALdDrnescyH8wgIIOzF84QfWQAeSVEmz5HnI=w1920-h919)
 
 {% info_block infoBox %}

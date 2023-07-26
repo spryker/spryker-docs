@@ -1,19 +1,19 @@
 ---
-title: "Oryx: Design Tokens"
+title: "Oryx: Design tokens"
 description: Design tokens provide a centralized and consistent approach for styling components in Oryx applications.
 last_updated: July 24, 2023
 template: concept-topic-template
 ---
 
-Design tokens are a fundamental aspect of the Oryx web framework, providing a powerful system for achieving consistent and customizable styles throughout the application. Design tokens are extensively used inside the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-colors-system.html), typography, icons and many more. Design tokens ensure a clean separation between styles and components, making it easier to manage and maintain the application's design system. This document focuses on the structure and usage of design tokens in Oryx.
+Design tokens provide a powerful system for achieving consistent and customizable styles throughout an Oryx application. They are extensively used inside the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-colors-system.html), typography, icons, and many more. Ensuring a clean separation between styles and components, design tokens make it easier to manage and maintain the application's design system. This document focuses on the structure and usage of design tokens in Oryx.
 
 ## CSS variables
 
-Design tokens are provided as CSS variables in the application code. The variables follow a structured naming convention to ensure consistency and avoid conflicts. The variables are prefixed with "oryx" to avoid naming conflicts with 3rd party variables and are written in kebab-case.
+Design tokens are provided as CSS variables in the application code. The variables follow a structured naming convention to ensure consistency. To avoid naming conflicts with third-party variables, they are prefixed with `oryx` and are written in kebab-case.
 
-The CSS variables are written in the root element of the application. This is the `oryx-app` component by default. CSS variables are inherited by all descendants of the root component. This makes is convenient to access the variables throughout the entire application. CSS variables can however be overridden at any element in the application.
+The variables are written in the root element of the application, the `oryx-app` component by default. The variables are inherited by all descendants of the root component. This makes it convenient to access the variables throughout the entire application. At the same time, they can be overridden at any element in the application.
 
-If you like to reuse the CSS variables outside the root element of the application, or if you are not using the `oryx-app` as the root, you can bootstrap the application using an alternative root:
+If you like to reuse the variables outside the root element of the application, or if you are not using the `oryx-app` as the root, you can bootstrap the application using an alternative root:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
@@ -21,11 +21,11 @@ import { appBuilder } from "@spryker-oryx/core";
 appBuilder().withAppOptions({ components: { root: "body" } });
 ```
 
-## Usage of Design Tokens
+## Usage of design tokens
 
-Design tokens are used extensively throughout Oryx components to achieve consistent and cohesive visual experience. Instead of hardcoding style values directly in component CSS, design tokens are used as CSS variables to define the styles. This way, developers can easily modify the visual appearance of the entire application by adjusting the corresponding design token values.
+Design tokens are used extensively throughout Oryx components to achieve consistent and cohesive visual experience. Instead of hardcoding style values directly in component CSS, design tokens are used as CSS variables to define the styles. This way, you can easily change the visual appearance of the entire application by adjusting the corresponding design token values.
 
-The following example demonstrates how to avoid hardcoded style values and use design tokens instead:
+The following example shows how to avoid hardcoded style values by using design tokens:
 
 ```css
 .button {
@@ -34,7 +34,7 @@ The following example demonstrates how to avoid hardcoded style values and use d
 }
 ```
 
-CSS variables are inherited throughout all descendants, but you can override the value anywhere in the DOM tree. The following example demonstrates how to override a design token anywhere in the DOM.
+The CSS variables are inherited throughout all descendants, but you can override the value anywhere in the DOM tree. The following example shows how to override a design token anywhere in the DOM.
 
 ```html
 <div style="--oryx-color-primary-9: red">
@@ -44,6 +44,6 @@ CSS variables are inherited throughout all descendants, but you can override the
 
 ## Themes
 
-Design tokens are organized in themes. Oryx provides a [preset package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) that provides standard themes to get your started. You can use a standard theme, customize a standard theme or bring your own.
+Design tokens are organized in themes. The Oryx [preset package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) provides standard themes to get your started. You can use a standard theme, customize a standard theme, or create your own.
 
 <!-- TODO: add a note link to the theme docs once its ready -->

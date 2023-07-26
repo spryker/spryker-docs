@@ -511,7 +511,7 @@ To synchronize data with Redis, an intermediate Zed database table is required. 
 
 Follow the steps to create the table:
 
-1. Create the table schema file in `Pyz\Zed\HelloWorldStorage\Persistance\Propel\Schema\spy_hello_world_storage.schema.xml`.
+1. Create the table schema file in `Pyz\Zed\HelloWorldStorage\Persistence\Propel\Schema\spy_hello_world_storage.schema.xml`.
 
 ```xml
 {% raw %}

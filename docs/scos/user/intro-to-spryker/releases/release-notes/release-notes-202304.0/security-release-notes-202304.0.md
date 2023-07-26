@@ -1,6 +1,6 @@
 ---
-title: Security release notes 202307.0
-description: Security release notes for the Spryker Product release 202307.0
+title: Security release notes 202304.0
+description: Security release notes for the Spryker Product release 202304.0
 last_updated: Apr 21, 2023
 template: concept-topic-template
 ---

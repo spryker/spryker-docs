@@ -5,6 +5,7 @@ description: Use this guide to migrate the project from Yarn to npm v9.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
+  - /docs/scos/dev/front-end-development/202304.0/migration-guide-switch-from-yarn-to-npm.html
 ---
 
 This document provides instructions for migrating from Yarn to npm version 9 in your Spryker project.

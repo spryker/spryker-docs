@@ -15,14 +15,14 @@ To make sure that all components can be customized and localized, Oryx doesn't p
 
 Translation keys, also knows as "i18n tokens", are used to resolve a localized text. The tokens are created with the following conventions in mind:
 
-- Tokens are written in English
+- Tokens are written in English.
 - Tokens are written in kebab-case format—for example, `my-token`.
-- Tokens are organized by domains, e.g. `cart.add-to-cart`
-- Tokens support context variables, which are added inside angle brackets using with camelCase format, e.g. `cart.totals.<count>-items`
+- Tokens are organized by domains—for example, `cart.add-to-cart`.
+- Tokens support context variables, which are added inside angle brackets in camelCase format. For example, `cart.totals.<count>-items`.
 
 ## Resolve translations from translation resources
 
-The localization of labels is driven by the current language and the translation key. Translations are supposed to be provided as additional lazy loaded resources next to the component implementation, although they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded as external resource, they can be provided by an API (e.g. 3rd party service) or by static JSON files.
+The localization of labels is driven by the current language and the translation key. Translations are supposed to be provided as additional lazy-loaded resources next to the component implementation. Although, they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded as external resources, they can be provided by an API (using a third-party service) or by static JSON files.
 
 Oryx uses the "current" language to "lookup" the available labels. When the language is `en`, the locales for English are being resolved.
 

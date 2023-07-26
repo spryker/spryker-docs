@@ -29,7 +29,7 @@ To add an item to a wishlist, send the request:
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------------- | ---------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html) to get it. |
 
 ### Request
 
@@ -231,7 +231,7 @@ To delete wishlist item, send the request:
 
 | PATH PARAMETER | DESCRIPTION   |
 | -------------- | -------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html) to get it. |
 | {% raw %}***{{item_sku}}***{% endraw %}    | Unique identifier of the product to delete.                  |
 
 ### Request

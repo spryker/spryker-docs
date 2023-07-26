@@ -10,7 +10,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html#marketplace-stock-management) information in your Spryker shop.
+This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) information in your Spryker shop.
 
 ## Import file dependencies
 

@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202304.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
 ---
-
+ 
 This document provides instructions for upgrading Node.js to v18 and npm to v9.
 
 ## Overview
@@ -163,7 +163,7 @@ If the project uses CI, adjust `.github/workflows/ci.yml`:
   uses: actions/cache@v3
   with:
     path: ~/.npm
-    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    key: ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-node-${% raw %}{{{% endraw %} hashFiles('**/package-lock.json') {% raw %}}}{% endraw %}
     restore-keys: |
-      ${{ runner.os }}-node-
+      ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-node-
 ```

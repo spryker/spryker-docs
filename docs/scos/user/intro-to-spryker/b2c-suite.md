@@ -51,7 +51,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
-- [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/payments-feature-overview.html)
+- [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/spryker-pay/base-shop/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
@@ -85,4 +85,4 @@ To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop
 
 To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
 
-To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).

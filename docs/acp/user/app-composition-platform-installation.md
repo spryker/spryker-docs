@@ -40,7 +40,7 @@ To make your project ACP-ready, different update steps are necessary depending o
 - SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html): All the changes required for ACP readiness are already included, but you should still verify them at the project level.
 - Older versions: To get the project ACP-ready, you should complete all steps described in this document.
 
-{% info_block infoBox "Product version ealier than 202211.0" %}
+{% info_block infoBox "Product version earlier than 202211.0" %}
 
 If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
 
@@ -72,6 +72,12 @@ The Spryker ACP Apps are continuously enhanced and improved with new versions. T
 For [each app](https://docs.spryker.com/docs/acp/user/intro-to-acp/acp-overview.html#supported-apps) you wish to use, ensure that you have the latest app-related SCCOS modules installed.
 
 ### 2. Configure SCCOS
+
+{% info_block infoBox "This step can be omitted for Product version later than 202211.0" %}
+
+If your version is based on product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) or newer, you can skip this section! 
+
+{% endinfo_block %}
 
 Once you have ensured that your project modules are up-to-date, proceed to configure your SCCOS project to activate the ACP catalog in the Back Office using the following steps:
 
@@ -478,6 +484,6 @@ Once all the steps of the ACP-enablement process are completed, the ACP catalog 
 Once your projecrt is ACP-enabled, you can start integrating the apps:
 
 - [Integrate Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/integrate-algolia.html)
-- [Integrate Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
+- [Integrate Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/payone/integration-in-the-back-office/integrate-payone.html)
 - [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html)
 - [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html)

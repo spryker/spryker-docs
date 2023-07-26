@@ -13,4 +13,4 @@ algolia:
     - docs/fes/dev/**/*.md
     - docs/pbc/all/**/*.md
     - docs/acp/user/**/*.md
-    - docs/sdk/dev/**/*.md  
+    - docs/sdk/dev/**/*.md

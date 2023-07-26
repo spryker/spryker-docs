@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
   - /docs/scos/dev/data-import/202005.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
+  - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/import-data/file-details-warehouse-address.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

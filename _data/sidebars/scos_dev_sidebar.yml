@@ -988,11 +988,21 @@ entries:
       - "202204.0"
   - title: Feature integration guides
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
+    include_versions:
+    - "202009.0"
+    - "201907.0"
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Glue API
       nested:
       - title: Glue API installation and configuration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html
+        include_versions:
+        - "202009.0"
+        - "201907.0"
+        - "202108.0"
+        - "202204.0"
       - title: Glue API - Agent Assist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html
         include_versions:

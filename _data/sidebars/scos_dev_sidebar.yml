@@ -3548,9 +3548,8 @@ entries:
                   - "202212.0"
 
             - title: "Table Filters"
-              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/
+              url: /docs/marketplace/dev/front-end/table-design/table-filter-extension/table-filter-extension.html
               include_versions:
-              - "202108.0"
               - "202204.0"
               - "202212.0"
               nested:
@@ -3577,16 +3576,17 @@ entries:
               url: /docs/marketplace/dev/front-end/table-design/table-configuration.html
               include_versions:
                - "202204.0"
+              - "202212.0"
 
         - title: "UI components library"
-          url: /docs/marketplace/dev/front-end/ui-components-library/
+          url: /docs/marketplace/dev/front-end/ui-components-library/ui-components-library.html
           include_versions:
           - "202204.0"
           - "202212.0"
           nested:
 
             - title: "Actions"
-              url: /docs/marketplace/dev/front-end/ui-components-library/actions/
+              url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions.html
               include_versions:
               - "202204.0"
               - "202212.0"
@@ -3641,7 +3641,7 @@ entries:
                   - "202212.0"
 
             - title: "Cache"
-              url: /docs/marketplace/dev/front-end/ui-components-library/cache/
+              url: /docs/marketplace/dev/front-end/ui-components-library/cache/cache.html
               include_versions:
               - "202204.0"
               - "202212.0"
@@ -3661,46 +3661,46 @@ entries:
               nested:
 
                 - title: "Collate"
-                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/
+                  url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/data-transformer-collate.html
                   include_versions:
                   - "202204.0"
                   - "202212.0"
                   nested:
 
                     - title: "Data Configurators"
-                      url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/
+                      url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
                       include_versions:
                       - "202204.0"
                       - "202212.0"
                       nested:
 
                         - title: "Table"
-                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/table.html
                           include_versions:
                           - "202204.0"
                           - "202212.0"
 
                     - title: "Filters"
-                      url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/
+                      url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
                       include_versions:
                       - "202204.0"
                       - "202212.0"
                       nested:
 
                         - title: "Equals"
-                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/equals.html
                           include_versions:
                           - "202204.0"
                           - "202212.0"
 
                         - title: "Range"
-                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/range.html
                           include_versions:
                           - "202204.0"
                           - "202212.0"
 
                         - title: "Text"
-                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html
+                          url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/text.html
                           include_versions:
                           - "202204.0"
                           - "202212.0"

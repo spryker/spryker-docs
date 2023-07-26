@@ -6,9 +6,9 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/
 related:
   - title: Data Transformer Data Configurators
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/data-configurators/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/index.html
   - title: Data Transformer Filters
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/index.html
 ---
 
 This document explains the Data Transformer Collate service in the Components Library.
@@ -59,9 +59,9 @@ These services are registered via `CollateDataTransformer.withFilters()`.
 
 There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
 
-- [Equals](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
-- [Range](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
-- [Text](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.
+- [Equals](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/equals.html)—filters values that are strictly equal.
+- [Range](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/range.html)—filters values that are within a number range.
+- [Text](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/text.html)—filters values that match a string.
 
 ## Collate Data Configurators
 
@@ -70,7 +70,7 @@ These services are registered via `CollateDataTransformer.withConfigurators()`.
 
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-- [Table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.
 
 ## Service registration
 

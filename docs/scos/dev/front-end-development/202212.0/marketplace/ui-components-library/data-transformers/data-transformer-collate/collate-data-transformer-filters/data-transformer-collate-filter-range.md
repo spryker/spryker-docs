@@ -6,11 +6,11 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/filters/range.html
 related:
   - title: Data Transformer Filters
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/index.html
   - title: Data Transformer Collate Filter Equals
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/equals.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/equals.html
   - title: Data Transformer Collate Filter Text
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/filters/text.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/text.html
 ---
 
 This document explains the Data Transformer Collate Filter Range service in the Components Library.

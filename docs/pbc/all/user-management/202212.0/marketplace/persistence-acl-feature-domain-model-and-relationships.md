@@ -1,4 +1,9 @@
-## Module dependency graph
+---
+title: "Persistence ACL feature: Domain model and relationships"
+last_updated: Nov 05, 2021
+description: Technical details about the Persistence ACL feature.
+template: concept-topic-template
+---
 
 The following module dependency graph and table list the main modules of the Persistence ACL feature and their interaction.
 

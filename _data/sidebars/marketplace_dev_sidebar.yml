@@ -169,16 +169,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-
             nested:
-
               - title: Persistence ACL feature configuration
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
-
               - title: Rules and scopes
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html
-
                 nested:
 
                   - title: Global scope
@@ -193,8 +188,8 @@ entries:
                   - title: Composite entity
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
 
-              - title: Execution flow
-                url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
+                  - title: Execution flow
+                    url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
 
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html

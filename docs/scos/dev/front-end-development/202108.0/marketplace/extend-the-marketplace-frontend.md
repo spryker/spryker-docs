@@ -27,8 +27,6 @@ Prior to starting the project extension, verify that the marketplace modules are
 | SalesMerchantPortalGui (optional)           | >= 0.8.1  |
 | SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
 
-Before extending the project, ensure that you have followed the [migration guide for extending the project](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/extending-the-project/migration-guide-extending-the-project.html).
-
 ## Extending/customizing configuration modules
 
 There are several modules having global configuration in `app.module.ts `(for example,`LocaleModule`, `DefaultUnsavedChangesConfigModule`, `DefaultTableConfigModule`) that influence any component in each module.

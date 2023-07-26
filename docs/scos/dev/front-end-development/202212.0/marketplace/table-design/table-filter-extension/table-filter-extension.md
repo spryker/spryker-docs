@@ -2,8 +2,8 @@
 title: Table Filter extension
 last_updated: Oct 21, 2022
 description: This document provides details about the Table Filter extension in the Сomponents Library.
-  template: concept-topic-template
-  redirect_from:
+template: concept-topic-template
+redirect_from:
     - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/
 related:
   - title: Table Filter Date Range

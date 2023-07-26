@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/data-configurators/
 related:
   - title: Data Transformer Collate Configurator Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/collate/data-configurators/table.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/table.html
 ---
 
 This document explains the Data Transformer Data Configurators service in the Components Library.
@@ -111,4 +111,4 @@ interface DataTransformerConfigurator {
 
 There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
-- [Table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.

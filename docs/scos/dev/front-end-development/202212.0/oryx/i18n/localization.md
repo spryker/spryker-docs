@@ -7,18 +7,18 @@ last_updated: July 23, 2023
 
 Localization is an important part of internationalization (`i18n`) and is concerned with creating variations of the same application in different locales.
 
-While most localized content is managed in other systems, like product or content management systems, components often use small text fragments in the UI. Examples are static site labels or aria labels
+While most localized content is managed in other systems, like product or content management systems, components often use small text fragments in the UI. The examples are static site labels or aria labels.
 
-To ensure that all components can be customized and localized, Oryx does not provide _any_ hardcoded text. Instead, components use _tokens_ that function as a reference to a text. When there's not (localized) text available for such reference, Oryx renders the token in a human readable format.
+To make sure that all components can be customized and localized, Oryx doesn't provide _any_ hardcoded text. Instead, components use _tokens_ that function as a reference to a text. When there's no localized text available for such a reference, Oryx renders the token in a human-readable format.
 
 ## Translation keys
 
 Translation keys, also knows as "i18n tokens", are used to resolve a localized text. The tokens are created with the following conventions in mind:
 
-- tokens are written in english
-- tokens are written in kebab-case format, e.g. `my-token`
-- tokens are organized by domains, e.g. `cart.add-to-cart`
-- tokens support context variables, which are added inside angle brackets using with camelCase format, e.g. `cart.totals.<count>-items`
+- Tokens are written in English
+- Tokens are written in kebab-case format—for example, `my-token`.
+- Tokens are organized by domains, e.g. `cart.add-to-cart`
+- Tokens support context variables, which are added inside angle brackets using with camelCase format, e.g. `cart.totals.<count>-items`
 
 ## Resolve translations from translation resources
 

@@ -582,7 +582,7 @@ composer update spryker/event-dispatcher spryker/glue-backend-api-application sp
 
 2. Register `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` in `Pyz\Glue\EventDispatcher::getEventDispatcherPlugins()`.
 
-3. Register `Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin` in `Pyz\Glue\GlueBackendApiApplication::getResponseFormatterPlugins()`.
+3. Register `Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin` in `Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider::getResponseFormatterPlugins()`.
 
 4. In `Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider::getResponseFormatterPlugins()`, register `Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\StrictTransportSecurityHeaderResponseFormatterPlugin`.
 
@@ -623,17 +623,17 @@ public function getSecurityHeaders(): array
 use Spryker\Shared\Http\HttpConstants;
 
 $config[HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' = true,
-   'max-age' = 3600,
+   'public' => true,
+   'max-age' => 3600,
 ];
 
 $config[HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' = true,
-   'max-age' = 3600,
+   'public' => true,
+   'max-age' => 3600,
 ];
 
 $config[HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG] = [
-   'public' = true,
-   'max-age' = 3600,
+   'public' => true,
+   'max-age' => 3600,
 ];
 ```

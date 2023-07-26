@@ -13,20 +13,20 @@ To make sure that all components can be customized and localized, Oryx doesn't p
 
 ## Translation keys
 
-Translation keys, also knows as "i18n tokens", are used to resolve a localized text. The tokens are created with the following conventions in mind:
+Translation keys, also knows as "i18n tokens", are used to resolve localized text. The tokens are created with the following conventions in mind:
 
 - Tokens are written in English.
 - Tokens are written in kebab-case format—for example, `my-token`.
 - Tokens are organized by domains—for example, `cart.add-to-cart`.
 - Tokens support context variables, which are added inside angle brackets in camelCase format. For example, `cart.totals.<count>-items`.
 
-## Resolve translations from translation resources
+## Resolving translations from translation resources
 
-The localization of labels is driven by the current language and the translation key. Translations are supposed to be provided as additional lazy-loaded resources next to the component implementation. Although, they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded as external resources, they can be provided by an API (using a third-party service) or by static JSON files.
+The localization of labels is driven by the current language and the translation key. Translations are supposed to be provided as additional lazy-loaded resources next to the component implementation. Although, they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded externally, they can be provided by static JSON files or a thrid-party service through an API.
 
-Oryx uses the "current" language to "lookup" the available labels. When the language is `en`, the locales for English are being resolved.
+Oryx uses the "current" language to "look up" the available labels. When the language is `en`, the locales for English are resolved.
 
-If a language resource can be resolved, the translation key is evaluated against the available translations in the resource, using all "parts" of the key. For example, if you have a translation key that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`.
+If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if you have a translation key that contains multiple parts, like `cart.increase`), you can provide a global translation for just the `increase` part or for `cart.increase`.
 
 ## Auto-conversion of translation keys
 
@@ -68,7 +68,7 @@ This gives you full flexibility to how and where to load your translation texts 
 
 ## Translation resources
 
-In order to translate text in Oryx, you can provide translation data in a TS module. You can also integrate those in data provided by a 3rd party translation engine.
+To translate text in Oryx, you can provide translation data in a TS module. You can also integrate those in data provided by a third-party translation engine.
 
 ```ts
 export default {
@@ -83,22 +83,22 @@ export default {
 };
 ```
 
-The translation engine is based on standardized [ICU message expressions](https://unicode-org.github.io/icu/userguide/format_parse/messages/). The ICU message format defines a standard syntax to handle common translation cases:
+The translation engine is based on the standardized [ICU message expressions](https://unicode-org.github.io/icu/userguide/format_parse/messages/). The ICU message format defines a standard syntax to handle common translation cases:
 
 - Pluralization: for example, `You have {count} {count, plural, one {item} other {items}} in cart`.
 - Selects: for example, `{gender, select, male {He} female {She} other {They}} invited you to party!`.
 
-Other ICU capabilities, such as [number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/) or [date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/) can be loaded in addition. Most likely this is not needed in your project, since Oryx uses the standard [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) api that is widely supported.
+Other ICU capabilities, such as [number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/) or [date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/) can be loaded in addition. Most likely, it's not needed in your project, because Oryx uses the standard [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) API, which is widely supported.
 
 ## Use the i18n directive in components
 
-Localized content is using [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed, for example when the user uses the localization selector or when you use the `LocaleService.set()` api in code. All localized content in Oryx components is updated instantly without a page reload.
+Localized content is using [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed; for example, when the user uses the localization selector, or when you use the `LocaleService.set()` API in the code. All localized content in Oryx components is updated instantly without a page reload.
 
-To support such fine-grained reactivity, a frameworks specific implementation is required. Oryx provides a `i18n` lit-directive that is used inside components. Using this directive, ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can leverage the `I18nMixin` in your component implementation that will add the `@signalAware()` and expose the `i18n` function as a method on the component.
+To support such fine-grained reactivity, a frameworks specific implementation is required. Oryx provides a `i18n` lit-directive that's used inside components. Using this directive ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can leverage the `I18nMixin` in your component implementation. `I18nMixin` adds `@signalAware()` and exposes the `i18n` function as a method on the component.
 
 <!-- TODO: add link to signal documentation once it's available so users can read about signals and @signalAware decorator -->
 
-In the following code you see an example of using i18n in action in a Lit component. The tokens are used in both attributes and plain text, and the example demonstrates the usage with and without a token context.
+The following is an example of using i18n in a Lit component. The tokens are used both as attributes and plain text, and the example shows the usage with and without a token context.
 
 ```ts
 import { I18nMixin } from "@spryker-oryx/utilities";
@@ -116,7 +116,7 @@ export class MyComponent extends I18nMixin(LitElement) {
 
 ## Localize texts in vanilla JS components
 
-The i18n directive uses the `I18nService`. You can inject the `I18nService` in JS or TS using [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection.html). The service provides an observable that you can subscribe to.
+The i18n directive uses `I18nService`. You can inject `I18nService` in JS or TS using [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection.html). The service provides an observable that you can subscribe to.
 
 ```ts
 import { inject } from "@spryker-oryx/injector";
@@ -131,7 +131,7 @@ class Example {
 }
 ```
 
-If a token requires a context, you can pass the context as a second argument to the `translate` method.
+If a token requires context, you can pass the context as a second argument to the `translate` method.
 
 ```ts
 i18nService

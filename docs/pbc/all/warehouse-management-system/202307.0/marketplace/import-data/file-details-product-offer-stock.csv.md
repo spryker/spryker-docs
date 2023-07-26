@@ -25,7 +25,7 @@ The file should have the following parameters:
 | PARAMETER     | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION        |
 | ------------- | ---------- | ------- | ------------- | ---------------------------- | ----------------------- |
 | product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) in the system. |
-| stock_name              | &check;             | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html#marketplace-warehouse-management). | Name of the stock.                                           |
+| stock_name              | &check;             | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html). | Name of the stock.                                           |
 | quantity                | &check;             | Integer  |                   |                                                              | The number of product offers that are in stock.              |
 | is_never_out_of_stock   |               | Integer  |                   | 1—option is enabled<br>0—option is disabled.               | Allows the offer to be never out of stock. |
 

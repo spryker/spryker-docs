@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/201903.0/spryker-core-feature-overview/spryker-core-feature-overview.html
   - /docs/scos/user/features/201811.0/spryker-core-feature-overview/spryker-core-feature-overview.html
   - /docs/scos/user/features/202212.0/spryker-core-feature-overview/spryker-core-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 ---
 
 The Spryker Core feature is the very basis of all the functionality in Spryker.

@@ -12,7 +12,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html#marketplace-warehouse-management) information in your Spryker shop.
+This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) information in your Spryker shop.
 
 
 ## Import file dependencies
@@ -26,7 +26,7 @@ This document describes the `merchant_stock.csv` file to configure [merchant sto
 | PARAMETER    | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
 | merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
-| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html#marketplace-warehouse-management). | Name of the stock.                        |
+| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html). | Name of the stock.                        |
 
 
 ## Import template file and content example

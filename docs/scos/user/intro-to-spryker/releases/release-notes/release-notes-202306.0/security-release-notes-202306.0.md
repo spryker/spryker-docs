@@ -174,6 +174,10 @@ console transfer:generate
 8. Add configuration to `config/Shared/config_default.php`:
 
 ```php
+use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
+use Spryker\Shared\SecurityBlockerStorefrontAgent\SecurityBlockerStorefrontAgentConstants;
+use Spryker\Shared\SecurityBlockerStorefrontCustomer\SecurityBlockerStorefrontCustomerConstants;
+
 // >>> Redis Security Blocker
 $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PERSISTENT_CONNECTION] = true;
 $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_SCHEME] = 'tcp://';

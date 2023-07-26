@@ -5,6 +5,8 @@ description: This integration guide describes how to integrate the Merchants fea
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/merchant-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/202307.0/feature-integration-guides.html
+  
 ---
 
 {% include pbc/all/install-features/202307.0/marketplace/install-the-marketplace-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/marketplace/install-the-marketplace-merchant-feature.md -->

@@ -30,25 +30,31 @@ If a language resource can be resolved, the translation key is evaluated against
 
 ## Auto-conversion of translation keys
 
-If a translation key does not match any of the translations, or if the i18n feature is not installed (which is a default behavior), the translation key is auto-converted to a human readable message.
+If a translation key doesn't match any of the translations, or if the i18n feature is not installed (which is the default behavior), the translation key is auto-converted into a human-readable message.
 
-For example, if you have a token that contains multiple parts (e.g. `cart.increase`), you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `increase` that might affect multiple components throughout multiple components. This provides a consistent and convenient translation mechanism, while remaining flexible to add very specific localizations for some components.
+For example, if you have a token that contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `increase` that might affect multiple components throughout multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
 
-The table below shows a few examples to help you understand how the tokens are translated.
+The following examples show how the tokens are translated.
 
-| Token                       | Converted label |
+| TOKEN                       | CONVERTED LABEL |
 | --------------------------- | --------------- |
 | `cart.increase`             | Increase        |
 | `cart.add-to-cart`          | Add to cart     |
 | `cart.totals.<count>-items` | 5 items         |
 
-This mechanism allows Oryx to **not** distribute any localizations as standard package or as part of the boilerplate. The reason for this is that labels are quit opinionated and might change rapidly over time, which would cause breaking changes. For 90% of the cases the keys are fairly short and provide an OK experience.
+This mechanism lets Oryx avoid distributing any localizations as a standard package or as part of the boilerplate. The reason for this is that labels are quite opinionated and may change frequently over time, which will cause breaking changes. For 90% of the cases, the keys are fairly short and provide an OK experience.
 
-_**note:** The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provide some localizations, mainly for demonstration reasons. More information on the labs package can be found att the [feature sets documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/feature-setes.html)._
+{% info_block infoBox "" %}
 
-## Install i18n package
+The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provides some localizations mainly for demonstration reasons. For more information on the labs package, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/feature-setes.html).
 
-To use the i18n package, you can add the `I18nFeature` to the app and configure translation resources using the loader function:
+{% endinfo_block %}
+
+
+
+## Install the i18n package
+
+To use the i18n package, add `I18nFeature` to the app and configure translation resources using the loader function:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";
@@ -64,7 +70,7 @@ export const app = appBuilder()
   .create();
 ```
 
-This gives you full flexibility to how and where to load your translation texts from. The `load` function returns a promise of a `{ default: I18nData }` type.
+This gives you full flexibility of how and where to load your translation texts from. The `load` function returns a promise of a `{ default: I18nData }` type.
 
 ## Translation resources
 

@@ -171,7 +171,6 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
-
 versions:
   '201811.0': '201811.0'
   '201903.0': '201903.0'
@@ -182,7 +181,8 @@ versions:
   '202108.0': '202108.0'
   '202204.0': '202204.0'
   '202212.0': '202212.0'
-  '202304.0': 'Upcoming release'
+  '202307.0': '202307.0'
+  '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -242,14 +242,18 @@ versioned_categories:
       - product-information-management
       - product-relationship-management
       - punchout
+      - push-notification
       - return-management
       - ratings-reviews
       - request-for-quote
       - search
+      - service-points
       - shopping-list-and-wishlist
       - tax-management
       - user-management
       - warehouse-management-system
+      - warehouse-picking
+
 
 
 # these are defaults used for the front matter for these file types

@@ -6,7 +6,7 @@ template: howto-guide-template
 
 This document explains how to install Spryker in Docker on a device with an ARM chip using demo shops versions 202108.0 or earlier.
 
-The steps below should be followed after you have completed the *Clone a Demo Shop and the Docker SDK* section in the installation guides for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) modes.
+The steps below should be followed after you have completed the *Clone a Demo Shop and the Docker SDK* section in the installation guides for [development](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) and [demo](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) modes.
 
 To switch to ARM architecture, follow the steps:
 

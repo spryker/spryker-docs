@@ -1,7 +1,9 @@
 ---
-title: Marketplace Product Offer Prices feature walkthrough
+title: Marketplace Product Offer Prices feature overview
 description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers.
-template: feature-walkthrough-template
+template: feature-overview-template
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 
 With the *Marketplace Product Offer Prices* feature, the Marketplace merchants can define custom prices for [product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html).
@@ -23,43 +25,6 @@ To support product offer prices, a *PriceProductOffer* database table has been a
 In addition, product offers support volume prices. Merchants can now enter volume prices for product offers, and customers will see the corresponding price on their Storefront based on the quantity they have chosen. The volume prices for product offers work the same as the volume prices for products.
 
 To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/volume-prices-overview.html)
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [Product offer price](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html#product-offer-price) overview for business users.
-
-{% endinfo_block %}
-
-## Module dependency graph
-
-The following diagram illustrates the dependencies between the modules for the *Marketplace Product Offer Prices* feature.
-
-![Entity diagram](https://confluence-connect.gliffy.net/embed/image/f128877d-eb61-4d87-b1af-5f166eb45c45.png?utm_medium=live&utm_source=confluence)
-
-| MODULE     | DESCRIPTION                |
-|------------|----------------------------|
-| PriceProductOffer | Provides product offer price-related functionality, price persistence, current price resolvers per currency/price mode.   |
-| PriceProductOfferDataImport | Imports data for product offer prices.    |
-| PriceProductOfferGui | Backoffice UI Interface for managing prices for product offers.    |
-| PriceProductOfferStorage | Provides functionality to store data about product offer prices in the storage.   |
-| PriceProductOfferVolume | Provides functionality to handle volume prices for product offers.    |
-| PriceProductOfferVolumeGui | Backoffice UI Interface for managing volume prices for product offers.    |
-| PriceProductOfferExtension | Provides plugin interfaces for extending `PriceProductOffer` module functionality.   |
-| PriceProductOfferStorageExtension | Provides plugin interfaces used by Price Product Offer Storage bundle.    |
-| PriceProductOfferVolumesRestApi | Provides plugin(s) to add product-offer-volume-prices to the product-offer-prices.   |
-| ProductOfferPricesRestApi | Provides Rest API endpoints to manage product offer prices.   |
-| ProductOfferPricesRestApiExtension | Provides plugin interfaces for extending the `ProductOfferPricesRestApi` module.    |
-| Price | Handles product pricing and provides plugins for products to populate prices.  |
-| PriceProduct | Provides product price-related functionality, price persistence, current price resolvers per currency/price mode.    |
-| PriceProductStorage | Provides functionality to store data about product prices in the storage.    |
-| PriceProductVolume | Provides functionality to handle volume prices for products.  |
-| ProductOffer | Provides the core functionality for product offer features.   |
-
-## Domain model
-
-The following schema illustrates the Marketplace Product Offer Prices domain model:
-
-![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)
 
 ## Related Developer documents
 

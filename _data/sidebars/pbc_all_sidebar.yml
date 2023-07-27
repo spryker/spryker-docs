@@ -2100,6 +2100,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
@@ -2953,6 +2954,7 @@ entries:
         url: /docs/pbc/all/search/search.html
         include_versions:
         - "202212.0"
+        - "202307.0"        
         nested:
           - title: Base shop
             nested:

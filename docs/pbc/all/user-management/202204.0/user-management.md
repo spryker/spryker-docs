@@ -58,4 +58,4 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 
 | OVERVIEWS | INSTALLATION GUIDES |
 | - | - |
-| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html) | [Install the ACL feature](/docs/pbc/all/user-management/202204.0/install-and-upgrade/install-the-acl-feature.html)
+| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html) | [Install the ACL feature](/docs/pbc/all/user-management/202204.0/base-shop/install-and-upgrade/install-the-acl-feature.html)

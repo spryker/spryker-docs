@@ -3504,7 +3504,7 @@ entries:
           url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/ui-components-library.html
           nested:
             - title: "Actions"
-              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions.html
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/ui-components-library-actions.html
               nested:
                 - title: "Close Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-close-drawer.html
@@ -3524,13 +3524,13 @@ entries:
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-refresh-table.html
 
             - title: "Cache"
-              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/cache/cache.html
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
               nested:
                 - title: "Static"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/cache/static.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
 
             - title: "Data Transformers"
-              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformers.html
               nested:
                 - title: "Collate"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/data-transformer-collate.html
@@ -3539,37 +3539,37 @@ entries:
                       url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
                       nested:
                         - title: "Table"
-                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/table.html
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html
 
                     - title: "Filters"
                       url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
                       nested:
                         - title: "Equals"
-                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/equals.html
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html
                         - title: "Range"
-                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/range.html
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
                         - title: "Text"
-                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/text.html
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
 
 
                 - title: "Array-map"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/array-map.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
                 - title: "Chain"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/chain.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-chain.html
                 - title: "Date-parse"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/date-parse.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
                 - title: "Date-serialize"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/date-serialize.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
                 - title: "Lens"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/lens.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-lens.html
                 - title: "Object-map"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/object-map.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
                 - title: "Pluck"
-                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/pluck.html
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
 
 
             - title: "Datasources"
-              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasources.html
               nested:
                 - title: "HTTP"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-http.html
@@ -3592,12 +3592,12 @@ entries:
           url: /docs/scos/dev/front-end-development/marketplace/angular-components.html
         - title: "Angular Services"
           url: /docs/scos/dev/front-end-development/marketplace/angular-services.html
-        - title: "Building the project"
-          url: /docs/scos/dev/front-end-development/marketplace/building-the-project.html
+        - title: "Building the Merchant Portal frontend"
+          url: /docs/scos/dev/front-end-development/marketplace/building-the-merchant-portal-frontend.html
         - title: "Project structure"
           url: /docs/scos/dev/front-end-development/marketplace/project-structure.html
-        - title: "Setting up the Merchant Portal"
-          url: /docs/scos/dev/front-end-development/marketplace/setting-up-the-merchant-portal.html
+        - title: "Set up the Merchant Portal"
+          url: /docs/scos/dev/front-end-development/marketplace/set-up-the-merchant-portal.html
         - title: "Web components"
           url: /docs/scos/dev/front-end-development/marketplace/web-components.html
 

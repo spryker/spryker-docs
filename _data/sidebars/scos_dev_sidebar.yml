@@ -3923,7 +3923,7 @@ entries:
       - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
       - title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-by-up-to-80-percent-without-ps-and-data-import-refactoring.html
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.md
       - title: "HowTo: Create an Angular module with application"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-an-angular-module-with-application.html
       - title: "HowTo: Split products by stores"

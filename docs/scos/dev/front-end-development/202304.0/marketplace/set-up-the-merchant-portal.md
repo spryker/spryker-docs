@@ -1,5 +1,5 @@
 ---
-title: Setting up the Merchant Portal
+title: Set up the Merchant Portal
 last_updated: May 15, 2023
 description: This document provides details about setting up Spryker Marketplace project.
 template: howto-guide-template

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/customer-account-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/customer-account-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/customer-account-management-feature-integration.html
-  - /docs/pbc/all/customer-relationship-management/202212.0/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+  - /docs/pbc/all/customer-relationship-management/202307.0/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
 related:
   - title: Install the Customer Account Management + Order Management feature
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html

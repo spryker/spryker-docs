@@ -75,7 +75,7 @@ Adjust the schema definition so entity changes will trigger events.
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           name="zed"
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
-          namespace="OrmZedProductMeasurementUnitPersistence"
+          namespace="Orm\Zed\ProductMeasurementUnit\Persistence"
           package="src.Orm.Zed.ProductMeasurementUnit.Persistence">
 
     <table name="spy_product_measurement_unit">
@@ -175,7 +175,7 @@ All measurement units need to have glossary entities for the configured locales.
 
 Infrastructural record's glossary keys:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 measurement_units.item.name,Item,en_US
@@ -184,7 +184,7 @@ measurement_units.item.name,Stück,de_DE
 
 Demo data glossary keys:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 measurement_units.standard.weight.kilo.name,Kilo,en_US
@@ -261,8 +261,8 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 namespace Pyz\Zed\EventBehavior;
 
 use Spryker\Zed\EventBehavior\EventBehaviorDependencyProvider as SprykerEventBehaviorDependencyProvider;
-use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\ProductConcreteMeasurementUnitEventResourceRepositoryPlugin;
-use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\ProductMeasurementUnitEventResourceRepositoryPlugin;
+use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\ProductConcreteMeasurementUnitEventResourceBulkRepositoryPlugin;
+use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Event\ProductMeasurementUnitEventResourceBulkRepositoryPlugin;
 
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
@@ -272,8 +272,8 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
     protected function getEventTriggerResourcePlugins()
     {
         return [
-            new ProductMeasurementUnitEventResourceRepositoryPlugin(),
-            new ProductConcreteMeasurementUnitEventResourceRepositoryPlugin(),
+            new ProductMeasurementUnitEventResourceBulkRepositoryPlugin(),
+            new ProductConcreteMeasurementUnitEventResourceBulkRepositoryPlugin(),
         ];
     }
 }
@@ -286,8 +286,8 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 namespace Pyz\Zed\Synchronization;
 
-use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization\ProductConcreteMeasurementUnitSynchronizationDataPlugin;
-use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization\ProductMeasurementUnitSynchronizationDataPlugin;
+use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization\ProductConcreteMeasurementUnitSynchronizationDataBulkPlugin;
+use Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization\ProductMeasurementUnitSynchronizationDataBulkPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
 
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
@@ -298,8 +298,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     protected function getSynchronizationDataPlugins(): array
     {
         return [
-            new ProductMeasurementUnitSynchronizationDataPlugin(),
-            new ProductConcreteMeasurementUnitSynchronizationDataPlugin(),
+            new ProductMeasurementUnitSynchronizationDataBulkPlugin(),
+            new ProductConcreteMeasurementUnitSynchronizationDataBulkPlugin(),
         ];
     }
 }
@@ -938,7 +938,7 @@ Make sure that the following modules are installed:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 cart.item_quantity,Quantity,en_US
@@ -986,49 +986,28 @@ Register the following plugins to enable widgets:
 | ProductMeasurementUnitWidgetPlugin | Allows customers to select sales units for the product when adding to cart. |None  | SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage |
 |QuantitySalesUnitWidgetPlugin|Displays selected sales unit information for products on the cart overview page.|None|SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage|
 
-**src/Pyz/Yves/ProductDetailPage/ProductDetailPageDependencyProvider.php**
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\ProductDetailPage;
+namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\ProductDetailPage\ProductDetailPageDependencyProvider as SprykerShopProductDetailPageDependencyProvider;
-use SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage\ProductMeasurementUnitWidgetPlugin;
+use SprykerShop\Yves\ProductMeasurementUnitWidget\Widget\ManageProductMeasurementUnitWidget;
+use SprykerShop\Yves\ProductMeasurementUnitWidget\Widget\CartProductMeasurementUnitQuantitySelectorWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
-class ProductDetailPageDependencyProvider extends SprykerShopProductDetailPageDependencyProvider
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface[]
+     * @return string[]
      */
-    protected function getProductDetailPageWidgetPlugins(): array
+    protected function getGlobalWidgets(): array
     {
         return [
-            ProductMeasurementUnitWidgetPlugin::class,
-        ];
-    }
-}
-```
-
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\CartPage;
-
-use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
-use SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage\QuantitySalesUnitWidgetPlugin;
-
-class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
-{
-    /**
-     * @return array
-     */
-    protected function getCartPageWidgetPlugins(): array
-    {
-        return [
-            QuantitySalesUnitWidgetPlugin::class,
+            CartProductMeasurementUnitQuantitySelectorWidget::class,
+            ManageProductMeasurementUnitWidget::class,
         ];
     }
 }

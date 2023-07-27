@@ -26,7 +26,7 @@ Merchants define the following settings when creating product offers:
 | Merchant SKU | Unique identifier of the offer in the merchants' system. |
 | Stores| Spryker Marketplace is a multi-store environment, and merchants can define which stores to display their offers in. |
 |Stock | Offer's own stock that's not dependent on the respective product's stock. |
-|Prices | Product offers support all types of Spryker Commerce OS prices: [volume](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html), [default and original](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html). |
+|Prices | Product offers support all types of Spryker Commerce OS prices: [volume](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html), [default and original](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html). |
 | Validity dates | Defines the period when an offer is displayed on the Storefront. Even if the respective product is no longer available, the offer can still be displayed. |
 
 ## Related Business User documents

@@ -3,6 +3,9 @@ title: "File details: merchant_product_option_group.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_product_option_group file to create product options for merchants.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html).

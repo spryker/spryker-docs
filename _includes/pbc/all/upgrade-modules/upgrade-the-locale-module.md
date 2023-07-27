@@ -1,30 +1,3 @@
-This document describes how to upgrade the Locale module.
-
-## Upgrading from version 3.* to version 4.0.0
-
-In this new 4.0.0 version of the `Locale` module, we have added support configuration locale for each store in the database.
-With the new 4.0.0 version of the `Locale` module, we have also added the `spy_locale_store` database table to persist stores-locales in Zed.
-We also added the column `fk_locale` into  `spy_store`, to allow saving a default locale per store. 
-
-You can find more details about the changes on the [Locale module](https://github.com/spryker/locale/releases) release page.
-
-*Estimated migration time: 5 minutes*
-
-To upgrade to the new version of the module, do the following:
-
-1. Upgrade the `Locale` module to the new version:
-
-```bash
-composer require spryker/locale:"^4.0.0" --update-with-dependencies
-```
-
-2. Run `vendor/bin/console transfer:generate` to update the transfer objects.
-
-3. Run `vendor/bin/console propel:install` to apply the database changes.
-
-
-***
-
 
 {% info_block errorBox %}
 

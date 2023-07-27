@@ -24,7 +24,7 @@ You can generate an invoice only once the order has acquired the `confirmed` sta
 
 {% info_block infoBox "Info" %}
 
-You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo: Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo: Display Custom Names for Order Item States on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
 
 {% endinfo_block %}
 

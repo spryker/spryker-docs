@@ -2,7 +2,7 @@
 This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
 
 
-This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -63,7 +63,7 @@ Adjust the schema definition, so that entity changes trigger the events.
  </database>
  ```
 
-Set up synchronization queue pools so that non-multistore entities (not store-specific entities) get synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 
@@ -527,7 +527,7 @@ Make sure that the following widgets were registered:
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

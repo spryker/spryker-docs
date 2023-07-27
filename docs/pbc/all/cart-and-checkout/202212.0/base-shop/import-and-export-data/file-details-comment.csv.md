@@ -12,6 +12,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/miscellaneous/file-details-comment.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/miscellaneous/file-details-comment.csv.html
   - /docs/pbc/all/cart-and-checkout/202212.0/import-and-export-data/file-details-comment.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `comment.csv` file to configure [Comment](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)  information in your Spryker Demo Shop.

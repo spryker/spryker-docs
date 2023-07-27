@@ -113,7 +113,7 @@ Each of the Identity Managers is an ECO module that should be developed separate
 | [Manage customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) |
 | [Create an abstract product and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) |
 | [Create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) |
-| [Create a voucher](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html) |
+| [Create a voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) |
 | [Manage users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) |
 | [Manage merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) |
 | [Create a warehouse](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html) |

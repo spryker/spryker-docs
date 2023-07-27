@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-category-feature-walkthrough.html
   - title: Merchant Category feature overview
     link: docs/marketplace/user/features/page.version/merchant-category-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_category.csv` file to configure [merchant categories](/docs/marketplace/user/features/{{site.version}}/merchant-category-feature-overview.html) in your Spryker shop.

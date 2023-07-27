@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/creating-a-product-variant
 related:
   - title: Editing Product Variants
-    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products

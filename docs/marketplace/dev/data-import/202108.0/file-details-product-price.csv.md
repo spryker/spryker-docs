@@ -3,6 +3,9 @@ title: "File details: product_price.csv"
 last_updated: Sep 7, 2021
 description: This document describes the product_price.csv file to configure  product prices in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
@@ -13,7 +16,7 @@ To import the file, run:
 data:import product-price
 ```
 
-## Headers & Mandatory Fields
+## Import file parameters
 
 These are the header fields to be included in the CSV file:
 
@@ -38,7 +41,7 @@ This file has the following dependencies:
 - [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 - `stores.php` configuration file of the Demo Shop PHP project
 
-## Template File & Content Example
+## Import template file and content example
 
 A template and an example of the `product_price.csv` file can be downloaded here:
 

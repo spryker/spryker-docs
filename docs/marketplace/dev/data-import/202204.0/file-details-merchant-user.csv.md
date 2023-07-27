@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
   - title: Merchant users overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/merchant-users-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant-user.csv` file to configure [merchant user](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) information in your Spryker shop.

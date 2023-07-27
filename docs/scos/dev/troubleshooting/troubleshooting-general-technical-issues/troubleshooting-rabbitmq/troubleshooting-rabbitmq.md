@@ -1,5 +1,5 @@
 ---
-title: TRoubleshooting RabbitMQ
+title: Troubleshooting RabbitMQ
 description: Troubleshoot RabbitMQ issues
 template: concept-topic-template
 ---

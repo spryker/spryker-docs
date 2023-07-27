@@ -29,7 +29,7 @@ This lets content managers create rich, compelling and attractive content for yo
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of asset measurement](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/asset-management.html)  |
+| [Get a general idea of asset management](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/asset-management.html)  |
 | [Get a general idea of the file uploader](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-uploader.html)  |
 | [Manage file tree](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html)   |
 | [Manage file list](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-list.html) |

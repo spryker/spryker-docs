@@ -16,9 +16,9 @@ Any changes the customer makes within the cart trigger an automatic sum-recalcul
 
 The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied based on the customers' final choice of items.
 
-Your customers can place orders faster by adding simple products to their cart from the **Category** page. They can add products with one [product variant](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) to the cart with one click.
+Your customers can place orders faster by adding simple products to their cart from the **Category** page. They can add products with one [product variant](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) to the cart with one click.
 
-The feature supports [product groups](/docs/pbc/all/product-information-management/{{site.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to your cart from the **Category** page.
+The feature supports [product groups](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to your cart from the **Category** page.
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 

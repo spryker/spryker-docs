@@ -168,7 +168,7 @@ Easily set a minimum order value for any of your products where either the custo
 You can easily manage gross and net prices per product, country, and currency. Please note that you cannot mix Net and Gross prices in the same shopping cart.
 ![Net and gross price](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image14.png)
 
-**Documentation**: [Net &amp; Gross Prices](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html)
+**Documentation**: [Net &amp; Gross Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html)
 
 ### Volume Prices
 

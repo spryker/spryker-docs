@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/file-details-order-statuscsv
   - /docs/file-details-order-statuscsv
   - /docs/en/file-details-order-statuscsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `order-status.csv` file to configure the update of the regular order status information in your Spryker shop.

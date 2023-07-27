@@ -17,9 +17,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
 related:
   - title: Retrieving concrete products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
   - title: Retrieving sales units
@@ -98,4 +98,4 @@ Request sample: retrieve availability of a concrete product
 | 306 | Availability is not found. |
 | 312 | Concrete product sku is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -3,6 +3,9 @@ title: "File details: combined_merchant_product_offer.csv"
 last_updated: Jun 07, 2021
 description: This document describes the combined_merchant_product_offer.csv file to configure product offers in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.

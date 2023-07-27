@@ -98,7 +98,7 @@ Request sample: impersonate a customer
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| tokenType | String | Type of the [authentication token](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html). Set this type when sending a request with the token. |
+| tokenType | String | Type of the [authentication token](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html). Set this type when sending a request with the token. |
 | expiresIn | Integer | The time in seconds in which the token expires. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the impersonated customer. |
 | refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |

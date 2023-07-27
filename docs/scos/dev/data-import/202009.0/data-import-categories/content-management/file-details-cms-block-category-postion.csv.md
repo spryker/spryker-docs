@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **cms_block_category_postion.csv** file to configure CMS Block Category Position information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | FIELD NAME | MANDATORY | TYPE | OTHER REQUIREMENTS/COMMENTS | DESCRIPTION |
@@ -24,7 +24,7 @@ These are the header fields to be included in the .csv file:
 
 This file has no dependencies.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *cms_block_category_postion.csv*  file can be downloaded here:
 
 | FILE | DESCRIPTION |

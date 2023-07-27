@@ -20,9 +20,15 @@ An attacker can inject malicious code in functionalities of the Spryker applicat
 
 ### How to get the fix
 
-Update the affected module `spryker/propel` to version 3.38.0:
+If the version of `spryker/propel` module is 3.35.0 up to and including 3.37.0, update it to version 3.38.0:
 ```bash
 composer require spryker/propel:"~3.38.0"
+composer show spryker/propel # Verify the version
+```
+
+If the version of `spryker/propel` module is earlier than 3.35.0, update it to version 3.34.3:
+```bash
+composer require spryker/propel:"~3.34.3"
 composer show spryker/propel # Verify the version
 ```
 
@@ -106,7 +112,7 @@ composer show spryker/cms # Verify the version
 
     {% info_block infoBox "Info" %}
 
-    The latest release of version 1.0 was in February, 2018. The version is outdated and no longer supported. To update from 1.* to 2.*, see [Upgrade the CmsBlockGui module](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html).
+    The latest release of version 1.0 was in February, 2018. The version is outdated and no longer supported. To update from 1.* to 2.*, see [Upgrade the CmsBlockGui module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html).
 
     {% endinfo_block %}
 

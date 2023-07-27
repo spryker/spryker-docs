@@ -113,9 +113,9 @@ On the storefront, company users can perform the following actions by using the 
 
 * To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html).
 * To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
-* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
+* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
 * To add comments to a cart, see [Comments feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html#comments-on-the-storefront).
-* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
+* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
 
 
 This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html).

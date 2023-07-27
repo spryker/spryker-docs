@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-customercsv
   - /docs/file-details-customercsv
   - /docs/en/file-details-customercsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `customer.csv` file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.

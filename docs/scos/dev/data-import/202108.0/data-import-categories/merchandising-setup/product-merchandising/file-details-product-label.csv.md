@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-labelcsv
   - /docs/file-details-product-labelcsv
   - /docs/en/file-details-product-labelcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_label.csv` file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information in your Spryker Demo Shop.

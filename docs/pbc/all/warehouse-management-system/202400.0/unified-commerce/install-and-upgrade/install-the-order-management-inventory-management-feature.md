@@ -4,7 +4,7 @@ description: Install the Order Management + Inventory Management feature in your
 template: feature-integration-guide-template
 last_updated: Feb 8, 2023
 redirect_from:
-  - /docs/pbc/all/warehouse-management-system/202304.0/base-shop/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
+  - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
 
 ---
 

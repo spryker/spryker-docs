@@ -56,7 +56,7 @@ For example, customize the names by adding the project name.
 
 ## Avoid using, extending, and overriding Private API
 
-Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), register the missing extension points in [Spryker ideas](https://spryker.ideas.aha.io/). In future, we will add the registered extension points, and you will be able to extend it via Public API.
+Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. In future, we will add the extension points, and you will be able to extend it via Public API.
 
 
 ## Keep modules up to date

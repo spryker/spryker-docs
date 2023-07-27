@@ -46,12 +46,14 @@ Make sure that the configured data is added to the `spy_glossary_key` and `spy_g
 
 Enable the following plugins:
 
-| PLUGIN                                                          | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
-|-----------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ServicePointCheckoutAddressCollectionFormExpanderPlugin         | Expands checkout address form with `ServicePoint` subform.                | None          | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin    | Expands checkout multi-shipping address form with `ServicePoint` subform. | None          | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin  | Expands shipments with service point address.                             | None          | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin    | Skips caching of `ServicePointAddressFormWidget` widget.                  | None          | SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication |
+| PLUGIN                                                                  | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
+|-------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
+| ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointCheckoutAddressCollectionFormExpanderPlugin                 | Expands checkout address form with `ServicePoint` subform.                |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin            | Expands checkout multi-shipping address form with `ServicePoint` subform. |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin          | Expands shipments with service point address.                             |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin            | Skips caching of `ServicePointAddressFormWidget` widget.                  |               | SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -61,10 +63,11 @@ Enable the following plugins:
 namespace Pyz\Yves\CustomerPage;
 
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
+use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin;
+use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin;
 use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin;
 use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointCheckoutAddressCollectionFormExpanderPlugin;
 use SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin;
-
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**
@@ -75,6 +78,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
         return [
             new ServicePointCheckoutAddressCollectionFormExpanderPlugin(),
             new ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin(),
+            new ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin(),
         ];
     }
 
@@ -85,9 +89,11 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     {
         return [
             new ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin(),
+            new ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin(),
         ];
     }
 }
+
 ```
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -103,7 +109,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return array<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface>
+     * @return list<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface>
      */
     protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
     {
@@ -118,9 +124,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Register the following plugins to enable widgets:
 
-| PLUGIN                        | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
-|-------------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
-| ServicePointAddressFormWidget | Enables service point selection during checkout address step. | None          | SprykerShop\Yves\ServicePointWidget\Widget |
+| PLUGIN                                    | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
+|-------------------------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
+| ClickCollectServicePointAddressFormWidget | Enables service point selection during checkout address step. |               | SprykerShop\Yves\ServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -129,18 +135,18 @@ Register the following plugins to enable widgets:
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\ServicePointWidget\Widget\ServicePointAddressFormWidget;
+use SprykerShop\Yves\ServicePointWidget\Widget\ClickCollectServicePointAddressFormWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return list<string>
      */
     protected function getGlobalWidgets(): array
     {
         return [
-            ServicePointAddressFormWidget::class,
+            ClickCollectServicePointAddressFormWidget::class,
         ];
     }
 }
@@ -156,8 +162,8 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| MODULE                        | TEST                                                                            |
-|-------------------------------|---------------------------------------------------------------------------------|
-| ServicePointAddressFormWidget | Go to **Address Checkout Step**, make sure that you could select service point. |
+| MODULE                                    | TEST                                                                            |
+|-------------------------------------------|---------------------------------------------------------------------------------|
+| ClickCollectServicePointAddressFormWidget | Go to **Address Checkout Step**, make sure that you could select service point. |
 
 {% endinfo_block %}

@@ -135,3 +135,45 @@ console data:import:shipment-type-service-type
 Make sure that entities were imported to the `spy_shipment_type_service_type` database table.
 
 {% endinfo_block %}
+
+## 2) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                        |
+|----------------------------------------------|--------------------------------------------------------------|---------------|--------------------------------------------------|
+| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer` with service type key. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+
+**src/Pyz/Zed/ShipmentTypeStorage/ShipmentTypeStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ShipmentTypeStorage;
+
+use Spryker\Zed\ShipmentTypeServicePoint\Communication\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin;
+use Spryker\Zed\ShipmentTypeStorage\ShipmentTypeStorageDependencyProvider as SprykerShipmentTypeStorageDependencyProvider;
+
+class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\ShipmentTypeStorageExtension\Dependency\Plugin\ShipmentTypeStorageExpanderPluginInterface>
+     */
+    protected function getShipmentTypeStorageExpanderPlugins(): array
+    {
+        return [
+            new ServiceTypeShipmentTypeStorageExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that `shipment-type` storage data is expanded with service type field:
+
+1. Fill the `spy_shipment_type_service_point` tables with data.
+2. Run the `console publish:trigger-events -r shipment_type` command.
+3. Make sure that the `spy_shipment_type_storage.data` field includes `service_type` data.
+
+{% endinfo_block %}

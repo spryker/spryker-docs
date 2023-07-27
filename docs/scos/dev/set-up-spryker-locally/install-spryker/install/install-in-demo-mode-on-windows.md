@@ -28,58 +28,62 @@ Depending on the needed WSL version, follow one of the guides:
 
 * [Install Docker prerequisites on Windows with WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
-## Install Spryker in Demo mode on Windows
+## Clone a Demo Shop and the Docker SDK
 
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Clone *one* of the [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+4. Clone *one* of the [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) and navigate into its folder:
 
     * B2C Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
-    ```
-
-    * B2B Demo Shop:
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
-    ```
-
-5. Depending on the cloned Demo Shop, navigate into the cloned folder:
-
-    * B2C Demo Shop:
-
-    ```bash
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop && \
     cd b2c-demo-shop
     ```
 
     * B2B Demo Shop:
 
-    ```bash
-    cd b2b-demo-shop
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop && \
+    cd b2c-demo-shop
+    ```
+
+    * B2C Marketplace Demo Shop
+
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2c-demo-marketplace && \
+    cd b2c-demo-marketplace
+    ```
+
+    * B2B Marketplace Demo Shop
+
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2b-demo-marketplace && \
+    cd b2b-demo-marketplace
     ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you are in the correct folder by running the `pwd` command.
+Make sure that you are in the Demo Shop's folder by running the `pwd` command.
 
-{% endinfo_block %}
+{% endinfo_block %}    
 
-6. Clone the Docker SDK repository into the same folder:
+5. Clone the Docker SDK repository into the same folder:
 
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-7. Add your user to the `docker` group:
+## Configure and start the instance
+
+1. Add your user to the `docker` group:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-8. Bootstrap the local Docker setup for demo:
+2. Bootstrap the local Docker setup for demo:
 
 ```shell
 docker/sdk bootstrap
@@ -91,7 +95,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 
-9. Update the `hosts` file:
+3. Update the `hosts` file:
     1. Open the Start menu.
     2. In the search field, enter `Notepad`.
     3. Right-click *Notepad* and select **Run as administrator**.
@@ -118,7 +122,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     9. Select **File > Save**.
     10. Close the file.
 
-10. Build and start the instance:
+4. Build and start the instance:
 
 ```shell
 docker/sdk up

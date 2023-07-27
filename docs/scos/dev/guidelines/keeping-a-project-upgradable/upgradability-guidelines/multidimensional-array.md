@@ -11,19 +11,23 @@ This check checks that project doesn't use the deeply nested multidimensional ar
 If a plugins stack is used on the project level, not all structures are necessarily required. Deeply nested multidimensional arrays make configuration hard to upgrade.
 This check verifies that multidimensional arrays have a maximum of two levels of nesting inside.
 
-## Example of an evaluator error message
+## Example of an Evaluator error message
 
 ```bash
 ======================
 MULTIDIMENSIONAL ARRAY
 ======================
 
-Message: Reached max level of nesting for the plugin registration in the {FormDependencyProvider::getPlugins()}.
-         The maximum allowed nesting level is 2. Refactor the code; otherwise, it can cause upgradability issues in the future.
-Target:  Pyz\Yves\Module\ModuleDependencyProvider
++---+----------------------------------------------------------------------------------------------------------------------------+------------------------------------------+
+| # | Message                                                                                                                    | Target                                   |
++---+----------------------------------------------------------------------------------------------------------------------------+------------------------------------------+
+| 1 | Reached max level of nesting for the plugin registration in the {FormDependencyProvider::getPlugins()}.                    | Pyz\Yves\Module\ModuleDependencyProvider |
+|   | The maximum allowed nesting level is 2. Please, refactor code, otherwise it will cause upgradability issues in the future. |                                          |
++---+----------------------------------------------------------------------------------------------------------------------------+------------------------------------------+
+
 ```
 
-## Example of code that causes an evaluator error
+## Example of code that causes an upgradability error
 
 The methods `ModuleDependencyProvider` contains unsupported multidimensional arrays, which have more than two nesting levels inside.
 

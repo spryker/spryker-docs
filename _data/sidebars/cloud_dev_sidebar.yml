@@ -42,11 +42,6 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
       - title: Starting asynchronous commands
         url: /docs/cloud/dev/spryker-cloud-commerce-os/starting-asynchronous-commands.html
-      - title: Best practices
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practices.html
-        nested:
-        - title: "Best practises: Jenkins stability"
-          url: /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode

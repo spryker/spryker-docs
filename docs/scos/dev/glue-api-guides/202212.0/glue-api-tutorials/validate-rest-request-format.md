@@ -25,7 +25,7 @@ related:
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
   - title: Glue infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
 Glue API lets you validate requests sent to REST endpoints. It lets you check whether all required fields are present and whether the type and format of the fields are correct.

@@ -238,7 +238,7 @@ To extend Docker/sdk, you can do the following:
    ```
   This approach is compatible with SCCOS, but provides limited customization possibilities.
 
-- To introduce "mocks" for development and CI/CD testing, you can use the [Docker-compose extension](https://docs.docker.com/compose/compose-file/11-extension/):
+- To introduce "mocks" for development and CI/CD testing, you can use the [Docker-compose extension](https://docs.docker.com/compose/extends/):
   ```
   docker:
    compose:

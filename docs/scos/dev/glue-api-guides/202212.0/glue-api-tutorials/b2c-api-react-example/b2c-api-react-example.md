@@ -27,7 +27,7 @@ related:
   - title: Install B2C API React example
     link: docs/scos/dev/glue-api-guides/page.version/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
   - title: Glue REST API
-    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-rest-api.html
+    link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
 ---
 
 As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React example. It is a [React](https://reactjs.org/) single-page application based on a [webpack](https://webpack.js.org/) dev server, Typescript, [Redux](https://redux.js.org/), and Material UI.

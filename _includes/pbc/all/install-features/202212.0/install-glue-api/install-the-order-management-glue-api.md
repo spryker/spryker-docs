@@ -69,7 +69,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-infrastructure.html#resource-routing).
+`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

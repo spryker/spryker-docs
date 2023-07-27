@@ -28,7 +28,7 @@ If you find a security issue in a Spryker product, please report it to us.
 
 ## Reporting a security issue
 
-Do not use public Slack channels or other public channels to report a security issue. Instead, send an e-mail to [security@spryker.com](mailto:security@spryker.com) in English and include system configuration details, reproduction steps, and received results. Your email will be forwarded to our internal team and we will confirm that we received your email and ask for more details if needed.
+Do not use public AHA Ideas, public Slack channels, or other public channels to report a security issue. Instead, send an e-mail to [security@spryker.com](mailto:security@spryker.com) in English and include system configuration details, reproduction steps, and received results. Your email will be forwarded to our internal team and we will confirm that we received your email and ask for more details if needed.
 
 ## How we are handling security reports
 

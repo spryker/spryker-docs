@@ -104,6 +104,8 @@ entries:
       nested:
       - title: How Spryker Support works
         url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+      - title: Handling new feature requests
+        url: /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
       - title: Case escalation
         url: /docs/scos/user/intro-to-spryker/support/case-escalation.html
       - title: Getting support

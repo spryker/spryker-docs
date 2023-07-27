@@ -27,6 +27,8 @@ redirect_from:
 **Updated: April 2021**
 We at Spryker are happy to share our plans with you. The plans below are guidelines that give us direction  to continuously evolve and improve our product. However, we are also flexible, and we constantly listen and adapt. Therefore, our plans could change. So although we are good at fulfilling our commitments, we reserve the right to change our priorities, remove or add new features from time to time. If you are planning anything strategic based on this list, you might want to talk to us first, either by contacting your Spryker representative or one of our [Solution Partners](https://spryker.com/solution-partners/).
 
+If you see a feature that you like, [create an idea in our Aha](https://spryker.ideas.aha.io/ideas/) and let us know why the feature is important to you.
+
 {% info_block warningBox %}
 
 The roadmap contains features and not architectural items, enhancements, technology updates, or any other strategic releases we are working on. We kindly ask you not to base any business decisions on these lists without consulting with us first.

@@ -72,7 +72,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |       |          | mariadb-10.3 | &check;     |    |
 |       |          | mariadb-10.4 | &check;     |    |
 |       |          | mariadb-10.5 | &check;     |    |
-| broker | rabbitmq | 3.7          |             |    |
+| broke | rabbitmq | 3.7          |             |    |
 |       |          | 3.8          | &check;     |    |
 |       |          | 3.9          | &check;     |    |
 | session         | redis    | 5.0          | &check;     |    |

@@ -13,18 +13,19 @@ This results in unnecessary additional time investment from developers, as they 
 This check examines potential obsolete classes, with a tendency to overlook important Spryker kernel classes like `Factory`, `Facade`, or `DependencyProvider`.
 If desired, you have the option to disable the dead code checker for a particular class using the `@evaluator-skip-dead-code` annotation.
 
-## Example of an evaluator error message
+## Example of an Evaluator error message
 
 ```bash
 =================
 DEAD CODE CHECKER
 =================
 
-Message: The class "Pyz/Zed/Single/Communication/Plugin/SinglePlugin" is not used in the project.
-Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
++---+---------------------------------------------------------------------------------+--------------------------------------------------+
+| # | Message                                                                         | Target                                           |
++---+---------------------------------------------------------------------------------+--------------------------------------------------+
+| 1 | Class "Pyz/Zed/Single/Communication/Plugin/SinglePlugin" is not used in project | Pyz/Zed/Single/Communication/Plugin/SinglePlugin |
++---+---------------------------------------------------------------------------------+--------------------------------------------------+
 ```
-
-## Example of code that causes an evaluator error
 
 Unused class `Pyz/Zed/Single/Communication/Plugin/SinglePlugin` that produces an error:
 

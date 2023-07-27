@@ -106,7 +106,7 @@ Note that depending on the Login feature configuration for your project, too man
 | --- | --- |
 |4101 | Failed to authenticate an agent. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

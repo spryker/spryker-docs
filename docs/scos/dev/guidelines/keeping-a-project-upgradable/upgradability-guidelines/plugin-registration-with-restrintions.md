@@ -51,18 +51,21 @@ Below is an example of the annotation syntax needed to register a plugin only af
     new DefaultProductOfferReferenceStrategyPlugin(),
 ```
 
-## Example of an evaluator error message
+## Example of an Evaluator error message
 
 ```shell
 ==============================================
 PLUGINS REGISTRATION WITH RESTRICTIONS CHECKER
 ==============================================
 
-Message: Restriction rule does not match the pattern "/^\* - (before|after) \{@link (?<class>.+)\}( .*\.|)$/".
-Target:  CategoryDependencyProvider.php
++---+------------------------------------------------------------------------------------------------------+--------------------------------+
+| # | Message                                                                                              | Target                         |
++---+------------------------------------------------------------------------------------------------------+--------------------------------+
+| 1 | Restriction rule does not match the pattern "/^\* - (before|after) \{@link (?<class>.+)\}( .*\.|)$/" | CategoryDependencyProvider.php |
++---+------------------------------------------------------------------------------------------------------+--------------------------------+
 ```
 
-## Example of code that causes an evaluator error
+## Example of code that causes an upgradability error
 
 ```php
 namespace Pyz\Zed\Category;

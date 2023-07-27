@@ -122,7 +122,7 @@ For more details, see [App Configuration Translation](/docs/acp/user/app-configu
 The command defines Sync API and Async API.
 
 ##### Sync API
-The Sync API defines the app's synchronous endpoints, or [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) endpoints. The workflow creates a boilerplate that you need to update with the required endpoints your app should have. See the [current OpenAPI specification](https://spec.openapis.org/oas/v3.1.0).
+The Sync API defines the app's synchronous endpoints, or [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html) endpoints. The workflow creates a boilerplate that you need to update with the required endpoints your app should have. See the [current OpenAPI specification](https://spec.openapis.org/oas/v3.1.0).
 
 For more details about the Sync API with information specific to Spryker, see [Sync API](/docs/acp/user/sync-api.html).
 

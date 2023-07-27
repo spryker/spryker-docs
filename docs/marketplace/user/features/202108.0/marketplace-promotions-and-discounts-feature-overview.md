@@ -2,7 +2,6 @@
 title: Marketplace Promotions and Discounts feature overview
 description: This document contains concept information for the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
-lust_udpated: Jul 17, 2023
 related:
     - title: Discount
       link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
@@ -64,7 +63,7 @@ A decision rule is a condition assigned to a discount that should be fulfilled f
 
 A discount can have one or more decision rules. Find an exemplary combination below:
 
-| Parameter | RELATION OPERATOR | VALUE |
+| Parameter | RELATION OPERATOR | Value |
 | --- | --- | --- |
 | total-quantity | equal |  3 |
 |  day-of-week| equal | 5  |
@@ -140,9 +139,7 @@ The Marketplace discounts are applied based on the query string.
 The *query string* is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
 
 The discount in the following example applies to white products.
-
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
-
 The product selection based on the query string is dynamic:
 * If at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
 * If at some point, a product receives the white color attribute, it becomes eligible for the discount.
@@ -161,9 +158,9 @@ With the calculator fixed type, the currency of the respective shop is used for 
 
 {% endinfo_block %}
 
-See examples in the following table.
 
-| PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
+See examples in the following table.
+| Product price | Calculation type | Amount | Discount applied | Price to pay |
 | --- | --- | --- | --- | --- |
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
@@ -184,7 +181,7 @@ An exclusive discount is a discount that, when applied to a cart, discards all t
 
 In the following example, a cart with the order total amount of €100 contains the following discounts.
 
-| DISCOUNT NAME  | DISCOUNT AMOUNT | DISCOUNT TYPE | EXCLUSIVENESS | DISCOUNTED AMOUNT |
+| Discount name  | Discount amount | Discount type | Exclusiveness | Discounted amount |
 | --- | --- | --- | --- | --- |
 | D1 | 15 | Calculator percentage | Exclusive | €15 |
 |D2|5| Calculator fixed | Exclusive | €5 |
@@ -202,7 +199,7 @@ A non-exclusive discount is a discount that can be combined with other non-exclu
 
 In the following example, a cart with the order total amount of €30 contains the following discounts.
 
-| DISCOUNT NAME  | DISCOUNT AMOUNT | DISCOUNT TYPE | EXCLUSIVENESS | DISCOUNTED AMOUNT |
+| Discount name  | Discount amount | Discount type | Exclusiveness | Discounted amount |
 | --- | --- | --- | --- | --- |
 | D1 | 15 | Calculator percentage | Non-exclusive | €15 |
 | D2 | 5 | Calculator fixed | Non-exclusive | €5 |

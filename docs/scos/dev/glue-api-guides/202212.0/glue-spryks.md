@@ -32,8 +32,8 @@ To perform the requested operations, besides the Spryks called by the user, oth
 {% endinfo_block %}
 
 To call a Spryk, you can use the following console commands:
-* `vendor/bin/spryk-run {SPRYK NAME}`: to call a _Spryk_ and input the arguments interactively, one-by-one.
-* `vendor/bin/spryk-run {SPRYK NAME} --{argument name}={argument value}`: to call a _Spryk_ and pass the named arguments in one pass.
+* `vendor/bin/console spryk:run {SPRYK NAME}` - to call a _Spryk_ and input the arguments interactively, one-by-one.
+* `vendor/bin/console spryk:run {SPRYK NAME} --{argument name}={argument value}` - to call a _Spryk_ and pass the named arguments in one pass.
 
 ## Glue module management
 

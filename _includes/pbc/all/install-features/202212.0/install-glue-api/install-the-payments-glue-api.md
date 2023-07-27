@@ -18,7 +18,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
-| Payments | {{page.version}} | [Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html) |
+| Payments | {{page.version}} | [Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/install-and-upgrade/install-the-payments-feature.html) |
 
 ## 1)  Install the required modules using Composer
 

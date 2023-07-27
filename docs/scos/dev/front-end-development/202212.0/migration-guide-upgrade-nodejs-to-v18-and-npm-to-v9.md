@@ -163,7 +163,7 @@ If the project uses CI, adjust `.github/workflows/ci.yml`:
   uses: actions/cache@v3
   with:
     path: ~/.npm
-    key: ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-node-${% raw %}{{{% endraw %} hashFiles('**/package-lock.json') {% raw %}}}{% endraw %}
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
     restore-keys: |
-      ${% raw %}{{{% endraw %} runner.os {% raw %}}}{% endraw %}-node-
+      ${{ runner.os }}-node-
 ```

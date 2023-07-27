@@ -34,7 +34,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/import-data/file-details-warehouse.csv.html)
 
 ## Import template file and content example
 

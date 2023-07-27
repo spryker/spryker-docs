@@ -358,7 +358,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | customer.lastName   | String | ✓        | Customer's last name.  |
 | idCart   | String | ✓        | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
 | billingAddress                                               | Object | ✓        | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
-| billingAddress.id                                            | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| billingAddress.id                                            | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation  | String | ✓        | Salutation to use when addressing the customer.  |
 | billingAddress.email   | String | ✓        | Customer's email address.   |
 | billingAddress.firstName  | String | ✓        | Customer's first name.   |
@@ -377,8 +377,8 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | shipment   | Object | ✓        | A list of attributes describing the shipping method selected for this order. |
 | shipment.items   | object | ✓        | A list of items that are to be delivered to the shipping address defined in this shipment. |
 | shipment.shippingAddress   | Object | ✓        | Customer's shipping [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html) for this shipment. |
-| shipment.shippingAddress.id | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipment.shippingAddress.idCompanyBusinessUnitAddress        | String |          | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress.id | String |          | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress.idCompanyBusinessUnitAddress        | String |          | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | shipment.shippingAddress.salutation   | String | ✓        | Salutation to use when addressing the customer.    |
 | shipment.shippingAddress.email   | String | ✓        | Customer's email address.     |
 | shipment.shippingAddress.firstName    | String | ✓        | Customer's first name.     |
@@ -1291,7 +1291,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | order-shipments       | country               | String   | Specifies the country.                          |
 | order-shipments       | iso2Code              | String   | ISO 2-Letter Country Code to use.               |
 
-For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-customers-orders)
+For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 
 ## Possible errors
 

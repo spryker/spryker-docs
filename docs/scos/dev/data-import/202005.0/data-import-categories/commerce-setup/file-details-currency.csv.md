@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **currency.csv** file to configure [Currency](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
+## Import file parameters
 These are the header fields to be included in the .csv file:
 
 |  | Field Name | Mandatory | Type | Other Requirements/Comments | Description | 
@@ -30,7 +30,7 @@ It is recommended to fill all three columns, when adding a new record, except if
 
 Default currency might be set up when setting up the store. Check [here](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/stores.php#L38). 
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *currency.csv* file can be downloaded here:
 
 | File | Description |

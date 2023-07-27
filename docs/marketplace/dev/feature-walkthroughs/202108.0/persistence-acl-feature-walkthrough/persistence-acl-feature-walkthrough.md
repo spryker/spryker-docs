@@ -71,7 +71,7 @@ A query sent to the database is intercepted and modified with additional joins t
 - [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html)
 - [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | REFERENCES  | HOWTOS  |
 |---------|---------|---------|

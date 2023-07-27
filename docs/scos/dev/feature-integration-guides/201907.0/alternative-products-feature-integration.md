@@ -68,7 +68,7 @@ Adjust the schema definition so that entity changes trigger the events.
 ```
 
     
-Set up synchronization queue pools so that non-multistore entities (not store specific entities) get synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 
@@ -272,7 +272,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 155_30149933,134_26145012,
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 |---|---|---|---|---|
 |  `concrete_sku` | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
 |  `alternative_product_concrete_sku` | optional | string | 420565 | SKU of the concrete alternative product. |

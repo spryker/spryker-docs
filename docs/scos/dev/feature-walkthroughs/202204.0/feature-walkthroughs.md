@@ -45,7 +45,7 @@ The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/compa
 
 ### Configuration process flow of Configurable Product
 
-The [configuration process](/docs/pbc/all/product-information-management/{{page.version}}/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) of a configurable product consists of eight phases.
+The [configuration process](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) of a configurable product consists of eight phases.
 
 ## Content Items
 
@@ -53,7 +53,7 @@ The [Content Items](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content
 
 ### Content item types: module relations
 
-[This document](/docs/pbc/all/content-management-system/{{page.version}}/domain-model-and-relationships/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
+[This document](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/domain-model-and-relationships/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
 
 ## Customer Access
 
@@ -96,7 +96,7 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 
 ### Navigation module: reference information
 
-The [Navigation module](/docs/pbc/all/content-management-system/{{page.version}}/extend-and-customize/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
+The [Navigation module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/extend-and-customize/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
 
 ## Non-splittable Products
 
@@ -126,7 +126,7 @@ The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-fea
 
 ### PriceProduct module details: reference information
 
-This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 
 ## Product Relations

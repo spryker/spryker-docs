@@ -43,7 +43,7 @@ The concerns for the product price calculation are the following:
 * Calculate the amount of tax.          
 * Product Option prices selected for the product (warranty or gift wrapping).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

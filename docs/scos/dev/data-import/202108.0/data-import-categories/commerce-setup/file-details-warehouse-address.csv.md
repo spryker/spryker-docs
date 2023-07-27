@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/file-details-warehouse-addresscsv
   - /docs/file-details-warehouse-addresscsv
   - /docs/en/file-details-warehouse-addresscsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.

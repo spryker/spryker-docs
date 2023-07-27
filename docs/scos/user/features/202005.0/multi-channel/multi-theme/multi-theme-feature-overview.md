@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/multi-theme-feature-overview
 ---
 
-Spryker Frontend consists of two main parts: [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-frontend-general-overview.html) (JS/CSS/Twg) and [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html) (Widgets and Pages). Both support theming and the same inheritance strategy: Current Theme > Default Theme.
+Spryker Frontend consists of two main parts: [Atomic Frontend](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-frontend-general-overview.html) (JS/CSS/Twg) and [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html) (Widgets and Pages). Both support theming and the same inheritance strategy: Current Theme > Default Theme.
 
 A theme is a combination of twig, CSS and JS files that make your user interface unique. 
 

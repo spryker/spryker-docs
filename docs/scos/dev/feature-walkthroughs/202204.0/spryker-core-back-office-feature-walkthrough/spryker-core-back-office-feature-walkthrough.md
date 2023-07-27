@@ -14,7 +14,7 @@ To learn more about the feature and to find out how end users use it, see [Spryk
 
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | REFERENCES|
 |---------|---------|

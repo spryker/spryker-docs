@@ -101,7 +101,7 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

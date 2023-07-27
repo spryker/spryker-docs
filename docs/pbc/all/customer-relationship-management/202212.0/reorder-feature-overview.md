@@ -22,8 +22,8 @@ One of the biggest factors that influences customer loyalty and persuades them t
 
 ![Reorder order details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Reorder/reorder_order_details.png)
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | CustomerReorderWidget migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | [CustomerReorderWidget migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html)  |

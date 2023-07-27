@@ -132,7 +132,7 @@ The checkout process is paramount for your business in any business model. With 
 #### Documentation
 
 * [Check out purchases](/docs/scos/dev/glue-api-guides/202005.0/checking-out/checking-out-purchases.html)
-* [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/glue-api-retrieve-orders.html)
+* [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html)
 
 ### Refresh Token API - Create Possibility to Invalidate Refresh Tokens
 

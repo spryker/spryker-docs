@@ -43,7 +43,7 @@ The feature has the following functional constraints which are going to be resol
 * You cannot restrict availability of a product set to a store.
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

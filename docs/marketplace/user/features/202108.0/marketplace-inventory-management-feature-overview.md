@@ -58,7 +58,7 @@ Are you a developer? See [Marketplace Inventory Management feature walkthrough](
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |

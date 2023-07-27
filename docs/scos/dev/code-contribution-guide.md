@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/code-contribution-guide
 ---
 
+{% info_block infoBox %}
+We are currently revising our code contribution concept and will update this page once the new concept is finalised. Please note that while we are working on the new concept we will unfortunately not be able to consider external contributions to our code base.
+{% endinfo_block %}
 
 In Spryker, we welcome contributions in all forms, be it detailed Issues or Pull Requests (PRs). As PRs directly show the changes and the context, we verify and ship them faster. Therefore, *PRs are the preferred method of contribution*.
 
@@ -52,4 +55,5 @@ If you create a PR and feel that the issue is important, [contact our support](h
 
 ---
 **See also:**
-* [Contributing to the Documentation](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#editing-documentation)
+
+[Contribute to documentation](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html)

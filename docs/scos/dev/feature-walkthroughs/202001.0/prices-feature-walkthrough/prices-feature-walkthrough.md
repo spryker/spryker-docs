@@ -11,7 +11,7 @@ The _Prices_ feature enables Back Office users to effectively manage the prices 
 To learn more about the feature and to find out how end users use it, see [Prices overview](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|

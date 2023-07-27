@@ -128,7 +128,7 @@ For more details about navigation, check the video:
 
 {% wistia anlwttuexm 720 480 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

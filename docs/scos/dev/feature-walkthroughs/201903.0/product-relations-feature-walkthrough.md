@@ -21,7 +21,7 @@ The following schema illustrates relations within the Product Relations feature:
 
 </div>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|

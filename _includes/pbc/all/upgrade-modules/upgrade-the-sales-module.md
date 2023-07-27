@@ -7,7 +7,7 @@ You can find more details about the changes on the [Sales module release page](h
 
 {% info_block errorBox %}
 
-This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/split-delivery-migration-concept.html).
+This release is a part of the **Split delivery** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/split-delivery-migration-concept.html).
 
 {% endinfo_block %}
 
@@ -260,8 +260,8 @@ Now you have two options:
 
 * migrate to the new calculators logic.
 
-1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
-2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
+1. To keep old calculation logic, see [Updating calculator stacks](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
+2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
 ## Upgrading from version 3.* to version 4.*
 

@@ -28,7 +28,7 @@ Update the required modules:
 "spryker/monitoring": "2.3.0"
 "spryker/router": "1.12.0"
 "spryker/session": "4.10.0"
-"spryker/twig": "3.15.1"```
+"spryker/twig": "3.15.1"
 ```
 
 2. Update the modules to the specified versions:
@@ -37,7 +37,7 @@ Update the required modules:
 composer update spryker/twig spryker/session spryker/router spryker/monitoring spryker/event-dispatcher spryker/application
 ```
 
-### 2) Update modules using NPM
+### 2) Update modules using npm
 
 Update the required module:
 
@@ -584,6 +584,12 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 ```
 
 3. Adjust the server configuration of the application according to the added endpoints.
+
+{% info_block errorBox "Inform the Support Team" %}
+
+Inform the Spryker Support Team of your intention to add additional endpoints. Your PaaS environment needs to be configured to be compatible with this new setup, and you need to agree with the team on a maintenance window for making this change, as it will result in brief service degradation. Please ask the Support Team for the adjustments by sharing your updated deploy file. Please do so with ample lead time, at least 5 working days prior to the planned change.
+
+{% endinfo_block %}
 
 ### 9) Update the Docker SDK
 

@@ -930,7 +930,7 @@ category_key,parent_category_key,name.de_DE,name.en_US,meta_title.de_DE,meta_tit
 cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,1,1,1,0,1,90,Catalog (default)
 ```
 
-|COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
+|COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
 | category_key | ✓ | string | cameras-and-camcorder | Sluggable name of the category. |
 | parent_category_key | | string | demoshop | Sluggable name of the parent category. |

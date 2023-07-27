@@ -72,7 +72,7 @@ Make sure that the following modules have been installed:
 </database>
 ```
 
-2. Set up synchronization queue pools so non-multistore entities (not store specific entities) will be synchronized among stores:
+2. Set up synchronization queue pools so non-multi-store entities (not store specific entities) will be synchronized among stores:
 
 **src/Pyz/Zed/ProductGroupStorage/Persistence/Propel/Schema/spy_product_group_storage.schema.xml**
 
@@ -247,7 +247,7 @@ group_key_2,005,1
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | group_key | Yes | string | group_key_1 | Unique product group identifier. |
 | abstract_sku | Yes | string  | 001 | SKU of an abstract product. |

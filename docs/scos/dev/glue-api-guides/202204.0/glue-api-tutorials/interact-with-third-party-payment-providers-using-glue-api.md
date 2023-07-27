@@ -19,7 +19,7 @@ redirect_from:
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
-  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/docs/pbc/all/payment-service-provider/{{site.version}}/interact-with-third-party-payment-providers-using-glue-api.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
 related:
   - title: Technology Partner Integration
@@ -32,7 +32,7 @@ The checkout process of Spryker Glue API can be leveraged to involve third parti
 
 {% info_block infoBox %}
 
-For details, see [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/check-out-purchases.html).
+For details, see [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html).
 
 {% endinfo_block %}
 
@@ -116,7 +116,7 @@ To help you understand which payments need to be processed, you can use the opti
 
 {% info_block infoBox %}
 
-For details, see [Update payment data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/update-payment-data.html).
+For details, see [Update payment data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/update-payment-data.html).
 
 {% endinfo_block %}
 

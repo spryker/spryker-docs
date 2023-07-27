@@ -9,7 +9,7 @@ The _Category Management_ feature allows managing your product catalog with cust
 
 To learn more about the feature and to find out how end users use it, see [Category Management feature overview](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) for business users.
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|---------|

@@ -34,7 +34,7 @@ It is the responsibility of the API Client to redirect to the third party web si
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 ## Checkout Workflow
 There are three endpoints provided to implement checkout via the API:

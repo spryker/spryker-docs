@@ -66,7 +66,7 @@ A Back Office user can create returns for the [returnable items](/docs/scos/user
 
 Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
 | --- | --- |

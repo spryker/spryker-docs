@@ -22,7 +22,7 @@ The following schema illustrates relations module relations in the Persistent Ca
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  |
 |---|

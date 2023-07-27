@@ -19,7 +19,7 @@ This topic contains the reference information you need to know when working with
 ## Add / Edit Address Page
 The following table describes the attributes you must enter when creating or editing the address.
 
-| Attribute | Description | Required? |
+| Attribute | Description | REQUIRED |
 | --- | --- | --- |
 | Salutation | A formal salutation for you (e.g., Mr, Mrs). | yes |
 | First Name | Your first name. | yes |

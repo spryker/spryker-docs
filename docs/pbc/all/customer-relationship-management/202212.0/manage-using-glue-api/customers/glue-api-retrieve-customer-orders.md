@@ -14,9 +14,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/retrieving-customer-orders.html
 related:
   - title: Retrieving orders
-    link: docs/pbc/all/order-management-system/page.version/glue-api-retrieve-orders.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration
@@ -34,14 +34,14 @@ related:
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
 ---
 
 This endpoint allows retrieving a customer’s orders.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
 
 ## Retrieve customer’s orders
 
@@ -53,7 +53,7 @@ To retrieve a customer’s orders, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/pbc/all/order-management-system/{{page.version}}/glue-api-retrieve-orders.html#retrieve-all-orders).
+Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/glue-api-retrieve-orders.html#retrieve-all-orders).
 
 {% endinfo_block %}
 
@@ -136,4 +136,4 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

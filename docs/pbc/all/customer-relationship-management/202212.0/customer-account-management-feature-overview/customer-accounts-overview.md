@@ -99,7 +99,7 @@ A customer can perform the following actions on the Storefront:
 
 </details>
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

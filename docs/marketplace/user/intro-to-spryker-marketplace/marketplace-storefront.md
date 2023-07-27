@@ -18,11 +18,11 @@ If searching by merchant name in the search field, products and offers of the re
 
 ## Product Details pages
 
-On the **Product Details** page, the **Sold by** section contains the [marketplace products](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html) and the [offers](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
+On the **Product Details** page, the **Sold by** section contains the [marketplace products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html) and the [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) from other merchants for that product. Each entry has a price and a link to the respective [merchant's profile page](#merchant-profiles).
 
 ![Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/product-details-page.png)
 
-In the **Sold by** section, when a customer opens a Product Details page, the product is pre-selected, and they can switch to any other offer. In the list, the pre-selected [marketplace product](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html) always appears first, followed by offers in ascending order of price. If the product is not available, but there are offers for it, the cheapest offer is pre-selected.
+In the **Sold by** section, when a customer opens a Product Details page, the product is pre-selected, and they can switch to any other offer. In the list, the pre-selected [marketplace product](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html) always appears first, followed by offers in ascending order of price. If the product is not available, but there are offers for it, the cheapest offer is pre-selected.
 
 Sorting of the **Sold by** section is configurable on a project level.
 
@@ -53,7 +53,7 @@ On the **Quick Order** page, in the **Merchants** drop-down, customers can selec
 
 At the Shipment checkout step, a merchant reference is displayed for each item. The merchant names are clickable and lead to the merchant profile pages.
 
-If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the [shipments](/docs/marketplace/user/features/{{site.version}}/marketplace-shipment-feature-overview.html) are automatically grouped by merchants.
+If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the [shipments](/docs/pbc/all/carrier-management/{{site.version}}/marketplace/marketplace-shipment-feature-overview.html) are automatically grouped by merchants.
 
 ![Shipment step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/shipment-step.png)
 
@@ -87,7 +87,7 @@ On the page of the wishlist, a merchant relation is displayed for each product. 
 
 If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed, and the customer can add the product to cart.
 
-If a product in a wishlist is out of stock, an [alternative product](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
+If a product in a wishlist is out of stock, an [alternative product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
 
 ## Marketplace shopping lists
 
@@ -111,7 +111,7 @@ On the **Merchant Profile** page, customers can find the following merchant-spec
 * Imprint
 * Data privacy statement
 
-Customers can access only the profile pages of [active](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
+Customers can access only the profile pages of [active](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
 For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
 

@@ -36,7 +36,7 @@ Setting up company structure:
 {% wistia qkdgkeannb 960 720 %}
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -46,7 +46,7 @@ Setting up company structure:
 |  [Get a general idea of company user roles and permissions](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---------|---------|---------|---------|---------|

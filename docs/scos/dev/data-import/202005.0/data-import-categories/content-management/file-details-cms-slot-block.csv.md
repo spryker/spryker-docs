@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **cms_slot_block.csv** file to configure [CMS Slot Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -35,7 +35,7 @@ This file has the following dependencies:
 *   [cms_slot.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-slot.csv.html)
 *   [cms_block.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *cms_slot_block.csv*  file can be downloaded here:
 
 | File | Description |

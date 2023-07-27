@@ -90,7 +90,7 @@ navigation-shipment-providers,List of carriers,,SHIPMENT_PROVIDERS,,
 navigation-social-links,List of social networks,,SOCIAL_LINKS,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | key | Yes | String, unique across content items | navigation-main-desktop | Content navigation key. |
 | name | Yes | String | Desktop navigation | Content navigation name. |

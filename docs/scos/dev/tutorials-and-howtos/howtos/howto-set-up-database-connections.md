@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/ht-setup-database-connections
 related:
   - title: Database access credentials
-    link: docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
+    link: docs/scos/dev/set-up-spryker-locally/database-access-credentials.html
 ---
 
 Spryker provides flexible database connection configuration.

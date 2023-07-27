@@ -76,7 +76,7 @@ DE--7,spryker_systems,spryker_systems_HQ,0
 <br>
 </details>
     
-|Column|REQUIRED?|Data Type|Data Example|Data Explanation|
+|Column|REQUIRED|Data Type|Data Example|Data Explanation|
 |---|---|---|---|---|
 |customer_reference|mandatory|string|DE--6|The key that will identify the Customer to which the data is added.|
 |company_key|mandatory|string|BoB-Hotel-Mitte|The key that will identify the Company to which the data is added.|

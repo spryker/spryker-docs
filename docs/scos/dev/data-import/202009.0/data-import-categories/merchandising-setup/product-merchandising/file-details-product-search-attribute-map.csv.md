@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_search_attribute_map.csv** file to configure Product Search Attribute Map information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -28,7 +28,7 @@ This file has the following dependency:
 Recommendations & other information
 This file maps the product attributes that are imported in the *product_attribute_key.csv* file with Elasticsearch-specific properties.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_search_attribute_map.csv*  file can be downloaded here:
 
 | File | Description |

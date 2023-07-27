@@ -164,7 +164,7 @@ We recommend defining all the atributes you want to use.
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

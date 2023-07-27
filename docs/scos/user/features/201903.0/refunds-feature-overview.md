@@ -17,7 +17,7 @@ All refunds can be listed per order or as a full overview. All sales order items
 For the refunded items, you can use the default OMS states to be displayed on the* Return Details* pages on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how to set the custom state names on the Storefront for refunded orders, see [HowTo - display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

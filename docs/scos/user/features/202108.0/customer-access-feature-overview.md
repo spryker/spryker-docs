@@ -48,7 +48,7 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

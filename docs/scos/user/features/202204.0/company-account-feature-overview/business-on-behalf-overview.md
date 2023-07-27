@@ -52,7 +52,7 @@ The aim of the Business on Behalf feature is to have one-to-many relationships:
 Company users can assign and unassign a company business unit to their accounts on the storefront:
 ![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

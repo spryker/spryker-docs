@@ -23,7 +23,7 @@ Stock does not always reflect the real availability of products, as not all the 
 
 You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html") for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
+A warehouse can be assigned to a single store or shared between several stores. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html") for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
 
 ## Stock management
 
@@ -86,12 +86,12 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create a warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html)  |
-| [Manage warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html") |
+| [Manage warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html") |
 | [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
 
 {% info_block warningBox "Developer guides" %}

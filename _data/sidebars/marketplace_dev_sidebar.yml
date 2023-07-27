@@ -129,8 +129,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
-            - "202307.0"
 
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
@@ -648,7 +646,7 @@ entries:
       - title: Glue API guides
         url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         include_versions:
-        - "202108.0"          
+        - "202108.0"
         - "202204.0"
         nested:
           - title: REST API Marketplace B2C reference

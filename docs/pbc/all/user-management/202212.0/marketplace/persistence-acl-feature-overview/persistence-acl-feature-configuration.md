@@ -85,11 +85,11 @@ The properties of the `AclEntityMetadataTransfer` are described in the following
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
-| parent | AclEntityParentMetadataTransfer | This property is used to configure the inheritance. It is required for the entity which has rules with the [inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html), or for the [composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). For more details, see [Inherited scope vs Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). |
+| parent | AclEntityParentMetadataTransfer | This property is used to configure the inheritance. It is required for the entity which has rules with the [inherited scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html), or for the [composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html). For more details, see [Inherited scope vs Composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html). |
 | entityName | string | Fully qualified class name of the configured entity (Propel Entity). |
-| hasSegmentTable | bool | Sets if the configured entity supports segmentation. For more details, see [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) documentation. |
+| hasSegmentTable | bool | Sets if the configured entity supports segmentation. For more details, see [Segment scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html) documentation. |
 | defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) documentation). |
-| isSubentity | bool | Indicates whether the configured entity is the part of a composite object. For more details, see [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). |
+| isSubentity | bool | Indicates whether the configured entity is the part of a composite object. For more details, see [Composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html). |
 
 ### AclEntityParentMetadataTransfer
 
@@ -119,7 +119,7 @@ This section provides examples of ACL configuration.
 
 This section shows how you can inherit the `SpyProduct` from `SpyStore` by using the `SpyProductAbstract` and the `SpyProductAbstractStore`.
 
-This configuration is necessary to use the functionality of the [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html) rules and [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html).
+This configuration is necessary to use the functionality of the [Inherited scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html) rules and [Composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html).
 
 ```php
     /**
@@ -205,7 +205,7 @@ Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparen
 
 ### Composite entity
 
-Below you can find an example of a [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) `SpyMerchant`, which consists of:
+Below you can find an example of a [Composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html) `SpyMerchant`, which consists of:
 - `SpyMerchant`
 - `SpyMerchantProfile`
 - `SpyMerchantUser`
@@ -260,7 +260,7 @@ Below you can find an example of a [Composite entity](/docs/marketplace/dev/feat
 
 ### Data segmentation support
 
-The following is an example of the data segmentation for the `SpyMerchant`. Data segmentation is required for the [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) rules.
+The following is an example of the data segmentation for the `SpyMerchant`. Data segmentation is required for the [Segment scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html) rules.
 
 ```php
     /**

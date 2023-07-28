@@ -13,16 +13,13 @@ If you need any additional support with this content, [contact our support](http
 
 It was possible to exploit a directory traversal vulnerability affecting the backend function of drawing graphs in order to determine whether a directory or an XML file exists on the file system. This was possible by submitting a malicious value in the process parameter within the URL of the affected function. 
 
-### Affected modules
-
-`spryker/state-machine`: 1.0.0 - 2.17.0
-
-### Introduced changes
-
+**Introduced changes:**
 Proper input validation controls have been implemented for the vulnerable parameter.
 
-### How to get the fix
+**Affected modules:**
+`spryker/state-machine`: 1.0.0 - 2.17.0
 
+**How to get the fix:**
 To implement the fix for this vulnerability, update the `spryker/state-machine` module:
 
 1. If the version of `spryker/state-machine` is 2.16.2 or later, update it to version 2.18.0:

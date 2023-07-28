@@ -18,11 +18,12 @@ If you are using the twig function `renderCmsBlockAsTwig` in twig templates, mak
 
 Example:
 ```twig
-
+ {% raw %}
 {{ renderCmsBlockAsTwig(
     'template-name',
     mail.storeName,
     mail.locale.localeName,
     {mail: mail}
 ) }}
+{% endraw %}
 ```

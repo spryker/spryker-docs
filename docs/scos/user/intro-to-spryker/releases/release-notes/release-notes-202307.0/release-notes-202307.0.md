@@ -314,6 +314,9 @@ Spryker Composable Storefront provides an efficient solution for developers to i
 Please reach out to your Spryker representative if you are interested in being part of Spryker’s Composable Storefront Early Access program.
 
 **Business benefit**: Spryker Composable Storefront allows Spryker customers to quickly implement and customize a decoupled storefront. It offers Spryker customers a future-proof, agile, and scalable solution.
+#### Documentation
+
+[Oryx](/docs/scos/dev/front-end-development/202307.0/oryx/oryx.html)
 
 ### [Dynamic Multistore] Early Access release
 

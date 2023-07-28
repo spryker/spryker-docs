@@ -117,6 +117,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Shipment feature overview
                 url: /docs/pbc/all/carrier-management/marketplace/marketplace-shipment-feature-overview.html
@@ -372,6 +373,7 @@ entries:
             url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-overview.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Install
                 nested:
@@ -724,6 +726,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
@@ -808,6 +811,7 @@ entries:
             url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Manage customers
                 nested:
@@ -973,6 +977,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Promotions & Discounts feature overview
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-overview.html
@@ -987,6 +992,7 @@ entries:
             url: /docs/pbc/all/emails/install-the-mailing-and-notifications-feature.html
             include_versions:
             - "202212.0"
+            - "202307.0"
           - title: "HowTo: Create and register a MailTypePlugin"
             url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
           - title: "HowTo: Create and register a mail provider"
@@ -998,6 +1004,7 @@ entries:
           - title: Third-party integrations
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Inxmail
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail.html
@@ -2096,6 +2103,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
@@ -2605,6 +2613,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Product feature overview
                 url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.html
@@ -2917,6 +2926,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Return Management feature overview
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.html
@@ -2943,6 +2953,7 @@ entries:
         url: /docs/pbc/all/search/search.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -3060,6 +3071,7 @@ entries:
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/configure-algolia.html
                   include_versions:
                   - "202212.0"
+                  - "202307.0"
                 - title: Disconnect Algolia
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/disconnect-algolia.html
               - title: Best practices
@@ -3152,6 +3164,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Marketplace Shopping Lists feature overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-shopping-lists-feature-overview.html
@@ -3257,6 +3270,7 @@ entries:
           - title: Marketplace
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
@@ -3351,6 +3365,7 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
               - title: Import and export data
                 url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
                 nested:
@@ -3401,6 +3416,7 @@ entries:
             url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
             include_versions:
             - "202212.0"
+            - "202307.0"
             nested:
               - title: Install features
                 nested:

@@ -37,8 +37,8 @@ Make sure your code is compliant and simple to upgrade with Spryker Code Upgrade
 These are the structural code validator of dependency providers:
 
 * [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): From an architectural standpoint, dependency providers must contain no business logic. Otherwise, the dependency providers are harder to maintain.
-* [Flatter arrays in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html#example-of-code-that-causes-an-upgradability-error): It is recommended to have flat arrays of plugins in dependency providers, as it simplifies the upgrade process.
-* [Simple plugin instantiation in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html#example-of-code-that-causes-an-upgradability-error): Plugins should be easy to instantiate and have minimal injected dependencies. Otherwise, the leakage of business logic into dependency providers makes maintenance more complex.
+* [Flatter arrays in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): It is recommended to have flat arrays of plugins in dependency providers, as it simplifies the upgrade process.
+* [Simple plugin instantiation in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Plugins should be easy to instantiate and have minimal injected dependencies. Otherwise, the leakage of business logic into dependency providers makes maintenance more complex.
 
 Example of the violation report:
 ```bash
@@ -302,7 +302,7 @@ To maintain the stability and longevity of our platform, we have migrated to Ang
 
 #### Documentation
 
-* [Upgrade to Angular v15](/docs/marketplace/dev/technical-enhancement/202304.0/migration-guide-upgrade-to-angular-v15.html)
+* [Upgrade to Angular v15](/docs/scos/dev/migration-concepts/upgrade-to-angular-15.html)
 * [Upgrade to Node.js v18](/docs/scos/dev/front-end-development/202307.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html)
 
 ### [Composable Storefront] Early Access release

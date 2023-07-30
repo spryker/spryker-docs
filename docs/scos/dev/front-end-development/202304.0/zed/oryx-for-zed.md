@@ -33,6 +33,12 @@ redirect_from:
 `oryx-for-zed` is a tool that performs a full build for Spryker Zed UI applications.
 It also provides access to Zed settings and Zed Webpack configuration, so you can extend/change the whole building process.
 
+{% info_block warningBox %}
+
+`Oryx` and `oryx-for-zed` are small utilities for the Zed build system and should not be confused with the frontend framework [Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx.html) that can be used to create composable front-end applications on Spryker.
+
+{% endinfo_block %}
+
 ### Requirements
 
 - [Node.js](https://nodejs.org/en/download/): minimum version is 18.

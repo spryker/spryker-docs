@@ -14,8 +14,8 @@ To start feature integration, integrate the required features:
 
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points              | {{site.version}} | [Service Points feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-service-points-feature.html)                                                                     |
-| Customer Account Management | {{site.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Service Points              | {{site.version}} | [Service Points feature integration](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.md.html)                                                                      |
+| Customer Account Management | {{site.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.md.html) |
 
 ## 1) Add Translations
 
@@ -46,14 +46,14 @@ Make sure that the configured data is added to the `spy_glossary_key` and `spy_g
 
 Enable the following plugins:
 
-| PLUGIN                                                                  | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
-|-------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointCheckoutAddressCollectionFormExpanderPlugin                 | Expands checkout address form with `ServicePoint` subform.                |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin            | Expands checkout multi-shipping address form with `ServicePoint` subform. |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin          | Expands shipments with service point address.                             |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin            | Skips caching of `ServicePointAddressFormWidget` widget.                  |               | SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication |
+| PLUGIN                                                                   | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
+|--------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
+| ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin       | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin  | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointCheckoutAddressCollectionFormExpanderPlugin                  | Expands checkout address form with `ServicePoint` subform.                |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin             | Expands checkout multi-shipping address form with `ServicePoint` subform. |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin           | Expands shipments with service point address.                             |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ClickCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of `ClickCollectServicePointAddressFormWidget` widget.      |               | SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -103,7 +103,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication\ServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin;
+use SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication\ClickCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -114,7 +114,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
     {
         return [
-            new ServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin(),
+            new ClickCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin(),
         ];
     }
 }

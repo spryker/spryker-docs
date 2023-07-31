@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the *product_quantity.csv* file to configure product quantity store information on your Spryker Demo Shop.
 
-## Headers & mandatory fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | FIELD NAME | MANDATORY | TYPE | OTHER REQUIREMENTS/COMMENTS | DESCRIPTION |
@@ -27,7 +27,7 @@ These are the header fields to be included in the .csv file:
 This file has the following dependency:
 *     [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
-## Template file & content example
+## Import template file and content example
 A template and an example of the *product_quantity.csv*  file can be downloaded here:
 
 | FILE | DESCRIPTION |

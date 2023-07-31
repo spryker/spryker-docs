@@ -35,7 +35,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html)
 - [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/resource-sharing-feature-overview.html)
 - [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
-- [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/scheduled-prices-feature-overview.html)
 - [Approval process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
@@ -53,9 +53,9 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <!---- [Merchant]()-->
 - [Merchant Product restrictions](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html)
 - [Merchant B2B Contracts](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
-- [Merchant Custom Prices](/docs/pbc/all/price-management/{{site.version}}/merchant-custom-prices-feature-overview.html)
+- [Merchant Custom Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html)
 - [Merchant Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
-- [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
@@ -76,7 +76,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html)
 - [Product Groups](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-groups-feature-overview.html)
 - [Product Relations](/docs/pbc/all/product-relationship-management/{{site.version}}/product-relationship-management.html)
-- [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/product-sets-feature-overview.html)
+- [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/product-sets-feature-overview.html)
 - [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
 - [Product Barcode](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-barcode-feature-overview.html)
 - [Product Bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
@@ -88,7 +88,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
-- [Search](/docs/pbc/all/search/{{site.version}}/search.html)
+- [Search](/docs/pbc/all/search/{{site.version}}/base-shop/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
 
 <br>
@@ -101,4 +101,4 @@ To demonstrate the B2B features in a live implementation, we use a B2B Demo Shop
 
 To download the B2B Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2b-demo-shop](https://github.com/spryker-shop/b2b-demo-shop).
 
-To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).

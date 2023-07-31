@@ -17,7 +17,7 @@ related:
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---

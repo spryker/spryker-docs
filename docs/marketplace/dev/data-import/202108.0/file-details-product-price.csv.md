@@ -16,7 +16,7 @@ To import the file, run:
 data:import product-price
 ```
 
-## Headers & Mandatory Fields
+## Import file parameters
 
 These are the header fields to be included in the CSV file:
 
@@ -41,7 +41,7 @@ This file has the following dependencies:
 - [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 - `stores.php` configuration file of the Demo Shop PHP project
 
-## Template File & Content Example
+## Import template file and content example
 
 A template and an example of the `product_price.csv` file can be downloaded here:
 

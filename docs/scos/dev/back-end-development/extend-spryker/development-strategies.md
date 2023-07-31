@@ -13,7 +13,7 @@ To get maximum from the Spryker OS codebase, atomic releases, leverage minimum e
 3. Project modules
 
 
-The following table briefly describes all the available strategies and how they affect a project's upgraddability. For full description of the strategies, see the following sections.
+The following table briefly describes all the available strategies and how they affect a project's upgradability. For a full description of the strategies, see the following sections.
 
 | DEVELOPMENT STRATEGY | SPRYKER OS UPDATE SUPPORT |
 | --- | --- |
@@ -56,7 +56,7 @@ In your project, you don't store prices in Spryker OS, but in an external system
 
 {% endinfo_block %}
 
-If an extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+If an extension point is missing, you can send a request to your Spryker account manager, and we will add it in future.
 
 Spryker OS support: High, you can safely take minor and patch releases.
 
@@ -80,7 +80,7 @@ When specific OOTB Spryker behavior doesn't fit Project requirements, you can en
 
 {% info_block infoBox "Let us know which extension point is missing, so we can add it in the core" %}
 
-Register missing extension points in [Aha ideas](https://spryker.ideas.aha.io/).
+If an extension point is missing, send a request to your Spryker account manager, and we will add it in future.
 
 {% endinfo_block %}
 

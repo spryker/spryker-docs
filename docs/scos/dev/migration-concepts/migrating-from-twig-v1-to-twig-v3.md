@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/migrating-from-twig-v1-to-twig-v3
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
   - title: Split Delivery migration concept

@@ -60,7 +60,7 @@ Make sure all the domains from `deploy.yml` are defined as `127.0.0.1` in the `h
 
 There are two ways to start working with Spryker in Docker:
 
-* If you want to set up a new Spryker project in Docker, start with [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
-* If you already have a DevVM based project, proceed to [Integrating Docker into an Existing Project](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html) to convert your project into a Docker based one.
+* If you want to set up a new Spryker project in Docker, start with [Getting Started with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+* If you already have a DevVM based project, proceed to [Integrating Docker into an Existing Project](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html) to convert your project into a Docker based one.
 
 <!-- Last review date: Aug 06, 2019by Mike Kalinin, Andrii Tserkovnyi -->

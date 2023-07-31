@@ -20,7 +20,7 @@ It extends the existing Domain with Merchant and ProductOffer to enable sophisti
 
 {% info_block infoBox "Info" %}
 
-This model is intentionally simplified. Learn more about the core domain objects in [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html) and [Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
+This model is intentionally simplified. Learn more about the core domain objects in [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html) and [Product Offer feature walkthrough](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html).
 
 {% endinfo_block %}
 
@@ -45,7 +45,7 @@ To learn more about the `Product` entity, see [Marketplace Product feature walkt
 
 Relation from `ProductOffer` to `Merchant` is optional. While `ProductOffer` is a core domain object for Marketplace, it can also be used for other non-Marketplace-related cases or even are non-Merchant-related.
 
-To learn more about the Product Offer entity, see [Marketplace Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
+To learn more about the Product Offer entity, see [Marketplace Product Offer feature walkthrough](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html).
 
 #### Order
 

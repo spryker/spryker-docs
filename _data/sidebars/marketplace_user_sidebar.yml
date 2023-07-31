@@ -55,6 +55,9 @@ entries:
 
       - title: Features
         url: /docs/marketplace/user/features/
+        include_versions:
+        - "202108.0"
+        - "202204.0"
         nested:
         - title: Marketplace Merchant
           url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
@@ -63,8 +66,17 @@ entries:
           - "202204.0"
           nested:
 
+          - title: Main merchant concept
+            url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/main-merchant-concept.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
+
           - title: Merchant users
             url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category-feature-overview.html
@@ -82,7 +94,6 @@ entries:
           url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
           include_versions:
           - "202204.0"
-          - "202212.0"
 
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
@@ -96,6 +107,8 @@ entries:
 
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
+          include_versions:
+          - "202204.0"
 
         - title: Marketplace Product Options
           url: /docs/marketplace/user/features/marketplace-product-options-feature-overview.html
@@ -162,18 +175,17 @@ entries:
 
         - title: Marketplace Merchant Portal Product Offer Management
           url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
-
+          include_versions:
+          - "202204.0"
 
       - title: Back Office user guides
-        url: /docs/marketplace/user/back-office-user-guides/back-office-user-guides.html
         include_versions:
-          - "202212.0"
+          - "202204.0"
         nested:
 
         - title: Catalog
-          url: /docs/marketplace/user/back-office-user-guides/catalog/catalog.html
           include_versions:
-          - "202212.0"
+          - "202204.0"
           nested:
 
             - title: Availability
@@ -184,13 +196,11 @@ entries:
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
 
             - title: Products
-              url: /docs/marketplace/user/back-office-user-guides/catalog/products/products.html
               include_versions:
               - "202204.0"
               nested:
 
               - title: Abstract products
-                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/abstract-products.html
                 nested:
 
                 - title: Creating abstract products
@@ -210,6 +220,7 @@ entries:
           url: /docs/marketplace/user/back-office-user-guides/marketplace/marketplace.html
           include_versions:
           - "202212.0"
+          - "202307.0"
           nested:
 
             - title: Merchants
@@ -227,6 +238,8 @@ entries:
 
             - title: Offers
               url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
+              include_versions:
+              - "202204.0"
               nested:
 
                 - title: Managing marketplace product offers
@@ -234,6 +247,8 @@ entries:
 
             - title: Orders
               url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
+              include_versions:
+              - "202204.0"
               nested:
 
                 - title: Managing marketplace orders
@@ -269,6 +284,8 @@ entries:
 
         - title: Offers
           nested:
+          include_versions:
+          - "202204.0"
 
           - title: Managing product offers
             url: /docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html

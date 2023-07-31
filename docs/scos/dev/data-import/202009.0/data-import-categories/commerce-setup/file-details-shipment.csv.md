@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **shipment.csv** file to configure [Shipment](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -26,7 +26,7 @@ N/A: Not applicable.
 ## Dependencies
 This file has no dependencies.
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *shipment.csv* file can be downloaded here:
 
 | File | Description |

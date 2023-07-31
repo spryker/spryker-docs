@@ -11,7 +11,7 @@ redirect_from:
 
 This article contains content of the **product_stock.csv** file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Import file parameters 
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -35,7 +35,7 @@ The *product_stock.csv* file contains information about the amount of product ar
 
 The product is identified by `concrete_sku` field (imported from *product_concrete.csv*), field name is a valid name of a warehouse (imported from *warehouse.csv*), field quantity is a number of product items/articles remaining in stock. 
 
-## Template File & Content Example
+## Import template file and content example
 A template and an example of the *product_stock.csv*  file can be downloaded here:
 
 | File | Description |

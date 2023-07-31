@@ -47,7 +47,7 @@ For an effortless shopping experience, the localized number formatting is availa
 
 ##### Documentation
 
-[HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
+[HowTo: Add support for number formatting in the Storefront](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 
 
 #### Number formatting in the Back Office
@@ -55,7 +55,7 @@ Efficiency and accuracy are essential when working in the Back Office. Increasin
 
 ##### Documentation
 
-[HowTo: Add support of number formatting in the Back Office](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
+[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
 
 
 ## Spryker Glue API

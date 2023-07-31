@@ -42,6 +42,11 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
       - title: Starting asynchronous commands
         url: /docs/cloud/dev/spryker-cloud-commerce-os/starting-asynchronous-commands.html
+      - title: Best practices
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practices.html
+        nested:
+        - title: "Best practises: Jenkins stability"
+          url: /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode
@@ -93,6 +98,10 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-notifications-for-5xx-errors.html
       - title: Peformance testing
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
+      - title: Performance testing in staging environments
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html
+      - title: Managing parameters in the Parameter Store
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
       - title: Multi-store setups
@@ -136,6 +145,8 @@ entries:
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-killed-process.html
               - title: Troubleshooting an unavailable Zed
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-an-unavailable-zed.html
+              - title: Troubleshooting failed Jenkins jobs
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failed-jenkins-jobs.html
               - title: Troubleshooting failing Yves authentication
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failing-yves-authentication.html
               - title: Troubleshooting error 403

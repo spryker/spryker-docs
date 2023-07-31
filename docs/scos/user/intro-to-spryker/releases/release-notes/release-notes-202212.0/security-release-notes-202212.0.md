@@ -347,7 +347,7 @@ Make sure that for the codeception/codeception module, the current version is eq
 spryker/gui (3.43.0 or earlier)
 
 **How to get the fix:**
-1. To receive the current versions of the NPM packages, update the module
+1. To receive the current versions of the npm packages, update the module
 ```bash
 composer update spryker/gui
 ```
@@ -356,14 +356,14 @@ composer update spryker/gui
 ```bash
 npm list <packagename>
 ```
-4. Make sure that your NPM packages have at least these versions:
+4. Make sure that your npm packages have at least these versions:
 hosted-git-info to 2.8.9
 lodash to 4.17.21
 ssri to 6.0.2
 y18n to 3.2.2
 elliptic to 6.5.4
 
-5. To apply the current versions of NPM packages, run the following command:
+5. To apply the current versions of npm packages, run the following command:
 ```bash
 npm i
 ```

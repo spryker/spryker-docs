@@ -10,7 +10,7 @@ The Spryker B2B Marketplace Demo Shop is a collection of ready-to-use B2B-Market
 <details>
 <summary markdown='span'>Marketplace B2B feature list</summary>
 
-- [Marketplace Merchant Custom Prices](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-custom-prices-feature-overview.html)
+- [Marketplace Merchant Custom Prices](/docs/pbc/all/price-management/{{site.version}}/marketplace/marketplace-merchant-custom-prices-feature-overview.html)
 - [Marketplace Product Approval Process](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-approval-process-feature-overview.html)
 - [Marketplace Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/marketplace/marketplace-shopping-lists-feature-overview.html)
 - [Marketplace Quick Add to Cart](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/marketplace-product-feature-overview.html#marketplace-product-on-the-quick-order-page)

@@ -5,6 +5,12 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
+{% info_block warningBox %}
+
+Please note that Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %} 
+
 This document describes how to integrate the Marketplace MerchantPortal Core + Dynamic Store feature into a Spryker project.
 
 ## Install feature core

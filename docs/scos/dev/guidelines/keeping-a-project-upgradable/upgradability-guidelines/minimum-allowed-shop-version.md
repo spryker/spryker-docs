@@ -27,7 +27,7 @@ Target:  spryker-feature/agent-assist:202108.0
 
 ## Example of code that causes an evaluator error
 
-The following is an example of `composer.json` file when the used Spryker feature package version doesn't correspond to the minimum required version:
+The following is an example of the `composer.json` file when the used Spryker feature package version doesn't correspond to the minimum required version:
 
 ```json
 {

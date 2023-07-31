@@ -29,7 +29,7 @@ In June 2023, we have added and updated the following pages:
 - [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 - [Warehouse picking feature integration guide](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/push-notification/202400.0/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html).
-- [Product offer shipment feature integration guide](/docs/pbc/all/offer-management/202400.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
+- [Product Offer Shipment feature integration guide](/docs/pbc/all/offer-management/202400.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
 - [Service Points feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-feature.html).
 - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
 - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.

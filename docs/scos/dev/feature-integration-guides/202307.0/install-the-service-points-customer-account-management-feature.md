@@ -1,7 +1,7 @@
 ---
 title: Install the Service Points + Customer Account Management feature
 description: Learn how to integrate the Service Points + Customer Account Management feature into your project
-last_updated: July 06, 2023
+last_updated: July 31, 2023
 template: feature-integration-guide-template
 ---
 

@@ -2,6 +2,7 @@
 title: App Composition Platform installation
 description: Learn how to install the App Orchestration Platform.
 template: concept-topic-template
+last_updated: Jul 11, 2023
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-installation.html
 ---
@@ -40,30 +41,30 @@ To make your project ACP-ready, different update steps are necessary depending o
 - SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html): All the changes required for ACP readiness are already included, but you should still verify them at the project level.
 - Older versions: To get the project ACP-ready, you should complete all steps described in this document.
 
-{% info_block infoBox "Product version ealier than 202211.0" %}
+{% info_block infoBox "Product version earlier than 202211.0" %}
 
 If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 
-### 1. Module updates for ACP
+### Module updates for ACP
 
 To get your project ACP-ready, it is important to ensure that your project modules are updated to the necessary versions.
 
-#### 1. ACP modules
+#### ACP modules
 
 Starting with the Spryker product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
-* `spryker/app-catalog-gui: ^1.2.0` or higher
-* `spryker/message-broker:^1.4.0` or higher
-* `spryker/message-broker-aws:^1.3.2` or higher
-* `spryker/session:^4.15.1` or higher
+* `spryker/app-catalog-gui: ^1.2.0` or later
+* `spryker/message-broker:^1.4.0` or later
+* `spryker/message-broker-aws:^1.3.2` or later
+* `spryker/session:^4.15.1` or later
 
-#### 2. App modules
+#### App modules
 
 {% info_block warningBox "Apps- and PBC-specific modules" %}
 
-Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html) you intend to use via ACP, you will need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
+Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use through ACP, you will need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
 
 {% endinfo_block %}
 
@@ -71,13 +72,19 @@ The Spryker ACP Apps are continuously enhanced and improved with new versions. T
 
 For [each app](https://docs.spryker.com/docs/acp/user/intro-to-acp/acp-overview.html#supported-apps) you wish to use, ensure that you have the latest app-related SCCOS modules installed.
 
-### 2. Configure SCCOS
+### Configure SCCOS
+
+{% info_block infoBox "This step can be omitted for Product version later than 202211.0" %}
+
+If your version is based on product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) or newer, you can skip this section! 
+
+{% endinfo_block %}
 
 Once you have ensured that your project modules are up-to-date, proceed to configure your SCCOS project to activate the ACP catalog in the Back Office using the following steps:
 
 1. Define the configuration and add plugins to the following files:
 
-<details open>
+<details>
 <summary>config/Shared/config_default.php</summary>
 
 ```php
@@ -139,10 +146,7 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
 ```
 </details>
 
-2. In the `navigation.xml` file, add one more navigation item:
-
-<details open>
-<summary>config/Zed/navigation.xml</summary>
+1. In the `navigation.xml` file, add one more navigation item:
 
 ```xml
 ...
@@ -154,13 +158,12 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
       <controller>index</controller>
       <action>index</action>
   </app-catalog-gui>
-...    
+...
 ```
-</details>
 
 3. In the `MessageBrokerDependencyProvider.php` file, enable the following module plugins:
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
 ```php
@@ -245,10 +248,9 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 ```
 </details>
 
-4. In the `MessageBrokerConfig.php` file, adjust the following module config:
+1. In the `MessageBrokerConfig.php` file, adjust the following module config:
 
-<details open>
-<summary>src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php</summary>
+**src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**:
 
 ```php
 <?php
@@ -280,12 +282,12 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
     }
 }
 ```
-</details>
 
 5. In the `OauthClientDependencyProvider.php` file, enable the following module plugins:
 
 In the MessageBrokerConfig.php, adjust the following module config:
-<details open>
+
+<details>
 <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
 
 ```php
@@ -335,12 +337,11 @@ You need to define the environment variables in the `deploy.yml` file of *each* 
 
 {% info_block warningBox "Warning" %}
 
-It is crucial to specify the keys for the environment variables. The infrastructure values, such as `SPRYKER_AOP_INFRASTRUCTURE` and `STORE_NAME_REFERENCE_MAP` are provided by Spryker OPS upon request.
+It is crucial to specify the keys for the environment variables. The infrastructure values, such as `SPRYKER_AOP_INFRASTRUCTURE` and `STORE_NAME_REFERENCE_MAP`, are provided by Spryker OPS upon request.
 
 {% endinfo_block %}
 
-<details open>
-<summary>General structure</summary>
+General structure:
 
 ```json
 ENVIRONMENT_VARIABLE_NAME_A: '{
@@ -348,10 +349,8 @@ ENVIRONMENT_VARIABLE_NAME_A: '{
   "CONFIGURATION_KEY_B":"SOME_VALUE_B"
 }'
 ```
-</details>
 
-<details open>
-<summary>Data structure example for a demo environment connected to the Spryker ACP production</summary>
+Data structure example for a demo environment connected to the Spryker ACP production:
 
 ```json
 #AOP
@@ -384,11 +383,10 @@ SPRYKER_AOP_INFRASTRUCTURE: '{
   }
 }'
 ```
-</details>
 
 #### General configurations: SPRYKER_AOP_APPLICATION variable
 
-The configuration key `APP_CATALOG_SCRIPT_URL`is the URL for the App-Tenant-Registry-Service (ATRS) and path to the JS script to load the ACP catalog.
+The configuration key `APP_CATALOG_SCRIPT_URL` is a URL for the App-Tenant-Registry-Service (ATRS) and the path to the JS script to load the ACP catalog.
 
 Example of the production ATRS_HOST and path:
 
@@ -404,7 +402,6 @@ The StoreReference mapping is created by Spryker OPS, and they provide you with 
 
 {% endinfo_block %}
 
-
 Example of demo stores for DE and AT:
 
 ```json
@@ -418,7 +415,6 @@ The configuration key `APP_DOMAINS` designates the app domains used in redirects
 The app domains are provided by Spryker OPS.
 
 {% endinfo_block %}
-
 
 Example of the app domain values:
 
@@ -467,7 +463,7 @@ Example of the `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG` configuration key val
 
 After configuring the files, updating all modules, and adding the requested keys with their corresponding values provided by Spryker OPS to the `deploy.yml` file, the SCCOS codebase is now up-to-date. Once redeployed, your environment is ACP-ready.
 
-The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. The ACP enablement step is fully handled by Spryker and implies registration of your ACP-ready SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP), so that the ACP catalog is able to work with SCCOS.
+The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. The ACP enablement step is fully handled by Spryker and implies the registration of your ACP-ready SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP catalog is able to work with SCCOS.
 
 To get your project ACP-enabled, contact the [Spryker support](https://spryker.com/support/).
 

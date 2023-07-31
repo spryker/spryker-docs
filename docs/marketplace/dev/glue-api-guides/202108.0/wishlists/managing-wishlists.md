@@ -2258,7 +2258,7 @@ The following sample changes the name of a wishlist.
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION    |
 | ------ | ---- | ------- | ----------------------- |
-| id        | string | &check;   | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| id        | string | &check;   | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html) to get it. |
 | name      | string | &check;   | New name of the wishlist.   |
 
 ### Response
@@ -2282,7 +2282,7 @@ To delete a wishlist, send the request:
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------- | ------------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html) to get it. |
 
 ### Request
 

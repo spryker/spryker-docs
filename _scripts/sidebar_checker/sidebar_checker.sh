@@ -10,7 +10,7 @@ SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sideba
 TITLES=("ACP User" "Cloud Dev" "Marketplace Dev" "Marketplace User" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
 
 # Define the folders to ignore
-IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0", "202304.0", "202400.0")
+IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0", "202307.0", "202400.0")
 
 # Define output file path
 OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"

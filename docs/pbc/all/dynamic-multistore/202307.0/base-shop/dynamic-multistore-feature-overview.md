@@ -14,8 +14,6 @@ Please note that Dynamic Multistore is currently running under an Early Access R
 
 The "Dynamic Multistore Manager" is an innovative feature that enables business users to effortlessly create and manage multiple online stores from our e-commerce platform's back-office. This feature aims to streamline the process of setting up and maintaining distinct online stores, each catering to different customer segments, regions, or product categories.
 
-[Placeholder for Early access text]
-
 Key Benefits
 * Intuitive Interface: The back-office interface is designed for ease of use, allowing even non-technical users to navigate and set up stores effortlessly.
 * Store Customization: Business users can customize each store's branding, theme, and appearance to maintain a unique identity that resonates with their target market.

@@ -5,12 +5,6 @@ last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
-{% info_block warningBox %}
-
-Please note that Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 An important part of the application user interface are the colors. Colors are used everywhere throughout components and are important for a good user experience. To ensure that you can adjust the colors to your needs throughout the application, a configurable color system is provided.
 
 The color system lets you set up the color values globally as well as override them per component. Components do not define _values_ for colors directly in their CSS but use _design tokens_. Design tokens are (CSS) variables that are provided by themes, which you can customize in your project.

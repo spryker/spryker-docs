@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Mar 3, 2023
 ---
 
+{% info_block warningBox %}
+
+Please note that Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 This document describes the methods used in Oryx to deliver an advanced application development platform while maintaining stability. The goal of implementing versioning methods is to ensure that any upcoming changes are introduced in a predictable manner. This makes sure that all Oryx users are informed and adequately prepared for the release of new features and removal of outdated ones.
 
 Stability is a critical aspect of any software framework, and it's especially important for frontend frameworks like Oryx. The stability of a framework refers to its ability to function reliably and consistently over time, despite changes in the environment or updates to its components.

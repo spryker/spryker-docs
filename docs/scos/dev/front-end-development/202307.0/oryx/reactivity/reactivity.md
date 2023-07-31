@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Apr 3, 2023
 ---
 
+{% info_block warningBox %}
+
+Please note that Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 Reactivity is a fundamental concept in modern web development that enables dynamic, real-time updates to the user interface. In interactive applications, and single-page application (SPA) in particular, reactivity ensures that the displayed data is constantly in sync with the underlying data model, even as that data is loaded asynchronously and in real time from a backend API.
 
 In a reactive frontend, data is treated as _streams_ that continue to emit new values in an asynchronous manner. This allows for a highly responsive and engaging user experience, as updates to the data are immediately reflected in the user interface. Examples of reactive behavior include searching for products, adding products to cart, and navigating the application.

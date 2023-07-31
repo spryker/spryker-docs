@@ -5,12 +5,6 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 ---
 
-{% info_block warningBox %}
-
-Please note that Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 The service layer in Oryx serves as the foundation for the business logic. The main objective of the service layer is to abstract all the system functionality, including querying backend services, data caching and reloading, state management, and reactivity. Dependency injection (DI) plays a crucial role in achieving this objective.
 
 Furthermore, DI is utilized by many higher-level elements and concepts in Oryx, ranging from adapters and normalizers to HTTP interceptors, authentication, product loading, cart management, and the checkout process.

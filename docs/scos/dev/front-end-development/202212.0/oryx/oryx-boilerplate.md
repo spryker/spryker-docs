@@ -5,12 +5,6 @@ last_updated: Apr 3, 2023
 template: concept-topic-template
 ---
 
-{% info_block warningBox %}
-
-Please note that Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 Boilerplate refers to the _template_ code that is used to generate application code which can be further customized. At first sight, changing boilerplate is convenient as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you customized the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
 
 The Oryx boilerplate is provided in the [Composable Frontend repository](https://github.com/spryker/composable-frontend).

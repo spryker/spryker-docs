@@ -28,6 +28,14 @@ service_point_widget.validation.error.service_point_not_selected,Please select s
 service_point_widget.validation.error.service_point_not_selected,Bitte Servicestelle auswählen.,de_DE
 service_point_widget.validation.error.billing_address_not_provided,Please add billing address manually.,en_US
 service_point_widget.validation.error.billing_address_not_provided,Bitte fügen Sie die Rechnungsadresse manuell hinzu.,de_DE
+service_point_widget.select_location_action,Select a location,en_US
+service_point_widget.select_location_action,Wählen Sie einen Standort,de_DE
+service_point_widget.change_action,Change,en_US
+service_point_widget.change_action,Ändern,de_DE
+service_point_widget.location_label,Location:,en_US
+service_point_widget.location_label,Standort:,de_DE
+service_point_widget.select_your_store_title,Select your store,en_US
+service_point_widget.select_your_store_title,Wählen Sie Ihren Store,de_DE
 ```
 
 2. Import data:
@@ -151,6 +159,25 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
+### 4) Set up FE part
+
+#### 4.1) Add `main-overlay` molecule to the `page-layout-main` template.
+
+```twig
+{% raw %}{% block globalComponents %}
+    ....
+    {% include molecule('main-overlay') only %}
+{% endblock %}{% endraw %}
+```
+
+#### 4.2) Add `ClickCollectServicePointAddressFormWidget`.
+
+```twig
+{% raw %}{% widget 'ClickCollectServicePointAddressFormWidget' args [data.checkoutAddressForm] only %}{% endwidget %}{% endraw %}
+```
+
+#### 4.3) Build assets.
 
 Run the following command to enable Javascript and CSS changes:
 

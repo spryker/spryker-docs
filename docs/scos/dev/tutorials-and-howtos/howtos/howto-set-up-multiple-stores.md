@@ -16,6 +16,12 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
+{% info_block warningBox %}
+
+Please note that Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %} 
+
 With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
 
 * Build one store for multiple countries and languages or separate stores for each region.

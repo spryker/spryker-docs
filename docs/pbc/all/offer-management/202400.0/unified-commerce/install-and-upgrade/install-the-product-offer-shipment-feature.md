@@ -1,7 +1,7 @@
 ---
 title: Install the Product offer shipment feature
 description: Learn how to integrate the Product offer shipment feature into your project
-last_updated: June 20, 2023
+last_updated: Jul 31, 2023
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/install-the-product-offer-shipment-feature.html

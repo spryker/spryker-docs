@@ -13,8 +13,8 @@ To start feature integration, integrate the required features:
 
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points              | {{page.version}} | [Service Points feature integration](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.md.html)                                                                      |
-| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.md.html) |
+| Service Points              | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.html)                                                                      |
+| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ## 1) Add translations
 

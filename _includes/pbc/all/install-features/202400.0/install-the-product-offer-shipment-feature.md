@@ -4,7 +4,7 @@ This document describes how to integrate the Product Offer Shipment feature into
 
 ## Install feature core
 
-Follow the steps below to install the Product offer shipment feature core.
+Follow the steps below to install the Product Offer Shipment feature core.
 
 ## Prerequisites
 

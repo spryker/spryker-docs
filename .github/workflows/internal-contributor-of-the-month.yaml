@@ -15,9 +15,9 @@ jobs:
       - name: Determine contributor
         id: determine
         run: |
-          # Set the start and end dates for June 2023
+          # Set the start and end dates for July 2023
           START_DATE="2023-07-01"
-          END_DATE="2023-07-30"
+          END_DATE="2023-07-31"
           MONTH_NAME="July"
 
           # Exclude certain users

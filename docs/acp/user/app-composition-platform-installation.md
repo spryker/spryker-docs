@@ -69,7 +69,7 @@ Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html) you intend 
 
 The Spryker ACP Apps are continuously enhanced and improved with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCOS modules to take full advantage of the latest app feature updates.
 
-For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You will find this information on each App integration guide.
+For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each App integration guide.
 
 ### 2. Configure SCOS
 

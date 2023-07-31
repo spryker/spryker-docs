@@ -1,4 +1,29 @@
+This document describes how to upgrade the Currency module.
 
+## Upgrading from version 3.* to version 4.0.0
+
+In this new version of the `Currency` module, we have added support configuration currency for each store in database.
+With the `Currency` module version 4 we have added the `spy_currency_store` database table to persist stores-locales in Zed.
+Also added column `fk_currency` into  `spy_store` for save default currency per store.
+
+You can find more details about the changes on the [Currency module](https://github.com/spryker/currency/releases) release page.
+
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `Currency` module to the new version:
+
+```bash
+composer require spryker/currency:"^4.0.0" --update-with-dependencies
+```
+
+2. Run `vendor/bin/console transfer:generate` to update the transfer objects.
+
+3. Run `vendor/bin/console propel:install` to apply the database changes.
+
+
+***
 
 ## Upgrading from version 2.* to version 3.*
 

@@ -28,6 +28,12 @@ This document describes the steps to consider when setting up stores with multip
 
 ## Configure locales for store
 
+{% info_block warningBox %}
+
+When using the Dynamic Multi-Store functionality, configuration via the `stores.php` file is no longer supported. Please refer to the [Integration Guide](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-dynamic-multiple-stores.html) for additional information.
+
+{% endinfo_block %}
+
 You can find the stores' configuration in the `config/Shared/stores.php` file.
 
 You can define a set of locales for each store. The first locale is the default one.

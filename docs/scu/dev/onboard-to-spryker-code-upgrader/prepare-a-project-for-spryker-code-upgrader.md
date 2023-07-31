@@ -26,14 +26,6 @@ Upgrades are provided as PRs that are automatically created in a project’s rep
 
 Currently, the Upgrader supports GitHub, GitLab and Azure. If you want to use a different version control system, [contact support](https://spryker.force.com/support/s/), so we can implement its support in future.
 
-## Optional: Implement headless design
-
-The Upgrader does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
-
-## Optional: Ensure your code is compliant with the supported extensions scenarios.
-
-To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
-
 ## Migrate to Spryker Cloud Commerce OS
 
 The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.

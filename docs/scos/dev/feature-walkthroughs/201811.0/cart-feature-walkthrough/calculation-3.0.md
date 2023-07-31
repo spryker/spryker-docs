@@ -32,7 +32,7 @@ There is already a list of plugins which populate quote transfer with correspond
 {% info_block infoBox %}
 For more details, check [Cart Data Flow](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-functionality-and-calculations/cart-functionality.html#cart-data-flow
 {% endinfo_block %} in the *Cart Functionality* section.)
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc.). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation/calculation-data-structure.html). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc.). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 Each amount is being calculated and stored in cents.

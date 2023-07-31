@@ -60,7 +60,7 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop && \
-    cd b2c-demo-shop
+    cd b2b-demo-shop
     ```
 
     * B2C Marketplace Demo Shop

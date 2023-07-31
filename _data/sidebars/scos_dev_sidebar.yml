@@ -3418,8 +3418,10 @@ entries:
           - "202212.0"
           - "202307.0"
           nested:
-          - title: "Color system"
+          - title: Color system
             url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
+          - title: Design tokens
+            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html            
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
       include version:

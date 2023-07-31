@@ -64,7 +64,7 @@ With Algolia Search, you can create an efficient path to purchase for your custo
 
 **Business benefit**: More accurate search results without any additional maintenance.
 
-#### Documentation:
+#### Documentation
 
 * [Algolia](/docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia.html)
 * Technical prerequisites: 
@@ -74,7 +74,7 @@ With Algolia Search, you can create an efficient path to purchase for your custo
 
 Spryker has updated how purchase data is synchronized with Bazaarvoice by embedding the process in our Order Management System (OMS). Spryker customers now have maximum control over when requests are sent to buyers to review purchased products.
 
-**Business benefit**: Send optimally-timed reminders to customers for reviews, increasing the possibility of gaining social proof for your products.
+**Business benefit**: Send optimally timed reminders to customers for reviews, increasing the possibility of gaining social proof for your products.
 
 #### Documentation
 
@@ -84,7 +84,7 @@ Spryker has updated how purchase data is synchronized with Bazaarvoice by embedd
 
 ### [ACP App] Consent Management with Usercentrics <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Usercentrics, a consent management platform, helps with privacy regulations and data quality. Enabling organizations to collect, manage, and document website visitors’ consent, Usercentrics helps mitigate legal risks, secure data capture and increase revenues. Usercentrics is now available on Spryker App Composition Platform.
+Usercentrics, a consent management platform, helps with privacy regulations and data quality. Enabling organizations to collect, manage, and document website visitors' consent, Usercentrics helps mitigate legal risks, secure data capture, and increase revenues. Usercentrics is now available on Spryker App Composition Platform.
 
 The Usercentrics app helps you as follows:
 * Address your consent management needs globally in one click.
@@ -92,15 +92,15 @@ The Usercentrics app helps you as follows:
 * Ensure you are compliant with privacy laws (GDPR, CCPA, LPGD) out of the box.
 * Provide a great user experience for your visitors to manage their cookie preferences.
 
-**Business benefit**: Empowering companies to take control of their data and to easily comply with privacy regulations with minimal investment.
+**Business benefit**: Empower companies to take control of their data and to easily comply with privacy regulations with minimal investment.
 
-#### Documentation:
+#### Documentation
 
 [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) 
 
 ### [ACP App] Payments with PAYONE <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Revolutionize the way you accept payments with the PAYONE app, which is now available on Spryker's App Composition Platform. As the leading payment service provider in Germany and Austria, PAYONE has over 1,200 experts who deliver the latest payment services from a single source – for all company sizes and industries.
+Revolutionize the way you accept payments with the PAYONE app, which is now available on Spryker's App Composition Platform. As the leading payment service provider in Germany and Austria, PAYONE has over 1,200 experts who deliver the latest payment services from a single source–for all company sizes and industries.
 
 With the PAYONE app, you can do the following:
 * Enable your customers to make payments with credit cards and via PayPal.
@@ -116,19 +116,19 @@ With the PAYONE app, you can do the following:
 
 ### [ACP Foundation] Monitoring and Logging for SCCOS <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-ACP tenant monitoring and logging is required for proper oversight of all ACP-related transactions within SCCOS.
+ACP tenant monitoring and logging are required to oversee all ACP-related transactions within Spryker Cloud Commerce OS (SCCOS) properly.
 
 Spryker is providing this feature as an integral part of having an end-to-end monitoring and logging system in place for all ACP app-related actions within SCOS. 
 
-This feature works out-of-the-box, and no additional configuration is required.
+This feature works out of the box; no additional configuration is required.
 
 **Business benefit**: Ensure the stability and monitoring of your transactions when using ACP apps.
 
 ### [Framework] GlueApplication as API enabler infrastructure <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Glue as an API stays the same, but the main module carrying the infrastructure for our API development layer gets a complete rework as the GlueApplication module transforms from a Storefront-specific JSON:API complying API provider to an infrastructure that allows the development of different API applications. The applications now follow two separate types: Storefront and Backend, which have access to different storage engines that allow for different use cases and get deployed in two different types of containers. The Storefront type has access to Redis & Search storages which allow for quick horizontal scalability to support bursts of traffic. The Backend type has direct access to Zed application layer facades which allow APIs to be built on top of the core business logic. 
+Glue as an API stays the same, but the main module carrying the infrastructure for our API development layer gets a complete rework as the GlueApplication module transforms from a Storefront-specific JSON:API complying API provider to an infrastructure that allows the development of different API applications. The applications now follow two separate types: Storefront and backend, which have access to different storage engines that allow for different use cases and get deployed in two different types of containers. The Storefront type has access to Redis & Search storages which allow for quick horizontal scalability to support bursts of traffic. The backend type has direct access to Zed application layer facades, which allow APIs to be built on top of the core business logic. 
 
-**Business benefit**: The separation of API applications by type and functionality allows for more diversity in the way we design APIs and the exposure of business logic to consumers.
+**Business benefit**: The separation of API applications by type and functionality allows for more diversity in how we design APIs and the exposure of business logic to consumers.
 
 #### Documentation
 
@@ -139,7 +139,7 @@ Glue as an API stays the same, but the main module carrying the infrastructure f
   * [Create backend resources](/docs/scos/dev/glue-api-guides/202307.0/routing/create-backend-resources.html)
   * [How to create resources with parent-child relationships](/docs/scos/dev/glue-api-guides/202307.0/create-glue-api-resources-with-parent-child-relationships.html)
   * [Create routes](/docs/scos/dev/glue-api-guides/202307.0/routing/create-routes.html)
-  * [Backend and Storefront API module differences](/docs/scos/dev/glue-api-guides/202307.0/backend-and-storefront-api-module-differences.html)
+  * [ and Storefront API module differences](/docs/scos/dev/glue-api-guides/202307.0/backend-and-storefront-api-module-differences.html)
   * [How to use default Glue parameters](/docs/scos/dev/glue-api-guides/202307.0/use-default-glue-parameters.html)
   * [How to create a JSON API relationship](/docs/scos/dev/glue-api-guides/202307.0/create-json-api-relationships.html)
   * [How to document Glue API endpoints](/docs/scos/dev/glue-api-guides/202307.0/document-glue-api-endpoints.html)
@@ -154,7 +154,7 @@ Glue as an API stays the same, but the main module carrying the infrastructure f
 
 ### [Framework] Configure OAuth 2.0 clients on install <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Previously, OAuth 2.0 clients were not able to be updated other than having one client per installation. To begin, our client was our own Storefront, but when opening the consuming of APIs we had to allow more API consumer clients to be installed in the system. This feature allows for creating as many OAuth 2.0 clients as needed for consumers.
+Previously, OAuth 2.0 clients were not able to be updated other than having one client per installation. To begin, our client was our own Storefront, but when opening the consuming of APIs, we had to allow more API consumer clients to be installed in the system. This feature allows for creating as many OAuth 2.0 clients as needed for consumers.
 
 **Business benefit**: 
 
@@ -166,20 +166,19 @@ Allows for the creation of multiple OAuth 2.0 clients, so the business can allow
 
 ### [Framework] Catalog Back Office Performance Improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Searching our tables in the back office can cause serious pain for business users that are trying to search any large tables due to how our querying works on the database in the back office. We allowed now for the possibility for our customers to decide on specific tables to allow more strict yet performant search on specific columns in tables.
+Searching our tables in the back office can cause serious pain for business users that are trying to search any large tables due to how our querying works on the database in the back office. We allowed now for the possibility for our customers to decide on specific tables to allow a more strict yet performant search on specific columns in tables.
 
 **Business benefit**: If a business user has a specific need for faster search on product SKUs or prices or something that contains a large amount of data, a quick configuration in code can help allow for strict yet more performant search
-
 
 #### Documentation
 
 [Create and configure Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html)
 
-### [Framework] Replace swiftmailer / swiftmailer library <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### [Framework] Replace Swift Mailer / Swift Mailer library <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-We have been dependency on a deprecated library swiftmailer in our email-sending library. This has been reworked to allow the usage of the more up-to-date [Symfony Mailer](https://github.com/symfony/mailer) component
+We have been dependant on a deprecated library, Swift Mailer, in our email-sending library. This has been reworked to allow the usage of the more up-to-date [Symfony Mailer](https://github.com/symfony/mailer) component.
 
-**Business benefit**: Jumping to a more widely used and supported component allows customers higher maintainability and feature richness
+**Business benefit**: Jumping to a more widely used and supported component allows customers higher maintainability and feature richness.
 
 #### Documentation
 
@@ -188,11 +187,9 @@ We have been dependency on a deprecated library swiftmailer in our email-sending
 * [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/202307.0/howto-create-and-register-a-mail-type-builder-plugin.html)
 * [HowTo: Create and register a mail provider](/docs/pbc/all/emails/202307.0/howto-create-and-register-a-mail-provider.html)
 
-
-
 ### [Cloud Self-Service] Management of Spryker CI variables <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Access to the variables in Spryker CI lets you change pipelines’ behavior without having to wait for our support. You can now manage the following variables:
+Access to the variables in Spryker CI lets you change pipelines' behavior without having to wait for our support. You can now manage the following variables:
 
 * `SDK_VERSION`
 * `UPGRADER_STRATEGY`
@@ -205,15 +202,14 @@ Documentation for this feature is coming soon.
 
 ### [Cloud Self-Service] Maintenance Mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Enable and disable the maintenance mode of an application using a dedicated pipeline without having to create a support ticket. This lets you deploy new versions of applications without disrupting the user experience with unexpected errors.
+Turn on and off the maintenance mode of an application using a dedicated pipeline without having to create a support ticket. This lets you deploy new versions of applications without disrupting the user experience with unexpected errors.
 
-**Business benefit**: Easier management of maintenance. You can enable maintenance mode more quickly, reducing downtime and minimizing disruption.
+**Business benefit**: Easier management of maintenance. You can turn on maintenance mode more quickly, reducing downtime and minimizing disruption.
 
 #### Documentation
 
 * [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) 
 * [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html) 
-
 
 ### [Cloud Self-Service] Environment variables management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -225,12 +221,11 @@ Manage environment variables and secrets of applications using a UI without havi
 
 [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) 
 
-
 ### [Cloud Observability] Infrastructure Health Check Monitoring Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Empowers your team with built-in dashboards to observe the status of the whole platform. 
 
-At a glance, your team can monitor the health status and uptime of their environment as a whole, the applications that are running, and the average response time, as well as the availability of single services and components. 
+At a glance, your team can monitor the health status and uptime of their environment as a whole, the applications running, the average response time, and the availability of single services and components.
 
 {% info_block infoBox "Info" %}
 
@@ -268,7 +263,7 @@ Infrastructure Health Check Monitoring Dashboard: Elasticsearch example:
 
 **Technical prerequisites:**
 
-As a prerequisite for the New Relic Application Monitoring Performance (APM) integration, which is also an optional additional feature, needs to be active.
+As a prerequisite for the New Relic Application Monitoring Performance (APM) integration, which is also an optional additional feature, it must be active.
 
 ### [Cloud Observability] Pipeline Success Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -294,11 +289,11 @@ Pipeline Success Dashboard example:
 
 ![pipeline-success-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/pipeline-success-dashboard.png)
 
-**Technical prerequisites**: The Pipeline Success Dashboard feature is *not* a part of the Spryker's base offering and is an *optional* additional feature. As a prerequisite, New Relic APM integration, which is also an optional additional feature, needs to be active.
+**Technical prerequisites**: The Pipeline Success Dashboard feature is *not* a part of Spryker's base offering and is an *optional* additional feature. As a prerequisite, New Relic APM integration, which is also an optional additional feature, needs to be active.
 
 ### [Core Commerce] Upgraded Angular to v15 and Node.js to v18 <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging the latest features and improvements offered by these versions.
+To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging of these versions' latest features and improvements.
 
 #### Documentation
 
@@ -309,11 +304,11 @@ To maintain the stability and longevity of our platform, we have migrated to Ang
 
 Spryker is launching an Early Access program for customers who want to be among the first to utilize the new Spryker Composable Storefront. 
 
-Spryker Composable Storefront provides an efficient solution for developers to implement and customize stores on Spryker’s commerce platform. It offers pre-packaged, decoupled, composable components for common features found on digital commerce sites. Customers can also create their own custom components to be used in the Storefront.
+Spryker Composable Storefront provides an efficient solution for developers to implement and customize stores on Spryker's commerce platform. It offers pre-packaged, decoupled, composable components for common features found on digital commerce sites. Customers can also create their own custom components to be used in the Storefront.
 
-Please reach out to your Spryker representative if you are interested in being part of Spryker’s Composable Storefront Early Access program.
+If you are interested in being part of Spryker's Composable Storefront Early Access program, contanct your Spryker representative.
 
-**Business benefit**: Spryker Composable Storefront allows Spryker customers to quickly implement and customize a decoupled storefront. It offers Spryker customers a future-proof, agile, and scalable solution.
+**Business benefit**: Spryker Composable Storefront allows Spryker customers to implement and customize a decoupled storefront quickly. It offers Spryker customers a future-proof, agile, and scalable solution.
 #### Documentation
 
 [Oryx](/docs/scos/dev/front-end-development/202307.0/oryx/oryx.html)
@@ -322,10 +317,8 @@ Please reach out to your Spryker representative if you are interested in being p
 
 Spryker is launching an Early Release Access program for customers who want to be among the first to utilize the new Dynamic Multistore. 
 
-Dynamic Multistore allows business users to create a new store in your platform's back-end, without the intervention of tech colleagues. 
+Dynamic Multistore allows business users to create a new store in your platform's backend without the intervention of tech colleagues. 
 
-Please contact your Spryker representative for further information about accessing this Early Release feature.
+For further information about accessing this Early Release feature, contact your Spryker representative.
 
 **Business benefit**: Boosts productivity and agility whilst empowering business users.
-
-

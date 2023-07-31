@@ -24,7 +24,7 @@ For more information on GitHub Actions, see the following documents:
 
 
 <details>
-<summary>Release 202304.0</summary>
+<summary>Release 202307.0</summary>
 
 ## Prerequisites
 

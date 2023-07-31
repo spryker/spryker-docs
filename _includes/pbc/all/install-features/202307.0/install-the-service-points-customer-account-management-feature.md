@@ -161,7 +161,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 4) Set up FE part
 
-#### 4.1) Add `main-overlay` molecule to the `page-layout-main` template.
+Adjust TWIG templates to display the service point selector.
+
+1) Add `main-overlay` molecule to the `page-layout-main` template.
 
 ```twig
 {% raw %}{% block globalComponents %}
@@ -170,13 +172,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% endblock %}{% endraw %}
 ```
 
-#### 4.2) Add `ClickCollectServicePointAddressFormWidget`.
+2) Add `ClickCollectServicePointAddressFormWidget`.
 
 ```twig
 {% raw %}{% widget 'ClickCollectServicePointAddressFormWidget' args [data.checkoutAddressForm] only %}{% endwidget %}{% endraw %}
 ```
 
-#### 4.3) Build assets.
+3) Build assets.
 
 Enable Javascript and CSS changes:
 

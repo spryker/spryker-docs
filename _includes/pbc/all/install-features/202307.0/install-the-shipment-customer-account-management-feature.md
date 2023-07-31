@@ -119,7 +119,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 3) Set up FE part
 
-#### 3.1) Single shipment.
+Adjust TWIG templates to display the shipment types.
+
+1) Single shipment.
 
 Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` module.
 
@@ -133,7 +135,7 @@ Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` modu
 {% endwidget %}{% endraw %}
 ```
 
-#### 3.2) Multi shipment.
+2) Multi shipment.
 
 {% info_block infoBox "Info" %}
 
@@ -185,9 +187,9 @@ d) Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra
 } only %}{% endraw %}
 ```
 
-#### 3.3) Build assets.
+3) Build assets.
 
-Enable Javascript and CSS changes:
+Enable Javascript changes:
 
 ```bash
 console frontend:yves:build

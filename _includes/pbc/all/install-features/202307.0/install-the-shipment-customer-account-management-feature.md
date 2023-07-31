@@ -1,12 +1,11 @@
 
 
 
-This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) + Customer Account Management feature into a Spryker project.
+This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the Shipment + Customer Account Management feature.
-To start feature integration, integrate the required features:
 
 ### Prerequisites
 
@@ -14,8 +13,8 @@ To start feature integration, integrate the required features:
 
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Shipment                    | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                                                                      |
-| Customer Account Management | {{site.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Shipment                    | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                                                                      |
+| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ## 1) Set up behavior
 
@@ -23,9 +22,9 @@ Enable the following plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
 |--------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands checkout address form with `ShipmentType` subform.                | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
-| ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands checkout multi-shipping address form with `ShipmentType` subform. | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
-| ShipmentTypeAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of `ShipmentTypeAddressFormWidget` widget.                  | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\ShopApplication |
+| ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands checkout address form with the `ShipmentType` subform.                | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands checkout multi-shipping address form `ShipmentType`. | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentTypeAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of the `ShipmentTypeAddressFormWidget` widget.                  | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -88,11 +87,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 2) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN                        | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
 |-------------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
-| ShipmentTypeAddressFormWidget | Enables shipment type selection during checkout address step. | None          | SprykerShop\Yves\ShipmentTypeWidget\Widget |
+| ShipmentTypeAddressFormWidget | Enables shipment type selection during the checkout address step. | None          | SprykerShop\Yves\ShipmentTypeWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -118,7 +117,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -130,6 +129,6 @@ Make sure that the following widgets were registered:
 
 | MODULE                         | TEST                                                                            |
 |--------------------------------|---------------------------------------------------------------------------------|
-| ShipmentTypeAddressFormWidget  | Go to **Address Checkout Step**, make sure that you could select shipment type. |
+| ShipmentTypeAddressFormWidget  | Go to **Address Checkout Step** and make sure that you can select shipment type. |
 
 {% endinfo_block %}

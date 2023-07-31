@@ -12,7 +12,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -402,7 +402,7 @@ console data:import service-point-store
 console data:import:service-type
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities were imported to the following database tables respectively:
 
@@ -601,7 +601,7 @@ class ServicePointSearchConfig extends SprykerServicePointSearchConfig
 }
 ```
 
-#### Set up regenerate and resync features
+#### Set up, regenerate, and resync features
 
 | PLUGIN                                              | SPECIFICATION                                                                                          | PREREQUISITES | NAMESPACE                                                           |
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
@@ -1284,8 +1284,6 @@ Follow the steps below to install the Service Points feature frontend.
 
 ### 1) Add translations
 
-Add translations as follows:
-
 1. Append glossary for the feature:
 
 ```csv
@@ -1338,8 +1336,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 ### 3) Set up widgets
-
-Set up widgets as follows:
 
 1. Register the following plugins to enable widgets:
 

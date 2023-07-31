@@ -1,12 +1,11 @@
 
 
 
-This document describes how to integrate the [Service Points feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-service-points-feature.html) + Customer Account Management feature into a Spryker project.
+This document describes how to integrate the Service Points + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the Service Points + Customer Account Management feature.
-To start feature integration, integrate the required features:
 
 ### Prerequisites
 
@@ -14,10 +13,10 @@ To start feature integration, integrate the required features:
 
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points              | {{site.version}} | [Service Points feature integration](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.md.html)                                                                      |
-| Customer Account Management | {{site.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.md.html) |
+| Service Points              | {{page.version}} | [Service Points feature integration](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.md.html)                                                                      |
+| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.md.html) |
 
-## 1) Add Translations
+## 1) Add translations
 
 1. Append the glossary according to your configuration:
 
@@ -48,12 +47,12 @@ Enable the following plugins:
 
 | PLUGIN                                                                   | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin       | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin  | Expands `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointCheckoutAddressCollectionFormExpanderPlugin                  | Expands checkout address form with `ServicePoint` subform.                |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin             | Expands checkout multi-shipping address form with `ServicePoint` subform. |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ClickCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin       | Expands the `ServicePoint` subform with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ClickCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin  | Expands `ServicePoint` with pickupable service type.              |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointCheckoutAddressCollectionFormExpanderPlugin                  | Expands checkout address form with `ServicePoint`.                |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
+| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin             | Expands checkout multi-shipping address form with `ServicePoint`. |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
 | ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin           | Expands shipments with service point address.                             |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage    |
-| ClickCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of `ClickCollectServicePointAddressFormWidget` widget.      |               | SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication |
+| ClickCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of the `ClickCollectServicePointAddressFormWidget` widget.      |               | SprykerShop\Yves\ServicePointWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -122,7 +121,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 3) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN                                    | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
 |-------------------------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
@@ -152,7 +151,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -164,6 +163,6 @@ Make sure that the following widgets were registered:
 
 | MODULE                                    | TEST                                                                            |
 |-------------------------------------------|---------------------------------------------------------------------------------|
-| ClickCollectServicePointAddressFormWidget | Go to **Address Checkout Step**, make sure that you could select service point. |
+| ClickCollectServicePointAddressFormWidget | Go to **Address Checkout Step** and make sure that you can select service point. |
 
 {% endinfo_block %}

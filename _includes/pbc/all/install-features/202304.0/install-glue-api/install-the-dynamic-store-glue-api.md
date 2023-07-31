@@ -1,3 +1,6 @@
+{% info_block warningBox %}
+Please note that Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+{% endinfo_block %} 
 
 Follow the steps below to integrate the Glue API: Dynamic Store feature into your project.
 

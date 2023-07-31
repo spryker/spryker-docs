@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202304.0/setting-up-the-merchant-portal.html
 related:
   - title: Building the project
-    link: docs/scos/dev/front-end-development/page.version/marketplace/building-the-project.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/set-up-the-merchant-portal.html
 ---
 
 This document provides details about how to set up the Spryker Merchant Portal.

@@ -8,7 +8,7 @@ related:
   - title: Project structure
     link: docs/scos/dev/front-end-development/page.version/marketplace/project-structure.html
   - title: Setting up the Merchant Portal
-    link: docs/scos/dev/front-end-development/page.version/marketplace/setting-up-the-merchant-portal.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/set-up-the-merchant-portal.html
 ---
 
 This document provides details about building the frontend part of the Merchant Portal.

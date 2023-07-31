@@ -12,5 +12,5 @@ This section explains how to build and set up the Merchant Portal frontend and a
 * [Angular Services](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/angular-services.html)
 * [Building the project](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/building-the-project.html)
 * [Project structure](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/project-structure.html)
-* [Setting up the Merchant Portal](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/setting-up-the-merchant-portal.html)
+* [Setting up the Merchant Portal](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html)
 * [Web components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/web-components.html)

@@ -341,7 +341,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Retrieve a shopping list
@@ -601,7 +601,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Edit a shopping list
@@ -816,7 +816,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Delete a shopping list

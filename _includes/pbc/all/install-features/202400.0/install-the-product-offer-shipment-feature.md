@@ -66,7 +66,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Ensure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY                         | TYPE  | EVENT   |
 |-----------------------------------------|-------|---------|
@@ -421,13 +421,14 @@ Enable the following plugins:
 
 | PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                            |
 |-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferPostCreatePlugin                  | Persists product offer shipment type to persistence.                                                                          | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence. | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferPostCreatePlugin                  | Persists product offer shipment type to persistence.                                                                          | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence. | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
 | ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                 | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
 | ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                               | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                         | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
-| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without product offer shipment type relation.                                                      | None                                                                                                                                                                                                            | Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage            |
+| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                      | None                                                                                                                                                                                                            | Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage            |
 
-**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
+<details open
+><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -471,6 +472,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
         ];
     }
 ```
+</details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
 
@@ -495,6 +497,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     }
 }
 ```
+
 
 **src/Pyz/Client/ShipmentTypeStorage/ShipmentTypeStorageDependencyProvider.php**
 

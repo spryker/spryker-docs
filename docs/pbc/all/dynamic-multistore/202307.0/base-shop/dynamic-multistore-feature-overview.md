@@ -6,6 +6,12 @@ template: concept-topic-template
 redirect_from:
 ---
 
+{% info_block warningBox %}
+
+Please note that Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %} 
+
 The "Dynamic Multistore Manager" is an innovative feature that enables business users to effortlessly create and manage multiple online stores from our e-commerce platform's back-office. This feature aims to streamline the process of setting up and maintaining distinct online stores, each catering to different customer segments, regions, or product categories.
 
 [Placeholder for Early access text]

@@ -16,7 +16,7 @@ To start feature integration, integrate the required features:
 | Shipment                    | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                                                                      |
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
-## 1) Set up behavior
+### 1) Set up behavior
 
 Enable the following plugins:
 
@@ -87,7 +87,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 2) Set up widgets
 
-1. Register the following plugins to enable widgets:
+Register the following plugins to enable widgets:
 
 | PLUGIN                        | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
 |-------------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
@@ -117,7 +117,77 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-2. Enable Javascript and CSS changes:
+### 3) Set up FE part
+
+#### 3.1) Single shipment.
+
+Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` module.
+
+```twig
+{% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [data.form] with {
+    data: {
+        deliveryContainerClassName: deliveryContainerClassName,
+        billingSameAsShippingContainerClassName: embed.jsAddressClass ~ '__wrapper-billingSameAsShipping',
+    },
+} only %}
+{% endwidget %}{% endraw %}
+```
+
+#### 3.2) Multi shipment.
+
+{% info_block infoBox "Info" %}
+
+This step can be skipped if multi shipment doesn't use on the project.
+
+{% endinfo_block %}
+
+a) Add the same widget as for single shipment.
+
+b) Add `multiple-shipment-toggler` molecule to the `address` view of `CheckoutPage` module.
+
+```twig
+{% raw %}{% include molecule('multiple-shipment-toggler', 'CheckoutPage') with {
+    data: {
+        isMultipleShipmentSelected: isMultipleShipmentSelected,
+    },
+    attributes: {
+        'toggle-targets-class-name': singleDeliveryContainerClassName,
+        'select-class-name': deliverySelectClassName,
+    },
+} only %}{% endraw %}
+```
+
+c) Add `ShipmentTypeAddressFormWidget` to the `address-item-form-field-list` molecule of `CheckoutPage` module.
+
+```twig
+{% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [item] with {
+    data: {
+        deliveryContainerClassName: deliveryContainerClassName,
+        shipmentTypesClassName: data.validatorTriggerClassName,
+        servicePointClassName: data.itemShippingClassName,
+    },
+} only %}{% endwidget %}{% endraw %}
+```
+
+d) Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra-triggers-class-name` attributes propery for `validate-next-checkout-step` molecule to validate `pickup` shipment type.
+
+```twig
+{% raw %}{% include molecule('validate-next-checkout-step', 'CheckoutPage') with {
+    class: validatorClassName,
+    attributes: {
+        'container-selector': '.' ~ itemShippingClassName,
+        'target-selector': '.' ~ data.jsAddressClass ~ '__form-submit',
+        'dropdown-trigger-selector': '.' ~ addressSelectClassName ~ ':not(.' ~ data.hiddenClassName ~ ')',
+        'extra-triggers-class-name': validatorTriggerClassName,
+        'parent-target-class-name': config.jsName ~ '__items',
+        'is-enable': false,
+    },
+} only %}{% endraw %}
+```
+
+#### 3.3) Build assets.
+
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

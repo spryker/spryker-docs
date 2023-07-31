@@ -3362,6 +3362,8 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
+        - title: "Oryx: Compositions"
+          url: /docs/scos/dev/front-end-development/oryx/oryx-compositions.html
         - title: Set up
           url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
         - title: Boilerplate
@@ -4578,7 +4580,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
             - title: Integrating Avalara Tax + Shipment
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
-
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:
@@ -4621,6 +4622,7 @@ entries:
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
       - title: Extension scenarios
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/extenstion-scenarios.html
         nested:
         - title: Event subscribers' registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
@@ -4669,6 +4671,8 @@ entries:
     - title: Testing guidelines
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
+      - title: Testing concepts
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       - title: Setting up tests
         url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Publish and Synchronization testing

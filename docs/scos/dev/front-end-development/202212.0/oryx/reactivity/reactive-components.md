@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Apr 3, 2023
 ---
 
+{% info_block warningBox %}
+
+Please note that Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 Components are organized by domains-for example, components in a product domain. They can leverage domain logic to communicate with the associated backend API. Each domain is shipped with a domain service that provides an API to communicate with a backend API. For example, when rendering product data, `ProductService` can be used as follows:
 
 ```ts

@@ -17,8 +17,8 @@ jobs:
         run: |
           # Set the start and end dates for June 2023
           START_DATE="2023-07-01"
-          END_DATE="2023-07-31"
-          MONTH_NAME="June"
+          END_DATE="2023-07-30"
+          MONTH_NAME="July"
 
           # Exclude certain users
           EXCLUDED_USERS=("VadymSachenko" "lenadoc" "andriitserkovnyi" "AlexSlawinski")  # Add the usernames to be excluded here

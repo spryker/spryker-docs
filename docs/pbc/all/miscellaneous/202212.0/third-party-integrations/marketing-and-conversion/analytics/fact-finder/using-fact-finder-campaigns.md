@@ -11,6 +11,8 @@ redirect_from:
   - /docs/search-factfinder-campaigns
   - /docs/en/search-factfinder-campaigns
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
 related:
   - title: Installing and configuring FACT-Finder NG API
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html

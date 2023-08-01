@@ -11,7 +11,7 @@ redirect_from:
   - /docs/product-rating-reviews-feature-integration
   - /docs/en/product-rating-reviews-feature-integration
   - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html  
 related:
   - title: Glue API - Product rating & reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html

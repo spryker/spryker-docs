@@ -1,5 +1,5 @@
 ---
-title: Marketplace MerchantPortal Core + Dynamic Store feature integration
+title: Install the Marketplace MerchantPortal Core + Dynamic Multistore feature
 last_updated: Apr 25, 2023
 description: This document describes the process how to integrate the Marketplace MerchantPortal Core + Dynamic Store feature into a Spryker project.
 template: feature-integration-guide-template
@@ -9,7 +9,7 @@ template: feature-integration-guide-template
 
 Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 This document describes how to integrate the Marketplace MerchantPortal Core + Dynamic Store feature into a Spryker project.
 
@@ -21,8 +21,8 @@ Follow the steps below to install the Marketplace MerchantPortal Core + Dynamic 
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | 
-| -------------------- | ------- | 
+| NAME | VERSION |
+| -------------------- | ------- |
 | Spryker Core | {{page.version}}  |
 | Marketplace Merchant Portal Core | {{page.version}}  |  
 

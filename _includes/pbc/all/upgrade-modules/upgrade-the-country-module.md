@@ -1,12 +1,12 @@
+This document describes how to upgrade the Country module.
+
+## Upgrading from version 3.* to version 4.0.0
+
 {% info_block warningBox %}
 
 Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %} 
-
-This document describes how to upgrade the Country module.
-
-## Upgrading from version 3.* to version 4.0.0
 
 In this new version of the `Country` module, we have added support configuration currency for each store in database.
 With the `Country` module version 4 we have added the `spy_country_store` database table to persist stores-countries in Zed.

@@ -21,7 +21,7 @@ Below is an example of when a used feature package version doesn't correspond to
 MINIMUM ALLOWED SHOP VERSION
 ============================
 
-Message: The package "spryker-feature/agent-assist" version 202108.0 is not supported. The minimum allowed version is 202204.0.
+Message: Version 202108.0 of the package "spryker-feature/agent-assist" is not supported. The minimum allowed version is 202204.0.
 Target:  spryker-feature/agent-assist:202108.0
 ```
 

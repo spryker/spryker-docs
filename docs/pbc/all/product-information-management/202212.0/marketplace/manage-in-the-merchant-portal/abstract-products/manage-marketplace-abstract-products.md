@@ -62,7 +62,7 @@ To edit the existing marketplace abstract product:
 | ----------- | -------------- | --------- |
 | Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |
-| Stores      | Defines the [stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product is available in.<br/>You can select multiple values. |           |
+| Stores      | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br/>You can select multiple values. |           |
 | Price       | In this pane, you can manage prices for your abstract product. See [Managing abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html) for more details. |           |
 | Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |
 | Images      | In this pane, you can manage image sets for your abstract product. See [Managing abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html) for more details. |           |

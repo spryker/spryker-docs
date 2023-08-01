@@ -93,7 +93,7 @@ Spryker increases the number of features that you can manage per store.
 
 #### Documentation
 
-* [Multiple Stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html)
+* [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
 * [Inventory](/docs/scos/user/features/202001.0/inventory-management-feature-overview.html)
 * [Warehouse Management](/docs/scos/user/features/202001.0/inventory-management-feature-overview.html)
 * [Managing Payment Methods in the Back Office](/docs/scos/user/back-office-user-guides/202001.0/administration/payment-methods/managing-payment-methods.html)

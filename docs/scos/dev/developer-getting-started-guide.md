@@ -136,7 +136,7 @@ To configure and customize your project, you can do the following:
     * [Redis](/docs/scos/dev/set-up-spryker-locally/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
-3. [Configure stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
+3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 

@@ -50,7 +50,7 @@ The following table describes attributes you select and enter in the ***[Product
 | ----------- | -------------- | --------- |
 | Name        | Name of your product displayed on the Storefront. It is set per locale. | &check;         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |
-| Stores      | Defines the [stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product is available in.<br/>You can select multiple values. |           |
+| Stores      | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br/>You can select multiple values. |           |
 | Price       | In this pane, you can manage prices for your abstract product. For more details, see [Managing abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html). |           |
 | Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets**<br/>Only one value can be selected. | &check;         |
 | Images      | In this pane, you can manage image sets for your abstract product. For more details, see [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html). |           |

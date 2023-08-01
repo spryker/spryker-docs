@@ -45,7 +45,7 @@ The following table describes the attributes you enter and select when adding a 
 | --- | --- |
 | Abstract SKU | Unique identifier of an abstract product. The field is disabled because you are adding a scheduled price to a particular abstract product. |
 | Concrete SKU | Unique identifier of a concrete product. The field is disabled because you are adding a scheduled price to a particular abstract product. |
-| Store | [Store](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the scheduled price will be displayed. Unless you add the scheduled price to all the other stores, the regular price will be displayed in them.  |
+| Store | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the scheduled price will be displayed. Unless you add the scheduled price to all the other stores, the regular price will be displayed in them.  |
 | Currency | Currency in which the scheduled price is defined. Unless you define the scheduled price for all the other currencies, the regular price will be displayed for them.  |
 | Net price | Net value of the product defined by the scheduled price. |
 | Gross price |Gross value of product defined by the scheduled price.  |

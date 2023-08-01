@@ -68,6 +68,6 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure access to data SpyCurrencyStore, SpyCountryStore, SpyLocaleStore is allowed.
+Make sure that access to tables `SpyCurrencyStore`, `SpyCountryStore`, `SpyLocaleStore` is allowed.
 
 {% endinfo_block %}

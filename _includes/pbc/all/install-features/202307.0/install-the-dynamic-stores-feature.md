@@ -10,9 +10,24 @@ Dynamic Multistore is currently running under an Early Access Release. Early Acc
 
 Follow the steps below to install the Dynamic Store feature:
 
-### 1) Install the required modules using Composer
+### 1) Make sure that Country, Locale and Currency modules migrated to the required major version
 
-To start feature integration, overview and install the necessary features:
+In order to make Dynamic Store work, new major versions of 3 modules must be updated.
+
+| NAME     | VERSION |
+|----------|---------|
+| Country  | ^4.0.0  |
+| Locale   | ^4.0.0  |
+| Currency | ^4.0.0  |
+
+Migration guides can be found here:
+[Country](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-country-module.html)
+[Locale](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-locale-module.html)
+[Currency](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-currency-module.html)
+
+### 2) Install the required modules using Composer
+
+To continue feature integration, overview and install or update the required feature:
 
 | NAME | VERSION |
 | --- | --- |
@@ -43,19 +58,18 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 
-### 2) Set up configuration
+### 3) Set up configuration
 
 {% info_block warningBox "Configuration stores.php" %}
 
-Before dynamic store was introduced, configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is now enabled, configuration for the store is stored in the database, making the file `config/Shared/stores.php` deprecated. 
+Before dynamic store was introduced, configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is now enabled, configuration for the store is stored in the database, making the files `config/Shared/stores.php` and `config/Shared/default_store.php` deprecated. 
 
-The default store configuration will now be imported using new data import modules such as StoreDataImport, LocaleDataImport and CountryDataImport. These modules will populate the store configuration in the database.
-New major modules, namely Locale and Country, have been introduced and they are responsible for extending store data and configuring it in the database.
+The default store configuration will now be imported using new data import modules such as `StoreDataImport`, `LocaleDataImport` and `CountryDataImport`. These modules will populate the store configuration in the database.
 
 {% endinfo_block %}
 
 
-#### Deploy file changes
+#### Deploy and configuration file changes
 
 1. Define the region stores context by domain
 
@@ -71,10 +85,10 @@ We recommend making de.mysprykershop.com a mirror of eu.mysprykershop.com to pre
 
 2. Enable dynamic store feature
 
-Due to a change in the ideology of the region instead store configuration, you need to change the deploy file to enable the dynamic store feature.
+Due to a change in the ideology with shifting to the region instead of store configuration for deploy, you need to change the deploy file to enable it.
 To use the new region configuration, create a new deployment file, such as `deploy.dynamic-store.yml` (or `deploy.dev.dynamic-store.yml` for development environment).
 
-For example development deoploy file for EU region:
+You can check example deploy file for EU region:
 
 ***deploy.dev.dynamic-store.yml***
 
@@ -90,7 +104,8 @@ image:
     # ...
     environment:
         # ...
-        SPRYKER_DYNAMIC_STORE_MODE: true # Enable dynamic store feature 
+        SPRYKER_DYNAMIC_STORE_MODE: true # This will enable dynamic store be default and will be used by the application to define its behaviour
+        SPRYKER_YVES_HOST_EU: yves.eu.spryker.local # See the guide for installing dynamic store availability notification feature
     node:
         version: 16
         npm: 8
@@ -98,6 +113,7 @@ image:
 regions:
     EU:
         # Services for EU region. Use one of the following services: mail, database, broker, key_value_store, search for all stores in EU region.
+        # Stores MUST not be defined in the deploy file as it was before due to their dynamic nature
         services:
             mail:
                 sender:
@@ -138,8 +154,8 @@ groups:
                         region: EU # Use region instead store name for all stores in EU region
                         services:
                             session:
-                                namespace: 1
-            # Same for Glue endpoints
+                                namespace: 2
+            # Same for other endpoints
             glue_eu: 
                 application: glue
                 endpoints:
@@ -188,9 +204,10 @@ docker:
 
 ```
 
-New configuration for deploy file use region instead store name for services, endpoints, applications, etc.
-Evnironment variable `SPRYKER_DYNAMIC_STORE_MODE` enable dynamic store feature, by default it is disabled.
-Also you need to change domain name for all endpoints in EU region.
+New configuration for the deploy file uses the region instead of the store name for services, endpoints, applications, etc.
+The environment variable `SPRYKER_DYNAMIC_STORE_MODE` enables dynamic store feature.
+Make sure that there are no mentions of the store is in the new deploy file. It can lead to broken deploy process
+
 Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 
@@ -296,7 +313,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     protected function getSynchronizationQueueConfiguration(): array
     {
         return [
+            ...
             StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE,
+            ...
         ];
     }
 
@@ -325,17 +344,18 @@ If the command execution was successful without rabbitmq connection errors, then
 
 
 
-**config/Zed/cronjobs/jobs.php**
+**config/Zed/cronjobs/jenkins.php**
 
-Change configuration for Jenkins jobs.
+Change configuration for Jenkins jobs. With the Dynamic Store setup, commands will be executed per region instead of per store.
+This means that the command that will be prepared for Jenkins will use `SPRYKER_CURRENT_REGION` env variable instead of `APPLICATION_STORE`.
 
-Delete the variable `$allStores` and its use in the configuration of the jobs through the `stores` parameter.
+Delete the variable `$allStores` and its usage in the configuration of the jobs through the `stores` parameter.
 
 ```
 config/Zed/cronjobs/jenkins.php
 ```
 
-So, the code block should be delete in you configuration file if used before:
+The code block below should be delete from your configuration file if it was used before:
 
 
 ```php
@@ -356,20 +376,7 @@ $jobs[] = [
     'enable' => true,
 ];
 ```
-
-For jobs `queue-worker-start` add parameter `storeAware` with value `true`
-
-
-```php
-$jobs[] = [
-    'name' => 'queue-worker-start',
-    'command' => '$PHP_BIN vendor/bin/console queue:worker:start',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'storeAware' => true,
-];
-```
-Please add the following code to the end of the configuration of the jobs in the configuration of the current region (if it is set).
+Please add the following code to the end of the jobs configuration file.
 
 ```php
 
@@ -380,7 +387,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 }
 ```
 
-You also can check this configuration in the file `config/Zed/cronjobs/jenkins.php` in the [Spryker Suite repository](https://github.com/spryker-shop/suite).
+You also can check this configuration in the file `config/Zed/cronjobs/jenkins.php` in the [Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
 {% info_block warningBox “Verification” %}
 
@@ -393,6 +400,8 @@ And check that the jobs are created in the Jenkins with region configuration.
 
 {% endinfo_block %}
 
+
+Enable additional queue that will be used to publish `Store` data to the `Storage`.
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -424,7 +433,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Please make sure that the following configuration is working via run `vendor/bin/console queue:setup` command.
-Also check queue `sync.storage.store` in RabbitMQ.
+Also check queue `sync.storage.store` in the RabbitMQ.
 
 {% endinfo_block %}
 
@@ -432,7 +441,7 @@ Also check queue `sync.storage.store` in RabbitMQ.
 
 ### 2) Set up the database schema and transfer objects
 
-1. Adjust the schema definition so entity changes trigger events:
+1. Adjust the schema definition so entity change triggers events:
 
 **src/Pyz/Zed/Country/Persistence/Propel/Schema/spy_country.schema.xml**
 
@@ -489,26 +498,6 @@ Also check queue `sync.storage.store` in RabbitMQ.
 </database>
 ```
 
-{% info_block warningBox "Verification" %}
-
-
-Steps for the changes to take effect, you need to suspend the scheduler.
-1. Stop scheduler and run the following commands. 
-
-```bash
-vendor/bin/console scheduler:suspend
-```
-
-2. Create store in the Back Office. Setup the store country and locale. 
-3. Check `event` queue in RabbitMQ.  Make sure events for update store, country and locale are in the queue.
-
-Note: Don't forget to start scheduler after the verification.
-
-
-{% endinfo_block %}
-
-
-
 2. Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -531,6 +520,24 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
+
+In order to verify that the changes are taking effect, you need to suspend the scheduler.
+1. Stop scheduler and run the following commands.
+
+```bash
+vendor/bin/console scheduler:suspend
+```
+
+2. Create store in the Back Office. Setup the store country and locale.
+3. Check `event` queue in RabbitMQ.  Make sure events for update store, country and locale are in the queue.
+
+Note: Don't forget to start scheduler after the verification.
+
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -545,7 +552,7 @@ Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 
-### 3) Configure export to Redis
+### 3) Configure export to Storage
 
 1.  Set up publisher plugins and trigger plugins:
 
@@ -963,8 +970,6 @@ use Spryker\Zed\Locale\Communication\Plugin\Application\ConsoleLocaleApplication
  */
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
-
-
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -1347,7 +1352,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
+            ...
             StoreSwitcherWidget::class,
+            ...
         ];
     }
 }

@@ -19,7 +19,7 @@ Trace your request execution flow to find bottlenecks and optimize your code. Th
 
 ![request-tracing](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/request-tracing.png)
 
-**Business benefit**: Lower response time, faster end-user experience resulting in higher SEO rankings.
+**Business benefit**: Lower response time, faster end-user experience resulting in higher conversion rates.
 
 #### Documentation
 
@@ -67,7 +67,7 @@ With Algolia Search, you can create an efficient path to purchase for your custo
 #### Documentation
 
 * [Algolia](/docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia.html)
-* Technical prerequisites: 
+* Technical prerequisites:
   * [Integrate Algolia](/docs/pbc/all/search/202307.0/third-party-integrations/integrate-algolia.html)
 
 ### [ACP App] Bazaarvoice App <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -96,7 +96,7 @@ The Usercentrics app helps you as follows:
 
 #### Documentation
 
-[Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) 
+[Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html)
 
 ### [ACP App] Payments with PAYONE <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -112,13 +112,13 @@ With the PAYONE app, you can do the following:
 
 #### Documentation
 
-[Payone integration in the Back Office](/docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html) 
+[Payone integration in the Back Office](/docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html)
 
 ### [ACP Foundation] Monitoring and Logging for SCCOS <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 ACP tenant monitoring and logging are required to oversee all ACP-related transactions within Spryker Cloud Commerce OS (SCCOS) properly.
 
-Spryker is providing this feature as an integral part of having an end-to-end monitoring and logging system in place for all ACP app-related actions within SCOS. 
+Spryker is providing this feature as an integral part of having an end-to-end monitoring and logging system in place for all ACP app-related actions within SCOS.
 
 This feature works out of the box; no additional configuration is required.
 
@@ -126,7 +126,7 @@ This feature works out of the box; no additional configuration is required.
 
 ### [Framework] GlueApplication as API enabler infrastructure <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Glue as an API stays the same, but the main module carrying the infrastructure for our API development layer gets a complete rework as the GlueApplication module transforms from a Storefront-specific JSON:API complying API provider to an infrastructure that allows the development of different API applications. The applications now follow two separate types: Storefront and backend, which have access to different storage engines that allow for different use cases and get deployed in two different types of containers. The Storefront type has access to Redis & Search storages which allow for quick horizontal scalability to support bursts of traffic. The backend type has direct access to Zed application layer facades, which allow APIs to be built on top of the core business logic. 
+Glue as an API stays the same, but the main module carrying the infrastructure for our API development layer gets a complete rework as the GlueApplication module transforms from a Storefront-specific JSON:API complying API provider to an infrastructure that allows the development of different API applications. The applications now follow two separate types: Storefront and backend, which have access to different storage engines that allow for different use cases and get deployed in two different types of containers. The Storefront type has access to Redis & Search storages which allow for quick horizontal scalability to support bursts of traffic. The backend type has direct access to Zed application layer facades, which allow APIs to be built on top of the core business logic.
 
 **Business benefit**: The separation of API applications by type and functionality allows for more diversity in how we design APIs and the exposure of business logic to consumers.
 
@@ -156,11 +156,11 @@ Glue as an API stays the same, but the main module carrying the infrastructure f
 
 Previously, OAuth 2.0 clients were not able to be updated other than having one client per installation. To begin, our client was our own Storefront, but when opening the consuming of APIs, we had to allow more API consumer clients to be installed in the system. This feature allows for creating as many OAuth 2.0 clients as needed for consumers.
 
-**Business benefit**: 
+**Business benefit**:
 
 Allows for the creation of multiple OAuth 2.0 clients, so the business can allow for secure connection of multiple API consumers with different access rights.
 
-#### Documentation 
+#### Documentation
 
 [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/202307.0/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 
@@ -208,8 +208,8 @@ Turn on and off the maintenance mode of an application using a dedicated pipelin
 
 #### Documentation
 
-* [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) 
-* [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html) 
+* [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+* [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 ### [Cloud Self-Service] Environment variables management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -219,11 +219,11 @@ Manage environment variables and secrets of applications using a UI without havi
 
 #### Documentation
 
-[Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) 
+[Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
 
 ### [Cloud Observability] Infrastructure Health Check Monitoring Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Empowers your team with built-in dashboards to observe the status of the whole platform. 
+Empowers your team with built-in dashboards to observe the status of the whole platform.
 
 At a glance, your team can monitor the health status and uptime of their environment as a whole, the applications running, the average response time, and the availability of single services and components.
 
@@ -269,11 +269,11 @@ As a prerequisite for the New Relic Application Monitoring Performance (APM) int
 
 Provides your team with a real-time view of the deployment pipeline performance, enabling them to track the success and failure rates of pipeline runs, allowing them to:
 
-Easily monitor their pipeline metrics, including the number of overall succeeded pipeline runs and the overall number of failed runs, and quickly identify and troubleshoot any issues, 
+Easily monitor their pipeline metrics, including the number of overall succeeded pipeline runs and the overall number of failed runs, and quickly identify and troubleshoot any issues,
 
-Have visibility into pipeline performance to drive continuous improvement of deployment processes, 
+Have visibility into pipeline performance to drive continuous improvement of deployment processes,
 
-Optimize release cycles and ultimately deliver applications faster and more reliably. 
+Optimize release cycles and ultimately deliver applications faster and more reliably.
 
 {% info_block infoBox "Info" %}
 
@@ -302,7 +302,7 @@ To maintain the stability and longevity of our platform, we have migrated to Ang
 
 ### [Composable Storefront] Early Access release
 
-Spryker is launching an Early Access program for customers who want to be among the first to utilize the new Spryker Composable Storefront. 
+Spryker is launching an Early Access program for customers who want to be among the first to utilize the new Spryker Composable Storefront.
 
 Spryker Composable Storefront provides an efficient solution for developers to implement and customize stores on Spryker's commerce platform. It offers pre-packaged, decoupled, composable components for common features found on digital commerce sites. Customers can also create their own custom components to be used in the Storefront.
 
@@ -315,9 +315,9 @@ If you are interested in being part of Spryker's Composable Storefront Early Acc
 
 ### [Dynamic Multistore] Early Access release
 
-Spryker is launching an Early Release Access program for customers who want to be among the first to utilize the new Dynamic Multistore. 
+Spryker is launching an Early Release Access program for customers who want to be among the first to utilize the new Dynamic Multistore.
 
-Dynamic Multistore allows business users to create a new store in your platform's backend without the intervention of tech colleagues. 
+Dynamic Multistore lets business users create stores in your platform's back-end without the help from the development team.
 
 For further information about accessing this Early Release feature, contact your Spryker representative.
 

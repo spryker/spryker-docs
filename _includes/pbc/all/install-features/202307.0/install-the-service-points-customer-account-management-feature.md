@@ -35,6 +35,12 @@ service_point_widget.location_label,Location:,en_US
 service_point_widget.location_label,Standort:,de_DE
 service_point_widget.select_your_store_title,Select your store,en_US
 service_point_widget.select_your_store_title,Wählen Sie Ihren Store,de_DE
+service_point_widget.search,"Search for Store, zip code or city...",en_US
+service_point_widget.search,"Suche nach Store, PLZ oder Stadt...",de_DE
+service_point_widget.select_store_action,Select store,en_US
+service_point_widget.select_store_action,Store auswählen,de_DE
+service_point_widget.no_results,"Nothing found...",en_US
+service_point_widget.no_results,"Nichts gefunden...",de_DE
 ```
 
 2. Import data:
@@ -127,7 +133,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-### 3) Set up widgets
+## 3) Set up widgets
 
 Register the following plugins to enable widgets:
 
@@ -159,7 +165,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-### 4) Set up FE part
+## 4) Set up FE part
 
 Adjust TWIG templates to display the service point selector.
 

@@ -16,7 +16,32 @@ To start feature integration, integrate the required features:
 | Shipment                    | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                                                                      |
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
-### 1) Set up behavior
+## 1) Add translations
+
+1. Append the glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+
+```
+page.checkout.address.single_address,Single address,en_US
+page.checkout.address.single_address,Eine Adresse,de_DE
+page.checkout.address.multiple_addresses,Multiple addresses,en_US
+page.checkout.address.multiple_addresses,Mehrere Adressen,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+
+{% endinfo_block %}
+
+## 2) Set up behavior
 
 Enable the following plugins:
 
@@ -85,7 +110,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-### 2) Set up widgets
+## 3) Set up widgets
 
 Register the following plugins to enable widgets:
 
@@ -117,11 +142,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-### 3) Set up FE part
+## 4) Set up FE part
 
 Adjust TWIG templates to display the shipment types.
 
-1) Single shipment.
+1. Single shipment.
 
 Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` module.
 
@@ -135,7 +160,7 @@ Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` modu
 {% endwidget %}{% endraw %}
 ```
 
-2) Multi shipment.
+2. Multi shipment.
 
 {% info_block infoBox "Info" %}
 
@@ -187,7 +212,7 @@ d) Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra
 } only %}{% endraw %}
 ```
 
-3) Build assets.
+3. Build assets.
 
 Enable Javascript changes:
 

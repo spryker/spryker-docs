@@ -169,7 +169,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Adjust TWIG templates to display the service point selector.
 
-1. To the `page-layout-main` template ща `ShopUi` module, add the `main-overlay` molecule:
+1. To the `page-layout-main` template of `ShopUi` module, add the `main-overlay` molecule:
 
 ```twig
 {% raw %}{% block globalComponents %}
@@ -178,19 +178,7 @@ Adjust TWIG templates to display the service point selector.
 {% endblock %}{% endraw %}
 ```
 
-2. Add `ClickCollectServicePointAddressFormWidget` to the `addres` view of the `CheckoutPage` module:
-
-```twig
-{% raw %}{% widget 'ClickCollectServicePointAddressFormWidget' args [data.checkoutAddressForm] only %}{% endwidget %}{% endraw %}
-```
-
-{% info_block infoBox "Info" %}
-
-In case using `ShipmentTypeAddressFormWidget` widget the `ClickCollectServicePointAddressFormWidget` will be added automatically, so no need to add it manually.
-
-{% endinfo_block %}
-
-3. Add `cross` icon to the `icon-spite` atom:
+2. Add `cross` icon to the `icon-spite` atom in the `ShopUi` module:
 
 ```twig
 {% raw %}<symbol id=":cross" viewBox="0 0 24 24">
@@ -198,7 +186,13 @@ In case using `ShipmentTypeAddressFormWidget` widget the `ClickCollectServicePoi
 </symbol>{% endraw %}
 ```
 
-4. Adjust `choice_widget_expanded` and `checkbox_widget` blocks for `/resources/form/form.twig` of `ShopUi` module:
+{% info_block infoBox "Info" %}
+
+In case the `cross` icon is already defined in the project, it is not necessary to add it again.
+
+{% endinfo_block %}
+
+3. Adjust `choice_widget_expanded` and `checkbox_widget` blocks for `/resources/form/form.twig` of `ShopUi` module:
 
 ```twig
 {% raw %}{% block choice_widget_expanded -%}
@@ -225,6 +219,18 @@ In case using `ShipmentTypeAddressFormWidget` widget the `ClickCollectServicePoi
     ...
 {%- endblock -%}{% endraw %}
 ```
+
+4. Add `ClickCollectServicePointAddressFormWidget` to the `addres` view of the `CheckoutPage` module:
+
+```twig
+{% raw %}{% widget 'ClickCollectServicePointAddressFormWidget' args [data.checkoutAddressForm] only %}{% endwidget %}{% endraw %}
+```
+
+{% info_block infoBox "Info" %}
+
+In case using `ShipmentTypeAddressFormWidget` widget the `ClickCollectServicePointAddressFormWidget` will be added automatically, so no need to add it manually.
+
+{% endinfo_block %}
 
 5. Build assets:
 

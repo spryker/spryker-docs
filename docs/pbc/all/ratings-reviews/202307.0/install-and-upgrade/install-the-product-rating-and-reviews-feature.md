@@ -1,11 +1,7 @@
 ---
 title: Install the Product Rating and Reviews feature
 description: The guide walks you through the process of installing the Product Reviews feature in your project.
-<<<<<<< Updated upstream
-last_updated: Jun 16, 2021
-=======
 last_updated: Aug 1, 2023
->>>>>>> Stashed changes
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-rating-reviews-feature-integration
 originalArticleId: a5fd5363-2839-406e-a29e-ba175b46592a
@@ -14,12 +10,8 @@ redirect_from:
   - /2021080/docs/en/product-rating-reviews-feature-integration
   - /docs/product-rating-reviews-feature-integration
   - /docs/en/product-rating-reviews-feature-integration
-<<<<<<< Updated upstream
   - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html  
-=======
-  - /docs/scos/dev/feature-integration-guides/202204.0/product-rating-and-reviews-feature-integration.html  
->>>>>>> Stashed changes
+  - /docs/scos/dev/feature-integration-guides/202307.0/product-rating-and-reviews-feature-integration.html
 related:
   - title: Glue API - Product rating & reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html

@@ -9,7 +9,7 @@ Icons play a crucial role in user interfaces as they provide clear visual cues, 
 
 ## Icon Component
 
-Icons are rendered using the ` IconComponent``, a design system component designed for this purpose. To display an icon, simply use the  `type` attribute to specify the icon's name:
+Icons are rendered using the ` IconComponent`, a design system component designed for this purpose. To display an icon, simply use the `type` attribute to specify the icon's name:
 
 ```html
 <oryx-icon type="rocket"></oryx-icon>

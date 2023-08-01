@@ -4,6 +4,11 @@ description: Environment of the Oryx Application
 template: concept-topic-template
 ---
 
+{% info_block warningBox %}
+
+Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
 
 `AppEnvironment` represents environment variables that are used in an Oryx application. It's a typesafe global object that can be extended wherever an environment variable is needed for a feature to work properly.
 

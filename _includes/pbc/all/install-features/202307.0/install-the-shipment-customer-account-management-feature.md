@@ -162,7 +162,7 @@ Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` modu
 
 {% info_block infoBox "Info" %}
 
-`deliveryContainerClassName` - class name of container the delivery form and the address selector.
+`deliveryContainerClassName` - class name of container the delivery form and the address selector.<br>
 `embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'` - class name of container for billing same as shipping checkbox.
 
 {% endinfo_block %}
@@ -193,8 +193,8 @@ b) Add `multiple-shipment-toggler` molecule to the `address` view of `CheckoutPa
 
 {% info_block infoBox "Info" %}
 
-`isMultipleShipmentSelected` - flag that indicates if multiple shipment is selected.
-`singleDeliveryContainerClassName` - class name of container the address selector and the `ShipmentTypeAddressFormWidget`.
+`isMultipleShipmentSelected` - flag that indicates if multiple shipment is selected.<br>
+`singleDeliveryContainerClassName` - class name of container the address selector and the `ShipmentTypeAddressFormWidget`.<br>
 `deliverySelectClassName` - class name of the address selector.
 
 {% endinfo_block %}

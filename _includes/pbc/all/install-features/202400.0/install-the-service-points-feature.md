@@ -12,7 +12,7 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -24,13 +24,14 @@ composer require spryker-feature/service-points: "{{page.version}}" --update-wit
 
 Make sure that the following modules have been installed:
 
-| MODULE                             | EXPECTED DIRECTORY                                     |
-|------------------------------------|--------------------------------------------------------|
-| ServicePoint                       | vendor/spryker/service-point                           |
-| ServicePointDataImport             | vendor/spryker/service-point-data-import               |
-| ServicePointsBackendApi            | vendor/spryker/service-points-backend-api              |
-| ServicePointSearch                 | vendor/spryker/service-point-search                    |
-| ServicePointStorage                | vendor/spryker/service-point-storage                   |
+| MODULE                  | EXPECTED DIRECTORY                        |
+|-------------------------|-------------------------------------------|
+| ServicePoint            | vendor/spryker/service-point              |
+| ServicePointDataImport  | vendor/spryker/service-point-data-import  |
+| ServicePointsBackendApi | vendor/spryker/service-points-backend-api |
+| ServicePointSearch      | vendor/spryker/service-point-search       |
+| ServicePointStorage     | vendor/spryker/service-point-storage      |
+| ServicePointWidget      | vendor/spryker-shop/service-point-widget  |
 
 {% endinfo_block %}
 
@@ -401,7 +402,7 @@ console data:import service-point-store
 console data:import:service-type
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities were imported to the following database tables respectively:
 
@@ -600,7 +601,7 @@ class ServicePointSearchConfig extends SprykerServicePointSearchConfig
 }
 ```
 
-#### Set up regenerate and resync features
+#### Set up, regenerate, and resync features
 
 | PLUGIN                                              | SPECIFICATION                                                                                          | PREREQUISITES | NAMESPACE                                                           |
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
@@ -1276,3 +1277,108 @@ Make sure that you can send the following requests:
   ```
 
 {% endinfo_block %}
+
+## Install feature frontend
+
+Follow the steps below to install the Service Points feature frontend.
+
+### 1) Add translations
+
+1. Append glossary for the feature:
+
+```csv
+service_point_widget.search,"Search for Store, zip code or city...",en_US
+service_point_widget.search,"Suche nach Store, PLZ oder Stadt...",de_DE
+service_point_widget.select_store_action,Select store,en_US
+service_point_widget.select_store_action,Store auswählen,de_DE
+service_point_widget.no_results,"Nothing found...",en_US
+service_point_widget.no_results,"Nichts gefunden...",de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+### 2) Enable controllers
+
+Register the following route providers on the Storefront:
+
+| PROVIDER                              | NAMESPACE                                         |
+|---------------------------------------|---------------------------------------------------|
+| ServicePointWidgetRouteProviderPlugin | SprykerShop\Yves\ServicePointWidget\Plugin\Router |
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\ServicePointWidget\Plugin\Router\ServicePointWidgetRouteProviderPlugin;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     */
+    protected function getRouteProvider(): array
+    {
+        $routeProviders = [
+            new ServicePointWidgetRouteProviderPlugin(),
+        ];
+
+        return $routeProviders;
+    }
+}
+```
+
+### 3) Set up widgets
+
+1. Register the following plugins to enable widgets:
+
+| PLUGIN                   | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
+|--------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
+| ServicePointSearchWidget | Allow customers to search, and sort a list of service points. |               | SprykerShop\Yves\ServicePointWidget\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\ServicePointWidget\Widget\ServicePointSearchWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            ServicePointSearchWidget::class,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+
+| WIDGET                   | VERIFICATION                                                                                                                                                 |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ServicePointSearchWidget | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
+
+{% endinfo_block %}
+
+2. Enable Javascript and CSS changes:
+
+```bash
+console frontend:yves:build
+```

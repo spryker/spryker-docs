@@ -1,5 +1,5 @@
 ---
-title: "How To: Delete store when using the dynamic store feature"
+title: Delete stores
 description: This document shows how to delete a store when the system is running with a dynamic store feature.
 past_updated: Jun 26, 2023
 template: howto-guide-template
@@ -9,16 +9,16 @@ template: howto-guide-template
 
 Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 This document describes the steps to take to delete a store in Spryker when using dynamic store.
 
 ## When it might be useful
 
-Occasionally, a store created earlier becomes unnecessary. It may be a store that has been used for a brand, product, holiday, marketing promotions, or events, such as ending experiments with no production environment. 
+Occasionally, a store created earlier becomes unnecessary. It may be a store that has been used for a brand, product, holiday, marketing promotions, or events, such as ending experiments with no production environment.
 
 On the technical side, removing a store helps with:
-1. By deleting redundant and no longer used data, which can take a lot of space up on the server, the store's speed is increased. The load on it for the purposes of indexing and searching is also reduced. 
+1. By deleting redundant and no longer used data, which can take a lot of space up on the server, the store's speed is increased. The load on it for the purposes of indexing and searching is also reduced.
 2. Reducing wasted memory and your storage footprint.
 
 
@@ -29,14 +29,14 @@ On the technical side, removing a store helps with:
 ### 1. Backup Database.
 
 Before starting the process of removing a store, you need to back the store's database up and ensure it is recoverable.
-If you are using Amazon Web Services' Relational Database Service (AWS RDS), check [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html) for more information. 
+If you are using Amazon Web Services' Relational Database Service (AWS RDS), check [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html) for more information.
 
 
 ### 2. Suspend P&S.
 
 **In order to reduce the risk of data synchronization errors, you can suspend data synchronization through P&S.**
 
-1. Enable **maintenance mode** by using command: 
+1. Enable **maintenance mode** by using command:
 ```bash
 vendor/bin/console maintenance mode
 ```
@@ -44,7 +44,7 @@ If you are using AWS infrastructure, check its relevant documentation on how to 
 
 2. Make sure there aren't too many many messages showing in the RabbitMQ. Wait for the messages to be processed.
 
-3. To suspend P&S and the Cronjob scheduler, use this command: 
+3. To suspend P&S and the Cronjob scheduler, use this command:
 
 ```bash
 vendor/bin/console scheduler:suspend
@@ -92,8 +92,8 @@ Store has new configuration tables that were used for dynamic store:
 - `spy_country_store`
 
 Make sure to delete all records related to the store. You may also have other related tables used in the project, make sure to check them and delete data from them.
-After removing all related data from all tables, you can remove the row with the **store** data from the table `spy_store`. 
- 
+After removing all related data from all tables, you can remove the row with the **store** data from the table `spy_store`.
+
 ### 4. Cleaning data in the key-value storage engine.
 
 Data is stored with keys that contain the name store, if you use Redis as a key-value store.
@@ -107,9 +107,9 @@ Below is a list of keys, taking into account the default configuration out of th
 {% endinfo_block %}
 
 Data stored in Redis that should be deleted includes the following:
-- Stock information: 
+- Stock information:
    - `kv:availability:xxx:*`
-- Product details: 
+- Product details:
     - `kv:price_product_abstract:xxx:*`
     - `kv:price_product_abstract_merchant_relationship:xxx:*`
     - `kv:price_product_concrete:xxx:*`
@@ -127,17 +127,17 @@ Data stored in Redis that should be deleted includes the following:
 - Product category details:
     - `kv:category_node:xxx:*`
     - `kv:category_tree:at:*`
-- CMS pages and blocks: 
+- CMS pages and blocks:
     - `kv:cms_block:xxx:*`
     - `kv:cms_page:xxx:*`
-- Merchant: 
+- Merchant:
     - `kv:merchant:xxx:*`
     - `kv:price_product_abstract_merchant_relationship:xxx:*`
-- Adjust `kv:store_list:` and delete store name XXX values in stores. 
+- Adjust `kv:store_list:` and delete store name XXX values in stores.
 ```json
 {"stores":["AT","DE","XXX"],"_timestamp":111111111111}
-``` 
-- Delete key `kv:store:xxx` with value about store. 
+```
+- Delete key `kv:store:xxx` with value about store.
 
 
 Note: A project's custom data stored keys may also be present.
@@ -150,7 +150,7 @@ If you are using Elasticsearch, each configured store has its index, which is in
 - A configuration file name.
 Index name components are delimited with an underscore, for example:  `spryker_xxx_page`.
 
-The following indexes are available in the standard configuration (example: `xxx` -  store name): 
+The following indexes are available in the standard configuration (example: `xxx` -  store name):
 
 - `spryker_xxx_merchant`.
 - `spryker_xxx_page`.
@@ -161,16 +161,16 @@ The following indexes are available in the standard configuration (example: `xxx
 
 Follow these steps to resume normal operations:
 
-1. Restart the Cronjob scheduler through these commands: 
+1. Restart the Cronjob scheduler through these commands:
 Run:  
 ```bash
 vendor/bin/console scheduler:resume
-``` 
+```
 2. Disable maintenance mode by running the following command:
-Run: 
+Run:
 ```bash
 vendor/bin/console maintenance:disable
-``` 
+```
 
 
 ## Checklist

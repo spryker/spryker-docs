@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Set up stores with multiple locales"
+title: Set up stores with multiple locales
 description: Use the guide to configure different locales for your store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -28,7 +28,7 @@ redirect_from:
 
 Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 This document describes the steps to consider when setting up stores with multiple locales.
 

@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
 related:
   - title: "HowTo: Set up multiple stores"
-    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html 
+    link: docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html 
 ---
 
 {% info_block infoBox %}

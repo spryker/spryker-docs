@@ -116,7 +116,7 @@ A developer can do the following:
 
 ## Store relation
 
-A product catalog manager can define the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) each product relation is displayed in.
+A product catalog manager can define the [stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) each product relation is displayed in.
 
 If no store relation is defined for a product relation, it is not displayed on Storefront.
 

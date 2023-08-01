@@ -36,7 +36,7 @@ To edit general settings of an abstract product:
 <div>
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- | --- | --- |
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. |
+| Store relation  | Defines the [stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | The name that's displayed for the product on the Storefront. |
 | Description | The description that's displayed for the product on the Storefront. |
@@ -153,7 +153,7 @@ To edit a scheduled price:
 | --- | --- |
 | Abstract SKU | Unique identifier of an abstract product. The field is disabled because you are editing a scheduled price of a particular abstract product. |
 | Concrete SKU | Unique identifier of a concrete product. The field is disabled because you are editing a scheduled price of a particular abstract product. |
-| Store | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the scheduled price is displayed. Unless you add the scheduled price to all the other stores, the regular price is displayed in them.  |
+| Store | [Store](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the scheduled price is displayed. Unless you add the scheduled price to all the other stores, the regular price is displayed in them.  |
 | Currency | Currency in which the scheduled price is defined. Unless you define the scheduled price for all the other currencies, the regular prices is displayed for them.  |
 | Net price | Net value of the product defined by the scheduled price. |
 | Gross price |Gross value of product defined by the scheduled price.  |

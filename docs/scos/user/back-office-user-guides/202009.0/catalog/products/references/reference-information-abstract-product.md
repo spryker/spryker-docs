@@ -17,7 +17,7 @@ The attributes for Create and Edit pages, as well as for abstract and concrete p
 ## General tab
 | Attribute | Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. | ✓ | ✓ |
+| Store relation  | Defines the [stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. | ✓ | ✓ |
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. | ✓ | Display only |
 | Name | The name that's displayed for the product on the Storefront. | ✓ |✓  |
 | Description | The description that's displayed for the product on the Storefront. | ✓ | ✓ |

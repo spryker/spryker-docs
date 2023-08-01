@@ -6,7 +6,7 @@ related:
   - title: Add and remove databases of stores
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
   - title: Implement a new store
-    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
+    link: docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html
 ---
 
 This document outlines the various options available for a multi-store setup and is essential to review when defining the architecture for your project and prior to implementing a new store. 
@@ -246,5 +246,5 @@ If you anticipate a high load, it's essential to consult and obtain guidance fro
 
 ## Next steps
 
-- [Implement a new store for your multi-store environment](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
+- [Implement a new store for your multi-store environment](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html)
 - [Check your and Spryker's tasks when setting up a new store](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html)

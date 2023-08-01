@@ -993,12 +993,6 @@ entries:
         url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
         include_versions:
         - "202307.0"
-        nested:
-          - title: Base shop
-            nested:
-              - title: Dynamic Multistore feature overview
-                url: /docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.html
-
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:

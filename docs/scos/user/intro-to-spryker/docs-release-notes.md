@@ -96,7 +96,7 @@ In May 2023, we have added and updated the following pages:
 
 ### Updated pages
 
-- [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
+- [HowTo: Set up multiple stores](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html): Learn how to set up multiple stores.
 - [App manifest](/docs/acp/user/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.

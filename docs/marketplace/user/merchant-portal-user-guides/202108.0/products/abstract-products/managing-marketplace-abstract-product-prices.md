@@ -59,7 +59,7 @@ To remove price of an abstract product:
 
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
-| Store          | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the price will be displayed. |
+| Store          | [Store](/docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the price will be displayed. |
 | Currency       | Currency in which the abstract product price is defined.           |
 | Net default    | Default item price before tax. |
 | Gross default  | Item price after tax.   |

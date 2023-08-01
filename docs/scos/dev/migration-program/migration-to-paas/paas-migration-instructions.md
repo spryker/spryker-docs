@@ -15,7 +15,7 @@ Go through the following documents to estimate the effort needed to migrate the 
 3. [Are performance and security guidelines implemented?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-performance-and-security-guidelines-implemented.html)
 4. [Is currently used PHP Version >=8.0?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-currently-used-php-version-8-0.html)
 5. [Are all used packages support PHP Version >=8.0?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-all-used-packages-support-php-version-8-0.html)
-6. [Is project based on or updated to the 202108.0 demoshop release?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-project-based-on-or-updated-to-the-202108-0-demoshop-release.html)
+6. [Check if separate endpoint bootstraps are integrated?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/check-if-separate-endpoint-bootstraps-are-integrated.html)
 7. [Are ZED endpoints split to 3 (BackendApi, BackendGateway, Backoffice)?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-zed-endpoints-split-to-3-backendapi-backendgateway-backoffice.html)
 8. [Is amount of assets small (images, assets manager, videos, import data (if needed) etc.) Files: <30 GB?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-amount-of-assets-small.html)
 9. [Are there some technical complexities, that might increase efforts like: CTE, Raw SQL?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-db-complexities-that-might-increase-efforts.html)

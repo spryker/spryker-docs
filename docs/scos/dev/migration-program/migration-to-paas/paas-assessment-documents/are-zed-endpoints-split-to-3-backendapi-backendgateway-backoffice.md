@@ -1,10 +1,10 @@
 ---
-title: Are ZED endpoints split into BackendApi, BackendGateway, and Backoffice?
+title: Check if ZED endpoints split into BackendApi, BackendGateway, and Backoffice
 description: Assess if ZED endpoints are split into BackendApi, BackendGateway and Backoffice.
 template: howto-guide-template
 ---
 
-
+In this step, you need to check
 
 ## Resources for assessment
 

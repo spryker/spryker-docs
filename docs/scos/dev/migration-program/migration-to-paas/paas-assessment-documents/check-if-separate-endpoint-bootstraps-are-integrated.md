@@ -8,7 +8,7 @@ To estimate the migration effort, follow the steps:
 
 1. Based on the project's code and `composer.json`, check if [Separate endpoint bootstraps](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) are integrated.
 
-2. If separate endpoint bootstraps are not integrated, using the [formula](#formula), estimate the required effort to update the packages to the specified versions:
+2. If separate endpoint bootstraps are not integrated, using the [formula](#formula-for-calculating-the-migration-effor), estimate the required effort to update the packages to the specified versions:
 ```json
 "spryker/application": "3.28.0"
 "spryker/event-dispatcher": "1.3.0"

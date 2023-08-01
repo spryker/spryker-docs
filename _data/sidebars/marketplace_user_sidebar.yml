@@ -220,6 +220,7 @@ entries:
           url: /docs/marketplace/user/back-office-user-guides/marketplace/marketplace.html
           include_versions:
           - "202212.0"
+          - "202307.0"
           nested:
 
             - title: Merchants

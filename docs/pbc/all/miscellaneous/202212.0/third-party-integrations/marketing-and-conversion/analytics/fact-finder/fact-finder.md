@@ -11,6 +11,7 @@ redirect_from:
   - /docs/factfinder
   - /docs/en/factfinder
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/fact-finder.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html

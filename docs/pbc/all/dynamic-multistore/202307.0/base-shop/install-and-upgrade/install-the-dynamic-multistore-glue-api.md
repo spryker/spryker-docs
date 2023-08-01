@@ -1,6 +1,6 @@
 ---
-title: Install the Dynamic multiple stores Glue API
-description: Use the guide to install the Dynamic multiple stores feature in your project.
+title: Install the Dynamic Multistore Glue API
+description: Use the guide to Install the Dynamic Multistore feature in your project.
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---

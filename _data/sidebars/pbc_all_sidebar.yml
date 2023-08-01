@@ -989,6 +989,16 @@ entries:
                 url: /docs/pbc/all/discount-management/marketplace/install-the-marketplace-promotions-discounts-feature.html
               - title: "Marketplace Promotions & Discounts feature: Domain model and relationships"
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-domain-model-and-relationships.html
+      - title: Dynamic Multistore
+        url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
+        include_versions:
+        - "202307.0"
+        nested:
+          - title: Base shop
+            nested:
+              - title: Dynamic Multistore feature overview
+                url: /docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.html
+
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:
@@ -1120,7 +1130,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
-              
+
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:

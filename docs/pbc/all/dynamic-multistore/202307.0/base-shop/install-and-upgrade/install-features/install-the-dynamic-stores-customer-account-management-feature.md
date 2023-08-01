@@ -1,5 +1,5 @@
 ---
-title: Install the Dynamic multiple stores & Customer Account Management feature
+title: Install the Dynamic Multistore & Customer Account Management feature
 description: Learn how to integrate the Dynamic multiple stores & Customer Account Management feature into a Spryker project.
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template

@@ -169,7 +169,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Adjust TWIG templates to display the service point selector.
 
-1) Add `main-overlay` molecule to the `page-layout-main` template.
+1. To the `page-layout-main` template ща `ShopUi` module, add the `main-overlay` molecule:
 
 ```twig
 {% raw %}{% block globalComponents %}
@@ -178,13 +178,55 @@ Adjust TWIG templates to display the service point selector.
 {% endblock %}{% endraw %}
 ```
 
-2) Add `ClickCollectServicePointAddressFormWidget`.
+2. Add `ClickCollectServicePointAddressFormWidget` to the `addres` view of the `CheckoutPage` module:
 
 ```twig
 {% raw %}{% widget 'ClickCollectServicePointAddressFormWidget' args [data.checkoutAddressForm] only %}{% endwidget %}{% endraw %}
 ```
 
-3) Build assets.
+{% info_block infoBox "Info" %}
+
+In case using `ShipmentTypeAddressFormWidget` widget the `ClickCollectServicePointAddressFormWidget` will be added automatically, so no need to add it manually.
+
+{% endinfo_block %}
+
+3. Add `cross` icon to the `icon-spite` atom:
+
+```twig
+{% raw %}<symbol id=":cross" viewBox="0 0 24 24">
+    <path d="M14.8,12l3.6-3.6c0.8-0.8,0.8-2,0-2.8c-0.8-0.8-2-0.8-2.8,0L12,9.2L8.4,5.6c-0.8-0.8-2-0.8-2.8,0   c-0.8,0.8-0.8,2,0,2.8L9.2,12l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8C6,18.8,6.5,19,7,19s1-0.2,1.4-0.6l3.6-3.6l3.6,3.6   C16,18.8,16.5,19,17,19s1-0.2,1.4-0.6c0.8-0.8,0.8-2,0-2.8L14.8,12z"/>
+</symbol>{% endraw %}
+```
+
+4. Adjust `choice_widget_expanded` and `checkbox_widget` blocks for `/resources/form/form.twig` of `ShopUi` module:
+
+```twig
+{% raw %}{% block choice_widget_expanded -%}
+    ...
+    {{- form_widget(child, {
+        parent_label_class: label_attr.class|default(''),
+        choices_attr: choices_attr | default({}),
+    }) -}}
+    ...
+{%- endblock choice_widget_expanded %}
+
+{%- block checkbox_widget -%}
+    ...
+    {%- set inputClass = attr.class | default ~ ' ' ~ choices_attr.class | default -%}
+
+    {% define attributes = {
+        id: id,
+        name: full_name,
+        checked: checked | default(false),
+        required: required | default(false),
+        disabled: disabled ?: attr.disabled | default(false),
+        value: value | default(),
+    } %}
+    ...
+{%- endblock -%}{% endraw %}
+```
+
+5. Build assets:
 
 Enable Javascript and CSS changes:
 

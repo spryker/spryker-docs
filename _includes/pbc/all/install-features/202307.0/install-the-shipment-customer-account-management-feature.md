@@ -144,7 +144,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ## 4) Set up FE part
 
-Adjust TWIG templates to display the shipment types.
+Adjust TWIG templates to display the shipment types:
 
 1. Single shipment.
 
@@ -160,11 +160,18 @@ Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` modu
 {% endwidget %}{% endraw %}
 ```
 
+{% info_block infoBox "Info" %}
+
+`deliveryContainerClassName` - class name of container the delivery form and the address selector.
+`embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'` - class name of container for billing same as shipping checkbox.
+
+{% endinfo_block %}
+
 2. Multi shipment.
 
 {% info_block infoBox "Info" %}
 
-This step can be skipped if multi shipment doesn't use on the project.
+You can skip this step if multi-shipment isn't used on the project.
 
 {% endinfo_block %}
 
@@ -183,6 +190,14 @@ b) Add `multiple-shipment-toggler` molecule to the `address` view of `CheckoutPa
     },
 } only %}{% endraw %}
 ```
+
+{% info_block infoBox "Info" %}
+
+`isMultipleShipmentSelected` - flag that indicates if multiple shipment is selected.
+`singleDeliveryContainerClassName` - class name of container the address selector and the `ShipmentTypeAddressFormWidget`.
+`deliverySelectClassName` - class name of the address selector.
+
+{% endinfo_block %}
 
 c) Add `ShipmentTypeAddressFormWidget` to the `address-item-form-field-list` molecule of `CheckoutPage` module.
 

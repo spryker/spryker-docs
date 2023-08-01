@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/dynamic-stores-product-feature-integration.md
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-dynamic-stores-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-dynamic-stores-feature.md -->
+{% include pbc/all/install-features/202307.0/install-the-dynamic-stores-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-dynamic-stores-feature.md -->

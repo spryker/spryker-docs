@@ -9,13 +9,13 @@ Typography is an important part of the look and feel of a web page. It contribut
 
 The typography system lets you set up font size, weight, and line height globally. Components don't define _values_ for fonts directly in their CSS but use _design tokens_ to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.
 
-Like all design tokens, the typography system is configurable by themes, so that selecting of a certain theme applies a unique set of typography settings to all components.
+Like all design tokens, the typography system is configurable by themes so that selecting a certain theme applies a unique set of typography settings to all components.
 
 ## Global font settings
 
 Oryx is based on web components, using the shadow DOM. The shadow DOM doesn't leak out any styles outside a component, and components don't inherit styles from ancestor elements. However, there are a few exceptions. Font face and size, line height and color are the few CSS properties that cascade down the shadow DOM. This lets you define those rules high up in the DOM tree.
 
-Because most design system components inehrit typography from ancestor elements, you can provide the basis typography configuration in the root of the application. Oryx applications use the `<oryx-app>` component, which provides this setup:
+Because most design system components inherit typography from ancestor elements, you can provide the basis typography configuration at the root of the application. Oryx applications use the `<oryx-app>` component, which provides this setup:
 
 ```css
 :host {
@@ -25,7 +25,7 @@ Because most design system components inehrit typography from ancestor elements,
 }
 ```
 
-The values are based on design tokens, whcih can be configured in a theme. Themes provide a mechanism to have screen size specific tokens, which enables the components to have different typography for small, medium, and large screens.
+The values are based on design tokens, which can be configured in a theme. Themes provide a mechanism for screen size-specific tokens, enabling the components to have different typography for small, medium, and large screens.
 
 {% info_block infoBox "" %}
 

@@ -53,9 +53,9 @@ Using `rem` for font size provides several benefits:
 
 ### `em` for line height
 
-The `em` unit, short for _element em_, is relative to the font size of the current element. When line height is defined using `em`, to determine the final line height, the value is multiplied by the font size.
+The `em` unit, short for _element em_, is relative to the font size of the current element. When line height is defined using `em`, the value is multiplied by the font size to determine the final line height.
 
-For example, if the line height token of an `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px`: `1.5 * 18`. The font size can be driven by a `rem` unit, the browser calculates the rem value of the font size before calculating the line height.
+For example, if the line height token of an `h3` is set to `1.5em`, and the font size is `18px`, the calculated line height for the `h3` becomes `27px`: `1.5 * 18`. The font size can be driven by a `rem` unit, and the browser calculates the rem value of the font size before calculating the line height.
 
 Using `em` for line height offers the following advantages:
 
@@ -87,9 +87,9 @@ The headings get `margin: 0` to avoid any clashes in the component layout.
 
 ### Semantic HTML structure versus UI
 
-The semantic usage of heading elements, like h1 or h2, defines the structure, which crawlers and screen readers use to interpreted the content. This enables easier content navigation, especially for those with limited sight; screen readers guide and let them skip sections which are not of interest. Consequently, if the structure is not well formatted, for example, when `h3` is followed by an `h5`, it is considered a violation of accessibility best practices.
+The semantic usage of heading elements, like h1 or h2, defines the structure, which crawlers and screen readers use to interpret the content. This enables easier content navigation, especially for those with limited sight; screen readers guide and let them skip sections that are not of interest. Consequently, if the structure is not well formatted, for example, when `h3` is followed by an `h5`, it is considered a violation of accessibility best practices.
 
-A valid structure, however, might conflict with the UI design. UI designers use the headings in combination with layout, which means that their options are more advanced compared to the structure only. UI designers tend to ignore the structure and favor layout options to emphasize sections of a page.
+A valid structure, however, might conflict with the UI design. UI designers use the headings in combination with the layout, which means that their options are more advanced compared to the structure only. UI designers tend to ignore the structure and favor layout options to emphasize sections of a page.
 
 For example, in a two-column layout, content in both sections has the same visual weight. However, in a left-to-right context, the content on the left is automatically more important.
 

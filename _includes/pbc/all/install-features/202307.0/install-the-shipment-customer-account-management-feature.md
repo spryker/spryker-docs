@@ -47,8 +47,8 @@ Enable the following plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
 |--------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands checkout address form with the `ShipmentType` subform.                | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
-| ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands checkout multi-shipping address form `ShipmentType`. | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands the checkout address form with the `ShipmentType` subform.                | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands the checkout multi-shipping address form `ShipmentType`. | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
 | ShipmentTypeAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of the `ShipmentTypeAddressFormWidget` widget.                  | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
@@ -142,7 +142,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-## 4) Set up FE part
+## 4) Set up the FE part
 
 Adjust TWIG templates to display the shipment types:
 
@@ -158,69 +158,64 @@ Adjust TWIG templates to display the shipment types:
 {% endwidget %}{% endraw %}
 ```
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "Attribute description" %}
 
-`deliveryContainerClassName`: class name of the container delivery form and address selector.
-
-`embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'`: container class name for the **billing same as shipping** checkbox.
+* `deliveryContainerClassName`: class name of the container delivery form and address selector.
+* `embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'`: container class name for the **Billing same as shipping** checkbox.
 
 {% endinfo_block %}
 
 2. (Optional) For a multi-shipment, follow these steps:
+   1. Add the `ShipmentTypeAddressFormWidget` widget, as described in step 1 (for the single shipment).
+   2. To the `address` view of the `CheckoutPage` module, add the `multiple-shipment-toggler` molecule:
 
-    1. Add the `ShipmentTypeAddressFormWidget` widget, as described in step 1 (for a single shipment).
+        ```twig
+        {% raw %}{% include molecule('multiple-shipment-toggler', 'CheckoutPage') with {
+            data: {
+                isMultipleShipmentSelected: isMultipleShipmentSelected,
+            },
+            attributes: {
+                'toggle-targets-class-name': singleDeliveryContainerClassName,
+                'select-class-name': deliverySelectClassName,
+            },
+        } only %}{% endraw %}
+        ```
 
-    2. To the `address` view of the `CheckoutPage` module, add the `multiple-shipment-toggler` molecule.
+    {% info_block infoBox "Attribute description" %}
 
-```twig
-{% raw %}{% include molecule('multiple-shipment-toggler', 'CheckoutPage') with {
-    data: {
-        isMultipleShipmentSelected: isMultipleShipmentSelected,
-    },
-    attributes: {
-        'toggle-targets-class-name': singleDeliveryContainerClassName,
-        'select-class-name': deliverySelectClassName,
-    },
-} only %}{% endraw %}
-```
+    * `isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
+    * `singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
+    * `deliverySelectClassName`: class name of the address selector.
 
-{% info_block infoBox "Info" %}
+    {% endinfo_block %}
 
-`isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
+   3. To the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`:
 
-`singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
+        ```twig
+        {% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [item] with {
+            data: {
+                deliveryContainerClassName: deliveryContainerClassName,
+                shipmentTypesClassName: data.validatorTriggerClassName,
+                servicePointClassName: data.itemShippingClassName,
+            },
+        } only %}{% endwidget %}{% endraw %}
+        ```
 
-`deliverySelectClassName`: class name of the address selector.
+   4. In the `CheckoutPage` module, adjust the `address-item-form` molecule by adding the `extra-triggers-class-name` attribute property for the `validate-next-checkout-step` molecule to validate `pickup` shipment type:
 
-{% endinfo_block %}
-
-    3. To the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`.
-
-```twig
-{% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [item] with {
-    data: {
-        deliveryContainerClassName: deliveryContainerClassName,
-        shipmentTypesClassName: data.validatorTriggerClassName,
-        servicePointClassName: data.itemShippingClassName,
-    },
-} only %}{% endwidget %}{% endraw %}
-```
-
-    4. Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra-triggers-class-name` attributes propery for `validate-next-checkout-step` molecule to validate `pickup` shipment type.
-
-```twig
-{% raw %}{% include molecule('validate-next-checkout-step', 'CheckoutPage') with {
-    class: validatorClassName,
-    attributes: {
-        'container-selector': '.' ~ itemShippingClassName,
-        'target-selector': '.' ~ data.jsAddressClass ~ '__form-submit',
-        'dropdown-trigger-selector': '.' ~ addressSelectClassName ~ ':not(.' ~ data.hiddenClassName ~ ')',
-        'extra-triggers-class-name': validatorTriggerClassName,
-        'parent-target-class-name': config.jsName ~ '__items',
-        'is-enable': false,
-    },
-} only %}{% endraw %}
-```
+        ```twig
+        {% raw %}{% include molecule('validate-next-checkout-step', 'CheckoutPage') with {
+            class: validatorClassName,
+            attributes: {
+                'container-selector': '.' ~ itemShippingClassName,
+                'target-selector': '.' ~ data.jsAddressClass ~ '__form-submit',
+                'dropdown-trigger-selector': '.' ~ addressSelectClassName ~ ':not(.' ~ data.hiddenClassName ~ ')',
+                'extra-triggers-class-name': validatorTriggerClassName,
+                'parent-target-class-name': config.jsName ~ '__items',
+                'is-enable': false,
+            },
+        } only %}{% endraw %}
+        ```
 
 3. Build assets:
 

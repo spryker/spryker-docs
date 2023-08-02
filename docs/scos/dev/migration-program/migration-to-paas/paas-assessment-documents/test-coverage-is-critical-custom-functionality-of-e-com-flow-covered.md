@@ -4,16 +4,6 @@ description: This document allows you to assess if critical custom functionality
 template: howto-guide-template
 ---
 
-
-
-## Resources for assessment
-
-
-Backend
-
-
-## Description
-
 Do a code review of the archived project received as part of the prerequisites and identify if the following functionalities were covered with tests:
 * Third-party integrations.
 * Data management-related features:
@@ -28,6 +18,10 @@ These functionalities must be covered with at least one type of testing:
 
 Apart from Codeception, other testing technologies, like Behat or phpspec, are acceptable.
 
+## Resources for assessment
+
+Backend
+
 ## Formula for calculating the migration effort
 
-Approximately 1 day per functionality/module.
+Approximately 1 day per functionality and module not covered with tests.

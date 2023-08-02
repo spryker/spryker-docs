@@ -4,20 +4,15 @@ description: This document allows you to assess if S3 bucket is integrated for a
 template: howto-guide-template
 ---
 
-Make sure that the project is not using any local storage, which may add more effort to migrate data to S3.
-
-Possible cases to check: Locally stored data, files stored in other places (not S3 bucket).
-
-Any third-party file storage is supposed to be migrated to S3 bucket usage. Files under the git repository are not counting here. In case the project uses third-party storage e.g. FTP server, it’s usage has to be replaced with an S3 bucket.
-
-You should be able to find this information in the prerequisites.
+Check if the project is using any third-party storage system, like local storage or an FTP server. This information may be available in the prerequisites.
 
 ## Resources for assessment
 
 * Backend
 * Optional: DevOps
 
-
 ## Formula for calculating the migration effort
 
-Locally stored data -> move to S3 - 1-2 days. Everything else is to be estimated.
+* Locally stored data: 1-2 days.
+
+* Third-party FTP server: Estimate based on the configuration and complexity.

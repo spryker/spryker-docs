@@ -23,7 +23,7 @@ appBuilder().withAppOptions({ components: { root: "body" } });
 
 ## Usage of design tokens
 
-Design tokens are used extensively throughout Oryx components to achieve consistent and cohesive visual experience. Instead of hardcoding style values directly in component CSS, design tokens are used as CSS variables to define the styles. This way, you can easily change the visual appearance of the entire application by adjusting the corresponding design token values.
+Design tokens are used extensively throughout Oryx components to achieve a consistent and cohesive visual experience. Instead of hardcoding style values directly in component CSS, design tokens are used as CSS variables to define the styles. This way, you can easily change the visual appearance of the entire application by adjusting the corresponding design token values.
 
 The following example shows how to avoid hardcoded style values by using design tokens:
 
@@ -44,6 +44,6 @@ The CSS variables are inherited throughout all descendants, but you can override
 
 ## Themes
 
-Design tokens are organized in themes. The Oryx [preset package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) provides standard themes to get your started. You can use a standard theme, customize a standard theme, or create your own.
+Design tokens are organized in themes. The Oryx [preset package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) provides standard themes to get you started. You can use a standard theme, customize a standard theme, or create your own.
 
 <!-- TODO: add a note link to the theme docs once its ready -->

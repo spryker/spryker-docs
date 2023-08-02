@@ -52,14 +52,14 @@ A query sent to the database is intercepted and modified with additional joins t
 
 - [Configuration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html)
 - [Rules and scopes](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html)
-- [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html)
+- [Execution flow](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/execution-flow.html)
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES  | REFERENCES  | HOWTOS  |
 |---------|---------|---------|
 | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)   | [Persistence ACL feature configuration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html) | [HowTo: Split products by stores](/docs/marketplace/dev/howtos/how-to-split-products-by-stores.html)|
-|  | [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) |    |
+|  | [Execution flow](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/execution-flow.html) |    |
 |  | [Rules and scopes](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html) |    |
 |  | [Global scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/global-scope.html) |    |
 |  | [Segment scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html) |  |

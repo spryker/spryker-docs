@@ -57,7 +57,7 @@ FROM `spy_merchant_product_abstract`
 ORDER BY `spy_merchant_product_abstract`.`updated_at` DESC;
 ```
 
-It is important to understand that the permissions are checked in the context of roles. Rules of one role do not affect the rules of another. For details, see [Execution Flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html). Below is an example of the two roles:
+It is important to understand that the permissions are checked in the context of roles. Rules of one role do not affect the rules of another. For details, see [Execution Flow](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/execution-flow.html). Below is an example of the two roles:
 
 1. DE product manager (Full CRUD for products in the DE store)
 2. US product viewer (View only for products in the US store)

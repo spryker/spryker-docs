@@ -4,7 +4,7 @@ description: This document provides details about the Datasource Inline service 
 template: concept-topic-template
 related:
   - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
   - title: Datasource Http
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table

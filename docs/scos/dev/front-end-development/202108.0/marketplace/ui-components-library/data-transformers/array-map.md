@@ -4,7 +4,7 @@ description: This document provides details about the Data Transformer Array-map
 template: concept-topic-template
 related:
   - title: Data Transformers
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Data Transformer Chain
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/chain.html
   - title: Data Transformer Date-parse

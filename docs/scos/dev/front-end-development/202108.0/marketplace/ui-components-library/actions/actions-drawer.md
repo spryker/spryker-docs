@@ -4,7 +4,7 @@ description: This document provides details about the Actions Drawer service in 
 template: concept-topic-template
 related:
   - title: Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Actions Close Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-close-drawer.html
   - title: Actions HTTP

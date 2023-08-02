@@ -4,7 +4,7 @@ description: This document provides details about the Actions Close Drawer servi
 template: concept-topic-template
 related:
   - title: Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Actions Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-drawer.html
   - title: Actions HTTP

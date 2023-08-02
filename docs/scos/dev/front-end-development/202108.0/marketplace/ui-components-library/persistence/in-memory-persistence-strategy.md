@@ -4,7 +4,7 @@ description: This document provides details about the In Memory Persistence Stra
 template: concept-topic-template
 related:
   - title: Persistence
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
   - title: Local Storage Persistence Strategy
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
   - title: Url Persistence Strategy

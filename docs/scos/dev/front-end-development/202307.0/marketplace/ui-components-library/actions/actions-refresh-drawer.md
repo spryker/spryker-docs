@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-refresh-drawer.html
 related:
   - title: Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Actions Close Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-close-drawer.html
   - title: Actions Drawer

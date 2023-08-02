@@ -4,7 +4,7 @@ last_updated: Nov 05, 2021
 description: Learn how to configure the Persistence ACL feature.
 template: concept-topic-template
 ---
-This document describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
+This document describes how you can configure the [Persistence ACL feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html).
 
 The Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
 - [Create a connection with one or more database tables](#connect-persistence-acl-feature-to-one-or-more-database-tables).
@@ -88,7 +88,7 @@ The properties of the `AclEntityMetadataTransfer` are described in the following
 | parent | AclEntityParentMetadataTransfer | This property is used to configure the inheritance. It is required for the entity which has rules with the [inherited scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html), or for the [composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html). For more details, see [Inherited scope vs Composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html). |
 | entityName | string | Fully qualified class name of the configured entity (Propel Entity). |
 | hasSegmentTable | bool | Sets if the configured entity supports segmentation. For more details, see [Segment scope](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html) documentation. |
-| defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) documentation). |
+| defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/execution-flow.html) documentation). |
 | isSubentity | bool | Indicates whether the configured entity is the part of a composite object. For more details, see [Composite entity](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html). |
 
 ### AclEntityParentMetadataTransfer

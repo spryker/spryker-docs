@@ -4,15 +4,15 @@ description: This articles provides details about UI components library.
 template: concept-topic-template
 related:
   - title: Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Cache
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/cache.html
   - title: Data Transformers
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
   - title: Persistence
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
 ---
 
 This document provides details about the UI components library.

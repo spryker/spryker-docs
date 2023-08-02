@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/date-parse.html
 related:
   - title: Data Transformers
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Data Transformer Array-map
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/array-map.html
   - title: Data Transformer Chain

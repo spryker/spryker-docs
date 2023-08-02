@@ -4,7 +4,7 @@ description: This document provides details about the Data Transformer Pluck ser
 template: concept-topic-template
 related:
   - title: Data Transformers
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Data Transformer Array-map
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/array-map.html
   - title: Data Transformer Chain

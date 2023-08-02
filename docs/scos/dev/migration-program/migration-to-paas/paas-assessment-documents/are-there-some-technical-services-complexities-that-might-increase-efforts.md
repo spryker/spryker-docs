@@ -4,7 +4,7 @@ description: This document allows you to assess if a project has technical compl
 template: howto-guide-template
 ---
 
-The information about non-standard services is provided in the [prerequisites form](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
+The information about non-standard services is provided in the prerequisites form.
 
 To asses the migration effort for services, compare the non-standard services with the [default services](/docs/scos/dev/system-requirements/202204.0/system-requirements.html).
 

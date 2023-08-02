@@ -2,17 +2,18 @@
 title: Docs release notes
 description: Spryker docs release notes
 template: concept-topic-template
+last_updated: Aug 2, 2023
 ---
 ## July 2023
 
-In [July 2023, we have added and updated the following pages:
+In July 2023, we have added and updated the following pages:
 
 ### New pages
-- [Oryx: Color system](/docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-color-system.html): Documentation on colours in Oryx.
+- [Oryx: Color system](/docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-color-system.html): Documentation on colors in Oryx.
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
-- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Save Jenkins related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
+- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
-- [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/202304.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html): This document describes how to integrate the [Product Raiting and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.
+- [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/202304.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html): This document describes how to integrate the [Product Raiting and Reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.
 - [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html): Find out how you can configure Usercentrics in your Spryker shop.
 - [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html): Details about data import files for the Ratings and Reviews PBC.
 - [Search data import](/docs/pbc/all/search/202212.0/base-shop/import-and-export-data/search-data-import.html): Details about data import files for the Search PBC.
@@ -37,11 +38,11 @@ In [July 2023, we have added and updated the following pages:
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html)
 - [App manifest](/docs/acp/user/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
 - [Development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
-- [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html): This article describes the strategies a project team can take while building a Spryker-based project.
-- [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this article to learn how to report a security issue and to understand how we handle these reports.     
-- [Install the Measurement Units feature](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html): The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
+- [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
+- [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
+- [Install the Measurement Units feature](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html): The guide describes how to integrate the [Measurement Units](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/measurement-units-feature-overview.html) feature into your project.
 
-For more details on these and other updates to the Spryker docs in July 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases)
+For more details about these and other updates to the Spryker docs in July 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases)
 
 ## June 2023
 

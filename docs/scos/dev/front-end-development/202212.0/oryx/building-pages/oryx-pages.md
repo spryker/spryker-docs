@@ -35,7 +35,7 @@ export const cartPage: ExperienceComponent = {
     // add component options here
   },
   components: [
-    // Add your components here
+    // add your components here
   ],
 };
 ```
@@ -148,13 +148,40 @@ Selectors use the following syntax:
 - select a component globally by `id`, e.g. `my-composition`
 - select components by `id` or `tag`, e.g. `oryx-product-title`
 - chain selects, using the dot notation, e.g. `#home-page.my-composition.oryx-product-title`
-- skip parts of the data, e.g. `#home-page.oryx-product-title`
+- skip parts of the component tree, e.g. `#home-page.oryx-product-title` rather than `#home-page.my-composition.oryx-product-title`
 
 Using this syntax gives you flexibility to apply changes in any page, or to very specific pages.
 
 ### Merge strategies
 
 When you do not provide a merge `type`, the selected component is replaced by default. Alternative types can be configured in the `merge.type` field.
+
+The example below shows how to _merge_ content in an existing component.
+
+```ts
+import { appBuilder } from "@spryker-oryx/application";
+import { provideExperienceData } from "@spryker-oryx/experience";
+
+export const app = appBuilder()
+  .withProviders(
+    provideExperienceData({
+      merge: {
+        selector: "site-logo",
+        type: "patch",
+      },
+      content: {
+        data: {
+          graphic: null,
+          image:
+            "https://www.coca-colacompany.com/content/dam/company/us/en/the-coca-cola-company-logo.svg",
+        },
+      },
+    })
+  )
+  .create();
+```
+
+The table below gives an overview of the various merge types.
 
 | Strategy            | details                                                                                                                                                        |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

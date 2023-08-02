@@ -49,7 +49,7 @@ Using `rem` for font size provides several benefits:
 
 1. Consistency: font sizes scale consistently across elements, maintaining proportional typography.
 2. Accessibility: users can adjust the overall font size in their browser settings without affecting layout or readability.
-3. Easy maintenance: adjusting the root font size automatically cascades changes to all elements using `rem`, reducing manual adjustments.
+3. Easy maintenance: adjusting the root font size cascades changes to all elements using `rem`, reducing manual adjustments.
 
 ### `em` for line height
 
@@ -61,11 +61,11 @@ Using `em` for line height offers the following advantages:
 
 1. Proportional line heights: `em` adjusts line height proportionally to the font size, ensuring visually harmonious typography.
 2. Vertical rhythm: `em` helps maintain a consistent vertical rhythm, creating a visually cohesive design.
-3. Flexible adjustments: modifying the font size of an element automatically adjusts its line height, facilitating quick and consistent changes.
+3. Flexible adjustments: modifying the font size of an element adjusts its line height, facilitating quick and consistent changes.
 
 ## Headings
 
-HTML supports heading elements up to level 6: `<h1>`, `<h2>`, `<h3>`, etc. Screen readers and crawlers use headings to better understand the content and their coherence.
+HTML supports heading elements up to level 6: from `<h1>` to `<h6>`. Screen readers and crawlers use headings to better understand the content and their coherence.
 
 Oryx provides a number of heading and paragraph styles that are used in the design system and components:
 

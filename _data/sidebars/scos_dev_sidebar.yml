@@ -3431,6 +3431,8 @@ entries:
           nested:
           - title: "Color system"
             url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
+          - title: Typography
+            url: /docs/scos/dev/front-end-development/oryx/styling/typography.html            
 
     - title: Marketplace
       include_versions:

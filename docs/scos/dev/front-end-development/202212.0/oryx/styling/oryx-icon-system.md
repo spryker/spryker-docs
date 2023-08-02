@@ -9,13 +9,13 @@ Icons play a crucial role in user interfaces as they provide clear visual cues, 
 
 ## Icon Component
 
-Icons are rendered using the ` IconComponent`, a design system component designed for this purpose. To display an icon, simply use the `type` attribute to specify the icon's name:
+Icons are rendered using the `IconComponent`, a design system component designed for this purpose. To display an icon, simply use the `type` attribute to specify the icon's name:
 
 ```html
 <oryx-icon type="rocket"></oryx-icon>
 ```
 
-The `IconComponent`` can render icons using either an icon font or SVG. When rendered as SVG, the icons are displayed in a 24x24 pixels viewport.
+The `IconComponent` can render icons using either an icon font or SVG. When rendered as SVG, the icons are displayed in a 24x24 pixels viewport.
 
 ## Icon Sizes
 
@@ -25,9 +25,9 @@ Our icon system is standardized around a 24x24 pixels format. Icons can be scale
 - md (Medium): 20x20 pixels
 - lg (Large): 24x24 pixels
 
-To maintain consistency, the IconComponent in Oryx provides the `--oryx-icon-size` CSS variable, which applies to both font-based and SVG-based icons. This feature enables you to control icon sizes throughout your UI effortlessly, ensuring icons remain clear and sharp across different contexts and devices.
+To maintain consistency, the `IconComponent` in Oryx provides the `--oryx-icon-size` CSS variable, which applies to both font-based and SVG-based icons. This feature enables you to control icon sizes throughout your UI effortlessly, ensuring icons remain clear and sharp across different contexts and devices.
 
-You can control the icon size through the `size` attribute, or by providing the CSS variable.
+You can control the icon size through the `size` attribute, or by providing the CSS variable. If both the size attribute and the CSS variable are used, the CSS variable will take precedence.
 
 ```html
 <oryx-icon type="rocket" size="md"></oryx-icon>
@@ -45,7 +45,7 @@ Oryx supports both font-based icons and SVG icons, allowing you to choose the mo
 
 Font-based icons are a popular choice due to their ease of use and the availability of a wide range of icons. They offer great quality and scalability, staying sharp at various sizes. Additionally, font-based icons can be easily colored using CSS, seamlessly integrating with your UI theme.
 
-Oryx leverages both [Material symbols](https://fonts.google.com/icons) and [fontawesome icons](https://fontawesome.com/). However, you can also add other icon fonts as needed. Material Symbols are built with Variable fonts, allowing developers to modify font characteristics like line weight and fill through CSS.
+Oryx leverages both [Material symbols](https://fonts.google.com/icons) and [Font Awesome icons](https://fontawesome.com/). However, you can also add other icon fonts as needed. Material Symbols are built with Variable fonts, allowing developers to modify font characteristics like line weight and fill through CSS.
 
 Please consider the potential impact on performance when using font-based icons. Since all icons in the font are loaded at once, it may affect the initial page loading time. Proper optimization strategies are essential to mitigate this issue.
 

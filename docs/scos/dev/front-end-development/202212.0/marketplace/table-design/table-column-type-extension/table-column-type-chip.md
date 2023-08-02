@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-chip.html
 related:
   - title: Table Column Type extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
   - title: Table Column Type Autocomplete
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
   - title: Table Column Type Date

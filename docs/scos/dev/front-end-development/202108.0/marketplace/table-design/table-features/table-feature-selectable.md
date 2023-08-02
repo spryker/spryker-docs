@@ -4,7 +4,7 @@ description: This document provides details about the Table Feature Selectable c
 template: concept-topic-template
 related:
   - title: Table Feature extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - title: Table Feature Batch Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Editable

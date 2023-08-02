@@ -4,7 +4,7 @@ description: This page provides an exhaustive reference for the REST API endpoin
 last_updated: May 10, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/rest-api-b2b-reference.html
+  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html
 related:
   - title: Reference information- GlueApplication errors
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html

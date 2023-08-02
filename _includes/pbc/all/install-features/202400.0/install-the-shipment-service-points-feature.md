@@ -88,7 +88,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. Enable the behaviors by registering the console commands:
+4. To enable the behaviors, register the console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -135,13 +135,13 @@ Make sure that entities were imported to the `spy_shipment_type_service_type` da
 
 {% endinfo_block %}
 
-## 2) Set up behavior
+## 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                       | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                        |
 |----------------------------------------------|--------------------------------------------------------------|---------------|--------------------------------------------------|
-| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer` with service type key. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer` with the service type key. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 
 **src/Pyz/Zed/ShipmentTypeStorage/ShipmentTypeStorageDependencyProvider.php**
 
@@ -169,7 +169,7 @@ class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `shipment-type` storage data is expanded with service type field:
+Make sure that `shipment-type` storage data is expanded with the service type field:
 
 1. Fill the `spy_shipment_type_service_point` tables with data.
 2. Run the `console publish:trigger-events -r shipment_type` command.

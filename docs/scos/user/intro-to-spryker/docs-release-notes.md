@@ -40,7 +40,6 @@ In [July 2023, we have added and updated the following pages:
 - [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html): This article describes the strategies a project team can take while building a Spryker-based project.
 - [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this article to learn how to report a security issue and to understand how we handle these reports.     
 - [Install the Measurement Units feature](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html): The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
-- [Install the Service Points feature](/docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-feature.html): Learn how to integrate the Service Points feature into your project.
 
 For more details on these and other updates to the Spryker docs in July 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases)
 

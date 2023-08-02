@@ -4,6 +4,13 @@ description: Feature of the Oryx Application
 template: concept-topic-template
 ---
 
+
+{% info_block warningBox %}
+
+Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 `AppFeature` is a higher level collection of lower-level primitives, such as the following:
 
 <!-- TODO: Link to components -->

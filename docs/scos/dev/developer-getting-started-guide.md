@@ -61,7 +61,7 @@ You can choose from the following options:
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
 
-Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
+Both Demo Shops can also be expanded with separate features and modules.
 
 To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 

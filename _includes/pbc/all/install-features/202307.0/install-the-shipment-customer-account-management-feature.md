@@ -146,9 +146,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Adjust TWIG templates to display the shipment types:
 
-1. Single shipment.
-
-Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` module.
+1. For a single shipment, to the `address` view of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`:
 
 ```twig
 {% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [data.form] with {
@@ -162,22 +160,16 @@ Add `ShipmentTypeAddressFormWidget` to the `address` view of `CheckoutPage` modu
 
 {% info_block infoBox "Info" %}
 
-`deliveryContainerClassName` - class name of container the delivery form and the address selector.<br>
-`embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'` - class name of container for billing same as shipping checkbox.
+`deliveryContainerClassName`: class name of container the delivery form and the address selector.<br>
+`embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'`: container class name for billing same as shipping checkbox.
 
 {% endinfo_block %}
 
-2. Multi shipment.
+2. (Optional) For a multi-shipment, follow these steps:
 
-{% info_block infoBox "Info" %}
+    1. Add the `ShipmentTypeAddressFormWidget` widget, as described in step 1 (for a single shipment).
 
-You can skip this step if multi-shipment isn't used on the project.
-
-{% endinfo_block %}
-
-a) Add the same widget as for single shipment.
-
-b) Add `multiple-shipment-toggler` molecule to the `address` view of `CheckoutPage` module.
+    2. To the `address` view of the `CheckoutPage` module, add the `multiple-shipment-toggler` molecule.
 
 ```twig
 {% raw %}{% include molecule('multiple-shipment-toggler', 'CheckoutPage') with {
@@ -193,13 +185,13 @@ b) Add `multiple-shipment-toggler` molecule to the `address` view of `CheckoutPa
 
 {% info_block infoBox "Info" %}
 
-`isMultipleShipmentSelected` - flag that indicates if multiple shipment is selected.<br>
-`singleDeliveryContainerClassName` - class name of container the address selector and the `ShipmentTypeAddressFormWidget`.<br>
-`deliverySelectClassName` - class name of the address selector.
+`isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.<br>
+`singleDeliveryContainerClassName`: class name of container the address selector and the `ShipmentTypeAddressFormWidget`.<br>
+`deliverySelectClassName`: class name of the address selector.
 
 {% endinfo_block %}
 
-c) Add `ShipmentTypeAddressFormWidget` to the `address-item-form-field-list` molecule of `CheckoutPage` module.
+    3. To the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`.
 
 ```twig
 {% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [item] with {
@@ -211,7 +203,7 @@ c) Add `ShipmentTypeAddressFormWidget` to the `address-item-form-field-list` mol
 } only %}{% endwidget %}{% endraw %}
 ```
 
-d) Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra-triggers-class-name` attributes propery for `validate-next-checkout-step` molecule to validate `pickup` shipment type.
+    4. Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra-triggers-class-name` attributes propery for `validate-next-checkout-step` molecule to validate `pickup` shipment type.
 
 ```twig
 {% raw %}{% include molecule('validate-next-checkout-step', 'CheckoutPage') with {
@@ -227,9 +219,7 @@ d) Adjust `address-item-form` molecule in `CheckoutPage` module by adding `extra
 } only %}{% endraw %}
 ```
 
-3. Build assets.
-
-Enable Javascript changes:
+3. Build assets:
 
 ```bash
 console frontend:yves:build

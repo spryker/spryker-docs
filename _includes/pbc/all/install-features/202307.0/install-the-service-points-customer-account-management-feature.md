@@ -234,8 +234,6 @@ In case using `ShipmentTypeAddressFormWidget` widget the `ClickCollectServicePoi
 
 5. Build assets:
 
-Enable Javascript and CSS changes:
-
 ```bash
 console frontend:yves:build
 ```

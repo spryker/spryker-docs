@@ -192,7 +192,7 @@ If the `cross` icon is already defined in the project, it's not necessary to add
 
 {% endinfo_block %}
 
-1. For `/resources/form/form.twig` of `ShopUi` module, adjust `choice_widget_expanded` and `checkbox_widget` blocks:
+3. For `/resources/form/form.twig` of `ShopUi` module, adjust `choice_widget_expanded` and `checkbox_widget` blocks:
 
 ```twig
 {% raw %}{% block choice_widget_expanded -%}
@@ -228,7 +228,7 @@ If the `cross` icon is already defined in the project, it's not necessary to add
 
 {% info_block infoBox "Adding of ClickCollectServicePointAddressFormWidget is automated" %}
 
-If using `ShipmentTypeAddressFormWidget` widget, the `ClickCollectServicePointAddressFormWidget` is added automatically. Therefore, you don't need to add it manually.
+If using the `ShipmentTypeAddressFormWidget` widget, the `ClickCollectServicePointAddressFormWidget` is added automatically. Therefore, you don't need to add it manually.
 
 {% endinfo_block %}
 

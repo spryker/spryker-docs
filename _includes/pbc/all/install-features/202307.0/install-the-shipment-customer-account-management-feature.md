@@ -160,9 +160,9 @@ Adjust TWIG templates to display the shipment types:
 
 {% info_block infoBox "Info" %}
 
-`deliveryContainerClassName`: class name of container delivery form and the address selector.
+`deliveryContainerClassName`: class name of the container delivery form and the address selector.
 
-`embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'`: container class name for billing same as shipping checkbox.
+`embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'`: container class name for the **billing same as shipping** checkbox.
 
 {% endinfo_block %}
 
@@ -188,7 +188,7 @@ Adjust TWIG templates to display the shipment types:
 
 `isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
 
-`singleDeliveryContainerClassName`: class name of container address selector and the `ShipmentTypeAddressFormWidget`.
+`singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
 
 `deliverySelectClassName`: class name of the address selector.
 

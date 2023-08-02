@@ -18,13 +18,11 @@ To start feature integration, overview and install the necessary features:
 
 ### Set up behavior
 
-
 Register the following plugins:
 
 | PLUGIN                                      | SPECIFICATION                                                                                                                             | PREREQUISITES      | NAMESPACE                                                |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|--------------------|----------------------------------------------------------|
 | QuoteSyncDatabaseStrategyReaderPlugin       | Sets retrieved quote from Persistence in session storage in case of persistent strategy and `QuoteTransfer.id` is empty.                  | None               | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
-
 
 
 **src/Pyz/Client/Quote/QuoteDependencyProvider.php**
@@ -45,7 +43,9 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     protected function getDatabaseStrategyReaderPlugins(): array
     {
         return [
+            ...
             new QuoteSyncDatabaseStrategyReaderPlugin(),
+            ...
         ];
     }
 }

@@ -23,8 +23,8 @@ To start feature integration, overview and install the necessary features:
 
 Since the dynamic store is now enabled, configuration for the store is stored in the database, making the file `config/Shared/stores.php` deprecated. 
 
-The default store configuration will now be imported using new data import modules such as CurrencyDataImport. These modules will populate the store configuration in the database.
-A new major module Currency, have been introduced and that are responsible for extending store data and configuring it in the database.
+The default store configuration will now be imported using new data import modules such as `CurrencyDataImport`. These modules will populate the store configuration in the database.
+A new major module `Currency`, have been introduced and that is responsible for extending store data and configuring it in the database. You can find migration guide [here](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-currency-module.html)
 
 {% endinfo_block %}
 
@@ -54,7 +54,7 @@ A new major module Currency, have been introduced and that are responsible for e
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by adding a currency to the store in the Administration Interface. 
+Make sure that the following changes have been applied by adding a currency to the store in the Backoffice interface. 
 
 {% endinfo_block %}
 
@@ -123,7 +123,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getStoreStoragePlugins(): array
     {
         return [
+            ...
             new CurrencyStoreWritePublisherPlugin(),
+            ...
         ];
     }
 }
@@ -132,7 +134,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a stroy currency added, updated, or deleted, it is exported to or removed from Redis.
+Ensure that, when a story currency added, updated, or deleted, it is exported to or removed from Storage.
 
 Storage type: Redis
 Target entity: Store
@@ -222,7 +224,9 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     protected function getDataImporterPlugins(): array
     {
         return [
+            ...
             new CurrencyStoreDataImportPlugin(),
+            ...
         ];     
     }
 }
@@ -260,7 +264,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         return [
+            ...
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . CurrencyDataImportConfig::IMPORT_TYPE_CURRENCY_STORE),
+            ...
         ];
     }
 
@@ -285,18 +291,18 @@ Make sure that currency store data have been added to the `spy_currency_store` t
 
 Register the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| CurrencyBackendGatewayApplicationPlugin |Provides currency service. | None | Spryker\Zed\Currency\Communication\Plugin\Application | 
-| DefaultCurrencyStorePreCreateValidationPlugin | Validates default currency before store is created. | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| DefaultCurrencyStorePreUpdateValidationPlugin | Validates default currency before store is updated. | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| CurrencyStorePostUpdatePlugin | Update currency store data after store is updated. | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| CurrencyStoreCollectionExpanderPlugin | Expands currency store collection. | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| CurrencyStoreFormExpanderPlugin | Adds currency selection fields to the Store form. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormViewExpanderPlugin | Adds rendered currency tabs and tables as variables in template. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormTabExpanderPlugin | Expands Store form with Currencies tab. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| AssignedCurrenciesStoreViewExpanderPlugin | Returns table with assigned currencies. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| CurrencyStoreTableExpanderPlugin | Expands table data rows of store table with currency codes. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| PLUGIN | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE |
+| --- |--------------------------------------------------------------------------------------| --- | --- |
+| CurrencyBackendGatewayApplicationPlugin | Provides currency service for the gateway request, by getting it from the meta data. | None | Spryker\Zed\Currency\Communication\Plugin\Application | 
+| DefaultCurrencyStorePreCreateValidationPlugin | Validates default currency before store is created.                                  | None | Spryker\Zed\Currency\Communication\Plugin\Store |
+| DefaultCurrencyStorePreUpdateValidationPlugin | Validates default currency before store is updated.                                  | None | Spryker\Zed\Currency\Communication\Plugin\Store |
+| CurrencyStorePostUpdatePlugin | Update currency store data after store is updated.                                   | None | Spryker\Zed\Currency\Communication\Plugin\Store |
+| CurrencyStoreCollectionExpanderPlugin | Expands currency store collection.                                                   | None | Spryker\Zed\Currency\Communication\Plugin\Store |
+| CurrencyStoreFormExpanderPlugin | Adds currency selection fields to the Store form.                                    | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| CurrencyStoreFormViewExpanderPlugin | Adds rendered currency tabs and tables as variables in template.                     | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| CurrencyStoreFormTabExpanderPlugin | Expands Store form with Currencies tab.                                              | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| AssignedCurrenciesStoreViewExpanderPlugin | Returns table with assigned currencies.                                              | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| CurrencyStoreTableExpanderPlugin | Expands table data rows of store table with currency codes.                          | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 
 
 
@@ -319,7 +325,9 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     protected function getBackendGatewayApplicationPlugins(): array
     {
         return [
+            ...
             new CurrencyBackendGatewayApplicationPlugin(),
+            ...
         ];
     }
 }
@@ -353,7 +361,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStorePreCreateValidationPlugins(): array
     {
         return [ 
+            ...
             new DefaultCurrencyStorePreCreateValidationPlugin(),
+            ...
         ];
     }
 
@@ -363,7 +373,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStorePreUpdateValidationPlugins(): array
     {
         return [ 
+            ...
             new DefaultCurrencyStorePreUpdateValidationPlugin(),
+            ...
         ];
     }
 
@@ -373,7 +385,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStorePostCreatePlugins(): array
     {
         return [
+            ...
             new CurrencyStorePostCreatePlugin(),
+            ...
         ];
     }
 
@@ -383,7 +397,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStorePostUpdatePlugins(): array
     {
         return [
+            ...
             new CurrencyStorePostUpdatePlugin(),
+            ...
         ];
     }
 
@@ -393,7 +409,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStoreCollectionExpanderPlugins(): array
     {
         return [
+            ...
             new CurrencyStoreCollectionExpanderPlugin(),
+            ...
         ];
     }
 }
@@ -402,8 +420,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Steps: 
-- Make sure that you get an error message if you try to create a store with a default currency that is not assigned to the store.
-- Make sure that you get an error message if you try to update a store with a default currency that is not assigned to the store.
+- Make sure that you get an error message if you try to create or update a store with a default currency that is not assigned to the store.
 - Make sure that `spy_currency_store` table has been updated with the default currency for the created store or updated store.
 - Make sure expanded store transfers have currency codes.
  
@@ -432,7 +449,9 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreFormExpanderPlugins(): array
     {
         return [
+            ...
             new CurrencyStoreFormExpanderPlugin(),
+            ...
         ];
     }
 
@@ -442,7 +461,9 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreFormViewExpanderPlugins(): array
     {
         return [
+            ...
             new CurrencyStoreFormViewExpanderPlugin(),
+            ...
         ];
     }
 
@@ -452,7 +473,9 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreFormTabsExpanderPlugins(): array
     {
         return [
+            ...
             new CurrencyStoreFormTabExpanderPlugin(),
+            ...
         ];
     }
 
@@ -462,7 +485,9 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreViewExpanderPlugins(): array
     {
         return [
+            ...
             new AssignedCurrenciesStoreViewExpanderPlugin(),
+            ...
  
         ];
     }
@@ -473,7 +498,9 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreTableExpanderPlugins(): array
     {
         return [
+            ...
             new CurrencyStoreTableExpanderPlugin(),
+            ...
         ];
     }
 }

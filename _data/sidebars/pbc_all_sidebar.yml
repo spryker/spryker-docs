@@ -993,6 +993,67 @@ entries:
         url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
         include_versions:
         - "202307.0"
+        nested:
+          - title: What's changed
+            url: /docs/pbc/all/dynamic-multistore/release-notes.html
+            include_versions:
+              - "202307.0"
+          - title: Base shop
+            include_versions:
+              - "202307.0"
+            nested:
+              - title: Install and upgrade
+                include_versions:
+                  - "202307.0"
+                nested:
+                  - title: Install the base Dynamic Store functionality
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-feature.html
+                    include_versions:
+                      - "202307.0"
+                  - title: Install the Dynamic Store Availability Notification
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-availability-notification-feature.html
+                    include_versions:
+                      - "202307.0"
+                  - title: Install the Dynamic Store CMS
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-cms-feature.html
+                    include_versions:
+                      - "202307.0"
+                  - title: Install the Dynamic Store Customer Account Management
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-customer-account-management-feature.html
+                    include_versions:
+                      - "202307.0"
+                  - title: Install the Dynamic Store Prices
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-prices-feature.html
+                    include_versions:
+                      - "202307.0"
+                  - title: Install the Dynamic Store Products
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-product-feature.html
+                    include_versions:
+                      - "202307.0"
+              - title: Tutorials and How-to
+                include_versions:
+                  - "202307.0"
+                nested:
+                  - title: How to remove a store
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/tutorials-and-howtos/delete-stores.html
+                    include_versions:
+                      - "202307.0"
+                  - title: How to use Glue API with Dynamic Store
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/tutorials-and-howtos/ADDTHISPAGE.html
+                    include_versions:
+                      - "202307.0"
+          - title: Marketplace
+            include_versions:
+              - "202307.0"
+            nested:
+              - title: Install and upgrade
+                include_versions:
+                  - "202307.0"
+                nested:
+                  - title: Install Dynamic Store Marketplace
+                    url: /docs/pbc/all/dynamic-multistore/marketplace/install-the-marketplace-merchant-portal-core-dynamic-multistore-feature.html
+                    include_versions:
+                      - "202307.0"
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:

@@ -24,9 +24,9 @@ To start feature integration, integrate the required features:
 
 Add the following configuration to your project:
 
-| CONFIGURATION  | SPECIFICATION | NAMESPACE |
-| --- | --- | --- |
-| CustomerConfig::getCustomerSequenceNumberPrefix() (See below in `src/Pyz/Zed/Customer/CustomerConfig.php`) | Provides a prefix used during customer reference generation. | Pyz\Zed\Customer |
+| CONFIGURATION  | SPECIFICATION                                                                                                                                                    | NAMESPACE |
+| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |
+| CustomerConfig::getCustomerSequenceNumberPrefix() (See below in `src/Pyz/Zed/Customer/CustomerConfig.php`) | Provides a prefix used during customer reference generation. If no prefix provided it will use current store name that can lead to issues in Dynamic Store setup | Pyz\Zed\Customer |
 
 
 **src/Pyz/Zed/Customer/CustomerConfig.php**

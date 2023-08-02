@@ -43,7 +43,9 @@ class ProductCategoryFilterGuiDependencyProvider extends SprykerProductCategoryF
     protected function getProductCategoryListActionViewDataExpanderPlugins(): array
     {
         return [
+            ...
             new StoreProductCategoryListActionViewDataExpanderPlugin(),
+            ...
         ];
     }
 }

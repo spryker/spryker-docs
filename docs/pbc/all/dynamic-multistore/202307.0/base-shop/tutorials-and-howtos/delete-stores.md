@@ -38,11 +38,11 @@ If you are using Amazon Web Services' Relational Database Service (AWS RDS), che
 
 1. Enable **maintenance mode** by using command:
 ```bash
-vendor/bin/console maintenance mode
+vendor/bin/console maintenance:enable
 ```
-If you are using AWS infrastructure, check its relevant documentation on how to [Enable and disable maintenance mode](docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
+If you are using AWS infrastructure, check its relevant documentation on how to [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
-2. Make sure there aren't too many many messages showing in the RabbitMQ. Wait for the messages to be processed.
+2. Make sure there aren't too many messages showing in the RabbitMQ. Wait for the messages to be processed.
 
 3. To suspend P&S and the Cronjob scheduler, use this command:
 
@@ -97,7 +97,7 @@ After removing all related data from all tables, you can remove the row with the
 ### 4. Cleaning data in the key-value storage engine.
 
 Data is stored with keys that contain the name store, if you use Redis as a key-value store.
-The key name follows this format: `kv:{store}:{locale}:{resource-type}:{key}`.
+The key name follows this format: `kv:{resource-type}:{store}:{locale}:{key}`.
 
 Consider `XXX` as the name of the store to be used as an example.
 

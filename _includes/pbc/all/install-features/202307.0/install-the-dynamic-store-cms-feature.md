@@ -6,20 +6,18 @@ Dynamic Multistore is currently running under an Early Access Release. Early Acc
 
 This document describes how to integrate the Dynamic Store + CMS feature into a Spryker project.
 
-## Install Feature Frontend
+## Install
 
-### Prerequisites
-
-To start feature integration, overview and install the necessary features:
+To complete feature integration, overview and install the necessary features:
 
 | NAME | VERSION |  
 | --- | --- | 
 | Spryker Core | {{page.version}} | 
 | CMS | {{page.version}} |
 
-### Set up behavior
+## Troubleshooting
 
-If you are using the twig function `renderCmsBlockAsTwig` in twig templates, make sure to provide `storeName` name as a parameter. Otherwise, the function will throw an exception.
+If you are using the `Twig` function `renderCmsBlockAsTwig()` in `Twig` templates, make sure to provide `storeName` name as a parameter. Otherwise, the function will throw an exception.
 
 Example:
 ```twig

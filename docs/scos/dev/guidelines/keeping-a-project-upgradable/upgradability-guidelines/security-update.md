@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Security Update Checker is a tool that checks if security fixes exists for Spryker modules that presented in your project.
+Security Update Checker is a tool that checks if security fixes exist for Spryker modules that are present in your project.
 
 ## Problem description
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Rating and Reviews feature into a Spryker project.
+This document describes how to integrate the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,8 +12,8 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
-| Product      | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | {{page.version}} | [Install Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
+| Product      | {{page.version}} | [Install Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -37,7 +37,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-1. Adjust the schema definition so entity changes trigger events.
+1. Adjust the schema definition so entity changes trigger events:
 
 | AFFECTED ENTITY               | TRIGGERED EVENTS                                                                                                              |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -77,7 +77,7 @@ Make sure that the following changes have been applied in the database:
 | spy_product_abstract_review_storage | table  | created |
 | spy_product_review_search           | table  | created |
 
-Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
+Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes:
 
 | CLASS NAMESPACE                                                                | EXTENDS                                                                                           |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -138,7 +138,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Import product reviews
 
-Check [how to import data](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/ratings-and-reviews-data-import.html).
+For details about this step, see [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/ratings-and-reviews-data-import.html).
 
 ### 4) Add translations
 
@@ -275,7 +275,7 @@ class ProductReviewSearchConfig extends SprykerProductReviewSearchConfig
 }
 ```
 
-5. Set up resync feature
+5. Set up resync feature:
 
 | PLUGIN                                   | SPECIFICATION                                                                    | PREREQUISITES | NAMESPACE                                                            |
 |------------------------------------------|----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -305,7 +305,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-6. Set up event trigger feature
+6. Set up event trigger feature:
 
 | PLUGIN                                            | SPECIFICATION                                                                    | PREREQUISITES | NAMESPACE                                                  |
 |---------------------------------------------------|----------------------------------------------------------------------------------|---------------|------------------------------------------------------------|
@@ -335,7 +335,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 }
 ```
 
-7. Register event subscriber
+7. Register the event subscriber:
 
 | PLUGIN                              | SPECIFICATION                                  | PREREQUISITES | NAMESPACE                                                                         |
 |-------------------------------------|------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
@@ -367,15 +367,15 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-8. Register product page data expander, data loader and map expander plugins
+8. Register product page data expander, data loader, and map expander plugins:
 
 | PLUGIN                                   | SPECIFICATION                                                     | PREREQUISITES | NAMESPACE                                                                            |
 |------------------------------------------|-------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------|
 | ProductReviewDataLoaderExpanderPlugin    | Expands the provided object with review details.                  | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\PageDataExpander                |
 | ProductReviewPageDataLoaderPlugin        | Expands the provided object with review details.                  | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\PageDataLoader                  |
-| ProductReviewMapExpanderPlugin           | Adds product review related data to product abstract search data. | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
+| ProductReviewMapExpanderPlugin           | Adds product review data related to product abstract search data. | None          | Spryker\Zed\ProductReviewSearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -424,6 +424,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -437,7 +438,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 ### 5) Configure export to Redis
 
-Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
+Configure tables to be published and synchronized to the Storage on create, edit, and delete changes:
 
 1. Configure synchronization pool and event queue name:
 
@@ -472,7 +473,7 @@ class ProductReviewStorageConfig extends SprykerProductReviewStorageConfig
 }
 ```
 
-2. Set up resync feature
+2. Set up resync feature:
 
 | PLUGIN                                   | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                             |
 |------------------------------------------|--------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
@@ -502,7 +503,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-3. Set up event trigger feature
+3. Set up the event trigger feature:
 
 | PLUGIN                                            | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                   |
 |---------------------------------------------------|------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
@@ -532,7 +533,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 }
 ```
 
-4. Register event subscriber
+4. Register the event subscriber:
 
 | PLUGIN                              | SPECIFICATION                                  | PREREQUISITES | NAMESPACE                                                              |
 |-------------------------------------|------------------------------------------------|---------------|------------------------------------------------------------------------|
@@ -580,7 +581,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | PLUGIN                             | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                   |
 |------------------------------------|-----------------------------------------------------|---------------|---------------------------------------------|
 | DisplayProductAbstractReviewWidget | Displays the product abstract review.               | None          | SprykerShop\Yves\ProductReviewWidget\Widget |
-| ProductDetailPageReviewWidget      | Displays the product review in product detail page. | None          | SprykerShop\Yves\ProductReviewWidget\Widget |
+| ProductDetailPageReviewWidget      | Displays the product review on a product details page. | None          | SprykerShop\Yves\ProductReviewWidget\Widget |
 | ProductRatingFilterWidget          | Displays the product rating filter.                 | None          | SprykerShop\Yves\ProductReviewWidget\Widget |
 | ProductReviewDisplayWidget         | Displays the product review rating.                 | None          | SprykerShop\Yves\ProductReviewWidget\Widget |
 
@@ -646,7 +647,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-3. Register expander plugins, if you use product group widget:
+3. Register expander plugins if you use product group widget:
 
 | PLUGIN                                            | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                      |
 |---------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------|
@@ -715,7 +716,7 @@ Make sure that the following endpoints are available:
 
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json
@@ -798,7 +799,7 @@ Make sure that the following endpoints are available:
 
 `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json
@@ -822,7 +823,7 @@ Make sure that the following endpoints are available:
 
 {% endinfo_block %}
 
-2. To enable the Glue API relationships, register the plugins:
+1. To enable the Glue API relationships, register the plugins:
 
 | PLUGIN                                                | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                                                            |
 |-------------------------------------------------------|-------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
@@ -912,10 +913,9 @@ Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{
 
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
-Make sure that `averageRating` and `reviewCount` attributes are present in concrete-products and abstract-products resources attributes section.
+Make sure that `averageRating` and `reviewCount` attributes are present in `concrete-products` and `abstract-products` resources attributes section.
 
-<details open>
-<summary markdown='span'>Example</summary>
+<details><summary markdown='span'>Example</summary>
 
 ```json
 {
@@ -1067,7 +1067,7 @@ Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{
 
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
-<details open>
+<details>
 <summary markdown='span'>Example</summary>
 
 ```json

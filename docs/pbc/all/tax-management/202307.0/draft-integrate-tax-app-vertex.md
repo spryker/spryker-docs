@@ -1,5 +1,6 @@
 ---
 title: Integrate Vertex Tax App
+draft: true
 description: Integrate Vertex Tax App to automatically calculate taxes.
 last_updated: Aug 3, 2023
 template: concept-topic-template

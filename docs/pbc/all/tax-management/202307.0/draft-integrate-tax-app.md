@@ -1,12 +1,12 @@
 ---
 title: Integrate Tax App
 description: Integrate Tax App to automatically calculate taxes using Acp Apps.
+draft: true
 last_updated: Aug 3, 2023
 template: concept-topic-template
 ---
 
 To enable the Tax app integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) module.
-
 
 ## Prerequisites
 

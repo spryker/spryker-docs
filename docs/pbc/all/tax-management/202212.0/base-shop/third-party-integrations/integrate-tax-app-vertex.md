@@ -52,34 +52,23 @@ First of all it's necessary to define specific Vertex Tax Metadata transfers and
 
     <!-- Sales Tax Metadata. It contains Vertex tax metadata which is related to Order or Quote in general. -->
     <transfer name="SaleTaxMetadata" strict="true">
-        <!-- Customer Class Code is a specific customer classification code defined on Vertex side -->
-        <property name="customerClassCode" type="string"/>
+        <property name="seller" type="array" associative="true" singular="_"/>
+        <property name="customer" type="array" associative="true" singular="_"/>
     </transfer>
 
     <!-- Items Tax Metadata. It contains Vertex tax metadata which is related to Item.-->
     <transfer name="ItemTaxMetadata" strict="true">
-        <!-- Product Class Code is a specific product classification code defined on Vertex side -->
-        <property name="productClassCode" type="string"/>
-        <!-- Flexible Fields are Vertex specific fields that could be passed in metadata -->
-        <property name="flexibleFields" type="VertexTaxFlexibleFields" singular="flexibleFields"/>
-    </transfer>
-
-    <!-- Flexible Fields are represented by three types. For more information refer to Vertex API Docs. -->
-    <transfer name="VertexTaxFlexibleFields">
-        <property name="flexibleCodeFields" type="VertexTaxFlexibleField[]" singular="flexibleCodeFields"/>
-        <property name="flexibleNumericFields" type="VertexTaxFlexibleField[]" singular="flexibleNumericFields"/>
-        <property name="flexibleDateFields" type="VertexTaxFlexibleField[]" singular="flexibleDateFields"/>
-    </transfer>
-
-    <!-- Vertex specific flexible field definition -->
-    <transfer name="VertexTaxFlexibleField">
-        <property name="fieldId" type="int"/>
-        <property name="value" type="string"/>
+        <property name="product" type="array" associative="true" singular="_"/>
+        <property name="flexibleFields" type="array" associative="true" singular="_"/>
     </transfer>
 
 </transfers>
 
 ```
+
+In general `SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to Vertex Tax Calculation API request body. So you are free to extend them as you need according to Vertex API structure.
+`SaleTaxMetadata` is equal to Ivoicing/Quotation request payload excluding LineItems.
+`ItemTaxMetadata` is equal to Line Item API Payload.
 
 2. # Implement Vertex Specific Metadata Extender Plugins 
 
@@ -214,7 +203,7 @@ class ItemProductClassCodeExpander
     public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
     {
         foreach ($calculableObjectTransfer->getItems() as $itemTransfer) {
-            $itemTransfer->getTaxMetadata()->setProductClassCode('ProductClassCode');
+            $itemTransfer->getTaxMetadata()->setProduct(['productClass' => 'ProductClassCode']);
         }
 
         return $transfer;
@@ -246,16 +235,16 @@ class ItemFlexibleFieldExpander
         foreach ($calculableObjectTransfer->getItems() as $itemTransfer) {
             $itemTransfer
                 ->getTaxMetadata()
-                ->getFlexibleFields()
-                    ->addFlexibleCodeField(
-                        new ArrayObject(
+                ->setFlexibleFields(
+                    [
+                        'flexibleCodeFields' => [
                             [
-                                (new VertexTaxFlexibleFieldTransfer())
-                                    ->setFieldId(1000)
-                                    ->setValue('FlexibleCodeValue'),
+                                'fieldId' => 1,
+                                'value' => 'Code',
                             ],
-                        ),
-                    );
+                        ],
+                    ],
+                );
         }
 
         return $transfer;
@@ -303,5 +292,3 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 }
 
 ```
-
-

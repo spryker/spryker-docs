@@ -11,6 +11,8 @@ redirect_from:
   - /docs/en/standard-filters-overview
   - /docs/scos/user/features/201811.0/search-feature-overview/standard-filters-overview.html
   - /docs/pbc/all/search/202307.0/search-feature-overview/search-feature-overview/standard-filters-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202212.0/search-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202307.0/search-feature-walkthrough.html
 ---
 
 Ecommerce solutions usually offer a huge product catalog to display products and their variations. To help buyers find the products they are looking for in the catalog, we have the *Standard Filters* feature.
@@ -50,8 +52,3 @@ Price Range Filter is not supported with the Merchant Relations, that is why thi
 | [Edit filter preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html)  |
 | [Reorder category filters](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html)  |
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

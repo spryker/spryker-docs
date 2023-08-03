@@ -22,11 +22,11 @@ The priority of scope is configurable. To modify it, you should override `\Spryk
 
 The default priority:
 
-| SCOPE | PRIORITY |
-|-----|-----|
-| global | 2 |
-| inherited | 1 |
-| segment | 0 |
+| Scope     | Database value | Priority |
+|-----------|----------------|----------|
+| global    | 0              | 2        |
+| segment   | 1              | 0        |
+| inherited | 2              | 1        |
 
 By default, rules with a global scope have the highest priority, and rules with a segment scope have the lowest priority.
 

@@ -36,7 +36,7 @@ The concept of scopes is very flexible. It lets you create any rules that suit t
 As mentioned above, there are 3 types of scopes: `global`, `segment` and `inherited`.
 In the database layer scope represented as enum:
 
-| Scope     | Database value | Priority |
+| SCOPE     | DATABASE VALUE | PRIORITY |
 |-----------|----------------|----------|
 | global    | 0              | 2        |
 | segment   | 1              | 0        |

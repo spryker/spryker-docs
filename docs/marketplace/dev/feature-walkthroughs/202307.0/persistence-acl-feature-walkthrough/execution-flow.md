@@ -22,7 +22,7 @@ The priority of scope is configurable. To modify it, you should override `\Spryk
 
 The default priority:
 
-| Scope     | Database value | Priority |
+| SCOPE     | DATABASE VALUE| PRIORITY |
 |-----------|----------------|----------|
 | global    | 0              | 2        |
 | segment   | 1              | 0        |

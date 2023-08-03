@@ -52,6 +52,6 @@ Price Range Filter is not supported with the Merchant Relations, that is why thi
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
+Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/search-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -275,7 +275,7 @@ class ProductReviewSearchConfig extends SprykerProductReviewSearchConfig
 }
 ```
 
-5. Set up resync feature:
+5. Add synchronization plugins:
 
 | PLUGIN                                   | SPECIFICATION                                                                    | PREREQUISITES | NAMESPACE                                                            |
 |------------------------------------------|----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -305,7 +305,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-6. Set up event trigger feature:
+6. Enable event trigger plugins to be able to re-trigger publish events:
 
 | PLUGIN                                            | SPECIFICATION                                                                    | PREREQUISITES | NAMESPACE                                                  |
 |---------------------------------------------------|----------------------------------------------------------------------------------|---------------|------------------------------------------------------------|
@@ -473,7 +473,7 @@ class ProductReviewStorageConfig extends SprykerProductReviewStorageConfig
 }
 ```
 
-2. Set up resync feature:
+2. Add synchronization plugins:
 
 | PLUGIN                                   | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                             |
 |------------------------------------------|--------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
@@ -503,7 +503,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-3. Set up the event trigger feature:
+3. Enable event trigger plugins to be able to re-trigger publish events:
 
 | PLUGIN                                            | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                   |
 |---------------------------------------------------|------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|

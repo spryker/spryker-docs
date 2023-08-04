@@ -19,7 +19,7 @@ Trace your request execution flow to find bottlenecks and optimize your code. Th
 
 ![request-tracing](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/request-tracing.png)
 
-**Business benefit**: Lower response time, faster end-user experience resulting in higher SEO rankings.
+**Business benefit**: Lower response time, faster end-user experience resulting in higher conversion rates.
 
 #### Documentation
 
@@ -304,6 +304,12 @@ To maintain the stability and longevity of our platform, we have migrated to Ang
 
 Spryker is launching an Early Access program for customers who want to be among the first to utilize the new Spryker Composable Storefront.
 
+{% info_block warningBox %}
+
+Composable Storefront is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 Spryker Composable Storefront provides an efficient solution for developers to implement and customize stores on Spryker's commerce platform. It offers pre-packaged, decoupled, composable components for common features found on digital commerce sites. Customers can also create their own custom components to be used in the Storefront.
 
 If you are interested in being part of Spryker's Composable Storefront Early Access program, contanct your Spryker representative.
@@ -317,7 +323,13 @@ If you are interested in being part of Spryker's Composable Storefront Early Acc
 
 Spryker is launching an Early Release Access program for customers who want to be among the first to utilize the new Dynamic Multistore.
 
-Dynamic Multistore allows business users to create a new store in your platform's backend without the intervention of tech colleagues.
+{% info_block warningBox %}
+
+Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
+Dynamic Multistore lets business users create stores in your platform's back-end without the help from the development team.
 
 For further information about accessing this Early Release feature, contact your Spryker representative.
 

@@ -5,4 +5,4 @@ last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202307.0/install-the-dynamic-store-product-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-dynamic-store-product-feature.md -->
+{% include pbc/all/install-features/202307.0/install-dynamic-multistore-the-product-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-dynamic-multistore-the-product-feature.md -->

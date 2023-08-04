@@ -32,24 +32,7 @@ vendor/bin/console transfer:generate
 vendor/bin/console propel:install
 ```
 
-***
-
-
-{% info_block errorBox %}
-
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
-
-{% endinfo_block %}
-
-To upgrade the module, do the following:
-
-1. Update the module using Composer:
-
-```bash
-composer update spryker/locale
-```
-
-2. Add new plugins to dependency providers:
+4. Add new plugins to dependency providers:
 
 **Zed integration**
 

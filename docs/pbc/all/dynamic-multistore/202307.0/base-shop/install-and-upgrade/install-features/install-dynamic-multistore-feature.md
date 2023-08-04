@@ -1,5 +1,5 @@
 ---
-title: Dynamic multiple stores installation and configuration
+title: Install Dynamic Multistore
 description: Learn how to integrate the Dynamic Store feature into your project
 last_updated: Feb 1, 2023
 template: feature-integration-guide-template
@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/dynamic-stores-product-feature-integration.md
 ---
 
-{% include pbc/all/install-features/202307.0/install-the-dynamic-stores-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-dynamic-stores-feature.md -->
+{% include pbc/all/install-features/202307.0/install-dynamic-multistore.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-dynamic-multistore.md -->

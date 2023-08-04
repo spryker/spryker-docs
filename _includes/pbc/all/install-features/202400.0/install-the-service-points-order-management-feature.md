@@ -15,7 +15,7 @@ To start feature integration, integrate the required features:
 | Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                         |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
-## 1) Set up behavior
+## Set up behavior
 
 1. Register sales plugins:
 
@@ -63,7 +63,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 Make sure that sales plugins work correctly:
 
-1.  Add product offer with service point shipment type to cart.
+1.  Add a product offer with the service point shipment type to your cart.
 
 2.  Place an order with the added product.
 
@@ -73,7 +73,7 @@ Make sure that sales plugins work correctly:
 
 ## Install feature frontend
 
-## 1) Set up widgets
+## Set up widgets
 
 1. Register the following plugins to enable widgets:
 

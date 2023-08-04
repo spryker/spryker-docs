@@ -1015,19 +1015,19 @@ entries:
                   - title: Install features
                     nested:
                       - title: Dynamic Multistore
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
                       - title: Dynamic Multistore + Avalability Notification
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
                       - title: Dynamic Multistore + Cart
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html
                       - title: Dynamic Multistore + CMS
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html
                       - title: Dynamic Multistore + Customer Account Management
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-customer-account-management-feature.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-customer-account-management-feature.html
                       - title: Dynamic Multistore + Product
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-product-feature.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-product-feature.html
                       - title: Install Dynamic Multistore
-                        url: docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
 
                   - title: Upgrade modules
                     nested:
@@ -1230,7 +1230,7 @@ entries:
                       - title: Marketplace Merchant Portal Core + Dynamic Multistore
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-dynamic-multistore.html
                         include_versions:
-                        - "202307.0"                       
+                        - "202307.0"
                       - title: Merchant Category
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html
                       - title: Merchant Opening Hours

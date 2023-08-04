@@ -18,7 +18,7 @@ Follow the steps below to install the Marketplace Merchant Custom Prices feature
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME    | VERSION    | INTEGRATION GUIDE    |
 |----------------|------------------|-------------------|

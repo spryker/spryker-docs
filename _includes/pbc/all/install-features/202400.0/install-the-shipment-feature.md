@@ -1053,7 +1053,7 @@ Follow the steps below to install the feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

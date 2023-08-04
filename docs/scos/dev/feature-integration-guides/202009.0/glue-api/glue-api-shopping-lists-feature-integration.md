@@ -23,7 +23,7 @@ The current feature integration guide only adds the Shopping List Rest API funct
 Follow the steps below to install Shopping List feature API.
 
 ## Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version | Integration guide|
 | --- | --- |--- |

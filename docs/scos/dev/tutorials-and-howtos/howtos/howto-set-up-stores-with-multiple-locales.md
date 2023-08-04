@@ -24,19 +24,13 @@ redirect_from:
   - /v1/docs/en/ht-setup-stores-with-multiple-locales
 ---
 
-{% info_block warningBox %}
-
-Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 This document describes the steps to consider when setting up stores with multiple locales.
 
 ## Configure locales for store
 
 {% info_block warningBox %}
 
-When using the Dynamic Multi-Store functionality, configuration via the `stores.php` file is no longer supported. Please refer to the [Integration Guide](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html) for additional information.
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) installed, you can only add stores in the Back Office.
 
 {% endinfo_block %}
 

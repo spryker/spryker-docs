@@ -6,11 +6,11 @@ This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-ma
 ## Install feature core
 
 Follow the steps below to install the Shipment + Service Points feature.
-To start feature integration, integrate the required features:
+Install the required features:
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------|

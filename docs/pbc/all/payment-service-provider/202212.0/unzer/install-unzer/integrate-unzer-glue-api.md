@@ -16,7 +16,7 @@ Follow the steps below to install the Unzer Glue API feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME               | INTEGRATION GUIDE                                                                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|

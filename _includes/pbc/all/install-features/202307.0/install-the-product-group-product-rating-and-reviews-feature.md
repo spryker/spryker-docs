@@ -6,7 +6,7 @@ Follow the steps below to install Product group + Product rating & review featur
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 
 | NAME | VERSION |

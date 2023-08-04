@@ -2,15 +2,15 @@
 
 Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
-This document describes how to integrate the  Dynamic Store + Product feature into a Spryker project.
+This document describes how to install Dynamic Store + the Product feature.
 
 ## Install feature core
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -21,9 +21,9 @@ To start feature integration, overview and install the necessary features:
 
 Register the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StoreProductCategoryListActionViewDataExpanderPlugin | Expands view data for list of product categories with stores data. | None | Spryker\Zed\StoreGui\Communication\Plugin\ProductCategoryFilterGui |
+| PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
+| StoreProductCategoryListActionViewDataExpanderPlugin | Expands **Overview of Category Filters** page with infromation about stores.| Spryker\Zed\StoreGui\Communication\Plugin\ProductCategoryFilterGui |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -55,8 +55,7 @@ class ProductCategoryFilterGuiDependencyProvider extends SprykerProductCategoryF
 
 Make sure that the following data is displayed on the **Product Category Filter** page:
 
-* Store 
+* Store
 * Category
 
 {% endinfo_block %}
-

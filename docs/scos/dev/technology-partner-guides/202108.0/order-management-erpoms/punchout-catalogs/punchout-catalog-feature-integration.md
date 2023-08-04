@@ -1471,7 +1471,7 @@ Make sure that when you chose the supplier for transferred cart in ERP, and redi
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

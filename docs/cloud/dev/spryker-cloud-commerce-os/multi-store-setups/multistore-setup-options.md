@@ -6,12 +6,12 @@ related:
   - title: Add and remove databases of stores
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
   - title: Implement a new store
-    link: docs/pbc/all/dynamic-multistore/{{site.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html
+    link: docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html
 ---
 
-This document outlines the various options available for a multi-store setup and is essential to review when defining the architecture for your project and prior to implementing a new store. 
+This document outlines the various options available for a multi-store setup and is essential to review when defining the architecture for your project and prior to implementing a new store.
 
-Keep in mind that the definition of a store can vary depending on the business use case. For example, it can refer to a region, market, country, or physical store.
+Keep in mind that the definition of a store can vary depending on the business use case. For example, it can refer to a region, market, country, or a physical store.
 
 ## Assess whether your shop is fit for Spryker Multi-Store
 
@@ -56,7 +56,7 @@ When setting up multiple stores, we recommended to group stores that share the s
 This setup has the following characteristics:
 
 - One store or multiple stores. 
-- Each store has a dedicated index for ES and its own key-value storage namespace (Redis). 
+- Each store has a dedicated index for ES and its own key-value storage namespace (Redis).
 {% info_block infoBox "Info" %}
 
 While the search index and key-value storages are shared resources, you can have multiple indexes within the same search instance and multiple namespaces in Redis.
@@ -69,7 +69,7 @@ While the search index and key-value storages are shared resources, you can have
 - Use of code buckets for store customization (logic).
 - Use a theme for a different visual look and feel.
 - Centralized third-party integrations.
-	
+
 This is a standard Spryker setup, best suited for the following use cases:
 - Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve store-specific business logic.
 - Products, customers, orders, etc., are stored in the same database, making collaborative management across all stores simpler.
@@ -151,7 +151,7 @@ You can apply the virtually isolated database to setup one and setup three too. 
 This setup has the following characteristics:
 
 - Multiple stores. 
-- Each store has dedicated key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services. 
+- Each store has dedicated key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services.
 - Separate database per account.
 - Allows for different regions.
 - Lets you use themes for a different visual look and feel.
@@ -160,7 +160,7 @@ This setup has the following characteristics:
     - Use of code buckets for store customization (logic).
     - Centralized third-party integrations.
 
-This setup is recommended for the following cases: 
+This setup is recommended for the following cases:
 - Your shops look completely different—not only from the design perspective but also from business logic and used features/modules due to completely separated code.
 - Shop maintenance and development happen independently. You may have multiple teams working on different shops, having their own development workflow and release cycles.
 - Data management (products, customers, orders, etc.) is separated due to separate databases. Data sharing and synchronization is possible with the help of external systems.
@@ -176,7 +176,7 @@ In each AWS account, you can have several stores.
 
 {% endinfo_block %}
 
-- SSL certificates may be generated automatically or uploaded manually in AWS. 
+- SSL certificates may be generated automatically or uploaded manually in AWS.
 - SSL termination process is handled by ALB in all setup models. There is also a built-in functionality, which allows to set several different certificates (issued for different domains) to one ALB.
 
 The following table provides details on the infrastructure for this setup:

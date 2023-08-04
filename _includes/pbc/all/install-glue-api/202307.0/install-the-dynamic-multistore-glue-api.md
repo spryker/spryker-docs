@@ -2,33 +2,34 @@
 
 Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
-Follow the steps below to integrate the Glue API: Dynamic Store feature into your project.
+This document describes how to install the Dynamic Multistore Glue API.
 
 ## Prerequisites
-To start feature integration, overview and install the necessary features:
+
+Install the required features:
 
 | NAME | VERSION |  
 | --- | --- | --- |
 | Spryker Core | {{page.version}} |
 
 
-### Set up behavior
+## Set up behavior
 
 
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION                                                                                                                                  | PREREQUISITES | NAMESPACE                                                 |
 | --- |------------------------------------------------------------------------------------------------------------------------------------------------| --- |-----------------------------------------------------------|
-| StoreHttpHeaderApplicationPlugin | Gets the name of the store from the Request parameter or the Request header used for the Glue Application. If both are defined, the Request parameter has more priority. - | None | Spryker\Glue\StoresRestApi\Plugin\Application             |
-| StoreApplicationPlugin | Gets the name of the store from the Request parameter or the Request header used for the Storefront API. If both are defined, the Request parameter has more priority. -   | None | Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication                 |
-| StoreApplicationPlugin |  Gets the name of the store from the Request parameter or the Request header used for the Storefront API. If both are defined, the Request parameter has more priority. -   | None | Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication          |
-| LocaleApplicationPlugin | Gets locale name from the Request header.                                                                                                      | None | Spryker\Glue\ProductOptionsRestApi\Plugin\GlueApplication |
+| StoreHttpHeaderApplicationPlugin | Retrieves the name of the store from the `Request` parameter or the `Request` header used for the Glue Application. If both are defined, the `Request` parameter has more priority. |   | Spryker\Glue\StoresRestApi\Plugin\Application             |
+| StoreApplicationPlugin | Retrieves the name of the store from the `Request` parameter or the `Request` header used for the Storefront API. If both are defined, the `Request` parameter has more priority.  |   | Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication                 |
+| StoreApplicationPlugin |  Retrieves the name of the store from the `Request` parameter or the `Request` header used for the Storefront API. If both are defined, the `Request` parameter has more priority.   |   | Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication          |
+| LocaleApplicationPlugin | Retrieves locale name from the `Request` header.                                                                                                      |   | Spryker\Glue\ProductOptionsRestApi\Plugin\GlueApplication |
 
 {% info_block warningBox "Warning" %}
 
-`StoreHttpHeaderApplicationPlugin` is deprecated, please use `\Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication\StoreApplicationPlugin` instead.
+`StoreHttpHeaderApplicationPlugin` is deprecated. Use `\Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication\StoreApplicationPlugin` instead.
 
 {% endinfo_block %}
 
@@ -36,7 +37,7 @@ Activate the following plugins:
 
 
 ```php
-<?php 
+<?php
 
 namespace Pyz\Glue\GlueApplication;
 
@@ -62,13 +63,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response without any errors and contain the `content-language` header set to **de_DE**.
+Send one of the following requests:
 
-{% endinfo_block %}
+| ENDPOINT | HEADER |
+|-|-|
+| https://glue.mysprykershop.com | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the store and locale are set correctly.
+Make sure the response contains the following:
+* The `content-language` header set to `de_DE`.
+* Proper locale and stores header.
 
 {% endinfo_block %}
 
@@ -82,7 +86,7 @@ namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 use Spryker\Glue\StoresBackendApi\Plugin\GlueBackendApiApplication\StoreApplicationPlugin;
- 
+
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -100,9 +104,16 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue-backend.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response without any errors and contain the `content-language` header set to **de_DE**.
+Send one of the following requests:
 
-An example for testing with a Store header: 
+| ENDPOINT | HEADER |
+|-|-|
+| https://glue-backend.mysprykershop.com` | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
+
+Make sure you get a response containing the `content-language` header set to `de_DE`.
+
+Example for testing with the `Store` header:
 
 ```bash
 curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token' \
@@ -114,7 +125,7 @@ curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token' 
 
 ```
 
-An example for testing with a Store Request parameter:
+Example for testing with the `store` request parameter:
 
 ```bash
 curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token?_store=DE' \
@@ -158,6 +169,14 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue-storefront.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` or `https://glue.mysprykershop.com?_store=DE`  with the header `[{"key":"Accept-Language","value":"de_DE"}]` should result in a response without any errors and contain the `content-language` header set to **de_DE**.
+Send one of the following requests:
+
+| ENDPOINT | HEADER |
+|-|-|
+| https://glue-storefront.mysprykershop.com | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
+
+Make sure you get a response containing the `content-language` header set to `de_DE`
+
 
 {% endinfo_block %}

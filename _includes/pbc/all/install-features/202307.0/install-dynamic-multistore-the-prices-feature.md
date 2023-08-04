@@ -4,13 +4,13 @@ Dynamic Multistore is currently running under an Early Access Release. Early Acc
 
 {% endinfo_block %}
 
-This document describes how to integrate the  Dynamic Store + Prices feature into a Spryker project.
+This document describes how to install Dynamic Store + the Prices feature.
 
 ## Install feature core
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -19,19 +19,19 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Set up configuration
 
-{% info_block warningBox "Configuration stores.php" %}
+{% info_block warningBox "stores.php configuration" %}
 
-Since the dynamic store is now enabled, configuration for the store is stored in the database, making the file `config/Shared/stores.php` deprecated. 
+Since Dynamic Multistore is now enabled, configuration of stores is stored in the database, making `config/Shared/stores.php` deprecated.
 
-The default store configuration will now be imported using new data import modules such as `CurrencyDataImport`. These modules will populate the store configuration in the database.
-A new major module `Currency`, have been introduced and that is responsible for extending store data and configuring it in the database. You can find migration guide [here](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-currency-module.html)
+The default store configuration is imported using new data import modules, like `CurrencyDataImport`. These modules populate the store configuration in the database.
+The `Currency` module is responsible for extending store data and configuring it in the database. For upgrade instructions, see [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-currency-module.html).
 
 {% endinfo_block %}
 
 
 ### 2) Set up the database schema and transfer objects
 
-1. Adjust the schema definition so entity changes trigger events:
+1. Adjust the schema definition, so entity changes trigger events:
 
 **src/Pyz/Zed/Currency/Persistence/Propel/Schema/spy_currency.schema.xml**
 
@@ -52,12 +52,6 @@ A new major module `Currency`, have been introduced and that is responsible for 
 
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied by adding a currency to the store in the Backoffice interface. 
-
-{% endinfo_block %}
-
 2. Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -67,7 +61,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTITY                       | TYPE   | EVENT   |
 |---------------------------------------|--------|---------|
@@ -88,13 +82,19 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
+{% info_block warningBox "Verification" %}
+
+Make sure you can add a currency to a store when editing a product in the Back Office.
+
+{% endinfo_block %}
+
 ### 3) Configure export to Redis
 
 1.  Set up publisher plugins:
 
 | PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CurrencyStoreWritePublisherPlugin | Publishes currency store data to storage table. | None | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CurrencyStore |
+| CurrencyStoreWritePublisherPlugin | Publishes store's currencies to the storage table. | None | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CurrencyStore |
 
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
@@ -116,7 +116,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getStoreStoragePlugins(),
         );
     }
-    
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -134,7 +134,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a story currency added, updated, or deleted, it is exported to or removed from Storage.
+Using the following data, make sure that when you add, update, or delete a store currency, it is exported to or removed from Storage.
 
 Storage type: Redis
 Target entity: Store
@@ -163,11 +163,11 @@ Example expected data fragment:
 
 ### 4) Import data
 
-Import locale, store and country data:
+Import locale, store, and country data:
 
-1.  Prepare your data according to your requirements using our demo data:
+1.  Prepare your data according to your requirements using the demo data:
 
-Example for DE store currency-store configurations:
+Example for the DE store currency-store configurations:
 **data/import/common/DE/currency_store.csv**
 
 ```csv
@@ -179,18 +179,20 @@ CHF,DE,0
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | currency_code | mandatory | string | EUR | Define currency code. |
-|store_name |mandatory |string | DE | Define store name. |
+|store_name |mandatory |string | DE | Defines the store name. |
 |is_default |mandatory |bool | 1 | Defines if the currency is default. |
 
-__Note: Only one currency can be default per store.__
+{% info_block infoBox "Default currency" %}
 
-{% info_block warningBox “Verification” %}
+There can only be one default currency per store.
 
-Make sure that:
+{% endinfo_block %}
 
-1.  The .csv files have an empty line in the end.
-2.  For each `currency_code` entry in csv files, there is a respective `code` entry in the table `spy_currency` in the database.
- 
+{% info_block warningBox “Import requirements” %}
+
+*  The `.csv` files must have an empty line in the end.
+*  For each `currency_code` entry in the CSV files, there must be a respective `code` entry in the `spy_currency` database table.
+
 {% endinfo_block %}
 
 2. Update the following import action files with the following action:
@@ -204,12 +206,12 @@ data_import:
       source: data/import/common/{REGION}/currency_store.csv
 ```
 
-3. Register the following plugins to enable data import:
- 
+3. To enable data import, register the following plugin:
+
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CurrencyStoreDataImportPlugin | Imports currency store relations. | None | \Spryker\Zed\CurrencyDataImport\Communication\Plugin\DataImport |
+| CurrencyStoreDataImportPlugin | Imports currency-store relations. | None | \Spryker\Zed\CurrencyDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -282,7 +284,7 @@ vendor/bin/console data:import:currency-store
 
 {% info_block warningBox "Verification" %}
 
-Make sure that currency store data have been added to the `spy_currency_store` table.
+Make sure that the currency store data has been added to the `spy_currency_store` table.
 
 {% endinfo_block %}
 
@@ -291,24 +293,24 @@ Make sure that currency store data have been added to the `spy_currency_store` t
 
 Register the following plugins:
 
-| PLUGIN | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE |
-| --- |--------------------------------------------------------------------------------------| --- | --- |
-| CurrencyBackendGatewayApplicationPlugin | Provides currency service for the gateway request, by getting it from the meta data. | None | Spryker\Zed\Currency\Communication\Plugin\Application | 
-| DefaultCurrencyStorePreCreateValidationPlugin | Validates default currency before store is created.                                  | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| DefaultCurrencyStorePreUpdateValidationPlugin | Validates default currency before store is updated.                                  | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| CurrencyStorePostUpdatePlugin | Update currency store data after store is updated.                                   | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| CurrencyStoreCollectionExpanderPlugin | Expands currency store collection.                                                   | None | Spryker\Zed\Currency\Communication\Plugin\Store |
-| CurrencyStoreFormExpanderPlugin | Adds currency selection fields to the Store form.                                    | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormViewExpanderPlugin | Adds rendered currency tabs and tables as variables in template.                     | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormTabExpanderPlugin | Expands Store form with Currencies tab.                                              | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| AssignedCurrenciesStoreViewExpanderPlugin | Returns table with assigned currencies.                                              | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
-| CurrencyStoreTableExpanderPlugin | Expands table data rows of store table with currency codes.                          | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| PLUGIN | SPECIFICATION   | NAMESPACE |
+| --- |----| --- |
+| CurrencyBackendGatewayApplicationPlugin | Provides a currency service for the gateway request by getting it from the meta data. |  Spryker\Zed\Currency\Communication\Plugin\Application |
+| DefaultCurrencyStorePreCreateValidationPlugin | Validates default currency before store is created.        |  Spryker\Zed\Currency\Communication\Plugin\Store |
+| DefaultCurrencyStorePreUpdateValidationPlugin | Validates default currency before store is updated.        |  Spryker\Zed\Currency\Communication\Plugin\Store |
+| CurrencyStorePostUpdatePlugin | Update currency store data after store is updated.                     | Spryker\Zed\Currency\Communication\Plugin\Store |
+| CurrencyStoreCollectionExpanderPlugin | Expands currency store collection.                         | Spryker\Zed\Currency\Communication\Plugin\Store |
+| CurrencyStoreFormExpanderPlugin | Adds currency selection fields to the Store form.                  | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| CurrencyStoreFormViewExpanderPlugin | Adds rendered currency tabs and tables as variables in template.          | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| CurrencyStoreFormTabExpanderPlugin | Expands Store form with Currencies tab.                 | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| AssignedCurrenciesStoreViewExpanderPlugin | Returns table with assigned currencies.       | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
+| CurrencyStoreTableExpanderPlugin | Expands table data rows of store table with currency codes.        | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 
 
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
-```php 
+```php
 <?php
 
 namespace Pyz\Zed\Application;
@@ -335,7 +337,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure service container has `currency` service.
+Make sure the service container has the `currency` service.
 
 {% endinfo_block %}
 
@@ -360,7 +362,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
      */
     protected function getStorePreCreateValidationPlugins(): array
     {
-        return [ 
+        return [
             ...
             new DefaultCurrencyStorePreCreateValidationPlugin(),
             ...
@@ -372,7 +374,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
      */
     protected function getStorePreUpdateValidationPlugins(): array
     {
-        return [ 
+        return [
             ...
             new DefaultCurrencyStorePreUpdateValidationPlugin(),
             ...
@@ -419,11 +421,12 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Steps: 
-- Make sure that you get an error message if you try to create or update a store with a default currency that is not assigned to the store.
-- Make sure that `spy_currency_store` table has been updated with the default currency for the created store or updated store.
-- Make sure expanded store transfers have currency codes.
- 
+
+* Create or update a store with a default currency that is not assigned to the store.
+    This should give you an error message.
+* Create or update a store.
+    This should update the `spy_currency_store` database table with the default currency. Also, this should expand store transfers with currency codes.
+
 {% endinfo_block %}
 
 
@@ -488,7 +491,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
             ...
             new AssignedCurrenciesStoreViewExpanderPlugin(),
             ...
- 
+
         ];
     }
 

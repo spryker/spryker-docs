@@ -19,7 +19,7 @@ Follow the steps below to install the Marketplace MerchantPortal Core + Dynamic 
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION |
 | -------------------- | ------- |

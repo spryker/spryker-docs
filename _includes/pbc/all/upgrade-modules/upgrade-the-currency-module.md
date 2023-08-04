@@ -1,18 +1,14 @@
-{% info_block warningBox %}
-
-Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %} 
-
 This document describes how to upgrade the Currency module.
 
 ## Upgrading from version 3.* to version 4.0.0
 
-In this new version of the `Currency` module, we have added support configuration currency for each store in database.
-With the `Currency` module version 4 we have added the `spy_currency_store` database table to persist stores-locales in Zed.
-Also added column `fk_currency` into  `spy_store` for save default currency per store.
+{% info_block warningBox %}
 
-You can find more details about the changes on the [Currency module](https://github.com/spryker/currency/releases) release page.
+Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
+In this version of the `Country` module, we have enabled the configuration of currencies per store in the database. The `Country` module version 4 introduces the `spy_country_store` database table to persist stores-countries in Zed. Also, we've added the `fk_currency`  column to the `spy_store` table for saving default currencies per store. You can find more details about the changes on the [Currency module release page](https://github.com/spryker/currency/releases).
 
 *Estimated migration time: 5 min*
 
@@ -24,9 +20,17 @@ To upgrade to the new version of the module, do the following:
 composer require spryker/currency:"^4.0.0" --update-with-dependencies
 ```
 
-2. Run `vendor/bin/console transfer:generate` to update the transfer objects.
+2. Update transfer objects:
 
-3. Run `vendor/bin/console propel:install` to apply the database changes.
+```shell
+vendor/bin/console transfer:generate
+```
+
+3. Apply database changes:
+
+```shell
+vendor/bin/console propel:install
+```
 
 
 ***

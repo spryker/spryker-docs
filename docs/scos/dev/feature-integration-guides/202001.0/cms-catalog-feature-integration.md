@@ -14,7 +14,7 @@ redirect_from:
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |
@@ -199,7 +199,7 @@ Once you have finished the full integration of the feature, make sure that the a
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

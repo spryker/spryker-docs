@@ -10,9 +10,9 @@ Follow the steps below to install the Service Points feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
-|-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+|--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -42,11 +42,11 @@ Make sure that the following modules have been installed:
 
 1. Adjust the schema definition so entity changes trigger events.
 
-| AFFECTED ENTITY           | TRIGGERED EVENTS                                                                                                              |
-|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| spy_service_point         | Entity.spy_service_point.create<br>Entity.spy_service_point.update<br>Entity.spy_service_point.delete                         |
-| spy_service_point_address | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update<br>Entity.spy_service_point_address.delete |
-| spy_service_point_store   | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.update<br>Entity.spy_service_point_store.delete       |                                                                                                                         |
+| AFFECTED ENTITY               | TRIGGERED EVENTS                                                                                                              |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| spy_service_point             | Entity.spy_service_point.create<br>Entity.spy_service_point.update<br>Entity.spy_service_point.delete                         |
+| spy_service_point_address     | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update<br>Entity.spy_service_point_address.delete |
+| spy_service_point_store       | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.update<br>Entity.spy_service_point_store.delete       |
 
 **src/Pyz/Zed/ServicePoint/Persistence/Propel/Schema/spy_service_point.schema.xml**
 
@@ -1385,9 +1385,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| WIDGET                                      | VERIFICATION                                                                                                                                                                    |
-|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ServicePointSearchWidget                    | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`                    |
+| WIDGET                   | VERIFICATION                                                                                                                                                 |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ServicePointSearchWidget | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
 {% endinfo_block %}
 

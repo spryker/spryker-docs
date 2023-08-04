@@ -42,7 +42,6 @@ Make sure that the following modules have been installed:
 | ShipmentGui             | vendor/spryker/shipment-gui               |
 | Shipment                | vendor/spryker/shipment                   |
 | ShipmentType            | vendor/spryker/shipment-type              |
-| ShipmentTypeCart        | vendor/spryker/shipment-type-cart         |
 | ShipmentTypeDataImport  | vendor/spryker/shipment-type-data-import  |
 | ShipmentTypeStorage     | vendor/spryker/shipment-type-storage      |
 | ShipmentTypesBackendApi | vendor/spryker/shipment-types-backend-api |
@@ -979,40 +978,7 @@ Make sure that during checkout on the Shipment step, you can only see shipment m
 
 {% endinfo_block %}
 
-6. Configure the shipment type validation plugin:
-
-| PLUGIN                                 | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                                                                         |
-|----------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------|
-| ShipmentTypeCheckoutPreConditionPlugin | Validates if selected shipment type have relation to selected shipment method, current store and is active. |               | Spryker\Zed\ShipmentTypeCart\Communication\Plugin\Checkout\ShipmentTypeCheckoutPreConditionPlugin |
-
-**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Checkout;
-
-use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\ShipmentTypeCart\Communication\Plugin\Checkout\ShipmentTypeCheckoutPreConditionPlugin;
-
-class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>
-     */
-    protected function getCheckoutPreConditions(Container $container): array
-    {
-        return [
-            new ShipmentTypeCheckoutPreConditionPlugin(),
-        ];
-    }
-}
-```
-
-7. To enable the Backend API, register these plugins:
+6. To enable the Backend API, register these plugins:
 
 | PLUGIN                             | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                             |
 |------------------------------------|------------------------------------------|---------------|-----------------------------------------------------------------------|
@@ -1109,32 +1075,7 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Add translations
-
-Add translations as follows:
-
-1.  Append glossary according to your configuration:
-
-**src/data/import/glossary.csv**
-
-```csv
-shipment_type.checkout.validation.error,Selected delivery type "%name%" is not available,en_US
-shipment_type.checkout.validation.error,Die ausgewählte Lieferart "%name%" ist nicht verfügbar,de_DE
-```
-
-2. Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
-
-{% endinfo_block %}
-
-### 3) Set up Behavior
+### 2) Set up Behavior
 
 Enable the following behaviors by registering the plugins:
 

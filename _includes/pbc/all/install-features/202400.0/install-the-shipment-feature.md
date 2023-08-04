@@ -979,7 +979,7 @@ Make sure that during checkout on the Shipment step, you can only see shipment m
 
 {% endinfo_block %}
 
-6. Configure shipment type validation plugin:
+6. Configure the shipment type validation plugin:
 
 | PLUGIN                                 | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                                                                         |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------|
@@ -1130,7 +1130,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 

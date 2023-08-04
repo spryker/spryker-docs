@@ -1,12 +1,12 @@
 
 
-This document describes how to integrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) + [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) + [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) features into a Spryker project.
 
 {% info_block errorBox %}
 
 The following features integration guide expects the basic feature to be in place.
 
-The current feature integration guide adds the following functionality:
+The feature integration guide adds the following functionality:
 
 * [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html)
 * [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html)
@@ -43,7 +43,7 @@ Make sure that the following module has been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### 2) Set up the database schema and transfer objects
 
 Apply the database changes and generate entity and transfer changes:
 
@@ -71,7 +71,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Set up behavior
 
-Enable the following plugins.
+Enable the following plugins:
 
 | PLUGIN                               | SPECIFICATION                                                                                                            | PREREQUISITES | NAMESPACE                                                |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
@@ -104,6 +104,6 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you place an order selected shipment type is persisted to `spy_sales_shipment_type` and `spy_sales_shipment.fk_sales_shipment_type` is updated.
+Make sure that when you place an order, the selected shipment type is persisted to `spy_sales_shipment_type` and `spy_sales_shipment.fk_sales_shipment_type` is updated.
 
 {% endinfo_block %}

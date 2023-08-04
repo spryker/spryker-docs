@@ -5,8 +5,6 @@ template: howto-guide-template
 related:
   - title: Add and remove databases of stores
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
-  - title: Implement a new store
-    link: docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html
 ---
 
 This document outlines the various options available for a multi-store setup and is essential to review when defining the architecture for your project and prior to implementing a new store.

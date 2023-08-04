@@ -36,7 +36,7 @@ This document describes the steps to consider when setting up stores with multip
 
 {% info_block warningBox %}
 
-When using the Dynamic Multi-Store functionality, configuration via the `stores.php` file is no longer supported. Please refer to the [Integration Guide](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-dynamic-multistore-feature.html) for additional information.
+When using the Dynamic Multi-Store functionality, configuration via the `stores.php` file is no longer supported. Please refer to the [Integration Guide](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html) for additional information.
 
 {% endinfo_block %}
 

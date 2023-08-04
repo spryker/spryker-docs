@@ -13,9 +13,6 @@ To start feature integration, integrate the required features:
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                  |
-| Shipment                    | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/enhanced-click-and-collect/install-and-upgrade/install-the-shipment-feature.html)                          |
-| Customer Account Management | {{page.version}} | [Customer account management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| File details CMS block      | {{page.version}} | [File details - cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-block.csv.html#import-file-command)                                |
 
 ### 1) Install the required modules using Composer
 
@@ -38,7 +35,6 @@ Make sure that the following modules have been installed:
 | SalesServicePoint       | vendor/spryker/sales-service-point             |
 | SalesServicePointGui    | vendor/spryker/sales-service-point-gui         |
 | SalesServicePointWidget | vendor/spryker-shop/sales-service-point-widget |
-
 
 {% endinfo_block %}
 
@@ -674,53 +670,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-#### Register sales plugins
-
-| PLUGIN                                | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                                     |
-|---------------------------------------|------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
-| ServicePointOrderItemExpanderPlugin   | Expands sales order items with with related service point. | None          | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemExpanderPlugin  |
-| ServicePointOrderItemsPostSavePlugin  | Persists service point information for sales order items.  | None          | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemsPostSavePlugin |
-
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
-
-```php
-<?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
-namespace Pyz\Zed\Sales;
-
-use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
-use Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemExpanderPlugin;
-use Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemsPostSavePlugin;
-
-class SalesDependencyProvider extends SprykerSalesDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
-     */
-    protected function getOrderItemExpanderPlugins(): array
-    {
-        return [
-            new ServicePointOrderItemExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
-     */
-    protected function getOrderItemsPostSavePlugins(): array
-    {
-        return [
-            new ServicePointOrderItemsPostSavePlugin(),
-        ];
-    }
-}
-```
-
 #### Register publisher plugins
 
 | PLUGIN                                  | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                                         |
@@ -1350,7 +1299,7 @@ Follow the steps below to install the Service Points feature frontend.
 ### 1) Add translations
 
 1. Append glossary for the feature:
-   
+
 ```csv
 service_point_widget.search,"Search for Store, zip code or city...",en_US
 service_point_widget.search,"Suche nach Store, PLZ oder Stadt...",de_DE
@@ -1415,7 +1364,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\SalesServicePointWidget\Widget\SalesServicePointNameForShipmentGroupWidget;
 use SprykerShop\Yves\ServicePointWidget\Widget\ServicePointSearchWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
@@ -1428,7 +1376,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             ServicePointSearchWidget::class,
-            SalesServicePointNameForShipmentGroupWidget::class,
         ];
     }
 }
@@ -1441,7 +1388,6 @@ Make sure that the following widgets have been registered by adding the respecti
 | WIDGET                                      | VERIFICATION                                                                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ServicePointSearchWidget                    | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`                    |
-| SalesServicePointNameForShipmentGroupWidget | `{% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
 {% endinfo_block %}
 

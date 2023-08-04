@@ -5,4 +5,4 @@ last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202307.0/install-glue-api/install-the-dynamic-multistore-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-glue-api/install-the-dynamic-multistore-glue-api.md -->
+{% include pbc/all/install-glue-api/202307.0/install-the-dynamic-multistore-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/install-the-dynamic-multistore-glue-api.md -->

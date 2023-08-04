@@ -10,9 +10,9 @@ Follow the steps below to install the Service Points feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
-|-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                  |
+| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+|-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -42,11 +42,11 @@ Make sure that the following modules have been installed:
 
 1. Adjust the schema definition so entity changes trigger events.
 
-| AFFECTED ENTITY                     | TRIGGERED EVENTS                                                                                                              |
-|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| spy_service_point                   | Entity.spy_service_point.create<br>Entity.spy_service_point.update<br>Entity.spy_service_point.delete                         |
-| spy_service_point_address           | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update<br>Entity.spy_service_point_address.delete |
-| spy_service_point_store             | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.update<br>Entity.spy_service_point_store.delete       |                                                                                                                         |
+| AFFECTED ENTITY           | TRIGGERED EVENTS                                                                                                              |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| spy_service_point         | Entity.spy_service_point.create<br>Entity.spy_service_point.update<br>Entity.spy_service_point.delete                         |
+| spy_service_point_address | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update<br>Entity.spy_service_point_address.delete |
+| spy_service_point_store   | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.update<br>Entity.spy_service_point_store.delete       |                                                                                                                         |
 
 **src/Pyz/Zed/ServicePoint/Persistence/Propel/Schema/spy_service_point.schema.xml**
 
@@ -108,25 +108,25 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
-| CLASS NAMESPACE                                                             | EXTENDS                                                                                       |
-|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                          |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress                   |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery              |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery                      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery                     |
-| \Orm\Zed\ServicePoint\Persistence\SpyService                                | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyService                               |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceQuery                           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceQuery                          |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery              |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore                      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore                     |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery                 | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery                |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                            | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                           |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery                       | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery                      |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch               | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch              |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery          | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery         |
-| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage             | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage            |
-| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery        | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery       |
-| \Orm\Zed\ServicePointStorage\Persistence\SpySalesOrderItemServicePoint      | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePoint       |
-| \Orm\Zed\ServicePointStorage\Persistence\SpySalesOrderItemServicePointQuery | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePointQuery  |
+| CLASS NAMESPACE                                                             | EXTENDS                                                                                      |
+|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                         |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress                  |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery                      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyService                                | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyService                              |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceQuery                           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceQuery                         |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore                      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery                 | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery               |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                            | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                          |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery                       | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery                     |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch               | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch             |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery          | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery        |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage             | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage           |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery        | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery      |
+| \Orm\Zed\ServicePointStorage\Persistence\SpySalesOrderItemServicePoint      | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePoint      |
+| \Orm\Zed\ServicePointStorage\Persistence\SpySalesOrderItemServicePointQuery | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePointQuery |
 
 Make sure that the following changes have been applied in transfer objects:
 

@@ -1,10 +1,10 @@
 ---
-title: Security checker
+title: Open-source vulnerabilities checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Security Checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.
+Open-source vulnerabilities checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.
 
 ## Problem description
 
@@ -13,9 +13,9 @@ A project can sometimes use dependencies that contain known vulnerabilities.. To
 ## Example of an evaluator error message
 
 ```bash
-================
-SECURITY CHECKER
-================
+===================================
+OPEN SOURCE VULNERABILITIES CHECKER
+===================================
 
 Message: Improper header validation (CVE-2023-29197): https://github.com/guzzle/psr7/security/advisories/GHSA-wxmh-65f7-jcvw
 Target:  guzzlehttp/psr7:2.4.1

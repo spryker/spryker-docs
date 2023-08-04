@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Locale
+title: Upgrade the Locale module
 description: Use the guide to perform the Locale part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

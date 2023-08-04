@@ -26,10 +26,11 @@ composer require spryker/locale:"^4.0.0" --update-with-dependencies
 vendor/bin/console transfer:generate
 ```
 
-3. Run `vendor/bin/console propel:install` to apply the database changes.
+3. Apply database changes:
 
 ```bash
-
+vendor/bin/console propel:install
+```
 
 ***
 

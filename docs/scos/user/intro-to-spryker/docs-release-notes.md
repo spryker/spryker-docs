@@ -4,18 +4,6 @@ description: Spryker docs release notes
 template: concept-topic-template
 last_updated: Aug 2, 2023
 ---
-## August 2023
-
-In June 2023, we have added and updated the following pages:
-
-### New pages
-- [Service Points + Order Management feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-order-management-feature.html).
-
-## Updated pages
-- [Service Points feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-feature.html).
-
-For more details on these and other updates to the Spryker docs in August 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
-
 ## July 2023
 
 In July 2023, we have added and updated the following pages:

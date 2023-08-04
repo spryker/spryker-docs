@@ -24,7 +24,7 @@ The current feature integration guide only adds the [Add product to cart from th
 ## Install Feature Core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

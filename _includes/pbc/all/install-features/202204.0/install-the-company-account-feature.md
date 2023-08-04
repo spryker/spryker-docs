@@ -12,7 +12,7 @@ Follow the steps below to install the Company Account + Order Management feature
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -690,7 +690,7 @@ Follow these steps to install the Company Account + Order Management feature fro
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

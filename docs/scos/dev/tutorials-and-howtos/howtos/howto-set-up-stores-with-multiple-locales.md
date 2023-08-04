@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Set up stores with multiple locales"
+title: Set up stores with multiple locales
 description: Use the guide to configure different locales for your store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -27,6 +27,12 @@ redirect_from:
 This document describes the steps to consider when setting up stores with multiple locales.
 
 ## Configure locales for store
+
+{% info_block warningBox %}
+
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) installed, you can only add stores in the Back Office.
+
+{% endinfo_block %}
 
 You can find the stores' configuration in the `config/Shared/stores.php` file.
 

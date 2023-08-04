@@ -6,7 +6,7 @@ Follow the steps below to install the Warehouse Picking + Inventory Management f
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                 |
 |----------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|

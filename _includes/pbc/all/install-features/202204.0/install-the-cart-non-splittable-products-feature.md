@@ -9,7 +9,7 @@ Follow the steps below to install the Cart + Non-splittable Products feature cor
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |

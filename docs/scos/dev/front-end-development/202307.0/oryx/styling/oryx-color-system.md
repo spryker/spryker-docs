@@ -11,6 +11,7 @@ Oryx is currently running under an Early Access Release. Early Access Releases a
 
 {% endinfo_block %}
 
+An important part of the application user interface are the colors. Colors are used everywhere throughout components and are important for a good user experience. To ensure that you can adjust the colors to your needs throughout the application, a configurable color system is provided.
 
 Colors are used everywhere throughout UI components and are important for a good user experience. To enable you to adjust colors throughout the application to your needs, Oryx provides a configurable color system.
 

@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Spryker Security Checker is a tool that checks if security fixes exists for Spryker modules that presented in your project.
+Spryker Security Checker is a tool that checks if security fixes exist for Spryker modules that presented in your project.
 
 ## Problem description
 

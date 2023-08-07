@@ -12,9 +12,9 @@ To start feature integration, overview, and install the necessary features:
 | Cart         | {{page.version}} |
 | Prices       | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Run the following commands to install the required modules:
 
 ```bash
 composer require spryker/shipment-cart-connector: "^2.1.0" spryker/shipment-type-cart: "^0.1.0" --update-with-dependencies
@@ -30,7 +30,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
+### Set up transfer objects
 
 Run the following command(s) to apply transfer changes:
 
@@ -68,7 +68,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### Set up behavior
 
 Register the following plugins:
 
@@ -167,7 +167,7 @@ To start feature integration, integrate the required features:
 | Shipment | {{page.version}} |
 | Cart     | {{page.version}} |
 
-### 2) Add translations
+### Add translations
 
 Add translations as follows:
 

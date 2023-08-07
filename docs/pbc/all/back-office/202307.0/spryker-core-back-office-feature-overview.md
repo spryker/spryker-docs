@@ -59,12 +59,11 @@ You can always define what exactly is going to be needed for your specific proje
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
-| [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
+| [Get a general idea of the Back Office Translations](/docs/pbc/all/back-office/{{page.version}}/back-office-translations-overview.html) |
 
 ## Related Developer articles
 
 |INSTALLATION GUIDES  | REFERENCES|
 |---------|---------|
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Back Office Translations overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Back Office Translations overview](/docs/pbc/all/back-office/{{page.version}}/back-office-translations-overview.html) |
 | [Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html)  |

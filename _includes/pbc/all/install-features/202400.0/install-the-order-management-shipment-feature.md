@@ -73,33 +73,37 @@ Make sure that the following changes have been triggered in transfer objects:
 
 Enable the following plugins:
 
-| PLUGIN                               | SPECIFICATION                                                                                                            | PREREQUISITES | NAMESPACE                                                |
-|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
-| ShipmentTypeOrderItemsPostSavePlugin | Persists shipment type data to `spy_sales_shipment_type` table and updates `spy_sales_shipment` with `fk_shipment_type`. |               | Spryker\Zed\SalesShipmentType\Communication\Plugin\Sales |
+| PLUGIN                                | SPECIFICATION                                                                                                            | PREREQUISITES                                                       | NAMESPACE                                                   |
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------|
+| ShipmentTypeCheckoutDoSaveOrderPlugin | Persists shipment type data to `spy_sales_shipment_type` table and updates `spy_sales_shipment` with `fk_shipment_type`. | Should be executed after the `SalesOrderShipmentSavePlugin` plugin. | Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout |
 
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\Sales;
+namespace Pyz\Zed\Checkout;
 
-use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
-use Spryker\Zed\SalesShipmentType\Communication\Plugin\Sales\ShipmentTypeOrderItemsPostSavePlugin;
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout\ShipmentTypeCheckoutDoSaveOrderPlugin;
 
-class SalesDependencyProvider extends SprykerSalesDependencyProvider
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     /**
-     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface>|list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface>
      */
-    protected function getOrderItemsPostSavePlugins(): array
+    protected function getCheckoutOrderSavers(Container $container): array
     {
         return [
-            new ShipmentTypeOrderItemsPostSavePlugin(),
+            new ShipmentTypeCheckoutDoSaveOrderPlugin(),
         ];
     }
 }
+
 ```
 
 {% info_block warningBox "Verification" %}

@@ -17,7 +17,7 @@ Follow the steps below to install the Marketplace Return Management Glue API fea
 ### Prerequisites
 <!-- List the features a project must have before they can integrate the current feature. -->
 
-To start feature integration, integrate the required features:
+Install the required features:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
 | NAME | VERSION | INTEGRATION GUIDE |

@@ -334,3 +334,7 @@ Dynamic Multistore lets business users create stores in your platform's back-end
 For further information about accessing this Early Release feature, contact your Spryker representative.
 
 **Business benefit**: Boosts productivity and agility whilst empowering business users.
+
+#### Documentation
+
+[Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202307.0/dynamic-multistore.html)

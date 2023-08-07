@@ -67,7 +67,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 |   | Trigger all matching states inside this order   | Action button for changing the available states for all the items in the order. For details, see [Changing marketplace order states](#changing-marketplace-order-states). |
 | Custom Order Reference |   | Custom number that can be added to the order. |
 | Customer |   | Section with the information about the customer who has submitted the order. |
-|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/view-customers.html)* page. |
+|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersview-customers.html)* page. |
 |   | Name | Name of the customer. |
 |   | Email | Customer’s email address. |
 |   | Previous orders count | Number of orders the customer has submitted. |

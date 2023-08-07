@@ -8,7 +8,7 @@ related:
     - title: Marketplace Shipment
       link: docs/pbc/all/carrier-management/page.version/marketplace/marketplace-shipment-feature-overview.html
     - title: Marketplace and merchant state machines
-      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+      link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
     - title: Marketplace and merchant state machines interaction
       link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
     - title: 'How-to: Create a new MerchantOms flow'

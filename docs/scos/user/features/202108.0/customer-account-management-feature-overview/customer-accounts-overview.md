@@ -64,8 +64,8 @@ A Back Office user can do the following:
 * Check last orders of a customer in the shop.
 
 For details, see the following:
-* [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)
-* [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)
+* [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customerscreate-customers.html)
+* [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersadd-notes-to-customers.html)
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
@@ -102,12 +102,12 @@ Customer can perform the following actions the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
-| [Edit customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)  |
-| [View customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/view-customers.html)  |
-| [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)  |
-| [Add customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html)  |
-| [Edit customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customer-addresses.html)  |
+| [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customerscreate-customers.html)  |
+| [Edit customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersedit-customers.html)  |
+| [View customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersview-customers.html)  |
+| [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersadd-notes-to-customers.html)  |
+| [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersadd-customer-addresses.html)  |
+| [Edit customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersedit-customer-addresses.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

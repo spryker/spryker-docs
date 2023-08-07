@@ -8,9 +8,9 @@ related:
     - title: Marketplace Shipment
       link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
     - title: Marketplace and merchant state machines
-      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+      link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
     - title: Marketplace and merchant state machines interaction
-      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+      link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
     - title: 'How-to: Create a new MerchantOms flow'
       link: docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
 ---
@@ -23,7 +23,7 @@ By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can de
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) feature overview for business users.
 
 {% endinfo_block %}
 

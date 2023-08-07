@@ -44,7 +44,7 @@ Review the [reference information](#reference-information-add-a-customer-address
     The **View** page opens with the address displayed in the **ADDRESSES** pane.
 
 **Tips and tricks**
-The first address added is used for both billing and shipping. To use different addresses, add one more address for the customer and select billing and shipping addresses by [editing the customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)
+The first address added is used for both billing and shipping. To use different addresses, add one more address for the customer and select billing and shipping addresses by [editing the customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersedit-customers.html)
 
 ## Reference information: Add a customer address
 
@@ -67,4 +67,4 @@ The following table describes the attributes you enter and select when adding a 
 
 ## Next steps
 
-To select addresses for a customer, [edit a customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)
+To select addresses for a customer, [edit a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersedit-customers.html)

@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchant order f
 template: concept-topic-template
 ---
 
-In the marketplace, when a buyer goes through checkout, the [Marketplace order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) is created. Such an order can contain offers and products from different merchants. The part of the order that belongs to a certain merchant is called *merchant order*. The merchant order created in the system after the Marketplace order has been placed. Thus, each merchant order contains at least one item from the Marketplace order.
+In the marketplace, when a buyer goes through checkout, the [Marketplace order](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) is created. Such an order can contain offers and products from different merchants. The part of the order that belongs to a certain merchant is called *merchant order*. The merchant order created in the system after the Marketplace order has been placed. Thus, each merchant order contains at least one item from the Marketplace order.
 
 ![Merchant order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Merchant+Order+overview/Merchant+Order+schema.png)
 
@@ -25,4 +25,4 @@ A merchant order consists of merchant order items, which are items (products) pu
 | Merchant Order tax total  | Total tax amount from the grand total.   |
 | Marketplace Operator fees total | Total amount of fees paid to the Marketplace administrator.  |
 
-The rounding logic for the calculations is the same as the one used for the Marketplace order. For details, see [Rounding in the Marketplace Order feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html#rounding).
+The rounding logic for the calculations is the same as the one used for the Marketplace order. For details, see [Rounding in the Marketplace Order feature overview](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html#rounding).

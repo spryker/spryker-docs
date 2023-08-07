@@ -47,7 +47,7 @@ that are registered by the user and then configured using the Table Configuratio
 
 ### Features
 
-Every other piece of functionality is extracted into the [Table Feature](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/):
+Every other piece of functionality is extracted into the [Table Feature](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-extension.html):
 
 - A *Table Feature* is an Angular Component that encapsulates a specific extension of the Core Table.
 - Core Table contains specific placeholders in its view that Table Feature may target to render its piece of UI.
@@ -95,7 +95,7 @@ export class AppModule {}
 A Table Component does not contain any filters a table usually has (filtering, searching).
 The Core Table Component has just a view of the columns and data and has built-in sorting.
 
-To use [Filter components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
+To use [Filter components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
 
 ```ts
 @NgModule({
@@ -113,7 +113,7 @@ export class AppModule {}
 
 ### Actions
 
-There is a way to trigger some [Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions.html) while user interacts with the Table.
+There is a way to trigger some [Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html) while user interacts with the Table.
 
 A few common Table Features that can trigger actions are available in the UI library:
 

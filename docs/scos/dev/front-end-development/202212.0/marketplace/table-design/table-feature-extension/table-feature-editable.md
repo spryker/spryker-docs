@@ -61,7 +61,7 @@ Component configuration:
 
 Take a closer look at all the options available.
 
-- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/#interfaces) document:  
+- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-design.html#interfaces) document:  
     - `id`—a cell `id`.  
     - `type`—a cell `type`.  
     - `typeOptions`–to learn more about the column types available, see [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html):  

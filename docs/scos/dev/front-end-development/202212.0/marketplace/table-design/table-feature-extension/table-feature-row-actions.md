@@ -39,7 +39,7 @@ Check out an example usage of the Table Feature Row Actions in the `@spryker/tab
 Component configuration:
 
 - `enabled`—enables the feature via config.  
-- `actions`—an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/on}}/marketplace/on}}/marketplace/on}}/marketplace/ui-components-library/actions/actions.html).  
+- `actions`—an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/on}}/marketplace/on}}/marketplace/on}}/marketplace/ui-components-library/actions/ui-components-library-actions.html).  
 - `click`—indicates which action is used for clicking the table row by its `id`.
 - `rowIdPath`—is used for the `rowId` action context.  
 - `availableActionsPath`—path to an array with the available action IDs in the table data row (supports nested objects using dot notation for ex. `prop.nestedProp`).  

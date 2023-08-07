@@ -175,7 +175,7 @@ There are multiple standard Table Features that are shipped with the UI library:
 
 - [Batch Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.
 - [Editable](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-editable.html) - allows editing/adding rows of the table
-- [Filters](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/) - allows filtering the data set.
+- [Filters](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html) - allows filtering the data set.
 - [Pagination](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-pagination.html) - renders pagination of the table.
 - [Row Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html) - allows triggering actions from rows.
 - [Search](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-search.html) - allows searching within the data set.

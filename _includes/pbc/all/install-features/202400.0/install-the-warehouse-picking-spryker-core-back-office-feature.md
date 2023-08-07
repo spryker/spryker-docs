@@ -6,11 +6,11 @@ This document describes how to integrate the Warehouse picking + [Spryker Core B
 ## Install feature core
 
 Follow the steps below to install the Warehouse Picking + Spryker Core Back Office feature.
-To start feature integration, integrate the required features:
+Install the required features:
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                     | VERSION          | INTEGRATION GUIDE                                                                                                                                            |
 |--------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|

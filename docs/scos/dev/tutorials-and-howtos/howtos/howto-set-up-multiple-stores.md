@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Set up multiple stores"
+title: Set up multiple stores
 description: Learn how to set up multiple stores for your project.
 last_updated: Dec 22, 2022
 template: howto-guide-template
@@ -15,6 +15,12 @@ redirect_from:
   - /docs/multiple-stores
   - /docs/en/multiple-stores
 ---
+
+{% info_block warningBox %}
+
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) installed, you can only add stores in the Back Office.
+
+{% endinfo_block %}
 
 With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
 

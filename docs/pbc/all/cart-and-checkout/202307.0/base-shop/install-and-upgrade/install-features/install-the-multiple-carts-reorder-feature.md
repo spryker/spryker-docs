@@ -7,7 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-reor
 originalArticleId: d5e4f165-d6b1-47fc-a008-ee010307c447
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/multiple-carts-reorder-feature-integration.html  
-  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-multiple-carts-reorder-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-multiple-carts-reorder-feature.md -->

@@ -12,7 +12,7 @@ redirect_from:
 
 ## Install Feature Core
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |
@@ -1156,7 +1156,7 @@ Note: You need to complete Feature Frontend integration before you can verify th
 ## Install feature frontend
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

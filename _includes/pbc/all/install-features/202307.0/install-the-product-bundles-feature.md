@@ -4,7 +4,7 @@ This integration guide expects the basic feature to be in place. It adds only th
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 
 | NAME | VERSION | INTEGRATION GUIDE |

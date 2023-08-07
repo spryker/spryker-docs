@@ -14,7 +14,7 @@ redirect_from:
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |
@@ -115,7 +115,7 @@ Make sure that the following plugins were registered:<table><thead><tr><th>Plugi
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

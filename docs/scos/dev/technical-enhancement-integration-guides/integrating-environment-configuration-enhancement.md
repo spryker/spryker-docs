@@ -36,7 +36,7 @@ Follow the steps below to integrate the environment enhancement into your projec
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |

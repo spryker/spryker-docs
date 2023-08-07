@@ -19,7 +19,7 @@ related:
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |
@@ -145,7 +145,7 @@ Make sure that shipment is saved with the quote in the `spy_quote` table after s
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 |Name|Version |
 | --- | --- |

@@ -10,7 +10,6 @@ Oryx is currently running under an Early Access Release. Early Access Releases a
 
 {% endinfo_block %}
 
-
 An Oryx application starts with the application orchestration. It lets you bootstrap and configure your application from reusable bits and pieces, such as the following:
 
 - [Features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-feature.html)

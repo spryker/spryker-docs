@@ -14,7 +14,7 @@ redirect_from:
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name |Version  |
 | --- | --- |
@@ -412,7 +412,7 @@ Make sure that when you make lock reset for a cart, quote request associated wit
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name |Version  |
 | --- | --- |

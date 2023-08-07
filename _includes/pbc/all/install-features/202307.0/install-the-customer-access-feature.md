@@ -8,7 +8,7 @@ Follow the steps below to install the Customer Access feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
@@ -403,7 +403,7 @@ Follow the steps below to install the Customer Access feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|

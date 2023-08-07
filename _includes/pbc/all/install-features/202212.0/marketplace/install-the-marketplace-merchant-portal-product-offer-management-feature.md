@@ -4,7 +4,7 @@ This document describes how to integrate the Marketplace Merchant Portal Product
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|

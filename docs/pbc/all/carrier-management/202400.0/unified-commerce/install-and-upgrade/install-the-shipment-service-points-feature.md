@@ -1,7 +1,7 @@
 ---
 title: Install the Shipment + Service Points feature
 description: Learn how to integrate the Shipment + Service Points feature into your project
-last_updated: May 30, 2023
+last_updated: Jul 31, 2023
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/install-the-shipment-service-points-feature.html

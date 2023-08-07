@@ -8,7 +8,7 @@ Follow the steps below to install the Product + Category feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -660,7 +660,7 @@ Follow the steps below to install the Product + Category feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|

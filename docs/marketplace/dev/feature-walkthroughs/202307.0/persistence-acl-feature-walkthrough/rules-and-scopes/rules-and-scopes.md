@@ -36,11 +36,11 @@ The concept of scopes is very flexible. It lets you create any rules that suit t
 As mentioned above, there are 3 types of scopes: `global`, `segment` and `inherited`.
 In the database layer scope represented as enum:
 
-| Scope | Database value |
-|-----|-----|
-| global | 0 |
-| segment | 1 |
-| inherited | 2 |
+| SCOPE     | DATABASE VALUE | PRIORITY |
+|-----------|----------------|----------|
+| global    | 0              | 2        |
+| segment   | 1              | 0        |
+| inherited | 2              | 1        |
 
 Depending on the scope, the system behaves differently. Read the documentation for each of them:
 - [Global scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html)

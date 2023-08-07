@@ -12,7 +12,7 @@ This document describes how to integrate the Merchant Portal - Marketplace Order
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|

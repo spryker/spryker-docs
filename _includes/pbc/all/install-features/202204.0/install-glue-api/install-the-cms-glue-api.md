@@ -4,7 +4,7 @@ This document describes how to integrate the CMS feature API into a Spryker proj
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |

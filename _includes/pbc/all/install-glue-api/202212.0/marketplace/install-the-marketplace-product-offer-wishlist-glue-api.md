@@ -6,7 +6,7 @@ Follow the steps below to install the Marketplace Product Offer + Wishlist Glue 
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

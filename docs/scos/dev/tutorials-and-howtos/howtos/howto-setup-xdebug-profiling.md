@@ -9,7 +9,7 @@ This document explains how to set up *XDebug profiling* in a local development e
 
 ## Prerequisites
 
-* Working SCOS applicaiton setup with our Docker SDK *.
+* Working SCOS application setup with our Docker SDK.
 * An integrated development envrinonment (IDE) of your choice—for example, PHPStorm or Visual Studio Code.
 * A plugin or software to view cachegrind files (kqachegrind, qcachegrind, or a plugin for your IDE).
 

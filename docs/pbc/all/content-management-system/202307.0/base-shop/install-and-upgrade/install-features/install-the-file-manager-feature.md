@@ -1,7 +1,7 @@
 ---
 title: File Manager feature integration
 description: File Manager lets you upload and manager your assets effectively.
-last_updated: Dec 30, 2022
+last_updated: Aug 07, 2023
 template: feature-integration-guide-template
 related:
 - title: File Manager feature walkthrough

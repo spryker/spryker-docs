@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Service Points + Order Management feature into a Spryker project.
+This document describes how to integrate the Service Points + [Order Management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -72,6 +72,8 @@ Make sure that sales plugins work correctly:
 {% endinfo_block %}
 
 ## Install feature frontend
+
+Follow the steps below to install the {Feature Name} feature frontend.
 
 ## Set up widgets
 

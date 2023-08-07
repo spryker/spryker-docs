@@ -196,6 +196,9 @@ Make sure that the following changes have been applied in transfer objects:
 | Quote                                 | class | created | src/Generated/Shared/Transfer/QuoteTransfer                                 |
 | SaveOrder                             | class | created | src/Generated/Shared/Transfer/SaveOrderTransfer                             |
 | ShipmentGroup                         | class | created | src/Generated/Shared/Transfer/ShipmentGroupTransfer                         |
+| RestServicePointsAttributes           | class | created | src/Generated/Shared/Transfer/RestServicePointsAttributesTransfer           |
+| RestServicePointAddressesAttributes   | class | created | src/Generated/Shared/Transfer/RestServicePointAddressesAttributesTransfer   |
+| RestErrorMessage                      | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                      |
 
 {% endinfo_block %}
 
@@ -499,6 +502,10 @@ service_point.validation.service_type_key_immutability,The service type key is i
 service_point.validation.service_type_key_immutability,Der Service-Typ-Schlüssel ist unveränderlich.,de_DE
 service_point.validation.service_key_exists,A service with the same key already exists.,en_US
 service_point.validation.service_key_exists,Ein Service mit demselben Schlüssel existiert bereits.,de_DE
+service_points_rest_api.error.endpoint_not_found,The endpoint is not found.,en_US
+service_points_rest_api.error.endpoint_not_found,Der Endpunkt wurde nicht gefunden.,de_DE
+service_points_rest_api.error.service_point_identifier_is_not_specified,The service point identifier is not specified.,en_US
+service_points_rest_api.error.service_point_identifier_is_not_specified,Der Servicestellen-Identifikator ist ungültig.,de_DE
  ```
 
 2. Import data:
@@ -714,13 +721,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Register query expander and result formatter plugins
 
-| PLUGIN                                            | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                              |
-|---------------------------------------------------|----------------------------------------------------|---------------|------------------------------------------------------------------------|
-| ServicePointSearchResultFormatterPlugin           | Maps raw Elasticsearch results to a transfer.      | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
-| SortedServicePointSearchQueryExpanderPlugin       | Adds sorting to a search query.                    | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| PaginatedServicePointSearchQueryExpanderPlugin    | Adds pagination to a search query.                 | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| StoreServicePointSearchQueryExpanderPlugin        | Adds filtering by locale to a search query.        | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServiceTypesServicePointSearchQueryExpanderPlugin | Adds filtering by service types to a search query. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| PLUGIN                                                            | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                              |
+|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| ServicePointSearchResultFormatterPlugin                           | Maps raw Elasticsearch results to a transfer.                                                                 | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
+| SortedServicePointSearchQueryExpanderPlugin                       | Adds sorting to a search query.                                                                               | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes service point address relation from query if `excludeAddressRelation` request parameter is provided. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 
@@ -757,6 +765,7 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
             new SortedServicePointSearchQueryExpanderPlugin(),
             new PaginatedServicePointSearchQueryExpanderPlugin(),
             new ServiceTypesServicePointSearchQueryExpanderPlugin(),
+            new ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin(),
         ];
     }
 }
@@ -1289,6 +1298,89 @@ Make sure that you can send the following requests:
           }
       }
   ```
+
+{% endinfo_block %}
+
+3. To enable the Storefront API, register the plugins:
+
+| PLUGIN                                     | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                 |
+|--------------------------------------------|---------------------------------------------------|---------------|-----------------------------------------------------------|
+| ServicePointsResourceRoutePlugin           | Registers the `service-points` resource.          |               | \Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication |
+| ServicePointAddressesResourceRoutePlugin   | Registers the `service-point-addresses` resource. |               | \Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication\ServicePointAddressesResourceRoutePlugin;
+use Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication\ServicePointsResourceRoutePlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        return [
+            new ServicePointsResourceRoutePlugin(),
+            new ServicePointAddressesResourceRoutePlugin(),
+        ];
+    }
+}
+```
+
+4. To enable the Storefront API relationships, register the plugin:
+
+| PLUGIN                                                              | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                 |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------------|---------------|-----------------------------------------------------------|
+| ServicePointAddressesByServicePointUuidResourceRelationshipPlugin   | Adds the `service-point-addresses` relationship to the `service-points` resource. |               | \Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication\ServicePointAddressesByServicePointUuidResourceRelationshipPlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            ServicePointsRestApiConfig::RESOURCE_SERVICE_POINTS,
+            new ServicePointAddressesByServicePointUuidResourceRelationshipPlugin(),
+        );
+
+        return $resourceRelationshipCollection;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can send the following requests:
+
+* `GET https://glue.mysprykershop.com/service-points`
+* `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}`
+* `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
 
 {% endinfo_block %}
 

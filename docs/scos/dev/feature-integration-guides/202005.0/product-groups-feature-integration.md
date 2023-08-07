@@ -16,7 +16,7 @@ Follow the steps below to install Product group feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 
 

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
   - /docs/handling-concurrent-rest-requests-and-caching-with-entity-tags
   - /docs/en/handling-concurrent-rest-requests-and-caching-with-entity-tags
+  - /docs/scos/dev/glue-api-guides/202212.0/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
 related:
   - title: Glue Infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html

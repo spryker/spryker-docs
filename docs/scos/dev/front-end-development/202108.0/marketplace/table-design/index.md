@@ -42,7 +42,7 @@ A Table Component is configured via [Table Configuration](/docs/scos/dev/front-e
 
 ### Datasources
 
-To render data, the Table must receive it via [Datasources](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/)
+To render data, the Table must receive it via [Datasources](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasources.html)
 that are registered by the user and then configured using the Table Configuration.
 
 ### Features
@@ -71,7 +71,7 @@ export class AppModule {}
 
 ### Columns
 
-Columns in a Table are defined by the [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/) and rendered within the columns (text, image, link).
+Columns in a Table are defined by the [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html) and rendered within the columns (text, image, link).
 A new Column Type may be created and registered to the table.
 
 A Column component must implement `TableColumn` interface with the defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
@@ -113,7 +113,7 @@ export class AppModule {}
 
 ### Actions
 
-There is a way to trigger some [Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/) while user interacts with the Table.
+There is a way to trigger some [Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions.html) while user interacts with the Table.
 
 A few common Table Features that can trigger actions are available in the UI library:
 

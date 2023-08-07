@@ -61,7 +61,7 @@ Take a closer look at all the options available.
 - `columns` (only required properties are listed, the entire interface can be found in [Table Design](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/#interfaces) article.):  
     - `id`—a cell `id`.  
     - `type`—a cell `type`.  
-    - `typeOptions`. Check [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/)) to learn more about the column types available.):  
+    - `typeOptions`. Check [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html)) to learn more about the column types available.):  
         - `value`—sets the default value to the newly added row's cell.  
 
 - `create`:  

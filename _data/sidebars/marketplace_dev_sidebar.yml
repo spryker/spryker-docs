@@ -24,7 +24,6 @@ entries:
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
             include_versions:
             - "202204.0"
-
       - title: Marketplace architecture overview
         url: /docs/marketplace/dev/architecture-overview/architecture-overview.html
         nested:
@@ -38,8 +37,7 @@ entries:
             url: /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
 
           - title: Marketplace in the Back Office
-            url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
-
+            url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.htm
       - title: Feature walkthroughs
         url: /docs/marketplace/dev/feature-walkthroughs/feature-walkthroughs.html
         nested:
@@ -249,7 +247,6 @@ entries:
 
               - title: Marketplace Merchant Portal Product Offer Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
-
       - title: Feature integration guides
         url: /docs/marketplace/dev/feature-integration-guides/feature-integration-guides.html
         include_versions:
@@ -650,7 +647,6 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
                 include_versions:
                 - "202204.0"
-
       - title: Glue API guides
         url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         nested:
@@ -867,7 +863,6 @@ entries:
 
               - title: Managing shopping list items
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
-
       - title: Data export
         nested:
           - title: Data export Merchant Orders .csv files format
@@ -1017,7 +1012,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-
       - title: Front-end
         url: /docs/marketplace/dev/front-end/front-end.html
         include_versions:
@@ -1515,3 +1509,30 @@ entries:
             - "202204.0"
             - "202212.0"
             - "202307.0"
+      - title: Technical enhancement guides
+        include versions:
+        - "202204.0"
+        - "202212.0"
+        - "202307.0"
+        nested:
+        - title: Migration guide - Upgrade to Angular v12
+          url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
+          include versions:
+          - "202204.0"
+          - "202212.0"
+          - "202307.0"
+        - title: Migration guide - Upgrade to Angular v15
+          url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v15.html
+          include versions:
+          - "202307.0"
+      - title: HowTos
+        url: /docs/marketplace/dev/howtos/howtos.html
+        nested:
+        - title: "HowTo: Create a new Angular module with application"
+          url: /docs/marketplace/dev/howtos/how-to-create-a-new-angular-module-with-application.html
+        - title: "How-To: Create a new Gui table column type"
+          url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
+        - title: "How-To: Split products by stores"
+          url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
+        - title: "How-To: Upgrade Spryker instance to the Marketplace"
+          url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html

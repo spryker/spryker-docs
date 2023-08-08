@@ -15,4 +15,4 @@ template: concept-topic-template
 
 ## Next steps
 
-[Integrate Vertex](/docs/pbc/all/tax-management/{{site.version}}/vertex/integrate-vertex.html)
+[Install Vertex](/docs/pbc/all/tax-management/{{site.version}}/vertex/install-vertex.html)

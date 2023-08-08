@@ -10,7 +10,7 @@ template: howto-guide-template
 
 To enable the Vertex integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module.
 
-Next follow these steps to integrate the connector module for the Vertex app.
+Follow these steps to integrate the connector module for the Vertex app.
 
 ### 1. Configure shared configs.
 
@@ -173,49 +173,6 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 // ...
 ```
 
-### 5. Configure what data has to be sent to Vertex
-
-Additional data for Spryker quote and order objects can be added as plugins in  `src/Pyz/Zed/TaxApp/TaxAppDependencyProvider.php`:
-
-{% info_block infoBox "Note" %}
-
-Please pay attention that you have to implement that plugin stack on your side. The explanation of what they should be will be provided below.
-
-{% endinfo_block %}
-
-```php
-<?php
-
-namespace Pyz\Zed\TaxApp;
-
-// ...
-
-class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpanderPluginInterface>
-     */
-    protected function getCalculableObjectExpanderPluginCollection(): array
-    {
-        return [
-            // Put your Calculable Object Expander plugins here
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\OrderTaxAppExpanderPluginInterface>
-     */
-    protected function getOrderExpanderPluginCollection(): array
-    {
-        return [
-             // Put your Order Expander plugins here
-        ];
-    }
-}
-```
-
-Usually, tax apps require Order/Cart and Order/Cart Items expander plugins. You can check example implementation of these plugins for the Vertex app.
-
 ## Step 2 - Integrate the Vertex app
 
 ### 1. Configure Vertex Specific Metadata Transfers
@@ -275,9 +232,7 @@ In general `SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to V
 `SaleTaxMetadata` is equal to Invoicing/Quotation request payload excluding LineItems.
 `ItemTaxMetadata` is equal to Line Item API Payload.
 
-### 2. Implement Vertex Specific Metadata Extender Plugins 
-
-Here explained how different Vertex Tax Metadata expander plugins could be organized.
+### 2. Implement Vertex Specific Metadata Extender Plugins
 
 #### Customer Class Code expanders
 
@@ -285,7 +240,7 @@ You could introduce them like:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexCodeExpanderPlugin.php`
 
-With contents:
+Example:
 
 ```php
 <?php
@@ -305,7 +260,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
      */
     public function expand(OrderTransfer $orderTransfer): OrderTransfer
     {
-        $orderTransfer->getTaxMetadata()->setCustomerClassCode('CustomerClassCode');
+        $orderTransfer->getTaxMetadata()->setCustomer(['customerCode' => 'vertex-customer-code']);
 
         return $orderTransfer;
     }
@@ -316,7 +271,7 @@ For Calculation process:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexCodeExpanderPlugin.php`
 
-with contents:
+Example:
 
 ```php
 <?php
@@ -336,7 +291,7 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
      */
     public function expand(CalculableObjectTransfer $quoteTransfer): CalculableObjectTransfer
     {
-        $quoteTransfer->getTaxMetadata()->setCustomerClassCode('CustomerClassCode');
+        $quoteTransfer->getTaxMetadata()->setCustomer(['customerCode' => 'vertex-customer-code']);
 
         return $quoteTransfer;
     }
@@ -353,7 +308,7 @@ and for Quote Items
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectItemWithVertexProductClassCodeExpanderPlugin.php`
 
-Contents of both plugins would be pretty similar:
+Contents of both plugins would be similar:
 
 ```php
 // ...
@@ -367,7 +322,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
     public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
     {
         foreach ($calculableObjectTransfer->getItems() as $itemTransfer) {
-            $itemTransfer->getTaxMetadata()->setProduct(['productClass' => 'ProductClassCode']);
+            $itemTransfer->getTaxMetadata()->setProduct(['productClass' => 'vertex-product-class-code']);
         }
 
         return $calculableObjectTransfer;
@@ -375,13 +330,15 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 }
 ```
 
-PLease pay attention: The same Product Class Code extension should be done for all Product Options and other Order Expenses because in Vertex prospective they all are separate items for tax calculation. To find them a proper place you can refer to transfer extension described above.
+{% info_block infoBox "Note" %}
 
+Please pay attention that the same Product Class Code extension should be done for all the Product Options and other Order Expenses because in Vertex prospective all of them are separate items for tax calculation. To find them a proper place you can refer to transfers definition which was described above.
+
+{% endinfo_block %}
 
 #### Flexible fields extension
 
-Flexible fields extension plugins would look like similar to Item Product Class Code extension plugins.
-For example:
+Example:
 
 ```php
 
@@ -404,7 +361,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
                         'flexibleCodeFields' => [
                             [
                                 'fieldId' => 1,
-                                'value' => 'Code',
+                                'value' => 'vertex-flexible-code-value',
                             ],
                         ],
                     ],
@@ -416,7 +373,9 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 }
 ```
 
-So in general the plugin stack could look like this:
+### 3. Configure Tax App Dependency Provider
+
+As the result the plugin stack could look like this:
 
 ```php
 

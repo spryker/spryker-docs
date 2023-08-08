@@ -1,24 +1,24 @@
 ---
-title: Security checker
+title: Spryker security checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Security Checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.
+Security Update Checker is a tool that checks if security fixes exist for Spryker modules that are present in your project.
 
 ## Problem description
 
-A project can sometimes use dependencies that contain known vulnerabilities. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
+A project can sometimes use dependencies that contain known vulnerabilities. To minimize the security risk for the project, these dependencies should be updated to the version that has the vulnerability fixed.
 
 ## Example of an evaluator error message
 
 ```bash
-================
-SECURITY CHECKER
-================
+========================
+SPRYKER SECURITY CHECKER
+========================
 
-Message: Improper header validation (CVE-2023-29197): https://github.com/guzzle/psr7/security/advisories/GHSA-wxmh-65f7-jcvw
-Target:  guzzlehttp/psr7:2.4.1
+Message: Security update available for the module spryker/price-product-merchant-relationship-storage, actual version 1.14.0
+Target:  spryker/price-product-merchant-relationship-storage:1.15.0
 ```
 
 ## Example of code that causes an evaluator error
@@ -28,11 +28,11 @@ Your `composer.lock` file contains package versions that have security issues:
 ```bash
 ...
 {
-    "name": "guzzlehttp/psr7",
-    "version": "2.4.1",
+    "name": "spryker/price-product-merchant-relationship-storage",
+    "version": "1.14.0",
     "source": {
         "type": "git",
-        "url": "https://github.com/guzzle/psr7.git",
+        "url": "https://github.com/spryker/price-product-merchant-relationship-storage.git",
         ...
     },
     ...

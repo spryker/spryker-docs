@@ -4665,8 +4665,6 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
-        - title: Security update checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security-update.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines

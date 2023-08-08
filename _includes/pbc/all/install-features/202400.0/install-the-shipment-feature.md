@@ -22,9 +22,10 @@ Follow the steps below to install the Shipment feature core.
 To start the feature integration, integrate the required features:
 
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
-|--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  |
+| NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+|------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core     | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)                |
 
 ### 1) Install the required modules using Composer
 
@@ -38,11 +39,11 @@ Make sure that the following modules have been installed:
 
 | MODULE                  | EXPECTED DIRECTORY                        |
 |-------------------------|-------------------------------------------|
+| SalesShipmentType       | vendor/spryker/sales-shipment-type        |
 | ShipmentDataImport      | vendor/spryker/shipment-data-import       |
 | ShipmentGui             | vendor/spryker/shipment-gui               |
 | Shipment                | vendor/spryker/shipment                   |
 | ShipmentType            | vendor/spryker/shipment-type              |
-| ShipmentTypeCart        | vendor/spryker/shipment-type-cart         |
 | ShipmentTypeDataImport  | vendor/spryker/shipment-type-data-import  |
 | ShipmentTypeStorage     | vendor/spryker/shipment-type-storage      |
 | ShipmentTypesBackendApi | vendor/spryker/shipment-types-backend-api |
@@ -147,13 +148,15 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY                      | TYPE   | EVENT   |
-|--------------------------------------|--------|---------|
-| spy_shipment_method_store            | table  | created |
-| spy_shipment_type                    | table  | created |
-| spy_shipment_type_storage            | table  | created |
-| spy_shipment_type_store              | table  | created |
-| spy_shipment_method.fk_shipment_type | column | created |
+| DATABASE ENTITY                       | TYPE   | EVENT   |
+|---------------------------------------|--------|---------|
+| spy_sales_shipment_type               | table  | created |
+| spy_shipment_method_store             | table  | created |
+| spy_shipment_type                     | table  | created |
+| spy_shipment_type_storage             | table  | created |
+| spy_shipment_type_store               | table  | created |
+| spy_sales_shipment.fk_shipment_type   | column | created |
+| spy_shipment_method.fk_shipment_type  | column | created |
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -175,6 +178,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer     |
 | ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer   |
 | ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer        |
+| SalesShipmentType                       | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer               |
 | ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                  |
 | ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                        |
 | ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                            |
@@ -979,7 +983,47 @@ Make sure that during checkout on the Shipment step, you can only see shipment m
 
 {% endinfo_block %}
 
-6. To enable the Backend API, register these plugins:
+6. Configure shipment type order saver plugins:
+
+| PLUGIN                                | SPECIFICATION                                                                                                            | PREREQUISITES                                                       | NAMESPACE                                                   |
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------|
+| ShipmentTypeCheckoutDoSaveOrderPlugin | Persists shipment type data to `spy_sales_shipment_type` table and updates `spy_sales_shipment` with `fk_shipment_type`. | Should be executed after the `SalesOrderShipmentSavePlugin` plugin. | Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout |
+
+
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout\ShipmentTypeCheckoutDoSaveOrderPlugin;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface>|list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface>
+     */
+    protected function getCheckoutOrderSavers(Container $container): array
+    {
+        return [
+            new ShipmentTypeCheckoutDoSaveOrderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when you place an order, the selected shipment type is persisted to `spy_sales_shipment_type` and `spy_sales_shipment.fk_sales_shipment_type` is updated.
+
+{% endinfo_block %}
+
+7. To enable the Backend API, register these plugins:
 
 | PLUGIN                             | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                             |
 |------------------------------------|------------------------------------------|---------------|-----------------------------------------------------------------------|

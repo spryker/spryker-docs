@@ -8,7 +8,7 @@ Security Checker is a tool that checks if your PHP application depends on PHP pa
 
 ## Problem description
 
-A project can sometimes use dependencies that contain known vulnerabilities.. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
+A project can sometimes use dependencies that contain known vulnerabilities. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
 
 ## Example of an evaluator error message
 

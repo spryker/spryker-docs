@@ -6,24 +6,15 @@ last_updated: Aug 3, 2023
 template: howto-guide-template
 ---
 
-## Step 1 - Integrate the Tax App module
+## Step 1 - Integrate ACP connector module for tax calculation
 
-To enable the Tax app integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) module.
+To enable the Vertex integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module.
 
-The Tax app requires the following Spryker modules:
+To integrate Vertex you have to install the following Spryker module:
 
-  *  `"spryker/event": "^2.1.0"`
-  *  `"spryker/event-behavior": "^1.23.0"`
-  *  `"spryker/kernel": "^3.30.0"`
-  *  `"spryker/log": "^3.0.0"`
-  *  `"spryker/message-broker": "^1.5.0"`
-  *  `"spryker/message-broker-extension": "^1.0.0"`
-  *  `"spryker/propel-orm": "^1.0.0"`
-  *  `"spryker/store": "^1.16.0"`
-  *  `"spryker/tax-app-extension": "^0.1.0"`
-  *  `"spryker/transfer": "^3.27.0"`
+  *  `"spryker/tax-app": "^0.1.0"`
 
-Follow these steps to integrate Tax App.
+Next follow these steps to integrate the connector module for the Vertex app.
 
 ### 1. Configure shared configs.
 
@@ -55,7 +46,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-### 2. Configure Payment OMS if you plan to send invoices to Tax App via OMS.
+### 2. Configure Payment OMS if you plan to send invoices to Vertex via OMS.
 
 There is an example of how to configure payment `config/Zed/oms/{your_payment_oms}.xml`.
 
@@ -186,9 +177,9 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 // ...
 ```
 
-### 5. Configure Tax App Dependency Provider
+### 5. Configure what data has to be sent to Vertex
 
-Tax App Dependency Provider could have next configuration `src/Pyz/Zed/TaxApp/TaxAppDependencyProvider.php`:
+Additional data for Spryker quote and order objects can be added as plugins in  `src/Pyz/Zed/TaxApp/TaxAppDependencyProvider.php`:
 
 {% info_block infoBox "Note" %}
 
@@ -227,9 +218,9 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 }
 ```
 
-Usually Tax app requires Order/Cart and Order/Cart Items. You can check example implementation of these plugins for the Vertex Tax App.
+Usually, tax apps require Order/Cart and Order/Cart Items expander plugins. You can check example implementation of these plugins for the Vertex app.
 
-## Step 2 - Integrate the Vertex App
+## Step 2 - Integrate the Vertex app
 
 ### 1. Configure Vertex Specific Metadata Transfers
 
@@ -285,7 +276,7 @@ First of all it's necessary to define specific Vertex Tax Metadata transfers and
 ```
 
 In general `SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to Vertex Tax Calculation API request body. So you are free to extend them as you need according to Vertex API structure.
-`SaleTaxMetadata` is equal to Ivoicing/Quotation request payload excluding LineItems.
+`SaleTaxMetadata` is equal to Invoicing/Quotation request payload excluding LineItems.
 `ItemTaxMetadata` is equal to Line Item API Payload.
 
 ### 2. Implement Vertex Specific Metadata Extender Plugins 
@@ -429,7 +420,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 }
 ```
 
-So in general the plugin stack could look like:
+So in general the plugin stack could look like this:
 
 ```php
 

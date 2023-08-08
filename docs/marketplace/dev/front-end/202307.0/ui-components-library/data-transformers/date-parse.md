@@ -6,17 +6,17 @@ related:
   - title: Data Transformers
     link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/index.html
   - title: Data Transformer Array-map
-    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/array-map.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/data-transformer-array-map.html
   - title: Data Transformer Chain
-    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/chain.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/data-transformer-chain.html
   - title: Data Transformer Date-serialize
-    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/date-serialize.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/data-transformer-date-serialize.html
   - title: Data Transformer Lens
-    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/lens.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/data-transformer-lens.html
   - title: Data Transformer Object-map
-    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/object-map.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/data-transformer-object-map.html
   - title: Data Transformer Pluck
-    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/pluck.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/data-transformer-pluck.html
 ---
 
 This document explains the Data Transformer Date-parse service in the Components Library.

@@ -3,22 +3,22 @@ title: "Data Transformer: Chain"
 description: This document provides details about the Data Transformer Chain service in the Components Library.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/chain.html
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/data-transformer-chain.html
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Data Transformer Array-map
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/array-map.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
   - title: Data Transformer Date-parse
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/date-parse.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
   - title: Data Transformer Date-serialize
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/date-serialize.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
   - title: Data Transformer Lens
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/lens.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-lens.html
   - title: Data Transformer Object-map
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/object-map.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
   - title: Data Transformer Pluck
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/pluck.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
 ---
 
 This document explains the Data Transformer Chain service in the Components Library.

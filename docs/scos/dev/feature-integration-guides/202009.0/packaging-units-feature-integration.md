@@ -13,7 +13,7 @@ redirect_from:
 Follow the steps to install Product packaging unit feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name |Version  |
 | --- | --- |
@@ -902,7 +902,7 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 
 ## Install feature frontend
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

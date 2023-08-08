@@ -4,6 +4,7 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+    - /docs/scos/dev/technology-partner-guides/202307.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
 ---
 
 {% info_block warningBox "Warning" %}

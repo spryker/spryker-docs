@@ -12,7 +12,7 @@ redirect_from:
 
 ## Install Feature Core
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |
@@ -108,7 +108,7 @@ Make sure that the following plugins have been registered:<table><thead><tr><th>
 
 ## Install feature frontend
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 | Name | Version |
 | --- | --- |
 | Spryker Core E-commerce | 2018.11.0 |

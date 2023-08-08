@@ -17,4 +17,4 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-shipment-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shipment-feature.md -->

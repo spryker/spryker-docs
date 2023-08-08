@@ -1,4 +1,4 @@
-version: "202212.0"
+version: "202307.0"
 
 repository: spryker/spryker-docs
 
@@ -181,7 +181,7 @@ versions:
   '202108.0': '202108.0'
   '202204.0': '202204.0'
   '202212.0': '202212.0'
-  '202304.0': 'Upcoming release'
+  '202307.0': '202307.0'
   '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
@@ -230,6 +230,7 @@ versioned_categories:
       - content-management-system
       - customer-relationship-management
       - discount-management
+      - dynamic-multistore
       - emails
       - gift-cards
       - identity-access-management
@@ -242,17 +243,17 @@ versioned_categories:
       - product-information-management
       - product-relationship-management
       - punchout
+      - push-notification
       - return-management
       - ratings-reviews
       - request-for-quote
       - search
+      - service-points
       - shopping-list-and-wishlist
       - tax-management
       - user-management
       - warehouse-management-system
-      - push notification
       - warehouse-picking
-      - service-points
 
 
 

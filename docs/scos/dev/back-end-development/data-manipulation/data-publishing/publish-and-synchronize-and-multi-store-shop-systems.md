@@ -1,5 +1,5 @@
 ---
-title: Publish and synchronize and multi-mtore shop systems
+title: Publish and synchronize and multi-store shop systems
 description: This document describes a way to synchronize data between multiple stores.
 last_updated: Jun 16, 2021
 template: howto-guide-template

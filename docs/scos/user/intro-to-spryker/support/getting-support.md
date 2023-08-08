@@ -21,6 +21,7 @@ redirect_from:
   - /v1/docs/en/getting-support
   - /v6/docs/getting-support
   - /v6/docs/en/getting-support
+  - /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
 related:
   - title: How to use the Support Portal
     link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
@@ -28,7 +29,7 @@ related:
     link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
   - title: How to get the most out of Spryker Support
     link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
-  
+
 ---
 
 If you need technical help for issues that can't be resolved with our documentation, you can always count on our support team.

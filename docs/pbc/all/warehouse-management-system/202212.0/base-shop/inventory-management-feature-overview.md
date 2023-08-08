@@ -28,13 +28,9 @@ A warehouse can be assigned to a single store or shared between several stores. 
 
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-address.csv.html).
 
-### Warehouse assignment to order items (with Avalara integration only)
+### Avalara: Warehouse assignment to order items
 
-{% info_block warningBox %}
-
-By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
-
-{% endinfo_block %}
+By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/avalara.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
 
 During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
 
@@ -46,13 +42,7 @@ By default, if a buyer orders several items of the same SKU, the requested itemâ
 4. 2 items
 5. 0 items
 
-If the requested quantity of the item is available in the first warehouse, that is, the one holding the biggest stock of the item, this warehouse is assigned to fulfill the order item.
-
-{% info_block infoBox %}
-
-The warehouse with the *never out of stock* item quantity is always assigned to the item.
-
-{% endinfo_block %}
+If the requested quantity of the item is available in the first warehouse, that is, the one holding the biggest stock of the item, this warehouse is assigned to fulfill the order item. *Never out of stock* quantity being the biggest stock, the warehouse containing unlimited stock of an item is always assigned to it. 
 
 If the first warehouse's stock is insufficient to fulfill the order item, this warehouse and the next one are assigned to the order item to fulfill the remaining quantity.
 

@@ -1,5 +1,5 @@
 ---
-title: Integrate Avalara
+title: Install Avalara
 description: Integrate Avalara to automatically calculate taxes.
 last_updated: Jun 29, 2023
 template: concept-topic-template
@@ -29,7 +29,6 @@ redirect_from:
   - /docs/pbc/all/tax-management/202212.0/base-shop/third-party-integrations/integrate-avalara.html
 ---
 
-## Avalara
 
 To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](https://github.com/spryker-eco/avalara-tax) module.
 

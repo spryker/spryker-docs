@@ -3158,8 +3158,6 @@ entries:
             nested:
               - title: Base shop
                 nested:
-                  - title: What's changed
-                    url: /docs/pbc/all/tax-management/spryker-tax/base-shop/whats-changed-in-tax-management.html
                   - title: Tax feature overview
                     url: /docs/pbc/all/tax-management/spryker-tax/base-shop/tax-feature-overview.html
                   - title: Install and upgrade

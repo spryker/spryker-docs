@@ -6,7 +6,7 @@ related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Cache
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/cache.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Datasources

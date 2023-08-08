@@ -12,7 +12,6 @@ To enable the Tax app integration, use the [spryker/tax-app](https://github.com/
 
 The Tax app requires the following Spryker modules:
 
-  *  `"spryker/calculation-extension": "^1.0.0"`
   *  `"spryker/event": "^2.1.0"`
   *  `"spryker/event-behavior": "^1.23.0"`
   *  `"spryker/kernel": "^3.30.0"`
@@ -20,7 +19,6 @@ The Tax app requires the following Spryker modules:
   *  `"spryker/message-broker": "^1.5.0"`
   *  `"spryker/message-broker-extension": "^1.0.0"`
   *  `"spryker/propel-orm": "^1.0.0"`
-  *  `"spryker/sales": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^10.0.0 || ^11.0.0"`
   *  `"spryker/store": "^1.16.0"`
   *  `"spryker/tax-app-extension": "^0.1.0"`
   *  `"spryker/transfer": "^3.27.0"`
@@ -192,6 +190,12 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 Tax App Dependency Provider could have next configuration `src/Pyz/Zed/TaxApp/TaxAppDependencyProvider.php`:
 
+{% info_block infoBox "Note" %}
+
+Please pay attention that you have to implement that plugin stack on your side. The explanation of what they should be will be provided below.
+
+{% endinfo_block %}
+
 ```php
 <?php
 
@@ -207,10 +211,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getCalculableObjectExpanderPluginCollection(): array
     {
         return [
-            new CalculableObjectCustomerWithTaxCodeExpanderPlugin(),
-            new CalculableObjectExpensesWithTaxCodeExpanderPlugin(),
-            new CalculableObjectItemProductOptionWithTaxCodeExpanderPlugin(),
-            new CalculableObjectItemWithTaxTaxCodeExpanderPlugin(),
+            // Put your Calculable Object Expander plugins here
         ];
     }
 
@@ -220,20 +221,11 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getOrderExpanderPluginCollection(): array
     {
         return [
-            new OrderCustomerWithTaxCodeExpanderPlugin(),
-            new OrderExpensesWithTaxCodeExpanderPlugin(),
-            new OrderItemProductOptionWithTaxCodeExpanderPlugin(),
-            new OrderItemWithTaxTaxCodeExpanderPlugin(),
+             // Put your Order Expander plugins here
         ];
     }
 }
 ```
-
-{% info_block infoBox "Note" %}
-
-Please pay attention that you have to implement that plugin stack on your side. `YourModule` - means that you'll put them wherever you suggest in some module.
-
-{% endinfo_block %}
 
 Usually Tax app requires Order/Cart and Order/Cart Items. You can check example implementation of these plugins for the Vertex Tax App.
 
@@ -326,8 +318,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
      */
     public function expand(OrderTransfer $orderTransfer): OrderTransfer
     {
-        /** @var \Generated\Shared\Transfer\OrderTransfer $orderTransfer */
-        $orderTransfer = $this->getFactory()->createCustomerVertexTaxMetadataExpander()->expand($orderTransfer);
+        $orderTransfer->getTaxMetadata()->setCustomerClassCode('CustomerClassCode');
 
         return $orderTransfer;
     }
@@ -358,25 +349,9 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
      */
     public function expand(CalculableObjectTransfer $quoteTransfer): CalculableObjectTransfer
     {
-        /** @var \Generated\Shared\Transfer\CalculableObjectTransfer $quoteTransfer */
-        $quoteTransfer = $this->getFactory()->createCustomerVertexTaxMetadataExpander()->expand($quoteTransfer);
+        $quoteTransfer->getTaxMetadata()->setCustomerClassCode('CustomerClassCode');
 
         return $quoteTransfer;
-    }
-}
-```
-
-In this case `CustomerVertexTaxMetadataExpander` will do something similar to:
-
-```php
-// ...
-
-class CustomerVertexTaxMetadataExpander {
-    // ...
-    
-    public function expand($orderTransfer)
-    {
-        return $orderTransfer->getTaxMetadata()->setCustomerClassCode('CustomerClassCode');
     }
 }
 ```
@@ -404,50 +379,26 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
      */
     public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
     {
-        /** @var \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer */
-        $calculableObjectTransfer = $this->getFactory()->createItemProductClassCodeExpander()->expand($calculableObjectTransfer);
+        foreach ($calculableObjectTransfer->getItems() as $itemTransfer) {
+            $itemTransfer->getTaxMetadata()->setProduct(['productClass' => 'ProductClassCode']);
+        }
 
         return $calculableObjectTransfer;
     }
 }
 ```
 
-Where `ItemProductClassCodeExpander` will do next:
-
-```php
-// ...
-
-class ItemProductClassCodeExpander
-{
-    // ...
-    
-    /**
-     * @param \CalculableObjectTransfer $calculableObjectTransfer
-     * 
-     * @return \CalculableObjectTransfer
-     */
-    public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
-    {
-        foreach ($calculableObjectTransfer->getItems() as $itemTransfer) {
-            $itemTransfer->getTaxMetadata()->setProduct(['productClass' => 'ProductClassCode']);
-        }
-
-        return $transfer;
-    }
-}
-```
-
-PLease pay attention: The same Product Class Code extension should be done for all Product Options and other order expenses because in Vertex prospective they all are separate items for tax calculation. To find them a proper place you can refer to transfer extension described above.
+PLease pay attention: The same Product Class Code extension should be done for all Product Options and other Order Expenses because in Vertex prospective they all are separate items for tax calculation. To find them a proper place you can refer to transfer extension described above.
 
 
 #### Flexible fields extension
 
 Flexible fields extension plugins would look like similar to Item Product Class Code extension plugins.
-There is how flexible field expander could be implemented:
+For example:
 
 ```php
 
-class ItemFlexibleFieldExpander
+class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
 {
     // ...
     
@@ -473,7 +424,7 @@ class ItemFlexibleFieldExpander
                 );
         }
 
-        return $transfer;
+        return $calculableObjectTransfer;
     }
 }
 ```

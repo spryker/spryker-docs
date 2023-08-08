@@ -4,7 +4,7 @@ description: This document provides details about the Table Filter Tree Select c
 template: concept-topic-template
 related:
   - title: Table Filter extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-extension.html
   - title: Table Filter Date Range
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
   - title: Table Filter Select

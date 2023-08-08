@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/table-filter-tree-select.html
 related:
   - title: Table Filter extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-extension.html
   - title: Table Filter Date Range
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
   - title: Table Filter Select

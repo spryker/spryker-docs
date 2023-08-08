@@ -4,7 +4,7 @@ description: This document provides details about the Table Filter Date Range co
 template: concept-topic-template
 related:
   - title: Table Filter extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-extension.html
   - title: Table Filter Select
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-select.html
   - title: Table Filter Tree Select

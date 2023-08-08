@@ -4,7 +4,7 @@ description: This document provides details about the Data Transformer Collate C
 template: concept-topic-template
 related:
   - title: Data Transformer Data Configurators
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/index.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
 ---
 
 This document explains the Data Transformer Collate Configurator Table service in the Components Library.

@@ -6,7 +6,7 @@ Follow the steps below to install the Offer Volume Prices Glue API feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-| - |

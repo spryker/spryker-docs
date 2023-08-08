@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -108,7 +108,7 @@ Make sure, that when you have a cart share link with Read-only or Full Access, y
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

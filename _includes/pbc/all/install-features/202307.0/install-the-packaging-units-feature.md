@@ -9,7 +9,7 @@ Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
@@ -973,7 +973,7 @@ Follow the steps below to install the {Feature Name} feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|

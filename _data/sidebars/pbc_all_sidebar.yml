@@ -183,6 +183,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
                       - title: Cart
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
+                      - title: Cart + Dynamic Multistore
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
                       - title: Cart + Non-splittable Products
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
                       - title: Cart + Product
@@ -460,6 +464,10 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-catalog-feature.html
                       - title: CMS + Category Management
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html
+                      - title: CMS + Dynamic Multistore
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
                       - title: CMS + Product Lists + Catalog
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
                       - title: Content Items
@@ -751,10 +759,14 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
                   - title: Customer Access
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-access-feature.html
-                  - title: Customer Account Management + Agent Assist
-                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
                   - title: Customer Account Management
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+                  - title: Customer Account Management + Agent Assist
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
+                  - title: Customer Account Management + Dynamic Multistore
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-feature-dynamic-multistore.html
+                    include_versions:
+                    - "202307.0"
                   - title: Customer Account Management + Order Management
                     url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
               - title: Install Glue API
@@ -989,6 +1001,53 @@ entries:
                 url: /docs/pbc/all/discount-management/marketplace/install-the-marketplace-promotions-discounts-feature.html
               - title: "Marketplace Promotions & Discounts feature: Domain model and relationships"
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-domain-model-and-relationships.html
+      - title: Dynamic Multistore
+        url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
+        include_versions:
+        - "202307.0"
+        nested:
+          - title: Base shop
+            nested:
+              - title: Dynamic Multistore feature overview
+                url: /docs/pbc/all/dynamic-multistore/base-shop/dynamic-multistore-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Dynamic Multistore
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+                      - title: Dynamic Multistore + Avalability Notification
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
+                      - title: Dynamic Multistore + Cart
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html
+                      - title: Dynamic Multistore + CMS
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html
+                      - title: Dynamic Multistore + Customer Account Management
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-customer-account-management-feature.html
+                      - title: Dynamic Multistore + Product
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-product-feature.html
+                      - title: Install Dynamic Multistore
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+
+                  - title: Upgrade modules
+                    nested:
+                      - title: Country
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html
+                      - title: Currency
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
+                      - title: Locale
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html
+
+                  - title: Install the Dynamic Multistore Glue API
+                    url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
+
+              - title: Delete stores
+                url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
+
+          - title: Marketplace
+            nested:
+              - title: Install Dynamic Multistore + the Marketplace MerchantPortal Core feature
+                url: /docs/pbc/all/dynamic-multistore/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:
@@ -1120,7 +1179,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
-              
+
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -1168,6 +1227,10 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html
                       - title: Marketplace Merchant Portal Core
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
+                      - title: Marketplace Merchant Portal Core + Dynamic Multistore
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
                       - title: Merchant Category
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html
                       - title: Merchant Opening Hours
@@ -2043,6 +2106,10 @@ entries:
                     nested:
                       - title: Prices
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
+                      - title: Prices + Dynamic Multistore
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
                       - title: Merchant Custom Prices
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
                       - title: Scheduled prices
@@ -2269,14 +2336,18 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html
                       - title: Product Bundles + Return Management
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html
+                      - title: Product
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
                       - title: Product + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-cart-feature.html
                       - title: Product + Category
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html
+                      - title: Product + Dynamic Multistore
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
                       - title: Product Configuration
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html
-                      - title: Product
-                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
                       - title: Product Group + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-group-cart-feature.html
                       - title: Product Group + Product Labels
@@ -3381,6 +3452,10 @@ entries:
                     nested:
                       - title: Availability Notification
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
+                      - title: Availability Notification + Dynamic Multistore
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
                       - title: Inventory Management
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
                       - title: Inventory Management + Alternative Products

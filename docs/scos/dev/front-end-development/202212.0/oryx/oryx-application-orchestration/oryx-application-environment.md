@@ -4,7 +4,6 @@ description: Environment of the Oryx Application
 template: concept-topic-template
 ---
 
-
 `AppEnvironment` represents environment variables that are used in an Oryx application. It's a typesafe global object that can be extended wherever an environment variable is needed for a feature to work properly.
 
 To pass an actual environment object, use the `AppBuilder.withEnvironment()` API and the method of accessing environment variables specific to your build:

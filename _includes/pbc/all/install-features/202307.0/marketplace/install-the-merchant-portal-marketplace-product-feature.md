@@ -8,7 +8,7 @@ Follow the steps below to install the Merchant Portal - Marketplace Product feat
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

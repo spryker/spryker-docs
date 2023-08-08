@@ -3383,8 +3383,8 @@ entries:
           - title: Vertex
             url: /docs/pbc/all/tax-management/vertex/vertex.html
             nested:
-              - title: Integrate Vertex
-                url: /docs/pbc/all/tax-management/vertex/integrate-vertex.html
+              - title: Install Vertex
+                url: /docs/pbc/all/tax-management/vertex/install-vertex.html
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
         nested:

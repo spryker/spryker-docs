@@ -1,16 +1,16 @@
 ---
-title: Integrate Vertex
+title: Install Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
 draft: true
 last_updated: Aug 3, 2023
 template: howto-guide-template
 ---
 
-## Step 1 - Integrate ACP connector module for tax calculation
+## Integrate ACP connector module for tax calculation
 
 To enable the Vertex integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module.
 
-Follow these steps to integrate the connector module for the Vertex app.
+To integrate the connector module for the Vertex app, follow these steps:
 
 ### 1. Configure shared configs.
 
@@ -42,7 +42,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-### 2. Configure Payment OMS if you plan to send invoices to Vertex via OMS.
+### 2. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS.
 
 There is an example of how to configure payment `config/Zed/oms/{your_payment_oms}.xml`.
 
@@ -173,11 +173,13 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 // ...
 ```
 
-## Step 2 - Integrate the Vertex app
+## Integrate the Vertex app
+
+Follow the next steps to integrate the Vertex app
 
 ### 1. Configure Vertex Specific Metadata Transfers
 
-First of all it's necessary to define specific Vertex Tax Metadata transfers and extend several other transfers with them.
+Define specific Vertex Tax Metadata transfers and extend several other transfers with them:
 
 ```xml
 
@@ -228,15 +230,18 @@ First of all it's necessary to define specific Vertex Tax Metadata transfers and
 
 ```
 
-In general `SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to Vertex Tax Calculation API request body. So you are free to extend them as you need according to Vertex API structure.
+`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. So you are free to extend them as you need according to Vertex API structure.
+
 `SaleTaxMetadata` is equal to Invoicing/Quotation request payload excluding LineItems.
 `ItemTaxMetadata` is equal to Line Item API Payload.
 
 ### 2. Implement Vertex Specific Metadata Extender Plugins
 
-#### Customer Class Code expanders
+There are several types of expander plugins you have to introduce.
 
-You could introduce them like:
+#### Customer Class Code expander plugins
+
+You can introduce as follows:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexCodeExpanderPlugin.php`
 
@@ -267,7 +272,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
 }
 ```
 
-For Calculation process:
+For calculation process:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexCodeExpanderPlugin.php`
 
@@ -300,15 +305,15 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
 
 #### Product Class Code Expanders
 
-For Order Items:
+For order items:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderItemVertexProductClassCodeExpanderPlugin.php`
 
-and for Quote Items
+and for quote items
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectItemWithVertexProductClassCodeExpanderPlugin.php`
 
-Contents of both plugins would be similar:
+Contents of both plugins are similar:
 
 ```php
 // ...
@@ -332,7 +337,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 
 {% info_block infoBox "Note" %}
 
-Please pay attention that the same Product Class Code extension should be done for all the Product Options and other Order Expenses because in Vertex prospective all of them are separate items for tax calculation. To find them a proper place you can refer to transfers definition which was described above.
+The same Product Class Code extension must be done for all the product options and other order expenses because, in Vertex's perspective, all of them are separate items for tax calculation. To find them a proper place, you can refer to the transfers' definition, which was described above.
 
 {% endinfo_block %}
 
@@ -375,7 +380,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 
 ### 3. Configure Tax App Dependency Provider
 
-As the result the plugin stack could look like this:
+As a result, the plugin stack can look like this:
 
 ```php
 

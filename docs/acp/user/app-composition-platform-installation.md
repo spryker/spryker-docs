@@ -70,7 +70,7 @@ Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-comp
 
 The Spryker ACP Apps are continuously enhanced and improved with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCCOS modules to take full advantage of the latest app feature updates.
 
-For [each app](https://docs.spryker.com/docs/acp/user/intro-to-acp/acp-overview.html#supported-apps) you wish to use, ensure that you have the latest app-related SCCOS modules installed.
+For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each App integration guide.
 
 ### Configure SCCOS
 
@@ -470,10 +470,3 @@ To get your project ACP-enabled, contact the [Spryker support](https://spryker.c
 Once all the steps of the ACP-enablement process are completed, the ACP catalog appears in the Back Office:
 
 ![acp-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
-
-Once your projecrt is ACP-enabled, you can start integrating the apps:
-
-- [Integrate Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/integrate-algolia.html)
-- [Integrate Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/payone/integration-in-the-back-office/integrate-payone.html)
-- [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html)
-- [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html)

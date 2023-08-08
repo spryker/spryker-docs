@@ -11,7 +11,7 @@ The following feature integration guide expects the basic feature to be in place
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|

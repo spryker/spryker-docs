@@ -1,5 +1,5 @@
 ---
-title: Managing customers
+title: Create customers
 description: Learn how to create customers in the Back Office.
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template

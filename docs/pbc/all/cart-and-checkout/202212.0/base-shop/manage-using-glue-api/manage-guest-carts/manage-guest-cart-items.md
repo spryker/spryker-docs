@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/guest-carts/managing-guest-cart-items.html
 related:
   - title: Manage guest carts
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - title: Managing gift cards of guest users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
 ---
@@ -29,7 +29,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
 * [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 

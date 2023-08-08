@@ -10,7 +10,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/guest-carts/managing-guest-carts.html
 related:
   - title: Manage guest cart items
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
 ---
 
 This endpoint lets you manage guest carts.
@@ -1932,7 +1932,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html)
+* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html)
 * [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 * [Retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
 * [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)

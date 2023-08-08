@@ -106,7 +106,7 @@ A customer can perform the following actions on the Storefront:
 | [Edit customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersedit-customers.html)  |
 | [View customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersview-customers.html)  |
 | [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersadd-notes-to-customers.html)  |
-| [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersadd-customer-addresses.html)  |
+| [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-customer-addresses.html)  |
 | [Edit customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customersedit-customer-addresses.html)  |
 
 {% info_block warningBox "Developer guides" %}

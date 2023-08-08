@@ -18,7 +18,7 @@ This document describes how to integrate the Shipment feature API into a Spryker
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | FEATURE | VERSION | INTEGRATION GUIDE  |
 | ----------------- | ------ | ------------------- |

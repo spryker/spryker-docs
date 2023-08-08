@@ -19,7 +19,7 @@ The following feature integration guide expects the basic feature to be in place
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |
@@ -421,7 +421,7 @@ To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole`
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

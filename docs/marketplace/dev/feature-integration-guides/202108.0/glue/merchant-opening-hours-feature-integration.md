@@ -13,7 +13,7 @@ Follow the steps below to install the Merchant Opening Hours Glue API feature co
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ----------- | ------ | --------------|

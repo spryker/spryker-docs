@@ -13,7 +13,7 @@ redirect_from:
 ## Install Feature Core
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name |Version  |
 | --- | --- |
@@ -385,7 +385,7 @@ Make sure that when you make lock reset for a cart, quote request associated wit
 ## Install feature frontend
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name |Version  |
 | --- | --- |

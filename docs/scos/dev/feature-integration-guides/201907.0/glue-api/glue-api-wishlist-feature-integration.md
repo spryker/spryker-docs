@@ -15,7 +15,7 @@ related:
 
 ## Install feature API
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 |Name|Version|Integration guide|
 |---|---|---|
 | Glue API: Glue Application |201907.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|

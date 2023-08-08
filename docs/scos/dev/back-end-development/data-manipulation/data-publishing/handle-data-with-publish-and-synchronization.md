@@ -1050,7 +1050,7 @@ interface HelloWorldStorageClientInterface
      *
      * @return \Generated\Shared\Transfer\HelloWorldStorageTransfer
      */
-    public function getMessageById(int $messageId): HelloWorldStorageTransfer;
+    public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
 
@@ -1078,7 +1078,7 @@ class HelloWorldStorageClient extends AbstractClient implements HelloWorldStorag
     {
         return $this->getFactory()
             ->createMessageStorageReader()
-            ->getMessageById($messageId);
+            ->getMessageById($idMessage);
     }
 }
 ```

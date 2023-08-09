@@ -142,7 +142,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
 
 ```
 
-### 4. Configure Calculation Dependency Provider
+### 3. Configure Calculation Dependency Provider
 
 Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`:
 

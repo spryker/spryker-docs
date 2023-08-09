@@ -1,15 +1,11 @@
 ---
-title: Integrate Avalara Tax + Shipment
-description: Integrate Avalara Tax + Shipment feature into your project.
+title: Install Avalara + Shipment
+description: Install Avalara + Shipment.
 last_updated: Jun 18, 2021
-template: concept-topic-template
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-shipment-feature-integration
 originalArticleId: a93d12c8-c40a-4cbb-b866-755ad29f2852
 redirect_from:
-  - /2021080/docs/avalara-tax-shipment-feature-integration
-  - /2021080/docs/en/avalara-tax-shipment-feature-integration
-  - /docs/avalara-tax-shipment-feature-integration
-  - /docs/en/avalara-tax-shipment-feature-integration
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-shipment-feature-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara-tax-shipment.html
   - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
@@ -18,7 +14,7 @@ related:
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-To enable the AvalaraTax + Shipment component of the Avalara partner integration, use the [spryker-eco/avalara-tax-shipment](https://github.com/spryker-eco/avalara-tax-shipment) module.  
+To enable the Avalara + Shipment component of the Avalara partner integration, use the [spryker-eco/avalara-tax-shipment](https://github.com/spryker-eco/avalara-tax-shipment) module.  
 
 ## Install feature core
 
@@ -26,17 +22,17 @@ Follow the steps below to install the feature core.
 
 ### Prerequisites
 
-To start the feature integration, overview and install the necessary features:
+Install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Shipment | master | [Shipment feature integration guide](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 | Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara.html) |
 
-### 1) Install the required modules using Composer
+### Install the required modules
 
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-eco/avalara-tax-shipment:"^0.1.0" --update-with-dependencies
@@ -52,9 +48,9 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema
+### Set up database schema
 
-Apply database changes, generate entity and transfer changes:
+Apply database changes, generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -63,7 +59,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 |---|---|---|
@@ -71,14 +67,14 @@ Make sure that the following changes have been applied by checking your databa
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### Set up behavior
 
 1. Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AvalaraShipmentCreateTransactionRequestExpanderPlugin | Expands `AvalaraCreateTransactionRequestTransfer` with shipments. | None | SprykerEco\Zed\AvalaraTaxShipment\Communication\Plugin\AvalaraTax |
-|AvalaraShipmentCreateTransactionRequestAfterPlugin | Calculates taxes for shipment methods based on `AvalaraCreateTransactionResponseTransfer`. | None | SprykerEco\Zed\AvalaraTaxShipment\Communication\Plugin\AvalaraTax |
+| AvalaraShipmentCreateTransactionRequestExpanderPlugin | Expands `AvalaraCreateTransactionRequestTransfer` with shipments. |  | SprykerEco\Zed\AvalaraTaxShipment\Communication\Plugin\AvalaraTax |
+|AvalaraShipmentCreateTransactionRequestAfterPlugin | Calculates taxes for shipment methods based on `AvalaraCreateTransactionResponseTransfer`. |  | SprykerEco\Zed\AvalaraTaxShipment\Communication\Plugin\AvalaraTax |
 
 **src/Pyz/Zed/AvalaraTax/AvalaraTaxDependencyProvider.php**
 
@@ -117,20 +113,19 @@ class AvalaraTaxDependencyProvider extends SprykerAvalaraTaxDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you’ve enabled the plugins:
 1. Add an item to a cart.
-2. Proceeding to checkout.
-3. On the summary page, you should see the calculated tax amount for your order, including taxes for product options and shipment methods.
+2. Proceed to checkout.
+3. On the summary page, you should see the calculated tax amount for your order, including the taxes for shipment methods.
 
 {% endinfo_block %}
 
-2. Update the following data import .csv files:
+2. Update the following data import files:
 
 | FILE NAME | COLUMN TO ADD | LOCATION |
 | --- | --- | --- |
 | shipment.csv | avalara_tax_code | data/import/common/common/shipment.csv |
 
-3. To handle the new field, adjust `Shipment` data importer using the following example:
+3. To handle the new field, adjust the `Shipment` data importer using the following example:
 
 **data/import/common/common/shipment.csv**
 
@@ -139,7 +134,7 @@ shipment_method_key,name,carrier,taxSetName,avalaraTaxCode
 spryker_dummy_shipment-standard,Standard,Spryker Dummy Shipment,Shipment Taxes,PC040111
 ```
 
-### 4) Import data:
+### Import data
 
 Import data using the following command:
 
@@ -152,3 +147,7 @@ console data:import shipment
 Make sure that the data has been imported to `spy_shipment_method`.
 
 {% endinfo_block %}
+
+## Next steps
+
+[Apply Avalara tax codes](/docs/pbc/all/tax-management/{{page.version}}/avalara/apply-avalara-tax-codes.html)

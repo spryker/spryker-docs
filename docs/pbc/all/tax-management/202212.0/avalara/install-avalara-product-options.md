@@ -1,23 +1,16 @@
 ---
-title: Integrate Avalara Tax + Product Options
+title: Install Avalara + Product Options
 description: Integrate the Avalara Tax + Product Options feature into your project
-last_updated: Jun 18, 2021
-template: concept-topic-template
+last_updated: Aug 3, 2023
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-product-options-feature-integration
 originalArticleId: baa66b26-825e-404a-a8e4-1b48cb00cd67
 redirect_from:
-  - /2021080/docs/avalara-tax-product-options-feature-integration
-  - /2021080/docs/en/avalara-tax-product-options-feature-integration
-  - /docs/avalara-tax-product-options-feature-integration
-  - /docs/en/avalara-tax-product-options-feature-integration
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-product-options-feature-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara-tax-product-options.html
-related:
-  - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-To enable the AvalaraTax + Product Options component of the Avalara partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.
+To enable the Avalara + Product Options component of the Avalara partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.
 
 ## Install feature core
 
@@ -25,14 +18,14 @@ Follow the steps below to install the feature core.
 
 ### Prerequisites
 
-To start the feature integration, overview and install the necessary features:
+Install the necessary features:
 
-|NAME | VERSION | INTEGRATION GUIDE |
+|NAME | VERSION | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Product Options | master |  |
-| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara.html)|
+| Avalara Tax | master | [Install Avalara](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara.html) |
 
-### 1) Install the required modules using Composer
+### Install the required modules using Composer
 
 Install the required modules:
 
@@ -51,9 +44,9 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema
+### Set up database schema
 
-Apply database changes, generate entity and transfer changes:
+Apply database changes, generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -62,7 +55,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure that the following changes have been applied by checking your database:
 
 |DATABASE ENTITY| TYPE| EVENT |
 |--- |---| ---|
@@ -70,14 +63,14 @@ Make sure that the following changes have been applied by checking your databa
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### Set up behavior
 
 1. Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AvalaraProductOptionCreateTransactionRequestExpanderPlugin | Expands `AvalaraCreateTransactionRequestTransfer` with product option data. | None | SprykerEco\Zed\AvalaraTaxProductOption\Communication\Plugin\AvalaraTax |
-| AvalaraProductOptionCreateTransactionRequestAfterPlugin | Calculates taxes for `ProductOptions` based on `AvalaraCreateTransactionResponseTransfer`. | None | SprykerEco\Zed\AvalaraTaxProductOption\Communication\Plugin\AvalaraTax |
+| AvalaraProductOptionCreateTransactionRequestExpanderPlugin | Expands `AvalaraCreateTransactionRequestTransfer` with product option data. |  | SprykerEco\Zed\AvalaraTaxProductOption\Communication\Plugin\AvalaraTax |
+| AvalaraProductOptionCreateTransactionRequestAfterPlugin | Calculates taxes for `ProductOptions` based on `AvalaraCreateTransactionResponseTransfer`. |  | SprykerEco\Zed\AvalaraTaxProductOption\Communication\Plugin\AvalaraTax |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/AvalaraTax/AvalaraTaxDependencyProvider.php</summary>
@@ -119,21 +112,19 @@ class AvalaraTaxDependencyProvider extends SprykerAvalaraTaxDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you’ve enabled the plugins:
-
 1. Add an item with a product option to a cart.
-2. Proceeding to checkout.
+2. Proceed to checkout.
 3. On the summary page, you should see the calculated tax amount for your order, including taxes for product options.
 
 {% endinfo_block %}    
 
-Update the following data import .csv files:
+2. Update the following data import files:
 
 |FILE NAME | COLUMN TO ADD | LOCATION |
 |--- | --- | --- |
-|product_option.csv | avalara_tax_code | data/import/common/common/product_option.csv|
+|product_option.csv | avalara_tax_code | data/import/common/common/product_option.csv |
 
-To handle the new field, adjust `ProductOption` data importer using the following example:
+3. To handle the new field, adjust `ProductOption` data importer using the following example:
 
 **data/import/common/common/product\_option.csv**
 ```csv
@@ -152,3 +143,7 @@ console data:import product-option
 Make sure that the data has been imported to `spy_product_option_value`.
 
 {% endinfo_block %}
+
+## Next steps
+
+[Install Avalara + Shipment](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-shipment.html)

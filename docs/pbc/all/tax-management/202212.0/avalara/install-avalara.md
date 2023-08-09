@@ -1,32 +1,25 @@
 ---
-title: Integrate Avalara
-description: Integrate Avalara to automatically calculate taxes.
-last_updated: Jun 18, 2021
-template: concept-topic-template
+title: Install Avalara
+description: Install Avalara to automatically calculate taxes.
+last_updated: Jun 29, 2023
+template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-integration
 originalArticleId: 3531e0eb-65ae-4c97-8703-78ceaae45c2a
 redirect_from:
-  - /2021080/docs/avalara-tax-integration
-  - /2021080/docs/en/avalara-tax-integration
-  - /docs/avalara-tax-integration
-  - /docs/en/avalara-tax-integration
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara.html
   - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
-related:
-  - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+  - /docs/pbc/all/tax-management/202212.0/base-shop/third-party-integrations/integrate-avalara.html
 ---
 
 To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](https://github.com/spryker-eco/avalara-tax) module.
 
-## Install feature core
+## Prerequisites
 
-Follow the steps below to install the feature core.
+1. To register an application with the Avalara platform and get configuration options, follow [Set up AvaTax](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update).
 
-### Prerequisites
 
-1.  To start the feature integration, overview and install the necessary features:
+2. Overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -37,9 +30,7 @@ Follow the steps below to install the feature core.
 | Inventory Management | master | [Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |
 |Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)|
 
-2. To register an application with the Avalara platform and get configuration options, follow [Set up AvaTax](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update).
-
-### 1) Install the required modules using Composer
+## 1) Install the required modules using Composer
 
 Install the required modules:
 
@@ -57,9 +48,9 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+## 2) Set up the configuration
 
-Add the `US` ISO country code to the global store configuration:
+1. Add the `US` ISO country code to the global store configuration:
 
 **config/Shared/stores.php**
 
@@ -75,8 +66,7 @@ $stores['DE'] = [
 ];
 ```
 
-Configure the Avalara credentials:
-1. Add the following template to configuration:
+2. To configure Avalara credentials, add the following template to configuration:
 
 **config/Shared/config\_default.php**
 ```php
@@ -106,7 +96,7 @@ Configure the Avalara credentials:
 | YOUR_LICENSE_KEY | Client secret. |
 | YOUR_COMPANY_CODE | Company code.|
 
-### 3) Add translations
+## 3) Add translations
 
 1.  Append glossary according to your configuration:
 
@@ -129,7 +119,7 @@ Make sure that in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 4) Set up database schema and transfer objects
+## 4) Set up database schema and transfer objects
 
 Apply database changes, generate entity and transfer changes:
 
@@ -154,7 +144,7 @@ Make sure that the following changes have been applied by checking your databa
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in the transfer objects:
+Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -177,7 +167,7 @@ Make sure that the following changes have been applied in the transfer objec
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 1.  Activate the following plugins:
 
@@ -234,9 +224,8 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you’ve enabled the plugins:
-1. Adding items to a cart and proceed to checkout.
-2. On the summary page, you should see the calculated taxes for your order.
+1. Add items to a cart and proceed to checkout.
+2. On the summary page, make sure the taxes are calculated and displayed for your order.
 
 {% endinfo_block %}    
 
@@ -287,11 +276,11 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Add an address to a warehouse
+1. Add an address to a warehouse.
 2. Increase the product stock of an item.
-3. Add the item to a cart.
+3. Add the item to cart.
 4. Proceed to the summary page of checkout.
-5. In the `spy_tax_avalara_api_log` table, check that the `ShipFrom` property is specified in the request data.
+5. In the `spy_tax_avalara_api_log` table, make sure that the `ShipFrom` property is specified in the request data.
 
 {% endinfo_block %}
 
@@ -330,7 +319,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 1. Create an abstract product with the Avalara tax code specified.
 2. Create a variant of this product.
-3. Check that the concrete product inherits the Avalara tax code.
+3. Check that the product variant inherits the Avalara tax code.
 
 {% endinfo_block %}
 
@@ -396,7 +385,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you’ve activated `AvalaraReadCheckoutDataValidatorPlugin`:
 1.  Send an incorrect address to the `/checkout-data` endpoint.  
 2.  Make sure that request with the incorrect shipping address does not pass the validation check:
 
@@ -451,7 +439,7 @@ Response:
 
 {% endinfo_block %}
 
-2. Update the following data import .csv files:
+2. Update the following data import `.csv` files:
 
 |FILE NAME | COLUMN TO ADD | LOCATION |
 |--- | --- | --- |
@@ -469,6 +457,7 @@ digital-cameras,16,001,Canon IXUS 160,Canon IXUS 160,/en/canon-ixus-160-1,/de/ca
 ```
 
 4. Import data:
+
 ```bash
 console data:import product-abstract
 console data:import product-concrete
@@ -476,13 +465,17 @@ console data:import product-concrete
 
 {% info_block warningBox "Verification" %}
 
-Open `spy_product_abstract`, and `spy_product` and make sure that all data has been imported.
+Make sure the data has been imported to `spy_product_abstract` and `spy_product`.
 
 {% endinfo_block %}
 
-## Related features
+## Related installations
 
-| FEATURE |REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
+| INSTALLATION | REQUIRED FOR THE CURRENT INSTALLATION | INSTALLATION GUIDE |
 | ---  |---  |---  |
 |Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html) |
 |Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html) |
+
+## Next steps
+
+[Install Avalara + Product Options](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-product-options.html)

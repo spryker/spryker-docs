@@ -474,7 +474,7 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
                         include_versions:
                           - "202212.0"
-                          - "202307.0""
+                          - "202307.0"
                   - title: Install Glue API
                     nested:
                       - title: CMS

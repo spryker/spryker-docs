@@ -9,7 +9,7 @@ template: concept-topic-template
 
 *Vertex O Series* is a software that delivers the latest sales and use tax calculations to your shopping cart or invoicing system at the point of purchase while accounting for the following:
 
-* Tax rates for each state, county, and city.  
+* Tax rates in each state, county, and city.  
 * Laws, rules, and jurisdiction boundaries.  
 * Special circumstances like tax holidays and product exemptions.
 

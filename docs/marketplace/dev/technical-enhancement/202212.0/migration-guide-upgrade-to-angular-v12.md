@@ -4,6 +4,7 @@ description: Use the guide to update versions of the Angular and related modules
 template: module-migration-guide-template
 redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/migration-guide-upgrade-to-angular-v12.html
+  - /docs/marketplace/dev/technical-enhancement/202212.0/migration-guide-upgrade-to-angular-v12.html
 ---
 
 ## Upgrading from version 9.* to version 12.*

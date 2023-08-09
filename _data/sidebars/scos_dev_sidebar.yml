@@ -3903,12 +3903,6 @@ entries:
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
-      - title: Feature HowTos
-        nested:
-        - title: "HowTo: Add support of number formatting in the Back Office"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
-        - title: "HowTo: Add support for number formatting in the Storefront"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
@@ -3962,6 +3956,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html
       - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
+      - title: "HowTo: Set up XDebug profiling"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html
       - title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
       - title: "HowTo: Create an Angular module with application"

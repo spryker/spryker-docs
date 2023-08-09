@@ -4,6 +4,9 @@ description: Find out how you can install Vertex in your Spryker shop
 draft: true
 last_updated: Aug 3, 2023
 template: howto-guide-template
+related:
+  - title: Vertex
+    link: docs/pbc/all/tax-management/page.version/vertex/vertex.html
 ---
 
 ## Integrate ACP connector module for tax calculation
@@ -242,7 +245,7 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 
 There are several types of expander plugins you have to introduce.
 
-#### Customer Class Code Expander plugins
+#### Configure Customer Class Code Expander plugins
 
 The following code sample shows how to introduce the following expander plugin:
 
@@ -303,7 +306,7 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
 }
 ```
 
-#### Product Class Code Expanders
+#### Configure Product Class Code Expanders
 
 For order items:
 
@@ -337,11 +340,11 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 
 {% info_block infoBox "Use same Product Class Code" %}
 
-The same Product Class Code extension must be used for all the product options and other order expenses because, in Vertex's perspective, all of them are separate items for tax calculation. To find them a proper place, you can refer to the transfers' definition, which was outlined above.
+The same Product Class Code extension must be used for all the product options and other order expenses because, in Vertex's perspective, all of them are separate items for tax calculation. To find them a proper place, you can refer to the transfers' definition, which is outlined in the [Configure Vertex Specific Metadata Transfers](#Configure Vertex Specific Metadata Transfers).
 
 {% endinfo_block %}
 
-#### Flexible fields extension
+#### Configure Flexible fields extension
 
 The following code sample shows how to introduce the flexible fields extension:
 

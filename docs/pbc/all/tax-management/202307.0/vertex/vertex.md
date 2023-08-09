@@ -3,6 +3,9 @@ title: Vertex
 description: Vertex technology partner
 last_updated: August 7, 2023
 template: concept-topic-template
+related:
+  - title: Install Vertex
+    link: docs/pbc/all/tax-management/page.version/vertex/install-vertex.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)

@@ -30,6 +30,7 @@ Make sure that the following modules have been installed:
 | ServicePointDataImport  | vendor/spryker/service-point-data-import       |
 | ServicePointsBackendApi | vendor/spryker/service-points-backend-api      |
 | ServicePointSearch      | vendor/spryker/service-point-search            |
+| ServicePointsRestApi    | vendor/spryker/service-points-rest-api         |
 | ServicePointStorage     | vendor/spryker/service-point-storage           |
 | ServicePointWidget      | vendor/spryker/service-point-widget            |
 | SalesServicePoint       | vendor/spryker/sales-service-point             |
@@ -1381,6 +1382,10 @@ Make sure that you can send the following requests:
 * `GET https://glue.mysprykershop.com/service-points`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+
+Make sure that you can include the `service-point-addresses` relation in the `service-points` resource requests.
+* `GET https://glue.mysprykershop.com/service-points?include=service-point-addresses`
+* `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}?include=service-point-addresses`
 
 {% endinfo_block %}
 

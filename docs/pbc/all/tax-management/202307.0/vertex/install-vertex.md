@@ -13,7 +13,7 @@ related:
 
 To enable the Vertex integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module.
 
-To integrate the connector module for the Vertex app, follow the steps below:
+To integrate the connector module for the Vertex app, follow the steps below.
 
 ### 1. Configure shared configs
 

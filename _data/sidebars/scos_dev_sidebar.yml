@@ -3857,7 +3857,7 @@ entries:
       url: /docs/scos/dev/sdk/data-export.html
   - title: Tutorials and HowTos
     url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
-    nested: 
+    nested:
     - title: Introduction Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
       nested:

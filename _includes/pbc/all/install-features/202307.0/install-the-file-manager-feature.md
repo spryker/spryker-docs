@@ -151,7 +151,7 @@ Ensure the following transfers have been created:
 
 {% info_block warningBox "Note" %}
 
-The precedence of the web server's maximum file size configuration is consistently prior to the application configuration and can be adjusted using `deploy.*.yml`.
+The web server's maximum file size configuration - `max-request-body-size` has higher priority then the module configuration and can be adjusted using `deploy.*.yml`.
 For additional details, refer to the [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
 
 {% endinfo_block %}

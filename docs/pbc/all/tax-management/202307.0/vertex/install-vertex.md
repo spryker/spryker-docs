@@ -179,7 +179,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 To integrate the Vertex app, follow the steps below. 
 
-### 5. Configure Vertex Specific Metadata Transfers
+### 1. Configure Vertex Specific Metadata Transfers
 
 Define specific Vertex Tax Metadata transfers and extend several other transfers with them:
 
@@ -238,7 +238,7 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 
 `ItemTaxMetadata` is equal to Line Item API Payload.
 
-### 6. Implement Vertex Specific Metadata Extender Plugins
+### 2. Implement Vertex Specific Metadata Extender Plugins
 
 There are several types of expander plugins you have to introduce.
 
@@ -378,7 +378,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 }
 ```
 
-### 7. Configure Tax App Dependency Provider
+### 3. Configure Tax App Dependency Provider
 
 As a result, the plugin stack can look like this:
 

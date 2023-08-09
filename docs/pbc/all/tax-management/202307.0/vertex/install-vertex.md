@@ -248,7 +248,6 @@ The following code sample shows how to introduce the following expander plugin:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexCodeExpanderPlugin.php`
 
-
 ```php
 <?php
 

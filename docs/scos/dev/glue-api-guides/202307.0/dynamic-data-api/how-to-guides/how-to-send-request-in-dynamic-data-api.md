@@ -1,5 +1,5 @@
 ---
-title: How send a request in Dynamic Data API
+title: How to send a request in Dynamic Data API
 description: This guide shows how to send a request in Dynamic Data API.
 last_updated: June 23, 2023
 template: howto-guide-template

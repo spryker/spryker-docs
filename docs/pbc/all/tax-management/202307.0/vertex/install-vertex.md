@@ -162,6 +162,8 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         $pluginStack = [
             // ...
         
+            // Please put this plugin after all other tax calculation plugins.
+        
             new TaxAppCalculationPlugin(),
         
             // ...

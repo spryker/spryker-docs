@@ -3316,6 +3316,17 @@ entries:
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
+          - title: Avalara
+            url: /docs/pbc/all/tax-management/avalara/avalara.html
+            nested:
+              - title: Install Avalara
+                url: /docs/pbc/all/tax-management/avalara/avalara.html
+              - title: Install Avalara
+                url: /docs/pbc/all/tax-management/avalara/avalara.html
+              - title: Install Avalara
+                url: /docs/pbc/all/tax-management/avalara/avalara.html
+              - title: Install Avalara
+                url: /docs/pbc/all/tax-management/avalara/avalara.html
           - title: Base shop
             nested:
               - title: What's changed

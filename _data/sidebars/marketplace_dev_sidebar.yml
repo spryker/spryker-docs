@@ -37,7 +37,7 @@ entries:
             url: /docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html
 
           - title: Marketplace in the Back Office
-            url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.htm
+            url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
       - title: Feature walkthroughs
         url: /docs/marketplace/dev/feature-walkthroughs/feature-walkthroughs.html
         nested:

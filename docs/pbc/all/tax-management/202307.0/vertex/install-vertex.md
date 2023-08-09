@@ -1,6 +1,6 @@
 ---
 title: Install Vertex
-description: Find out how you can integrate Vertex into your Spryker shop
+description: Find out how you can install Vertex in your Spryker shop
 draft: true
 last_updated: Aug 3, 2023
 template: howto-guide-template
@@ -12,7 +12,7 @@ To enable the Vertex integration, use the [spryker/tax-app](https://github.com/s
 
 To integrate the connector module for the Vertex app, follow these steps:
 
-### 1. Configure shared configs.
+### 1. Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
 
@@ -42,7 +42,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-### 2. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS.
+### 2. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS
 
 There is an example of how to configure payment `config/Zed/oms/{your_payment_oms}.xml`.
 
@@ -83,7 +83,7 @@ There is an example of how to configure payment `config/Zed/oms/{your_payment_om
             <transition happy="true">
                 <source>tax invoice submitted</source>
                 
-                <!-- Here the contents of target transition -->
+                <!-- Here are the contents of the target transition -->
                 
             </transition>
 
@@ -177,7 +177,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 ## Integrate the Vertex app
 
-Follow the next steps to integrate the Vertex app
+Follow the steps below to install the integrate the Vertex app.
 
 ### 1. Configure Vertex Specific Metadata Transfers
 
@@ -235,6 +235,7 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 `SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. So you are free to extend them as you need according to Vertex API structure.
 
 `SaleTaxMetadata` is equal to Invoicing/Quotation request payload excluding LineItems.
+
 `ItemTaxMetadata` is equal to Line Item API Payload.
 
 ### 2. Implement Vertex Specific Metadata Extender Plugins
@@ -274,7 +275,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
 }
 ```
 
-For calculation process:
+For the calculation process:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexCodeExpanderPlugin.php`
 

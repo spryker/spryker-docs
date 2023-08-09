@@ -109,8 +109,7 @@ The following code sample shows how to configure payment `config/Zed/oms/{your_p
 </statemachine>
 ```
 
-### 3. Configure Oms Dependency Provider
-
+Configure Oms Dependency Provider.
 Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
 ```php

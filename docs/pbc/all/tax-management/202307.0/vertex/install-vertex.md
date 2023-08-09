@@ -12,7 +12,7 @@ To enable the Vertex integration, use the [spryker/tax-app](https://github.com/s
 
 To integrate the connector module for the Vertex app, follow the steps below:
 
-### Configure shared configs
+### 1. Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
 
@@ -42,7 +42,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-### (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS
+### 2. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS
 
 The following code sample shows how to configure payment `config/Zed/oms/{your_payment_oms}.xml`.
 
@@ -106,7 +106,7 @@ The following code sample shows how to configure payment `config/Zed/oms/{your_p
 </statemachine>
 ```
 
-### Configure Oms Dependency Provider
+### 3. Configure Oms Dependency Provider
 
 Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
@@ -140,7 +140,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
 
 ```
 
-### Configure Calculation Dependency Provider
+### 4. Configure Calculation Dependency Provider
 
 Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`:
 
@@ -179,7 +179,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 To integrate the Vertex app, follow the steps below. 
 
-### Configure Vertex Specific Metadata Transfers
+### 5. Configure Vertex Specific Metadata Transfers
 
 Define specific Vertex Tax Metadata transfers and extend several other transfers with them:
 
@@ -238,7 +238,7 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 
 `ItemTaxMetadata` is equal to Line Item API Payload.
 
-### Implement Vertex Specific Metadata Extender Plugins
+### 6. Implement Vertex Specific Metadata Extender Plugins
 
 There are several types of expander plugins you have to introduce.
 
@@ -335,7 +335,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 }
 ```
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "Use same Product Class Code" %}
 
 The same Product Class Code extension must be used for all the product options and other order expenses because, in Vertex's perspective, all of them are separate items for tax calculation. To find them a proper place, you can refer to the transfers' definition, which was outlined above.
 
@@ -378,7 +378,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 }
 ```
 
-### Configure Tax App Dependency Provider
+### 7. Configure Tax App Dependency Provider
 
 As a result, the plugin stack can look like this:
 

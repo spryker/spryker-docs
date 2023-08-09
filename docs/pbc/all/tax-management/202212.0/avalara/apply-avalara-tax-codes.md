@@ -1,6 +1,13 @@
-To automate tax calculations for your shop, [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes).
+---
+title: Apply Avalara tax codes
+description: Apply Avalara tax codes to calculate taxes
+last_updated: Aug 3, 2023
+template: concept-topic-template
+---
 
-You can import Avalara tax codes for the following entities:
+[Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) are processed in the background to define taxes for order items, and are not displayed on the Storefront or in the Back Office. Taxes are calculated during the checkout, and, by default, the taxes are shown at the final checkout step.
+
+To automate tax calculations for your shop, you need to apply the tax codes by importing them into your shop. You can import Avalara tax codes for the following entities:
 
 | ENTITY | IMPORT FILE DETAILS |
 |-|-|
@@ -13,5 +20,3 @@ You can import Avalara tax codes for the following entities:
 Because shipment and products fall under different taxability categories, the Avalara tax code for shipment is different from that of the abstract product or product option. For details about the codes and categories, see [Avalara tax code search](https://taxcode.avatax.avalara.com/).
 
 {% endinfo_block %}
-
-The Avalara codes are processed in the background to define taxes for order items, and are not displayed on the Storefront or in the Back Office. Taxes are calculated during the checkout, and, by default, the taxes are shown at the final checkout step.

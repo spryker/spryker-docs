@@ -728,7 +728,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 | PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 | StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 | ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes service point address relation from query if `excludeAddressRelation` request parameter is provided. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes service point address relation from query if the `excludeAddressRelation` request parameter is provided. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 

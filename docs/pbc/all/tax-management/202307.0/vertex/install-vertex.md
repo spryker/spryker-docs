@@ -10,7 +10,7 @@ template: howto-guide-template
 
 To enable the Vertex integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module.
 
-To integrate the connector module for the Vertex app, follow these steps:
+To integrate the connector module for the Vertex app, follow the steps below:
 
 ### Configure shared configs
 
@@ -177,7 +177,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 ## Integrate the Vertex app
 
-Follow the steps below to install the integrate the Vertex app.
+To integrate the Vertex app, follow the steps below. 
 
 ### Configure Vertex Specific Metadata Transfers
 
@@ -232,7 +232,7 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 
 ```
 
-`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You are free to extend them as you need according to the Vertex API structure.
+`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You can extend them as you need according to the Vertex API structure.
 
 `SaleTaxMetadata` is equal to the Invoicing/Quotation request payload, excluding LineItems.
 
@@ -242,7 +242,7 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 
 There are several types of expander plugins you have to introduce.
 
-#### Customer Class Code expander plugins
+#### Customer Class Code Expander plugins
 
 The following code sample shows how to introduce the following expander plugin:
 
@@ -344,7 +344,7 @@ The same Product Class Code extension must be used for all the product options a
 
 #### Flexible fields extension
 
-The following code sample shows how to introduce the flexible fields extension:```
+The following code sample shows how to introduce the flexible fields extension:
 
 ```php
 

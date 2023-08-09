@@ -1301,7 +1301,7 @@ Make sure that you can send the following requests:
 
 {% endinfo_block %}
 
-3. To enable the Storefront API, register the plugins:
+3. To enable the Storefront API, register the following plugins:
 
 | PLUGIN                                     | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                 |
 |--------------------------------------------|---------------------------------------------------|---------------|-----------------------------------------------------------|

@@ -28,7 +28,7 @@ The *Tax* feature lets you define taxes for the items you sell. The feature is r
 
 The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/spryker-tax/configure-spryker-tax/create-tax-rates.html).
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/spryker-tax/configure-spryker-tax/create-tax-sets.html) or [import tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-tax-sets.html) into your project.
+A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/spryker-tax/configure-spryker-tax/create-tax-sets.html) or [import tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html) into your project.
 
 Tax sets can be applied to an abstract product, product option, and shipment:
 

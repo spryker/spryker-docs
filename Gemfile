@@ -9,7 +9,7 @@ gem "jekyll-feed", "~> 0.12"
 gem "jekyll-redirect-from"
 
 group :jekyll_plugins do
-  gem "jekyll-commonmark-ghpages"
+  gem "jekyll-commonmark-ghpages", ">= 0.2.0"
   gem "jekyll-algolia", "~> 1.0"
   gem "page_template_validator", path: "./_plugins/page_template_validator"
   gem "jekyll-sitemap"

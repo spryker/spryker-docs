@@ -187,8 +187,16 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                      - title: Cart Notes
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html
+                        include_versions:
+                        - "202307.0"
                       - title: Cart + Non-splittable Products
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
+                      - title: Cart + Prices
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-prices-feature.html
+                        include_versions:
+                        - "202307.0"
                       - title: Cart + Product
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-feature.html
                       - title: Cart + Product Bundles
@@ -472,12 +480,12 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
                       - title: Content Items
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
+                      - title: File Manager
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html
                       - title: Navigation
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
                       - title: Product Sets
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
-                        include_versions:
-                          - "202212.0"
                   - title: Install Glue API
                     nested:
                       - title: CMS
@@ -1010,7 +1018,7 @@ entries:
       - title: Dynamic Multistore
         url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
         include_versions:
-        - "202307.0"
+        - "202307.0" 
         nested:
           - title: Base shop
             nested:
@@ -1030,6 +1038,8 @@ entries:
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html
                       - title: Dynamic Multistore + Customer Account Management
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-customer-account-management-feature.html
+                      - title: Dynamic Multistore + Prices
+                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-prices-feature.html
                       - title: Dynamic Multistore + Product
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-product-feature.html
                       - title: Install Dynamic Multistore
@@ -3402,6 +3412,13 @@ entries:
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+          - title: Vertex
+            url: /docs/pbc/all/tax-management/vertex/vertex.html
+            include_versions:
+            - "202307.0"
+            nested:
+              - title: Install Vertex
+                url: /docs/pbc/all/tax-management/vertex/install-vertex.html
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
         nested:

@@ -429,6 +429,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     {
         return [
             new CalculableObjectCustomerWithTaxCodeExpanderPlugin(), // to extend quote with customer class code
+            new CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin(), // to extend quote with customer exemption certificate
             new CalculableObjectExpensesWithTaxCodeExpanderPlugin(), // to extend quote expenses with product class codes
             new CalculableObjectItemProductOptionWithTaxCodeExpanderPlugin(), // to extend quote item product options with product class codes
             new CalculableObjectItemWithProductClassCodeExpandePlugin(), // to extend quote items with product class codes
@@ -443,6 +444,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     {
         return [
             new OrderCustomerWithTaxCodeExpanderPlugin(), // to extend order with customer class code
+            new OrderCustomerWithVertexExemptionCertificateExpanderPlugin(), // to extend order with customer exemption certificate
             new OrderExpensesWithTaxCodeExpanderPlugin(), // to extend order expenses with product class codes
             new OrderItemProductOptionWithTaxCodeExpanderPlugin(), // to extend order item product options with product class codes
             new OrderItemWithProductClassCodeExpandePlugin(), // to extend order items with product class codes

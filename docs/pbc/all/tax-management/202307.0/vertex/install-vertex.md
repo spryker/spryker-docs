@@ -315,7 +315,7 @@ and for quote:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin.php`
 
-The following code sample shows how to introduce the following expander plugins:
+The following code sample shows how to implement the previously mentioned plugins:
 
 ```php
 // ...

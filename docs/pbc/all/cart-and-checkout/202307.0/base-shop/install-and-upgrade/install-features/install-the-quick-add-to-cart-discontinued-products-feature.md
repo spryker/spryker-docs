@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-discontinued-products-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/quick-add-to-cart-discontinued-products-feature-integration.html
-  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-quick-add-to-cart-discontinued-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-quick-add-to-cart-discontinued-products-feature.md -->

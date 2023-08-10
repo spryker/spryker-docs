@@ -16,7 +16,7 @@ Follow the steps below to install the Glue Storefront and Backend API applicatio
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

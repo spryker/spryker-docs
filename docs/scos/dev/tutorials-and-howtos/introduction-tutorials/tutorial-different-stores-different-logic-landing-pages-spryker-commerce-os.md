@@ -23,9 +23,6 @@ redirect_from:
   - /v1/docs/t-different-stores-different-logic-landing-pages
   - /v1/docs/en/t-different-stores-different-logic-landing-pages
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
-related:
-  - title: "HowTo: Set up multiple stores"
-    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html 
 ---
 
 {% info_block infoBox %}

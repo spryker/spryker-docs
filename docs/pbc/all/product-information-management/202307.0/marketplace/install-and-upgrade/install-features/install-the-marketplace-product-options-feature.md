@@ -6,8 +6,9 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202307.0/marketplace-product-option-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202307.0/marketplace-product-options-feature-integration.html
+  - /docs/pbc/all/product-information-management/202307.0/marketplace/marketplace-product-options-feature-integration.html
 related:
-  - title: Marketplace Product Options feature walkthrough
+  - title: Marketplace Product Options feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
 ---
 

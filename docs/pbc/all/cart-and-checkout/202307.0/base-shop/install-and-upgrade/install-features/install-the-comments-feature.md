@@ -11,7 +11,6 @@ redirect_from:
   - /docs/comments-feature-integration
   - /docs/en/comments-feature-integration
   - /docs/scos/dev/feature-integration-guides/202307.0/comments-feature-integration.html
-  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-comments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-comments-feature.md -->

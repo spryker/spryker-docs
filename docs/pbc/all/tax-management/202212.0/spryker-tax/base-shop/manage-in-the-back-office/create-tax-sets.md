@@ -40,7 +40,7 @@ This opens the **Edit Tax Set** page with a success message displayed.
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | NAME | You will use the name when assigning the tax set to products, delivery methods, and thresholds. |
-| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html). |
+| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html). |
 
 ## Next steps
 

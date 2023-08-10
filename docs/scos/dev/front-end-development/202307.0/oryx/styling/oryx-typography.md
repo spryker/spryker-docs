@@ -5,6 +5,13 @@ last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
+
+{% info_block warningBox %}
+
+Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also defines how page structure is perceived. Big headers typically go first and are perceived as more important, whereas smaller text seems less important.
 
 The typography system lets you set up font size, weight, and line height globally. Components don't define _values_ for fonts directly in their CSS but use _design tokens_ to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.

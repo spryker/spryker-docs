@@ -5,6 +5,12 @@ last_updated: July 24, 2023
 template: concept-topic-template
 ---
 
+{% info_block warningBox %}
+
+Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 Design tokens provide a powerful system for achieving consistent and customizable styles throughout an Oryx application. They are extensively used inside the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-colors-system.html), typography, icons, and many more. Ensuring a clean separation between styles and components, design tokens make it easier to manage and maintain the application's design system. This document focuses on the structure and usage of design tokens in Oryx.
 
 ## CSS variables

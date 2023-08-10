@@ -5,6 +5,7 @@ entries:
       - title: Back Office
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Spryker Core Back Office feature overview
             url: /docs/pbc/all/back-office/spryker-core-back-office-feature-overview.html
@@ -53,9 +54,6 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202204.0"
-                - "202212.0"
                 nested:
                   - title: Add carrier companies
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
@@ -251,6 +249,7 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                   - title: Install Glue API
                     nested:
                       - title: Install the Cart Glue API
@@ -318,9 +317,6 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202204.0"
-                - "202212.0"
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
@@ -330,6 +326,7 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
                     include_versions:
                     - "202212.0"
+                    - "202307.0"
               - title: Manage using Glue API
                 nested:
                   - title: Check out purchases
@@ -431,7 +428,6 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
-
       - title: Content Management System
         url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:
@@ -486,6 +482,9 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
                       - title: Product Sets
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
+                        include_versions:
+                          - "202212.0"
+                          - "202307.0"
                   - title: Install Glue API
                     nested:
                       - title: CMS
@@ -613,9 +612,6 @@ entries:
                     url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                include_versions:
-                - "202204.0"
-                - "202212.0"
                 nested:
                   - title: "Best practices: Add content to the Storefront pages using templates and slots"
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
@@ -754,6 +750,7 @@ entries:
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -947,6 +944,7 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-multiple-abstract-products-as-promotional-products-discounts-feature.html
                     include_versions:
                     - "202212.0"
+                    - "202307.0"
                   - title: Upgrade the Discount module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
                   - title: Upgrade the DiscountCalculatorConnector module
@@ -998,12 +996,6 @@ entries:
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
               - title: Create discounts based on shipment
                 url: /docs/pbc/all/discount-management/base-shop/create-discounts-based-on-shipment.html
-              - title: Tutorials and HowTos
-                include_versions:
-                - "202204.0"
-                nested:
-                  - title: "HowTo: Create discounts based on shipment"
-                    url: /docs/pbc/all/discount-management/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
           - title: Marketplace
             include_versions:
             - "202212.0"
@@ -1095,7 +1087,6 @@ entries:
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail-api-requests.html
               - title: Inxmail Order referenced commands
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail-order-referenced-commands.html
-
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
         nested:
@@ -1171,6 +1162,7 @@ entries:
         url: /docs/pbc/all/merchant-management/merchant-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -1304,6 +1296,7 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: Manage merchants
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants.html
@@ -1351,6 +1344,7 @@ entries:
       - title: Miscallaneous
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -1488,6 +1482,7 @@ entries:
         url: /docs/pbc/all/offer-management/offer-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Base shop
             nested:
@@ -1580,8 +1575,6 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/marketplace-product-offer-feature-domain-model-and-relationships.html
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
-        include_versions:
-        - "202212.0"
         nested:
           - title: Base shop
             nested:
@@ -1801,6 +1794,7 @@ entries:
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Spryker Pay
             nested:
@@ -2134,6 +2128,7 @@ entries:
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-per-merchant-relation-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                       - title: Product Price Glue API
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
                   - title: Upgrade modules
@@ -2328,6 +2323,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                       - title: Category Management + CMS
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
                       - title: Category Management + Promotions and Discounts
@@ -2346,6 +2342,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-multi-store-products-feature.html
                         include_versions:
                         - "202212.0"
+                        - "202307.0"
                       - title: Packaging Units
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
@@ -2865,6 +2862,7 @@ entries:
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -2924,6 +2922,7 @@ entries:
         url: /docs/pbc/all/punchout/punchout-catalogs.html
         include_versions:
         - "202212.0"
+        - "202307.0"
         nested:
           - title: Punchout Catalogs overview
             url: /docs/pbc/all/punchout/punchout-catalogs-overview.html
@@ -3068,6 +3067,7 @@ entries:
                 url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/log-into-the-back-office.html
                 include_versions:
                 - "202212.0"
+                - "202307.0"
                 nested:
                   - title: Main merchant returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html

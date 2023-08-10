@@ -268,7 +268,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
      */
     public function expand(OrderTransfer $orderTransfer): OrderTransfer
     {
-        $orderTransfer->getTaxMetadata()->setCustomer(['customerCode' => 'vertex-customer-code']);
+        $orderTransfer->getTaxMetadata()->setCustomer(['customerCode' => ['classCode' => 'vertex-customer-code']]);
 
         return $orderTransfer;
     }
@@ -292,20 +292,50 @@ use Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpander
 class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
 {
     /**
-     * @param \Generated\Shared\Transfer\CalculableObjectTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer
      *
      * @return \Generated\Shared\Transfer\CalculableObjectTransfer
      */
-    public function expand(CalculableObjectTransfer $quoteTransfer): CalculableObjectTransfer
+    public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
     {
-        $quoteTransfer->getTaxMetadata()->setCustomer(['customerCode' => 'vertex-customer-code']);
+        $calculableObjectTransfer->getTaxMetadata()->setCustomer(['customerCode' => ['classCode' => 'vertex-customer-code']]);
 
-        return $quoteTransfer;
+        return $calculableObjectTransfer;
     }
 }
 ```
 
-#### Configure Product Class Code Expanders
+#### Configure Customer Exemption Certificate Expander plugins
+
+For order:
+
+`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexExemptionCertificateExpanderPlugin.php`
+
+and for quote:
+
+`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin.php`
+
+The following code sample shows how to introduce the following expander plugins:
+
+```php
+// ...
+class OrderCustomerWithVertexExemptionCertificateExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer
+     *
+     * @return \Generated\Shared\Transfer\CalculableObjectTransfer
+     */
+    public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
+    {
+        $calculableObjectTransfer->getTaxMetadata()->setCustomer(['exemptionCertificate' => ['exemptionCertificateNumber' => 'vertex-exemption-certificate-number']]);
+
+        return $calculableObjectTransfer;
+    }
+}
+```
+
+#### Configure Product Class Code Expander plugins
 
 For order items:
 

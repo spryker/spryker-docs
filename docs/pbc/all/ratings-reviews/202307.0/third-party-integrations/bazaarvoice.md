@@ -8,9 +8,11 @@ redirect_from:
    - docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html  
 ---
 
-{% wistia fhyuouxbpp 960 720 %}
+![Bazaarvoice](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice/bazaarvoice.png)
 
-The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app lets you collect and add user-generated content (UGC) to your product pages. 
+The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app lets you collect and add user-generated content (UGC) to your product pages.
+
+{% wistia fhyuouxbpp 960 720 %}
 
 The Bazaarvoice service offers the following UGC: 
 

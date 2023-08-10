@@ -1,29 +1,29 @@
 ---
 title: "Oryx: Icon system"
-description: Icons are used for a consistent design system through the components in Oryx applications
+description: Icons are used for a consistent design system throughout components in Oryx applications
 last_updated: July 29, 2023
 template: concept-topic-template
 ---
 
-Icons play a crucial role in user interfaces as they provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components in your applications.
+Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components in your applications.
 
-## Icon Component
+## Icon component
 
-Icons are rendered using the `IconComponent`, a design system component designed for this purpose. To display an icon, simply use the `type` attribute to specify the icon's name:
+Icons are rendered using `IconComponent`, a design system component designed for this purpose. To display an icon, simply use the `type` attribute to specify the icon's name:
 
 ```html
 <oryx-icon type="rocket"></oryx-icon>
 ```
 
-The `IconComponent` can render icons using either an icon font or SVG. When rendered as SVG, the icons are displayed in a 24x24 pixels viewport.
+`IconComponent` can render icons using either an icon font or SVG. When rendered as SVG, icons are displayed in a 24x24 pixels viewport.
 
-## Icon Sizes
+## Icon sizes
 
-Our icon system is standardized around a 24x24 pixels format. Icons can be scaled to fit alternative sizes, and we offer three pre-defined sizes:
+The icon system is standardized around a 24x24 pixels format. Icons can be scaled to fit alternative sizes, and with three pre-defined sizes available:
 
-- xs (Extra Small): 16x16 pixels
-- md (Medium): 20x20 pixels
-- lg (Large): 24x24 pixels
+- xs (extra small): 16x16 pixels
+- md (medium): 20x20 pixels
+- lg (large): 24x24 pixels
 
 To maintain consistency, the `IconComponent` in Oryx provides the `--oryx-icon-size` CSS variable, which applies to both font-based and SVG-based icons. This feature enables you to control icon sizes throughout your UI effortlessly, ensuring icons remain clear and sharp across different contexts and devices.
 

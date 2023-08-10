@@ -24,6 +24,10 @@ Message: [high] d3-color vulnerable to ReDoS
 Message: [high] Cross-realm object access in Webpack 5
          https://github.com/advisories/GHSA-hc6q-2mpp-qw7j
  Target: webpack
+ 
+Message: [critical] Prototype pollution in webpack loader-utils 
+         https://github.com/advisories/GHSA-76p3-8jx3-jpfq      
+ Target: loader-utils  
 
 
 Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html

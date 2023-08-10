@@ -10,6 +10,7 @@ redirect_from:
   - /docs/reclamations-feature-integration
   - /docs/en/reclamations-feature-integration
   - /docs/scos/dev/feature-integration-guides/202307.0/reclamations-feature-integration.html
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/install-and-update/install-features/install-the-reclamations-feature.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-reclamations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-reclamations-feature.md -->

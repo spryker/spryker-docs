@@ -3,8 +3,6 @@ title: File Manager feature integration
 description: File Manager lets you upload and manager your assets effectively.
 last_updated: Aug 07, 2023
 template: feature-integration-guide-template
-related:
-- title: File Manager feature walkthrough
   link: docs/scos/dev/feature-walkthroughs/page.version/file-manager-feature-walkthrough.html
 ---
 

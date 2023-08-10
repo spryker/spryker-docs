@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/search/202307.0/third-party-integrations/algolia.html
 ---
 
-![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
+{% wistia za7wet2x2s 960 720 %}
 
 Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).
 

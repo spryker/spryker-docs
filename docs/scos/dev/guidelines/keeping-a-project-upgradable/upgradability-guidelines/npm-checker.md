@@ -4,7 +4,7 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This checker executes the `npm audit` command on a project code and provides the list of npm packages vulnerabilities.
+This checker identifies and reports security vulnerabilities in the npm dependencies.
 
 ## Problem description
 
@@ -21,6 +21,10 @@ By using the npm vulnerabilities checker with the Evaluator, developers can safe
 NPM CHECKER
 ===========
 
+Message: [critical] Prototype pollution in webpack loader-utils 
+         https://github.com/advisories/GHSA-76p3-8jx3-jpfq      
+ Target: loader-utils  
+
 Message: [high] d3-color vulnerable to ReDoS
          https://github.com/advisories/GHSA-36jr-mh4h-2g58
  Target: d3-color
@@ -28,11 +32,12 @@ Message: [high] d3-color vulnerable to ReDoS
 Message: [high] Cross-realm object access in Webpack 5
          https://github.com/advisories/GHSA-hc6q-2mpp-qw7j
  Target: webpack
- 
-Message: [critical] Prototype pollution in webpack loader-utils 
-         https://github.com/advisories/GHSA-76p3-8jx3-jpfq      
- Target: loader-utils  
-
 
 Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
 ```
+
+### Resolving the issue
+
+To resolve the issue:
+
+1. Update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.

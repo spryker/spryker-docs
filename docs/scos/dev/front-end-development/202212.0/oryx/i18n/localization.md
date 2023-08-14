@@ -22,9 +22,9 @@ Translation keys, also knows as "i18n tokens", are used to resolve localized tex
 
 ## Resolving translations from translation resources
 
-The localization of labels is driven by the current language and the translation key. Translations are supposed to be provided as additional lazy-loaded resources next to the component implementation. Although, they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded externally, they can be provided by static JSON files or a thrid-party service through an API.
+The localization of labels is driven by the current language and the translation key. Translations are typically provided as lazy loaded resources next to the component implementation. Although, they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded externally, they can be provided by static JSON files or a third-party service through an API.
 
-Oryx uses the "current" language to "look up" the available labels. When the language is `en`, the locales for English are resolved.
+Oryx uses the active application language to look up the available labels. When the language is `en`, the locales for English are resolved.
 
 If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if you have a translation key that contains multiple parts, like `cart.increase`), you can provide a global translation for just the `increase` part or for `cart.increase`.
 
@@ -32,7 +32,7 @@ If a language resource can be resolved, the translation key is evaluated against
 
 If a translation key doesn't match any of the translations, or if the i18n feature is not installed (which is the default behavior), the translation key is auto-converted into a human-readable message.
 
-For example, if you have a token that contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single global translation of `increase` that might affect multiple components throughout multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
+For example, if you have a token that contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single translation of `increase` that might affect multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
 
 The following examples show how the tokens are translated.
 
@@ -74,7 +74,7 @@ This gives you full flexibility of how and where to load your translation texts 
 
 ## Translation resources
 
-To translate text in Oryx, you can provide translation data in a TS module. You can also integrate those in data provided by a third-party translation engine.
+To translate text in Oryx, you can provide translation data in a TS module. You can also load the text from a third-party translation engine.
 
 ```ts
 export default {

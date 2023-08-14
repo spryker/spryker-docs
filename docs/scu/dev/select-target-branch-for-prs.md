@@ -16,8 +16,8 @@ To select a target branch, do the following:
 
 ![Spryker CI Code - Branches](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/select-target-branch-for-prs.md/branches-tab.png)
 
-3. Near the branch name that you want to use as a target, click the vertical ellipsis button.
-4. Click **Set as default branch** to select the branch as a target.
+3. Near the branch name that you want to use as a target, click the <span class="inline-img">![settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/select-target-branch-for-prs.md/kebab-menu.png)</span> button.
+4. Select the branch as a target: click **Set as default branch**.
 
 ![Spryker CI Code - Target branch selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/select-target-branch-for-prs.md/set-as-default-branch.png)
 

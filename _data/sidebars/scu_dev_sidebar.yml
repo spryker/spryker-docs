@@ -25,6 +25,8 @@ entries:
             url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
       - title: Invite users to Spryker CI
         url: /docs/scu/dev/invite-users-to-spryker-ci.html
+      - title: Configure the SCU
+        url: /docs/scu/dev/configure-spryker-code-upgrader.html
       - title: Run the SCU
         url: /docs/scu/dev/run-spryker-code-upgrader.html
       - title: Change default branch

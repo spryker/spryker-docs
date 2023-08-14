@@ -3482,12 +3482,19 @@ entries:
                     url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-configuration.html
                   - title: Execution flow
                     url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/execution-flow.html
-                  - title: Rules and scope
+                  - title: Rules and scopes
                     url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html
                     nested:
-
-
-
+                      - title: Composite entity
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html
+                      - title: Global scope
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/global-scope.html
+                      - title: Inherited scope
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html
+                      - title: Segment scope
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
+              - title: "Persistence ACL feature: Domain model and relationships"
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-domain-model-and-relationships.html                                                                                   
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

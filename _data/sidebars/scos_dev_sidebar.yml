@@ -782,7 +782,7 @@ entries:
         - "202212.0"
         - "202307.0"
       - title: REST API Marketplace B2C Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -3444,7 +3444,7 @@ entries:
           - title: "Color system"
             url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
           - title: Typography
-            url: /docs/scos/dev/front-end-development/oryx/styling/typography.html            
+            url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
 
     - title: Marketplace
       include_versions:

@@ -3478,10 +3478,15 @@ entries:
               - title: Persistence ACL feature overview
                 url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
                 nested:
-                  - title: Persistence ACL feature overview
-                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
-                  - title: Persistence ACL feature overview
-                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
+                  - title: Persistence ACL feature configuration
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-configuration.html
+                  - title: Execution flow
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/execution-flow.html
+                  - title: Rules and scope
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html
+                    nested:
+
+
 
 
       - title: Warehouse Management System

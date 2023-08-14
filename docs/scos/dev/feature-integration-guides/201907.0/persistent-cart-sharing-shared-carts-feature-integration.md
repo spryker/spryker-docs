@@ -12,7 +12,7 @@ redirect_from:
 
 ## Install Feature Core
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name  | Version |
 | --- | --- |
@@ -111,7 +111,7 @@ Make sure, that when you have a cart share link with Read-only or Full Access, y
 
 ## Install feature frontend
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version|
 | --- | --- |

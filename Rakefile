@@ -118,7 +118,7 @@ task :check_mp_dev do
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/sdk\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/,    
+    /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
@@ -216,6 +216,7 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,    
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/

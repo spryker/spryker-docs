@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Apr 3, 2023
 ---
 
+{% info_block warningBox %}
+
+Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 To compose a frontend application from different backend APIs, Oryx provides a flexible architecture. This architecture lets you adapt third-party APIs without changing business logic and components. For example, when an alternative search system is used, the existing application layers and components can remain unchanged.
 
 ## Data models

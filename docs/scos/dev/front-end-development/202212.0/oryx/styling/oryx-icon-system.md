@@ -5,11 +5,11 @@ last_updated: July 29, 2023
 template: concept-topic-template
 ---
 
-Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components in your applications.
+Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components of an  application.
 
 ## Icon component
 
-Icons are rendered using `IconComponent`, a design system component designed for this purpose. To display an icon, simply use the `type` attribute to specify the icon's name:
+Icons are rendered using `IconComponent`, a design system component designed for this purpose. To display an icon, use the `type` attribute to specify the icon's name:
 
 ```html
 <oryx-icon type="rocket"></oryx-icon>
@@ -19,15 +19,17 @@ Icons are rendered using `IconComponent`, a design system component designed for
 
 ## Icon sizes
 
-The icon system is standardized around a 24x24 pixels format. Icons can be scaled to fit alternative sizes, and with three pre-defined sizes available:
+The icon system is standardized around the 24x24 pixels format. Icons can be scaled to fit alternative sizes with three pre-defined sizes available:
 
-- xs (extra small): 16x16 pixels
-- md (medium): 20x20 pixels
-- lg (large): 24x24 pixels
+| SIZE NAME | PIXELS |
+|-|-|
+| `xs`: extra small | 16x16 |
+| `md`: medium | 20x20 |
+| `lg`: large | 24x24 |
 
-To maintain consistency, `IconComponent` provides the `--oryx-icon-size` CSS variable, which applies to both font-based and SVG-based icons. This feature enables you to control icon sizes throughout your UI effortlessly, ensuring icons remain clear and sharp across different contexts and devices.
+To maintain consistency, `IconComponent` provides the `--oryx-icon-size` CSS variable, which applies to both font-based and SVG-based icons. This feature enables you to control icon sizes throughout UI effortlessly, ensuring icons remain clear and sharp across different contexts and devices.
 
-You can control the icon size through the `size` attribute, or by providing the CSS variable. If both the size attribute and the CSS variable are used, the CSS variable takes precedence.
+You can control the icon size through the `size` attribute or by providing the CSS variable. If both the size attribute and the CSS variable are used, the CSS variable takes precedence.
 
 ```html
 <oryx-icon type="rocket" size="md"></oryx-icon>
@@ -43,17 +45,17 @@ Oryx supports both font-based icons and SVG icons, letting you choose the most s
 
 ### Font-based icons
 
-Font-based icons are a popular choice due to their ease of use and the availability of a wide range of icons. They offer great quality and scalability, staying sharp at various sizes. Additionally, font-based icons can be easily colored using CSS, seamlessly integrating with your UI theme.
+Font-based icons are a popular choice due to their ease of use and the availability of a wide range of icons. They offer great quality and scalability, staying sharp at various sizes. Additionally, font-based icons can be easily colored using CSS, seamlessly integrating with UI themes.
 
-Oryx leverages [Material symbols](https://fonts.google.com/icons) and [Font Awesome icons](https://fontawesome.com/). However, you can also add other icon fonts as needed. Material Symbols are built with Variable fonts, enabling developers to modify font characteristics like line weight and fill through CSS.
+Oryx leverages [Material symbols](https://fonts.google.com/icons) and [Font Awesome icons](https://fontawesome.com/). However, you can also add other icon fonts. Material Symbols are built with Variable fonts, enabling developers to edit font characteristics like line weight and fill through CSS.
 
 When using font-based icons, make sure to consider the potential impact on performance. Since all icons in the font are loaded at once, it may affect the initial page loading time. Proper optimization strategies are essential to mitigate this issue.
 
 ### SVG icons
 
-SVG icons offer several advantages, including the ability to load icons individually or in sprite sheets, which optimizes HTTP requests and improves performance. Server-side rendering of SVG icons results in optimal output for performance, leading to faster loading times. Being vector-based, SVG icons maintain their quality and sharpness at various sizes, making them ideal for responsive designs. Like font-based icons, SVG icons can also be colored using CSS, enabling seamless integration with a UI theme.
+SVG icons offer several advantages, including the ability to load icons individually or in sprite sheets, which optimizes HTTP requests and improves performance. Server-side rendering of SVG icons results in optimal output for performance, leading to faster loading times. Being vector-based, SVG icons maintain their quality and sharpness at various sizes, making them ideal for responsive designs. Like font-based icons, SVG icons can also be colored using CSS, enabling seamless integration with UI themes.
 
-However, creating and maintaining SVG icons can be more complicated compared to font-based icons, requiring more intricate design work. Developers need to find a balance between icon complexity and performance to ensure a smooth user experience.
+Compared to font-based icons, creating and maintaining SVG icons requires more intricate design work. Developers need to find balance between icon complexity and performance to ensure a smooth user experience.
 
 ### Image icons
 
@@ -61,7 +63,7 @@ Oryx does not provide support for using images as icons. Images lack scalability
 
 ## Icon colors
 
-Icons in Oryx are seamlessly integrated into the main Document Object Model (DOM), which means they can inherit colors from ancestor HTML elements. To customize an icon's color, you can use standard CSS or leverage the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-color-system.html). If no explicit color is provided, the icon inherits its color from the parent element.
+In Oryx, icons are seamlessly integrated into the main Document Object Model (DOM), which means they can inherit colors from ancestor HTML elements. To customize an icon's color, you can use standard CSS or leverage the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-color-system.html). If no explicit color is provided, the icon inherits its color from the parent element.
 
 Here's an example of how to apply colors using standard CSS or the `--oryx-icon-color` variable:
 
@@ -84,7 +86,7 @@ When using Material Symbols, you can configure the adjustable variable font styl
 * grade
 * optical size
 
-### Global Configuration
+### Global configuration
 
 You can provide the variable font styles globally using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-design-tokens.html):
 
@@ -105,9 +107,9 @@ export const app = appBuilder().withTheme({
 });
 ```
 
-### CSS Properties
+### CSS properties
 
-Alternatively, you can configure the variable font styles for parts of the DOM by creating CSS properties in the stylesheet. CSS custom properties are inherited by all descendants, making it easy to configure variable fonts for a DOM tree with a single style rule:
+Alternatively, you can configure the variable font styles for parts of the DOM by creating CSS properties in the stylesheet. Custom CSS properties are inherited by all descendants, making it easy to configure variable fonts for a DOM tree with a single style rule:
 
 ```html
 <div style="--oryx-icon-fill: 1">
@@ -118,9 +120,9 @@ Alternatively, you can configure the variable font styles for parts of the DOM b
 </div>
 ```
 
-### Individual Icon Styling
+### Individual icon styling
 
-You can also style the variable font for an individual icon by specifying style rules for a single icon type.
+You can also style the variable font for an individual icon by specifying style rules for a single icon type:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";
@@ -142,7 +144,7 @@ export const app = appBuilder().withTheme({
 });
 ```
 
-## Icon Configuration
+## Icon configuration
 
 You can configure one or multiple icon resources per theme. An icon resource can contain a reference to a font or provide SVG-based icons.
 

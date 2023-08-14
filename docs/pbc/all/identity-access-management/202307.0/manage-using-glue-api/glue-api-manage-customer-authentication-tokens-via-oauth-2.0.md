@@ -26,15 +26,15 @@ related:
   - title: Managing customer authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
   - title: Managing customers
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
+    link: docs/pbc/all/customer-relationship-management/page.version/manage-using-glue-api/customers/managing-customers.html
   - title: Managing customer passwords
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customer addresses
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
+    link: docs/pbc/all/customer-relationship-management/page.version/manage-using-glue-api/customers/managing-customer-addresses.html
   - title: Retrieve customer carts
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/page.version/manage-using-glue-api/customers/retrieving-customer-orders.html
 ---
 
 This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.

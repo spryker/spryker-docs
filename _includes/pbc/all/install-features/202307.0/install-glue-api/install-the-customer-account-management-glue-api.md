@@ -739,7 +739,7 @@ Ensure that the following endpoints are available:
 
 Ensure that the addresses resource relationship is registered correctly:
 
-1. [Add a customer address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#add-an-address).
+1. [Add a customer address](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-using-glue-api/customers/managing-customer-addresses.html#add-an-address).
 
 2. Send the request: `GET https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses`.
 

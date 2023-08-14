@@ -25,8 +25,6 @@ redirect_from:
 related:
   - title: Managing Wishlists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
-  - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains business level description of major new features and enhancements released in November of 2018.
@@ -49,7 +47,7 @@ The catalog browsing endpoints allow you to request search results and also use 
 ### Login/Registration
 Endpoints ensure access-token login and retrieval. Customers can also register and request new passwords in case they forgot or want to change their current password.
 
-**Documentation**: [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html).
+**Documentation**: [Managing customers](/docs/pbc/all/customer-relationship-management/{{site.version}}/manage-using-glue-api/customers/glue-api-manage-customers.html).
 
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
@@ -64,7 +62,7 @@ Retrieve all the necessary information to build your checkout for guest customer
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html), [Managing Wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html), [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html).
+**Documentation**: [Managing Customers](/docs/pbc/all/customer-relationship-management/{{site.version}}/manage-using-glue-api/customers/glue-api-manage-customers.html), [Managing Wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html), [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png)

@@ -1,6 +1,3 @@
-# To run the scipt, in Terminal, run `bash _scripts/sidebar_checker/sidebar_checker.sh`.
-# The `missing_documents.yml` file with missing documents is generated and saved in the `_scripts/sidebar_checker` folder.
-
 #!/bin/bash
 
 # Define doc folder paths
@@ -13,7 +10,7 @@ SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sideba
 TITLES=("ACP User" "Cloud Dev" "Marketplace Dev" "Marketplace User" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
 
 # Define the folders to ignore
-IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0")
+IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0", "202204.0", "202212.0", "202400.0")
 
 # Define output file path
 OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"
@@ -27,8 +24,12 @@ for i in "${!SIDEBARS[@]}"; do
   folder="${FOLDERS[$i]}"
   sidebar_title="${TITLES[$i]}"
 
-  # Find missing files in folder
-  missing_files=($(find "$folder" -type f -name "*.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | while IFS= read -r -d '' file_path; do
+  # Find missing files in folder; overview-of-features.md files are intenionally exluded from the sidebar; index.md files are skipped as these are used implicitly.
+  missing_files=($(find "$folder" -type f -name "*.md" \
+  -not -path "*/overview-of-features/202204.0/overview-of-features.md" \
+    -not -path "*/overview-of-features/202212.0/overview-of-features.md" \
+    -not -name "index.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | \
+    while IFS= read -r -d '' file_path; do
     ignored=false
     for dir in $(dirname "$file_path" | tr '/' ' '); do
       if [[ "${IGNORED_FOLDERS[*]}" =~ "$dir" ]]; then
@@ -49,7 +50,7 @@ for i in "${!SIDEBARS[@]}"; do
   if [[ ${#missing_files[@]} -gt 0 ]]; then
     echo "The following files are missing from $sidebar_title:"
     printf -- '- %s\n' "${missing_files[@]}"
-    
+
     # Write missing files to a file
     echo "# Missing files in $sidebar_title" >> "$OUTPUT_FILE"
     for file_path in "${missing_files[@]}"; do

@@ -11,7 +11,7 @@ redirect_from:
 
 ## Install Feature Core
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name |Version  |
 | --- | --- |
@@ -854,7 +854,7 @@ Go to the Zed UI Sales overview and check the order.
 
 ## Install feature frontend
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

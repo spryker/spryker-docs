@@ -16,14 +16,13 @@ If you need any additional support with this content, [contact our support](mail
 
 {Description of the technical changes in the affected modules}
 
-<!-- Description example: Administrators can place a malicious payload in placeholders, which can be executed while trying to save, preview, or view the new page, resulting in an XSS vulnerability.. -->
+<!-- Description example: Administrators can place a malicious payload in placeholders, which can be executed while trying to save, preview, or view the new page, resulting in an XSS vulnerability. -->
 
 ## Affected modules
 
 {module}: {version} <!--Example: `spryker/propel`: 1.0.0-3.37.0-->
 
 <!-- Link the module with the version to the respective release tag page on GitHub—for example, "[spryker/comment 1.1.0.](https://github.com/spryker/comment/releases/tag/1.1.0)" -->
-
 
 ## Introduced changes
 

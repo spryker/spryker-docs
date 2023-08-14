@@ -23,7 +23,7 @@ This section contains a collection of integration guides for tools that enhance 
 * [Multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html)
 * [Propel clean command](/docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html)
 * [Queue worker signal handling](/docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html)
-* [Search initialization enhancement](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-search-initialization.html)
+* [Search initialization enhancement](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-search-initialization.html)
 * [Separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html)
 * [Symfony 5](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html)
 * [Arm architecture (M1 chip)](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html)

@@ -747,7 +747,6 @@ entries:
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
       - title: Customer Relationship Management
-        url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -771,7 +770,7 @@ entries:
                       - title: Customer Account Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
                       - title: Customer Account Management + Dynamic Multistore
-                        url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-feature-dynamic-multistore.html
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
                       - title: Customer Account Management + Order Management
@@ -1010,7 +1009,7 @@ entries:
       - title: Dynamic Multistore
         url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
         include_versions:
-        - "202307.0" 
+        - "202307.0"
         nested:
           - title: Base shop
             nested:

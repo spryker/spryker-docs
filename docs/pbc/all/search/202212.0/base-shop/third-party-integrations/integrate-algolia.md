@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/search/202212.0/third-party-integrations/integrate-algolia.html
 ---
 
-This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia.html) into a Spryker shop.
+This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -20,7 +20,6 @@ The Algolia app requires the following Spryker modules:
 * `spryker/catalog-price-product-connector: "^1.4.0"`
 * `spryker/category: "^5.11.0"`
 * `spryker/category-storage: "^2.5.0"`
-* `spryker/message-broker-aws: "^1.3.1"`
 * `spryker/price-product: "^4.40.0"`
 * `spryker/product: "^6.32.0"`
 * `spryker/product-approval: "^1.1.0"` (Optional)
@@ -31,8 +30,8 @@ The Algolia app requires the following Spryker modules:
 * `spryker/product-label-storage "^2.6.0"`
 * `spryker/product-review: "^2.9.0"`
 * `spryker/search: "^8.19.3"`
-* `spryker/search-http: "^1.0.0"`
-* `spryker/store: "^1.17.0"`
+* `spryker/search-http: "^0.3"`
+* `spryker/store: "^1.18.0"`
 * `spryker/merchant-product-offer: "^1.5.0"` (Marketplace only)
 * `spryker/merchant-product-offer-data-import: "^1.1.0"` (Marketplace only)
 * `spryker/merchant-product-offer-search: "^1.4.0"` (Marketplace only)

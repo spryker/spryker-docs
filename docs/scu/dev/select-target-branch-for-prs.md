@@ -11,7 +11,6 @@ After connection of the repository to Spryker CI, you can change a target branch
 To select a target branch, do the following:
 
 1. In Spryker CI, go to **Code**.
-
 2. On the **Code** page, click **Branches**.
 
 ![Spryker CI Code - Branches](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/select-target-branch-for-prs.md/branches-tab.png)

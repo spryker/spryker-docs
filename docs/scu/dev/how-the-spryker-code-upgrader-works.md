@@ -2,6 +2,7 @@
 title: How the Spryker Code Upgrader works
 description: Spryker Code Upgrader overview
 template: concept-topic-template
+last_updated: Jul 24, 2023
 redirect_from:
   - /docs/paas-plus/dev/how-the-spryker-code-upgrader-works.html
 ---
@@ -11,25 +12,27 @@ To update a project, the Spryker Code Upgrader runs the following steps.
 ### 1. Identifies the available updates for the Spryker modules
 
 The Upgrader tool performs the following sub-steps:
-
 1. To identify the modules to be updated, it compares the information present in the `composer.json` and `composer.lock` files with our latest released code.
-
-2. It creates a list of modules and third-party libraries to be updated. Groups the modules according to how we released them.
+2. It creates a list of modules and third-party libraries to be updated and groups the modules according to how we released them.
 
 {% info_block infoBox "Module groups" %}
 
-As modules depend on other modules, we tend to release them in groups. When the Spryker Code Upgrader identifies a module to be updated, apart from the identified module, it also adds all the other related modules from its group to the list.
+Because modules depend on other modules, we tend to release them in groups. When the Spryker Code Upgrader identifies a module to be updated, apart from the identified module, it also adds all the other related modules from its group to the list.
 
 {% endinfo_block %}
 
 
 ### 2. Updates the modules and libraries
 
-Using `composer`, the Upgrader tool updates the modules in groups. After updating the modules, the Upgrader tool returns the list of updated modules and proceeds to the next step.
+Using `composer`, the Upgrader tool updates the modules in groups.
 
-If the Upgrader tool can’t update a module, it skips the module and the remaining groups. If all the groups failed to update, the Upgrader tool returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
+Firstly, it applies the security releases (the releases with security updates). For these releases, only minor and patch versions are applied. The major releases are applied after the module is updated to the major version.
 
-By default, the Upgrader tool updates only minor and patch versions. When the Upgrader tool finds a group with a [major release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it won't update it and informs you about that:
+After updating the modules, the Upgrader tool returns the list of updated modules and proceeds to the next step.
+
+If the Upgrader tool can’t update a module, it skips the module and the remaining groups. If all the groups fail to update, the Upgrader tool returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
+
+By default, the Upgrader tool updates only minor and patch versions. When the Upgrader tool finds a group with a [major release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it doesn't update it and informs you about that (the exclusion only for the security major releases that silently skipped):
 
 ```bash
 There is a major release available for module spryker/merchant-product-approval. 
@@ -45,7 +48,7 @@ The Upgrader tool creates a separate Git branch to commit the changes to. The br
 
 ### 4. Commits the changes
 
-Upgrader tool commits the changes in the `composer.json` and `composer.lock` files to the branch.
+The Upgrader tool commits the changes in the `composer.json` and `composer.lock` files to the branch.
 
 ### 5. Pushes the changes
 

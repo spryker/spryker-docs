@@ -4,7 +4,7 @@
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -903,7 +903,7 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

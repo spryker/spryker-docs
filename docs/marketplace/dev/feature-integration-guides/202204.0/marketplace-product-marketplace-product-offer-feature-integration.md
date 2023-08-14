@@ -18,7 +18,7 @@ Follow the steps below to install the Marketplace Product + Marketplace Product 
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -79,7 +79,7 @@ Follow the steps below to install the Marketplace Product + Marketplace Product 
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

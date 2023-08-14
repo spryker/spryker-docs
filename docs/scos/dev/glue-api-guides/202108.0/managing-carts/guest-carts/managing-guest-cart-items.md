@@ -2556,7 +2556,7 @@ For the attributes of the included resources, see:
 * [Gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
-*  [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-bundled-products.html#bundled-products-response-attributes)
+*  [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-bundled-products.html)
 
 ## Add a configurable bundle to a guest cart
 

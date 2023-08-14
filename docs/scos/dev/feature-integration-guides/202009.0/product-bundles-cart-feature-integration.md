@@ -13,7 +13,7 @@ redirect_from:
 ## Install Feature Core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 | Module | Expected Directory |
 | --- | --- |
 | Product Bundles | 202009.0 |

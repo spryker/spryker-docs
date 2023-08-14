@@ -3,7 +3,7 @@
 ## Install feature core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -26,7 +26,7 @@ Make sure that the following modules were installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | MerchantRelationshipProductList | vendor/spryker/merchant-relationship-product-list |
-| MerchantRelationshipProductListDataImport | `vendor/spryker/merchant-relationship-product-list-data-import |
+| MerchantRelationshipProductListDataImport | vendor/spryker/merchant-relationship-product-list-data-import |
 | MerchantRelationshipProductListGui | vendor/spryker/merchant-relationship-product-list-gui |
 
 {% endinfo_block %}

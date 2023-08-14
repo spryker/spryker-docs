@@ -2,6 +2,7 @@
 title: Select target branch for PRs
 description: Instructions how to select a target branch on Spryker CI
 template: howto-guide-template
+last_updated: Aug 14, 2023
 redirect_from:
   - /docs/paas-plus/dev/select-target-branch-for-prs.html
 ---

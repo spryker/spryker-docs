@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salesquantity.html
   - /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
   - /module_migration_guides/mg-sales-quantity.htm
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/install-and-update/upgrade-modules/upgrade-the-salesquantity-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-salesquantity-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-salesquantity-module.md -->

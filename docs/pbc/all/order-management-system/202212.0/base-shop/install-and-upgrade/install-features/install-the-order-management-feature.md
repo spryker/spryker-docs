@@ -26,4 +26,4 @@ related:
   - title: Customer Account Management + Order Management feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-order-management-feature.md -->

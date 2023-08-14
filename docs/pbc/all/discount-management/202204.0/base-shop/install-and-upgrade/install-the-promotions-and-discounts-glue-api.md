@@ -17,4 +17,4 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html  
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-promotions-and-discounts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md -->

@@ -6,4 +6,4 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202212.0/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
 ---
-{% include pbc/all/install-features/202212.0/install-the-category-management-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-category-management-promotions-and-discounts-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-category-management-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-category-management-promotions-and-discounts-feature.md -->

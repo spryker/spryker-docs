@@ -22,4 +22,4 @@ related:
     - title: Install the Checkout + Quotation Process feature
       link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-feature.md -->

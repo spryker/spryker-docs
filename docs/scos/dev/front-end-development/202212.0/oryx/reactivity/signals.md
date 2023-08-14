@@ -1,6 +1,6 @@
 ---
-title: [Add title; the file name and title must be identic]
-description: [Add description]
+title: Signals
+description: Signals are reactivity API for components in Oryx.
 template: concept-topic-template
 last_updated: Jul 11, 2023
 ---

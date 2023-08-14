@@ -4837,6 +4837,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
         - title: Npm checker
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
+        - title: Open-source vulnerabilities checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
         - title: PHP version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
         - title: Plugin registration with restrictions

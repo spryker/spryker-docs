@@ -5,15 +5,15 @@ template: concept-topic-template
 last_updated: July 23, 2023
 ---
 
-Localization is an important part of internationalization (`i18n`) and is concerned with creating variations of the same application in different locales.
+Localization is the part of internationalization (`i18n`) that's concerned with creating variations of the same application in different locales.
 
 While most localized content is managed in other systems, like product or content management systems, components often use small text fragments in the UI. The examples are static site labels or aria labels.
 
-To make sure that all components can be customized and localized, Oryx doesn't provide _any_ hardcoded text. Instead, components use _tokens_ that function as a reference to a text. When there's no localized text available for such a reference, Oryx renders the token in a human-readable format.
+To make sure all components can be customized and localized, Oryx doesn't provide _any_ hardcoded text. Instead, components use _tokens_ that function as a reference to a text. When there's no localized text available for such a reference, Oryx renders the token in a human-readable format.
 
 ## Translation keys
 
-Translation keys, also knows as "i18n tokens", are used to resolve localized text. The tokens are created with the following conventions in mind:
+Translation keys, also knows as _i18n tokens_, are used to resolve localized text. The tokens are created with the following conventions in mind:
 
 - Tokens are written in English.
 - Tokens are written in kebab-case format—for example, `my-token`.

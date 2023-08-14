@@ -3475,8 +3475,13 @@ entries:
 
           - title: Marketplace
             nested:
-
-
+              - title: Persistence ACL feature overview
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
+                nested:
+                  - title: Persistence ACL feature overview
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
+                  - title: Persistence ACL feature overview
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
 
 
       - title: Warehouse Management System

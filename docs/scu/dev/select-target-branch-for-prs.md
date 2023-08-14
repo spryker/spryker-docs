@@ -1,6 +1,6 @@
 ---
 title: Select target branch for PRs
-description: Instructions how to select a target branch on Spryker CI
+description: Learn how to select a target branch on Spryker CI
 template: howto-guide-template
 last_updated: Aug 14, 2023
 redirect_from:

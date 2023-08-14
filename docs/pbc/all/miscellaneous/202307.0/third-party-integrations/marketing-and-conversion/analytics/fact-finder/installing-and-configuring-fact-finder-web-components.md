@@ -11,6 +11,8 @@ redirect_from:
   - /docs/fact-finder-web-components
   - /docs/en/fact-finder-web-components
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
 ---
 
 This document shows how to install and configure FACT-Finder web components.

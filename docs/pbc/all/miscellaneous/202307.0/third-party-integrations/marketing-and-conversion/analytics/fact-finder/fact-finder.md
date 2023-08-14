@@ -11,6 +11,8 @@ redirect_from:
   - /docs/factfinder
   - /docs/en/factfinder
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/fact-finder.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html
+  - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
@@ -36,12 +38,12 @@ related:
 
 [ABOUT FACT-FINDER](http://www.fact-finder.de/)
 
-FACT-Finder is a software for online shops. We provide on-site search, navigation, merchandising, personalisation and product recommendations – with a measurable impact: A/B tests have proven that merchants experience a conversion uplift of 10-33 %. More than 1600 online shops use FACT-Finder, among them are brands like Media Markt, Distrelec, MyTheresa, Misterspex and Bergfreunde.
+FACT-Finder is a software for online shops. We provide on-site search, navigation, merchandising, personalization, and product recommendations – with a measurable impact: A/B tests have proven that merchants experience a conversion uplift of 10-33%. More than 1600 online shops use FACT-Finder, among them are brands like Media Markt, Distrelec, MyTheresa, Misterspex, and Bergfreunde.
 
 ## FACT-Finder User Management
 
 FACT-Finder has its own User Management (permissions management) functions that allow you to set the authorizations for various modules at a fine, granular level. In this way, for example, individual users can only manage specific channels or check and maintain the associated configurations.
-This system of permissions is based on roles that provide access to the specific modules. These roles can be allocated to the user directly or indirectly via groups. Groups allow complex roles to be allocated in bulk, without having to assign them individually to each user.
+This system of permissions is based on roles that provide access to specific modules. These roles can be allocated to the user directly or indirectly via groups. Groups allow complex roles to be allocated in bulk, without having to assign them individually to each user.
 
 ## Related Developer guides
 

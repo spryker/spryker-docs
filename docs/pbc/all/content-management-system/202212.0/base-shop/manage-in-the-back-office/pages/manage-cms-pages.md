@@ -25,7 +25,7 @@ This article describes how to manage CMS pages.
 
 ## Prerequisites
 
-1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html).
+1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html).
 
 2. To start managing CMS pages, got to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 

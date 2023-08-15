@@ -4,7 +4,7 @@ last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 related:
   - title: Customer Account Management feature integration
-    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Confirming customer registration

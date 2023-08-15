@@ -11,7 +11,7 @@ redirect_from:
   - /docs/glue-api-customer-access-feature-integration
   - /docs/en/glue-api-customer-access-feature-integration
 related:
-  - title: Customer Access feature integration
+  - title: Install the Customer Access feature
     link: docs/scos/dev/feature-integration-guides/page.version/customer-access-feature-integration.html
   - title: Customer Access feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/customer-access-feature-walkthrough.html

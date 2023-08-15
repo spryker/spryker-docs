@@ -64,7 +64,7 @@ GuiTable frontend component knows how to create the table itself, where to go fo
 
 {% info_block warningBox "Table design" %}
 
-To learn more about Table design, see [Table design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/).
+To learn more about Table design, see [Table design](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/).
 
 {% endinfo_block %}
 

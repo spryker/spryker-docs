@@ -129,8 +129,7 @@ Ensure that the following changes have occurred in transfer objects:
 | UserRequestValidatorPlugin | Validates if `GlueRequestTransfer.requestUser` is set in case if request has Authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php</summary>
+**src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php**
 
 ```php
 <?php
@@ -153,7 +152,6 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
     }
 }
 ```
-</details>
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.****php</summary>
@@ -253,8 +251,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
 <?php
@@ -281,10 +278,8 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Authentication/AuthenticationDependencyProvider.php</summary>
+**src/Pyz/Zed/Authentication/AuthenticationDependencyProvider.php**
 
 ```php
 <?php

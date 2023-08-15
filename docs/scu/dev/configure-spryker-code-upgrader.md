@@ -30,10 +30,11 @@ To change the values of the variables, do the following:
 
 ## Variables
 
-**Variable** | **Description** | **Default value**
-CRON_STRING | This variable enables users to define a cron schedule expression, which dictates the frequency and timing of when the Spryker Code Upgrader pipeline will be automatically executed. | 0 8 * * MON
-MAX_ALLOWED_MINOR_VERSIONS | This variable allows users to define the maximum number of installed *minor* versions of Spryker modules. Please bear in mind that this serves as a flexible threshold, and there are scenarios where the actual count of installed minor Spryker module versions might exceed the value specified here. | 10
-MAX_ALLOWED_PATCH_VERSIONS | This variable allows users to define the maximum number of installed *patch* versions of Spryker modules. Please bear in mind that this serves as a flexible threshold, and there are scenarios where the actual count of installed patch Spryker module versions might exceed the value specified here. | 30
+| **Variable**               | **Description**                                                                                                                                                                                                                                                                                          | **Default value** |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| CRON_STRING                | This variable enables users to define a cron schedule expression, which dictates the frequency and timing of when the Spryker Code Upgrader pipeline will be automatically executed.                                                                                                                     | 0 8 * * MON       |
+| MAX_ALLOWED_MINOR_VERSIONS | This variable allows users to define the maximum number of installed *minor* versions of Spryker modules. Please bear in mind that this serves as a flexible threshold, and there are scenarios where the actual count of installed minor Spryker module versions might exceed the value specified here. | 10                |
+| MAX_ALLOWED_PATCH_VERSIONS | This variable allows users to define the maximum number of installed *patch* versions of Spryker modules. Please bear in mind that this serves as a flexible threshold, and there are scenarios where the actual count of installed patch Spryker module versions might exceed the value specified here. | 30                |
 
 ## Support for Spryker CI
 

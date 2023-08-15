@@ -16,12 +16,12 @@ redirect_from:
 related:
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
-  - title: Glue API - Customer Account Management feature integration
+  - title: Install the Customer Account Management Glue API
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
   - title: Customer Login overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-login-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-login-overview.html
 ---
 
 [Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.

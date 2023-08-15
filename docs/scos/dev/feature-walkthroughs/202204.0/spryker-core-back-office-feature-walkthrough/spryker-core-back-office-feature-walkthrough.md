@@ -19,4 +19,4 @@ To learn more about the feature and to find out how end users use it, see [Spryk
 |INSTALLATION GUIDES  | REFERENCES|
 |---------|---------|
 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Back Office Translations overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
-| [Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html)  |
+| [Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html)  |

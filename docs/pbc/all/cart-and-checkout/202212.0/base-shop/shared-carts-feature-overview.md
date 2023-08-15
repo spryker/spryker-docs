@@ -131,7 +131,7 @@ If the shared cart has been dismissed individually by a user, this user can't se
 
 ## Current constraints
 
-With the current functionality, the shopping cart cannot be shared outside of the [business unit](/docs/pbc/all/customer-relationship-management/{{site.version}}/company-account-feature-overview/business-units-overview.html) to which the owner belongs to.
+With the current functionality, the shopping cart cannot be shared outside of the [business unit](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to which the owner belongs to.
 
 ## Shared Cart on the Storefront
 <a id=shared-cart-on-the-storefront></a>

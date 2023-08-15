@@ -39,8 +39,8 @@ The Glue REST API comes with a set of predefined APIs, which you can extend or a
 
 For more details, see REST API reference:
 
-* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-reference.html)
-* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2c-reference.html)
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html)
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html)
 
 ## B2C API React example
 

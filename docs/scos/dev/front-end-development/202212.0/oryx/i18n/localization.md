@@ -52,7 +52,7 @@ The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provid
 
 
 
-## Install the i18n package
+## Installing the i18n package
 
 To use the i18n package, add `I18nFeature` to the app and configure translation resources using the loader function:
 
@@ -96,11 +96,11 @@ The translation engine is based on the standardized [ICU message expressions](ht
 
 Other ICU capabilities, such as [number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/) or [date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/) can be loaded in addition. Most likely, it's not needed in your project, because Oryx uses the standard [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) API, which is widely supported.
 
-## Use the i18n directive in components
+## Using the i18n directive in components
 
-Localized content is using [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed; for example, when the user uses the localization selector, or when you use the `LocaleService.set()` API in the code. All localized content in Oryx components is updated instantly without a page reload.
+Localized content uses [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed; for example, when the user interacts with the localization selector, or when the `LocaleService.set()` API is used. All localized content in Oryx components is updated instantly without a page reload.
 
-To support such fine-grained reactivity, a frameworks specific implementation is required. Oryx provides a `i18n` lit-directive that's used inside components. Using this directive ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can leverage the `I18nMixin` in your component implementation. `I18nMixin` adds `@signalAware()` and exposes the `i18n` function as a method on the component.
+To support such fine-grained reactivity, a framework specific implementation is required. Oryx provides an `i18n` Lit directive that's used inside components. Using this directive ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can use `I18nMixin` in your component implementation. `I18nMixin` adds `@signalAware()` and exposes the `i18n` function as a method on the component.
 
 <!-- TODO: add link to signal documentation once it's available so users can read about signals and @signalAware decorator -->
 
@@ -120,7 +120,7 @@ export class MyComponent extends I18nMixin(LitElement) {
 }
 ```
 
-## Localize texts in vanilla JS components
+## Localizing texts in vanilla JS components
 
 The i18n directive uses `I18nService`. You can inject `I18nService` in JS or TS using [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection.html). The service provides an observable that you can subscribe to.
 

@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/managing-agent-assist-authentication-tokens
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.
@@ -27,8 +27,8 @@ This endpoint allows to refresh an agent assist access token or revoke a refresh
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
-* [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
+* [Install the Customer Account Management + Agent Assist feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
 * [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
 ## Refresh an agent assist authentication token

@@ -305,7 +305,7 @@ class ProductsController extends AbstractController
 
 Create a corresponding Twig template, pass configuration to frontend component.
 
-To learn more about table components, see [Table Design](/docs/marketplace/dev/front-end/{{site.version}}/table-design).
+To learn more about table components, see [Table Design](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/table-design).
 
 ## 7) Data source
 

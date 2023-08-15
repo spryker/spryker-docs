@@ -19,8 +19,8 @@ In the B2B partnership, which is usually based on contracts, the selling company
 There are three key figures: marketplace owner, merchant, and buyer.
 
 * The marketplace owner owns the platform and acts as a broker between merchants and buyers.
-* The merchants are sellers usually represented by a [company](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html#company).
-* The buyers are often [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
+* The merchants are sellers usually represented by a [company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company).
+* The buyers are often [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
 
 The business relationships between merchants and buyers are usually based on contracts.
 

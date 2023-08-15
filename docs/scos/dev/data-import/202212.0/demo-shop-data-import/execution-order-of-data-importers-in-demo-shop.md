@@ -27,7 +27,7 @@ The following list illustrates the order followed to run the data importers and 
 * Commerce:
   * store: it's not a data importer; it's hardcoded.
   * [currency](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-currency.csv.html)
-  * [customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/file-details-customer.csv.html)
+  * [customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-file-details-customer.csv.html)
   * [glossary](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
   * [tax](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
   * [shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html)

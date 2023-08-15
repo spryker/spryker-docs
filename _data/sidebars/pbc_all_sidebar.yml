@@ -3496,7 +3496,7 @@ entries:
                       - title: Segment scope
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
               - title: "Persistence ACL feature: Domain model and relationships"
-                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-domain-model-and-relationships.html                                                                                   
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html                                                                                   
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

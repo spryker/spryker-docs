@@ -3347,70 +3347,72 @@ entries:
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
-          - title: Base shop
+          - title: Avalara
+            url: /docs/pbc/all/tax-management/avalara/avalara.html
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/tax-management/base-shop/whats-changed-in-tax-management.html
-              - title: Tax feature overview
-                url: /docs/pbc/all/tax-management/base-shop/tax-feature-overview.html
-              - title: Install and upgrade
-                nested:
-                  - title: Integrate the Tax Glue API
-                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/install-the-tax-glue-api.html
-                  - title: Integrate the Product Tax Sets Glue API
-                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
-                  - title: Upgrade the ProductTaxSetsRestApi module
-                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
-                  - title: Upgrade the Tax module
-                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-tax-module.html
-              - title: Manage in the Back Office
-                url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-                nested:
-                  - title: Create tax rates
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
-                  - title: Edit tax rates
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-rates.html
-                  - title: Create tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-sets.html
-                  - title: Edit tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
-              - title: Manage using Glue API
-                nested:
-                  - title: Retrieve tax sets
-                    url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets.html
-                  - title: Retrieve tax sets when retrieving abstract products
-                    url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
-              - title: Import and export data
-                url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/tax-management-data-import.html
-                nested:
-                  - title: "Import file details: tax_sets.csv"
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
-                  - title: "Import file details: product_abstract.csv"
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
-                  - title: "Import file details: product_option.csv"
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-product-option.csv.html
-                  - title: "Import file details: shipment.csv"
-                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-shipment.csv.html
-              - title: Extend and customize
-                url: /docs/pbc/all/tax-management/base-shop/extend-and-customize/tax-module-reference-information.html
-              - title: Domain model and relationships
-                url: /docs/pbc/all/tax-management/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
-              - title: Third-party integrations
-                url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara.html
-                nested:
-                  - title: Integrate Avalara
-                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara.html
-                  - title: Integrate Avalara Tax + Product Options
-                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html
-                  - title: Integrate Avalara Tax + Shipment
-                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html
-          - title: Marketplace
-            include_versions:
-            - "202212.0"
-            - "202307.0"
+              - title: Install Avalara
+                url: /docs/pbc/all/tax-management/avalara/avalara.html
+              - title: Install Avalara + Product Options
+                url: /docs/pbc/all/tax-management/avalara/install-avalara-product-options.html
+              - title: Install Avalara + Shipment
+                url: /docs/pbc/all/tax-management/avalara/install-avalara-shipment.html
+              - title: Apply Avalara tax codes
+                url: /docs/pbc/all/tax-management/avalara/apply-avalara-tax-codes.html
+          - title: Spryker Tax
             nested:
-              - title: Install the Tax + Merchant Portal - Marketplace Product feature
-                url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+              - title: Base shop
+                nested:
+                  - title: Tax feature overview
+                    url: /docs/pbc/all/tax-management/spryker-tax/base-shop/tax-feature-overview.html
+                  - title: Install and upgrade
+                    nested:
+                      - title: Integrate the Tax Glue API
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/install-and-upgrade/install-the-tax-glue-api.html
+                      - title: Integrate the Product Tax Sets Glue API
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
+                      - title: Upgrade the ProductTaxSetsRestApi module
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+                      - title: Upgrade the Tax module
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/install-and-upgrade/upgrade-the-tax-module.html
+                  - title: Manage in the Back Office
+                    url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                    nested:
+                      - title: Create tax rates
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html
+                      - title: Edit tax rates
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-in-the-back-office/edit-tax-rates.html
+                      - title: Create tax sets
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-in-the-back-office/create-tax-sets.html
+                      - title: Edit tax sets
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-in-the-back-office/edit-tax-sets.html
+                  - title: Manage using Glue API
+                    nested:
+                      - title: Retrieve tax sets
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+                      - title: Retrieve tax sets when retrieving abstract products
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
+                  - title: Import and export data
+                    url: /docs/pbc/all/tax-management/spryker-tax/base-shop/import-and-export-data/tax-management-data-import.html
+                    nested:
+                      - title: "Import file details: tax_sets.csv"
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
+                      - title: "Import file details: product_abstract.csv"
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
+                      - title: "Import file details: product_option.csv"
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/import-and-export-data/import-file-details-product-option.csv.html
+                      - title: "Import file details: shipment.csv"
+                        url: /docs/pbc/all/tax-management/spryker-tax/base-shop/import-and-export-data/import-file-details-shipment.csv.html
+                  - title: Extend and customize
+                    url: /docs/pbc/all/tax-management/spryker-tax/base-shop/extend-and-customize/tax-module-reference-information.html
+                  - title: Domain model and relationships
+                    url: /docs/pbc/all/tax-management/spryker-tax/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
+              - title: Marketplace
+                include_versions:
+                - "202212.0"
+                - "202307.0"
+                nested:
+                  - title: Install the Tax + Merchant Portal - Marketplace Product feature
+                    url: /docs/pbc/all/tax-management/spryker-tax/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
           - title: Vertex
             url: /docs/pbc/all/tax-management/vertex/vertex.html
             include_versions:

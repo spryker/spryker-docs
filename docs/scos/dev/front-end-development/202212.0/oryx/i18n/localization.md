@@ -18,21 +18,21 @@ Translation keys, also knows as _i18n tokens_, are used to resolve localized tex
 - Tokens are written in English.
 - Tokens are written in kebab-case format—for example, `my-token`.
 - Tokens are organized by domains—for example, `cart.add-to-cart`.
-- Tokens support context variables, which are added inside angle brackets in camelCase format. For example, `cart.totals.<count>-items`.
+- Tokens support context variables, which are wrapped in angle brackets in camelCase format. For example, `cart.totals.<count>-items`.
 
 ## Resolving translations from translation resources
 
-The localization of labels is driven by the current language and the translation key. Translations are typically provided as lazy loaded resources next to the component implementation. Although, they can be added as part of the static resources that are loaded in Oryx as well. If the resources are loaded externally, they can be provided by static JSON files or a third-party service through an API.
+The localization of labels is driven by the current language and the translation key. Translations are typically provided as lazy-loaded resources next to the component implementation. Although, they can aslo be added as part of the static resources that are loaded in Oryx. If the resources are loaded externally, they can be provided by static JSON files or a third-party service through an API.
 
 Oryx uses the active application language to look up the available labels. When the language is `en`, the locales for English are resolved.
 
-If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if you have a translation key that contains multiple parts, like `cart.increase`), you can provide a global translation for just the `increase` part or for `cart.increase`.
+If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if a translation key contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or for `cart.increase`.
 
 ## Auto-conversion of translation keys
 
-If a translation key doesn't match any of the translations, or if the i18n feature is not installed (which is the default behavior), the translation key is auto-converted into a human-readable message.
+If a translation key doesn't match any of the translations, or if the i18n feature is not installed (which is the default behavior), the translation key is converted into a human-readable message.
 
-For example, if you have a token that contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or provide a translation for `cart.increase`. This mechanism allows for a single translation of `increase` that might affect multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
+For example, if a token contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or for `cart.increase`. This mechanism allows for a single translation of `increase` that might affect multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
 
 The following examples show how the tokens are translated.
 
@@ -42,7 +42,7 @@ The following examples show how the tokens are translated.
 | `cart.add-to-cart`          | Add to cart     |
 | `cart.totals.<count>-items` | 5 items         |
 
-This mechanism lets Oryx avoid distributing any localizations as a standard package or as part of the boilerplate. The reason for this is that labels are quite opinionated and may change frequently over time, which will cause breaking changes. For 90% of the cases, the keys are fairly short and provide an OK experience.
+This mechanism lets Oryx avoid distributing localizations as a standard package or as part of the boilerplate. Labels are quite opinionated and may change frequently over time, which may cause breaking changes. For 90% of the cases, the keys are fairly short and provide an OK experience.
 
 {% info_block infoBox "" %}
 

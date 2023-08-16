@@ -752,9 +752,12 @@ entries:
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
         include_versions:
         - "202212.0"
-        - "202307.0"
-      - title: Resolving search engine friendly URLs
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
+      - title: Resolve search engine friendly URLs
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
+        include_versions:
+        - "202212.0"
+      - title: "Marketplace: Resolve search engine friendly URLs"
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -764,12 +767,22 @@ entries:
         - "202212.0"
         - "202307.0"
       - title:  REST API B2B Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
       - title: REST API B2C Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+      - title: REST API Marketplace B2B Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+      - title: REST API Marketplace B2C Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -2315,10 +2328,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
-    - title: Migration Guide - CompanyBusinessUnit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-companybusinessunit.html
-    - title: Migration Guide - CompanyUser
-      url: /docs/scos/dev/module-migration-guides/migration-guide-companyuser.html
     - title: Migration Guide - ConfigurableBundle
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
     - title: Migration Guide - ConfigurableBundleStorage
@@ -3427,6 +3436,8 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
+            - title: Signals
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html
         - title: Styling
           include_versions:
           - "202212.0"
@@ -3438,6 +3449,7 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html
             - title: Typography
               url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
+
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
       include version:
@@ -4657,6 +4669,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
         - title: Npm checker
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
+        - title: Open-source vulnerabilities checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
         - title: PHP version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
         - title: Plugin registration with restrictions

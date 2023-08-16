@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/calculation-data-structure.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/cart-feature-walkthrough/calculation-data-structure.html
-  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/extend-and-customize/calculation-data-structure.html
+  - /docs/pbc/all/cart-and-checkout/202304.0/base-shop/extend-and-customize/calculation-data-structure.html
 ---
 
 The following diagram illustrates the calculation data structure.

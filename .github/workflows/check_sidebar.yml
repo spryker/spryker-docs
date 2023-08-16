@@ -1,0 +1,26 @@
+name: Check Sidebar
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up required dependencies
+        run: |
+          # Install any dependencies required for your project here
+          sudo apt-get install -y <dependency>
+
+      - name: Run sidebar checker script
+        run: ./_scripts/sidebar_checker/sidebar_checker.sh
+
+      - name: Print missing documents file
+        run: cat _scripts/sidebar_checker/missing-documents.yml

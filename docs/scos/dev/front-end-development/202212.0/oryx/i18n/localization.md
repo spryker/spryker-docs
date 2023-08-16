@@ -74,7 +74,7 @@ This gives you full flexibility of how and where to load your translation texts 
 
 ## Translation resources
 
-To translate text in Oryx, you can provide translation data in a TS module. You can also load the text from a third-party translation engine.
+To translate text in Oryx, you can provide translation data in a TS module.
 
 ```ts
 export default {
@@ -89,7 +89,9 @@ export default {
 };
 ```
 
-The translation engine is based on the standardized [ICU message expressions](https://unicode-org.github.io/icu/userguide/format_parse/messages/). The ICU message format defines a standard syntax to handle common translation cases:
+You can also load the text from a third-party translation engine.
+
+The [globalize](https://www.npmjs.com/package/globalize) translation engine is based on the standardized [ICU message expressions](https://unicode-org.github.io/icu/userguide/format_parse/messages/). The ICU message format defines a standard syntax to handle common translation cases:
 
 - Pluralization: for example, `You have {count} {count, plural, one {item} other {items}} in cart`.
 - Selects: for example, `{gender, select, male {He} female {She} other {They}} invited you to party!`.

@@ -1,4 +1,4 @@
-name: Check Sidebar
+name: Check missing sidebar links
 
 on:
   pull_request:
@@ -20,5 +20,9 @@ jobs:
       - name: Run sidebar checker script
         run: ./_scripts/sidebar_checker/sidebar_checker.sh
 
+      - name: Check for missing documents
+        run: test ! -s _scripts/sidebar_checker/missing-documents.yml
+
       - name: Print missing documents file
         run: cat _scripts/sidebar_checker/missing-documents.yml
+

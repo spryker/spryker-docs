@@ -752,9 +752,12 @@ entries:
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
         include_versions:
         - "202212.0"
-        - "202307.0"
-      - title: Resolving search engine friendly URLs
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
+      - title: Resolve search engine friendly URLs
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
+        include_versions:
+        - "202212.0"
+      - title: "Marketplace: Resolve search engine friendly URLs"
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -764,12 +767,22 @@ entries:
         - "202212.0"
         - "202307.0"
       - title:  REST API B2B Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
       - title: REST API B2C Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-reference.html
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+      - title: REST API Marketplace B2B Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+      - title: REST API Marketplace B2C Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -2315,10 +2328,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
-    - title: Migration Guide - CompanyBusinessUnit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-companybusinessunit.html
-    - title: Migration Guide - CompanyUser
-      url: /docs/scos/dev/module-migration-guides/migration-guide-companyuser.html
     - title: Migration Guide - ConfigurableBundle
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
     - title: Migration Guide - ConfigurableBundleStorage
@@ -3427,6 +3436,8 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
+            - title: Signals
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html              
         - title: Styling
           include_versions:
           - "202212.0"
@@ -3436,6 +3447,179 @@ entries:
             url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
           - title: Typography
             url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
+
+    - title: Marketplace
+      include_versions:
+      - "202204.0"
+      - "202212.0"
+      - "202307.0"
+      nested:
+        - title: Extend the Marketplace frontend
+          url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
+        - title: "Table design"
+          url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
+          nested:
+            - title: "Table Column Types"
+              url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
+              nested:
+                - title: "Autocomplete"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+                - title: "Chip"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
+                - title: "Date"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-date.html
+                - title: "Dynamic"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html
+                - title: "Image"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-image.html
+                - title: "Input"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-input.html
+                - title: "List"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-list.html
+                - title: "Select"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-select.html
+                - title: "Text"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-text.html
+
+            - title: "Table Features"
+              url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-extension.html
+              nested:
+                - title: "Batch Actions"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+                - title: "Editable"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-editable.html
+                - title: "Pagination"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-pagination.html
+                - title: "Row Actions"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
+                - title: "Search"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-search.html
+                - title: "Selectable"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+                - title: "Settings"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-settings.html
+                - title: "Sync State"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+                - title: "Title"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-title.html
+                - title: "Total"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-feature-extension/table-feature-total.html
+
+            - title: "Table Filters"
+              url: /docs/scos/dev/front-end-development/marketplace/table-design/table-filter-extension/table-filter-extension.html
+              nested:
+                - title: "Date Range"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-filter-extension/table-filter-date-range.html
+                - title: "Select"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-filter-extension/table-filter-select.html
+                - title: "Tree Select"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
+
+            - title: "Table Configuration"
+              url: /docs/scos/dev/front-end-development/marketplace/table-design/table-configuration.html
+
+        - title: "UI components library"
+          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/ui-components-library.html
+          nested:
+            - title: "Actions"
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/ui-components-library-actions.html
+              nested:
+                - title: "Close Drawer"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-close-drawer.html
+                - title: "Drawer"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-drawer.html
+                - title: "HTTP"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-http.html
+                - title: "Notification"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-notification.html
+                - title: "Redirect"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-redirect.html
+                - title: "Refresh Drawer"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-refresh-drawer.html
+                - title: "Refresh Parent Table"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-refresh-parent-table.html
+                - title: "Refresh Table"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-refresh-table.html
+
+            - title: "Cache"
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
+              nested:
+                - title: "Static"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
+
+            - title: "Data Transformers"
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformers.html
+              nested:
+                - title: "Collate"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/data-transformer-collate.html
+                  nested:
+                    - title: "Data Configurators"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
+                      nested:
+                        - title: "Table"
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html
+
+                    - title: "Filters"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
+                      nested:
+                        - title: "Equals"
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html
+                        - title: "Range"
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
+                        - title: "Text"
+                          url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
+
+
+                - title: "Array-map"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
+                - title: "Chain"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-chain.html
+                - title: "Date-parse"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
+                - title: "Date-serialize"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
+                - title: "Lens"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-lens.html
+                - title: "Object-map"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
+                - title: "Pluck"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
+
+
+            - title: "Datasources"
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasources.html
+              nested:
+                - title: "HTTP"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-http.html
+                - title: "Inline"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-inline.html
+                - title: "Inline Table"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-inline-table.html
+
+            - title: "Persistence"
+              url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/persistence/persistence.html
+              nested:
+                - title: "In Memory"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
+                - title: "Local Storage"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
+                - title: "Url"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+
+        - title: "Angular Components"
+          url: /docs/scos/dev/front-end-development/marketplace/angular-components.html
+        - title: "Angular Services"
+          url: /docs/scos/dev/front-end-development/marketplace/angular-services.html
+        - title: "Building the Merchant Portal frontend"
+          url: /docs/scos/dev/front-end-development/marketplace/building-the-merchant-portal-frontend.html
+        - title: "Project structure"
+          url: /docs/scos/dev/front-end-development/marketplace/project-structure.html
+        - title: "Set up the Merchant Portal"
+          url: /docs/scos/dev/front-end-development/marketplace/set-up-the-merchant-portal.html
+        - title: "Web components"
+          url: /docs/scos/dev/front-end-development/marketplace/web-components.html
+
+
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
       include version:
@@ -4655,6 +4839,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
         - title: Npm checker
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
+        - title: Open-source vulnerabilities checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
         - title: PHP version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
         - title: Plugin registration with restrictions

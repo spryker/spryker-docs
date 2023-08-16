@@ -26,7 +26,7 @@ Back Office supports login via two types of accounts:
 
 ### Login with a Back Office account
 
-Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
 
 
 To log in, on the Back Office login page, a user enters the email address and password of their account. If the credentials are correct and their account is active at that time, they are logged in.

@@ -19,8 +19,8 @@ This part of this document is related to the Old Glue infrastructure. For the ne
 
 This section contains a collection of guides for working with the Old Spryker Glue API:
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-rest-api.html)
-* [Rest API B2C reference](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/rest-api-b2c-reference.html)  
-* [Rest API B2B Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/rest-api-b2b-reference.html)
+* [Rest API B2C reference](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html)  
+* [Rest API B2B Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html)
 * [Handling concurrent REST requests and caching with entity tags](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html)
 * [Reference information – GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html)
 * [Glue Spryks](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html)

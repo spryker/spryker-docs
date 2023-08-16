@@ -16,7 +16,7 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Customer Access feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-access-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-access-feature-overview.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
@@ -27,7 +27,7 @@ In your development, the Customer Access API helps you to protect resources from
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Customer Access feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html).
 
 ## Retrieve protected resources
 

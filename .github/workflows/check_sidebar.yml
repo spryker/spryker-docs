@@ -7,7 +7,7 @@ on:
       - synchronize
 
 jobs:
-  check:
+  check-sidebar:
     runs-on: ubuntu-latest
 
     steps:

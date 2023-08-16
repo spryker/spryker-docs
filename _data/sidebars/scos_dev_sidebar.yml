@@ -3448,7 +3448,7 @@ entries:
           - title: Design tokens
             url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
           - title: Typography
-            url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
+            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
 
     - title: Marketplace
       include_versions:

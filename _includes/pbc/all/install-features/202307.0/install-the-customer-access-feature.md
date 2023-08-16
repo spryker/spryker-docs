@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.md) into a Spryker project.
+This document describes how to integrate the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.md) into a Spryker project.
 
 ## Install Feature Core
 

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/guest-carts/managing-guest-cart-items.html
 related:
   - title: Manage guest carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - title: Managing gift cards of guest users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
 ---

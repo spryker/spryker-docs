@@ -4,7 +4,7 @@ description: Retrieve details about guest cart items and learn what else you can
 template: glue-api-storefront-guide-template
 related:
   - title: Managing guest carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
 ---
 
 This endpoint lets you manage guest cart items.

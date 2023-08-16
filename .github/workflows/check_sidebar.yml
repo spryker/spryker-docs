@@ -7,7 +7,7 @@ on:
       - synchronize
 
 jobs:
-  check-sidebar:
+  check-sidebar-links:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
         run: ./_scripts/sidebar_checker/sidebar_checker.sh
 
       - name: Print missing documents file
-        run: cat _scripts/sidebar_checker/missing-documents.yml || true
+        run: if [ -f "_scripts/sidebar_checker/missing-documents.yml" ]; then cat _scripts/sidebar_checker/missing-documents.yml; else echo "No missing documents found."; fi
 
       - name: Check for missing documents
         run: test ! -s _scripts/sidebar_checker/missing-documents.yml

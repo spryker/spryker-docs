@@ -128,6 +128,7 @@ Ensure that the following changes have occurred in transfer objects:
 | UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth |
 | UserRequestValidatorPlugin | Validates if `GlueRequestTransfer.requestUser` is set in case if request has Authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication |
 
+
 **src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php**
 
 ```php
@@ -213,12 +214,12 @@ namespace Pyz\Glue\GlueStorefrontApiApplication;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 use Spryker\Glue\OauthApi\Plugin\AccessTokenValidatorPlugin;
 use Spryker\Glue\OauthApi\Plugin\CustomerRequestBuilderPlugin;
-use Spryker\Glue\OauthApi\Plugin\GlueApplication\OauthTokenResource
+use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\OauthBackendApiTokenResource;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueStorefrontApiApplicationExtension\Dependency\Plugin\RequestBuilderPluginInterface>
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestBuilderPluginInterface>
      */
     protected function getRequestBuilderPlugins(): array
     {
@@ -228,7 +229,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     }
 
     /**
-     * @return array<\Spryker\Glue\GlueStorefrontApiApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface>
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface>
      */
     protected function getRequestValidatorPlugins(): array
     {
@@ -243,14 +244,14 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     protected function getResourcePlugins(): array
     {
         return [
-            new OauthTokenResource(),
+            new OauthBackendApiTokenResource(),
         ];
     }
 }
 ```
 </details>
 
-__src/Pyz/Zed/Installer/InstallerDependencyProvider.****php__
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
 <?php

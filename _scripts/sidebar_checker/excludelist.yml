@@ -1,4 +1,4 @@
-# folders to exlude from sidebar_checker:
+# Folders to exclude:
 201811.0
 201903.0
 201907.0
@@ -11,7 +11,7 @@
 202400.0
 drafts-dev
 
-#files to exlude:
+# Documents to exclude:
 docs/scos/user/overview-of-features/202204.0/overview-of-features.md
 docs/scos/user/overview-of-features/202212.0/overview-of-features.md
 index.md

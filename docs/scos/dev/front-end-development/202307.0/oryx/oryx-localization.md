@@ -76,7 +76,7 @@ This gives you full flexibility of how and where to load your translation texts 
 
 To translate text in Oryx, you can provide translation data in a TS module.
 
-```ts
+```ts {% raw %}
 export default {
   increase: "Increase",
 
@@ -87,7 +87,7 @@ export default {
   "order.<count>-items":
     "Products ({count, plural, one {{count} item} other {{count} items}})",
 };
-```
+{% endraw %}```
 
 You can also load the text from a third-party translation engine.
 

@@ -20,5 +20,8 @@ entries:
         url: /docs/acp/user/app-configuration.html
       - title: App configuration translation
         url: /docs/acp/user/app-configuration-translation.html
-
+      - title: Sync API
+        url: /docs/acp/user/sync-api.html
+      - title: Async API
+        url: /docs/acp/user/async-api.html
 

@@ -4,6 +4,7 @@ description: The capability for managing product catalogs
 template: concept-topic-template
 last_udpated: Aug 16, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/pim-feature-overviews.html
   - /docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/pim-feature-overviews.html
 ---
 

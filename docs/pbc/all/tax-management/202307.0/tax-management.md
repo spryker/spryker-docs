@@ -1,6 +1,6 @@
 ---
 title: Tax Management
-description: Tax Management PBC lets you define tax rates for different stores and products
+description: Tax Management PBC lets you manage your tax rules for different stores and products
 template: concept-topic-template
 ---
 
@@ -11,7 +11,8 @@ Adhere to the respective tax regulations in the countries you sell and effortles
 | TAX PROVIDER | BUILT AND MAINTAINED BY | AVAILABLE FROM | BUSINESS MODEL SUPPORTED | SUITABLE WHEN | CAN BE EXTENDED AND CUSTOMIZED |
 | --- | --- | ---| ---| --- | -- |
 | [Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/avalara.html) | Avalara | Composer | B2C | You do business primarily in North America. | From the Avalara Admin panel, you can customize all the tax rules of your business. |
-| [Spryker Tax](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/spryker-tax/spryker-tax.html) | Spryker | Composer | B2B, B2C, Marketplace | You do business primarily in Europe and in the countries where tax systems are simple. | While you still need  a development team to customize the tax experience, some parts of it can be customized in Spryker Back Office. |
+| [Spryker Tax](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/spryker-tax/spryker-tax.html) | Spryker | Composer | B2B, B2C, Marketplace | You do business primarily in Europe and in the countries where tax systems are simple. | While you still need  a development team to customize the tax experience, some parts can be customized in Spryker Back Office. |
+| [Vertex](/docs/pbc/all/tax-management/{{page.version}}/vertex/vertex.html) | Spryker | ACP | Marketplace | You do business primarily in North America. | From the Vertex Admin panel, you can customize all the tax rules of your business. |
 
 The following are some key usages and values of a tax engine in the ecommerce context.
 
@@ -21,7 +22,7 @@ A tax engine automates the complex process of calculating taxes for online trans
 
 ## Compliance with tax laws
 
-Tax regulations can be intricate and constantly changing, making it challenging for businesses to keep up. A tax engine stays up to date with the latest tax laws, rates, and jurisdictions. It ensures that the correct taxes are applied based on the specific location and products involved in the transaction. By ensuring compliance with tax laws, businesses can avoid penalties, legal issues, and reputational damage.
+Tax regulations can be intricate and constantly changing, making it challenging for businesses to keep up. A tax engine stays up to date with the latest tax laws, rates, and jurisdictions. It ensures that the correct taxes are applied based on the specific location and products involved in the transaction. Businesses can avoid penalties, legal issues, and reputational damage by ensuring compliance with tax laws.
 
 ## Real-time tax rates
 

@@ -12,7 +12,7 @@ To enable smooth upgradability of the project using the [Spryker Code Upgrader](
 
 In case the project does not utilize the feature packages, it is necessary to ensure that the corresponding Spryker module versions are used.
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 Below is an example of when a used feature package version doesn't correspond to the minimum required version:
 
@@ -21,25 +21,24 @@ Below is an example of when a used feature package version doesn't correspond to
 MINIMUM ALLOWED SHOP VERSION
 ============================
 
-+---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| # | Message                                                                                                                   | Target                                |
-+---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| 1 | The package "spryker-feature/agent-assist" version "202108.0" is not supported. The minimum allowed version is "202204.0" | spryker-feature/agent-assist:202108.0 |
-+---+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------+
+Message: The package "spryker-feature/agent-assist" version 202108.0 is not supported. The minimum allowed version is 202204.0.
+Target:  spryker-feature/agent-assist:202108.0
 ```
 
-Below is an example of when the used Spryker package version doesn't correspond to the minimum required version:
+## Example of code that causes an evaluator error
 
-```shell
-============================
-MINIMUM ALLOWED SHOP VERSION
-============================
+The following is an example of the `composer.json` file when the used Spryker feature package version doesn't correspond to the minimum required version:
 
-+---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
-| # | Message                                                                                                         | Target                         |
-+---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
-| 1 | The package "spryker/availability-gui" version "6.5.9" is not supported. The minimum allowed version is "6.6.0" | spryker/availability-gui:6.5.9 |
-+---+-----------------------------------------------------------------------------------------------------------------+--------------------------------+
+```json
+{
+  ...
+  "require": {
+    ...
+    "spryker-feature/agent-assist": "^202108.0",
+    ...
+  },
+  ...
+}
 ```
 
 ### Resolving the error

@@ -57,33 +57,15 @@ Signup for Docker Hub is not required.
 
 {% endinfo_block %}
 
-2. To enable BuildKit, create or update `/etc/docker/daemon.json`:
+2. Optional: Configure the `docker` group to manage Docker as a non-root user. See [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for configuration instructions.
 
-```php
-{
-  ...
-  "features" : {
-    ...
-    "buildkit" : true
-  }
-}
-```
-
-3. Restart Docker:
-
-```bash
-/etc/init.d/docker restart
-```
-
-4. Optional: Configure the `docker` group to manage Docker as a non-root user. See [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for configuration instructions.
-
-5. Install Docker-compose:
+3. Install Docker-compose:
 <!-- Updating the doc? Update the docker-compose version to the latest one. See https://github.com/docker/compose/releases -->
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-6. Apply executable permissions to the binary:
+4. Apply executable permissions to the binary:
 
 ```bash
 sudo chmod +x /usr/local/bin/docker-compose

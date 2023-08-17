@@ -73,22 +73,19 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-## Example of an Evaluator error message
+## Example of an evaluator error message
 
 ```bash
 ======================
 MULTIDIMENSIONAL ARRAY
 ======================
 
-+---+------------------------------------------------------------------------------------+-------------------------------------------------------------------+
-| # | Message                                                                            | Target                                                            |
-+---+------------------------------------------------------------------------------------+-------------------------------------------------------------------+
-| 1 | The condition statement if ($alwaysTrue) {} is forbidden in the DependencyProvider | <path_to_project>/Pyz/Zed/Checkout/CheckoutDependencyProvider.php |
-+---+------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+Message: The if ($alwaysTrue) {} condition statement is forbidden in DependencyProvider
+Target:  {PATH_TO_PROJECT}/Pyz/Zed/Checkout/CheckoutDependencyProvider.php
 
 ```
 
-## Example of code that causes an upgradability error
+## Example of code that causes an evaluator error
 
 The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in the `if` construct `$alwaysAddPlugin`.
 

@@ -2,7 +2,7 @@
 title: Key concepts of Reactivity
 description: Understanding Reactivity concepts will help you understand how Oryx works
 template: concept-topic-template
-last_updated: Apr 3, 2023
+last_updated: Jul 11, 2023
 ---
 
 ## Reactive data streams
@@ -22,7 +22,7 @@ Oryx makes use of reactive programming through the popular library [RxJS](https:
 
 Application state is data that describes the _current_ state of an application at any given moment. It is used to render the user interface and provide the right behavior for user interactions.
 
-Oryx does not provide a _global_ state management layer. Application state is maintained per _domain_, and each domain is only concerned with the associated data used by the domain. For example, product data is maintained in the product domain, and the product domain logic ensures that a product is only loaded once when multiple requests are being made for the same product.
+Oryx doesn't provide a _global_ state management layer. Application state is maintained per _domain_, and each domain is only concerned with the associated data used by the domain. For example, product data is maintained in the product domain, and the product domain logic ensures that a product is only loaded once when multiple requests are being made for the same product.
 
 Some part of the application state is maintained below domains. A good example is the internationalization state (or application context), like active language and currency. The internationalization domain is considered a core domain, so it can be used in other domains without introducing cycle dependencies in the system.
 
@@ -61,7 +61,7 @@ While observables and RxJS operators provide a great setup for an in-memory reac
 
 Oryx has a standardized library of web components and uses [Lit](https://lit.dev) to develop those components. Lit can update only the mutable parts of the components, and maintains the static parts unchanged. This results in a highly efficient rendering performance.
 
-Oryx offers the `@asyncState` decorator for Lit components, which simplifies the use of reactive streams and reduces code complexity. However, if you are integrating Oryx into a different web framework, use the reactive patterns of that particular framework.
+Oryx offers a signals implementation and the @signalAware decorator for Lit components, which simplifies the use of reactive streams and reduces code complexity. However, if you are integrating Oryx into a different web framework, use the reactive patterns of that particular framework.
 
 ## Next steps
 

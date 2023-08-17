@@ -6,12 +6,12 @@ Follow the steps below to install the Marketplace Shipment + Customer feature co
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
-| Customer | {{page.version}} | [Customer account management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)  |
+| Customer | {{page.version}} | [Customer account management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)  |
 
 ### 1) Set up behavior
 

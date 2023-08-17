@@ -5,7 +5,7 @@ Follow the steps to install the Product Relations feature API.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|

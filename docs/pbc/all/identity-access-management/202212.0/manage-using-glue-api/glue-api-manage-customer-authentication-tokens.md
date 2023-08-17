@@ -46,7 +46,7 @@ This endpoint does not comply with OAuth 2.0. If your project requires such comp
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 ## Refresh an authentication token
 
@@ -148,7 +148,7 @@ The tokens are marked as expired on the date and time of the request. You can co
 | --- | --- |
 | 004 | Failed to refresh the token. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

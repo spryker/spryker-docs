@@ -61,7 +61,6 @@ Placeholder description:
 * `grant`: Defines access permissions to variables. Possible values:
     * `public`: readable and writable
     * `limited`: readable
-    * `internal`: hidden
 
 Path examples:
 
@@ -73,31 +72,23 @@ Path examples:
 
 Path hierarchy is needed to cover the cases when several variables with the same name are declared. If several variables with the same name are declared, the variable with a higher priority applies. The following rules define the priority of variables:
 
-1. For any `type` and `bucket`, the priority is `public` > `limited` > `internal`.
+1. For any `type` and `bucket`, the priority is `public` > `limited`.
 2. Foy any `bucket`, the priority is `bucket` > `common`.
 3. For any variable with the same name, the priority is `secret` > `config`.
 
 The following variables are arranged from lower to higher priority:
 
-* /{project}/{environment}/config/common/internal/{variable_name}
-
 * /{project}/{environment}/config/common/limited/{variable_name}
 
 * /{project}/{environment}/config/common/public/{variable_name}
-
-* /{project}/{environment}/config/{app | scheduler}/internal/{variable_name}
 
 * /{project}/{environment}/config/{app | scheduler}/limited/{variable_name}
 
 * /{project}/{environment}/config/{app | scheduler}/public/{variable_name}
 
-* /{project}/{environment}/secret/common/internal/{variable_name}
-
 * /{project}/{environment}/secret/common/limited/{variable_name}
 
 * /{project}/{environment}/secret/common/public/{variable_name}
-
-* /{project}/{environment}/secret/{app | scheduler}/internal/{variable_name}
 
 * /{project}/{environment}/secret/{app | scheduler}/limited/{variable_name}
 
@@ -120,7 +111,7 @@ The following sections describe how to add parameters and secrets for different 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
-9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -139,7 +130,7 @@ The following sections describe how to add parameters and secrets for different 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -158,7 +149,7 @@ The following sections describe how to add parameters and secrets for different 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **ECS-updater-{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.
@@ -177,7 +168,7 @@ The following sections describe how to add parameters and secrets for different 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
-9. On the **Pipelines** page, select the **ECS-updater-{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **ECS-updater-{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.    
@@ -198,7 +189,7 @@ The following sections describe how to add parameters and secrets for different 
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
 8. Go to **Services&nbsp;<span aria-label="and then">></span> CodePipeline**.
-9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environemt}** pipeline.
+9. On the **Pipelines** page, select the **Rollout_Scheduler_{project}-{environment}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.
     After the pipeline finishes running, the variable gets available for your application.  

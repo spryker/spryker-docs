@@ -2,7 +2,7 @@
 title: Reactive components
 description: Reactive components are built with Lit
 template: concept-topic-template
-last_updated: Apr 3, 2023
+last_updated: Jul 11, 2023
 ---
 
 Components are organized by domains-for example, components in a product domain. They can leverage domain logic to communicate with the associated backend API. Each domain is shipped with a domain service that provides an API to communicate with a backend API. For example, when rendering product data, `ProductService` can be used as follows:
@@ -41,34 +41,37 @@ export class ProductPriceComponent {
 
 ## Updating data in the DOM
 
-While the user navigates thorugh a single page application, it is crucial for components to be updated accordingly. This section describes how data updates are propagated throughout the UI in Oryx.
+While the user navigates thorugh a single page application, it's crucial for components to be updated accordingly. This section describes how data updates are propagated throughout the UI in Oryx.
 
 RxJS operates on data streams and updates them in memory, but it doesn't synchronize this to the UI automatically. Each JavaScript framework ships its own opinionated method to update the DOM. The selected method contributes significantly to the performance and user experience of the application.
 
-The components provided in the Oryx libraries are built with Lit. Lit provides a highly efficient system to only synchronize the minimum required updates to the DOM. When updates are loaded asynchronously, the UI needs to be updated every time new data is emitted. To make this as transparent as possible, the `@asyncState()` decorator is used in the UI components. Under the hood, the decorator uses `AsyncStateController` which requests updates to the view when needed.
+The components provided in the Oryx libraries are built with Lit. Lit provides a highly efficient system to only synchronize the minimum required updates to the DOM. When updates are loaded asynchronously, the UI needs to be updated every time new data is emitted. To make this as transparent as possible, the `@signalAware()` decorator is used in the UI components, allowing for `signals` to be used when building UI, which automatically requests updates to the view when needed.
 
-The following example shows the usage of the `asyncState` decorator. The decorator subscribes to the assigned observable and requests an update to the component when needed. This means that component developers do not need to worry about how the reactive system works under the hood.
-
-Oryx components are built in TypeScript, and we provide types everywhere to increase the developer experience and avoid errors upfront. The original type of the assigned observable needs to be adjusted. It's impossible to resolve a correct type from the observable by using a decorator, which is why the `valueType` function is used to resolve the observed type.
+The following example shows the usage of the `computed` signal. `Computed` wraps an observable into a `signal` that automatically subscribes to the underlying observable and triggers updating the view. This means that component developers don't need to worry about how the reactive system works under the hood.
 
 ```ts
 export class ProductPriceComponent {
-  @asyncState()
-  protected prices = valueType(
-    this.productController
-      .getProduct()
-      .pipe(switchMap((product) => this.formatPrices(product?.price)))
-  );
+    protected $prices = computed(() => {
+        return this.formatPrices(this.$product()?.price);
+    });
 
   protected override render(): TemplateResult | void {
-    return html`${this.prices.defaultPrice}`;
+    return html`${this.$prices().defaultPrice}`;
   }
 }
 ```
 
 ## Multiple data streams
 
-Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a _local_ price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. RxJS operators combine the various streams. They can combine multiple observables and operate on the combined results.
+Components often use multiple data streams. For example, the product price component renders a product price in a certain currency and a _local_ price format. The currency and locale are part of the application context and may change during the application's lifecycle. The product price changes from product to product. For managing these streams, you can leverage signals, which have the ability to combine multiple observables and operate on the combined results.
+
+
+{% info_block infoBox "RxJS operators instead of signals" %}
+
+If you want to manage more complex data stream operations, you can apply RxJS operators instead of signals.
+
+{% endinfo_block %}
+
 
 In the following example, `ProductPriceComponent` observes the product data from `ProductService` and _combines_ it with the formatted price given by `PriceService`.
 
@@ -77,23 +80,20 @@ export class ProductPriceComponent {
   protected productService = resolve(ProductService);
   protected priceService = resolve(PriceService);
 
-  protected prices = this.productService
-    .getProduct()
-    .pipe(switchMap((product) => this.formatPrices(product?.price)));
+  protected $product = signal(this.productService.getProduct());
+  
+  protected $prices = computed(() => this.formatPrices(this.$product()?.price));
 
-  protected formatPrices(
-    price?: ProductPrices
-  ): Observable<{ originalPrice: string | null; salesPrice: string | null }> {
-    const salesPrice = this.priceService.format(price?.defaultPrice);
-    const originalPrice = this.priceService.format(price?.originalPrice);
-    return combineLatest({ salesPrice, originalPrice });
+  protected formatPrices(price?: ProductPrices): Observable<Prices> {
+      return combineLatest({
+          sales: this.pricingService.format(price?.defaultPrice),
+          original: this.pricingService.format(price?.originalPrice),
+      });
   }
 }
 ```
 
-**Note:** The example is simplified to focus on the RxJs part.
-
-In this example, the product data is observed from `ProductService`, but switches to the price formatting logic. This means that, whenever the product and its route change, new product data is emitted and formatted. `PriceService` is used to format both the sales and original prices. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object.
+In the preceding example, the product data is observed from `ProductService` by creating a `$product` signal. Whenever the product and its route change, new product data is emitted and formatted. `PriceService` formats the sales and the original price. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object and exposed as a computed signal to the component.
 
 ## Next steps
 

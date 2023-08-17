@@ -36,14 +36,14 @@ related:
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Password Management overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/password-management-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 
 ## Change a customer's password
@@ -190,7 +190,7 @@ If the password reset is successful, the endpoint returns the `204 No Content` s
 | 422 | `newPassword` and `confirmPassword` values are not identical.  |
 | 901 | `newPassword` and `confirmPassword` are not specified; or the password length is invalid (it should be from 8 to 64 characters). |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

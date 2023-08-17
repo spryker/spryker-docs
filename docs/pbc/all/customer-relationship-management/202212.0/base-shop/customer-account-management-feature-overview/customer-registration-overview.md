@@ -57,7 +57,7 @@ A developer can verify a customer's email address using Glue API regardless of t
 
 {% endinfo_block %}
 
-To learn how a developer creates customer accounts using Glue API, see [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-using-glue-api/customers/glue-api-manage-customers.html).
+To learn how a developer creates customer accounts using Glue API, see [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html).
 
 To learn how a developer confirms a customer's email address, see [Confirming customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html).
 

@@ -8,7 +8,7 @@ related:
   - title: Creating user groups
     link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/create-user-groups.html
   - title: Customer Groups overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-groups-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to edit user groups in the Back Office.

@@ -35,14 +35,14 @@ related:
   - title: Merchant Custom Prices feature overview
     link: docs/pbc/all/price-management/page.version/base-shop/merchant-custom-prices-feature-overview.html
   - title: Password Management overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This endpoint allows [authenticated customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve available company users
 

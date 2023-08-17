@@ -29,9 +29,9 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
 
-* [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
+* [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
 
-* [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
+* [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 
 ## Authenticate as an agent assist
 
@@ -66,7 +66,7 @@ Request sample: authenticate as an agent assist
 
 {% info_block warningBox %}
 
-Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)
+Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-login-overview.html)
 
 {% endinfo_block %}
 

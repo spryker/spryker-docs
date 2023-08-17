@@ -28,15 +28,15 @@ related:
   - title: Managing customer authentication tokens via OAuth 2.0
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customers
-    link: docs/pbc/all/customer-relationship-management/page.version/manage-using-glue-api/customers/glue-api-manage-customers.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
   - title: Managing customer addresses
-    link: docs/pbc/all/customer-relationship-management/page.version/manage-using-glue-api/customers/managing-customer-addresses.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html
   - title: Retrieve customer carts
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
-    link: docs/pbc/all/customer-relationship-management/page.version/manage-using-glue-api/customers/retrieving-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/retrieving-customer-orders.html
   - title: Password Management overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/password-management-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password.

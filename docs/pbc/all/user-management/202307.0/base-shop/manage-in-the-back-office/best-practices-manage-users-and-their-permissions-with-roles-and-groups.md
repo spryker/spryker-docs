@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
 related:
   - title: Customer Groups overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-groups-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create a user with restricted access to the  Back Office.

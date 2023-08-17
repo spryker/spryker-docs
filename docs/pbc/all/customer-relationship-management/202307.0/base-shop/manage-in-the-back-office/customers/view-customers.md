@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/customer/customers/view-customers.html
 related:
   - title: Customer Account Management feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 To view a customer in the Back Office, follow the steps:
@@ -25,7 +25,7 @@ To view a customer in the Back Office, follow the steps:
 | First Name | First name. |
 | Last name	| Last name. |
 | Email | Email address. |
-|Company | Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+|Company | Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html). |
 | Customer Reference | Unique identifier of the customer. |
 | Gender | Gender. |
 | Locale | Locale. |

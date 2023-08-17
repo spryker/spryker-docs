@@ -28,7 +28,7 @@ To add a new price for a marketplace concrete product, follow these steps:
 1. On the **Concrete Products** page, next to the concrete product you want to edit, hold the pointer over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
-4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
+4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to apply the price to.
 
   {% info_block infoBox "Note" %}
 

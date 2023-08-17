@@ -47,7 +47,7 @@ After checkout registration, the cart created by a customer as a guest user is c
 
 A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account using the link in the email, in the Back Office, the status of their account remains `Unverified`. Once they click the link, the status changes to `Verified`.
 
-To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customerscreate-customers.html).
+To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html).
 
 ### Registration using Glue API
 
@@ -71,7 +71,7 @@ A developer can register a customer by importing their customer account details.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customerscreate-customers.html)  |
+| [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

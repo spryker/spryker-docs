@@ -1,6 +1,6 @@
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| customer | Object | &check; | A list of attributes describing the [customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-using-glue-api/customers/glue-api-manage-customers.html) to submit checkout data of. |
+| customer | Object | &check; | A list of attributes describing the [customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html) to submit checkout data of. |
 | customer.salutation | String | &check; | Salutation to use when addressing the customer. |
 | customer.email | String | &check; | Customer's email address. |
 | customer.firstName | String | &check; | Customer's first name. |

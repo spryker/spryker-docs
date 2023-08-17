@@ -56,4 +56,4 @@ This opens the **Edit Tax Set** page with a success message displayed.
 
 * Assign a tax set to a threshold's fee by [managing threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html).
 
-* Assign a tax set to a delivery method by [creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+* Assign a tax set to a delivery method by [creating and managing delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html).

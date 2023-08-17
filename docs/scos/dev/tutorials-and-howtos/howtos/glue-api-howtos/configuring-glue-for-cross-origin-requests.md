@@ -27,51 +27,90 @@ To enable CORS support in Glue, follow the Installation Guide.
 
 ## Configure CORS behavior
 
-CORS is configured in Spryker Glue using environment variables. There are 2 levels where CORS can be configured: global and per-domain. On the global level, CORS is configured for the whole Glue Application. On the *per-domain* level, you can configure CORS behavior for each domain configured in Glue Application separately. For example, you can configure different lists of allowed origins for the `http://glue.de.mysprykershop.com` and `http://glue.at.mysprykershop.com` domains.
-
-{% info_block warningBox %}
-
-_Per-domain_ configuration always prevails over the global one. For this reason, the recommended practice is to configure CORS behavior for each domain separately.
-
-{% endinfo_block %}
-
-Configuration can be found in the following files:
-
-* *Global*—`config/Shared/config_default.php`.
-* *Per-domain*—`config/Shared/config_default_DE.php`, where DE is the respective domain.
+CORS is configured in Spryker Glue using `deploy.yml` file. For example, you can configure different lists of allowed origins for the `http://glue.de.mysprykershop.com` and `http://glue.at.mysprykershop.com` domains.
 
 To configure CORS behavior, follow these steps:
 
 1. Open the necessary configuration file depending on which CORS configuration you want to set up.
-2. Modify the value of the `GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN` variable. You can set its value as follows:
+2. Modify the value of `cors-allow-origin`.
 
-    * `<null>`: CORS is disabled. Example:
+    ```yml
+    glue_eu:
+        application: glue
+        endpoints:
+            glue.de.mysprykershop.com:
+                store: DE
+                cors-allow-origin: 'http://cors-allow-origin1.domain'
+                cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,User-Agent,newrelic,traceparent,tracestate"
+            glue.at.mysprykershop.com:
+                store: AT
+                cors-allow-origin: 'http://cors-allow-origin2.domain'
+                cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate,X-Device-Id"
+    ```
 
-    ```php
-    $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '';
+    You can set its value as follows:
+    
+    * CORS is disabled. Example:
+
+    ```yml
+    glue_eu:
+        application: glue
+        endpoints:
+            glue.de.mysprykershop.com:
+                store: DE
+            glue.at.mysprykershop.com:
+                store: AT
     ```
 
     *  `*`: allow CORS requests from any domain. Example:
 
-    ```php
-    $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
+    ```yml
+        glue_eu:
+        application: glue
+        endpoints:
+            glue.de.mysprykershop.com:
+                store: DE
+                cors-allow-origin: '*'
+            glue.at.mysprykershop.com:
+                store: AT
+                cors-allow-origin: '*'
     ```
 
     * `http://www.example1.com`: allow CORS requests only from the specified origin. Example:
 
-    ```php
-    $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://www.example1.com';
+    ```yml
+        glue_eu:
+        application: glue
+        endpoints:
+            glue.de.mysprykershop.com:
+                store: DE
+                cors-allow-origin: 'http://www.example1.com'
+            glue.at.mysprykershop.com:
+                store: AT
+                cors-allow-origin: 'http://www.example1.com'
     ```
 
 3. Save the file.
 
 ## Verify the configuration
 
-To verify that the configuration has been completed successfully, make an _OPTIONS_ pre-flight request to any valid Glue resource with the correct `Origin` header, for example, `http://glue.example.com/`, and make sure the following:
+To verify that the configuration has been completed successfully, make an _OPTIONS_ pre-flight request to any valid Glue resource with the correct `Origin` header, for example, `http://www.example1.com`, and make sure the following:
 
 * The `Access-Control-Allow-Origin` header is present and is the same as set in the configuration.
 * The `Access-Control-Allow-Methods` header is present and contains all available REST methods.
 
-You can also make one of the available `POST`, `PATCH`, or `DELETE` requests (depending on the resource used) and verify that response headers are the same.
+```bash
+curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.mysprykershop.com
+```
 
-<!-- Last review date: Mar 14, 2019--by Volodymyr Volkov-->
+```bash
+Content-Type: text/plain; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Http-Origin: http://www.example1.com
+Access-Control-Allow-Origin: http://www.example1.com
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
+Access-Control-Allow-Headers: accept,content-type,content-language,accept-language,authorization,X-Anonymous-Customer-Unique-Id,Merchant-Reference,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: ETag
+```

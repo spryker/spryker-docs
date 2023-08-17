@@ -36,40 +36,61 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the necessary parameters to `config/Shared/config_default.php`:
+Add the necessary parameters to `deploy.yml`:
 
-**config/Shared/config_default.php**
-
-```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'https://glue.mysprykershop.com';
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'https://glue.mysprykershop.com';
-$config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
+#### Configuration CORS
+```yml
+glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: 'http://cors-allow-origin1.domain'
+            cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,User-Agent,newrelic,traceparent,tracestate"
+        glue.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: 'http://cors-allow-origin2.domain'
+            cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate,X-Device-Id"
 ```
 
-#### Add global CORS policy
+* CORS is disabled. Example:
 
-{% info_block infoBox %}
-
-`GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project.
-
-{% endinfo_block %}
-
-Adjust `config/Shared/config_default.php`:
-
-**config/Shared/config_default.php**
-
-```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'https://glue.mysprykershop.com';
+```yml
+glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+        glue.at.mysprykershop.com:
+            store: AT
 ```
 
-#### Allow CORS requests to any domain
+*  `*`: allow CORS requests from any domain. Example:
 
-Adjust `config/Shared/config_default.php`:
+```yml
+glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: '*'
+        glue.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: '*'
+```
 
-**config/Shared/config_default.php**
+* `http://www.example1.com`: allow CORS requests only from the specified origin. Example:
 
-```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
+```yml
+glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: 'http://www.example1.com'
+        glue.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: 'http://www.example1.com'
 ```
 
 {% info_block warningBox "Verification" %}
@@ -78,7 +99,22 @@ To make sure that the CORS headers are set up correctly, send the OPTIONS reques
 
 * Verify that the `access-control-allow-origin` header is present and is the same to the one set in `config`.
 * Verify that the `access-control-allow-methods` header is present and contains all available methods.
-* Send POST, PATCH, or DELETE requests (can choose any of available ones), and verify that the response headers are the same.
+
+```bash
+curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.mysprykershop.com
+```
+
+```bash
+Content-Type: text/plain; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Http-Origin: http://www.example1.com
+Access-Control-Allow-Origin: http://www.example1.com
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
+Access-Control-Allow-Headers: accept,content-type,content-language,accept-language,authorization,X-Anonymous-Customer-Unique-Id,Merchant-Reference,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: ETag
+```
 
 {% endinfo_block %}
 

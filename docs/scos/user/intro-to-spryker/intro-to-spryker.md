@@ -52,7 +52,7 @@ The modules combine to create features and have limited dependencies. The limite
 
 #### Benefits of the Spryker modular architecture:
 
-* You *take only the modules or features that you need* for your project, without overloading it with redundant code and investing effort in something you don’t need.
+* You *take only the modules or features that you need* for your project without overloading it with redundant code and investing effort in something you don’t need.
 * You can *grow a project easily* using any of the wide selection of modules.
 * You can *add, delete, and test new features* without worrying about breaking or pausing your production shop site.
 * We adhere to the atomic release approach. This means that each module is released independently and has its own version. It is developed and tested so as to ensure backward compatibility with other modules that you might not want to update. This means you can *take new and update existing modules or features right after they have been released*.

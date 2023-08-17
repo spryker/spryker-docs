@@ -3445,10 +3445,12 @@ entries:
           nested:
             - title: Color system
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
+            - title: Design tokens
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
             - title: Icon system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html              
             - title: Typography
-              url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
 
     - title: Marketplace
       include_versions:

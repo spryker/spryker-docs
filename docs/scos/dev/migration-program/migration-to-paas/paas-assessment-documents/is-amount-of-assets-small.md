@@ -24,4 +24,4 @@ To assess the project's assets that are stored separately from Git, do the follo
 
 ## Formula for calculating the migration effort
 
-Approximately 2d.
+Approximately 1d per 30GB of assets.

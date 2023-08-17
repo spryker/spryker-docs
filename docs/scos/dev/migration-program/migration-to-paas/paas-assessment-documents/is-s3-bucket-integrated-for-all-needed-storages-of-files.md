@@ -9,7 +9,6 @@ Check if the project is using any third-party storage system, like local storage
 ## Resources for assessment
 
 * Backend
-* Optional: DevOps
 
 ## Formula for calculating the migration effort
 

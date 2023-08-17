@@ -4,18 +4,14 @@ description: This document allows you to assess if ElasticSearch and Redis are r
 template: howto-guide-template
 ---
 
-# Are ElasticSearch and Redis restorable?
 
-{% info_block infoBox %}
+## Resources for assessment
 
-## Resources for assessment Backend
-
-{% endinfo_block %}
+Backend
 
 ## Description
 
-Based on prerequisites data identify if the environment is restorable via default Spryker utilities - `sync:data`
-and `publisher:trigger-events`.
+Based on prerequisites data identify if the environment is restorable via default Spryker utilities: `sync:data` and `publisher:trigger-events`.
 
 ## Formula for calculating the migration effort
 

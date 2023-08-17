@@ -4,7 +4,7 @@ description: This document allows you to assess if ENV variables approach is use
 template: howto-guide-template
 ---
 
-In this step, you need to check if custom env variables are used for sensitive configuration, like third-party integration tokens or encryption keys. Defining env variables using the `env()` function is the default approach that doesn't require additional migration effort. 
+In this step, you need to check if custom env variables are used for configuration, like third-party integration tokens or encryption keys. Defining env variables using the `env()` function is the default approach that doesn't require additional migration effort.
 
 ## Resources for assessment
 
@@ -15,7 +15,7 @@ In this step, you need to check if custom env variables are used for sensitive c
 
 Go through `config/Shared/config_{SERVICE_NAME}-{ENVIRONMENT_NAME}.php` files and check how variables are defined.
 
-Example of env variables that *don't* require additional migration effor:
+Example of env variables that *don't* require additional migration effort:
 
 ```php
 $config[ServiceApiConstants::BASE_URL] = env('SERVICE_API_BASE_URL');
@@ -29,6 +29,6 @@ Environment variables should be created in the cloud environments by a Spryker C
 
 ## Formula for calculating the migration effort
 
-1. If sensitive information is defined as env variables using the `env()` function, respective variables with values need to be defined in the cloud environments. Approximately 4h per environment.
+1. If configuration is defined as env variables using the `env()` function, respective variables with values need to be defined in the cloud environments. Approximately 4h per environment.
 
-2. If sensitive information is defined using another approach, estimate the additional effort based on the current approach and the number of configuration values that need to be reworked. Approximately 10m per configuration it
+2. If sensitive information is defined using another approach, estimate the additional effort based on the current approach and the number of configuration values that need to be reworked. Approximately 10m per configuration item.

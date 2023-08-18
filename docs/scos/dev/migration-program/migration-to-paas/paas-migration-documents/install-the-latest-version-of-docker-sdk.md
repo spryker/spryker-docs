@@ -4,22 +4,20 @@ description: This document describes how to install the latest version of Docker
 template: howto-guide-template
 ---
 
-# Install the latest version of Docker SDK
 
-{% info_block infoBox %}
+## Resources for migration
 
-## Resources for assessment Backend
+ Backend
 
-{% endinfo_block %}
 
-## If Docker SDK is not installed
+## The Docker SDK is not installed
 
-1. Follow the [installation guide](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html#system-requirements-for-installing-spryker-with-docker).
+1. Follow the [installation guide](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
 2. Run the following command from the root of the project `git clone git@github.com:spryker/docker-sdk.git docker`.
-3. Commit and push changes.
+3. Commit and push the changes.
 
-## If Docker SDK is outdated
+## The Docker SDK is installed but outdated
 
-1. Follow the [installation guide](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html#system-requirements-for-installing-spryker-with-docker).
-2. Run the following command to update Docker SDK `git submodule update --init --force docker`.
-3. Commit and push changes.
+1. Follow the [installation guide](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
+2. To update the Docker SDK, run the following command  `git submodule update --init --force docker`.
+3. Commit and push the changes.

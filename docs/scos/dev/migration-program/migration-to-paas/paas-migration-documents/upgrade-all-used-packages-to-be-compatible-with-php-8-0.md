@@ -4,18 +4,19 @@ description: This document describes how to upgrade all used packages to be comp
 template: howto-guide-template
 ---
 
-# Upgrade all used packages to be compatible with PHP >=8.0
 
-{% info_block infoBox %}
 
-## Resources for assessment Backend
+## Resources for migration
 
-{% endinfo_block %}
+Backend
 
-1. Run the `why-not` command from composer and see how many packages are not compatible with PHP 8.0:
-    ```bash
-    composer why-not php 8.0
-    ```
+
+1. Check the packages that are not compatible with PHP 8.0:
+
+```bash
+composer why-not php 8.0
+```
+
 2. If the incompatible package is coming from root `composer.json` then it has to be updated to the state when it will be
    working fine with PHP 8.0. If there is no PHP 8.0 support for the external package then it has to be replaced with
    analog and the solution dependent on this package should be reworked.

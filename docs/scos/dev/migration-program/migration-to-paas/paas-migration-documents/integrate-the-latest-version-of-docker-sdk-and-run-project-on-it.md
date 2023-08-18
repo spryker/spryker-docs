@@ -4,19 +4,16 @@ description: This document describes how to integrate the latest version of Dock
 template: howto-guide-template
 ---
 
-# Integrate the latest version of Docker SDK and run project on it
+## Resources for assessment
 
-{% info_block infoBox %}
+* Backend
+* Optional: DevOps
 
-## Resources for assessment Backend, DevOps[optional]
 
-{% endinfo_block %}
-
-1. Create boot files for all required environments using the following pattern `deploy.(projectname)-(environmentname).yml`
-    and the following [example](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
-2. Boot local development environment based on newly created deploy file and ensure that the local env is working well.
+1. For all required environments, create deploy files with the `deploy.{PROJECT_NAME}-{ENVIRONMENT_NAME}.yml` naming pattern. For an example, see the [B2C Demo Shop boot file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
+2. Based on the deploy files you've created, deploy the local environments and make sure they are working correctly.
 3. In sync with the cloud engineer check the naming of hosts for services per each environment.
-4. Deploy other environments in Spryker Cloud and ensure they are running well with new/updated boot files.
+4. Deploy other environments in Spryker Cloud and ensure they are running well with new/updated deploy files.
    The first deployment of any environment has to be in destructive mode.
 5. Custom applications have to be added by DevOps, the following instructions are needed in case it is not part of Spryker applications:
     * app name;

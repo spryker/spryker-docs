@@ -4,16 +4,13 @@ description: This document describes how to implement security and performance g
 template: howto-guide-template
 ---
 
-# Implement security and performance guidelines
-
-{% info_block infoBox %}
-
-## Resources for assessment Backend
-
-{% endinfo_block %}
 
 Implement the following guidelines:
-* [Security guidelines](/docs/scos/dev/guidelines/security-guidelines.html) 
+
+* [Security guidelines](/docs/scos/dev/guidelines/security-guidelines.html)
 * [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 
 
+## Resources for migration
+
+Backend

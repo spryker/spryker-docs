@@ -4,16 +4,13 @@ description: This document describes how to upgrade project packages.
 template: howto-guide-template
 ---
 
-# Upgrade project packages
+## Resources for migration
 
-{% info_block infoBox %}
+Backend
 
-## Resources for assessment Backend
-
-{% endinfo_block %}
 
 ## Project with feature packages
-1. Open a public demo shop that has been used for your project as a boilerplate e.g. [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/blob/202108.0/composer.json).
+1. Open a public demo shop that has been used for your project as a boilerplate, like the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/blob/202108.0/composer.json).
     Change the version of the release tag to the one you are going to update.
 2. Find the feature package which you want to update from release A to release B and check if this feature package is
     still present in release B.

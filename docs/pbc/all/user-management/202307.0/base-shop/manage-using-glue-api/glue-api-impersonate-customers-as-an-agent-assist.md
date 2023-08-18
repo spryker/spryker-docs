@@ -13,23 +13,23 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202307.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
-Impersonating a customer allows an [agent assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
+Impersonating a customer allows an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.
 
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
 
 * [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
 
@@ -120,6 +120,6 @@ After you’ve authenticated as a customer, you can impersonate them:
 * [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
-* [Manage orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/retrieving-customer-orders.html)  
+* [Manage orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)  
 
 Also, you can [refresh the agent assist authentication token](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html#refresh-an-agent-assist-authentication-token) or [revoke the agent assist refresh token](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).

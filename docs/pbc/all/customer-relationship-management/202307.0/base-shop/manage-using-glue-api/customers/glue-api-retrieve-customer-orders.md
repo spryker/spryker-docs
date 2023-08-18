@@ -28,11 +28,11 @@ related:
   - title: Managing customer authentication tokens via OAuth 2.0
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customers
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/managing-customers.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
   - title: Managing customer passwords
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customer addresses
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
 ---

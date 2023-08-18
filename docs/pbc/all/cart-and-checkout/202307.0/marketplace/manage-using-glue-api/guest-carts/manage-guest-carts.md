@@ -1940,7 +1940,7 @@ For the attributes of other included resources, see:
 * [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 * [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offer availability](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
+* [Retrieving product offer availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/glue-api-retrieve-product-offer-availability.html#product-offer-availability-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
 
 ## Assign a guest cart to a registered customer

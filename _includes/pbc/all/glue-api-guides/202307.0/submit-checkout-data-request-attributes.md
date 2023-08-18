@@ -1,6 +1,6 @@
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| billingAddress | Object | | Customer's billing [address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html). |
+| billingAddress | Object | | Customer's billing [address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html). |
 | billingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | billingAddress.email | String | &check; | Customer's email address. |

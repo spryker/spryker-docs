@@ -13,22 +13,22 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202307.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
 * [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
 * [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 

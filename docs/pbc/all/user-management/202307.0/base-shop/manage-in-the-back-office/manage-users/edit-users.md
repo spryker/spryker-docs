@@ -8,11 +8,11 @@ related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
   - title: Assigning and deassigning customers from users
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
   - title: Create users
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/create-users.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/create-users.html
   - title: Deleting users
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/delete-users.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/delete-users.html
 ---
 
 This document describes how to edit users in the Back Office.
@@ -54,6 +54,6 @@ The following table describes the attributes you enter and select when editing u
 | FIRST NAME | User's first name. |
 | LAST NAME | User's last name. |
 | ASSIGNED GROUPS | The user groups this user is assigned to. User groups define what areas and actions the user has access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
-| AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) |
+| AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
 | STATUS | Defines if the user can access the Back Office. |

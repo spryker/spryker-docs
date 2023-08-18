@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/users/managing-user-roles/editing-user-roles.html
 related:
   - title: Creating user roles
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/create-user-groups.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html
 ---
 
 This document describes how to edit user roles in the Back Office.

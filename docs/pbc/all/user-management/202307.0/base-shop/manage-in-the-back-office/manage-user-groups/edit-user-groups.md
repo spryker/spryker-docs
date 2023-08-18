@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/users/managing-user-groups/editing-user-groups.html
 related:
   - title: Creating user groups
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/create-user-groups.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html
   - title: Customer Groups overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---

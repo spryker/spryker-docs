@@ -1205,7 +1205,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 {% include pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md -->
 
-For the attributes of other included resources, see [Retrieve customer's order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/retrieving-customer-orders.html)
+For the attributes of other included resources, see [Retrieve customer's order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
 
 ## Possible errors
 

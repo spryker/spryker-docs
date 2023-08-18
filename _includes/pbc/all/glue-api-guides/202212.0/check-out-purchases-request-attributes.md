@@ -6,8 +6,8 @@
 | customer.firstName | String | &check; | Customer's first name. |
 | customer.lastName | String | &check; | Customer's last name. |
 | idCart | String | &check; | Unique identifier of the customer's [cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) to check out. |
-| billingAddress | Object | &check; | Customer's billing [address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html). |
-| billingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| billingAddress | Object | &check; | Customer's billing [address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html). |
+| billingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | billingAddress.email | String | &check; | Customer's email address. |
 | billingAddress.firstName | String | &check; | Customer's first name. |
@@ -25,8 +25,8 @@
 | payments.paymentProviderName | String | &check; | Name of the payment provider for this order. |
 | shipment | Object | &check; | A list of attributes describing the shipping method selected for this order. |
 | shipment.items | object | &check; | A list of items that are to be delivered to the shipping address defined in this shipment. |
-| shipment.shippingAddress | Object | &check; | Customer's shipping [address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html) for this shipment. |
-| shipment.shippingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/managing-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress | Object | &check; | Customer's shipping [address](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html) for this shipment. |
+| shipment.shippingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | shipment.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | shipment.shippingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | shipment.shippingAddress.email | String | &check; | Customer's email address. |

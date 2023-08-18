@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
   - /docs/scos/dev/glue-api-guides/202200.0/authentication-and-authorization.html
   - /docs/scos/dev/glue-api-guides/202204.0/authentication-and-authorization.html
+  - /docs/pbc/all/identity-access-management/202307.0/glue-api-authentication-and-authorization.html  
 related:
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html

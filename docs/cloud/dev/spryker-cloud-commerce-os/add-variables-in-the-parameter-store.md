@@ -40,8 +40,45 @@ Variables must follow this naming convention: `/{project}/{environment}/{type}/{
 
 Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you can't define your own variables using these names.
 <BR> The reserved variable names are the following:
+* `SPRYKER_*` *(Every variable name with that prefix)*
+* `ALLOWED_IP`
+* `BLACKFIRE_AGENT_SOCKET`
+* `BLACKFIRE_SERVER_ID`
+* `BLACKFIRE_SERVER_TOKEN`
+* `DATA_IMPORT_S3_BUCKET`
+* `DATA_IMPORT_S3_KEY`
+* `DATA_IMPORT_S3_SECRET`
 * `DUMMY_INIT`
-* `SPRYKER_*`
+* `ENABLE_NRI_ECS`
+* `JAVA_OPTS`
+* `JENKINS_URL`
+* `NEWRELIC_APPNAME`
+* `NEWRELIC_ENABLED`
+* `NEWRELIC_LICENSE`
+* `NRIA_CUSTOM_ATTRIBUTES`
+* `NRIA_LICENSE_KEY`
+* `NRIA_OVERRIDE_HOST_ROOT`
+* `NRIA_PASSTHROUGH_ENVIRONMENT`
+* `NRIA_VERBOSE`
+* `ONEAGENT_INSTALLER_DOWNLOAD_TOKEN`
+* `ONEAGENT_INSTALLER_SCRIPT_URL`
+* `RABBITMQ_DEFAULT_PASS`
+* `RABBITMQ_DEFAULT_USER`
+* `RABBITMQ_DEFAULT_VHOST`
+* `RABBITMQ_ENDPOINT`
+* `RABBITMQ_EXCHANGE_REGEXES`
+* `RABBITMQ_INTEGRATIONS_INTERVAL`
+* `RABBITMQ_NODENAME`
+* `RABBITMQ_PASSWORD`
+* `RABBITMQ_PORT`
+* `RABBITMQ_QUEUES_REGEXES`
+* `RABBITMQ_USE_SSL`
+* `RABBITMQ_USERNAME`
+* `TIDEWAYS_APIKEY`
+* `TIDEWAYS_CLI_ENABLED`
+* `TIDEWAYS_DAEMON_URI`
+* `TIDEWAYS_ENVIRONMENT`
+
 
 If you are already using these reserved variables in your code, you need to change their names to avoid any service issues.
 

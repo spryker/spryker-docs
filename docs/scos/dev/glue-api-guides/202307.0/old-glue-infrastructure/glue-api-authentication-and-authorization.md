@@ -27,6 +27,12 @@ related:
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions. -->
 
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
+
 [Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.
 
 To get access to a protected resource, a user obtains an *access token*. An access token is a JSON Web Token used to identify a user during API calls. Then, they pass the token in the request header.

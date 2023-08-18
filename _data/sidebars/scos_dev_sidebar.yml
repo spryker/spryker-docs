@@ -724,12 +724,12 @@ entries:
       - "202212.0"
       - "202307.0"
     - title: Authentication and authorization
-      url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
+      url: /docs/scos/dev/glue-api-guides/glue-api-authentication-and-authorization.html
       include_versions:
       - "202212.0"
       - "202307.0"
     - title: Security and authentication
-      url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
+      url: /docs/scos/dev/glue-api-guides/glue-api-security-and-authentication.html
       include_versions:
       - "202212.0"
       - "202307.0"
@@ -738,6 +738,10 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
+      - title: Glue API authentication and authorization
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-authentication-and-authorization.html
+      - title: Glue API security and authentication
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-security-and-authentication.html
       - title: Glue REST API
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-rest-api.html
         include_versions:

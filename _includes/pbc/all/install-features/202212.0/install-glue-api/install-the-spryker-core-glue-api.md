@@ -1,8 +1,8 @@
 
 
-This document describes how to integrate the Glue API: Spryker Core feature into a Spryker project.
+This document describes how to install the Spryker Core Glue API into a Spryker project.
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 
@@ -12,9 +12,9 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | Feature | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:"^1.0.0" spryker/stores-rest-api:"^1.0.0" spryker/urls-rest-api:"^1.0.0" spryker/security-blocker-rest-api:"^1.0.0" --update-with-dependencies
@@ -39,6 +39,7 @@ Make sure that the following modules have been installed:
 Add the necessary parameters to `deploy.yml`:
 
 #### Configuration CORS
+
 ```yml
 glue_eu:
     application: glue
@@ -130,6 +131,7 @@ Access-Control-Expose-Headers: ETag
 ### 3) Set up transfer objects
 
 Generate transfer objects:
+
 ```bash
 console transfer:generate
 ```
@@ -160,7 +162,7 @@ Make sure that the following changes have occurred:
 
 ### 4) Set up behavior
 
-Activate the following plugins:
+1. Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -214,7 +216,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-Create a new entry point for Glue Application:
+2. Create a new entry point for Glue Application:
 
 **public/Glue/index.php**
 
@@ -243,7 +245,7 @@ $bootstrap
 
 #### Configure web server
 
-Create Nginx VHOST configuration:
+1. Create Nginx VHOST configuration:
 
 **/etc/nginx/sites-enabled/DE_development_glue**
 
@@ -270,17 +272,16 @@ server {
 }
 ```
 
-Update hosts configuration by adding the following line (replace **ip** with your server's IP address):
+2. Update the hosts configuration by adding the following line. Replace {IP} with your server's IP address:
 
 **/etc/hosts**
-
 ```bash
-ip glue.mysprykershop.com
+{IP} glue.mysprykershop.com
 ```
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you should be able to access `https://glue.mysprykershop.com` and get a correct JSON response as follows:
+If everything is set up correctly, you should be able to access `https://glue.mysprykershop.com` and get the following JSON response:
 
 **Default JSON Response**
 ```json
@@ -424,15 +425,15 @@ use Spryker\Glue\EntityTagsRestApi\EntityTagsRestApiConfig as SprykerEntityTagsR
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the `content-language` header set to **de_DE**.
+Make a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]`. The response should contain the `content-language` header set to **de_DE**.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-`EntityTagFormatResponseHeadersPlugin` is set up correctly if the response of any of the resources configured to require `ETag` (in `EntityTagsRestApiConfig::getEntityTagRequiredResources()`) contains the `ETag` header.
+To make sure `EntityTagFormatResponseHeadersPlugin` is set up correctly, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`(in `EntityTagsRestApiConfig::getEntityTagRequiredResources()`). 
 
-Check this by sending a GET request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.
+The response should contain the `ETag` header.
 
 {% endinfo_block %}
 

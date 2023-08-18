@@ -36,7 +36,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the necessary parameters to `deploy.yml`:
+Add `cors-allow-origin` to `deploy.yml`:
 
 #### Configuration CORS
 ```yml

@@ -5,6 +5,13 @@ last_updated: July 9, 2023
 template: concept-topic-template
 ---
 
+
+{% info_block warningBox %}
+
+Oryx is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 Typography is an important part of the look and feel of a web page. It contributes to the readability of text but also defines how page structure is perceived. Big headers typically go first and are perceived as more important, whereas smaller text seems less important.
 
 The typography system lets you set up font size, weight, and line height globally. Components don't define _values_ for fonts directly in their CSS but use _design tokens_ to connect to the font values. Design tokens are CSS variables that you can configure in your project implementation.
@@ -15,7 +22,7 @@ Like all design tokens, the typography system is configurable by themes, so that
 
 Oryx is based on web components, using the shadow DOM. The shadow DOM doesn't leak out any styles outside a component, and components don't inherit styles from ancestor elements. However, there are a few exceptions. Font face and size, line height and color are the few CSS properties that cascade down the shadow DOM. This lets you define those rules high up in the DOM tree.
 
-Because most design system components inehrit typography from ancestor elements, you can provide the basis typography configuration in the root of the application. Oryx applications use the `<oryx-app>` component, which provides this setup:
+Because most design system components inherit typography from ancestor elements, you can provide the basis typography configuration in the root of the application. Oryx applications use the `<oryx-app>` component, which provides this setup:
 
 ```css
 :host {

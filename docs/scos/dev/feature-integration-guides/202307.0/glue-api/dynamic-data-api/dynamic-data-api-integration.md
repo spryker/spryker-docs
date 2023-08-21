@@ -138,9 +138,9 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 
 ### Dynamic Data Install Configuration
 
-4. It is possible to install default configuration data by creating a configuration file:
+1. Optional: To install default configuration data, create a configuration file:
 
-**src/Pyz/Zed/DynamicEntity/data/installer/configuration.json**
+<details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
 ```json
 [
@@ -204,8 +204,9 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
     }
 ]
 ```
+</details>
 
-Add file path to the `DynamicEntityConfig`:
+2. Add file path to the `DynamicEntityConfig`:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 
@@ -489,7 +490,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 {% info_block warningBox %}
 
-Run the following command after enabling `DynamicEntityInstallerPlugin`:
+When `DynamicEntityInstallerPlugin` is enabled, run the following command:
 
 ```bash
 console setup:init-db

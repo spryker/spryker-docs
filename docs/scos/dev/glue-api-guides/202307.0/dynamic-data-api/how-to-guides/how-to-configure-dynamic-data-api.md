@@ -9,8 +9,8 @@ redirect_from:
 
 This guide shows how to configure the Dynamic Data API endpoints.
 
-In order to incorporate a new endpoint for interacting with entities in the database, 
-it is necessary to add a corresponding row to the `spy_dynamic_entity_configuration` table or needs to create a configuration file and install configuration data, see ([Dynamic Data Install Configuration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html#dynamic-data-install-configuration))
+To incorporate a new endpoint for interacting with entities in the database,
+add a corresponding row to the `spy_dynamic_entity_configuration` table or create a configuration file and install configuration data. For details, see [Dynamic Data API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html)
 
 The `spy_dynamic_entity_configuration` table represents the configuration for dynamic entity endpoints in the system. It has the following columns:
 
@@ -26,7 +26,7 @@ The `spy_dynamic_entity_configuration` table represents the configuration for dy
 
 {% info_block infoBox %}
 
-Currently, the process entails manually executing SQL queries or importing via config file as there is no existing user interface (UI) feature in Spryker for it. 
+The process entails manually executing SQL queries or importing using a config file because there is no existing user interface (UI) feature in Spryker for it.
 However, future releases are expected to introduce an UI solution for adding new rows to the `spy_dynamic_entity_configuration` table.
 
 {% endinfo_block %}

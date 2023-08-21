@@ -5,9 +5,15 @@ template: concept-topic-template
 last_updated: Apr 4, 2023
 ---
 
-The [presets package](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.
+{% info_block warningBox %}
 
-Presets are typically used to demonstrate or try out Oryx applications. In product applications, the boilerplate is set up in more optimized way, by leaving out the features that are not used.
+Oryx is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
+The [presets package](https://www.npmjs.com/package/@spryker-oryx/presets) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.
+
+Presets are typically used to demonstrate or try out Oryx applications. In production applications, the boilerplate is set up in a more optimized way, by leaving out the features that are not used.
 
 ## Dependencies
 
@@ -43,7 +49,7 @@ For more information about feature sets, see [Feature sets](/docs/scos/dev/front
 
 ## Themes
 
-A *theme* represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as the color of a form field's placeholder. Themes are built with design tokens, which are configurable values that are used in CSS properties. Configuring these design tokens lets you customize a theme and align the application and its components with your brand identity or specific design requirements.
+A _theme_ represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as the color of a form field's placeholder. Themes are built with [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/styling/oryx-design-tokens.html), which are configurable values that are used in CSS properties. Configuring these design tokens lets you customize a theme and align the application and its components with your brand identity or specific design requirements.
 
 To apply a theme to your Oryx application, you can import it from the preset package and use it during the application setup:
 

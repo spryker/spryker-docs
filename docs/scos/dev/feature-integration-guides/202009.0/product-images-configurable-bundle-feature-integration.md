@@ -24,7 +24,7 @@ related:
 ## Install Feature Core
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | Name | Version |
 | --- | --- |

@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 ---
 
+{% info_block warningBox %}
+
+Oryx is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+
+{% endinfo_block %}
+
 This document describes the conventions we use and recommend for defining services in Oryx.
 
 ## String-based token

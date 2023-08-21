@@ -19,7 +19,7 @@ This document describes how to integrate the [Agent Assist](/docs/scos/user/feat
 Follow the steps below to install the feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -144,7 +144,7 @@ Follow the steps below to install the feature front end.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

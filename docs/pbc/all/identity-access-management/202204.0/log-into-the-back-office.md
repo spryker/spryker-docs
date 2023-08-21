@@ -33,7 +33,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/man
 
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#create-a-user) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html#create-a-user) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html).
 
 {% endinfo_block %}
 
@@ -64,7 +64,7 @@ To log in with a third-party system credentials:
 1. In the login form, click **Login with {Third-party service name}**. This redirects your to the third-party sign-in page.
 2. Log in to the third-party system by entering your username and password.
 
-You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) page.
+You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) page.
 
 {% info_block warningBox %}
 

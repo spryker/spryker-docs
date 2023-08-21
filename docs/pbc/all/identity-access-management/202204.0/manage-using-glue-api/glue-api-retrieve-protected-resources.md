@@ -26,7 +26,7 @@ In your development, the Customer Access API helps you to protect resources from
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Customer Access feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html).
 
 ## Retrieve protected resources
 

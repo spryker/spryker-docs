@@ -11,7 +11,7 @@ Suppose you have two testing environments, and you need to migrate a large amoun
 2. Export the database as a compressed file and upload it to an S3 bucket:
 
 ```php
-mysqldump --host=$SPRYKER_DB_HOST --user=$SPRYKER_DB_ROOT_USERNAME --password=$SPRYKER_DB_ROOT_PASSWORD $SPRYKER_DB_DATABASE | gzip | aws s3 cp - s3://your_bucket_name/backup.$(date +"%Y-%m-%d__%H-%M-%S").sql.gz
+mysqldump --skip-lock-tables --host=$SPRYKER_DB_HOST --user=$SPRYKER_DB_ROOT_USERNAME --password=$SPRYKER_DB_ROOT_PASSWORD $SPRYKER_DB_DATABASE | gzip | aws s3 cp - s3://your_bucket_name/backup.$(date +"%Y-%m-%d__%H-%M-%S").sql.gz
 ```
 
 ![mysqldump-command-in-jenkins](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments/mysqldump-command-in-jenkins.png)

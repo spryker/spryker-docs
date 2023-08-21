@@ -1,7 +1,7 @@
 ---
 title: Add variables in the Parameter Store
 description: Learn how to define variables in the Parameter Store.
-last_updated: May 3, 2023
+last_updated: Aug 21, 2023
 template: howto-guide-template
 keywords: environment variable management
 redirect_from:

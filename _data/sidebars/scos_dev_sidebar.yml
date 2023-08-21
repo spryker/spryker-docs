@@ -3439,16 +3439,18 @@ entries:
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
             - title: Signals
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html              
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html
         - title: Styling
           include_versions:
           - "202212.0"
           - "202307.0"
           nested:
-          - title: "Color system"
+          - title: Color system
             url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
+          - title: Design tokens
+            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
           - title: Typography
-            url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
+            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
 
     - title: Marketplace
       include_versions:

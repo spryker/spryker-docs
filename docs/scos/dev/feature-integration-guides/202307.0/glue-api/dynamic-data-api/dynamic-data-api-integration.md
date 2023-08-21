@@ -136,9 +136,9 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-### Dynamic Data import configuration
+### Dynamic Data Install Configuration
 
-4. It is also possible to import default configuration data, create configuration file:
+4. It is also possible to install default configuration data for that need to create a configuration file:
 
 **src/Pyz/Zed/DynamicEntity/data/installer/configuration.json**
 
@@ -207,7 +207,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 
 Add file path to the `DynamicEntityConfig`:
 
-**src/Pyz/Glue/DynamicEntity/DynamicEntityConfig.php**
+**src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 
 ```php
 <?php
@@ -241,7 +241,7 @@ class DynamicEntityConfig extends SprykerDynamicEntityConfig
 Run the following command: 
 
 ```bash
-console transfer:generate
+console setup:init-db
 ```
 
 ### Set up database schema and transfer objects

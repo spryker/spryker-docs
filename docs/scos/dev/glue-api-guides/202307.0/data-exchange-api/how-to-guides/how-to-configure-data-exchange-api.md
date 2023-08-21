@@ -1,13 +1,13 @@
 ---
-title: How to configure Dynamic Data API endpoints.
-description: This guide shows how to configure the Dynamic Data API endpoints.
+title: How to configure Data Exchange API endpoints.
+description: This guide shows how to configure the Data Exchange API endpoints.
 last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from: 
-  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html
+  - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
-This guide shows how to configure the Dynamic Data API endpoints.
+This guide shows how to configure the Data Exchange API endpoints.
 
 In order to incorporate a new endpoint for interacting with entities in the database, 
 it is necessary to add a corresponding row to the `spy_dynamic_entity_configuration` table. 
@@ -98,23 +98,43 @@ larger values, the field can be set as a string type instead.
 
 {% info_block infoBox %}
 
-So far the Dynamic Data API supports the following types for the configured fields: boolean, integer, string and decimal.
+So far the Data Exchange API supports the following types for the configured fields: boolean, integer, string and decimal.
 
 {% endinfo_block %}
 
 Let's say you want to have a new endpoint `/dynamic-data/country` to operate with data in `spy_country` table in database.
 
-Based on the provided information, the SQL transaction for interacting with the `spy_country` table through the API request via `dynamic-entity/country` would be as follows:
+In order to configure the endpoint, you need to go to Data Exchange API section in Backoffice and click on "Create Data Exchange API configuration" button.
 
-```sql
-BEGIN;
-INSERT INTO `spy_dynamic_entity_configuration` VALUES ('country', 'spy_country', 1, '{\"identifier\":\"id_country\",\"fields\":[{\"fieldName\":\"id_country\",\"fieldVisibleName\":\"id_country\",\"isEditable\":false,\"isCreatable\":false,\"type\":\"integer\",\"validation\":{\"isRequired\":false}},{\"fieldName\":\"iso2_code\",\"fieldVisibleName\":\"iso2_code\",\"type\":\"string\",\"isEditable\":true,\"isCreatable\":true,\"validation\":{\"isRequired\":true,\"maxLength\":2,\"minLength\":2}},{\"fieldName\":\"iso3_code\",\"fieldVisibleName\":\"iso3_code\",\"type\":\"string\",\"isEditable\":true,\"isCreatable\":true,\"validation\":{\"isRequired\":true,\"maxLength\":3,\"minLength\":3}},{\"fieldName\":\"name\",\"fieldVisibleName\":\"name\",\"type\":\"string\",\"isEditable\":true,\"isCreatable\":true,\"validation\":{\"isRequired\":true,\"maxLength\":255,\"minLength\":1}},{\"fieldName\":\"postal_code_mandatory\",\"fieldVisibleName\":\"postal_code_mandatory\",\"type\":\"boolean\",\"isEditable\":true,\"isCreatable\":true,\"validation\":{\"isRequired\":false}},{\"fieldName\":\"postal_code_regex\",\"isEditable\":\"false\",\"isCreatable\":\"false\",\"fieldVisibleName\":\"postal_code_regex\",\"type\":\"string\",\"validation\":{\"isRequired\":false,\"maxLength\":500,\"minLength\":1}}]}');
-COMMIT;
-```
+[PASTE SCREENSHOT HERE]
+
+Then you need to select a configurable table in the form below. In our case it is `spy_country`:
+
+[PASTE SCREENSHOT HERE]
+
+{% info_block infoBox %}
+
+Note, that you can only select tables that are not excluded from configuring. 
+In order to exclude a table from configuring follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html).
+
+{% endinfo_block %}
+
+After you select a table, you will see a form for configuring the endpoint. Let's fill in the form with the following values:
+
+[PASTE SCREENSHOT HERE]
+
+{% info_block infoBox %}
+
+Note, that you have to enable the endpoint in order to be able to use it. And besides that, you have to provide enable each field you want to use as well.
+
+{% endinfo_block %}
+
+After you click "Save" button, you will see a new endpoint in the list of endpoints in Data Exchange API section in Backoffice.
+And you will be able to send request to it.
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Dynamic Data API follow [Dynamic Data API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html) to proceed with it.
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
 
 {% endinfo_block %}

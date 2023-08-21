@@ -1,18 +1,18 @@
 ---
-title: Dynamic Data API integration
-description: Integrate the Dynamic Data API into a Spryker project.
+title: Data Exchange API integration
+description: Integrate the Data Exchange API into a Spryker project.
 last_updated: June 22, 2023
 template: feature-integration-guide-template
 redirect_from: 
-    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
-    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/data-exchange-api/data-exchange-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
 ---
 
-This document describes how to integrate the Dynamic Data API into a Spryker project.
+This document describes how to integrate the Data Exchange API into a Spryker project.
 
 ---
 
-The Dynamic Data API is a powerful tool that allows seamless interaction with your database.
+The Data Exchange API is a powerful tool that allows seamless interaction with your database.
 
 You can easily access your data by sending requests to the API endpoint. 
 
@@ -20,7 +20,7 @@ It enables you to retrieve, create, update, and manage data in a flexible and ef
 
 ## Install feature core
 
-Follow the steps below to install the Dynamic Data API core.
+Follow the steps below to install the Data Exchange API core.
 
 ### Prerequisites
 
@@ -36,7 +36,7 @@ To start feature integration, install the necessary features:
 Install the required modules:
 
 ```bash
-composer require spryker/dynamic-entity-backend-api:"^0.1.0" --update-with-dependencies
+composer require spryker/dynamic-entity-backend-api:"^0.1.0" spryker/dynamic-entity-gui:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -47,6 +47,7 @@ Make sure that the following modules have been installed:
 | --- | --- |
 | DynamicEntity | vendor/spryker/dynamic-entity |
 | DynamicEntityBackendApi | vendor/spryker/dynamic-entity-backend-api |
+| DynamicEntityGui | vendor/spryker/dynamic-entity-gui |
 
 {% endinfo_block %}
 
@@ -94,7 +95,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-3. The Dynamic Data API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
+3. The Data Exchange API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
    Logging is enabled by default. Adjust `DynamicEntityBackendApiConfig` in order to disable this option or change the path for the log file.
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
@@ -136,6 +137,38 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
+4. The Data Exchange API comes with an exclusion list of database schemas that are not allowed to be configured. 
+   Notably, the `spy_dynamic_entity_configuration` schema is excluded by default.
+   Adjust `DynamicEntityGuiConfig` in order to exclude database schemas from configuring:
+   
+**src/Pyz/Zed/DynamicEntityGui/DynamicEntityGuiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DynamicEntityGui;
+
+use Spryker\Zed\DynamicEntityGuiConfig as SprykerDynamicEntityGuiConfig;
+
+class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
+{
+    /**
+     * Specification:
+     * - Returns a list of tables that should not be used for dynamic entity configuration.
+     *
+     * @api
+     *
+     * @return array<string>
+     */
+    public function getDisallowedTables(): array
+    {
+        return [
+            'spy_dynamic_entity_configuration',
+        ];
+    }
+}
+```
+
 ### Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
@@ -153,13 +186,15 @@ Ensure that you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for dynamic entities. In order to do that follow the instructions here [how to configure Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html)  
+Add configurations for dynamic entities. In order to do that follow the instructions here [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html)  
 
 Ensure the following transfers have been created:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ApiApplicationSchemaContext | class | created | src/Generated/Shared/Transfer/ApiApplicationSchemaContextTransfer.php | 
+| CriteriaRangeFilter | class | created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer.php |
+| DocumentationInvalidationVoterRequest | class | created | src/Generated/Shared/Transfer/DocumentationInvalidationVoterRequestTransfer.php |
 | DynamicApiDefinition | class | created | src/Generated/Shared/Transfer/DynamicApiDefinitionTransfer.php |
 | DynamicEntity | class | created | src/Generated/Shared/Transfer/DynamicEntityTransfer.php |
 | DynamicEntityCollection | class | created | src/Generated/Shared/Transfer/DynamicEntityCollectionTransfer.php |
@@ -168,6 +203,8 @@ Ensure the following transfers have been created:
 | DynamicEntityCollectionResponse | class | created | src/Generated/Shared/Transfer/DynamicEntityCollectionResponseTransfer.php |
 | DynamicEntityConfiguration | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationTransfer.php |
 | DynamicEntityConfigurationCollection | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCollectionTransfer.php |
+| DynamicEntityConfigurationCollectionRequest | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCollectionRequestTransfer.php |
+| DynamicEntityConfigurationCollectionResponse | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCollectionResponseTransfer.php |
 | DynamicEntityConfigurationConditions | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationConditionsTransfer.php |
 | DynamicEntityConfigurationCriteria | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCriteriaTransfer.php |
 | DynamicEntityConditions | class | created | src/Generated/Shared/Transfer/DynamicEntityConditionsTransfer.php |
@@ -177,6 +214,7 @@ Ensure the following transfers have been created:
 | DynamicEntityFieldDefinition | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldDefinitionTransfer.php |
 | DynamicEntityFieldValidation | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldValidationTransfer.php |
 | Error | class | created | src/Generated/Shared/Transfer/ErrorTransfer.php |
+| ErrorCollection | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer.php |
 | GlueError | class | created | src/Generated/Shared/Transfer/GlueErrorTransfer.php |
 | GlueFilter | class | created | src/Generated/Shared/Transfer/GlueFilterTransfer.php |
 | GlueRequest | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer.php |
@@ -231,6 +269,60 @@ Make sure that the configured data in the database has been added to the `spy_gl
 
 {% endinfo_block %}
 
+### Configure navigation
+
+Add Dynamic Exchange API section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <dynamic-entities-gui>
+        <label>Data Exchange API Configuration</label>
+        <title>Data Exchange API Configuration</title>
+        <icon>fa-exchange-alt</icon>
+        <bundle>dynamic-entity-gui</bundle>
+        <controller>configuration-list</controller>
+        <action>index</action>
+        <pages>
+            <dynamic-entity-create>
+                <label>Create new configuration</label>
+                <title>Create new configuration</title>
+                <bundle>dynamic-entity-gui</bundle>
+                <controller>configuration-create</controller>
+                <action>index</action>
+                <visible>0</visible>
+            </dynamic-entity-create>
+            <dynamic-entity-edit>
+                <label>Edit configuration</label>
+                <title>Edit configuration</title>
+                <bundle>dynamic-entity-gui</bundle>
+                <controller>configuration-edit</controller>
+                <action>index</action>
+                <visible>0</visible>
+            </dynamic-entity-edit>
+        </pages>
+    </dynamic-entities-gui>
+</config>
+```
+
+{% info_block infoBox "Info" %}
+
+Run the following console command to update navigation cache:
+
+```bash
+console navigation:build-cache 
+```
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the Data Exchange API section has been added to the navigation list in the Backoffice.
+
+{% endinfo_block %}
+
 ### Set up behavior
 
 Enable the following behaviors by registering the plugins:
@@ -239,6 +331,7 @@ Enable the following behaviors by registering the plugins:
 | --- | --- | --- |
 | PropelApplicationPlugin | Initializes `PropelOrm`. | Spryker\Zed\Propel\Communication\Plugin\Application |
 | DynamicEntityApiSchemaContextExpanderPlugin | Adds dynamic entities to the documentation generation context. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorApi |
+| DynamicEntityDocumentationInvalidationVoterPlugin | Checks if dynamic entity configuration was changed within the provided interval. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorApi |
 | DynamicEntityOpenApiSchemaFormatterPlugin | Formats dynamic entities of the Open API 3 schema: info, components, paths, tags. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorOpenApi |
 | DynamicEntityRouteProviderPlugin | Adds routes for the provided dynamic entity to the RouteCollection. | Spryker\Glue\DynamicEntityBackendApi\Plugin |
 | DynamicEntityProtectedPathCollectionExpanderPlugin | Expands a list of protected endpoints with dynamic entity endpoints. | Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
@@ -285,6 +378,7 @@ namespace Pyz\Glue\DocumentationGeneratorApi;
 use Spryker\Glue\DocumentationGeneratorApi\DocumentationGeneratorApiDependencyProvider as SprykerDocumentationGeneratorApiDependencyProvider;
 use Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface;
 use Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorApi\DynamicEntityApiSchemaContextExpanderPlugin;
+use Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorApi\DynamicEntityDocumentationInvalidationVoterPlugin;
 
 class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGeneratorApiDependencyProvider
 {
@@ -301,6 +395,16 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface	    
     {	    
         $contextExpanderCollection->addExpander(new DynamicEntityApiSchemaContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
+    }
+    
+    /**
+     * @return array<\Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\DocumentationInvalidationVoterPluginInterface>
+     */
+    protected function getInvalidationVoterPlugins(): array
+    {
+        return [
+            new DynamicEntityDocumentationInvalidationVoterPlugin(),
+        ];
     }
 }
 ```
@@ -360,6 +464,40 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html)
+If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
 
 {% endinfo_block %}
+
+### Configure Jenkins:
+
+1. Adjust the scheduler project configuration:
+
+**config/Zed/cronjobs/jenkins.php**
+
+```php
+$jobs[] = [
+    'name' => 'glue-api-generate-documentation',
+    'command' => '$PHP_BIN vendor/bin/glue api:generate:documentation --invalidated-after-interval 90sec',
+    'schedule' => '*/1 * * * *',
+    'enable' => true,
+];
+```
+
+2. Apply the scheduler configuration update:
+
+```bash
+vendor/bin/console scheduler:suspend
+vendor/bin/console scheduler:setup
+vendor/bin/console scheduler:resume
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you've set up the configuration:
+
+1. Configure at least one entity in `spy_dynamic_entity_configuration`. In order to do that follow the link [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
+2. Make sure that `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` was generated and contains the corresponding endpoint with correct configurations.
+
+{% endinfo_block %}
+
+

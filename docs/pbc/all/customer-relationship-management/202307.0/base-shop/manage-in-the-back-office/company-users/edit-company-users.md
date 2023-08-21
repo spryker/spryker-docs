@@ -9,7 +9,7 @@ related:
   - title: Create company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/company-users/create-company-users.html
   - title: Create company roles
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-roles/create-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html
   - title: Managing Companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html
   - title: Company user roles and permissions overview

@@ -18,7 +18,7 @@ related:
   - title: Managing gift cards of registered users
     link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/manage-gift-cards-of-registered-users.html
   - title: Retrieving customer carts
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/retrieving-customer-carts.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
 This endpoint allows managing carts by creating, retrieving, and deleting them.
@@ -154,7 +154,7 @@ To retrieve all carts, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieving customer carts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/retrieving-customer-carts.html).
+Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieving customer carts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html).
 
 {% endinfo_block %}
 

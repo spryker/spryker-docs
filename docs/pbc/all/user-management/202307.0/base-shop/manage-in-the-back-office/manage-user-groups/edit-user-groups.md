@@ -35,4 +35,4 @@ To de-assign a user from the group, in the **Users** section, click **Delete** n
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | TITLE | Unique identifier of the user group. It's used for identifying the group when creating users. |
-| ASSIGNED ROLES | The user roles that are assigned to the group. For role creating instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
+| ASSIGNED ROLES | The user roles that are assigned to the group. For role creating instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |

@@ -85,7 +85,7 @@ This moves the address to the **UNASSIGNED ADDRESSES** section.
 | [Create company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/create-company-units.html) |
 | [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html) |
 | [Create company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html) |
-| [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html) |
+| [Edit company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html) |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -26,13 +26,11 @@ The localization of labels is driven by the current language and the translation
 
 Oryx uses the active application language to look up the available labels. When the language is `en`, the locales for English are resolved.
 
-If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if a translation key contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or for `cart.increase`.
+If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if a translation key contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or for `cart.increase`. This mechanism allows for a single translation of `increase` that might affect multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
 
 ## Auto-conversion of translation keys
 
 If a translation key doesn't match any of the translations, or if the i18n feature is not installed (which is the default behavior), the translation key is converted into a human-readable message.
-
-For example, if a token contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or for `cart.increase`. This mechanism allows for a single translation of `increase` that might affect multiple components. This provides a consistent and convenient translation mechanism while remaining flexible to add specific localizations for some components.
 
 The following examples show how the tokens are translated.
 

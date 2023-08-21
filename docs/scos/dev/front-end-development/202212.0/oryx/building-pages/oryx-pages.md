@@ -1,21 +1,21 @@
 ---
-title: "Oryx: Creating Pages"
+title: "Oryx: Creating pages"
 description: Pages can be created from a data set or custom components
 last_updated: Aug 1, 2023
 template: concept-topic-template
 ---
 
-In Oryx, pages are essential building blocks of web applications. They represent different sections or views within your application and can be created using a data-driven approach. This approach allows you to define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.
+In Oryx, pages are essential building blocks of web applications. They represent different sections or views within your application and can be created using a data-driven approach. This approach lets you define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.
 
-Oryx provides standard pages in application [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html), such as home, login page, search page, etc. Using presets gets you up and running fast. This documentation shows you how to provide custom pages or apply small customization on top of standard presetted pages.
+Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of standard preset pages.
 
-## Understanding Pages and Compositions
+## Understanding pages and compositions
 
-Pages in Oryx are represented as [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and layout of pages without hardcoding them in your application code. This separation of concerns makes your components more reusable and less tied to specific pages.
+Pages in Oryx are represented as [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and layout of pages without hardcoding them in your code. This separation of concerns makes your components more reusable and less tied to specific pages.
 
-Oryx leverages a data-driven approach for creating pages, allowing you to configure the composition and content of a page using external data sources. The advantages and technical details are covered in the documentation on [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
+Oryx leverages a data-driven approach for creating pages, letting you configure the composition and content of pages using external data sources. For the advantages and technical details, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
 
-## Non-Data-Driven Approach
+## Non-data-driven approach
 
 While Oryx promotes the data-driven approach for creating pages, you are not bound to it. If you prefer, you can create a page component and directly assign it to a route without using the data-driven approach.
 

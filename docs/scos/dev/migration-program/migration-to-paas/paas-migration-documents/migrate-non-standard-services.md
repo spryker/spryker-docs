@@ -1,16 +1,16 @@
 ---
-title: Migrate non standard services. Apply settings for high traffic, external connections, VPN etc.
-description: This document describes how to migrate non standard services.
+title: Migrate non-standard services
+description: Migrate non standard services to migrate to Spryker Cloud
 template: howto-guide-template
 ---
 
 
 
 1. Rework the application to function in the same way without the custom services.
-2. If the application cann't work properly without a service, escalate the matter to the Solution Architecture department.
-3. If a Solution Architect decides that the application should keep using the service via VPN or AWS private link, create a ticket about setting up a Site-To-Site VPN connection in [SalesForce](http://support.spryker.com). 
+2. If the application can't work properly without a service, escalate the matter to the Solution Architecture department.
+3. If a Solution Architect decides that the application should keep using the service through VPN or AWS PrivateLink, create a ticket about setting up a Site-To-Site VPN connection in [SalesForce](http://support.spryker.com). 
 
-Here is the example of information is required to be filled out in a form to proceed a ticket:
+Here is the example of information that is required in the ticket:
 
 <table data-number-column="false">
   <colgroup>
@@ -238,7 +238,7 @@ Here is the example of information is required to be filled out in a form to pro
 </table>
 
 
-All further communication with a requestor is carried out in scope of a ticket.
+Make sure to keep track of the ticket until VPN connection is set up.
 
 
 ## Resources for migration

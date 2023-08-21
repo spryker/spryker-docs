@@ -4,30 +4,23 @@ description: This document describes how to transfer environment specific applic
 template: howto-guide-template
 ---
 
-# Transfer environment specific application settings to Spryker Cloud (ENV variables)
-
-{% info_block infoBox %}
-
-## Resources for assessment Backend, DevOps
-
-{% endinfo_block %}
-
 ## If the ENV variables approach is not used
 
 Environment variables must be used for all the sensitive values such as 3rd party integration tokens, encryption keys, etc.
 
-For example this kind of configuration:
+Examplary configuration:
 ```php
 $config[ServiceApiConstants::BASE_URL] = 'https://api.base.url';
 $config[ServiceApiConstants::API_KEY] = 'api-key-value';
 $config[ServiceApiConstants::API_SECRET] = 'api-secret-value';
 ```
-should be changed to this:
+Example of updated configuration:
 ```php
 $config[ServiceApiConstants::BASE_URL] = env('SERVICE_API_BASE_URL');
 $config[ServiceApiConstants::API_KEY] = env('SERVICE_API_KEY');
 $config[ServiceApiConstants::API_SECRET] = env('SERVICE_API_SECRET');
 ```
+
 All the variables must be created on Spryker Cloud and all the values must be added there for all the environments
 such as production, staging, sandboxes, etc.
 
@@ -50,3 +43,8 @@ If you are a customer and do not have access to the Support Portal yet,
 please use this [form](https://spryker.force.com/support/s/case-creation-form) to request access.
 
 If you are a partner and do not have access to the Partner Portal you can request access [here](https://partners.spryker.com/s/request-access).
+
+## Resources for migration
+
+* Backend
+* DevOps

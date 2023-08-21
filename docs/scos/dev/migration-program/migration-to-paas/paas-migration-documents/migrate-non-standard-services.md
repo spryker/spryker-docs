@@ -4,24 +4,11 @@ description: This document describes how to migrate non standard services.
 template: howto-guide-template
 ---
 
-# Migrate non standard services. Apply settings for high traffic, external connections, VPN etc.
 
-{% info_block infoBox %}
 
-## Resources for assessment Backend, DevOps
-
-{% endinfo_block %}
-
-The current statement is that all non-standard services used on the project have to be dropped and the application has to be
-reworked to be compatible with `Spryker Cloud` services.
-
-In case it’s not possible to drop usage of some services that are not supported by `Spryker Cloud` then you should escalate the issue
-further to Solution Architecture department. Since in this case we should think about usage of
-third-party services via `VPN` or `AWS private link`.
-
-Depending on a location (on-premise or another cloud provider) of such a non-standard service and necessity to be a part of
-current solution we can propose to initiate a `Site-To-Site VPN` connection between these areas. It is reachable in a way of
-creating a ticket about setting `S2S VPN` connection in [SalesForce portal](http://support.spryker.com) to the Operation team.
+1. Rework the application to function in the same way without the custom services.
+2. If the application cann't work properly without a service, escalate the matter to the Solution Architecture department.
+3. If a Solution Architect decides that the application should keep using the service via VPN or AWS private link, create a ticket about setting up a Site-To-Site VPN connection in [SalesForce](http://support.spryker.com). 
 
 Here is the example of information is required to be filled out in a form to proceed a ticket:
 
@@ -252,3 +239,9 @@ Here is the example of information is required to be filled out in a form to pro
 
 
 All further communication with a requestor is carried out in scope of a ticket.
+
+
+## Resources for migration
+
+* Backend
+* DevOps

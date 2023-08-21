@@ -4,28 +4,15 @@ description: This document describes how to migrate CTEs, Raw SQL queries, Views
 template: howto-guide-template
 ---
 
-# Migrate CTEs, Raw SQL queries, Views, Procedures etc.
 
-{% info_block infoBox %}
+CTE performance in MariaDB isn't as performant as in `PostgreSQL`, so it’s better to replace CTEs with raw SQL-styled bulk inserts. However, MariaDB is still compatible with CTEs and this implementation can remain in place if the performance is efficient enough.
 
-## Resources for assessment Backend
+1. If CTE performance is not optimal with MariaDB, rework CTEs into raw SQL–styled bulk inserts.
+2. Review code and migrate old DB-specific raw SQL to be compatible with MariaDB.
+3. The prerequisites should contain custom DB structures, like temporary tables or materialised views. Migrate them to MariaDB.
+4. Check if Procedures and Functions are compatible with MariaDB. If not, migrate them as well.
 
-{% endinfo_block %}
-
-`CTE` performance in `MariaDB` is not as performant as in `PostgreSQL`, therefore it’s better to replace `CTE` implementation
-with raw `SQL` styled bulk inserts. However, `MariaDB` is still compatible with `CTE` and this implementation can remain
-in place if the performance is efficient enough.
-
-1. Rework `CTE` usage to raw `SQL` styled bulk inserts if `CTE` performance with `MariaDB` is not efficient enough.
-2. Review code and migrate old DB specific raw `SQL` to be compatible with `MariaDB`.
-3. Having the list of custom DB structures from prerequisites each of them has to be migrated to `MariaDB`, this is related to:
-    * temporary tables
-    * materialised views
-    * etc.
-4. Procedures and Functions have to be doubled checked individually since there might be compatibility issues between RDBMSs
-    different from `MariaDB`.
-
-## Example of similar CTE and bulk insert query
+## Example of a CTE rewored into a bulk insert query
 
 CTE:
 ```sql
@@ -108,3 +95,7 @@ ON DUPLICATE KEY UPDATE
     `attributes` = VALUES(`attributes`),
     `updated_at` = VALUES(`updated_at`);
 ```
+
+## Resources for migration
+
+ Backend

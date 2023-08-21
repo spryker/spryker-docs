@@ -1,10 +1,8 @@
 
 
-This document describes how to install the Spryker Core Glue API into a Spryker project.
+This document describes how to install the Spryker Core Glue API.
 
-## Install feature API
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -12,7 +10,7 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | Feature | {{page.version}} |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -34,11 +32,11 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+## 2) Set up configuration
 
 Add the necessary parameters to `deploy.yml`:
 
-#### Configuration CORS
+### Configure CORS
 
 ```yml
 glue_eu:
@@ -119,7 +117,7 @@ Access-Control-Expose-Headers: ETag
 
 {% endinfo_block %}
 
-#### Configure included section
+### Configure the included section
 
 {% info_block infoBox %}
 
@@ -128,7 +126,7 @@ Access-Control-Expose-Headers: ETag
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Generate transfer objects:
 
@@ -160,7 +158,7 @@ Make sure that the following changes have occurred:
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+## 4) Set up behavior
 
 1. Activate the following plugins:
 
@@ -243,7 +241,7 @@ $bootstrap
     ->run();
 ```
 
-#### Configure web server
+### Configure web server
 
 1. Create Nginx VHOST configuration:
 
@@ -461,9 +459,10 @@ HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
 
 {% info_block warningBox "Verification" %}
 
-Make sure that returned resource contains updated `ETag`.
+Make sure that the returned resource contains an updated `ETag`.
 
 Sending a wrong `If-Match` header value results in the following error:
+
 ```json
 {
     "errors": [
@@ -517,7 +516,7 @@ https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
 
 {% info_block warningBox "Verification" %}
 
-To make sure `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin` is set up correctly, request the category URL via the /URLs API endpoint, and ensure you receive the correct resource identifier in response.
+To make sure `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin` is set up correctly, request the category URL via the `/URLs` API endpoint, and ensure you receive the correct resource identifier in response.
 
 **Request body**
 
@@ -548,8 +547,8 @@ https://glue.mysprykershop.com/url-resolver/?url=/category-url
 
 {% info_block warningBox "Verification" %}
 
-Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
+To make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly, [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with incorrect credentials. After making the number of attempts you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for the number of seconds you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Check that with the consequent login attempts, you get the `429 Too many requests` error.
 
-Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core. See  [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) for agent access tokens manual.
+* To make sure `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin` are activated correclty, [authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) with incorrect credentials. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core.
 
 {% endinfo_block %}

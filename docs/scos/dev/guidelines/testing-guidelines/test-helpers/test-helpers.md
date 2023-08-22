@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/test-helper
   - /v5/docs/en/test-helper
   - /docs/scos/dev/guidelines/testing/test-helpers.html
+  - /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
@@ -46,9 +47,28 @@ Basically, almost every Spryker module provides one or more helpers. The helpers
 
 <a name="enabling"></a>
 
+## Helper best practices
+
+Helpers should be organized according to their specific roles and intended use cases. These roles encompass:
+
+- Arranging: For example, `Helper::haveCustomer()`
+- Asserting: For example, `Helper::assertCustomer($customerTransfer)`
+
+During the "Act" stage, we often invoke a specific method that requires testing. In certain situations, it might make sense to create a helper method for executing bigger processes, such as `Helper::checkout()`. This method could encompass actions like adding a product to the cart, initiating the checkout procedure, completing address forms, selecting payment options, and more. This helper could then be reused by other tests as well.
+
+### Root helper
+Each module should have a helper named after the module. For example, in the `spryker/customer` module, there is `CustomerHelper`. This particular helper facilitates interactions with customer-related functionalities, such as creating `CustomerTransfer` or registering a customer.
+
+You can also use these helpers to configure the system in a manner where, for instance, an in-memory message broker is used instead a remote or a locally running one. This switch simplifies testing procedures and enhances overall performance.
+
+### Assert helper
+To not blow up the root helper specific assertions should be in separate helpers in the Customer example you should create a CustomerAssertHelper which will only contain assert methods that can be used in any other module as well.
+
+To prevent overburdening the root helper, specific assertions should reside in separate helpers. In the context of the Customer module example, you could establish a CustomerAssertHelper. This dedicated helper should exclusively encompass assertion methods that can be used in any other module as well.
+
 ## Enabling a helper
 
-To make a helper available for your tests, you need to enable it in the `codeception.yml` configuration file.
+To make a helper available for your tests, you need to enable it in the [codeception.yml configuration file](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html#configuration).
 
 Example:
 
@@ -148,11 +168,9 @@ class YourHelper extends Module
 }
 ```
 
-## Next Steps
+## Next steps
 
-* [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
 * Learn about the [available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html).
-*  Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
-* [Configure data builders to create transfers your tests](/docs/scos/dev/guidelines/testing-guidelines/data-builders.html).
+* [Execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
+* [Configure data builders to create transfers for your tests](/docs/scos/dev/guidelines/testing-guidelines/data-builders.html).
 * [Generate code coverage report for your tests](/docs/scos/dev/guidelines/testing-guidelines/code-coverage.html).
-* Learn about the [testing best practices](/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html).

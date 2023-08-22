@@ -11,7 +11,7 @@ Dynamic Multistore is part of an *Early Access Release*. This *Early Access* fea
 
 {% endinfo_block %}
 
-The *Dynamic Multistore* feature enables the creation and management of multiple online stores within the same region of the Back Office installation. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories. 
+The *Dynamic Multistore* feature lets you create and manage multiple online stores within the same region of the Back Office installation. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories. 
 
 In the following sections, you can learn more details about the capabilities of Dynamic Multistore.
 ## Viewing stores
@@ -34,13 +34,13 @@ When creating a store, you can assign locales and specify a default one for this
 
 ## Adding currencies
 
-The feature also allows the addition of currencies for the created store, ensuring that transactions can be conducted in various currencies as needed
+The feature also allows the addition of currencies for the created store, ensuring that transactions can be conducted in various currencies as needed.
 
 ![adding-currencies](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/adding-currencies.png)
 
 ## Publishing and synchronizing
 
-When the new queue infrastructure is published, the store becomes visible on the Storefront.
+When the new queue infrastructure is published, the store becomes visible on the storefront.
 
 ## Assigning products and their prices
 
@@ -50,7 +50,7 @@ Products, along with their prices, can be assigned to a product using the Back O
 
 ![product-prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/product-prices.png)
 
-## Viewing the store on the Storefront
+## Viewing the store on the storefront
 
 The newly created store is viewable on the storefront, complete with the assigned products and prices.
 
@@ -62,6 +62,7 @@ The newly created store is viewable on the storefront, complete with the assigne
  
 
 ## Assigning CMS Pages
+
 New stores can have CMS pages assigned, providing rich content experiences tailored to specific store needs.
 
 ![assigning-a-cms-page-to-the-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/assigning-a-cms-page-to-the-store.png)
@@ -72,11 +73,12 @@ The following example shows a CMS page on the storefront:
 
 ## Utilizing storefront APIs
 
-Normal Storefront APIs can be used to fetch data from the newly created store via a Store HTTP header, allowing access to Catalog Search or product details.
+Normal storefront APIs can be used to fetch data from the newly created store via a Store HTTP header, allowing access to Catalog Search or product details.
 
 ![storefront-api](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/storefront-api.png)
 
 ## Spryker Cloud compatibility
-Spryker Cloud Commerce OS (SCCOS) is fully equipped to run the dynamic multistore setup, ensuring a seamless experience across different platforms.
 
-Dynamic Multistore removes the complexity of managing multiple stores, providing an intuitive interface and streamlined processes to manage various aspects of store creation and management. It's a key component in enhancing scalability and flexibility in e-commerce operations.
+Spryker Cloud is fully equipped to run the dynamic multistore setup, ensuring a seamless experience across different platforms.
+
+Dynamic Multistore removes the complexity of managing multiple stores, providing an intuitive interface and streamlined processes to manage various store creation and management aspects. It's a key component in enhancing scalability and flexibility in e-commerce operations.

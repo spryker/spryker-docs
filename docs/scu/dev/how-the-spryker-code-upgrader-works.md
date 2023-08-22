@@ -44,8 +44,8 @@ To continue running the Upgrader tool, install the major version manually, and r
 
 {% info_block infoBox "Composer dependency conflict" %}
 
-Spryker code upgrader uses the [composer](https://getcomposer.org/) for updating modules and libraries. 
-If the composer detects a conflict, it stops the update process and returns the error message. To resolve the conflict, you need to manually update the conflicting module and re-run the Upgrader pipline.
+Spryker Code Upgrader uses the [composer](https://getcomposer.org/) for updating modules and libraries.
+If the composer detects a conflict, it stops the update process and generates an error message. To resolve the conflict, you must manually update the conflicting module and then re-run the Upgrader pipeline.
 
 {% endinfo_block %}
 

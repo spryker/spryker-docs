@@ -14,8 +14,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-content-items/retrieving-banner-content-items.html
   - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-banner-content-items.html
 related:
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
 ---

@@ -40,12 +40,12 @@ Please follow the link below to find all documentation needed to help you upgrad
 https://api.release.spryker.com/release-group/XXXX
 ```
 
-To continue running the Upgrader tool, install the major version manually, and re-run the Upgrader tool.
+To continue running the Upgrader tool, install the major version manually, and rerun the Upgrader tool.
 
 {% info_block infoBox "Composer dependency conflict" %}
 
 Spryker Code Upgrader uses the [composer](https://getcomposer.org/) for updating modules and libraries.
-If the composer detects a conflict, it stops the update process and generates an error message. To resolve the conflict, you must manually update the conflicting module and then re-run the Upgrader pipeline.
+If the composer detects a conflict, it stops the update process and generates an error message. To resolve the conflict, you must manually update the conflicting module and rerun the Upgrader pipeline.
 
 {% endinfo_block %}
 

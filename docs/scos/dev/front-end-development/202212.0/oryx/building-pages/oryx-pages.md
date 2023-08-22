@@ -17,11 +17,11 @@ Oryx leverages a data-driven approach for creating pages, letting you configure 
 
 ## Non-data-driven approach
 
-While Oryx promotes the data-driven approach for creating pages, you are not bound to it. If you prefer, you can create a page component and directly assign it to a route without using the data-driven approach.
+While Oryx promotes the data-driven approach for creating pages, you are not bound to it. If you prefer, you can create a page component and assign it directly to a route.
 
-## Creating Pages by data
+## Creating pages by data
 
-To create a page in an Oryx app, you use the `Page` component type. A page is defined as a composition that can hold other compositions and/or components. Here's a basic example of a page defined as a composition:
+The `Page` component type is used to create pages. A page is defined as a composition that can hold other compositions and components. Here's a basic example of a page defined as a composition:
 
 ```ts
 export const cartPage: ExperienceComponent = {

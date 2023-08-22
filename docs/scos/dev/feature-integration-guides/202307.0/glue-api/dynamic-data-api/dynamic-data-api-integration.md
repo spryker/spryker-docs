@@ -206,7 +206,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 ```
 </details>
 
-2. Add file path to the `DynamicEntityConfig`:
+2. Add file path to `DynamicEntityConfig`:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 

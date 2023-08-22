@@ -1,7 +1,7 @@
 ---
 title: How to configure Dynamic Data API endpoints.
 description: This guide shows how to configure the Dynamic Data API endpoints.
-last_updated: August 21, 2023
+last_updated: Aug 21, 2023
 template: howto-guide-template
 redirect_from: 
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html

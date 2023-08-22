@@ -77,7 +77,7 @@ When you have a new shipment carrier, you can add a new shipment method to it.
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+For more detailed information about adding shipment methods, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) and [Edit delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html).
 
 {% endinfo_block %}
 
@@ -93,7 +93,7 @@ To add a shipment method to a carrier, follow these steps:
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html).
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
 
 {% endinfo_block %}
 

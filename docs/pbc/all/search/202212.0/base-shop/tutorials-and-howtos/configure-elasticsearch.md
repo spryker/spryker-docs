@@ -59,7 +59,7 @@ related:
   - title: Configure search for multi-currency
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure the search features
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-featureshtml
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-features.html
   - title: Configure the search query
     link: docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-a-search-query.html
   - title: Expand search data

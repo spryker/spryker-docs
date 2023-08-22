@@ -78,7 +78,7 @@ To remove abstract product's price, follow these steps:
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
 | Customer | Defines whether the price will be applied to all customers or a specific one. If **Default** is selected, the price will be applied to all customers.  |
-| Store          | [Store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the price will be displayed. |
+| Store          | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the price will be displayed. |
 | Currency       | Currency in which the abstract product price is defined.           |
 | Net default    | Default item price before tax. |
 | Gross default  | Item price after tax.   |
@@ -96,7 +96,7 @@ Let's say you have a product that you want to sell with a special price if a use
 
 ## Next steps
 
-- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product.html)
+- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
 - [Manage abstract product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
 - [Manage abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
 - [Manage abstract product meta information](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html)

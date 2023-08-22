@@ -6,10 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell
 originalArticleId: 66c188de-e8fa-4643-872c-98dc97d37c27
 redirect_from:
-  - /2021080/docs/econda-cross-sell
-  - /2021080/docs/en/econda-cross-sell
-  - /docs/econda-cross-sell
-  - /docs/en/econda-cross-sell
   - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
   - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html

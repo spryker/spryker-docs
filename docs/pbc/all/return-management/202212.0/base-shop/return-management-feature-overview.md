@@ -140,7 +140,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
 | [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
-| [Configurable Bundle + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-order-management-feature-integration.html) |  |  |
+| [Configurable Bundle + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html) |  |  |
 | [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
 | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |  |  |
 | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |

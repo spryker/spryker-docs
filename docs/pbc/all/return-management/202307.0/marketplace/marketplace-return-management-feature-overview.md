@@ -9,7 +9,7 @@ related:
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
 
 
 {% info_block warningBox "Note" %}

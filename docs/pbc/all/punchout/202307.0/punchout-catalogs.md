@@ -6,10 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/punchout-catalogs
 originalArticleId: 931ad11a-a77a-46a2-8878-73327caee2d3
 redirect_from:
-  - /2021080/docs/punchout-catalogs
-  - /2021080/docs/en/punchout-catalogs
-  - /docs/punchout-catalogs
-  - /docs/en/punchout-catalogs
   - /docs/scos/user/technology-partners/201811.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
   - /docs/scos/user/technology-partners/202307.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
 ---
@@ -24,9 +20,9 @@ Check out this video to get more details on how Punchout works:
 
 ## Related Developer guides
 
-* [Punchout Catalog feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-punchout-catalog-feature.html)
-* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-product-bundles-feature.html)
-* [Eco - Punchout Catalogs feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-feature.html)
+* [Punchout Catalog feature integration](/docs/pbc/all/punchout/{{page.version}}/install-features/install-the-punchout-catalog-feature.html)
+* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/pbc/all/punchout/{{page.version}}/install-features/install-the-eco-punchout-catalogs-product-bundles-feature.html)
+* [Eco - Punchout Catalogs feature integration](/docs/pbc/all/punchout/{{page.version}}/install-features/install-the-eco-punchout-catalogs-feature.html)
 
 ## Copyright and Disclaimer
 

@@ -85,4 +85,4 @@ $config[KernelConstants::DOMAIN_WHITELIST][] = 'os.apps.aop.spryker.com';
 
 ## Next steps
 
-[Activate the added payment methods](/docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/edit-payment-methods.html)
+[Activate the added payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/edit-payment-methods.html)

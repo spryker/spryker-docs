@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/channelpilot-analytics
 originalArticleId: 56a3d03b-a02f-468c-ba91-31e422fd458a
 redirect_from:
-  - /2021080/docs/channelpilot-analytics
-  - /2021080/docs/en/channelpilot-analytics
-  - /docs/channelpilot-analytics
-  - /docs/en/channelpilot-analytics
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/channelpilot-analytics.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

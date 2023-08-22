@@ -6,15 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/minubo
 originalArticleId: a59d9ef6-1912-4b3b-bed6-c6c2ad659a71
 redirect_from:
-  - /2021080/docs/minubo
-  - /2021080/docs/en/minubo
-  - /docs/minubo
-  - /docs/en/minubo
-  - /industry_partners/performance/minubo.htm
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/minubo.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

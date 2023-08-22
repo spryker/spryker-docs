@@ -21,7 +21,7 @@ While Oryx promotes the data-driven approach for creating pages, you are not bou
 
 ## Creating pages by data
 
-The `Page` component type is used to create pages. A page is defined as a composition that can hold other compositions and components. Here's a basic example of a page defined as a composition:
+The `Page` component type is used to create pages. A page is defined as a composition that can hold other compositions and components. Here's an example of a page defined as a composition:
 
 ```ts
 export const cartPage: ExperienceComponent = {
@@ -42,7 +42,7 @@ export const cartPage: ExperienceComponent = {
 
 ### Configuring content for a route
 
-You can configure the matching URL of a page using the `meta.route` field. This allows you to define on which URL the page should be rendered.
+You can configure the matching URL of a page using the `meta.route` field. This lets you define which URL the page should be rendered on.
 
 Here's an example of how to configure the route of a page:
 
@@ -56,21 +56,21 @@ export const cartPage: ExperienceComponent = {
 };
 ```
 
-In this example, the `route` field is set to "/cart," so the page is rendered when the "/cart" URL of your application is visited.
+In this example, the `route` field is set to `/cart`, so the page is rendered when the `/cart` URL is visited.
 
 {% info_block infoBox "Reading tip" %}
 
-Changing the route of the page content does not mean that the related route has changed; You'd need to configure the [routing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-routing.html) to change the route.
+Changing the route of a page content is not changing the related route. To change a route, you need to configure the [routing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-routing.html).
 
 {% endinfo_block %}
 
 ## Customizing pages and page content
 
-Oryx allows you to provide custom experience data or modify existing data for your pages. This gives you the flexibility to tailor the compositions to your specific needs and business requirements.
+Oryx enables you to provide custom experience data or change the existing data for your pages. This gives you the flexibility to tailor the compositions to specific needs and business requirements.
 
 ### Provide custom data
 
-You can provide custom experience data using Oryx' [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-providing-services.html):
+You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-providing-services.html).
 
 A small utility function is available from the experience package to add custom data:
 
@@ -86,7 +86,7 @@ export const app = appBuilder()
 
 ### Custom data
 
-The data that you can provide is typed in the `ExperienceComponent` type. You can create a page structure by leveraging compositions, layout and existing components in a standard way.
+The data that you can provide is typed in the `ExperienceComponent` type. You can create a page structure by leveraging compositions, layout, and existing components in a standard way.
 
 The following example shows how a single text component is added to the structure.
 

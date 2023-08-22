@@ -2,7 +2,7 @@
 title: How the Spryker Code Upgrader works
 description: Spryker Code Upgrader overview
 template: concept-topic-template
-last_updated: Jul 24, 2023
+last_updated: Aug 22, 2023
 redirect_from:
   - /docs/paas-plus/dev/how-the-spryker-code-upgrader-works.html
 ---

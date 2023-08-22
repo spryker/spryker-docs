@@ -42,6 +42,13 @@ https://api.release.spryker.com/release-group/XXXX
 
 To continue running the Upgrader tool, install the major version manually, and re-run the Upgrader tool.
 
+{% info_block infoBox "Composer dependency conflict" %}
+
+Spryker code upgrader uses the [composer](https://getcomposer.org/) for updating modules and libraries. 
+If the composer detects a conflict, it stops the update process and returns the error message. To resolve the conflict, you need to manually update the conflicting module and re-run the Upgrader pipline.
+
+{% endinfo_block %}
+
 ### 3. Creates a Git branch
 
 The Upgrader tool creates a separate Git branch to commit the changes to. The branch name follows the pattern: `upgradebot/upgrade-for-{base-branch-name}-{last-commit-hash-in-the-base-branch}`.

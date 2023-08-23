@@ -4,7 +4,7 @@ Dynamic Multistore is part of an *Early Access Release*. This *Early Access* fea
 
 {% endinfo_block %}
 
-This document describes how to install Dynamic Store + the Customer Account Management feature.
+This document describes how to install the [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
 ## Install feature core
 

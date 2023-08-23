@@ -2,10 +2,13 @@
 
 Dynamic Multistore is part of an *Early Access Release*. This *Early Access* feature introduces the ability to handle the store entity in the Back Office. Business users can try creating stores without editing the `Stores.php` file and redeploying the system.
 
-{% endinfo_block %} 
+{% endinfo_block %}
+
+This document describes how to integrate the [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
+Follow the steps below to install the Dynamic Multistore feature core.
 ### Prerequisites
 
 Follow the steps below to install the Dynamic Store feature:

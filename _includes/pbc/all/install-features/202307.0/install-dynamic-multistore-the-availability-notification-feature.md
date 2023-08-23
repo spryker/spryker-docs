@@ -1,9 +1,10 @@
 {% info_block warningBox %}
 
 Dynamic Multistore is part of an *Early Access Release*. This *Early Access* feature introduces the ability to handle the store entity in the Back Office. Business users can try creating stores without editing the `Stores.php` file and redeploying the system.
+
 {% endinfo_block %}
 
-This document describes how to install Dynamic Store + the Availability Notification feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/availability-notification-feature-overview.html) feature.
 
 ## Install feature core
 

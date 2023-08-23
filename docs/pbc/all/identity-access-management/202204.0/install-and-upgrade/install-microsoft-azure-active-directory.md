@@ -17,4 +17,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/microsoft-azure-active-directory.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-microsoft-azure-active-directory.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-microsoft-azure-active-directory.md -->
+{% include pbc/all/install-features/{{page.version}}/install-microsoft-azure-active-directory.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-microsoft-azure-active-directory.md -->

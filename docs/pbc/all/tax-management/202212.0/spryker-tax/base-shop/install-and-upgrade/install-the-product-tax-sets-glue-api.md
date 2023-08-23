@@ -13,4 +13,4 @@ redirect_from:
   - /docs/pbc/all/tax-management/202212.0/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-product-tax-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-product-tax-sets-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-tax-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-product-tax-sets-glue-api.md -->

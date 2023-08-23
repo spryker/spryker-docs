@@ -13,4 +13,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/quick-add-to-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/quick-add-to-cart-feature-integration.html  
 ---
-{% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-quick-add-to-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-feature.md -->

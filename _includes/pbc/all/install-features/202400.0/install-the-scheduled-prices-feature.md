@@ -1,20 +1,23 @@
 
 
+
+This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Product Lists feature core.
 
 ### Prerequisites
 
-To start feature integration, review and install the necessary features:
+Install the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{page.version}} |
-| Product | {{page.version}} |
-| Price | {{page.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+|---|---|---|
+| Spryker Core | {{page.version}}  | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product | {{page.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Price | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)
 
 ### 1) Install the required modules using Composer
-
-Run the following command to install the required modules:
 
 ```bash
 composer require spryker-feature/scheduled-prices:"{{page.version}}" --update-with-dependencies
@@ -34,10 +37,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to:
-
-* apply database changes
-* generate entity and transfer changes
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -53,9 +53,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_price_product_schedule | table | created |
 | spy_price_product_schedule_list | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 Make sure that the following changes in transfer objects have been applied:
 
 | Transfer | Type | Event | Path |
@@ -104,9 +101,7 @@ class PriceProductScheduleGuiConfig extends SprykerPriceProductScheduleGuiConfig
 }
 ```
 
-### 4) Import data
-
-#### Import price product schedules
+### 4) Import price product schedules
 
 {% info_block infoBox "Info" %}
 
@@ -114,7 +109,7 @@ The following imported entities will be used as product price schedules in Spryk
 
 {% endinfo_block %}
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/PriceProductScheduleDataImport/data/import**
 
@@ -140,7 +135,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 | --- | --- | --- | --- | --- |
 |  abstract_sku | optional | string | 001 | Existing abstract product SKU of the scheduled price. |
 |  concrete_sku | optional | string | 060_26027598 | Existing concrete product SKU of the scheduled price. |
-|  price_type | mandatory | string | DEFAULT | Name of a price type. By default, it's "DEFAULT", but can be project specific (strike, sale, ...). |
+|  price_type | mandatory | string | DEFAULT | Name of a price type. By default, it's `DEFAULT`, but can be project specific (strike, sale, ...). |
 |  store | mandatory | string | DE | Store name of the scheduled price. |
 |  currency | mandatory | string | CHF | Currency ISO code. |
 |  value_net | optional | integer | 9832 | Net price in cents. |
@@ -148,7 +143,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 |  from_included | mandatory | datetime | 2019-01-01T00:00:00-00:00 | Start date of the scheduled price (should be less than `to_included`). |
 |  to_included | mandatory | datetime | 2019-12-31T23:59:59-00:00 | End date of the scheduled price. |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -178,7 +173,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import:product-price-schedule
@@ -192,16 +187,16 @@ Make sure that the configured data has been added to the `spy_price_product_sche
 
 ### 5) Set up behavior
 
-Enable the following behaviors by registering the console commands, view and tab plugins:
+1. Enable the following behaviors by registering the console commands, view and tab plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 |  PriceProductScheduleApplyConsole | <ul><li>Applies scheduled prices for the current store.</li><li>Persists a price product store for the applied scheduled product price.</li><li>Disables irrelevant product price schedules for the applied scheduled products price.</li><li>Reverts product prices from the fallback price type for scheduled product prices that are finished.</li></ul> | None |  Spryker\Zed\PriceProductSchedule\Communication\Console |
 |  PriceProductScheduleCleanupConsole | Deletes scheduled prices that have ended for the number of days provided as a parameter starting from the current date. | None |  Spryker\Zed\PriceProductSchedule\Communication\Console |
-| ScheduledPriceProductConcreteFormEditTabsExpanderPlugin | Expands product concrete *Edit Product* page with the **Scheduled Prices** tab. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement|
-| ScheduledPriceProductAbstractFormEditTabsExpanderPlugin | Expands product abstract *Edit Product* page with the **Scheduled Prices** tab. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
-| ScheduledPriceProductAbstractEditViewExpanderPlugin | Expands the  **Scheduled Prices** tab of the *Edit Product abstract* page with scheduled prices data. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
-| ScheduledPriceProductConcreteEditViewExpanderPlugin | Expands the **Scheduled Prices** tab of the *Edit Product concrete* page with the scheduled prices data. | None | Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
+| ScheduledPriceProductConcreteFormEditTabsExpanderPlugin | Expands product concrete **Edit Product** page with the **Scheduled Prices** tab. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement|
+| ScheduledPriceProductAbstractFormEditTabsExpanderPlugin | Expands product abstract **Edit Product** page with the **Scheduled Prices** tab. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
+| ScheduledPriceProductAbstractEditViewExpanderPlugin | Expands the  **Scheduled Prices** tab of the **Edit Product abstract** page with scheduled prices data. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
+| ScheduledPriceProductConcreteEditViewExpanderPlugin | Expands the **Scheduled Prices** tab of the **Edit Product concrete** page with the scheduled prices data. | None | Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -259,7 +254,7 @@ class PriceProductScheduleDataImportConfig extends SprykerPriceProductScheduleDa
 }
 ```
 
-**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+<details open><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -317,8 +312,9 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+</details>
 
-Run the following console command to apply scheduled prices:
+2. Apply scheduled prices:
 
 ```bash
 console price-product-schedule:apply
@@ -326,20 +322,18 @@ console price-product-schedule:apply
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-* Scheduled prices have been correctly applied in the **Back Office > Products > Products** section.*
-* You can edit any abstract or concrete product.
-* On the **Edit Product** page, you can find the *Scheduled prices* tab with your scheduled prices which you can create, update and delete.
-* You can import scheduled prices in the **Back Office > Prices > Scheduled Prices** section.
-* You can see the list of previous imports in the **Back Office > Prices > Scheduled Prices** section.
-* You can see information about the import in the **Back Office > Prices > Scheduled Prices page > View** section.
-* You can edit the name of the import and edit and delete scheduled prices inside this import in the **Back Office > Prices > Scheduled Prices page > Edit** section.
-* You can download all the prices inside the import in the **Back Office > Prices > Scheduled Prices page > Download** section.
-* You can delete the import in the **Back Office > Prices > Scheduled Prices page > Delete** section.
+In the Back Office, make sure that the following conditions are met:
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and check the following: 
+   1. Check that scheduled prices have been correctly applied.
+   2. Click **Edit** to check that you can edit any abstract or concrete product.
+   3. On the **Edit Product** page, you can find the **Scheduled Prices** tab with your scheduled prices which you can create, update, and delete.
+2. Go to **Catalog&nbsp;<span aria-label="and then">></span> Scheduled Prices** and check the following:
+   1. You can import scheduled prices and then see the list of previous imports.
+   2. You can click the **View**, **Edit**, **Download**, and **Delete** buttons to see information about the import, edit the name of the import as well as edit and delete scheduled prices inside this import, and download all the prices inside the import, and delete the import.
 
 {% endinfo_block %}
 
-Run the following console command to clear applied scheduled prices:
+3. Clear applied scheduled prices:
 
 ```bash
 console price-product-schedule:clean-up 1
@@ -384,6 +378,6 @@ $jobs[] = [
 
 {% info_block warningBox "Verification" %}
 
-Make sure that scheduled prices have been correctly applied in the **Back Office > Products > Products** section.
+In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products** and make sure that scheduled prices have been correctly applied.
 
 {% endinfo_block %}

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [File Manager feature](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [File Manager feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -151,8 +151,8 @@ Add the following configuration to your project:
 
 {% info_block warningBox "Note" %}
 
-The web server's maximum file size configuration - `max-request-body-size` has higher priority then the module configuration and can be adjusted using `deploy.*.yml`.
-For additional details, refer to the [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
+The web server's maximum file size configuration—`max-request-body-size`—has higher priority than the module configuration and can be adjusted using `deploy.*.yml`.
+For additional details, refer to [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
 
 {% endinfo_block %}
 
@@ -191,7 +191,7 @@ class FileManagerGuiConfig extends SprykerFileManagerGuiConfig
 
 ### 4) Import data
 
-repare import data according to your requirements using demo data:
+Prepare import data according to your requirements using demo data:
 
 **data/import/common/common/mime_type.csv**
 
@@ -280,7 +280,7 @@ console data:import mime-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the imported data is added to the `spy_mime_type` table.
+Make sure that the imported data has been added to the `spy_mime_type` table.
 
 {% endinfo_block %}
 
@@ -344,7 +344,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### 6) Set up the following behaviors
+### 6) Set up behaviors
 
 | PLUGIN                                            | DESCRIPTION                                                                                                        | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -457,6 +457,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When a file data is created, updated, or deleted, make sure it is exported or removed from Redis accordingly.
+When a file data is created, updated, or deleted, make sure it's exported or removed from Redis accordingly.
 
 {% endinfo_block %}

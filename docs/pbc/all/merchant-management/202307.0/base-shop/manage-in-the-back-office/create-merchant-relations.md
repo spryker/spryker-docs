@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/marketplace/merchant-relations/create-merchant-relations.html
 related:
   - title: Edit merchant relations
-    link: docs/scos/user/back-office-user-guides/page.version/base-shop/manage-in-the-back-office/edit-merchant-relations.html
+    link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/edit-merchant-relations.html
   - title: Merchants and Merchant Relations feature overview
     link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-b2b-contracts-feature-overview.html
 ---

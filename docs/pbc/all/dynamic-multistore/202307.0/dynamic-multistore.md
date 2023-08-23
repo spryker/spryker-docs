@@ -16,7 +16,7 @@ The *Dynamic Multistore* feature lets you create and manage multiple online stor
 In the following sections, you can learn more details about the capabilities of Dynamic Multistore.
 ## Viewing stores
 
-In the Back Office, in the **Administration&nbsp;<span aria-label="and then">></span>Stores**, you can view the list of stores in the current region. The **Stores** page offers a consolidated view of all the stores within a specific region.
+In the Back Office, in the **Administration&nbsp;<span aria-label="and then">></span> Stores**, you can view the list of stores in the current region. The **Stores** page offers a consolidated view of all the stores within a specific region.
 
 ![managing-stores](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/managing-stores.png)
 

@@ -137,7 +137,7 @@ Structure:
 | [Create product set content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html)     |
 |  [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/edit-content-items.html)  |
 |  [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
-|  [Add content items to CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
+|  [Add content items to CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html)   |
 
 ## Related Developer documents
 

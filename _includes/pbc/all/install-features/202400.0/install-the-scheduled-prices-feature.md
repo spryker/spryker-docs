@@ -103,7 +103,7 @@ class PriceProductScheduleGuiConfig extends SprykerPriceProductScheduleGuiConfig
 
 ### 4) Import price product schedules
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 The following imported entities will be used as product price schedules in Spryker OS.
 

@@ -1,6 +1,6 @@
 ---
-title: Product Lists feature integration
-description: The Product Lists feature allows defining access to particular items. The guide walks you through the process of installing this feature into your project.
+title: Install the Product Lists feature
+description: Learn how to install the Product Lists feature into your project.
 last_updated: Aug 22, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-feature-integration
@@ -31,4 +31,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202400.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-product-lists-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-product-lists-feature.md -->

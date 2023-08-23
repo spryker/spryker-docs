@@ -13,4 +13,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/product-group-product-labels-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-group-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-group-product-labels-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-group-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-group-product-labels-feature.md -->

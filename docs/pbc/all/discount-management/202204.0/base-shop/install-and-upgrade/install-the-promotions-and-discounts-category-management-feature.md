@@ -4,4 +4,4 @@ description: Add the category parameter to calculation and conditions queries in
 last_updated: Jan 11, 2022
 template: feature-integration-guide-template
 ---
-{% include pbc/all/install-features/202204.0/install-the-category-management-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-category-management-promotions-and-discounts-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-category-management-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-category-management-promotions-and-discounts-feature.md -->

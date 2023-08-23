@@ -186,7 +186,8 @@ The table below gives an overview of the various merge types.
 | Strategy            | details                                                                                                                                                        |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `replace` (default) | Replaces the selected element with the given content                                                                                                           |
-| `patch`             | Patches the selected component with the given component. This includes both the component options and content. The data is deep merged, expect for arrays.     |
+| `patch`             | Patches the selected component with the given component. This includes both the component options and content. The data is deep merged, except for arrays.     |
+| `remove`             | Removed selected component.    |
 | `before`            | Adds the content before the selected component.                                                                                                                |
 | `after`             | Adds the content after the selected component                                                                                                                  |
 | `append`            | Adds the content after the last component of the composition components. If the selected component is not a composition, the custom component is not merged.   |

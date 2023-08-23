@@ -11,7 +11,7 @@ This document describes how to retrieve shipments in orders. For full informatio
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
 * [Glue API: Order Management Feature Integration](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 
 ## Retrieve an order

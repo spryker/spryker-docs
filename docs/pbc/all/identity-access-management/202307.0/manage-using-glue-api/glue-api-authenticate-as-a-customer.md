@@ -124,7 +124,7 @@ Note that depending on the Login feature configuration for your project, too man
 | expiresIn | Integer | The time in seconds in which the token expires.  |
 | accessToken | String | Authentication token used to send requests to the protected resources available for a customer.  |
 | refreshToken | String | Authentication token used to refresh the `accessToken`. |
-| idCompanyUser | string | A unique identifier of a user within a company. Use it to [retrieve a company user](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/shop/manage-using-glue-api/company-account/shop/manage-using-glue-api/company-account/shop/manage-using-glue-api/company-account/retrieving-company-users.html). |
+| idCompanyUser | string | A unique identifier of a user within a company. Use it to [retrieve a company user](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html). |
 
 ## Possible errors
 

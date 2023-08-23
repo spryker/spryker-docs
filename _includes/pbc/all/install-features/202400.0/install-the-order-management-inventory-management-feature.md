@@ -24,7 +24,7 @@ Install the required features:
 
 | NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                 |
 |----------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Order Management     | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)      |
+| Order Management     | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)      |
 | Inventory Management | {{page.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-inventory-management-feature.md) |
 
 

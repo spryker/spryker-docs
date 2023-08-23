@@ -73,7 +73,7 @@ http://mysprykershop.com/access-token/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aS
 
 ```
 
-In Spryker Commerce OS, token generation is performed using a facade method, that is why no GUI is present. To generate a token, see [HowTo: Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
+In Spryker Commerce OS, token generation is performed using a facade method, that is why no GUI is present. To generate a token, see [HowTo: Generate a token for login](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/generate-login-tokens.html).
 
 Token-based authentication works closely with the [Punch Out](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs.html) feature. It lets B2B buyers log in from their ERP system to a Spryker company user account using a token without entering the username and password and buy the products from a Spryker e-commerce shop.
 

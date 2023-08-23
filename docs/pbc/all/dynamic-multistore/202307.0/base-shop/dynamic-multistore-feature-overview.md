@@ -10,13 +10,13 @@ The *Dynamic Multistore* feature lets you create and manage multiple online stor
 In the following sections, you can learn more details about the capabilities of Dynamic Multistore.
 ## Viewing stores
 
-In the Back Office, in the **Administration&nbsp;<span aria-label="and then">></span>Stores**, you can view the list of stores in the current region. The **Stores** page offers a consolidated view of all the stores within a specific region.
+In the Back Office, in the **Administration&nbsp;<span aria-label="and then">></span> Stores**, you can view the list of stores in the current region. The **Stores** page offers a consolidated view of all the stores within a specific region.
 
 ![managing-stores](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/managing-stores.png)
 
 ## Creating a store
 
-You can create a new store with a specified name. For this, on the **Stores** page, click **Create Store**. This functionality simplifies the process of adding new stores to the existing setup.
+You can create a new store with a specified name. For this, in the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> Stores** page and click **Create Store**. This functionality simplifies the process of adding new stores to the existing setup.
 
 ![creating-a-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/creating-a-store.png)
 
@@ -36,11 +36,15 @@ The feature also allows the addition of currencies for the created store, ensuri
 
 When the new queue infrastructure is published, the store becomes visible on the storefront.
 
-## Assigning products and their prices
+## Assigning products and prices
 
-Products, along with their prices, can be assigned to a product using the Back Office UI or other methods of creating a new product in the system. This offers flexibility in managing the product catalog.
+You can assign products and their prices to a product using the Back Office UI or other methods of creating a new product in the system. This offers flexibility in managing the product catalog.
+
+The following image shows how you can assign a product to an already existing store.
 
 ![store-relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/store-relation.png)
+
+The following demonstrates shows how you can assign a product price to a specific store.
 
 ![product-prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/product-prices.png)
 
@@ -48,26 +52,33 @@ Products, along with their prices, can be assigned to a product using the Back O
 
 The newly created store is viewable on the storefront, complete with the assigned products and prices.
 
+The following example demonstrates the created store from the Back Office being in the store switcher.
+
 ![store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/store-switcher.png)
+
+The following images show that the assigned products to the newly created store are available on the Storefront.
 
 ![search-suggestions](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/search-suggestions.png)
 
 ![assigned-product-searchable-in-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/assigned-product-searchable-in-the-storefront.png)
  
-
 ## Assigning CMS Pages
 
 New stores can have CMS pages assigned, providing rich content experiences tailored to specific store needs.
 
+The following image shows the ability to assign a store to a specific CMS page to be shown on the Storefront.
+
 ![assigning-a-cms-page-to-the-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/assigning-a-cms-page-to-the-store.png)
 
-The following example shows a CMS page on the storefront:
+The assigned CMS page is shown on the selected "SECOND" store that is selected on the Storefront.
 
 ![cms-page-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/cms-page-on-the-storefront.png)
 
 ## Utilizing storefront APIs
 
 Normal storefront APIs can be used to fetch data from the newly created store via a Store HTTP header, allowing access to Catalog Search or product details.
+
+The following image shows the ability to call API endpoints with the newly created "SECOND" store selected in the API call itself.
 
 ![storefront-api](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/storefront-api.png)
 

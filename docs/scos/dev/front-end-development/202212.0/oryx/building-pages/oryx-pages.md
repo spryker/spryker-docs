@@ -121,7 +121,7 @@ const customHomePage: ExperienceComponent = {
 
 ### Merge selector
 
-To replace existing content, provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy you like to use.
+To replace existing content, provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
 
 The selected content is defined by the `merge.selector` field. The following example shows how the provided data replaces the home page.
 
@@ -144,19 +144,19 @@ export const app = appBuilder()
 
 Selectors use the following syntax:
 
-- select a page with the `#` prefix, e.g. `#home-page`
-- select a component globally by `id`, e.g. `my-composition`
-- select components by `id` or `tag`, e.g. `oryx-product-title`
-- chain selects, using the dot notation, e.g. `#home-page.my-composition.oryx-product-title`
-- skip parts of the component tree, e.g. `#home-page.oryx-product-title` rather than `#home-page.my-composition.oryx-product-title`
+- Select a page with the `#` prefix—for example, `#home-page`.
+- Select a component globally by `id`—for example, `my-composition`.
+- Select components by `id` or `tag`—for example, `oryx-product-title`.
+- Chain selects, using the dot notation—for example, `#home-page.my-composition.oryx-product-title`.
+- Skip parts of the component tree—for example, `#home-page.oryx-product-title` rather than `#home-page.my-composition.oryx-product-title`.
 
-Using this syntax gives you flexibility to apply changes in any page, or to very specific pages.
+Using this syntax gives you flexibility to apply changes in any page, or to a very specific pages.
 
 ### Merge strategies
 
-When you do not provide a merge `type`, the selected component is replaced by default. Alternative types can be configured in the `merge.type` field.
+When you do not provide a merge `type`, by default, the selected component is replaced . Alternative types can be configured in the `merge.type` field.
 
-The example below shows how to _merge_ content in an existing component.
+The following example shows how to _merge_ content in an existing component.
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";
@@ -181,13 +181,13 @@ export const app = appBuilder()
   .create();
 ```
 
-The table below gives an overview of the various merge types.
+The following table gives an overview of the various merge types.
 
-| Strategy            | details                                                                                                                                                        |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `replace` (default) | Replaces the selected element with the given content                                                                                                           |
+| STRATEY            | DESCRIPTION                      |
+| ---- | - |
+| `replace` (default) | Replaces the selected element with the given content.                        |
 | `patch`             | Patches the selected component with the given component. This includes both the component options and content. The data is deep merged, expect for arrays.     |
-| `before`            | Adds the content before the selected component.                                                                                                                |
-| `after`             | Adds the content after the selected component                                                                                                                  |
+| `before`            | Adds the content before the selected component.                        |
+| `after`             | Adds the content after the selected component.                        |
 | `append`            | Adds the content after the last component of the composition components. If the selected component is not a composition, the custom component is not merged.   |
 | `prepend`           | Adds the content before the first component of the composition components. If the selected component is not a composition, the custom component is not merged. |

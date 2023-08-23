@@ -7,4 +7,4 @@ redirect_from:
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202212.0/marketplace/install-marketplace-shipment-customer-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-marketplace-shipment-customer-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-marketplace-shipment-customer-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-marketplace-shipment-customer-feature.md -->

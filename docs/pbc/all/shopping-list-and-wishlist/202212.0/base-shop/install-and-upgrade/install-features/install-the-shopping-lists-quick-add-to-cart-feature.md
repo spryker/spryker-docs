@@ -5,4 +5,4 @@ last_updated: Jun 16, 2021
 template: feature-integration-guide-template
   - /docs/pbc/all/shopping-list-and-wishlist/202212.0/base-shop/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
 ---
-{% include pbc/all/install-features/202212.0/install-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-quick-add-to-cart-shopping-lists-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-quick-add-to-cart-shopping-lists-feature.md -->

@@ -3437,16 +3437,20 @@ entries:
             - title: Integration of backend APIs
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
             - title: Signals
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html              
+              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html
         - title: Styling
           include_versions:
           - "202212.0"
           - "202307.0"
           nested:
-          - title: "Color system"
-            url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
-          - title: Typography
-            url: /docs/scos/dev/front-end-development/oryx/styling/typography.html
+            - title: Color system
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
+            - title: Design tokens
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
+            - title: Icon system
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html              
+            - title: Typography
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
 
     - title: Marketplace
       include_versions:
@@ -3618,7 +3622,6 @@ entries:
           url: /docs/scos/dev/front-end-development/marketplace/set-up-the-merchant-portal.html
         - title: "Web components"
           url: /docs/scos/dev/front-end-development/marketplace/web-components.html
-
 
     - title: Migration guide - Remove support of IE11
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html

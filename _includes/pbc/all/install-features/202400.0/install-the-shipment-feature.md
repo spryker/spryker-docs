@@ -1203,5 +1203,7 @@ class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidg
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that after completing the reordering process, the address selection step functions correctly and the address type is selected as "single address".
-{% info_block warningBox "Verification" %}
+
+{% endinfo_block %}

@@ -1117,6 +1117,7 @@ Ensure that the following modules have been installed:
 | MODULE             | EXPECTED DIRECTORY                       |
 |--------------------|------------------------------------------|
 | ShipmentTypeWidget | vendor/spryker-shop/shipment-type-widget |
+| ShipmentPage       | vendor/spryker-shop/shipment-page        |
 
 {% endinfo_block %}
 
@@ -1124,10 +1125,11 @@ Ensure that the following modules have been installed:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                               |
-|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------|
-| ShipmentTypeCheckoutPageStepEnginePreRenderPlugin            | Expands `Quote.items.shipment` transfer with `shipmentTypeUuid` taken from `Quote.items.shipmentType.uuid`. |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CheckoutPage |
-| ShipmentTypeCheckoutAddressStepPreGroupItemsByShipmentPlugin | Cleans `Shipment.shipmentTypeUuid` from each item in `Quote.items`.                                         |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage |
+| PLUGIN                                                       | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                                  |
+|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------|
+| ShipmentTypeCheckoutPageStepEnginePreRenderPlugin            | Expands `Quote.items.shipment` transfer with `shipmentTypeUuid` taken from `Quote.items.shipmentType.uuid`. |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CheckoutPage    |
+| ShipmentTypeCheckoutAddressStepPreGroupItemsByShipmentPlugin | Cleans `Shipment.shipmentTypeUuid` from each item in `Quote.items`.                                         |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentReorderItemSanitizerPlugin                           | Sets the `ItemTransfer.shipment` property to `null` for each item after reorder.                            |               | SprykerShop\Yves\ShipmentPage\Plugin\CustomerReorderWidget |
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
@@ -1171,6 +1173,30 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     {
         return [
             new ShipmentTypeCheckoutAddressStepPreGroupItemsByShipmentPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Yves/CustomerReorderWidget/CustomerReorderWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CustomerReorderWidget;
+
+use SprykerShop\Yves\CustomerReorderWidget\CustomerReorderWidgetDependencyProvider as SprykerCustomerReorderWidgetDependencyProvider;
+use SprykerShop\Yves\ShipmentPage\Plugin\CustomerReorderWidget\ShipmentReorderItemSanitizerPlugin;
+
+class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CustomerReorderWidgetExtension\Dependency\Plugin\ReorderItemSanitizerPluginInterface>
+     */
+    protected function getReorderItemSanitizerPlugins(): array
+    {
+        return [
+            new ShipmentReorderItemSanitizerPlugin(),
         ];
     }
 }

@@ -45,6 +45,7 @@ Make sure that the following modules have been installed:
 | Shipment                | vendor/spryker/shipment                   |
 | ShipmentType            | vendor/spryker/shipment-type              |
 | ShipmentTypeDataImport  | vendor/spryker/shipment-type-data-import  |
+| ShipmentTypesRestApi    | vendor/spryker/shipment-types-rest-api    |
 | ShipmentTypeStorage     | vendor/spryker/shipment-type-storage      |
 | ShipmentTypesBackendApi | vendor/spryker/shipment-types-backend-api |
 
@@ -107,7 +108,34 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-### 3) Set up database schema and transfer objects
+### 3) To enable the Storefront API, register the following plugins:
+| PLUGIN                           | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                |
+|----------------------------------|------------------------------------------|---------------|----------------------------------------------------------|
+| ShipmentTypesResourceRoutePlugin | Registers the `shipment-types` resource. |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesResourceRoutePlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        new ShipmentTypesResourceRoutePlugin(),
+    }
+}
+```
+### 4) Set up database schema and transfer objects
 
 1. Adjust the schema definition so entity changes trigger events.
 
@@ -178,14 +206,16 @@ Make sure that the following changes have been applied in transfer objects:
 | ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer     |
 | ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer   |
 | ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer        |
-| SalesShipmentType                       | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer               |
+| SalesShipmentTypeTransfer               | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer               |
+| RestShipmentTypesAttributesTransfer     | class    | created | src/Generated/Shared/Transfer/RestShipmentTypesAttributesTransfer     |
+| RestErrorMessageTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                |
 | ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                  |
 | ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                        |
 | ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                            |
 
 {% endinfo_block %}
 
-### 4) Add translations
+### 5) Add translations
 
 1. Append glossary according to your configuration:
 
@@ -220,7 +250,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 {% endinfo_block %}
 
-### 5) Configure export to Redis
+### 6) Configure export to Redis
 
 Configure tables to be published to `spy_shipment_type_storage` and synchronized to the Storage on create, edit, and delete changes:
 
@@ -421,7 +451,7 @@ In Redis, make sure data is represented in the following format:
 
 {% endinfo_block %}
 
-### 6) Import shipment methods
+### 7) Import shipment methods
 
 {% info_block infoBox "Info" %}
 
@@ -679,7 +709,7 @@ Make sure that the configured data has been added to the `spy_shipment_method`, 
 
 {% endinfo_block %}
 
-### 7) Set up behavior
+### 8) Set up behavior
 
 1. Configure the data import to use your data on the project level:
 

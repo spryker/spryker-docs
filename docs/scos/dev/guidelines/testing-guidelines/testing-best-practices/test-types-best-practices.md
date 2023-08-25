@@ -19,3 +19,9 @@ Unit tests typically reside in the Business layer. However, some of them may als
 These tests are cost-effective, robust, and fast. You can mock any dependencies in these tests. You can also easily manipulate the system during the _Arrange_ phase of your tests.
 
 ## Integration tests
+
+There is a mixture of unit and integration tests in the Business and the Communication layer. Integration tests are typically performed using facade tests in the Business Layer and cover several parts of the system together. Spryker primarily uses integration tests and switches to unit tests when necessary. 
+
+Integration tests can be slow, but they can also provide good code coverage and reduce the number of tests required.
+
+Like unit tests, you can mock any dependencies in the integration tests and easily manipulate the system during the _Arrange_ phase of your tests.

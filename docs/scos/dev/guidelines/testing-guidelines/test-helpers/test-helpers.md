@@ -49,20 +49,19 @@ Basically, almost every Spryker module provides one or more helpers. The helpers
 
 ## Helper best practices
 
-Helpers should be organized according to their specific roles and intended use cases. These roles encompass:
+You should organize helpers according to their specific roles and intended use cases. These roles represent the following test stages:
 
-- Arranging: For example, `Helper::haveCustomer()`
-- Asserting: For example, `Helper::assertCustomer($customerTransfer)`
+- Arrange: For example, `Helper::haveCustomer()`
+- Assert: For example, `Helper::assertCustomer($customerTransfer)`
 
-During the "Act" stage, we often invoke a specific method that requires testing. In certain situations, it might make sense to create a helper method for executing bigger processes, such as `Helper::checkout()`. This method could encompass actions like adding a product to the cart, initiating the checkout procedure, completing address forms, selecting payment options, and more. This helper could then be reused by other tests as well.
+During the "Act" stage, we often only invoke a specific method that requires testing. In certain situations, it might make sense to create a helper method for executing bigger processes, such as `Helper::checkout()`. This method could include actions like adding a product to the cart, initiating the checkout procedure, completing address forms, selecting payment options, and more. This helper method could then also be reused by other tests.
 
 ### Root helper
 Each module should have a helper named after the module. For example, in the `spryker/customer` module, there is `CustomerHelper`. This particular helper facilitates interactions with customer-related functionalities, such as creating `CustomerTransfer` or registering a customer.
 
-You can also use these helpers to configure the system in a manner where, for instance, an in-memory message broker is used instead a remote or a locally running one. This switch simplifies testing procedures and enhances overall performance.
+You can also use these helpers to configure the system in a manner where, for example, an in-memory message broker is used instead a remote or a locally running one. This switch simplifies testing procedures and enhances overall performance.
 
 ### Assert helper
-To not blow up the root helper specific assertions should be in separate helpers in the Customer example you should create a CustomerAssertHelper which will only contain assert methods that can be used in any other module as well.
 
 To prevent overburdening the root helper, specific assertions should reside in separate helpers. In the context of the Customer module example, you could establish a CustomerAssertHelper. This dedicated helper should exclusively encompass assertion methods that can be used in any other module as well.
 
@@ -105,7 +104,7 @@ With the helpers, you can hook into every point of this lifecycle and do things 
 
 Checkout the [Codeception helper](https://codeception.com/docs/06-ModulesAndHelpers), the *Hooks* section, for information about each method of the Codeception's module class.
 
-## Helper Methods
+## Helper methods
 When you have code blocks that are re-usable in other modules as well, consider creating a helper with a method that provides the re-usable code.
 
 Every public method in your helper will be generated into the tester class, and can be executed from within your test after you run `vendor/bin/codecept build`.

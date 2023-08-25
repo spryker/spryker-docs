@@ -1,5 +1,5 @@
 ---
-title: Testing best practices
+title: Best practices for effective testing
 description: The article describes how to write and organize your tests efficiently.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/best-practices
   - /v5/docs/en/best-practices
   - /docs/scos/dev/guidelines/testing/testing-best-practices.html
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html

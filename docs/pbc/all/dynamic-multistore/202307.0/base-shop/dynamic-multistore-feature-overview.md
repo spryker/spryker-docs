@@ -34,9 +34,9 @@ The feature also allows the addition of currencies for the created store, ensuri
 
 ## Publishing and synchronizing
 
-When the new queue infrastructure is published, the store becomes visible on the storefront.
+When the new queue infrastructure is published, the store becomes visible on the Storefront.
 
-## Assigning products and prices
+## Assigning products and prices to stores
 
 You can assign products and their prices to a product using the Back Office UI or other methods of creating a new product in the system. This offers flexibility in managing the product catalog.
 
@@ -44,11 +44,11 @@ The following image shows how you can assign a product to an already existing st
 
 ![store-relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/store-relation.png)
 
-The following demonstrates shows how you can assign a product price to a specific store.
+The following shows how you can assign a product price to a specific store.
 
 ![product-prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/product-prices.png)
 
-## Viewing the store on the storefront
+## Viewing stores on the Storefront
 
 The newly created store is viewable on the storefront, complete with the assigned products and prices.
 
@@ -56,7 +56,7 @@ The following example demonstrates the created store from the Back Office being 
 
 ![store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/store-switcher.png)
 
-The following images show that the assigned products to the newly created store are available on the storefront.
+The product that was assigned to the store in [Assigning products and prices to stores](#assigning-products-and-prices-to-stores) is available in this store.
 
 ![search-suggestions](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/search-suggestions.png)
 
@@ -66,11 +66,11 @@ The following images show that the assigned products to the newly created store 
 
 New stores can have CMS pages assigned, providing rich content experiences tailored to specific store needs.
 
-The following image shows the ability to assign a store to a specific CMS page to be shown on the storefront.
+CMS pages are assigned to stores in the Back Office.
 
 ![assigning-a-cms-page-to-the-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/assigning-a-cms-page-to-the-store.png)
 
-The assigned CMS page is shown on the selected "SECOND" store that is selected on the Storefront.
+When such a CMS page is published, it's only visible in the store it's assigned to.
 
 ![cms-page-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/cms-page-on-the-storefront.png)
 

@@ -56,7 +56,7 @@ The following example demonstrates the created store from the Back Office being 
 
 ![store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/store-switcher.png)
 
-The following images show that the assigned products to the newly created store are available on the Storefront.
+The following images show that the assigned products to the newly created store are available on the storefront.
 
 ![search-suggestions](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/search-suggestions.png)
 
@@ -66,7 +66,7 @@ The following images show that the assigned products to the newly created store 
 
 New stores can have CMS pages assigned, providing rich content experiences tailored to specific store needs.
 
-The following image shows the ability to assign a store to a specific CMS page to be shown on the Storefront.
+The following image shows the ability to assign a store to a specific CMS page to be shown on the storefront.
 
 ![assigning-a-cms-page-to-the-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/assigning-a-cms-page-to-the-store.png)
 

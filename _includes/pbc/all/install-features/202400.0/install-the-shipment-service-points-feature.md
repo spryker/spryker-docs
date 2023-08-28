@@ -199,7 +199,7 @@ Make sure that `shipment-type` storage data is expanded with the service type UU
 
 1. Fill the `spy_shipment_type_service_point` tables with data.
 2. Run the `console publish:trigger-events -r shipment_type` command.
-3. Make sure that the `spy_shipment_type_storage.data` field includes `service_type.uuid` data.
+3. Make sure that the `spy_shipment_type_storage.data` field includes the `service_type.uuid` data.
 
 {% endinfo_block %}
 
@@ -207,7 +207,7 @@ Make sure that `shipment-type` storage data is expanded with the service type UU
 
 | PLUGIN                                               | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                                          |
 |------------------------------------------------------|--------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
-| ServiceTypeByShipmentTypesResourceRelationshipPlugin | Adds `service-types` resource as relationship by `shipment-types`. |               | Spryker\Glue\ShipmentTypesServicePointsResourceRelationship\Plugin\GlueApplication |
+| ServiceTypeByShipmentTypesResourceRelationshipPlugin | Adds the `service-types` resource as a relationship by `shipment-types`. |               | Spryker\Glue\ShipmentTypesServicePointsResourceRelationship\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 

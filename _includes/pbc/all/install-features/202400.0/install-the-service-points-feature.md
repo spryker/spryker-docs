@@ -1115,9 +1115,9 @@ Make sure that the `service-type` trigger plugin works correctly:
 1. Fill the `spy_service_type` table with data.
 2. Run the `console publish:trigger-events -r service_type` command.
 3. Make sure that the `spy_service_type_storage` table has been filled with respective data.
-4. Make sure that, in your system, storage entries are displayed with `kv:service_type:{service_type_id}` mask.
+4. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
 
-Make sure that `service-type` synchronization plugin works correctly:
+Make sure that the `service-type` synchronization plugin works correctly:
 
 1. Fill the `spy_service_type_storage` table with some data.
 2. Run the `console sync:data -r service_type` command.

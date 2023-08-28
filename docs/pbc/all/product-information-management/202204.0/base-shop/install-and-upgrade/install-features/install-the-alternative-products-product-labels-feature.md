@@ -14,4 +14,4 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/install-and-upgrade/install-features/install-the-alternative-products-product-label-feature.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-alternative-products-product-label-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-product-label-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-alternative-products-product-label-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-product-label-feature.md -->

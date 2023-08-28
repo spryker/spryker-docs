@@ -24,8 +24,8 @@ To start the feature integration, integrate the required features:
 
 | NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
 |------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core     | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)                |
+| Spryker Core     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)                |
 
 ### 1) Install the required modules using Composer
 
@@ -395,7 +395,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Make sure that the `shipment-type` trigger plugin works correctly:
 
-1. Fill the `spy_shipment_type`, `spy_shipment_type_store` tables with data.
+1. Fill the `spy_shipment_type` and `spy_shipment_type_store` tables with data.
 2. Run the `console publish:trigger-events -r shipment_type` command.
 3. Make sure that the `spy_shipment_type_storage` table has been filled with respective data.
 4. Make sure that, in your system, storage entries are displayed with the `kv:shipment_type:{store}:{shipment_type_id}` mask.
@@ -445,9 +445,9 @@ free_pickup,Free Pickup,pickup,Tax Exempt
 
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION              |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of the shipment method.   |
-| name                | mandatory | string    | Standard                        | Name of the shipment method.  |
-| carrier             | mandatory | string    | Spryker Dummy Shipment          | Name of the shipment carrier. |
+| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Shipment method key.   |
+| name                | mandatory | string    | Standard                        | Shipment method name.  |
+| carrier             | mandatory | string    | Spryker Dummy Shipment          | Shipment carrier name. |
 | taxSetName          | mandatory | string    | Shipment Taxes                  | Tax set name.                 |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_method_store.csv**
@@ -475,8 +475,8 @@ spryker_no_shipment,US
 
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| store               | mandatory | string    | DE                              | Name of an existing store.          |
+| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
+| store               | mandatory | string    | DE                              | Existing store name.          |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_price.csv**
 ```yaml
@@ -525,11 +525,11 @@ spryker_no_shipment,US,CHF,0,0
 
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| store               | mandatory | string    | DE                              | Name of an existing store.          |
-| currency            | mandatory | string    | EUR                             | Name of an existing currency.       |
-| value_net           | optional  | integer   | 390                             | Net price in coins.                 |
-| value_gross         | optional  | integer   | 490                             | Gross price in coins.               |
+| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
+| store               | mandatory | string    | DE                              | Existing store name.          |
+| currency            | mandatory | string    | EUR                             | Existing currency name.       |
+| value_net           | optional  | integer   | 390                             | Net price, in coins.                 |
+| value_gross         | optional  | integer   | 490                             | Gross price, in coins.               |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_type.csv**
 ```yaml
@@ -577,7 +577,7 @@ free_pickup,pickup
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
 | shipment_type_key   | mandatory | string    | delivery                        | Key of an existing shipping type.   |
 
-2. Register the following data import plugins:
+1. Register the following data import plugins:
 
 | PLUGIN                                     | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------|---------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
@@ -623,7 +623,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Enable the behaviors by registering the console commands:
+2. Enable the behaviors by registering the console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -661,7 +661,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-4. Import data:
+3. Import data:
 
 ```bash
 console data:import shipment
@@ -987,7 +987,7 @@ Make sure that during checkout on the Shipment step, you can only see shipment m
 
 | PLUGIN                                | SPECIFICATION                                                                                                            | PREREQUISITES                                                       | NAMESPACE                                                   |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------|
-| ShipmentTypeCheckoutDoSaveOrderPlugin | Persists shipment type data to `spy_sales_shipment_type` table and updates `spy_sales_shipment` with `fk_shipment_type`. | Should be executed after the `SalesOrderShipmentSavePlugin` plugin. | Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout |
+| ShipmentTypeCheckoutDoSaveOrderPlugin | Persists shipment type data to the `spy_sales_shipment_type` table and updates `spy_sales_shipment` with `fk_shipment_type`. | Should be executed after the `SalesOrderShipmentSavePlugin` plugin. | Spryker\Zed\SalesShipmentType\Communication\Plugin\Checkout |
 
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
@@ -1127,7 +1127,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                                  |
 |--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ShipmentTypeCheckoutPageStepEnginePreRenderPlugin            | Expands `Quote.items.shipment` transfer with `shipmentTypeUuid` taken from `Quote.items.shipmentType.uuid`. |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CheckoutPage    |
+| ShipmentTypeCheckoutPageStepEnginePreRenderPlugin            | Expands the `Quote.items.shipment` transfer with `shipmentTypeUuid` taken from `Quote.items.shipmentType.uuid`. |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CheckoutPage    |
 | ShipmentTypeCheckoutAddressStepPreGroupItemsByShipmentPlugin | Cleans `Shipment.shipmentTypeUuid` from each item in `Quote.items`.                                         |               | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
 | ShipmentReorderItemSanitizerPlugin                           | Sets the `ItemTransfer.shipment` property to `null` for each item after reorder.                            |               | SprykerShop\Yves\ShipmentPage\Plugin\CustomerReorderWidget |
 

@@ -2,7 +2,8 @@
 title: "Oryx: Localization"
 description: Localizations are decoupled from component implementations
 template: concept-topic-template
-last_updated: July 23, 2023
+last_updated: Aug 23, 2023
+
 ---
 
 Localization is the part of internationalization (`i18n`) that's concerned with creating variations of the same application in different locales.
@@ -13,7 +14,8 @@ To make sure all components can be customized and localized, Oryx doesn't provid
 
 ## Translation keys
 
-Translation keys, also knows as _i18n tokens_, are used to resolve localized text. The tokens are created with the following conventions in mind:
+Translation keys, also known as _i18n tokens_, are used to resolve localized text. The tokens are created with the following conventions in mind:
+
 
 - Tokens are written in English.
 - Tokens are written in kebab-case format—for example, `my-token`.
@@ -22,13 +24,15 @@ Translation keys, also knows as _i18n tokens_, are used to resolve localized tex
 
 ## Resolving translations from translation resources
 
-The localization of labels is driven by the current language and the translation key. Translations are typically provided as lazy-loaded resources next to the component implementation. Although, they can aslo be added as part of the static resources that are loaded in Oryx. If the resources are loaded externally, they can be provided by static JSON files or a third-party service through an API.
+The localization of labels is driven by the current language and the translation key. Translations are typically provided as lazy-loaded resources next to the component implementation. However, they can also be added as part of the static resources that are loaded in Oryx. If the resources are loaded externally, they can be provided by static JSON files or a third-party service through an API.
+
 
 Oryx uses the active application language to look up the available labels. When the language is `en`, the locales for English are resolved.
 
 If a language resource can be resolved, the translation key is evaluated against the available translations in the resource using all "parts" of the key. For example, if a translation key contains multiple parts, like `cart.increase`, you can provide a global translation for just the `increase` part or for `cart.increase`.
 
-## Auto-conversion of translation keys
+## Autoconversion of translation keys
+
 
 If a translation key doesn't match any of the translations, or if the i18n feature is not installed (which is the default behavior), the translation key is converted into a human-readable message.
 
@@ -98,7 +102,8 @@ The [globalize](https://www.npmjs.com/package/globalize) translation engine is b
 - Pluralization: for example, `You have {count} {count, plural, one {item} other {items}} in cart`.
 - Selects: for example, `{gender, select, male {He} female {She} other {They}} invited you to party!`.
 
-Other ICU capabilities, such as [number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/) or [date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/) can be loaded in addition. Most likely, it's not needed in your project, because Oryx uses the standard [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) API, which is widely supported.
+Other ICU capabilities, such as [number formatting](https://unicode-org.github.io/icu/userguide/format_parse/numbers/) or [date and time formatting](https://unicode-org.github.io/icu/userguide/format_parse/datetime/) can be loaded in addition. Most likely, it's not needed in your project because Oryx uses the standard [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) API, which is widely supported.
+
 
 ## Using the i18n directive in components
 

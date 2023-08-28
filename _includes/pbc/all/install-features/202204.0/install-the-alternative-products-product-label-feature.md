@@ -1,4 +1,4 @@
-This document describes how to integrate the [Product Labels](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-labels-feature-integration.html) feature into a Spryker project.
+This document describes how to integrate the [Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html) feature into a Spryker project.
 
 
 This document describes how to integrate the Alternative Products + Product Label feature into a Spryker project.
@@ -14,7 +14,7 @@ Install the required features:
 | NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
 |Alternative Products| {{page.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
-|Product Labels| {{page.version}} | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-labels-feature-integration.html)|
+|Product Labels| {{page.version}} | [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)|
 
 ### 1) Install the required modules using Composer
 

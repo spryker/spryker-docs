@@ -7,7 +7,7 @@ template: concept-topic-template
 
 {% info_block warningBox %}
 
-Oryx is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+Oryx is currently running under an _Early Access Release_. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
@@ -29,13 +29,13 @@ While the package layering might be irrelevant during your development, it might
 
 The template layer contains packages that can be used as quick starters for demos and projects. Templated packages follow semantic versioning and ensure upgradability. Some packages in the template layer, like presets, are opinionated and might not be used inside your final setup. Their main purpose is to quickly get up and running a standard frontend application.
 
-| PACKAGES                                                                 | LOCATION                                                        |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------- |
-|                                                                          |                                                                 |
-| [Application](https://www.npmjs.com/package/@spryker-oryx/application)   | `@spryker-oryx/oryx-application-orchestration/oryx-application` |
-| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`                                    |
-| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)                | `@spryker-oryx/labs`                                            |
-| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)            | `@spryker-oryx/themes`                                          |
+| PACKAGES                                                               | LOCATION                    |
+| ---------------------------------------------------------------------- | --------------------------- |
+|                                                                        |                             |
+| [Application](https://www.npmjs.com/package/@spryker-oryx/application) | `@spryker-oryx/application` |
+| [Presets](https://www.npmjs.com/package/@spryker-oryx/presets)         | `@spryker-oryx/presets`     |
+| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)              | `@spryker-oryx/labs`        |
+| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)          | `@spryker-oryx/themes`      |
 
 {% info_block infoBox %}
 

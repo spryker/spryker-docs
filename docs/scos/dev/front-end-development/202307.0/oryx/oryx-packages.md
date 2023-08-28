@@ -29,13 +29,13 @@ While the package layering might be irrelevant during your development, it might
 
 The template layer contains packages that can be used as quick starters for demos and projects. Templated packages follow semantic versioning and ensure upgradability. Some packages in the template layer, like presets, are opinionated and might not be used inside your final setup. Their main purpose is to quickly get up and running a standard frontend application.
 
-| PACKAGES                                                                 | LOCATION                                                                |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-|                                                                          |                                                                         |
-| [Application](https://www.npmjs.com/package/@spryker-oryx/application)   | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
-| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`                                            |
-| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)                | `@spryker-oryx/labs`                                                    |
-| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)            | `@spryker-oryx/themes`                                                  |
+| PACKAGES                                                                 | LOCATION                                                        |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------- |
+|                                                                          |                                                                 |
+| [Application](https://www.npmjs.com/package/@spryker-oryx/application)   | `@spryker-oryx/oryx-application-orchestration/oryx-application` |
+| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`                                    |
+| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)                | `@spryker-oryx/labs`                                            |
+| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)            | `@spryker-oryx/themes`                                          |
 
 {% info_block infoBox %}
 
@@ -49,7 +49,6 @@ Domain packages provide components and service logic for certain domains. Organi
 
 | PACKAGES                                                         | LOCATION                 |
 | ---------------------------------------------------------------- | ------------------------ |
-| [Auth](https://www.npmjs.com/package/@spryker-oryx/auth)         | `@spryker-oryx/auth`     |
 | [Cart](https://www.npmjs.com/package/@spryker-oryx/cart)         | `@spryker-oryx/cart`     |
 | [Checkout](https://www.npmjs.com/package/@spryker-oryx/checkout) | `@spryker-oryx/checkout` |
 | [Content](https://www.npmjs.com/package/@spryker-oryx/content)   | `@spryker-oryx/content`  |
@@ -66,8 +65,10 @@ The platform layer contains the core packages of the Oryx framework. They provid
 
 | PACKAGES                                                                           | LOCATION                          |
 | ---------------------------------------------------------------------------------- | --------------------------------- |
+| [Auth](https://www.npmjs.com/package/@spryker-oryx/auth)                           | `@spryker-oryx/auth`              |
 | [Core](https://www.npmjs.com/package/@spryker-oryx/core)                           | `@spryker-oryx/core`              |
 | [Experience](https://www.npmjs.com/package/@spryker-oryx/experience)               | `@spryker-oryx/experience`        |
+| [Form](https://www.npmjs.com/package/@spryker-oryx/form)                           | `@spryker-oryx/form`              |
 | [I18n](https://www.npmjs.com/package/@spryker-oryx/I18n)                           | `@spryker-oryx/i18n`              |
 | [Indexed-db](https://www.npmjs.com/package/@spryker-oryx/indexed-db)               | `@spryker-oryx/indexed-db`        |
 | [offline](https://www.npmjs.com/package/@spryker-oryx/offline)                     | `@spryker-oryx/offline`           |
@@ -81,6 +82,5 @@ The base layer contains packages that serve as utilities to all layers above. An
 | PACKAGES                                                           | LOCATION                  |
 | ------------------------------------------------------------------ | ------------------------- |
 | [UI](https://www.npmjs.com/package/@spryker-oryx/ui)               | `@spryker-oryx/ui`        |
-| [Form](https://www.npmjs.com/package/@spryker-oryx/form)           | `@spryker-oryx/form`      |
 | [Utilities](https://www.npmjs.com/package/@spryker-oryx/utilities) | `@spryker-oryx/utilities` |
 | [DI](https://www.npmjs.com/package/@spryker-oryx/di)               | `@spryker-oryx/di`        |

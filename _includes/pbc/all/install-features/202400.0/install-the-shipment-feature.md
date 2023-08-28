@@ -25,7 +25,7 @@ To start the feature integration, integrate the required features:
 | NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
 |------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Order Management | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)                |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                |
 
 ### 1) Install the required modules using Composer
 

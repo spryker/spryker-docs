@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/adyen/integrate-adyen.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/adyen/installing-and-configuring-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/adyen/install-and-configuring-adyen.html
   - title: Enabling filtering of payment methods for Ayden
     link: docs/pbc/all/payment-service-provider/page.version/adyen/enable-filtering-of-payment-methods-for-adyen.html
   - title: Integrating Adyen payment methods
@@ -27,7 +27,7 @@ This article provides step-by-step instructions on integrating the Adyen module 
 
 ## Prerequisites
 
-Prior to integrating Adyen into your project, make sure you [installed and configured the Adyen module](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/installing-and-configuring-adyen.html).
+Prior to integrating Adyen into your project, make sure you [installed and configured the Adyen module](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/install-and-configuring-adyen.html).
 
 ## Project integration
 

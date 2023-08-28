@@ -4,7 +4,7 @@ description: The Marketplace Order Management feature lets Marketplace customers
 template: feature-walkthrough-template
 related:
     - title: MerchantOms
-      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html
+      link: docs/pbc/all/order-management-system/page.version/marketplace/merchant-oms.html
     - title: Marketplace Shipment
       link: docs/pbc/all/carrier-management/page.version/marketplace/marketplace-shipment-feature-overview.html
     - title: Marketplace and merchant state machines

@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/collect-ai
 originalArticleId: a2a855d2-1680-44e9-9e69-b11a59936f78
 redirect_from:
-  - /2021080/docs/collect-ai
-  - /2021080/docs/en/collect-ai
-  - /docs/collect-ai
-  - /docs/en/collect-ai
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/collectai.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

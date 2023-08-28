@@ -100,10 +100,7 @@ Other ICU capabilities, such as [number formatting](https://unicode-org.github.i
 
 Localized content uses [the fine-grained reactivity system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/reactivity.html). The localizations are updated as soon the active locale is changed; for example, when the user interacts with the localization selector, or when the `LocaleService.set()` API is used. All localized content in Oryx components is updated instantly without a page reload.
 
-To support such fine-grained reactivity, a framework-specific implementation is required. Oryx provides an `i18n` Lit directive that's used inside components. Using this directive ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can use `I18nMixin` in your component implementation. `I18nMixin` adds `@signalAware()` and exposes the `i18n` function as a method on the component.
-
-
-<!-- TODO: add link to signal documentation once it's available so users can read about signals and @signalAware decorator -->
+To support such fine-grained reactivity, a framework-specific implementation is required. Oryx provides an `i18n` Lit directive that's used inside components. Using this directive ensures that the DOM is aligned with the localizations in an efficient way. This requires the `@signalAware()` decorator on the component class. To simplify the integration, you can use `I18nMixin` in your component implementation. `I18nMixin` adds `@signalAware()` and exposes the `i18n` function as a method on the component. For more information about the `@signalAware()` decorator, see [Signals](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/signals.html).
 
 The following is an example of using i18n in a Lit component. The tokens are used both as attributes and plain text, and the example shows the usage with and without a token context.
 

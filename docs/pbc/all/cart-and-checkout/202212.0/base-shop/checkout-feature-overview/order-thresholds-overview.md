@@ -126,5 +126,5 @@ If the global minimum threshold is €400, and the minimum threshold per merchan
 |BACK OFFICE USER GUIDES|
 |---|
 | [Define global thresholds](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html) |
-| [Define merchant order thresholds](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/define-merchant-order-thresholds.html) |
+| [Define merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) |
 | [Manage threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html) |

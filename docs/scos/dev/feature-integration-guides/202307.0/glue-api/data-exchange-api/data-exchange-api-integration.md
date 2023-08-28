@@ -410,6 +410,19 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 ```
 </details>
 
+{% info_block infoBox "Info" %}
+
+Note, that `DocumentationGeneratorApiDependencyProvider::getInvalidationVoterPlugins()` stack contains plugins that are used to invalidate the documentation cache.
+If the documentation cache is not invalidated, the documentation will not be updated.
+
+{% endinfo_block %} 
+
+```bash
+console navigation:build-cache 
+```
+
+{% endinfo_block %}
+
 <details open>
 <summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
 
@@ -468,7 +481,7 @@ If everything is set up correctly, you can operate with the data. Follow this li
 
 {% endinfo_block %}
 
-### Configure Jenkins:
+### Configure Scheduler:
 
 1. Adjust the scheduler project configuration:
 

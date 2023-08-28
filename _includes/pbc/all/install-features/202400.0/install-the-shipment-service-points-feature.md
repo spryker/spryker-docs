@@ -203,7 +203,7 @@ Make sure that `shipment-type` storage data is expanded with the service type UU
 
 {% endinfo_block %}
 
-3. Enable relationship between `shipment-types` and `service-types` resources in the Storefront API by registering the following plugins:
+2. Enable the relationship between `shipment-types` and `service-types` resources in the Storefront API by registering the following plugins:
 
 | PLUGIN                                               | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                                          |
 |------------------------------------------------------|--------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|

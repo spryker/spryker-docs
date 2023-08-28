@@ -38,7 +38,7 @@ When the new queue infrastructure is published, the store becomes visible on the
 
 ## Assigning products and prices to stores
 
-You can assign products and their prices to a product using the Back Office UI or other methods of creating a new product in the system. This offers flexibility in managing the product catalog.
+You can assign products and their prices to stores using the Back Office or other methods of creating products.
 
 The following image shows how you can assign a product to an already existing store.
 

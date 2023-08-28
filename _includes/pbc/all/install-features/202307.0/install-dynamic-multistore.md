@@ -4,7 +4,7 @@ Dynamic Multistore is part of an *Early Access Release*. This *Early Access* fea
 
 {% endinfo_block %}
 
-This document describes how to integrate the [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) feature into a Spryker project.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html).
 
 ## Install feature core
 

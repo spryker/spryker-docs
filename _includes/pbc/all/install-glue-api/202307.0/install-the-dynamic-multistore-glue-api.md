@@ -67,8 +67,8 @@ Send one of the following requests:
 
 | ENDPOINT | HEADER |
 |-|-|
-| https://glue.mysprykershop.com | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
-| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
+| `https://glue.mysprykershop.com` | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| `https://glue.mysprykershop.com?_store=DE` | [{"key":"Accept-Language","value":"de_DE"}] |
 
 Make sure the response contains the following:
 * The `content-language` header set to `de_DE`.

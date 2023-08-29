@@ -13,11 +13,17 @@ jobs:
 
       - name: Check for missing redirects
         run: |
-          find docs -type f -name "*.md" | while read file; do
-            frontmatter=$(cat $file | grep -Po 'redirect_from: *\K.*')
+          missing_redirects=""
+          find docs -type f -name "*.md" -print0 | xargs -0 -I {} bash -c '
+            file="$1"
+            frontmatter=$(cat "$file" | grep -Po "redirect_from: *\K.*")
             relative_path="${file%.md}.md"
             if ! [[ $frontmatter =~ $relative_path ]]; then
-              echo "Error: Missing redirect for $relative_path"
-              exit 1
+              missing_redirects="$missing_redirects\nError: Missing redirect for $relative_path"
             fi
-          done
+          ' -- {}
+
+          if [ -n "$missing_redirects" ]; then
+            echo -e "Workflow failed due to missing redirects:$missing_redirects"
+            exit 1
+          fi

@@ -63,6 +63,7 @@ commonmark:
 plugins:
   - jekyll-last-modified-at
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 

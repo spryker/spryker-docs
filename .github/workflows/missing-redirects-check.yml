@@ -1,0 +1,29 @@
+name: Missing redirects check
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+
+jobs:
+  check_redirects:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check for Missing Redirects
+        run: |
+          git diff --name-status ${{ github.event.before }} ${{ github.sha }} |
+          while read status file; do
+            if [ "$status" == "D" ] || [ "$status" == "R" ]; then
+              if echo "$file" | grep -qE '\.md$'; then
+                relative_path="${file%.md}.html"
+                if [ ! -f "_site/$relative_path" ]; then
+                  echo "Error: Missing redirect for $relative_path"
+                  exit 1
+                fi
+              fi
+            fi
+          done

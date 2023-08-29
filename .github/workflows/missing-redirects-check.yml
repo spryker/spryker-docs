@@ -13,9 +13,9 @@ jobs:
 
       - name: Check for missing redirects
         run: |
-          find . -type f -name "*.md" | while read file; do
+          find docs -type f -name "*.md" | while read file; do
             relative_path="${file%.md}.md"
-            if ! grep -q "${relative_path}" _site/*.html; then
+            if ! grep -q "${relative_path}" docs/*; then
               echo "Error: Missing redirect for $relative_path"
               exit 1
             fi
@@ -24,7 +24,8 @@ jobs:
       - name: Fail if missing redirects are found
         if: ${{ always() }}
         run: |
-          if [ $? -ne 0 ]; then
+          if [ -s missing-redirects.txt ]; then
             echo "Workflow failed due to missing redirects"
+            cat missing-redirects.txt
             exit 1
           fi

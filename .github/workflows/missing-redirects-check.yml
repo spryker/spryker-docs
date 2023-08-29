@@ -19,7 +19,7 @@ jobs:
           while read status file; do
             if [ "$status" == "D" ] || [ "$status" == "R" ]; then
               if echo "$file" | grep -qE '\.md$'; then
-                relative_path="${file%.md}.html"
+                relative_path="${file%.md}.md"
                 if [ ! -f "_site/$relative_path" ]; then
                   echo "Error: Missing redirect for $relative_path"
                   exit 1

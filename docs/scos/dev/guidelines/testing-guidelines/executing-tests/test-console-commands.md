@@ -1,5 +1,5 @@
 ---
-title: Testing console commands
+title: Test console commands
 description: How to test console commands.
 last_updated: Jan 12, 2022
 template: concept-topic-template
@@ -26,6 +26,8 @@ related:
     link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
   - title: Testing concepts
     link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+redirect_from:
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 Spryker supports several [test helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.

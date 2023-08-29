@@ -25,3 +25,15 @@ There is a mixture of unit and integration tests in the Business and the Communi
 Integration tests can be slow, but they can also provide good code coverage and reduce the number of tests required.
 
 Like unit tests, you can mock any dependencies in the integration tests and easily manipulate the system during the _Arrange_ phase of your tests.
+
+## Acceptance tests (UI tests, E2E tests)
+
+Acceptance tests are the slowest tests, and you should avoid using them as much as you can. Acceptance tests in Spryker reside in the Presentation layer. These tests render pages as you open them within your tests which makes it slow. Besides, there is no simple way to bring the system into a state you would like to test. For example, if you need a specific customer in the database, you have to create the customer by following the standard customer creation process:
+
+1. Go to the registration page.
+2. Fill out the form and submit it.
+3. Confirm the registration, etc.
+
+As you can imagine, having hundreds of tests that require a specific customer would eat up a lot runtime of your tests, which will make you test suite extremely slow. In most cases, unit or integration tests should be preferred over the acceptance tests.
+
+With the acceptance tests, you can't do mocking easily, however, there is a way of reducing the runtime in the above described process. When you have no other choice than using an acceptance test, you can also achieve the state setup by using an API call in your test, ideally, from a helper with a clean-up API call.

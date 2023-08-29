@@ -113,7 +113,7 @@ Naturally, there are many more quality attributes and there are lots of articles
 
 ## Development or testing process and TDD
 
-Whether you have a QA team or not you will have to test your application. When you do not have a dedicated resource for testing the process can be slightly different. However, there still is a clear process that can be followed. At Spryker we structure our testing process to follow the concepts of TDD (Test Driven Development)
+Whether you have a QA team or not you will have to test your application. When you do not have a dedicated resource for testing the process can be slightly different. However, there still is a clear process that can be followed. At Spryker we structure our testing process to follow the concepts of TDD (Test Driven Development).
 
 ### Testing without a full-time QA engineer
 

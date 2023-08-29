@@ -50,7 +50,7 @@ We strongly recommend reading the documentation of both frameworks to get the be
 
 Codeception offers many handy things to write better and cleaner tests. Many solutions this framework has are built on top of PHPUnit. In the next articles, we will only reference Codeception even if these features are available in PHPUnit as well.
 
-On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#testify-helpers) for details on the existing helpers.
+On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify](/docs/scos/dev/guidelines/testing-guidelines/testify.html) for more details on Testify itself, and [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#testify-helpers) for details on the existing Testify helpers.
 
 ## Basic test setup
 

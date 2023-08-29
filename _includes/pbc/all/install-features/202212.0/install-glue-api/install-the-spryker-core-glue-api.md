@@ -94,14 +94,19 @@ glue_eu:
 
 {% info_block warningBox "Verification" %}
 
-To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the `Origin` header `https://glue.mysprykershop.com/` and see the correct JSON response:
+To make sure that the CORS headers are set up correctly, follow the steps:
 
-* Verify that the `access-control-allow-origin` header is present and is the same to the one set in `config`.
-* Verify that the `access-control-allow-methods` header is present and contains all available methods.
+1. Send the OPTIONS request to any valid GLUE resource with the `Origin` header:
 
 ```bash
-curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.mysprykershop.com
+curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.mysprykershop.com
 ```
+
+2. Using the following example, verify the headers:
+
+* The `access-control-allow-origin` header is present and is the same as set in the deploy file.
+* The `access-control-allow-methods` header is present and contains all available methods.
+
 
 ```bash
 Content-Type: text/plain; charset=utf-8
@@ -429,7 +434,7 @@ Make a request to `https://glue.mysprykershop.com` with the header `[{"key":"Acc
 
 {% info_block warningBox "Verification" %}
 
-To make sure `EntityTagFormatResponseHeadersPlugin` is set up correctly, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`(in `EntityTagsRestApiConfig::getEntityTagRequiredResources()`). 
+To make sure `EntityTagFormatResponseHeadersPlugin` is set up correctly, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`(in `EntityTagsRestApiConfig::getEntityTagRequiredResources()`).
 
 The response should contain the `ETag` header.
 

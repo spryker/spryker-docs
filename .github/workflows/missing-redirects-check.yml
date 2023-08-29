@@ -2,8 +2,6 @@ name: Missing redirects check
 
 on:
   push:
-    paths:
-      - '**/*.md'
 
 jobs:
   check_redirects:
@@ -15,16 +13,11 @@ jobs:
 
       - name: Check for missing redirects
         run: |
-          git diff --name-status ${{ github.event.before }} ${{ github.sha }} |
-          while read status file; do
-            if [ "$status" == "D" ] || [ "$status" == "R" ]; then
-              if echo "$file" | grep -qE '\.md$'; then
-                relative_path="${file%.md}.md"
-                if ! grep -q "${relative_path}" _site/*.html; then
-                  echo "Error: Missing redirect for $relative_path"
-                  exit 1
-                fi
-              fi
+          find . -type f -name "*.md" | while read file; do
+            relative_path="${file%.md}.md"
+            if ! grep -q "${relative_path}" _site/*.html; then
+              echo "Error: Missing redirect for $relative_path"
+              exit 1
             fi
           done
 

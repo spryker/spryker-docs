@@ -14,7 +14,7 @@ related:
   - title: Configure search features
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-features.html
   - title: Configure a search query
-    link: docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-a-search-query.html
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-a-search-query.html
   - title: Facet filter overview and configuration
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---

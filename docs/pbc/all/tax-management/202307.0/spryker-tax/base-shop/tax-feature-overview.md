@@ -66,7 +66,7 @@ Avalara is mostly meant for the USA.
 
 {% endinfo_block %}
 
-To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
+To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 

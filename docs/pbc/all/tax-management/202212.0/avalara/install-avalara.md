@@ -473,8 +473,8 @@ Make sure the data has been imported to `spy_product_abstract` and `spy_product`
 
 | INSTALLATION | REQUIRED FOR THE CURRENT INSTALLATION | INSTALLATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html) |
+|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-tax-product-options.html) |
+|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-tax-shipment.html) |
 
 ## Next steps
 

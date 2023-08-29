@@ -65,7 +65,7 @@ Avalara is mostly meant for the USA.
 
 {% endinfo_block %}
 
-To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
+To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 
@@ -122,7 +122,7 @@ The capability has the following functional constraints:
 | | | | [Import tax sets for product options](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-product-option.csv.html) |
 
 <!--
-| [Integrate Avalara](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara.html) |
-| [Integrrate Avalara Tax + Shipment feature](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |
-| [Integrate Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html) |
+| [Integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) |
+| [Integrrate Avalara Tax + Shipment feature](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-tax-shipment.html) |
+| [Integrate Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-tax-product-options.html) |
 -->

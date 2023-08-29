@@ -15,7 +15,7 @@ jobs:
         run: |
           find docs -type f -name "*.md" | while read file; do
             relative_path="${file%.md}.md"
-            if ! grep -q "${relative_path}" docs/*; then
+            if ! grep -q "${relative_path}" $(find docs -type d -name "*/*"); then
               echo "Error: Missing redirect for $relative_path"
               exit 1
             fi

@@ -5,6 +5,8 @@ template: glue-api-storefront-guide-template
 related:
   - title: Retrieving abstract products in abstract product lists
     link: docs/marketplace/dev/glue-api-guides/page.version/content-items/retrieving-abstract-products-in-abstract-product-lists.html
+redirect_from:
+    /docs/marketplace/dev/glue-api-guides/202108.0/abstract-products/retrieving-abstract-products.html
 ---
 
 This endpoint allows retrieving general information about abstract products.

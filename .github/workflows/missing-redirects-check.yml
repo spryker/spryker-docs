@@ -14,8 +14,9 @@ jobs:
       - name: Check for missing redirects
         run: |
           find docs -type f -name "*.md" | while read file; do
+            frontmatter=$(cat $file | grep -Po 'redirect_from: *\K.*')
             relative_path="${file%.md}.md"
-            if ! grep -q "${relative_path}" $(find docs -type d -name "*/*"); then
+            if ! [[ $frontmatter =~ $relative_path ]]; then
               echo "Error: Missing redirect for $relative_path"
               exit 1
             fi

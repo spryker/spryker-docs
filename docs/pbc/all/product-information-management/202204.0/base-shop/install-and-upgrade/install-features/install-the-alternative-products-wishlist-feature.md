@@ -14,4 +14,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/alternative-products-wishlist-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md -->

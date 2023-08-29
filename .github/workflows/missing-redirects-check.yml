@@ -13,17 +13,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Check for Missing Redirects
+      - name: Check for missing redirects
         run: |
           git diff --name-status ${{ github.event.before }} ${{ github.sha }} |
           while read status file; do
             if [ "$status" == "D" ] || [ "$status" == "R" ]; then
               if echo "$file" | grep -qE '\.md$'; then
                 relative_path="${file%.md}.md"
-                if [ ! -f "_site/$relative_path" ]; then
+                if ! grep -q "${relative_path}" _site/*.html; then
                   echo "Error: Missing redirect for $relative_path"
                   exit 1
                 fi
               fi
             fi
           done
+
+      - name: Fail if missing redirects are found
+        if: ${{ always() }}
+        run: |
+          if [ $? -ne 0 ]; then
+            echo "Workflow failed due to missing redirects"
+            exit 1
+          fi

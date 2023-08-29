@@ -27,7 +27,7 @@ For more details, check [Cart Data Flow](/docs/pbc/all/cart-and-checkout/{{site.
 
 {% endinfo_block %}
 
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/calculation-data-structure.html). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 

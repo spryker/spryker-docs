@@ -50,11 +50,11 @@ The default filter functionality includes *standard filters* and *dynamic filter
 
 #### Standard filters
 
-On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, and brand. For more details about standard filters, see [Standard filters](/docs/pbc/all/search/{{page.version}}/search-feature-overview/standard-filters-overview.html).
+On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, and brand. For more details about standard filters, see [Standard filters](/docs/pbc/all/search/{{page.version}}/base-shop/search-feature-overview/standard-filters-overview.html).
 
 #### Dynamic filters and facets
 
-Compared to standard filters, dynamic filters and facets allow the creation of more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Managing filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html).
+Compared to standard filters, dynamic filters and facets allow the creation of more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Edit filter preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html).
 
 ## Video tutorial
 Check out this video on managing categories:

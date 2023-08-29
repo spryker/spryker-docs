@@ -14,4 +14,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/merchant-custom-prices-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-merchant-custom-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchant-custom-prices-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-merchant-custom-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchant-custom-prices-feature.md -->

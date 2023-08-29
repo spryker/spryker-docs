@@ -13,4 +13,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/product-group-product-rating-and-reviews-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-product-group-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-group-product-rating-and-reviews-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-group-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-group-product-rating-and-reviews-feature.md -->

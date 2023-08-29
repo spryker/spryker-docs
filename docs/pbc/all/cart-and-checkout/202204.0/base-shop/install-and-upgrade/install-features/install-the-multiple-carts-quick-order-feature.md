@@ -14,4 +14,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/multiple-carts-quick-order-feature-integration.html  
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-multiple-carts-quick-order-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multiple-carts-quick-order-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-multiple-carts-quick-order-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multiple-carts-quick-order-feature.md -->

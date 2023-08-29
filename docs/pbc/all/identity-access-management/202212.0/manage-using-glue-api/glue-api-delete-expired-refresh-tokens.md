@@ -14,7 +14,7 @@ redirect_from:
 related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
-  - title: Glue API - Customer Account Management feature integration
+  - title: Install the Customer Account Management Glue API
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
 ---
 

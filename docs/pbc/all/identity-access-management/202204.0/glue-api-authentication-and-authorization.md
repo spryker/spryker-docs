@@ -15,7 +15,7 @@ redirect_from:
 related:
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
-  - title: Glue API - Customer Account Management feature integration
+  - title: Install the Customer Account Management Glue API
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
@@ -41,7 +41,7 @@ Expired tokens are stored in the database, and you can configure them to be dele
 
 ## Protected resources
 
-Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow.
+Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html) of the shop before you start working with the API or setting up a flow.
 
 | ACTION | METHOD | ENDPOINTS|
 | --- | --- | --- |
@@ -139,4 +139,4 @@ Different endpoints require the client to be authenticated as different users. B
 
 ## Next steps
 
-[Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html)
+[Retrieve protected resources](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html)

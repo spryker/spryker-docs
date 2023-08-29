@@ -8,7 +8,7 @@ Follow the steps below to install the Product + Category feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 |NAME | VERSION |
 |--- | --- |
@@ -703,5 +703,5 @@ Integrate the following related features:
 | Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 | Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 | Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/pbc/all/search/{{page.version}}/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management  | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html) |
+| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
+| CMS + Category Management  | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html) |

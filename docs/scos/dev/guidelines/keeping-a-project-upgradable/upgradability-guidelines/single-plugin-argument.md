@@ -4,11 +4,11 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-This check makes sure that the plugins don't require the complicated constructor arguments.
+This check makes sure that the plugins don't require complicated constructor arguments.
 
 ## Problem description
 
-Inside of the dependency provider you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. 
+Inside of the dependency provider, you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. 
 To keep the plugins simple, they shouldn't require complicated objects as constructor arguments.
 
 Supported argument types:
@@ -22,23 +22,20 @@ Supported argument types:
 ## Example of evaluator error message
 
 ```bash
-================
+======================
 SINGLE PLUGIN ARGUMENT
-================
+======================
 
-+---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
-| # | Message                                                                                   | Target                                                                |
-+---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
-| 1 | Plugin \Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin                  |                                                                       |
-|   | should not have unsupported constructor parameters.                                       | <path_to_class>\ConsoleDependencyProvider::getMonitoringConsoleMethod |
-|   | Supported argument types: int, float, string, const, bool, int, usage of new statement to |                                                                       |
-|   | instantiate a class (without further methods calls)                                       |                                                                       |
-+---+-------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+Message: The "\Spryker\Zed\Console\Communication\Plugin\MonitoringConsolePlugin" plugin
+         should not have unsupported constructor parameters.
+         Supported argument types: int, float, string, const, bool, int, usage of new statement to
+         instantiate a class (without further methods calls).
+Target:  {PATH_TO_PROJECT}\ConsoleDependencyProvider::getMonitoringConsoleMethod()
 ```
 
-## Example of code that causes an upgradability error
+## Example of code that causes an evaluator error
 
-The dependency provider method returns the plugin with unwanted argument: 
+The dependency provider method returns the plugin with the unwanted argument: 
 
 ```bash
 namespace Pyz\Zed\SinglePluginArgument;
@@ -62,5 +59,5 @@ class ConsoleDependencyProvider
 ### Resolving the error
 
 To resolve the error:
-1. Rework the plugin - remove the usage of the complicated constructor arguments.
+1. Refactor the plugin - remove the usage of the complicated constructor arguments.
 

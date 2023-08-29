@@ -15,4 +15,4 @@ redirect_from:
 
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-non-splittable-products-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-quick-add-to-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-non-splittable-products-feature.md -->

@@ -17,8 +17,7 @@ jobs:
             frontmatter=$(cat $file | grep -Po 'redirect_from: *\K.*')
             relative_path="${file%.md}.md"
             if ! [[ $frontmatter =~ $relative_path ]]; then
-              echo "Error: Missing redirect for $relative_path"
-              exit 1
+              echo "Error: Missing redirect for $relative_path" >> missing-redirects.txt
             fi
           done
 

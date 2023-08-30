@@ -16,13 +16,13 @@ related:
   - title: RatePay - Payment Workflow
     link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-payment-workflow.html
   - title: Disabling address updates from the backend application for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram
     link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-core-module-structure-diagram.html
   - title: Integrating the Installment payment method for RatePay
     link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
   - title: Integrating the Direct Debit payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
   - title: RatePay - State Machine Commands and Conditions
     link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---

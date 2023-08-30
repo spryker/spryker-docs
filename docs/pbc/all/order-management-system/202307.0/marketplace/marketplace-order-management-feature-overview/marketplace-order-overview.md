@@ -35,7 +35,7 @@ As the Marketplace order contains details about offers and products a customer h
 ## Marketplace and merchant order states machines
 You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
 
-For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/wmarketplace-and-merchant-state-machines-overview.html).
+For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 
 For details about how the two state machines interact with each other, see [Marketplace and merchant state machine interactions](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 

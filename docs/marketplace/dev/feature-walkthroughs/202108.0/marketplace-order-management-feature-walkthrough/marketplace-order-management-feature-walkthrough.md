@@ -12,7 +12,7 @@ related:
     - title: Marketplace and merchant state machines interaction
       link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
     - title: 'How-to: Create a new MerchantOms flow'
-      link: docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
+      link: docs/pbc/all/order-management-system/{{site.version}}/marketplace/create-merchant-oms-flows.html
 ---
 
 
@@ -93,4 +93,4 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 | INTEGRATION GUIDES                                                                                                                                                                                              |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|--------|
 | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)                                     | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
-| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)   |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |
+| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)   |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/create-merchant-oms-flows.html)   |

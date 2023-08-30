@@ -91,7 +91,7 @@ You normally add a CNAME record in your DNS Management for the domains you want 
 - You add the endpoint you want to use in the appropriate `deploy.yml` file and send it to us using a support case, mentioning that you have added a new endpoint that you want to set up for DNS configuration.
 - We terraform this endpoint and send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site).
 - You set these entries in your DNS management and let us know when you are done.
-- Terraforming can then be completed, and you receive the ANAME DNS records that you can then set in your DNS management to point your DNS names to the newly created endpoints.
+- Terraforming can then be completed, and you receive the CNAME DNS records that you can then set in your DNS management to point your DNS names to the newly created endpoints.
 - After this is completed, your application gets accessible through the new endpoints.
 
 {% info_block infoBox "Info" %}

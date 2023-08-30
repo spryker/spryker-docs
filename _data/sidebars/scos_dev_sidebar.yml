@@ -3401,6 +3401,8 @@ entries:
           url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
         - title: Presets
           url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
+        - title: Localization
+          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html          
         - title: Supported browsers
           url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
         - title: Dependency injection

@@ -136,7 +136,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-### Dynamic Data Install Configuration
+### Configure Dynamic Data installation
 
 1. Optional: To install default configuration data, create a configuration file:
 

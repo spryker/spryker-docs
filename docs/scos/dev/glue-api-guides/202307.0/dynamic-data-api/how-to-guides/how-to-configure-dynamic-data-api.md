@@ -10,7 +10,7 @@ redirect_from:
 This guide shows how to configure the Dynamic Data API endpoints.
 
 To incorporate a new endpoint for interacting with entities in the database,
-add a corresponding row to the `spy_dynamic_entity_configuration` table or create a configuration file and install configuration data. For details, see [Dynamic Data API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html)
+add a corresponding row to the `spy_dynamic_entity_configuration` table or create a configuration file and install configuration data. For details, see the [Configure Dynamic Data installation](#dynamic-data-install-configuration) section
 
 The `spy_dynamic_entity_configuration` table represents the configuration for dynamic entity endpoints in the system. It has the following columns:
 

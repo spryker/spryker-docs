@@ -1,7 +1,7 @@
 ---
 title: Dynamic Data API integration
 description: Integrate the Dynamic Data API into a Spryker project.
-last_updated: August 21, 2023
+last_updated: Aug 21, 2023
 template: feature-integration-guide-template
 redirect_from: 
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
@@ -206,7 +206,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 ```
 </details>
 
-2. Add file path to the `DynamicEntityConfig`:
+2. Add file path to `DynamicEntityConfig`:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 
@@ -320,7 +320,7 @@ dynamic_entity.validation.missing_identifier,"Unvollständige Anforderung - fehl
 
 {% info_block infoBox "Info" %}
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -330,7 +330,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data in the database has been added to the `spy_glossary` table.
+Ensure the configured data in the database has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -347,8 +347,7 @@ Enable the following behaviors by registering the plugins:
 | DynamicEntityProtectedPathCollectionExpanderPlugin | Expands a list of protected endpoints with dynamic entity endpoints. | Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
 | DynamicEntityInstallerPlugin | Installs Dynamic Entity data. | Spryker\Zed\DynamicEntity\Communication\Plugin\Installer |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Glue/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -376,10 +375,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php</summary>
+**src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php**
 
 ```php
 <?php
@@ -408,10 +405,8 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
+**src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php**
 
 ```php
 <?php
@@ -434,10 +429,8 @@ class DocumentationGeneratorOpenApiDependencyProvider extends SprykerDocumentati
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -460,10 +453,9 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }	    
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
+
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
 <?php
@@ -486,7 +478,6 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
     }	    
 }
 ```
-</details>
 
 {% info_block warningBox %}
 

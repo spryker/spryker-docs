@@ -8,4 +8,4 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-offer-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-offer-prices-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-offer-prices-feature.md -->

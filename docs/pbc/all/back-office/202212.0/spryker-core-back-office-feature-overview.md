@@ -59,7 +59,7 @@ You can always define what exactly is going to be needed for your specific proje
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Get a general idea of the Back Office Translations](/docs/pbc/all/back-office/{{page.version}}/back-office-translations-overview.html) |
 | [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
 
 ## Related Developer articles

@@ -4,18 +4,14 @@ description: This document describes how to migrate / develop critical custom fu
 template: howto-guide-template
 ---
 
-# Migrate / develop critical custom functionality of E-com flow
+* Cover the project's third-party integrations with tests.
+* Cover with tests custom features that impact critical application flows, like the following:
+    * Data import
+    * Data export
+    * Data recalculation
 
-{% info_block infoBox %}
+Make sure tests are running in the pipeline and are green.
 
-## Resources for assessment Backend
+## Resources for migration
 
-{% endinfo_block %}
-
-* Cover project third party integrations with tests.
-* Cover custom features that impact critical application flows with tests:
-    * Data import;
-    * Data export;
-    * Data recalculation;
-    * etc.
-* Ensure tests are running in the pipeline and are green.
+* Backend

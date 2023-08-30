@@ -4,13 +4,11 @@ description: This document describes how to migrate files storages usage to S3 u
 template: howto-guide-template
 ---
 
-# Migrate files storages usage to S3 usage
 
-{% info_block infoBox %}
+## Resources for migration
+* Backend
+* Optional: DevOps
 
-## Resources for assessment Backend, DevOps[optional]
-
-{% endinfo_block %}
 
 Spryker Cloud has a kinda standard for having file storage on an AWS S3 bucket. Therefore it’s recommended to rework
 all existing solutions which require certain file storage to use an S3 bucket.

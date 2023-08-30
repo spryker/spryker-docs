@@ -4,19 +4,17 @@ description: This document describes how to migrate existing DB driver to MariaD
 template: howto-guide-template
 ---
 
-# Migrate existing DB driver to MariaDB
+## Resources for migration
 
-{% info_block infoBox %}
-
-## Resources for assessment Backend, DevOps
+* Backend
+* DevOps
 
 {% endinfo_block %}
 
-## MySQL/MariaDB to MariaDB
+## Migrate from MySQL/MariaDB to MariaDB
 
 1. Make sure the version of MySQL/MariaDB in the old system is the same as in the new Spryker Cloud system.
-2. Run the following queries against DB and save this data, we will need this later in order to validate that the
-    restoration went successfully:
+2. Run the following query against the DB and save the output data. You will need this later to validate the DB restoration.
     ```php
     <?php
         $dbName = 'database_maria';
@@ -29,7 +27,7 @@ template: howto-guide-template
             echo $tableName['TABLE_NAME'] . "," . $count . " - " . $key . "/" . $tablesCount . PHP_EOL;
         }
     ```
-3. Request customer to create database dump:
+3. Ask the customer to create a database dump as follows:
     ```bash
     mysqldump -u local_user \
      --databases database_name \
@@ -39,9 +37,10 @@ template: howto-guide-template
      --column-statistics=0 \
      -plocal_password | gzip > /path/to/outputfile.sql.gz
     ```
-   Code snippet for creating database dump. Additional information is [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.SmallExisting.html).
-4. Request customer to upload database dump into AWS S3 bucket of the production environment in Spryker Cloud, using AWS console UI.
-5. Connect to EC2 instance. Details can be found [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.NonRDSRepl.html#MySQL.Procedural.Importing.Import.Database).
+   For more information about creating DB dumps, see [Importing data from a MariaDB or MySQL database to a MariaDB or MySQL DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.SmallExisting.html).
+
+4. Ask the customer to upload the database dump to an AWS S3 bucket of the production environment using the AWS Management Console.
+5. Connect to the EC2 instance. Details can be found [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.NonRDSRepl.html#MySQL.Procedural.Importing.Import.Database).
 
     *Optional*: for the Spryker Cloud environment we recommend using a Scheduler instance for backup/restore purposes.
     * AWS → EC2 → Instances → <env_name>-<[/d/w]*> → Connect via Session Manager
@@ -58,15 +57,17 @@ template: howto-guide-template
       aws s3 ls //to list buckets
       aws s3 cp s3://<bucket_name>/<dump_name> .
       ```
-6. Restore database backup in Spryker Cloud:
-    * Go to AWS → Parameter Store and filter by “DB“ in order to find Spryker Cloud DB credentials.
-    * Execute the following:
-      ```bash
-      mysql -u<SPRYKER_DB_USERNAME> -p<SPRYKER_DB_PASSWORD> -h <Endpoint> <DB name> < <dump_name>.sql &
-      ```
-7. Repeat step 2 against restored database in order to ensure that everything went fine.
+6. In the AWS Management Console, go to **Parameter Store**.
+7. To find the database credentials, filter the parameters by `DB`.
+8. Import the database:
+```bash
+mysql -u<SPRYKER_DB_USERNAME> -p<SPRYKER_DB_PASSWORD> -h <Endpoint> <DB name> < <dump_name>.sql &
+```
 
-## MySQL/MariDB to MariaDB
+7. Repeat step 2 against the restored database. To make sure the migration is successful, compare the outputs from the queries you've run for the original and restored DBs. They should be the same.
+
+## PostgreSQL/MariDB to MariaDB
+
 
 PostgreSQL DB must be converted to MariaDB compatible dump. More information can be found [here](https://mariadb.com/kb/en/migrating-to-mariadb-from-postgresql/).
 Converted dump can be uploaded to Spryker cloud using **MySQL/MariaDB to MariaDB** guide.

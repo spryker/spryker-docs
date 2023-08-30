@@ -11,40 +11,42 @@ Dynamic Multistore is part of an *Early Access Release*. This *Early Access* fea
 
 {% endinfo_block %}
 
-This document describes the steps to take to delete a store in Spryker when using dynamic store.
+This document describes how to delete stores.
 
 ## When it might be useful
 
 Occasionally, a store created earlier becomes unnecessary. It may be a store that has been used for a brand, product, holiday, marketing promotions, or events, such as ending experiments with no production environment.
 
-On the technical side, removing a store helps with:
-1. By deleting redundant and no longer used data, which can take a lot of space up on the server, the store's speed is increased. The load on it for the purposes of indexing and searching is also reduced.
+On the technical side, removing a store helps with the following:
+1. By deleting redundant data, which can take a lot of space, the shop's speed is increased. The load on it for the purposes of indexing and searching is also reduced.
 2. Reducing wasted memory and your storage footprint.
 
+{% info_block warningBox "Warning" %}
 
-## Step-by-step plan
+We recommend taking these steps in a test environment. Make sure to create a backup of the database and other storages.
 
-**For the sake of security, it is better to perform these steps in a test environment. Remember to also provide a backup of the database and other storages, if necessary.**
-
-### 1. Backup Database.
-
-Before starting the process of removing a store, you need to back the store's database up and ensure it is recoverable.
-If you are using Amazon Web Services' Relational Database Service (AWS RDS), check [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html) for more information.
+{% endinfo_block %}
 
 
-### 2. Suspend P&S.
+## Back up the database
 
-**In order to reduce the risk of data synchronization errors, you can suspend data synchronization through P&S.**
+Back up the store's database up and make sure it's recoverable.
+For instructions, see [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html).
 
-1. Enable **maintenance mode** by using command:
+
+## Suspend P&S
+
+
+1. Enable the maintenance mode:
 ```bash
 vendor/bin/console maintenance:enable
 ```
-If you are using AWS infrastructure, check its relevant documentation on how to [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
+
+For more information, see [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
 2. Make sure there aren't too many messages showing in the RabbitMQ. Wait for the messages to be processed.
 
-3. To suspend P&S and the Cronjob scheduler, use this command:
+3. Suspend P&S and the Cronjob scheduler:
 
 ```bash
 vendor/bin/console scheduler:suspend

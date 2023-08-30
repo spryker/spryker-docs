@@ -199,5 +199,5 @@ The Search migration effort implies an upgrade of the following modules:
 * [ProductReviewSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
 * [ProductLabelSearch](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
 * [ProductSetPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)
-* [CategoryPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html#upgrading-from-version-14-to-version-15)
+* [CategoryPageSearch](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html#upgrading-from-version-14-to-version-15)
 * [ProductNew](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html)

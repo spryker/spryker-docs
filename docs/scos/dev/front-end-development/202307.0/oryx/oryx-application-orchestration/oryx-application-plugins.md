@@ -4,11 +4,7 @@ description: Plugins of the Oryx Application
 template: concept-topic-template
 ---
 
-{% info_block warningBox %}
 
-Oryx is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 When you create an Oryx Application with the `appBuilder()` function, it creates an instance of `App`. `App` is a a shell that can be enhanced with custom plugins: `AppPlugin`. Plugins let you extend Oryx core behavior without modifying the core code of the framework.
 

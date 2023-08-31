@@ -42,7 +42,7 @@ For instructions, see [Create and restore database backups](/docs/cloud/dev/spry
 vendor/bin/console maintenance:enable
 ```
 
-For more information, see [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
+For more information about maintenance mode, see [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
 2. Make sure there aren't too many messages showing in the RabbitMQ. Wait for the messages to be processed.
 
@@ -53,9 +53,9 @@ vendor/bin/console scheduler:suspend
 ```
 
 
-### 3. Database. Cleaning data and configration in related database tables.
+## Cleaning data and configuration in related database tables
 
-The number of tables that use relation with the `spy_store` table may depend on the use of the functionality, and on the installed modules.
+The number of tables that use the relation with the `spy_store` table depends on the use of the functionality, and on the installed modules.
 
 The list of available tables with data that may contain a foreign key relationship:
 - `spy_price_product_store`
@@ -96,50 +96,54 @@ Store has new configuration tables that were used for dynamic store:
 Make sure to delete all records related to the store. You may also have other related tables used in the project, make sure to check them and delete data from them.
 After removing all related data from all tables, you can remove the row with the **store** data from the table `spy_store`.
 
-### 4. Cleaning data in the key-value storage engine.
+## Cleaning the data in the key-value storage engine
 
-Data is stored with keys that contain the name store, if you use Redis as a key-value store.
-The key name follows this format: `kv:{resource-type}:{store}:{locale}:{key}`.
-
-Consider `XXX` as the name of the store to be used as an example.
+With the Redis key-value storage, data is stored as keys that contain the store name. The key name follows this format: `kv:{resource-type}:{store}:{locale}:{key}`.
 
 {% info_block infoBox %}
-Please note that the structure of data storage on the project can be organized differently, taking into account its features.
-Below is a list of keys, taking into account the default configuration out of the box.
+
+When taking the steps in this section, take the following into account:
+
+* The Redis data to modify in this section is relevant to the default configuration. Depending on the features your project has, you may need to modify more data.
+* `xxx` is a placeholder of the store name.
+
 {% endinfo_block %}
 
-Data stored in Redis that should be deleted includes the following:
-- Stock information:
-   - `kv:availability:xxx:*`
-- Product details:
-    - `kv:price_product_abstract:xxx:*`
-    - `kv:price_product_abstract_merchant_relationship:xxx:*`
-    - `kv:price_product_concrete:xxx:*`
-    - `kv:price_product_concrete_merchant_relationship:xxx:*`
-    - `kv:product_abstract:xxx:*`
-    - `kv:product_abstract_category:xxx:*`
-    - `kv:product_abstract_option:xxx:*`
-    - `kv:product_abstract_relation:xxx:*`
-    - `kv:product_concrete_measurement_unit:xxx:*`
-    - `kv:product_concrete_product_offer_price:xxx:*`
-    - `kv:product_concrete_product_offers:xxx:*`
-    - `kv:product_label_dictionary:xxx:*`
-    - `kv:product_offer:xxx:*`
-    - `kv:product_offer_availability:xxx:*`
-- Product category details:
-    - `kv:category_node:xxx:*`
-    - `kv:category_tree:at:*`
-- CMS pages and blocks:
-    - `kv:cms_block:xxx:*`
-    - `kv:cms_page:xxx:*`
-- Merchant:
-    - `kv:merchant:xxx:*`
-    - `kv:price_product_abstract_merchant_relationship:xxx:*`
-- Adjust `kv:store_list:` and delete store name XXX values in stores.
+1. Delete the following data in Redis:
+
+  - Stock information:
+     - `kv:availability:xxx:*`
+  - Product details:
+      - `kv:price_product_abstract:xxx:*`
+      - `kv:price_product_abstract_merchant_relationship:xxx:*`
+      - `kv:price_product_concrete:xxx:*`
+      - `kv:price_product_concrete_merchant_relationship:xxx:*`
+      - `kv:product_abstract:xxx:*`
+      - `kv:product_abstract_category:xxx:*`
+      - `kv:product_abstract_option:xxx:*`
+      - `kv:product_abstract_relation:xxx:*`
+      - `kv:product_concrete_measurement_unit:xxx:*`
+      - `kv:product_concrete_product_offer_price:xxx:*`
+      - `kv:product_concrete_product_offers:xxx:*`
+      - `kv:product_label_dictionary:xxx:*`
+      - `kv:product_offer:xxx:*`
+      - `kv:product_offer_availability:xxx:*`
+  - Product category details:
+      - `kv:category_node:xxx:*`
+      - `kv:category_tree:at:*`
+  - CMS pages and blocks:
+      - `kv:cms_block:xxx:*`
+      - `kv:cms_page:xxx:*`
+  - Merchant:
+      - `kv:merchant:xxx:*`
+      - `kv:price_product_abstract_merchant_relationship:xxx:*`
+
+
+2. Adjust `kv:store_list:` and delete the store name XXX values in stores.
 ```json
 {"stores":["AT","DE","XXX"],"_timestamp":111111111111}
 ```
-- Delete key `kv:store:xxx` with value about store.
+3. Delete the `kv:store:xxx` key with the store value.
 
 
 Note: A project's custom data stored keys may also be present.

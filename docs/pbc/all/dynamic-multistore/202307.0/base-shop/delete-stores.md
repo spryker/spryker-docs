@@ -48,7 +48,7 @@ For more information about maintenance mode, see [Enable and disable maintenance
 
 2. Check the number of messaged in RabbitMQ. If there are too many, wait for them to be processed.
 
-3. Suspend P&S and the Cronjob scheduler:
+3. Suspend Publish and Sync and the Cronjob scheduler:
 
 ```bash
 vendor/bin/console scheduler:suspend
@@ -57,7 +57,12 @@ vendor/bin/console scheduler:suspend
 
 ## Cleaning data and configuration in related database tables
 
-The number of tables that use the relation with the `spy_store` table depends on the use of the functionality, and on the installed modules.
+{% info_block infoBox %}
+
+The database data to modify in this section is relevant to the default configuration. Depending on the features your project has, you may need to modify more data.
+
+{% endinfo_block %}
+
 
 The list of available tables with data that may contain a foreign key relationship:
 - `spy_price_product_store`

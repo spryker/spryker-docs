@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/202009.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/202108.0/twig-and-twigextension.html
+  - /docs/scos/dev/sdk/twig-and-twigextension.html
 related:
   - title: Code Generator
     link: docs/scos/dev/sdk/code-generator.html

@@ -5,12 +5,6 @@ last_updated: Apr 3, 2023
 template: howto-guide-template
 ---
 
-{% info_block warningBox %}
-
-Oryx is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/composable-frontend) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.
 
 ## Prerequisites

@@ -31,8 +31,6 @@ redirect_from:
   - /docs/scos/dev/sdk/202108.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/twig-and-twigextension.html
 related:
-  - title: Code Generator
-    link: docs/scos/dev/sdk/code-generator.html
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
   - title: Data export

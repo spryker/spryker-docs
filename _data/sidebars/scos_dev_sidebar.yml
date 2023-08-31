@@ -3385,8 +3385,6 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-        - title: "Oryx: Compositions"
-          url: /docs/scos/dev/front-end-development/oryx/oryx-compositions.html
         - title: Set up
           url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
         - title: Boilerplate
@@ -3442,6 +3440,14 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
             - title: Signals
               url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html
+        - title: Compositions
+          include_versions:
+            - "202307.0"
+          nested:
+            - title: Composition
+              url: /docs/scos/dev/front-end-development/oryx/compositions/oryx-composition.html
+            - title: Layout system
+              url: /docs/scos/dev/front-end-development/oryx/compositions/oryx-layout-system.html
         - title: Styling
           include_versions:
           - "202212.0"
@@ -3455,7 +3461,7 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html              
             - title: Typography
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
-
+              
     - title: Marketplace
       include_versions:
       - "202204.0"

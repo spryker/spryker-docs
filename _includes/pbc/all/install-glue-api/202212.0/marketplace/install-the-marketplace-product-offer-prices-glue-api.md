@@ -122,4 +122,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
-| Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Glue API: Marketplace Product Offer Prices + Wishlist feature integration ](//docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-wishlist-glue-api.html.html) |
+| Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Glue API: Marketplace Product Offer Prices + Wishlist feature integration ](//docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-wishlist-glue-api.html) |

@@ -32,7 +32,7 @@ The document describes the flow of making a product searchable and displayed on 
 
 There are a number of conditions that must be fulfilled to make your product searchable and shown on Yves by URL. Ensure your product meets the following conditions:
 
-* Product abstract is assigned to at least one category. For information about how to assign products to categories, see the [Category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/category/assign-products-to-categories.html) section.
+* Product abstract is assigned to at least one category. For information about how to assign products to categories, see the [Category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html) section.
 * The product abstract's status is `Active`. To learn how to manage products, including the status change, see the [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-products.html#activating-products) section.
 * Product abstract has been marked as searchable in the Back Office. For more details, see the [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html) section.
 * Product abstract has at least one product variant and the status is `Active`: an abstract product isn't displayed on Yves unless it has product variants. To learn how to create product variants, [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).

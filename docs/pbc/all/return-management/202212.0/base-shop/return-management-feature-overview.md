@@ -147,5 +147,5 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [Product Bundles + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
 | [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
 | [Product Measurement Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |  |  |
-| [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |  |  |
+| [Product Options + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |  |  |
 | [Product Packaging Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |  |  |

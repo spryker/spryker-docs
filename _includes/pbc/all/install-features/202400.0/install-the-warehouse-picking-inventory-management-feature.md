@@ -1,4 +1,4 @@
-This document describes how to integrate the Warehouse picking + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse picking + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Install the required features:
 | NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                 |
 |----------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse Picking    | {{page.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-warehouse-picking-feature.html)    |
-| Inventory Management | {{page.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-inventory-management-feature.md) |
+| Inventory Management | {{page.version}} | [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ## 1) Install the required modules using Composer
 

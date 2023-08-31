@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/docker-environment-infrastructure
   - /docs/docker-environment-infrastructure
   - /docs/en/docker-environment-infrastructure
+  - /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

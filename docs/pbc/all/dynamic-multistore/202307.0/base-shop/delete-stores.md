@@ -1,6 +1,6 @@
 ---
 title: Delete stores
-description: This document shows how to delete a store when the system is running with a dynamic store feature.
+description: This document shows how to delete a store
 past_updated: Jun 26, 2023
 template: howto-guide-template
 ---
@@ -11,31 +11,33 @@ Dynamic Multistore is part of an *Early Access Release*. This *Early Access* fea
 
 {% endinfo_block %}
 
+{% info_block infoBox %}
+
+* When taking the following steps, consider `xxx` and `XXX` as the name of the store you are deleting.
+* We recommend taking these steps in a test environment. Make sure to create a backup of the database and other storages.
+
+{% endinfo_block %}
+
 This document describes how to delete stores.
 
 ## When it might be useful
 
-Occasionally, a store created earlier becomes unnecessary. It may be a store that has been used for a brand, product, holiday, marketing promotions, or events, such as ending experiments with no production environment.
+Occasionally, a store created earlier becomes unnecessary. It may be a store that was used for a brand, product, holiday, marketing promotions, or events.
 
 On the technical side, removing a store helps with the following:
 1. By deleting redundant data, which can take a lot of space, the shop's speed is increased. The load on it for the purposes of indexing and searching is also reduced.
 2. Reducing wasted memory and your storage footprint.
 
-{% info_block warningBox "Warning" %}
+## Prerequisites
 
-We recommend taking these steps in a test environment. Make sure to create a backup of the database and other storages.
-
-{% endinfo_block %}
+[Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
 
 
 ## Back up the database
 
-Back up the store's database up and make sure it's recoverable.
-For instructions, see [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html).
+Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html).
 
-
-## Suspend P&S
-
+## Suspend Publish and Sync
 
 1. Enable the maintenance mode:
 ```bash
@@ -44,7 +46,7 @@ vendor/bin/console maintenance:enable
 
 For more information about maintenance mode, see [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
-2. Make sure there aren't too many messages showing in the RabbitMQ. Wait for the messages to be processed.
+2. Check the number of messaged in RabbitMQ. If there are too many, wait for them to be processed.
 
 3. Suspend P&S and the Cronjob scheduler:
 
@@ -102,10 +104,7 @@ With the Redis key-value storage, data is stored as keys that contain the store 
 
 {% info_block infoBox %}
 
-When taking the steps in this section, take the following into account:
-
-* The Redis data to modify in this section is relevant to the default configuration. Depending on the features your project has, you may need to modify more data.
-* `xxx` is a placeholder of the store name.
+The Redis data to modify in this section is relevant to the default configuration. Depending on the features your project has, you may need to modify more data.
 
 {% endinfo_block %}
 
@@ -148,38 +147,37 @@ When taking the steps in this section, take the following into account:
 
 Note: A project's custom data stored keys may also be present.
 
-### 5. Remove data from Search engine
+## Remove data from the search engine
 
-If you are using Elasticsearch, each configured store has its index, which is installed automatically. An indexed name consists of the following parts:
-- An optional prefix, which is defined by the SearchElasticsearchConstants::INDEX_PREFIX configuration option (for example, we use by default `spryker`).
+With Elasticsearch, each configured store has its index, which is installed automatically. An indexed name consists of the following parts:
+- An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option. For example, we use `spryker` by default.
 - A store name.
 - A configuration file name.
-Index name components are delimited with an underscore, for example:  `spryker_xxx_page`.
 
-The following indexes are available in the standard configuration (example: `xxx` -  store name):
+Index name components are delimited with an underscore—for example, `spryker_xxx_page`.
+
+The following indexes are available in the standard configuration:
 
 - `spryker_xxx_merchant`.
 - `spryker_xxx_page`.
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-### 6. Resume P&S
+## Resume P&S
 
-Follow these steps to resume normal operations:
-
-1. Restart the Cronjob scheduler through these commands:
-Run:  
+1. Restart the Cronjob scheduler:
 ```bash
 vendor/bin/console scheduler:resume
 ```
-2. Disable maintenance mode by running the following command:
-Run:
+
+2. Disable the maintenance mode:
 ```bash
 vendor/bin/console maintenance:disable
 ```
 
 
-## Checklist
+## Verify that the store is deleted
 
-1. Make sure the deleted store is not available in the admin panel in the list.
-2. Make sure that the store is not available through Yves.
+1. In the Back Office, go to **Administration** > **Stores**.
+2. Make sure the deleted store is not available.
+3. Make sure that the store is not available on the Storefront.

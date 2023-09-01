@@ -72,3 +72,30 @@ Minor releases are fully backward compatible and do not require any developer as
 ### Deprecation practices
 
 If a newer and better alternative to a feature is introduced in a minor release, the old one is deprecated. Deprecated features remain functional until the next major release, in which they are removed completely.
+
+## Feature Flag Versioning
+
+### Overview
+
+Oryx introduces Feature Flag Versioning to add new functionalities without affecting backward compatibility. This is achieved using the `ORYX_FEATURE_VERSION` environment variable.
+
+### Code Optimization
+
+Setting `ORYX_FEATURE_VERSION` optimizes your build by leveraging Dead Code Elimination (DCE). Any code unrelated to the specified version will not be included in the final bundle, making your application leaner.
+
+### Usage
+
+Use the `featureVersion` utility in your code to conditionally enable features.
+
+```typescript
+import { featureVersion } from '@spryker-oryx/utilities';
+if (featureVersion >= '1.1') { /* New feature code */ }
+```
+
+Set the `ORYX_FEATURE_VERSION` environment variable to enable specific versions.
+
+```
+ORYX_FEATURE_VERSION=1.1
+```
+
+By doing so, you can control feature rollouts while optimizing your application's performance.

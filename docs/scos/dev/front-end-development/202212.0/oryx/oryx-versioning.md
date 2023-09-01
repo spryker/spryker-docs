@@ -85,13 +85,6 @@ Setting `ORYX_FEATURE_VERSION` optimizes your build by leveraging Dead Code Elim
 
 ### Usage
 
-Use the `featureVersion` utility in your code to conditionally enable features.
-
-```typescript
-import { featureVersion } from '@spryker-oryx/utilities';
-if (featureVersion >= '1.1') { /* New feature code */ }
-```
-
 Set the `ORYX_FEATURE_VERSION` environment variable to enable specific versions.
 
 ```
@@ -99,3 +92,10 @@ ORYX_FEATURE_VERSION=1.1
 ```
 
 By doing so, you can control feature rollouts while optimizing your application's performance.
+
+You can also use `featureVersion` utility in your code or third-party libraries to conditionally enable features.
+
+```typescript
+import { featureVersion } from '@spryker-oryx/utilities';
+if (featureVersion >= '1.1') { /* New feature code */ }
+```

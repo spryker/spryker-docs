@@ -4040,7 +4040,7 @@ entries:
     - title: Processor stack - Zed API
       url: /docs/scos/dev/zed-api/zed-api-processor-stack.html
     - title: Zed API resources
-      url: /docs/scos/dev/zed-api/zed-api-processor-stack.html
+      url: /docs/scos/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
       url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html  
   - title: Code generator

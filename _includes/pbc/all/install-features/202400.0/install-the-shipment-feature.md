@@ -135,6 +135,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can send the following requests:
+
+* `GET https://glue.mysprykershop.com/shipment-types`
+* `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}`
+
+{% endinfo_block %}
+
 ### 4) Set up database schema and transfer objects
 
 1. Adjust the schema definition so entity changes trigger events.

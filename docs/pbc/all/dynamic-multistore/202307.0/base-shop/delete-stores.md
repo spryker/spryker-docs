@@ -95,7 +95,7 @@ The list of available tables with data that may contain a foreign key relationsh
 - `spy_touch_search`
 - `spy_touch_storage`
 
-Store has new configuration tables that were used for dynamic store:
+Store has new configuration tables that are used for dynamic store:
 - `spy_locale_store`
 - `spy_currency_store`
 - `spy_country_store`

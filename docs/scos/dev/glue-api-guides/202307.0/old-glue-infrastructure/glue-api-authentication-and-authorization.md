@@ -22,7 +22,7 @@ related:
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
   - title: Customer Login overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-login-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-login-overview.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions. -->

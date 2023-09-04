@@ -4029,7 +4029,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: Zed API
-    url: /docs/scos/dev/sdk/zed-api/zed-api.html
+    url: /docs/scos/dev/zed-api/zed-api.html
     nested:
     - title: Project implementation - Zed API
       url: /docs/scos/dev/zed-api/zed-api-project-implementation.html

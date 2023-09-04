@@ -1,6 +1,6 @@
 ---
-title: Install Dynamic Multistore + Avalability Notification feature
-description: Learn how to integrate the Dynamic multiple stores & Avalability Notification feature into a Spryker project.
+title: Install Dynamic Multistore + Availability Notification feature
+description: Learn how to integrate the Dynamic multiple stores & Availability Notification feature into a Spryker project.
 last_updated: Apr 25, 2023
 template: feature-integration-guide-template
 ---

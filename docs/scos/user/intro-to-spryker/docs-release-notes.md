@@ -4,6 +4,51 @@ description: Spryker docs release notes
 template: concept-topic-template
 last_updated: Aug 2, 2023
 ---
+
+## August 2023
+
+In August 2023, we have added and updated the following pages:
+
+### New pages
+
+- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Learn how to save Jenkins-related costs or speed up background jobs processing by implementing a single custom worker for all stores.
+- [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html).
+- [Security release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html).
+- [Spryker security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Learn how to check for security fixes in the Spryker modules.
+- [Open-source vulnerabilities checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Dynamic multistore docs](/docs/pbc/all/dynamic-multistore/202307.0/dynamic-multistore.html):
+    - [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
+    - [Dynamic Multistore feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html).
+    - [Dynamic Multistore + Availability Notification feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html).
+    - [Dynamic Multistore + Cart feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html).
+    - [Dynamic Multistore + CMS feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html).
+- [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-and-upgrade/install-the-customer-account-management-service-points-feature.html).
+- [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
+- [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
+- [Vertex integration guide](/docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html#integrate-acp-connector-module-for-tax-calculation).
+- [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
+- [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
+- [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
+- [Oryx: Icon system](/docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
+- [Oryx: Localization](/docs/scos/dev/front-end-development/202307.0/oryx/oryx-localization.html): Learn how localization is handled in Oryx applications.
+- [Oryx: Typography](/docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-typography.html): Learn about typography in Oryx.
+- [File manager feature integration guide](/docs/pbc/all/content-management-system/202400.0/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html).
+- [Scheduled Prices feature integration guide](/docs/pbc/all/price-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html).
+- [Product Lists feature integration guide](/docs/pbc/all/product-information-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html).
+
+
+### Updated pages
+
+- [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+- [Product Offer Shipment feature integration guide](/docs/pbc/all/offer-management/202400.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
+- [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202400.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
+- [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
+- [Shipment feature integration guide](/docs/pbc/all/carrier-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
+- [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
+- [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
+- [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
+
+
 ## July 2023
 
 In July 2023, we have added and updated the following pages:

@@ -20,7 +20,7 @@ Dynamic Multistore is currently running under an *Early Access Release*. Early A
 
 This document describes how to delete stores.
 
-## When it might be useful
+## When to delete a store
 
 Occasionally, a store created earlier becomes unnecessary. It may be a store that was used for a brand, product, holiday, marketing promotions, or events.
 
@@ -48,7 +48,7 @@ For more information about maintenance mode, see [Enable and disable maintenance
 
 2. Check the number of messaged in RabbitMQ. If there are too many, wait for them to be processed.
 
-3. Suspend Publish and Sync and the Cronjob scheduler:
+3. Suspend Publish and Sync and the cronjob scheduler:
 
 ```bash
 vendor/bin/console scheduler:suspend
@@ -184,5 +184,5 @@ vendor/bin/console maintenance:disable
 ## Verify that the store is deleted
 
 1. In the Back Office, go to **Administration** > **Stores**.
-2. Make sure the deleted store is not available.
+    Make sure the deleted store is not in the list.
 3. Make sure that the store is not available on the Storefront.

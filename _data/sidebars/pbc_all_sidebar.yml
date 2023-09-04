@@ -428,3 +428,379 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
+
+      - title: Content Management System
+        url: /docs/pbc/all/content-management-system/content-management-system.html
+        nested:
+          - title: Base shop
+            nested:
+              - title: What's changed
+                url: /docs/pbc/all/content-management-system/base-shop/whats-changed-in-cms.html
+                include_versions:
+                - "202204.0"
+              - title: CMS feature overview
+                url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-feature-overview.html
+                nested:
+                  - title: CMS Pages
+                    url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-pages-overview.html
+                  - title: CMS blocks
+                    url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-blocks-overview.html
+                  - title: CMS pages in search results
+                    url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html
+                  - title: Email as a CMS block
+                    url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
+                  - title: Templates and Slots
+                    url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/templates-and-slots-overview.html
+              - title: Content items feature overview
+                url: /docs/pbc/all/content-management-system/base-shop/content-items-feature-overview.html
+              - title: File Manager feature overview
+                url: /docs/pbc/all/content-management-system/base-shop/file-manager-feature-overview.html
+              - title: Navigation feature overview
+                url: /docs/pbc/all/content-management-system/base-shop/navigation-feature-overview.html
+              - title: Product Sets feature overview
+                url: /docs/pbc/all/content-management-system/base-shop/product-sets-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: CMS
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html
+                      - title: CMS + Catalog
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-catalog-feature.html
+                      - title: CMS + Category Management
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html
+                      - title: CMS + Dynamic Multistore
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
+                      - title: CMS + Product Lists + Catalog
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
+                      - title: Content Items
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
+                      - title: File Manager
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html
+                      - title: Navigation
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
+                      - title: Product Sets
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html
+                        include_versions:
+                          - "202212.0"
+                          - "202307.0"
+                  - title: Install Glue API
+                    nested:
+                      - title: CMS
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
+                      - title: Content Items
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html
+                      - title: Navigation
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: Cms
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html
+                      - title: CmsBlock
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+                      - title: CmsBlockCategoryConnector
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html
+                      - title: CmsBlockCategoryConnector migration script
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.html
+                      - title: CmsBlockCollector
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
+                      - title: CmsBlockGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html
+                      - title: CmsBlockStorage
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockstorage-module.html
+                      - title: CmsBlockWidget
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockwidget-module.html
+                      - title: CmsCollector
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html
+                      - title: CmsGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsgui-module.html
+                      - title: CmsPageSearch
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+                      - title: CmsStorage
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
+                      - title: Content
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html
+                      - title: ContentBanner
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html
+                      - title: ContentBannerGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html
+                      - title: ContentBannersRestApi
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannersrestapi-module.html
+                      - title: ContentFileGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentfilegui-module.html
+                      - title: ContentFileWidget
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentfilewidget-module.html
+                      - title: ContentGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentgui-module.html
+                      - title: ContentStorage
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html
+                      - title: FileManager
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html
+                      - title: FileManagerStorage
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html
+                      - title: FileManagerWidget
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html
+                      - title: Navigation
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
+                      - title: NavigationGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
+                      - title: NavigationsRestApi
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
+                      - title: ProductSetGui
+                        url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetgui-module.html
+                        include_versions:
+                        - "202204.0"
+                  - title: Category CMS blocks
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-category-cms-blocks.html
+                  - title: Product CMS blocks
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-product-cms-blocks.html
+                  - title: Content widget
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-content-widget.html
+                  - title: Multi-store CMS blocks
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-multi-store-cms-blocks.html
+                  - title: Navigation module
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-navigation-module.html
+              - title: Import and export data
+                url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-content-management-system-data.html
+                nested:
+                  - title: cms_template.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-template.csv.html
+                  - title: cms_block.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block.csv.html
+                  - title: cms_block_store.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block-store.csv.html
+                  - title: cms_block_category_position.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block-category-postion.csv.html
+                  - title: cms_block_category.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block-category.csv.html
+                  - title: content_banner.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-banner.csv.html
+                  - title: content_product_abstract_list.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-product-abstract-list.csv.html
+                  - title: content_product_set.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-product-set.csv.html
+                  - title: cms_page.csv.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-page.csv.html
+                  - title: cms_page_store.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-page-store.csv.html
+                  - title: cms_slot_template.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-slot-template.csv.html
+                  - title: cms_slot.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-slot.csv.html
+                  - title: cms_slot_block.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-slot-block.csv.html
+                  - title: mime_type.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-mime-type.csv.html
+                  - title: navigation.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-navigation.csv.html
+                  - title: navigation_node.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-navigation-node.csv.html
+                  - title: content_navigation.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-navigation.csv.html
+                  - title: product_set.csv
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-product-set.csv.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Retrieve abstract product list content items
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
+                  - title: Retrieve banner content items
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-banner-content-items.html
+                  - title: Retrieve CMS pages
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-cms-pages.html
+                  - title: Retrieve navigation trees
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                nested:
+                  - title: "Best practices: Add content to the Storefront pages using templates and slots"
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
+                  - title: Navigation
+                    nested:
+                      - title: Create navigation elements
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html
+                      - title: Create navigation nodes
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html
+                      - title: Duplicate navigation elements
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
+                      - title: Edit navigation elements
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/edit-navigation-elements.html
+                      - title: Edit navigation nodes
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html
+                      - title: Delete navigation nodes
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/delete-navigation-nodes.html
+                  - title: Content items
+                    nested:
+                      - title: Create abstract product list content items
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
+                      - title: Create banner content items
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html
+                      - title: Create file list content items
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.html
+                      - title: Create navigation content items
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html
+                      - title: Create product set content items
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html
+                      - title: Edit content items
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/content-items/edit-content-items.html
+                  - title: Blocks
+                    nested:
+                      - title: Create CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html
+                      - title: Create category CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/create-category-cms-blocks.html
+                      - title: Create email CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
+                      - title: Create product CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
+                      - title: Edit CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
+                      - title: Add content items to CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
+                      - title: Edit placeholders in CMS blocks
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
+                  - title: Pages
+                    nested:
+                      - title: Create CMS pages
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/create-cms-pages.html
+                      - title: Edit CMS pages
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
+                      - title: Add content items to CMS pages
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
+                      - title: Manage CMS page versions
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
+                      - title: Manage CMS pages
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
+                  - title: Product sets
+                    nested:
+                      - title: Create product sets
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html
+                      - title: Delete product sets
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/product-sets/delete-product-sets.html
+                      - title: Edit product sets
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html
+                      - title: Reorder product sets
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
+                      - title: View product sets
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html
+                  - title: Manage slots
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-slots.html
+                  - title: Redirects
+                    nested:
+                      - title: Create CMS redirects
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html
+                      - title: Manage CMS redirects
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/manage-cms-redirects.html
+                  - title: Manage file list
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-file-list.html
+                  - title: Manage file tree
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-file-tree.html
+                  - title: Add and edit MIME types
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
+              - title: Tutorials and HowTos
+                nested:
+                  - title: "HowTo: Create a custom content item"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-create-a-custom-content-item.html
+                  - title: "HowTo: Create a visibility condition for CMS Blocks"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
+                  - title: "HowTo: Create CMS templates"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
+                  - title: "HowTo: Define positions of category CMS blocks"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
+                  - title: "HowTo: Define the maximum size of content fields"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html
+                  - title: "HowTo: Use blocks"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-use-blocks.html
+                  - title: "Tutorial: CMS"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/tutorial-cms.html
+                  - title: "Tutorial: Content and search - personalized catalog pages"
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
+              - title: Third-party integrations
+                nested:
+                  - title: Censhare
+                    url: /docs/pbc/all/content-management-system/base-shop/third-party-integrations/censhare.html
+                  - title: Coremedia
+                    url: /docs/pbc/all/content-management-system/base-shop/third-party-integrations/coremedia.html
+                  - title: E-Spirit
+                    url: /docs/pbc/all/content-management-system/base-shop/third-party-integrations/e-spirit.html
+                  - title: Magnolia
+                    url: /docs/pbc/all/content-management-system/base-shop/third-party-integrations/magnolia.html
+                  - title: Styla
+                    url: /docs/pbc/all/content-management-system/base-shop/third-party-integrations/styla.html
+              - title: Extend and customize
+                nested:
+                  - title: "CMS extension points: reference information"
+                    url: /docs/pbc/all/content-management-system/base-shop/extend-and-customize/cms-extension-points-reference-information.html
+                  - title: "Navigation module: reference information"
+                    url: /docs/pbc/all/content-management-system/base-shop/extend-and-customize/navigation-module-reference-information.html
+              - title: Domain model and relationships
+                nested:
+                  - title: "Content item types: module relations"
+                    url: /docs/pbc/all/content-management-system/base-shop/domain-model-and-relationships/content-item-types-module-relations.html
+                  - title: "Product Sets feature: domain model and relationships"
+                    url: /docs/pbc/all/content-management-system/base-shop/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
+          - title: Marketplace
+            include_versions:
+            - "202212.0"
+            - "202307.0"
+            nested:
+              - title: "Glue API: Retrieve abstract products in abstract product lists"
+                url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
+      - title: Customer Relationship Management
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+        nested:
+          - title: Base shop
+            nested:
+              - title: Reorder feature overview
+                url: /docs/pbc/all/customer-relationship-management/base-shop/reorder-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Company Account
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html
+                      - title: Company Account + Order Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
+                      - title: Customer Access
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html
+                      - title: Customer Account Management + Agent Assist
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
+                      - title: Customer Account Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+                      - title: Customer Account Management + Dynamic Multistore
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature-dynamic-multistore.html
+                        include_versions:
+                        - "202307.0"
+                      - title: Customer Account Management + Order Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+
+                  - title: Install Glue API
+                    nested:
+                      - title: Company Account
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                      - title: Customer Account Management
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
+
+                  - title: Upgrade modules
+                    nested:
+                      - title: BusinessOnBehalfDataImport
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-businessonbehalfdataimport-module.html
+                      - title: CompanyBusinessUnit
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companybusinessunit-module.html
+                      - title: CompanyUser
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html
+                      - title: CompanyUserAuthRestApi
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuserauthrestapi-module.html
+                      - title: CompanyUsersRestApi
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyusersrestapi-module.html
+                      - title: Customer
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customer-module.html
+                      - title: CustomerPage
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
+                      - title: CustomerReorderWidget
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
+                      - title: SharedCartPage
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html

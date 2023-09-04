@@ -1,5 +1,6 @@
 ---
 title: Prepare a project for Spryker Code Upgrader
+last_updated: Sep 4, 2023
 description: Get your project ready to start using Spryker Code Upgrader
 template: concept-topic-template
 redirect_from:
@@ -14,9 +15,11 @@ The Upgrader provides automatic minor and patch updates for the current version 
 
 To ensure that your project is suitable for the requirement, update all `spryker-feature-*` packages in composer.json to version `2022.04` or higher.
 
+You can automatically check if the Spryker module versions used in your project are supported by the Spryker Code Upgrader with help of the [Minimum allowed shop version checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html) by running the [evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+
 ## Make sure your code is compliant with Upgradability Guidelines
 
-Spryker Upgradability Guidelines contain rules that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
+Spryker [Upgradability Guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) contain rules that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
 
 ## Implement E2E testing in development workflow
 
@@ -34,7 +37,7 @@ The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCO
 
 To ensure a smooth experience, please make sure that your environments meet the minimum technical requirements outlined below:
 
-* PHP 7.4+. The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
+* PHP 7.4+. The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). You can automatically check if the PHP version used in your project is supported by the Spryker Code Upgrader with help of the [PHP version checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html) by running the [evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 * Composer 2.1+
 * Git 2.24+
 

@@ -4842,7 +4842,7 @@ entries:
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines

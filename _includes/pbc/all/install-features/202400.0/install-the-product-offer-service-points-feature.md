@@ -88,9 +88,6 @@ Make sure that the following changes have been applied in transfer objects:
 |-------------------------------------------|-------|---------|---------------------------------------------------------------------------------|
 | ServicePoint                              | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                              |
 | ServicePointCollection                    | class | created | src/Generated/Shared/Transfer/ServicePointCollectionTransfer                    |
-| ServicePointCriteria                      | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                      |
-| ServicePointConditions                    | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                    |
-| ServicePointAddressesBackendApiAttributes | class | created | src/Generated/Shared/Transfer/ServicePointAddressesBackendApiAttributesTransfer |
 | StoreRelation                             | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                             |
 | Store                                     | class | created | src/Generated/Shared/Transfer/StoreTransfer                                     |
 | Sort                                      | class | created | src/Generated/Shared/Transfer/SortTransfer                                      |

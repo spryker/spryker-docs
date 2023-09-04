@@ -67,7 +67,6 @@ Make sure that the following changes have been triggered in transfer objects:
 | WarehouseUserAssignmentCollectionDeleteCriteria | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionDeleteCriteria |
 | WarehouseUserAssignmentsBackendApiAttributes    | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentsBackendApiAttributes    |
 | WarehousesBackendApiAttributes                  | class    | created    | src/Generated/Shared/Transfer/WarehousesBackendApiAttributes                  |
-| UsersBackendApiAttributes                       | class    | created    | src/Generated/Shared/Transfer/UsersBackendApiAttributes                       |
 | UserCollection                                  | class    | created    | src/Generated/Shared/Transfer/UserCollection                                  |
 | UserConditions                                  | class    | created    | src/Generated/Shared/Transfer/UserConditions                                  |
 | User.uuid                                       | property | created    | src/Generated/Shared/Transfer/User                                            |

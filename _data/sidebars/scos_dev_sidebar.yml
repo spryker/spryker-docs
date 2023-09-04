@@ -4032,15 +4032,15 @@ entries:
     url: /docs/scos/dev/sdk/zed-api/zed-api.html
     nested:
     - title: Project implementation - Zed API
-      url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
+      url: /docs/scos/dev/zed-api/zed-api-project-implementation.html
     - title: Zed API configuration
-      url: /docs/scos/dev/sdk/zed-api/zed-api-configuration.html
+      url: /docs/scos/dev/zed-api/zed-api-configuration.html
     - title: CRUD functionality - Zed API
-      url: /docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
+      url: /docs/scos/dev/zed-api/zed-api-crud-functionality.html
     - title: Processor stack - Zed API
-      url: /docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
+      url: /docs/scos/dev/zed-api/zed-api-processor-stack.html
     - title: Zed API resources
-      url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
+      url: /docs/scos/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
       url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html  
   - title: Code generator

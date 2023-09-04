@@ -48,6 +48,8 @@ In August 2023, we have added and updated the following pages:
 - [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
 - [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
 
+For more details about these and other updates to the Spryker docs in August 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
+
 
 ## July 2023
 
@@ -87,7 +89,7 @@ In July 2023, we have added and updated the following pages:
 - [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
 - [Install the Measurement Units feature](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html): The guide describes how to integrate the [Measurement Units](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/measurement-units-feature-overview.html) feature into your project.
 
-For more details about these and other updates to the Spryker docs in July 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases)
+For more details about these and other updates to the Spryker docs in July 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
 ## June 2023
 

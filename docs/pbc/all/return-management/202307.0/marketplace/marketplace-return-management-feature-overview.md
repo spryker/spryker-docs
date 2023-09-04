@@ -65,7 +65,7 @@ The following figure shows how to create a return, view its details, and print a
 
 ## Marketplace Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](/docs/pbc/all/return-management/{{page.version}}/base-shop/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide: Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). Also, a Back Office user can view returns, close fulfilled returns, print a return slip, and cancel returns.
+A Back Office user can create returns for the [returnable items](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide: Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). Also, a Back Office user can view returns, close fulfilled returns, print a return slip, and cancel returns.
 
 ## Marketplace Return Management in the Merchant Portal
 

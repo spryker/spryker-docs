@@ -1,5 +1,5 @@
 ---
-title: Data export
+title: Exporting data
 description: This document shows how to export data from a Spryker shop to an external system
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -10,9 +10,13 @@ redirect_from:
   - /2021080/docs/en/exporting-data
   - /docs/exporting-data
   - /docs/en/exporting-data
+  - /docs/scos/dev/data-import/202307.0/data-export.html
+  - /docs/scos/dev/sdk/data-export.html
 related:
   - title: Sales Data Export feature integration
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
+    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+  - title: Data export orders .csv files format
+    link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
 ---
 
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.
@@ -31,7 +35,7 @@ Out of the box, Spryker supports only CSV as a format for exporting files.
 
 To export the order data, follow these steps:
 
-1. Make sure you have the [Sales Data Export feature installed](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html) for your project.
+1. Make sure you have the [Sales Data Export feature installed](/docs/scos/dev/feature-integration-guides/{{page.version}}/sales-data-export-feature-integration.html) for your project.
 2. Specify necessary configurations in the YML export configuration file residing in `./data/export/config/`. For details about the YML export configuration file structure and configuration options, see [.yml Export configuration file](#yml-export-configuration-file).
 3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
 
@@ -110,6 +114,8 @@ When running the command for data export with this file, `console data:export --
 * `orders_AT.csv`
 * `orders_DE.csv`
 
+For details about the content of each of the files, see [Data Export Orders CSV Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html).
+
 ### Setting the filter criteria in a YML file
 
 You can set the following filter criteria for the order data export in your YML export configuration file:
@@ -119,7 +125,7 @@ You can set the following filter criteria for the order data export in your YML 
 
 #### Defining the stores for order data export
 
-To define the stores you want to export the order data for, specify them in `destination` for the specific data entities.
+To define the stores you want to export the order data for, specify them in `destination` for the specific data entities. 
 
 {% info_block warningBox "Warning" %}
 
@@ -153,11 +159,11 @@ actions:
           <<: *default_filter_criteria
           store_name: [AT]
   ```
-
+  
 
 {% endinfo_block %}
 
-#### Defining the Date and Time Range for Order Data Export
+#### Defining the Ddte and time range for order data export
 
 The default date and time range filter criteria—for example, the order creation dates filter applied to all `data_entity` items by default—is specified in the `defaults` section:
 

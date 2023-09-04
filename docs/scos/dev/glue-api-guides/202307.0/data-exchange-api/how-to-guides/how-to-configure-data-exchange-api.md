@@ -3,14 +3,13 @@ title: How to configure Data Exchange API endpoints.
 description: This guide shows how to configure the Data Exchange API endpoints.
 last_updated: June 23, 2023
 template: howto-guide-template
-redirect_from: 
+redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
-This guide shows how to configure the Data Exchange API endpoints.
+This guide shows how to configure the Data Exchange API endpoints by executing SQL queries.
 
-In order to incorporate a new endpoint for interacting with entities in the database, 
-it is necessary to add a corresponding row to the `spy_dynamic_entity_configuration` table. 
+To incorporate a new endpoint for interacting with entities in the database, it is necessary to add a corresponding row to the `spy_dynamic_entity_configuration` table.
 
 The `spy_dynamic_entity_configuration` table represents the configuration for dynamic entity endpoints in the system. It has the following columns:
 
@@ -21,19 +20,12 @@ The `spy_dynamic_entity_configuration` table represents the configuration for dy
 | table_name | The name of the corresponding table in the database to operate on. |
 | is_active | Indicates whether the endpoint is enabled or disabled. |
 | definition | A JSON-formatted string containing the configuration details for each field in the table. |
-| created_at | Represents the date and time when the configuration was created. |
-| updated_at | Represents the date and time when the configuration was last updated. |
-
-{% info_block infoBox %}
-
-Currently, the process entails manually executing SQL queries as there is no existing user interface (UI) feature in Spryker for it. 
-However, future releases are expected to introduce an UI solution for adding new rows to the `spy_dynamic_entity_configuration` table.
-
-{% endinfo_block %}
+| created_at | Date and time when the configuration was created. |
+| updated_at | Date and time when the configuration was last updated. |
 
 Let's dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
 
-Below is an example snippet illustrating the structure of a possible definition value based on `spy_country` table:
+The following example shows the structure of a possible definition value based on the `spy_country` table:
 
 ```json
 {
@@ -49,10 +41,10 @@ Below is an example snippet illustrating the structure of a possible definition 
         "isRequired": false
       }
     },
-    { 
+    {
       "fieldName": "iso2_code",
       "fieldVisibleName": "iso2_code",
-      "type": "string", 
+      "type": "string",
       "isEditable": true,
       "isCreatable": true,
       "validation": {
@@ -65,14 +57,14 @@ Below is an example snippet illustrating the structure of a possible definition 
 }
 ```
 
-And now, let's delve into the meaning of each field within the snippet. Here's a breakdown of the purpose of each field:
+The following table describes the purpose of each field:
 
 | FIELD | SPECIFICATION |
 | --- | --- |
 | identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique ID for each record. |
-| fields | An array containing the descriptions of the columns from the table. It allows customization of which columns are included for interaction. By specifying the desired columns in the "fields" array, the API will only expose and operate on those specific columns. Any columns not included in the array will be inaccessible through API requests. |
-| fieldName | The actual name of the column in the database table. |
-| fieldVisibleName | The name used for interacting with the field through API requests. It provides a more user-friendly and descriptive name compared to the physical column name. |
+| fields | An array containing the descriptions of the columns from the table. It defines the columns that are included for interaction. The API exposes and operates on the included columns. Columns that are not included in the array are inaccessible through API requests. |
+| fieldName | The name of the column in the database table. |
+| fieldVisibleName | The name used for interacting with the field through API requests. It's a more user-friendly and descriptive name compared to the physical column name. |
 | type | The data type of the field. It specifies the expected data format for the field, enabling proper validation and handling of values during API interactions. |
 | isEditable | A flag indicating whether the field can be modified. When set to "true," the field is editable, allowing updates to its value. |
 | isCreatable | A flag indicating whether the field can be set. If set to "true," the field can be included in requests to provide an initial value during record creation. |
@@ -89,9 +81,9 @@ It is recommended to set `isEditable` and `isCreatable` to `false` for fields th
 
 {% info_block infoBox %}
 
-When configuring the definition for the field responsible for the numerable values, keep in mind that an integer data type is a non-decimal number 
-between -2147483648 and 2147483647 in 32-bit systems, and between -9223372036854775808 and 9223372036854775807 in 64-bit systems. 
-However, if there is a need to use values outside this range or if the person providing the configuration anticipates 
+When configuring the definition for the field responsible for the numerable values, keep in mind that an integer data type is a non-decimal number
+between -2147483648 and 2147483647 in 32-bit systems, and between -9223372036854775808 and 9223372036854775807 in 64-bit systems.
+However, if there is a need to use values outside this range or if the person providing the configuration anticipates
 larger values, the field can be set as a string type instead.
 
 {% endinfo_block %}
@@ -114,7 +106,7 @@ Then you need to select a configurable table in the form below. In our case it i
 
 {% info_block infoBox %}
 
-Note, that you can only select tables that are not excluded from configuring. 
+Note, that you can only select tables that are not excluded from configuring.
 In order to exclude a table from configuring follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html).
 
 {% endinfo_block %}

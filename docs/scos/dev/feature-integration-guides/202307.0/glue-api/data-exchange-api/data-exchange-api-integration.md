@@ -1,22 +1,16 @@
 ---
-title: Data Exchange API integration
-description: Integrate the Data Exchange API into a Spryker project.
+title: Install Data Exchange API
+description: Learn how to install Data Exchange API
 last_updated: June 22, 2023
 template: feature-integration-guide-template
-redirect_from: 
+redirect_from:
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/data-exchange-api/data-exchange-api-integration.html
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
 ---
 
-This document describes how to integrate the Data Exchange API into a Spryker project.
+This document describes how to install Data Exchange API.
 
----
-
-The Data Exchange API is a powerful tool that allows seamless interaction with your database.
-
-You can easily access your data by sending requests to the API endpoint. 
-
-It enables you to retrieve, create, update, and manage data in a flexible and efficient manner.
+Data Exchange API is a powerful tool that enables seamless interaction with your database. You can easily access your data by sending requests to the API endpoint. It lets you retrieve, create, update, and manage data in a flexible and efficient manner.
 
 ## Install feature core
 
@@ -31,9 +25,9 @@ To start feature integration, install the necessary features:
 | Glue Backend Api Application | {{page.version}} | [Glue API - Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html) |
 | Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-authentication-integration.html) |
 
-### Install the required modules using Composer
+### Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/dynamic-entity-backend-api:"^0.1.0" spryker/dynamic-entity-gui:"^0.1.0" --update-with-dependencies
@@ -53,7 +47,7 @@ Make sure that the following modules have been installed:
 
 ### Set up the configuration
 
-1. Move the following commands into `setup-glue` section after `demodata` step:
+1. Move the following commands into `setup-glue` section after the `demodata` step:
 
 **config/install/docker.yml**
 
@@ -66,8 +60,7 @@ setup-glue:
         command: 'vendor/bin/glue api:generate:documentation'
 ```
 
-2. By default, requests are sent to `/dynamic-entity/{entity-alias}`. 
-   Adjust `DynamicEntityBackendApiConfig` in order to replace `dynamic-entity` part with another one:
+2. By default, requests are sent to `/dynamic-entity/{entity-alias}`. To replace the `dynamic-entity` part of the endpoint, adjust `DynamicEntityBackendApiConfig`:
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
 
@@ -95,8 +88,8 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-3. The Data Exchange API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
-   Logging is enabled by default. Adjust `DynamicEntityBackendApiConfig` in order to disable this option or change the path for the log file.
+3. Optional: Data Exchange API provides a logging mechanism to capture important information about requests and any thrown exceptions.
+   Logging is enabled by default. To disable logging or change the path of the log file, adjust `DynamicEntityBackendApiConfig`:
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
 
@@ -137,10 +130,10 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-4. The Data Exchange API comes with an exclusion list of database schemas that are not allowed to be configured. 
+4. The Data Exchange API comes with an exclusion list of database schemas that are not allowed to be configured.
    Notably, the `spy_dynamic_entity_configuration` schema is excluded by default.
    Adjust `DynamicEntityGuiConfig` in order to exclude database schemas from configuring:
-   
+
 **src/Pyz/Zed/DynamicEntityGui/DynamicEntityGuiConfig.php**
 
 ```php
@@ -192,7 +185,7 @@ Ensure the following transfers have been created:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| ApiApplicationSchemaContext | class | created | src/Generated/Shared/Transfer/ApiApplicationSchemaContextTransfer.php | 
+| ApiApplicationSchemaContext | class | created | src/Generated/Shared/Transfer/ApiApplicationSchemaContextTransfer.php |
 | CriteriaRangeFilter | class | created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer.php |
 | DocumentationInvalidationVoterRequest | class | created | src/Generated/Shared/Transfer/DocumentationInvalidationVoterRequestTransfer.php |
 | DynamicApiDefinition | class | created | src/Generated/Shared/Transfer/DynamicApiDefinitionTransfer.php |
@@ -312,7 +305,7 @@ Add Dynamic Exchange API section to `navigation.xml`:
 Run the following console command to update navigation cache:
 
 ```bash
-console navigation:build-cache 
+console navigation:build-cache
 ```
 
 {% endinfo_block %}
@@ -386,7 +379,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
      * @var string
      */
     protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';	    
-    
+
     /**
      * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection	     
      *	     
@@ -396,7 +389,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     {	    
         $contextExpanderCollection->addExpander(new DynamicEntityApiSchemaContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
     }
-    
+
     /**
      * @return array<\Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\DocumentationInvalidationVoterPluginInterface>
      */
@@ -415,10 +408,10 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 Note, that `DocumentationGeneratorApiDependencyProvider::getInvalidationVoterPlugins()` stack contains plugins that are used to invalidate the documentation cache.
 If the documentation cache is not invalidated, the documentation will not be updated.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ```bash
-console navigation:build-cache 
+console navigation:build-cache
 ```
 
 {% endinfo_block %}
@@ -512,5 +505,3 @@ Make sure that you've set up the configuration:
 2. Make sure that `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` was generated and contains the corresponding endpoint with correct configurations.
 
 {% endinfo_block %}
-
-

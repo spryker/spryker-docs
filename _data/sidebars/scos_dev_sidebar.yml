@@ -3006,6 +3006,7 @@ entries:
     - "202005.0"
     - "202009.0"
     - "202108.0"
+    - "202307.0"
     - "202204.0"
     nested:
     - title: Exporting data
@@ -3023,6 +3024,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202307.0"
       - "202204.0"
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html
@@ -3401,6 +3403,8 @@ entries:
           url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
         - title: Presets
           url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
+        - title: Localization
+          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html          
         - title: Supported browsers
           url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
         - title: Dependency injection
@@ -4020,40 +4024,29 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
     - title: Symfony 6
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-6.html
+    - title: Twig and TwigExtension
+      url: /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
-  - title: SDK
-    url: /docs/scos/dev/sdk/sdk.html
+  - title: Zed API
+    url: /docs/scos/dev/zed-api/zed-api.html
     nested:
-    - title: Development Virtual Machine, Docker Containers & Console
-      url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
-    - title: Zed API
-      url: /docs/scos/dev/sdk/zed-api/zed-api.html
-      nested:
-      - title: Project implementation - Zed API
-        url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
-      - title: Zed API configuration
-        url: /docs/scos/dev/sdk/zed-api/zed-api-configuration.html
-      - title: CRUD functionality - Zed API
-        url: /docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
-      - title: Processor stack - Zed API
-        url: /docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
-      - title: Zed API resources
-        url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
-      - title: Zed API (BETA)
-        url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
-    - title: Cronjob scheduling
-      url: /docs/scos/dev/sdk/cronjob-scheduling.html
-    - title: Importer
-      url: /docs/scos/dev/sdk/data-import.html
-    - title: Twig and TwigExtension
-      url: /docs/scos/dev/sdk/twig-and-twigextension.html
-    - title: Code generator
-      url: /docs/scos/dev/sdk/code-generator.html
-      include_versions:
-      - "201811.0"
-    - title: Data export
-      url: /docs/scos/dev/sdk/data-export.html
+    - title: Project implementation - Zed API
+      url: /docs/scos/dev/zed-api/zed-api-project-implementation.html
+    - title: Zed API configuration
+      url: /docs/scos/dev/zed-api/zed-api-configuration.html
+    - title: CRUD functionality - Zed API
+      url: /docs/scos/dev/zed-api/zed-api-crud-functionality.html
+    - title: Processor stack - Zed API
+      url: /docs/scos/dev/zed-api/zed-api-processor-stack.html
+    - title: Zed API resources
+      url: /docs/scos/dev/zed-api/zed-api-resources.html
+    - title: Zed API (BETA)
+      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html  
+  - title: Code generator
+    url: /docs/scos/dev/sdk/code-generator.html
+    include_versions:
+    - "201811.0"
   - title: Tutorials and HowTos
     url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     nested:
@@ -4849,7 +4842,7 @@ entries:
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines

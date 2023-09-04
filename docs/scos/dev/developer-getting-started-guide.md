@@ -50,7 +50,7 @@ redirect_from:
   - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
 ---
 
-This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
+This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access the Spryker community at [CommerceQuest](https://commercequest.space/).
 
 ## 1. Install Spryker
 

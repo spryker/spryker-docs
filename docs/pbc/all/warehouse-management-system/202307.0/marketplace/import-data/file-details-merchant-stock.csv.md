@@ -24,8 +24,6 @@ This document describes the `merchant_stock.csv` file to configure [merchant sto
 - [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
 
 
->>>>>>>> master:docs/pbc/all/merchant-management/202307.0/marketplace/import-data/file-details-merchant-stock.csv.md
-
 ## Import file parameters
 
 

@@ -25,6 +25,12 @@ redirect_from:
   - /spryker-middleware.htm
 ---
 
+{% info_block warningBox "Warning" %}
+
+Spryker Middleware has been discontinued and is no longer supported.
+
+{% endinfo_block %}
+
 ## Overview
 
 Spryker Middleware is a constructor that lets you set up a linear data processing flow, also referred to as a pipeline, to import and export data from some system to a shop or from the shop to some system. For example, it can be used for importing products to a shop or exporting orders from a shop.

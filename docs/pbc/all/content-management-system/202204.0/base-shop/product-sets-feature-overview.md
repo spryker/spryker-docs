@@ -50,8 +50,8 @@ The feature has the following functional constraints which are going to be resol
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/product-sets-feature-overview.html) |
-| [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
-| [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
+| [Create product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html) |
+| [Manage product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html) |
 
 
 ## Related Developer documents

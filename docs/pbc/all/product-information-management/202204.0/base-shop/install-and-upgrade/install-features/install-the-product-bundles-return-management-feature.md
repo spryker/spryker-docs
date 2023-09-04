@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/product-bundles-return-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/product-bundles-return-management-feature-integration.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-product-bundles-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-bundles-return-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-bundles-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-bundles-return-management-feature.md -->

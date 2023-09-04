@@ -3,7 +3,14 @@ title: Zed API
 description: This section lists documents inside the Zed API section.
 last_updated: Apr 26, 2023
 template: concept-topic-template
+redirect_from: 
+    - /docs/scos/dev/sdk/zed-api/zed-api-beta.html
 ---
+{% info_block warningBox "Warning" %}
+
+Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-api.html#new-type-of-application-glue-backend-api-application).
+
+{% endinfo_block %}
 
 Explore the flexible REST API offered by the Spryker OS for Zed and the basic functionality of mapping REST actions to the backend persistence layer. Learn how to configure the API and explore the Zed API processor stack and the project implementation process for activating API and API bundles. Also, expand your knowledge about Zed API resources to leverage their capabilities effectively.
 

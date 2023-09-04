@@ -1342,3 +1342,451 @@ entries:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
       - title: Miscallaneous
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Permissions
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-permissions-feature.html
+                  - title: Queue Data Import
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
+                  - title: Spryker Core
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Spryker Core
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+                  - title: REST Schema Validation
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Quote
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
+                  - title: Transfer
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
+          - title: Spryker Core feature overview
+            url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
+            nested:
+              - title: "HowTo: Add support for number formatting in the Storefront"
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.html
+              - title: How translations are managed
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/how-translations-are-managed.html
+              - title: URL redirects overview
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/url-redirects-overview.html
+              - title: Vault for Tokens overview
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/vault-for-tokens-overview.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Add translations
+                url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
+              - title: Edit translations
+                url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
+          - title: Retrieve store configuration using Glue API
+            url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+          - title: Third-party integrations
+            nested:
+              - title: Customer service
+                nested:
+                  - title: Dixa
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/dixa.html
+                  - title: Live Chat Service
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/live-chat-service.html
+                  - title: optimise-it
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/optimise-it.html
+                  - title: iAdvize
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/customer-service/iadvize.html
+              - title: Marketing and conversion
+                nested:
+                - title: Customer communication
+                  nested:
+                  - title: Episerver
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver.html
+                  - title: Dotdigital
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/dotdigital.html
+                - title: AB testing and performance
+                  nested:
+                  - title: AB Tasty
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
+                  - title: Baqend
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/ab-testing-and-performance/baqend.html
+                - title: Customer retention and loyalty
+                  nested:
+                  - title: Zenloop
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html
+                  - title: Namogoo
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html
+                  - title: Trustpilot
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html
+                - title: Analytics
+                  nested:
+                  - title: FACT-Finder
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html
+                    nested:
+                      - title: Installing and configuring FACT-Finder NG API
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+                      - title: Installing and configuring FACT-Finder
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+                      - title: Installing and configuring FACT-Finder web components
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+                      - title: Exporting product data for FACT-Finder
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+                      - title: Using FACT-Finder campaigns
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+                      - title: Using FACT-Finder search
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+                      - title: Using FACT-Finder search suggestions
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+                      - title: Using FACT-Finder tracking
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+                      - title: Integrating FACT-Finder
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+                      - title: Using FACT-Finder recommendation engine
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+                  - title: Minubo
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo.html
+                  - title: ChannelPilot Analytics
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/channelpilot-analytics.html
+                  - title: Haensel AMS
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/haensel-ams.html
+                  - title: Mindlab
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
+              - title: Operational tools, monitoring, legal
+                nested:
+                - title: PlusServer
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/plusserver.html
+                - title: common solutions
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/common-solutions.html
+                - title: VSHN
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/vshn.html
+                - title: Tideways
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/tideways.html
+                - title: Shopmacher
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/shopmacher.html
+                - title: Loggly
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly.html
+                - title: Proclane
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
+                - title: Data Virtuality
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
+                - title: Usercentrics
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/usercentrics.html
+                - title: New Relic
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+                - title: Mindcurv
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
+      - title: Offer Management
+        url: /docs/pbc/all/offer-management/offer-management.html
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+        nested:
+          - title: Base shop
+            nested:
+              - title: Upgrade modules
+                nested:
+                  - title: Upgrade the OfferGui module
+                    url: /docs/pbc/all/offer-management/base-shop/upgrade-modules/upgrade-the-offergui-module.html
+                  - title: Upgrade the Offer module
+                    url: /docs/pbc/all/offer-management/base-shop/upgrade-modules/upgrade-the-offer-module.html
+          - title: Marketplace
+            nested:
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Merchant Portal Product Offer Management feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Merchant Portal Product Offer Management - Merchant Portal
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
+                      - title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management - Merchant Portal
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-merchant-portal-feature.html
+                      - title: Marketplace Product Offer + Cart feature
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html
+                      - title: Marketplace Product Offer + Checkout
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-checkout-feature.html
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html
+                      - title: Marketplace Product Offer + Marketplace Product
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-marketplace-product-feature.html
+                      - title: Marketplace Product Offer + Quick Add to Cart
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Marketplace Product Offer
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html
+                      - title: Marketplace Product Offer + Cart
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-cart-glue-api.html
+                      - title: Marketplace Product Offer + Wishlist
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-wishlist-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: MerchantProductOfferDataImport
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-merchantproductofferdataimport-module.html
+                      - title: MerchantProductOffersRestApi
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-merchantproductoffersrestapi-module.html
+                      - title: MerchantProductOfferStorage
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-merchantproductofferstorage-module.html
+                      - title: ProductMerchantPortalGui
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-productmerchantportalgui-module.html
+                      - title: ProductOfferPricesRestApi
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/upgrade-modules/upgrade-the-productofferpricesrestapi-module.html
+              - title: Import data
+                url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-offer-management-data.html
+                nested:
+                  - title: "combined_merchant_product_offer.csv"
+                    url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html
+                  - title: "merchant_product_offer_store.csv"
+                    url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-merchant-product-offer-store.csv.html
+                  - title: "merchant_product_offer.csv"
+                    url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html
+                  - title: "product_offer_validity.csv"
+                    url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-product-offer-validity.csv.html
+              - title: Manage merchant product offers in the Back Office
+                url: /docs/pbc/all/offer-management/marketplace/manage-merchant-product-offers.html
+              - title: Manage product offers in the Merchant Portal
+                url: /docs/pbc/all/offer-management/marketplace/manage-product-offers.html
+              - title: Retrieve product offers using Glue API
+                url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
+              - title: Render merchant product offers on the Storefront
+                url: /docs/pbc/all/offer-management/marketplace/render-merchant-product-offers-on-the-storefront.html
+              - title: "Marketplace Product Offer feature: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: Marketplace Product Offer feature overview
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
+              - title: "Marketplace Merchant Portal Product Offer Management feature: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html
+              - title: "Product Offer validity dates: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-validity-dates.html
+              - title: "Product Offer in the Back Office: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-in-the-back-office.html
+              - title: "Product Offer storage: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-storage.html
+              - title: "Product Offer store relation: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-store-relation.html
+              - title: "Marketplace Product Offer feature: Domain model and relationships"
+                url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/marketplace-product-offer-feature-domain-model-and-relationships.html
+      - title: Order Management System
+        url: /docs/pbc/all/order-management-system/order-management-system.html
+        nested:
+          - title: Base shop
+            nested:
+              - title: Order Management feature overview
+                url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-management-feature-overview.html
+                nested:
+                  - title: Invoice generation
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/invoice-generation-overview.html
+                  - title: Order cancellation
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.html
+                  - title: Splittable order items
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/splittable-order-items-overview.html
+                  - title: Split delivery
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/split-delivery-overview.html
+                  - title: OMS (Order management system) matrix
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html
+                  - title: Custom order reference
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
+              - title: Reclamations feature overview
+                url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
+              - title: Refunds feature overview
+                url: /docs/pbc/all/order-management-system/base-shop/refunds-feature-overview.html
+              - title: Import and export data
+                url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-and-export-order-management-system-data.html
+                nested:
+                  - title: "Import file details: order-status.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-file-details-order-status.csv.html
+                  - title: "Export file details: orders.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-orders.csv.html
+                  - title: "Export file details: order-expenses.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
+                  - title: "Export file details: order-items.csv"
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Order Management
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
+                      - title: Reclamations
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
+                      - title: Quick Add to Cart + Non-splittable Products
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+                      - title: Splittable Order Items
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
+                      - title: Sales Data Export
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Checkout
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+                      - title: Order Management
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
+                      - title: Shipment
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: ManualOrderEntryGui
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html
+                      - title: OMS
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html
+                      - title: OrdersRestApi
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
+                      - title: Refund
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
+                      - title: Sales
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
+                      - title: SalesQuantity
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html
+                      - title: SalesSplit
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html
+                  - title: Split delivery migration concept
+                    url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/split-delivery-migration-concept.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                nested:
+                  - title: Orders
+                    nested:
+                      - title: Change the state of order items
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html
+                      - title: Commente orders
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/comment-orders.html
+                      - title: Create returns
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/create-returns.html
+                      - title: Create shipments
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/create-shipments.html
+                      - title: Edit billing addresses in orders
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
+                      - title: Add and remove custom order references
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html
+                      - title: Edit shipments
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/edit-shipments.html
+                      - title: View returns of an order
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
+                  - title: Reclamations
+                    nested:
+                      - title: Create reclamations
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html
+                      - title: Changing the state of order items in reclamations
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
+                      - title: View reclamations
+                        url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/reclamations/view-reclamations.html
+                  - title: View refunds
+                    url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/view-refunds.html
+                  - title: View the order matrix
+                    url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/view-the-order-matrix.html
+              - title: "Glue API: Retrieve orders"
+                url: /docs/pbc/all/order-management-system/base-shop/glue-api-retrieve-orders.html
+              - title: Domain model and relationsips
+                nested:
+                  - title: "Custom Order Reference: module relations"
+                    url: /docs/pbc/all/order-management-system/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html
+                  - title: "Order Management feature: Domain model and relationships"
+                    url: /docs/pbc/all/order-management-system/base-shop/domain-model-and-relationships/order-management-feature-domain-model-and-relationships.html
+                  - title: "Sales module: reference information"
+                    url: /docs/pbc/all/order-management-system/base-shop/domain-model-and-relationships/sales-module-reference-information.html
+              - title: DataPayload Conversion
+                nested:
+                - title: Refund process management
+                  url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/refund-process-management.html
+                - title: State machine
+                  url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+                  nested:
+                  - title: State machine console commands
+                    url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
+                  - title: Order management system multi-thread
+                    url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+                  - title: Common pitfalls in OMS design
+                    url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+                  - title: Multi-language setup
+                    url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/multi-language-setup.html
+                  - title: Step engine
+                    nested:
+                    - title: Create a breadcrumb navigation
+                      url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
+                    - title: Use case scenario
+                      url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
+                    - title: Workflow overview
+                      url: /docs/pbc/all/order-management-system/base-shop/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+              - title: State machine cookbook
+                url: /docs/pbc/all/order-management-system/base-shop/state-machine-cookbook/state-machine-cookbook.html
+                nested:
+                - title: State machine fundamentals
+                  url: /docs/pbc/all/order-management-system/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+                - title: Build a state machine
+                  url: /docs/pbc/all/order-management-system/base-shop/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
+              - title: Disable split delivery on the Storefront
+                url: /docs/pbc/all/order-management-system/base-shop/disable-split-delivery-on-the-storefront.html
+              - title: Email invoices using BCC
+                url: /docs/pbc/all/order-management-system/base-shop/email-invoices-using-bcc.html
+              - title: Third-party integrations
+                nested:
+                  - title: CollectAI
+                    url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/collectai.html
+                  - title: NEKOM CC GmbH
+                    url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/nekom-cc-gmbh.html
+                  - title: Tradebyte
+                    url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/tradebyte.html
+                  - title: Nitrobox
+                    url: /docs/pbc/all/order-management-system/base-shop/third-party-integrations/nitrobox.html
+              - title: Process incoming HTTP requests from external ERP services for order updates
+                url: /docs/pbc/all/order-management-system/base-shop/process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
+              - title: Display custom names for order item states on the Storefront
+                url: /docs/pbc/all/order-management-system/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html
+          - title: Marketplace
+            nested:
+              - title: Marketplace Order Management feature overview
+                url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+                nested:
+                  - title: Marketplace Order overview
+                    url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
+                  - title: Merchant Order overview
+                    url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+                  - title: Marketplace and merchant state machines overview
+                    url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+                    nested:
+                      - title: Marketplace and merchant state machines interaction
+                        url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+              - title: Install features
+                nested:
+                  - title: Marketplace Order Management
+                    url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-feature.html
+                  - title: Marketplace Order Management + Merchant Portal
+                    url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-merchant-portal-feature.html
+                  - title: Marketplace Order Management + Order Threshold
+                    url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
+              - title: Import and export data
+                url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/marketplace-import-and-export-order-management-system-data.html
+                nested:
+                  - title: "Import file details: merchant_oms_process.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html
+                  - title: "Import file details: merchant-order-status.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html
+                  - title: "Export file details: merchant_orders.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-orders.csv.html
+                  - title: "Export file details: merchant_orders-expenses.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-order-expenses.csv.html
+                  - title: "Export file details: merchant_orders-items.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-order-items.csv.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Manage main merchant orders
+                    url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+                  - title: Manage marketplace orders
+                    url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
+              - title: Manage merchant orders in the Merchant Portal
+                url: /docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.html
+              - title: "Glue API: Retrieve Marketplace orders"
+                url: /docs/pbc/all/order-management-system/marketplace/glue-api-retrieve-marketplace-orders.html
+              - title: Merchant OMS
+                url: /docs/pbc/all/order-management-system/marketplace/merchant-oms.html
+              - title: Create MerchantOms flows
+                url: /docs/pbc/all/order-management-system/marketplace/create-merchant-oms-flows.html
+              - title: Domain model and relationships
+                url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-domain-model-and-relationships.html

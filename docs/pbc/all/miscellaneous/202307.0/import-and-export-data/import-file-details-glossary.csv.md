@@ -1,5 +1,5 @@
 ---
-title: File details - glossary.csv
+title: "Import file details: glossary.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv

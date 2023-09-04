@@ -2423,8 +2423,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
-        - "202307.0"
         nested:
         - title: File details - payment_method.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html
@@ -2476,8 +2474,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
-          - "202307.0"
         - title: File details - shipment.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html
           include_versions:
@@ -3404,7 +3400,7 @@ entries:
         - title: Presets
           url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
         - title: Localization
-          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html          
+          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html
         - title: Supported browsers
           url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
         - title: Dependency injection
@@ -3452,7 +3448,7 @@ entries:
             - title: Design tokens
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
             - title: Icon system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html              
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html
             - title: Typography
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
 
@@ -4042,7 +4038,7 @@ entries:
     - title: Zed API resources
       url: /docs/scos/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
-      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html  
+      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
   - title: Code generator
     url: /docs/scos/dev/sdk/code-generator.html
     include_versions:

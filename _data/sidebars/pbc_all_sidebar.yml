@@ -1355,6 +1355,10 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+              - title: Import and export data
+                nested:
+                  - title: "Import file details: glossary.csv"
+                    url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
               - title: Install Glue API
                 nested:
                   - title: Spryker Core
@@ -3496,7 +3500,7 @@ entries:
                       - title: Segment scope
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
               - title: "Persistence ACL feature: Domain model and relationships"
-                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html                                                                                   
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

@@ -77,7 +77,11 @@ If a newer and better alternative to a feature is introduced in a minor release,
 
 ### Overview
 
-Oryx introduces Feature Flag Versioning to add new functionalities without affecting backward compatibility. This allows you to use new features before they are released in the next major version. This requires an explicit opt-in, using the `ORYX_FEATURE_VERSION` environment variable.
+Feature Flag Versioning in Oryx enables us to roll out new functionalities such as alterations in page structure, additional component options, and more, while ensuring backward compatibility. The feature versioning is directly aligned with major and minor releases, allowing for a balanced blend of innovation and stability.
+
+### ORYX_FEATURE_VERSION
+
+Utilize the `ORYX_FEATURE_VERSION` environment variable to opt into new functionalities or to lock and maintain compatibility with existing setups.
 
 ### Code Optimization
 

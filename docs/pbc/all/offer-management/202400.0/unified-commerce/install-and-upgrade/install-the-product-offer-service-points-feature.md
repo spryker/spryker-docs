@@ -1,7 +1,7 @@
 ---
 title: Install the Product Offer + Service Points feature
 description: Learn how to integrate the Product Offer + Service Points feature into your project
-last_updated: July 04, 2023
+last_updated: Sep 04, 2023
 template: feature-integration-guide-template
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Dynamic Data API integration
 description: Integrate the Dynamic Data API into a Spryker project.
-last_updated: June 22, 2023
+last_updated: Aug 21, 2023
 template: feature-integration-guide-template
 redirect_from: 
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
@@ -136,6 +136,109 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
+### Configure Dynamic Data installation
+
+1. Optional: To install default configuration data, create a configuration file:
+
+<details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
+
+```json
+[
+  {
+      "tableName": "spy_country",
+      "tableAlias": "countries",
+      "isActive": true,
+      "definition": {
+        "identifier": "id_country",
+        "fields": [
+          {
+            "fieldName": "id_country",
+            "fieldVisibleName": "id_country",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "integer",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "iso2_code",
+            "fieldVisibleName": "iso2_code",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": true }
+          },
+          {
+            "fieldName": "iso3_code",
+            "fieldVisibleName": "iso3_code",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "name",
+            "fieldVisibleName": "name",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "postal_code_mandatory",
+            "fieldVisibleName": "postal_code_mandatory",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "postal_code_regex",
+            "fieldVisibleName": "postal_code_regex",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          }
+        ]
+      }
+    }
+]
+```
+</details>
+
+2. Add file path to `DynamicEntityConfig`:
+
+**src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\DynamicEntity;
+
+use Spryker\Zed\DynamicEntity\DynamicEntityConfig as SprykerDynamicEntityConfig;
+
+class DynamicEntityConfig extends SprykerDynamicEntityConfig
+{
+    /**
+     * @var string
+     */
+    protected const CONFIGURATION_FILE_PATH = '%s/src/Pyz/Zed/DynamicEntity/data/installer/configuration.json';
+
+    /**
+     * @return string
+     */
+    public function getInstallerConfigurationDataFilePath(): string
+    {
+        return sprintf(static::CONFIGURATION_FILE_PATH, APPLICATION_ROOT_DIR);
+    }
+}
+```
+
 ### Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
@@ -217,7 +320,7 @@ dynamic_entity.validation.missing_identifier,"Unvollständige Anforderung - fehl
 
 {% info_block infoBox "Info" %}
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -227,7 +330,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data in the database has been added to the `spy_glossary` table.
+Ensure the configured data in the database has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -242,9 +345,9 @@ Enable the following behaviors by registering the plugins:
 | DynamicEntityOpenApiSchemaFormatterPlugin | Formats dynamic entities of the Open API 3 schema: info, components, paths, tags. | Spryker\Glue\DynamicEntityBackendApi\Plugin\DocumentationGeneratorOpenApi |
 | DynamicEntityRouteProviderPlugin | Adds routes for the provided dynamic entity to the RouteCollection. | Spryker\Glue\DynamicEntityBackendApi\Plugin |
 | DynamicEntityProtectedPathCollectionExpanderPlugin | Expands a list of protected endpoints with dynamic entity endpoints. | Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
+| DynamicEntityInstallerPlugin | Installs Dynamic Entity data. | Spryker\Zed\DynamicEntity\Communication\Plugin\Installer |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Glue/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -272,10 +375,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php</summary>
+**src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php**
 
 ```php
 <?php
@@ -304,10 +405,8 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
+**src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php**
 
 ```php
 <?php
@@ -330,10 +429,8 @@ class DocumentationGeneratorOpenApiDependencyProvider extends SprykerDocumentati
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -356,7 +453,41 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }	    
 }
 ```
-</details>
+
+
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Installer;
+
+use Spryker\Zed\DynamicEntity\Communication\Plugin\Installer\DynamicEntityInstallerPlugin;
+use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
+
+class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface|\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
+     */
+    public function getInstallerPlugins(): array
+    {	    
+        return [
+            new DynamicEntityInstallerPlugin(),
+        ];
+    }	    
+}
+```
+
+{% info_block warningBox %}
+
+When `DynamicEntityInstallerPlugin` is enabled, run the following command:
+
+```bash
+console setup:init-db
+```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

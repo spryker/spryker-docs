@@ -5,11 +5,7 @@ last_updated: May 24, 2023
 template: concept-topic-template
 ---
 
-{% info_block warningBox %}
 
-Oryx is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html) required to configure and initialize the application.
 
@@ -89,7 +85,7 @@ export const loginPage = {
 };
 ```
 
-To better understand the data structure, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
+To better understand the data structure, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
 
 By utilizing the static experience data provided in Oryx presets, you can easily set up the overall structure and layout of your application, including common sections like the header and footer, without having to write the code from scratch.
 

@@ -4033,7 +4033,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: Zed API
-    url: /docs/scos/dev/sdk/zed-api/zed-api.html
+    url: /docs/scos/dev/zed-api/zed-api.html
     nested:
     - title: Project implementation - Zed API
       url: /docs/scos/dev/zed-api/zed-api-project-implementation.html
@@ -4846,7 +4846,7 @@ entries:
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines

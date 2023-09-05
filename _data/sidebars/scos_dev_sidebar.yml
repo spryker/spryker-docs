@@ -2320,8 +2320,6 @@ entries:
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
-    - title: Migration Guide - API Module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-api.html
     - title: Migration guide - Auth module to SecurityGui module
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
     - title: Migration Guide - Business On Behalf Data Import

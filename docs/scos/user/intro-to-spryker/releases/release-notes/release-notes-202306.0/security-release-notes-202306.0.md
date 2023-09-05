@@ -174,23 +174,6 @@ console transfer:generate
 8. Add configuration to `config/Shared/config_default.php`:
 
 ```php
-use Spryker\Shared\SecurityBlockerBackoffice\SecurityBlockerBackofficeConstants;
-use Spryker\Shared\SecurityBlockerStorefrontAgent\SecurityBlockerStorefrontAgentConstants;
-use Spryker\Shared\SecurityBlockerStorefrontCustomer\SecurityBlockerStorefrontCustomerConstants;
-
-// >>> Redis Security Blocker
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PERSISTENT_CONNECTION] = true;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_SCHEME] = 'tcp://';
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_HOST] = '127.0.0.1';
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PORT] = 6379;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PASSWORD] = false;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
-
-// >>> Security Blocker Default
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL] = 600;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR] = 300;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS] = 10;
-
 // >>> Security Blocker Storefront Agent
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL] = 900;
@@ -210,8 +193,6 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 9. Add translations to `data/import/common/common/glossary.csv`:
 
 ```csv
-security_blocker_page.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
-security_blocker_page.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
@@ -260,10 +241,15 @@ namespace Pyz\Zed\ErrorHandler;
 use Spryker\Zed\ErrorHandler\ErrorHandlerConfig as SprykerErrorHandlerConfigAlias;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * @method \Spryker\Shared\ErrorHandler\ErrorHandlerConfig getSharedConfig()
+ */
 class ErrorHandlerConfig extends SprykerErrorHandlerConfigAlias
 {
     /**
-     * @return list<int>
+     * @api
+     *
+     * @return array<int>
      */
     public function getValidSubRequestExceptionStatusCodes(): array
     {
@@ -280,31 +266,18 @@ class ErrorHandlerConfig extends SprykerErrorHandlerConfigAlias
 13. Register plugins in `src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
 ```php
-<?php
-
-namespace Pyz\Yves\EventDispatcher;
-
-use Spryker\Yves\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
-use SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher\SecurityBlockerAgentEventDispatcherPlugin;
-use SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher\SecurityBlockerCustomerEventDispatcherPlugin;
-
-class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider 
 {
-    /**
-     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
-     */
+...
     protected function getEventDispatcherPlugins(): array
     {
         return [
-            new SecurityBlockerCustomerEventDispatcherPlugin(),
-            new SecurityBlockerAgentEventDispatcherPlugin(),
+            ...
+            new SecurityBlockerBackofficeUserEventDispatcherPlugin(),
         ];
     }
-}
-
+...
 ```
-
-14. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
 If Merchant Portal is also installed, follow these steps:
 
@@ -327,56 +300,31 @@ composer show spryker/security-blocker-merchant-portal-gui # Verify the version
 ```bash
 console transfer:generate
 ```
-4. Add configuration to `config/Shared/config_default.php`:
+4. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
 ```php
-// >>> Security Blocker MerchantPortal user
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
-```
-
-5. Add translations to `data/import/common/common/glossary.csv`:
-
-```csv
-security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
-security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
-```
-
-6. Import glossary:
-
-```bash
-console data:import:glossary
-```
-
-7. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
-
-```php
-<?php
-
-namespace Pyz\Zed\EventDispatcher;
-
-use Spryker\Zed\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
-use Spryker\Zed\SecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher\SecurityBlockerMerchantPortalUserEventDispatcherPlugin;
-
-class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider 
 {
-    /**
-     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
-     */
+...
     protected function getEventDispatcherPlugins(): array
     {
         return [
+            ...
             new SecurityBlockerMerchantPortalUserEventDispatcherPlugin(),
         ];
     }
-}
+...
 ```
 
-8. Register plugins in `SecurityBlockerDependencyProvider`:
+5. Register plugins in `SecurityBlockerDependencyProvider`:
 
 ```php
 <?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
 
 namespace Pyz\Client\SecurityBlocker;
 
@@ -391,10 +339,33 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
     protected function getSecurityBlockerConfigurationSettingsExpanderPlugins(): array
     {
         return [
+            ...
             new MerchantPortalUserSecurityBlockerConfigurationSettingsExpanderPlugin(),
         ];
     }
 }
+```
+
+6. Add configuration to `config/Shared/config_default.php`:
+
+```bash
+// >>> Security Blocker MerchantPortal user
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+```
+
+7. Add translations to `data/import/common/common/glossary.csv` : 
+
+```csv
+security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+```
+
+8. Import glossary:
+
+```bash
+console data:import:glossary
 ```
 
 ## Weak input validation for the customer address field

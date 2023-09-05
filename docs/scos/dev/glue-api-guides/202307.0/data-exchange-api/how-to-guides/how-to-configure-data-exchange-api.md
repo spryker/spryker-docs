@@ -1,5 +1,5 @@
 ---
-title: How to configure Data Exchange API endpoints.
+title: Configure Data Exchange API endpoints
 description: This guide shows how to configure the Data Exchange API endpoints.
 last_updated: June 23, 2023
 template: howto-guide-template
@@ -8,6 +8,8 @@ redirect_from:
 ---
 
 This document describes how to configure the Data Exchange API endpoints by executing SQL queries.
+
+## Configuration of Data Exchange API endpoints
 
 To create an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table.
 
@@ -73,34 +75,32 @@ The following table describes the purpose of each field:
 | maxLength/minLength | Defines the minimum/maximum length allowed for the field with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
 | max/min | Defines the minimum/maximum value allowed for the field with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
 
-{% info_block infoBox %}
-
-We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
-
-{% endinfo_block %}
 
 {% info_block infoBox %}
 
-When configuring the definition for the field responsible for the numerable values, keep in mind that an integer data type is a non-decimal number
-between -2147483648 and 2147483647 in 32-bit systems, and between -9223372036854775808 and 9223372036854775807 in 64-bit systems.
-However, if there is a need to use values outside this range or if the person providing the configuration anticipates
-larger values, the field can be set as a string type instead.
+* We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
+
+* For the fields with numerable values, an integer data type is a non-decimal number between -2147483648 and 2147483647 in 32-bit systems and, in 64-bit systems, between -9223372036854775808 and 9223372036854775807. If you need or anticipate values outside of this range, you can set the value as a string type.
+
+* The Data Exchange API supports the following types for the configured fields:
+  * boolean
+  * integer
+  * string
+  * decimal
 
 {% endinfo_block %}
 
-{% info_block infoBox %}
+## Create Data Exchange API endpoints
 
-So far the Data Exchange API supports the following types for the configured fields: boolean, integer, string and decimal.
+In this example, we are creating the `/dynamic-data/country` endpoint to operate with data in the `spy_country` table. When following the steps, adjust the data per your requirements:
 
-{% endinfo_block %}
 
-Let's say you want to have a new endpoint `/dynamic-data/country` to operate with data in `spy_country` table in database.
-
-In order to configure the endpoint, you need to go to Data Exchange API section in Backoffice and click on "Create Data Exchange API configuration" button.
+1. In the Back Office, go to **Data Exchange API Configuration**.
+2. On the **Data Exchange API Configuration** page, click **Create Data Exchange API configuration**.
 
 [PASTE SCREENSHOT HERE]
 
-Then you need to select a configurable table in the form below. In our case it is `spy_country`:
+3. Then you need to select a configurable table in the form below. In our case it is `spy_country`:
 
 [PASTE SCREENSHOT HERE]
 

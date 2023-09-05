@@ -13,7 +13,7 @@ Oryx provides standard pages, like home, login, or search page, in [application 
 
 Pages in Oryx are represented as [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and layout of pages without hardcoding them in the code. This [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) makes your components more reusable and less tied to specific pages.
 
-Oryx leverages a data-driven approach for creating pages, letting you configure the composition and content of pages using external data sources. For the advantages and technical details, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
+Oryx leverages a data-driven approach for creating pages, letting you configure the composition and content of pages using external data sources. For the advantages and technical details, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
 
 ## Creating pages with page components
 
@@ -60,7 +60,7 @@ In this example, the `route` field is set to `/cart`, so the page is rendered wh
 
 {% info_block infoBox "Routing" %}
 
-Changing the route of a page content is not changing the related route. To change a route, you need to configure the [routing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-routing.html).
+Changing the route of a page content is not changing the related route. To change a route, you need to configure the [routing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-routing.html).
 
 {% endinfo_block %}
 

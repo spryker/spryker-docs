@@ -3385,26 +3385,28 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-        - title: "Oryx: Compositions"
-          url: /docs/scos/dev/front-end-development/oryx/oryx-compositions.html
         - title: Set up
           url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
         - title: Boilerplate
           url: /docs/scos/dev/front-end-development/oryx/oryx-boilerplate.html
         - title: Feature sets
           url: /docs/scos/dev/front-end-development/oryx/oryx-feature-sets.html
-        - title: Packages
-          url: /docs/scos/dev/front-end-development/oryx/oryx-packages.html
-        - title: Routing
-          url: /docs/scos/dev/front-end-development/oryx/oryx-routing.html
-        - title: Server-side rendering
-          url: /docs/scos/dev/front-end-development/oryx/oryx-server-side-rendering.html
-        - title: Versioning
-          url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
         - title: Presets
           url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
+        - title: Packages
+          url: /docs/scos/dev/front-end-development/oryx/oryx-packages.html
+        - title: Versioning
+          url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
+        - title: "Pages"
+          url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-pages.html
+        - title: "Compositions"
+          url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-compositions.html
+        - title: Routing
+          url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
+        - title: Server-side rendering
+          url: /docs/scos/dev/front-end-development/oryx/oryx-server-side-rendering.html
         - title: Localization
-          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html          
+          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html
         - title: Supported browsers
           url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
         - title: Dependency injection
@@ -3452,7 +3454,7 @@ entries:
             - title: Design tokens
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
             - title: Icon system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html              
+              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html
             - title: Typography
               url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
 
@@ -4029,7 +4031,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: Zed API
-    url: /docs/scos/dev/sdk/zed-api/zed-api.html
+    url: /docs/scos/dev/zed-api/zed-api.html
     nested:
     - title: Project implementation - Zed API
       url: /docs/scos/dev/zed-api/zed-api-project-implementation.html
@@ -4842,7 +4844,7 @@ entries:
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
     - title: Performance guidelines

@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/cronjob-scheduling-guide-201907
   - /v3/docs/cronjob-scheduling-guide
   - /v3/docs/en/cronjob-scheduling-guide
+  - /docs/scos/dev/sdk/cronjob-scheduling.html
 related:
   - title: Create a custom scheduler
     link: docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html

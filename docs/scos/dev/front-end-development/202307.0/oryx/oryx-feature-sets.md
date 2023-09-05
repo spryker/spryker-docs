@@ -85,7 +85,7 @@ export const loginPage = {
 };
 ```
 
-To better understand the data structure, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-compositions.html).
+To better understand the data structure, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
 
 By utilizing the static experience data provided in Oryx presets, you can easily set up the overall structure and layout of your application, including common sections like the header and footer, without having to write the code from scratch.
 

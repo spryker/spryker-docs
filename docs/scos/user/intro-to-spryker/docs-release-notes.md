@@ -162,7 +162,7 @@ In May 2023, we have added and updated the following pages:
     - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
     - [Oryx: Feature sets](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-feature-sets.html): Learn what the feature sets in Oryx are all about.
     - [Oryx: Packages](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
-    - [Oryx: Routing](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-routing.html): Lear how to set up the Oryx routing.
+    - [Oryx: Routing](/docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-routing.html): Lear how to set up the Oryx routing.
     - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
     - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-supported-browsers.html): Learn what browsers Oryx supports.
     - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.

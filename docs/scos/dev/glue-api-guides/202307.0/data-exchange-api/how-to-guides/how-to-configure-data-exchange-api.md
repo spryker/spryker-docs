@@ -71,11 +71,11 @@ The following table describes the purpose of each field:
 | validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria. |
 | required | Defines if the field must be provided in API requests. |
 | maxLength/minLength | Defines the minimum/maximum length allowed for the field with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
-| max/min | An optional validation attribute that specifies the minimum/maximum value allowed for the field defined with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
+| max/min | Defines the minimum/maximum value allowed for the field with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
 
 {% info_block infoBox %}
 
-It is recommended to set `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
+We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
 
 {% endinfo_block %}
 

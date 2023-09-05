@@ -2324,14 +2324,10 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
     - title: Migration Guide - Business On Behalf Data Import
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
-    - title: Migration Guide - Collector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - ConfigurableBundle
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
     - title: Migration Guide - ConfigurableBundleStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
-    - title: Migration Guide - Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-console.html
     - title: Migration Guide - Customer
       url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
     - title: Migration Guide - CustomerPage

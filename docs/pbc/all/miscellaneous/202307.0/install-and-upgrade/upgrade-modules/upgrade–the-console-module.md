@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Console
+title: Upgrade the Console module
 description: Use the guide to update versions to the newer ones of the Console module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-console.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-console.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-console.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-console.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-console-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-console-module.md -->

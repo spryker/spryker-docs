@@ -7,15 +7,15 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
-This guide shows how to configure the Data Exchange API endpoints by executing SQL queries.
+This document describes how to configure the Data Exchange API endpoints by executing SQL queries.
 
-To incorporate a new endpoint for interacting with entities in the database, it is necessary to add a corresponding row to the `spy_dynamic_entity_configuration` table.
+To create an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table.
 
-The `spy_dynamic_entity_configuration` table represents the configuration for dynamic entity endpoints in the system. It has the following columns:
+The `spy_dynamic_entity_configuration` table contains the configuration of dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION |
 | --- | --- |
-| id_dynamic_entity_configuration | The unique ID for the configuration. |
+| id_dynamic_entity_configuration | The unique ID of the configuration. |
 | table_alias | An alias used in the request URL to refer to the endpoint. |
 | table_name | The name of the corresponding table in the database to operate on. |
 | is_active | Indicates whether the endpoint is enabled or disabled. |
@@ -23,7 +23,7 @@ The `spy_dynamic_entity_configuration` table represents the configuration for dy
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was last updated. |
 
-Let's dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
+Dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
 
 The following example shows the structure of a possible definition value based on the `spy_country` table:
 

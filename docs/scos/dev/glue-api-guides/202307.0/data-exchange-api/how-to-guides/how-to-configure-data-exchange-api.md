@@ -66,11 +66,11 @@ The following table describes the purpose of each field:
 | fieldName | The name of the column in the database table. |
 | fieldVisibleName | The name used for interacting with the field through API requests. It's a more user-friendly and descriptive name compared to the physical column name. |
 | type | The data type of the field. It specifies the expected data format for the field, enabling proper validation and handling of values during API interactions. |
-| isEditable | A flag indicating whether the field can be modified. When set to "true," the field is editable, allowing updates to its value. |
-| isCreatable | A flag indicating whether the field can be set. If set to "true," the field can be included in requests to provide an initial value during record creation. |
+| isEditable | Defines if the field's value can be changed. |
+| isCreatable | Defines if the field can be included in requests to provide an initial value during record creation. |
 | validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria. |
-| required | A validation attribute that determines whether the field is required or optional. When set to "true," the field must be provided in API requests. |
-| maxLength/minLength | An optional validation attribute that specifies the minimum/maximum length allowed for the field defined with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
+| required | Defines if the field must be provided in API requests. |
+| maxLength/minLength | Defines the minimum/maximum length allowed for the field with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
 | max/min | An optional validation attribute that specifies the minimum/maximum value allowed for the field defined with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
 
 {% info_block infoBox %}

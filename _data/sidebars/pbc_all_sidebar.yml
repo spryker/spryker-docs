@@ -1346,7 +1346,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
-      - title: Miscallaneous
+      - title: Miscellaneous
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -1367,10 +1367,18 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-api-module.html
                   - title: Collector
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
+                  - title: Flysystem
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-flysystem-module.html
+                  - title: Monitoring
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade–the-monitoring-module.html
                   - title: Console
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html
                   - title: Quote
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
+                  - title: RabbitMQ
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-rabbitmq-module.html
+                  - title: Setup
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-setup-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
               - title: Import and export data

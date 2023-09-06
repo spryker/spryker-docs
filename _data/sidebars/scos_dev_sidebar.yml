@@ -2369,7 +2369,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Commerce setup
         url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/commerce-setup.html

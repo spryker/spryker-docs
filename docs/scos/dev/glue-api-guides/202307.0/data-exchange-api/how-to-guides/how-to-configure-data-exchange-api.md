@@ -130,3 +130,20 @@ If everything is set up correctly, you can follow [How to send request in Data E
 Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
 
 {% endinfo_block %}
+
+## Download Data Exchange API specification
+
+You can download the specification of the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download Data Exchange API specification** on the **Data Exchange API Configuration** page.
+
+[PASTE SCREENSHOT HERE]
+
+After you click the button, the specification will be downloaded to your computer.
+
+If you added new endpoints, documentation will be updated automatically with the new endpoints, but need wait 1 minute for it. You can see  message about it in the top of the page:
+
+[PASTE SCREENSHOT HERE]
+
+So. please wait 1 minute and refresh the page. After that you will see new endpoints in the documentation.
+Also if for some reason file not exists, you will see the message about it:
+
+[PASTE SCREENSHOT HERE]

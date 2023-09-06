@@ -9,17 +9,14 @@ redirect_from:
 
 This guide shows how to send a request in Data Exchange API.
 
-{% info_block infoBox %}
+## Prerequisites
 
-Ensure the Data Exchange API is integrated (follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html))
-and configured (follow [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html))
-as described in the guides.
-
-{% endinfo_block %}
+* [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html)
+* [Configure the Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html)
 
 Let's say you have an endpoint `/dynamic-data/country` to operate with data in `spy_country` table in database.
 
-The Data Exchange API is a non-resource-based API and routes directly to a controller all specified endpoints.
+The Data Exchange API is a non-resource-based API and routes all specified endpoints directly to a controller.
 
 By default, all routes within the Data Exchange API are protected to ensure data security.
 To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
@@ -36,12 +33,12 @@ grant_type=password&username={username}&password={password}
 
 ### Sending a `GET` request
 
-To retrieve a collection of countries, a `GET` request should be sent to the `/dynamic-entity/country` endpoint. 
+To retrieve a collection of countries, a `GET` request should be sent to the `/dynamic-entity/country` endpoint.
 This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
 
-The response body will contain all the columns from the `spy_country` table that have been configured in the `spy_dynamic_entity_definition.definition`. 
+The response body will contain all the columns from the `spy_country` table that have been configured in the `spy_dynamic_entity_definition.definition`.
 Each column will be represented using the `fieldVisibleName` as the key, providing a comprehensive view of the table's data in the API response.
-   
+
 Pagination allows for efficient data retrieval by specifying the desired range of results.
 To implement pagination, include the desired page limit and offset in the request:
 
@@ -210,9 +207,9 @@ The response payload includes all the specified fields from the request body, al
 
 {% info_block infoBox %}
 
-Note that all fields included in the request payload are marked as `isCreatable: true` in the configuration. 
-Therefore, the API will create a new record with all the provided fields. 
-However, if any of the provided fields are configured as `isCreatable: false` it will result in an error. 
+Note that all fields included in the request payload are marked as `isCreatable: true` in the configuration.
+Therefore, the API will create a new record with all the provided fields.
+However, if any of the provided fields are configured as `isCreatable: false` it will result in an error.
 
 Let's configure `isCreatable: false` for `iso3_code` and send the same request.
 You will receive the following error response because a non-creatable field `iso3_code` is provided:
@@ -233,9 +230,9 @@ You will receive the following error response because a non-creatable field `iso
 
 It is important to consider that certain database-specific configurations may result in issues independent of entity configurations.
 
-For instance, in the case of MariaDB, it is not possible to set the ID value for an auto-incremented field. 
-Additionally, for the `iso2_code` field in the `spy_country` table, it must have a unique value. 
-Therefore, before creating a new record, it is necessary to verify that you do not pass a duplicated value for this field. 
+For instance, in the case of MariaDB, it is not possible to set the ID value for an auto-incremented field.
+Additionally, for the `iso2_code` field in the `spy_country` table, it must have a unique value.
+Therefore, before creating a new record, it is necessary to verify that you do not pass a duplicated value for this field.
 Otherwise, you will receive the following response:
 
 ```json
@@ -248,7 +245,7 @@ Otherwise, you will receive the following response:
 ]
 ```
 
-This response is caused by a caught Propel exception, specifically an integrity constraint violation `(Integrity constraint violation: 1062 Duplicate entry 'WA' for key 'spy_country-iso2_code')`. 
+This response is caused by a caught Propel exception, specifically an integrity constraint violation `(Integrity constraint violation: 1062 Duplicate entry 'WA' for key 'spy_country-iso2_code')`.
 
 {% endinfo_block %}
 
@@ -368,7 +365,7 @@ If `id_country` is not found you will get the following response:
 
 {% info_block infoBox %}
 
-Similarly to the `POST` request, it is important to consider database-specific configurations when sending a `PATCH` request. 
+Similarly to the `POST` request, it is important to consider database-specific configurations when sending a `PATCH` request.
 
 {% endinfo_block %}
 
@@ -467,9 +464,9 @@ Bellow you can find a list of error codes that you can receive when sending `GET
 | 1302 | Failed to persist the data. Please verify the provided data and try again. | The data could not be persisted in the database. Please verify the provided data entities and try again. |
 | 1303 | The entity could not be found in the database. | The requested entity could not be found in the database for retrieval or update. |
 | 1304 | Modification of immutable field `field` is prohibited. | The field is prohibited from being modified. Please check the configuration for this field.  |
-| 1305 | Invalid data type for field: `field` |  The specified field has an incorrect type. Please check the configuration for this field and correct the value. | 
+| 1305 | Invalid data type for field: `field` |  The specified field has an incorrect type. Please check the configuration for this field and correct the value. |
 | 1306 | Invalid data value for field: `field`, row number: `row`. Field rules: `validation rules`. | The error indicates a data row and a field that does not comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`. |
 | 1307 | The required field must not be empty. Field: `field` | The specified field is required according to the configuration. The field was not provided. Please check the data you are sending and try again. |
-| 1308 | Entity not found by identifier, and new identifier can not be persisted. Please update the request. | The entity could not be found using the provided identifier, and a new identifier cannot be persisted. Please update your request accordingly or check configuration for identifier field. | 
+| 1308 | Entity not found by identifier, and new identifier can not be persisted. Please update the request. | The entity could not be found using the provided identifier, and a new identifier cannot be persisted. Please update your request accordingly or check configuration for identifier field. |
 | 1309 | Failed to persist the data. Please verify the provided data and try again. Entry is duplicated. | Failed to persist the data. Please verify the provided data and try again. This error may occur if a record with the same information already exists in the database. |
 | 1310 | Incomplete Request - missing identifier. | The request is incomplete. The identifier is missing. Please check the request and try again. |

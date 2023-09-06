@@ -133,7 +133,7 @@ Or if you're in the middle of the integration process for the Data Exchange API 
 
 ## Download Data Exchange API specification
 
-You can download the specification of the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download Data Exchange API specification** on the **Data Exchange API Configuration** page.
+You can download the specification of for all available endpoints including the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download Data Exchange API specification** on the **Data Exchange API Configuration** page.
 
 [PASTE SCREENSHOT HERE]
 
@@ -143,7 +143,12 @@ If you added new endpoints, documentation will be updated automatically with the
 
 [PASTE SCREENSHOT HERE]
 
-So. please wait 1 minute and refresh the page. After that you will see new endpoints in the documentation.
-Also if for some reason file not exists, you will see the message about it:
+***Also if for some reason file not exists, you will see the message about it***
 
 [PASTE SCREENSHOT HERE]
+
+Please regenerate specification in this case manually or add new endpoints for Data Exchange API.
+
+```bash 
+ vendor/bin/glue api:generate:documentation
+```

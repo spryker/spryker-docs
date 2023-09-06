@@ -119,7 +119,7 @@ defaults:
     scope:
       path: "docs/datex/all"
     values:
-      sidebar: "datex_all_sidebar.yml"
+      sidebar: "datex_all_sidebar"
       role: "all"
   -
      scope:

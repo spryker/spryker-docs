@@ -15,11 +15,11 @@ Before you can integrate the Algolia app, make sure that your project is ACP-ena
 
 The Algolia app requires the following Spryker modules:
 
-* `spryker/catalog: "^5.8.0"`
+* `spryker/catalog: "^5.9.0"`
 * `spryker/catalog-extension: "^1.0.0"`
-* `spryker/catalog-price-product-connector: "^1.4.0"`
+* `spryker/catalog-price-product-connector: "^1.6.0"`
 * `spryker/category: "^5.11.0"`
-* `spryker/category-storage: "^2.5.0"`
+* `spryker/category-storage: "^2.8.0"`
 * `spryker/message-broker-aws: "^1.3.1"`
 * `spryker/price-product: "^4.40.0"`
 * `spryker/product: "^6.37.0"`
@@ -30,8 +30,9 @@ The Algolia app requires the following Spryker modules:
 * `spryker/product-label "^3.8.0"`
 * `spryker/product-label-storage "^2.6.0"`
 * `spryker/product-review: "^2.9.0"`
-* `spryker/search: "^8.19.3"`
-* `spryker/search-http: "^0.3.4"`
+* `spryker/search: "^8.21.1"`
+* `spryker/search-http: "^0.3.5"`
+* `spryker/search-extension: "^1.3.0"`
 * `spryker/store: "^1.22.0"`
 * `spryker/merchant-product-offer: "^1.5.0"` (Marketplace only)
 * `spryker/merchant-product-offer-data-import: "^1.1.0"` (Marketplace only)
@@ -39,6 +40,10 @@ The Algolia app requires the following Spryker modules:
 * `spryker/price-product-offer-data-import: "^0.7.1"` (Marketplace only)
 * `spryker/product-offer: "^1.4.0"` (Marketplace only)
 
+If you are relying on `spryker-shop` modules for your frontend, you will also need the following modules in addition to the above:
+
+* `spryker-shop/catalog-page: "^1.25.2"`
+* `spryker-shop/product-widget: "^1.4.0"`
 
 ## Integrate Algolia
 

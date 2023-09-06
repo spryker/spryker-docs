@@ -4,8 +4,8 @@ description: Integrate the Data Exchange API into a Spryker project.
 last_updated: Aug 21, 2023
 template: feature-integration-guide-template
 redirect_from: 
-    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
-    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
 ---
 
 This document describes how to integrate the Data Exchange API into a Spryker project.
@@ -491,6 +491,6 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html)
+If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
 
 {% endinfo_block %}

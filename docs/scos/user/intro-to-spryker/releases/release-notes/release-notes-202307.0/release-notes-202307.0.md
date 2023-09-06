@@ -30,7 +30,7 @@ Trace your request execution flow to find bottlenecks and optimize your code. Th
 Make sure your code is compliant and simple to upgrade with Spryker Code Upgrader. This tool allows your team to evaluate your project code and highlight potential issues. Fixing these issues simplifies your upgrading experience.
 
 * [Detecting dead code](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Reducing dead code is important for maintenance and upgrade because otherwise, your teams invest time in maintaining the code that is not used.
-* [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html#resolving-the-error): We let you know about known vulnerabilities in third-party packages so that your team keeps them up-to-date.
+* [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): We let you know about known vulnerabilities in third-party packages so that your team keeps them up-to-date.
 * [Minimal version check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Spryker Code Upgrader is available for customers from SCOS version 2022.04.
 * [PHP versions check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): We verify that you use the same version of PHP in composer.json, deploy*.yml, and your runtime to maintain consistency and prevent possible incompatibilities when installing dependencies. For instance, if you are using PHP 8.1 during development or upgrades, but your production system is running on PHP 7.4. Additionally, we check for the minimal PHP version, which is PHP 7.4. Keep in mind that the minimal version will be upgraded to 8.0 in the future, as 7.4 has reached its end of life.
 
@@ -293,7 +293,7 @@ Pipeline Success Dashboard example:
 
 ### [Core Commerce] Upgraded Angular to v15 and Node.js to v18 <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging of these versions' latest features and improvements.
+To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging of these versions' latest features and improvements. No infrastructure changes are required on your end before performing the upgrade.
 
 #### Documentation
 

@@ -2,6 +2,8 @@
 title: Spryker security checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
+     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
 ---
 
 Security Update Checker is a tool that checks if security fixes exist for Spryker modules that are present in your project.
@@ -39,6 +41,4 @@ Your `composer.lock` file contains package versions that have security issues:
 ````
 
 ### Resolving the error
-
-To resolve the error:
-1. Upgrade the package to a version where the vulnerability issue is fixed.
+To resolve the error, upgrade the package to a version where the vulnerability issue is fixed.

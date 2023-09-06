@@ -22,7 +22,7 @@ The Algolia app requires the following Spryker modules:
 * `spryker/category-storage: "^2.5.0"`
 * `spryker/message-broker-aws: "^1.3.1"`
 * `spryker/price-product: "^4.40.0"`
-* `spryker/product: "^6.32.0"`
+* `spryker/product: "^6.37.0"`
 * `spryker/product-approval: "^1.1.0"` (Optional)
 * `spryker/product-category: "^4.19.0"`
 * `spryker/product-extension: "^1.5.0"`
@@ -31,8 +31,8 @@ The Algolia app requires the following Spryker modules:
 * `spryker/product-label-storage "^2.6.0"`
 * `spryker/product-review: "^2.9.0"`
 * `spryker/search: "^8.19.3"`
-* `spryker/search-http: "^1.0.0"`
-* `spryker/store: "^1.17.0"`
+* `spryker/search-http: "^0.3.4"`
+* `spryker/store: "^1.22.0"`
 * `spryker/merchant-product-offer: "^1.5.0"` (Marketplace only)
 * `spryker/merchant-product-offer-data-import: "^1.1.0"` (Marketplace only)
 * `spryker/merchant-product-offer-search: "^1.4.0"` (Marketplace only)

@@ -4,12 +4,12 @@ description: This guide shows how to configure the Data Exchange API endpoints.
 last_updated: Aug 21, 2023
 template: howto-guide-template
 redirect_from: 
-  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html
+  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
 This guide shows how to configure the Data Exchange API endpoints.
 
-To incorporate a new endpoint for interacting with entities in the database, add a corresponding row to the `spy_dynamic_entity_configuration` table or create a configuration file and install configuration data. For details, see the [Configure Data Exchange installation](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html#configure-dynamic-data-installation).
+To incorporate a new endpoint for interacting with entities in the database, add a corresponding row to the `spy_dynamic_entity_configuration` table or create a configuration file and install configuration data. For details, see the [Configure Data Exchange installation](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html#configure-data-exchange-installation).
 
 The `spy_dynamic_entity_configuration` table represents the configuration for dynamic entity endpoints in the system. It has the following columns:
 
@@ -113,7 +113,7 @@ COMMIT;
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html) to proceed with it.
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
 
 {% endinfo_block %}

@@ -63,26 +63,33 @@ use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
-    ProductExportedTransfer::class => 'product',
-    ProductCreatedTransfer::class => 'product',
-    ProductUpdatedTransfer::class => 'product',
-    ProductDeletedTransfer::class => 'product',
-    InitializeProductExportTransfer::class => 'product',
-    SearchEndpointAvailableTransfer::class => 'search',
-    SearchEndpointRemovedTransfer::class => 'search',
+    ProductExportedTransfer::class => 'product-events',
+    ProductCreatedTransfer::class => 'product-events',
+    ProductUpdatedTransfer::class => 'product-events',
+    ProductDeletedTransfer::class => 'product-events',
+    InitializeProductExportTransfer::class => 'product-commands',
+    SearchEndpointAvailableTransfer::class => 'search-commands',
+    SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
+$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
+    //...
+    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-events' => 'http',
+];
+
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...
-    'product' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
-    'product' => 'http',
+    'product-events' => 'http',
 ];
+
 ```
 
 ### 2. Configure modules and dependencies
@@ -148,7 +155,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
      */
     protected function createCatalogSearchQueryPluginVariants(): array
     {
-       return [
+        return [
             new SearchHttpQueryPlugin(),
         ];
     }
@@ -214,7 +221,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new BasicSearchHttpQueryExpanderPlugin(),
                 new ProductPriceSearchHttpQueryExpanderPlugin(),
-                new MerchantReferenceSearchHttpQueryExpanderPlugin(),
                 new FacetSearchHttpQueryExpanderPlugin(),
             ],
         ];
@@ -394,9 +400,8 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
   {
       return [
           //...
-          new InitializeProductExportMessageHandlerPlugin(),
-          new SearchEndpointAvailableMessageHandlerPlugin(),
-          new SearchEndpointRemovedMessageHandlerPlugin(),
+          new ProductExportMessageHandlerPlugin(),
+          new SearchEndpointMessageHandlerPlugin(),
       ];
   }
 
@@ -420,7 +425,11 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
      */
     public function getDefaultWorkerChannels(): array
     {
-        return [/*... ,*/ 'product', 'search'];
+        return [
+            //...
+            'product-commands',
+            'search-commands',
+        ];
     }
 
     //...
@@ -636,7 +645,7 @@ class SearchHttpConfig extends SprykerSearchHttpConfig
      */
     public function getSearchHttpSynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
 ```
@@ -684,7 +693,7 @@ This command must be executed periodically. To achieve this, configure Jenkins i
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15',
+    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
     'schedule' => '* * * * *',
     'enable' => true,
     'stores' => $allStores,

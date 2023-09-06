@@ -256,7 +256,7 @@ Ensure that you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for data exchange entities. In order to do that follow the instructions here [how to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html)  
+Add configurations for data exchange entities. In order to do that follow the instructions here [how to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html)  
 
 Ensure the following transfers have been created:
 

@@ -14,3 +14,4 @@ algolia:
     - docs/cloud/dev/**/*.md
     - docs/pbc/all/**/*.md
     - docs/sdk/dev/**/*.md
+    - docs/datex/all/**/*.md

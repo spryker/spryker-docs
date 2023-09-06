@@ -116,6 +116,12 @@ defaults:
       sidebar: "scos_user_sidebar"
       role: "user"
   -
+    scope:
+      path: "docs/datex/all"
+    values:
+      sidebar: "datex_all_sidebar.yml"
+      role: "all"
+  -
      scope:
        path: "docs/sdk"
      values:
@@ -265,6 +271,7 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
+  - datex_all_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
   - scu_dev_sidebar
@@ -305,6 +312,8 @@ algolia:
       title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
+    - name: 'datex_all'
+      title: 'Data Exchange'
 sass:
     sass_dir: css
     style: compressed

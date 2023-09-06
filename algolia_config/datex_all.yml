@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'scos_dev'
+  index_name: 'datex_all'
   files_to_exclude:
     - index.md
     - 404.md
@@ -7,11 +7,11 @@ algolia:
     - search.md
     - docs/marketplace/user/**/*.md
     - docs/marketplace/dev/**/*.md
-    - docs/cloud/dev/**/*.md
     - docs/scos/user/**/*.md
+    - docs/scos/dev/**/*.md
     - docs/scu/dev/**/*.md
+    - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md  
+    - docs/acp/user/**/*.md
     - docs/fes/dev/**/*.md
     - docs/pbc/all/**/*.md
-    - docs/acp/user/**/*.md
-    - docs/sdk/dev/**/*.md
-    - docs/datex/all/**/*.md
+    - docx/sdk/dev/**/*.md

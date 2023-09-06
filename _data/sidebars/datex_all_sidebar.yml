@@ -1,0 +1,6 @@
+title: Data Exchange guides
+entries:
+  - product: Data Exchange
+    nested:
+      - title: Data Exchange
+        url: /docs/datex/all/data-exchange.html

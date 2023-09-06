@@ -1,3 +1,20 @@
+---
+title: Upgrade Publish and Sync
+description: Use the guide to learn how to update the Publish and Synchronization module to a newer version.
+last_updated: Jun 16, 2021
+template: module-migration-guide-template
+originalLink: https://documentation.spryker.com/2021080/docs/mg-pub-and-sync
+originalArticleId: cf634bb3-f098-4820-8220-16f00e3eda61
+redirect_from:
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
+---
 
 
 ## Upgrading from version 0.* to version 1.*

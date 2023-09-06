@@ -2334,28 +2334,11 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
     - title: Migration Guide - CustomerReorderWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration guide - Elastica
-      url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
     - title: Migration Guide - Environment Configuration
       url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
-    - title: Migration Guide - Flysystem
-      url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
-    - title: Migration Guide - Monitoring
-      url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - Oauth
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
-    - title: Migration Guide - OauthCompanyUser
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration Guide - RabbitMQ
-      url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
-    - title: Migration Guide - Publish and Synchronization
-      url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - Setup
-      url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
-    - title: Migration Guide - Step Engine
-      url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
+
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -3706,10 +3689,12 @@ entries:
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html
           - title: WebProfiler
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
-      - title: Update to Angular 12
+      - title: Upgrade to Angular 12
         url: /docs/scos/dev/migration-concepts/upgrade-to-angular-12.html
-      - title: Update to Angular 15
+      - title: Upgrade to Angular 15
         url: /docs/scos/dev/migration-concepts/upgrade-to-angular-15.html
+      - title: Upgrade Publish and Sync
+        url: /docs/scos/dev/migration-concepts/upgrade-publish-and-sync.html
       - title: Upgrade to Marketplace
         url: /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html
       - title: Migrate to Docker

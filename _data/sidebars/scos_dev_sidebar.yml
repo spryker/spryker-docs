@@ -1004,9 +1004,9 @@ entries:
       - "202307.0"
       nested:
       - title: How to send a request in Data Exchange API
-        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html
+        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
       - title: How to configure Data Exchange API endpoints.
-        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html
+        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
   - title: Feature integration guides
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
     include_versions:

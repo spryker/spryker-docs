@@ -2317,27 +2317,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
       include_versions:
       - "202204.0"
-  - title: Module migration guides
-    url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
-    nested:
-    - title: Migration guide - Auth module to SecurityGui module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
-    - title: Migration Guide - Business On Behalf Data Import
-      url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
-    - title: Migration Guide - ConfigurableBundle
-      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
-    - title: Migration Guide - ConfigurableBundleStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
-    - title: Migration Guide - Customer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
-    - title: Migration Guide - CustomerPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
-    - title: Migration Guide - CustomerReorderWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration Guide - Environment Configuration
-      url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
-    - title: Migration Guide - Payment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
 
   - title: DevOps migration guides
     include_versions:
@@ -3643,6 +3622,8 @@ entries:
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
         - title: Integrate the protected endpoints authorization
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
+    - title: Migrate from Auth to SecurityGui module
+      url: /docs/scos/dev/migration-concepts/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Silex Replacement
@@ -4004,6 +3985,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
+    - title: Update environemnt configuration
+      url: /docs/scos/dev/technical-enhancement-integration-guides/update-environment-configuration.html
   - title: Zed API
     url: /docs/scos/dev/zed-api/zed-api.html
     nested:

@@ -11,7 +11,7 @@ This document describes how to configure the Data Exchange API endpoints by exec
 
 ## Configuration of Data Exchange API endpoints
 
-To create an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table.
+To create an endpoint for interacting with entities in the database, you need to add a corresponding row in the `spy_dynamic_entity_configuration` table.
 
 The `spy_dynamic_entity_configuration` table contains the configuration of dynamic entity endpoints and has the following columns:
 
@@ -100,14 +100,13 @@ In this example, we are creating the `/dynamic-data/country` endpoint to operate
 
 [PASTE SCREENSHOT HERE]
 
-3. Then you need to select a configurable table in the form below. In our case it is `spy_country`:
+3. In **CREATE DATA EXCHANGE API CONFIGURATION** pane, select a **TABLE NAME**. In our example, it's `spy_country`.
 
 [PASTE SCREENSHOT HERE]
 
 {% info_block infoBox %}
 
-Note, that you can only select tables that are not excluded from configuring.
-In order to exclude a table from configuring follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html).
+You can only select the tables that are not excluded from configuring. To exclude a table from configuring, follow [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html).
 
 {% endinfo_block %}
 
@@ -121,8 +120,8 @@ Note, that you have to enable the endpoint in order to be able to use it. And be
 
 {% endinfo_block %}
 
-After you click "Save" button, you will see a new endpoint in the list of endpoints in Data Exchange API section in Backoffice.
-And you will be able to send request to it.
+Click **Save**.
+This opens the **Data Exchange API Configuration** page with the endpoint displayed in the list. Now you can send requests to this endpoint.
 
 {% info_block warningBox "Verification" %}
 

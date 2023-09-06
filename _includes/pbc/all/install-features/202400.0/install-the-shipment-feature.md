@@ -54,9 +54,10 @@ Make sure that the following modules have been installed:
 
 1. Add the following configuration to your project:
 
-| CONFIGURATION                           | SPECIFICATION                                             | NAMESPACE            |
-|-----------------------------------------|-----------------------------------------------------------|----------------------|
-| ShipmentConfig::getShipmentHashFields() | Used to group items by shipment using shipment type uuid. | Pyz\Service\Shipment |
+| CONFIGURATION                                                | SPECIFICATION                                                                                                                                                                         | NAMESPACE            |
+|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| ShipmentConfig::getShipmentHashFields()                      | Used to group items by shipment using shipment type uuid.                                                                                                                             | Pyz\Service\Shipment |
+| ShipmentConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation in `ShipmentFacade::expandQuoteWithShipmentGroups()` method. | Pyz\Zed\Shipment     |
 
 **src/Pyz/Service/Shipment/ShipmentConfig.php**
 
@@ -76,6 +77,27 @@ class ShipmentConfig extends SprykerShipmentConfig
     public function getShipmentHashFields(): array
     {
         return array_merge(parent::getShipmentHashFields(), [ShipmentTransfer::SHIPMENT_TYPE_UUID]);
+    }
+}
+```
+
+**src/Pyz/Zed/Shipment/ShipmentConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Shipment;
+
+use Spryker\Zed\Shipment\ShipmentConfig as SprykerShipmentConfig;
+
+class ShipmentConfig extends SprykerShipmentConfig
+{
+    /**
+     * @return bool
+     */
+    public function shouldExecuteQuotePostRecalculationPlugins(): bool
+    {
+        return false;
     }
 }
 ```

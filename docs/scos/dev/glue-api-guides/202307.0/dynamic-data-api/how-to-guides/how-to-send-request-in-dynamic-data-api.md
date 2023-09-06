@@ -4,15 +4,15 @@ description: This guide shows how to send a request in Data Exchange API.
 last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html
+  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
 ---
 
 This guide shows how to send a request in Data Exchange API.
 
 {% info_block infoBox %}
 
-Ensure the Data Exchange API is integrated (follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/dynamic-data-api-integration.html))
-and configured (follow [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html))
+Ensure the Data Exchange API is integrated (follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html))
+and configured (follow [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html))
 as described in the guides.
 
 {% endinfo_block %}

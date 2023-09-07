@@ -1,5 +1,5 @@
 ---
-title: Install the Data Exchange API + Inventory Management feature
+title: Data Exchange API + Inventory Management feature integration
 description: Install the Data Exchange API + Inventory Management features in your project.
 last_updated: Sep 06, 2023
 template: feature-integration-guide-template
@@ -66,6 +66,41 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after updating stock data - product availability is updated as well.
+Let’s say you have an endpoint `/dynamic-data/stock-products` to operate with data in `spy_stock_product` table in database.
+
+By default, all routes within the Data Exchange API are protected to ensure data security.
+To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
+
+```bash
+POST /token/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 67
+
+grant_type=password&username={username}&password={password}
+```
+
+### Sending a `PATCH` request
+This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
+
+```bash
+PATCH /dynamic-entity/stock-products HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+Content-Length: 174
+{
+    "data": [
+        {
+            "idStockProduct": 1,
+            "Quantity": 10
+        }
+    ]
+}
+```
+
+Make sure that after updating stock data - product availability is updated as well. For this go to the Storefront and check the availability of the product.
 
 {% endinfo_block %}

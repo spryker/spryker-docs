@@ -2195,3 +2195,44 @@ entries:
                     url: /docs/pbc/all/price-management/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
                   - title: "PriceProduct module details: reference information"
                     url: /docs/pbc/all/price-management/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html
+          - title: Marketplace
+            include_versions:
+            - "202212.0"
+            - "202307.0"
+            nested:
+              - title: Marketplace Merchant Custom Prices feature overview
+                url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
+              - title: Marketplace Product Offer Prices feature overview
+                url: /docs/pbc/all/price-management/marketplace/marketplace-product-offer-prices-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Merchant Custom Prices
+                        url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-custom-prices-feature.html
+                      - title: Marketplace Product Offer Prices
+                        url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Marketplace Product Offer Prices
+                        url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
+                      - title: Marketplace Product Offer Prices + Wishlist
+                        url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-wishlist-glue-api.html
+                      - title: Marketplace Product Offer Volume Prices
+                        url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html
+                      - title: Prices + Marketplace Wishlist
+                        url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-glue-api/install-the-prices-marketplace-wishlist-glue-api.html
+              - title: Import and export data
+                nested:
+                  - title: "File details: product_price.csv"
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-product-price.csv.html
+                  - title: "File details: price-product-offer.csv"
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
+              - title: Retrieve product offer prices using Glue API
+                url: /docs/pbc/all/price-management/marketplace/glue-api-retrieve-product-offer-prices.html
+              - title: Domain model and relationships
+                nested:
+                  - title: "Marketplace Merchant Custom Prices feature: Domain model and relationships"
+                    url: /docs/pbc/all/price-management/marketplace/domain-model-and-relationships/marketplace-merchant-custom-prices-feature-domain-model-and-relationships.html
+                  - title: "Marketplace Product Offer Prices feature: Domain model and relationships"
+                    url: /docs/pbc/all/price-management/marketplace/domain-model-and-relationships/marketplace-product-offer-prices-feature-domain-model-and-relationships.html

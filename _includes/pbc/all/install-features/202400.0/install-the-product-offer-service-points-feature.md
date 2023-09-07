@@ -110,6 +110,7 @@ Make sure that the following changes have been applied in transfer objects:
 | IterableProductOfferServicesConditions | class | created | src/Generated/Shared/Transfer/IterableProductOfferServicesConditionsTransfer |
 | ProductOfferServiceStorage             | class | created | src/Generated/Shared/Transfer/ProductOfferServiceStorageTransfer             |
 | ProductOfferServiceStorageCollection   | class | created | src/Generated/Shared/Transfer/ProductOfferServiceStorageCollectionTransfer   |
+| ServiceStorageCollection               | class | created | src/Generated/Shared/Transfer/ServiceStorageCollectionTransfer               |
 | ServicePointStorageCollection          | class | created | src/Generated/Shared/Transfer/ServicePointStorageCollectionTransfer          |
 | ServicePointStorageCriteria            | class | created | src/Generated/Shared/Transfer/ServicePointStorageCriteriaTransfer            |
 | ServicePointStorageConditions          | class | created | src/Generated/Shared/Transfer/ServicePointStorageConditionsTransfer          |

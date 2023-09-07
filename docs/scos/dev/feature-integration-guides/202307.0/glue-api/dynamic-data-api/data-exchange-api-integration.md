@@ -1,18 +1,18 @@
 ---
-title: Dynamic Data API integration
-description: Integrate the Dynamic Data API into a Spryker project.
+title: Data Exchange API integration
+description: Integrate the Data Exchange API into a Spryker project.
 last_updated: Aug 21, 2023
 template: feature-integration-guide-template
 redirect_from: 
-    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
-    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
 ---
 
-This document describes how to integrate the Dynamic Data API into a Spryker project.
+This document describes how to integrate the Data Exchange API into a Spryker project.
 
 ---
 
-The Dynamic Data API is a powerful tool that allows seamless interaction with your database.
+The Data Exchange API is a powerful tool that allows seamless interaction with your database.
 
 You can easily access your data by sending requests to the API endpoint. 
 
@@ -20,7 +20,7 @@ It enables you to retrieve, create, update, and manage data in a flexible and ef
 
 ## Install feature core
 
-Follow the steps below to install the Dynamic Data API core.
+Follow the steps below to install the Data Exchange Data API core.
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-3. The Dynamic Data API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
+3. The Data Exchange API provides a logging mechanism to capture important information about requests and any thrown exceptions. 
    Logging is enabled by default. Adjust `DynamicEntityBackendApiConfig` in order to disable this option or change the path for the log file.
 
 **src/Pyz/Glue/DynamicEntityBackendApi/DynamicEntityBackendApiConfig.php**
@@ -136,7 +136,7 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-### Configure Dynamic Data installation
+### Configure Data Exchange installation
 
 1. Optional: To install default configuration data, create a configuration file:
 
@@ -256,7 +256,7 @@ Ensure that you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for dynamic entities. In order to do that follow the instructions here [how to configure Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html)  
+Add configurations for data exchange entities. In order to do that follow the instructions here [how to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html)  
 
 Ensure the following transfers have been created:
 
@@ -491,6 +491,6 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Dynamic Data API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html)
+If everything is set up correctly, you can operate with the data. Follow this link to discover how to perform it:[How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
 
 {% endinfo_block %}

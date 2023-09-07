@@ -133,13 +133,13 @@ Or if you're in the middle of the integration process for the Data Exchange API 
 
 ## Download Data Exchange API specification
 
-You can download the specification of for all available endpoints including the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download Data Exchange API specification** on the **Data Exchange API Configuration** page.
+You can download the specification of for all available endpoints including the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download API Specification** on the **Data Exchange API Configuration** page.
 
 [PASTE SCREENSHOT HERE]
 
 After you click the button, the specification will be downloaded to your computer.
 
-If you added new endpoints, documentation will be updated automatically with the new endpoints, but need wait 1 minute for it. You can see  message about it in the top of the page:
+If you added new endpoints, documentation will be updated automatically with the new endpoints, but need wait 1 minute for it. Button **Download API Specification** will be disabled during this time and aviailable after 1 minute. You can see  message about it in the top of the page:
 
 [PASTE SCREENSHOT HERE]
 

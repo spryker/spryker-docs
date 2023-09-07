@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
 ---
 
-This guide shows how to send a request in Data Exchange API.
+This guide shows how to send a request using the Data Exchange API.
 
 ## Prerequisites
 
@@ -18,8 +18,7 @@ Let's say you have an endpoint `/dynamic-data/country` to operate with data in `
 
 The Data Exchange API is a non-resource-based API and routes all specified endpoints directly to a controller.
 
-By default, all routes within the Data Exchange API are protected to ensure data security.
-To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
+By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
 
 ```bash
 POST /token/ HTTP/1.1
@@ -31,16 +30,12 @@ Content-Length: 67
 grant_type=password&username={username}&password={password}
 ```
 
-### Sending a `GET` request
+## Sending a `GET` request
 
-To retrieve a collection of countries, a `GET` request should be sent to the `/dynamic-entity/country` endpoint.
+To retrieve a collection of countries, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/country` request.
 This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
 
-The response body will contain all the columns from the `spy_country` table that have been configured in the `spy_dynamic_entity_definition.definition`.
-Each column will be represented using the `fieldVisibleName` as the key, providing a comprehensive view of the table's data in the API response.
-
-Pagination allows for efficient data retrieval by specifying the desired range of results.
-To implement pagination, include the desired page limit and offset in the request:
+Pagination allows for efficient data retrieval by specifying the desired range of results. To use pagination, include the desired page limit and offset in the request:
 
 ```bash
 GET /dynamic-entity/country?page[offset]=1&page[limit]=2 HTTP/1.1
@@ -50,9 +45,7 @@ Accept: application/json
 Authorization: Bearer {your_token}
 ```
 
-{% info_block warningBox "Verification" %}
-
-If everything is set up correctly you will get the following response:
+Response sample:
 
 ```json
 [
@@ -75,16 +68,10 @@ If everything is set up correctly you will get the following response:
 ]
 ```
 
-{% endinfo_block %}
+The response contains all the columns from the `spy_country` table that are configured in `spy_dynamic_entity_definition.definition`. Each column is represented using the `fieldVisibleName` as the key, providing a comprehensive view of the table's data in the API response. By default the API `GET` request returns up to 20 records.
 
-{% info_block infoBox %}
 
-Note, by default the API `GET` request returns up to 20 records.
-
-{% endinfo_block %}
-
-Filtering enables targeted data retrieval, refining the response to match the specified criteria.
-To apply filtering to the results based on specific fields, include the appropriate filter parameter in the request:  
+Filtering enables targeted data retrieval, refining the response to match the specified criteria. To apply filtering to the results based on specific fields, include the appropriate filter parameter in the request:  
 
 ```bash
 GET /dynamic-entity/country?filter[country.iso2_code]=AA HTTP/1.1
@@ -94,9 +81,7 @@ Accept: application/json
 Authorization: Bearer {your_token}
 ```
 
-{% info_block warningBox "Verification" %}
-
-If everything is set up correctly you will get the following response:
+Response sample:
 
 ```json
 [
@@ -111,15 +96,13 @@ If everything is set up correctly you will get the following response:
 ]
 ```
 
-{% endinfo_block %}
-
 {% info_block infoBox %}
 
-Note, so far when you combine multiple filters in a single request, the system applies an "AND" condition to the retrieved results.
+When you combine multiple filters in a single request, the system applies an `AND` condition to the retrieved results.
 
 {% endinfo_block %}
 
-To retrieve a country by a specific ID, you can send a `GET` request with the following parameters:
+To retrieve a country by a specific ID, send a `GET` request with the following parameters:
 
 ```bash
 GET /dynamic-entity/country/3 HTTP/1.1
@@ -128,9 +111,8 @@ Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {your_token}
 ```
-{% info_block warningBox "Verification" %}
 
-If everything is set up correctly you will get the following response:
+Response sample:
 
 ```json
 [
@@ -145,11 +127,8 @@ If everything is set up correctly you will get the following response:
 ]
 ```
 
-{% endinfo_block %}
 
-{% info_block infoBox %}
-
-Note if a current endpoint is not configured in `spy_dynamic_entity_configuration` and it's not found you'll get the following response:
+If you send a request to an endpoint that's not configured in `spy_dynamic_entity_configuration`, the following is returned:
 
 ```json
 [
@@ -161,9 +140,8 @@ Note if a current endpoint is not configured in `spy_dynamic_entity_configuratio
 ]
 ```
 
-{% endinfo_block %}
 
-### Sending `POST` request
+## Sending `POST` request
 
 To create a collection of countries, submit the following HTTP request:
 
@@ -186,9 +164,7 @@ Content-Length: 154
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-If everything is set up correctly you will get the following response:
+Response sample:
 
 ```json
 [
@@ -203,11 +179,9 @@ If everything is set up correctly you will get the following response:
 
 The response payload includes all the specified fields from the request body, along with the ID of the newly created entity.
 
-{% endinfo_block %}
-
 {% info_block infoBox %}
 
-Note that all fields included in the request payload are marked as `isCreatable: true` in the configuration.
+All fields included in the request payload are marked as `isCreatable: true` in the configuration.
 Therefore, the API will create a new record with all the provided fields.
 However, if any of the provided fields are configured as `isCreatable: false` it will result in an error.
 
@@ -224,16 +198,12 @@ You will receive the following error response because a non-creatable field `iso
 ]
 ```
 
-{% endinfo_block %}
-
 {% info_block infoBox %}
 
-It is important to consider that certain database-specific configurations may result in issues independent of entity configurations.
+Certain database-specific configurations may result in issues independent of entity configurations.
 
-For instance, in the case of MariaDB, it is not possible to set the ID value for an auto-incremented field.
-Additionally, for the `iso2_code` field in the `spy_country` table, it must have a unique value.
-Therefore, before creating a new record, it is necessary to verify that you do not pass a duplicated value for this field.
-Otherwise, you will receive the following response:
+For instance, in case of MariaDB, it is impossible to set the ID value for an auto-incremented field. Additionally, for the `iso2_code` field in the `spy_country` table, it must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicated value for this field.
+Otherwise, the following response is returned:
 
 ```json
 [

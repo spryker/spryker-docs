@@ -13,37 +13,9 @@ This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.v
 
 Before you can integrate the Algolia app, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-The Algolia app requires the following Spryker modules:
+The Algolia app catalog page lists specific packages which must be installed (or upgraded) before the Algolia app can be used. You can find this by navigating to the "App Composition Platform Catalog" and clicking the card for the Algolia app.
 
-* `spryker/catalog: "^5.9.0"`
-* `spryker/catalog-extension: "^1.0.0"`
-* `spryker/catalog-price-product-connector: "^1.6.0"`
-* `spryker/category: "^5.11.0"`
-* `spryker/category-storage: "^2.8.0"`
-* `spryker/message-broker-aws: "^1.3.1"`
-* `spryker/price-product: "^4.40.0"`
-* `spryker/product: "^6.37.0"`
-* `spryker/product-approval: "^1.1.0"` (Optional)
-* `spryker/product-category: "^4.19.0"`
-* `spryker/product-extension: "^1.5.0"`
-* `spryker/product-image: "^3.13.0"`
-* `spryker/product-label "^3.8.0"`
-* `spryker/product-label-storage "^2.6.0"`
-* `spryker/product-review: "^2.9.0"`
-* `spryker/search: "^8.21.1"`
-* `spryker/search-extension: "^1.3.0"`
-* `spryker/search-http: "^0.3.5"`
-* `spryker/store: "^1.22.0"`
-* `spryker/merchant-product-offer: "^1.5.0"` (Marketplace only)
-* `spryker/merchant-product-offer-data-import: "^1.1.0"` (Marketplace only)
-* `spryker/merchant-product-offer-search: "^1.4.0"` (Marketplace only)
-* `spryker/price-product-offer-data-import: "^0.7.1"` (Marketplace only)
-* `spryker/product-offer: "^1.4.0"` (Marketplace only)
-
-If you are relying on `spryker-shop` modules for your frontend, you will also need the following modules in addition to the above:
-
-* `spryker-shop/catalog-page: "^1.25.2"`
-* `spryker-shop/product-widget: "^1.4.0"`
+Adjust your installation to comply with the listed constraints before proceeding.
 
 ## Integrate Algolia
 
@@ -66,7 +38,8 @@ use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
 
 //...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
+$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     ProductExportedTransfer::class => 'product-events',
     ProductCreatedTransfer::class => 'product-events',

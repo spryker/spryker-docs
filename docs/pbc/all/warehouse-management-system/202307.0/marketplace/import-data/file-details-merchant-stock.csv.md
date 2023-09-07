@@ -17,12 +17,11 @@ This document describes the `merchant_stock.csv` file to configure [merchant sto
 
 ## Import file dependencies
 
-- [merchant-stock.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-stock.csv.html)
+- [merchant-stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/import-data/file-details-merchant-stock.csv.html)
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
 - [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
 - [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
 - [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html)
-
 
 ## Import file parameters
 

@@ -38,11 +38,6 @@ entries:
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
         - title: Release notes 202204.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
-        - title: Release notes 202108.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html
-          nested:
-          - title: Security release notes 202108.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
         - title: Release notes 202009.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-202009.0.html
           nested:
@@ -79,11 +74,6 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
         - title: Release notes 2018.12.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.12.0.html
-        - title: Release notes 2018.11.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
-          nested:
-          - title: Security release notes 2018.11.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
     - title: Docs release notes
       url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new

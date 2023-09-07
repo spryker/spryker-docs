@@ -2358,14 +2358,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
-  - title: DevOps migration guides
-    include_versions:
-    - "202001.0"
-    nested:
-    - title: DevOps Migration Guide 202001.0
-      url: /docs/scos/dev/devops-migration-guides/devops-migration-guide-202001.0.html
-      include_versions:
-      - "202001.0"
   - title: Data import
     url: /docs/scos/dev/data-import/data-import.html
     include_versions:

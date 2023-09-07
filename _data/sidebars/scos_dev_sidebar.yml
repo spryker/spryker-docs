@@ -11,7 +11,6 @@ entries:
     - title: System requirements
       url: /docs/scos/dev/system-requirements/system-requirements.html
       include_versions:
-      - "202108.0"
       - "202204.0"
       - "202212.0"
       - "202307.0"
@@ -83,18 +82,15 @@ entries:
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
     include_versions:
-    - "202108.0"
     - "202204.0"
     nested:
     - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
       include_versions:
-      - "202108.0"
       - "202204.0"
     - title: Alternative Products
       url: /docs/scos/dev/feature-walkthroughs/alternative-products-feature-walkthrough.html
       include_versions:
-      - "202108.0"
       - "202204.0"
     - title: Approval Process
       url: /docs/scos/dev/feature-walkthroughs/approval-process-feature-walkthrough.html
@@ -4044,7 +4040,7 @@ entries:
     - title: Zed API resources
       url: /docs/scos/dev/zed-api/zed-api-resources.html
     - title: Zed API (BETA)
-      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html  
+      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
   - title: Code generator
     url: /docs/scos/dev/sdk/code-generator.html
     include_versions:

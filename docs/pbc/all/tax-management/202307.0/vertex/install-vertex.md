@@ -17,8 +17,9 @@ The Vertex app requires the following Spryker modules:
 
 * `spryker/tax-app: ^0.1.0`
 * `spryker-shop/cart-page: ^3.38.0`
-* `spryker/product-offer-availability: ^1.4.0` (Marketplace only)
 * `spryker/merchant-profile: ^1.5.0` (Marketplace only)
+* `spryker/product-offer-availability: ^1.4.0` (Marketplace only)
+* `spryker/stock-address: ^1.2.0` (Marketplace only)
 
 ## Integrate ACP connector module for tax calculation
 

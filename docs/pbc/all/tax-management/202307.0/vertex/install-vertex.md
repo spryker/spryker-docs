@@ -9,6 +9,17 @@ related:
     link: docs/pbc/all/tax-management/page.version/vertex/vertex.html
 ---
 
+## Prerequisites
+
+Before you can integrate Vertex, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+
+The Vertex app requires the following Spryker modules:
+
+* `spryker/tax-app: ^0.1.0`
+* `spryker-shop/cart-page: ^3.38.0`
+* `spryker/product-offer-availability: ^1.4.0` (Marketplace only)
+* `spryker/merchant-profile: ^1.5.0` (Marketplace only)
+
 ## Integrate ACP connector module for tax calculation
 
 To enable the Vertex integration, use the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module.
@@ -22,26 +33,30 @@ Add the following config to `config/Shared/config_default.php`:
 ```php
 // ...
 
+use Generated\Shared\Transfer\ConfigureTaxAppTransfer;
+use Generated\Shared\Transfer\DeleteTaxAppTransfer;
 use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
 
 // ...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
+$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     // ...
-    
+    ConfigureTaxAppTransfer::class => 'tax-commands',
+    DeleteTaxAppTransfer::class => 'tax-commands',
     SubmitPaymentTaxInvoiceTransfer::class => 'tax-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     // ...
     
-    'tax-commands' => 'http',
+    'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     // ...
     
-    'tax-commands' => 'http',
+    'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 ```
 
@@ -172,6 +187,24 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         ];
         
         return $pluginStack;
+    }
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     */
+    protected function getOrderCalculatorPluginStack(Container $container): array
+    {
+        return [
+            // ...
+        
+            // Please put this plugin after all other tax calculation plugins.
+        
+            new TaxAppCalculationPlugin(),
+        
+            // ...
+        ];
     }
 
 // ...
@@ -418,7 +451,11 @@ As a result, the plugin stack can look like this:
 
 namespace Pyz\Zed\TaxApp;
 
-// ...
+// The following plugins are for Marketplace only.
+use Spryker\Zed\MerchantProfile\Communication\Plugin\TaxApp\MerchantProfileAddressCalculableObjectTaxAppExpanderPlugin;
+use Spryker\Zed\MerchantProfile\Communication\Plugin\TaxApp\MerchantProfileAddressOrderTaxAppExpanderPlugin;
+use Spryker\Zed\ProductOfferAvailability\Communication\Plugin\TaxApp\ProductOfferAvailabilityCalculableObjectTaxAppExpanderPlugin;
+use Spryker\Zed\ProductOfferAvailability\Communication\Plugin\TaxApp\ProductOfferAvailabilityOrderTaxAppExpanderPlugin;
 
 class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 {
@@ -434,6 +471,10 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
             new CalculableObjectItemProductOptionWithTaxCodeExpanderPlugin(), // to extend quote item product options with product class codes
             new CalculableObjectItemWithProductClassCodeExpandePlugin(), // to extend quote items with product class codes
             new CalculableObjectItemWithFlexibleFieldsExpanderPlugin(), // to extend quote items with flexible fields
+            
+            // The following plugins are for Marketplace only.
+            new MerchantProfileAddressCalculableObjectTaxAppExpanderPlugin(),
+            new ProductOfferAvailabilityCalculableObjectTaxAppExpanderPlugin(),
         ];
     }
 
@@ -449,6 +490,36 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
             new OrderItemProductOptionWithTaxCodeExpanderPlugin(), // to extend order item product options with product class codes
             new OrderItemWithProductClassCodeExpandePlugin(), // to extend order items with product class codes
             new OrderItemWithFlexibleFieldsExpanderPlugin(), // to extend order items with flexible fields
+            
+            // The following plugins are for Marketplace only.
+            new MerchantProfileAddressOrderTaxAppExpanderPlugin(),
+            new ProductOfferAvailabilityOrderTaxAppExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
+### 4. Configure Product Offer Stock Dependency Provider (Marketplace only)
+
+As a result, the plugin stack can look like this:
+
+```php
+
+namespace Pyz\Zed\ProductOfferStock;
+
+use Spryker\Zed\ProductOfferStock\ProductOfferStockDependencyProvider as SprykerProductOfferStockDependencyProvider;
+use Spryker\Zed\StockAddress\Communication\Plugin\Stock\StockAddressStockTransferProductOfferStockExpanderPlugin;
+
+class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductOfferStockExtension\Dependency\Plugin\StockTransferProductOfferStockExpanderPluginInterface>
+     */
+    protected function getStockTransferExpanderPluginCollection(): array
+    {
+        return [
+            new StockAddressStockTransferProductOfferStockExpanderPlugin(),
         ];
     }
 }

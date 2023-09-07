@@ -16,7 +16,7 @@ composer require --dev spryker-sdk/evaluator
 * Get general information about the tool and see all the commands related to evaluation in the `evaluate` section:
 
 ```bash
-/vendor/bin/evaluator evaluate -h
+vendor/bin/evaluator evaluate -h
 ```
 
 ## Run an evaluation
@@ -26,13 +26,13 @@ To evaluate your code, run the evaluator in one of the following ways:
 * Evaluate the code of all the modules:
 
 ```bash
-/vendor/bin/evaluator evaluate
+vendor/bin/evaluator evaluate
 ```
 
 * Evaluate the code of a specific module:
 
 ```bash
-/vendor/bin/evaluator evaluate --path=src/path_to_module
+vendor/bin/evaluator evaluate --path=src/path_to_module
 ```
 
 ## Resolve upgradability issues

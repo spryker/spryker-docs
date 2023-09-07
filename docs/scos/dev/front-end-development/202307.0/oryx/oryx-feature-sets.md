@@ -7,7 +7,7 @@ template: concept-topic-template
 
 
 
-A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html) required to configure and initialize the application.
+A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
 
 There are two types of feature sets: domain and application feature sets.
 

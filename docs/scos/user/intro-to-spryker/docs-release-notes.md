@@ -158,13 +158,13 @@ In May 2023, we have added and updated the following pages:
 - [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
 - [Change default branch](/docs/scu/dev/change-default-branch.html): Learn how to change the default branch in Spryker CI
 - [Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/oryx.html) documentation:
-    - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
-    - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
+    - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
+    - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
     - [Oryx: Feature sets](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-feature-sets.html): Learn what the feature sets in Oryx are all about.
-    - [Oryx: Packages](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
+    - [Oryx: Packages](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
     - [Oryx: Routing](/docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-routing.html): Lear how to set up the Oryx routing.
-    - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
-    - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-supported-browsers.html): Learn what browsers Oryx supports.
+    - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
+    - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-supported-browsers.html): Learn what browsers Oryx supports.
     - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
     - [Oryx service layer](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
     - [Dependency Injection: Using services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.

@@ -3382,17 +3382,17 @@ entries:
       - "202307.0"
       nested:
         - title: Getting started
-          nested: 
+          nested:
             - title: Set up
-              url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
             - title: Boilerplate
-              url: /docs/scos/dev/front-end-development/oryx/oryx-boilerplate.html
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
             - title: Packages
-              url: /docs/scos/dev/front-end-development/oryx/oryx-packages.html
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-packages.html
             - title: Versioning
-              url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-versioning.html
             - title: Supported browsers
-              url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-supported-browsers.html
 
         - title: Building applications
           nested:

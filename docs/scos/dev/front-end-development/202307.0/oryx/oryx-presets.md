@@ -6,7 +6,7 @@ last_updated: Apr 4, 2023
 ---
 
 
-The [presets package](https://www.npmjs.com/package/@spryker-oryx/presets) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.
+The [presets package](https://www.npmjs.com/package/@spryker-oryx/presets) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.
 
 Presets are typically used to demonstrate or try out Oryx applications. In production applications, the boilerplate is set up in a more optimized way, by leaving out the features that are not used.
 

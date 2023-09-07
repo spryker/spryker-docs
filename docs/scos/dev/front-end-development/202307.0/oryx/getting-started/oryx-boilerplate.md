@@ -85,7 +85,7 @@ We recommend fronting the dependencies with a caret notation (`^`), so that the 
 {% endinfo_block %}
 
 
-Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/set-up-oryx.html).
+Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html).
 
 ### `index.html`
 

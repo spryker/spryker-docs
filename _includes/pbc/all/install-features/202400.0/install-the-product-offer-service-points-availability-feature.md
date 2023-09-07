@@ -35,7 +35,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-1. Generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -79,7 +79,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ## Set up behavior
 
-1. Register availability plugins:
+Register the availability plugin:
 
 | PLUGIN                                                  | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                                                           |
 |---------------------------------------------------------|-------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
@@ -111,12 +111,12 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that availability plugin works correctly:
+Make sure that the availability plugin works correctly:
 
 1.  Add a product offer with the service point to your cart.
 
-2.  Go to `spy_product_offer_service` and delete the connection between product offer and service point.
+2.  Go to `spy_product_offer_service` and delete the connection between the product offer and the service point.
 
-3.  Try to create an order. You should see the error message that the product is not available at the moment.
+3.  Try to create an order. You should see the error message that the product isn't available at the moment.
 
 {% endinfo_block %}

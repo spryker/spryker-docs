@@ -73,31 +73,21 @@ Minor releases are fully backward compatible and do not require any developer as
 
 If a newer and better alternative to a feature is introduced in a minor release, the old one is deprecated. Deprecated features remain functional until the next major release, in which they are removed completely.
 
-## Feature Flag Versioning
+## Feature flag versioning
 
-### Overview
-
-Feature Flag Versioning in Oryx enables us to roll out new functionalities such as alterations in page structure, additional component options, and more, while ensuring backward compatibility. The feature versioning is directly aligned with major and minor releases, allowing for a balanced blend of innovation and stability.
+Feature flag versioning in Oryx enables you to roll out new functionalities, like changes in page structure or additional component options, while ensuring backward compatibility. Feature flag versioning is directly aligned with major and minor releases, allowing for a balanced mix of innovation and stability.
 
 ### ORYX_FEATURE_VERSION
 
-Utilize the `ORYX_FEATURE_VERSION` environment variable to opt into new functionalities or to lock and maintain compatibility with existing setups.
+The `ORYX_FEATURE_VERSION` environment variable is used to opt into new functionalities or to lock and maintain compatibility with existing setups. It optimizes your build by leveraging Dead Code Elimination. Any code unrelated to the specified version isn't included in the final bundle, making your application leaner.
 
-### Code Optimization
-
-Setting `ORYX_FEATURE_VERSION` optimizes your build by leveraging Dead Code Elimination (DCE). Any code unrelated to the specified version will not be included in the final bundle, making your application leaner.
-
-### Usage
-
-Set the `ORYX_FEATURE_VERSION` environment variable to enable specific versions.
+The following example shows how you can enable a specific version:
 
 ```
 ORYX_FEATURE_VERSION=1.1
 ```
 
-By doing so, you can control feature rollouts while optimizing your application's performance.
-
-You can also use `featureVersion` utility in your code or third-party libraries to conditionally enable features.
+You can also use the `featureVersion` utility in your code or third-party libraries to conditionally enable features.
 
 ```typescript
 import { featureVersion } from '@spryker-oryx/utilities';

@@ -3428,7 +3428,7 @@ entries:
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-typography.html
 
         - title: Building pages
-            nested:
+          nested:
             - title: "Pages"
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-pages.html
             - title: "Compositions"
@@ -3437,7 +3437,7 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
 
         - title: Architecture
-            nested:
+          nested:
             - title: Dependency injection
               url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection.html
               nested:

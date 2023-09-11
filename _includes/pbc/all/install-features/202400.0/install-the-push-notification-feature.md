@@ -725,6 +725,15 @@ $jobs[] = [
 ];
 ```
 
+{% info_block infoBox "Info" %}
+
+To optimize job execution and manage job concurrency, we recommend configuring and using the following pre-installed Jenkins plugins:
+
+- `Priority Sorter Plugin`: This plugin allows you to set priorities for your Jenkins jobs. You can assign higher priorities to critical jobs, ensuring they are executed before lower-priority jobs.
+- `Throttle Concurrent Builds Plugin`: This plugin provides fine-grained control over how many concurrent builds of a job can run. You can use it to limit the number of parallel executions for resource-intensive jobs, preventing overloading your Jenkins environment.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification_subscription_delivery_log` database table. This table contains a record for each unique combination of push notification and push notification subscription.

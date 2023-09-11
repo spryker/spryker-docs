@@ -11,8 +11,6 @@ redirect_from:
   - /docs/product-store-relation-feature-integration
   - /docs/en/product-store-relation-feature-integration
 related:
-  - title: Migration Guide - Collector
-    link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
   - title: Migration Guide - Touch
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
   - title: Migration Guide - Product
@@ -29,7 +27,7 @@ By default abstract products are available in all stores. This feature provides 
 ## Prerequisites
 To prepare your project to work with multi-store abstract products:
 
-1. Update/install `spryker/collector` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Collector](/docs/scos/dev/module-migration-guides/migration-guide-collector.html).
+1. Update/install `spryker/collector` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Collector](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html).
 2. Update/install `spryker/touch` to at least 4.0.0 version. You can find additional help for feature migration in [_Migration Guide - Touch_](/docs/scos/dev/module-migration-guides/migration-guide-touch.html).
 3. Update/install `spryker/store` to at least 1.3.0 version.
 4. Update/install `spryker/product` to at least 6.0.0 version. You can find additional help for feature migration in [Migration Guide - Product](/docs/scos/dev/module-migration-guides/migration-guide-product.html).

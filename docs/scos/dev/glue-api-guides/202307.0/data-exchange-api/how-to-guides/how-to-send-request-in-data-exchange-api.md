@@ -7,18 +7,16 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
 ---
 
-This guide shows how to send a request using the Data Exchange API.
+This guide shows how to send a request using the Data Exchange API. Let's say you have an endpoint `/dynamic-data/country` to operate with data in `spy_country` table in database.
+
 
 ## Prerequisites
 
 * [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html)
 * [Configure the Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html)
 
-Let's say you have an endpoint `/dynamic-data/country` to operate with data in `spy_country` table in database.
 
-The Data Exchange API is a non-resource-based API and routes all specified endpoints directly to a controller.
-
-By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
+The Data Exchange API is a non-resource-based API and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:
 
 ```bash
 POST /token/ HTTP/1.1
@@ -30,10 +28,9 @@ Content-Length: 67
 grant_type=password&username={username}&password={password}
 ```
 
-## Sending a `GET` request
+## Retrieve a collection of fields
 
-To retrieve a collection of countries, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/country` request.
-This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
+To retrieve a collection of countries, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/country` request. The request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
 
 Pagination allows for efficient data retrieval by specifying the desired range of results. To use pagination, include the desired page limit and offset in the request:
 
@@ -96,7 +93,6 @@ Response sample:
 ]
 ```
 
-{% info_block infoBox %}
 
 When you combine multiple filters in a single request, the system applies an `AND` condition to the retrieved results.
 

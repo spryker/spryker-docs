@@ -90,9 +90,9 @@ The order of import for the above example will be:
 
 Whenever you need to import some data, all you need to change is your YML file by defining the new data importer. You don’t need to change anything in the code.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-Keep in mind that some importers depend on the data from the other ones. For example, you can not import Product Concretes, unless there are no data on Product Abstracts in the database. Therefore, make sure to check individual database relations or dependencies in [About Demo Shop Data Import ](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html) before running specific importers.
+Some importers depend on the data from the other ones. For example, you can not import Product Concretes, unless there are no data on Product Abstracts in the database. Therefore, make sure to check individual database relations or dependencies for specific data importers.
 
 {% endinfo_block %}
 

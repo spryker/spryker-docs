@@ -141,7 +141,7 @@ If you send a request to an endpoint that's not configured in `spy_dynamic_entit
 ```
 
 
-## Sending `POST` request
+## Sending `POST` requests
 
 To create a collection of countries, submit the following HTTP request:
 
@@ -164,7 +164,7 @@ Content-Length: 154
 }
 ```
 
-Response sample:
+The response payload includes all the specified fields from the request body, along with the ID of the created entity. Response sample:
 
 ```json
 [
@@ -177,16 +177,11 @@ Response sample:
 ]
 ```
 
-The response payload includes all the specified fields from the request body, along with the ID of the newly created entity.
 
-{% info_block infoBox %}
+All fields included in the request payload are marked as `isCreatable: true` in the configuration. So, the API creates a new record with all the provided fields.
+However, if any of the provided fields are configured as `isCreatable: false`, the request results in an error.
 
-All fields included in the request payload are marked as `isCreatable: true` in the configuration.
-Therefore, the API will create a new record with all the provided fields.
-However, if any of the provided fields are configured as `isCreatable: false` it will result in an error.
-
-Let's configure `isCreatable: false` for `iso3_code` and send the same request.
-You will receive the following error response because a non-creatable field `iso3_code` is provided:
+For example, configure `isCreatable: false` for `iso3_code` and send the same request. You should receive the following error response:
 
 ```json
 [
@@ -198,12 +193,8 @@ You will receive the following error response because a non-creatable field `iso
 ]
 ```
 
-{% info_block infoBox %}
 
-Certain database-specific configurations may result in issues independent of entity configurations.
-
-For instance, in case of MariaDB, it is impossible to set the ID value for an auto-incremented field. Additionally, for the `iso2_code` field in the `spy_country` table, it must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicated value for this field.
-Otherwise, the following response is returned:
+Certain database-specific configurations may result in issues independent of entity configurations. For example, with MariaDB, it is impossible to set the ID value for an auto-incremented field. Additionally, the `iso2_code` field in the `spy_country` table must have a unique value. Therefore, before creating a new record, you need to make sure you are not passing a duplicate value for this field. If a duplicate value is passed, the following is returned:
 
 ```json
 [
@@ -215,11 +206,11 @@ Otherwise, the following response is returned:
 ]
 ```
 
-This response is caused by a caught Propel exception, specifically an integrity constraint violation `(Integrity constraint violation: 1062 Duplicate entry 'WA' for key 'spy_country-iso2_code')`.
+This response is caused by a caught Propel exception, specifically an integrity constraint violation: `(Integrity constraint violation: 1062 Duplicate entry 'WA' for key 'spy_country-iso2_code')`.
 
-{% endinfo_block %}
 
-### Sending `PATCH` request
+
+### Sending `PATCH` requests
 
 To update a collection of countries, submit the following HTTP request:
 
@@ -242,9 +233,7 @@ Content-Length: 174
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-If everything is set up correctly you will get the following response:
+The response payload includes all the specified fields from the request body. Response sample:
 
 ```json
 [
@@ -257,13 +246,8 @@ If everything is set up correctly you will get the following response:
 ]
 ```
 
-The response payload includes all the specified fields from the request body.
 
-{% endinfo_block %}
-
-{% info_block infoBox %}
-
-It is also possible to send a `PATCH` request for a specific ID instead of a collection, use the following request:
+To update a specific country, send the following HTTP request:
 
 ```bash
 PATCH /dynamic-entity/country/1 HTTP/1.1
@@ -281,17 +265,10 @@ Content-Length: 143
 }
 ```
 
-{% endinfo_block %}
+All fields included in the request payload are marked as `isCreatable: true` in the configuration. So, the API creates a new record with all the provided fields.
+However, if any of the provided fields are configured as `isCreatable: false`, the request results in an error.
 
-{% info_block infoBox %}
-
-Note that all fields included in the request payload are marked as `isEditable: true` in the configuration.
-Therefore, the API will update the found record with all the provided fields.
-However, if any of the provided fields are configured as `isEditable: false` it will result in an error.
-
-Let's configure `isEditable: false` for `iso3_code` and send the same request.
-
-You will receive the following error response because a non-editable field `iso3_code` is provided:
+For example, configure `isCreatable: false` for `iso3_code` and send the same request. You should receive the following error response:
 
 ```json
 [
@@ -303,11 +280,9 @@ You will receive the following error response because a non-editable field `iso3
 ]
 ```
 
-{% endinfo_block %}
 
-{% info_block infoBox %}
 
-If `id_country` is not provided you will get the following response:
+If `id_country` is not provided, the following is returned:
 
 ```json
 [
@@ -319,7 +294,7 @@ If `id_country` is not provided you will get the following response:
 ]
 ```
 
-If `id_country` is not found you will get the following response:
+If `id_country` is not found, the following is returned:
 
 ```json
 [
@@ -331,7 +306,6 @@ If `id_country` is not found you will get the following response:
 ]
 ```
 
-{% endinfo_block %}
 
 {% info_block infoBox %}
 
@@ -341,10 +315,9 @@ Similarly to the `POST` request, it is important to consider database-specific c
 
 ### Sending `PUT` request
 
-When you send a PUT request, you provide the updated representation of the resource in the request
-payload. The server then replaces the entire existing resource with the new representation provided. If the resource does not exist at the specified URL, a PUT request can also create a new resource.
+When you send a PUT request, you provide the updated representation of the resource in the request payload. The server replaces the entire existing resource with the new representation provided. If the resource does not exist at the specified URL, the request creates a new resource.
 
-Let's send the following `PUT` request to update the existing entity:
+To replace an existing entity, send the following `PUT` request:
 
 ```bash
 PUT /dynamic-entity/country HTTP/1.1
@@ -365,9 +338,7 @@ Content-Length: 263
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-If everything is set up correctly you will get the following response:
+The response payload includes all touched fields for the provided resource. Response sample:
 
 ```json
 [
@@ -382,11 +353,6 @@ If everything is set up correctly you will get the following response:
 ]
 ```
 
-The response payload includes all touched fields for the provided resource.
-
-{% endinfo_block %}
-
-{% info_block infoBox %}
 
 It is also possible to send a `PUT` request for a specific ID instead of a collection using the following request:
 

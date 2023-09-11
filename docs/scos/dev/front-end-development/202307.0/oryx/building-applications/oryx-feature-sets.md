@@ -3,6 +3,8 @@ title: "Oryx: Feature sets"
 description: Feature sets are collections of standard features
 last_updated: May 24, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-feature-sets.html
 ---
 
 

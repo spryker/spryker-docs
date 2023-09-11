@@ -2,6 +2,8 @@
 title: Oryx application orchestration
 description: Orchestration of the Oryx Application
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-application-orchestration/oryx-application-orchestration.html
 ---
 
 

@@ -3,6 +3,8 @@ title: "Oryx: Design tokens"
 description: Design tokens provide a centralized and consistent approach for styling components in Oryx applications.
 last_updated: July 24, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-design-tokens.html
 ---
 
 

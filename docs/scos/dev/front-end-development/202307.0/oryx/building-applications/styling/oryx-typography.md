@@ -3,6 +3,8 @@ title: "Oryx: Typography"
 description: Typography design tokens are used for a consistent design system through the components in Oryx applications
 last_updated: July 9, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-typography.html
 ---
 
 

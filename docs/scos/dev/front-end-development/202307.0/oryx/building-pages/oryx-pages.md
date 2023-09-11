@@ -3,6 +3,8 @@ title: "Oryx: Creating pages"
 description: Pages can be created from a data set or custom components
 last_updated: Aug 1, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-pages/oryx-pages.html
 ---
 
 In Oryx, pages are essential building blocks of web applications. They represent different sections or views within an application and can be created using a data-driven approach. This approach lets you define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.
@@ -70,7 +72,7 @@ Oryx enables you to provide custom experience data or change the existing data o
 
 ### Providing custom data
 
-You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-providing-services.html).
+You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html).
 
 A small utility function is available from the experience package to add custom data:
 

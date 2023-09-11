@@ -3,6 +3,8 @@ title: "Oryx: Packages"
 description: Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
 last_updated: Apr 19, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-pages/oryx-packages.html
 ---
 
 

@@ -3,6 +3,8 @@ title: "Oryx: Server-side rendering"
 description: Get a general idea of server-side rendering
 template: concept-topic-template
 last_updated: June 3, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-server-side-rendering.html
 ---
 
 

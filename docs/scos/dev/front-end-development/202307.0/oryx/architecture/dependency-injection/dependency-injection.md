@@ -3,6 +3,8 @@ title: Dependency injection
 description: Dependency injection lets you customize logic but keep your project upgradable
 template: concept-topic-template
 last_updated: Apr 13, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/dependency-injection/dependency-injection.html
 ---
 
 
@@ -14,4 +16,4 @@ The key advantage of using Oryx's DI implementation is that it is vanilla JavaSc
 
 ## Next step
 
-[Oryx service layer](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/oryx-service-layer.html)
+[Oryx service layer](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/oryx-service-layer.html)

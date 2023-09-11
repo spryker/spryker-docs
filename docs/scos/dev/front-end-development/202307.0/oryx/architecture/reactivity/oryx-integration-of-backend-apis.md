@@ -3,6 +3,8 @@ title: "Oryx: Integration of backend APIs"
 description: Compose a frontend application from backend APIs
 template: concept-topic-template
 last_updated: Apr 3, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/reactivity/oryx-integration-of-backend-apis.html
 ---
 
 

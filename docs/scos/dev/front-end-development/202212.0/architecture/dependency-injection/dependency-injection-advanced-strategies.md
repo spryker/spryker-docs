@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 ---
 
-This document describes advanced strategies of using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection.html).
+This document describes advanced strategies of using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html).
 
 
 ## The INJECTOR token

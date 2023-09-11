@@ -165,21 +165,21 @@ In May 2023, we have added and updated the following pages:
     - [Oryx: Routing](/docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-routing.html): Lear how to set up the Oryx routing.
     - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
     - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-supported-browsers.html): Learn what browsers Oryx supports.
-    - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
-    - [Oryx service layer](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
-    - [Dependency Injection: Using services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.
-    - [Dependency Injection: Defining services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-defining-services.html): Recommended conventions for defining services.
-    - [Dependency Injection: Providing services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-providing-services.html): Recommended conventions for providing services.
-    - [Dependency Injection: Advanced strategies](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-advanced-strategies.html): Strategies for using DI that cover advanced use cases.
+    - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
+    - [Oryx service layer](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
+    - [Dependency Injection: Using services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.
+    - [Dependency Injection: Defining services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-defining-services.html): Recommended conventions for defining services.
+    - [Dependency Injection: Providing services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html): Recommended conventions for providing services.
+    - [Dependency Injection: Advanced strategies](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html): Strategies for using DI that cover advanced use cases.
     - [Oryx application orchestration](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html): Orchestration of the Oryx Application.
     - [Oryx application](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html): Learn about the app of the Oryx Application.
     - [Oryx application environment](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html): Learn about the environment of the Oryx Application.
     - [Oryx application feature](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html): Learn about the feature of the Oryx Application.
     - [Oryx application plugins](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html): Learn about plugins of the Oryx Application.
-    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
-    - [Key concepts of Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
-    - [Reactive components](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
-    - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
+    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
+    - [Key concepts of Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
+    - [Reactive components](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
+    - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
 
 
 ### Updated pages

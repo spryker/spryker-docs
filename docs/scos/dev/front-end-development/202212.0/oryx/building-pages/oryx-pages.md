@@ -70,7 +70,7 @@ Oryx enables you to provide custom experience data or change the existing data o
 
 ### Providing custom data
 
-You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-providing-services.html).
+You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html).
 
 A small utility function is available from the experience package to add custom data:
 

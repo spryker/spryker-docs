@@ -38,7 +38,7 @@ The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCO
 To ensure a smooth experience, please make sure that your environments meet the minimum technical requirements outlined below:
 
 * PHP 7.4+. The Upgrader still supports PHP 7.4 to help you upgrade your project. However, make sure to update PHP to the recommended version based on [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). You can automatically check if the PHP version used in your project is supported by the Spryker Code Upgrader with help of the [PHP version checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html) by running the [evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
-* Composer 2.1+
+* Composer 2.4+
 * Git 2.24+
 
 ## Optional: Implement headless design

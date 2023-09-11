@@ -1,11 +1,11 @@
 
 
 
-This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps to install Packaging Units feature core.
+Follow the steps to install the Packaging Units feature core.
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 
 ### 3) Set up the database schema and transfer objects
 
-1. Adjust the schema definition, so entity changes can trigger events.
+1. Adjust the schema definition so entity changes can trigger events.
 
 | AFFECTED ENTITY                 | TRIGGERED EVENTS                                                                                                                                |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -92,7 +92,7 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 </database>
 ```
 
-2. Set up synchronization queue pools, so non-multi-store entities (not store-specific entities) can be synchronized among stores:
+2. Set up synchronization queue pools so non-multi-store entities (not store-specific entities) can be synchronized among stores:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
 
@@ -193,7 +193,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 ### 4) Add translations
 
-1. Append glossary according to your language configuration:
+1. Append the glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
 
@@ -269,7 +269,7 @@ Make sure that the configured data in the database has been added to the `spy_gl
 
 ### 5) Configure export to Redis
 
-This step publishes tables on change (create, edit, delete) to the `spy_product_packaging_unit_storage` and synchronizes the data to Storage.
+This step publishes tables on change (create, edit, delete) to `spy_product_packaging_unit_storage` and synchronizes the data to Storage.
 
 #### Set up event listeners
 
@@ -394,7 +394,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-2. Execute registered installer plugins and install infrastructural data:
+2. Execute the registered installer plugins and install infrastructural data:
 
 ```bash
 console setup:init-db
@@ -560,19 +560,19 @@ Enable the following behaviors by registering the plugins:
 | CustomAmountPriceItemExpanderPlugin                                  | Updates unit prices for variable amounted packaging units.                                                                                                                     | Expects the `amount` and `productPackagingUnit` fields to be set in `ItemTransfers` with packaging units.                                                                                                       | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
 | ProductPackagingUnitCartAddItemStrategyPlugin                        | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the cart add action.                                               | Expects the amount field to be set in `ItemTransfers` with packaging units.                                                                                                                                     | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
 | ProductPackagingUnitCartRemoveItemStrategyPlugin                     | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the cart removal action.                                           | Expects the amount field to be set in `ItemTransfers` with packaging units.                                                                                                                                     | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
-| ProductPackagingUnitItemExpanderPlugin                               | Sets the `amountLeadProduct` and `productPackagingUnit` fields in the `ItemTransfer` properties .                                                                              | Expects the `amount` field to be set in `ItemTransfer` properties with packaging units.                                                                                                                         | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
+| ProductPackagingUnitItemExpanderPlugin                               | Sets the `amountLeadProduct` and `productPackagingUnit` fields in the `ItemTransfer` properties.                                                                              | Expects the `amount` field to be set in `ItemTransfer` properties with packaging units.                                                                                                                         | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
 | ProductPackagingUnitCartPreCheckPlugin                               | Checks if packaging units are found for items in `CartChangeTransfer`.                                                                                                         | Expects the `amount` field to be set in the `ItemTransfer` properties with packaging units.                                                                                                                     | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
-| AmountAvailabilityCheckoutPreConditionPlugin                         | Validates if the given amount is available according to stock configuration during checkout.                                                                                   | Expects the `amount` and `amountLeadProduct` fields to be set in `ItemTransfers` with packaging units.                                                                                                          | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout             |
-| PackagingUnitSplittableItemTransformerStrategyPlugin                 | Splitting order item if product packaging unit item is splittable                                                                                                              |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout             |
+| AmountAvailabilityCheckoutPreConditionPlugin                         | Validates if the given amount is available according to the stock configuration during checkout.                                                                                   | Expects the `amount` and `amountLeadProduct` fields to be set in `ItemTransfers` with packaging units.                                                                                                          | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout             |
+| PackagingUnitSplittableItemTransformerStrategyPlugin                 | Splitting order item if product packaging unit item is splittable.                                                                                                              |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout             |
 | ProductPackagingUnitCartAddItemStrategyPlugin                        | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the persistent cart add action.                                    | Expects the `amount` field to be set in `ItemTransfers` with packaging units.                                                                                                                                   | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PersistentCart       |
 | LeadProductReservationPostSaveTerminationAwareStrategyPlugin         | Updates the lead product's reservation for the provided product packaging unit SKU.                                                                                            |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation          |
-| AmountSalesUnitOrderItemExpanderPreSavePlugin                        | Sets the amount measurement related fields in the Order item for saving.                                                                                                       | Expects the `amountSalesUnit` field to be set in `ItemTransfers` with packaging units.                                                                                                                          | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension       |
+| AmountSalesUnitOrderItemExpanderPreSavePlugin                        | Sets the amount in the measurement-related fields in the Order item for saving.                                                                                                       | Expects the `amountSalesUnit` field to be set in `ItemTransfers` with packaging units.                                                                                                                          | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension       |
 | ProductPackagingUnitOrderItemExpanderPreSavePlugin                   | Sets the `amount` and `amountSku` fields in the Order item for saving.                                                                                                         | Expects `amountLeadProduct` to be set in `ItemTransfers` with packaging units.                                                                                                                                  | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension       |
 | LeadProductStockUpdateHandlerPlugin                                  | Updates availability and reservation of a lead product for a given product packaging unit for stock update handler.                                                            |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Stock                |
 | ProductPackagingUnitAmountCartChangeRequestExpanderPlugin            | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for cart change.                                          | Expects a request to contain the to-be-used information.                                                                                                                                                        | Spryker\Client\ProductPackagingUnit\Plugin\CartExtension                   |
 | ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin         | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for persistent cart change.                               | Expects a request to contain the to-be-used information.                                                                                                                                                        | Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension         |
-| ProductPackagingUnitOmsReservationAggregationPlugin                  | Aggregates reservations for provided SKU both with or without packaging unit.                                                                                                  |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms                  |
-| ProductPackagingUnitProductAbstractAddToCartPlugin                   | Filters out products which have packaging unit available.                                                                                                                      |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\ProductPageSearch    |
+| ProductPackagingUnitOmsReservationAggregationPlugin                  | Aggregates reservations for the provided SKU both with or without packaging unit.                                                                                                  |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms                  |
+| ProductPackagingUnitProductAbstractAddToCartPlugin                   | Filters out products that have packaging units available.                                                                                                                      |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\ProductPageSearch    |
 | AmountLeadProductOrderItemExpanderPlugin                             | Expands order items with additional packaging unit amount lead product.                                                                                                        |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales                |
 | AmountSalesUnitOrderItemExpanderPlugin                               | Expands order items with additional packaging unit sales unit.                                                                                                                 |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales                |
 | ProductPackagingUnitPickingListCollectionExpanderPlugin              | Expands `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem` transfer objects with `amountSalesUnit` property.                                                |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList          |
@@ -940,7 +940,7 @@ Add an item with packaging units to cart and check if the following statements a
 * The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
 * The amount restriction works as expected.
 * Availability is validated respectfully according to your lead product's and packaging unit's configuration.
-* Item grouping in cart works as expected.
+* Item grouping in the cart works as expected.
 * Variable amount changes affect unit prices in the `ItemTransfer` properties.
 * The quantity and amount are merged correctly when the group key matches.
 
@@ -960,7 +960,7 @@ Go to the Zed UI Sales overview, check the order, and verify the following:
 - The correct amount is displayed per sales order item.
 
 Make sure the following:
-* Abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
+* Abstract products that have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
 * Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
 * The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
 
@@ -999,7 +999,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 

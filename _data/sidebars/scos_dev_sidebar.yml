@@ -1382,6 +1382,10 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/dynamic-data-api-integration.html
         include_versions:
         - "202307.0"
+      - title: Data Exchange API + Inventory Management feature integration
+        url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/install-the-data-exchange-api-inventory-management-feature.md
+        include_versions:
+        - "202307.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
       include_versions:

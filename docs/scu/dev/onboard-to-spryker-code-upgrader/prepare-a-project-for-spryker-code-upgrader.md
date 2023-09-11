@@ -13,7 +13,7 @@ Before you can start managing the upgrades of your project with Spryker Code Upg
 
 The Upgrader provides automatic minor and patch updates for the current version of each module. Since most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json `, update all `spryker-feature-*` packages to version `2022.04` or higher.
 
-To check your modules are supported by the Spryker Code Upgrader, [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+To check if your module versions are supported by the Spryker Code Upgrader, [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 
 ## Make your code compliant with Upgradability Guidelines
 

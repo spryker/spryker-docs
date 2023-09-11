@@ -6,10 +6,9 @@ template: concept-topic-template
 redirect_from:
     - /docs/scos/dev/sdk/data-import.html
 ---
-Spryker’s customers need to import data from other systems into their Spryker Commerce OS project. The _Data import_ section holds all the needed information for that. For details, see the following documents:
+
 * [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
 * [Demo Shop data import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
-* [Data import categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html)
 * [Creating a data importer](/docs/scos/dev/data-import/{{page.version}}/creating-a-data-importer.html)
 * [Importing product data with a single file](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html)
 * [Data importers overview and implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)

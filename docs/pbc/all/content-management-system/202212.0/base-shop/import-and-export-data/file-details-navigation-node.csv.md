@@ -27,7 +27,7 @@ This document describes the `navigation_node.csv` file to configure [Navigation 
 
 
 * [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
 
 ## Import file parameters
 

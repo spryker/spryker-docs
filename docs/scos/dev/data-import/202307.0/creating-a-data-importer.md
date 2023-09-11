@@ -23,7 +23,7 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 ## Prerequisites
 
 <a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it should include. We recommend you start by checking out the respective database tables you want to fill with data. The image below shows the table relation for product images.
-![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png) 
+![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png)
 
 From this schema, you can easily identify the data columns you need for your import file. So the relevant fields to fill are:
 
@@ -43,9 +43,9 @@ All `fk_*` fields are foreign keys to other database tables. We can not know the
 For the database field `fk_locale` we will use the name of the locale for which we need the id (e.g. de_DE). This value will then be used later to fetch the id for the given locale name.
 We will use the same technique for the `fk_product` and `fk_product_abstract` fields.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html).
+To identify the data for your import file, you can also check out the .csv files of individual data importers. You can find the import file details in [Packaged Business Capabilities](/docs/pbc/all/pbc.html).
 
 {% endinfo_block %}
 
@@ -67,7 +67,7 @@ Your CSV file for the product images import will contain the following header co
 Now, you can start to fill in some data into the new file. We recommend adding only a couple of entries to check after the first import run if all needed data is imported.
 
 Once you populate all columns, your CSV file should be similar to this one:
-![CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_csv_file_example.png) 
+![CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_csv_file_example.png)
 
 Save the new file under `data/import/*`.
 
@@ -447,4 +447,4 @@ public function execute(DataSetInterface $dataSet)
 
 That’s it! Now when you run the console command `vendor/bin/console data:import:product-image`, you will see an output similar to this one:
 
-![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png) 
+![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png)

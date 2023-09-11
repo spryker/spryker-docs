@@ -192,7 +192,7 @@ That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is comple
 The Search migration effort implies an upgrade of the following modules:
 
 * [Search](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810)
-* [Console](/docs/scos/dev/module-migration-guides/migration-guide-console.html)
+* [Console](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html)
 * [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
 * [Catalog](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
 * [ProductPageSearch](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)

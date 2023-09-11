@@ -13,7 +13,7 @@ Before you can integrate the Algolia app, make sure that your project is ACP-ena
 
 The Algolia app catalog page lists specific packages which must be installed (or upgraded) before the Algolia app can be used. You can find this by navigating to the "App Composition Platform Catalog" and clicking the card for the Algolia app.
 
-Adjust your installation to comply with the listed constraints before proceeding.
+Adjust your installation to comply with the listed requirements before proceeding.
 
 ## Integrate Algolia
 

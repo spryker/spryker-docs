@@ -66,20 +66,17 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Let’s say you have an endpoint `/dynamic-data/stock-products` to operate with data in `spy_stock_product` table in database.
+Let's say you want to have a new endpoint `/dynamic-data/stock-products` to operate with data in `spy_stock_product` table in database.
 
-By default, all routes within the Data Exchange API are protected to ensure data security.
-To access the API, you need to obtain an access token by sending a POST request to the `/token/` endpoint with the appropriate credentials:
+Based on the provided information, the SQL transaction for interacting with the `spy_stock_product` table through the API request via `dynamic-entity/stock-products` would be as follows:
 
-```bash
-POST /token/ HTTP/1.1
-Host: glue-backend.mysprykershop.com
-Content-Type: application/x-www-form-urlencoded
-Accept: application/json
-Content-Length: 67
-
-grant_type=password&username={username}&password={password}
+```sql
+BEGIN;
+INSERT INTO `spy_dynamic_entity_configuration` VALUES (1,'stock-products','spy_stock_product',1,'{"identifier":"id_stock_product","fields":[{"fieldName":"id_stock_product","fieldVisibleName":"id_stock_product","isCreatable":false,"isEditable":false,"validation":{"isRequired": false},"type":"integer"},{"fieldName":"fk_product","fieldVisibleName":"fk_product","isCreatable":true,"isEditable":true,"type":"integer","validation":{"isRequired": true}},{"fieldName":"fk_stock","fieldVisibleName":"fk_stock","isCreatable":true,"isEditable":true,"type":"integer","validation":{"isRequired": true}},{"fieldName":"is_never_out_of_stock","fieldVisibleName":"is_never_out_of_stock","isCreatable":true,"isEditable":true,"type":"boolean","validation":{"isRequired": false}},{"fieldName":"quantity","fieldVisibleName":"quantity","isCreatable":true,"isEditable":true,"type":"integer","validation":{"isRequired": true}}]}', '2023-07-29 12:15:13.0', '2023-07-29 12:15:15.0');
+COMMIT;
 ```
+
+To obtain an access token follow [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
 
 ### Sending a `PATCH` request
 This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
@@ -95,12 +92,15 @@ Content-Length: 174
     "data": [
         {
             "idStockProduct": 1,
-            "Quantity": 10
+            "quantity": 10
         }
     ]
 }
 ```
 
-Make sure that after updating stock data - product availability is updated as well. For this go to the Storefront and check the availability of the product.
+Make sure that after updating stock data - product availability is updated as well:
+```sql
+SELECT * from spy_availability WHERE sku='PRODUCT_SKU';
+```
 
 {% endinfo_block %}

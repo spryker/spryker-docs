@@ -10,11 +10,11 @@ template: concept-topic-template
 - Components
 <!-- TODO: Link to providers -->
 - Providers
-- [Plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-plugins.html)
+- [Plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
 <!-- TODO: Link to resources -->
 - Resources
 - [Feature options](#feature-options)
-- [Builder options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
+- [Builder options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
 
 Features are useful to structure and organize code and functionality into logical groups and to make them easier to reuse in different scenarios.
 

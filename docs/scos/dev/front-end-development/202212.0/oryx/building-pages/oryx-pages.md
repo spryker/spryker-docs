@@ -7,7 +7,7 @@ template: concept-topic-template
 
 In Oryx, pages are essential building blocks of web applications. They represent different sections or views within an application and can be created using a data-driven approach. This approach lets you define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.
 
-Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of the standard preset pages.
+Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of the standard preset pages.
 
 ## Understanding pages and compositions
 
@@ -121,7 +121,7 @@ const customHomePage: ExperienceComponent = {
 
 ### Merge selector
 
-To replace existing content provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
+To replace existing content provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
 
 The selected content is defined by the `merge.selector` field. The following example shows how the provided data replaces the home page.
 

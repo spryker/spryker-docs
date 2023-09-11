@@ -5,8 +5,6 @@ last_updated: May 24, 2023
 template: concept-topic-template
 ---
 
-
-
 A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
 
 There are two types of feature sets: domain and application feature sets.
@@ -23,7 +21,7 @@ Application feature sets can be seen as _demo apps_, because one such set lets y
 
 ### Available application feature sets
 
-Oryx includes predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html). The following feature sets are available:
+Oryx includes predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html). The following feature sets are available:
 
 - b2cFeatures: features commonly used in B2C applications.
 - fulfillmentFeatures: features used in PWAs, used for picking products for fulfillment.

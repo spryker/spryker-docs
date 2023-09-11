@@ -3397,35 +3397,35 @@ entries:
         - title: Building applications
           nested:
           - title: Presets
-            url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-presets.html
           - title: Feature sets
-            url: /docs/scos/dev/front-end-development/oryx/oryx-feature-sets.html
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-feature-sets.html
           - title: Application orchestration
-            url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-orchestration.html
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
             nested:
               - title: Application
-                url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application.html
               - title: Application environment
-                url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-environment.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
               - title: Application feature
-                url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-feature.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
               - title: Application plugins
-                url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-plugins.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
           - title: Localization
-            url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-localization.html
           - title: Styling
             include_versions:
             - "202212.0"
             - "202307.0"
             nested:
               - title: Color system
-                url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-color-system.html
               - title: Design tokens
-                url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-design-tokens.html
               - title: Icon system
-                url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-icon-system.html
               - title: Typography
-                url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-typography.html
 
         - title: Building pages
             nested:

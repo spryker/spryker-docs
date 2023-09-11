@@ -44,7 +44,7 @@ This mechanism lets Oryx avoid distributing localizations as a standard package 
 
 {% info_block infoBox "" %}
 
-The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provides some localizations mainly for demonstration reasons. For more information on the labs package, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html).
+The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provides some localizations mainly for demonstration reasons. For more information on the labs package, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html).
 
 {% endinfo_block %}
 

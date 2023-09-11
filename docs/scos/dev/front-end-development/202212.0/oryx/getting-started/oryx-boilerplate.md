@@ -14,8 +14,8 @@ The Oryx boilerplate is provided in the [Composable Frontend repository](https:/
 In Oryx, we use the following tactics to prevent boilerplate code:
 
 1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) instead of source.
-2. Expose a function to set up the [app orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html) conveniently.
-3. Provide [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html) for the standard application setup, including the feature sets and UI themes.
+2. Expose a function to set up the [app orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html) conveniently.
+3. Provide [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
 5. Provide configurable components and business logic.
 6. Allow for customizations with [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection.html).
@@ -102,7 +102,7 @@ While `index.html` can have a few more details, the following is the required ba
   <body>
     <root-app></root-app>
   </body>
-  <script type="module" src="/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application.ts"></script>
+  <script type="module" src="/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application.ts"></script>
 </html>
 ```
 

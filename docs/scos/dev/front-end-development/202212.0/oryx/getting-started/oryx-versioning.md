@@ -5,24 +5,20 @@ template: concept-topic-template
 last_updated: Mar 3, 2023
 ---
 
-This document describes the methods used in Oryx to deliver an advanced application development platform while maintaining stability. The goal of implementing versioning methods is to ensure that any upcoming changes are introduced in a predictable manner. This makes sure that all Oryx users are informed and adequately prepared for the release of new features and removal of outdated ones.
+This document describes the methods used in Oryx to deliver an advanced application development platform while maintaining stability. The goal of implementing versioning methods is to ensure that changes are introduced in a predictable manner. This makes sure that all Oryx users are informed and adequately prepared for the release and removal of features.
 
-Stability is a critical aspect of any software framework, and it's especially important for frontend frameworks like Oryx. The stability of a framework refers to its ability to function reliably and consistently over time, despite changes in the environment or updates to its components.
-
-The following sections describe how the Oryx framework achieves stability through its versioning and release processes, uses version numbers to indicate changes, and ensures backward compatibility.
+The following sections describe how the Oryx framework achieves versioning and release stability, uses version numbers to indicate changes, and ensures backward compatibility.
 
 ## Semantic versioning
 
-Oryx follows the principles of [semantic versioning](https://semver.org/).
-
-This means that, for version `x.y.z`, the following applies:
+Oryx follows the principles of [semantic versioning](https://semver.org/). This means that, for version `x.y.z`, the following applies:
 - If critical bug fixes are released, a patch release is made by changing the `z` number. For example, `1.5.2` to `1.5.3`.
 - If new features or non-critical fixes are released, a minor release is made by changing the `y` number. For example, `1.5.2` to `15.6.0`.
 - If significant changes that may break compatibility are released, a major release is made by changing the `x` number. For example, `1.5.2` to `2.0.0`.
 
 ### Release previews
 
-For those who want to know what's to come beforehand, for every major and minor release, we offer prerelease versions called Release Candidates (RC).
+For every major and minor release, we offer prerelease versions called Release Candidates (RC).
 
 ## Release process
 
@@ -32,7 +28,7 @@ The Oryx framework consists of two components that are released separately:
 
 ### Libraries
 
-The primary source of functionality within the Oryx framework is the Oryx libraries. They include core features, utilities and helpers, domain-specific functionality, as well as predesigned themes and presets that can be used as provided by default.
+The primary source of functionality within the framework is the Oryx libraries. They include core features, utilities and helpers, domain-specific functionality, as well as predesigned themes and presets that can be used as provided by default.
 
 The libraries are released as [packages](https://www.npmjs.com/org/spryker-oryx) under the same version.
 
@@ -41,7 +37,7 @@ The libraries are released as [packages](https://www.npmjs.com/org/spryker-oryx)
 The Oryx labs consist of experimental or demo functionality. Its version is tied to the current version of the libraries and is never considered stable. Therefore, the labs version number consists of three parts:
 
 ```
-0.{Libraries-version}.{patch}
+0.{libraries-version}.{patch}
 ```
 
 For example, if the current libraries version is `1.5.2`, the version of the labs is `0.152.0`. If we release the next version of labs before releasing the libraries, the version of the labs is updated to `0.152.1`.
@@ -72,3 +68,24 @@ Minor releases are fully backward compatible and do not require any developer as
 ### Deprecation practices
 
 If a newer and better alternative to a feature is introduced in a minor release, the old one is deprecated. Deprecated features remain functional until the next major release, in which they are removed completely.
+
+## Feature flag versioning
+
+Feature flag versioning enables you to roll out new functionalities, like changes in page structure or additional component options, while ensuring backward compatibility. Feature flag versioning is directly aligned with major and minor releases, allowing for a balanced mix of innovation and stability.
+
+### ORYX_FEATURE_VERSION
+
+The `ORYX_FEATURE_VERSION` environment variable is used to opt into new functionalities or to lock and maintain compatibility with existing setups. It optimizes your build by leveraging Dead Code Elimination. Any code unrelated to the defined version isn't included in the final bundle, making your application leaner.
+
+The following example shows how you can define a specific version:
+
+```
+ORYX_FEATURE_VERSION=1.1
+```
+
+You can also use the `featureVersion` utility in your code or third-party libraries to conditionally enable features.
+
+```typescript
+import { featureVersion } from '@spryker-oryx/utilities';
+if (featureVersion >= '1.1') { /* New feature code */ }
+```

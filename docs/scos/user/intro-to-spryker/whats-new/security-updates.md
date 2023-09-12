@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
   - title: Security release notes 202212.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
-  - title: Security release notes 202108.0
-    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
 ---
 
 To receive a security updates email, please request the subscription at [support@spryker.com](mailto:support@spryker.com).

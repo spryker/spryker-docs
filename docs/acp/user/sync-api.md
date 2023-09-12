@@ -4,7 +4,7 @@ Descriptions: You can use the Sync API's OpenAPI schema to generate code with th
 template: howto-guide-template
 ---
 
-[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](/docs/scos/dev/glue-api-guides/202108.0/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2c-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
+[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/{{site.verison}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
 Spryker uses schema files to generate code for your project, including predefined test cases. The purpose of doing so is to let you focus on building your business logic without caring about the boilerplate code.
 
 ## Code generation
@@ -15,7 +15,7 @@ You can control the code generator with the following parts of the schema file:
 - Extension
 - Application type
 - Components
-  
+
 {% info_block infoBox "Info" %}
 
 All the required infrastructural code is generated automatically. For example, Facade, Factory, DependencyProvider, Plugins, Controller, etc.
@@ -27,7 +27,7 @@ All the required infrastructural code is generated automatically. For example, F
 
 When you design your resource names, keep in mind that the code generator, by default, uses the path to define the following:
 - module the endpoint belongs to,
-- controller name that will handle the request, 
+- controller name that will handle the request,
 - model name that will be used to fulfill your business logic.
 
 For example, `/customers/addresses` generates code within the CustomersBackendApi or CustomersFrontendApi module (see [Application type](#application-type)). The controller name that will be executed to handle the request will be `AddressesController` and the model name will be `Addresses`.
@@ -104,17 +104,17 @@ For all three components, the code generator creates a transfer schema file defi
 There is the following error: `Failed to resolve Reference '#/paths/my/app/path/...`. Example output:
 
 ```php
-php vendor/bin/syncapi code:openapi:generate -f config/app/bazaarvoice/api/openapi/bazaarvoice.yml 
+php vendor/bin/syncapi code:openapi:generate -f config/app/bazaarvoice/api/openapi/bazaarvoice.yml
 
 In Reference.php line 255:
-                                                                                                                                                                                                                                
+
   Failed to resolve Reference '#/paths/bazaar-voice/configure/post' to cebe\openapi\spec\Operation Object: Failed to evaluate pointer '/paths/bazaar-voice/configure/post'. Array has no member bazaar-voice at path '/paths'.  
-                                                                                                                                                                                                                                
+
 
 In JsonPointer.php line 123:
-                                                                                                                       
+
   Failed to evaluate pointer '/paths/bazaar-voice/configure/post'. Array has no member bazaar-voice at path '/paths'.  
-                                                                                                                       
+
 
 code:openapi:generate [-f|--openapi-file OPENAPI-FILE] [-t|--application-type APPLICATION-TYPE] [-o|--organization ORGANIZATION]
 ```

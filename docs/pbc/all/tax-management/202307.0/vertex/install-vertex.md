@@ -11,15 +11,11 @@ related:
 
 ## Prerequisites
 
-Before you can integrate Vertex, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+- Before you can integrate Vertex, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-The Vertex app requires the following Spryker modules:
+- The Vertex app catalog page lists specific packages which must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
 
-* `spryker/tax-app: ^0.1.0`
-* `spryker-shop/cart-page: ^3.38.0`
-* `spryker/merchant-profile: ^1.5.0` (Marketplace only)
-* `spryker/product-offer-availability: ^1.4.0` (Marketplace only)
-* `spryker/stock-address: ^1.2.0` (Marketplace only)
+Adjust your installation to comply with the listed requirements before proceeding.
 
 ## Integrate ACP connector module for tax calculation
 
@@ -61,7 +57,79 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-### 2. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS
+### 2. Configure Calculation Dependency Provider
+
+Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`:
+
+```php
+// ...
+
+use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
+
+// ...
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     */
+    protected function getQuoteCalculatorPluginStack(Container $container): array
+    {
+        /** @var array<\Spryker\Zed\Calculation\Dependency\Plugin\CalculationPluginInterface> $pluginStack */
+        $pluginStack = [
+            // ...
+        
+            // Please put this plugin after all other tax calculation plugins.
+        
+            new TaxAppCalculationPlugin(),
+        
+            // ...
+        ];
+        
+        return $pluginStack;
+    }
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     */
+    protected function getOrderCalculatorPluginStack(Container $container): array
+    {
+        return [
+            // ...
+        
+            # Please put this plugin after all other tax calculation plugins.        
+            new TaxAppCalculationPlugin(),
+        
+            // ...
+        ];
+    }
+
+// ...
+```
+
+{% info_block infoBox "Performance Improvements" %}
+
+Spryker has its own Taxes functionality that is pre-installed to the Checkout via Calculation module. When you decided to use external Tax calculation provider for the performance improvements it worths to disable following plguins:
+
+in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
+
+- TaxAmountCalculatorPlugin
+- ItemTaxAmountFullAggregatorPlugin
+- TaxRateAverageAggregatorPlugin
+- TaxTotalCalculatorPlugin
+
+in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPluginStack()`:
+
+- TaxAmountCalculatorPlugin
+- ItemTaxAmountFullAggregatorPlugin
+- TaxAmountAfterCancellationCalculatorPlugin
+- OrderTaxTotalCalculationPlugin
+
+{% endinfo_block %}
+
+### 3. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS
 
 The following code sample shows how to configure payment `config/Zed/oms/{your_payment_oms}.xml`.
 
@@ -156,59 +224,6 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
         return $container;
     }
 
-```
-
-### 3. Configure Calculation Dependency Provider
-
-Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`:
-
-```php
-// ...
-
-use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
-
-// ...
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
-     */
-    protected function getQuoteCalculatorPluginStack(Container $container): array
-    {
-        /** @var array<\Spryker\Zed\Calculation\Dependency\Plugin\CalculationPluginInterface> $pluginStack */
-        $pluginStack = [
-            // ...
-        
-            // Please put this plugin after all other tax calculation plugins.
-        
-            new TaxAppCalculationPlugin(),
-        
-            // ...
-        ];
-        
-        return $pluginStack;
-    }
-    
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
-     */
-    protected function getOrderCalculatorPluginStack(Container $container): array
-    {
-        return [
-            // ...
-        
-            // Please put this plugin after all other tax calculation plugins.
-        
-            new TaxAppCalculationPlugin(),
-        
-            // ...
-        ];
-    }
-
-// ...
 ```
 
 ## Integrate the Vertex app

@@ -1192,6 +1192,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Merchant Relationship Product Lists Glue API
+                        url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
@@ -3135,6 +3139,8 @@ entries:
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-search-widget-for-concrete-products.html
                       - title: Install the Catalog Glue API
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
+                      - title: Install the Catalog + Merchant Product Restrictions
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html
                   - title: Upgrade modules
                     nested:
                       - title: Catalog
@@ -3223,16 +3229,17 @@ entries:
               - title: Third-party integrations
                 nested:
                 - title: Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia.html
-                - title: Integrate Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/integrate-algolia.html
-                - title: Configure Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/configure-algolia.html
-                  include_versions:
-                  - "202212.0"
-                  - "202307.0"
-                - title: Disconnect Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/disconnect-algolia.html
+                  url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia.html
+                  nested:
+                    - title: Integrate Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
+                    - title: Configure Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
+                      include_versions:
+                      - "202212.0"
+                      - "202307.0"
+                    - title: Disconnect Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html
                 nested:

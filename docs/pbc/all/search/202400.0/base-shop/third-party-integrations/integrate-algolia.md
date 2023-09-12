@@ -9,9 +9,10 @@ This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.v
 
 ## Prerequisites
 
-Before you can integrate the Algolia app, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+- Before you can integrate the Algolia app, make sure that your project is [ACP-enabled](/docs/acp/user/app-composition-platform-installation.html).
 
-The Algolia app catalog page lists specific packages which must be installed (or upgraded) before the Algolia app can be used. You can find this by navigating to the "App Composition Platform Catalog" and clicking the card for the Algolia app.
+- The Algolia app catalog page lists specific packages which must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
+![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
 Adjust your installation to comply with the listed requirements before proceeding.
 
@@ -70,7 +71,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ### 2. Configure modules and dependencies
 
-Configure modules and add and the necessary dependencies according to these guidelines.
+Configure modules and add the necessary dependencies according to these guidelines.
 
 #### Configure Catalog dependencies in `Client`
 
@@ -387,7 +388,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 #### Adjust MessageBroker configuration in `Zed`
 
-Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
 //...
@@ -414,7 +415,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 #### Adjust Product configuration in `Zed`
 
-Add the following to `src/Pyz/Zed/Product/ProductConfig.php`:
+Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 ```php
 //...
@@ -604,7 +605,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Add SearchHttp configuration in `Zed`
 
-Add the code following to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
+Add the following code to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
 
 ```php
 <?php

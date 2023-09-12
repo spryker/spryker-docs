@@ -38,6 +38,4 @@ Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-u
 
 ### Resolving the issue
 
-To resolve the issue:
-
-1. Update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.
+To resolve the issue, update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.

@@ -292,6 +292,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                       - title: QuickOrderPage
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
+                      - title: StepEngine
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stepengine-module.html
               - title: Extend and customize
                 nested:
                   - title: "Calculation 3.0"
@@ -1129,6 +1131,10 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-customer-account-management-glue-api.html
               - title: Install Microsoft Azure Active Directory
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-microsoft-azure-active-directory.html
+              - title: Upgrade the Oauth module
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
+              - title: Upgrade the OauthCompanyUser module
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
           - title: Manage using Glue API
             nested:
               - title: Create customers
@@ -1186,6 +1192,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Merchant Relationship Product Lists Glue API
+                        url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
@@ -1340,7 +1350,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
-      - title: Miscallaneous
+      - title: Miscellaneous
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -1355,6 +1365,30 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+              - title: Upgrade modules
+                nested:
+                  - title: Api
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-api-module.html
+                  - title: Collector
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
+                  - title: Flysystem
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-flysystem-module.html
+                  - title: Monitoring
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-monitoring-module.html
+                  - title: Console
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html
+                  - title: Quote
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
+                  - title: RabbitMQ
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-rabbitmq-module.html
+                  - title: Setup
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-setup-module.html
+                  - title: Transfer
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
+              - title: Import and export data
+                nested:
+                  - title: "Import file details: glossary.csv"
+                    url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
               - title: Install Glue API
                 nested:
                   - title: Spryker Core
@@ -3115,6 +3149,8 @@ entries:
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
                       - title: CmsPageSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+                      - title: Elastica
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-elastica-module.html
                       - title: ProductLabelSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html
                       - title: ProductListSearch
@@ -3496,7 +3532,7 @@ entries:
                       - title: Segment scope
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
               - title: "Persistence ACL feature: Domain model and relationships"
-                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html                                                                                   
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

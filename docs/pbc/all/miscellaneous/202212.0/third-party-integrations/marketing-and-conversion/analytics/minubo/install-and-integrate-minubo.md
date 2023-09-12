@@ -1,5 +1,5 @@
 ---
-title: Install and integrate Minubo
+title: Installing and integrating Minubo
 description: Learn how to install and integrate Minubo
 template: howto-guide-template
 redirect_from:

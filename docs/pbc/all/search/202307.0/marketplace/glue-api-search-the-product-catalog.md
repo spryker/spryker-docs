@@ -17,7 +17,9 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api).
+For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
+- [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
+- [Install the Merchant Relationship Product Lists Glue API](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html)
 
 ## Search by products
 

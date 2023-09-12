@@ -493,5 +493,5 @@ The proposed solution was developed was tested in a project environment. It has 
 
 
 {% info_block warningBox "Important Note" %}
-While this solution can be used to either save cloud costs because of down-scaling Jenkins instance or speed up background processing, it is not guaranteed, because each project is unique and EC2 ("Jenkins" jobs) instance performance also depends on other jobs like data import and custom plugins which may affect performance significantly.
+Please note that instance performance also depends on other jobs like data import and custom plugins which may affect the overall performance and run time of your P&S processes significantly. These should always be analysed, as well, by using [Application Performance Monitoring](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202307.0/configure-services.html#new-relic) or [local application profiling](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html).
 {% endinfo_block %}

@@ -16,30 +16,13 @@ Install the required features:
 | Warehouse Picking | {{page.version}} | [Warehouse Picking feature integration](/docs/pbc/all/install-features/{{page.version}}/install-the-warehouse-picking-order-management-feature.html)                    |
 | Product           | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
-
-## 1) Install the required modules using Composer
-
-```bash
-composer require spryker/picking-lists-products-backend-resource-relationship:"^0.1.0" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following module has been installed:
-
-| MODULE                                          | EXPECTED DIRECTORY                                                  |
-|-------------------------------------------------|---------------------------------------------------------------------|
-| PickingListsProductsBackendResourceRelationship | vendor/spryker/picking-lists-products-backend-resource-relationship |
-
-{% endinfo_block %}
-
-### 2) Set up behavior
+### 1) Set up behavior
 
 Enable the following plugins.
 
-| PLUGIN                                                              | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                                                                                   |
-|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------|
-| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\PickingListsProductsBackendResourceRelationship\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| PLUGIN                                                              | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                                                      |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------|
+| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
@@ -52,7 +35,7 @@ namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
 use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
-use Spryker\Glue\PickingListsProductsBackendResourceRelationship\Plugin\GlueJsonApiConvention\ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin;
+use Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {

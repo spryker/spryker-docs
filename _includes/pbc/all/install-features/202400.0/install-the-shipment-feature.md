@@ -43,6 +43,7 @@ Make sure that the following modules have been installed:
 | ShipmentDataImport      | vendor/spryker/shipment-data-import       |
 | ShipmentGui             | vendor/spryker/shipment-gui               |
 | Shipment                | vendor/spryker/shipment                   |
+| ShipmentsBackendApi     | vendor/spryker/shipments-backend-api      |
 | ShipmentType            | vendor/spryker/shipment-type              |
 | ShipmentTypeDataImport  | vendor/spryker/shipment-type-data-import  |
 | ShipmentTypesRestApi    | vendor/spryker/shipment-types-rest-api    |
@@ -109,11 +110,13 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 ```
 
 ### 3) To enable the Storefront API, register the following plugins:
+
 | PLUGIN                           | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                |
 |----------------------------------|------------------------------------------|---------------|----------------------------------------------------------|
 | ShipmentTypesResourceRoutePlugin | Registers the `shipment-types` resource. |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -186,42 +189,51 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY                       | TYPE   | EVENT   |
-|---------------------------------------|--------|---------|
-| spy_sales_shipment_type               | table  | created |
-| spy_shipment_method_store             | table  | created |
-| spy_shipment_type                     | table  | created |
-| spy_shipment_type_storage             | table  | created |
-| spy_shipment_type_store               | table  | created |
-| spy_sales_shipment.fk_shipment_type   | column | created |
-| spy_shipment_method.fk_shipment_type  | column | created |
+| DATABASE ENTITY                      | TYPE   | EVENT   |
+|--------------------------------------|--------|---------|
+| spy_sales_shipment_type              | table  | created |
+| spy_shipment_method_store            | table  | created |
+| spy_shipment_type                    | table  | created |
+| spy_shipment_type_storage            | table  | created |
+| spy_shipment_type_store              | table  | created |
+| spy_sales_shipment.fk_shipment_type  | column | created |
+| spy_sales_shipment.uuid              | column | created |
+| spy_shipment_carrier.uuid            | column | created |
+| spy_shipment_method.fk_shipment_type | column | created |
+| spy_shipment_method.uuid             | column | created |
+| spy_shipment_method_price.uuid       | column | created |
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                | TYPE     | EVENT   | PATH                                                                  |
-|-----------------------------------------|----------|---------|-----------------------------------------------------------------------|
-| ShipmentTransfer                        | class    | created | src/Generated/Shared/Transfer/ShipmentTransfer                        |
-| StoreTransfer                           | class    | created | src/Generated/Shared/Transfer/StoreTransfer                           |
-| DataImporterConfigurationTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer       |
-| DataImporterReaderConfigurationTransfer | class    | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
-| DataImporterReportTransfer              | class    | created | src/Generated/Shared/Transfer/DataImporterReportTransfer              |
-| DataImporterReportMessageTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterReportMessageTransfer       |
-| TotalsTransfer                          | class    | created | src/Generated/Shared/Transfer/TotalsTransfer                          |
-| ShipmentTypeCollectionTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer          |
-| ShipmentTypeTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                    |
-| ShipmentTypeCriteriaTransfer            | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer            |
-| ShipmentTypeConditionsTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer          |
-| ShipmentTypeStorageCollectionTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer   |
-| ShipmentTypeStorageTransfer             | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer             |
-| ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer     |
-| ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer   |
-| ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer        |
-| SalesShipmentTypeTransfer               | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer               |
-| RestShipmentTypesAttributesTransfer     | class    | created | src/Generated/Shared/Transfer/RestShipmentTypesAttributesTransfer     |
-| RestErrorMessageTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                |
-| ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                  |
-| ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                        |
-| ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                            |
+| TRANSFER                                | TYPE     | EVENT   | PATH                                                                     |
+|-----------------------------------------|----------|---------|--------------------------------------------------------------------------|
+| ShipmentTransfer                        | class    | created | src/Generated/Shared/Transfer/ShipmentTransfer                           |
+| StoreTransfer                           | class    | created | src/Generated/Shared/Transfer/StoreTransfer                              |
+| DataImporterConfigurationTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer          |
+| DataImporterReaderConfigurationTransfer | class    | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer    |
+| DataImporterReportTransfer              | class    | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                 |
+| DataImporterReportMessageTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterReportMessageTransfer          |
+| TotalsTransfer                          | class    | created | src/Generated/Shared/Transfer/TotalsTransfer                             |
+| SalesShipmentCriteria                   | class    | created | src/Generated/Shared/Transfer/SalesShipmentCriteriaTransfer              |
+| SalesShipmentConditions                 | class    | created | src/Generated/Shared/Transfer/SalesShipmentConditionsTransfer            |
+| SalesShipmentCollection                 | class    | created | src/Generated/Shared/Transfer/SalesShipmentCollectionTransfer            |
+| ShipmentTypeCollectionTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer             |
+| ShipmentTypeTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                       |
+| ShipmentTypeCriteriaTransfer            | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer               |
+| ShipmentTypeConditionsTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer             |
+| ShipmentTypeStorageCollectionTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer      |
+| ShipmentTypeStorageTransfer             | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                |
+| ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer        |
+| ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer      |
+| ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer           |
+| SalesShipmentTypeTransfer               | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer                  |
+| RestShipmentTypesAttributesTransfer     | class    | created | src/Generated/Shared/Transfer/RestShipmentTypesAttributesTransfer        |
+| SalesShipmentResourceCollection         | class    | created | src/Generated/Shared/Transfer/SalesShipmentResourceCollectionTransfer    |
+| SalesShipmentsBackendApiAttributes      | class    | created | src/Generated/Shared/Transfer/SalesShipmentsBackendApiAttributesTransfer |
+| RestErrorMessageTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                   |
+| ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                     |
+| ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                           |
+| ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                               |
 
 {% endinfo_block %}
 
@@ -1065,9 +1077,10 @@ Make sure that when you place an order, the selected shipment type is persisted 
 
 7. To enable the Backend API, register these plugins:
 
-| PLUGIN                             | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                             |
-|------------------------------------|------------------------------------------|---------------|-----------------------------------------------------------------------|
-| ShipmentTypesBackendResourcePlugin | Registers the `shipment-types` resource. |               | Spryker\Glue\ShipmentTypesBackendApi\Plugin\GlueBackendApiApplication |
+| PLUGIN                                                        | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                       |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------------|
+| ShipmentTypesBackendResourcePlugin                            | Registers the `shipment-types` resource.                                              |               | Spryker\Glue\ShipmentTypesBackendApi\Plugin\GlueBackendApiApplication                           |
+| SalesShipmentsByPickingListsBackendResourceRelationshipPlugin | Adds `sales-shipments` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\ShipmentsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -1091,12 +1104,43 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
         ];
     }
 }
+```
 
+**src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
+
+use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
+use Spryker\Glue\ShipmentsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\SalesShipmentsByPickingListsBackendResourceRelationshipPlugin;
+
+class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
+{
+    /**
+     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            PickingListsBackendApiConfig::RESOURCE_PICKING_LIST_ITEMS,
+            new SalesShipmentsByPickingListsBackendResourceRelationshipPlugin(),
+        );
+
+        return $resourceRelationshipCollection;
+    }
+}
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+1. Make sure that you can send the following requests:
 
 * `GET https://glue-backend.mysprykershop.com/shipment-types`
 * `GET https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types-uuid{% raw %}}{{% endraw %}`
@@ -1129,6 +1173,79 @@ Make sure that you can send the following requests:
     }
     ```
 
+2. Make sure you have a `sales-shipments` resource as a relationship to `picking-list-items` when you do a request.
+
+`GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-shipments`
+<details>
+  <summary markdown='span'>Response body example</summary>
+```json
+{
+    "data": {
+        "id": "14baa0f3-e6e7-5aa8-bc6c-c02ec39ca77b",
+        "type": "picking-lists",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-03-23 15:47:07.000000",
+            "updatedAt": "2023-03-30 12:47:45.000000"
+        },
+        "relationships": {
+            "picking-list-items": {
+                "data": [
+                    {
+                        "id": "65bb3aec-0a45-5ec6-9b12-bbca6551d87f",
+                        "type": "picking-list-items"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/14baa0f3-e6e7-5aa8-bc6c-c02ec39ca77b?include=picking-list-items,sales-shipments"
+        }
+    },
+    "included": [
+        {
+            "id": "84935e86-ef86-507f-9c23-54942486d8cb",
+            "type": "sales-shipments",
+            "attributes": {
+                "requestedDeliveryDate": "2023-04-20"
+            },
+            "links": {
+                "self": "https://glue-backend.mysprykershop.com/sales-shipments/84935e86-ef86-507f-9c23-54942486d8cb?include=picking-list-items,sales-shipments"
+            }
+        },
+        {
+            "id": "65bb3aec-0a45-5ec6-9b12-bbca6551d87f",
+            "type": "picking-list-items",
+            "attributes": {
+                "quantity": 1,
+                "numberOfPicked": 1,
+                "numberOfNotPicked": 0,
+                "orderItem": {
+                    "uuid": "31e21001-e544-5533-9754-51331c8c9ac5",
+                    "sku": "141_29380410",
+                    "quantity": 1,
+                    "name": "Asus Zenbook US303UB",
+                    "amountSalesUnit": null
+                }
+            },
+            "relationships": {
+                "sales-shipments": {
+                    "data": [
+                        {
+                            "id": "84935e86-ef86-507f-9c23-54942486d8cb",
+                            "type": "sales-shipments"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/65bb3aec-0a45-5ec6-9b12-bbca6551d87f?include=picking-list-items,sales-shipments"
+            }
+        }
+    ]
+}
+```
+</details>
 {% endinfo_block %}
 
 ## Install feature frontend

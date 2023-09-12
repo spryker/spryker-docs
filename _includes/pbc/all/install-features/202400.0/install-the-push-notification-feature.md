@@ -11,9 +11,9 @@ Follow the steps below to install the Push Notification feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
-|--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  |
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+|--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -29,8 +29,8 @@ Make sure that the following modules have been installed:
 |-----------------------------|-----------------------------------------------|
 | PushNotification            | vendor/spryker/push-notification              |
 | PushNotificationExtension   | vendor/spryker/push-notification-extension    |
-| PushNotificationsBackendApi | vendor/spryker/push-notification-backend-api  |
 | PushNotificationWebPushPhp  | vendor/spryker/push-notification-web-push-php |
+| PushNotificationsBackendApi | vendor/spryker/push-notifications-backend-api |
 
 {% endinfo_block %}
 
@@ -75,6 +75,7 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationProviderCollection                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionTransfer                   |
 | PushNotificationProviderCollectionRequest            | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionRequestTransfer            |
 | PushNotificationProviderCollectionResponse           | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionResponseTransfer           |
+| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransferTransfer          |
 | PushNotificationProvider                             | class | created | src/Generated/Shared/Transfer/PushNotificationProviderTransfer                             |
 | PushNotificationProviderConditions                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderConditionsTransfer                   |
 | PushNotificationSubscriptionConditions               | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionConditionsTransfer               |
@@ -82,14 +83,13 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
 | PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
 | PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
-| ApiPushNotificationSubscriptionsAttributes           | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionsAttributesTransfer           |
-| ApiPushNotificationGroupsAttributes                  | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
-| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequest                                                  |
-| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollection                                 |
-| Sort                                                 | class | created | src/Generated/Shared/Transfer/Sort                                                         |
-| Pagination                                           | class | created | src/Generated/Shared/Transfer/Pagination                                                   |
-| ApiPushNotificationProvidersAttributes               | class | created | src/Generated/Shared/Transfer/ApiPushNotificationProvidersAttributes                       |
-| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
+| PushNotificationSubscriptionsBackendApiAttributes    | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionsBackendApiAttributesTransfer           |
+| PushNotificationGroupsBackendApiAttributes           | class | created | src/Generated/Shared/Transfer/PushNotificationGroupsBackendApiAttributesTransfer                  |
+| PushNotificationProvidersBackendApiAttributes        | class | created | src/Generated/Shared/Transfer/PushNotificationProvidersBackendApiAttributesTransfer               |
+| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer                                          |
+| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollectionTransfer                         |
+| Sort                                                 | class | created | src/Generated/Shared/Transfer/SortTransfer                                                 |
+| Pagination                                           | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                           |
 
 {% endinfo_block %}
 
@@ -127,8 +127,8 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 2. Add the configuration defining *Voluntary Application Server Identity (`VAPID`)* keys, which are used by the push notification:
 
-| CONFIGURATION                                          | SPECIFICATION                                                                   | NAMESPACE                                 |
-|--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
+| CONFIGURATION                                          | SPECIFICATION                                                                         | NAMESPACE                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------|-------------------------------------------|
 | PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides the `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
 | PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides the `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
 | PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides the `VAPID` subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
@@ -179,12 +179,12 @@ push_notification.validation.error.push_notification_provider_not_found,The push
 push_notification.validation.error.push_notification_provider_not_found,Der Push-Benachrichtigungsanbieters wurde nicht gefunden.,de_DE
 push_notification.validation.error.push_notification_not_found,Push notification not found.,en_US
 push_notification.validation.error.push_notification_not_found,Push-Nachricht nicht gefunden.,de_DE
-push_notification.validation.error.push_notification_provider_already_exists,Push notification provider already exists.,en_US
-push_notification.validation.error.push_notification_provider_already_exists,Der Anbieter für Push-Benachrichtigungen existiert bereits.,de_DE
 push_notification.validation.error.wrong_group_name,Wrong group name.,en_US
 push_notification.validation.error.wrong_group_name,Falscher Gruppenname.,de_DE
 push_notification.validation.error.push_notification_already_exists,Push notification subscription already exists.,en_US
 push_notification.validation.error.push_notification_already_exists,Das Abonnement für Push-Benachrichtigungen existiert bereits.,de_DE
+push_notification.validation.error.locale_not_found,Provided locale not found.,en_US
+push_notification.validation.error.locale_not_found,Bereitgestellte Sprache nicht gefunden.,de_DE
 push_notification_web_push_php.validation.error.invalid_payload_structure,Invalid payload structure.,en_US
 push_notification_web_push_php.validation.error.invalid_payload_structure,Ungültige Nutzlaststruktur.,de_DE
 push_notification_web_push_php.validation.error.payload_length_exceeded,The maximum payload length exceeded.,en_US
@@ -235,7 +235,7 @@ use Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification
 class PushNotificationDependencyProvider extends SprykerPushNotificationDependencyProvider
 {
     /**
-     * @return array<int, \Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationSubscriptionValidatorPluginInterface>
+     * @return list<\Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationSubscriptionValidatorPluginInterface>
      */
     protected function getPushNotificationSubscriptionValidatorPlugins(): array
     {
@@ -245,7 +245,7 @@ class PushNotificationDependencyProvider extends SprykerPushNotificationDependen
     }
 
     /**
-     * @return array<int, \Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationValidatorPluginInterface>
+     * @return list<\Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationValidatorPluginInterface>
      */
     protected function getPushNotificationValidatorPlugins(): array
     {
@@ -255,7 +255,7 @@ class PushNotificationDependencyProvider extends SprykerPushNotificationDependen
     }
 
     /**
-     * @return array<int, \Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationSenderPluginInterface>
+     * @return list<\Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationSenderPluginInterface>
      */
     protected function getPushNotificationSenderPlugins(): array
     {
@@ -287,7 +287,7 @@ use Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\Installer\PushNo
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface|\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
+     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface|\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins(): array
     {   
@@ -314,9 +314,9 @@ docker/sdk console setup:init-db
 
 3. Enable the following console command plugins:
 
-| PLUGIN                                           | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                          |
-|--------------------------------------------------|------------------------------------------------------------------|---------------|----------------------------------------------------|
-| SendPushNotificationConsole                      | Sends notifications in an async way.                             |               | Spryker\Zed\PushNotification\Communication\Console |
+| PLUGIN                                           | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                          |
+|--------------------------------------------------|--------------------------------------------------------------------|---------------|----------------------------------------------------|
+| SendPushNotificationConsole                      | Sends notifications in an async way.                               |               | Spryker\Zed\PushNotification\Communication\Console |
 | DeleteExpiredPushNotificationSubscriptionConsole | Delete expired push notification subscriptions from `Persistence`. |               | Spryker\Zed\PushNotification\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -335,7 +335,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
      /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Symfony\Component\Console\Command\Command>
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -350,10 +350,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 4. To enable the Backend API, register the plugin:
 
-| PLUGIN                                             | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                       |
-|----------------------------------------------------|------------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| PushNotificationSubscriptionsBackendResourcePlugin | Registers the `push-notification-subscriptions` resource.  |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication |
-| PushNotificationProvidersBackendResourcePlugin     | Registers the `push-notification-providers` resource.      |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication |
+| PLUGIN                                             | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                 |
+|----------------------------------------------------|------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
+| PushNotificationSubscriptionsBackendResourcePlugin | Registers the `push-notification-subscriptions` resource.  |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication |
+| PushNotificationProvidersBackendResourcePlugin     | Registers the `push-notification-providers` resource.      |               | Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -363,7 +363,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication\PushNotificationSubscriptionsBackendResourcePlugin;
+use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationSubscriptionsBackendResourcePlugin;
 use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueBackendApiApplication\PushNotificationProvidersBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider

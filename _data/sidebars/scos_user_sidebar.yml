@@ -49,12 +49,6 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
           - title: "Security release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
-        - title: Release notes Code Releases May, 2020
-          nested:
-          - title: Security Release Notes Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
-          - title: Release Notes Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-code-releases-may-2020.html
     - title: Docs release notes
       url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new

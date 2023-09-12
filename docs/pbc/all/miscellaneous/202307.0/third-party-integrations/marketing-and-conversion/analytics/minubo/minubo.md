@@ -34,7 +34,7 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Installing and configuring Minubo](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/installing-and-integrating-minubo.html)
+* [Installing and configuring Minubo](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html)
 
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to set up Oryx using a boilerplate project
 last_updated: Apr 3, 2023
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/front-end-development/202307.0/oryx/building-pages/set-up-oryx.html
+  - /docs/scos/dev/front-end-development/202307.0/oryx/set-up-oryx.html
 ---
 
 This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/composable-frontend) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.

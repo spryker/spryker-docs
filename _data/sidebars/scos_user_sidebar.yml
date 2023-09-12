@@ -38,30 +38,12 @@ entries:
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
         - title: Release notes 202204.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
-        - title: Release notes 202009.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-202009.0.html
-          nested:
-          - title: Security release notes 202009.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
         - title: Release Notes 202102.0
           nested:
           - title: "Performance release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
           - title: "Security release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
-        - title: Release notes Code Releases May, 2020
-          nested:
-          - title: Security Release Notes Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
-          - title: Release Notes Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-code-releases-may-2020.html
-        - title: Release notes 202001.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html
-          nested:
-          - title: Security release notes 202001.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
-          - title: Known issues 202001.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
     - title: Docs release notes
       url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new

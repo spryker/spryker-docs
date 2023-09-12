@@ -4051,8 +4051,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
       - title: "Tutorial: Customer import"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
-      - title: "Tutorial: Calculator plugin"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
       - title: "Tutorial: Using translations"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"

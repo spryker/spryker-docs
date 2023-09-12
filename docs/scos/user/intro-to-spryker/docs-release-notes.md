@@ -190,8 +190,8 @@ In May 2023, we have added and updated the following pages:
 - [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html): Learn how you can submit an environment provisioning request.
-- [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/configure-algolia.html): Learn how to configure the Algolia app.
-- [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/integrate-algolia.html): Learn how to integrate the Algolia app.
+- [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/configure-algolia.html): Learn how to configure the Algolia app.
+- [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/integrate-algolia.html): Learn how to integrate the Algolia app.
 
 For more details on these and other updates to the Spryker docs in May 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 

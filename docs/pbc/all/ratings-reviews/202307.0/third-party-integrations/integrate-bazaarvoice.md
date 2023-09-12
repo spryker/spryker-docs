@@ -200,19 +200,19 @@ use \Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...,
-    AddReviewsTransfer::class => 'reviews',
-    OrderStatusChangedTransfer::class => 'orders'
+    AddReviewsTransfer::class => 'product-review-commands',
+    OrderStatusChangedTransfer::class => 'order-events'
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...,
-    'reviews' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...,
-    'orders' => 'http',
+    'order-events' => 'http',
 ];
 ```
 #### Add a message handler

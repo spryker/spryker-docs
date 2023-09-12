@@ -5,7 +5,6 @@ template: howto-guide-template
 last_updated: Feb 23, 2023
 redirect_from:
   - /docs/pbc/all/search/202212.0/third-party-integrations/disconnect-algolia.html
-  - /docs/pbc/all/search/202307.0/base-shop/third-party-integrations/disconnect-algolia.html
 ---
 
 Disconnecting the Algolia app immediately and permanently deletes all the existing Algolia [indexes](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia.html#indexes) and restores the default [Elasticsearch](https://www.elastic.co/elasticsearch/) search engine for your store.

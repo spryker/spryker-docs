@@ -3140,7 +3140,7 @@ entries:
                       - title: Install the Catalog Glue API
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
                       - title: Install the Catalog + Merchant Product Restrictions
-                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api\install-the-catalog-merchant-product-restrictions-feature.html
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html
                   - title: Upgrade modules
                     nested:
                       - title: Catalog

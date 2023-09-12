@@ -4,7 +4,7 @@ description: Browsers supported by Oryx
 template: concept-topic-template
 last_updated: May 23, 2023
 redirect_from:
-  - /docs/scos/dev/front-end-development/202307.0/oryx/building-pages/oryx-supported-browsers.html
+  - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-supported-browsers.html
 ---
 
 

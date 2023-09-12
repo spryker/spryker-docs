@@ -14,17 +14,17 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
 related:
   - title: Episerver - Installation and Configuration
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
   - title: Episerver - Order referenced commands
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
   - title: Episerver - API Requests
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
 ---
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
-Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 

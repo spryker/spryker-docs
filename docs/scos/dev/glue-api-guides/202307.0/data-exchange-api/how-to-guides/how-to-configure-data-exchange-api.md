@@ -142,13 +142,3 @@ After you click the button, the specification will be downloaded to your compute
 If you added new endpoints, documentation will be updated automatically with the new endpoints, but need wait 1 minute for it. Button **Download API Specification** will be disabled during this time and aviailable after 1 minute. You can see  message about it in the top of the page:
 
 [PASTE SCREENSHOT deapi_generation_in_progress.png HERE]
-
-***Also if for some reason file not exists, you will see the message about it***
-
-[PASTE SCREENSHOT deapi_spec_file_not_exists.png HERE]
-
-Please regenerate specification in this case manually or add new endpoints for Data Exchange API.
-
-```bash 
- vendor/bin/glue api:generate:documentation
-```

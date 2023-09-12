@@ -34,9 +34,10 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration
 
-Add `cors-allow-origin` to `deploy.yml`:
 
 ### Configure CORS
+
+Add `cors-allow-origin` to `deploy.yml`:
 
 ```yml
 glue_eu:
@@ -122,14 +123,15 @@ Access-Control-Expose-Headers: ETag
 
 {% endinfo_block %}
 
-### Configure the included section
+### Configure relationships
 
-{% info_block infoBox %}
+Set the value of `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` according to your requirements:
 
-  -  When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (that is, `/abstract-products?include=abstract-product-prices`).
-  - When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (that is, `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
+|VALUE | DESCRIPTION |
+|-|-|
+| false | If the `include` query parameter is not passed, no resource relationships are returned. If particular relationships are requested thorough the `include` parameter, only those relationships are returned. For example: `/abstract-products?include=abstract-product-prices` |
+| true | If the `include` query parameter is not passed, all resource relationships are returned. If an empty include query parameter is passed, no relationships are returned: `/abstract-products?include=`. If particular relationships are requested thorough the `include` parameter, only those relationships are returned. |
 
-{% endinfo_block %}
 
 ## 3) Set up transfer objects
 
@@ -172,20 +174,20 @@ Make sure that the following changes have occurred:
 | GlueApplicationApplicationPlugin | Registers the resource builder service and configures the debug mode in Glue Application. |  | Spryker\Glue\GlueApplication\Plugin\Application |
 | HttpApplicationPlugin | Sets trusted proxies and host. Adds `HttpKernel`, `RequestStack`, and `RequestContext` to the container. |  | Spryker\Glue\Http\Plugin\Application |
 | EventDispatcherApplicationPlugin | Extends `EventDispatcher` with plugins. |  | Spryker\Glue\EventDispatcher\Plugin\Application |
-| SessionApplicationPlugin | Registers session in Glue Application. |  | Spryker\Glue\Session\Plugin\Application |
-| GlueRestControllerListenerEventDispatcherPlugin | Registers the `onKernelController` event listeners in Glue Application |  | Spryker\Glue\GlueApplication\Plugin\Rest |
+| SessionApplicationPlugin | Registers the session in Glue Application. |  | Spryker\Glue\Session\Plugin\Application |
+| GlueRestControllerListenerEventDispatcherPlugin | Registers the `onKernelController` event listeners in Glue Application. |  | Spryker\Glue\GlueApplication\Plugin\Rest |
 | RouterApplicationPlugin | Registers the URL matcher and router services in Glue Application. |  | Spryker\Glue\Router\Plugin\Application |
 | SetStoreCurrentLocaleBeforeActionPlugin | Sets a locale for the whole current store. |  | Spryker\Glue\GlueApplication\Plugin\Rest\ |
 | EntityTagFormatResponseHeadersPlugin | Adds the `ETag` header to response if applicable. |  | Spryker\Glue\EntityTagsRestApi\Plugin\GlueApplication\ |
 | EntityTagRestRequestValidatorPlugin | Verifies that the `If-Match` header is equal to the entity tag. |  | Spryker\Glue\EntityTagsRestApi\Plugin\GlueApplication\ |
-| StoresResourceRoutePlugin | Registers the stores resource. |  | Spryker\Glue\StoresRestApi\Plugin |
-| UrlResolverResourceRoutePlugin | Registers the url-resolver resource. |  | Spryker\Glue\UrlsRestApi\Plugin\GlueApplication\ |
-| ProductAbstractRestUrlResolverAttributesTransferProviderPlugin | Provides abstract-products resource from the `UrlStorageTransfer` object. |  | Spryker\Glue\ProductsRestApi\Plugin\UrlsRestApi\ |
-| CategoryNodeRestUrlResolverAttributesTransferProviderPlugin | Provides category-nodes resource from the UrlStorageTransfer object. |  | Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi\ |
+| StoresResourceRoutePlugin | Registers the `stores` resource. |  | Spryker\Glue\StoresRestApi\Plugin |
+| UrlResolverResourceRoutePlugin | Registers the `url-resolver` resource. |  | Spryker\Glue\UrlsRestApi\Plugin\GlueApplication\ |
+| ProductAbstractRestUrlResolverAttributesTransferProviderPlugin | Provides the `abstract-products` resource from the `UrlStorageTransfer` object. |  | Spryker\Glue\ProductsRestApi\Plugin\UrlsRestApi\ |
+| CategoryNodeRestUrlResolverAttributesTransferProviderPlugin | Provides the `category-nodes` resource from the `UrlStorageTransfer` object. |  | Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi\ |
 | SecurityBlockerCustomerRestRequestValidatorPlugin | Stops the customer accounts that are blocked by SecurityBlocker from being able to make access-tokens requests. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
 | SecurityBlockerAgentRestRequestValidatorPlugin | Stops the agent accounts that are blocked by SecurityBlocker from being able to make agent-access-tokens requests. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
-| SecurityBlockerCustomerControllerAfterActionPlugin | Counts the failed customer login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
-| SecurityBlockerAgentControllerAfterActionPlugin | Counts the failed agent login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
+| SecurityBlockerCustomerControllerAfterActionPlugin | Counts failed customer login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
+| SecurityBlockerAgentControllerAfterActionPlugin | Counts failed agent login attempts. |  | Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -246,9 +248,9 @@ $bootstrap
     ->run();
 ```
 
-### Configure web server
+### Configure the web server
 
-1. Create Nginx VHOST configuration:
+1. Create the Nginx VHOST configuration:
 
 **/etc/nginx/sites-enabled/DE_development_glue**
 
@@ -275,7 +277,7 @@ server {
 }
 ```
 
-2. Update the hosts configuration by adding the following line. Replace {IP} with your server's IP address:
+2. Update the hosts configuration. Replace `{IP}` with your server's IP address:
 
 **/etc/hosts**
 ```bash
@@ -284,7 +286,7 @@ server {
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you should be able to access `https://glue.mysprykershop.com` and get the following JSON response:
+Make sure you can access `https://glue.mysprykershop.com` and get the following JSON response:
 
 **Default JSON Response**
 ```json
@@ -442,11 +444,9 @@ The response should contain the `ETag` header.
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `EntityTagRestRequestValidatorPlugin` is set up correctly.
+To verify `EntityTagRestRequestValidatorPlugin`, send the following request with the `If-Match` header equal the value of `ETag` from the GET response header:
 
-Send a PATCH request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}` with the `If-Match` header equal the value of `ETag` from the GET response header:
-`PATCH https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/identitifer`
-
+`PATCH https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`
 ```json
 HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
 
@@ -460,13 +460,13 @@ HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
 }
 ```
 
+Make sure that the returned resource contains an updated `ETag`.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the returned resource contains an updated `ETag`.
-
-Sending a wrong `If-Match` header value results in the following error:
+Make sure that sending a wrong `If-Match` header value results in the following error:
 
 ```json
 {
@@ -484,18 +484,17 @@ Sending a wrong `If-Match` header value results in the following error:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `https://glue.mysprykershop.com/stores` endpoint is available:
+Make sure you can send requests to the `https://glue.mysprykershop.com/stores` endpoint.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To make sure the `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin` plugin is set up correctly, request the abstract-products URL via the /URLs API endpoint and make sure you receive the correct resource identifier in response.
+To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send the following request: make sure you receive the correct resource identifier in response.
 
-**Request body**
-
+`POST https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url`
 ```json
-https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
+
 {
     "data": [
         {
@@ -521,7 +520,7 @@ https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
 
 {% info_block warningBox "Verification" %}
 
-To make sure `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin` is set up correctly, request the category URL via the `/URLs` API endpoint, and ensure you receive the correct resource identifier in response.
+To verify `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin`, request the category URL via the `/URLs` API endpoint, and ensure you receive the correct resource identifier in response.
 
 **Request body**
 

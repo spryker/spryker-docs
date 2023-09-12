@@ -3331,78 +3331,89 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-        - title: Set up
-          url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
-        - title: Boilerplate
-          url: /docs/scos/dev/front-end-development/oryx/oryx-boilerplate.html
-        - title: Feature sets
-          url: /docs/scos/dev/front-end-development/oryx/oryx-feature-sets.html
-        - title: Presets
-          url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
-        - title: Packages
-          url: /docs/scos/dev/front-end-development/oryx/oryx-packages.html
-        - title: Versioning
-          url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
-        - title: "Pages"
-          url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-pages.html
-        - title: "Compositions"
-          url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-compositions.html
-        - title: Routing
-          url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
-        - title: Server-side rendering
-          url: /docs/scos/dev/front-end-development/oryx/oryx-server-side-rendering.html
-        - title: Localization
-          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html
-        - title: Supported browsers
-          url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
-        - title: Dependency injection
-          url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection.html
+        - title: Getting started
           nested:
-            - title: Oryx service layer
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/oryx-service-layer.html
-            - title: Using services
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-using-services.html
-            - title: Defining services
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-defining-services.html
-            - title: Providing services
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-providing-services.html
-            - title: Advanced strategies
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-advanced-strategies.html
-        - title: Application orchestration
-          url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-orchestration.html
+            - title: Set up
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
+            - title: Boilerplate
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
+            - title: Packages
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-packages.html
+            - title: Versioning
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-versioning.html
+            - title: Supported browsers
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-supported-browsers.html
+
+        - title: Building applications
           nested:
-            - title: Application
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application.html
-            - title: Application environment
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-environment.html
-            - title: Application feature
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-feature.html
-            - title: Application plugins
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-plugins.html
-        - title: Reactivity
-          url: /docs/scos/dev/front-end-development/oryx/reactivity/reactivity.html
+          - title: Presets
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-presets.html
+          - title: Feature sets
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-feature-sets.html
+          - title: Application orchestration
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
+            nested:
+              - title: Application
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application.html
+              - title: Application environment
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
+              - title: Application feature
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
+              - title: Application plugins
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
+          - title: Localization
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-localization.html
+          - title: Styling
+            include_versions:
+            - "202212.0"
+            - "202307.0"
+            nested:
+              - title: Color system
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-color-system.html
+              - title: Design tokens
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-design-tokens.html
+              - title: Icon system
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-icon-system.html
+              - title: Typography
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-typography.html
+
+        - title: Building pages
           nested:
-            - title: Key concepts
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/key-concepts-of-reactivity.html
-            - title: Reactive components
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
-            - title: Integration of backend APIs
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
-            - title: Signals
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html
-        - title: Styling
-          include_versions:
-          - "202212.0"
-          - "202307.0"
+            - title: "Pages"
+              url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-pages.html
+            - title: "Compositions"
+              url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-compositions.html
+            - title: Routing
+              url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
+
+        - title: Architecture
           nested:
-            - title: Color system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
-            - title: Design tokens
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
-            - title: Icon system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html
-            - title: Typography
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
+            - title: Dependency injection
+              url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection.html
+              nested:
+                - title: Oryx service layer
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/oryx-service-layer.html
+                - title: Using services
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-using-services.html
+                - title: Defining services
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-defining-services.html
+                - title: Providing services
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-providing-services.html
+                - title: Advanced strategies
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
+            - title: Reactivity
+              url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/reactivity.html
+              nested:
+                - title: Key concepts
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/key-concepts-of-reactivity.html
+                - title: Reactive components
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/reactive-components.html
+                - title: Integration of backend APIs
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html
+                - title: Signals
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/signals.html
+            - title: Server-side rendering
+              url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
 
     - title: Marketplace
       include_versions:

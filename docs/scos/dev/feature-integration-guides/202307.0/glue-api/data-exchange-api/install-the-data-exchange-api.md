@@ -401,10 +401,6 @@ If the documentation cache is not invalidated, the documentation will not be upd
 
 {% endinfo_block %}
 
-```bash
-console navigation:build-cache
-```
-
 <details open>
 <summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
 

@@ -11,19 +11,19 @@ This document describes how to configure the Data Exchange API endpoints by exec
 
 ## Configuration of Data Exchange API endpoints
 
-To create an endpoint for interacting with entities in the database, you need to add a corresponding row in the `spy_dynamic_entity_configuration` table.
+To create an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table.
 
 The `spy_dynamic_entity_configuration` table contains the configuration of dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION |
 | --- | --- |
-| id_dynamic_entity_configuration | The unique ID of the configuration. |
+| id_dynamic_entity_configuration | ID of the configuration. |
 | table_alias | An alias used in the request URL to refer to the endpoint. |
-| table_name | The name of the corresponding table in the database to operate on. |
-| is_active | Indicates whether the endpoint is enabled or disabled. |
+| table_name | The name of the database table to operate on. |
+| is_active | Defines if the endpoint can be interacted with. |
 | definition | A JSON-formatted string containing the configuration details for each field in the table. |
 | created_at | Date and time when the configuration was created. |
-| updated_at | Date and time when the configuration was last updated. |
+| updated_at | Date and time when the configuration was updated. |
 
 Dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
 
@@ -95,7 +95,7 @@ The following table describes the purpose of each field:
 In this example, we are creating the `/dynamic-data/country` endpoint to operate with data in the `spy_country` table. When following the steps, adjust the data per your requirements:
 
 
-1. In the Back Office, go to **Data Exchange API Configuration**.
+1. In the Back Office, go to **Data Exchange API Configuration**. 
 2. On the **Data Exchange API Configuration** page, click **Create Data Exchange API configuration**.
 
 [PASTE SCREENSHOT HERE]

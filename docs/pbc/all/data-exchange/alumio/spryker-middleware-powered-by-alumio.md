@@ -6,14 +6,14 @@ template: concept-topic-template
 
 ## Alumio
 
-Alumio is a cloud-based integration Platform as a Service (iPaaS) solution which is the foundation of Spryker Middleware and Integration Apps. Alumio has integrations (connectors) with several solutions in its marketplace, including Spryker, this way allowing to connect Spryker with other systems. 
+Alumio is a cloud-based integration Platform as a Service (iPaaS) solution which is the foundation of Spryker Middleware and Integration Apps. Alumio has integrations or connectors with several solutions in its marketplace, including Spryker, this way allowing to connect Spryker with other systems. 
 
 Examples of use-cases with Alumio include the following:
 
-- File import and Export: Files in different formats (CSV, XML, JSON) can be exchanged via Alumio using Spryker’s [Data Exchange APIs](docs\pbc\all\data-exchange\data-exchange-api\data-exchang-api.md).
-- ERP Integration: Data from Enterprise Resource Planning systems such as SAP, Microsoft Dynamics 365, Oracle can be imported into Spryker via the middleware. 
-- PIM Integration: Product data from Product Information Management Systems such as Akeneo, Pimcore can be imported to Spryker via the middleware.
-- Marketplace Integration: Product data can be exported from Spryker to external marketplaces such as Amazon, Tradebyte, and Ebay via the middleware.
+- File import and Export: You can exchange files in different formats (CSV, XML, JSON) via Alumio using Spryker’s [Data Exchange APIs](/docs/pbc/all/data-exchange/data-exchange-api/data-exchang-api.html).
+- ERP Integration: You can import data from Enterprise Resource Planning systems such as SAP, Microsoft Dynamics 365, Oracle into Spryker via the middleware. 
+- PIM Integration: You can import product data from a Product Information Management Systems such as Akeneo, Pimcore into Spryker via the middleware.
+- Marketplace Integration: You can export product data from Spryker to external marketplaces such as Amazon, Tradebyte, and Ebay via the middleware.
 
 ## Spryker Middleware
 

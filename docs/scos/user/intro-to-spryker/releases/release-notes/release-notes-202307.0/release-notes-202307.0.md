@@ -293,7 +293,7 @@ Pipeline Success Dashboard example:
 
 ### [Core Commerce] Upgraded Angular to v15 and Node.js to v18 <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging of these versions' latest features and improvements.
+To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging of these versions' latest features and improvements. No infrastructure changes are required on your end before performing the upgrade.
 
 #### Documentation
 

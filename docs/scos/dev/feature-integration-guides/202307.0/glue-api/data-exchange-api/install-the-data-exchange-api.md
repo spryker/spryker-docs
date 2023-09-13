@@ -162,7 +162,7 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 
 ### Set up database schema and transfer objects
 
-Apply database changes and generate entity and transfer changes:
+1. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -177,9 +177,7 @@ Make sure you've triggered the following changes by checking the database:
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
 
-Add configurations for dynamic entities. In order to do that follow the instructions here [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html)  
-
-Ensure the following transfers have been created:
+Make sure the following transfers have been created:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -214,6 +212,8 @@ Ensure the following transfers have been created:
 | Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
 
 {% endinfo_block %}
+
+2. Add configurations for dynamic entities. For instructions, see [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).  
 
 ### Add translations
 

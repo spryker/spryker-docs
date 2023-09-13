@@ -72,8 +72,10 @@ The following table describes the purpose of each field:
 | isCreatable | Defines if the field can be included in requests to provide an initial value during record creation. |
 | validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria. |
 | required | Defines if the field must be provided in API requests. |
-| maxLength/minLength | Defines the minimum/maximum length allowed for the field with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
-| max/min | Defines the minimum/maximum value allowed for the field with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
+| maxLength | Defines the maximum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. |
+| minLength | Defines the minimum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined requirement. |
+| max | Defines the maximum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. Optional. |
+| min | Defines the minimum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
 
 
 {% info_block infoBox %}
@@ -95,7 +97,7 @@ The following table describes the purpose of each field:
 In this example, we are creating the `/dynamic-data/country` endpoint to operate with data in the `spy_country` table. When following the steps, adjust the data per your requirements:
 
 
-1. In the Back Office, go to **Data Exchange API Configuration**. 
+1. In the Back Office, go to **Data Exchange API Configuration**.
 2. On the **Data Exchange API Configuration** page, click **Create Data Exchange API configuration**.
 
 [PASTE SCREENSHOT HERE]

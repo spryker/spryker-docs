@@ -29,6 +29,7 @@ Make sure that the following module has been installed:
 |------------------------------------------|--------------------------------------------------------------|
 | ProductOfferShipmentType                 | vendor/spryker/product-offer-shipment-type                   |
 | ProductOfferShipmentTypeDataImport       | vendor/spryker/product-offer-shipment-type-data-import       |
+| ProductOfferShipmentTypeGui              | vendor/spryker/product-offer-shipment-type-gui               |
 | ProductOfferShipmentTypeStorage          | vendor/spryker/product-offer-shipment-type-storage           |
 | ProductOfferShipmentTypeStorageExtension | vendor/spryker/product-offer-shipment-type-storage-extension |
 
@@ -419,13 +420,14 @@ Make sure that the configured data has been added to the `spy_product_offer_ship
 
 Enable the following plugins:
 
-| PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                            |
-|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES                                                                                                                                                                                                       | NAMESPACE                                                                            |
+|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | ShipmentTypeProductOfferPostCreatePlugin                  | Persists product offer shipment type to persistence.                                                                          | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
 | ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence. | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                 | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                               | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                         | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
-| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                      | None                                                                                                                                                                                                            | Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage            |
+| ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                     | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                               | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
+| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                  | None                                                                                                                                                                                                                | Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage            |
+| ShipmentTypeProductOfferViewSectionPlugin                 | Expands product offer view section with shipment types.                                                                       | None                                                                                                                                                                                                                | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
 
 <details open
 ><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -522,3 +524,32 @@ class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDe
     }
 }
 ```
+
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferGui;
+
+use Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui\ShipmentTypeProductOfferViewSectionPlugin;
+
+class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface>
+     */
+    public function getProductOfferViewSectionPlugins(): array
+    {
+        return [
+            new ServiceProductOfferViewSectionPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that `Shipment Types` section is displayed on product offer view page.
+
+{% endinfo_block %}

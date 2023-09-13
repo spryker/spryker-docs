@@ -148,6 +148,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ServicePointCollectionResponse        | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponseTransfer        |
 | ServicePointCriteria                  | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                  |
 | ServicePointConditions                | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                |
+| ServicePointSearchConditions          | class | created | src/Generated/Shared/Transfer/ServicePointSearchConditions                  |
 | ApiServicePointsAttributes            | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributesTransfer            |
 | ApiServiceTypesAttributes             | class | created | src/Generated/Shared/Transfer/ApiServiceTypesAttributesTransfer             |
 | ApiServicesAttributes                 | class | created | src/Generated/Shared/Transfer/ApiServicesAttributesTransfer                 |

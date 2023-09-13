@@ -18,7 +18,7 @@ To start feature integration, integrate the required feature:
 ## 1) Install the required modules using Composer
 
 ```bash
-composer require spryker/cart-notes-backend-api:^0.1.0 --update-with-dependencies
+composer require spryker-feature/cart-notes:"{{page.version}}" --update-with-dependencies
 ```
 
 Ensure that the following modules have been installed:

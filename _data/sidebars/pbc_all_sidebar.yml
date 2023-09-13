@@ -1437,7 +1437,16 @@ entries:
                 - title: Customer communication
                   nested:
                   - title: Episerver
-                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver.html
+                    nested:
+                      - title: Install and configure
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html
+                      - title: Integrating
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
+                      - title: API
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+                      - title: Order reference commands
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
                   - title: Dotdigital
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/dotdigital.html
                 - title: AB testing and performance
@@ -1480,7 +1489,10 @@ entries:
                       - title: Using FACT-Finder recommendation engine
                         url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
                   - title: Minubo
-                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo/minubo.html
+                    nested:
+                      - title: Install and integrate
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html
                   - title: ChannelPilot Analytics
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/channelpilot-analytics.html
                   - title: Haensel AMS
@@ -1500,7 +1512,10 @@ entries:
                 - title: Shopmacher
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/shopmacher.html
                 - title: Loggly
-                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly.html
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
+                  nested:
+                    - title: Configure
+                      url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
                 - title: Proclane
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
                 - title: Data Virtuality

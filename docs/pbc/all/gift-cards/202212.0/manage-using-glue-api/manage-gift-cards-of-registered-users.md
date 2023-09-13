@@ -63,7 +63,7 @@ To redeem the gift card code, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/pbc/all/identity-access-management/{{site.version}}/glue-api-authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -180,7 +180,7 @@ To remove the gift card code from the cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/pbc/all/identity-access-management/{{site.version}}/glue-api-authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 

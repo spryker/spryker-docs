@@ -720,12 +720,12 @@ entries:
       - "202212.0"
       - "202307.0"
     - title: Authentication and authorization
-      url: /docs/scos/dev/glue-api-guides/glue-api-authentication-and-authorization.html
+      url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
       include_versions:
       - "202212.0"
       - "202307.0"
     - title: Security and authentication
-      url: /docs/scos/dev/glue-api-guides/glue-api-security-and-authentication.html
+      url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
       include_versions:
       - "202212.0"
       - "202307.0"

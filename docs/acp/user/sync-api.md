@@ -4,7 +4,7 @@ Descriptions: You can use the Sync API's OpenAPI schema to generate code with th
 template: howto-guide-template
 ---
 
-[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/{{site.verison}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
+[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
 Spryker uses schema files to generate code for your project, including predefined test cases. The purpose of doing so is to let you focus on building your business logic without caring about the boilerplate code.
 
 ## Code generation

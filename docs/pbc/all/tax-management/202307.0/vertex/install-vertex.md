@@ -2,7 +2,7 @@
 title: Install Vertex
 description: Find out how you can install Vertex in your Spryker shop
 draft: true
-last_updated: Aug 3, 2023
+last_updated: Sep 13, 2023
 template: howto-guide-template
 related:
   - title: Vertex

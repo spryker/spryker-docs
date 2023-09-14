@@ -2,6 +2,8 @@
 title: Oryx application plugins
 description: Plugins of the Oryx Application
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-plugins.html
 ---
 
 When you create an Oryx Application with the `appBuilder()` function, it creates an instance of `App`. `App` is a a shell that can be enhanced with custom plugins: `AppPlugin`. Plugins let you extend Oryx core behavior without modifying the core code of the framework.

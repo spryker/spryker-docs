@@ -149,8 +149,8 @@ Glue as an API stays the same, but the main module carrying the infrastructure f
   * [Create and change Glue API conventions](/docs/scos/dev/glue-api-guides/202307.0/create-and-change-glue-api-conventions.html)
   * [How to create grant type parameters](/docs/scos/dev/glue-api-guides/202307.0/create-grant-type-parameters.html)
   * [How to use an authentication server](/docs/scos/dev/glue-api-guides/202307.0/use-authentication-servers-with-glue-api.html)
-  * [Authentication and authorization](/docs/scos/dev/glue-api-guides/202307.0/glue-api-authentication-and-authorization.html)
-  * [Security and authentication](/docs/scos/dev/glue-api-guides/202307.0/glue-api-security-and-authentication.html)
+  * [Authentication and authorization](/docs/scos/dev/glue-api-guides/202307.0/authentication-and-authorization.html)
+  * [Security and authentication](/docs/scos/dev/glue-api-guides/202307.0/security-and-authentication.html)
 
 ### [Framework] Configure OAuth 2.0 clients on install <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

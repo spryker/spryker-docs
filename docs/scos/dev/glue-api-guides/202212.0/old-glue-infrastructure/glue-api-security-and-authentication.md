@@ -20,7 +20,7 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202307.0/glue-api-security-and-authentication.html  
 related:
   - title: Authentication and Authorization
-    link: docs/scos/dev/glue-api-guides/page.version/glue-api-authentication-and-authorization.html
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
 ---
 
 {% info_block warningBox %}

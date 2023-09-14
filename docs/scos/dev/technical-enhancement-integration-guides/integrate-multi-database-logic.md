@@ -93,12 +93,22 @@ In `config/Shared/config_default.php`,  extend the key-value configuration:
 
 ```php
 // >>> STORAGE
-
+...
 $keyValueRegionNamespaces = json_decode(getenv('SPRYKER_KEY_VALUE_REGION_NAMESPACES') ?: '[]', true);
-....
 $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = getenv('SPRYKER_KEY_VALUE_STORE_NAMESPACE') ?: $keyValueRegionNamespaces[APPLICATION_CODE_BUCKET] ?? 1;
 ...
 ```
+
+{% info_block infoBox "Edge case when SPRYKER_KEY_VALUE_STORE_NAMESPACE is always set " %}
+If you notice that environment variable SPRYKER_KEY_VALUE_STORE_NAMESPACE is set in your setup, and you still want to be able to switch Redis DB changing only the store, we recommend the following change:
+```php
+// >>> STORAGE
+...
+$keyValueRegionNamespaces = json_decode(getenv('SPRYKER_KEY_VALUE_REGION_NAMESPACES') ?: '[]', true);
+$config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = $keyValueRegionNamespaces[APPLICATION_CODE_BUCKET] ?: getenv('SPRYKER_KEY_VALUE_STORE_NAMESPACE') ?? 1;
+...
+```
+{% endinfo_block %}
 
 ## Configure stores
 

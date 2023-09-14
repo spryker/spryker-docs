@@ -1,7 +1,43 @@
 #!/bin/bash
 
-# Specify the folder containing the Markdown files
-folder_path="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs/docs/scos/dev/guidelines"
+# Function to process files in a folder and its subfolders recursively
+process_files() {
+    local folder="$1"
+    local root_directory="$2"
+
+    for file in "$folder"/*; do
+        if [ -f "$file" ]; then
+            # Get the absolute file path
+            file_path=$(realpath "$file")
+
+            # Get the relative file path
+            relative_path=${file_path#$root_directory}
+
+            # Add '  - ' at the start of the relative file path
+            relative_path="  - $relative_path"
+
+            # Replace ".md" with ".html" in the relative file path
+            relative_path="${relative_path%.md}.html"
+
+            # Get the content of the original file
+            original_content=$(cat "$file")
+
+            # Prepend the modified relative file path to the content
+            updated_content="$relative_path"$'\n'"$original_content"
+
+            # Overwrite the original file with the updated content
+            echo "$updated_content" > "$file"
+
+            echo "Modified file path added to: $file"
+        elif [ -d "$file" ]; then
+            # If it's a directory, recursively process its contents
+            process_files "$file" "$root_directory"
+        fi
+    done
+}
+
+# Specify the folder containing the files
+folder_path="/path/to/your/folder"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then
@@ -9,45 +45,10 @@ if [ ! -d "$folder_path" ]; then
     exit 1
 fi
 
-# Function to process Markdown files
-process_markdown_files() {
-    local folder="$1"
-    local root_directory="$2"
+# Specify the root directory to make paths relative to
+root_directory="$folder_path"
 
-    for file in "$folder"/*; do
-        if [ -f "$file" ] && [[ "$file" == *.md ]]; then
-            # Get the content of the Markdown file
-            file_content=$(cat "$file")
-            
-            # Check if "redirect_from:" exists in the file
-            if [[ "$file_content" =~ redirect_from: ]]; then
-                # Add the file path after "redirect_from:"
-                updated_content=$(echo "$file_content" | sed -E "s/(redirect_from:.*)/\1\n  - $file_path/")
-
-                # Update the file with the modified content
-                echo "$updated_content" > "$file"
-
-                echo "File path added to: $file"
-            else
-                # Add "redirect_from:" before the second occurrence of "---"
-                updated_content=$(echo "$file_content" | sed -E "0,/---/s/---/\0\nredirect_from:/")
-                
-                # Add the file path after "redirect_from:"
-                updated_content=$(echo "$updated_content" | sed -E "/redirect_from:/s/$/\n  - $file_path/")
-
-                # Update the file with the modified content
-                echo "$updated_content" > "$file"
-
-                echo "redirect_from: and file path added to: $file"
-            fi
-        elif [ -d "$file" ]; then
-            # If it's a directory, recursively process its contents
-            process_markdown_files "$file" "$root_directory"
-        fi
-    done
-}
-
-# Call the function to process Markdown files and subfolders
-process_markdown_files "$folder_path" "$folder_path"
+# Call the function to process files and subfolders
+process_files "$folder_path" "$root_directory"
 
 echo "Script completed."

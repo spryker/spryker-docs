@@ -4,13 +4,11 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-The *Container set function* check checks the way plugins are registered in the dependency provider on the project level.
+The *Container set function* check checks how plugins are registered in the dependency provider on the project level.
 
 ## Problem description
 
-Inside of the dependency provider, you can add the plugin to `\Spryker\Client\Kernel\Container`, by using the `set` method.
-To keep the plugins simple, please do not return an array of plugins inside the callback function.
-When you need to register a list of plugins, please create a dedicated method for this purpose, return an array of plugins, and call this method inside the callable function.
+In the dependency provider, you can add plugins to `\Spryker\Client\Kernel\Container` by using the `set` method. To keep the plugins simple, do not return arrays of plugins inside the callback function. When you need to register a list of plugins, create a dedicated method, return an array of plugins, and call this method inside the callable function.
 
 ## Example of an evaluator error message
 
@@ -25,7 +23,7 @@ Target:  {PATH_TO_PROJECT}/Pyz/Zed/Checkout/CheckoutDependencyProvider.php:{LINE
 
 ## Example of code that causes an evaluator error
 
-The method `addProductSalePageWidgetPlugins` in `ExampleDependencyProvider` contains the callable function that returns an array of plugins, it is not supported for now.
+The method `addProductSalePageWidgetPlugins` in `ExampleDependencyProvider` contains a callable function that returns an array of plugins.
 
 ```php
 namespace Pyz\Zed\ContainerSetFunctionChecker;
@@ -53,11 +51,9 @@ class ExampleDependencyProvider
 }
 ```
 
-### Resolving the error
+## Resolve the error
 
-To resolve the issue:
-
-1. Create dedicated method for registering plugins.
+1. Create a dedicated method for registering plugins.
 2. Call the method in the callback function.
 
 

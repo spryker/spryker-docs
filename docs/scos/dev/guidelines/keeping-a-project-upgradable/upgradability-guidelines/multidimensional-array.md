@@ -52,8 +52,6 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
 }
 ```
 
-### Resolving the error
+## Resolving the error
 
-To resolve the error:
-
-1. Try to have simple configuration arrays. They shouldn't have more than two nesting levels inside.
+Try to have simple configuration arrays. They shouldn't have more than two nesting levels inside.

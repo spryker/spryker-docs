@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Specify the folder containing the files
-folder_path="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs/docs/scos/dev/guidelines"
+folder_path="/path/to/your/folder"
+
+# Specify the root directory to make paths relative to
+root_directory="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then
@@ -9,25 +12,31 @@ if [ ! -d "$folder_path" ]; then
     exit 1
 fi
 
+# Check if the root directory exists
+if [ ! -d "$root_directory" ]; then
+    echo "Root directory does not exist: $root_directory"
+    exit 1
+fi
+
 # Loop through each file in the folder
 for file in "$folder_path"/*; do
     if [ -f "$file" ]; then
-        # Get the file path
-        file_path="$folder_path/$file"
+        # Get the absolute file path
+        file_path=$(realpath "$file")
         
-        # Remove everything before "/docs" in the file path
-        file_path="${file_path#*\/docs\/}"
+        # Get the relative file path
+        relative_path=${file_path#$root_directory}
         
         # Get the content of the original file
         original_content=$(cat "$file")
         
-        # Prepend the modified file path to the content
-        updated_content="$file_path"$'\n'"$original_content"
+        # Prepend the relative file path to the content
+        updated_content="$relative_path"$'\n'"$original_content"
         
         # Overwrite the original file with the updated content
         echo "$updated_content" > "$file"
         
-        echo "File path added to: $file"
+        echo "Relative file path added to: $file"
     fi
 done
 

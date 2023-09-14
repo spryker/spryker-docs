@@ -13,6 +13,9 @@ process_files() {
             # Get the relative file path
             relative_path=${file_path#$root_directory}
 
+            # Add '  - ' at the start of the relative file path
+            relative_path="  - $relative_path"
+
             # Replace ".md" with ".html" in the relative file path
             relative_path="${relative_path%.md}.html"
 

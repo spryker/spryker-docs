@@ -4129,8 +4129,6 @@ entries:
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     include_versions:
     - "202204.0"
-    - "202212.0"
-    - "202307.0"
     nested:
     - title: Marketing and conversion
       url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html

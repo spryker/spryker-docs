@@ -82,14 +82,14 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
 | PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
 | PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
-| ApiPushNotificationSubscriptionsAttributes           | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionsAttributesTransfer           |
-| ApiPushNotificationGroupsAttributes                  | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
-| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequest                                                  |
-| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollection                                 |
-| Sort                                                 | class | created | src/Generated/Shared/Transfer/Sort                                                         |
-| Pagination                                           | class | created | src/Generated/Shared/Transfer/Pagination                                                   |
-| ApiPushNotificationProvidersAttributes               | class | created | src/Generated/Shared/Transfer/ApiPushNotificationProvidersAttributes                       |
-| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
+| PushNotificationSubscriptionsBackendApiAttributes    | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionsBackendApiAttributesTransfer    |
+| PushNotificationGroupsBackendApiAttributes           | class | created | src/Generated/Shared/Transfer/PushNotificationGroupsBackendApiAttributesTransfer           |
+| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer                                          |
+| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollectionTransfer                         |
+| Sort                                                 | class | created | src/Generated/Shared/Transfer/SortTransfer                                                 |
+| Pagination                                           | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                           |
+| ApiPushNotificationProvidersAttributes               | class | created | src/Generated/Shared/Transfer/ApiPushNotificationProvidersAttributesTransfer               |
+| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionDeleteCriteriaTransfer     |
 
 {% endinfo_block %}
 

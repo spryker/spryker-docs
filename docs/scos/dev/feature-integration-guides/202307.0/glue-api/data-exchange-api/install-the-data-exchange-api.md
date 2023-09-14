@@ -6,6 +6,9 @@ template: feature-integration-guide-template
 redirect_from:
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/data-exchange-api/data-exchange-api-integration.html
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
+related:
+- title: How to configure Data Exchange API
+  link: docs/scos/dev/glue-api-guides/page.version/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
 This document describes how to install the Data Exchange API.
@@ -130,7 +133,9 @@ class DynamicEntityBackendApiConfig extends SprykerDynamicEntityBackendApiConfig
 }
 ```
 
-4. Optional: The Data Exchange API comes with an exclusion list of database schemas that are not allowed to be configured. The `spy_dynamic_entity_configuration` schema is excluded by default. To exclude other database schemas from configuring, adjust `DynamicEntityGuiConfig`:
+<a name="exclude-database-schemas-from-configuring"></a>
+
+4. Optional: To exclude database schemas from configuring, define them as follows:
 
 **src/Pyz/Zed/DynamicEntityGui/DynamicEntityGuiConfig.php**
 
@@ -301,7 +306,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure the Data Exchange API section has been added to the Backoffice navigation.
+Make sure the Data Exchange API section has been added to the Back Office navigation.
 
 {% endinfo_block %}
 
@@ -392,7 +397,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 ```
 </details>
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 The `DocumentationGeneratorApiDependencyProvider::getInvalidationVoterPlugins()` stack contains plugins that are used to invalidate the documentation cache.
 If the documentation cache is not invalidated, the documentation will not be updated.
@@ -453,11 +458,11 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can operate data. For instructions, see :[Requesting data using the Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
+Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
 
 {% endinfo_block %}
 
-### Configure Scheduler:
+### Configure the scheduler
 
 1. Adjust the scheduler project configuration:
 
@@ -486,7 +491,3 @@ vendor/bin/console scheduler:resume
 2. Make sure `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` has been generated and contains the corresponding endpoint with correct configurations.
 
 {% endinfo_block %}
-
-## Related documents
-
-To add configurations for dynamic entities, see [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).

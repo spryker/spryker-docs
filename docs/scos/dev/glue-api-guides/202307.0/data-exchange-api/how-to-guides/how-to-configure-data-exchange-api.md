@@ -9,8 +9,7 @@ redirect_from:
 
 This document describes how to create and configure the Data Exchange API endpoints.
 
-
-The Data Exchange API lets you create endpoints to interact with any database tables. In this example, we are creating the `/dynamic-data/country` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
+The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/country` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
 
 ## Create and configure a Data Exchange API endpoint
 
@@ -91,38 +90,33 @@ The following example shows a possible value of the `spy_dynamic_entity_configur
 
 ## Enable and configure the Data Exchange API endpoint in the Back Office
 
-
 1. In the Back Office, go to **Data Exchange API Configuration**.
 2. On the **Data Exchange API Configuration** page, click **Create Data Exchange API configuration**.
 
 [PASTE SCREENSHOT HERE]
 
-3. In **CREATE DATA EXCHANGE API CONFIGURATION** pane, select a **TABLE NAME**. In our example, it's `spy_country`.
+3. In **CREATE DATA EXCHANGE API CONFIGURATION** pane, for **TABLE NAME**, select the table you want to configure the API for. In our example, it's `spy_country`.
 
 [PASTE SCREENSHOT HERE]
 
 {% info_block infoBox %}
 
-You can only select the tables that are not excluded from configuring. To exclude a table from configuring, follow [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html).
+If you don't see the needed table, it may be [excluded from configuring](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api/install-the-data-exchange-api.html#exclude-database-schemas-from-configuring).
 
 {% endinfo_block %}
 
-After you select a table, you will see a form for configuring the endpoint. Let's fill in the form with the following values:
+4. For **RESOURCE NAME**, enter the name of the endpoint you want to create. In our case, it's `countries`.
+5. Optional: On the ... , to enable the endpoint after it's configured, select **IS ENABLED**.
+6. Configure the fields for interactions per your requirements.
 
 [PASTE SCREENSHOT HERE]
 
-{% info_block infoBox %}
 
-Note, that you have to enable the endpoint in order to be able to use it. And besides that, you have to provide enable each field you want to use as well.
-
-{% endinfo_block %}
-
-Click **Save**.
+7. Click **Save**.
 This opens the **Data Exchange API Configuration** page with the endpoint displayed in the list. Now you can send requests to this endpoint.
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
+## Next steps
 
-{% endinfo_block %}
+[How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)

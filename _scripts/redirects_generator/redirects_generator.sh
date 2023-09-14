@@ -12,19 +12,20 @@ fi
 # Loop through each file in the folder
 for file in "$folder_path"/*; do
     if [ -f "$file" ]; then
-        # Get the file name without extension
-        filename=$(basename "$file")
-        filename_without_extension="${filename%.*}"
-        
         # Get the file path
-        file_path="$folder_path/$filename"
+        file_path="$folder_path/$file"
         
-        # Create a new file with the file path added to the content
-        new_file_path="$folder_path/${filename_without_extension}_with_path.txt"
-        echo "$file_path" > "$new_file_path"
+        # Remove everything before "/docs" in the file path
+        file_path="${file_path#*\/docs\/}"
         
-        # Append the content of the original file to the new file
-        cat "$file" >> "$new_file_path"
+        # Get the content of the original file
+        original_content=$(cat "$file")
+        
+        # Prepend the modified file path to the content
+        updated_content="$file_path"$'\n'"$original_content"
+        
+        # Overwrite the original file with the updated content
+        echo "$updated_content" > "$file"
         
         echo "File path added to: $file"
     fi

@@ -3,6 +3,8 @@ title: Reactive components
 description: Reactive components are built with Lit
 template: concept-topic-template
 last_updated: Jul 11, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactive-components.html
 ---
 
 Components are organized by domains-for example, components in a product domain. They can leverage domain logic to communicate with the associated backend API. Each domain is shipped with a domain service that provides an API to communicate with a backend API. For example, when rendering product data, `ProductService` can be used as follows:
@@ -81,7 +83,7 @@ export class ProductPriceComponent {
   protected priceService = resolve(PriceService);
 
   protected $product = signal(this.productService.getProduct());
-  
+
   protected $prices = computed(() => this.formatPrices(this.$product()?.price));
 
   protected formatPrices(price?: ProductPrices): Observable<Prices> {

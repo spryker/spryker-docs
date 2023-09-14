@@ -734,6 +734,10 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
+      - title: Glue API authentication and authorization
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-authentication-and-authorization.html
+      - title: Glue API security and authentication
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-security-and-authentication.html
       - title: Glue REST API
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-rest-api.html
         include_versions:

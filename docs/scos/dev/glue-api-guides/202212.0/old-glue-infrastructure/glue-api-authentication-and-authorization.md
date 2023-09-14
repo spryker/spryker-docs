@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
   - /docs/scos/dev/glue-api-guides/202200.0/authentication-and-authorization.html
   - /docs/scos/dev/glue-api-guides/202204.0/authentication-and-authorization.html
+  - /docs/pbc/all/identity-access-management/202307.0/glue-api-authentication-and-authorization.html  
 related:
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
@@ -23,6 +24,12 @@ related:
   - title: Customer Login overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-login-overview.html
 ---
+
+{% info_block warningBox %}
+
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+
+{% endinfo_block %}
 
 [Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.
 

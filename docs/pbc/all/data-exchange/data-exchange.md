@@ -12,10 +12,10 @@ There are four options to import and export data in Spryker:
 
 - Via the data importers and data exporters (availble in Spryker by default).
 - Via the Data Exchnage API (availble in Spryker by default).
-- Via the Spryker Middleware powered by Alumio.
-- Via the Spryker integration apps that are based on the Spryker Middleware powered by Alumio.
-- Via custom integrations using the existing Alumio connectors.
-- Via custom integration apps using the SDK to build own connectors.
+- Via the Spryker Middleware powered by Alumio:
+    - Via the Spryker integration apps.
+    - Via custom integrations using the existing Alumio connectors.
+    - Via custom integration apps using the SDK to build own connectors.
 
 
 ## Data importers and data exporters
@@ -36,22 +36,76 @@ Data exchange API is a robust API that facilitates real-time data transfers, ens
 
 ## Spryker Middleware Powered by Alumio
 
-The Spryker Middleware powered by Alumio, is a cloud-based integration Platform as a Service (iPaaS). It lets you exchange data between your Spryker system and third-party systems via a user-friendly interface without the development effort.
-The Spryker Middleware Powered by Alumio isn't a part of the Spryker Clould Commerce OS by default. To obtain it, reach out to [QUESTION: WHO?] 
+The Spryker Middleware powered by Alumio, is a cloud-based integration Platform as a Service (iPaaS). It lets you exchange data between your Spryker system and third-party systems via a user-friendly interface.
+The Spryker Middleware Powered by Alumio isn't a part of the Spryker Clould Commerce OS by default. To obtain it, reach out to [QUESTION: WHO?].
+ 
 
 For more datails about the Spryker Middleware Powered by Alumio, see LINK
 
-When you use the Spryker Middleware Powered by Alumio, the data exchange process looks like this:
+The Spryker Middleware Powered by Alumio is the foundation of the Spryker Integration apps, and can also be used to build custom integrations.
+
+### Spryker Integration Apps
+
+The Integration Apps let you import data data between your Spryker system and third-party systems quickly, without any development effort, and without the need to configure mapping, as the configurations are preset.
+
+To exchange data between a Spryker system and a third-party system with an integration app, you need to do the following:
+
+- Provision the Spryker Middleware Powered by Alumio.
+- Provision the Spryker Integration Apps you need.
+- Make minimum adjustiments to the existing mapping and transformation of data, if needed.
+
+ Reach out to [CONTACT] with the request regarding the Spryker Middleware Powered by Alumio and the Integration Apps.
+
+We recommend considering Integration Apps for data exchange in the following cases:
+
+- You require a quick setup of the data exchange process, which should take up to a few hours.
+- You don't have the developer resources to do the coding job upon initial setup.
+- You don't have the developer resources to do the coding job when you need to update mapping or configuration settings.
+- You need a pre-configured mapping and transformation of data for exchange between Spryker and a third-party system so you would have to make minimum adjustments, if needed.
+- For your project, it is important that the data exchange solution allows for the the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, CSV validation, health monitoring, etc.
+
+When you use the Spryker Integration Apps, the data exchange process looks like this:
 
 1. Transfer of data via Dynamic Data Exchnage API. The data is transferred in the real-time, which ensures that the data is always current across all integrated platforms.
-2. Data is fed into the Spryker Middleware powered by Alumio. You configure mapping of your data, and the middleware ensures that data is translated and formatted correctly, regardless of the source or destination.
-3. Transfer of data via Dynamic Data Exchnage API.
+2. Data is fed into Alumio and transformed there.
+3. Data is transferred to Spryker via the Sprker Middleware Powered by Alumio.
 
-Schematically, the process looks like this:
+Schematically, the data exchange process like this:
+
+https://docs.google.com/presentation/d/1RrnuZrbWbDQ_H8K0A5s06uW-oACf74t1TZMjrFzc_eQ/edit#slide=id.g22d9016de29_0_86
+
+Spryker provides Early Access to the Akeneo PIM integration app. Spryker Akeneo PIM Integration App allows for product import from Akeneo to Spryker. The connector between Spryker and Akeneo is set up in a configurable way. Once new objects such as categories, attributes, product are created in Akeneo, they are transformed in the Alumio middleware before the data is transferred to Spryker via the Spryker Middleware Powered by Alumio. 
+
+The middleware allows customers to configure data which is to be transferred to Spryker. For example, attributes and super attributes. 
+
+{% info_block infoBox "Info" %}
+
+Akeneo handles the so-called “cold data”. Cold data is product information directly linked to the product that describes product properties. The Akeneo PIM Integration does not include the transfer of “hot data” such as stock or pricing. 
+
+{% endinfo_block %}
+
+For details on how to import data from Akeneo to Spryker, see [Akeneo PIM](LINK)
+
+### Custom Integration Apps
+
+For cases, where there are no integration apps for data exchange, you can build them by your own using the Spryker Alumio Middleware. Alumio provides a number of built-in API connectors to third-party systems that you can use to build integrations between these Systems and Spryker. Check the available connectors for Spryker on the [Alumio web-site](https://www.alumio.com/platforms/spryker). 
+
+To build these integrations you need:
+
+1. Provision the Spryker Middleware Powered by Alumio.
+2. Enable the API connectors offered by Alumio.
+3. Build the mapping and transformation of data. Initial configuration of data mapping and transformation usually takes up to a few days, changing them takes up to a few hours.
+
+When you use the Spryker Middleware Powered by Alumio, the data exchange process looks like this:
+
+1. Transfer of data via the Alumio API connector. The data is transferred in the real-time, which ensures that the data is always current across all integrated platforms.
+2. Data is fed into the Spryker Middleware powered by Alumio. You configure mapping of your data, and the middleware ensures that data is translated and formatted correctly, regardless of the source or destination.
+3. Transfer of data to the target system.
+
+Schematically, the data exchange process like this:
 
 https://docs.google.com/presentation/d/1RrnuZrbWbDQ_H8K0A5s06uW-oACf74t1TZMjrFzc_eQ/edit#slide=id.g22d9016de29_0_37
 
-For more details on how to import and export data with the Spryker Middleware Powered by Alumio, see LINK
 
 We recommend to use the Spryker Middleware powered by Alumio in the following cases:
 - You require a quick setup of the data exchange process, which should take up to a few days.
@@ -60,30 +114,20 @@ We recommend to use the Spryker Middleware powered by Alumio in the following ca
 - You have a tech-savy person who can configure mapping of data for exchange between Spryker and a third-party system.
 - For your project, it is important that the data exchange solution allows for the the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, CSV validation, health monitoring, etc.
 
-## Spryker integration apps
+For more details on how to manage integrations and exchange data in the Alumio platform, see LINK
 
-The Spryker integration apps are build on the basis of the Spryker Middleware Powered by Alumio. They let you exchange data data between your Spryker system and third-party systems quickly, without any development work, and without the need to configure mapping.
+1. Provision the Spryker Middleware Powered by Alumio.
 
+### Legacy Integration Apps
 
-If you want to export data from third-party systems to Spryker, you need a connector that would serve as a bridge between two systems. As the connector, you can use:
+If you have legacy systems or systems of old versions with which you need to exchange data and for which Alumio does not provide a connector, you can you can still build you intergation apps. You can build a connector to this systems, because Spryker Middleware Powered by Alumio provides includes an SDK to build own connectors.
 
-- Spryker Middleware powered by Alumio. 
+To build an integration app for a legacy system, you need:
 
-If you use a default integration app, the data exchange process looks as follows:
+1. Provision the Spryker Middleware Powered by Alumio.
+2. Build a connector to the legacy system using the SDK from the Spryker Middleware Powered by Alumio. Building a connector with SDK usually takes up to a few weeks.
+3. Build the mapping and transformation of data. Initial configuration of data mapping and transformation usually takes up to a few days, changing them takes up to a few hours.
 
-1. Transfer of data via Dynamic Data Exchnage API. The data is transferred in the real-time, which ensures that the data is always current across all integrated platforms.
-2. Data is fed into the Spryker Middleware powered by Alumio. The middleware ensures that data is translated and formatted correctly, regardless of the source or destination.
-https://docs.google.com/presentation/d/1RrnuZrbWbDQ_H8K0A5s06uW-oACf74t1TZMjrFzc_eQ/edit#slide=id.g22d9016de29_0_37 (QUESTION: Alumio middleware is optional here? Can they also go without it at this stage, that is, map and transform data by their own, and then feed it into the integration app?)
-
-3. Data goes through the pre-built connectors and integration apps for popular platfroms (like Akeneo PIM). New data exchange paths are established to allow for import or export to or from a third-party system.
-
-https://docs.google.com/presentation/d/1RrnuZrbWbDQ_H8K0A5s06uW-oACf74t1TZMjrFzc_eQ/edit#slide=id.g22d9016de29_0_86
-
-
-If you build custom integrations, you can do one of the following:
-- Use the existing Alumio connectors between Spryker and a 3rd-party system, or between two 3rd-party systems. They only thing you have to provide in this case is mapping and transformation:
-
-https://docs.google.com/presentation/d/1RrnuZrbWbDQ_H8K0A5s06uW-oACf74t1TZMjrFzc_eQ/edit#slide=id.g22d9016de29_0_124
 
 - Build your own integrations between a Spryker or a 3rd-party system and a legacy system, even if there is no connector for the latter because there’s an [SDK](/docs/pbc/all/data-exchange/alumio/alumio-sdk-to-implement-connectors.html) to build such a connector:
 

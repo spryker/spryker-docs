@@ -213,8 +213,6 @@ Make sure the following transfers have been created:
 
 {% endinfo_block %}
 
-2. Add configurations for dynamic entities. For instructions, see [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).  
-
 ### Add translations
 
 1. Append the glossary according to your language configuration:
@@ -488,3 +486,7 @@ vendor/bin/console scheduler:resume
 2. Make sure `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` has been generated and contains the corresponding endpoint with correct configurations.
 
 {% endinfo_block %}
+
+## Related documents
+
+To add configurations for dynamic entities, see [How to configure Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).

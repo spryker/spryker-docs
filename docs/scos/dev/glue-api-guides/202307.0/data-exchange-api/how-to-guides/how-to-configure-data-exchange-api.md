@@ -7,13 +7,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
-This document describes how to configure the Data Exchange API endpoints by executing SQL queries.
+This document describes how to create and configure the Data Exchange API endpoints.
 
-## Configuration of Data Exchange API endpoints
 
-To create an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table.
+The Data Exchange API lets you create endpoints to interact with any database tables. In this example, we are creating the `/dynamic-data/country` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
 
-The `spy_dynamic_entity_configuration` table contains the configuration of dynamic entity endpoints and has the following columns:
+## Create and configure a Data Exchange API endpoint
+
+To register an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table. The table contains the configuration of dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION |
 | --- | --- |
@@ -25,9 +26,7 @@ The `spy_dynamic_entity_configuration` table contains the configuration of dynam
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was updated. |
 
-Dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
-
-The following example shows the structure of a possible definition value based on the `spy_country` table:
+The following example shows a possible value of the `spy_dynamic_entity_configuration.definition` field configured for the `spy_country` table:
 
 ```json
 {
@@ -59,9 +58,7 @@ The following example shows the structure of a possible definition value based o
 }
 ```
 
-The following table describes the purpose of each field:
-
-| FIELD | SPECIFICATION |
+| FIELD | DESCRIPTION |
 | --- | --- |
 | identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique ID for each record. |
 | fields | An array containing the descriptions of the columns from the table. It defines the columns that are included for interaction. The API exposes and operates on the included columns. Columns that are not included in the array are inaccessible through API requests. |
@@ -92,9 +89,7 @@ The following table describes the purpose of each field:
 
 {% endinfo_block %}
 
-## Create Data Exchange API endpoints
-
-In this example, we are creating the `/dynamic-data/country` endpoint to operate with data in the `spy_country` table. When following the steps, adjust the data per your requirements:
+## Enable and configure the Data Exchange API endpoint in the Back Office
 
 
 1. In the Back Office, go to **Data Exchange API Configuration**.

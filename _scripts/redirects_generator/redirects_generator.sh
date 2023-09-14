@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the folder containing the files
-folder_path="/path/to/your/folder"
+folder_path="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs/docs/scos/dev/guidelines"
 
 # Specify the root directory to make paths relative to
 root_directory="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs"

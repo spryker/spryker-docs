@@ -44,6 +44,7 @@ for file in "$folder_path"/*; do
 done
 
 echo "Script completed."
+Replace "/path/to/your/folder" with the actual path to the folder containing your files, and set root_directory to the path of the spryker-docs folder. This script will prepend the relative file path (relative to the spryker-docs folder) with ".md" replaced by ".html" to the end of each original file in the specified folder. Please use this script with caution, as it will modify your original files directly.
 
 
 

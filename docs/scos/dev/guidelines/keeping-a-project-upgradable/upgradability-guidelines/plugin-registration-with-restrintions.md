@@ -85,7 +85,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-### Resolving the error
+## Resolve the error
 
 To solve this issue:
 

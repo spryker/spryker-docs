@@ -5,8 +5,8 @@ last_updated: April 5, 2023
 template: howto-guide-template
 ---
 
-{% info_block warningBox  "S3 Bucket Permissions" %}
-Please ensure that the S3 Bucket you use in the How To is not public and only accessible by users that should have access to the database.
+{% info_block warningBox  "S3 bucket permissions" %}
+Make sure that the S3 bucket you use to import and export databases is not public and is only accessible by users who should have access to the database.
 {% endinfo_block %}
 
 Suppose you have two testing environments, and you need to migrate a large amount of data from one environment to another to perform different tests with the same data. If you have little data, you can export by running the `mysqldump` command on the local machine. However, for large amounts of data, this method can be slow due to long waiting time and VPN connection issues. In this case, to import the data between the environments faster, you can run the `mysqldump` command on the Jenkins instance and upload the dump file to AWS S3. Here's how to do it:

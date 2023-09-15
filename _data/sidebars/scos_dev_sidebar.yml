@@ -2285,10 +2285,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
       include_versions:
       - "202204.0"
-    - title: Picker user login
-      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html
-      include_versions:
-        - "202400.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:

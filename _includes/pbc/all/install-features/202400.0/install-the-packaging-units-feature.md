@@ -1,11 +1,11 @@
 
 
 
-This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps to install Packaging Units feature core.
+Follow the steps to install the Packaging Units feature core.
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 
 ### 3) Set up the database schema and transfer objects
 
-1. Adjust the schema definition, so entity changes can trigger events.
+1. Adjust the schema definition so entity changes can trigger events.
 
 | AFFECTED ENTITY                 | TRIGGERED EVENTS                                                                                                                                |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -92,7 +92,7 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 </database>
 ```
 
-2. Set up synchronization queue pools, so non-multi-store entities (not store-specific entities) can be synchronized among stores:
+2. Set up synchronization queue pools so non-multi-store entities (not store-specific entities) can be synchronized among stores:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
 
@@ -188,7 +188,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 ### 4) Add translations
 
-1. Append glossary according to your language configuration:
+1. Append the glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
 
@@ -264,7 +264,7 @@ Make sure that the configured data in the database has been added to the `spy_gl
 
 ### 5) Configure export to Redis
 
-This step publishes tables on change (create, edit, delete) to the `spy_product_packaging_unit_storage` and synchronizes the data to Storage.
+This step publishes tables on change (create, edit, delete) to `spy_product_packaging_unit_storage` and synchronizes the data to Storage.
 
 #### Set up event listeners
 
@@ -389,7 +389,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-2. Execute registered installer plugins and install infrastructural data:
+2. Execute the registered installer plugins and install infrastructural data:
 
 ```bash
 console setup:init-db
@@ -420,8 +420,8 @@ packaging_unit_type.pack_100.name
 packaging_unit_type.pack_500.name
 ```
 
-| COLUMN | REQUIRED  | DATA TYPE | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                        |
-|--------|-----------|-----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| COLUMN | REQUIRED  | DATA TYPE | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                       |
+|--------|-----------|-----------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | name   | mandatory | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type. Each name needs a glossary key definition for all configured locales. |
 
 2. Register the following plugin to enable data import:
@@ -935,7 +935,7 @@ Add an item with packaging units to cart and check if the following statements a
 * The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
 * The amount restriction works as expected.
 * Availability is validated respectfully according to your lead product's and packaging unit's configuration.
-* Item grouping in cart works as expected.
+* Item grouping in the cart works as expected.
 * Variable amount changes affect unit prices in the `ItemTransfer` properties.
 * The quantity and amount are merged correctly when the group key matches.
 
@@ -955,7 +955,7 @@ Go to the Zed UI Sales overview, check the order, and verify the following:
 - The correct amount is displayed per sales order item.
 
 Make sure the following:
-* Abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
+* Abstract products that have packaging units available don’t have `add_to_cart_sku` field in the Elasticsearch document.
 * Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
 * The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
 
@@ -970,11 +970,11 @@ Follow the steps below to install the {Feature Name} feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-|---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
-| Non-splittable Products | {{page.version}} |
+| NAME                    | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                |
+|-------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core            | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                      |
+| Measurement Units       | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
+| Non-splittable Products | {{page.version}} |                                                                                                                                                                                                  |
 
 ### 1) Install the required modules using Composer
 
@@ -994,7 +994,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -1079,8 +1079,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 `ProductPackagingUnitWidget` uses Javascript for some functionality:
 
-| Functionality | Path |
-|---|---|
+| Functionality                                                                                                                                                                                                                                                   | Path                                                                                                                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Controls base unit => sales unit calculationsApplies product quantity and amount restrictions on sales unit levelOffers recommendation when invalid quantity or amount is selectedMaintains stock-based quantity, amount and sales unit information for posting | `vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts` |
 
 
@@ -1104,9 +1104,9 @@ Check if Check if the `amount` field meets the following criteria:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| QuickOrderItemDefaultPackagingUnitExpanderPlugin | Expands `ItemTransfer` with packaging unit data if available using product the abstract ID and product concrete ID |   | SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder |
+| PLUGIN                                           | DESCRIPTION                                                                                                        | PREREQUISITES | NAMESPACE                                                     |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
+| QuickOrderItemDefaultPackagingUnitExpanderPlugin | Expands `ItemTransfer` with packaging unit data if available using product the abstract ID and product concrete ID |               | SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder |
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 

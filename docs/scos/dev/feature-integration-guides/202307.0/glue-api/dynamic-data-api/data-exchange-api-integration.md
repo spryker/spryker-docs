@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from: 
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
+    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/dynamic-data-api-integration.html
 ---
 
 This document describes how to integrate the Data Exchange API into a Spryker project.

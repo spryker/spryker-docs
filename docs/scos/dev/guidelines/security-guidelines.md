@@ -1,6 +1,6 @@
 ---
 title: Security guidelines
-last_updated: Nov 16, 2022
+last_updated: Sep 15, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
 originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
@@ -103,6 +103,14 @@ Clickjacking is when UI tweaked to force users to click on specific buttons or l
 ## Obsolete or outdated dependencies
 
 To make sure that all the security updates are installed, keep Spryker and third-party modules up to date. For upgradability guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
+
+## Packages security vulnerabilities
+* Check if Spryker packages have known vulnerabilities.
+  * You can check security [release notes](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) under every release 
+* Verify whether `composer` packages have known vulnerabilities.
+    * You can use `./vendor/bin/console security:check` command to inspect third-party vulnerabilities.
+* Verify whether `npm` packages have known vulnerabilities.
+  * You can use `npm audit` command to inspect third-party vulnerabilities.
 
 ## Exceptions and debug mode
 

@@ -3,6 +3,8 @@ title: Reactivity
 description: Reactivity enables real-time updates
 template: concept-topic-template
 last_updated: Apr 3, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html
 ---
 
 Reactivity is a fundamental concept in modern web development that enables dynamic, real-time updates to the user interface. In interactive applications, and single-page application (SPA) in particular, reactivity ensures that the displayed data is constantly in sync with the underlying data model, even as that data is loaded asynchronously and in real time from a backend API.

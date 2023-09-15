@@ -142,4 +142,4 @@ For now, you can not do the following things with Jarvis:
 
 To see Spryker Jarvis in action, check out this video:
 
-{% wistia t1o6z2o5n 720 480 %}
+{% wistia jtkjogkxht 720 480 %}

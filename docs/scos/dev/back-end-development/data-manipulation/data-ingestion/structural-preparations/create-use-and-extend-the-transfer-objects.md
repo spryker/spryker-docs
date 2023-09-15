@@ -70,7 +70,7 @@ As for the types, you can use PHP native types: `int`, `string`, `bool`, and `ar
 
 The transfer object associative property attribute allows working with associative arrays and collections. An *associative array* is an array with a string index where instead of linear storage, each value can be assigned a specific key.
 
-The associative attribute can be used with all PHP native data types or collections. As of [202108.0 release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html), we recommend creating strict transfer objects.
+The associative attribute can be used with all PHP native data types or collections. As of 202108.0 release, we recommend creating strict transfer objects.
 
 Schema generation example:
 
@@ -269,7 +269,7 @@ This command retrieves all `*.transfer.xml` files from the project- and core-lev
 
 ## Expand transfer objects
 
-Transfer objects can be expanded from different bundles. Any other module can add properties to the existing transfer objects. For instance, the [Tax](https://github.com/spryker/tax) module may expect a *customer tax-id*. So in the `tax.transfer.xml`, you can add the required properties to the customer. 
+Transfer objects can be expanded from different bundles. Any other module can add properties to the existing transfer objects. For instance, the [Tax](https://github.com/spryker/tax) module may expect a *customer tax-id*. So in the `tax.transfer.xml`, you can add the required properties to the customer.
 
 {% info_block infoBox "Note" %}
 
@@ -377,5 +377,5 @@ The only valid attribute value of the root `<transfers></transfers>` element is 
 
 You can use the following definitions to generate the related code:
 
-* Add shared transfer schema. For details, see [Spryk](/docs/sdk/dev/spryks/spryks.html). 
+* Add shared transfer schema. For details, see [Spryk](/docs/sdk/dev/spryks/spryks.html).
  

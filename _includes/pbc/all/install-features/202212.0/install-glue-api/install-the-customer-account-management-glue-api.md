@@ -291,7 +291,7 @@ $jobs[] = [
 
 {% info_block infoBox %}
 
-For information on how to protect resources, see [Security and authentication](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-security-and-authentication.html).
+For information on how to protect resources, see [Security and authentication](/docs/scos/dev/glue-api-guides/{{page.version}}/security-and-authentication.html).
 
 {% endinfo_block %}
 

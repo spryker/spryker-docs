@@ -3,6 +3,8 @@ title: "Oryx: Presets"
 description: Presets are used to install predefined applications
 template: concept-topic-template
 last_updated: Apr 4, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-presets.html
 ---
 
 The [presets package](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.

@@ -3,6 +3,8 @@ title: "Dependency Injection: Defining services"
 description: Recommended conventions for defining services
 template: concept-topic-template
 last_updated: Apr 13, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-defining-services.html
 ---
 
 This document describes the conventions we use and recommend for defining services in Oryx.

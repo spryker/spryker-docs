@@ -228,7 +228,11 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
 
 ## Integrate the Vertex app
 
-To integrate the Vertex app, follow the steps below. 
+Spryker does not have the same data model as Vertex requires to do correct taxes calculation, so the integration requires from the project developers to add some missing information to the Quote object before sending calculation request.
+
+ [image here]
+
+The diagram shows the data flow of the tax caclulation requiest from Spryker Cart to the Vertex API.
 
 ### 1. Configure Vertex Specific Metadata Transfers
 

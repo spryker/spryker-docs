@@ -626,7 +626,6 @@ Make sure that after the order is created, order items gain the `warehouse alloc
 
 {% endinfo_block %}
 
-
 ## Implement and integrate the warehouse allocation process for product and product offer order items
 This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
 
@@ -686,10 +685,14 @@ Make sure that the following changes have been applied in transfer objects:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                          | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                                   |
-|-------------------------------------------------|------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
-| ProductSalesOrderWarehouseAllocationPlugin      | Associates warehouses to a sales order product item.       | None          | Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation      |
-| ProductOfferSalesOrderWarehouseAllocationPlugin | Associates warehouses to a sales order product offer item. | None          | Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation |
+| PLUGIN                                          | SPECIFICATION                                                                | PREREQUISITES | NAMESPACE                                                                                   |
+|-------------------------------------------------|------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
+| ProductSalesOrderWarehouseAllocationPlugin      | Associates warehouses to a sales order product item.                         |               | Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation      |
+| ProductOfferSalesOrderWarehouseAllocationPlugin | Associates warehouses to a sales order product offer item.                   |               | Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation |
+| WarehouseOrderItemExpanderPlugin                | Expands order item with warehouse.                                           |               | Spryker\Zed\WarehouseAllocation\Communication\Plugin\Sales                                  |
+| ProductConcreteAfterCreatePlugin                | Persists product stock data after product is created.                        |               | Spryker\Zed\Stock\Communication\Plugin                                                      |
+| ProductConcreteAfterUpdatePlugin                | Persists product stock data after product is updated.                        |               | Spryker\Zed\Stock\Communication\Plugin                                                      |
+| StockProductConcreteExpanderPlugin              | Expands product concrete transfers with stock information from the database. |               | Spryker\Zed\Stock\Communication\Plugin\Product                                              |
 
 **src/Pyz/Zed/WarehouseAllocation/WarehouseAllocationDependencyProvider.php**
 
@@ -717,9 +720,87 @@ class WarehouseAllocationDependencyProvider extends SprykerWarehouseAllocationDe
 }
 ```
 
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+use Spryker\Zed\WarehouseAllocation\Communication\Plugin\Sales\WarehouseOrderItemExpanderPlugin;
+
+class SalesDependencyProvider extends SprykerSalesDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
+     */
+    protected function getOrderItemExpanderPlugins(): array
+    {
+        return [
+            new WarehouseOrderItemExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Product;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
+use Spryker\Zed\Stock\Communication\Plugin\Product\StockProductConcreteExpanderPlugin;
+use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteAfterCreatePlugin as StockProductConcreteAfterCreatePlugin;
+use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteAfterUpdatePlugin as StockProductConcreteAfterUpdatePlugin;
+
+class ProductDependencyProvider extends SprykerProductDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteCreatePluginInterface>
+     */
+    protected function getProductConcreteAfterCreatePlugins(Container $container): array
+    {
+        return [
+            new StockProductConcreteAfterCreatePlugin(),
+        ];
+    }
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Product\Dependency\Plugin\ProductConcretePluginUpdateInterface>
+     */
+    protected function getProductConcreteAfterUpdatePlugins(Container $container): array
+    {
+        return [
+            new StockProductConcreteAfterUpdatePlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
+     */
+    protected function getProductConcreteExpanderPlugins(): array
+    {
+        return [
+            new StockProductConcreteExpanderPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
-Make sure that after the order is created, the new row in the `warehouse_allocation` table is created with the appropriate `warehouseId` for the product and product offer in the order accordingly.
+1. Make sure that after the order is created, the new row in the `warehouse_allocation` table is created with the appropriate `warehouseId` for the product and product offer in the order accordingly.
+2. Make sure that when you retrieve an order each order item has warehouse property set.
+3. Make sure that product stock data is persisted in `spy_stock_product` database table after creating/updating concrete product.
 
 {% endinfo_block %}
 

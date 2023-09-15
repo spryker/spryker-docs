@@ -522,9 +522,9 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 3. Enable the Backend API resource by registering the plugin:
 
-| PLUGIN                                 | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                              |
-|----------------------------------------|-------------------------------------------------------|---------------|------------------------------------------------------------------------|
-| WarehouseUserAssignmentsResourcePlugin | Registers the `warehouse-user-assignments` resource.  |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication |
+| PLUGIN                                        | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                              |
+|-----------------------------------------------|-------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| WarehouseUserAssignmentsBackendResourcePlugin | Registers the `warehouse-user-assignments` resource.  |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication |
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
@@ -535,7 +535,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsResourcePlugin;
+use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -545,7 +545,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     protected function getResourcePlugins(): array
     {
         return [
-            new WarehouseUserAssignmentsResourcePlugin(),
+            new WarehouseUserAssignmentsBackendResourcePlugin(),
         ];
     }
 }

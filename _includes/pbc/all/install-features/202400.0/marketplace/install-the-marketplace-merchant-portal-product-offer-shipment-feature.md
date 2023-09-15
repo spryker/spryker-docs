@@ -108,6 +108,9 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 {% info_block warningBox "Verification" %}
 
+- Log in to the Merchant Portal.
+- Navigate to the **Offers** section in the navigation menu.
+- Select the specific product offer you want to edit or create a new one if needed.
 - Make sure that Shipment types field is displayed in Shipment types section when creating or editing an offer.
 - Make sure that all the Shipment types available in the system are displayed in Shipment types field.
 - Make sure you can save the selected Shipment types.

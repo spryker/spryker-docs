@@ -172,6 +172,9 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 {% info_block warningBox "Verification" %}
 
+- Log in to the Merchant Portal.
+- Navigate to the **Offers** section in the navigation menu.
+- Select the specific product offer you want to edit or create a new one if needed.
 - Make sure that Service Points and Services fields are displayed in their own section when creating or editing an offer.
 - Make sure you can search by Service Points and the corresponding services associated with the selected Service Point are displayed in Services field.
 - Make sure you can save the selected Services.

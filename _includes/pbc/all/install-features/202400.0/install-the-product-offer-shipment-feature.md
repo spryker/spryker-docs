@@ -550,6 +550,9 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `Shipment Types` section is displayed on product offer view page.
+- Log in to the Backoffice.
+- Navigate to the **Marketplace&nbsp;<span aria-label="and then">></span> Offers** in the navigation menu.
+- Select the specific product offer you want to view.
+- Make sure that `Shipment Types` section is displayed on product offer view page.
 
 {% endinfo_block %}

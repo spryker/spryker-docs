@@ -41,7 +41,7 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     // ...
     ConfigureTaxAppTransfer::class => 'tax-commands',
     DeleteTaxAppTransfer::class => 'tax-commands',
-    SubmitPaymentTaxInvoiceTransfer::class => 'tax-commands',
+    SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -53,7 +53,7 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     // ...
     
-    'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'payment-tax-invoice-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 ```
 
@@ -79,7 +79,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         $pluginStack = [
             // ...
         
-            // Please put this plugin after all other tax calculation plugins.
+            # Please put this plugin after all other tax calculation plugins or instead.
         
             new TaxAppCalculationPlugin(),
         
@@ -99,7 +99,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         return [
             // ...
         
-            # Please put this plugin after all other tax calculation plugins.        
+            # Please put this plugin after all other tax calculation plugins or instead.
             new TaxAppCalculationPlugin(),
         
             // ...

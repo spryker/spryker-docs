@@ -5,6 +5,10 @@ description:
 template: concept-topic-template
 --- 
 
+TBD: what exactly it is, how business users can use them.
+
+Link to developer documentation on data exchange API.
+
 With the Dynamic Exchange API you can build, customize, and manage APIs tailored to your specific business requirements, all through a user interface.
 
 Benefits:
@@ -16,10 +20,6 @@ Benefits:
 Security and Access Control: There are robust  security measures and access controls in place.
 
 
-https://spryker.zoom.us/rec/share/AbGO8-U6YP0nn1nOtwcY06j-3eTHL-W62LAU_59pbsgsDa_eWVkMvIbZ8dSf_VBE.jqcDn3tiuxLPeQWt
-Passcode: 8e$tYqR+
-
-A robust API that facilitates real-time data transfers, ensuring data is always current across all integrated platforms.
 
 No coding is needed to create additional API endpoints, only configuration.
 

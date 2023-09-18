@@ -4,19 +4,19 @@ description:
 template: concept-topic-template
 ---
 
-Data exchange refers to the process of transferring data between Spryker and third-party systems. Spryker offers various solutions to exchange data between a Spryker-based project and third-party systems, ensureing compatibility, consistency, quality, security of your data are preserved.
+Data exchange refers to the process of transferring data between Spryker and third-party systems. Spryker offers various solutions to facilitate data exchange between a Spryker-based project and third-party systems, ensuring compatibility, consistency, quality, and security of your data.
 
 There are four options to import and export data in Spryker: 
 
 - Via the Data Importers and Data Exporters: availble in SCCOS by default.
-- Via the Data Exchnage API: availble in SCCOS by default..
+- Via the Data Exchnage API: availble in SCCOS by default.
 - Via the Spryker Middleware powered by Alumio:
     - Via the Spryker integration apps.
     - Via custom integrations using the existing Alumio connectors.
     - Via custom integration apps using the SDK to build own connectors.
 
 ## Data Importers and Data Exporters
-The Data Importers and Data Exporters available in SCCOS by default, let you bring external data into and send data from SCCOS, in CSV format. They require customization for each project, and ongoing development effort.
+The Data Importers and Data Exporters available in SCCOS by default, let you bring external data into and send data from SCCOS, in CSV format. The Data Importers and Exporters require customization for each project, and ongoing development effort.
 
 We recommend using the Data Importers and exporters in the following cases:
 
@@ -26,10 +26,16 @@ We recommend using the Data Importers and exporters in the following cases:
 - You have the developer resources who can do coding at the project level wherever you need to make changes to the existing data importers an exporters or troubleshoot issues.
 - Your project isn't affected by some limitations of the data importers and exporters, like missing data orchestration (no dependency management), no delta synchronization, minimum error logging.
 
+For more information on data importers and exporters, see [LINK TO SECTION WITH DATA IMPORTERS AND EXPORTERS]
 ## Data Exchange API
 
 Data exchange API is a robust API that facilitates real-time data transfers, ensuring data is always current across all integrated platforms.
 
+TBD:
+QUESTIONS:
+
+1. How business users can use it
+2. In what cases we recommend using the Data Exchange API (can it be used independently, without Alumio middleware?)
 
 ## Spryker Middleware Powered by Alumio
 
@@ -40,15 +46,15 @@ With the Spryker Middleware powered by Alumio, the data exchange process looks l
 
 1. Transfer of data from the source system via the API connector. The data is transferred in the real-time, which ensures that the data is always current across all integrated platforms.
 2. Data is fed into Alumio and transformed there.
-3. Transfer of data to the target system via the API connector
+3. Transfer of data to the target system via the API connector.
 
-For more details about the Spryker Middleware Powered by Alumio, see LINK
+For more details about the Spryker Middleware Powered by Alumio, see [LINK]
 
 The Spryker Middleware Powered by Alumio is the foundation of the Spryker Integration Apps. You can also use it to build custom integrations.
 
 ### Spryker Integration Apps
 
-The Integration Apps let you import data data between your Spryker system and third-party systems quickly, without any development effort, and without the need to configure mapping and transformation of data, as the configurations are preset.
+The Integration Apps let you import data between your Spryker system and third-party systems quickly, without any development effort, and without the need to configure mapping and transformation of data, as the configurations are preset.
 
 To exchange data between a Spryker system and a third-party system with an integration app, you need to do the following:
 
@@ -64,7 +70,7 @@ We recommend considering Integration Apps for data exchange in the following cas
 - You don't have the developer resources to do the coding job upon initial setup.
 - You don't have the developer resources to do the coding job when you need to update mapping or configuration settings.
 - You need a pre-configured mapping and transformation of data for exchange between Spryker and a third-party system so you would have to make minimum adjustments, if needed.
-- For your project, it is important that the data exchange solution allows for the the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, CSV validation, health monitoring, etc.
+- For your project, it is important that the data exchange solution allows for the the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, .CSV file validation, health monitoring, etc.
 
 With the Spryker Integration Apps, the data exchange process like this:
 
@@ -85,7 +91,7 @@ For details on how to import data from Akeneo to Spryker, see [Akeneo PIM](LINK)
 
 ### Custom Integration Apps
 
-For cases, where there are no integration apps for data exchange, you can build them by your own using the Spryker Alumio Middleware. Alumio provides a number of built-in API connectors to third-party systems that you can use to build integrations between these systems and Spryker. Check the available connectors for Spryker on the [Alumio web-site](https://www.alumio.com/platforms/spryker). 
+In cases where there are no integration apps for data exchange, you can build them yourself using the Spryker Alumio Middleware. Alumio provides a number of built-in API connectors to third-party systems that you can use to build integrations between these systems and Spryker. Check the available connectors for Spryker on the [Alumio web-site](https://www.alumio.com/platforms/spryker). 
 
 To build custom integrations you need:
 
@@ -105,13 +111,13 @@ We recommend building Custom Integration Apps with the existing Alumio connector
 - You don't have the developer resources to do the coding job upon initial setup.
 - You don't have the developer resources to do the coding job when you need to update mapping or configuration settings.
 - You have a tech-savy person who can configure mapping of data for exchange between Spryker and a third-party system.
-- For your project, it is important that the data exchange solution allows for the the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, CSV validation, health monitoring, etc.
+- For your project, it is important that the data exchange solution allows for the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, .CSV file validation, health monitoring, etc.
 
 For more details on how to manage integrations and exchange data in the Alumio platform, see [LINK]
 
 ### Legacy Integration Apps
 
-If you have legacy systems or systems of old versions with which you need to exchange data and for which Alumio does not provide a connector, you can you can still build you integration apps. You can build a connector to these systems, as Spryker Middleware Powered by Alumio includes an SDK to build own connectors.
+If you have legacy systems or systems of old versions with which you need to exchange data and for which Alumio does not provide a connector, you can still build you integration apps. You can build a connector to these systems, as Spryker Middleware Powered by Alumio includes an SDK to build own connectors.
 
 To build an integration app for a legacy system, you need:
 

@@ -2,6 +2,7 @@
 title: Open-source vulnerabilities checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 Open-source vulnerabilities checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.

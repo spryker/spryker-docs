@@ -2,6 +2,7 @@
 title: Npm checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This checker identifies and reports security vulnerabilities in the npm dependencies.

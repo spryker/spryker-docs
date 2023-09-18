@@ -2,6 +2,7 @@
 title: Single plugin argument
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This check makes sure that the plugins don't require complicated constructor arguments.

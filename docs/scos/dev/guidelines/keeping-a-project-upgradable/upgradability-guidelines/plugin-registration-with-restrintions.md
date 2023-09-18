@@ -2,6 +2,7 @@
 title: Plugin registration with restrictions
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 Some plugins have dependencies from other plugins and should be used only before or after another plugin. The *Plugin registration with restrictions* check checks that dependencies between the plugins are described according to the specification.

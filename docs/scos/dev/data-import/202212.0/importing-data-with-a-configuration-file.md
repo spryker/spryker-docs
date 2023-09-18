@@ -92,7 +92,7 @@ Whenever you need to import some data, all you need to change is your YML file b
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that some importers depend on the data from the other ones. For example, you can not import Product Concretes, unless there are no data on Product Abstracts in the database. Therefore, make sure to check individual database relations or dependencies in [About Demo Shop Data Import ](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html) before running specific importers.
+Keep in mind that some importers depend on the data from the other ones. For example, you can not import Product Concretes, unless there are no data on Product Abstracts in the database. Therefore, make sure to check individual database relations or dependencies in [Packages Business Capabilities](/docs/pbc/all/pbc.html) before running specific importers.
 
 {% endinfo_block %}
 

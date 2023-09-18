@@ -5,6 +5,10 @@ last_updated: April 5, 2023
 template: howto-guide-template
 ---
 
+{% info_block warningBox  "Currently not functional" %}
+The steps described in this How To might not currently work as "aws" module is not currently automatically installed on every Jenkins instance. Please connect to your RDS directly via provided VPN and download the contents directly via an SQL client. We will remove this note or adjust the HowTo once a permanent solution is found.
+{% endinfo_block %}
+
 {% info_block warningBox  "S3 bucket permissions" %}
 Make sure that the S3 bucket you use to import and export databases is not public and is only accessible by users who should have access to the database.
 {% endinfo_block %}

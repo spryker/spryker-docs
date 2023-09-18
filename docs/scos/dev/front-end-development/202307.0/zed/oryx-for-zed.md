@@ -6,35 +6,17 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/oryx-for-zed
 originalArticleId: 7bb2b280-f309-4bd4-b7cd-d5c30b345cc0
 redirect_from:
-  - /2021080/docs/oryx-for-zed
-  - /2021080/docs/en/oryx-for-zed
-  - /docs/oryx-for-zed
-  - /docs/en/oryx-for-zed
-  - /v6/docs/oryx-for-zed
-  - /v6/docs/en/oryx-for-zed
-  - /v5/docs/oryx-for-zed
-  - /v5/docs/en/oryx-for-zed
-  - /v4/docs/oryx-for-zed
-  - /v4/docs/en/oryx-for-zed
-  - /v3/docs/oryx-for-zed
-  - /v3/docs/en/oryx-for-zed
-  - /v2/docs/oryx-for-zed
-  - /v2/docs/en/oryx-for-zed
-  - /v1/docs/oryx-for-zed
-  - /v1/docs/en/oryx-for-zed
   - /front-end_developer_guide/zed/oryx/oryx-for-zed
   - /front-end_developer_guide/zed/oryx/oryx-for-zed.htm
   - /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
 ---
 
-## Introduction
 
-`oryx-for-zed` is a tool that performs a full build for Spryker Zed UI applications.
-It also provides access to Zed settings and Zed Webpack configuration, so you can extend/change the whole building process.
+`oryx-for-zed` is a tool that performs a full build for Spryker Zed UI applications. It also provides access to Zed settings and Zed Webpack configuration, so you can extend and change the whole building process.
 
-{% info_block warningBox %}
+{% info_block warningBox "Oryx framework" %}
 
-`Oryx` and `oryx-for-zed` are small utilities for the Zed build system and should not be confused with the frontend framework [Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx.html) that can be used to create composable front-end applications on Spryker.
+`Oryx` and `oryx-for-zed` should not be confused with the [Oryx frontend framework](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx.html) that is used to create composable frontend applications.
 
 {% endinfo_block %}
 

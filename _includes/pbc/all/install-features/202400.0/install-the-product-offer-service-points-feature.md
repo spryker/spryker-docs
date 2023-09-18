@@ -84,38 +84,34 @@ Make sure that propel entities have been generated successfully by checking thei
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                               | TYPE  | EVENT   | PATH                                                                         |
-|----------------------------------------|-------|---------|------------------------------------------------------------------------------|
-| ServicePoint                           | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                           |
-| ServicePointCollection                 | class | created | src/Generated/Shared/Transfer/ServicePointCollectionTransfer                 |
-| ServicePointCriteria                   | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                   |
-| ServicePointConditions                 | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                 |
-| ApiServicePointAddressesAttributes     | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributesTransfer     |
-| StoreRelation                          | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                          |
-| Store                                  | class | created | src/Generated/Shared/Transfer/StoreTransfer                                  |
-| Sort                                   | class | created | src/Generated/Shared/Transfer/SortTransfer                                   |
-| Pagination                             | class | created | src/Generated/Shared/Transfer/PaginationTransfer                             |
-| DataImporterConfiguration              | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer              |
-| DataImporterReport                     | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                     |
-| ServicePointStorage                    | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                    |
-| ProductOfferService                    | class | created | src/Generated/Shared/Transfer/ProductOfferServiceTransfer                    |
-| ProductOfferServices                   | class | created | src/Generated/Shared/Transfer/ProductOfferServicesTransfer                   |
-| ProductOfferServiceCollection          | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionTransfer          |
-| ProductOfferServiceCollectionRequest   | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionRequestTransfer   |
-| ProductOfferServiceCollectionResponse  | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionResponseTransfer  |
-| ProductOfferServiceCollectionResponse  | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionResponseTransfer  |
-| ProductOfferServiceCriteria            | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCriteriaTransfer            |
-| ProductOfferServiceConditions          | class | created | src/Generated/Shared/Transfer/ProductOfferServiceConditionsTransfer          |
-| IterableProductOfferServicesCriteria   | class | created | src/Generated/Shared/Transfer/IterableProductOfferServicesCriteriaTransfer   |
-| IterableProductOfferServicesConditions | class | created | src/Generated/Shared/Transfer/IterableProductOfferServicesConditionsTransfer |
-| ProductOfferServiceStorage             | class | created | src/Generated/Shared/Transfer/ProductOfferServiceStorageTransfer             |
-| ProductOfferServiceStorageCollection   | class | created | src/Generated/Shared/Transfer/ProductOfferServiceStorageCollectionTransfer   |
-| ServiceStorageCollection               | class | created | src/Generated/Shared/Transfer/ServiceStorageCollectionTransfer               |
-| ServicePointStorageCollection          | class | created | src/Generated/Shared/Transfer/ServicePointStorageCollectionTransfer          |
-| ServicePointStorageCriteria            | class | created | src/Generated/Shared/Transfer/ServicePointStorageCriteriaTransfer            |
-| ServicePointStorageConditions          | class | created | src/Generated/Shared/Transfer/ServicePointStorageConditionsTransfer          |
-| SynchronizationData                    | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                    |
-| Filter                                 | class | created | src/Generated/Shared/Transfer/FilterTransfer                                 |
+| TRANSFER                                  | TYPE  | EVENT   | PATH                                                                            |
+|-------------------------------------------|-------|---------|---------------------------------------------------------------------------------|
+| ServicePoint                              | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                              |
+| ServicePointCollection                    | class | created | src/Generated/Shared/Transfer/ServicePointCollectionTransfer                    |
+| StoreRelation                             | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                             |
+| Store                                     | class | created | src/Generated/Shared/Transfer/StoreTransfer                                     |
+| Sort                                      | class | created | src/Generated/Shared/Transfer/SortTransfer                                      |
+| Pagination                                | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                |
+| DataImporterConfiguration                 | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer                 |
+| DataImporterReport                        | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                        |
+| ServicePointStorage                       | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                       |
+| ProductOfferService                       | class | created | src/Generated/Shared/Transfer/ProductOfferServiceTransfer                       |
+| ProductOfferServices                      | class | created | src/Generated/Shared/Transfer/ProductOfferServicesTransfer                      |
+| ProductOfferServiceCollection             | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionTransfer             |
+| ProductOfferServiceCollectionRequest      | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionRequestTransfer      |
+| ProductOfferServiceCollectionResponse     | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionResponseTransfer     |
+| ProductOfferServiceCollectionResponse     | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionResponseTransfer     |
+| ProductOfferServiceCriteria               | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCriteriaTransfer               |
+| ProductOfferServiceConditions             | class | created | src/Generated/Shared/Transfer/ProductOfferServiceConditionsTransfer             |
+| IterableProductOfferServicesCriteria      | class | created | src/Generated/Shared/Transfer/IterableProductOfferServicesCriteriaTransfer      |
+| IterableProductOfferServicesConditions    | class | created | src/Generated/Shared/Transfer/IterableProductOfferServicesConditionsTransfer    |
+| ProductOfferServiceStorage                | class | created | src/Generated/Shared/Transfer/ProductOfferServiceStorageTransfer                |
+| ProductOfferServiceStorageCollection      | class | created | src/Generated/Shared/Transfer/ProductOfferServiceStorageCollectionTransfer      |
+| ServicePointStorageCollection             | class | created | src/Generated/Shared/Transfer/ServicePointStorageCollectionTransfer             |
+| ServicePointStorageCriteria               | class | created | src/Generated/Shared/Transfer/ServicePointStorageCriteriaTransfer               |
+| ServicePointStorageConditions             | class | created | src/Generated/Shared/Transfer/ServicePointStorageConditionsTransfer             |
+| SynchronizationData                       | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                       |
+| Filter                                    | class | created | src/Generated/Shared/Transfer/FilterTransfer                                    |
 
 {% endinfo_block %}
 

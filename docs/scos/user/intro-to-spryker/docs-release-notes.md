@@ -28,10 +28,10 @@ In August 2023, we have added and updated the following pages:
 - [Vertex integration guide](/docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html#integrate-acp-connector-module-for-tax-calculation).
 - [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
 - [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
-- [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
-- [Oryx: Icon system](/docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
-- [Oryx: Localization](/docs/scos/dev/front-end-development/202307.0/oryx/oryx-localization.html): Learn how localization is handled in Oryx applications.
-- [Oryx: Typography](/docs/scos/dev/front-end-development/202307.0/oryx/styling/oryx-typography.html): Learn about typography in Oryx.
+- [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
+- [Oryx: Icon system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
+- [Oryx: Localization](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-localization.html): Learn how localization is handled in Oryx applications.
+- [Oryx: Typography](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-typography.html): Learn about typography in Oryx.
 - [File manager feature integration guide](/docs/pbc/all/content-management-system/202400.0/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html).
 - [Scheduled Prices feature integration guide](/docs/pbc/all/price-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html).
 - [Product Lists feature integration guide](/docs/pbc/all/product-information-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html).
@@ -56,7 +56,7 @@ For more details about these and other updates to the Spryker docs in August 202
 In July 2023, we have added and updated the following pages:
 
 ### New pages
-- [Oryx: Color system](/docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-color-system.html): Documentation on colors in Oryx.
+- [Oryx: Color system](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-color-system.html): Documentation on colors in Oryx.
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
@@ -97,7 +97,7 @@ In June 2023, we have added and updated the following pages:
 
 ### New pages
 - [Security release notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html).
-- [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-presets.html): Learn how you can use presets to install predefined applications.
+- [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
 - [Service Points feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202400.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
 - [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html).
@@ -158,28 +158,28 @@ In May 2023, we have added and updated the following pages:
 - [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
 - [Change default branch](/docs/scu/dev/change-default-branch.html): Learn how to change the default branch in Spryker CI
 - [Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/oryx.html) documentation:
-    - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
-    - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
-    - [Oryx: Feature sets](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-feature-sets.html): Learn what the feature sets in Oryx are all about.
-    - [Oryx: Packages](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
+    - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
+    - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
+    - [Oryx: Feature sets](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-feature-sets.html): Learn what the feature sets in Oryx are all about.
+    - [Oryx: Packages](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
     - [Oryx: Routing](/docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-routing.html): Lear how to set up the Oryx routing.
-    - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
-    - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-supported-browsers.html): Learn what browsers Oryx supports.
-    - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
-    - [Oryx service layer](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
-    - [Dependency Injection: Using services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.
-    - [Dependency Injection: Defining services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-defining-services.html): Recommended conventions for defining services.
-    - [Dependency Injection: Providing services](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-providing-services.html): Recommended conventions for providing services.
-    - [Dependency Injection: Advanced strategies](/docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-advanced-strategies.html): Strategies for using DI that cover advanced use cases.
-    - [Oryx application orchestration](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-orchestration.html): Orchestration of the Oryx Application.
-    - [Oryx application](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application.html): Learn about the app of the Oryx Application.
-    - [Oryx application environment](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-environment.html): Learn about the environment of the Oryx Application.
-    - [Oryx application feature](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-feature.html): Learn about the feature of the Oryx Application.
-    - [Oryx application plugins](/docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-plugins.html): Learn about plugins of the Oryx Application.
-    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
-    - [Key concepts of Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
-    - [Reactive components](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
-    - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
+    - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
+    - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-supported-browsers.html): Learn what browsers Oryx supports.
+    - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
+    - [Oryx service layer](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
+    - [Dependency Injection: Using services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.
+    - [Dependency Injection: Defining services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-defining-services.html): Recommended conventions for defining services.
+    - [Dependency Injection: Providing services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html): Recommended conventions for providing services.
+    - [Dependency Injection: Advanced strategies](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html): Strategies for using DI that cover advanced use cases.
+    - [Oryx application orchestration](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html): Orchestration of the Oryx Application.
+    - [Oryx application](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html): Learn about the app of the Oryx Application.
+    - [Oryx application environment](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html): Learn about the environment of the Oryx Application.
+    - [Oryx application feature](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html): Learn about the feature of the Oryx Application.
+    - [Oryx application plugins](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html): Learn about plugins of the Oryx Application.
+    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
+    - [Key concepts of Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
+    - [Reactive components](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
+    - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
 
 
 ### Updated pages
@@ -190,8 +190,8 @@ In May 2023, we have added and updated the following pages:
 - [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html): Learn how you can submit an environment provisioning request.
-- [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/configure-algolia.html): Learn how to configure the Algolia app.
-- [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/integrate-algolia.html): Learn how to integrate the Algolia app.
+- [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/configure-algolia.html): Learn how to configure the Algolia app.
+- [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/integrate-algolia.html): Learn how to integrate the Algolia app.
 
 For more details on these and other updates to the Spryker docs in May 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 

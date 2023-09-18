@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
-description: Save Jenkins related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
+description: Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:
@@ -63,7 +63,7 @@ Child processes are killed at the end of each minute, which means those batches 
 
 There are two methods possible for implementing this:
 
-1. Applying a patch, although it may require conflict resolution, since it is applied on project level and each project may have unique customizations already in place. See attached diffs for an example implementation. [Here's a diff](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff).
+1. Applying a patch, although it may require conflict resolution since it is applied on the project level and each project may have unique customizations already in place. See the attached diffs for an example implementation. [Here's a diff](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff).
 
 ```bash
 git apply one-worker.diff
@@ -426,9 +426,9 @@ class ProcessManager extends SprykerProcessManager implements ProcessManagerInte
 
 ### Simple Ordered Strategy
 
-And really simple, yet useful - a simple ordered strategy to define any logic to return a next queue to process. It uses a custom `\Pyz\Zed\Queue\Business\Strategy\CountBasedIterator` which provides some additional optional sorting/repeating benefits for more complex strategies, but without additional configuration - works as a simple [ArrayIterator](https://www.php.net/manual/en/class.arrayiterator.php).
+And really simple, yet useful - a simple ordered strategy to define any logic to return the next queue to process. It uses a custom `\Pyz\Zed\Queue\Business\Strategy\CountBasedIterator` which provides some additional optional sorting/repeating benefits for more complex strategies, but without additional configuration - works as a simple [ArrayIterator](https://www.php.net/manual/en/class.arrayiterator.php).
 
-To discover alternative use-cases for a Strategy component, feel free to investigate previously mentioned `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` which you can find in the patch attached.
+To discover alternative use cases for a Strategy component, feel free to investigate the previously mentioned `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` which you can find in the attached patch.
 
 <details open>
 <summary>src/Pyz/Zed/Queue/Business/Strategy/OrderedQueuesStrategy.php</summary>
@@ -478,13 +478,13 @@ class OrderedQueuesStrategy implements QueueProcessingStrategyInterface
 
 # When to use and when not to use it?
 
-Currently this solution proved to be useful for multi-store setup environments with more than 2 stores operated within a single AWS region, although projects with only 2 stores can benefit with this solution as well.
+Currently, this solution proved to be useful for multi-store setup environments with more than 2 stores operated within a single AWS region, although projects with only two stores can benefit from this solution as well.
 
-At the same time it worth mentioning that for it does not make sense to apply this customization for a single store setup. Although there are no drawbacks, it won't provide any significant benefits in performance, just better logging.
+At the same time, it is worth mentioning that it does not make sense to apply this customization for a single-store setup. Although there are no drawbacks, it won't provide any significant benefits in performance, just better logging.
 
 - In summary, this HowTo can be applied to multi-store setup with at least 2 stores within one AWS region to gain such benefits as potential cost reduction from scaling down a Jenkins instance, or to speed Publish and Synchronize processing instead.
 
-- it can't help much for single store setups or for multi-store setup where each store is hosted in a different AWS region.
+- it can't help much for single-store setups or for multi-store setup where each store is hosted in a different AWS region.
 
 
 # Summary
@@ -492,6 +492,6 @@ At the same time it worth mentioning that for it does not make sense to apply th
 The proposed solution was developed was tested in a project environment. It has shown positive results, with significant improvements in data-import processing time. While this solution is suitable for small to medium projects, it has the potential to be applied universally. Code Examples can be found in the attached diff files that show the implementation in a project.
 
 
-{% info_block warningBox "Important Note" %}
-While this solution can be used to either save cloud costs because of down-scaling Jenkins instance or speed up background processing, it is not guaranteed, because each project is unique and EC2 ("Jenkins" jobs) instance performance also depends on other jobs like data import and custom plugins which may affect performance significantly.
+{% info_block warningBox "Performance monitoring" %}
+Keep in mind that instance performance also depends on other jobs, such as data import and custom plugins. These jobs can significantly affect the overall performance and runtime of your Publish and Synchronize processes. Therefore, always analyze them with [Application Performance Monitoring](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202307.0/configure-services.html#new-relic) or [local application profiling](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html).
 {% endinfo_block %}

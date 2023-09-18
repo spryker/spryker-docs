@@ -142,7 +142,7 @@ image:
 
 Inconsistent PHP versions produce the error message output.
 
-### Resolving the error
+## Resolve the error
 
 To resolve the issue:
 1. Use a supported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version.

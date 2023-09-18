@@ -124,7 +124,7 @@ Certificates are created for all domains.
 - Import the updated CSV files.
 
 ### CMS
-- Update the list of the [related CMS stores](https://docs.spryker.com/docs/scos/user/features/202009.0/cms-feature-overview/cms-pages-overview.html#cms-page-store-relation)
+- Update the list of the [related CMS stores](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-pages-overview.html#cms-page-store-relation)
 - Update store-specific Terms & Conditions
 
 ### Add-ons

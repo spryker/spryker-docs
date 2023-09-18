@@ -5,6 +5,7 @@ last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
+  - /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html
 ---
 
 This guide shows how to send a request in Data Exchange API.

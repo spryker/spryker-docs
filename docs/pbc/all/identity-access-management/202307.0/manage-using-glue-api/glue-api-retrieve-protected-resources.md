@@ -21,7 +21,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
 
-Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html).
+Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
 In your development, the Customer Access API helps you to protect resources from guest access and perform pre-flight checks to avoid sending requests to protected resources without authentication.
 

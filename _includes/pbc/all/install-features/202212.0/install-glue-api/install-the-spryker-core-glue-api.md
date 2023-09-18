@@ -34,10 +34,11 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration
 
+Set up the configuration in the following sections.
 
 ### Configure CORS
 
-Add `cors-allow-origin` to `deploy.yml`:
+Based on the following examples, add `cors-allow-origin` to the needed deploy file:
 
 ```yml
 glue_eu:
@@ -79,7 +80,7 @@ glue_eu:
             cors-allow-origin: '*'
 ```
 
-* `http://www.example1.com`: allow CORS requests only from the specified origin. Example:
+* Allow CORS requests only from a specific origin. Example:
 
 ```yml
 glue_eu:
@@ -97,13 +98,16 @@ glue_eu:
 
 To make sure that the CORS headers are set up correctly, follow the steps:
 
-1. Send the OPTIONS request to any valid GLUE resource with the `Origin` header:
+1. In the deploy file, define a specific origin to accept requests from. In our example, it's `http://www.example1.com`
+
+
+2. Send the OPTIONS request to any valid Glue API resource with the `Origin` header:
 
 ```bash
 curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.mysprykershop.com
 ```
 
-2. Using the following example, verify the headers:
+3. Using the following example, verify the headers:
 
 * The `access-control-allow-origin` header is present and is the same as set in the deploy file.
 * The `access-control-allow-methods` header is present and contains all available methods.
@@ -436,7 +440,7 @@ Make a request to `https://glue.mysprykershop.com` with the header `[{"key":"Acc
 
 {% info_block warningBox "Verification" %}
 
-To make sure `EntityTagFormatResponseHeadersPlugin` is set up correctly, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`(in `EntityTagsRestApiConfig::getEntityTagRequiredResources()`).
+To verify `EntityTagFormatResponseHeadersPlugin`, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`.
 
 The response should contain the `ETag` header.
 
@@ -444,7 +448,7 @@ The response should contain the `ETag` header.
 
 {% info_block warningBox "Verification" %}
 
-To verify `EntityTagRestRequestValidatorPlugin`, send the following request with the `If-Match` header equal the value of `ETag` from the GET response header:
+To verify `EntityTagRestRequestValidatorPlugin`, send the following request with the `If-Match` header equal the value of the `ETag` from the GET response header:
 
 `PATCH https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`
 ```json

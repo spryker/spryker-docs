@@ -4,7 +4,7 @@ This document describes how to integrate the Product Lists feature into a Spryke
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -102,7 +102,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-3. Set up synchronization queue pools so  that non-multistore entities (not store-specific entities) are synchronized among stores:
+3. Set up synchronization queue pools so  that non-multi-store entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/ProductListStorage/Persistence/Propel/Schema/spy_product_list_storage.schema.xml**
 

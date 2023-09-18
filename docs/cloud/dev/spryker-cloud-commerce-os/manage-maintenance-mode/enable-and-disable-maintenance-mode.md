@@ -6,6 +6,12 @@ template: howto-guide-template
 
 Maintenance mode is used many cases, like deploying a new application version or fixing an unexpected error. To automate the process, we created dedicated pipelines for enabling and disabling maintenance mode. The following sections describe how to run maintenance mode pipelines.
 
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
+
 ## Prerequisites
 
 When you enable maintenance mode, the landing pages of your applications, like the Back Office or Storefront, are replaced with maintenance pages in `public/{{APPLICATION}}/maintenance/index.html`. Adjust the pages to match the design of your application and fulfill business requirements.

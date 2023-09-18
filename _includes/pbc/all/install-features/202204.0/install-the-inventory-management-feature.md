@@ -21,7 +21,7 @@ Follow the steps below to install the Inventory Management feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 
 | NAME | VERSION |
@@ -541,4 +541,4 @@ Make sure that the warehouse address management works:
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
 | Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) |
-| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html)|
+| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html)|

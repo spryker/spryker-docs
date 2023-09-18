@@ -22,7 +22,7 @@ This document describes the `gift_card_abstract_configuration.csv` file to conf
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 ## Import file parameters
 

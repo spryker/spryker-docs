@@ -48,7 +48,7 @@ This document helps you prepare for a traditionally very busy season of the year
   * Make sure that your ERP or backend systems are capable of processing the expected number of transactions
   * Talk to partners integrated into checkout—for example, payment providers and fraud checks. They need to be prepared to handle expected volumes of transactions
   * Preload all relevant data in advanced: new products, prepare discount rules but mark them disabled
-  * Make sure application monitoring is in place ([Tideways](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/tideways.html), NewRelic) so you can watch for errors or issues
+  * Make sure application monitoring is in place ([Tideways](/docs/pbc/all/miscellaneous/{{site.version}}/third-party-integrations/operational-tools-monitoring-legal/tideways.html), NewRelic) so you can watch for errors or issues
 
 ## Extra: Performance tips
 

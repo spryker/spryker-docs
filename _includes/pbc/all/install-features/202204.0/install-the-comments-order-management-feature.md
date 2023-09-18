@@ -11,7 +11,7 @@ Follow the steps below to install the Comments + Order Management feature core.
 
 To start feature integration, integrate the required features 
 
-| NAME | VERSION | INTEGRATION GUIDES|
+| NAME | VERSION | INSTALLATION GUIDES|
 | --- | --- | --- |
 | Comments | {{page.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)|

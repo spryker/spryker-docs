@@ -10,4 +10,4 @@ redirect_from:
   - /v3/docs/en/multiple-carts-api-feature-integration-201907
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-multiple-carts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-multiple-carts-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-multiple-carts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-multiple-carts-glue-api.md -->

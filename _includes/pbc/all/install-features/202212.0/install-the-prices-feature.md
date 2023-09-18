@@ -10,7 +10,7 @@ The following feature integration Guide expects the basic feature to be in place
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
@@ -315,6 +315,6 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | --- | --- |
 | ProductPriceVolumeWidget | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html) feature. |
+| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

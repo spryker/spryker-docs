@@ -37,7 +37,7 @@ The file must have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html).
+This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html).
 
 ## Import template file and content example
 

@@ -33,6 +33,6 @@ The following schema illustrates the *Marketplace Merchant Custom Prices* domain
 
 ## Related Developer documents
 
-| INTEGRATION GUIDES|
+| INSTALLATION GUIDES|
 |---------|
 | [Marketplace Merchant Custom Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-custom-prices-feature-integration.html) |

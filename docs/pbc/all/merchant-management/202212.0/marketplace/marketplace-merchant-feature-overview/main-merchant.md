@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:
   - title: Managing main merchant orders
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
   - title: Managing main merchant returns
     link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
 ---
@@ -17,7 +17,7 @@ Thus, the main merchant acts as a common [marketplace merchant](/docs/pbc/all/me
 
 ## Main merchant orders and returns
 
-Being both a [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html) and a seller and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. For details, see [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
+Being both a [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html) and a seller and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. For details, see [Managing main merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-merchant-orders.html).
 
 ## Main merchant state machine
 

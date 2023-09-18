@@ -72,7 +72,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |       |          | mariadb-10.3 | &check;     |    |
 |       |          | mariadb-10.4 | &check;     |    |
 |       |          | mariadb-10.5 | &check;     |    |
-| broke | rabbitmq | 3.7          |             |    |
+| broker | rabbitmq | 3.7          |             |    |
 |       |          | 3.8          | &check;     |    |
 |       |          | 3.9          | &check;     |    |
 | session         | redis    | 5.0          | &check;     |    |
@@ -208,7 +208,7 @@ docker/sdk up --build --data
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
 
 ### Configure ElasticSearch

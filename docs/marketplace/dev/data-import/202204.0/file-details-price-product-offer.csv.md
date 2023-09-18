@@ -39,7 +39,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
-- [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price.csv.html)
+- [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
 
 ## Import template file and content example
 

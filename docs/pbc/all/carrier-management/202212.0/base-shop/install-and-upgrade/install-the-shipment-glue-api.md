@@ -21,7 +21,7 @@ related:
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Retrieving orders
-    link: docs/pbc/all/order-management-system/page.version/glue-api-retrieve-orders.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md -->

@@ -12,7 +12,7 @@ Follow the steps below to install the Company Account + Order Management feature
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Set up synchronization queue pools to synchronize non-multistore entities (not store-specific entities) among stores:
+Set up synchronization queue pools to synchronize non-multi-store entities (not store-specific entities) among stores:
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageConfig.php**
 
@@ -690,7 +690,7 @@ Follow these steps to install the Company Account + Order Management feature fro
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

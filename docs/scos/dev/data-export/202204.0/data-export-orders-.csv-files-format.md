@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/data-export-orders-csv-files-format
   - /docs/data-export-orders-csv-files-format
   - /docs/en/data-export-orders-csv-files-format
+  - /docs/scos/dev/sdk/data-export.html
 related:
   - title: Exporting data
     link: docs/scos/dev/data-export/page.version/data-export.html

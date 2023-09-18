@@ -6,7 +6,7 @@ Follow the steps below to install Product group feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -60,7 +60,7 @@ Make sure that the following modules have been installed:
 </database>
 ```
 
-2. Set up synchronization queue pools so non-multistore entities (not store specific entities) will be synchronized among stores:
+2. Set up synchronization queue pools so non-multi-store entities (not store specific entities) will be synchronized among stores:
 
 **src/Pyz/Zed/ProductGroupStorage/Persistence/Propel/Schema/spy_product_group_storage.schema.xml**
 
@@ -352,5 +352,5 @@ Make sure that `ProductGroupColorWidget` has been registered:
 | FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |
 | Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html) |
 | Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |

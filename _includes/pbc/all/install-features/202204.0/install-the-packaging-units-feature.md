@@ -4,7 +4,7 @@
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -86,7 +86,7 @@ Adjust the schema definition, so entity changes can trigger events.
 </database>
 ```
 
-Set up synchronization queue pools, so non-multistore entities (not store-specific entities) can be synchronized among stores:
+Set up synchronization queue pools, so non-multi-store entities (not store-specific entities) can be synchronized among stores:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
 
@@ -903,7 +903,7 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

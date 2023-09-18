@@ -105,8 +105,10 @@ If you don't see the needed table, it may be [excluded from configuring](/docs/s
 
 {% endinfo_block %}
 
-4. For **RESOURCE NAME**, enter the name of the endpoint you want to create. In our case, it's `countries`.
-5. Optional: On the ... , to enable the endpoint after it's configured, select **IS ENABLED**.
+4. Click **Create**.
+    This opens the **EDIT DATA EXCHANGE API CONFIGURATION** page.
+5. For **RESOURCE NAME**, enter the name of the endpoint you want to create. In our case, it's `countries`.
+5. Optional: To enable the endpoint after it's configured, select **IS ENABLED**.
 6. Configure the fields for interactions per your requirements.
 
 [PASTE SCREENSHOT HERE]

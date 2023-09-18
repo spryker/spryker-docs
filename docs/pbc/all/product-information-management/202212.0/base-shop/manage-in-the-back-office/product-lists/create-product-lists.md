@@ -70,6 +70,6 @@ This doc describes how to create product lists. Product lists are used to allow 
 
 ## Next steps
 
-* Allow or deny a company access to the product list by [creating a new merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
+* Allow or deny a company access to the product list by [creating a new merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
 * Allow or deny a company access to the product list by [editing a merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html).
 * [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html).

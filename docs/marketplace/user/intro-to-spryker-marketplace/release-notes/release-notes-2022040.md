@@ -65,4 +65,4 @@ Documentation: <br>
 The frontend project of the Spryker Marketplace was upgraded to  Angular 12. Follow the steps from the migration guide to update the Angular version of the project.
 
 Documentation:<br>
-[Migration guide - Upgrade to Angular v12](/docs/marketplace/dev/technical-enhancement/{{site.version}}/migration-guide-upgrade-to-angular-v12.html)
+[Migration guide - Upgrade to Angular v12](/docs/scos/dev/migration-concepts/upgrade-to-angular-12.html)

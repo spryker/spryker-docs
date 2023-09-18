@@ -13,4 +13,4 @@ redirect_from:
   - /docs/pbc/all/search/202307.0/install-and-upgrade/install-features-and-glue-api/install-the-search-widget-for-concrete-products.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-search-widget-for-concrete-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-search-widget-for-concrete-products-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-search-widget-for-concrete-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-search-widget-for-concrete-products-feature.md -->

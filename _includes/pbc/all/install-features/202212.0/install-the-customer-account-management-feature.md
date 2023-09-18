@@ -20,7 +20,7 @@ Follow the steps below to install the Customer Account Management feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -1002,4 +1002,4 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 | NAME                                           | INTEGRATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |
+| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

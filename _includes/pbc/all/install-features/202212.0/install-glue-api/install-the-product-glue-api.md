@@ -4,7 +4,7 @@ Follow the steps below to integrate the Glue API: Products feature.
 
 
 ## Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

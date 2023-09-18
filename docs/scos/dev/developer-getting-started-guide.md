@@ -50,7 +50,7 @@ redirect_from:
   - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
 ---
 
-This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
+This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access the Spryker community at [CommerceQuest](https://commercequest.space/).
 
 ## 1. Install Spryker
 
@@ -61,13 +61,13 @@ You can choose from the following options:
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
 
-Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
+Both Demo Shops can also be expanded with separate features and modules.
 
 To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
 ### The deploy file
 
-When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 

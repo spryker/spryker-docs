@@ -27,7 +27,7 @@ To add a new price for a marketplace abstract product, follow these steps:
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
 
-4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate customer's [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
+4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate customer's [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to apply the price to.
 
   {% info_block infoBox "Note" %}
 

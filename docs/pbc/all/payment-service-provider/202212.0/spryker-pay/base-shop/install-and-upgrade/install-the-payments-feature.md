@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/spryker-pay/base-shop/payments-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-payments-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-payments-feature.md -->

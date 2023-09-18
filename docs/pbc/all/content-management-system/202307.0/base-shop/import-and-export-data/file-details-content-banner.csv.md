@@ -23,7 +23,7 @@ This document describes the `content_banner.csv` file to configure [Content Bann
 
 ## Import file dependencies
 
-This file has the following dependency: [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html).
+This file has the following dependency: [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html).
 
 
 ## Import file parameters

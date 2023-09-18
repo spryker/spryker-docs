@@ -1,7 +1,7 @@
 ---
 title: Add variables in the Parameter Store
 description: Learn how to define variables in the Parameter Store.
-last_updated: May 3, 2023
+last_updated: Aug 21, 2023
 template: howto-guide-template
 keywords: environment variable management
 redirect_from:
@@ -40,8 +40,45 @@ Variables must follow this naming convention: `/{project}/{environment}/{type}/{
 
 Reserved variables are variable names that have special meaning in Spryker Cloud Commerce OS. Since their names are reserved, you can't define your own variables using these names.
 <BR> The reserved variable names are the following:
+* `SPRYKER_*` *(Every variable name with that prefix)*
+* `ALLOWED_IP`
+* `BLACKFIRE_AGENT_SOCKET`
+* `BLACKFIRE_SERVER_ID`
+* `BLACKFIRE_SERVER_TOKEN`
+* `DATA_IMPORT_S3_BUCKET`
+* `DATA_IMPORT_S3_KEY`
+* `DATA_IMPORT_S3_SECRET`
 * `DUMMY_INIT`
-* `SPRYKER_*`
+* `ENABLE_NRI_ECS`
+* `JAVA_OPTS`
+* `JENKINS_URL`
+* `NEWRELIC_APPNAME`
+* `NEWRELIC_ENABLED`
+* `NEWRELIC_LICENSE`
+* `NRIA_CUSTOM_ATTRIBUTES`
+* `NRIA_LICENSE_KEY`
+* `NRIA_OVERRIDE_HOST_ROOT`
+* `NRIA_PASSTHROUGH_ENVIRONMENT`
+* `NRIA_VERBOSE`
+* `ONEAGENT_INSTALLER_DOWNLOAD_TOKEN`
+* `ONEAGENT_INSTALLER_SCRIPT_URL`
+* `RABBITMQ_DEFAULT_PASS`
+* `RABBITMQ_DEFAULT_USER`
+* `RABBITMQ_DEFAULT_VHOST`
+* `RABBITMQ_ENDPOINT`
+* `RABBITMQ_EXCHANGE_REGEXES`
+* `RABBITMQ_INTEGRATIONS_INTERVAL`
+* `RABBITMQ_NODENAME`
+* `RABBITMQ_PASSWORD`
+* `RABBITMQ_PORT`
+* `RABBITMQ_QUEUES_REGEXES`
+* `RABBITMQ_USE_SSL`
+* `RABBITMQ_USERNAME`
+* `TIDEWAYS_APIKEY`
+* `TIDEWAYS_CLI_ENABLED`
+* `TIDEWAYS_DAEMON_URI`
+* `TIDEWAYS_ENVIRONMENT`
+
 
 If you are already using these reserved variables in your code, you need to change their names to avoid any service issues.
 
@@ -61,7 +98,6 @@ Placeholder description:
 * `grant`: Defines access permissions to variables. Possible values:
     * `public`: readable and writable
     * `limited`: readable
-    * `internal`: hidden
 
 Path examples:
 
@@ -73,31 +109,23 @@ Path examples:
 
 Path hierarchy is needed to cover the cases when several variables with the same name are declared. If several variables with the same name are declared, the variable with a higher priority applies. The following rules define the priority of variables:
 
-1. For any `type` and `bucket`, the priority is `public` > `limited` > `internal`.
+1. For any `type` and `bucket`, the priority is `public` > `limited`.
 2. Foy any `bucket`, the priority is `bucket` > `common`.
 3. For any variable with the same name, the priority is `secret` > `config`.
 
 The following variables are arranged from lower to higher priority:
 
-* /{project}/{environment}/config/common/internal/{variable_name}
-
 * /{project}/{environment}/config/common/limited/{variable_name}
 
 * /{project}/{environment}/config/common/public/{variable_name}
-
-* /{project}/{environment}/config/{app | scheduler}/internal/{variable_name}
 
 * /{project}/{environment}/config/{app | scheduler}/limited/{variable_name}
 
 * /{project}/{environment}/config/{app | scheduler}/public/{variable_name}
 
-* /{project}/{environment}/secret/common/internal/{variable_name}
-
 * /{project}/{environment}/secret/common/limited/{variable_name}
 
 * /{project}/{environment}/secret/common/public/{variable_name}
-
-* /{project}/{environment}/secret/{app | scheduler}/internal/{variable_name}
 
 * /{project}/{environment}/secret/{app | scheduler}/limited/{variable_name}
 

@@ -11,7 +11,7 @@ Performance testing is an integral part of the development and deployment proces
 
 Since the staging environment isn't designed to be as performant as the production environment, we recommend using a subset of the data and extrapolate the results.
 
-If you want to execute a full load test on a production-like dataset and traffic, use a production environment. This could be your actual production environment if it is not yet live, or you can order an additional environment by contacting you Account Executive. Testing with real or at least mock data provides significantly better and more reliable results than testing with a small data set. To conduct effective performance tests, it is recommended to use the same amount of data that will be used in the production environment. 
+If you want to execute a full load test on a production-like dataset and traffic, use a production environment. This could be your actual production environment if it is not yet live, or you can order an additional environment by contacting you Account Executive. Testing with real or at least mock data provides significantly better and more reliable results than testing with a small data set. To conduct effective performance tests, it is recommended to use the same amount of data that will be used in the production environment.
 
 If you are unable to use real data for your load tests, you can use the [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. Please note that we do not provide support for this data. However, if your specific use case is not covered, you can [contact support](https://spryker.force.com/support/s/knowledge-center), and we will try to accommodate your needs.
 
@@ -21,7 +21,7 @@ Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/
 
 To assist in performance testing, we have a [load testing tool](https://github.com/spryker-sdk/load-testing). The tool contains predefined test scenarios that are specific to Spryker. Test runs based on Gatling.io, an open-source tool. Web UI helps to manage runs and multiple target projects are supported simultaneously.
 
-The tool can be used as a package integrated into the Spryker project or as a standalone package. 
+The tool can be used as a package integrated into the Spryker project or as a standalone package.
 
 ## What is Gatling?
 
@@ -58,7 +58,7 @@ git clone git@github.com:spryker/docker-sdk.git docker
 
 ### Integrating Gatling
 
-With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves. 
+With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves.
 
 {% info_block infoBox %}
 
@@ -90,7 +90,7 @@ use SprykerSdk\Yves\LoadTesting\Plugin\Router\LoadTestingRouterProviderPlugin;
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     ...
-    
+
     /**
      * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
      */
@@ -99,11 +99,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
         $routeProviders = [
         ...
         ];
-		
+
         if (class_exists(LoadTestingRouterProviderPlugin::class)) {
             $routeProviders[] = new LoadTestingRouterProviderPlugin();
         }
-        
+
         return $routeProviders;
     }
 
@@ -129,7 +129,7 @@ This step is only needed for a new project, such as our B2C Demo Shop example. O
 
 {% endinfo_block %}
 
-Before we can generate the fixtures needed to be loaded into the database, we still need to set up the environment. We can do that with the following steps: 
+Before we can generate the fixtures needed to be loaded into the database, we still need to set up the environment. We can do that with the following steps:
 
 1. Bootstrap the docker setup:
 
@@ -161,13 +161,13 @@ You've set up your Spryker B2C Demo Shop and can now access your applications.
 
 ### Data preparation
 
-With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html). 
+With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html).
 
-These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment. 
+These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment.
 
 #### Steps for using a cloud-hosted environment.
 
-The Gatling test tool uses pre-seeded data which is used locally for both testing and generating the fixtures in the project's database. If you wish to test a production or a staging environment, there are several factors which need to be addressed. 
+The Gatling test tool uses pre-seeded data which is used locally for both testing and generating the fixtures in the project's database. If you wish to test a production or a staging environment, there are several factors which need to be addressed.
 
 - You may have data you wish to test with directly which the sample dummy data may not cover.
 - Cloud-hosted applications are not able to be run in test mode.
@@ -179,7 +179,7 @@ Data used for Gatling's load testing can be found in **/load-test-tool-dir/tests
 
 ##### Setting up for basic authentication.
 
-If your environment is set for `BASIC AUTH` authentication and requires a user name and password before the site can be loaded, Gatling needs additional configuration. Found within **/load-test-tool-dir/resources/scenarios/spryker/**, two files control the HTTP protocol which is used by each test within the same directory. `GlueProtocol.scala` and `YvesProtocol.scala` each have a value (`httpProtocol`) which needs an additional argument to account for this authentication mode. 
+If your environment is set for `BASIC AUTH` authentication and requires a user name and password before the site can be loaded, Gatling needs additional configuration. Found within **/load-test-tool-dir/resources/scenarios/spryker/**, two files control the HTTP protocol which is used by each test within the same directory. `GlueProtocol.scala` and `YvesProtocol.scala` each have a value (`httpProtocol`) which needs an additional argument to account for this authentication mode.
 
 ```scala
 val httpProtocol = http
@@ -210,7 +210,7 @@ Product data can be generated from existing product data for use with the load-t
 SELECT
        JSON_UNQUOTE(JSON_EXTRACT(data, "$.sku")) as `sku`,
        JSON_UNQUOTE(JSON_EXTRACT(data, "$.url")) as `url`
-FROM `us-docker`.`spy_product_concrete_storage`; 
+FROM `us-docker`.`spy_product_concrete_storage`;
 ```
 
 This command parses through the JSON entry and extracts what we need. Once this information has been generated, it should be saved as `product_concrete.csv` and saved in the **/load-test-tool-dir/tests/_data** directory.
@@ -228,9 +228,9 @@ Customer data can be generated from existing product data for use with the load-
 - To generate information for `auth_token`, a separate Glue call is required.
 - Passwords are encrypted in the database, while the load-testing tool requires a password to use in plain-text.
 
-Because of these aforementioned issues, it is recommended that you create the test users you need first through the Zed or Backoffice interface. For help with creating users, please refer to [Managing customers](/docs/scos/user/back-office-user-guides/202009.0/customer/customer-customer-access-customer-groups/managing-customers.html).
+Because of these aforementioned issues, we recommended creating the test users you need first through the Back Office. For instructions, see [Managing customers](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html).
 
-Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/scos/dev/glue-api-guides/202108.0/managing-b2b-account/managing-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
+Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
 
 Expected request body
 ```json
@@ -283,10 +283,10 @@ console publish:trigger-events
 3. Run the *queue worker*. The [Queue System](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
 
 ```bash
-console queue:worker:start -s 
+console queue:worker:start -s
 ```
 
-You should have the fixtures loaded into the databases and can now exit the CLI to install Gatling into the project. 
+You should have the fixtures loaded into the databases and can now exit the CLI to install Gatling into the project.
 
 #### Alternative method to generate local fixtures.
 
@@ -300,7 +300,7 @@ Jenkins is the default scheduler which ships with Spryker. It is an automation s
 
 3. The next step will allow up to input the commands we need to run. While a description is optional, you can choose to set one here. There are also additional settings, such as a display name, which may also be toggled. As you only need the commands to run once, you can move down to the `Build` section to add the three build steps needed.
 
-Click on `Add build step` and select `Execute shell`. A Command field will appear, allowing you to input the following: 
+Click on `Add build step` and select `Execute shell`. A Command field will appear, allowing you to input the following:
 
 ```bash
 APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/codecept fixtures -c vendor/spryker-sdk/load-testing" bash /usr/bin/spryker.sh
@@ -349,7 +349,7 @@ Both Java 8+ and Node 10.10+ are requirements to run Gatling from any system. Th
 
 {% endinfo_block %}
 
-The last steps to getting the Spryker load testing tool set up with your project is to finally install Gatling. The load testing tool is set up with a PHP interface which makes calls to Gatling to run the tests that have been built into the tool. 
+The last steps to getting the Spryker load testing tool set up with your project is to finally install Gatling. The load testing tool is set up with a PHP interface which makes calls to Gatling to run the tests that have been built into the tool.
 
 If you are attempting to load test your production or staging environment and are not testing your site locally, you can skip to the [steps for standalone installation](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html#installing-gatling-as-a-standalone-package).
 
@@ -361,7 +361,7 @@ An installation script is included with the load testing tool and can be run wit
 cd vendor/spryker-sdk/load-testing
 ```
 
-2. Run the installation script: 
+2. Run the installation script:
 
 ```bash
 ./install.sh
@@ -426,7 +426,7 @@ For *Glue API*:
 
 {% info_block errorBox %}
 
-Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) reference for more details.
+Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) reference for more details.
 
 {% endinfo_block %}
 
@@ -466,7 +466,7 @@ For the already available instances, you can edit Yves URL and Glue URL. Instanc
 
 To edit an instance:
 1. In the navigation bar, click **New instance**. The *Instance* page opens.
-2. Click the *edit* sign next to the instance you want to edit: 
+2. Click the *edit* sign next to the instance you want to edit:
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/edit-instance.png)
 3. Edit the Yves URL or the Glue URL.
 4. Click **Go**.
@@ -476,10 +476,10 @@ Now, the instance data is updated.
 #### Deleting an instance
 To delete an instance:
 1. In the navigation bar, click **New instance**. The *Instance* page opens.
-2. Click the X sign next to the instance you want to delete: 
+2. Click the X sign next to the instance you want to delete:
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/delete-instance.png)
 3. Click **Go**.
- 
+
 Your instance is now deleted.
 
 ### Running tests
@@ -498,7 +498,7 @@ To run a new load test:
 7. Optional: In the *Description*, provide the test description.
 8. Click **Go**.
 
-That's it - your test should run now. While it runs, you see a page where logs are generated. Once the time you specified in the Duration field from step 6 elapses, the test stops, and you can view the detailed test report. 
+That's it - your test should run now. While it runs, you see a page where logs are generated. Once the time you specified in the Duration field from step 6 elapses, the test stops, and you can view the detailed test report.
 
 
 ### Viewing the test reports
@@ -513,10 +513,10 @@ By default, information on all instances and tests is displayed on the main page
 
 ---
 
-To check what tests are being run, on the main page, expand the *Running* section. 
+To check what tests are being run, on the main page, expand the *Running* section.
 
 To view the reports of the completed tests, on the main page, in the *Done* section, click **Report log** for the test you need:
-![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/reports.png) A new tab with the detailed Gatling reports is opened. 
+![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/reports.png) A new tab with the detailed Gatling reports is opened.
 
 
 
@@ -542,7 +542,7 @@ For the *Steady probe* test type, the following is done:
 
 ## Gatling Reports
 
-Gatling reports are a valuable source of information to read the performance data by providing some details about requests and response timing. 
+Gatling reports are a valuable source of information to read the performance data by providing some details about requests and response timing.
 
 There are the following report types in Gatling:
 - Indicators

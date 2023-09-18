@@ -23,4 +23,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-availability-notification-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-availability-notification-glue-api.md -->

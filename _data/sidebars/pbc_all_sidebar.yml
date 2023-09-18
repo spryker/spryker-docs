@@ -19,6 +19,12 @@ entries:
             nested:
               - title: View Dashboard
                 url: /docs/pbc/all/back-office/manage-in-the-back-office/view-dashboard.html
+          - title: Install and upgrade
+            nested:
+              - title: Upgrade modules
+                nested:
+                  - title: Chart
+                    url: /docs/pbc/all/back-office/install-and-upgrade/upgrade-modules/upgrade-the-chart-module.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:

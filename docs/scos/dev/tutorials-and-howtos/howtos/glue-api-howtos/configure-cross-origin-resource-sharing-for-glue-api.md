@@ -28,61 +28,61 @@ By default, Glue REST API is configured to run using the [same-origin policy](ht
 
 To configure CORS, edit the needed deploy file. Example:
 
-    ```yml
-    glue_eu:
-        application: glue
-        endpoints:
-            glue.de.mysprykershop.com:
-                store: DE
-                cors-allow-origin: 'http://cors-allow-origin1.domain'
-                cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,User-Agent,newrelic,traceparent,tracestate"
-            glue.at.mysprykershop.com:
-                store: AT
-                cors-allow-origin: 'http://cors-allow-origin2.domain'
-                cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate,X-Device-Id"
-    ```
+```yml
+glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: 'http://cors-allow-origin1.domain'
+            cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,User-Agent,newrelic,traceparent,tracestate"
+        glue.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: 'http://cors-allow-origin2.domain'
+            cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate,X-Device-Id"
+```
 
  Configuration options:
-    
-    * CORS is disabled. Example:
 
-    ```yml
+* CORS is disabled. Example:
+
+```yml
+glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+        glue.at.mysprykershop.com:
+            store: AT
+```
+
+*  `*`: allow CORS requests from any domain. Example:
+
+```yml
     glue_eu:
-        application: glue
-        endpoints:
-            glue.de.mysprykershop.com:
-                store: DE
-            glue.at.mysprykershop.com:
-                store: AT
-    ```
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: '*'
+        glue.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: '*'
+```
 
-    *  `*`: allow CORS requests from any domain. Example:
+* `http://www.example1.com`: allow CORS requests only from the specified originExample:
 
-    ```yml
-        glue_eu:
-        application: glue
-        endpoints:
-            glue.de.mysprykershop.com:
-                store: DE
-                cors-allow-origin: '*'
-            glue.at.mysprykershop.com:
-                store: AT
-                cors-allow-origin: '*'
-    ```
-
-    * `http://www.example1.com`: allow CORS requests only from the specified origin. Example:
-
-    ```yml
-        glue_eu:
-        application: glue
-        endpoints:
-            glue.de.mysprykershop.com:
-                store: DE
-                cors-allow-origin: 'http://www.example1.com'
-            glue.at.mysprykershop.com:
-                store: AT
-                cors-allow-origin: 'http://www.example1.com'
-    ```
+```yml
+    glue_eu:
+    application: glue
+    endpoints:
+        glue.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: 'http://www.example1.com'
+        glue.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: 'http://www.example1.com'
+```
 
 ## Verify the CORS configuration
 

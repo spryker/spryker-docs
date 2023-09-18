@@ -5,8 +5,10 @@ User journey: https://spryker.atlassian.net/wiki/spaces/Data/pages/3752787969/WI
 
 Akeneo Integration App MVP - Demo Recording (by Memo-ICT) - 23.06.2023: 
 
-Video Conferencing, Web Conferencing, Webinars, Screen Sharing 
+https://spryker.zoom.us/rec/play/Kd5gss431LQN2Dg247HQM4CxSxSPe1b-q0HAO2ed2OHEPTUBeDin2Z0fP5jOMdjwE61LqDBSayRHzwKB.2FyR29MgRDG0J1H-?canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fspryker.zoom.us%2Frec%2Fshare%2FyxgPY437hP88vPVPGrNpGmsyw7RCpWNnFeXKIiKRmTZLqczOSydzzjmNAB_DV90n.0DzhpgeTQsoRbuiL
 
 Passcode: 0p^@.Pqv
 
 Ask if it is still relevant
+
+You need to create a base in Alumio that you would use for communication between Spryker and Akeneo (incoming?) - Spryker http client.

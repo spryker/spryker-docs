@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Push Notification feature](/docs/pbc/all/push-notification/{{page.version}}/unified-commerce/push-notification-feature-overview.html) into a Spryker project.
+This document describes how to install the [Push Notification feature](/docs/pbc/all/push-notification/{{page.version}}/unified-commerce/push-notification-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -15,7 +15,9 @@ Install the required features:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
+
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/push-notification: "{{page.version}}" --update-with-dependencies
@@ -82,20 +84,20 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
 | PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
 | PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
-| ApiPushNotificationSubscriptionsAttributes           | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionsAttributesTransfer           |
-| ApiPushNotificationGroupsAttributes                  | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
-| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequest                                                  |
-| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollection                                 |
-| Sort                                                 | class | created | src/Generated/Shared/Transfer/Sort                                                         |
-| Pagination                                           | class | created | src/Generated/Shared/Transfer/Pagination                                                   |
-| ApiPushNotificationProvidersAttributes               | class | created | src/Generated/Shared/Transfer/ApiPushNotificationProvidersAttributes                       |
-| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupsAttributesTransfer                  |
+| PushNotificationSubscriptionsBackendApiAttributes    | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionsBackendApiAttributesTransfer    |
+| PushNotificationGroupsBackendApiAttributes           | class | created | src/Generated/Shared/Transfer/PushNotificationGroupsBackendApiAttributesTransfer           |
+| GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer                                          |
+| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollectionTransfer                         |
+| Sort                                                 | class | created | src/Generated/Shared/Transfer/SortTransfer                                                 |
+| Pagination                                           | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                           |
+| ApiPushNotificationProvidersAttributes               | class | created | src/Generated/Shared/Transfer/ApiPushNotificationProvidersAttributesTransfer               |
+| PushNotificationProviderCollectionDeleteCriteria     | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionDeleteCriteriaTransfer     |
 
 {% endinfo_block %}
 
 ### 3) Set up configuration
 
-1. To make the `push-notification-subscriptions` and `push-notification-providers` resource protected, adjust the protected paths configuration:
+1. To make the `push-notification-subscriptions` and `push-notification-providers` resources protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -125,13 +127,13 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. Add the configuration defining *Voluntary Application Server Identity (`VAPID`)* keys, which are used by the push notification:
+2. Add the configuration defining *Voluntary Application Server Identity (VAPID) keys, which are used by the push notification:
 
 | CONFIGURATION                                          | SPECIFICATION                                                                   | NAMESPACE                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
-| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides the `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides the `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides the `VAPID` subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides the VAPID public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides the VAPID private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides the VAPID subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
 
 **config/Shared/config_default.php**
 
@@ -146,7 +148,7 @@ $config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKE
 $config[PushNotificationWebPushPhpConstants::VAPID_SUJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');
 ```
 
-3. Add the VAPID keys to your **deploy.*.yml**:
+3. Add the VAPID keys to the needed deploy file:
 
 ```yml
 
@@ -158,17 +160,22 @@ image:
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT: 'https://your.subject'
 ```
 
-VAPID is a new way to send and receive website push notifications. Your `VAPID` keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).
+{% info_block infoBox "VAPID" %}
+
+
+VAPID is a new way to send and receive website push notifications. Your VAPID keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).
 
 To generate `VAPID` keys, you can use the following tools:
-- https://vapidkeys.com/—an online tool to generate keys.
-- https://www.npmjs.com/package//web-push—a Node.js package that can generate `VAPID` keys.
+- `https://vapidkeys.com/`: an online tool to generate keys.
+- `https://www.npmjs.com/package//web-push`: a Node.js package that generates VAPID keys.
 
 The following example command generates `VAPID` keys by using the `web-push` Node.js library:
 
 ```bash
 web-push generate-vapid-keys --json
 ```
+
+{% endinfo_block %}
 
 ### 4) Add translations
 
@@ -217,7 +224,7 @@ console data:import glossary
 |------------------------------------------------------------------------|-------------------------------------------------------|---------------|------------------------------------------------------------------------------|
 | PushNotificationWebPushPhpPushNotificationSubscriptionValidatorPlugin  | Validates the push notification subscription payload. |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
 | PushNotificationWebPushPhpPayloadLengthPushNotificationValidatorPlugin | Validates the push notification payload.              |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
-| PushNotificationWebPushPhpPushNotificationSenderPlugin                 | Sends push notification collection.                   |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
+| PushNotificationWebPushPhpPushNotificationSenderPlugin                 | Sends the push notification collection.                   |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/PushNotification/PushNotificationDependencyProvider.php</summary>
@@ -317,7 +324,7 @@ docker/sdk console setup:init-db
 | PLUGIN                                           | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                          |
 |--------------------------------------------------|------------------------------------------------------------------|---------------|----------------------------------------------------|
 | SendPushNotificationConsole                      | Sends notifications in an async way.                             |               | Spryker\Zed\PushNotification\Communication\Console |
-| DeleteExpiredPushNotificationSubscriptionConsole | Delete expired push notification subscriptions from `Persistence`. |               | Spryker\Zed\PushNotification\Communication\Console |
+| DeleteExpiredPushNotificationSubscriptionConsole | Deletes expired push notification subscriptions from `Persistence`. |               | Spryker\Zed\PushNotification\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -382,12 +389,14 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 ```
 
-{% info_block warningBox "Verification" %}
+#### Verify the push notifications
 
-Ensure that the plugins work correctly:
-1. To test the functionality, create a simple single-page demo application.
-2. Generate `VAPID` keys through the online generator https://vapidkeys.com/.
-3. Create a directory for the demo application: `mkdir push_notification_spa`.
+1. Create a simple single-page demo application.
+2. Generate `VAPID` keys at `https://vapidkeys.com/`.
+3. Create a directory for the demo application:
+```bash
+mkdir push_notification_spa
+```
 4. In the `push_notification_spa` directory, create the following files:
 
 **.../push_notification_spa/index.html**
@@ -660,34 +669,30 @@ self.addEventListener('push', function (event) {
 });
 ```
 
-5. Setup credentials:
-   1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your `VAPID` public key.
-   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system.
-6. Run the local HTTP server with the demo app:
+5. To set up credential, in `.../push_notification_spa/app.js`, set your VAPID public key for the `applicationServerKey` variable.
+6. In `.../push_notification_spa/app.js`, find the `getToken()` method and set the credentials of the user that works in your system.
+7. Run the local HTTP server with the demo app:
 ```bash
 php -S localhost:8000
 ```
 
-7. Integrate the Push Notification feature by following the current guide.
-8. To enable the push notification, on the **Web Push sandbox** page, click the **Enable browser notifications** button.
-9. To create a push notification subscription, on the **Web Push sandbox** page, click the **Create Push notification subscription** button.
-10. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
-11. Send the push notification by running the following console command:
+8. To enable the push notification, on the **Web Push sandbox** page, click **Enable browser notifications**.
+9. To create a push notification subscription, on the **Web Push sandbox** page, click **Create Push notification subscription**.
+10. Create the push notification by adding it manually to the `spy_push_notification` database table.
+    Use the same group and notification provider that is used by the subscription.
+11. Send the push notification:
 ```bash
 docker/sdk console send-push-notifications
 ```
-
-12. Depending on the OS, the notification is displayed with content from the `spy_push_notification.payload` database field.
+    The notification is displayed with content from the `spy_push_notification.payload` database field.
 13. Change the `spy_push_notification_subscription.expired_at` subscription expiration date to the previous year's date.
 14. Remove the outdated subscriptions:
 ```bash
 docker/sdk console delete-expired-push-notification-subscriptions
 ```
 
-{% endinfo_block %}
 
-
-### 6) Set up a cron job
+### 6) Set up a cron job to automate push notifications
 
 In the cron-job list, enable the `send-push-notifications` and `delete-expired-push-notification-subscriptions` console commands:
 
@@ -727,7 +732,18 @@ $jobs[] = [
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification_subscription_delivery_log` database table. This table contains a record for each unique combination of push notification and push notification subscription.
-2. Make sure that outdated push notification subscriptions are removed by checking the `spy_push_notification_subscription` database table. Create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
+1. Create a push notification and subscribe to it.
+    Make sure that push notifications are sent based on the cron-job schedule by checking the `spy_push_notification_subscription_delivery_log` database table. This table contains a record for each unique combination of push notification and push notification subscription.
+2. Create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
+    Make sure that outdated push notification subscription is removed based on the cron-job schedule by checking the `spy_push_notification_subscription` database table.
+
+{% endinfo_block %}
+
+{% info_block infoBox "" %}
+
+To optimize job execution and manage job concurrency, we recommend configuring and using the following pre-installed Jenkins plugins:
+
+- `Priority Sorter Plugin`: lets you set priorities for your Jenkins jobs. You can assign higher priorities to critical jobs, ensuring they are executed before lower-priority jobs.
+- `Throttle Concurrent Builds Plugin`: provides fine-grained control over how many concurrent builds of a job can run. You can use it to limit the number of parallel executions for resource-intensive jobs, preventing overloading your Jenkins environment.
 
 {% endinfo_block %}

@@ -12,10 +12,12 @@ redirect_from:
   - /docs/en/rest-api-reference
   - /docs/scos/dev/glue-api-guides/202204.0/rest-api-reference.html
   - /docs/scos/dev/glue-api-guides/202200.0/rest-api-reference.html
-related: 
+related:
   - title: Reference information- GlueApplication errors
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
 ---
+
+<!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
 {% info_block warningBox %}
 
@@ -33,7 +35,7 @@ This document provides an overview of REST API endpoints provided by the Spryker
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-bundle.js"></script>
 <script>
 const swaggerContainer = document.getElementById('swagger-ui');
-if(swaggerContainer) { 
+if(swaggerContainer) {
     console.log('start'); const ui = SwaggerUIBundle({
         url: 'https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/glue-api-guides/202204.0/b2c_spryker_rest_api.schema.json',
         dom_id: '#swagger-ui', deepLinking: true, presets: [
@@ -41,7 +43,7 @@ if(swaggerContainer) {
         ],
         enableCORS: false, layout: 'BaseLayout', supportedSubmitMethods: []
     });
-    console.log(ui); window.ui = ui 
+    console.log(ui); window.ui = ui
 }
 </script>
 {% endraw %}

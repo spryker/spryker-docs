@@ -3,11 +3,13 @@ title: "Oryx: Creating pages"
 description: Pages can be created from a data set or custom components
 last_updated: Aug 1, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-pages.html
 ---
 
 In Oryx, pages are essential building blocks of web applications. They represent different sections or views within an application and can be created using a data-driven approach. This approach lets you define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.
 
-Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of the standard preset pages.
+Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of the standard preset pages.
 
 ## Understanding pages and compositions
 
@@ -70,7 +72,7 @@ Oryx enables you to provide custom experience data or change the existing data o
 
 ### Providing custom data
 
-You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/dependency-injection/dependency-injection-providing-services.html).
+You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html).
 
 A small utility function is available from the experience package to add custom data:
 
@@ -121,7 +123,7 @@ const customHomePage: ExperienceComponent = {
 
 ### Merge selector
 
-To replace existing content provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
+To replace existing content provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
 
 The selected content is defined by the `merge.selector` field. The following example shows how the provided data replaces the home page.
 

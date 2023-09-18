@@ -252,9 +252,7 @@ $bootstrap
     ->run();
 ```
 
-### Configure the web server
-
-1. Create the Nginx VHOST configuration:
+3. Create the Nginx VHOST configuration:
 
 **/etc/nginx/sites-enabled/DE_development_glue**
 
@@ -281,7 +279,7 @@ server {
 }
 ```
 
-2. Update the hosts configuration. Replace `{IP}` with your server's IP address:
+4. Update the hosts configuration. Replace `{IP}` with your server's IP address:
 
 **/etc/hosts**
 ```bash
@@ -440,15 +438,11 @@ Make a request to `https://glue.mysprykershop.com` with the header `[{"key":"Acc
 
 {% info_block warningBox "Verification" %}
 
-To verify `EntityTagFormatResponseHeadersPlugin`, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`.
+1. To verify `EntityTagFormatResponseHeadersPlugin`, send the `GET https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}` request to a resource that requires an `ETag`.
+    The response should contain the `ETag` header.
 
-The response should contain the `ETag` header.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-To verify `EntityTagRestRequestValidatorPlugin`, send the following request with the `If-Match` header equal the value of the `ETag` from the GET response header:
+2. To verify `EntityTagRestRequestValidatorPlugin`, send the following request with the `If-Match` header equal the value of the `ETag` value from the response to the previous request:
 
 `PATCH https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`
 ```json
@@ -463,8 +457,7 @@ HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
     }
 }
 ```
-
-Make sure that the returned resource contains an updated `ETag`.
+    Make sure that the returned resource contains an updated `ETag`.
 
 {% endinfo_block %}
 
@@ -494,7 +487,7 @@ Make sure you can send requests to the `https://glue.mysprykershop.com/stores` e
 
 {% info_block warningBox "Verification" %}
 
-To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send the following request: make sure you receive the correct resource identifier in response.
+To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send the following request:
 
 `POST https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url`
 ```json
@@ -518,15 +511,14 @@ To verify `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin`, send
     }
 }
 ```
+    Make sure you receive the correct resource identifier in the response.
 
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-To verify `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin`, request the category URL via the `/URLs` API endpoint, and ensure you receive the correct resource identifier in response.
-
-**Request body**
+To verify `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin`, request the category URL via the `/URLs` API endpoint:
 
 ```json
 https://glue.mysprykershop.com/url-resolver/?url=/category-url
@@ -550,13 +542,17 @@ https://glue.mysprykershop.com/url-resolver/?url=/category-url
 }
 ```
 
+Make sure the response contains the correct resource identifier.
+
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-To make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly, [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with incorrect credentials. After making the number of attempts you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for the number of seconds you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Check that with the consequent login attempts, you get the `429 Too many requests` error.
+* To verify `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin`, [authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with incorrect credentials for as many times as you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`.
+    Make sure the account gets blocked for the number of seconds you've specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Consequent login attempts should return the `429 Too many requests` error.
 
-* To make sure `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin` are activated correclty, [authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) with incorrect credentials. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core.
+* To verify `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`, [authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) with incorrect credentials.
+    The agent account should get blocked according to the configured you've set up.
 
 {% endinfo_block %}

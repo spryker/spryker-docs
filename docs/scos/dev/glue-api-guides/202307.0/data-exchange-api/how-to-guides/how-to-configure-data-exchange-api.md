@@ -9,7 +9,7 @@ redirect_from:
 
 This document describes how to create and configure the Data Exchange API endpoints.
 
-The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/country` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
+The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/countries` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
 
 ## Create and configure a Data Exchange API endpoint
 

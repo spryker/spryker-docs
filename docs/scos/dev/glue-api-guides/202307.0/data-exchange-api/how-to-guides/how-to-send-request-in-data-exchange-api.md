@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
 ---
 
-This document describes how to send interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we are using the `/dynamic-data/country` to interact with the `spy_country` table as an example.
+This document describes how to send interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we are using the `/dynamic-data/countries` to interact with the `spy_country` table as an example.
 
 
 ## Prerequisites
@@ -30,12 +30,12 @@ grant_type=password&username={username}&password={password}
 
 ## Retrieve a collection of fields
 
-To retrieve a collection of countries, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/country` request. The request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
+To retrieve a collection of countries, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/countries` request. The request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
 
 Pagination allows for efficient data retrieval by specifying the desired range of results. To use pagination, include the desired page limit and offset in the request:
 
 ```bash
-GET /dynamic-entity/country?page[offset]=1&page[limit]=2 HTTP/1.1
+GET /dynamic-entity/countries?page[offset]=1&page[limit]=2 HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -71,7 +71,7 @@ The response contains all the columns from the `spy_country` table that are conf
 Filtering enables targeted data retrieval, refining the response to match the specified criteria. To apply filtering to the results based on specific fields, include the appropriate filter parameter in the request:  
 
 ```bash
-GET /dynamic-entity/country?filter[country.iso2_code]=AA HTTP/1.1
+GET /dynamic-entity/countries?filter[country.iso2_code]=AA HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -101,7 +101,7 @@ When you combine multiple filters in a single request, the system applies an `AN
 To retrieve a country by a specific ID, send a `GET` request with the following parameters:
 
 ```bash
-GET /dynamic-entity/country/3 HTTP/1.1
+GET /dynamic-entity/countries/3 HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -142,7 +142,7 @@ If you send a request to an endpoint that's not configured in `spy_dynamic_entit
 To create a collection of countries, submit the following HTTP request:
 
 ```bash
-POST /dynamic-entity/country HTTP/1.1
+POST /dynamic-entity/countries HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -211,7 +211,7 @@ This response is caused by a caught Propel exception, specifically an integrity 
 To update a collection of countries, submit the following HTTP request:
 
 ```bash
-PATCH /dynamic-entity/country HTTP/1.1
+PATCH /dynamic-entity/countries HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -246,7 +246,7 @@ The response payload includes all the specified fields from the request body. Re
 To update a specific country, send the following HTTP request:
 
 ```bash
-PATCH /dynamic-entity/country/1 HTTP/1.1
+PATCH /dynamic-entity/countries/1 HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -316,7 +316,7 @@ When you send a PUT request, you provide the updated representation of the resou
 To replace an existing entity, send the following `PUT` request:
 
 ```bash
-PUT /dynamic-entity/country HTTP/1.1
+PUT /dynamic-entity/countries HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json
@@ -353,7 +353,7 @@ The response payload includes all touched fields for the provided resource. Resp
 It is also possible to send a `PUT` request for a specific ID instead of a collection using the following request:
 
 ```bash
-PUT /dynamic-entity/country/1 HTTP/1.1
+PUT /dynamic-entity/countries/1 HTTP/1.1
 Host: glue-backend.mysprykershop.com
 Content-Type: application/json
 Accept: application/json

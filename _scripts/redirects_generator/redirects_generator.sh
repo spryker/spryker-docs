@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files
-folder_path="/path/to/your/folder"
+folder_path="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs/docs/scos/dev/guidelines"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then
@@ -46,9 +46,10 @@ if [ ! -d "$folder_path" ]; then
 fi
 
 # Specify the root directory to make paths relative to
-root_directory="$folder_path"
+root_directory="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs"
 
 # Call the function to process files and subfolders
 process_files "$folder_path" "$root_directory"
 
 echo "Script completed."
+

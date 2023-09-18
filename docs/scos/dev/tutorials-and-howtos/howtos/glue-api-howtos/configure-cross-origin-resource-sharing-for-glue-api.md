@@ -70,7 +70,7 @@ glue_eu:
             cors-allow-origin: '*'
 ```
 
-* `http://www.example1.com`: allow CORS requests only from the specified originExample:
+* `{ORIGIN}: allow CORS requests only from the specified origin. Example:
 
 ```yml
     glue_eu:

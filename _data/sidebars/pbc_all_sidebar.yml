@@ -430,7 +430,6 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
-
       - title: Content Management System
         url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:
@@ -1849,12 +1848,18 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/payments-feature-overview.html
                   - title: Install and upgrade
                     nested:
-                      - title: Install the Payments feature
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html
-                      - title: Install the Payments Glue API
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/install-the-payments-glue-api.html
-                      - title: Upgrade the Payment module
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/upgrade-the-payment-module.html
+                      - title: Install features
+                        nested:
+                          - title: Payments
+                            url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html
+                      - title: Install Glue APIs
+                        nested:
+                          - title: Payments
+                            url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/install-the-payments-glue-api.html
+                      - title: Upgrade modules
+                        nested:
+                          - title: Payment
+                            url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/upgrade-the-payment-module.html
                   - title: Import and export data
                     url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
                     nested:
@@ -1881,6 +1886,7 @@ entries:
                 nested:
                   - title: Install Marketplace Dummy Payment
                     url: /docs/pbc/all/payment-service-provider/spryker-pay/marketplace/install-marketplace-dummy-payment.html
+
           - title: Adyen
             url: /docs/pbc/all/payment-service-provider/adyen/adyen.html
             nested:
@@ -1892,6 +1898,7 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/adyen/integrate-adyen-payment-methods.html
               - title: Enable filtering of payment methods
                 url: /docs/pbc/all/payment-service-provider/adyen/enable-filtering-of-payment-methods-for-adyen.html
+
           - title: Afterpay
             url: /docs/pbc/all/payment-service-provider/afterpay/afterpay.html
             nested:
@@ -1912,6 +1919,7 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/amazon-pay/amazon-pay-state-machine.html
               - title: Handling orders with Amazon Pay API
                 url: /docs/pbc/all/payment-service-provider/amazon-pay/handling-orders-with-amazon-pay-api.html
+
           - title: Arvato
             url: /docs/pbc/all/payment-service-provider/arvato/arvato.html
             nested:
@@ -1921,6 +1929,7 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/arvato/arvato-risk-check.html
               - title: Store Order
                 url: /docs/pbc/all/payment-service-provider/arvato/arvato-store-order.html
+
           - title: Billie
             url: /docs/pbc/all/payment-service-provider/billie.html
           - title: Billpay
@@ -2139,7 +2148,7 @@ entries:
               - title: Prices feature overview
                 url: /docs/pbc/all/price-management/base-shop/prices-feature-overview/prices-feature-overview.html
                 nested:
-                  - title: Volume prices overview
+                  - title: Volume Prices overview
                     url: /docs/pbc/all/price-management/base-shop/prices-feature-overview/volume-prices-overview.html
               - title: Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/base-shop/merchant-custom-prices-feature-overview.html
@@ -2164,10 +2173,14 @@ entries:
                         include_versions:
                         - "202212.0"
                         - "202307.0"
-                  - title: Install the Product Price Glue API
-                    url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
+                      - title: Product Price Glue API
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
                   - title: Upgrade modules
                     nested:
+                      - title: CRUD Scheduled Prices
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+                      - title: Multi-currency
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
                       - title: Currency
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
                       - title: Price
@@ -2186,10 +2199,6 @@ entries:
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
                       - title: PriceProductVolumeGui
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
-                      - title: CRUD Scheduled Prices
-                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
-                      - title: Multi-currency
-                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
               - title: Import and export data
                 url: /docs/pbc/all/price-management/base-shop/import-and-export-data/import-and-export-price-management-data.html
                 nested:

@@ -2976,6 +2976,12 @@ entries:
       - "202108.0"
       - "202307.0"
       - "202204.0"
+    - title: Marketplace data import
+      url: /docs/scos/dev/data-import/marketplace-data-import.html
+      include_versions:
+      - "202212.0"
+      - "202307.0"
+
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html
     nested:

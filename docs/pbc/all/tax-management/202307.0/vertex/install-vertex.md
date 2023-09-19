@@ -129,7 +129,7 @@ in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPlugin
 
 {% endinfo_block %}
 
-### 3. (Optional) If you plan to send invoices to Vertex through OMS, configure Payment OMS
+### 3. (Optional) If you plan to send invoices to Vertex through OMS, configure your Payment OMS
 
 The following code sample shows how to configure payment `config/Zed/oms/{your_payment_oms}.xml`.
 
@@ -289,13 +289,14 @@ Define specific Vertex Tax Metadata transfers and extend several other transfers
 
 `SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You can extend them as you need according to the Vertex API structure.
 
-`SaleTaxMetadata` is equal to the Invoicing/Quotation request payload, excluding LineItems.
+`SaleTaxMetadata` equals to the Invoicing/Quotation request payload, excluding LineItems.
 
-`ItemTaxMetadata` is equal to Line Item API Payload.
+`ItemTaxMetadata` equals to Line Item API Payload.
 
 ### 2. Implement Vertex Specific Metadata Extender Plugins
 
 There are several types of expander plugins you have to introduce.
+As a starting point you can take examples provided by Spryker in [this module](https://github.com/spryker/tax-app-vertex). The plugins inside are just for development purposes, the data provided in TaxMetaData fields has to be collected from project database or other sources, e.g. external ERP.
 
 #### Configure Customer Class Code Expander plugins
 

@@ -1,5 +1,5 @@
 ---
-title: Integrate the Product Price Glue API
+title: Install the Product Price Glue API
 last_updated: Jun 18, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-prices-api-feature-integration

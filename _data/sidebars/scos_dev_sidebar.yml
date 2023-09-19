@@ -3252,11 +3252,6 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-      - title: Oryx Builder overview and setup
-        url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
-        include version:
-        - "202212.0"
-        - "202307.0"
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
         include version:

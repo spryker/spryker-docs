@@ -11,4 +11,4 @@ redirect_from:
 
 ## Next steps
 
-[Integrate Avalara](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara.html)
+[Integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html)

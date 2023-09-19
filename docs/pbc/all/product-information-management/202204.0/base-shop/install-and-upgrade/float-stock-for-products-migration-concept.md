@@ -96,7 +96,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/offer | 0.2.0 | [Migration Guide - Offer](/docs/scos/dev/module-migration-guides/migration-guide-offer.html) |
 | spryker/offer-gui | 0.2.0 | [Migration Guide - OfferGui](/docs/scos/dev/module-migration-guides/migration-guide-offergui.html) |
 | spryker/oms | 9.0.0 | [Migration Guide - Oms](/docs/pbc/all/order-management-system/202212.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) |
-| spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html) |
+| spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html) |
 | spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) |
 | spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |
@@ -126,7 +126,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/stock-sales-connector | 4.0.0 |  |
 | spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html) |
 | spryker-shop/cart-page | 2.0.0 | [Upgrade the CartPage module](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html) |
-| spryker-shop/customer-reorder-widget | 5.0.0 | [Migration Guide - CustomerReorderWidget](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html) |
+| spryker-shop/customer-reorder-widget | 5.0.0 | [Migration Guide - CustomerReorderWidget](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html) |
 | spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html) |
 | spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productdetailpage-module.html) |
 | spryker-shop/product-measurement-unit-widget | 0.7.0 | [Migration Guide - ProductMeasurementUnitWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.html) |

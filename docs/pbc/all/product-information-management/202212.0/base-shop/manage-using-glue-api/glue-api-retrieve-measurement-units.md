@@ -79,7 +79,7 @@ You can use the measurement units resource as follows:
 * Retrieve sales unit of a product—[Retrieve Sales Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
 *  Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
 * Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage guest carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html).
-* Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
+* Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html).
 
 ## Possible errors
 

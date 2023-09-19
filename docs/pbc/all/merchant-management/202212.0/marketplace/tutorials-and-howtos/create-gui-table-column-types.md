@@ -47,4 +47,4 @@ Add a new `addColumn***()` method to `Spryker\Shared\GuiTable\Configuration\Buil
     }
 ```
 
-To learn more about Column Type frontend components, see the [Table Column Type Extension](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/table-design/table-column-types)
+To learn more about Column Type frontend components, see the [Table Column Type Extension](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html)

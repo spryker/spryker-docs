@@ -2176,7 +2176,7 @@ entries:
                         - "202212.0"
                         - "202307.0"
                       - title: Product Price Glue API
-                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
                   - title: Upgrade modules
                     nested:
                       - title: CRUD Scheduled Prices
@@ -3159,7 +3159,7 @@ entries:
                       - title: Catalog
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
                       - title: CatalogSearchRestApi
-                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi–module.html
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi-module.html
                       - title: CategoryPageSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
                       - title: CmsPageSearch

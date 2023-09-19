@@ -14,7 +14,7 @@ This document shows how to implement Unzer payment types, which are not currentl
 
 Before implementing the Unzer payment method, make sure to check and fulfill the following preconditions:
 
-* [Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/unzer/version}}/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html).
+* [Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/unzer/install-unzer/install-and-configure-unzer.html).
 * [Integrate Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/unzer/install-unzer/integrate-unzer.html)
 
 

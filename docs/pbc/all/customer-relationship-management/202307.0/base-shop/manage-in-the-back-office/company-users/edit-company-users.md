@@ -7,11 +7,11 @@ redirect_from:
 - /docs/scos/user/back-office-user-guides/202307.0/customer/company-account/managing-company-users.html
 related:
   - title: Create company users
-    link: docs/pbc/all/customer-relationship-management/page.version/manage-in-the-back-office/company-users/create-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/company-users/create-company-users.html
   - title: Create company roles
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-roles/create-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html
   - title: Managing Companies
-    link: docs/pbc/all/customer-relationship-management/page.version/manage-in-the-back-office/manage-companies.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html
   - title: Company user roles and permissions overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
@@ -43,7 +43,7 @@ Review the [reference information](#reference-information-edit-a-company-user) b
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| EMAIL | Email address that is used to log into the Storefront. You can define it only when [creating a company user](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-users/create-company-users.html). |
+| EMAIL | Email address that is used to log into the Storefront. You can define it only when [creating a company user](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/create-company-users.html). |
 | SALUTATION | Formal salutation. |
 | FIRST NAME | First name. |
 | LAST NAME |  Last name. |

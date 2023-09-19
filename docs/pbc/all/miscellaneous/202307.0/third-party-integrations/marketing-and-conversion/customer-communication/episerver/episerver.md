@@ -6,10 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/episerver
 originalArticleId: cbbe8552-c38a-478d-bcda-cd6b393e895b
 redirect_from:
-  - /2021080/docs/episerver
-  - /2021080/docs/en/episerver
-  - /docs/episerver
-  - /docs/en/episerver
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/episerver.html
 related:
   - title: Episerver - Integration into a project

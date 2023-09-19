@@ -4,9 +4,9 @@ description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving product offer prices
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-prices.html
+    link: docs/pbc/all/price-management/page.version/marketplace/glue-api-retrieve-product-offer-prices.html
   - title: Retrieving product offer availabilities
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/glue-api-retrieve-product-offer-availability.html
 ---
 
 Product offers let different merchants sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
@@ -253,8 +253,8 @@ To retrieve the product offers, send the request:
 
 
 For the response attributes of the other included resources, see the following:
-* [Retrieve product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieve product offer availability](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
+* [Retrieve product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+* [Retrieve product offer availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/glue-api-retrieve-product-offer-availability.html#product-offer-availability-response-attributes)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 

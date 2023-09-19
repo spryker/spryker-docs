@@ -5,16 +5,8 @@ last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/powerpay
 originalArticleId: f6d0bdfc-6145-4e9f-b2b6-51509e16713c
-redirect_from:
-  - /2021080/docs/powerpay
-  - /2021080/docs/en/powerpay
-  - /docs/powerpay
-  - /docs/en/powerpay
   - /docs/scos/user/technology-partners/202307.0/payment-partners/powerpay.html
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/powerpay.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Payment Information

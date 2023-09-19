@@ -3,6 +3,8 @@ title: "Oryx: Localization"
 description: Localizations are decoupled from component implementations
 template: concept-topic-template
 last_updated: Aug 23, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-localization.html
 
 ---
 

@@ -3,6 +3,8 @@ title: "Oryx: Compositions"
 description: Compositions are used to organize components and provide layout in Oryx applications
 last_updated: June 8, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-compositions.html
 ---
 
 Compositions in Oryx are a tool for organizing components and defining their layout. It removes page-specific layout concerns from the component implementation, which makes the components less opinionated and more reusable.

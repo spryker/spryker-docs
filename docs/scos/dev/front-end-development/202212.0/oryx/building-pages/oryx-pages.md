@@ -3,6 +3,8 @@ title: "Oryx: Creating pages"
 description: Pages can be created from a data set or custom components
 last_updated: Aug 1, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-pages.html
 ---
 
 In Oryx, pages are essential building blocks of web applications. They represent different sections or views within an application and can be created using a data-driven approach. This approach lets you define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.

@@ -2,6 +2,8 @@
 title: Oryx application
 description: App of the Oryx Application
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application.html
 ---
 
 `App` represents a running Oryx application instance.

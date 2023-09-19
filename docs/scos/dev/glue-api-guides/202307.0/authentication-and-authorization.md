@@ -1,5 +1,5 @@
 ---
-title: Authentication and authorization
+title: Glue API authentication and authorization
 description: Information about Glue API authentication and authorization.
 last_updated: Oct 23, 2022
 template: glue-api-storefront-guide-template

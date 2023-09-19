@@ -1,7 +1,3 @@
-
-
-## Install Merchant Relationship Product Lists Feature API
-
 ### Prerequisites
 
 Install the required features:

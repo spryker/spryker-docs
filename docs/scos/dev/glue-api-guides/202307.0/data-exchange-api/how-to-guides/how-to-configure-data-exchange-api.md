@@ -117,7 +117,6 @@ If you don't see the needed table, it may be [excluded from configuring](/docs/s
 7. Click **Save**.
 This opens the **Data Exchange API Configuration** page with the endpoint displayed in the list. Now you can send requests to this endpoint.
 
-{% info_block warningBox "Verification" %}
 
 ## Next steps
 

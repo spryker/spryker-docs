@@ -56,7 +56,7 @@ class ConsoleDependencyProvider
 }
 ```
 
-### Resolving the error
+## Resolve the error
 
 To resolve the error:
 1. Refactor the plugin - remove the usage of the complicated constructor arguments.

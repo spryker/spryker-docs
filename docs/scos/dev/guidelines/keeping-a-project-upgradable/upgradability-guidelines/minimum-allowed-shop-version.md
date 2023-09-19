@@ -41,8 +41,6 @@ The following is an example of the `composer.json` file when the used Spryker fe
 }
 ```
 
-### Resolving the error
+## Resolving the error
 
-To resolve this issue:
-
-1. Update the outdated dependencies to make it correspond to the minimum required version.
+Update the outdated dependencies to make it correspond to the minimum required version.

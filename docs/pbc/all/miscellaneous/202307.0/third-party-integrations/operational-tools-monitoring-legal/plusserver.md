@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/plusserver
 originalArticleId: 56e02408-2d1c-4b3f-86b5-f3807b325724
 redirect_from:
-  - /2021080/docs/plusserver
-  - /2021080/docs/en/plusserver
-  - /docs/plusserver
-  - /docs/en/plusserver
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/plusserver.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
@@ -21,7 +14,7 @@ related:
 [ABOUT PLUSSERVER](https://www.plusserver.com/)
 PlusServer GmbH is the leading managed cloud provider in Germany, Austria and Switzerland. As a cloud optimizer, they offer flexible, reliable and efficient hybrid cloud solutions for medium-sized and large companies from a single source. Thanks to many years of cooperation with leading companies from trade, industry and other sectors, PlusServer GmbH have a deep understanding of the respective trends and challenges. They advise our customers in the choice of architecture and orchestrate all relevant infrastructures to an optimal hybrid cloud environment. They are technology-independent and technically flexible and include dedicated infrastructures, public and private cloud solutions as well as offers from Hyperscalers.
 
-YOUR ADVANTAGES: 
+YOUR ADVANTAGES:
 * Highest performance through optimized solutions
 * Proactive monitoring and 24/7 support
 * Flexible scalability, e.g. for peak loads

@@ -12,9 +12,6 @@ redirect_from:
   - /docs/en/channelpilot
   - /docs/scos/user/technology-partners/202200.0/marketplace-integrations/channelpilot-marketplace.html
   - /docs/scos/user/technology-partners/202212.0/marketplace-integrations/channelpilot-marketplace.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

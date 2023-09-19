@@ -11,9 +11,6 @@ redirect_from:
   - /docs/nitrobox
   - /docs/en/nitrobox
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/nitrobox.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

@@ -16,6 +16,8 @@ related:
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 
+<!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
+
 {% info_block warningBox %}
 
 This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)

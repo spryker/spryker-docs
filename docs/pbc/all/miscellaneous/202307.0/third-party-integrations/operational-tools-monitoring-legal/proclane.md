@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/proclane
 originalArticleId: c61f1780-f44c-4641-a68f-c0d0fb29ad47
 redirect_from:
-  - /2021080/docs/proclane
-  - /2021080/docs/en/proclane
-  - /docs/proclane
-  - /docs/en/proclane
   - docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/proclane.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

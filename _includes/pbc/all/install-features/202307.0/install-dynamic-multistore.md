@@ -24,9 +24,9 @@ In order to make Dynamic Store work, new major versions of 3 modules must be upd
 | Currency | ^4.0.0  |
 
 Migration guides can be found here:
-[Country](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-country-module.html)
-[Locale](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-locale-module.html)
-[Currency](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/update-the-currency-module.html)
+[Country](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html)
+[Locale](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html)
+[Currency](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html)
 
 ### 2) Install the required modules using Composer
 

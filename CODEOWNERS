@@ -1,11 +1,11 @@
 * @spryker/docs
 
 /docs/scos/dev/front-end-development/*/oryx/* @andriitserkovnyi
-docs/scos/dev/front-end-development/*/oryx/oryx-localization.md @andriitserkovnyi @tobi-or-not-tobi @tolerants
+docs/scos/dev/front-end-development/*/oryx/building-applications/oryx-localization.md @andriitserkovnyi @tobi-or-not-tobi @tolerants
 /docs/scos/dev/front-end-development/*/oryx/feature-sets.md @tobi-or-not-tobi @andriitserkovnyi
-/docs/scos/dev/front-end-development/*/oryx/dependency-injection/* @dunqan @andriitserkovnyi
-/docs/scos/dev/front-end-development/*/oryx/styling/* @tobi-or-not-tobi @andriitserkovnyi @tolerants
-/docs/scos/dev/front-end-development/*/oryx/styling/oryx-icon-system.md @supproduction @tobi-or-not-tobi @andriitserkovnyi
-/docs/scos/dev/front-end-development/*/oryx/styling/oryx-design-tokens.md @tolerants @tobi-or-not-tobi @andriitserkovnyi
+/docs/scos/dev/front-end-development/*/oryx/architecture/dependency-injection/* @dunqan @andriitserkovnyi
+/docs/scos/dev/front-end-development/*/oryx/building-applications/styling/* @tobi-or-not-tobi @andriitserkovnyi @tolerants
+/docs/scos/dev/front-end-development/*/oryx/building-applications/styling/oryx-icon-system.md @supproduction @tobi-or-not-tobi @andriitserkovnyi
+/docs/scos/dev/front-end-development/*/oryx/building-applications/styling/oryx-design-tokens.md @tolerants @tobi-or-not-tobi @andriitserkovnyi
 /docs/scos/dev/set-up-spryker-locally/* @andriitserkovnyi
 /docs/pbc/all/dynamic-multistore/*/base-shop/dynamic-multistore-feature-overview.md @andriichekanov @a-sabaa @VadymSachenko

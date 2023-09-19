@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/adyen/adyen.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/adyen/installing-and-configuring-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/adyen/install-and-configure-adyen.html
   - title: Integrating Adyen
     link: docs/pbc/all/payment-service-provider/page.version/adyen/integrate-adyen.html
   - title: Integrating Adyen payment methods
@@ -27,7 +27,7 @@ Adyen is a global payment company that allows businesses to accept e-commerce, m
 
 ## Related Developer guides
 
-* [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/installing-and-configuring-adyen.html)
+* [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/install-and-configure-adyen.html)
 * [Integrating Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/integrate-adyen.html)
 * [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/integrate-adyen-payment-methods.html)
 * [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/{{page.version}}/adyen/enable-filtering-of-payment-methods-for-adyen.html)

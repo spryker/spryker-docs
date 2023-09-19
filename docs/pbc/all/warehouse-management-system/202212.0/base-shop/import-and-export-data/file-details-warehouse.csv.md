@@ -48,15 +48,10 @@ data:import:stock
 
 ## Additional information
 
-Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
 
-{% info_block infoBox "Note" %}
+* The `warehouse.csv` file replaces the `stock.csv` previously used.
 
-The `warehouse.csv` file replaces the `stock.csv` previously used.
-
-{% endinfo_block %}
-
-By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data-import/data/import/warehouse.csv`, but can be also be copied into `…/data/import` folder.
+* By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data-import/data/import/warehouse.csv`, but can be also be copied into `…/data/import` folder.
 
 ## Next steps
 

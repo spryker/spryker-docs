@@ -52,7 +52,7 @@ class CustomerConfig extends SprykerCustomerConfig
 
 {% info_block warningBox "Verification" %}
 
-1. [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html).
+1. [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html).
 2. On the **Customers** page, next to the created customer, click **View**.
 3. On the **View Customer** page, make sure that the **Customer Reference** contains the prefix you've configured.
 

@@ -63,8 +63,7 @@ The database data to modify in this section is relevant to the default configura
 
 {% endinfo_block %}
 
-
-The list of available tables with data that may contain a foreign key relationship:
+Due to the foreign key relationship with store entity, you need to delete data from the following tables:
 - `spy_price_product_store`
 - `spy_asset_store`
 - `spy_availability_abstract`
@@ -95,7 +94,7 @@ The list of available tables with data that may contain a foreign key relationsh
 - `spy_touch_search`
 - `spy_touch_storage`
 
-Store has new configuration tables that are used for dynamic store:
+Store has new configuration tables that are used for dynamic store configuration. You need to delete configuration data from the following tables by store id:
 - `spy_locale_store`
 - `spy_currency_store`
 - `spy_country_store`
@@ -143,14 +142,25 @@ The Redis data to modify in this section is relevant to the default configuratio
       - `kv:price_product_abstract_merchant_relationship:xxx:*`
 
 
-2. Adjust `kv:store_list:` and delete the store name XXX values in stores.
+2. Adjust `kv:store_list` and delete the store name XXX values in stores.
+
+For example we have 3 stores: AT, DE, XXX. We need to delete the XXX store. 
 ```json
 {"stores":["AT","DE","XXX"],"_timestamp":111111111111}
 ```
-3. Delete the `kv:store:xxx` key with the store value.
+Adjust the `kv:store_list` value to:
+```json
+{"stores":["AT","DE"],"_timestamp":111111111111}
+```
 
+3. Delete the `kv:store:xxx` key with the store data.
 
-Note: A project's custom data stored keys may also be present.
+For example we have `kv:store:xxx` in storage with some data. We need to delete it by key.
+```json 
+{"id_store":3,"name":"XXX","default_locale_iso_code":"en_US","default_currency_iso_code":"EUR","available_currency_iso_codes":["EUR"],"available_locale_iso_codes":["de_DE","en_US"],"stores_with_shared_persistence":[],"countries":["DE"],"country_names":["Germany"],"_timestamp":11111111111}
+```
+
+Note: Please be aware that there may also be other project-level keys in use if implemented some custom functionality.
 
 ## Remove data from the search engine
 
@@ -161,12 +171,15 @@ With Elasticsearch, each configured store has its index, which is installed auto
 
 Index name components are delimited with an underscore—for example, `spryker_xxx_page`.
 
-The following indexes are available in the standard configuration:
+The following indexes are available in the standard configuration, delete them in the search engine: 
 
 - `spryker_xxx_merchant`.
 - `spryker_xxx_page`.
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
+
+Note: Also you may have more indexes depending on the features your project has.
+
 
 ## Resume P&S
 

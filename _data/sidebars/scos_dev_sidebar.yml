@@ -3381,6 +3381,21 @@ entries:
             - title: Routing
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
 
+        - title: Building Components
+              nested:
+                - title: Component Introduction
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-introduction.html
+                - title: Component Types
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html
+                - title: Component Implementation
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-implementation.html
+                - title: Component Definition
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html
+                - title: Component Options
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html
+                - title: Component Interoperability
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-interoperability.html
+
         - title: Architecture
           nested:
             - title: Dependency injection

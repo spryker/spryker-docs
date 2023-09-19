@@ -2174,7 +2174,7 @@ entries:
                         - "202212.0"
                         - "202307.0"
                       - title: Product Price Glue API
-                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/nstall-the-product-price-glue-api.html
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
                   - title: Upgrade modules
                     nested:
                       - title: CRUD Scheduled Prices

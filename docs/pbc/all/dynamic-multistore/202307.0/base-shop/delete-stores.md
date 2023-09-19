@@ -5,20 +5,20 @@ past_updated: Jun 26, 2023
 template: howto-guide-template
 ---
 
+This document describes how to delete stores.
+
 {% info_block warningBox %}
 
 Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
-{% info_block infoBox %}
+{% info_block warningBox %}
 
 * When taking the following steps, consider `xxx` and `XXX` as the name of the store you are deleting.
 * We recommend taking these steps in a test environment. Make sure to create a backup of the database and other storages.
 
 {% endinfo_block %}
-
-This document describes how to delete stores.
 
 ## When to delete a store
 
@@ -55,15 +55,10 @@ vendor/bin/console scheduler:suspend
 ```
 
 
-## Cleaning data and configuration in related database tables
+## Clean data and configuration in related database tables
 
-{% info_block infoBox %}
 
-The database data to modify in this section is relevant to the default configuration. Depending on the features your project has, you may need to modify more data.
-
-{% endinfo_block %}
-
-Due to the foreign key relationship with store entity, you need to delete data from the following tables:
+1. Due to the foreign key relationship with the store entity, delete the data from the following tables:
 - `spy_price_product_store`
 - `spy_asset_store`
 - `spy_availability_abstract`
@@ -94,23 +89,17 @@ Due to the foreign key relationship with store entity, you need to delete data f
 - `spy_touch_search`
 - `spy_touch_storage`
 
-Store has new configuration tables that are used for dynamic store configuration. You need to delete configuration data from the following tables by store id:
+2. The store has new configuration tables that are used for the dynamic store configuration. Delete the configuration data from the following tables by the store's ID:
 - `spy_locale_store`
 - `spy_currency_store`
 - `spy_country_store`
 
-Make sure to delete all records related to the store. You may also have other related tables used in the project, make sure to check them and delete data from them.
-After removing all related data from all tables, you can remove the row with the **store** data from the table `spy_store`.
+3. Delete the store's data in any other tables related to the project's features and custom functionality.
+4. Remove the row with the store's data from the `spy_store` table.
 
-## Cleaning the data in the key-value storage engine
+## Clean the data in the key-value storage engine
 
 With the Redis key-value storage, data is stored as keys that contain the store name. The key name follows this format: `kv:{resource-type}:{store}:{locale}:{key}`.
-
-{% info_block infoBox %}
-
-The Redis data to modify in this section is relevant to the default configuration. Depending on the features your project has, you may need to modify more data.
-
-{% endinfo_block %}
 
 1. Delete the following data in Redis:
 
@@ -142,25 +131,26 @@ The Redis data to modify in this section is relevant to the default configuratio
       - `kv:price_product_abstract_merchant_relationship:xxx:*`
 
 
-2. Adjust `kv:store_list` and delete the store name XXX values in stores.
+2. Adjust `kv:store_list` by removing the store's name from it's value.
 
-For example we have 3 stores: AT, DE, XXX. We need to delete the XXX store. 
+For example, you have AT, DE, and XXX stores.
 ```json
 {"stores":["AT","DE","XXX"],"_timestamp":111111111111}
 ```
-Adjust the `kv:store_list` value to:
+To remove the XXX store, update `kv:store_list` as follows:
 ```json
 {"stores":["AT","DE"],"_timestamp":111111111111}
 ```
 
 3. Delete the `kv:store:xxx` key with the store data.
 
-For example we have `kv:store:xxx` in storage with some data. We need to delete it by key.
-```json 
+For example, you have `kv:store:xxx` in storage with some data. You need to delete it by the key.
+```json
 {"id_store":3,"name":"XXX","default_locale_iso_code":"en_US","default_currency_iso_code":"EUR","available_currency_iso_codes":["EUR"],"available_locale_iso_codes":["de_DE","en_US"],"stores_with_shared_persistence":[],"countries":["DE"],"country_names":["Germany"],"_timestamp":11111111111}
 ```
 
-Note: Please be aware that there may also be other project-level keys in use if implemented some custom functionality.
+4. Delete any other store's keys related to the project's features and custom functionality.
+
 
 ## Remove data from the search engine
 
@@ -171,14 +161,14 @@ With Elasticsearch, each configured store has its index, which is installed auto
 
 Index name components are delimited with an underscore—for example, `spryker_xxx_page`.
 
-The following indexes are available in the standard configuration, delete them in the search engine: 
+1. Delete the following standard indexes in the search engine:
 
 - `spryker_xxx_merchant`.
 - `spryker_xxx_page`.
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-Note: Also you may have more indexes depending on the features your project has.
+2. Delete the any other store's indexes related to the project's features and custom functionality.
 
 
 ## Resume P&S

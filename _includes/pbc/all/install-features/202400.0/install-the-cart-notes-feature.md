@@ -18,7 +18,7 @@ To start feature integration, integrate the required feature:
 ## 1) Install the required modules using Composer
 
 ```bash
-composer require spryker/cart-notes-backend-api:^0.1.0 --update-with-dependencies
+composer require spryker-feature/cart-notes:"{{page.version}}" --update-with-dependencies
 ```
 
 Ensure that the following modules have been installed:
@@ -39,8 +39,8 @@ console transfer:generate
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER                     | TYPE     | EVENT   | PATH                                                             |
-|------------------------------|----------|---------|------------------------------------------------------------------|
+| TRANSFER                            | TYPE     | EVENT   | PATH                                                             |
+|-------------------------------------|----------|---------|------------------------------------------------------------------|
 | OrdersBackendApiAttributes.cartNote | property | created | src/Generated/Shared/Transfer/OrdersBackendApiAttributesTransfer |
 
 {% endinfo_block %}
@@ -49,9 +49,9 @@ Make sure that the following changes have been triggered in transfer objects:
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                   | SPECIFICATION                                                          | PREREQUISITES | NAMESPACE                                                     |
-|------------------------------------------|------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
-| CartNoteOrdersBackendApiAttributesMapperPlugin  | Expands `OrdersBackendApiAttributes.cartNote` with `Order.cartNote` property. |               | Spryker\Glue\CartNotesBackendApi\Plugin\SalesOrdersBackendApi |
+| PLUGIN                                         | SPECIFICATION                                                          | PREREQUISITES | NAMESPACE                                                     |
+|------------------------------------------------|------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
+| CartNoteOrdersBackendApiAttributesMapperPlugin | Expands `ApiOrdersAttributes.cartNote` with `Order.cartNote` property. |               | Spryker\Glue\CartNotesBackendApi\Plugin\SalesOrdersBackendApi |
 
 **src/Pyz/Glue/SalesOrdersBackendApi/SalesOrdersBackendApiDependencyProvider.php**
 

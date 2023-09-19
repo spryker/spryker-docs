@@ -8,23 +8,6 @@ originalArticleId: ffd53037-46a0-410e-941c-eb9cd4c3ff22
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/payment-partners/bs-payone/bs-payone.html
   - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payone/manual-integration/payone-manual-integration.html
-related:
-  - title: PayOne - Integration into the SCOS Project
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
-  - title: PayOne - Risk Check and Address Check
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/scos-integration/payone-risk-check-and-address-check.html
-  - title: PayOne - Prepayment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
-  - title: PayOne - Authorization and Preauthorization Capture Flows
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
-  - title: PayOne - Invoice Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
-  - title: PayOne - Cash on Delivery
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: PayOne - Credit Card Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
-  - title: PayOne - Security Invoice Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
 ---
 
 ## Partner Information

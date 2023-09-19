@@ -14,7 +14,7 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-|Alternative Products|{{page.version}}| [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
+|Alternative Products|{{page.version}}| [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
 |Inventory Management|{{page.version}}| [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ### 1) Set up behavior

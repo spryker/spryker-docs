@@ -2285,10 +2285,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
       include_versions:
       - "202204.0"
-    - title: Picker user login
-      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html
-      include_versions:
-        - "202400.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -3256,11 +3252,6 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-      - title: Oryx Builder overview and setup
-        url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
-        include version:
-        - "202212.0"
-        - "202307.0"
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
         include version:

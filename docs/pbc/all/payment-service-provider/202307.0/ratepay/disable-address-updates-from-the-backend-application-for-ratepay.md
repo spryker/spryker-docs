@@ -12,19 +12,19 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
 related:
   - title: Integrating the Invoice payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
   - title: RatePay facade methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-facade-methods.html
   - title: Integrating the Prepayment payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
   - title: RatePay - Payment Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-payment-workflow.html
   - title: RatePay- Core Module Structure Diagram
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-core-module-structure-diagram.html
   - title: Integrating the Direct Debit payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
   - title: RatePay - State Machine Commands and Conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---
 
 To disable updates on addresses from the backend application, follow the steps described below:

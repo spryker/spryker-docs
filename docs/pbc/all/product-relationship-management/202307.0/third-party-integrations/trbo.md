@@ -5,14 +5,6 @@ last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/trbo
 originalArticleId: 066f52aa-3367-4b57-8158-e23df04eb494
-redirect_from:
-  - /2021080/docs/trbo
-  - /2021080/docs/en/trbo
-  - /docs/trbo
-  - /docs/en/trbo
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

@@ -21,7 +21,7 @@ To integrate the Unzer, follow these steps.
 
 ### Prerequisites
 
-[Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/unzerinstall-unzer/install-and-configure-unzer.html).
+[Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/unzer/install-unzer/install-and-configure-unzer.html).
 
 {% info_block infoBox "Exemplary content" %}
 

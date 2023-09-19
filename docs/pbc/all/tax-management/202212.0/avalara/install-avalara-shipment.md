@@ -27,7 +27,7 @@ Install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Shipment | master | [Shipment feature integration guide](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
-| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara.html) |
+| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) |
 
 ### Install the required modules
 

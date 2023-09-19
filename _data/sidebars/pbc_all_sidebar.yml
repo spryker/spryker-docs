@@ -3157,7 +3157,7 @@ entries:
                       - title: Catalog
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
                       - title: CatalogSearchRestApi
-                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi–module.html
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi-module.html
                       - title: CategoryPageSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
                       - title: CmsPageSearch

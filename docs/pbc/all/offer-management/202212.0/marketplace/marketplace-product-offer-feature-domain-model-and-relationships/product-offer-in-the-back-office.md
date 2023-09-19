@@ -11,7 +11,7 @@ To inject the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.
 | [ProductOfferGui](https://github.com/spryker/product-offer-gui) | Main module which provides CRUD functionality for product offers in the Back Office. You can extend the module by implementing interfaces from the ProductOfferGuiExtension module. |
 | [ProductOfferGuiExtension](https://github.com/spryker/product-offer-gui-extension) | Provides interfaces for extending the ProductOfferGui module.  |
 | [MerchantProductOfferGui](https://github.com/spryker/merchant-product-offer-gui) | Extends the ProductOfferGui module, adds merchant context for managing offers in the Back office. |
-| [ProductOfferValidityGui](https://github.com/spryker/product-offer-validity-gui) | Extends the ProductOfferGui module, adds the [validity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html) context for managing offers in the Back office. |
+| [ProductOfferValidityGui](https://github.com/spryker/product-offer-validity-gui) | Extends the ProductOfferGui module, adds the [validity](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-validity-dates.html) context for managing offers in the Back office. |
 
 ## Module relations
 

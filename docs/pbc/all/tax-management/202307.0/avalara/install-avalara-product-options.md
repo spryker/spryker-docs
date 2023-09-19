@@ -23,7 +23,7 @@ Install the necessary features:
 |NAME | VERSION | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Product Options | master |  |
-| Avalara Tax | master | [Install Avalara](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/third-party-integrations/integrate-avalara.html) |
+| Avalara Tax | master | [Install Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) |
 
 ### Install the required modules using Composer
 

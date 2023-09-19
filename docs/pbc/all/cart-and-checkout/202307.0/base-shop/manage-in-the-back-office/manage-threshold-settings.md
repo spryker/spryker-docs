@@ -17,7 +17,7 @@ related:
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/define-merchant-order-thresholds.html
   - title: Managing Merchant Relations
-    link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
+    link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/create-merchant-relations.html
   - title: Order Thresholds feature overview
     link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
 ---

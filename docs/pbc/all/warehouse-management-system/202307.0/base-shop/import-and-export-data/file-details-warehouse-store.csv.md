@@ -52,7 +52,6 @@ data:import:stock-store
 
 ## Additional information
 
-Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
-The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`.
+* The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`.
 
-You can also create `warehouse_store.csv` in `…/data/import`.
+* You can also create `warehouse_store.csv` in `…/data/import`.

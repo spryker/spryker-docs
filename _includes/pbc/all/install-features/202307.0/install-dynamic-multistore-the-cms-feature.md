@@ -4,7 +4,7 @@ Dynamic Multistore is currently running under an *Early Access Release*. Early A
 
 {% endinfo_block %}
 
-To install Dynamic Store + the CMS feature, install the required features:
+To install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-feature-overview.html) feature, install the required features:
 
 | NAME | VERSION |  
 | --- | --- |

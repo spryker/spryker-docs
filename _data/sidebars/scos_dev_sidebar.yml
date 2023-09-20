@@ -4834,6 +4834,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
+      - title: Ignore evaluation errors
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:

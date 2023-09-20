@@ -2,6 +2,7 @@
 title: Additional logic in dependency provider
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 The *Additional logic in dependency provider* check checks the way plugins are registered in the dependency provider on the project level.

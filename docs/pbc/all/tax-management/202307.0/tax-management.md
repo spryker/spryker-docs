@@ -2,6 +2,8 @@
 title: Tax Management
 description: Tax Management PBC lets you manage your tax rules for different stores and products
 template: concept-topic-template
+redirect_from: 
+    
 ---
 
 Adhere to the respective tax regulations in the countries you sell and effortlessly configure and manage tax rates for products, shipments, and additional services.

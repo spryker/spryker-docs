@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202307.0/glue-api/migration-guide-producttaxsetsrestapi.html  
   - /docs/pbc/all/tax-management/202307.0/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-producttaxsetsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-producttaxsetsrestapi-module.md -->

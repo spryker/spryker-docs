@@ -64,7 +64,7 @@ In July 2023, we have added and updated the following pages:
 - [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html): Find out how you can configure Usercentrics in your Spryker shop.
 - [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html): Details about data import files for the Ratings and Reviews PBC.
 - [Search data import](/docs/pbc/all/search/202212.0/base-shop/import-and-export-data/search-data-import.html): Details about data import files for the Search PBC.
-- [Tax Management data import](/docs/pbc/all/tax-management/202204.0/base-shop/spryker-tax/import-and-export-data/tax-management-data-import.html): Details about data import files for the Tax Management PBC.
+- [Tax Management data import](/docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/import-and-export-data/tax-management-data-import.html): Details about data import files for the Tax Management PBC.
 - [Warehouse Management System data import](/docs/pbc/all/warehouse-management-system/202212.0/base-shop/import-and-export-data/warehouse-management-system-data-import.html): Details about data import files for the Warehouse Management System PBC.
 - [Marketplace Merchant Portal Product Management feature overview](/docs/pbc/all/product-information-management/202212.0/marketplace/marketplace-merchant-portal-product-management-feature-overview.html): Overview of the Marketplace Merchant Portal Product Management feature.
 -

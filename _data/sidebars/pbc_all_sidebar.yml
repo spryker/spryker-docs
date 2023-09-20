@@ -3471,7 +3471,7 @@ entries:
             - "202307.0"
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
-                url: /docs/pbc/all/tax-management/marketplace/spryker-tax/install-the-tax-merchant-portal-marketplace-product-feature.html
+                url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
           
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html

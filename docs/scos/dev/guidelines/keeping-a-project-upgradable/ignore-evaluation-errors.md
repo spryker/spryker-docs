@@ -1,15 +1,14 @@
 ---
-title: Ignore evaluation rules
+title: Ignore evaluation errors
 description: Reference information for evaluator configuration file.
 template: howto-guide-template
 ---
 
 In some cases, the evaluator's rules may cause false positive errors. Then you can configure the evaluator to ignore some errors.
 
-1. To configure the evaluator, add `tooling.yml` to the project's root directory.
+1. To configure the evaluator to ignore errors, add `tooling.yml` to the project's root directory.
 
 ```yaml
-# tooling.yml
 
 evaluator:
   # evaluator options
@@ -17,17 +16,17 @@ evaluator:
 
 ```
 
-2. In `ignoreErrors` section, add the errors to ignore using regular expressions.
-    You can configure specific or multiple errors to be ignored.
+2. In the `ignoreErrors` section, add the errors to ignore using regular expressions.
+    You can specify errors to ignore globally or per specific checker.
 
+**tooling.yml**
 ```yaml
-# tooling.yml
 
 evaluator:
     ignoreErrors:
-        # generic error regexp
+        # global error ignore regexp
         - '#SprykerSdkTest\\InvalidProject\\MultidimensionalArray\\Application1\\ApplicationDependencyProvider#'
-        # error regexp for some specific checker
+        # error ignore regexp for a defined checker
         - messages:
               - '#deploy.*\.yml#'
               - '#php\.7\.4#'

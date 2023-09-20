@@ -2,6 +2,7 @@
 title: Multidimensional array
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This check checks that project doesn't use the deeply nested multidimensional arrays in dependency providers, in order to not overload it with complicated logic.

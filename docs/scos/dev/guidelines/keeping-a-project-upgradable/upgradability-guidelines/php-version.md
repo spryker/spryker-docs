@@ -2,6 +2,7 @@
 title: PHP version
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This guide describes how to resolve issues surrounding the allowed and consistent PHP version being used in different project parts.

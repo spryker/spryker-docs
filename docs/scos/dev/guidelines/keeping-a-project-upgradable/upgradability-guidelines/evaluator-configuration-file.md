@@ -26,8 +26,8 @@ evaluator:
 
 ## Ignoring checkers errors
 
-To ignore errors need to specify regular expressions in `ignoreErrors` section in configuration file. Each error message that matches these regular expressions will be ignored by evaluator.
-You can specify rules both for some specific checkers or globally for all of them.
+To ignore errors need to specify regular expressions in `ignoreErrors` section in configuration file. Each error message that matches them will be ignored by evaluator.
+You can specify regular expressions both for some specific checkers or globally for all of them.
 
 ```yaml
 # tooling.yml

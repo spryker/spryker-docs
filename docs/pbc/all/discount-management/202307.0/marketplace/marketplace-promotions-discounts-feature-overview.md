@@ -22,7 +22,7 @@ A product catalog manager selects a discount type when [creating a discount](/do
 
 {% info_block warningBox %}
 
-Creating cart rules or vouchers based on any merchant parameters, such as a merchant ID or product offer, is not available OOTB in the current implementation and needs to be added on the project level by extending the Discount Engine. However, it is possible to create cart rules and vouchers for the marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) for more details.
+Creating cart rules or vouchers based on any merchant parameters, such as a merchant ID or product offer, is not available by default in the current implementation and needs to be added on the project level by extending the Discount Engine. However, it is possible to create cart rules and vouchers for the Marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) for more details.
 
 {% endinfo_block %}
 

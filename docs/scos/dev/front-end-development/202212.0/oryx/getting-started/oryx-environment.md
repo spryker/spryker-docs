@@ -1,40 +1,30 @@
 ---
 title: "Environment Variables"
+description: Oryx environment variables
+last_updated: Sep 20, 2023
+template: concept-topic-template
 ---
 
-Environment variables are useful when:
+[Environment variables](https://en.wikipedia.org/wiki/Environment_variable) - is a user-definable value that can affect the way running process(es) will behave on a computer. Environment variables are part of the environment in which a process runs. 
 
-- Values are different across developer machines.
+While most of the features in Oryx are driven by data coming from a backend, there are some exceptions where an environment variable is required:
+
+- Values are different across developer machines
 - Values are different across multiple environments: (dev, staging, qa, prod)
-- Values change frequently and are highly dynamic.
+- Values change frequently and are highly dynamic (especially when running in CI)
 
-Environment variables can be changed easily - especially when running in CI.
+Make sure that sensitive data **do not leak** in the code repository, especially secrets/passwords/keys etc. Keep them secure.
 
-Oryx uses [dotenv](https://github.com/motdotla/dotenv) for environment variables management. 
+Oryx uses vite [.env files](https://vitejs.dev/guide/env-and-mode.html#env-files) for environment variables management. 
 
-## Storefront Variables 
+## Storefront Variables
 
 The list of environment variables to configure Storefront:
 
-| Variable | Required | Default | Description                               |
-|----------|----------|---------|-------------------------------------------|
-| `SCOS_BASE_URL` | Yes | None | Spryker GLUE API URL* |
-| `STORE` | Yes | None | Default store name, e.g. DE, AT etc. The value is case-sensitive |
-| `PRICE_MODE` | No | None | Can be used to initialise the application with default price mode. When this variable is not provided, the backend will set the default one |
-| `ORYX_PRESET` | No | `b2c` | Used to set a preset name, available options: `b2b`, `b2c` |
-| `ORYX_FEATURE_VERSION` | No | `latest` | Used to set a feature level, available options: `latest`, `1.0`, `1.1`, etc. Only major and minor versions can be used |
-| `ORYX_LABS` | No | `false` | Turns on/off oryx labs features. These features are in experimental state and are not production ready |
+| Variable | Required | Introduced in | Default | Description                               |
+|----------|-------------|---------------|---------------|-------------------------------------------|
+| `SCOS_BASE_URL` | Yes | 1.0 | None | Spryker GLUE API URL* |
+| `ORYX_PRESET` | No | 1.1 | `b2c` | Used to set a preset name, available options: `b2b`, `b2c` |
+| `ORYX_FEATURE_VERSION` | No | 1.1 | `latest` | Used to set a feature level, available options: `latest`, `1.0`, `1.1`, etc. Only major and minor versions can be used |
 
 <sub>*The [boilerplate repostiory](https://github.com/spryker/composable-frontend) comes with [a fallback env variable](https://github.com/spryker/composable-frontend/blob/master/.env) that uses a public Spryker backend API to get you up and running fast. You can configure your custom backend, by setting the `SCOS_BASE_URL` value.<sub>
-
-### Labs Variables
-
-There are some additional variables, which are available only when [labs feature](TODO: ADD LINK) is turned on:
-
-| Variable | Required | Default | Description                               |
-|----------|----------|---------|-------------------------------------------|
-| `ORYX_CLOUDINARY_ID` | No | None | [Cloudinary](https://cloudinary.com/) API token |
-| `ORYX_STORYBLOK_TOKEN` | No | None | [Storyblock](https://www.storyblok.com/home) CMS API token |
-| `ORYX_STORYBLOK_SPACE` | No | None | [Storyblock](https://www.storyblok.com/home) CMS space name/id |
-| `ORYX_CONTENTFUL_TOKEN` | No | None | [Contentful](https://www.contentful.com/) CMS API token |
-| `ORYX_CONTENTFUL_SPACE` | No | None | [Contentful](https://www.contentful.com/) CMS space name/id |

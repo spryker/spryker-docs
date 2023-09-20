@@ -3459,12 +3459,12 @@ entries:
               - title: Vertex
                 url: /docs/pbc/all/tax-management/base-shop/vertex/vertex.html
                 include_versions:
-                - "202204.0"
+                - "202400.0"
                 nested:
                   - title: Install Vertex
                     url: /docs/pbc/all/tax-management/base-shop/vertex/install-vertex.html
                     include_versions:
-                    - "202204.0"                       
+                    - "202400.0"                       
           - title: Marketplace
             include_versions:
             - "202212.0"

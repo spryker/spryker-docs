@@ -4,7 +4,7 @@ Dynamic Multistore is currently running under an *Early Access Release*. Early A
 
 {% endinfo_block %}
 
-This document describes how to install Dynamic Store + the Product feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature.
 
 ## Install feature core
 

@@ -55,7 +55,7 @@ Vite is a build tool and development server for modern web projects. In Oryx, Vi
 Storybook is an open-source tool for developing UI components in isolation. In Oryx, Storybook is used to create a component library and showcase the different UI components in the application. It provides a simple and intuitive way to develop and test UI components in isolation, making it easier to iterate on them and ensure consistency across the application.
 
 ## Web hosting
-Hosting an Oryx application offers several advantageous capabilities that contribute to an optimized deployment and superior user experience. Here are the key features to consider:
+Oryx applications are decoupled applications and can be hosted separately. It is recommended to host Oryx applications at a frontend hosting providing, to benefit from standard features, like: 
 
 - Build process integration: Choose hosting providers with seamless build process integration to streamline updates and deployments.
 - HTTP header configuration: Opt for hosting providers that allow flexible configuration of HTTP headers for improved security, caching, and optimizations.

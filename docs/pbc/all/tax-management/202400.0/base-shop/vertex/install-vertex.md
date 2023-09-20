@@ -14,11 +14,12 @@ redirect_from:
 
 ## Prerequisites
 
-- Before you can integrate Vertex, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+Before integrating Vertex, ensure the following prerequisites are met:
+
+- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
 - The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
-
-Adjust your installation to comply with the listed requirements before proceeding.
+Ensure that your installation meets these requirements.
 
 ## 1. Integrate ACP connector module for tax calculation
 

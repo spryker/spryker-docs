@@ -3382,19 +3382,33 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
 
         - title: Building Components
+          include_versions:
+          - "202307.0"
               nested:
                 - title: Component Introduction
+                  include_versions:
+                  - "202307.0"
                   url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-introduction.html
                 - title: Component Types
+                  include_versions:
+                  - "202307.0"
                   url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html
                 - title: Component Implementation
+                  include_versions:
+                  - "202307.0"
                   url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-implementation.html
                 - title: Component Definition
+                  include_versions:
+                  - "202307.0"
                   url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html
                 - title: Component Options
+                  include_versions:
+                  - "202307.0"
                   url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html
-                - title: Component Interoperability
-                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-interoperability.html
+                - title: Component Integration
+                  include_versions:
+                  - "202307.0"
+                  url: /docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-integration.html
 
         - title: Architecture
           nested:

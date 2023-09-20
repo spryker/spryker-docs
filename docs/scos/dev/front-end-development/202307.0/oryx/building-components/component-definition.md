@@ -13,7 +13,7 @@ When a component is rendered for the first time, Oryx resolves the component def
 
 To register a [component implementation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-implementation.html), you need to provide a component definition. The component definition requires a name and implementation. The name is used as the (web) component element name. Web components require as least to be defined by 2 words, separated by a dash. It is a good practice to prefix your components by a vendor prefix, such as the project, brand or company name. This is why Oryx components are all prefixed with `oryx-`.
 
-{% info_block infoBox %}
+{% info_block infoBox "Update definitions" %}
 You can also update an existing component definition. To match an existing definition, you'd still need to provide a name.
 {% endinfo_block %}
 

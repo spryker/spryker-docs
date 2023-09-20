@@ -9,7 +9,7 @@ template: concept-topic-template
 
 A well-known methodology to structure different types of components is the [Atomic Design methodology](https://bradfrost.com/blog/post/atomic-web-design/). This methodology helps to better understand the different levels of components found in a frontend application. Spryker has embraced this methodology in Yves, calling it the [Atomic Frontend](/docs/scos/dev/front-end-development/202307.0/yves/atomic-frontend/atomic-front-end-general-overview.html#basic-concepts).
 
-Not all the Atomic Design levels map to different component types. The table below outlines the mapping from Atomic Design to Oryx component types.
+Oryx has not implemented Atomic Design. But aligning Oryx component types with the component levels in Atomic Design might help you to better understand how components are created and used. Oryx component types, however, do not map 1:1 to the Atomic Design levels, but its a fairly good comparison.
 
 | Atomic Design | Oryx Component           | Examples                       |
 | ------------- | ------------------------ | ------------------------------ |
@@ -26,7 +26,7 @@ Atomic design describes the foundational building blocks as _Atoms_, referencing
 > Atoms include basic HTML elements like form labels, inputs, buttons, and others that can't be broken down any further without ceasing to be functional.  
 > (Source: https://atomicdesign.bradfrost.com/chapter-2/)
 
-Most design system components can be compared to atoms, with some exceptions.
+A lot of design system components can be compared to atoms, but there are components that better fit the molecule description. The typeahead component for example contains a lot of functionality and is much more than a basic molecule.
 
 The design system components are used to ensure a consistent and cohesive visual language across the application. Design components do not interact directly with application logic. They're considered fairly "dumb" as they don't know anything about their surroundings. They are used by domain components, which will provide them with properties and listen to their events.
 
@@ -41,11 +41,13 @@ Molecules are the next level in the atomic design methodology. Here's what the a
 > In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.  
 > (Source: https://atomicdesign.bradfrost.com/chapter-2/)
 
-In Oryx, molecules are named "Domain Components". Domain Components are organized by the associated domain. For example, all product-related components are provided by the product package (`@spryker-oryx/product`) and are prefixed with the Domain (e.g. `<oryx-product-images>`)
+Oryx functionality is organized in domains. Domains only contain functional components, also know as "Domain Components". For example, all product-related components are provided by the product package (`@spryker-oryx/product`) and are prefixed with the Domain (e.g. `<oryx-product-images>`)
 
-To ensure a consistent user interface and experience, domain components heavily depend on the Oryx design system. The design system components receive inputs from the domain components, and the domain components listen to their events.
+Domain components map fairly well to molecules, although some of them better map to organisms.
 
-Domain components integrate with domain services to obtain and update the application state. The services take care of the integration with backend APIs and application state management. In a single page application (SPA) experience, domain components need to reflect the application state and rerender the UI whenever the state is changed asynchronously. This pattern is called _reactivity_, which is covered in [great detail in the documentation](/docs/scos/dev/front-end-development/202307.0/oryx/reactivity/key-concepts-of-reactivity.html). Oryx uses [signals](/docs/scos/dev/front-end-development/202307.0/oryx/reactivity/signals.html) offer a clean and efficient reactivity API for components in the Oryx framework. Using signals, components are automatically updated in an efficient way when the application state is updated.
+Domain components use the design system components to ensure a consistent user interface and experience. The design system components receive inputs from the domain components, and the domain components listen to their events.
+
+Domain components integrate with domain services to obtain and update the application state. The services take care of the integration with backend APIs and application state management. In a single page application (SPA) experience, domain components need to reflect the application state and rerender the UI whenever the state is changed asynchronously. This pattern is called[reactivity](/docs/scos/dev/front-end-development/202307.0/oryx/reactivity/reactivity.html). Oryx uses [signals](/docs/scos/dev/front-end-development/202307.0/oryx/reactivity/signals.html) to offer a clean and efficient reactivity API for Oryx components. Using signals, components are automatically updated in an efficient way when the application state is updated.
 
 ## Pages and compositions (Organisms, pages)
 
@@ -59,4 +61,4 @@ If you use Oryx and want to customize the application with your own pages, there
 
 ## Page references (templates)
 
-Components and compositions can be referenced by their ID. A classic example of a reusable component is the header or footer.
+Components and compositions can be referenced by their ID. A good example of a reusable composition is the header or the footer.

@@ -1,7 +1,7 @@
 ---
-title: "Oryx: Integrate Oryx Components in any web frameworks"
+title: "Integrate Oryx Components in any web frameworks"
 description: Oryx Components are build as web components
-last_updated: Sept 12, 2023
+last_updated: Sept 20, 2023
 template: concept-topic-template
 ---
 
@@ -9,14 +9,7 @@ Oryx components are _framework agnostic_. This means that components can be used
 
 Oryx components are build as [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). Web components are a suite of standard web technologies, widely embraced by browser vendors. The purpose of web components is to provide components in isolation, so that they can easily integrate with other web technologies.
 
-Web components can be built by different frameworks or even with plain html, css and javascript. Oryx components are implemented with [Lit](https://lit.dev). Lit is a lightweight open source framework from Google that can be used to build highly efficient web components. If you do not want to use Lit, you can use your own framework of choice to create web components, see [component customization](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-customization.html).
-
-<!--
-Web components have a number of specific characteristics that have an impact on the implementation.
-- First and foremost, web components use a _shadow dom_. The main purpose of the shadow dom is to avoid leaking component styles to other components. While this is a great feature to have, it might be considered challenging when you like to intentionally manage styles at a central place in the application.
-- CSS custom properties (aka CSS variables) will pierce through the shadow DOM and are great to use inside design system components. Oryx uses CSS variables to manage styling through design tokens.
-- Not all native events bubble up outside the shadow DOM. Events must be flagged with the _composed_ property to bubble outside the shadow DOM.
-- Component styles use the `:host` selector as a root level selector for the component.  -->
+Web components can be built with different frameworks or even plain html, css and javascript. Oryx components are implemented with [Lit](https://lit.dev). Lit is a lightweight open source framework from Google that can be used to build highly efficient web components. If you do not want to use Lit, you can use your own framework of choice.
 
 ## Integrate in other web frameworks
 

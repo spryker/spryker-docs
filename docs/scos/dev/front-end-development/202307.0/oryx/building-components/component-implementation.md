@@ -1,7 +1,7 @@
 ---
-title: "Build Your Custom Oryx Components"
-description: Oryx Components can be replaced by your own components.
-last_updated: Sept 12, 2023
+title: "Component implementation"
+description: Learn how to create an Oryx component
+last_updated: Sept 20, 2023
 template: concept-topic-template
 ---
 
@@ -49,8 +49,10 @@ In this step we're going to resolve the product data, and render the id field of
 
 Oryx provides a number of standard [application layers](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html#application-layers) to load and resolve the backend data. The service layer is intended to be used by components, product components would interact with the `ProductService`. The integration with the product service and the reactivity is simplified by the use of the `ProductMixin`. Mixins provide a number of component properties and methods that you can use in your components.
 
-{% info_block infoBox %}
+{% info_block infoBox "Inheritance vs composition" %}
+
 While component classes extend from a base class, Oryx tries to avoid inheritance as much as possible, and rather uses the _composition_ design pattern. Not all component logic can be composed, which is why mixins are used.
+
 {% endinfo_block %}
 
 The following example shows you how to extend from the `ProductMixin` and consume the product data.
@@ -106,7 +108,7 @@ You can provide default options in the component as well as provide options in f
 
 ### Step 4: Style the component DOM
 
-Oryx components are styled with standard CSS. The components have a separate DOM attached, also known as the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), which means that the component styles are processed in isolation. Consequently, component styles will not _leak_ into other components, nor do any global styles cascade down to the component.
+Oryx components are styled with standard CSS. The components have a separate DOM attached, using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components, nor do any global styles cascade down to the component.
 
 Styling components in the shadow DOM might be new experience to you. This guide is not going to provide detailed knowledge on this topic, as it's a standard feature. However, there are few things to know when it comes to Oryx and styling components:
 
@@ -118,7 +120,7 @@ Styling components in the shadow DOM might be new experience to you. This guide 
 - Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen specific styles in the component definition (see below)
 - You can use Oryx themes and provide component styles for a specific theme. Similar to breakpoint specific styles, you can configure styles for a theme.
 
-### Step 5: localize messages
+### Step 5: Localize messages
 
 Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage the [ Localization](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-localization.html) feature in Oryx.
 
@@ -151,7 +153,7 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
 
-#### Step 6: Prepare for Server Side Rendering and Hydration
+#### Step 7: Prepare for Server Side Rendering and Hydration
 
 If your application needs to be indexed by crawlers, such as Google Search or Pinterest, it is important that the application is [server side rendered](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
 
@@ -191,7 +193,7 @@ The component implementation that we start building in the first section of this
 import { componentDef } from "@spryker-oryx/utilities";
 
 export const productIdComponent = componentDef({
-  name: "oryx-product-id",
+  name: "my-product-id",
   impl: () => import("./id.component").then((m) => m.ProductIdComponent),
 });
 ```
@@ -200,7 +202,7 @@ This ensures that whenever the component is used anywhere in the DOM, Oryx will 
 
 ```html
 <div>
-  <oryx-product-id></oryx-product-id>
+  <my-product-id></my-product-id>
 </div>
 ```
 

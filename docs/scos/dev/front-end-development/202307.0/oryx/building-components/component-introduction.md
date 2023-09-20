@@ -7,10 +7,10 @@ template: concept-topic-template
 
 Oryx provides a fully component-based architecture, where only components are used to render the application. Components are the building blocks that developers can use to create modular and reusable elements. The components are primarily concerned with the UI/UX, leaving business logic and integrations to other application layers.
 
-Oryx contains a library of standard components, organized and distributed in [packages](/docs//scos/dev/front-end-development/{{page.version}}/getting-started/oryx-packages.html). There are different [types of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html), including a design system. The components are build with strong usability features, including:
+Oryx contains a library of standard components, organized and distributed in [packages](/docs//scos/dev/front-end-development/{{page.version}}/getting-started/oryx-packages.html). There are different [types of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html), including a design system. The components are build with strong UI/UX features, including:
 
 - Responsive design
-- Themable (using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html))
+- Themes support, using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html)
 - [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html)
 - [Icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html)
 - Internationalization (i18n) features:
@@ -23,9 +23,9 @@ Oryx contains a library of standard components, organized and distributed in [pa
   - keyboarding
   - screen reader support
 
-Oryx components are rendered inside [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) and [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html). The pages and the organization and layout of the components are provided in standard [feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html). When you install an Oryx application, the feature sets are installed from the [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html) package.
+Oryx components are rendered inside [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) and [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html). The pages and the organization and layout of the components are provided in standard [feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html). When you install an Oryx application, the feature sets are available in the [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html) package.
 
-You can use standard components in your application in combination with custom components. A common approach is to start your project with the standard components and configure the application theme and [component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) to meet the application design. When the application requires a custom component, you can [implement your custom components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-implementation.html) or customize an existing Oryx components.
+Oryx provides a large set of standard components that you can use in your projects. Oryx components can be customized with a custom theme, style rules, [component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) or component logic. You can also [implement custom components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-implementation.html) and add them to the application.
 
 Oryx components are built as web components, which makes them highly reusable in other web frameworks and systems. Read more about the [interoperability of Oryx components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-interoperability.html) in other frameworks and systems.
 

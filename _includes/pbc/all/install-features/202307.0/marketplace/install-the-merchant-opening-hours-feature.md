@@ -688,4 +688,4 @@ Make sure that the following widget was registered:
 
 | FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Merchant Opening Hours API |  | [Glue API: Merchant Opening Hours feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-category-glue-api.html) |
+| Merchant Opening Hours API |  | [Glue API: Merchant Opening Hours feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html) |

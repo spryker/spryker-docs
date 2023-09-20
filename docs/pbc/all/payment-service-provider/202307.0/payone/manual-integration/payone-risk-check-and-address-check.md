@@ -8,21 +8,6 @@ originalArticleId: 38b985f4-811e-4e38-8f43-c7863cb5add2
 redirect_from:
   - /docs/scos/user/technology-partners/202307.0/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/payone/manual-integration/payone-risk-check-and-address-check.html
-related:
-  - title: PayOne - Cash on Delivery
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: PayOne - Authorization and Preauthorization Capture Flows
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
-  - title: PayOne - Invoice Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
-  - title: PayOne - Prepayment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
-  - title: PayOne - Direct Debit Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
-  - title: PayOne - Security Invoice Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
-  - title: PayOne - Online Transfer Payment
-    link: docs/pbc/all/payment-service-provider/page.version/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
 On the project level, you should override execute and postCondition methods of `SprykerShop\Yves\CheckoutPage\Process\Steps\AddressStep`.

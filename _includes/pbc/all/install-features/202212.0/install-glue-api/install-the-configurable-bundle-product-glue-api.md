@@ -9,7 +9,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Configurable Bundle | {{page.version}} | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |
+| Configurable Bundle | {{page.version}} | [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
 | Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
@@ -106,5 +106,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue API: Configurable Bundle  | ✓ | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |
+| Glue API: Configurable Bundle  | ✓ | [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
 | GLUE: Configurable Bundle + Cart  | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) |

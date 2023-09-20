@@ -2,6 +2,7 @@
 title: Dead code checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 The dead code checker checks for dead code that extends core classes in your project.

@@ -3,6 +3,7 @@ title: Extension scenarios
 description: Supported extension scenarios for event subscribers registration, modules configuration, plugins registration
 last_updated: May 2513, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 This section describes the supported extension scenarios for the following entities:

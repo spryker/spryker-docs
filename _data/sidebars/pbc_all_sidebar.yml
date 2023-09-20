@@ -369,7 +369,7 @@ entries:
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
                   - title: "Tutorial: Calculator plugin"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-calculator-plugin.html                    
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-calculator-plugin.html
               - title: Domain model and relationships
                 nested:
                   - title: "Approval Process feature: module relations"
@@ -1278,6 +1278,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html
                       - title: Merchant Opening Hours
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-opening-hours-glue-api.html
+                  - title: Install the Merchant Portal
+                    url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-the-merchant-portal.html
               - title: Import data
                 url: /docs/pbc/all/merchant-management/marketplace/import-data/import-merchant-management-data.html
                 nested:
@@ -1309,6 +1311,12 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants.html
                   - title: Manage merchants users
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users.html
+              - title: Manage in the Merchant Portal
+                nested:
+                  - title: Manage merchant's performance data
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html
+                  - title: Manage merchant account details and settings
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html
               - title: Manage using Glue API
                 url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
                 nested:

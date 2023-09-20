@@ -1,5 +1,5 @@
 ---
-title: Merchant Portal feature integration
+title: Install the Merchant Portal
 last_updated: Aug 31, 2022
 description: Integrate the Merchant Portal feature into a Spryker project.
 draft: true

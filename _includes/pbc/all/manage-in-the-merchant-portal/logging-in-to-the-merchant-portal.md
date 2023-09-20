@@ -1,19 +1,10 @@
----
-title: Logging in to the Merchant Portal
-last_updated: Aug 31, 2022
-description: This document describes how to log in and log out of the Merchant Portal.
-template: back-office-user-guide-template
-related:
-  - title: Merchant Portal overview
-    link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
----
-
-To use the Merchant Portal, you have to log in. This document describes how you can do that.
+This document describes how to log into the Merchant portal.
 
 
 ## Prerequisites
 
-To log in to the Merchant Portal, a [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) needs to be [created](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#creating-a-merchant-user) and [activated in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#activating-and-deactivating-the-merchant-users) by the Marketplace administrator.
+1. [Create a merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#creating-a-merchant-user)
+2. [Activate the merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#activating-and-deactivating-the-merchant-users).
 
 Each section in this guide contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -82,4 +73,4 @@ To log out, in the top right corner of the Merchant Portal, click the user icon 
 
 To have a quick overview of Merchant performance, see [Managing merchant's performance data](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/dashboard/managing-merchants-performance-data.html).
 
-To learn how to manage a Merchant Profile in the Merchant Portal, see [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) page.
+To learn how to manage a Merchant Profile in the Merchant Portal, see [Editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#editing-merchants).

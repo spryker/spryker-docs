@@ -1,5 +1,5 @@
 ---
-title: Managing merchant's performance data
+title: Manage merchant's performance data
 last_updated: Nov 13, 2020
 description: This document describes what information you can check in Dashboard of the Merchant Portal.
 template: back-office-user-guide-template

@@ -3931,6 +3931,8 @@ entries:
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+      - title: Combined product offer import
+        url: /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
       - title: SCSS linter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
       - title: TS linter

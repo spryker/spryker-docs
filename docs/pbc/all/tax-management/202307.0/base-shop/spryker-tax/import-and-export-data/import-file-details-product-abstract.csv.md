@@ -6,6 +6,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202307.0/import-and-export-data/import-file-details-product-abstract.csv.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
 ---
 
 This document describes how to import taxes for abstract products via  `product_abstract.csv`. To import full information for abstract products, see [File details - product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).

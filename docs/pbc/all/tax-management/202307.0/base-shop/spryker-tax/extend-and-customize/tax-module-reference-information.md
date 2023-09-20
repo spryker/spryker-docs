@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202307.0/tax-feature-walkthrough/reference-information-tax-module.html  
   - /docs/scos/dev/feature-walkthroughs/202307.0/tax-feature-walkthrough/reference-information-tax-module.html
   - /docs/pbc/all/tax-management/202307.0/extend-and-customize/tax-module-reference-information.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/extend-and-customize/tax-module-reference-information.html
 ---
 
 

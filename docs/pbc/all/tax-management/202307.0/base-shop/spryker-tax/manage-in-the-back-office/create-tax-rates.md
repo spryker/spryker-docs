@@ -15,6 +15,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202307.0/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/manage-in-the-back-office/create-tax-rates.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

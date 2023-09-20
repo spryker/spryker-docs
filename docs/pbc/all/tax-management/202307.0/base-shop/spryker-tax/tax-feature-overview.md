@@ -22,6 +22,7 @@ redirect_from:
   - /docs/scos/user/features/202307.0/tax-feature-overview.html
   - /docs/pbc/all/tax-management/tax-management.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/tax-feature-overview.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/tax-feature-overview.html
 ---
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.

@@ -6,6 +6,8 @@ template: concept-topic-template
 related:
   - title: Install Vertex
     link: docs/pbc/all/tax-management/page.version/vertex/install-vertex.html
+redirect_from:
+  - /docs/pbc/all/tax-management/202307.0/vertex/vertex.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)

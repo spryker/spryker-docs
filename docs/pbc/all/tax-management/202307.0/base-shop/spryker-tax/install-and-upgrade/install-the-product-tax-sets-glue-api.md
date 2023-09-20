@@ -8,6 +8,7 @@ originalArticleId: abdf52c7-aadd-4d9e-84fa-1f7bd1790ed5
 redirect_from:
   - /docs/pbc/all/tax-management/202307.0/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-glue-api/install-the-product-tax-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-product-tax-sets-glue-api.md -->

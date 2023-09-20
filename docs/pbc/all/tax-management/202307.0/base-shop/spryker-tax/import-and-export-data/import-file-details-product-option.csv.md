@@ -5,6 +5,7 @@ template: data-import-template
 redirect_from:
   - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-product-option.csv.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-product-option.csv.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/import-and-export-data/import-file-details-product-option.csv.html
 ---
 
 

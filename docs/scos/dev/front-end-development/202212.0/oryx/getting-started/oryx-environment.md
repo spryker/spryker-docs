@@ -23,7 +23,7 @@ The list of environment variables to configure Storefront:
 
 | Variable | Required | Introduced in | Default | Description                               |
 |----------|-------------|---------------|---------------|-------------------------------------------|
-| `SCOS_BASE_URL` | Yes | 1.0 | None | Spryker GLUE API URL* |
+| `SCOS_BASE_URL` | Yes | 1.0 | None<sup>*<sup> | Spryker GLUE API URL |
 | `ORYX_PRESET` | No | 1.1 | `b2c` | Used to set a preset name, available options: `b2b`, `b2c` |
 | `ORYX_FEATURE_VERSION` | No | 1.1 | `latest` | Used to set a feature level, available options: `latest`, `1.0`, `1.1`, etc. Only major and minor versions can be used |
 

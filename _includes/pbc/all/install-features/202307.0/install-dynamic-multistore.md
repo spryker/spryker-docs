@@ -2,10 +2,13 @@
 
 Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
+
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html).
 
 ## Install feature core
 
+Follow the steps below to install the Dynamic Multistore feature core.
 ### Prerequisites
 
 Follow the steps below to install the Dynamic Store feature:

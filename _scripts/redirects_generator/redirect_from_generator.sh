@@ -10,7 +10,7 @@ process_markdown_files() {
             if ! grep -q "redirect_from:" "$file"; then
                 # Add "redirect_from:" after "template:" if it's missing
                 awk '/template:/ && !p {print $0 RS "redirect_from:"; p=1; next} 1' "$file" > temp && mv temp "$file"
-                
+
                 echo "redirect_from added to: $file"
             fi
         elif [ -d "$file" ]; then
@@ -20,8 +20,8 @@ process_markdown_files() {
     done
 }
 
-# Specify the folder containing the Markdown files
-folder_path="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs/docs/scos/dev/guidelines"
+# Specify the folder to add `redirect_from` to
+folder_path=""
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

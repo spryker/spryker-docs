@@ -36,8 +36,8 @@ process_files() {
     done
 }
 
-# Specify the folder containing the files
-folder_path="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs/docs/scos/dev/guidelines"
+# Specify the folder containing the files to add paths to
+folder_path=""
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then
@@ -45,11 +45,10 @@ if [ ! -d "$folder_path" ]; then
     exit 1
 fi
 
-# Specify the root directory to make paths relative to
-root_directory="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs"
+# Specify the root directory to make paths relative to. Must end with `spryker-docs`
+root_directory=""
 
 # Call the function to process files and subfolders
 process_files "$folder_path" "$root_directory"
 
 echo "Script completed."
-

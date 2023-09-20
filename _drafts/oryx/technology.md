@@ -62,6 +62,9 @@ Oryx applications are decoupled applications and can be hosted separately. It is
 - CDN integration: Look for hosting providers with native CDN integration to boost performance and availability by distributing static assets across a network.
 - Rewrites and redirects: Prioritize hosting providers that enable easy configuration of URL rewrites and redirects for managing URL structure and routing.
 - Lambda function integration: Select hosting providers that seamlessly integrate with serverless technologies like AWS Lambda to execute custom logic, server-side operations or perform a server-side rendering.
-- Consider hosting providers that offer support for [Server-Side Rendering on Oryx](./oryx-server-side-rendering.md). SSR enables dynamic content generation on the server, delivering pre-rendered pages to clients for improved performance, SEO-friendliness, and enhanced user experience.
+
+If your Oryx applications requires Consider hosting providers that offer support for [Server-Side Rendering on Oryx](./oryx-server-side-rendering.md) you need to make sure that the right infrastructure is in place at your hosting provider. You can run SSR in a Lambda function or have a long-running server that processes the SSR.
+
+If you have a fairly static application that doesn't require SSR, you could consider a non-frontend hosting provider. 
 
 By considering these capabilities, you can optimize the deployment, performance, and customization options for your Oryx application.

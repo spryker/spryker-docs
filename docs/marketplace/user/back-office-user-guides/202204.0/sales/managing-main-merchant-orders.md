@@ -7,7 +7,7 @@ related:
   - title: Managing main merchant returns
     link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-returns.html
   - title: Marketplace Order Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Main Merchant concept
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/main-merchant-concept.html
 ---

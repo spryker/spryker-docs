@@ -230,7 +230,7 @@ Customer data can be generated from existing product data for use with the load-
 
 Because of these aforementioned issues, we recommended creating the test users you need first through the Back Office. For instructions, see [Managing customers](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html).
 
-Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/scos/dev/glue-api-guides/202108.0/managing-b2b-account/managing-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
+Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
 
 Expected request body
 ```json
@@ -426,7 +426,7 @@ For *Glue API*:
 
 {% info_block errorBox %}
 
-Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) reference for more details.
+Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) reference for more details.
 
 {% endinfo_block %}
 

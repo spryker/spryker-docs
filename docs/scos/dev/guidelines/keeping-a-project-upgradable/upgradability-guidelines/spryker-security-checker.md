@@ -40,5 +40,5 @@ Your `composer.lock` file contains package versions that have security issues:
     ...
 ````
 
-### Resolving the error
+## Resolve the error
 To resolve the error, upgrade the package to a version where the vulnerability issue is fixed.

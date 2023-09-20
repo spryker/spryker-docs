@@ -3,6 +3,8 @@ title: "Oryx: Icon system"
 description: Icons are used for a consistent design system throughout components in Oryx applications
 last_updated: July 29, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-icon-system.html
 ---
 
 Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components of an  application.

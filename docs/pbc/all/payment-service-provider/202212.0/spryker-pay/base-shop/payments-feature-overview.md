@@ -35,7 +35,7 @@ The Spryker Commerce OS supports the integration of the following payment provid
 * [Billie](/docs/pbc/all/payment-service-provider/{{page.version}}/billie.html)
 * [Billpay](/docs/pbc/all/payment-service-provider/{{page.version}}/billpay/billpay.html)
 * [Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/braintree/braintree.html)
-* [BS Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/bs-payone/bs-payone.html)
+* [BS Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/payone/payone.html)
 * [Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/computop/computop.html)
 * [CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/crefopay/crefopay.html)
 * [Heidelpay](/docs/pbc/all/payment-service-provider/{{page.version}}/heidelpay/heidelpay.html)

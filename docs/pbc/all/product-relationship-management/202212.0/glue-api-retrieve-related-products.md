@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-related-products
 related:
   - title: Retrieving alternative products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 ---
@@ -976,7 +976,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve upselling products of a guest cart
 

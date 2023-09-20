@@ -40,8 +40,6 @@ class SinglePlugin extends SprykerSinglePlugin
 }
 ```
 
-### Resolving the error
+## Resolve the error
 
-To resolve the error:
-
-1. Remove the unused dead code in project.
+Remove the unused dead code in project.

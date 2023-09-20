@@ -3,6 +3,8 @@ title: "Dependency Injection: Providing services"
 description: Recommended conventions for providing services
 template: concept-topic-template
 last_updated: Apr 13, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-providing-services.html
 ---
 
 To use and inject services, they must be provided in the DI container. Oryx offers several types of providers:

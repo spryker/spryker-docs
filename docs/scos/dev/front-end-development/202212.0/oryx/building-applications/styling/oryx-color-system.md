@@ -3,6 +3,8 @@ title: "Oryx: Color system"
 description: Color design tokens are used for a consistent design system throughout the components in Oryx applications
 last_updated: July 9, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-color-system.html
 ---
 
 Colors are used everywhere throughout UI components and are important for a good user experience. To enable you to adjust colors throughout the application to your needs, Oryx provides a configurable color system.

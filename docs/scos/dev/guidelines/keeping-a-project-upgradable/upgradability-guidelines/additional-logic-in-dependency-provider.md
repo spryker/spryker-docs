@@ -46,7 +46,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 2. `isDevelopment` function call
 
 The usage of `isDevelopment` checks is allowed in order to register the plugins that are needed in development mode only (e.g. profiling, debug, etc.).
-    
+
 ```php
 namespace Pyz\Zed\Console;
 
@@ -64,7 +64,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         $commands = [];
-        
+
         if ($this->getConfig()->isDevelopmentConsoleCommandsEnabled()) {
             $commands[] = new CodeTestConsole();
         }
@@ -114,9 +114,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-### Resolving the error
-
-To resolve the issue:
+## Resole the error
 
 1. Try to avoid the usage of conditions in the dependency providers.
 2. Use only the supported expressions in the `if` construct.

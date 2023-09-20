@@ -25,7 +25,7 @@ In August 2023, we have added and updated the following pages:
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-and-upgrade/install-the-customer-account-management-service-points-feature.html).
 - [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
-- [Vertex integration guide](/docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html#integrate-acp-connector-module-for-tax-calculation).
+- [Vertex integration guide](/docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html#integrate-acp-connector-module-for-tax-calculation).
 - [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
 - [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
 - [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
@@ -64,7 +64,7 @@ In July 2023, we have added and updated the following pages:
 - [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html): Find out how you can configure Usercentrics in your Spryker shop.
 - [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html): Details about data import files for the Ratings and Reviews PBC.
 - [Search data import](/docs/pbc/all/search/202212.0/base-shop/import-and-export-data/search-data-import.html): Details about data import files for the Search PBC.
-- [Tax Management data import](/docs/pbc/all/tax-management/202204.0/spryker-tax/base-shop/import-and-export-data/tax-management-data-import.html): Details about data import files for the Tax Management PBC.
+- [Tax Management data import](/docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/import-and-export-data/tax-management-data-import.html): Details about data import files for the Tax Management PBC.
 - [Warehouse Management System data import](/docs/pbc/all/warehouse-management-system/202212.0/base-shop/import-and-export-data/warehouse-management-system-data-import.html): Details about data import files for the Warehouse Management System PBC.
 - [Marketplace Merchant Portal Product Management feature overview](/docs/pbc/all/product-information-management/202212.0/marketplace/marketplace-merchant-portal-product-management-feature-overview.html): Overview of the Marketplace Merchant Portal Product Management feature.
 -
@@ -205,12 +205,7 @@ In April 2023, we have added and updated the following pages:
 - [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-    - [Install the Picker user login feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html)
-    - [Install the Warehouse picking + Inventory Management feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-inventory-management-feature.html)
-    - [Install the Warehouse picking + Order Management feature](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-order-management-feature.html)
-    - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-order-management-feature.html)
-   - [Install the Warehouse picking + Shipment feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-shipment-feature.html)
-   - [Install the Warehouse picking + Spryker Core Back Office feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-spryker-core-back-office-feature.html)
+    - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)
 - [Security release notes 202304.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html)
 - [Releases vs Customization types](/docs/sdk/dev/releases-vs-customization-types.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.
 

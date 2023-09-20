@@ -25,8 +25,8 @@ Check out this video to get more details on how Punchout works:
 ## Related Developer guides
 
 * [Punchout Catalog feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-punchout-catalog-feature.html)
-* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-product-bundles-feature.html)
-* [Eco - Punchout Catalogs feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-feature.html)
+* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/pbc/all/punchout/{{page.version}}/install-features/install-the-eco-punchout-catalogs-product-bundles-feature.html)
+* [Eco - Punchout Catalogs feature integration](/docs/pbc/all/punchout/{{page.version}}/install-features/install-the-eco-punchout-catalogs-feature.html)
 
 ## Copyright and Disclaimer
 

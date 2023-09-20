@@ -18,12 +18,14 @@ The list of environment variables to configure Storefront:
 
 | Variable | Required | Default | Description                               |
 |----------|----------|---------|-------------------------------------------|
-| `SCOS_BASE_URL` | Yes | None | Spryker GLUE API URL |
+| `SCOS_BASE_URL` | Yes | None | Spryker GLUE API URL* |
 | `STORE` | Yes | None | Default store name, e.g. DE, AT etc. The value is case-sensitive |
 | `PRICE_MODE` | No | None | Can be used to initialise the application with default price mode. When this variable is not provided, the backend will set the default one |
 | `ORYX_PRESET` | No | `b2c` | Used to set a preset name, available options: `b2b`, `b2c` |
 | `ORYX_FEATURE_VERSION` | No | `latest` | Used to set a feature level, available options: `latest`, `1.0`, `1.1`, etc. Only major and minor versions can be used |
 | `ORYX_LABS` | No | `false` | Turns on/off oryx labs features. These features are in experimental state and are not production ready |
+
+<sub>*The [boilerplate repostiory](https://github.com/spryker/composable-frontend) comes with [a fallback env variable](https://github.com/spryker/composable-frontend/blob/master/.env) that uses a public Spryker backend API to get you up and running fast. You can configure your custom backend, by setting the `SCOS_BASE_URL` value.<sub>
 
 ### Labs Variables
 

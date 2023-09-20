@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/klarna/klarna-part-payment-flexible.html
 related:
   - title: Klarna
-    link: docs/pbc/all/payment-service-provider/page.version/klarna/klarnaions/klarna/klarna.html
+    link: docs/pbc/all/payment-service-provider/page.version/klarna/klarna.html
   - title: Klarna payment workflow
     link: docs/pbc/all/payment-service-provider/page.version/klarna/klarna-payment-workflow.html
   - title: Klarna - Invoice Pay in 14 days

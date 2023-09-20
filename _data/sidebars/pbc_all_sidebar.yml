@@ -292,6 +292,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorder-module.html
                       - title: QuickOrderPage
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
+                      - title: StepEngine
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stepengine-module.html
               - title: Extend and customize
                 nested:
                   - title: "Calculation 3.0"
@@ -1115,10 +1117,6 @@ entries:
       - title: Identity Access Management
         url: /docs/pbc/all/identity-access-management/identity-access-management.html
         nested:
-          - title: Glue API authentication and authorization
-            url: /docs/pbc/all/identity-access-management/glue-api-authentication-and-authorization.html
-          - title: Glue API security and authentication
-            url: /docs/pbc/all/identity-access-management/glue-api-security-and-authentication.html
           - title: Install and upgrade
             nested:
               - title: Install the Spryker Core Back Office feature
@@ -1129,6 +1127,10 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-customer-account-management-glue-api.html
               - title: Install Microsoft Azure Active Directory
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-microsoft-azure-active-directory.html
+              - title: Upgrade the Oauth module
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
+              - title: Upgrade the OauthCompanyUser module
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
           - title: Manage using Glue API
             nested:
               - title: Create customers
@@ -1186,6 +1188,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Merchant Relationship Product Lists Glue API
+                        url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
@@ -1340,7 +1346,7 @@ entries:
                 nested:
                   - title: ChannelPilot Marketplace
                     url: /docs/pbc/all/merchant-management/marketplace/third-party-integrations/channelpilot-marketplace.html
-      - title: Miscallaneous
+      - title: Miscellaneous
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -1355,6 +1361,30 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+              - title: Upgrade modules
+                nested:
+                  - title: Api
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-api-module.html
+                  - title: Collector
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
+                  - title: Flysystem
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-flysystem-module.html
+                  - title: Monitoring
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-monitoring-module.html
+                  - title: Console
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html
+                  - title: Quote
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
+                  - title: RabbitMQ
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-rabbitmq-module.html
+                  - title: Setup
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-setup-module.html
+                  - title: Transfer
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
+              - title: Import and export data
+                nested:
+                  - title: "Import file details: glossary.csv"
+                    url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
               - title: Install Glue API
                 nested:
                   - title: Spryker Core
@@ -1403,7 +1433,16 @@ entries:
                 - title: Customer communication
                   nested:
                   - title: Episerver
-                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver.html
+                    nested:
+                      - title: Install and configure
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html
+                      - title: Integrating
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
+                      - title: API
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+                      - title: Order reference commands
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
                   - title: Dotdigital
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/customer-communication/dotdigital.html
                 - title: AB testing and performance
@@ -1446,7 +1485,10 @@ entries:
                       - title: Using FACT-Finder recommendation engine
                         url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
                   - title: Minubo
-                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo.html
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo/minubo.html
+                    nested:
+                      - title: Install and integrate
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/minubo/install-and-integrate-minubo.html
                   - title: ChannelPilot Analytics
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/channelpilot-analytics.html
                   - title: Haensel AMS
@@ -1466,7 +1508,10 @@ entries:
                 - title: Shopmacher
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/shopmacher.html
                 - title: Loggly
-                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly.html
+                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
+                  nested:
+                    - title: Configure
+                      url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
                 - title: Proclane
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
                 - title: Data Virtuality
@@ -2129,7 +2174,7 @@ entries:
                         - "202212.0"
                         - "202307.0"
                       - title: Product Price Glue API
-                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-product-price-glue-api.html
+                        url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
                   - title: Upgrade modules
                     nested:
                       - title: CRUD Scheduled Prices
@@ -3105,16 +3150,20 @@ entries:
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-search-widget-for-concrete-products.html
                       - title: Install the Catalog Glue API
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
+                      - title: Install the Catalog + Merchant Product Restrictions
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html
                   - title: Upgrade modules
                     nested:
                       - title: Catalog
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
                       - title: CatalogSearchRestApi
-                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi–module.html
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi-module.html
                       - title: CategoryPageSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
                       - title: CmsPageSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+                      - title: Elastica
+                        url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-elastica-module.html
                       - title: ProductLabelSearch
                         url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html
                       - title: ProductListSearch
@@ -3191,16 +3240,17 @@ entries:
               - title: Third-party integrations
                 nested:
                 - title: Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia.html
-                - title: Integrate Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/integrate-algolia.html
-                - title: Configure Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/configure-algolia.html
-                  include_versions:
-                  - "202212.0"
-                  - "202307.0"
-                - title: Disconnect Algolia
-                  url: /docs/pbc/all/search/base-shop/third-party-integrations/disconnect-algolia.html
+                  url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia.html
+                  nested:
+                    - title: Integrate Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
+                    - title: Configure Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
+                      include_versions:
+                      - "202212.0"
+                      - "202307.0"
+                    - title: Disconnect Algolia
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html
                 nested:
@@ -3497,7 +3547,7 @@ entries:
                       - title: Segment scope
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
               - title: "Persistence ACL feature: Domain model and relationships"
-                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html                                                                                   
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

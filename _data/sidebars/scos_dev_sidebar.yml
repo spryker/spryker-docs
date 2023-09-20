@@ -3343,6 +3343,8 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-versioning.html
             - title: Supported browsers
               url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-supported-browsers.html
+            - title: Environment Variables
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-environment-variables.html
 
         - title: Building applications
           nested:

@@ -6,10 +6,6 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-users
 originalArticleId: 835c1e16-904a-4ed9-82c8-50244c7b0ff2
 redirect_from:
-  - /2021080/docs/managing-users
-  - /2021080/docs/en/managing-users
-  - /docs/managing-users
-  - /docs/en/managing-users
   - /docs/scos/user/back-office-user-guides/202307.0/users/managing-users/activating-and-deactivating-users.html
   - /docs/scos/user/back-office-user-guides/202307.0/users/managing-users/creating-users.html
 related:
@@ -61,5 +57,5 @@ This opens the **Users** page with the success message displayed. The created us
 | LAST NAME | User's last name. |
 | ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) |
+| WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-feature-overview.html). |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
-| WAREHOUSE USER| Defines if this user works inside a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-feature-overview.html). |

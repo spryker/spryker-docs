@@ -9,7 +9,8 @@ originalArticleId:
 Fulfillment App supports store associates (warehouse users) in the picking process. There's also an Offline Mode available for the Fulfillment App to enable picking items without an internet connection.
 
 
-## Setting up a Warehouse User
+## Warehouse user
+
 To create a warehouse user, select the *"IS WAREHOUSE USER"* checkbox under a user's option when creating or modifying one in the Back Office. To learn more about managing warehouse users in Back Office, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
 You can assign warehouses by selecting `Assign Warehouses`. By assigning a warehouse, you give the user the necessary access so they can fulfill order items in that specific warehouse.
 blob:https://spryker.atlassian.net/ea1cb604-6126-4a3b-a9d0-b4bcd84b2367#media-blob-url=true&id=a24dda2e-6334-42fb-90c9-3bf59fcb9f0b&collection=&contextId=364968&height=436&width=1209&alt=

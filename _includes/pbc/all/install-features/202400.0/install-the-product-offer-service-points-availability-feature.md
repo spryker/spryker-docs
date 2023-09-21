@@ -34,7 +34,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-Also, we offer the example click & collect product offer service point availability calculator strategy. To use it, install the following module:
+Also, we offer the example Click & Collect product offer service point availability calculator strategy. To use it, install the following module:
 
 ```bash
 composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies

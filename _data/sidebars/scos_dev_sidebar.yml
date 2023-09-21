@@ -4240,21 +4240,6 @@ entries:
       include_versions:
       - "202204.0"
       nested:
-      - title: Punchout Catalog
-        include_versions:
-      - "202204.0"
-    - title: Punchout Catalog feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs + Product Bundles feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
-      include_versions:
-      - "202204.0"
     - title: Payment partners
       nested:
         - title: Adyen

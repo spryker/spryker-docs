@@ -25,13 +25,28 @@ composer require spryker-feature/product-offer-service-points-availability: "{{p
 
 Make sure that the following modules have been installed:
 
-| MODULE                                        | EXPECTED DIRECTORY                                                |
-|-----------------------------------------------|-------------------------------------------------------------------|
-| ProductOfferServicePointAvailability          | vendor/spryker/product-offer-service-point-availability           |
-| ProductOfferServicePointAvailabilityExtension | vendor/spryker/product-offer-service-point-availability-extension |
+| MODULE                                                  | EXPECTED DIRECTORY                                                           |
+|---------------------------------------------------------|------------------------------------------------------------------------------|
+| ProductOfferServicePointAvailability                    | vendor/spryker/product-offer-service-point-availability                      |
+| ProductOfferServicePointAvailabilityExtension           | vendor/spryker/product-offer-service-point-availability-extension            |
+| ProductOfferServicePointAvailabilityCalculator          | vendor/spryker/product-offer-service-point-availability-calculator           |
+| ProductOfferServicePointAvailabilityCalculatorExtension | vendor/spryker/product-offer-service-point-availability-calculator-extension |
 
 {% endinfo_block %}
 
+Also, we offer the example click & collect product offer service point availability calculator strategy. To use it, install the following module:
+
+```bash
+composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies
+```
+
+Make sure that the following module has been installed:
+
+| MODULE                 | EXPECTED DIRECTORY                       |
+|------------------------|------------------------------------------|
+| ClickAndCollectExample | vendor/spryker/click-and-collect-example |
+
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 
@@ -74,15 +89,16 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductOfferStorageCollection                    | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer                    |
 | ProductOfferStorageCriteria                      | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer                      |
 | ServicePointStorage                              | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                              |
+| Store                                            | class | created | src/Generated/Shared/Transfer/StoreTransfer                                            |
 
 {% endinfo_block %}
 
-## Set up behavior
+### 3) Set up behavior
 
-Register the availability plugin:
+#### 1. Register the availability plugin:
 
-| PLUGIN                                                  | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                                                           |
-|---------------------------------------------------------|-------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
+| PLUGIN                                                  | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                                                                                                                  |
+|---------------------------------------------------------|-------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | ProductOfferServicePointBatchAvailabilityStrategyPlugin | Validates service point for the product offer.  | None          | Spryker\Zed\ProductOfferServicePointAvailability\Communication\Plugin\Availability\ProductOfferServicePointBatchAvailabilityStrategyPlugin |
 
 **src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
@@ -120,3 +136,40 @@ Make sure that the availability plugin works correctly:
 3.  Try to create an order. You should see the error message that the product isn't available at the moment.
 
 {% endinfo_block %}
+
+#### 2. Enable the demo Click & Collect availability calculator strategy plugin:
+
+For the demo purpose, we propose the example of the Click & Collect product offer service point availability calculator strategy.
+
+| PLUGIN                                                                             | SPECIFICATION                                                                                                                                                                             | PREREQUISITES | NAMESPACE                                    |
+|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin | Calculates product offer availabilities, considers merchant references if provided, and returns availabilities by service point UUID for requested items, prioritizing matching criteria. |               | Spryker\Client\ClickAndCollectExample\Plugin |
+
+**src/Pyz/Client/ProductOfferServicePointAvailabilityCalculator/ProductOfferServicePointAvailabilityCalculatorDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Client\ProductOfferServicePointAvailabilityCalculator;
+
+use Spryker\Client\ClickAndCollectExample\Plugin\ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin;
+use Spryker\Client\ProductOfferServicePointAvailabilityCalculator\ProductOfferServicePointAvailabilityCalculatorDependencyProvider as SprykerProductOfferServicePointAvailabilityCalculatorDependencyProvider;
+
+class ProductOfferServicePointAvailabilityCalculatorDependencyProvider extends SprykerProductOfferServicePointAvailabilityCalculatorDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityCalculatorExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityCalculatorStrategyPluginInterface>
+     */
+    protected function getProductOfferServicePointAvailabilityCalculatorStrategyPlugins(): array
+    {
+        return [
+            new ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin(),
+        ];
+    }
+}
+```

@@ -4058,8 +4058,8 @@ entries:
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configure cross-origin resource sharing for Glue API
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
         - title: Configuring Visibility of the Included Section
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources

@@ -40,6 +40,8 @@ Also, we offer the example Click & Collect product offer service point availabil
 composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies
 ```
 
+{% info_block warningBox "Verification" %}
+
 Make sure that the following module has been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                       |

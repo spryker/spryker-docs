@@ -31,6 +31,7 @@ Make sure that the following modules have been installed:
 | ProductOfferServicePointAvailabilityExtension           | vendor/spryker/product-offer-service-point-availability-extension            |
 | ProductOfferServicePointAvailabilityCalculator          | vendor/spryker/product-offer-service-point-availability-calculator           |
 | ProductOfferServicePointAvailabilityCalculatorExtension | vendor/spryker/product-offer-service-point-availability-calculator-extension |
+| ProductOfferServicePointAvailabilitiesRestApi           | vendor/spryker/product-offer-service-point-availabilities-rest-api           |
 
 {% endinfo_block %}
 
@@ -62,36 +63,42 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                         | TYPE  | EVENT   | PATH                                                                                   |
-|--------------------------------------------------|-------|---------|----------------------------------------------------------------------------------------|
-| ProductOfferCriteria                             | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer                             |
-| ProductAvailabilityCriteria                      | class | created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer                      |
-| ServicePoint                                     | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                                     |
-| SellableItemRequest                              | class | created | src/Generated/Shared/Transfer/SellableItemRequestTransfer                              |
-| ProductOfferConditions                           | class | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer                           |
-| SellableItemsResponse                            | class | created | src/Generated/Shared/Transfer/SellableItemsResponseTransfer                            |
-| SellableItemResponse                             | class | created | src/Generated/Shared/Transfer/SellableItemResponseTransfer                             |
-| SellableItemsRequest                             | class | created | src/Generated/Shared/Transfer/SellableItemsRequestTransfer                             |
-| ProductOfferCollection                           | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer                           |
-| ProductOfferServiceCollection                    | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionTransfer                    |
-| ProductOfferServiceCriteria                      | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCriteriaTransfer                      |
-| ProductOfferServiceConditions                    | class | created | src/Generated/Shared/Transfer/ProductOfferServiceConditionsTransfer                    |
-| ProductOffer                                     | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                                     |
-| ProductOfferServices                             | class | created | src/Generated/Shared/Transfer/ProductOfferServicesTransfer                             |
-| Service                                          | class | created | src/Generated/Shared/Transfer/ServiceTransfer                                          |
-| ProductOfferServicePointAvailabilityRequestItem  | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityRequestItemTransfer  |
-| ProductOfferServicePointAvailabilityConditions   | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityConditionsTransfer   |
-| ProductOfferServicePointAvailabilityCriteria     | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityCriteriaTransfer     |
-| ProductOfferServicePointAvailabilityResponseItem | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityResponseItemTransfer |
-| ProductOfferServicePointAvailabilityCollection   | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityCollectionTransfer   |
-| ProductOfferStorage                              | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                              |
-| ServiceStorage                                   | class | created | src/Generated/Shared/Transfer/ServiceStorageTransfer                                   |
-| ServiceTypeStorage                               | class | created | src/Generated/Shared/Transfer/ServiceTypeStorageTransfer                               |
-| ProductOfferAvailabilityStorage                  | class | created | src/Generated/Shared/Transfer/ProductOfferAvailabilityStorageTransfer                  |
-| ProductOfferStorageCollection                    | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer                    |
-| ProductOfferStorageCriteria                      | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer                      |
-| ServicePointStorage                              | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                              |
-| Store                                            | class | created | src/Generated/Shared/Transfer/StoreTransfer                                            |
+| TRANSFER                                                               | TYPE  | EVENT   | PATH                                                                                                         |
+|------------------------------------------------------------------------|-------|---------|--------------------------------------------------------------------------------------------------------------|
+| ProductOfferCriteria                                                   | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer                                                   |
+| ProductAvailabilityCriteria                                            | class | created | src/Generated/Shared/Transfer/ProductAvailabilityCriteriaTransfer                                            |
+| ServicePoint                                                           | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                                                           |
+| SellableItemRequest                                                    | class | created | src/Generated/Shared/Transfer/SellableItemRequestTransfer                                                    |
+| ProductOfferConditions                                                 | class | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer                                                 |
+| SellableItemsResponse                                                  | class | created | src/Generated/Shared/Transfer/SellableItemsResponseTransfer                                                  |
+| SellableItemResponse                                                   | class | created | src/Generated/Shared/Transfer/SellableItemResponseTransfer                                                   |
+| SellableItemsRequest                                                   | class | created | src/Generated/Shared/Transfer/SellableItemsRequestTransfer                                                   |
+| ProductOfferCollection                                                 | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer                                                 |
+| ProductOfferServiceCollection                                          | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCollectionTransfer                                          |
+| ProductOfferServiceCriteria                                            | class | created | src/Generated/Shared/Transfer/ProductOfferServiceCriteriaTransfer                                            |
+| ProductOfferServiceConditions                                          | class | created | src/Generated/Shared/Transfer/ProductOfferServiceConditionsTransfer                                          |
+| ProductOffer                                                           | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                                                           |
+| ProductOfferServices                                                   | class | created | src/Generated/Shared/Transfer/ProductOfferServicesTransfer                                                   |
+| Service                                                                | class | created | src/Generated/Shared/Transfer/ServiceTransfer                                                                |
+| ProductOfferServicePointAvailabilityRequestItem                        | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityRequestItemTransfer                        |
+| ProductOfferServicePointAvailabilityConditions                         | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityConditionsTransfer                         |
+| ProductOfferServicePointAvailabilityCriteria                           | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityCriteriaTransfer                           |
+| ProductOfferServicePointAvailabilityResponseItem                       | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityResponseItemTransfer                       |
+| ProductOfferServicePointAvailabilityCollection                         | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityCollectionTransfer                         |
+| ProductOfferStorage                                                    | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                                                    |
+| ServiceStorage                                                         | class | created | src/Generated/Shared/Transfer/ServiceStorageTransfer                                                         |
+| ServiceTypeStorage                                                     | class | created | src/Generated/Shared/Transfer/ServiceTypeStorageTransfer                                                     |
+| ProductOfferAvailabilityStorage                                        | class | created | src/Generated/Shared/Transfer/ProductOfferAvailabilityStorageTransfer                                        |
+| ProductOfferStorageCollection                                          | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer                                          |
+| ProductOfferStorageCriteria                                            | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer                                            |
+| ServicePointStorage                                                    | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                                                    |
+| Store                                                                  | class | created | src/Generated/Shared/Transfer/StoreTransfer                                                                  |
+| RestProductOfferServicePointAvailabilitiesRequestAttributes            | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer            |
+| RestProductOfferServicePointAvailabilityRequestItemsAttributes         | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilityRequestItemsAttributesTransfer         |
+| RestProductOfferServicePointAvailabilitiesResponseAttributes           | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilitiesResponseAttributesTransfer           |
+| RestProductOfferServicePointAvailabilityResponseItemsAttributes        | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilityResponseItemsAttributesTransfer        |
+| RestProductOfferServicePointAvailabilitiesResponseAttributesCollection | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer |
+| RestErrorMessage                                                       | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                                                       |
 
 {% endinfo_block %}
 
@@ -175,3 +182,63 @@ class ProductOfferServicePointAvailabilityCalculatorDependencyProvider extends S
     }
 }
 ```
+
+#### 3. To enable the Storefront API, register the following plugins:
+
+| PLUGIN                                                    | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                  |
+|-----------------------------------------------------------|----------------------------------------------------------------------|---------------|------------------------------------------------------------|
+| ProductOfferServicePointAvailabilitiesResourceRoutePlugin | Registers the `product-offer-service-point-availabilities` resource. |               | Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueApplication;
+
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Plugin\GlueApplication\ProductOfferServicePointAvailabilitiesResourceRoutePlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        return [
+            new ProductOfferServicePointAvailabilitiesResourceRoutePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can send the following requests:
+
+* `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+   ```json
+      {
+          "data": {
+              "type": "product-offer-service-point-availabilities",
+              "attributes": {
+                  "servicePointUuids": [
+                      "{{service-point-uuid}}"
+                  ],
+                  "serviceTypeUuid": "{{service-type-uuid}}",
+                  "productOfferServicePointAvailabilityRequestItems": [
+                      {
+                          "productConcreteSku": "{{product-concrete-sku}}",
+                          "productOfferReference": "{{product-offer-reference}}",
+                          "quantity": 1
+                      }
+                  ]
+              }
+          }
+      }
+   ```
+
+{% endinfo_block %}

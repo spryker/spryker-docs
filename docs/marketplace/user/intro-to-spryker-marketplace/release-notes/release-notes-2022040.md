@@ -2,6 +2,8 @@
 title: Release notes 202204.0
 description: Release notes for the Spryker Marketplace release 202204.0
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new Marketplace features and enhancements.

@@ -2,6 +2,8 @@
 title: Marketplace Application composition
 description: The following document shows how Spryker Marketplace looks in general.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
 related:
   - title: Marketplace domain model
     link: docs/marketplace/dev/architecture-overview/marketplace-domain-model.html

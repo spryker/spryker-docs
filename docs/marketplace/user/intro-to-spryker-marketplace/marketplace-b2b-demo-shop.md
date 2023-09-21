@@ -3,6 +3,8 @@ title: Marketplace B2B Demo Shop
 description: The Spryker Marketplace B2B Demo Shop is a showcase that demonstrates ready-to-use Marketplace B2B-specific Spryker features in a live implementation.
 last_updated: May 12, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html
 ---
 
 The Spryker B2B Marketplace Demo Shop is a collection of ready-to-use B2B-Marketplace-specific features.

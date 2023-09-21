@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Dec 14, 2022
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes-202212.0/release-notes-202212.0.html
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0/release-notes-202212.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new Marketplace features and enhancements.
@@ -19,4 +20,3 @@ For more information about upgrading the Spryker Commerce OS with Enterprise Mar
 For detailed infomration about all related changes, see [Localization improvements](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html#localization-improvements-span-classinline-imgimg-srchttpssprykers3eu-central-1amazonawscomdocsscosuserintro-to-sprykerreleasesrelease-notesimprovementpng-altimprovement-span) and [Update cart totals based on delivery method](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html#update-cart-totals-based-on-delivery-method-span-classinline-imgimg-srchttpssprykers3eu-central-1amazonawscomdocsscosuserintro-to-sprykerreleasesrelease-notesimprovementpng-altimprovement-span)
 
 {% endinfo_block %}
-

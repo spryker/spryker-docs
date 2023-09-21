@@ -3,6 +3,8 @@ title: Marketplace personas
 description: This document describes key users that cooperate in the Marketplace environment.
 last_updated: Aug 31, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html
 ---
 
 A marketplace extension provided by Spryker Cloud Commerce OS covers a wide range of needs for sellers and buyers and presupposes the fulfillment of multiple actions by various types of users in different areas of the Marketplace. This document describes the different types of users—personas that function within the Marketplace.

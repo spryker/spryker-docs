@@ -33,7 +33,6 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-
 ### 2) Set up transfer objects
 
 Generate transfer changes:

@@ -32,6 +32,7 @@ Make sure that the following modules have been installed:
 | ProductOfferServicePointAvailabilityCalculator          | vendor/spryker/product-offer-service-point-availability-calculator           |
 | ProductOfferServicePointAvailabilityCalculatorExtension | vendor/spryker/product-offer-service-point-availability-calculator-extension |
 | ProductOfferServicePointAvailabilitiesRestApi           | vendor/spryker/product-offer-service-point-availabilities-rest-api           |
+| ProductOfferServicePointAvailabilityWidget              | vendor/spryker-shop/product-offer-service-point-availability-widget          |
 
 {% endinfo_block %}
 
@@ -242,3 +243,61 @@ Make sure that you can send the following requests:
    ```
 
 {% endinfo_block %}
+
+## Install feature frontend
+
+Follow the steps below to install the Product Offer Service Points Availability feature frontend.
+
+### 1) Add translations
+
+1. Append glossary for the feature:
+
+```csv
+product_offer_service_point_availability_widget.all_items_available,All items are available.,en_US
+product_offer_service_point_availability_widget.all_items_available,Alle Produkte sind verfügbar.,de_DE
+product_offer_service_point_availability_widget.some_items_not_available,Some items are not available.,en_US
+product_offer_service_point_availability_widget.some_items_not_available,Einige der Produkte sind nicht verfügbar.,de_DE
+product_offer_service_point_availability_widget.all_items_not_available,Not available.,en_US
+product_offer_service_point_availability_widget.all_items_not_available,Keine der Produkte sind verfügbar.,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+### 2) Set up widgets
+
+1. Register the following plugins to enable widgets:
+
+| PLUGIN                                            | SPECIFICATION                                                                     | PREREQUISITES  | NAMESPACE                                                           |
+|---------------------------------------------------|-----------------------------------------------------------------------------------|----------------|---------------------------------------------------------------------|
+| ProductOfferServicePointAvailabilityDisplayWidget | Allow customers to display product offer availability for service points message. |                | SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Widget  |
+| ProductOfferServicePointAvailabilityWidget        | Allow customers to display product offer availability for service points.         |                | SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Widget  |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Widget\ProductOfferServicePointAvailabilityDisplayWidget;
+use SprykerShop\Yves\ProductOfferServicePointAvailabilityWidget\Widget\ProductOfferServicePointAvailabilityWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            ProductOfferServicePointAvailabilityWidget::class,
+            ProductOfferServicePointAvailabilityDisplayWidget::class,
+        ];
+    }
+}
+```

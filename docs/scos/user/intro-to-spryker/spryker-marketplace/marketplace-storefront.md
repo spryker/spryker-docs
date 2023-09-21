@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 ---
 
-*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html) features. Marketplace functionality lets buyers browse for products and view and purchase them across different merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html) features. Marketplace functionality lets buyers browse for products and view and purchase them across different merchants.
 
 In most sections of the Marketplace Storefront, customers can see who the seller of a product or offer is.
 
@@ -42,13 +42,13 @@ In the **Quick Add to Cart** section, a customer can find and add marketplace pr
 
 When a customer creates, opens, or edits a shopping list, they can use the **Quick add to shopping list** section to search marketplace products and product offers and add them to the shopping list. To search for a specific product, the customer enters an SKU or product name in the search field of the section.
 
-![products-and-offers-in-quick-add-to-shipping-list-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.md/products-and-offers-in-quick-add-to-shipping-list.png)
+![products-and-offers-in-quick-add-to-shipping-list-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.md/products-and-offers-in-quick-add-to-shipping-list.png)
 
 ## Quick Order page
 
 On the **Quick Order** page, in the **Merchants** drop-down, customers can select a particular merchant to buy marketplace products and product offers. In this case, when they type in a product name or SKU, a product or offer from only a selected merchant is found. Alternatively, a customer can select the **All Merchants** option to buy from all merchants. If a customer changes the merchant for already selected marketplace products or product offers, some fields may change—for example, **Price**. If a customer selects all merchants, then the marketplace products and product offers of all merchants are found.
 
-![products-and-offers-on-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.md/products-and-offers-on-quick-order-page.png)
+![products-and-offers-on-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.md/products-and-offers-on-quick-order-page.png)
 
 
 ## Checkout
@@ -119,4 +119,4 @@ For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplac
 
 ## Read next
 
-[Merchant Portal](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html)
+[Merchant Portal](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html)

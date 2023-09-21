@@ -34,4 +34,4 @@ Check out this video to learn more about the Marketplace in the Spryker Commerce
 
 ## Read next
 
-[Marketplace personas](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html)
+[Marketplace personas](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html)

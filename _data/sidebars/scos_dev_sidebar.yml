@@ -4758,6 +4758,20 @@ entries:
       url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
+    - title: Marketplace architecture
+      url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-architecture.html
+      nested:
+        - title: Marketplace Application composition
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html
+        - title: Marketplace domain model
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
+        - title: Merchant Portal architecture overview
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+        - title: Marketplace in the Back Office
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+
+
+
   - title: Guidelines
     url: /docs/scos/dev/guidelines/guidelines.html
     nested:

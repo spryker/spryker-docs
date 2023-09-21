@@ -35,13 +35,13 @@ Backend Gateway is a Storefront-oriented application. This is where a storefront
 
 ### Merchant Portal
 
-Merchant Portal is a merchant-focused application. Merchants use the Merchant Portal to manage their catalog and fulfill customer orders. For more details, see [Merchant Portal's architecture](/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html).
+Merchant Portal is a merchant-focused application. Merchants use the Merchant Portal to manage their catalog and fulfill customer orders. For more details, see [Merchant Portal's architecture](/docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html).
 
 ### Marketplace Operator Back Office
 
 Back Office for the Marketplace Operator is a marketplace owner-centric or admin-centric application. Marketplace Operator here takes care of the whole Marketplace, including listing global products, managing merchants, and managing categories.
 
-The Back Office also includes facilities oriented to the Operator-As-A-Merchant case, such as offers and orders management. Check out [Marketplace in the Back Office](/docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html) for more details.
+The Back Office also includes facilities oriented to the Operator-As-A-Merchant case, such as offers and orders management. Check out [Marketplace in the Back Office](/docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html) for more details.
 
 {% info_block warningBox "Important note" %}
 

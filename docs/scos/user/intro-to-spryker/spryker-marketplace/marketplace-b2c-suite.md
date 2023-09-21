@@ -1,5 +1,5 @@
 ---
-title: Marketplace B2C Demo Shop
+title: Marketplace B2C Suite
 description: The Spryker Marketplace B2C Demo Shop is a showcase that demonstrates ready-to-use Marketplace B2C-specific Spryker features in a live implementation.
 last_updated: May 12, 2022
 template: concept-topic-template

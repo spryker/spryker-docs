@@ -6,11 +6,11 @@ redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 ---
 
-A *marketplace operator* is a company that owns the marketplace. In a marketplace business model, one or more of such a company's employees represent a marketplace operator and manage the store. We call such users as [marketplace administrators](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#marketplace-administrator). Depending on the marketplace model, the marketplace operator either manages only other merchants' orders or also sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)).  
+A *marketplace operator* is a company that owns the marketplace. In a marketplace business model, one or more of such a company's employees represent a marketplace operator and manage the store. We call such users as [marketplace administrators](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator). Depending on the marketplace model, the marketplace operator either manages only other merchants' orders or also sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)).  
 
 ## Merchant management
 
-Merchant accounts are created in the Back Office, and a [marketplace administrator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
+Merchant accounts are created in the Back Office, and a [marketplace administrator](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
 
 * Creates merchants
 * Edits merchants
@@ -55,10 +55,10 @@ For detailed instructions on managing returns, see [Managing marketplace returns
 
 ## Main merchant sales
 
-In an [enterprise marketplace business model](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html), apart from managing the marketplace, a marketplace operator sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html). In the Back Office, they manage their orders and returns in **Sales&nbsp;<span aria-label="and then">></span> My Orders** and **Sales&nbsp;<span aria-label="and then">></span> My returns** sections, respectively. With their own orders, they can perform the same actions as they do with other merchants' as described in [Order management](#order-management) and [Return management](#return-management). Apart from that, they can create and edit shipments for their orders.
+In an [enterprise marketplace business model](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html), apart from managing the marketplace, a marketplace operator sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html). In the Back Office, they manage their orders and returns in **Sales&nbsp;<span aria-label="and then">></span> My Orders** and **Sales&nbsp;<span aria-label="and then">></span> My returns** sections, respectively. With their own orders, they can perform the same actions as they do with other merchants' as described in [Order management](#order-management) and [Return management](#return-management). Apart from that, they can create and edit shipments for their orders.
 
 For detailed instructions about managing main merchant orders and returns, see [Managing main merchant orders](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html) and [Managing main merchant returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html).
 
 ## Read next
 
-[Marketplace Storefront](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html)
+[Marketplace Storefront](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html)

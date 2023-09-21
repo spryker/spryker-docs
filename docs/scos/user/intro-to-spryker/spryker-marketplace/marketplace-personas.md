@@ -37,4 +37,4 @@ A *buyer* is a user who actively uses the Storefront. It is either a registered 
 
 ## Read next
 
-[Back Office for Marketplace Operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html)
+[Back Office for Marketplace Operator](/docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html)

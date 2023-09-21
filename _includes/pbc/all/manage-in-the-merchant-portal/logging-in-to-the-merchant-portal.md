@@ -10,7 +10,7 @@ Each section in this guide contains reference information. Make sure to review i
 
 {% info_block warningBox %}
 
-A [marketplace administrator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#marketplace-administrator) cannot log in to Merchant Portal.
+A [marketplace administrator](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator) cannot log in to Merchant Portal.
 
 {% endinfo_block %}
 

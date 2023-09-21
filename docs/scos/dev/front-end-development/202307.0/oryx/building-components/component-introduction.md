@@ -1,7 +1,7 @@
 ---
 title: "Oryx: Building Components"
 description: Components are the building blocks of Oryx Applications
-last_updated: Sept 10, 2023
+last_updated: Sept 19, 2023
 template: concept-topic-template
 ---
 

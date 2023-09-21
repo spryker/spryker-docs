@@ -1,10 +1,8 @@
-## docs/scos/dev/front-end-development/202212.0/oryx/building-components/component-types.md
-
+---
 title: "Oryx Component Types"
 description: Oryx components compared to Atomic Design
-last_updated: Sept 10, 2023
+last_updated: Sept 19, 2023
 template: concept-topic-template
-
 ---
 
 A well-known methodology to structure different types of components is the [Atomic Design methodology](https://bradfrost.com/blog/post/atomic-web-design/). This methodology helps to better understand the different levels of components found in a frontend application. Spryker has embraced this methodology in Yves, calling it the [Atomic Frontend](/docs/scos/dev/front-end-development/202307.0/yves/atomic-frontend/atomic-front-end-general-overview.html#basic-concepts).

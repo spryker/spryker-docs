@@ -54,7 +54,8 @@ commonOptions = {
     /blackfire.io\/[\.\w\-\/\?]+/,
     /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
-    /www.blackfire.io\/[\.\w\-\/\?]+/
+    /www.blackfire.io\/[\.\w\-\/\?]+/,
+    /linux.die.net\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -216,7 +217,7 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,    
+    /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/

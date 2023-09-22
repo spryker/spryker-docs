@@ -87,7 +87,6 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 ## Order Management (ERP/OMS)
 
 * [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)
-* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
 
 ## Operational Tools
 

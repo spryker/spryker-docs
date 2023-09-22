@@ -13,7 +13,7 @@ To start feature integration, integrate the required feature:
 
 | NAME             | VERSION          | INTEGRATE GUIDE                                                                                                                              |
 |------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-feature.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ## 1) Install the required modules using Composer
 

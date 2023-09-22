@@ -16,9 +16,9 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Customer Access feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-access-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-access-feature-overview.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
 ---
 
 Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).

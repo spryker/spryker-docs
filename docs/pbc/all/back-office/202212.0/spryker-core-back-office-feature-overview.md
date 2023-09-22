@@ -66,5 +66,5 @@ You can always define what exactly is going to be needed for your specific proje
 
 |INSTALLATION GUIDES  | REFERENCES|
 |---------|---------|
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Back Office Translations overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Back Office Translations overview](/docs/pbc/all/back-office/{{page.version}}/back-office-translations-overview.html) |
 | [Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html)  |

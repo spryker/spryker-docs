@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/shipment-feature-integration
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
   - title: Shipment + Approval Process feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
 ---

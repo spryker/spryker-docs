@@ -2285,10 +2285,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
       include_versions:
       - "202204.0"
-    - title: Picker user login
-      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html
-      include_versions:
-        - "202400.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -3256,11 +3252,6 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-      - title: Oryx Builder overview and setup
-        url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
-        include version:
-        - "202212.0"
-        - "202307.0"
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
         include version:
@@ -4067,8 +4058,8 @@ entries:
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configure cross-origin resource sharing for Glue API
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
         - title: Configuring Visibility of the Included Section
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources
@@ -4249,21 +4240,6 @@ entries:
       include_versions:
       - "202204.0"
       nested:
-      - title: Punchout Catalog
-        include_versions:
-      - "202204.0"
-    - title: Punchout Catalog feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs + Product Bundles feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
-      include_versions:
-      - "202204.0"
     - title: Payment partners
       nested:
         - title: Adyen
@@ -4814,6 +4790,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
+      - title: Ignore evaluation errors
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:

@@ -16,7 +16,7 @@ related:
   - title: Editing shipments
     link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/edit-shipments.html
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
 ---
 
 This document describes how to create shipments for orders in the Back Office.

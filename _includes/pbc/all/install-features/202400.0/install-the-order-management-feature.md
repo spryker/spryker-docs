@@ -24,12 +24,12 @@ Follow the steps below to install the Order Management feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-|---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Mailing and Notifications | {{page.version}} | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
-| Persistent Cart | {{page.version}} |  |
+| NAME                      | VERSION          | INTEGRATION GUIDE                                                                                                                                                                       |
+|---------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core              | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
+| Mailing and Notifications | {{page.version}} | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)                          |
+| Order Management          | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Persistent Cart           | {{page.version}} |                                                                                                                                                                                         |
 
 ### 1) Install the required modules using Composer
 
@@ -41,11 +41,12 @@ composer require spryker-feature/order-management: "{{page.version}}" --update-w
 
 Make sure that the following modules have been installed:
 
-| MODULE                  | EXPECTED DIRECTORY                        |
-|-------------------------|-------------------------------------------|
-| OrderCustomReference    | vendor/spryker/order-custom-reference     |
-| OrderCustomReferenceGui | vendor/spryker/order-custom-reference-gui |
-| SalesOrdersBackendApi   | vendor/spryker/sales-orders-backend-api   |
+| MODULE                         | EXPECTED DIRECTORY                                |
+|--------------------------------|---------------------------------------------------|
+| OrderCustomReference           | vendor/spryker/order-custom-reference             |
+| OrderCustomReferenceGui        | vendor/spryker/order-custom-reference-gui         |
+| SalesOrdersBackendApi          | vendor/spryker/sales-orders-backend-api           |
+| SalesOrdersBackendApiExtension | vendor/spryker/sales-orders-backend-api-extension |
 
  {% endinfo_block %}
 
@@ -66,24 +67,35 @@ Make sure that the following changes have been applied in the database:
 |----------------------------------------|--------|---------|
 | spy_sales_order_invoice                | table  | created |
 | spy_sales_order.order_custom_reference | column | created |
+| spy_sales_order.uuid                   | column | created |
+| spy_sales_order_item.uuid              | column | created |
+| spy_sales_order_address.uuid           | column | created |
+| spy_sales_order_address_history.uuid   | column | created |
+| spy_sales_order_totals.uuid            | column | created |
+| spy_sales_order_note.uuid              | column | created |
+| spy_sales_order_comment.uuid           | column | created |
+| spy_sales_expense.uuid                 | column | created |
+| spy_sales_order_item_metadata.uuid     | column | created |
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                          | TYPE     | EVENT   | PATH                                                               |
-|---------------------------------------------------|----------|---------|--------------------------------------------------------------------|
-| OrderInvoice                                      | class    | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer                 |
-| OrderInvoiceSendRequest                           | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer      |
-| OrderInvoiceSendResponse                          | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer     |
-| OrderInvoiceCriteria                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer         |
-| OrderInvoiceCollection                            | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCollectionTransfer       |
-| OrderInvoiceResponse                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceResponseTransfer         |
-| OrderCustomReferenceResponse                      | class    | created | src/Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer |
-| OrdersBackendApiAttributes                        | class    | created | src/Generated/Shared/Transfer/OrdersBackendApiAttributesTransfer   |
-| OrderResourceCollection                           | class    | created | src/Generated/Shared/Transfer/OrderResourceCollectionTransfer      |
-| Mail.recipientBccs                                | property | created | src/Generated/Shared/Transfer/MailTransfer                         |
-| Quote.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/QuoteTransfer                        |
-| QuoteUpdateRequestAttributes.orderCustomReference | property | created | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
-| Order.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/OrderTransfer                        |
+| TRANSFER                                          | TYPE     | EVENT   | PATH                                                                 |
+|---------------------------------------------------|----------|---------|----------------------------------------------------------------------|
+| OrderInvoice                                      | class    | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer                   |
+| OrderInvoiceSendRequest                           | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer        |
+| OrderInvoiceSendResponse                          | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer       |
+| OrderInvoiceCriteria                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer           |
+| OrderInvoiceCollection                            | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCollectionTransfer         |
+| OrderInvoiceResponse                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceResponseTransfer           |
+| OrderCustomReferenceResponse                      | class    | created | src/Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer   |
+| OrderResourceCollection                           | class    | created | src/Generated/Shared/Transfer/OrderResourceCollectionTransfer        |
+| OrdersBackendApiAttributes                        | class    | created | src/Generated/Shared/Transfer/OrdersBackendApiAttributesTransfer     |
+| OrderItemsBackendApiAttributes                    | class    | created | src/Generated/Shared/Transfer/OrderItemsBackendApiAttributesTransfer |
+| Mail.recipientBccs                                | property | created | src/Generated/Shared/Transfer/MailTransfer                           |
+| Quote.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/QuoteTransfer                          |
+| QuoteUpdateRequestAttributes.orderCustomReference | property | created | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer   |
+| Order.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/OrderTransfer                          |
+| Item.uuid                                         | property | created | src/Generated/Shared/Transfer/ItemTransfer                           |
 
 {% endinfo_block %}
 
@@ -1071,6 +1083,47 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
+### Set up warehouse picking relationship plugins
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                         | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                                                         |
+|----------------------------------------------------------------|------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------|
+| SalesOrdersByPickingListItemsBackendResourceRelationshipPlugin | Adds `sales-orders` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\SalesOrdersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+
+
+**src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
+
+use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
+use Spryker\Glue\SalesOrdersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\SalesOrdersByPickingListItemsBackendResourceRelationshipPlugin;
+
+class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
+{
+    /**
+     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            PickingListsBackendApiConfig::RESOURCE_PICKING_LIST_ITEMS,
+            new SalesOrdersByPickingListItemsBackendResourceRelationshipPlugin(),
+        );
+
+        return $resourceRelationshipCollection;
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that, on the following Storefront pages, even if the `display` property is not set in the process definition, the item states are displayed correctly:
@@ -1080,6 +1133,81 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 - *Order details*
 - *Returns*
 - *Return details*
+
+2. Make sure you have the `sales-orders` resource as a relationship to `picking-list-items` when you do a request.
+
+`GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-orders`
+<details>
+  <summary markdown='span'>Response body example</summary>
+```json
+{
+    "data": {
+        "id": "14baa0f3-e6e7-5aa8-bc6c-c02ec39ca77b",
+        "type": "picking-lists",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-03-23 15:47:07.000000",
+            "updatedAt": "2023-03-30 12:47:45.000000"
+        },
+        "relationships": {
+            "picking-list-items": {
+                "data": [
+                    {
+                        "id": "65bb3aec-0a45-5ec6-9b12-bbca6551d87f",
+                        "type": "picking-list-items"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/14baa0f3-e6e7-5aa8-bc6c-c02ec39ca77b?include=picking-list-items,sales-orders"
+        }
+    },
+    "included": [
+        {
+            "id": "DE--1",
+            "type": "sales-orders",
+            "attributes": {
+                "cartNote": null,
+                "orderReference": "DE--1"
+            },
+            "links": {
+                "self": "https://glue-backend.mysprykershop.com/sales-orders/DE--1?include=picking-list-items,sales-orders"
+            }
+        },
+        {
+            "id": "65bb3aec-0a45-5ec6-9b12-bbca6551d87f",
+            "type": "picking-list-items",
+            "attributes": {
+                "quantity": 1,
+                "numberOfPicked": 1,
+                "numberOfNotPicked": 0,
+                "orderItem": {
+                    "uuid": "31e21001-e544-5533-9754-51331c8c9ac5",
+                    "sku": "141_29380410",
+                    "quantity": 1,
+                    "name": "Asus Zenbook US303UB",
+                    "amountSalesUnit": null
+                }
+            },
+            "relationships": {
+                "sales-orders": {
+                    "data": [
+                        {
+                            "id": "DE--1",
+                            "type": "sales-orders"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/65bb3aec-0a45-5ec6-9b12-bbca6551d87f?include=picking-list-items,sales-orders"
+            }
+        }
+    ]
+}
+```
+</details>
 
 {% endinfo_block %}
 
@@ -1304,13 +1432,13 @@ To make sure that you've registered the widget, log in as a customer on the Stor
 
 Integrate the following related features:
 
-| FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                      |
-|--------------------------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comments + Order Management feature integration                    |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                  |
-| Glue API: Order Management feature integration                     |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)                                               |
-| Company Account + Order Management feature integration             |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html)                                         |
+| FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                |
+|--------------------------------------------------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Comments + Order Management feature integration                    |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                            |
+| Glue API: Order Management feature integration                     |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)                                                         |
+| Company Account + Order Management feature integration             |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html)                                                   |
 | Product + Order Management feature integration                     |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                 |
-| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)                 |
+| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)                           |
 | Packaging Units feature integration                                |                                  | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)                                     |
 | Product + Order Management feature integration                     |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                 |
 | Product Options + Order Management feature integration             |                                  | [Product Options + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |

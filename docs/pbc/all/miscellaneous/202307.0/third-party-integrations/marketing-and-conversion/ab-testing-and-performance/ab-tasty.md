@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ab-tasty
 originalArticleId: eaac5623-d807-4057-ae96-50765c872696
 redirect_from:
-  - /2021080/docs/ab-tasty
-  - /2021080/docs/en/ab-tasty
-  - /docs/ab-tasty
-  - /docs/en/ab-tasty
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

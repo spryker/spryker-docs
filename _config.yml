@@ -235,7 +235,6 @@ versioned_categories:
       - payment-service-provider
       - product-information-management
       - product-relationship-management
-      - punchout
       - push-notification
       - return-management
       - ratings-reviews

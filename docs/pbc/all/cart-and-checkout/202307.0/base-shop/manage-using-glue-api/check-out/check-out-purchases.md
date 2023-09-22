@@ -24,7 +24,7 @@ The endpoint also provides information on whether it is necessary to redirect th
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)
 * [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
 * [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
@@ -1205,7 +1205,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 {% include pbc/all/glue-api-guides/202307.0/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/check-out-puchases-response-attributes-of-included-resources.md -->
 
-For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/retrieving-customer-orders.html)
+For the attributes of other included resources, see [Retrieve customer's order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
 
 ## Possible errors
 

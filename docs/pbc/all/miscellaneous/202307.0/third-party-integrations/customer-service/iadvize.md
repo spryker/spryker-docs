@@ -11,9 +11,6 @@ redirect_from:
   - /docs/iadvize
   - /docs/en/iadvize
   - /docs/scos/user/technology-partners/202200.0/customer-service/iadvize.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

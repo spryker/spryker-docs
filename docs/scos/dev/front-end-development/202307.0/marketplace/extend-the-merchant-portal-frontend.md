@@ -5,6 +5,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/index.html
   - /docs/marketplace/dev/front-end/202212.0/extending-the-project/migration-guide-extending-the-project.html
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/extend-the-marketplace-frontend.html
 ---
 
 To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.

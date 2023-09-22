@@ -3416,8 +3416,8 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-        - title: Extend the Marketplace frontend
-          url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
+        - title: Extend the Merchant Portal frontend
+          url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
         - title: "Table design"
           url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
           nested:

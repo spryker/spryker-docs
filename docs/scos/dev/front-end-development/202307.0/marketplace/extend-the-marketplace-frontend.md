@@ -1,5 +1,5 @@
 ---
-title: Extend the Marketplace frontend
+title: Extend the Merchant Portal frontend
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
 redirect_from:
@@ -13,7 +13,7 @@ This document can help you understand how you can extend the frontend project.
 
 ## Prerequisites
 
-Prior to starting the project extension, verify that the marketplace modules are up-to-date:
+Prior to starting the project extension, verify that the Merchant Portal modules are up-to-date:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
@@ -197,7 +197,7 @@ console cache:empty-all
 
 ## Overriding CSS variables
 
-CSS variables can be overridden in any `.less`/`.css` file related to the Marketplace at the project level.
+CSS variables can be overridden in any `.less`/`.css` file related to the Merchant Portal at the project level.
 
 Global override changes a variable for the whole project:
 

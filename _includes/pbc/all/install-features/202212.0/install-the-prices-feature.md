@@ -10,19 +10,19 @@ The following feature integration Guide expects the basic feature to be in place
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core | {{site.version}} |
-| Prices | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Prices | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/prices: "^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -78,7 +78,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 194,,DEFAULT,AT,EUR,20780,23089,"[{""quantity"":5,""net_price"":265,""gross_price"":295}, {""quantity"":10,""net_price"":275,""gross_price"":310}, {""quantity"":20,""net_price"":285,""gross_price"":320}]"
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  abstract_sku | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
 |  concrete_sku | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
@@ -226,15 +226,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core E-commerce | {{site.version}} |
-| Prices | {{site.version}} |
+| Spryker Core E-commerce | {{page.version}} |
+| Prices | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/prices: "^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -315,6 +315,6 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | --- | --- |
 | ProductPriceVolumeWidget | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/configurable-bundle-feature-overview.html) feature. |
+| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

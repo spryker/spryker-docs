@@ -10,7 +10,7 @@ End of November 2022, Spryker will release a new version of its Demo Shops, whic
 
 ## Impacts
 
-Backwards compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you will not experience any upgradeability issues.
+Backwards compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you will not experience any upgradability issues.
 
 ## Migration steps
 

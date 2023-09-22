@@ -5,12 +5,12 @@ This document describes how to integrate the Category Management Glue API featur
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
-| Spryker Core | {{site.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Category Management | {{site.version}} | |
+| Spryker Core | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Category Management | {{page.version}} | |
 
 
 ## 1) Install the required modules using Composer

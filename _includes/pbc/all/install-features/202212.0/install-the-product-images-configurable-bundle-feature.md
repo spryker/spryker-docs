@@ -4,12 +4,12 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Configurable Bundle  | {{site.version}} |
-| Product Images | {{site.version}} |
+| Configurable Bundle  | {{page.version}} |
+| Product Images | {{page.version}} |
 
 ### 1) Set up database schema and transfer objects
 
@@ -266,7 +266,7 @@ t000002,product_image_set_3
 t000002,product_image_set_4
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
 | product_image_set_key | mandatory | string | product_image_set_1 | Internal data import identifier for the product image set. |

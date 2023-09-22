@@ -3,13 +3,13 @@
 ## Install feature core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Customer Account Management | {{site.version}} |
-| Order Management | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Customer Account Management | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up configuration
 To enable order search functionality, adjust config as shown below.

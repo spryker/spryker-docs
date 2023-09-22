@@ -4,11 +4,11 @@ This document describes how to integrate the Glue: Development Tools feature int
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION |
 |-|-|
-| Development Tools | {{site.version}} |
+| Development Tools | {{page.version}} |
 
 ## 1) Install the required modules using Composer
 

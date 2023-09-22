@@ -9,9 +9,9 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-|Configurable Bundles |{{site.version}} | [Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html)|
-|Order Management |{{site.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+|Configurable Bundles |{{page.version}} | [Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html)|
+|Order Management |{{page.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
@@ -185,5 +185,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue API: Configurable Bundle + Cart Feature | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
-| Glue API: Configurable Bundle + Product Feature | ✓ | [Glue API: Configurable Bundle + Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |
+| Glue API: Configurable Bundle + Cart Feature | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
+| Glue API: Configurable Bundle + Product Feature | ✓ | [Glue API: Configurable Bundle + Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |

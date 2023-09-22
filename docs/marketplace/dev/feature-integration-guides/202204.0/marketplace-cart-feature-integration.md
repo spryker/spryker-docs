@@ -16,12 +16,12 @@ Follow the steps below to install the Marketplace Cart feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
-| Cart            | {{page.version}}  | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Cart            | {{page.version}}  | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Marketplace Order Management | {{page.version}}  | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -83,7 +83,7 @@ Follow the steps below to install the Marketplace Cart feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME            | VERSION |
 | -------------------- | ----------- |

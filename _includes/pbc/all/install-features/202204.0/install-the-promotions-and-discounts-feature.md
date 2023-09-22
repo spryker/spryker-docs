@@ -12,19 +12,19 @@ Follow the steps below to install the Promotions & Discounts feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 
 | NAME  | VERSION  | INTEGRATION GUIDE  |
 |----------------|--------------------|---------------------|
-| Spryker Core   | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)   |
+| Spryker Core   | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)   |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/promotions-discounts {{site.version}} --update-with-dependencies
+composer require spryker-feature/promotions-discounts {{page.version}} --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

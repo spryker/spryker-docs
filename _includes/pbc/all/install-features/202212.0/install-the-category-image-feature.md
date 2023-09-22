@@ -13,13 +13,13 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Category | {{site.version}} | |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -72,7 +72,7 @@ Make sure that the following modules were installed:
     </database>
 ```
 
-2. Set up synchronization queue pools so that non-multistore entities (not store specific entities) are synchronized among stores:
+2. Set up synchronization queue pools so that non-multi-store entities (not store specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml**
 
@@ -396,17 +396,17 @@ Follow the steps below to install the Category Image feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Category | {{site.version}} | |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -3,20 +3,20 @@
 ## Install feature core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}}  |
-| Product Lists | {{site.version}} |
-| Merchant | {{site.version}} |
+| Spryker Core | {{page.version}}  |
+| Product Lists | {{page.version}} |
+| Merchant | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-product-restrictions:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/merchant-product-restrictions:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -26,7 +26,7 @@ Make sure that the following modules were installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | MerchantRelationshipProductList | vendor/spryker/merchant-relationship-product-list |
-| MerchantRelationshipProductListDataImport | `vendor/spryker/merchant-relationship-product-list-data-import |
+| MerchantRelationshipProductListDataImport | vendor/spryker/merchant-relationship-product-list-data-import |
 | MerchantRelationshipProductListGui | vendor/spryker/merchant-relationship-product-list-gui |
 
 {% endinfo_block %}
@@ -78,7 +78,7 @@ mr-011,pl-007
 mr-011,pl-008
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |merchant_relation_key  | mandatory | string | mr-008 | Identifier of merchant relations. The merchant relations must exist already. |
 | product_list_key |mandatory  | string | pl-001 | Identifier of product lists. The product lists must exist already. |

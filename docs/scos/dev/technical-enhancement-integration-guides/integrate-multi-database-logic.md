@@ -11,6 +11,8 @@ This document describes how to switch from using a shared database to dedicated 
 
 Update the Docker SDK to [version 1.48.0](https://github.com/spryker/docker-sdk/releases/tag/1.48.0) or higher.
 
+For cloud environments, make sure your project supports a [separated setup](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html#separated-setup).
+
 ## Define databases
 
 1. Define multiple databases per region.
@@ -26,8 +28,8 @@ regions:
                     name: Spryker No-Reply
                     email: no-reply@spryker.local
             databases:
-                eu-region-db-de:
-                eu-region-db-at:
+                eu-region-db-one:
+                eu-region-db-two:
 
 ...                
 ```

@@ -34,7 +34,7 @@ The following schema illustrates the *Marketplace Shopping Lists* domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/40d25819-b12d-45ac-938d-c1ee0b68ac44.png?utm_medium=live&utm_source=custom)
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT   |
 |-----------------|-------------|-----------------|

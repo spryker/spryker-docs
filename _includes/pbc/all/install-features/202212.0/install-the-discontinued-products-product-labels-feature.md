@@ -10,9 +10,9 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Discontinued Products | {{site.version}} |
-| Product Labels | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Discontinued Products | {{page.version}} |
+| Product Labels | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Import data
 

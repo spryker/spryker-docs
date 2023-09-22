@@ -12,7 +12,7 @@ Price types (for example,gross price, net price) are assigned to each price, and
 
 A new price type can be added by importing price data. The price type in the CSV file will be added or updated.
 
-To learn more details about prices import file, see: [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price.csv.html)
+To learn more details about prices import file, see: [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
 
 Depending on the price mode selected by a customer in Storefront, the price can have gross or net value. You can run your shop in both modes as well as select net mode for business customers, for example.
 
@@ -22,7 +22,7 @@ To support product offer prices, a *PriceProductOffer* database table has been a
 
 In addition, product offers support volume prices. Merchants can now enter volume prices for product offers, and customers will see the corresponding price on their Storefront based on the quantity they have chosen. The volume prices for product offers work the same as the volume prices for products.
 
-To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
+To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html)
 
 {% info_block warningBox "User documentation" %}
 
@@ -61,7 +61,7 @@ The following schema illustrates the Marketplace Product Offer Prices domain mod
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|

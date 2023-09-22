@@ -4,23 +4,23 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{site.version}} |
-| Cart | {{site.version}} |
-|Company Account  | {{site.version}} |
-|Prices  | {{site.version}} |
-| Persistent Cart | {{site.version}} |
-| Agent Assist | {{site.version}} |
+|Spryker Core  | {{page.version}} |
+| Cart | {{page.version}} |
+|Company Account  | {{page.version}} |
+|Prices  | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Agent Assist | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quotation-process: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -406,23 +406,23 @@ Make sure that when you make lock reset for a cart, quote request associated wit
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{site.version}} |
-| Cart | {{site.version}} |
-| Company Account | {{site.version}} |
-|Prices  | {{site.version}} |
-| Persistent Cart | {{site.version}} |
-|Agent Assist  | {{site.version}} |
+|Spryker Core  | {{page.version}} |
+| Cart | {{page.version}} |
+| Company Account | {{page.version}} |
+|Prices  | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+|Agent Assist  | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quotation-process: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

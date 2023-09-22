@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/confirming-customer-registration.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Authenticating as a customer
@@ -32,12 +32,12 @@ related:
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
-After a customer has been created (to create a customer, see [Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
+After a customer has been created (to create a customer, see [Customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
 
 ## Installation
 

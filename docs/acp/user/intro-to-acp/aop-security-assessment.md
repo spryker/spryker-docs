@@ -163,7 +163,7 @@ The diagram below demonstrates the security assessment procedure:
 
 ## Communication channels
 
-- Spryker will create a Slack channel for the app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions.
+- For the app developers to ask questions related to security, Spryker will create a (private) subforum in our [CommerceQuest](https://commercequest.space/) community platform. Security experts will monitor this channel and respond to the questions.
 - Communication during individual assessments would be handled through emails.
 - In cases where a discussion is needed to resolve open questions, a call can be set up between the developer and Spryker security experts.
 
@@ -172,7 +172,7 @@ The diagram below demonstrates the security assessment procedure:
 Spryker recommends using the following approved tools and scanners:
 
 - [Burp Suite](https://portswigger.net/burp), [ZAP](https://www.zaproxy.org/), [Netsparker](https://www.netsparker.com/plp/dast/), [Acunetix](https://www.acunetix.com/plp/dast/), [Rapid7](https://www.rapid7.com/) as DAST tools.
-- [Checkmarx](https://checkmarx.com/), [Veracode](https://www.veracode.com/products/binary-static-analysis-sast), [Micro Focus Fortify SCA](https://www.microfocus.com/ru-ru/products/static-code-analysis-sast/overview), [SonarQube](https://www.sonarsource.com/), [Snyk](https://snyk.io/product/snyk-code/), [Kuiwan](https://www.kiuwan.com/code-security-sast/) for static code analysis/code scanner (PHP, JS, Java, Python, Go, Ruby, Scala).
+- [Checkmarx](https://checkmarx.com/), [Veracode](https://www.veracode.com/products/binary-static-analysis-sast), [Micro Focus Fortify SCA](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [SonarQube](https://www.sonarsource.com/), [Snyk](https://snyk.io/product/snyk-code/), [Kuiwan](https://www.kiuwan.com/code-security-sast/) for static code analysis/code scanner (PHP, JS, Java, Python, Go, Ruby, Scala).
 
 ## Resources
 
@@ -181,4 +181,4 @@ Security assessment recommendations are created based on the following guides an
 - [OWASP Top-10](https://owasp.org/www-project-top-ten/)
 - [OWASP Web Security Testing guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)
-- [OWASP Security Knowledge Framework](https://owasp.org/www-project-security-knowledge-framework/)
+- [OWASP Security Knowledge Framework](https://owasp.org/projects/spotlight/historical/2021.02.03/)

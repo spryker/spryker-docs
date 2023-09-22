@@ -9,12 +9,12 @@ The following feature integration guide expects the basic feature to be in place
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Product | {{site.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

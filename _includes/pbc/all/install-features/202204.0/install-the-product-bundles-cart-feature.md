@@ -8,13 +8,13 @@ Follow the steps below to install feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
-| Product Bundles | {{site.version}} | [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-bundles-feature-integration.html)|
-| Cart | {{site.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Product Bundles | {{page.version}} | [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
+| Cart | {{page.version}} | |
 
 
 ### Set up behavior
@@ -177,4 +177,4 @@ To create an order successfully with a large number of product bundles in the ca
 This constant controls the bundle quantity threshold. When the threshold is reached, it keeps bundled items from splitting into individual items and adds them to the order as a single shipment.
 The lower the threshold, the fewer number of separate shipments are created in an order, which decreases the potential probability of insufficient memory errors during the order creation process.
 
-For details, see [Splittable Order Items feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/splittable-order-items-feature-integration.html).
+For details, see [Splittable Order Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/splittable-order-items-feature-integration.html).

@@ -4,13 +4,13 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Configurable Bundle | {{site.version}} |
-| Order Management | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Configurable Bundle | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up behaviour
 

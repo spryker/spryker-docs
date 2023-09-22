@@ -1,54 +1,26 @@
 ---
 title: Product Information Management
-description: The Product Information Management capability lets you manage product catalog.
-last_updated: Jul 21, 2021
+description: The capability for managing product catalogs
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/catalog
-originalArticleId: c9c0a388-619c-464f-ac15-ee3c4bb13b36
+last_udpated: Aug 16, 2023
 redirect_from:
-  - /2021080/docs/catalog
-  - /2021080/docs/en/catalog
-  - /docs/catalog
-  - /docs/en/catalog
-  - /docs/scos/user/features/202212.0/catalog-feature-overview.html
-  - /docs/scos/user/features/202200.0/catalog-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202200.0/catalog-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/catalog-feature-walkthrough.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/pim-feature-overviews.html
 ---
 
-Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
+The Product Information Management (PIM) capability lets you build a rich product catalog using flexible management tools.
 
-Product catalogs are built by assigning attributes (defining characteristics) to products and organizing them into custom category trees. In the tree structure, you can create categories that nest sub-categories in them.
+The capability consists of a base shop and the marketplace addon. The base shop features are needed to run a regular shop, in which your company is the only entity fulfilling orders. The marketplace addon adds the marketplace product entity, which is a product sold by a merchant. To run a marketplace, the features from both the base shop and the marketplace addon are required.
 
-For example, Electronics is a category that can encompass all the electronics you sell. You can also group different types of electronics under that category into smaller logical groups, such as TVs, Cameras, and Mobile Phones. This approach lets you structure the information logically.
+To learn more, see the following feature overviews:
 
-With this information, we can build navigation and display product pages that dynamically list products based on a selected category.
-
-Catalogs have full translation and SEO support in addition to other necessary dimensions such as stock level management and pricing.
-
-Building a custom category strategy lets you leverage your product information to create and manage product-based content in your store: stock levels and pricing. You can dynamically create category pages and include category filters. This will help you to display all your products on a page by category that lists all electronics in one place (with details and images). An advanced filter will provide customers with the option to further drill down by one of the following:
-* Sub-categories—for example, TVs, Cameras, and Mobile Phones for the electronics category.
-* Attributes—for example, size, color, and capacity.
-
-To keep your catalog dynamic, you can include auto-generated pages based on categories and create templates for these dynamic pages. This lets you flexibly support the growth of your product range while maintaining an up-to-date catalog.
-
-The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
-
-
-
-
-
-
-The Product Information Management capability To learn about the
-
-[Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html)
-[Catalog](/docs/pbc/all/product-information-management/{{page.version}}/catalog-feature-overview.html)
-[Category Management](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html)
-[Product Approval Process](/docs/pbc/all/product-information-management/{{page.version}}/product-approval-process-feature-overview.html)
-[Product Barcode](/docs/pbc/all/product-information-management/{{page.version}}/product-barcode-feature-overview.html)
-[Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html)
-[Product](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview.html)
-[Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/product-groups-feature-overview.html)
-[Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html)
-[Product Lists](/docs/pbc/all/product-information-management/{{page.version}}/product-lists-feature-overview.html)
-[Product Options](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html)
+* [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html)
+* [Catalog](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/catalog-feature-overview.html)
+* [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
+* [Product Approval Process](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-approval-process-feature-overview.html)
+* [Product Barcode](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-barcode-feature-overview.html)
+* [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
+* [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)
+* [Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-groups-feature-overview.html)
+* [Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
+* [Product Lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html)
+* [Product Options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)

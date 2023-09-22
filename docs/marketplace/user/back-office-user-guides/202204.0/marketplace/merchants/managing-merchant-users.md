@@ -41,7 +41,7 @@ To create a merchant user, do the following:
 
 4. Click **Create**.
 
-By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/edit-users.html).
+By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 
 ### Reference information: Creating a merchant user
 
@@ -64,7 +64,7 @@ On the **Users** tab, you see a table with all the merchant users available for 
 
 The following table describes the attributes you enter and select when creating merchant users.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Email | Text field where you specify the email address of the merchant user. The email with the reset password instructions will be sent to this email address.  | &check; |
 | First name | Text field where you specify the first name of the merchant user. | &check; |
@@ -82,7 +82,7 @@ To edit a merchant user, do the following:
 
 The following table describes the attributes you enter and select when editing merchant users.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Email | Text field where you specify the email address of the merchant user. The email with the reset password instructions will be sent to this email address.  | &check; |
 | First name | Text field where you specify the first name of the merchant user. | &check; |

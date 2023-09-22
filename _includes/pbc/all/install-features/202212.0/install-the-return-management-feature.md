@@ -4,19 +4,19 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Order Management | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Order Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/return-management:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
+composer require spryker-feature/return-management:"{{page.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -764,14 +764,14 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/return-management:"{{site.version}}" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/return-management:"{{page.version}}" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

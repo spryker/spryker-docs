@@ -4,11 +4,11 @@ Follow the steps below to install Rest schema validation feature API.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 
 
 ## 1)  Install the required modules using Composer
@@ -141,7 +141,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
 2. Create validation configuration:
     a. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
-    b. In the file, describe validation rules for endpoints. See [Validate REST request format](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/validate-rest-request-format.html) for more details. Example:
+    b. In the file, describe validation rules for endpoints. See [Validate REST request format](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html) for more details. Example:
 
     ```yaml
     access-tokens:

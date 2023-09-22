@@ -4,13 +4,13 @@ Follow the steps below to integrate the Glue API: Products feature.
 
 
 ## Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | {{site.version}} |  |
-| Price | {{site.version}} |  |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product | {{page.version}} |  |
+| Price | {{page.version}} |  |
 
 
 ## 1) Install the required modules using Composer

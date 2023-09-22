@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -8,14 +8,14 @@ Follow the steps below to install feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME         | EXPECTED DIRECTORY | INTEGRATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product      | {{site.version}}   | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)           |
-| Cart         | {{site.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                 |
-| Checkout     | {{site.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)         |
+| Spryker Core | {{page.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product      | {{page.version}}   | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
+| Checkout     | {{page.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
 
 ### Install feature
 

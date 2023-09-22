@@ -3,18 +3,18 @@
 ## Install feature core
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/resource-sharing: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}
@@ -69,14 +69,14 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/resource-sharing: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}

@@ -6,11 +6,11 @@ Follow the steps below to integrate the Glue API - Availability Notification fea
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |-|-|
-| Availability Notification | {{site.version}} |
+| Availability Notification | {{page.version}} |
 
 ## 1) Install required modules using Composer
 

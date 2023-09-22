@@ -4,20 +4,20 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Persistent Cart | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Cart | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -136,7 +136,7 @@ quote-20,My Cart,DE--20,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |key|mandatory|string|quote-19|Key that will identify the quote to be referred in future imports.|
 |name|mandatory|string|>My Cart|Name of the quote.|
@@ -436,17 +436,17 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{site.version}} |
-| Cart | {{site.version}} |
-| Persistent Cart | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| Product | {{page.version}} |
+| Cart | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -1,6 +1,6 @@
 
 
-This document describes how. to integrate the [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html) feature into a Spryker project.
+This document describes how. to integrate the [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,14 +12,14 @@ To start the feature integration, review and install the necessary features:
 
 | NAME         | VERSION |
 | ----------- | ------ |
-| Spryker Core | {{site.version}}  |
+| Spryker Core | {{page.version}}  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/content-item:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/content-item:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -732,7 +732,7 @@ To start the feature integration, review and install the necessary features:
 
 | NAME         | VERSION    |
 | ---------- | -------- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

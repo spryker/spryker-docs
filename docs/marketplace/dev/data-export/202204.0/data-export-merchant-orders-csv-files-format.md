@@ -5,7 +5,7 @@ description: This document contains content of merchant-orders, merchant order-i
 template: import-file-template
 related:
   - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 This document contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
@@ -18,7 +18,7 @@ This document contains content of the following files you get when [exporting da
 
 These are the parameters included in the `merchant_orders.csv` file:
 
-| DEFAULT SEQUENCE | PARAMETER | REQUIRED? | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identifier. |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identifier. |
@@ -67,7 +67,7 @@ Check out the [merchant-orders.csv sample file](https://spryker.s3.eu-central-1.
 
 These are the header fields included in the `merchant_order_items.csv` file:
 
-| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identifier |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identifier. |
@@ -135,7 +135,7 @@ Check out the [merchant-order-items.csv sample file](https://spryker.s3.eu-centr
 
 These are the header fields included in the `merchant_order_expenses.csv` file.
 
-| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identification |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identification. |

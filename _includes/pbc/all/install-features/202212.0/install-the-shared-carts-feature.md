@@ -4,22 +4,22 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Cart|{{site.version}}|
-|Persistent Cart |{{site.version}}|
-|Multiple Carts|{{site.version}}|
-|Company Account|{{site.version}}|
-|Spryker Core|{{site.version}}|
+|Cart|{{page.version}}|
+|Persistent Cart |{{page.version}}|
+|Multiple Carts|{{page.version}}|
+|Company Account|{{page.version}}|
+|Spryker Core|{{page.version}}|
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shared-carts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shared-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -220,7 +220,7 @@ quote-23,Spryker--4,READ_ONLY
 quote-23,Spryker--5,READ_ONLY
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |quote_key|mandatory|string |quote-22|Key that will identify the quote to add data to.|
 |company_user_key|mandatory|string|Spryker--1|Key that will identify the company user that the quote is shared with.|
@@ -560,17 +560,17 @@ Please review and install the necessary features before beginning the integratio
 
 | NAME | VERSION |
 |---|---|
-|Cart|{{site.version}}|
-|Persistent Cart|{{site.version}}|
-|Multiple Carts|{{site.version}}|
-|Spryker Core|{{site.version}}|
+|Cart|{{page.version}}|
+|Persistent Cart|{{page.version}}|
+|Multiple Carts|{{page.version}}|
+|Spryker Core|{{page.version}}|
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shared-carts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shared-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

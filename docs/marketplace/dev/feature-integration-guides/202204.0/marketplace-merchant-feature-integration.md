@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Merchant feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -995,7 +995,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000007 | Merchant identifier. |
 | contact_person_role |   | String | E-Commerce Manager | Role of the contact person of a merchant. |
@@ -1038,7 +1038,7 @@ MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
 MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006 | Merchant identifier. |
 | country_iso2_code |   | String | DE | Country ISO-2 code the address exists in. |
@@ -1098,7 +1098,7 @@ merchant_reference,username
 MER000006,michele@sony-experts.com
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006  | Identifier of the merchant in the system. Have to be unique. |
 | username | &check; | String | `michele@sony-experts.com`  | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |
@@ -1349,7 +1349,7 @@ Follow the steps below to install the Marketplace Merchant feature front end.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|

@@ -4,13 +4,13 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{site.version}} |
-| Reorder | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Multiple Carts | {{page.version}} |
+| Reorder | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up behavior
 

@@ -4,12 +4,12 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shared Carts | {{site.version}} |
-| Persistent Cart Sharing | {{site.version}} |
+| Shared Carts | {{page.version}} |
+| Persistent Cart Sharing | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -108,12 +108,12 @@ Make sure, that when you have a cart share link with Read-only or Full Access, y
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shared Carts | {{site.version}} |
-| Persistent Cart Sharing | {{site.version}} |
+| Shared Carts | {{page.version}} |
+| Persistent Cart Sharing | {{page.version}} |
 
 ## 1) Add translations
 

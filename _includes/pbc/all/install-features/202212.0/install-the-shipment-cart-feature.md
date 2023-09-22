@@ -7,10 +7,10 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shipment | {{site.version}} |
-| Cart | {{site.version}} |
-| Spryker Core | {{site.version}} |
-| Prices | {{site.version}} |
+| Shipment | {{page.version}} |
+| Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
+| Prices | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

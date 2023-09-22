@@ -4,13 +4,13 @@ Follow the steps below to install Wishlist feature API.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 |NAME|VERSION|INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core| {{site.version}} |[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product| {{site.version}} |[Product API feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
-|Wishlist| {{site.version}} | |
+| Spryker Core| {{page.version}} |[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product| {{page.version}} |[Product API feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
+|Wishlist| {{page.version}} | |
 
 ### 1) Install the required modules using Composer
 

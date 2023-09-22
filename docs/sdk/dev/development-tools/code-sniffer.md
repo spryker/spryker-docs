@@ -51,7 +51,7 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
-To correspond to [PSR-2](http://www.php-fig.org/psr/psr-2/) and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+To correspond to PSR-2<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
 Code Sniffer is a very powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues, and can also auto-fix the majority of them (when used with the `-f` option).
 

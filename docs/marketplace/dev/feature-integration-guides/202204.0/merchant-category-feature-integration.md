@@ -16,7 +16,7 @@ Follow the steps below to install the Merchant Category feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
@@ -246,7 +246,7 @@ category_key,merchant_reference
 demoshop,MER000001
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------- | ------- | ----- | -------- | -------------- |
 | category_key  | &check; | string  | food  | Internal data import identifier for a merchant. |
 | merchant_reference | &check; | string    | roan  | Merchant identifier.  |

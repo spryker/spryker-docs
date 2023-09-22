@@ -4,12 +4,12 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shipment | {{site.version}} |
-| Approval Process | {{site.version}} |
+| Shipment | {{page.version}} |
+| Approval Process | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -131,11 +131,11 @@ Make sure that shipment is saved with the quote in the `spy_quote` table after s
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| CheckoutPage | {{site.version}} |
+| CheckoutPage | {{page.version}} |
 
 ### 1) Set up behavior
 

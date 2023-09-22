@@ -16,13 +16,13 @@ Follow the steps below to install the Marketplace Inventory Management feature c
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)  |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
-| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html)  |
+| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)  |
 
 ### 1) Install the required modules using Composer
 
@@ -522,7 +522,7 @@ MER000005,Budget Cameras MER000005 Warehouse 1
 MER000006,Sony Experts MER000006 Warehouse 1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | string | MER000001 | Merchant identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -660,7 +660,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | &check; | string | offer350 | Product offer identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |

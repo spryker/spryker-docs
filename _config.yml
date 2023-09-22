@@ -1,4 +1,4 @@
-version: "202212.0"
+version: "202307.0"
 
 repository: spryker/spryker-docs
 
@@ -150,14 +150,14 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/paas-plus"
+       path: "docs/scu"
      values:
-       product: "platform-as-a-service-plus"
+       product: "scu"
   -
      scope:
-       path: "docs/paas-plus/dev"
+       path: "docs/scu/dev"
      values:
-       sidebar: "paas_plus_dev_sidebar"
+       sidebar: "scu_dev_sidebar"
        role: "dev"
   -
      scope:
@@ -171,18 +171,11 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
-
 versions:
-  '201811.0': '201811.0'
-  '201903.0': '201903.0'
-  '201907.0': '201907.0'
-  '202001.0': '202001.0'
-  '202005.0': 'Code releases 05.20'
-  '202009.0': '202009.0'
-  '202108.0': '202108.0'
   '202204.0': '202204.0'
   '202212.0': '202212.0'
-  '202304.0': 'Upcoming release'
+  '202307.0': '202307.0'
+  '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -207,6 +200,7 @@ versioned_categories:
       - back-office-user-guides
       - technology-partners
       - shop-user-guides
+      - overview-of-features
     dev:
       - feature-walkthroughs
       - feature-integration-guides
@@ -220,26 +214,38 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
       - system-requirements
+      - front-end-development
   pbc:
     all:
+      - back-office
       - cart-and-checkout
+      - carrier-management
       - content-management-system
+      - customer-relationship-management
       - discount-management
+      - dynamic-multistore
+      - emails
       - gift-cards
       - identity-access-management
-      - user-management
-      - return-management
-      - emails
-      - carrier-management
+      - merchant-management
+      - miscellaneous
+      - offer-management
+      - order-management-system
       - price-management
+      - payment-service-provider
+      - product-information-management
+      - product-relationship-management
+      - push-notification
+      - return-management
       - ratings-reviews
       - request-for-quote
       - search
+      - service-points
       - shopping-list-and-wishlist
       - tax-management
+      - user-management
       - warehouse-management-system
-      - product-information-management
-      - product-relationship-management
+      - warehouse-picking
 
 
 
@@ -253,7 +259,7 @@ sidebars:
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - paas_plus_dev_sidebar
+  - scu_dev_sidebar
   - pbc_all_sidebar
 
 description: "Spryker documentation center."
@@ -289,8 +295,8 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'paas_plus_dev'
-      title: 'PaaS+'
+    - name: 'scu_dev'
+      title: 'SCU Developer'
 sass:
     sass_dir: css
     style: compressed

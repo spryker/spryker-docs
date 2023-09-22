@@ -16,12 +16,12 @@ Follow the steps below to install the Marketplace Return Management feature core
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core                 | {{page.version}} | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-feature.html) |
+| Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
 | Marketplace Order Management | {{page.version}} | [Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install required modules using Composer

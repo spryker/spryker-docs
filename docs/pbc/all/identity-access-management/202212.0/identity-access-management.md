@@ -3,49 +3,74 @@ title: Identity Access Management
 description:
 last_updated: Oct 2, 2022
 template: concept-topic-template
+redirect_from:
+  - /2021080/docs/logging-in-to-the-back-office
+  - /2021080/docs/en/logging-in-to-the-back-office
+  - /docs/logging-in-to-the-back-office
+  - /docs/en/logging-in-to-the-back-office
+  - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/201903.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/202005.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/202204.0/logging-in-to-the-back-office.html
 ---
 
 The Identity Access Management capability enables all types of users in a Spryker shop to create and manage accounts. Different levels of security let users manage the access of other users.
 
 ## Back Office authentication
 
+Back Office supports login via two types of accounts:
 
-To use the Spryker Back Office, users have to authenticate to the Back Office. They can authenticate by the following:
+* Back Office account.
+* Account of a third-party service that is configured as a single sign-on.
 
-* Regular Back Office user account.
-* Third-party sign-on (optional).
+### Login with a Back Office account
 
-To *authenticate as a regular Back Office user*, you must have a Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
 
-You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
-{% info_block infoBox %}
+To log in, on the Back Office login page, a user enters the email address and password of their account. If the credentials are correct and their account is active at that time, they are logged in.
 
-The feature is shipped with an exemplary ECO module that supports authentication using Microsoft Azure Active Directory. With the existing infrastructure, you can develop your own ECO modules for the identity managers you need.
+If a user does not remember their password, they can reset it using the form available on the login page.
 
-{% endinfo_block %}
+### Login with a single sign-on
 
-If a user chooses to log in using a third party, the user is redirected to the OAuth provider's sign-in page—for example, Microsoft Azure. If the user logs in to the third-party service successfully, the check is made if the user exists in the Spryker database. If the user exists in the database and is active, the user is logged in. If the user does not exist in the database, you can have one of the two different behaviors or strategies for your project:
+Your project can have a single sign-on(SSO) login configured for the Back Office. SSO lets users log into the Back Office with accounts of a third-party service.
 
-<a name="strategies"></a>
+The feature is shipped with an exemplary ECO module that supports SSO authentication via Microsoft Azure Active Directory. With the existing infrastructure, you can develop your own ECO modules for the identity managers you need. SSO uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
-**Strategy 1: Upon the first login, create the Back Office admin user based on the third-party system’s user data.**
+To log in with an SSO, on the Back Office login page, users click **Login with {Third-party service name}**. This opens the sign-in page of the configured service. Users sign in with their accounts and get redirected to the Back Office.
 
-If a user who does not exist in the Spryker database logs in for the first time, the following happens:
-* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) in the Back Office.
-* The user is assigned to the default [group](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
+If a user chooses to log in using a third party, they are redirected to the OAuth provider's sign-in page—for example, Microsoft Azure. If the user successfully signs into the third-party service, the check is made if the user exists in the Spryker database. If the user exists in the database and is active, the user is logged in.
 
-With Strategy 1, the login process looks like this:
+The following sections describe different ways of handling users that have access to your SSO service, but don't have a Back Office account.
+
+### SSO authentication strategies
+
+Depending on your access and security requirements, you can have one of the following strategies implemented for SSO authentication.
+
+
+#### Registration is required only with the SSO service
+
+If a user logs in with an SSO but does not have a Back Office account, the following happens:
+* Based on the third-party system’s user data, such as first name, last name, and email, a Back Office account is created.
+* The user is assigned to the default user group.
+* The user is logged into the Back Office.
+
+The login process looks like this:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
 
-**Strategy 2: Do not log in to the user unless they exist in the Spryker database.**
+#### Registration is required with the SSO service and with Spryker
 
-Before a user can log in to Back Office with third-party service credentials, the user must be added and set to `Active` in the database. You can add the user using either the Back Office or the ACL module.
+If a user logs in with an SSO but does not have a Back Office account, the user is not logged in. To be able to log in, a user must have a Back Office account registered using the email address used for their account with the SSO service. Usually, this strategy is used when not all the users that have access to the SSO service need access to the Back Office.
 
-With Strategy 2, the login process looks like this:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
+
+## Glue API authentication
+
+For details about Glue API authentication, see [Glue API authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html)
 
 ## Current constraints
 
@@ -53,20 +78,16 @@ The feature has the following functional constraint:
 
 Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
-## Related Business User articles
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
 
 
 
-## Related Developer articles
+
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-security-and-authentication.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/scos/dev/glue-api-guides/{{page.version}}/security-and-authentication.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |

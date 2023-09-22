@@ -16,13 +16,13 @@ Follow the steps below to install the Marketplace Product Offer feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Product              | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -581,7 +581,7 @@ offer418,112_312526172,MER000002,,1,approved
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
 | product_offer_reference | &check;      | string    | offer1        | Product offer reference that will be referenced to this merchant. |
 | concrete_sku            | &check;        | string    | 093_24495843  | Concrete product SKU this product offer is attached to.      |
@@ -981,7 +981,7 @@ offer418,AT
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ---------------- | ------------ | ------- | ------------- | ------- |
 | product_offer_reference | &check;     | string    | roan-gmbh-und-co-k-g | Product Offer reference, unique identifier per Offer. |
 | store_name              | &check;    | string    | DE  | The name of the store.  |
@@ -1014,7 +1014,7 @@ offer94,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ |-----------|-----------| ----------- | ---------------- |
 | product_offer_reference | &check;   | string    | offer1       | Unique product offer identifier.             |
 | valid_from              |           | String    | 2020-01-01   | Date since which the product offer is valid. |

@@ -9,12 +9,12 @@ Follow the steps below to install the CMS + Catalog feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Catalog | {{site.version}} |  |
-| Cms | {{site.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Catalog | {{page.version}} |  |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ### 1) Configure the CMS page search query
 
@@ -196,19 +196,19 @@ Follow the steps below to install the CMS + Catalog feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Catalog | {{site.version}} |  |
-| Cms | {{site.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Catalog | {{page.version}} |  |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/catalog:"{{site.version}}" spryker-feature/cms:"{{site.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/catalog:"{{page.version}}" spryker-feature/cms:"{{page.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

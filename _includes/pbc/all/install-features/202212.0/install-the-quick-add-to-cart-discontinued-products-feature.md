@@ -4,12 +4,12 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Quick Add To Cart  | {{site.version}}  |
-|Discontinued Products  | {{site.version}} |
+|Quick Add To Cart  | {{page.version}}  |
+|Discontinued Products  | {{page.version}} |
 
 ### 1) Set up behavior
 

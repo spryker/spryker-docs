@@ -6,6 +6,8 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
       - title: Environments overview
         url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
+      - title: Environments provisioning
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html
       - title: Access
         url: /docs/cloud/dev/spryker-cloud-commerce-os/access/access.html
         nested:
@@ -40,12 +42,17 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
       - title: Starting asynchronous commands
         url: /docs/cloud/dev/spryker-cloud-commerce-os/starting-asynchronous-commands.html
+      - title: Best practices
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practices.html
+        nested:
+        - title: "Best practises: Jenkins stability"
+          url: /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode
             url: /docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html
           - title: Configure access to applications in maintenance mode
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html
       - title: Monitoring
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/monitoring.html
         nested:
@@ -83,21 +90,29 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
       - title: Create and restore databse backups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
-      - title: Define parameter and secret values
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/define-parameter-and-secret-values-in-sccos-environments.html
+      - title: Add variables in the Parameter Store
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html
       - title: Verifying email addresses
         url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
       - title: Setting up notifications for 5xx errors
         url: /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-notifications-for-5xx-errors.html
       - title: Peformance testing
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
+      - title: Performance testing in staging environments
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html
+      - title: Managing parameters in the Parameter Store
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
       - title: Multi-store setups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
         nested:
+          - title: Multistore setup options
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
           - title: Add and remove databases of stores
             url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
+          - title: Checklist for a new store implementation
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
       - title: Troubleshooting
         url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting.html
         nested:
@@ -130,6 +145,8 @@ entries:
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-killed-process.html
               - title: Troubleshooting an unavailable Zed
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-an-unavailable-zed.html
+              - title: Troubleshooting failed Jenkins jobs
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failed-jenkins-jobs.html
               - title: Troubleshooting failing Yves authentication
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failing-yves-authentication.html
               - title: Troubleshooting error 403

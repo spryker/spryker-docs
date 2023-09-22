@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,14 +12,14 @@ To start feature integration, integrate the required feature:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -899,7 +899,7 @@ category_key,parent_category_key,name.de_DE,name.en_US,meta_title.de_DE,meta_tit
 cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,1,1,1,0,1,90,Catalog (default)
 ```
 
-|COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
+|COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
 | category_key | &check; | string | cameras-and-camcorder | Sluggable name of the category. |
 | parent_category_key | | string | demoshop | Sluggable name of the parent category. |
@@ -1202,19 +1202,19 @@ Follow the steps below to install the Category Management feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}}| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}}| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1313,6 +1313,6 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|
+| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
+| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

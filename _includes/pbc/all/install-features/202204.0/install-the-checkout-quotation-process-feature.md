@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Quotation Process](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) feature into a Spryker project.
+This document describes how to integrate the [Quotation Process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -9,12 +9,12 @@ Follow the steps below to install the Quotation Process feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Checkout | {{site.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+| Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
 
 ### 1) Set up behavior
 
@@ -75,7 +75,7 @@ Ensure that after you place an order from a quote request, the quote request has
 
 ## Install feature frontend
 
-Follow the steps below to install the [Quotation Process](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) feature frontend.
+Follow the steps below to install the [Quotation Process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) feature frontend.
 
 ### Prerequisites
 
@@ -83,8 +83,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Checkout | {{site.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+| Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
 
 ### Set up quote request workflow
 

@@ -4,12 +4,12 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{site.version}} |
-|Shopping Lists| {{site.version}} |
+|Quick Order| {{page.version}} |
+|Shopping Lists| {{page.version}} |
 
 ### 1) Set up widgets
 

@@ -4,12 +4,12 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{site.version}} |
-|Measurement units| {{site.version}} |
+|Quick Order| {{page.version}} |
+|Measurement units| {{page.version}} |
 
 ### 1) Set up behavior
 

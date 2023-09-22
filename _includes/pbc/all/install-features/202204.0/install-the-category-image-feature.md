@@ -13,15 +13,15 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |
-| Category | {{site.version}} | |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -73,7 +73,7 @@ Adjust the schema definition so entity changes will trigger events.
     </database>
 ```
 
-Set up synchronization queue pools so that non-multistore entities (not store-specific entities) are synchronized among stores:
+Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml**
 
@@ -405,15 +405,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |
-| Category | {{site.version}} | |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

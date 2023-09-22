@@ -3,23 +3,13 @@ title: Feature walkthroughs
 description: Describes Marketplace features from a development perspective
 last_updated: Jan 12, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-acl.html
+  - /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-acl.html
 ---
 
 This section provides descriptions of Marketplace features from a development perspective. It includes the following feature walkthroughs:
-* [Marketplace Product](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-feature-walkthrough.html)
-* [Marketplace Product Approval Process](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-approval-process-feature-walkthrough.html)
-* [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html)
-* [Marketplace Inventory Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-inventory-management-feature-walkthrough.html)
-* [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-prices-feature-walkthrough.html)
-* [Marketplace Merchant Custom Prices](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-custom-prices-feature-walkthrough.html)
-* [Marketplace Return Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-return-management-feature-walkthrough.html)
-* [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html)
-* [Marketplace Promotions and Discounts](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-promotions-and-discounts-feature-walkthrough.html)
-* [Marketplace Product Options](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-options-feature-walkthrough.html)
-* [Marketplace Cart](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-cart-feature-walkthrough.html)
-* [Marketplace Wishlist](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-wishlist-feature-walkthrough.html)
-* [Marketplace Shopping Llists](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html)
-* [persistence ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html)
+* [persistence ACL](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html)
 * [Merchant Category](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/merchant-category-feature-walkthrough.html)
 * [Merchant Opening Hours](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/merchant-opening-hours-feature-walkthrough.html)
 * Merchant Portal

@@ -6,6 +6,8 @@ template: import-file-template
 related:
   - title: Marketplace Product Options feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-options-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html).
@@ -20,7 +22,7 @@ data:import merchant-product-option-group
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
 | product_option_group_key | &check;  | String   | It should be either one word, or several words separated with underscore.    | Unique   | Glossary key for a product option group. |
 | merchant_reference | &check;     | String |      |      | Unique identifier of the merchant the product option group belongs to. |

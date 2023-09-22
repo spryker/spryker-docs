@@ -12,14 +12,12 @@ redirect_from:
   - /docs/en/product-store-relation-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-products-feature-integration.html
 related:
-  - title: Migration Guide - Collector
-    link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
   - title: Migration Guide - Touch
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
   - title: Migration Guide - Product
-    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Migration Guide - ProductManagement
-    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->

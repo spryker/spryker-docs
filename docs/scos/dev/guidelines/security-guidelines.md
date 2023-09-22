@@ -25,11 +25,15 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) and [PaaS+](/docs/paas-plus/dev/platform-as-a-service-plus.html) environments.
+This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) and PaaS environments.
 
 ## Passwords
 
 The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
+
+## Secrets
+
+Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. 
 
 ## Encrypted communication
 
@@ -44,6 +48,94 @@ You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-
 * `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
+
+## Security Headers
+
+Security headers are directives used by web applications to configure security defenses in web browsers.
+Based on these directives, browsers can make it harder to exploit client-side vulnerabilities such as Cross-Site Scripting or Clickjacking.
+Headers can also be used to configure the browser to only allow valid TLS communication and enforce valid certificates,
+or even enforce using a specific server certificate.
+
+The sections below detail configure places for various security headers. You can change them at the project level.
+
+### X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Content-Security-Policy
+
+#### Yves
+For Yves set of default security headers in: `\Spryker\Yves\Application\ApplicationConfig::getSecurityHeaders()`. 
+
+Default values:
+
+```
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'self'; sandbox allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation; base-uri 'self'; form-action 'self'
+```
+
+#### Zed
+
+For Zed set of default security headers in: `\Spryker\Zed\Application\ApplicationConfig::getSecurityHeaders()`.
+
+Default values:
+
+```
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'self'
+```
+
+#### Glue
+
+For Glue set of default security headers in:  `\Spryker\Glue\GlueApplication\GlueApplicationConfig::getSecurityHeaders()`.
+
+Default values:
+
+```
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'self'
+```
+
+#### Glue Storefront
+
+Glue is in the set of default security headers in: `\Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConfig:::getSecurityHeaders()`.
+
+Default values:
+
+```
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'self'
+```
+
+#### Glue Backend
+
+Glue is in the set of default security headers in: `\Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationConfig::getSecurityHeaders()`.
+
+Default values:
+
+```
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: frame-ancestors 'self'
+```
+
+####  Cache-Control header
+
+You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using plugins: 
+* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher::getEventDispatcherPlugins()` 
+and configure using: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`. 
+* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcher::getEventDispatcherPlugins()`
+  and configure using: `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`.
+* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcher::getEventDispatcherPlugins()`
+  and configure using: `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`.
+
+
+
 
 ## Session security and hijacking
 

@@ -4,25 +4,25 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Cart | {{site.version}} |
-|Product  | {{site.version}} |
-|Payments  | {{site.version}} |
-| Shipment | {{site.version}} |
-| Order Management | {{site.version}} |
-| Mailing &amp; Notifications | {{site.version}} |
-| Promotions &amp; Discounts | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+|Product  | {{page.version}} |
+|Payments  | {{page.version}} |
+| Shipment | {{page.version}} |
+| Order Management | {{page.version}} |
+| Mailing &amp; Notifications | {{page.version}} |
+| Promotions &amp; Discounts | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -250,7 +250,7 @@ abstract_sku,pattern
 1234,{prefix}-{randomPart}-{suffix}
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | abstract_sku |mandatory  | string | 1234 |  SKU reference of an abstract gift card product.|
 | pattern |mandatory  | string | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
@@ -264,7 +264,7 @@ sku,value
 1234_3,5000
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | sku | mandatory | string| 1234 | SKU reference of an abstract gift card product. |
 | value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
@@ -1130,20 +1130,20 @@ Note: You need to complete Feature Frontend integration before you can verify th
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Cart | {{site.version}} |
-| Checkout | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -8,12 +8,12 @@ Follow the steps below to install the Quotation process + Approval Process featu
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE |
 |-------------------|------------------|------------------|
-| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
-| Approval Process  | {{site.version}} | [Install the Approval Process feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html) |
+| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+| Approval Process  | {{page.version}} | [Install the Approval Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) |
 
 ### 1) Set up behavior
 

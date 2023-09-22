@@ -15,7 +15,7 @@ To use the Spryker Back Office, users have to authenticate to the Back Office. T
 * Regular Back Office user account.
 * Third-party sign-on (optional).
 
-To *authenticate as a regular Back Office user*, you must have a Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+To *authenticate as a regular Back Office user*, you must have a Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
 
 You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
@@ -32,8 +32,8 @@ If a user chooses to log in using a third party, the user is redirected to the O
 **Strategy 1: Upon the first login, create the Back Office admin user based on the third-party system’s user data.**
 
 If a user who does not exist in the Spryker database logs in for the first time, the following happens:
-* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) in the Back Office.
-* The user is assigned to the default [group](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
+* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) in the Back Office.
+* The user is assigned to the default [group](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
 
 With Strategy 1, the login process looks like this:
 
@@ -53,20 +53,16 @@ The feature has the following functional constraint:
 
 Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
-## Related Business User articles
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
 
 
 
-## Related Developer articles
+
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-security-and-authentication.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-security-and-authentication.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |

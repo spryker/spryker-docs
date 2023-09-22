@@ -201,8 +201,8 @@ jobs:
 
       - run: bundle exec rake check_scos_user
 
-  link_validation_check_paas_plus:
-    name: Links validation (check_paas_plus)
+  link_validation_check_scu:
+    name: Links validation (check_scu)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -220,14 +220,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_paas_plus-htmlproofer
+          key: ${{ runner.os }}-check_scu-htmlproofer
 
       - uses: actions/download-artifact@v2
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_paas_plus
+      - run: bundle exec rake check_scu
 
   link_validation_check_pbc:
     name: Links validation (check_pbc)
@@ -338,7 +338,7 @@ jobs:
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_sdk_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_paas_plus_dev.yml
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scu_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
 

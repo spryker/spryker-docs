@@ -8,7 +8,7 @@ redirect_from:
    - docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html  
 ---
 
-![bazaarvoice](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice/bazaarvoice.png)
+![Bazaarvoice](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice/bazaarvoice.png)
 
 The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app lets you collect and add user-generated content (UGC) to your product pages. 
 
@@ -30,6 +30,9 @@ When you connect Bazaarvoice, the app puts JavaScrip tags into your store, and t
 
 {% info_block infoBox "Info" %}
 
-If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
+If you have Bazaarvoice integrated, the Spryker default the [Ratings and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
+
+## Next step
+[Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{page.version}}/third-party-integrations/integrate-bazaarvoice.html)

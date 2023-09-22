@@ -8,11 +8,11 @@ Follow the steps below to install the Merchant feature.
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -92,7 +92,7 @@ MER000001,Spryker,HRB 134310,approved,harald@spryker.com,1,/de/merchant/spryker,
 MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/video-king,/en/merchant/video-king
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA TYPE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA TYPE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | string | MER000006 | Non-database identifier for a merchant. |
 | merchant_name | &check; | string | Sony Experts | Merchant profile page url for the de_DE locale. |
@@ -115,7 +115,7 @@ MER000003,DE
 MER000007,DE
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | string | MER000006 | Merchant identifier. |
 | store_name | &check; | string | DE | Store name to which the merchant will be assigned. |

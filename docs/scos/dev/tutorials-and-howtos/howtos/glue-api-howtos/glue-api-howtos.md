@@ -21,10 +21,10 @@ redirect_from:
   - /v2/docs/en/about-glue-api-howtos
 related:
   - title: Glue REST API
-    link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
+    link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-rest-api.html
 ---
 
-Glue API HowTo tutorials provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html).
+Glue API HowTo tutorials provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html).
 
 From these guides, you can learn how to perform the following tasks:
 

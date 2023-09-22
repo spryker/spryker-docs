@@ -6,23 +6,23 @@ Follow the steps below to install feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Company Account | {{site.version}} |
-| Customer Account Management | {{site.version}} |
-| Spryker Core | {{site.version}} |
-|Cart | {{site.version}} |
-|Prices | {{site.version}} |
-|Product | {{site.version}} |
+| Company Account | {{page.version}} |
+| Customer Account Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
+|Cart | {{page.version}} |
+|Prices | {{page.version}} |
+|Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shopping-lists:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -489,7 +489,7 @@ Cameras,Cameras,DE--21
 Workstations,WorkstationsDE--21
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key| mandatory | string | Laptops | Key that will identify the shopping list to be referred to in future imports. |
 | name | mandatory | string | Laptops | Name of the shopping list. |
@@ -582,7 +582,7 @@ Workstations,117_30585828,1
 Workstations,129_30706500,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key | mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
 | product_sku | mandatory | string | 187_26306352 | SKU of the concrete product variant that will be added to the shopping list. |
@@ -651,7 +651,7 @@ Workstations,Spryker--3,READ_ONLY
 Workstations,Spryker--6,READ_ONLY
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key | mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
 | company_user_key | mandatory | string | Spryker--7 | Key that will identify the company user that the shopping list is shared with. |
@@ -716,7 +716,7 @@ Cameras,spryker_systems_Zurich,FULL_ACCESS
 Workstations,spryker_systems_Berlin,READ_ONLY
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key| mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
 | business_unit_key | mandatory | string | spryker_systems_HR | Key that will identify the company business unit that the shopping list is shared with. |
@@ -1005,18 +1005,18 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Company Account | {{site.version}} |
-| Multiple Carts | {{site.version}} |
-| Product | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Company Account | {{page.version}} |
+| Multiple Carts | {{page.version}} |
+| Product | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shopping-lists:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

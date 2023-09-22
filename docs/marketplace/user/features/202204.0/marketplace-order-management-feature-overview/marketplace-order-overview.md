@@ -4,13 +4,13 @@ description: This document contains concept information for the Marketplace orde
 template: concept-topic-template
 related:
   - title: Marketplace Order Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Marketplace and merchant state machines overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace and merchant state machines interaction
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Managing marketplace orders
     link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/orders/managing-marketplace-orders.html
 ---
@@ -80,7 +80,7 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 * [Learn about the merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html)
 * [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
 
-## Related Business User articles
+## Related Business User documents
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|

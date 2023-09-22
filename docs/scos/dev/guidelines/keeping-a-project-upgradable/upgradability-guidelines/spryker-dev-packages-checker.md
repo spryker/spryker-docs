@@ -36,10 +36,10 @@ composer.json
 SPRYKER DEV PACKAGES CHECKER
 ============================
 
-Message: Spryker package "spryker/asset:dev-master" has forbidden "dev-*" constraint 
+Message: Spryker package "spryker/asset:dev-master" has forbidden "dev-*" version constraint 
  Target: spryker/storage-gui                                                                    
                                                                                                 
-Message: Spryker package "spryker/asset-storage:dev-some-branch" has forbidden "dev-*" constraint 
+Message: Spryker package "spryker/asset-storage:dev-some-branch" has forbidden "dev-*" version constraint 
  Target: spryker/uuid                                                                                                           
                                                                                                                                 
 

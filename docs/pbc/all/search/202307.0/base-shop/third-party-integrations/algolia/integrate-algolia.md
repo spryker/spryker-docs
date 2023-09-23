@@ -2,44 +2,23 @@
 title: Integrate Algolia
 description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
-last_updated: Feb 23, 2023
+last_updated: Sep 13, 2023
 redirect_from:
-  - /docs/pbc/all/search/202307.0/third-party-integrations/integrate-algolia.html
-  - /docs/pbc/all/search/202307.0/base-shop/third-party-integrations/integrate-algolia.html
+    - /docs/pbc/all/search/202307.0/third-party-integrations/integrate-algolia.html
 ---
 
 This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia.html) into a Spryker shop.
 
 ## Prerequisites
 
-Before you can integrate the Algolia app, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+Before integrating Algolia, ensure the following prerequisites are met:
 
-The Algolia app requires the following Spryker modules:
+- Make sure your project is [ACP-enabled](/docs/acp/user/app-composition-platform-installation.html).
 
-* `spryker/catalog: "^5.8.0"`
-* `spryker/catalog-extension: "^1.0.0"`
-* `spryker/catalog-price-product-connector: "^1.4.0"`
-* `spryker/category: "^5.11.0"`
-* `spryker/category-storage: "^2.5.0"`
-* `spryker/message-broker-aws: "^1.3.1"`
-* `spryker/price-product: "^4.40.0"`
-* `spryker/product: "^6.32.0"`
-* `spryker/product-approval: "^1.1.0"` (Optional)
-* `spryker/product-category: "^4.19.0"`
-* `spryker/product-extension: "^1.5.0"`
-* `spryker/product-image: "^3.13.0"`
-* `spryker/product-label "^3.8.0"`
-* `spryker/product-label-storage "^2.6.0"`
-* `spryker/product-review: "^2.9.0"`
-* `spryker/search: "^8.19.3"`
-* `spryker/search-http: "^1.0.0"`
-* `spryker/store: "^1.17.0"`
-* `spryker/merchant-product-offer: "^1.5.0"` (Marketplace only)
-* `spryker/merchant-product-offer-data-import: "^1.1.0"` (Marketplace only)
-* `spryker/merchant-product-offer-search: "^1.4.0"` (Marketplace only)
-* `spryker/price-product-offer-data-import: "^0.7.1"` (Marketplace only)
-* `spryker/product-offer: "^1.4.0"` (Marketplace only)
+- The Algolia app catalog page lists specific packages which must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
+![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
+Ensure that your installation meets these requirements.
 
 ## Integrate Algolia
 
@@ -62,33 +41,41 @@ use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
 
 //...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
+$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
-    ProductExportedTransfer::class => 'product',
-    ProductCreatedTransfer::class => 'product',
-    ProductUpdatedTransfer::class => 'product',
-    ProductDeletedTransfer::class => 'product',
-    InitializeProductExportTransfer::class => 'product',
-    SearchEndpointAvailableTransfer::class => 'search',
-    SearchEndpointRemovedTransfer::class => 'search',
+    ProductExportedTransfer::class => 'product-events',
+    ProductCreatedTransfer::class => 'product-events',
+    ProductUpdatedTransfer::class => 'product-events',
+    ProductDeletedTransfer::class => 'product-events',
+    InitializeProductExportTransfer::class => 'product-commands',
+    SearchEndpointAvailableTransfer::class => 'search-commands',
+    SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
+$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
+    //...
+    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-events' => 'http',
+];
+
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...
-    'product' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
-    'product' => 'http',
+    'product-events' => 'http',
 ];
+
 ```
 
 ### 2. Configure modules and dependencies
 
-Configure modules and add and the necessary dependencies according to these guidelines.
+Configure modules and add the necessary dependencies according to these guidelines.
 
 #### Configure Catalog dependencies in `Client`
 
@@ -99,17 +86,24 @@ Add the following code to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`
 
 use Generated\Shared\Transfer\SearchContextTransfer;
 use Generated\Shared\Transfer\SearchHttpSearchContextTransfer;
+use Spryker\Client\Catalog\Plugin\SearchHttp\ResultFormatter\ProductConcreteCatalogSearchHttpResultFormatterPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\QueryExpander\ProductPriceSearchHttpQueryExpanderPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\ResultFormatter\CurrencyAwareCatalogSearchHttpResultFormatterPlugin;
+use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\ResultFormatter\CurrencyAwareCatalogSearchHttpResultFormatterPlugin;
+use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategorySuggestionsSearchHttpResultFormatterPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategoryTreeFilterSearchHttpResultFormatterPlugin;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\Catalog\MerchantReferenceSearchHttpQueryExpanderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\Catalog\ProductLabelSearchHttpFacetConfigTransferBuilderPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\ProductConcreteSearchHttpQueryPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SearchHttpQueryPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SuggestionSearchHttpQueryPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\BasicSearchHttpQueryExpanderPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\FacetSearchHttpQueryExpanderPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\CompletionSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\FacetSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\PaginationSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\ProductSearchHttpResultFormatterPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\ProductSuggestionSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SortSearchHttpResultFormatterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SpellingSuggestionSearchHttpResultFormatterPlugin;
 use Spryker\Shared\SearchHttp\SearchHttpConfig;
@@ -142,12 +136,60 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
      */
     protected function createCatalogSearchQueryPluginVariants(): array
     {
-        $searchContextTransfer = (new SearchContextTransfer())
-            ->setSourceIdentifier(SearchHttpConfig::SOURCE_IDENTIFIER_PRODUCT)
-            ->setSearchHttpContext(new SearchHttpSearchContextTransfer());
-
         return [
-            new SearchHttpQueryPlugin($searchContextTransfer),
+            new SearchHttpQueryPlugin(),
+        ];
+    }
+    
+    /**
+     * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
+     *
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryInterface>
+     */
+    protected function createSuggestionQueryPluginVariants(): array
+    {
+        return [
+            new SuggestionSearchHttpQueryPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
+     */
+    protected function createProductConcreteCatalogSearchResultFormatterPluginVariants(): array
+    {
+        return [
+            SearchHttpConfig::TYPE_PRODUCT_CONCRETE_SEARCH_HTTP => [
+                new ProductConcreteCatalogSearchHttpResultFormatterPlugin(),
+            ],
+        ];
+    }
+    
+    /**
+     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
+     */
+    protected function createSuggestionResultFormatterPluginVariants(): array
+    {
+        return [
+            SearchHttpConfig::TYPE_SUGGESTION_SEARCH_HTTP => [
+                new CompletionSearchHttpResultFormatterPlugin(),
+                new CurrencyAwareCatalogSearchHttpResultFormatterPlugin(
+                    new ProductSuggestionSearchHttpResultFormatterPlugin(),
+                ),
+                new CategorySuggestionsSearchHttpResultFormatterPlugin(),
+            ],
+        ];
+    }
+    
+    /**
+     * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
+     *
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryInterface>
+     */
+    protected function createProductConcreteCatalogSearchQueryPluginVariants(): array
+    {
+        return [
+            new ProductConcreteSearchHttpQueryPlugin(),
         ];
     }
 
@@ -160,7 +202,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new BasicSearchHttpQueryExpanderPlugin(),
                 new ProductPriceSearchHttpQueryExpanderPlugin(),
-                new MerchantReferenceSearchHttpQueryExpanderPlugin(),
                 new FacetSearchHttpQueryExpanderPlugin(),
             ],
         ];
@@ -272,7 +313,6 @@ namespace Pyz\Client\SearchHttp;
 use Spryker\Client\Catalog\Plugin\ConfigTransferBuilder\CategoryFacetConfigTransferBuilderPlugin;
 use Spryker\Client\Catalog\Plugin\SearchHttp\CatalogSearchHttpConfigBuilderPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\ConfigTransferBuilder\PriceFacetConfigTransferBuilderPlugin;
-use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantProductMerchantNameSearchConfigExpanderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\ProductLabelFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductReview\Plugin\RatingFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductSearchConfigStorage\Plugin\Config\ProductSearchConfigExpanderPlugin;
@@ -310,7 +350,6 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     {
         return [
             new ProductSearchConfigExpanderPlugin(),
-            new MerchantProductMerchantNameSearchConfigExpanderPlugin(), # Marketplace only
         ];
     }
 }
@@ -340,9 +379,8 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
   {
       return [
           //...
-          new InitializeProductExportMessageHandlerPlugin(),
-          new SearchEndpointAvailableMessageHandlerPlugin(),
-          new SearchEndpointRemovedMessageHandlerPlugin(),
+          new ProductExportMessageHandlerPlugin(),
+          new SearchEndpointMessageHandlerPlugin(),
       ];
   }
 
@@ -352,7 +390,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 #### Adjust MessageBroker configuration in `Zed`
 
-Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
 //...
@@ -366,7 +404,11 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
      */
     public function getDefaultWorkerChannels(): array
     {
-        return [/*... ,*/ 'product', 'search'];
+        return [
+            //...
+            'product-commands',
+            'search-commands',
+        ];
     }
 
     //...
@@ -375,7 +417,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 #### Adjust Product configuration in `Zed`
 
-Add the following to `src/Pyz/Zed/Product/ProductConfig.php`:
+Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 ```php
 //...
@@ -565,7 +607,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Add SearchHttp configuration in `Zed`
 
-Add the code following to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
+Add the following code to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
 
 ```php
 <?php
@@ -582,7 +624,7 @@ class SearchHttpConfig extends SprykerSearchHttpConfig
      */
     public function getSearchHttpSynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
 ```
@@ -630,7 +672,7 @@ This command must be executed periodically. To achieve this, configure Jenkins i
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15',
+    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
     'schedule' => '* * * * *',
     'enable' => true,
     'stores' => $allStores,

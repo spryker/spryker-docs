@@ -4087,8 +4087,8 @@ entries:
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configure cross-origin resource sharing for Glue API
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
         - title: Configuring Visibility of the Included Section
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources
@@ -4269,21 +4269,6 @@ entries:
       include_versions:
       - "202204.0"
       nested:
-      - title: Punchout Catalog
-        include_versions:
-      - "202204.0"
-    - title: Punchout Catalog feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs + Product Bundles feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
-      include_versions:
-      - "202204.0"
     - title: Payment partners
       nested:
         - title: Adyen

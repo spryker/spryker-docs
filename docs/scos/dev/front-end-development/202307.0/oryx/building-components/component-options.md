@@ -7,7 +7,7 @@ template: concept-topic-template
 
 ## Component options
 
-Oryx components can be provided with options. Component options are javascript objects that can be configured as part of the application configuration, to make the components better reusable in different business contexts.
+Oryx components support configurable options to make the components better reusable in different business contexts. Component options are javascript objects that can be configured as part of the application configuration or added by providing an attribute. Each component type can provide an interface for the options, to ensure a good developer experience when you use the component.
 
 To illustrate the usage of component options, we use the tax message ("incl. vat") that is rendered on the `ProductPriceComponent`. The tax message might not be useful for all businesses. For example, in a b2c context, the message might not be required. You can conditionally render the message based on a configuration.
 
@@ -38,7 +38,11 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 
 ## Configure Component Options
 
-The component option model can be configured in various ways. Components can setup default values for the options. Feature sets can be used to configure the options for a specific business model. The feature sets configurations can be override by application configurations and last but not least, the component instance options can be specified in the experience data.
+Component options can be configured in various ways. To begin with, components can setup default values for the options that are used as a fallback in case no values are provided. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) can provide values for a specific business context. As an application developer, you can provide customized values, either for all component instances in the application configuration, or by providing options per instance in the experience data.
+
+When you use components in your code, you can also override the options in the code.
+
+The various approaches to setup the values are detailed in the following sections.
 
 ### Default component option values
 
@@ -76,7 +80,7 @@ export const app = appBuilder()
   .create();
 ```
 
-### Experience data
+### Component option values in Experience data
 
 The default options, feature set configurations and application configurations are all applied to the Component type. The options provided in the experience data are applied to a specific instance in the experience data structure.
 
@@ -96,6 +100,22 @@ In the following configuration you see a part of the experience data that sets t
 
 You can read more about creating and customizing experience data in the
 [page documentation](/docs/scos/dev/front-end-development/202307.0/oryx/building-pages/oryx-pages.html).
+
+### Hardcoded component options
+
+When you use components in your code, the options can be provided by the `options` attribute. The options attribute is resolved automatically by the `ContentMixin`, that most domain components use.
+
+The example below shows how component options are written in the component `options` attribute. When options are added by an attribute, the web component specs require a stringified JSON. [Lit](https://lit.dev) provides a convenient property mapping that we use in the example below.
+
+```ts
+protected override render(): TemplateResult {
+
+  const options: ProductPriceOptions = {
+    enableSalesLabel: false;
+  }
+  return html`<oryx-product-price .options=${options}></oryx-product-price>`;
+}
+```
 
 ## Use component options
 

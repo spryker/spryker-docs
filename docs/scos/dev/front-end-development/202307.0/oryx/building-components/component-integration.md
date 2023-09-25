@@ -9,8 +9,6 @@ Oryx components are _framework agnostic_. This means that components can be used
 
 Oryx components are build as [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components). Web components are a suite of standard web technologies, widely embraced by browser vendors. The purpose of web components is to provide components in isolation, so that they can easily integrate with other web technologies.
 
-Web components can be built with different frameworks or even plain html, css and javascript. Oryx components are implemented with [Lit](https://lit.dev). Lit is a lightweight open source framework from Google that can be used to build highly efficient web components. If you do not want to use Lit, you can use your own framework of choice.
-
 ## Integrate in other web frameworks
 
 Thanks to the web component based architecture, Oryx components integrate with any web framework. You can integrate Oryx components inside component frameworks, such as [React](https://react.dev/), [Vue.js](https://vuejs.org/), [Angular](https://angular.io/).

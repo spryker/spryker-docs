@@ -100,7 +100,7 @@ entries:
     - title: Supported browsers
       url: /docs/scos/user/intro-to-spryker/supported-browsers.html
     - title: Spryker Marketplace
-      url: /docs/scos/user/intro-to-spryker/spryker-marketplace/intro-to-spryker-marketplace.html
+      url: /docs/scos/user/intro-to-spryker/spryker-marketplace/spryker-marketplace.html
       nested:
       - title: Marketplace concept
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html

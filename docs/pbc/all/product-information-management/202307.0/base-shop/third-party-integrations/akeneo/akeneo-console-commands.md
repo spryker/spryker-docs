@@ -1,5 +1,5 @@
 ---
-title: "Akeneo: Console commands"
+title: "Akeneo Connector (Eco Module): Console commands"
 description: This guide provides the console commands for the Akeneo module.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202307.0/product-information-pimerp/akeneo/akeneo-console-commands.html
 ---
 
-The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html) of the Akeneo module. Run them one by one.
+The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html) of the Akeneo Connector eco module. Run them one by one.
 
 1) Command to import super attributes:
 ```bash

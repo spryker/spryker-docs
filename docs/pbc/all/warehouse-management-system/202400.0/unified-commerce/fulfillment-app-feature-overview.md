@@ -11,6 +11,8 @@ Fulfillment App supports store associates (warehouse users) in the picking proce
 
 ## Warehouse user
 
+A *warehouse user* is a person that works in one or more warehouses to fulfill orders. 
+
 To create a warehouse user, select the *"IS WAREHOUSE USER"* checkbox under a user's option when creating or modifying one in the Back Office. To learn more about managing warehouse users in Back Office, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
 You can assign warehouses by selecting `Assign Warehouses`. By assigning a warehouse, you give the user the necessary access so they can fulfill order items in that specific warehouse.
 blob:https://spryker.atlassian.net/ea1cb604-6126-4a3b-a9d0-b4bcd84b2367#media-blob-url=true&id=a24dda2e-6334-42fb-90c9-3bf59fcb9f0b&collection=&contextId=364968&height=436&width=1209&alt=
@@ -18,6 +20,8 @@ blob:https://spryker.atlassian.net/ea1cb604-6126-4a3b-a9d0-b4bcd84b2367#media-bl
 Warehouse users can only log in into the Fulfillment App but lose access to the Back Office.
 {% endinfo_block %}
 For additional information on the process, you can look at the (Warehouse Users Integration Guide)[https://docs.spryker.com/docs/pbc/all/back-office/{{page.version}}/install-spryker-core-back-office-warehouse-user-management-feature) and (BAPI coverage)[https://docs.spryker.com/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html].
+
+
 ## Allocating a warehouse
 {% info_block infoBox "Info" %}
 The default warehouse allocation strategy can be replaced on the project level with a custom strategy.
@@ -76,3 +80,19 @@ For further information, see the (**Push Notifications** integration guide)[http
 * Business logic for picking of bundle products is not supported, but if all concretes of the bundle product are picked, it will be successfully processed by State Machine.
 * No visualization of configurable bundles in Fulfillment App is currently possible, but picking of items in bundles is.
 * Picking of random weight products is not currently available.
+
+
+
+
+
+## Related Business User articles
+
+|BACK OFFICE USER GUIDES|
+|---|
+| [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202400.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html)  |
+| [Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)  |
+
+## Related Developer articles
+
+| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---|---|---|---|---|

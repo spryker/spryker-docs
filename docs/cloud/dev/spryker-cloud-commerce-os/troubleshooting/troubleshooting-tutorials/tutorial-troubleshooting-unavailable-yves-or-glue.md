@@ -2,6 +2,8 @@
 title: Tutorial — Troubleshooting unavailable Yves or Glue
 description: Learn how to troubleshoot unavailable Yves or Glue
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-unavailable-yves-or-glue.html
 ---
 Yves or Glue didn't restart after a deployment or you can't access it.
 

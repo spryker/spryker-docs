@@ -2,6 +2,8 @@
 title: Tutorial — Troubleshooting failing Yves authentication
 description: Learn what to do when Yves authentication fails
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failing-yves-authentication.html
 ---
 
 Yves authentication fails for all customers.

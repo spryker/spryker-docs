@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202212.0/hosting-providers/continum.html
   - /docs/scos/user/technology-partners/202212.0/hosting-providers/metaways.html
   - /docs/scos/dev/technology-partner-guides/202212.0/hosting-providers/integrating-heroku.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
 ---
 
 This document is a starting point of development with the Spryker Cloud Commerce OS(SCCOS).

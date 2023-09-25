@@ -9,6 +9,7 @@ redirect_from:
   - /docs/connecting-docker-sdk
   - /docs/en/connecting-docker-sdk
   - /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk
+  - /docs/cloud/dev/spryker-cloud-commerce-os/connecting-the-docker-sdk.html
 ---
 
 Spryker Docker SDK is a tool used to set up docker environments for Spryker projects.

@@ -1,5 +1,5 @@
 ---
-title: Generating access keys
+title: Generate access keys
 description: Learn how to generate access keys for your AWS account.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/generating-access-keys
@@ -7,6 +7,7 @@ originalArticleId: 624eb34a-4e28-40ec-a9cb-663ae1524d33
 redirect_from:
   - /docs/generating-access-keys
   - /docs/en/generating-access-keys
+  - /docs/cloud/dev/spryker-cloud-commerce-os/security/generating-access-keys.html
 ---
 
 This document describes how to generate access keys. Access keys are used to access AWS Command Line Interface and connect integrated development environments, like PhpStorm.

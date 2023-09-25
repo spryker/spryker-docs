@@ -2,6 +2,8 @@
 title: Setting up a notifications for 5xx errors
 description: Learn how to set up notifications for 5xx errors via SNS
 template: howto-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-notifications-for-5xx-errors.html
 ---
 
 This document describes how to set up email notifications for 5xx errors via [Simple Notification Service](https://docs.aws.amazon.com/sns/latest/dg/welcome.html). The notifications are sent if, during a two-minute period, more than 20% of requests are getting 5xx responses.

@@ -2,6 +2,8 @@
 title: Troubleshooting tutorials
 description: Learn how to troubleshoot common issues in Spryker Cloud Commerce OS
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/troubleshooting-tutorials.html
 ---
 
 The documents in this section explain how to troubleshoot common issues. You will learn what to check if an issue occurs and how to understand if an issue is related to the infrastructure or the application itself.

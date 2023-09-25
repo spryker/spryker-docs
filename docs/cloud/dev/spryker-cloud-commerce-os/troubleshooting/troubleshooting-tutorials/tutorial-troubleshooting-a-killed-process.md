@@ -2,6 +2,8 @@
 title: Tutorial — Troubleshooting a killed process
 description: Learn how to troubleshoot a killed process
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-killed-process.html
 ---
 
 One of the reasons for a process being killed is OOM Killer(Out of memory Killer).

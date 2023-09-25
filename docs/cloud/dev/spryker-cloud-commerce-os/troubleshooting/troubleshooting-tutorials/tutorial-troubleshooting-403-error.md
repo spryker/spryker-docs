@@ -2,6 +2,8 @@
 title: Tutorial — Troubleshooting 403 error
 description: Learn how to troubleshoot 403 error
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.html
 ---
 A website functionality is not working properly, or there is a 403 status response code in the frontend logs.
 

@@ -1,8 +1,10 @@
 ---
- title: "Best practises: Jenkins stability"
- description: Improve the stability of the scheduler component.
- template: best-practices-guide-template
- last_updated: Jun 10, 2023
+title: "Best practises: Jenkins stability"
+description: Improve the stability of the scheduler component.
+template: best-practices-guide-template
+ - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
+redirect_from:
+last_updated: Jun 10, 2023
 ---
 
 Jenkins fulfills the role of a scheduler in the Spryker applications. It is used to run repetitive console commands and jobs. In Spryker Cloud Commerce OS, the Jenkins instance runs the commands configured directly in its container. This means that, when you run a command like the following one, it's executed within the Jenkins container, utilizing its resources:

@@ -2,9 +2,11 @@
 title: Verifying email addresses
 description: Learn how to verify email addresses, so that your applications can send emails from them.
 template: howto-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
 ---
 
-For your applications to be able to send emails from an email address, you need to verify it. The verification is required to prevent spam from being sent from staging environments. 
+For your applications to be able to send emails from an email address, you need to verify it. The verification is required to prevent spam from being sent from staging environments.
 
 To verify an email address:
 

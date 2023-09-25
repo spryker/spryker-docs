@@ -2,6 +2,8 @@
 title: Multi-store setup options
 description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
 related:
   - title: Add and remove databases of stores
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html

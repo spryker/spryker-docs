@@ -1,5 +1,5 @@
 ---
-title: Configuring Azure Pipelines
+title: Configure Azure Pipelines
 description: Learn how to configure Azure Pipelines and connect them to your project.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-azure-pipelines
@@ -7,11 +7,12 @@ originalArticleId: df3448d4-34a8-43a8-bc58-f37ea8b6cd8d
 redirect_from:
   - /docs/configuring-azure-pipelines
   - /docs/en/configuring-azure-pipelines
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html
 ---
 
 This document describes how to configure Azure pipelines and connect them to your Spryker Commerce OS project.
 
-Azure Pipelines automatically builds and tests code projects to make them available to others. It works with just about any language or project type. Azure Pipelines combines continuous integration (CI) and continuous delivery (CD) to constantly and consistently test and build your code and ship it to any target. 
+Azure Pipelines automatically builds and tests code projects to make them available to others. It works with just about any language or project type. Azure Pipelines combines continuous integration (CI) and continuous delivery (CD) to constantly and consistently test and build your code and ship it to any target.
 
 The main building blocks of azure pipelines are stages, jobs, and steps. To learn more, see [Azure Pipelines documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops).
 
@@ -26,7 +27,7 @@ Adjust the following example or use it as a reference to configure the desired g
 ```yaml
 pool:
     vmImage: ubuntu-18.04
-    
+
 steps:
     - script:
           git clone https://github.com/spryker/docker-sdk.git docker
@@ -65,13 +66,13 @@ steps:
           docker/sdk testing codecept run -c codeception.functional.yml
       displayName: 'Functional tests'
   ```
-  
+
 ## Connecting Azure Pipelines to your project
 
 To connect Azure Pipelines with your AWS repository:
 1. Request your AWS repository URL and credentials from [support](https://spryker.force.com/support/s/).
 
-2. Add the following to the end of `azure-pipelines.yml`: 
+2. Add the following to the end of `azure-pipelines.yml`:
 ```yaml
 ...
     - script: |
@@ -92,21 +93,6 @@ Values to replace:
 
 `{target-repo.username}` and `{target-repo.password}`: credentials you’ve received from support.
 
- 
+
 
 You’ve configured Azure pipelines.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

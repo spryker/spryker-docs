@@ -5,6 +5,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/troubleshooting-deployment.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment-issues.html
 ---
 
 This section contains solutions to common deployment issues.

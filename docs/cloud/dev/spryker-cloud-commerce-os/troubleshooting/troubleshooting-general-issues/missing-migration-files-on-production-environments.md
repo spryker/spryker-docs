@@ -1,15 +1,17 @@
 ---
-title: Missing migration files on production environments 
+title: Missing migration files on production environments
 description: Troubleshoot issues you might encounter when you have your Spryker-based project in Cloud. Missing migration files on production environment
 last_updated: Jun 9, 2022
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/missing-migration-files-on-production-environments.html
 ---
 
 There are no tables in the DB after deploy.
 
 {% info_block warningBox "Note" %}
 
-It is recommended to define a strategy for migrations at the start of the project. 
+It is recommended to define a strategy for migrations at the start of the project.
 We recommend to push all the migrations to a repository as a go-live preparation to make sure that all the migrations that are executed against production are also in the repositoriy to ease possible troubleshooting in the future.
 
 {% endinfo_block %}
@@ -25,4 +27,4 @@ During the development you can keep your migrations ignored by a repositoriy to 
 console propel:migration:delete
 ```
 
-Find more information about [deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html) or [customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html) 
+Find more information about [deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html) or [customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html)

@@ -7,6 +7,7 @@ originalArticleId: 2047c84c-bd7b-4bce-9203-08945367ad46
 redirect_from:
   - /docs/managing-parameters-in-the-parameter-store
   - /docs/en/managing-parameters-in-the-parameter-store
+  - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
 ---
 
 This document describes how you can add new parameters and edit the values of existing parameters. You can use parameters for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.

@@ -10,6 +10,7 @@ redirect_from:
   - /docs/en/configuring-github-actions
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/upcoming-release/configuring-github-actions.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-github-actions.html
 ---
 
 This document describes how to configure continuous integration using GitHub Actions.

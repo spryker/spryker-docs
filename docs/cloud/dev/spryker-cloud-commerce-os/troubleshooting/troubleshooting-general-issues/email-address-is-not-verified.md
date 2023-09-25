@@ -2,6 +2,8 @@
 title: Email address is not verified
 description: Solution to the error about unverified email addres.
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/email-address-is-not-verified.html
 ---
 
 

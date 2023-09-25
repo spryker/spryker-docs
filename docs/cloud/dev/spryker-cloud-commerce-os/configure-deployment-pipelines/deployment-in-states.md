@@ -8,6 +8,7 @@ redirect_from:
   - /docs/deployment-pipelines
   - /docs/en/deployment-pipelines
   - /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.html
 ---
 
 When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states that an application goes through during a deployment, potential issues, and what you need to do to avoid them.

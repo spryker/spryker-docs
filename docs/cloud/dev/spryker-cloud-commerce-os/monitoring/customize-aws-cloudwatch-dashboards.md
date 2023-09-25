@@ -1,3 +1,4 @@
+  - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html
 ---
 title: Customize AWS CloudWatch dashboards
 description: Adjust AWS CloudWatch dashboards to your needs.

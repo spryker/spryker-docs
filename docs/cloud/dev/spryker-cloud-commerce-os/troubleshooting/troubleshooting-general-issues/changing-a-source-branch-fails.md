@@ -4,6 +4,7 @@ description: Solution to a failed source branch change while saving pipeline set
 template: troubleshooting-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/changing-a-source-branch-fails.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/changing-a-source-branch-fails.html
 ---
 
 

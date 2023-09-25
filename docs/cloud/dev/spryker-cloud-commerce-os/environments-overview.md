@@ -2,7 +2,9 @@
 title: Environments overview
 description: Learn about the development, staging, and production environments of the Spryker Cloud Commerce OS
 template: concept-topic-template
+redirect_from:
 last_updated: Jun 8, 2023
+  - /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
 ---
 
 This document explains what to do with the hosting environments you received at the start of your contract and how you can make use of them best. Knowing the purpose of these platforms and working with them as intended can help you build more solid and performant projects.
@@ -25,11 +27,11 @@ This environment is a non production environment that is usually used to host a 
 
 ### Production (PROD)
 
-Your production environment must host the code that the end-user gets to interact with directly. The code must already be tested on the staging environment for stability and performance. 
+Your production environment must host the code that the end-user gets to interact with directly. The code must already be tested on the staging environment for stability and performance.
 
 {% info_block infoBox "Note" %}
 
-Do not make changes to the production environments directly unless they have been verified on your staging and dev environments first. 
+Do not make changes to the production environments directly unless they have been verified on your staging and dev environments first.
 We highly recommend testing every data load and import, as well as any integrations on your staging environment.
 
 {% endinfo_block %}

@@ -2,6 +2,8 @@
 title: Tutorial — Troubleshooting an unavailable Zed
 description: Learn how to troubleshoot an unavailable Zed
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-an-unavailable-zed.html
 ---
 Zed didn't restart after a deployment or you can't access it.
 

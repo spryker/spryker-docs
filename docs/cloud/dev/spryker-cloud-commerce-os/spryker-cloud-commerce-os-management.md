@@ -3,6 +3,8 @@ title: Spryker Cloud Commerce OS management
 description: Assignment of responsibilities, consultation and reporting obligations.
 last_updated: Nov 21, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/spryker-cloud-commerce-os-management.html
 ---
 
 This RACI Matrix defines responsibilities, consultation and reporting obligations while providing Platform-as-a-Service (PaaS) hosting for Spryker customers.

@@ -4,6 +4,7 @@ description: Solution to absent assets, logs, or pipelines in the AWS Management
 template: troubleshooting-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
 ---
 
 

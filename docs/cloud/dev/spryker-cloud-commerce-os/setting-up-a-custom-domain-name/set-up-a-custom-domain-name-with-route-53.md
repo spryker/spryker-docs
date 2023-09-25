@@ -6,6 +6,7 @@ originalArticleId: 6a422776-6e65-48ae-8133-759954b13537
 redirect_from:
   - /docs/setting-up-a-custom-domain-name-with-route-53
   - /docs/en/setting-up-a-custom-domain-name-with-route-53
+  - /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-route-53.html
 ---
 
 This document describes how to set up a custom domain name (domain) with its DNS zone hosted by [Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html).

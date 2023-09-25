@@ -7,11 +7,12 @@ originalArticleId: 2e1dea17-21b4-4b25-ac8f-7cf2766f07eb
 redirect_from:
   - /docs/setting-up-a-custom-ssl-certificate
   - /docs/en/setting-up-a-custom-ssl-certificate
+  - /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html
 ---
 
-This document describes how to set up an SSL certificate (SSL) for a production environment. 
+This document describes how to set up an SSL certificate (SSL) for a production environment.
 
-By default, all the domain names (domains) are provided with generic SSLs, which are managed automatically. For the production environment, you can set up a custom SSL certificate. 
+By default, all the domain names (domains) are provided with generic SSLs, which are managed automatically. For the production environment, you can set up a custom SSL certificate.
 
 {% info_block infoBox "Third-party DNS zone provider" %}
 
@@ -36,27 +37,15 @@ To set up a custom SSL:
     * Certificate body
     * Certificate private key
     * Optional: Certificate chain
- 
+
 {% info_block warningBox "Format" %}
 
 The values should be [PEM-encoded](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate-format.html).
-    
+
 {% endinfo_block %}
-    
-We set up the SSL shortly after you have provided it. 
+
+We set up the SSL shortly after you have provided it.
 
 
 ## Next step
 [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
-
-
-
-
-
-
-
-
-
-
-
-

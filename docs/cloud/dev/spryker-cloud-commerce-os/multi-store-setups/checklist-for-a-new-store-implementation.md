@@ -2,6 +2,8 @@
 title: Checklist for a new store implementation
 description: Learn how to implement a new store in a multi-store environment
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
 related:
   - title: Multistore setup options
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
@@ -22,7 +24,7 @@ For detailed steps about the new store implementation, see [HowTo: Set up multip
 2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes.  
 3. Adjust the importer and define product, content, data, payment, including OMS, or stock store relations via the importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
-5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search). 
+5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search).
 6. Migration of the existing data into the shared instance. Spryker can support you in this on request.
 7. Full UAT, end2end tests.
 8. Check the provided launch list from Spryker, if you start a new project.
@@ -50,10 +52,10 @@ For this setup, send a support request to Spryker and do the following:
 **SI / Customer**
 
 1. Set up a local dev environment and adjust the configuration in `config.php`, including hosts in data YML files, for example, in `/deploy.spryker-b2c-production.yml`.
-2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes. 
+2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes.
 3. Adjust the importer and define product, content, data, payment, including OMS or stock store relations via the importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
-5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search). 
+5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search).
 6. Migrate the existing data into the shared instance. Spryker can support you in this on request.
 7. Conduct the full UAT, end2end tests.
 8. If you start a new project, check the provided launch list from Spryker.
@@ -73,7 +75,7 @@ The following steps are subject to change and should be considered as tentative.
 
 {% endinfo_block %}
 
-For this type of setup, you have to send a new provisioning request via the [Spryker support portal](https://support.spryker.com/s/). 
+For this type of setup, you have to send a new provisioning request via the [Spryker support portal](https://support.spryker.com/s/).
 
 **Spryker**
 
@@ -82,10 +84,10 @@ Provision of a new fully isolated environment per store.
 **SI / Customer**
 
 1. Set up a local dev environment and adjust the configuration in `config.php`, including hosts in data YML files, for example, in `/deploy.spryker-b2c-production.yml`.
-2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes. 
+2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes.
 3. Adjust the importer and define product, content, data, payment, including OMS or stock store relations via the importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
-5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search). 
+5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search).
 6. Migrate the existing data into the shared instance. Spryker can support you in this on request.
 7. Conduct the full UAT, end2end tests.
 8. Check the provided launch list from Spryker, if you start a new project.
@@ -107,7 +109,7 @@ The touchpoints listed here may vary depending on the project. If view of that, 
 
 ### Data
 1. Generate product data files to add new localized attributes and entries.
-2. Create the folder `data/import/common/{NewStore}` and fill it with all the files that reflect the new store. 
+2. Create the folder `data/import/common/{NewStore}` and fill it with all the files that reflect the new store.
 3. Modify install recipes to add the new folder you created or copied in the previous steps.
 
 ### Store domains and certificates
@@ -117,7 +119,7 @@ Request the Spryker Cloud team to create domains and certificates.
 
 Certificates are created for all domains.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ### Translations
 - Re-generate all CSV files consisting of a new locale.

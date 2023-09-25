@@ -5,6 +5,7 @@ last_updated: Sep 15, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing-in-staging-enivronments.html
 ---
 
 Performance testing is an integral part of the development and deployment process. Even if you execute performance testing during development, we highly recommend testing the performance of your code in a staging environment before deploying it in production environments.

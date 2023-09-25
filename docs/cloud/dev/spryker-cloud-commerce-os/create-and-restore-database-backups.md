@@ -9,6 +9,7 @@ redirect_from:
   - /docs/creating-and-restoring-database-backups
   - /docs/en/creating-and-restoring-database-backups
   - /docs/cloud/dev/spryker-cloud-commerce-os/creating-and-restoring-database-backups.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
 ---
 
 This doc describes how to create and restore database (DB) backups in Spryker Cloud Commerce OS (SCCOS).

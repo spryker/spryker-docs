@@ -8,6 +8,7 @@ redirect_from:
   - /docs/configuring-gitlab-pipelines
   - /docs/en/configuring-gitlab-pipelines
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-gitlab-pipelines.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-gitlab-pipelines.html
 ---
 
 This document describes how to configure continuous integration using GitLab Pipelines.
@@ -18,7 +19,7 @@ GitLab pipelines automate steps in the SDLC like builds, tests, and deployments.
 For more information on Gitlab Pipelines, see [GitLab CI/CD](https://docs.gitlab.com/ee/ci/README.html).
 
 ## Prerequisites
-In the repository root, create the CI/CD configuration file: `.gitlab-ci.yml`. 
+In the repository root, create the CI/CD configuration file: `.gitlab-ci.yml`.
 
 ## Configuring groups of tests via the Docker SDK
 To configure GitLab pipelines:
@@ -163,4 +164,3 @@ functional-tests:
 ## See also
 
 For more configuration options of GitLab pipelines, see [The .gitlab-ci.yml file](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html).
-

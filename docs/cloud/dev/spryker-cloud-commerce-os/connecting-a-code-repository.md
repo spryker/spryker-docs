@@ -8,13 +8,14 @@ redirect_from:
   - /docs/connecting-code-repository
   - /docs/en/connecting-code-repository
   - /docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository
+  - /docs/cloud/dev/spryker-cloud-commerce-os/connecting-a-code-repository.html
 ---
 
 This document describes how to connect a code repository to Spryker Cloud Commerce OS.
 
 {% info_block infoBox "Initial setup" %}
 
-If you specified a code repository in the Onboarding Questionnaire, we connected it to your Staging environment during the initial setup. To connect a code repository to another environment, follow this document. 
+If you specified a code repository in the Onboarding Questionnaire, we connected it to your Staging environment during the initial setup. To connect a code repository to another environment, follow this document.
 
 Note that we are only supporting the Cloud variants of the repositories listed below. To connect the On-Premises repository, check the documentation of your git repository provider about mirroring the repository to one of the following providers.
 

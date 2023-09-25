@@ -7,6 +7,7 @@ originalArticleId: 9a152894-26bd-488f-8dfa-a8e645063c51
 redirect_from:
   - /docs/deploying-in-a-staging-environment
   - /docs/en/deploying-in-a-staging-environment
+  - /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html
 ---
 
 This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html#staging-stage).

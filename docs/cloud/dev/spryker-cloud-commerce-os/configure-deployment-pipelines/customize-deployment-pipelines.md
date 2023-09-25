@@ -1,5 +1,5 @@
 ---
-title: Customizing deployment pipelines
+title: Customize deployment pipelines
 description: Learn how to customize deployment pipelines.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/customizing-deployment-pipelines
@@ -8,6 +8,7 @@ redirect_from:
   - /docs/customizing-deployment-pipelines
   - /docs/en/customizing-deployment-pipelines
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html
 ---
 
 This document describes how to customize deployment pipelines.
@@ -29,7 +30,7 @@ This document describes how to customize deployment pipelines.
 To customize the `pre-deploy` stage of a pipeline:
 
 1.  In a deploy file of the desired environment, set the shell command as a value of the `SPRYKER_HOOK_BEFORE_DEPLOY:` variable:
-    
+
 ```yaml    
 environment: ...
 image:
@@ -83,11 +84,11 @@ if [ "${SPRYKER_PROJECT_NAME}" == "spryker-dev" ]; then
   {list_of_commands}
 fi
 
-if [ "${SPRYKER_PIPELINE_TYPE}" == "normal" ]; then 
+if [ "${SPRYKER_PIPELINE_TYPE}" == "normal" ]; then
   {list_of_commands}
 fi
 
-if [ "${SPRYKER_PIPELINE_TYPE}" == "destructive" ]; then 
+if [ "${SPRYKER_PIPELINE_TYPE}" == "destructive" ]; then
   {list_of_commands}
 fi
 ```
@@ -97,13 +98,12 @@ fi
 To add one or more commands to the `install` stage of a deployment pipeline:
 
 1.  Depending on the desired environment, add the desired commands to one of the following files:
-    
+
 * Normal: `config/install/production`
-        
+
 * Destructive: `config/install/destructive`
-        
+
 2.  Push the changes to the repository.
-    
+
 
 During the next deployment, the commands in the script will be executed in the `install` stage.
-

@@ -7,9 +7,10 @@ originalArticleId: 71dae250-39b8-4adc-a57d-ba9376587f7c
 redirect_from:
   - /docs/deploying-in-a-production-environment
   - /docs/en/deploying-in-a-production-environment
+  - /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
 ---
 
-This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [production environment](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html#production-prod). 
+This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [production environment](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html#production-prod).
 
 
 ## Prerequisites
@@ -27,12 +28,12 @@ Example of the ECR images with the application version in tags:
 * `spryker-prod-frontend:290b955bd06d029c8643c093b58a0cedb86b1c8d`
 * `spryker-prod-jenkins:290b955bd06d029c8643c093b58a0cedb86b1c8d`
 
- 
+
 
 
 ## 1. Check the version to deploy
 
-To deploy a specific application version, copy the version of the respective GitHub commit: 
+To deploy a specific application version, copy the version of the respective GitHub commit:
 
 
 ![version to deploy](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/version-to-deploy.png)
@@ -43,13 +44,13 @@ To deploy a specific application version, copy the version of the respective Git
 ## 2. Define the version to deploy
 To define the application version to deploy:
 
-1. In the AWS Management Console, go to **Services** > **Systems Manager** > **Application Management** > **[Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/)**. 
+1. In the AWS Management Console, go to **Services** > **Systems Manager** > **Application Management** > **[Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/)**.
 
 2. Select */spryker-prod/desired_version*.
 
-3. Select **Edit**. 
+3. Select **Edit**.
 
-4. Enter the application version into the **Value** field. 
+4. Enter the application version into the **Value** field.
 
 5. Select **Save changes**.
 
@@ -59,12 +60,12 @@ To run a pipeline:
 
 1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
 
-2. Select *NORMAL_Deploy_Spryker_spryker-prod*. 
+2. Select *NORMAL_Deploy_Spryker_spryker-prod*.
 
 
 {% info_block infoBox "Normal deploy" %}
 
-*Normal deploy* is a pipeline that includes all the stages of a complete CI/CD flow. The *Install* stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. We recommend this type of deploy for the production environment. 
+*Normal deploy* is a pipeline that includes all the stages of a complete CI/CD flow. The *Install* stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. We recommend this type of deploy for the production environment.
 
 {% endinfo_block %}
 
@@ -72,7 +73,7 @@ To run a pipeline:
 
     1. In the *Prepare_versions_information_for_Approval_stage* stage, select **Details**.
 
-    
+
 
     ![compare application versions](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/compare-application-versions.png)
 
@@ -82,7 +83,7 @@ To run a pipeline:
 
     3. Check `Deploymnet version` and `Latest deployed version` in the output.
 
-    
+
 
     ![deployment-versions-logs](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/deployment-versions-logs-prod.png)
 
@@ -119,7 +120,7 @@ To check the deployed application version in the [ECS cluster](https://docs.aws.
 
 ![select task](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/select-task-prod.png)
 
-7. In the *Image* column of the *Containers* section, ensure that the image name of the container contains the correct application version. 
+7. In the *Image* column of the *Containers* section, ensure that the image name of the container contains the correct application version.
 
 ![check image task](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/check-image-task-prod.png)
 
@@ -128,36 +129,7 @@ To roll back an application:
 
 1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#check-the-version-to-deploy) for more details.
 
-2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#define-the-version-to-deploy) for more details. 
+2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#define-the-version-to-deploy) for more details.
 
 
 3. Run a deployment pipeline as described in [3. Run a deployment pipeline](#run-a-deployment-pipeline).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

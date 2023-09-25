@@ -6,6 +6,7 @@ originalArticleId: fbf9cb02-2a68-45bd-a404-258011585225
 redirect_from:
   - /docs/setting-up-a-custom-domain-name
   - /docs/en/setting-up-a-custom-domain-name
+  - /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name.html
 ---
 
 With Spryker Cloud Commerce OS, you get domain names (domains) which are managed automatically for the staging and production environments. You can also set up custom domains during the initial setup or any time later.
@@ -16,7 +17,7 @@ If you want to set up a custom domain after the initial setup, depending on the 
 * [Setting up a custom domain name with a third-party DNS zone provider](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html)
 
 ## Set up a DNS zone
-You can host the DNS zone of a domain with [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html) or with a third-party provider. 
+You can host the DNS zone of a domain with [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html) or with a third-party provider.
 If you choose the latter, you need to manage DNS records and SSL certificates with the DNS zone provider.
 
 ### Set up a DNS zone with Route 53
@@ -30,7 +31,7 @@ We created [Route 53 Hosted Zones](https://docs.aws.amazon.com/Route53/latest/De
 6. On your domain registrar's side, set up the nameservers for the domain. Refer to the domain registrar's documentation for details.
 7. Optional: [Set up a custom SSL certificate for the domain](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 
-Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain. 
+Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain.
 
 ### Set up a DNS zone with a third-party DNS zone provider
 
@@ -42,12 +43,11 @@ We created load balancers for the staging and production environment during the 
     * *{project_name}-prod*
 
 3. In the *Load balancer:{load balancer name}* section, select **Copy** ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name/copy-icon.png) next to the DNS name field.
- 
+
 4. On the side of the DNS zone provider, set up a CNAME record using the copied *DNS name* as the record value. Refer to the DNS zone provider’s documentation for details.
 
-Give the DNS configuration about an hour to propagate and you will be able to access your application via the domain. 
- 
+Give the DNS configuration about an hour to propagate and you will be able to access your application via the domain.
+
 ## Next step
 
 [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html)
-

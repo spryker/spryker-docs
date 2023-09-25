@@ -3,10 +3,11 @@ title: Environment provisioning
 description: This document explains core concepts that are important to understand before filing an environment provisioning request.
 last_updated: Mar 14, 2023
 template: concept-topic-template
-
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html
 ---
 
-Before proceeding with the provisioning of your Spryker PaaS environment, we would like to clarify the information we require from you. To initiate the environment provisioning process, you need to create a case using your support portal access. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey. 
+Before proceeding with the provisioning of your Spryker PaaS environment, we would like to clarify the information we require from you. To initiate the environment provisioning process, you need to create a case using your support portal access. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey.
 Once you are logged in to the Spryker Support Portal, you can submit the [environment provisioning request](https://support.spryker.com/s/hosting-change-requests/change-request-new-environment).
 
 {% info_block warningBox %}
@@ -15,7 +16,7 @@ This process can only be initiated through a customer account. To request an env
 
 {% endinfo_block %}
 
-The following sections outline the information you need to provide to initiate provisioning of your environment. 
+The following sections outline the information you need to provide to initiate provisioning of your environment.
 
 {% info_block warningBox "Mandatory information" %}
 
@@ -58,7 +59,7 @@ If `myshop` is the customer, then `myshop-PROD` is an environment name, where `m
 
 ### AWS region
 
-The *AWS region* indicates where customers want their infrastructure resources to be available. For more information about available options for the AWS region, refer to the AWS [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html). For information about the AWS region you are entitled to use, check your contract. 
+The *AWS region* indicates where customers want their infrastructure resources to be available. For more information about available options for the AWS region, refer to the AWS [official documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html). For information about the AWS region you are entitled to use, check your contract.
 
 The following AWS regions are supported:
 - Asia Pacific (Tokyo)
@@ -86,7 +87,7 @@ This section explains the aspects of the code base and boilerplate you use and i
 
 ### Code base
 
-Which code base is being used? As Spryker offers different business models based on customer requirements, application services related to infra setup vary based on the model. It is important to know which model is being used for the respective environment during provisioning. 
+Which code base is being used? As Spryker offers different business models based on customer requirements, application services related to infra setup vary based on the model. It is important to know which model is being used for the respective environment during provisioning.
 
 {% info_block infoBox "Note" %}
 
@@ -137,7 +138,7 @@ This section explains what additional attributes you can specify at the beginnin
 Spryker implemented SFTP on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it is preferred to validate this option during provisioning.
 
 ### Optional: Site to Site VPN
-A Site-to-Site VPN (Virtual Private Network) is a type of network connection that enables secure communication between two or more geographically separated networks. This type of VPN allows two or more sites to establish a secure and encrypted connection over the internet or other public networks, creating a virtual private network between the two sites. 
+A Site-to-Site VPN (Virtual Private Network) is a type of network connection that enables secure communication between two or more geographically separated networks. This type of VPN allows two or more sites to establish a secure and encrypted connection over the internet or other public networks, creating a virtual private network between the two sites.
 The following configuration parameters are required to set up the Site-to-Site VPN tunnel:
 - Customer gateway IP address
 - IP ranges on the customer side that would need access to Spryker VPC

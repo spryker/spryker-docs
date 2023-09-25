@@ -1,8 +1,10 @@
 ---
 title: Security
 last_updated: Jan 16, 2023
-description: Explains how to check ECR image scan results and generate access keys, and introduces the web application firewall 
+description: Explains how to check ECR image scan results and generate access keys, and introduces the web application firewall
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/security/security.html
 ---
 
 This section explains how to check ECR image scan results and generate access keys, and introduces the web application firewall:  

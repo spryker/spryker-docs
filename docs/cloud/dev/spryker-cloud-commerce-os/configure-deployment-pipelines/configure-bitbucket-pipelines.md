@@ -1,5 +1,5 @@
 ---
-title: Configuring Bitbucket Pipelines
+title: Configure Bitbucket Pipelines
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-bitbucket-pipelines
@@ -7,14 +7,15 @@ originalArticleId: f100164f-976a-4ce5-b713-7c58335f9965
 redirect_from:
   - /docs/configuring-bitbucket-pipelines
   - /docs/en/configuring-bitbucket-pipelines
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html
 ---
 
 This document describes how to configure continuous integration using Bitbucket Pipelines.
 
 ## Bitbucket Pipelines
-Bitbucket Pipelines is an integrated CI/CD service, built into Bitbucket. It allows you to automatically build, test, and deploy your code, based on a configuration file in your repository. 
+Bitbucket Pipelines is an integrated CI/CD service, built into Bitbucket. It allows you to automatically build, test, and deploy your code, based on a configuration file in your repository.
 
-For more information on Bitbucket Pipelines, see [Get started with Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/). 
+For more information on Bitbucket Pipelines, see [Get started with Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/).
 
 ## Prerequisites
 1. In the repository root, create the CI/CD configuration file: `bitbucket-pipelines.yml`.
@@ -66,21 +67,21 @@ pipelines:
           - vendor/bin/phpmd src/ text vendor/spryker/architecture-sniffer/src/ruleset.xml --minimumpriority 2
           - node ./frontend/libs/stylelint
           - node ./frontend/libs/tslint stylish
-        services: 
+        services:
           - mysql
           - redis
           - elasticsearch
           - broker
 
-definitions: 
+definitions:
   services:
-    mysql: 
+    mysql:
       image: mariadb:10.3
-      variables: 
+      variables:
         MYSQL_USER: $MYSQL_USER
         MYSQL_PASSWORD: $MYSQL_PASSWORD
         MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-        MYSQL_DATABASE: $MYSQL_DATABASE 
+        MYSQL_DATABASE: $MYSQL_DATABASE
     redis:
       image: redis:5.0-alpine
     elasticsearch:
@@ -112,7 +113,7 @@ Docker SDK tests will be supported after Bitbucket starts supporting [Docker Bui
 
 To set up a job that runs a specific group of tests:
 
-1. To `bitbucket-pipelines.yml`, add the following configuration template: 
+1. To `bitbucket-pipelines.yml`, add the following configuration template:
 ```yaml
 ...
     - step:
@@ -138,18 +139,7 @@ To set up a job that runs a specific group of tests:
 ```
 2. Replace the placeholders with the actual values using the following description.
 
-|PLACEHOLDER | DESCRIPTION | EXAMPLE IN THE PROPERTY VALUE | 
+|PLACEHOLDER | DESCRIPTION | EXAMPLE IN THE PROPERTY VALUE |
 |---|---|---|
 |{image_tag} | Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian). | 7.4 |
 |{tests_configuration_file} | Codeception configuration files that defines the tests to run. Example: codeception.ci.functional.yml  | codeception.functional.yml|
-
-
-
-
-
-
-
-
-
-
-

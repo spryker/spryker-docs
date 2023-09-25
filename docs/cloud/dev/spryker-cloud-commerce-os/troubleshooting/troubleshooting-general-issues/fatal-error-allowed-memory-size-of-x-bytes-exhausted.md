@@ -2,6 +2,8 @@
 title: 'Fatal error: Allowed memory size of x bytes exhausted'
 description: Solution to the error about exhausted memory
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/fatal-error-allowed-memory-size-of-x-bytes-exhausted.html
 ---
 
 One of the following errors is returned in the error log:

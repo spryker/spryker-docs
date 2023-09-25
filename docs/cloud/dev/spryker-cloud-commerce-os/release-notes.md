@@ -7,6 +7,7 @@ originalArticleId: eee5e8bc-dd95-4b51-91f4-203962a2e8af
 redirect_from:
   - /docs/release-notes
   - /docs/en/release-notes
+  - /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html
 ---
 
 This document describes new features and enhancements released for Spryker Cloud Commerce OS.

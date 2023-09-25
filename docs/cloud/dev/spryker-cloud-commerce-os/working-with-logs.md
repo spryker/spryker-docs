@@ -7,6 +7,7 @@ originalArticleId: bf2fcf27-ef7f-4ff5-b491-850d20b73a1e
 redirect_from:
   - /docs/working-with-logs
   - /docs/en/working-with-logs
+  - /docs/cloud/dev/spryker-cloud-commerce-os/working-with-logs.html
 ---
 
 This document describes how to work with logs(events). Logs provide information about the state of application and related services. In Spryker Cloud Commerce OS, logging is maintained by [Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html).

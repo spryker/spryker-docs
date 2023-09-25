@@ -6,6 +6,7 @@ originalArticleId: a0bdd6d7-2603-4bb6-8ab9-0899a6b2041f
 redirect_from:
   - /docs/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
   - /docs/en/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider
+  - /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-domain-name/setting-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
 ---
 
 This document describes how to set up a custom domain name (domain) with a third-party DNS zone provider.

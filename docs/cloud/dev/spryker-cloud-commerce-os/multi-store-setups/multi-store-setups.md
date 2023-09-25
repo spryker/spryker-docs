@@ -2,9 +2,11 @@
 title: Multi-store setups
 description: Types of multi-store setups in Spryker Cloud Commerce OS
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
 ---
 
-The Multi-Store is a capability in the Spryker Cloud Commerce OS that gives you the flexibility to create multiple stores for different scenarios—giving you the ability to easily reach your customers everywhere. 
+The Multi-Store is a capability in the Spryker Cloud Commerce OS that gives you the flexibility to create multiple stores for different scenarios—giving you the ability to easily reach your customers everywhere.
 
 The Spryker Cloud Commerce OS supports following multi-store setups:
 

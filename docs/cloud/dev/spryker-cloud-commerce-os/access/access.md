@@ -3,6 +3,8 @@ title: Access
 last_updated: Jan 16, 2023
 description: Describes how to access AWS Management Console, locate credentials for Spryker Cloud Commerce OS services, and connect to services
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/access/access.html
 ---
 
 This section describes how to access AWS Management Console as an Identity and Access Management (IAM) user, locate the credentials for Spryker Cloud Commerce OS services, and connect to services:  

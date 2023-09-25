@@ -8,6 +8,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/define-parameter-and-secret-values-in-sccos-environments.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/add-variables.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html
 ---
 
 

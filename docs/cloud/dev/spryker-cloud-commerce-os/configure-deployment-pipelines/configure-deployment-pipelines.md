@@ -3,6 +3,8 @@ title: Configure deployment pipelines
 last_updated: Jan 16, 2023
 description: Explains how to customize and configure deployment pipelines in Spryker Cloud Commerce OS (SCCOS)
 template: concept-topic-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configure-deployment-pipelines.html
 ---
 
 This section explains how to customize and configure deployment pipelines in Spryker Cloud Commerce OS (SCCOS):  

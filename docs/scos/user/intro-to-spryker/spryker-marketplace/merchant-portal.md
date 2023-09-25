@@ -15,8 +15,8 @@ By default, Marketplace administrators do not have access to the Merchant Portal
 
 The Merchant Portal includes the following pages:
 
-- [My account](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/my-account/managing-account-details-and-settings.html)
-- [Dashboard](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/dashboard/managing-merchants-performance-data.html)
+- [My account](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
+- [Dashboard](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
 - [Profile](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/profile/editing-merchants-profile-details.html)
 - [Offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-product-offers.html)
 - [Products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html)

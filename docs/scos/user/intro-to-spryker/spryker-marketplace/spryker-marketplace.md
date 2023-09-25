@@ -26,7 +26,7 @@ To learn what Spryker Marketplace is, read the following documents:
 
 ## How do I start with Spryker Marketplace?
 
-For new projects, we provide [B2C](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-demo-shop.html) and [B2B Demo Marketplace](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-demo-shop.html) templates, which are a great starting point.
+For new projects, we provide [B2C](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html) and [B2B Demo Marketplace](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html) templates, which are a great starting point.
 
 Even if you don't need marketplace features at first, but you are going to use them in the future, the Demo Marketplaces are still the best starting point. You can just ignore the marketplace features until you actually want to use them.
 

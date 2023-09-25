@@ -177,7 +177,7 @@ The Spryker B2B Marketplace Suite is a collection of ready-to-use B2B- Marketpla
 ![b2b-marketplace-demo-shop-yves-home-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/b2b-marketplace-demo-shop-yves-home-page.png)
 
 Documentation:<br>
-[Marketplace B2B Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-demo-shop.html)
+[Marketplace B2B Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
 
 ## Marketplace Merchant Custom Prices in the Merchant Portal
 
@@ -209,7 +209,7 @@ The Marketplace Shopping Lists feature lets B2B customers create and share multi
 ![marketplace-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-shopping-lists.png)
 
 Documentation:<br>
-[Marketplace Shopping Lists feature overview](/docs/marketplace/user/features/202204.0/marketplace-shopping-list-feature-overview.html)
+[Marketplace Shopping Lists feature overview](/docs/pbc/all/shopping-list-and-wishlist/202212.0/marketplace/marketplace-shopping-lists-feature-overview.html)
 
 ## Marketplace Quick Add to Cart
 
@@ -219,7 +219,7 @@ The Marketplace Quick Add to Cart feature lets B2B customers find and buy mercha
 
 Documentation: <br>
 [Marketplace Product feature overview](/docs/pbc/all/product-information-management/202212.0/marketplace/marketplace-product-feature-overview.html)<br>
-[Marketplace Product Offer feature overview](/docs/pbc/all/offer-management/202212.0/marketplace/marketplace-product-offer-feature-overview.md.html)
+[Marketplace Product Offer feature overview](/docs/pbc/all/offer-management/202212.0/marketplace/marketplace-product-offer-feature-overview.html)
 
 ## Technical Enhancements
 

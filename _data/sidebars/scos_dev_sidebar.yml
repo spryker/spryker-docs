@@ -3411,13 +3411,14 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
 
     - title: Marketplace
+      url: /docs/scos/dev/front-end-development/marketplace/marketplace-frontend.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
       nested:
         - title: Extend the Merchant Portal frontend
-          url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
+          url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
         - title: "Table design"
           url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
           nested:

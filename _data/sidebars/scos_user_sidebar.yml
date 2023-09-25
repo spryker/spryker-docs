@@ -1017,27 +1017,6 @@ entries:
       - "202005.0"
       - "202009.0"
       nested:
-      - title: Punch Out
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        nested:
-        - title: Punch Out
-          url: /docs/scos/user/features/technology-partner-integrations/punch-out/punch-out-feature-overview.html
-          include_versions:
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-        - title: Punchout
-          url: /docs/scos/user/features/technology-partner-integrations/punch-out/punchout.html
-          include_versions:
-          - "202009.0"
-        - title: Punchout
-          url: /docs/scos/user/features/technology-partner-integrations/punch-out/punchout-feature-overview.html
-          include_versions:
-          - "202009.0"
       - title: Integrating technology partners
         url: /docs/scos/user/features/technology-partner-integrations/integrating-technology-partners.html
         include_versions:
@@ -3285,25 +3264,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-      - title: Punchout Catalogs
-        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Punchout Catalogs
-        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
-        include_versions:
-        - "202108.0"
-        - "202204.0"
-        nested:
-        - title: Punchout Catalogs overview
-          url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
-          include_versions:
-          - "202108.0"
-          - "202204.0"
     - title: Marketplace Integrations
       nested:
       - title: ChannelPilot Marketplace

@@ -230,7 +230,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
 
 ```
 
-## Integrate the Vertex app
+## 2. Integrate the Vertex app
 
 Spryker does not have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to to add some missing information to the Quote object before sending a calculation request.
 

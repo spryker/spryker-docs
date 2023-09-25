@@ -1,6 +1,6 @@
 ---
-title: Install and configure Akeneo
-description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
+title: Install and configure Akeneo Connector (Eco Module)
+description: This article provides installation and configuration details for the Akeneo Connector eco module in the Spryker-based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/akeneo-installation-configuration
@@ -40,7 +40,7 @@ $config[KernelConstants::CORE_NAMESPACES] = [
 ];
 ```
 
-To set up the Akeneo initial configuration, use the credentials you received from your PIM:
+To set up the Akeneo Connector eco module initial configuration, use the credentials you received from your PIM:
 
 ```php
 $config[AkeneoPimConstants::HOST] = '';
@@ -378,7 +378,7 @@ class ProductAbstractStep extends ProductAbstractHydratorStep
 }
 ```
 
-You can change default data mappers and translators for overriding keys or values. By default, Akeneo has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
+You can change default data mappers and translators for overriding keys or values. By default, Akeneo Connector eco modle has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
 
 You also need to take care of that data that is to be written to the database. Two approaches can be used for that.
 

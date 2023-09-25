@@ -1,31 +1,31 @@
 ---
-title: Unified Commerce feature overview
-description: Learn about the features of the Unified Commerce Fulfillment App.
-last_updated: May 9, 2023
+title: Fulfillment App feature overview
+description:
+last_updated: Oct 3, 2023
 template: Which Template to use for this?
-originalLink: How do I get the Original Link?
-originalArticleId:
 ---
-Fulfillment App supports store associates (warehouse users) in the picking process. There's also an Offline Mode available for the Fulfillment App to enable picking items without an internet connection.
+
+The *Fulfillment App* feature streamlines the process of fulfilling orders by introducing the Fulfillment App and the warehouse user.
 
 
 ## Warehouse user
 
-A *warehouse user* is a person that works in one or more warehouses to fulfill orders. 
+A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, instead of having access to the Back Office, they have access to the fulfillment app.
 
-To create a warehouse user, select the *"IS WAREHOUSE USER"* checkbox under a user's option when creating or modifying one in the Back Office. To learn more about managing warehouse users in Back Office, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular user.
+
+
+
 You can assign warehouses by selecting `Assign Warehouses`. By assigning a warehouse, you give the user the necessary access so they can fulfill order items in that specific warehouse.
 blob:https://spryker.atlassian.net/ea1cb604-6126-4a3b-a9d0-b4bcd84b2367#media-blob-url=true&id=a24dda2e-6334-42fb-90c9-3bf59fcb9f0b&collection=&contextId=364968&height=436&width=1209&alt=
-{% info_block infoBox "Info" %}
-Warehouse users can only log in into the Fulfillment App but lose access to the Back Office.
-{% endinfo_block %}
-For additional information on the process, you can look at the (Warehouse Users Integration Guide)[https://docs.spryker.com/docs/pbc/all/back-office/{{page.version}}/install-spryker-core-back-office-warehouse-user-management-feature) and (BAPI coverage)[https://docs.spryker.com/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html].
 
 
 ## Allocating a warehouse
-{% info_block infoBox "Info" %}
+
+{% info_block infoBox "" %}
 The default warehouse allocation strategy can be replaced on the project level with a custom strategy.
 {% endinfo_block %}
+
 By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. Based on the item's availability, the warehouses are sorted in descending order from highest amount to lowest.
 If the requested quantity of the item is available in the first warehouse, which is the one holding the biggest stock of the item, this warehouse is by default assigned to fulfill the order.
 {% info_block infoBox "Info" %}

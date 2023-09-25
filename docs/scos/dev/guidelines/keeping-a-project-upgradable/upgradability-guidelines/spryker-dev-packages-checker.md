@@ -10,9 +10,9 @@ Spryker dev packages checker checks the project spryker dependencies for the "de
 
 The project contains the spryker packages dependencies in the `require` section of the `composer.json` file.
 
-The integration can be broken if some of those packages has reference to the specific branch by using `dev-*` constraint version.
+Integration may break if some of these packages have references to specific branches using `dev-*` constraint versions.
 
-To avoid it need to be sure that all the spryker packages has valid version constraints.
+To prevent this, it is essential to ensure that all Spryker packages have valid version constraints.
 
 ## Example of code that causes an evaluator error
 

@@ -51,7 +51,7 @@ To accelerate the validation process, you can use relevant Spryker technology pa
 
 The official relationship between the operator and merchant can be established by providing a contract to a merchant. For specific merchants, you can use custom contracts. If not, boilerplate agreements should be readily available. Contracts can be created as part of the terms and conditions, which must be accepted beforehand, along with the platform rules, customer communication guidelines, data policy, and SLA agreement. Clarification is also required regarding who the product data owner is, in which categories the merchant is allowed to sell, and the commissions and fees the merchant must pay the operator.
 
-![edit-merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-2-edit-merchant.png)
+![edit-merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-2-edit-merchant.png)
 
 ### 3) Operator: Approve the merchant
 
@@ -62,9 +62,9 @@ By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/m
 Then, the operator needs to create a merchant admin user based on data provided through the registration form, such as the email or first and last name of the contact person. For this, the operator finds a merchant user in the Back Office, in **Merchant&nbsp;<span aria-label="and then">></span> Users** and assigns them the required permissions.
 The email with the password is automatically sent to access the Merchant Portal later on. The operator can also create more user accounts for the merchant if required.
 
-![overview-of-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-3-overview-of-merchants.png)
+![overview-of-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-3-overview-of-merchants.png)
 
-![edit-user](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-3-edit-user.png)
+![edit-user](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-3-edit-user.png)
 
 ### 4) Merchant and operator: Create and update the product and offers
 
@@ -84,9 +84,9 @@ Based on the product volume, we recommend the following:
 
 The operator and merchants need to align on categories, attributes, and values that can be used in the importing process. Mapping needs to be done by merchants or through Spryker Middleware.
 
-![concrete-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-4-concrete-products.png)
+![concrete-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-4-concrete-products.png)
 
-![create-offer](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-4-create-offer.png)
+![create-offer](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-4-create-offer.png)
 
 
 ### 5) Operator: Set up the payment process
@@ -123,7 +123,7 @@ The State Machine can be set up to route an automated email to the relevant merc
 
 The following diagram shows an example of a simple State Machine workflow, where every merchant handles their own shipments and returns.
 
-![state-machine-workflow-example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-6-state-machine-workflow-example.png)
+![state-machine-workflow-example](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-6-state-machine-workflow-example.png)
 
 ### 7) Merchant and operator: Approve products and offers and activate the merchant
 
@@ -140,6 +140,6 @@ Trusted merchants can have an automatic pre-approval, while new merchants have t
 
 {% endinfo_block %}
 
-![offers-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-7-offers-in-the-back-office.png)
+![offers-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-in-the-back-office.png)
 
-![offers-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding/step-7-offers-on-the-storefront.png)
+![offers-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-on-the-storefront.png)

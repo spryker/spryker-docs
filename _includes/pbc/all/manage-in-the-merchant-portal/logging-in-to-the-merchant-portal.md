@@ -71,6 +71,6 @@ To log out, in the top right corner of the Merchant Portal, click the user icon 
 
 **What’s Next?**
 
-To have a quick overview of Merchant performance, see [Managing merchant's performance data](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/dashboard/managing-merchants-performance-data.html).
+To have a quick overview of Merchant performance, see [Managing merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html).
 
 To learn how to manage a Merchant Profile in the Merchant Portal, see [Editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#editing-merchants).

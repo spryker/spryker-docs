@@ -75,14 +75,14 @@ Now that the client is created, you can test if it works. To test the client, do
 
 To configure data mapping between Akeneo and Spryker, you need to create an incoming and outgoing configuration.
 
-### Craete an incoming configuration
+### Create an incoming configuration
 
 The incoming configuation defines what data should be retrieved from Akeneo and how this should be done.
 To create an incoming configuration, do the following:
 
-1. Go to Connections-Incoming-click the + sign.
-2. Enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
-3. Optional: Add a description of you incoming configuration.
+1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click the + sign.
+2. In the **Name** field, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+3. Optional: In the **Description** field, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
 5. In the *Subscriber* field, select *Akeneo Subscriber*. 
   QUESTION: What is the subscriber, what is each subscriber in the dropdown for, and how do they know which subscriber to select here?
@@ -92,17 +92,56 @@ To create an incoming configuration, do the following:
 10. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incomfing configuration has been created.
 ![incoming-for-akeneo-product-import.png]
 
-The incoming configuration should now appear at **Configurations->Incoming** page.
+The incoming configuration should now appear at the **Configurations->Incoming** page.
 
+### Create an outgoing configuration
 
+The outgoing configuration defines how data retrieved from Akeneo should be sent to SCCOS.
 
-## 2. Create a transformer
+QUESTION: WHERE IS THE OUTGOING CONFIGURATION?
 
-1. Go to Coonnections->Entity transformers and click the "+" sign.
+### Define the route
+
+The route configuration connects the incoming configuration and outgoing configuration to enable import of data from Akeneo PIM to SCCOS.
+
+To define the route, do the following:
+
+1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Routes** and click the + sign.
+2. In the **Name** field, enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
+3. Optional: In the **Description** field, add the description of your route.
+4. To activate the route, set the status to *Enabled*.
+5. In the **Incoming configuration** filed, select the configuration you created at this step:[Create an incoming configuration](#create-an-incoming-configuration).
+6. In the **Outgoing configuration** field, select *No action publisher*. QUESTION: SHOULD THEY ALWAYS SELECT THIS PUBLISHER? WHAT DOES IT MEAN?
+
+![create-a-new-route]
+5. Click **Save & Continue**. 
+
+The route should now appear at the **Configurations->Routes** page.
+
+## Create the Akeneo to Base model transformer
+
+To import data from Akeneo PIM, you need to transform it from the Akeneo model to the base model. To transform the data like this, you need to create the Akeneo to Base model transformer. Do the following:
+
+1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Entity transformers** and click the + sign.
+2. In the **Name** field, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
+3. Optional: In the **Description** field, add the description of your route.
+4. To activate the entity transformer, set the status to *Enabled*.
+5. In *Settings*, select *Data, transform using mappers and conditions*. QUESTIONS: WHAT DOES THIS SETTING MEAN? CAN THEY SELECT OTHER SETTINGS, AND IF YES, THEN IN WHAT CASES WHAT SETTING SHOULD BE SELECTED?
+6.  Click **Add data transformer** and select *Memo Akeneo to Base - Product - Set Base information*. QUESTIONS: WHAT DOES THIS TRANSFORMER MEAN? CAN THEY SELECT OTHER TRANSFORMERS, AND IF YES, THEN IN WHAT CASES WHAT TRANSFORMER SHOULD BE SELECTED?
+![akeneo-create-an-entity-tansformer]
+7. In the **Client** field, enter the client you created at this step: [Connect SCCOS with the Middleware Powered by Alumio platform](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+8. In the **Locale** field, enter the locale from which you want to import data from Akeneo. For example, *us_US*. 
+
+{% info_block infoBox "Locale in Akeneo" %}
+
+If the locale in Akeneo is not specified, the locale you specify at this step will be assigned as a default one.
+
+{% endinfo_block %}
+
+1. Go to Connections->Entity transformers and click the "+" sign.
 2. Enter the Name of your transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. In *Settings*, select *Data, transform using mappers and conditions*.
-4. Click **Add data transformer** and select *Memo Akeneo to Base - Product - Set Base information*.
-![akeneo-create-an-entity-tansformer]
+4.
 
 ## 1. Create an incoming:
 

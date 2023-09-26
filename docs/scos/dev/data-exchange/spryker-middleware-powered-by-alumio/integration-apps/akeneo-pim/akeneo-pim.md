@@ -138,10 +138,19 @@ If the locale in Akeneo is not specified, the locale you specify at this step wi
 
 {% endinfo_block %}
 
-1. Go to Connections->Entity transformers and click the "+" sign.
-2. Enter the Name of your transformer. As you are entering the name, the identifier will be populated automatically based on the name.
-3. In *Settings*, select *Data, transform using mappers and conditions*.
-4.
+9. In the SKU field, select one the following options:
+ - Identifier as SKU: The product identifier in Akeneo will be used as SKU in SCCOS
+ - Value as SKU: You can specify the value of another filed in Akeneo which should be used as SKU in SCCOS. Specify the value in the *SKU Identifier* field that appears as the very last field
+ ![value-as-sku]
+
+10. In the *Description* field, enter the description for the products you are importing.
+11. In the *Short description* field, enter the short description for the products you are importing.
+
+12. Define the tax set to use for the imported products. Do the following:
+  1. Go to your project's Back Office, to **Administration -> Tax Sets** page.
+  2. On the *Overview of tax sets* page, copy the value from the *Name* column of the tax set you want to use for the products imported from Akeneo PIM.
+  3. Go back to the transformer creation page in the Spryker Middleware powered by Alumio and enter the tax name in the **Tax** field.
+
 
 ## 1. Create an incoming:
 

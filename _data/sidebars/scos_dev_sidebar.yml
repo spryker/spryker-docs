@@ -999,7 +999,7 @@ entries:
       - "201907.0"
       - "202108.0"
       - "202204.0"
-    - title: Dynamic data API
+    - title: Data Exchange API
       include_versions:
       - "202307.0"
       nested:
@@ -1378,8 +1378,8 @@ entries:
             url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
             include_versions:
               - "202204.0"
-      - title: Data Exchange API integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/data-exchange-api/data-exchange-api-integration.html
+      - title: Install the Data Exchange API
+        url: /docs/scos/dev/feature-integration-guides/glue-api/data-exchange-api/install-the-data-exchange-api.html
         include_versions:
         - "202307.0"
     - title: Agent Assist

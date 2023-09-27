@@ -27,6 +27,8 @@ Updating your Spryker shop is always an effort. New features, fixes, and updates
 
 This article gives answers to these questions and provides recommendations that will help you make the Spryker update process smoother, easier, and update efforts predictable.
 
+The [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html) addresses the challenges of an application's upgradability and can help you semi-automate the Spryker update process on a regular basis.
+
 ## Spryker product structure
 
 The smallest building block of Spryker is a *module*. Usually, a module does not represent a complete functionality. A complete functionality, or a *feature*, is represented by an aggregation of a set of modules. A feature is a virtual entity, which binds together a number of modules to satisfy certain functionalities. Check out the [Spryker feature repository](https://github.com/spryker-feature/) for detailed information about each feature.
@@ -34,6 +36,8 @@ The smallest building block of Spryker is a *module*. Usually, a module does not
 The set of features makes up a *product*. Spryker offers the following products:
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html)
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html)
+* B2B Demo Marketplace
+* B2C Demo Marketplace
 * [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html)
 
 Schematically, the Spryker product structure looks like this:

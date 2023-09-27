@@ -93,6 +93,7 @@ Response sample:
 ]
 ```
 
+{% info_block infoBox %}
 
 When you combine multiple filters in a single request, the system applies an `AND` condition to the retrieved results.
 
@@ -367,8 +368,6 @@ Content-Length: 143
         }
 }
 ```
-
-{% endinfo_block %}
 
 {% info_block infoBox %}
 

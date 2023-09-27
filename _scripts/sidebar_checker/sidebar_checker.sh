@@ -28,6 +28,7 @@ for i in "${!SIDEBARS[@]}"; do
   missing_files=($(find "$folder" -type f -name "*.md" \
   -not -path "*/overview-of-features/202204.0/overview-of-features.md" \
     -not -path "*/overview-of-features/202212.0/overview-of-features.md" \
+    -not -path "*/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.md" \
     -not -name "index.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | \
     while IFS= read -r -d '' file_path; do
     ignored=false

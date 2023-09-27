@@ -4,17 +4,13 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-Spryker dev packages checker checks the project spryker dependencies for the "dev-*" constraints.
+Spryker dev packages checker checks the project Spryker dependencies for the _dev-*_ constraints.
 
 ## Problem description
 
-The project contains the spryker packages dependencies in the `require` section of the `composer.json` file.
+Projects contain the Spryker packages dependencies in the `require` section of the `composer.json` file. The integration of new versions of Spryker modules by the Spryker Code Upgrader may fail if some of these packages have references to specific branches that use `dev-*` constraint versions. To prevent this, it is essential to ensure that all Spryker packages have valid version constraints.
 
-Integration may break if some of these packages have references to specific branches using `dev-*` constraint versions.
-
-To prevent this, it is essential to ensure that all Spryker packages have valid version constraints.
-
-## Example of code that causes an evaluator error
+## Example of code that causes the evaluator error
 
 composer.json
 ```json
@@ -29,7 +25,7 @@ composer.json
 }
 ```
 
-## Example of an evaluator error message
+## Example of the evaluator error message
 
 ```bash
 ============================

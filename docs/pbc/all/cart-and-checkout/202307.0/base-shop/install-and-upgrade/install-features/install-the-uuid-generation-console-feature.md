@@ -13,4 +13,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/uuid-generation-console-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-uuid-generation-console-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-uuid-generation-console-feature.md -->

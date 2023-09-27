@@ -53,11 +53,7 @@ The feature has the following functional constraint:
 
 Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
-## Related Business User documents
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
 
 
 

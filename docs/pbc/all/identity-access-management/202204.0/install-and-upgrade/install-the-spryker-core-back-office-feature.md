@@ -21,4 +21,4 @@ related:
       link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-spryker-core-back-office-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-spryker-core-back-office-feature.md -->

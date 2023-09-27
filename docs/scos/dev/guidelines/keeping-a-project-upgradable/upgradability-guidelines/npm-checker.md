@@ -2,6 +2,7 @@
 title: Npm checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This checker identifies and reports security vulnerabilities in the npm dependencies.
@@ -21,7 +22,7 @@ By using the npm vulnerabilities checker with the Evaluator, developers can safe
 NPM CHECKER
 ===========
 
-Message: [critical] Prototype pollution in webpack loader-utils 
+Message: [critical] Prototype pollution in webpack loader-utils
          https://github.com/advisories/GHSA-76p3-8jx3-jpfq      
  Target: loader-utils  
 
@@ -36,8 +37,6 @@ Message: [high] Cross-realm object access in Webpack 5
 Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
 ```
 
-### Resolving the issue
+## Resolve the error
 
-To resolve the issue:
-
-1. Update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.
+To resolve the issue, update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.

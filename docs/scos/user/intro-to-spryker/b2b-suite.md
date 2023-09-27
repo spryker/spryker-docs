@@ -63,7 +63,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Quick add to cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/quick-add-to-cart-feature-overview.html)
 - [Shared carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/shared-carts-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/reorder-feature-overview.html)
-- [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
+- [Shipment](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html)
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html)
 - [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/spryker-pay/base-shop/payments-feature-overview.html)
 <!---- [Invoice]()-->

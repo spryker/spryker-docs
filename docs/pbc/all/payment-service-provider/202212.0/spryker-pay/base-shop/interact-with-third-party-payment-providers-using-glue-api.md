@@ -10,9 +10,6 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
   - /docs/pbc/all/payment-service-provider/202212.0/interact-with-third-party-payment-providers-using-glue-api.html
   - /docs/pbc/all/payment-service-provider/202212.0/interact-with-third-party-payment-providers-using-glue-api.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 This tutorial shows how to invoke third parties in the API payment process.

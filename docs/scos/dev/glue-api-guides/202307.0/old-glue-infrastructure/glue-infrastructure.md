@@ -21,6 +21,8 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
 ---
 
+<!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
+
 {% info_block warningBox %}
 
 This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)

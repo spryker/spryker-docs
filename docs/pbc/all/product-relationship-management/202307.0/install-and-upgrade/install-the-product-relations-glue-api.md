@@ -12,11 +12,6 @@ redirect_from:
   - /docs/en/glue-api-product-relations-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-relations-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-relations-feature-integration.html
-related:
-  - title: Product Relations feature integration
-    link: docs/pbc/all/product-relationship-management/site.version/install-and-upgrade/install-the-product-relations-feature.html
-  - title: Retrieving related products
-    link: docs/pbc/all/product-relationship-management/page.version/glue-api-retrieve-related-products.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-relations-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md -->

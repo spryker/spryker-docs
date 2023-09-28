@@ -3411,6 +3411,7 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
 
     - title: Marketplace
+      url: /docs/scos/dev/front-end-development/marketplace/marketplace-frontend.html
       include_versions:
       - "202204.0"
       - "202212.0"
@@ -3418,6 +3419,13 @@ entries:
       nested:
         - title: Extend the Marketplace frontend
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
+          include_versions:
+          - "202204.0"
+          - "202212.0"
+        - title: Extend the Merchant Portal frontend
+          url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
+          include_versions:
+          - "202307.0"
         - title: "Table design"
           url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
           nested:
@@ -4790,6 +4798,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
+        - title: Spryker dev packages checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
       - title: Ignore evaluation errors
         url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
     - title: Performance guidelines

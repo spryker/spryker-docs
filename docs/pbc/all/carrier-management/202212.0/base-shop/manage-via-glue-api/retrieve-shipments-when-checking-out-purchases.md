@@ -16,7 +16,7 @@ This endpoint allows finalizing the checkout process by placing an order. After 
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-glue-api/install-the-shipment-glue-api.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
 
 ## Place an order
 
@@ -352,7 +352,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 {% include pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md -->
 
-For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/retrieving-customer-orders.html)
+For the attributes of other included resources, see [Retrieve customer's order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
 
 ## Possible errors
 

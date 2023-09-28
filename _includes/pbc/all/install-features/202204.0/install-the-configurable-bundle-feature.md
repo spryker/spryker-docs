@@ -16,7 +16,7 @@ Install the required features:
 | Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 | Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Product Lists	 | {{page.version}} | Product Lists feature integration | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |
+| Product Lists	 | {{page.version}} | Product Lists feature integration | [Product Lists feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-lists-featureinstall-features/install-the-product-lists-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -926,7 +926,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
   * The quantity of bundle has changed.
 
 * Do the following:
-  1. Make clean up for the configured bundle item (in the `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`. 
+  1. Make clean up for the configured bundle item (in the `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`.
   2. Reload the cart page and make sure that `ConfiguredBundleItem::quantityPerSlot` is not null.
   3. For the configured bundle item, set the wrong quantity to `ConfiguredBundle::quantity`.
   4. Make sure that after updating the configured bundle quantity on the cart page error flash message is displayed.

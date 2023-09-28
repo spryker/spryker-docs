@@ -67,7 +67,7 @@ To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-l
 
 ### The deploy file
 
-When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 

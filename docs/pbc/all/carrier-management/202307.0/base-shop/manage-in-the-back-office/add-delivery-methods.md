@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/administration/delivery-methods/add-delivery-methods.html
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
   - title: Creating a Carrier Company
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
 ---

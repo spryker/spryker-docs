@@ -10,8 +10,6 @@ redirect_from:
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
-  - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shipment-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shipment-module.md -->

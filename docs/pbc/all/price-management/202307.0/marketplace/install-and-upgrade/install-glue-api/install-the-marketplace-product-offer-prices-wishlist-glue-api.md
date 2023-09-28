@@ -4,7 +4,7 @@ description: This document describes how to integrate the Marketplace Product Of
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Offer Prices feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
+    link: docs/pbc/all/price-management/page.version/marketplace/marketplace-product-offer-prices-feature-overview.html
   - title: Marketplace Wishlist feature walkthrough
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-wishlist-feature-overview.html
 ---

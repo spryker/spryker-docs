@@ -21,7 +21,6 @@ Before integrating Vertex, ensure the following prerequisites are met:
 - The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
 Ensure that your installation meets these requirements.
 
-#### Notes 
 - Make sure that your deployment pipeline executes DB migrations.
 
 ## 1. Integrate ACP connector module for tax calculation

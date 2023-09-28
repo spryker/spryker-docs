@@ -4,7 +4,7 @@ description: This guide shows how to configure the Data Exchange API endpoints.
 last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
+  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
 This document describes how to create and configure the Data Exchange API endpoints.
@@ -93,11 +93,11 @@ The following example shows a possible value of the `spy_dynamic_entity_configur
 1. In the Back Office, go to **Data Exchange API Configuration**.
 2. On the **Data Exchange API Configuration** page, click **Create Data Exchange API configuration**.
 
-[PASTE SCREENSHOT HERE]
+![configure-data-exchange-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/configure-data-exchange-in-back-office.png)
 
 3. In **CREATE DATA EXCHANGE API CONFIGURATION** pane, for **TABLE NAME**, select the table you want to configure the API for. In our example, it's `spy_country`.
 
-[PASTE SCREENSHOT HERE]
+![create-data-exchange-api-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/create-data-exchange-api-configuration.png)
 
 {% info_block infoBox %}
 
@@ -111,7 +111,7 @@ If you don't see the needed table, it may be [excluded from configuring](/docs/s
 5. Optional: To enable the endpoint after it's configured, select **IS ENABLED**.
 6. Configure the fields for interactions per your requirements.
 
-[PASTE SCREENSHOT HERE]
+![edit-data-exchange-api-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/edit-data-exchange-api-configuration.png)
 
 
 7. Click **Save**.

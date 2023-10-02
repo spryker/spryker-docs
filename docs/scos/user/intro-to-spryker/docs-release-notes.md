@@ -2,9 +2,24 @@
 title: Docs release notes
 description: Spryker docs release notes
 template: concept-topic-template
-last_updated: Aug 2, 2023
+last_updated: Oct 2, 2023
 ---
 
+## September 2023
+
+In September 2023, we have added and updated the following pages:
+
+### New pages
+
+- [Catalog + Merchant Product Restrictions feature integration guide](/docs/pbc/all/search/202307.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
+- [Container set function](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
+- [Ignore evaluation errors](/docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
+
+
+### Updated pages
+
+- [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
+- [Delete stores](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/delete-stores.html): Learn how to delete a store for the Dynamic Multistore feature.
 ## August 2023
 
 In August 2023, we have added and updated the following pages:

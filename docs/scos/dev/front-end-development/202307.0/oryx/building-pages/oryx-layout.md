@@ -1,6 +1,6 @@
 ---
 title: "Oryx layout system"
-description: Component layout is not hardcoded in components, but applied as part of a composition
+description: The Oryx layout system is designed to apply layouts to pages and compositions, allowing for highly reusable components.
 last_updated: September 25, 2023
 template: concept-topic-template
 ---

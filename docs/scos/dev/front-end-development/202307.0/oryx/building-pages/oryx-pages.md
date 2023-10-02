@@ -13,7 +13,7 @@ Oryx provides standard pages, like home, login, or search page, in [application 
 
 ## Understanding pages and compositions
 
-Pages in Oryx are represented as [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and layout of pages without hardcoding them in the code. This [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) makes your components more reusable and less tied to specific pages.
+Pages in Oryx are represented as [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and [layout](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-layout.html) of pages without hardcoding them in the code. This [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) makes your components more reusable and less tied to specific pages.
 
 Oryx leverages a data-driven approach for creating pages, letting you configure the composition and content of pages using external data sources. For the advantages and technical details, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
 
@@ -185,12 +185,12 @@ export const app = appBuilder()
 
 The following table gives an overview of the various merge types.
 
-| STRATEGY            | DESCRIPTION                      |
-| ---- | - |
-| `replace` (default) | Replaces the selected element with the given content.                        |
-| `patch`             | Patches the selected component with the given component. This includes both the component options and content. All data, except for arrays, is deep-merged.     |
-| `remove`            | Removes the selected component.    |
-| `before`            | Adds the content before the selected component.                        |
-| `after`             | Adds the content after the selected component.                        |
+| STRATEGY            | DESCRIPTION                                                                                                                                                    |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `replace` (default) | Replaces the selected element with the given content.                                                                                                          |
+| `patch`             | Patches the selected component with the given component. This includes both the component options and content. All data, except for arrays, is deep-merged.    |
+| `remove`            | Removes the selected component.                                                                                                                                |
+| `before`            | Adds the content before the selected component.                                                                                                                |
+| `after`             | Adds the content after the selected component.                                                                                                                 |
 | `append`            | Adds the content after the last component of the composition components. If the selected component is not a composition, the custom component is not merged.   |
 | `prepend`           | Adds the content before the first component of the composition components. If the selected component is not a composition, the custom component is not merged. |

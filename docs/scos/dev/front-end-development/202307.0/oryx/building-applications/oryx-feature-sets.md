@@ -7,8 +7,6 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-feature-sets.html
 ---
 
-
-
 A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
 
 There are two types of feature sets: domain and application feature sets.
@@ -78,9 +76,7 @@ export const loginPage = {
     {
       type: "oryx-auth-login",
       options: {
-        data: {
-          rules: [{ width: "50%", margin: "auto" }],
-        },
+        rules: [{ width: "50%", margin: "auto" }],
       },
     },
   ],

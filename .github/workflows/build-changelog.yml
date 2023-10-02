@@ -31,7 +31,7 @@ jobs:
                 }
               ]
             }'
-          fromTag: "09.2023"
+          fromTag: "08.2023"
           toTag: "09.2023"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -111,14 +111,14 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 ### 3) To enable the Storefront API, register the following plugins:
 
-| PLUGIN                                                   | SPECIFICATION                                                                                            | PREREQUISITES                                                                    | NAMESPACE                                                             |
-|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| ShipmentTypesResourceRoutePlugin                         | Registers the `shipment-types` resource.                                                                 |                                                                                  | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
-| ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds `shipment-types` resources as a relationship to `shipment-methods` resources.                       | None.                                                                            | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
-| SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      | Requires `RestCheckoutDataTransfer.quote` to be set.                             | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
-| ItemShipmentTypeQuoteMapperPlugin                        | Maps shipment types taken from shipment methods to `Quote.items.shipmentType`.                           | None.                                                                            | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether shipment type related to the shipment method is active and belongs to the quote store. | Requires `CheckoutDataTransfer.quote.store.idStore` transfer property to be set. | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether shipment type related to the shipment method is active and belongs to the quote store. | Requires `CheckoutDataTransfer.quote.store.idStore` transfer property to be set. | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| PLUGIN                                                   | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                             |
+|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
+| ShipmentTypesResourceRoutePlugin                         | Registers the `shipment-types` resource.                                                                 |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds `shipment-types` resources as a relationship to `shipment-methods` resources.                       |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
+| ItemShipmentTypeQuoteMapperPlugin                        | Maps shipment types taken from shipment methods to `Quote.items.shipmentType`.                           |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -131,6 +131,7 @@ use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlu
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesByShipmentMethodsResourceRelationshipPlugin;
 use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesResourceRoutePlugin;
+use Spryker\Glue\ShipmentsRestApi\ShipmentsRestApiConfig;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -205,8 +206,8 @@ Make sure you have a `shipment-types` resource as a relationship to `shipment-me
                       "shippingAddress": {
                           "salutation": "Mr",
                           "email": "spencor.hopkin@spryker.com",
-                          "firstName": "spencor",
-                          "lastName": "hopkin",
+                          "firstName": "Spencor",
+                          "lastName": "Hopkin",
                           "address1": "West road",
                           "address2": "212",
                           "address3": "",
@@ -375,13 +376,13 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 {% info_block warningBox "Verification" %}
 
 Make sure you have a `selectedShipmentTypes` field in the response when you do a request with single-shipment request structure.
-`POST https://glue-backend.mysprykershop.com/checkout-data?include=shipments,shipment-methods,shipment-types`
+`POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
   <summary markdown='span'>Request body example</summary>
   ```json
   {
       "data": {
-          "type": "checkout",
+          "type": "checkout-data",
           "attributes": {
               "customer": {
                   "salutation": "Mr",
@@ -408,8 +409,8 @@ Make sure you have a `selectedShipmentTypes` field in the response when you do a
               "shippingAddress": {
                   "salutation": "Mr",
                   "email": "spencor.hopkin@spryker.com",
-                  "firstName": "spencor",
-                  "lastName": "hopkin",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin",
                   "address1": "West road",
                   "address2": "212",
                   "address3": "",
@@ -417,7 +418,6 @@ Make sure you have a `selectedShipmentTypes` field in the response when you do a
                   "city": "Berlin",
                   "iso2Code": "DE",
                   "company": "Spryker",
-                  "phone": "+380669455897",
                   "isDefaultShipping": true,
                   "isDefaultBilling": true
               },

@@ -14,11 +14,14 @@ redirect_from:
 
 ## Prerequisites
 
-- Before you can integrate Vertex, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+Before integrating Vertex, ensure the following prerequisites are met:
+
+- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
 - The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
+Ensure that your installation meets these requirements.
 
-Adjust your installation to comply with the listed requirements before proceeding.
+- Make sure that your deployment pipeline executes DB migrations.
 
 ## 1. Integrate ACP connector module for tax calculation
 
@@ -50,13 +53,13 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     // ...
     
-    'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'tax-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     // ...
     
-    'payment-tax-invoice-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'payment-tax-invoice-commands' => 'http',
 ];
 ```
 
@@ -202,7 +205,7 @@ Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 ```php
 // ...
     
-use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlugin;
+use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoicePlugin;
 
 // ...
 
@@ -217,7 +220,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
              
              // ...
              
-             $commandCollection->add(new SendPaymentTaxInvoicePlugin(), 'TaxApp/SubmitPaymentTaxInvoice');
+             $commandCollection->add(new SubmitPaymentTaxInvoicePlugin(), 'TaxApp/SubmitPaymentTaxInvoice');
 
              // ...
             
@@ -229,7 +232,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SendPaymentTaxInvoicePlu
 
 ```
 
-## Integrate the Vertex app
+## 2. Integrate the Vertex app
 
 Spryker does not have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to to add some missing information to the Quote object before sending a calculation request.
 

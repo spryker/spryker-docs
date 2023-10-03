@@ -476,6 +476,8 @@ Make sure you have a `selectedShipmentTypes` field in the response when you do a
   ```
 </details>
 
+{% endinfo_block %}
+
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 ```php
 <?php
@@ -589,6 +591,7 @@ Deactivate one of shipment types and send a request with corresponding shipment 
     }
     ```
 </details>
+{% endinfo_block %}
 
 ### 4) Set up database schema and transfer objects
 

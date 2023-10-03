@@ -44,12 +44,6 @@ use Spryker\Zed\OauthAuth0\OauthAuth0Config;
 
 // ...
 
-$config[TaxAppConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
-$config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
-$config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
-
-// ...
-
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     // ...
     ConfigureTaxAppTransfer::class => 'tax-commands',
@@ -68,6 +62,12 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     
     'payment-tax-invoice-commands' => 'http',
 ];
+
+// ...
+
+$config[TaxAppConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
+$config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+$config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
 ```
 
 ### 2. Configure the Calculation dependency provider
@@ -586,7 +586,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             // ...
 
             # This widget is replacing Spryker OOTB tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
-            new CartSummaryHideTaxAmountWidget(),
+            CartSummaryHideTaxAmountWidget::class,
         ];
     }
 }

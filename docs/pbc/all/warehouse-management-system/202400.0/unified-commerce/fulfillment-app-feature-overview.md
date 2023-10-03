@@ -22,37 +22,65 @@ blob:https://spryker.atlassian.net/ea1cb604-6126-4a3b-a9d0-b4bcd84b2367#media-bl
 
 ## Allocating a warehouse
 
-{% info_block infoBox "" %}
-The default warehouse allocation strategy can be replaced on the project level with a custom strategy.
+By default, when a customer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order.
+
+{% info_block infoBox "Never out of stock" %}
+The warehouse holding the never out of stock item quantity is considered to be holding the biggest stock.
 {% endinfo_block %}
 
-By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. Based on the item's availability, the warehouses are sorted in descending order from highest amount to lowest.
-If the requested quantity of the item is available in the first warehouse, which is the one holding the biggest stock of the item, this warehouse is by default assigned to fulfill the order.
-{% info_block infoBox "Info" %}
-The warehouse with the never out of stock item quantity is always assigned to the item.
+In some cases, the ordered quantity might not be available in the warehouse holding the biggest stock of the item. Then, the warehouse fulfills the order partially. The remaining quantity is fulfilled by the the warehouse holding the next biggest stock of the item. For example, the customer orders 100 tablets. The store's warehouses hold the following stock:
+
+| WAREHOUSE | STOCK|
+|-|-|
+| 2 | 65 |
+| 3 | 40 |
+| 1 | 13 |
+
+In this case, warehouse 2 provides 65 tables by emptying out its stock completely. Warehouse 3 provides the remaining 35 tablets with 5 tablets left in stock.
+
+
+{% info_block warningBox "Item reservation" %}
+Warehouse allocation shouldn't be confused with the reservation process, meaning items are not reserved when they are allocated to a warehouse. The warehouse management system is responsible for warehouse reservation. The default strategy is designed to show how warehouse allocation can be implemented and used in the fulfillment process.
 {% endinfo_block %}
-If a warehouse’s stock is insufficient to fulfill the order item, the next warehouse is added to the order to fulfill the remaining quantity of the item.
-For more information on this process, you can look at the (Warehouse Allocation Integration guide)[https://github.com/spryker/spryker-docs/blob/825525ae94ad70ba39598c59f3947bbd0c04f364/_includes/pbc/all/install-features/{{page.version}}/install-the-inventory-management-feature.md].
-{% info_block warningBox "Warning" %}
-Warehouse Allocation is different from the reservation process, meaning items are not reserved when they are allocated to a warehouse. For now, responsibility for warehouse reservation lies in the warehouse management system used by the customer. The default strategy has been implemented only to demonstrate how warehouse allocation can be implemented and used in the fulfillment process.
-{% endinfo_block %}
-## Generating a Picklist
-A warehouse picklist is a document that contains a list of items to be picked from the shelves or racks in order to fulfill a specific order. It includes information such as the product name, product image, and the quantity of each item that needs to be picked. The picklist serves as a guide for the warehouse user who is responsible for gathering the items and preparing them for shipment or storage. By following the information on the picklist, you can efficiently and accurately fulfill the order. The information within will also allow you to quickly restock inventory as required.
-Picking is semi-automated. It follows these steps:
-1) The customer places an order.
-2) A warehouse is allocated to the order.
-3) The picklist is generated.
-4) The picklist is self-assigned by a warehouse user logged in into Fulfillment App.
-5) Items are marked either as Picked or Not Found.
-6) Picking is finished.
-7) Order line items states are updated to reflect the picking being finished.
-8) The items are by default shipped.
-The picklist generation strategy allows warehouses to configure how picklists are generated based on the fulfillment requirements of the order. A custom picklist generation strategy can be implemented on a project level per individual warehouse. The default picklist generation strategy includes the ability to generate picklists by order, where each order line is assigned to a unique picklist that contains all the items needed to fulfill that order.
-Additionally, an order can be split by shipment into multiple picklists. For example, if an order contains items that need to be shipped to multiple locations, the order can be split by shipment into two picklists so that you can easily identify which items belong to each shipment.
-Overall, the picklist generation strategy provides flexibility and customization to warehouses in terms of generating picklists that best suit their order fulfillment needs, increasing efficiency, and reducing errors in the picking process.
-For further information, see the **Picklist** (integration guide)[https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-warehouse-picking-feature.html#install-feature-core].
+
+
+## Generating warehouse picklists
+
+A *warehouse picklist* is a document that contains a list of items to be picked from the shelves or racks in order to fulfill an order. It includes the following  information:
+* Product name
+* Product image
+* Quantity to be picked
+
+Based on the picklist, the warehouse user gathers and prepares the items for shipping.
+
+The information within will also allow you to quickly restock inventory as required.
+
+Picking is semi-automated and follows the steps:
+1. The customer places an order.
+2. A warehouse is allocated to the order.
+3. The picklist is generated.
+4. In the Fulfillment App, a warehouse user assigns the picklist to themselves.
+5. The user marks the items as picked or not found.
+6. Picking is finished.
+7. Order items states are updated to reflect the picking being finished.
+8. The items are shipped.
+
+### Picklist generation strategies
+
+
+
+The picklist generation strategies let you configure how picklists are generated based on the fulfillment requirements of orders per warehouse. On the project level, each warehouse can have its own strategy.
+
+The default picklist generation strategy is designed to generate picklists by order, where each order line is assigned to a unique picklist that contains all the items needed to fulfill that order.
+
+Additionally, an order can be split by shipment into multiple picklists. If an order contains items that need to be shipped to multiple locations, the order is split into two picklists. This helps the warehouse user ship items more efficiently.
+
+
+
 You can also import warehouse strategies by following the (relevant guide)[https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-warehouse-picking-feature.html#import-warehouse-picking-list-strategies].
+
 ## Picking using the Fulfillment App
+
 Follow the guide below to learn how to pick order items using our Fulfillment App.
 The Fulfillment App allows warehouse users to start the picking process for a picklist, and easily mark items in the picklist as picked or not found. Once the picking process is complete the state in the State Machine is updated to Picking Finished. To set up State Machine configuration, go (here)[https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html#set-up-configuration]. This feature improves inventory accuracy and reduces the likelihood of incorrect orders being shipped to customers.
 A subprocess for DummyPayment01 below describes in detail the state transition for the sales order line item:

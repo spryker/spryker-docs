@@ -206,7 +206,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
         return [
             // ...
 
-            # This plugin is handling messages sent from Vertex PBC to tenant application.
+            # This plugin is handling messages sent from Vertex app to SCCOS.
             new TaxAppMessageHandlerPlugin(),
         ];
     }
@@ -571,7 +571,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getCalculableObjectExpanderPluginCollection(): array
     {
         return [       
-            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in spryker/tax-app-vertex module.
+            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
             
             // The following plugins are for Marketplace only.
             # This plugin is expanding CalculableObjectTransfer object with merchant address information.
@@ -587,7 +587,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getOrderExpanderPluginCollection(): array
     {
         return [
-            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in spryker/tax-app-vertex module.
+            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
             
             // The following plugins are for Marketplace only.
             # This plugin is expanding OrderTransfer object with merchant address information.

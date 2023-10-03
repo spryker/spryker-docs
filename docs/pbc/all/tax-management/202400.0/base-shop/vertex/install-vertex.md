@@ -149,9 +149,72 @@ in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPlugin
 - TaxAmountAfterCancellationCalculatorPlugin
 - OrderTaxTotalCalculationPlugin
 
+Disabling them will also disable Spryker Taxes feature. This means that in case when Vertex is unresponsive or disabled order taxes will not be calculated and their amount will be always 0.
+
 {% endinfo_block %}
 
-### 3. (Optional) If you plan to send invoices to Vertex through OMS, configure your Payment OMS
+### 3. Configure Shop Application dependency provider
+
+Add the following to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
+
+```php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+use SprykerShop\Yves\CartPage\Widget\CartSummaryHideTaxAmountWidget;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @phpstan-return array<class-string<\Spryker\Yves\Kernel\Widget\AbstractWidget>>
+     *
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            // ...
+
+            # This widget is replacing Spryker OOTB tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
+            CartSummaryHideTaxAmountWidget::class,
+        ];
+    }
+}
+
+```
+
+
+### 4. Configure Message Broker dependency provider
+
+Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+
+```php
+
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
+use Spryker\Zed\TaxApp\Communication\Plugin\MessageBroker\TaxAppMessageHandlerPlugin;
+
+class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
+     */
+    public function getMessageHandlerPlugins(): array
+    {
+        return [
+            // ...
+
+            # This plugin is handling messages sent from Vertex PBC to tenant application.
+            new TaxAppMessageHandlerPlugin(),
+        ];
+    }
+}
+
+```
+
+### 5. (Optional) If you plan to send invoices to Vertex through OMS, configure your Payment OMS
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 
@@ -318,7 +381,7 @@ Define specific Vertex Tax metadata transfers and extend other transfers with th
 ### 2. Implement Vertex-specific metadata extender plugins
 
 There are several types of expander plugins you have to introduce.
-As a starting point, you can take examples provided by Spryker in the [tax-app-vertex] module (https://github.com/spryker/tax-app-vertex). The plugins inside are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
+As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins inside are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
 
 #### Configure the Customer Class Code Expander plugins
 
@@ -508,7 +571,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getCalculableObjectExpanderPluginCollection(): array
     {
         return [       
-            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here.
+            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in spryker/tax-app-vertex module.
             
             // The following plugins are for Marketplace only.
             # This plugin is expanding CalculableObjectTransfer object with merchant address information.
@@ -524,7 +587,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getOrderExpanderPluginCollection(): array
     {
         return [
-            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here.
+            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in spryker/tax-app-vertex module.
             
             // The following plugins are for Marketplace only.
             # This plugin is expanding OrderTransfer object with merchant address information.
@@ -558,67 +621,6 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
         return [
             # This plugin is providing warehouse address to StockTransfer objects which is used during tax calculation.
             new StockAddressStockTransferProductOfferStockExpanderPlugin(),
-        ];
-    }
-}
-
-```
-
-### 5. Configure Shop Application dependency provider
-
-Add the following to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
-
-```php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
-use SprykerShop\Yves\CartPage\Widget\CartSummaryHideTaxAmountWidget;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    /**
-     * @phpstan-return array<class-string<\Spryker\Yves\Kernel\Widget\AbstractWidget>>
-     *
-     * @return array<string>
-     */
-    protected function getGlobalWidgets(): array
-    {
-        return [
-            // ...
-
-            # This widget is replacing Spryker OOTB tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
-            CartSummaryHideTaxAmountWidget::class,
-        ];
-    }
-}
-
-```
-
-
-### 6. Configure Message Broker dependency provider
-
-Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
-
-```php
-
-namespace Pyz\Zed\MessageBroker;
-
-use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
-use Spryker\Zed\TaxApp\Communication\Plugin\MessageBroker\TaxAppMessageHandlerPlugin;
-
-class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
-     */
-    public function getMessageHandlerPlugins(): array
-    {
-        return [
-            // ...
-
-            # This plugin is handling messages sent from Vertex PBC to tenant application.
-            new TaxAppMessageHandlerPlugin(),
         ];
     }
 }

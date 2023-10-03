@@ -39,24 +39,31 @@ Add the following config to `config/Shared/config_default.php`:
 use Generated\Shared\Transfer\ConfigureTaxAppTransfer;
 use Generated\Shared\Transfer\DeleteTaxAppTransfer;
 use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
+use Spryker\Shared\TaxApp\TaxAppConstants;
+use Spryker\Zed\OauthAuth0\OauthAuth0Config;
 
 // ...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[TaxAppConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
+$config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+$config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
+
+// ...
+
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     // ...
     ConfigureTaxAppTransfer::class => 'tax-commands',
     DeleteTaxAppTransfer::class => 'tax-commands',
     SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     // ...
     
     'tax-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     // ...
     
     'payment-tax-invoice-commands' => 'http',
@@ -85,9 +92,12 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         $pluginStack = [
             // ...
         
-            # Please put this plugin after all other tax calculation plugins or instead.
+            # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
+            # Suggested plugins order is shown.
         
+            new TaxTotalCalculatorPlugin(),
             new TaxAppCalculationPlugin(),
+            new GrandTotalCalculatorPlugin(),
         
             // ...
         ];
@@ -105,8 +115,12 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         return [
             // ...
         
-            # Please put this plugin after all other tax calculation plugins or instead.
+            # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
+            # Suggested plugins order is shown.
+        
+            new TaxTotalCalculatorPlugin(),
             new TaxAppCalculationPlugin(),
+            new GrandTotalCalculatorPlugin(),
         
             // ...
         ];
@@ -491,16 +505,13 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
      */
     protected function getCalculableObjectExpanderPluginCollection(): array
     {
-        return [
-            new CalculableObjectCustomerWithTaxCodeExpanderPlugin(), // to extend quote with customer class code
-            new CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin(), // to extend quote with customer exemption certificate
-            new CalculableObjectExpensesWithTaxCodeExpanderPlugin(), // to extend quote expenses with product class codes
-            new CalculableObjectItemProductOptionWithTaxCodeExpanderPlugin(), // to extend quote item product options with product class codes
-            new CalculableObjectItemWithProductClassCodeExpandePlugin(), // to extend quote items with product class codes
-            new CalculableObjectItemWithFlexibleFieldsExpanderPlugin(), // to extend quote items with flexible fields
+        return [       
+            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here.
             
             // The following plugins are for Marketplace only.
+            # This plugin is expanding CalculableObjectTransfer object with merchant address information.
             new MerchantProfileAddressCalculableObjectTaxAppExpanderPlugin(),
+            # This plugin is expanding CalculableObjectTransfer object with product offer availability information.
             new ProductOfferAvailabilityCalculableObjectTaxAppExpanderPlugin(),
         ];
     }
@@ -511,15 +522,12 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     protected function getOrderExpanderPluginCollection(): array
     {
         return [
-            new OrderCustomerWithTaxCodeExpanderPlugin(), // to extend order with customer class code
-            new OrderCustomerWithVertexExemptionCertificateExpanderPlugin(), // to extend order with customer exemption certificate
-            new OrderExpensesWithTaxCodeExpanderPlugin(), // to extend order expenses with product class codes
-            new OrderItemProductOptionWithTaxCodeExpanderPlugin(), // to extend order item product options with product class codes
-            new OrderItemWithProductClassCodeExpandePlugin(), // to extend order items with product class codes
-            new OrderItemWithFlexibleFieldsExpanderPlugin(), // to extend order items with flexible fields
+            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here.
             
             // The following plugins are for Marketplace only.
+            # This plugin is expanding OrderTransfer object with merchant address information.
             new MerchantProfileAddressOrderTaxAppExpanderPlugin(),
+            # This plugin is expanding OrderTransfer object with product offer availability information.
             new ProductOfferAvailabilityOrderTaxAppExpanderPlugin(),
         ];
     }
@@ -546,7 +554,69 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
     protected function getStockTransferExpanderPluginCollection(): array
     {
         return [
+            # This plugin is providing warehouse address to StockTransfer objects which is used during tax calculation.
             new StockAddressStockTransferProductOfferStockExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
+### 5. Configure Shop Application dependency provider
+
+Add the following to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
+
+```php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+use SprykerShop\Yves\CartPage\Widget\CartSummaryHideTaxAmountWidget;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @phpstan-return array<class-string<\Spryker\Yves\Kernel\Widget\AbstractWidget>>
+     *
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            // ...
+
+            # This widget is replacing Spryker OOTB tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
+            new CartSummaryHideTaxAmountWidget(),
+        ];
+    }
+}
+
+```
+
+
+### 6. Configure Message Broker dependency provider
+
+Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+
+```php
+
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
+use Spryker\Zed\TaxApp\Communication\Plugin\MessageBroker\TaxAppMessageHandlerPlugin;
+
+class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
+     */
+    public function getMessageHandlerPlugins(): array
+    {
+        return [
+            // ...
+
+            # This plugin is handling messages sent from Vertex PBC to tenant application.
+            new TaxAppMessageHandlerPlugin(),
         ];
     }
 }

@@ -77,6 +77,8 @@ Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`
 ```php
 // ...
 
+use Spryker\Zed\Calculation\Communication\Plugin\Calculator\GrandTotalCalculatorPlugin;
+use Spryker\Zed\Calculation\Communication\Plugin\Calculator\TaxTotalCalculatorPlugin;
 use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 // ...

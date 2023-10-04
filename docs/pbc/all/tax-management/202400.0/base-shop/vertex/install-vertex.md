@@ -21,7 +21,7 @@ Before integrating Vertex, ensure the following prerequisites are met:
 - The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
 Ensure that your installation meets these requirements.
 
-- Make sure that your deployment pipeline executes DB migrations.
+- Make sure that your deployment pipeline executes database migrations.
 
 ## 1. Integrate ACP connector module for tax calculation
 
@@ -153,9 +153,9 @@ Disabling them will also disable Spryker Taxes feature. This means that in case 
 
 {% endinfo_block %}
 
-### 3. Configure Shop Application dependency provider
+### 3. Configure the Shop Application dependency provider
 
-Add the following to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
+Add the following code to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
 
 ```php
 
@@ -185,9 +185,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 
-### 4. Configure Message Broker dependency provider
+### 4. Configure the Message Broker dependency provider
 
-Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
 ```php
 

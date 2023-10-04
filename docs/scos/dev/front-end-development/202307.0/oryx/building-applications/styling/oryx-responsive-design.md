@@ -21,13 +21,13 @@ Oryx is designed to render applications and their components on a variety of dev
 
 Oryx provides five t-shirt size values, that are given by a generic `size` enumeration, that can be imported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
 
-| Screen      | Code      | Example devices                  |
-| ----------- | --------- | -------------------------------- |
-| Extra small | `Size.xs` | Small phone, Smart Watch         |
-| Small       | `Size.sm` | Smart phone, instore application |
-| Medium      | `Size.md` | Tablet                           |
-| Large       | `Size.lg` | Desktop                          |
-| Extra large | `Size.xl` | Wide screen                      |
+| Screen      | Code | Enum breakpoint | Example devices                  |
+| ----------- | ---- | --------------- | -------------------------------- |
+| Extra small | `xs` | `Size.Xs`       | Small phone, Smart Watch         |
+| Small       | `sm` | `Size.Sm`       | Smart phone, instore application |
+| Medium      | `md` | `Size.Md`       | Tablet                           |
+| Large       | `lg` | `Size.Lg`       | Desktop                          |
+| Extra large | `xl` | `Size.Xl`       | Wide screen                      |
 
 While the `xs` and `xl` sizes are available in the typescript enumeration, they are not used in most Oryx components and layouts. You can however use the definitions to create an optimized user experience for these screen sizes. Moreover, you can introduce additional screen sizes in case you need.
 
@@ -53,13 +53,13 @@ You'd assume that breakpoints and their usage would be controlled by design toke
 
 ### Default Breakpoints
 
-Oryx provides the following default breakpoints:
+Oryx provides the following default breakpoints for three screen sizes.
 
-| Breakpoint | Size Range (in pixels) |
-| ---------- | ---------------------- |
-| `Size.sm`  | Up to 767              |
-| `Size.md`  | 768 - 1023             |
-| `Size.lg`  | 1024 and above         |
+| Screen size | Breakpoints                      |
+| ----------- | -------------------------------- |
+| Small       | Smaller than `"768px"`           |
+| Medium      | Between `"768px"` and `"1023px"` |
+| Large       | Larger than `"1023px"`           |
 
 The default breakpoints are given by the `defaultBreakpoints` object, available in the [themes](https://www.npmjs.com/package/@spryker-oryx/themes) package. The breakpoint values are configured in pixels.
 
@@ -84,7 +84,7 @@ The breakpoint definition shows that you only need to define the required breakp
 
 ### Custom Breakpoints
 
-If the default breakpoints do not align with your project's requirements, Oryx allows you to define custom breakpoints. This gives you the flexibility to adapt your design to specific devices or screen sizes that are relevant to your target audience.
+By utilizing custom breakpoints, you can create a responsive design that is tailored to your project's needs and provides an optimal user experience across different devices and screen sizes.
 
 Breakpoints are part of Oryx themes. Oryx themes use the default configuration, but you can configure a(n additional) theme with custom breakpoints.
 
@@ -108,11 +108,7 @@ export const app = appBuilder()
   .create();
 ```
 
-In this example, we have defined custom breakpoints for extra-small (XS), small (SM), medium (MD), large (LG), and extra-large (XL) screen sizes. You can adjust the minimum and maximum values to suit your specific design requirements.
-
-By utilizing custom breakpoints, you can create a responsive design that is tailored to your project's needs and provides an optimal user experience across different devices and screen sizes.
-
-In the next sections, we will explore how to leverage Oryx's Responsive Design system to create responsive layouts, adapt individual components, and utilize media queries effectively.
+In this example, we have defined custom breakpoints for extra-small and small screen sizes. The small screen get's a minimum value and the extra small only requires a max value since it will start with 0 by default.
 
 ## Build Responsive Designs
 
@@ -178,14 +174,13 @@ The layout system is covered in more detail in the layout documentation.
 
 ## Responsive Visibility Rules
 
-Some experiences require an alternative page structure, which means that some components should or should not be rendered in a specific screen size. The Experience Data that you setup for creating [Pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) allows you to define visibility rules. The visibility rules can be configured to hide a composition or component for a specific screen size.
+Some experiences require an alternative page structure, which means that some components should or should not be rendered in a specific screen size. The Experience Data that you setup for creating [Pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) allows you to define visibility rules. The visibility rules can be configured to hide a composition or component for a specific screen size (next to other more advanced visibility rules).
 
 The following example shows you how to create a simple visibility rule for a specific screen.
 
 ```ts
 export const headerTemplate = {
   id: 'header',
-  type: 'Page',
   // ...
   components: [
     type: 'oryx-content-link',

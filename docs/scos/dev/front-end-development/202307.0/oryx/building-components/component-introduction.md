@@ -1,32 +1,32 @@
 ---
-title: "Oryx: Building Components"
+title: "Oryx: Building components"
 description: Components are the building blocks of Oryx Applications
 last_updated: Sept 19, 2023
 template: concept-topic-template
 ---
 
-Oryx provides a fully component-based architecture, where only components are used to render the application. Components are the building blocks that developers can use to create modular and reusable elements. The components are primarily concerned with the UI/UX, leaving business logic and integrations to other application layers.
+Oryx provides a fully component-based architecture where only components are used to render the application. Components are the building blocks used to create modular and reusable elements. The components are primarily concerned with UI/UX, leaving business logic and integrations to other application layers.
 
-Oryx contains a library of standard components, organized and distributed in [packages](/docs//scos/dev/front-end-development/{{page.version}}/getting-started/oryx-packages.html). There are different [types of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html), including a design system. The components are build with strong UI/UX features, including:
+Oryx contains a library of standard components, organized and distributed in [packages](/docs/scos/dev/front-end-development/{{page.version}}/getting-started/oryx-packages.html). There are different [types of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html), including a design system. The components are built with powerful UI/UX features:
 
 - Responsive design
-- Themes support, using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html)
+- Themes support using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html)
 - [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html)
 - [Icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html)
 - Internationalization (i18n) features:
   - [locales](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/oryx-service-layer.html)
-  - number and price formatting
-  - directionality (left-to-right vs right-to-left)
+  - Number and price formatting
+  - Directionality: left-to-right versus right-to-left
 - Accessibility features:
-  - dark and light mode
-  - [color contrast](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-color-system.html)
-  - keyboarding
-  - screen reader support
+  - Dark and light mode
+  - [Color contrast](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-color-system.html)
+  - Keyboarding
+  - Screen reader support
 
-Oryx components are rendered inside [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) and [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html). The pages and the organization and layout of the components are provided in standard [feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html). When you install an Oryx application, the feature sets are available in the [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html) package.
+The components are rendered inside [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) and [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html). The pages, organization, and layout of the components are provided in standard [feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-feature-sets.html). When you install an Oryx application, the feature sets are available in the [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html) package.
 
-Oryx provides a large set of standard components that you can use in your projects. Oryx components can be customized with a custom theme, style rules, [component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) or component logic. You can also [implement custom components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-implementation.html) and add them to the application.
+You can customize the components with a custom theme, style rules, [component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html), or component logic. You can also [implement custom components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-implementation.html) and add them to the application.
 
-Oryx components are built as web components, which makes them highly reusable in other web frameworks and systems. Read more about the [interoperability of Oryx components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-interoperability.html) in other frameworks and systems.
+The components are built as web components, which makes them highly reusable in other web frameworks and systems. For more details, see [interoperability of Oryx components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-interoperability.html).
 
-Oryx provides a reactive framework and is designed to work highly efficiently in a Single Page Application architecture. To ensure _reactivity_ throughout the application, Oryx only re-renders those fragments of the components that have been affected by the changing application state. You can read more about this in the [key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html).
+Oryx provides a reactive framework and is designed to work highly efficiently in a Single Page Application architecture. To ensure _reactivity_ throughout the application, Oryx only re-renders those fragments of the components that were affected by the changing application state. For more details, see [key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html).

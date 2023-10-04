@@ -115,6 +115,10 @@ We do not normally support full delegation of your DNS to us and therefore do no
 - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
+{% info_block warningBox "Integration with Payment Providers" %}
+Lower/non production environments might not have the same WAF and Firewall settings configured as production environments. Please make sure that all your requests have valid headers. Test the functionality of payment integrations that use call backs or API calls back your application on your production environment!
+{% endinfo_block %}
+
 ### Data preparation and communication
 
 - *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.

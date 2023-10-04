@@ -26,7 +26,7 @@ In September 2023, we have added and updated the following pages:
 - [Prepare a project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html): Get your project ready to start using Spryker Code Upgrader.
 - [Bazaarvoice app integration guide](/docs/pbc/all/ratings-reviews/202307.0/third-party-integrations/integrate-bazaarvoice.html).
 - [Algolia app integration guide](/docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html).
-- [Cart Notes feature integration guide](/docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html).
+- [Cart Notes feature integration guide](/docs/pbc/all/cart-and-checkout/202400.0/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html).
 - [Order management feature integration guide](/docs/pbc/all/order-management-system/202400.0/base-shop/install-features/install-the-order-management-feature.html).
 - [Packaging Units feature integration guide](/docs/pbc/all/product-information-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/push-notification/202400.0/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html).

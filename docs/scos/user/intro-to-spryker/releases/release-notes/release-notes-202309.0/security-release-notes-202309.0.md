@@ -1,7 +1,7 @@
 ---
-title: Security release notes 202306.0
-description: Security release notes for the Spryker Product release 202306.0
-last_updated: Jul 11, 2023
+title: Security release notes 202309.0
+description: Security release notes for Q3
+last_updated: Oct 4, 2023
 template: concept-topic-template
 ---
 

@@ -63,7 +63,7 @@ The number of columns that is used for the first column is configurable by desig
 | ------ | --------------------------- | -------------------------- | --------------------------- |
 | large  | `6`                         | `8`                        | `3`                         |
 | medium | `4`                         | `5`                        | `2.66`                      |
-|        | `--oryx-column-split-equal` | `--oryx-column-split-main` | `--oryx-column-split-equal` |
+|        | `--oryx-column-split-equal` | `--oryx-column-split-main` | `--oryx-column-split-aside` |
 
 On small screens, the Split layout adapts by using only one column, with the "second" column changing to the next row. This responsive behavior ensures that the layout remains functional and visually appealing across a wide range of devices and screen sizes.
 
@@ -181,7 +181,7 @@ If you like to leverage component options, including layout options in the hardc
 Another option would be to integrate with the `CompositionComponent` as the layout and options are automatically assigned based on the composition `uid`.
 
 ```html
-<oryx-composition uid="component-uid"></oryx-layout>
+<oryx-composition uid="component-uid"></oryx-composition>
 ```
 
 This approach is used in some Oryx components, such as the `CartTotalsComponent`.
@@ -196,11 +196,8 @@ An example of using this approach can be found in the `ProductListComponent`. Th
 @hydrate()
 export class ProductListComponent extends LayoutMixin(LitElement) {
   protected override render(): TemplateResult {
-    return html`
-      // write the component html here ${unsafeHTML(
-        `<style>${this.layoutStyles()}</style>`
-      )}
-    `;
+    // apply the layout html inside the returned TemplateResult
+    return html`${unsafeHTML(`<style>${this.layoutStyles()}</style>`)}`;
   }
 }
 ```

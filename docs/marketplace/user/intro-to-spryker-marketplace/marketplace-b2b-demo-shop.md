@@ -21,4 +21,4 @@ The B2B Marketplace Demo Shop is a showcase that is pre-loaded with a combinatio
 
 To download the Marketplace B2B Demo Shop, visit the following GitHub repository: https://github.com/spryker-shop/b2b-demo-marketplace
 
-To set up the B2B Demo Shop, follow the instructions in [Spryker Marketplace Setup](/docs/marketplace/dev/setup/{{site.version}}/spryker-marketplace-setup.html).
+To set up the B2B Demo Shop, follow the instructions in [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).

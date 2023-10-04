@@ -3,6 +3,7 @@ title: Testing console commands
 description: How to test console commands.
 last_updated: Jan 12, 2022
 template: concept-topic-template
+redirect_from:
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html

@@ -27,7 +27,7 @@ To add a new price for a marketplace abstract product, follow these steps:
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
 
-4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate customer's [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
+4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate customer's [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to apply the price to.
 
   {% info_block infoBox "Note" %}
 
@@ -96,7 +96,7 @@ Let's say you have a product that you want to sell with a special price if a use
 
 ## Next steps
 
-- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product.html)
+- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
 - [Manage abstract product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
 - [Manage abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
 - [Manage abstract product meta information](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html)

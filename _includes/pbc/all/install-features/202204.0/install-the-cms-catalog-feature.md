@@ -9,12 +9,12 @@ Follow the steps below to install the CMS + Catalog feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Catalog | {{page.version}} |  |
-| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ### 1) Configure the CMS page search query
 
@@ -196,12 +196,12 @@ Follow the steps below to install the CMS + Catalog feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Catalog | {{page.version}} |  |
-| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ### 1) Install the required modules using Composer
 

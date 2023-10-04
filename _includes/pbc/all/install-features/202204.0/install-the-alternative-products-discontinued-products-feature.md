@@ -10,11 +10,11 @@ Follow the steps below to install the Alternative Products + Discontinued Produc
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | ---| --- |
-| Alternative Products | {{page.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html) |
+| Alternative Products | {{page.version}} | [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html) |
 |  Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) 0|
 
 ### 1) Set up behavior

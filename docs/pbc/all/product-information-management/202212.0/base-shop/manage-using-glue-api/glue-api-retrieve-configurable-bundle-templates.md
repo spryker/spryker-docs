@@ -749,7 +749,7 @@ For the attributes of other included resources, see:
 
 ## Possible errors
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Other management options
 
@@ -762,4 +762,4 @@ You can use the configurable bundle resource in the following way:
 * [Change the quantity of the configurable bundles in a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
 * [Remove a configurable bundle from a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
 * [Checking our purchases with configurable bundles](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html)
-* [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
+* [Retrieving orders with configurable bundles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)

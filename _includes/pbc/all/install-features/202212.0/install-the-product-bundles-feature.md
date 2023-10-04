@@ -4,12 +4,12 @@ This integration guide expects the basic feature to be in place. It adds only th
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
 
 ## 1) Install required modules using Composer
@@ -287,11 +287,3 @@ console data:import product-concrete
 Ensure that, in the database, the configured data has been added to the `spy_product_bundle` table and the `product_bundle` publishing has been triggered.
 
 {% endinfo_block %}
-
-## Related features
-
-Integrate the following related features:
-
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| --- | --- | --- |
-| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/pbc/all/punchout/{{site.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-product-bundles-feature.html) |

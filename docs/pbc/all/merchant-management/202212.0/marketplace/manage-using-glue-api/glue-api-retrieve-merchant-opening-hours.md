@@ -27,7 +27,7 @@ To retrieve a merchant opening hours, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overviewew.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
+This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
 
 {% endinfo_block %}
 
@@ -206,4 +206,4 @@ Request sample: retrieve merchant opening hours
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

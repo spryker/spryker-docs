@@ -19,11 +19,11 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
   - title: Glue API - Order Management feature integration
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
-  - title: Company Account + Order Management feature integration
-    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
+  - title: Install the Company Account + Order Management feature
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
   - title: Product + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
-  - title: Customer Account Management + Order Management feature integration
-    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+  - title: Install the Customer Account Management + Order Management feature
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-order-management-feature.md -->

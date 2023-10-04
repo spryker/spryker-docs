@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
   - title: Order Management feature overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
 ---
@@ -1226,4 +1226,4 @@ To retrieve detailed information on an order, send the request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

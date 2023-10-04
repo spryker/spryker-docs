@@ -12,7 +12,7 @@ Follow the steps below to install the Company Account + Order Management feature
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -652,7 +652,7 @@ class CompanyBusinessUnitGuiDependencyProvider extends SprykerCompanyBusinessUni
 
 Log in to a customer account that has multiple company users and a default one. In the session, check if the default company user is assigned to the customer and if the `IsOnBehalf` property is set correctly for the customer.
 
-Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
+Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/generate-login-tokens.html).
 
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` is set up correctly, check the data exported to the key-value storage key `kv:company_user:1` for `id_company_business_unit:id` and `id_company_business_unit` must be set up to a correct foreign key of the business unit that the company user is assigned to.
 
@@ -690,7 +690,7 @@ Follow these steps to install the Company Account + Order Management feature fro
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

@@ -74,11 +74,11 @@ This code shows the ease of use, but there's a lot going on in the background:
 
 The above pattern is commonly used in all Oryx domains. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
-### Step 3: Configure the component
+### 3: Configure the component
 
-Oryx components can be made configurable by options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options are an important concept in Oryx as they allow components to be reusable cross different business models. For example, a component can render different results based on an option that is provided `true` for a b2c application, but `false` for a b2b application.
+Oryx components can be made configurable by options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options allow components to be reusable across different business models. For example, a component can render different results based on an option that is provided: `true` for a B2C application, but `false` for a B2B application.
 
-The component options are resolved by the `ContentMixin`, similar to how the `ProductService` resolves the product data. It is possible to combine multiple mixins in your component implementation, for example:
+The component options are resolved by `ContentMixin`, similar to how the `ProductService` resolves the product data. It is possible to combine multiple mixins in your component implementation, for example:
 
 ```ts
 import { resolve } from "@spryker-oryx/di";

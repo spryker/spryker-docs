@@ -7,19 +7,19 @@ template: concept-topic-template
 
 This guide helps you to learn how to create a new Oryx component.
 
-Oryx components are web components, built with [Lit](https://lit.dev). Lit is a lightweight open source framework from Google that can be used to build highly efficient web components. Web components can actually be created with any framework or even with vanilla html, CSS and JavaScript. If you do not want to use Lit, you can use your own framework of choice. If you do not use Lit, however, you'd miss out on some of the utilities that Oryx provides, such as [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) and component mixins.
+Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
 
 In this guide you'll learn how to implement a component and how to use it inside an application. This documentation guide presumes you'll use Lit to build your custom components. It will not go in detail of the standard concepts that are covered in the [component documentation of Lit](https://lit.dev/docs/components/overview/).
 
 ## Implement a component
 
-In this documentation we'll guide you through the development process to implement a product _ID_ component. It is a simple component that demonstrates a number of basic concepts. The component already exists in the Oryx product package.
+In this documentation we'll guide you through the development process to implement a product _ID_ component. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
 
-Oryx creates a folder per component (e.g. `src/product/id`), and separates some of the component logic in separate files. However, if you are more comfortable with the Single-File Components (SFC) pattern, it is fine to do so. Only the component definition should be separated out to ensure lazy loading of the component.
+Oryx creates a folder per component, like `src/product/id`, and separates some of the component logic in separate files. However, if you are more comfortable with the Single-File Components pattern, it is fine to do so. Only the component definition should be separated out to ensure lazy loading of the component.
 
-### Step 1: Create the component class
+### 1. Create the component class
 
-Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class based elements, that extend from `HTMLElement`. Lit provides the `LitElement` as a base class to extend from when you create a custom element.
+Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class based elements that extend from `HTMLElement`. Lit provides `LitElement` as a base class to extend from when you create a custom element.
 
 ```ts
 import { LitElement, TemplateResult } from "lit";
@@ -35,10 +35,10 @@ Oryx components follow a simple naming convention that is used in the class name
 
 `[Domain][Feature]Component`,
 
-The `Domain` in this example is Product and the feature `Id`.
+In this example, the `Domain` is `Product` and the `Feature` is `Id`. The component's name is `ProductIdComponent`.
 
 {% info_block infoBox %}
-Oryx is implemented with TypeScript, to improve the development experiences. This is not necessary. There also no TypeScript configuration that are forces by Oryx.
+Oryx is implemented with TypeScript to improve the development experience. This is not necessary. There also no TypeScript configuration that are forces by Oryx.
 {% endinfo_block %}
 
 ### Step 2: Integrate backend data

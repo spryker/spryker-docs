@@ -41,19 +41,19 @@ In this example, the `Domain` is `Product` and the `Feature` is `Id`. The compon
 Oryx is implemented with TypeScript to improve the development experience. This is not necessary. There also no TypeScript configuration that are forces by Oryx.
 {% endinfo_block %}
 
-### Step 2: Integrate backend data
+### 2. Integrate backend data
 
-In this step we're going to resolve the product data, and render the id field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time, for example when the user navigates from product page to product page. In order to render the state efficiently, the component must support [reactivity](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
+In this step you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time—for example, when a user navigates one product page to another. In order to render the state efficiently, the component must support [reactivity](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
 
-Oryx provides a number of standard [application layers](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html#application-layers) to load and resolve the backend data. The service layer is intended to be used by components, product components would interact with the `ProductService`. The integration with the product service and the reactivity is simplified by the use of the `ProductMixin`. Mixins provide a number of component properties and methods that you can use in your components.
+Oryx provides standard [application layers](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html#application-layers) to load and resolve the backend data. The service layer is intended to be used by components, and product components interact with `ProductService`. The integration with the product service and reactivity is simplified by using `ProductMixin`. Mixins provide component properties and methods, which you can use in your components.
 
-{% info_block infoBox "Inheritance vs composition" %}
+{% info_block infoBox "Inheritance versus composition" %}
 
-While component classes extend from a base class, Oryx tries to avoid inheritance as much as possible, and rather uses the _composition_ design pattern. Not all component logic can be composed, which is why mixins are used.
+While component classes extend from a base class, Oryx mostly avoids inheritance and uses the _composition_ design pattern. Not all component logic can be composed, which is why mixins are used.
 
 {% endinfo_block %}
 
-The following example shows you how to extend from the `ProductMixin` and consume the product data.
+The following example shows how to extend from `ProductMixin` and consume the product data.
 
 ```ts
 import { LitElement, TemplateResult } from "lit";
@@ -66,13 +66,13 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 }
 ```
 
-This code demonstrates nicely the ease of use, but there's a lot going on in the background:
+This code shows the ease of use, but there's a lot going on in the background:
 
-1. The product _context_ (sku) is resolved from the url or any of the components ancestor DOM elements, depending on where the component is used. When the component is used inside a product card or cart entry, the `sku` is added as an attribute, but when the component is used on the Product Detail Page, the `sku` is resolved from the url. The current locale and currency are used as additional context. When any of the context is changing, the product data is reloaded automatically.
-2. The `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service use an adapter (`ProductAdapter`) to fetch the data. The http response is converted to meet the client side product model. Oryx' state management solution (_Command and Query_) prevents reloading data unless explicitly requested.
-3. The `$product` signal subscribes to the application state, using the `ProductService`. Whenever the product state is changing, the [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
+1. The product _context_ (sku) is resolved from the URL or any of the component's ancestor DOM elements, depending on where the component is used. When the component is used inside a product card or cart entry, the `sku` is added as an attribute, but when the component is used on the Product Details Page, the `sku` is resolved from the URL. The current locale and currency are used as additional context. When the context is changing, the product data is reloaded automatically.
+2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses an adapter (`ProductAdapter`) to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
+3. The `$product` signal subscribes to the application state using `ProductService`. Whenever the product state is changed, the [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
 
-The above pattern is commonly used in all Oryx domains. It ensure efficiently consumption of backend APIs and efficient rendering of DOM elements.
+The above pattern is commonly used in all Oryx domains. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
 ### Step 3: Configure the component
 

@@ -1,0 +1,142 @@
+
+
+This document describes how to integrate the Service Points Cart + Checkout feature into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Service Points Cart + Checkout feature.
+
+### Prerequisites
+
+To start feature integration, integrate the required features:
+
+| NAME                | VERSION           | INTEGRATION GUIDE                                                                                                                                                          |
+|---------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html) |
+| Checkout            | {{page.version}}  | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                                               |
+
+### 1) Install the required modules using Composer
+
+We offer the example Click & Collect service point cart replacement strategies. To use them, install the following module:
+
+```bash
+composer require spryker/click-and-collect-example: "^0.3.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following module has been installed:
+
+| MODULE                 | EXPECTED DIRECTORY                       |
+|------------------------|------------------------------------------|
+| ClickAndCollectExample | vendor/spryker/click-and-collect-example |
+
+{% endinfo_block %}
+
+### 2) Set up transfer objects
+
+Generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER                         | TYPE  | EVENT   | PATH                                                                   |
+|----------------------------------|-------|---------|------------------------------------------------------------------------|
+| QuoteError                       | class | created | src/Generated/Shared/Transfer/QuoteErrorTransfer                       |
+| QuoteResponse                    | class | created | src/Generated/Shared/Transfer/QuoteResponseTransfer                    |
+| Quote                            | class | created | src/Generated/Shared/Transfer/QuoteTransfer                            |
+| Item                             | class | created | src/Generated/Shared/Transfer/ItemTransfer                             |
+| Currency                         | class | created | src/Generated/Shared/Transfer/CurrencyTransfer                         |
+| Store                            | class | created | src/Generated/Shared/Transfer/StoreTransfer                            |
+| ServicePoint                     | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                     |
+| ShipmentType                     | class | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                     |
+| Shipment                         | class | created | src/Generated/Shared/Transfer/ShipmentTransfer                         |
+| ProductOffer                     | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                     | 
+| ProductOfferServicePoint         | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointTransfer         |
+| ProductOfferServicePointCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointCriteriaTransfer | 
+| ProductOfferPrice                | class | created | src/Generated/Shared/Transfer/ProductOfferPriceTransfer                |
+| ProductOfferStock                | class | created | src/Generated/Shared/Transfer/ProductOfferStockTransfer                |
+
+{% endinfo_block %}
+
+### 2) Set up behavior
+
+1. Register plugins:
+
+| PLUGIN                                            | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                             |
+|---------------------------------------------------|-------------------------------------------------|---------------|-------------------------------------------------------|
+| ServicePointCheckoutAddressStepPostExecutePlugin  | Replaces quote items using applicable strategy. | None          | SprykerShop\Yves\ServicePointCartPage\Plugin\CartPage |
+
+**src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Yves\CheckoutPage;
+
+use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
+use SprykerShop\Yves\ServicePointCartPage\Plugin\CartPage\ServicePointCheckoutAddressStepPostExecutePlugin;
+
+class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
+{
+    /**
+     * @return list<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutAddressStepPostExecutePluginInterface>
+     */
+    protected function getCheckoutAddressStepPostExecutePlugins(): array
+    {
+        return [
+            new ServicePointCheckoutAddressStepPostExecutePlugin(),
+        ];
+    }
+}
+```
+
+2. Enable the demo Click & Collect replacement strategy plugins:
+
+For the demo purpose, we propose the example of the Click & Collect replacement strategy.
+
+| PLUGIN                                                                   | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                                                |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin | Replaces product offers in quote items that have `delivery` shipment type with suitable product offers replacements. |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
+| ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin   | Replaces product offers in quote items that have `pickup` shipment type with suitable product offers replacements.   |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
+
+**src/Pyz/Zed/ServicePointCart/ServicePointCartDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\ServicePointCart;
+
+use Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart\ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin;
+use Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart\ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin;
+use Spryker\Zed\ServicePointCart\ServicePointCartDependencyProvider as SprykerServicePointCartDependencyProvider;
+
+class ServicePointCartDependencyProvider extends SprykerServicePointCartDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\ServicePointCartExtension\Dependency\Plugin\ServicePointQuoteItemReplaceStrategyPluginInterface>
+     */
+    protected function getServicePointQuoteItemReplaceStrategyPlugins(): array
+    {
+        return [
+            new ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin(),
+            new ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin(),
+        ];
+    }
+}
+```

@@ -74,11 +74,11 @@ This code shows the ease of use, but there's a lot going on in the background:
 
 The above pattern is commonly used in all Oryx domains. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
-### 3: Configure the component
+### 3. Configure the component
 
 Oryx components can be made configurable by options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options allow components to be reusable across different business models. For example, a component can render different results based on an option that is provided: `true` for a B2C application, but `false` for a B2B application.
 
-The component options are resolved by `ContentMixin`, similar to how the `ProductService` resolves the product data. It is possible to combine multiple mixins in your component implementation, for example:
+The component options are resolved by `ContentMixin`, similar to how `ProductService` resolves the product data. You can combine multiple mixins in component implementation—for example:
 
 ```ts
 import { resolve } from "@spryker-oryx/di";
@@ -102,27 +102,27 @@ export class ProductIdComponent extends ProductMixin(
 }
 ```
 
-You can provide default options in the component as well as provide options in feature sets or in the application, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html).
+You can provide default options in the component, in feature sets, or in the application. For more details, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html).
 
-### Step 4: Style the component DOM
+### 4. Style the component DOM
 
-Oryx components are styled with standard CSS. The components have a separate DOM attached, using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components, nor do any global styles cascade down to the component.
+Oryx components are styled with standard CSS. The components have a separate DOM attached using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components and prevents global styles from cascading down to the component.
 
-Styling components in the shadow DOM might be new experience to you. This guide is not going to provide detailed knowledge on this topic, as it's a standard feature. However, there are few things to know when it comes to Oryx and styling components:
+Styling components in the shadow DOM is a big topic we recommend studying separately. However, there are a few things to know when it comes to Oryx and styling components:
 
-- Oryx uses design system components, that are provided in the UI package. For example, `<oryx-button>`, `<oryx-link>`, etc. are components that you can use to ensure a common visual language. Moreover, design system components can be customized, similar to any Oryx component.
-- Font styles rules like `font-face` or `font-size` will, unlike other CSS rules,cascade to web components, no matter how deep they are nested. Oryx provides standard font rules in the `<oryx-app>` component.
-- Oryx provides a set of [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens that can be used to ensure consistent styling.
-- Custom properties (also known as CSS variables) cascade into web components, which is why the application theme is based on CSS variables. See [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) for more information.
+- Design system components are provided in the UI package. Components like `<oryx-button>` or `<oryx-link>` are used to ensure a common visual language. They can be customized.
+- Font styles rules like `font-face` or `font-size`, unlike other CSS rules, cascade to web components, no matter how deep they are nested. Standard font rules are provided in the `<oryx-app>` component.
+- [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens are used to ensure consistent styling.
+- Custom properties, also known as CSS variables, cascade into web components, which is why the application theme is based on CSS variables. See [Design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) for more information.
 - Oryx provides an [icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html) that you can leverage in your components.
-- Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen specific styles in the component definition (see below)
+- Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen specific styles in the component definition as described in the following sections.
 - You can use Oryx themes and provide component styles for a specific theme. Similar to breakpoint specific styles, you can configure styles for a theme.
 
-### Step 5: Localize messages
+### 5. Localize messages
 
-Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage the [ Localization](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-localization.html) feature in Oryx.
+Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage [localization](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-localization.html).
 
-Localizations are resolved asynchronously, and require a rerender of the UI whenever they're loaded or reloaded. The `ContentMixin` that we've seen earlier when we integrated the component options, provides access to the `i18n` directive. The `i18n` directive is available as a class method, the following example shows how to use it:
+Localizations are resolved asynchronously, and require the UI to be rerendered whenever they're loaded or reloaded. `ContentMixin`, which you've used earlier to integrate the component options, provides access to the `i18n` directive. The `i18n` directive is available as a class method. The following example shows how to use it:
 
 ```ts
 protected render(): TemplateResult | void {
@@ -130,11 +130,11 @@ protected render(): TemplateResult | void {
 }
 ```
 
-If you do not use the `ContentMixin`, you can use the `I18nMixin` instead. If you not like to use any mixin, you can also integrate the `i18n` directive directly.
+If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose to not use mixins, you can integrate the `i18n` directive directly.
 
-### Step 6: Use services inside your component
+### 6. Use services inside your component
 
-In one the previous sections you've seen how the `ProductMixin` can resolve the product data and hides the integration with the `ProductService`. It is common to also use services directly in your components. Oryx integrates _injects_ services through [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern to separate concerns but also allows to customize services without touching the components or other depending services.
+You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx integrates _injects_ services through [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern to separate concerns but also allows to customize services without touching the components or other depending services.
 
 The Oryx DI container is used to register and resolve services by a token. You can read more about resolving services in [the documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html). In the following example you see how the pricing service is resolved.
 

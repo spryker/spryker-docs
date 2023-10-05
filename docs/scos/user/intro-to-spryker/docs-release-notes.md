@@ -34,7 +34,7 @@ In September 2023, we have added and updated the following pages:
 - [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html).
 - [Vertex app integration guide](/docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html).
 
-For more details about these and other updates to the Spryker docs in August 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
+For more details about these and other updates to the Spryker docs in September 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
 
 ## August 2023

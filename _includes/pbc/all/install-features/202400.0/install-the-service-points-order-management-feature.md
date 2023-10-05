@@ -109,36 +109,36 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\CheckoutRestApi;
+namespace Pyz\Glue\CheckoutRestApi;
 
-use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
-use Spryker\Zed\ServicePointsRestApi\Communication\Plugin\CheckoutRestApi\ServicePointCheckoutDataExpanderPlugin;
-use Spryker\Zed\ServicePointsRestApi\Communication\Plugin\CheckoutRestApi\ServicePointQuoteMapperPlugin;
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi\ServicePointCheckoutDataResponseMapperPlugin;
+use Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi\ServicePointCheckoutRequestAttributesValidatorPlugin;
 
 class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\QuoteMapperPluginInterface>
+     * @return array<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutRequestAttributesValidatorPluginInterface>
      */
-    protected function getQuoteMapperPlugins(): array
+    protected function getCheckoutRequestAttributesValidatorPlugins(): array
     {
         return [
-            new ServicePointQuoteMapperPlugin(),
+            new ServicePointCheckoutRequestAttributesValidatorPlugin(),
         ];
     }
 
     /**
-     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataExpanderPluginInterface>
+     * @return array<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataResponseMapperPluginInterface>
      */
-    protected function getCheckoutDataExpanderPlugins(): array
+    protected function getCheckoutDataResponseMapperPlugins(): array
     {
         return [
-            new ServicePointCheckoutDataExpanderPlugin(),
+            new ServicePointCheckoutDataResponseMapperPlugin(),
         ];
     }
 }

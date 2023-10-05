@@ -218,7 +218,7 @@ Make sure the following transfers have been created:
 | GlueResponse | class | created | src/Generated/Shared/Transfer/GlueResponseTransfer.php |
 | Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
 
-Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.\
+Ensure successful generation of Propel entities by verifying that they exist. Additionally, modify the generated entity classes to extend from Spryker core classes.
 
 | CLASS PATH | EXTENDS |
 | --- | --- |

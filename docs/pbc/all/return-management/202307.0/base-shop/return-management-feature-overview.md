@@ -125,7 +125,7 @@ To install the return management capability, do the following:
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-documents).
+2. Follow the integration guides in [Related Developer documents](#related-developer-documents).
 
 ## Related Business User articles
 
@@ -135,7 +135,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/base-shop/build-a-return-management-process-best-practices.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|

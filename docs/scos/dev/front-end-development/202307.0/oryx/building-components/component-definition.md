@@ -9,7 +9,7 @@ Oryx components can be integrated in different ways. They can be listed in [page
 
 When a component is rendered for the first time, Oryx resolves the component definition from the registry and loads the associated implementation. With this, components are lazily loaded.
 
-## Create a component definition
+## Creating a component definition
 
 To register a [component implementation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-implementation.html), you need to provide a component definition. The component definition requires a name and an implementation. The name is used as the web component element name. Definition of a web component consists of two or more words separated by a dash. It is a good practice to prefix components with a project, brand, or company name. For example, Oryx components are prefixed with `oryx-`.
 

@@ -172,8 +172,8 @@ In May 2023, we have added and updated the following pages:
 
 - [Docs release notes](/docs/scos/user/intro-to-spryker/docs-release-notes.html)
 - Multistore documentation:
-    - [Multistore setup options](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html): Learn about all the setup options you have for a multi-store environment.
-    - [Checklist for a new store implementation](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.
+    - [Multistore setup options](/docs/cag/dev/multi-store-setups/multistore-setup-options.html): Learn about all the setup options you have for a multi-store environment.
+    - [Checklist for a new store implementation](/docs/cag/dev/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html): Learn how to install the App Orchestration Platform.
 - [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html): Learn how to run the evaluator tool.
 - [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html):

@@ -22,7 +22,7 @@ The described issues are directly related to how changes are introduced in a pro
 
 ## Pipelines in SCCOS
 
-To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html).
+To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/deployment-pipelines.html).
 
 ## Production pipeline steps
 

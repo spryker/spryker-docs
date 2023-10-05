@@ -1,5 +1,5 @@
 ---
-title: Multi-store setups
+title: Multi-store setup options
 description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
 redirect_from:
@@ -109,7 +109,7 @@ While the search index and key-value storages are shared resources, you can have
 
 {% endinfo_block %}
 
-- Virtual separated database per store. For details on how to add virtual databases to your store, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
+- Virtual separated database per store. For details on how to add virtual databases to your store, see [Add and remove databases of stores](/docs/cag/dev/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% info_block infoBox "Info" %}
 
@@ -141,7 +141,7 @@ The following table provides details on the infrastructure for this setup:
 
 {% info_block infoBox "Info" %}
 
-You can apply the virtually isolated database to setup one and setup three too. See [Shared setup](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html#shared-setup) for more details.
+You can apply the virtually isolated database to setup one and setup three too. See [Shared setup](/docs/cag/dev/multi-store-setups/multi-store-setups.html#shared-setup) for more details.
 
 {% endinfo_block %}
 
@@ -247,4 +247,4 @@ If you anticipate a high load, it's essential to consult and obtain guidance fro
 ## Next steps
 
 - [Implement a new store for your multi-store environment](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
-- [Check your and Spryker's tasks when setting up a new store](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html)
+- [Check your and Spryker's tasks when setting up a new store](/docs/cag/dev/multi-store-setups/checklist-for-a-new-store-implementation.html)

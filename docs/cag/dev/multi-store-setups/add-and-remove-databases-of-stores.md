@@ -10,7 +10,7 @@ This document describes how to add and remove a dedicated database of a store.
 
 ## Prerequisites
 
-Make sure that your project supports the [separated multi-store setup](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html).
+Make sure that your project supports the [separated multi-store setup](/docs/cag/dev/multi-store-setups/multi-store-setups.html).
 
 
 ## Add a database for a store

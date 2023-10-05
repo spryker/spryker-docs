@@ -5,7 +5,7 @@ last_updated: Nov 29, 2022
 template: howto-guide-template
 ---
 
-Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
+Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
 
 ```
 config
@@ -108,7 +108,7 @@ For [Staging and Production](/docs/cloud/dev/spryker-cloud-commerce-os/environme
 - pre-deploy.yml
 - production.yml
 
-You can use them as a hook definition when [customizing pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html#adding-a-single-command-to-a-deployment-pipeline):
+You can use them as a hook definition when [customizing pipelines](/docs/cag/dev/configure-deployment-pipelines/customize-deployment-pipelines.html#adding-a-single-command-to-a-deployment-pipeline):
 
 ```shell
 image:

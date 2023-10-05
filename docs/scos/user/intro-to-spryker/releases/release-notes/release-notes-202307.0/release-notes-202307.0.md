@@ -208,8 +208,8 @@ Turn on and off the maintenance mode of an application using a dedicated pipelin
 
 #### Documentation
 
-* [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
-* [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
+* [Enable and disable maintenance mode](/docs/cag/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+* [Configure access to applications in maintenance mode](/docs/cag/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 ### [Cloud Self-Service] Environment variables management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 

@@ -6,7 +6,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html
 ---
 
-When you [enable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) for an application, visitors see a maintenance page and can't access the application. To enable access to an application in maintenance mode, you can allowlist IP addresses as follows.
+When you [enable maintenance mode](/docs/cag/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) for an application, visitors see a maintenance page and can't access the application. To enable access to an application in maintenance mode, you can allowlist IP addresses as follows.
 
 ## Define gateway IP addresses
 

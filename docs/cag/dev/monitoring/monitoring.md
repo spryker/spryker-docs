@@ -9,5 +9,5 @@ redirect_from:
 
 This section explains monitoring via New Relic and describes how to customize AWS CloudWatch dashboards:  
 
-* [Performance and availability monitoring via New Relic](/docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html)
-* [Customize AWS CloudWatch dashboards](/docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html)
+* [Performance and availability monitoring via New Relic](/docs/cag/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html)
+* [Customize AWS CloudWatch dashboards](/docs/cag/dev/monitoring/customize-aws-cloudwatch-dashboards.html)

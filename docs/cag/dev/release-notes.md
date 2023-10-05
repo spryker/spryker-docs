@@ -46,8 +46,8 @@ Faster maintenance. You can enable maintenance mode more quickly, reducing downt
 
 #### Documentation
 
-* [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
-* [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
+* [Enable and disable maintenance mode](/docs/cag/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+* [Configure access to applications in maintenance mode](/docs/cag/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 
 ### Deployment optimization of RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -104,7 +104,7 @@ Benefits of a multi-store setup:
 
 ### Documentation
 
-[Multi-store setups](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html)
+[Multi-store setups](/docs/cag/dev/multi-store-setups/multi-store-setups.html)
 
 
 ## January 2022

@@ -134,7 +134,7 @@ If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose
 
 ### 6. Use services inside your component
 
-You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx integrates _injects_ services through [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern to separate concerns but also allows to customize services without touching the components or other depending services.
+You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx integrates _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
 
 The Oryx DI container is used to register and resolve services by a token. You can read more about resolving services in [the documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html). In the following example you see how the pricing service is resolved.
 

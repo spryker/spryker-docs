@@ -5,8 +5,6 @@ algolia:
     - 404.md
     - 403.md
     - search.md
-    - docs/marketplace/dev/**/*.md
-    - docs/marketplace/user/**/*.md
     - docs/cloud/dev/**/*.md
     - docs/scos/dev/**/*.md
     - docs/scu/dev/**/*.md

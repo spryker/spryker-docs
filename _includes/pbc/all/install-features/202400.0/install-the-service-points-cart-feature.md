@@ -55,6 +55,11 @@ Generate transfer changes:
 ```bash
 console transfer:generate
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied in transfer objects:
+
 | TRANSFER                         | TYPE  | EVENT   | PATH                                                                   |
 |----------------------------------|-------|---------|------------------------------------------------------------------------|
 | QuoteError                       | class | created | src/Generated/Shared/Transfer/QuoteErrorTransfer                       |
@@ -77,9 +82,7 @@ console transfer:generate
 | Store                            | class | created | src/Generated/Shared/Transfer/StoreTransfer                            |
 | StoreRelation                    | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                    |
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied in transfer objects:
+{% endinfo_block %}
 
 ### 3) Add translations
 

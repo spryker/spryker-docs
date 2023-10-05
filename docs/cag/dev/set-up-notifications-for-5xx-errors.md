@@ -1,5 +1,5 @@
 ---
-title: Setting up a notifications for 5xx errors
+title: Set up a notifications for 5xx errors
 description: Learn how to set up notifications for 5xx errors via SNS
 template: howto-guide-template
 redirect_from:

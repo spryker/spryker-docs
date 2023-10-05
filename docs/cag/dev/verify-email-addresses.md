@@ -1,5 +1,5 @@
 ---
-title: Verifying email addresses
+title: Verify email addresses
 description: Learn how to verify email addresses, so that your applications can send emails from them.
 template: howto-guide-template
 redirect_from:

@@ -32,7 +32,7 @@ After the initial setup, the following is configured and available:
 ## Access
 You can access SCCOS via:
 
-* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html) for more details.
+* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/cag/dev/access/access-the-aws-management-console.html) for more details.
 * SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html) for more details.
 * VPN - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). We provide the access details during the onboarding.
 * SFTP - provides access to the SFTP folder mounted inside the Jenkins container.

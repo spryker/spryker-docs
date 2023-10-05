@@ -1,5 +1,5 @@
 ---
-title: Multi-store setup options
+title: Multi-store setups
 description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
 redirect_from:

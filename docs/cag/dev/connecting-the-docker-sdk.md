@@ -31,6 +31,7 @@ Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project
 
 
 ## Connect Docker SDK
+
 To connect Docker SDK to your project, follow the instructions in [Integrating the Docker SDK into existing projects](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% info_block errorBox "Deploy file" %}

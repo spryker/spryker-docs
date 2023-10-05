@@ -1,5 +1,5 @@
 ---
-title: Configuring data import from an S3 bucket via Flysystem
+title: Configure data import from an S3 bucket via Flysystem
 description: Learn how to import data via an S3 bucket.  
 template: howto-guide-template
 redirect_from:

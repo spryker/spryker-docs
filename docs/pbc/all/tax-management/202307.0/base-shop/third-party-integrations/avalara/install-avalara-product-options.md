@@ -8,7 +8,7 @@ originalArticleId: baa66b26-825e-404a-a8e4-1b48cb00cd67
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-product-options-feature-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara-tax-product-options.html
-  ß /docs/pbc/all/tax-management/202307.0/base-shop/avalara/install-avalara-product-options.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/avalara/install-avalara-product-options.html
 ---
 
 To enable the Avalara + Product Options component of the Avalara partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.

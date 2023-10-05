@@ -258,12 +258,6 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_cloud_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}

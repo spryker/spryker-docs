@@ -1,19 +1,17 @@
 ---
-title: "Oryx Components Options"
+title: "Oryx Components options"
 description: Components Options provide reusable components cross business models
 last_updated: Sept 19, 2023
 template: concept-topic-template
 ---
 
-## Component options
+Oryx components support configurable options to make the components reusable in different business contexts. Component options are JavaScript objects that can be configured as part of the application configuration or added by providing an attribute. To ensure a good developer experience, each component type can provide an interface for the options.
 
-Oryx components support configurable options to make the components better reusable in different business contexts. Component options are javascript objects that can be configured as part of the application configuration or added by providing an attribute. Each component type can provide an interface for the options, to ensure a good developer experience when you use the component.
-
-To illustrate the usage of component options, we use the tax message ("incl. vat") that is rendered on the `ProductPriceComponent`. The tax message might not be useful for all businesses. For example, in a b2c context, the message might not be required. You can conditionally render the message based on a configuration.
+To show the usage of component options, we use the tax message ("incl. vat") that is rendered on `ProductPriceComponent`. The tax message might not be useful for all businesses. For example, in a b2c context, the message might not be required. You can conditionally render the message based on a configuration.
 
 ## Set up component options
 
-Component options are provided by a TypeScript interface. This ensures a good developer experience during the component implementation and when you configure the application. The component option interface is defined in a separate `*.model.ts` file in Oryx components, but there's no strict rule to follow.
+Component options are provided by a TypeScript interface. This ensures a good developer experience when implementing a component and configuring the application. The component option interface is defined in a separate `*.model.ts` file in Oryx components, but there's no strict rule to follow.
 
 ```ts
 export interface ProductPriceOptions {

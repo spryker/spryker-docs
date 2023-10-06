@@ -35,7 +35,7 @@ On the technical side, removing a store helps with the following:
 
 ## Back up the database
 
-Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html).
+Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/cag/dev/create-and-restore-database-backups.html).
 
 ## Suspend Publish and Sync
 

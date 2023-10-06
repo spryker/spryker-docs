@@ -25,7 +25,7 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) and PaaS environments.
+This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cag/dev/getting-started-with-the-spryker-cloud-commerce-os.html) and PaaS environments.
 
 ## Passwords
 
@@ -33,7 +33,7 @@ The most important about password security is to not save it in plain text. Ther
 
 ## Secrets
 
-Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. 
+Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/cag/dev/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. 
 
 ## Encrypted communication
 

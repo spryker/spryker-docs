@@ -102,7 +102,7 @@ For examples, see [b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop/
 
 ## Staging and Production environment recipes
 
-For [Staging and Production](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html) environments, there are [dedicated installation recipes](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install/EU) with custom sections:
+For [Staging and Production](/docs/cag/dev/environments-overview.html) environments, there are [dedicated installation recipes](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install/EU) with custom sections:
 
 - destructive.yml
 - pre-deploy.yml

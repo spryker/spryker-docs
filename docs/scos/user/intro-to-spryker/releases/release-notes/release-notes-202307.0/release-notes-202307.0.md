@@ -219,7 +219,7 @@ Manage environment variables and secrets of applications using a UI without havi
 
 #### Documentation
 
-[Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
+[Add variables in the Parameter Store](/docs/cag/dev/add-variables-in-the-parameter-store.html)
 
 ### [Cloud Observability] Infrastructure Health Check Monitoring Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 

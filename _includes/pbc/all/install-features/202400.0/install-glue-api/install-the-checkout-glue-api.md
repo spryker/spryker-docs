@@ -372,8 +372,8 @@ Activate the following plugins:
 | CheckoutResourcePlugin                                | Registers the `checkout` resource.                                                                                     | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | OrderRelationshipByOrderReferencePlugin               | Adds a relationship to the `order` entity by order reference.                                                          | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
 | OrderPaymentsResourceRoutePlugin                      | Registers the `order-payments` resource.                                                                               | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
-| CartByRestCheckoutDataResourceRelationshipPlugin      | Adds `carts` resource as relationship by `RestCheckoutDataTransfer.quote`. Applies only for registered customers.      | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
-| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only for guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
+| CartByRestCheckoutDataResourceRelationshipPlugin      | Adds `carts` resource as a relationship by `RestCheckoutDataTransfer.quote`. Applies only to registered customers.      | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
+| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only to guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
 
 <details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
@@ -462,9 +462,9 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 }
 ```
 
-To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
+To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly, do the following:
 
-1. Send a request with an authorization token to a `checkout-data` endpoint with `carts` relation—Ffr example, send the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request with the request body:
+1. Send a request with an authorization token to a `checkout-data` endpoint with `carts` relation—for example, send the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request with the request body:
 
 ```json
 {"data":
@@ -789,7 +789,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 Ensure that the plugins work correctly:
 
-1. [Setting up Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html).
+1. [Set up the Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html).
 2. Add a product to the cart with a price less minimum threshold value.
 3. Check that the following error is returned by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
@@ -844,8 +844,8 @@ Ensure that the plugins work correctly:
 }
 ```
 
-5. Add more products to cart to satisfy minimum threshold.
-6. Check result by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
+5. Add more products to cart to satisfy the minimum threshold value.
+6. Check the result by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
 ```json
 {
@@ -876,7 +876,7 @@ Ensure that the plugins work correctly:
 }
 ```
 
-7. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
+7. Check the result by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
 
 ```json
 {

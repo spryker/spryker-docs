@@ -82,7 +82,7 @@ task :check_acp_user do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/scu\/.+/,
     /docs\/pbc\/.+/,
@@ -91,7 +91,7 @@ task :check_acp_user do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_cloud do
+task :check_ca do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
@@ -108,7 +108,7 @@ end
 task :check_scos_dev do
   options = commonOptions.dup
   options[:file_ignore] = [
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/scu\/.+/,
     /docs\/acp\/.+/,
@@ -131,7 +131,7 @@ end
 task :check_scos_user do
   options = commonOptions.dup
   options[:file_ignore] = [
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
@@ -155,7 +155,7 @@ task :check_scu do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
@@ -169,7 +169,7 @@ task :check_pbc do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/sdk\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
@@ -185,7 +185,7 @@ task :check_sdk do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,

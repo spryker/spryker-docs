@@ -37,6 +37,19 @@ Message: [high] Cross-realm object access in Webpack 5
 Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
 ```
 
+## Configuration
+
+You have the option to set the desired npm vulnerabilities level for checking, which is enabled by default for high and critical levels.
+
+To specify a custom list of allowed levels, modify the tooling.yml file located in the project's root directory. Here's an example configuration that permits low, moderate, high, and critical levels:
+```yaml
+evaluator:
+    checkerConfiguration:
+        - checker: NPM_CHECKER
+          var:
+              ALLOWED_SEVERITY_LEVELS: [low, moderate, high, critical]
+```
+
 ## Resolve the error
 
 To resolve the issue, update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.

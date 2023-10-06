@@ -13,7 +13,7 @@ To start integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Product Options| {{page.version}} | [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html) |
-| Merchant Portal Marketplace Order Management | {{page.version}} | [Merchant Portal Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html) |
+| Merchant Portal Marketplace Order Management | {{page.version}} | [Merchant Portal Marketplace Order Management feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 

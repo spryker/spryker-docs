@@ -99,6 +99,26 @@ entries:
       url: /docs/scos/user/intro-to-spryker/master-suite.html
     - title: Supported browsers
       url: /docs/scos/user/intro-to-spryker/supported-browsers.html
+    - title: Spryker Marketplace
+      url: /docs/scos/user/intro-to-spryker/spryker-marketplace/spryker-marketplace.html
+      nested:
+      - title: Marketplace concept
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html
+      - title: Marketplace personas
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html
+      - title: Back Office for Marketplace Operator
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
+      - title: Merchant onborading
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
+      - title: Marketplace Storefront
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html
+      - title: Merchant Portal
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html
+      - title: Marketplace B2C Suite
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html
+      - title: Marketplace B2B Suite
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html
+
     - title: Spryker release process
       url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
     - title: MVP project structuring

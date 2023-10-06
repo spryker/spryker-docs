@@ -2,6 +2,7 @@
 title: Multidimensional array
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This check checks that project doesn't use the deeply nested multidimensional arrays in dependency providers, in order to not overload it with complicated logic.
@@ -52,8 +53,6 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
 }
 ```
 
-### Resolving the error
+## Resolving the error
 
-To resolve the error:
-
-1. Try to have simple configuration arrays. They shouldn't have more than two nesting levels inside.
+Try to have simple configuration arrays. They shouldn't have more than two nesting levels inside.

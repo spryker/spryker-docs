@@ -38,52 +38,6 @@ entries:
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
         - title: Release notes 202204.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
-        - title: Release notes 202108.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/release-notes-202108.0.html
-          nested:
-          - title: Security release notes 202108.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
-        - title: Release notes 202009.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-202009.0.html
-          nested:
-          - title: Security release notes 202009.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
-        - title: Release Notes 202102.0
-          nested:
-          - title: "Performance release notes: 202102.0 SEC"
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
-          - title: "Security release notes: 202102.0 SEC"
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
-        - title: Release notes Code Releases May, 2020
-          nested:
-          - title: Security Release Notes Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
-          - title: Release Notes Code Releases May, 2020
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-code-releases-may-2020.html
-        - title: Release notes 202001.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html
-          nested:
-          - title: Security release notes 202001.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
-          - title: Known issues 202001.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
-        - title: Release notes 201907.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/release-notes-201907.0.html
-          nested:
-          - title: Security release notes 201907.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/security-release-notes-201907.0.html
-        - title: Release notes 201903.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/release-notes-201903.0.html
-          nested:
-          - title: Security release notes 201903.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
-        - title: Release notes 2018.12.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.12.0.html
-        - title: Release notes 2018.11.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
-          nested:
-          - title: Security release notes 2018.11.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
     - title: Docs release notes
       url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new
@@ -145,6 +99,26 @@ entries:
       url: /docs/scos/user/intro-to-spryker/master-suite.html
     - title: Supported browsers
       url: /docs/scos/user/intro-to-spryker/supported-browsers.html
+    - title: Spryker Marketplace
+      url: /docs/scos/user/intro-to-spryker/spryker-marketplace/spryker-marketplace.html
+      nested:
+      - title: Marketplace concept
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html
+      - title: Marketplace personas
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html
+      - title: Back Office for Marketplace Operator
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
+      - title: Merchant onborading
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
+      - title: Marketplace Storefront
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html
+      - title: Merchant Portal
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html
+      - title: Marketplace B2C Suite
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html
+      - title: Marketplace B2B Suite
+        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html
+
     - title: Spryker release process
       url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
     - title: MVP project structuring
@@ -1043,27 +1017,6 @@ entries:
       - "202005.0"
       - "202009.0"
       nested:
-      - title: Punch Out
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        nested:
-        - title: Punch Out
-          url: /docs/scos/user/features/technology-partner-integrations/punch-out/punch-out-feature-overview.html
-          include_versions:
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-        - title: Punchout
-          url: /docs/scos/user/features/technology-partner-integrations/punch-out/punchout.html
-          include_versions:
-          - "202009.0"
-        - title: Punchout
-          url: /docs/scos/user/features/technology-partner-integrations/punch-out/punchout-feature-overview.html
-          include_versions:
-          - "202009.0"
       - title: Integrating technology partners
         url: /docs/scos/user/features/technology-partner-integrations/integrating-technology-partners.html
         include_versions:
@@ -3311,25 +3264,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-      - title: Punchout Catalogs
-        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Punchout Catalogs
-        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
-        include_versions:
-        - "202108.0"
-        - "202204.0"
-        nested:
-        - title: Punchout Catalogs overview
-          url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
-          include_versions:
-          - "202108.0"
-          - "202204.0"
     - title: Marketplace Integrations
       nested:
       - title: ChannelPilot Marketplace

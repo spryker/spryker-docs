@@ -5,14 +5,6 @@ last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/nosto
 originalArticleId: e7d00914-ce24-46dc-a139-0ec2e038ccf9
-redirect_from:
-  - /2021080/docs/nosto
-  - /2021080/docs/en/nosto
-  - /docs/nosto
-  - /docs/en/nosto
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

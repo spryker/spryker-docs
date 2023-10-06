@@ -15,7 +15,7 @@ To start the feature integration, overview and install the necessary features:
 | FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
 | Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Company Account                       | {{page.version}}  | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Company Account                       | {{page.version}}  | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
 | Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | UUID Generation Console               | {{page.version}}  |  |
@@ -762,7 +762,7 @@ To verify that feature is set up correctly go throw the following steps:
 
 1. [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).
 
-2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
+2. [Retrieve available company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html#retrieve-available-company-users).
 
 3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.

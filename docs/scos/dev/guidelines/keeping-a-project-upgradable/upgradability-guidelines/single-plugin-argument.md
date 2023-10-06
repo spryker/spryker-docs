@@ -2,6 +2,7 @@
 title: Single plugin argument
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 This check makes sure that the plugins don't require complicated constructor arguments.
@@ -56,7 +57,7 @@ class ConsoleDependencyProvider
 }
 ```
 
-### Resolving the error
+## Resolve the error
 
 To resolve the error:
 1. Refactor the plugin - remove the usage of the complicated constructor arguments.

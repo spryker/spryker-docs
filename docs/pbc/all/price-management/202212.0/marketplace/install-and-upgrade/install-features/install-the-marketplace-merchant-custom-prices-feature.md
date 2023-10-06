@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-merchant-custom-prices-feature-integration.html
 related:
   - title: Marketplace Merchant Custom Prices feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-custom-prices-feature-walkthrough.html
+    link: docs/pbc/all/price-management/page.version/marketplace/marketplace-merchant-custom-prices-feature-overview.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Custom Prices feature into a Spryker project.

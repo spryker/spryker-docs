@@ -2,6 +2,7 @@
 title: Minimum allowed shop version
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 The *Minimum allowed shop version* check makes sure that the project uses one of the supported product releases by the [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
@@ -41,8 +42,6 @@ The following is an example of the `composer.json` file when the used Spryker fe
 }
 ```
 
-### Resolving the error
+## Resolving the error
 
-To resolve this issue:
-
-1. Update the outdated dependencies to make it correspond to the minimum required version.
+Update the outdated dependencies to make it correspond to the minimum required version.

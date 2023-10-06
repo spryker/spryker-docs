@@ -22,9 +22,9 @@ export interface ProductPriceOptions {
 }
 ```
 
-In order to resolve component options in your new components, you can use the `ContentMixin`. The `ContentMixin` provides a type safe `$option` [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) that guaranties efficient usage of the options.
+To resolve component options in your new components, you can use `ContentMixin`. `ContentMixin` provides a type safe `$option` [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) that guarantees efficient usage of the options.
 
-Oryx provides a mixin `ContentMixin` to work with component options. You can use the mixin to hand in the option interface. The code below shows the usage of the mixin for the definition of the options.
+Oryx provides the `ContentMixin` mixin to work with component options. You can use the mixin to hand in the option interface. The following example shows how mixin is used to define the options.
 
 ```ts
 export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
@@ -34,19 +34,19 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 }
 ```
 
-## Configure Component Options
+## Configure component options
 
-Component options can be configured in various ways. To begin with, components can setup default values for the options that are used as a fallback in case no values are provided. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) can provide values for a specific business context. As an application developer, you can provide customized values, either for all component instances in the application configuration, or by providing options per instance in the experience data.
+There are different ways to configure component options. Components can set up default values for the options that are used as a fallback in case no values are provided. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) can provide values for a specific business context. As an application developer, you can provide customized values, either for all component instances in the application configuration or by providing options per instance in the experience data.
 
-When you use components in your code, you can also override the options in the code.
+You can also override the options when using components in your code.
 
-The various approaches to setup the values are detailed in the following sections.
+The approaches to set up the values are detailed in the following sections.
 
 ### Default component option values
 
 Components can set up default values for the component options. The default values are used as a fallback in case there are no specific values provided.
 
-Oryx provides the `@defaultOptions` class decorator that can be used to add the default values.
+Oryx provides the `@defaultOptions` class decorator that can be used to add default values.
 
 ```ts
 @defaultOptions({
@@ -61,11 +61,11 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 
 ### Feature set component options
 
-Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a standard for a specific business model, such as b2b or b2c. Besides providing a set of features, a feature set can also provide component configurations. The feature set configurations override the default options values that are provided by the components.
+Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a standard for a specific business model, such as B2B or B2C. Besides providing the features, a feature set can also provide component configurations. The feature set configurations override the default option values provided by the components.
 
-### Application driven component options
+### Application-driven component options
 
-Default component value and feature set values can be customized at an Oryx application. The configurations are applied to all instances of the component. The following code example shows how to configure an application using the appBuilder, see [application-orchestration documentation](https://docs.spryker.com/docs/scos/dev/front-end-development/202307.0/oryx/oryx-application-orchestration/oryx-application-orchestration.html) for more information.
+You can customize default component values and feature set values. The configurations are applied to all instances of the component. The following code example shows how to configure an application using the appBuilder.
 
 ```ts
 export const app = appBuilder()
@@ -77,6 +77,8 @@ export const app = appBuilder()
   })
   .create();
 ```
+
+For more information, see [Application orchestration](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html)
 
 ### Component option values in Experience data
 
@@ -97,7 +99,7 @@ In the following configuration you see a part of the experience data that sets t
 ```
 
 You can read more about creating and customizing experience data in the
-[page documentation](/docs/scos/dev/front-end-development/202307.0/oryx/building-pages/oryx-pages.html).
+[page documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
 
 ### Hardcoded component options
 

@@ -140,3 +140,15 @@ class ServicePointCartDependencyProvider extends SprykerServicePointCartDependen
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+1. Create two Product Offers with `delivery` and `pickup` shipment types for the same product.
+2. Add the Product Offer with `delivery` shipment type to the cart.
+3. Start Checkout.
+4. Go to the Address step.
+5. Choose `pickup` shipment type.
+6. Go to the next step.
+7. Make sure that the Product Offer with `delivery` type was replaced with the Product Offer with `pickup` type.
+
+{% endinfo_block %}

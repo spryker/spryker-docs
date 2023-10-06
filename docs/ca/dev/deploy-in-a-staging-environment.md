@@ -10,7 +10,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html
 ---
 
-This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [staging environment](/docs/cag/dev/environments-overview.html#staging-stage).
+This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [staging environment](/docs/ca/dev/environments-overview.html#staging-stage).
 
 
 ## Prerequisites
@@ -146,4 +146,4 @@ To roll back an application:
 
 
 ## Next step
-[Configuring debugging](/docs/cag/dev/configure-debugging.html)
+[Configuring debugging](/docs/ca/dev/configure-debugging.html)

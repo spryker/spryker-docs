@@ -48,4 +48,4 @@ If you want to start a new project from scratch, follow [Installing Spryker with
 
 ## Next step
 
-[Connecting a code repository](/docs/cag/dev/connect-a-code-repository.html)
+[Connecting a code repository](/docs/ca/dev/connect-a-code-repository.html)

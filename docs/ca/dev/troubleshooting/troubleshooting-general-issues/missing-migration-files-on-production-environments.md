@@ -27,4 +27,4 @@ During the development you can keep your migrations ignored by a repositoriy to 
 console propel:migration:delete
 ```
 
-Find more information about [deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/deployment-pipelines.html) or [customizing deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/customize-deployment-pipelines.html)
+Find more information about [deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html) or [customizing deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/customize-deployment-pipelines.html)

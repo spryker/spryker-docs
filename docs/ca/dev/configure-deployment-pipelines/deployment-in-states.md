@@ -22,7 +22,7 @@ The described issues are directly related to how changes are introduced in a pro
 
 ## Pipelines in SCCOS
 
-To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/deployment-pipelines.html).
+To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html).
 
 ## Production pipeline steps
 
@@ -141,4 +141,4 @@ Another powerful technique we recommend is feature flags. They let you enable up
 ## Next steps
 
 
-*   [Deploying in a staging environemnt](/docs/cag/dev/deploy-in-a-staging-environment.html)
+*   [Deploying in a staging environemnt](/docs/ca/dev/deploy-in-a-staging-environment.html)

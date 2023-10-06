@@ -6,7 +6,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html
 ---
 
-When you [enable maintenance mode](/docs/cag/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) for an application, visitors see a maintenance page and can't access the application. To enable access to an application in maintenance mode, you can allowlist IP addresses as follows.
+When you [enable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) for an application, visitors see a maintenance page and can't access the application. To enable access to an application in maintenance mode, you can allowlist IP addresses as follows.
 
 ## Define gateway IP addresses
 
@@ -72,7 +72,7 @@ For more information about the deploy file configuration, see [docker: maintenan
 ## Deploy the changes
 
 Deploy the application with the updated configuration by following one of the following docs:
-  * [Deploying in a staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html)
+  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 Now you can access the applications from the `192.158.1.38` and `192.0.2.1` IP addresses.

@@ -1072,7 +1072,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 4. Repeat steps 1 to 3 until you add all the desired jobs.
 
-For different configuration examples, see Configuring groups of tests via the [Configuring groups of tests via the Docker SDK: Configuration examples](/docs/cag/dev/configure-deployment-pipelines/configure-github-actions.html#configuring-groups-of-tests-via-the-docker-sdk).
+For different configuration examples, see Configuring groups of tests via the [Configuring groups of tests via the Docker SDK: Configuration examples](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html#configuring-groups-of-tests-via-the-docker-sdk).
 
 ### Configuring groups of tests via the Docker SDK: Configuration examples
 

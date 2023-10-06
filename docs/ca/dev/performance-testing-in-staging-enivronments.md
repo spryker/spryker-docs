@@ -352,7 +352,7 @@ Both Java 8+ and Node 10.10+ are requirements to run Gatling from any system. Th
 
 The last steps to getting the Spryker load testing tool set up with your project is to finally install Gatling. The load testing tool is set up with a PHP interface which makes calls to Gatling to run the tests that have been built into the tool.
 
-If you are attempting to load test your production or staging environment and are not testing your site locally, you can skip to the [steps for standalone installation](/docs/cag/dev/performance-testing-in-staging-enivronments.html#installing-gatling-as-a-standalone-package).
+If you are attempting to load test your production or staging environment and are not testing your site locally, you can skip to the [steps for standalone installation](/docs/ca/dev/performance-testing-in-staging-enivronments.html#installing-gatling-as-a-standalone-package).
 
 An installation script is included with the load testing tool and can be run with the following:
 

@@ -486,8 +486,8 @@ image:
 
 2. Push and deploy the changes using one of the following guides:
 
-  * [Deploying in a staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html)
+  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 

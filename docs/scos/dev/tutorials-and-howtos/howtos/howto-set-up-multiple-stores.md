@@ -29,7 +29,7 @@ With the Spryker Commerce OS, you can create multiple stores per your business r
 * Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
 * Set up a default store.
 
-For details on all the multi-store infrastructure options, see [Multistore setup options](/docs/cag/dev/multi-store-setups/multistore-setup-options.html).
+For details on all the multi-store infrastructure options, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).
 
 ## Set up multiple stores
 
@@ -189,7 +189,7 @@ Also, make sure that commands that need to trigger for each store have stores: `
 
 ## Configure the deploy file
 
-According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](/docs/cag/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default): database, search engine, and key-value storage are shared:
+According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](/docs/ca/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default): database, search engine, and key-value storage are shared:
 
 Deploy file configuration for the multi-store setup 1:
 
@@ -252,7 +252,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 
 {% info_block infoBox %}
 
-The workaround is only supported by the [multi-store store setup 1](/docs/cag/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
+The workaround is only supported by the [multi-store store setup 1](/docs/ca/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
 ```php

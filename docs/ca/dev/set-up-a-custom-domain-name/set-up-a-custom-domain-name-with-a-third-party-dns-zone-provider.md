@@ -73,10 +73,10 @@ See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}
 
 4. Depending on the environment you are setting up the domain for:
 
-* [Deploy the application in the production environment](/docs/cag/dev/deploy-in-a-production-environment.html).
+* [Deploy the application in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 
-* [Deploy the application in the staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html).
+* [Deploy the application in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html).
 
 ## Next step
 
-[Setting up a custom SSL certificate](/docs/cag/dev/setting-up-a-custom-ssl-certificate.html)
+[Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html)

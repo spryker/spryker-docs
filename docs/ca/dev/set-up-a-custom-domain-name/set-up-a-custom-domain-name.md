@@ -13,8 +13,8 @@ With Spryker Cloud Commerce OS, you get domain names (domains) which are managed
 If you provided custom domains for the initial setup, follow [Set up a DNS zone](#set-up-a-dns-zone).
 If you want to set up a custom domain after the initial setup, depending on the desired DNS zone provider, see:
 
-* [Setting up a custom domain name with Route 53](/docs/cag/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-route-53.html)
-* [Setting up a custom domain name with a third-party DNS zone provider](/docs/cag/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html)
+* [Setting up a custom domain name with Route 53](/docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-route-53.html)
+* [Setting up a custom domain name with a third-party DNS zone provider](/docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html)
 
 ## Set up a DNS zone
 You can host the DNS zone of a domain with [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html) or with a third-party provider.
@@ -29,7 +29,7 @@ We created [Route 53 Hosted Zones](https://docs.aws.amazon.com/Route53/latest/De
 4. In the *Records* section, locate the record with the *NS* type.
 5. Copy the *Value* of this record, which is a list of nameservers.
 6. On your domain registrar's side, set up the nameservers for the domain. Refer to the domain registrar's documentation for details.
-7. Optional: [Set up a custom SSL certificate for the domain](/docs/cag/dev/setting-up-a-custom-ssl-certificate.html).
+7. Optional: [Set up a custom SSL certificate for the domain](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 
 Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain.
 
@@ -50,4 +50,4 @@ Give the DNS configuration about an hour to propagate and you will be able to ac
 
 ## Next step
 
-[Setting up a custom SSL certificate](/docs/cag/dev/setting-up-a-custom-ssl-certificate.html)
+[Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html)

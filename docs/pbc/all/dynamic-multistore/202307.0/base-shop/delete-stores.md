@@ -35,7 +35,7 @@ On the technical side, removing a store helps with the following:
 
 ## Back up the database
 
-Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/cag/dev/create-and-restore-database-backups.html).
+Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/ca/dev/create-and-restore-database-backups.html).
 
 ## Suspend Publish and Sync
 
@@ -44,7 +44,7 @@ Back up the store's database and make sure it's recoverable. For instructions, s
 vendor/bin/console maintenance:enable
 ```
 
-For more information about maintenance mode, see [Enable and disable maintenance mode](/docs/cag/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
+For more information about maintenance mode, see [Enable and disable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
 2. Check the number of messaged in RabbitMQ. If there are too many, wait for them to be processed.
 

@@ -208,7 +208,7 @@ Make sure to check the following articles on how to optimize the performance of 
 - [Performance guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
 - [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html)
 - [Integrating multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html)
-- [Performance testing in staging environments](/docs/cag/dev/performance-testing.html)
+- [Performance testing in staging environments](/docs/ca/dev/performance-testing.html)
 
 ## Application performance and load tests
 

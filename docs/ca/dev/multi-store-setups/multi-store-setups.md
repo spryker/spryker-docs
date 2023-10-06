@@ -32,7 +32,7 @@ We recommend this setup for simple shops that have two to three stores that foll
 
 * All stores are hosted in the same AWS region.
 
-For more details on this setup, see [Setup 1: Shared infrastructure resources (default)](/docs/cag/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default)
+For more details on this setup, see [Setup 1: Shared infrastructure resources (default)](/docs/ca/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default)
 
 ## Separated setup
 

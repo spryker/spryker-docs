@@ -22,7 +22,7 @@ SCCOS is a fully-managed solution. Before you start developing, we set up enviro
 
 After the initial setup, the following is configured and available:
 
-* [Environments](/docs/cag/dev/environments-overview.html): staging and production
+* [Environments](/docs/ca/dev/environments-overview.html): staging and production
 * Services: RDS database, RDS backup, logs, SMTP, etc.
 * Access to AWS, internal resources and services
 * CD pipelines for staging and production environments
@@ -32,8 +32,8 @@ After the initial setup, the following is configured and available:
 ## Access
 You can access SCCOS via:
 
-* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/cag/dev/access/access-the-aws-management-console.html) for more details.
-* SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/docs/cag/dev/access/connecting-to-services-via-ssh.html) for more details.
+* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html) for more details.
+* SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/docs/ca/dev/access/connecting-to-services-via-ssh.html) for more details.
 * VPN - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). We provide the access details during the onboarding.
 * SFTP - provides access to the SFTP folder mounted inside the Jenkins container.
 
@@ -50,7 +50,7 @@ You can access SCCOS via:
 
 
 ## Service credentials
-You can find the credentials for services in the environment variables for the Zed container in [Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). See [Locating service credentials](/docs/cag/dev/access/locating-service-credentials.html) to learn how to get them.
+You can find the credentials for services in the environment variables for the Zed container in [Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). See [Locating service credentials](/docs/ca/dev/access/locating-service-credentials.html) to learn how to get them.
 
 
 ## CD Pipelines
@@ -68,7 +68,7 @@ The following CD pipelines are configured in [CodePipeline](https://docs.aws.ama
 
 </div>
 
-See [Deploying in a staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html) and [Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html) to learn about running pipelines.
+See [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html) and [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html) to learn about running pipelines.
 
 ## Next step
-[Environments overview](/docs/cag/dev/environments-overview.html)
+[Environments overview](/docs/ca/dev/environments-overview.html)

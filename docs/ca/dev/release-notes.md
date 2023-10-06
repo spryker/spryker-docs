@@ -33,7 +33,7 @@ Flexibility. You can change environment variables according to a needed schedule
 
 #### Documentation
 
-[Define parameter and secret values in SCCOS environments](/docs/cag/dev/define-parameter-and-secret-values-in-sccos-environments.html)
+[Define parameter and secret values in SCCOS environments](/docs/ca/dev/define-parameter-and-secret-values-in-sccos-environments.html)
 
 
 ### Maintenance mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -46,8 +46,8 @@ Faster maintenance. You can enable maintenance mode more quickly, reducing downt
 
 #### Documentation
 
-* [Enable and disable maintenance mode](/docs/cag/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
-* [Configure access to applications in maintenance mode](/docs/cag/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
+* [Enable and disable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+* [Configure access to applications in maintenance mode](/docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 
 ### Deployment optimization of RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -104,7 +104,7 @@ Benefits of a multi-store setup:
 
 ### Documentation
 
-[Multi-store setups](/docs/cag/dev/multi-store-setups/multi-store-setups.html)
+[Multi-store setups](/docs/ca/dev/multi-store-setups/multi-store-setups.html)
 
 
 ## January 2022
@@ -134,9 +134,9 @@ Increased the stability of Jenkins deployment. This update addresses critical is
 
 * **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
-* **Documentation about Onboarding deliverables**: updated the Spryker Cloud Commerce OS getting started page with the deliverables provided after the onboarding. See [Getting started with the Spryker Cloud Commerce OS](/docs/cag/dev/getting-started-with-the-spryker-cloud-commerce-os.html).
+* **Documentation about Onboarding deliverables**: updated the Spryker Cloud Commerce OS getting started page with the deliverables provided after the onboarding. See [Getting started with the Spryker Cloud Commerce OS](/docs/ca/dev/getting-started-with-the-spryker-cloud-commerce-os.html).
 
-* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/cag/dev/connecting-a-code-repository.html#connect-a-gitlab-code-repository).
+* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/ca/dev/connecting-a-code-repository.html#connect-a-gitlab-code-repository).
 
 * **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 

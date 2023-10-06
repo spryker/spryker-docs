@@ -159,4 +159,4 @@ Allow the synchronization several minutes to complete and you should see the rec
 
 ## Next step
 
-[Deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/deployment-pipelines.html)
+[Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html)

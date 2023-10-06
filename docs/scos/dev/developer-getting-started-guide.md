@@ -171,12 +171,12 @@ For those stores that you wish to allow, don’t forget to edit `CodeBucketConfi
 ## 4. Configure CI
 
 Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
-* [Deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
-* [Customizing deployment pipelines](/docs/cag/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
-* [GitHub Actions](/docs/cag/dev/configure-deployment-pipelines/configure-github-actions.html)
-* [Configuring GitLab pipelines](/docs/cag/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
-* [Azure Pipelines](/docs/cag/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
-* [Configuring Bitbucket Pipelines ](/docs/cag/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
+* [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
+* [Customizing deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
+* [GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
+* [Configuring GitLab pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
+* [Azure Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
+* [Configuring Bitbucket Pipelines ](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
 
 ## 5. Configure checkers
 

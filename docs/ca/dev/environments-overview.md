@@ -37,4 +37,4 @@ We highly recommend testing every data load and import, as well as any integrati
 {% endinfo_block %}
 
 ## Next step
-[Accessing AWS Management Console](/docs/cag/dev/access/access-the-aws-management-console.html)
+[Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html)

@@ -10,7 +10,7 @@ This document describes how to add and remove a dedicated database of a store.
 
 ## Prerequisites
 
-Make sure that your project supports the [separated multi-store setup](/docs/cag/dev/multi-store-setups/multi-store-setups.html).
+Make sure that your project supports the [separated multi-store setup](/docs/ca/dev/multi-store-setups/multi-store-setups.html).
 
 
 ## Add a database for a store
@@ -73,8 +73,8 @@ regions:
 
 Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
-* [Deploying in a staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html)
+* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 ## Remove a database of store
@@ -126,5 +126,5 @@ regions:
 
 Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
-* [Deploying in a staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html)
+* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)

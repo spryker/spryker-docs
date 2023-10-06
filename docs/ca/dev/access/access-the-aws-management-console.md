@@ -33,4 +33,4 @@ The sign-in page opens with the **Account ID (12 digits) or account alias** fiel
 This takes you to the AWS Management Console.
 
 ## Next step
-[Connecting the Docker SDK](/docs/cag/dev/connecting-the-docker-sdk.html)  
+[Connecting the Docker SDK](/docs/ca/dev/connecting-the-docker-sdk.html)  

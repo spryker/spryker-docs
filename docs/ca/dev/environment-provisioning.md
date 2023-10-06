@@ -47,7 +47,7 @@ The *project name* is the name of the customer or the customer's preferred name 
 
 ### Environment type
 
-The *[environment type](/docs/cag/dev/environments-overview.html)* corresponds to the popular naming convention for environment tiers in software development. You can refer to your contract for information on what environments you are entitled to and choose the respective one—for example:
+The *[environment type](/docs/ca/dev/environments-overview.html)* corresponds to the popular naming convention for environment tiers in software development. You can refer to your contract for information on what environments you are entitled to and choose the respective one—for example:
 
 Lower environments: STAGE, DEV
 
@@ -101,7 +101,7 @@ The repository is the place where the customer's Spryker application code reside
 
 GitHub: If the customer uses GitHub, provide a link to the GitHub repository, including a branch and a valid GitHub token. This allows code pipelines to access the repository. Ensure that you securely share the GitHub token according to [Spryker recommendations](/docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html).
 
-GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to pipelines isn't supported. Therefore, we have to enable the codecommit feature during provisioning. Connections with pipelines can be established only after the environment is provisioned. If possible, grant GitLab or Bitbucket access to the Spryker engineer working on this request. If not, we'll use your deploy file along with the Spryker Demo Shop during provisioning. For detailed information about the connection process, see [Connect a GitLab code repository](/docs/cag/dev/connecting-a-code-repository.html#connect-a-gitlab-code-repository) section in "Connecting a code repository".
+GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to pipelines isn't supported. Therefore, we have to enable the codecommit feature during provisioning. Connections with pipelines can be established only after the environment is provisioned. If possible, grant GitLab or Bitbucket access to the Spryker engineer working on this request. If not, we'll use your deploy file along with the Spryker Demo Shop during provisioning. For detailed information about the connection process, see [Connect a GitLab code repository](/docs/ca/dev/connecting-a-code-repository.html#connect-a-gitlab-code-repository) section in "Connecting a code repository".
 
 {% info_block infoBox "Note" %}
 
@@ -127,7 +127,7 @@ Please note Spryker is only issuing SSL certificates for endpoints that are mana
 Customer or partner users must have access to the following entities:
 * AWS Console access: You can use it to access environment CloudWatch logs, deployment pipelines, parameter store, S3 buckets. Provide the email addresses of users who need access to AWS Console.
 * VPN: You can use it to access services such as databases, Jenkins, and RabbitMQ. Usually, developers or DevOps personnel need it. Provide the email addresses of users that need VPN access.
-* SSH: You can use it to access the Bastion Host, and from there, reach other services via [port forwarding](/docs/cag/dev/access/connecting-to-services-via-ssh.html). Usually, developers or DevOps personnel need it in special cases. Provide an SSH public key and email addresses of users who need access to SSH. Keep in mind that VPN access is required to use SSH.
+* SSH: You can use it to access the Bastion Host, and from there, reach other services via [port forwarding](/docs/ca/dev/access/connecting-to-services-via-ssh.html). Usually, developers or DevOps personnel need it in special cases. Provide an SSH public key and email addresses of users who need access to SSH. Keep in mind that VPN access is required to use SSH.
 * SFTP: This access is required for the SFTP Bastion Host. Provide an SSH public key and email addresses of users who need access to SFTP. Keep in mind that VPN access is required to use SFTP. Please note that SFTP is not provisioned by default.
 
 ## Optional: Additional attributes

@@ -169,4 +169,4 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 ## Next steps
 
 
-*   [Deployment in states](/docs/cag/dev/configure-deployment-pipelines/deployment-in-states.html)
+*   [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html)

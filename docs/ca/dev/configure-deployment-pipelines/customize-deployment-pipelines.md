@@ -15,10 +15,10 @@ This document describes how to customize deployment pipelines.
 
 {% info_block warningBox %}
 
-* To prevent timeouts and issues, avoid adding long operations like data import to deployment pipelines. Export long operations to Jenkins jobs that run separately from deployment. To learn how long operations affect pipelines, see [Deploymment in states](/docs/cag/dev/configure-deployment-pipelines/deployment-in-states.html).
+* To prevent timeouts and issues, avoid adding long operations like data import to deployment pipelines. Export long operations to Jenkins jobs that run separately from deployment. To learn how long operations affect pipelines, see [Deploymment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
 
 
-* In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/cag/dev/configure-deployment-pipelines/deployment-pipelines.html#deployment-stages).
+* In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#deployment-stages).
 
 * Also, we use the default location of deployment scripts: `/config/install/`. Before you edit or add new scripts, make sure to check where they are stored in your project.
 

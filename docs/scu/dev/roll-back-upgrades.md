@@ -8,8 +8,8 @@ redirect_from:
 
 To roll back an upgrade, you need to deploy the previous version of the application using the regular deploy process. For instructions, see one of the following documents:
 
-* [Deploying in a staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html)
+* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 ## Other deployment pipelines
 

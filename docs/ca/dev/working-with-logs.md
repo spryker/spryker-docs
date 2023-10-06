@@ -42,4 +42,4 @@ To search in logs:
 
 ## Next step
 
-[Preparation for going live](/docs/cag/dev/preparation-for-going-live.html)
+[Preparation for going live](/docs/ca/dev/preparation-for-going-live.html)

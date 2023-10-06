@@ -48,4 +48,4 @@ We set up the SSL shortly after you have provided it.
 
 
 ## Next step
-[Deploying in a production environment](/docs/cag/dev/deploy-in-a-production-environment.html)
+[Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)

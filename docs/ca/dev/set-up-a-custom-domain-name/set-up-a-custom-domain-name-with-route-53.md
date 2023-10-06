@@ -25,7 +25,7 @@ For a domain to start using the created hosted zone:
 4. In the *Records* pane, locate the record with the *NS* type.
 5. Copy the *Value* of this record, which is a list of nameservers.
 6. On your domain registrar's side, set up the nameservers for your domain. Refer to the domain registrar's documentation for details.
-7. Optional: [Set up a custom SSL certificate for the domain](/docs/cag/dev/setting-up-a-custom-ssl-certificate.html).
+7. Optional: [Set up a custom SSL certificate for the domain](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 
 
 ## 3. Define domain names
@@ -74,9 +74,9 @@ See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}
 
 4. Depending on the environment you are setting up the domain for:
 
-* [Deploy the application in the production environment](/docs/cag/dev/deploy-in-a-production-environment.html).
+* [Deploy the application in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 
-* [Deploy the application in the staging environment](/docs/cag/dev/deploy-in-a-staging-environment.html).
+* [Deploy the application in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html).
 
 
 5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/).
@@ -87,4 +87,4 @@ Give the DNS configuration 24-48 hours to propagate and you will be able to acce
 
 ## Next step
 
-[Setting up a custom SSL certificate](/docs/cag/dev/setting-up-a-custom-ssl-certificate.html)
+[Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html)

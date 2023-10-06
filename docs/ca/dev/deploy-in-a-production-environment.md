@@ -10,7 +10,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
 ---
 
-This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [production environment](/docs/cag/dev/environments-overview.html#production-prod).
+This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [production environment](/docs/ca/dev/environments-overview.html#production-prod).
 
 
 ## Prerequisites

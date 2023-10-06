@@ -11,4 +11,4 @@ The `Email address is not verified` error is returned in the error log.
 
 ## Solution
 
-Verify the related email address as described in [Verifying email addresses](/docs/cag/dev/verify-email-addresses.html).
+Verify the related email address as described in [Verifying email addresses](/docs/ca/dev/verify-email-addresses.html).

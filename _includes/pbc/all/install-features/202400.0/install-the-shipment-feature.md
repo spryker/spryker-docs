@@ -114,8 +114,8 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 | PLUGIN                                                   | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                             |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
 | ShipmentTypesResourceRoutePlugin                         | Registers the `shipment-types` resource.                                                                 |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
-| ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds `shipment-types` resources as a relationship to `shipment-methods` resources.                       |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
-| SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
+| ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds the `shipment-types` resources as a relationship to `shipment-methods` resources.                       |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps the selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
 | ItemShipmentTypeQuoteMapperPlugin                        | Maps shipment types taken from shipment methods to `Quote.items.shipmentType`.                           |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
 | ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
 | ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
@@ -167,7 +167,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+- Make sure that you can send the following requests:
 
 * `GET https://glue.mysprykershop.com/shipment-types`
 * `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}`
@@ -176,7 +176,8 @@ Make sure that you can send the following requests:
 
 {% info_block warningBox "Verification" %}
 
-Make sure you have a `shipment-types` resource as a relationship to `shipment-methods` when you do a request with multi-shipment request structure.
+- Make sure you have the `shipment-types` resource as a relationship to `shipment-methods` when you send a request with the multi-shipment request structure.
+
 `POST https://glue-backend.mysprykershop.com/checkout-data?include=shipments,shipment-methods,shipment-types`
 <details>
   <summary markdown='span'>Request body example</summary>
@@ -375,7 +376,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure you have a `selectedShipmentTypes` field in the response when you do a request with single-shipment request structure.
+- Make sure you have the `selectedShipmentTypes` field in the response when you send a request with the single-shipment request structure.
+
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
   <summary markdown='span'>Request body example</summary>
@@ -525,7 +527,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Deactivate one of shipment types and send a request with corresponding shipment method: 
+Deactivate one of the shipment types and send a request with a corresponding shipment method: 
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
   <summary markdown='span'>Request body example</summary>

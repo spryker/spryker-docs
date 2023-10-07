@@ -74,7 +74,7 @@ This code shows the ease of use, but there's a lot going on in the background:
 2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses an adapter (`ProductAdapter`) to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
 3. The `$product` signal subscribes to the application state using `ProductService`. Whenever the product state is changed, the [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
 
-The above pattern is commonly used in all Oryx domains. It ensures efficient consumption of backend APIs and rendering of DOM elements.
+The above steps are a commonly used pattern cross all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
 ### 3. Configure the component
 

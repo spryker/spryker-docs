@@ -11,9 +11,9 @@ Oryx's Responsive Design System provides various screen sizes which you can rede
 
 The responsive design system works closely with other styling techniques in Oryx, such as layouts, [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), themes and [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) and play an important role in some of the design system components, such as media and images.
 
-<!-- Add link to layout docs when they're published -->
-<!-- Add link to themes docs when they're published -->
-<!-- Add link to (design system) components docs when they're published -->
+<!-- TODO: Add link to layout docs when they're published -->
+<!-- TODO: Add link to themes docs when they're published -->
+<!-- TODO: Add link to (design system) components docs when they're published -->
 
 ## Screen sizes
 
@@ -172,9 +172,31 @@ All design tokens are configurable per screen size, which allows you to control 
 
 The layout system is covered in more detail in the layout documentation.
 
-## Responsive Visibility Rules
+## Responsive Images
 
-Some experiences require an alternative page structure, which means that some components should or should not be rendered in a specific screen size. The Experience Data that you setup for creating [Pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) allows you to define visibility rules. The visibility rules can be configured to hide a composition or component for a specific screen size (next to other more advanced visibility rules).
+Images are shown in various places throughout the experience. For example, small icon-sized images appear in a typeahead search results and increase in size when they're shown in carousel or grid, and might blow up when you see them in a detail page. Some images require fullscreen size and others are only rendered inside a small layout.
+
+The web platform has several ways to optimized image per viewport. Oryx components, such as the `ProductMediaComponent` and `ImageComponent` design system component are fully equipped to render optimized images for the right screen size and even device pixel density and current network connection speed.
+
+It is however important to have the right images available. This can be done automatically which is offered by 3rd party service.
+
+{% info_block infoBox "" %}
+
+The labs package contains an integration with Cloudinary that could be interesting to evaluate in this context. Cloudinary has an http API that you can use to fill in the right size and quality when you request an image. The media are pulled into Cloudinary CDN, which makes it a performant solution for both the generation and serving of the media.
+
+The Cloudinary integration is an example implementation, which is why it's in the (experimental) labs package.
+
+{% endinfo_block %}
+
+## Adaptive Design
+
+Adaptive Design is a technique used in web development to create user interfaces that adapt to specific devices or screen sizes. Unlike Responsive Design, which focuses on fluidly adjusting the layout and content based on the viewport size, Adaptive Design involves creating different versions of a website or application specifically tailored to different devices or screen sizes.
+
+In Adaptive Design, developers create multiple fixed layouts or templates optimized for specific devices or screen resolutions. These layouts are then served to users based on their device characteristics, such as screen size, device type, or browser capabilities. This approach allows for more precise control over the user experience on different devices, as elements can be rearranged, resized, or even hidden to provide an optimized interface.
+
+It's important to note that while Adaptive Design offers more control and customization for specific devices, Oryx does not fully support Adaptive Design. For example, Oryx does not have native knowledge of the specific device characteristics, such as the device type or browser capabilities. In todays web development, responsive design is considered being a very mature technique that does not need much in addition. However, on order to dictate the visibility of certain elements on various screen sizes, Oryx supports visibility rules on compositions and components.
+
+You can utilize visibility rules in the experience data to selectively hide elements on specific screen sizes, providing a level of adaptability within the responsive design framework. The visibility rules can be applied to the experience data that you create for [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html). The rules can be configured to hide a composition or component for a specific screen size (next to other more advanced visibility rules).
 
 The following example shows you how to create a simple visibility rule for a specific screen.
 
@@ -193,18 +215,4 @@ export const headerTemplate = {
 };
 ```
 
-## Responsive Images
-
-Images are shown in various places throughout the experience. For example, small icon-sized images appear in a typeahead search results and increase in size when they're shown in carousel or grid, and might blow up when you see them in a detail page. Some images require fullscreen size and others are only rendered inside a small layout.
-
-The web platform has several ways to optimized image per viewport. Oryx components, such as the `ProductMediaComponent` and `ImageComponent` design system component are fully equipped to render optimized images for the right screen size and even device pixel density and current network connection speed.
-
-It is however important to have the right images available. This can be done automatically which is offered by 3rd party service.
-
-{% info_block infoBox "" %}
-
-The labs package contains an integration with Cloudinary that could be interesting to evaluate in this context. Cloudinary has an http API that you can use to fill in the right size and quality when you request an image. The media are pulled into Cloudinary CDN, which makes it a performant solution for both the generation and serving of the media.
-
-The Cloudinary integration is an example implementation, which is why it's in the (experimental) labs package.
-
-{% endinfo_block %}
+<!-- TODO: add a link to visibility docs whenever that is available -->

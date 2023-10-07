@@ -38,7 +38,9 @@ Oryx components follow a simple naming convention that is used in the class name
 In this example, the `Domain` is `Product` and the `Feature` is `Id`. The component's name is `ProductIdComponent`.
 
 {% info_block infoBox %}
-Oryx is implemented with TypeScript to improve the development experience. This is not necessary. There also no TypeScript configuration that are forces by Oryx.
+
+Oryx is built in typescript with fairly strict typing configurations. This ensures high quality standards and a good developer experience. You are free to use TypeScript in your application code, or leave it out. If you do use TypeScript, you are in charge of the TypeScript configuration (`.tsconfig`) that is used in your application, so you can decide on how strict the configuration should be.
+
 {% endinfo_block %}
 
 ### 2. Integrate backend data
@@ -204,6 +206,6 @@ This ensures that whenever the component is used anywhere in the DOM, Oryx lazil
 
 ## Place the component
 
-After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside  (CMS) content.
+After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside (CMS) content.
 
 Also, you can merge the component into an existing page structure. For example, `before` or `after` an existing component or inside (`prepend` or `append`) the components of an existing composition.

@@ -208,4 +208,18 @@ This ensures that whenever the component is used anywhere in the DOM, Oryx lazil
 
 After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside (CMS) content.
 
-Also, you can merge the component into an existing page structure. For example, `before` or `after` an existing component or inside (`prepend` or `append`) the components of an existing composition.
+Also, you can merge the component into an existing page structure. For example, before or after an existing component or inside (prepend or append) the components of an existing composition.
+
+The available merge types are exported in the [@spryker-oryx/experience](https://www.npmjs.com/package/@spryker-oryx/experience) package.
+
+```ts
+export const enum ExperienceDataMergeType {
+  Before = "before",
+  Prepend = "prepend",
+  Append = "append",
+  After = "after",
+  Replace = "replace",
+  Patch = "patch",
+  Remove = "remove",
+}
+```

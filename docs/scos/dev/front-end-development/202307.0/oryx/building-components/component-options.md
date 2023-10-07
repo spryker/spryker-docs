@@ -65,7 +65,9 @@ Default component options can be overridden in feature sets. [Feature sets](/doc
 
 ### Application-driven component options
 
-You can customize default component values and feature set values. The configurations are applied to all instances of the component. The following code example shows how to configure an application using the appBuilder.
+You can customize default component values and feature set values in the application configuration. The configuration is used every time the component is used in the application.
+
+The following code example shows how to configure an application using the appBuilder.
 
 ```ts
 export const app = appBuilder()

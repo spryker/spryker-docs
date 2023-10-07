@@ -27,6 +27,6 @@ The components are rendered inside [compositions](/docs/scos/dev/front-end-devel
 
 You can customize the components with a custom theme, style rules, [component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html), or component logic. You can also [implement custom components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-implementation.html) and add them to the application.
 
-The components are built as web components, which makes them highly reusable in other web frameworks and systems. For more details, see [interoperability of Oryx components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-interoperability.html).
+The components are built as web components, which makes them highly reusable in other web frameworks and systems. For more details, see [components integrations](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-integration.html).
 
 Oryx provides a reactive framework and is designed to work highly efficiently in a Single Page Application architecture. To ensure _reactivity_ throughout the application, Oryx only re-renders those fragments of the components that were affected by the changing application state. For more details, see [key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html).

@@ -78,13 +78,13 @@ export const app = appBuilder()
   .create();
 ```
 
-For more information, see [Application orchestration](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html)
+For more information, see [Application orchestration](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html).
 
-### Component option values in Experience data
+### Component option values in experience data
 
-The default options, feature set configurations and application configurations are all applied to the Component type. The options provided in the experience data are applied to a specific instance in the experience data structure.
+The default options, feature set configurations, and application configurations are applied to the Component type. The options provided in the experience data are applied to a specific instance in the experience data structure.
 
-In the following configuration you see a part of the experience data that sets the `enableSalesLabel` option to `false`. This configuration is only applied to the instance, if the component is used elsewhere, this configuration will not have any effect.
+In the following configuration, you see a part of the experience data that sets the `enableSalesLabel` option to `false`. This configuration is only applied to the instance. This configuration does not affect the component when it's used elsewhere.
 
 ```ts
 {
@@ -98,14 +98,13 @@ In the following configuration you see a part of the experience data that sets t
 }
 ```
 
-You can read more about creating and customizing experience data in the
-[page documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
+For more information about creating and customizing experience data, see [Oryx: Pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
 
 ### Hardcoded component options
 
-When you use components in your code, the options can be provided by the `options` attribute. The options attribute is resolved automatically by the `ContentMixin`, that most domain components use.
+When using components in code, options can be provided using the `options` attribute. The options attribute is resolved automatically by `ContentMixin` that most domain components use.
 
-The example below shows how component options are written in the component `options` attribute. When options are added by an attribute, the web component specs require a stringified JSON. [Lit](https://lit.dev) provides a convenient property mapping that we use in the example below.
+The following example shows how component options are written in the component `options` attribute. When options are added by an attribute, the web component specs require stringified JSON. [Lit](https://lit.dev) provides a convenient property mapping shown in the example below.
 
 ```ts
 protected override render(): TemplateResult {
@@ -119,9 +118,9 @@ protected override render(): TemplateResult {
 
 ## Use component options
 
-To use component options in an asynchronous fashion, it is important to observe the options and react to updates in the component UI. Oryx provides a [reactive](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) framework with observable data streams that can update the UI using [signals](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/signals.html). To simplify the integration in component logic, the `ContentMixin` provides an `$options` signal, that be called in the render logic or other signals.
+To use component options asynchronously, it is important to observe the options and react to updates in the component UI. Oryx provides a [reactive](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) framework with observable data streams that can update the UI using [signals](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/signals.html). To simplify the integration in component logic, `ContentMixin` provides the `$options` signal that can be called in the render logic or other signals.
 
-The following code shows how to use the `$options` signal. Due to the component option interface the usage of the signal is type safe.
+The following code shows how to use the `$options` signal. Due to the component option interface, the usage of the signal is type safe.
 
 ```ts
 @defaultOptions({

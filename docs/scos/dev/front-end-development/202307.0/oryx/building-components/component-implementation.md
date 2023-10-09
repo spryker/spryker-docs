@@ -1,23 +1,22 @@
 ---
-title: "Component implementation"
+title: "Oryx: Implementing components"
 description: Learn how to create an Oryx component
 last_updated: Sept 20, 2023
 template: concept-topic-template
 ---
 
-This guide helps you to learn how to create a new Oryx component.
+Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
 
-Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
+## Lit's standard concepts
 
-In this guide you'll learn how to implement a component and how to use it inside an application. This documentation guide presumes you'll use Lit to build your custom components. It will not go in detail of the standard concepts that are covered in the [component documentation of Lit](https://lit.dev/docs/components/overview/).
+This document describes how to implement a component using Lit. Lit's standard concepts are not covered. To learn more about them, see [Components overview](https://lit.dev/docs/components/overview/).
 
-## Implement a component
 
 In this documentation we'll guide you through the development process to implement a product _ID_ component. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
 
 Oryx creates a folder per component, like `src/product/id`, and separates some of the component logic in separate files. However, if you are more comfortable with the Single-File Components pattern, it is fine to do so. Only the component definition should be separated out to ensure lazy loading of the component.
 
-### 1. Create the component class
+## 1. Create the component class
 
 Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class based elements that extend from `HTMLElement`. Lit provides `LitElement` as a base class to extend from when you create a custom element.
 
@@ -43,7 +42,7 @@ Oryx is built in TypeScript with fairly strict typing configurations. This ensur
 
 {% endinfo_block %}
 
-### 2. Integrate backend data
+## 2. Integrate backend data
 
 In this step you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time—for example, when a user navigates one product page to another. In order to render the state efficiently, the component must support [reactivity](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
 
@@ -76,7 +75,7 @@ This code shows the ease of use, but there's a lot going on in the background:
 
 The preceding steps are a commonly used pattern across all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
-### 3. Configure the component
+## 3. Configure the component
 
 Oryx components can be made configurable by options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options allow components to be reusable across different business models. For example, a component can render different results based on an option that is provided: `true` for a B2C application, but `false` for a B2B application.
 
@@ -106,7 +105,7 @@ export class ProductIdComponent extends ProductMixin(
 
 You can provide default options in the component, in feature sets, or in the application. For more details, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html).
 
-### 4. Style the component DOM
+## 4. Style the component DOM
 
 Oryx components are styled with standard CSS. The components have a separate DOM attached using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components and prevents global styles from cascading down to the component.
 
@@ -120,7 +119,7 @@ Styling components in the shadow DOM is a big topic we recommend studying separa
 - Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen specific styles in the component definition as described in the following sections.
 - You can use Oryx themes and provide component styles for a specific theme. Similar to breakpoint specific styles, you can configure styles for a theme.
 
-### 5. Localize messages
+## 5. Localize messages
 
 Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage [localization](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-localization.html).
 
@@ -134,7 +133,7 @@ protected render(): TemplateResult | void {
 
 If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose to not use mixins, you can integrate the `i18n` directive directly.
 
-### 6. Use services inside the component
+## 6. Use services inside the component
 
 You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
 
@@ -153,7 +152,7 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
 
-### 7. Prepare for server side rendering and hydration
+## 7. Prepare for server side rendering and hydration
 
 If your application needs to be indexed by crawlers, such as Google Search or Pinterest, the application needs to be [server-side rendered](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
 

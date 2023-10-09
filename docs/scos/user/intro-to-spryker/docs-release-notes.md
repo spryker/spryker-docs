@@ -57,7 +57,7 @@ In August 2023, we have added and updated the following pages:
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-and-upgrade/install-the-customer-account-management-service-points-feature.html).
 - [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
-- [Vertex integration guide](/docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html#integrate-acp-connector-module-for-tax-calculation).
+- [Vertex integration guide](/docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html).
 - [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
 - [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
 - [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.

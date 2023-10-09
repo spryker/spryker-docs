@@ -2976,6 +2976,12 @@ entries:
       - "202108.0"
       - "202307.0"
       - "202204.0"
+    - title: Marketplace data import
+      url: /docs/scos/dev/data-import/marketplace-data-import.html
+      include_versions:
+      - "202212.0"
+      - "202307.0"
+
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html
     nested:
@@ -3937,6 +3943,8 @@ entries:
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+      - title: Combined product offer import
+        url: /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
       - title: SCSS linter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
       - title: TS linter
@@ -4058,8 +4066,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
       - title: "Tutorial: Customer import"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
-      - title: "Tutorial: Calculator plugin"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
       - title: "Tutorial: Using translations"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"
@@ -4749,6 +4755,20 @@ entries:
       url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
+    - title: Marketplace architecture
+      url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-architecture.html
+      nested:
+        - title: Marketplace Application composition
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html
+        - title: Marketplace domain model
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
+        - title: Merchant Portal architecture overview
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+        - title: Marketplace in the Back Office
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+
+
+
   - title: Guidelines
     url: /docs/scos/dev/guidelines/guidelines.html
     nested:

@@ -178,7 +178,7 @@ Images are shown in various places throughout the experience. For example, small
 
 The web platform has several ways to optimized image per viewport. Oryx components, such as the `ProductMediaComponent` and `ImageComponent` design system component are fully equipped to render optimized images for the right screen size and even device pixel density and current network connection speed.
 
-It is however important to have the right images available. This can be done automatically which is offered by 3rd party service.
+It is however important to have the right images available. This can be done manually or automatically by integrating a 3rd party service.
 
 {% info_block infoBox "" %}
 

@@ -1,6 +1,6 @@
 ---
 title: Security release notes 202309.0
-description: Security release notes for Q3
+description: Security release notes for 202309.0
 last_updated: Oct 4, 2023
 template: concept-topic-template
 ---
@@ -11,7 +11,7 @@ If you need any additional support with this content, [contact our support](http
 
 ## Insecure file upload functionality
 
-The file upload functionality was lacking robust validation controls and it was possible to upload files of potentially malicious type or content.
+The file upload functionality lacked robust validation controls, so it was possible to upload files of potentially malicious type or content.
 
 ### Affected modules
 
@@ -153,7 +153,7 @@ class ProductListGuiConfig extends SprykerProductListGuiConfig
 
 ## Credential stuffing attack affects the Agent and Customer portals
 
-The login portal was vulnerable to credential stuffing, an attack where an attacker is submitting a big number of username and password pairs (“credentials”) in the login form, in order to fraudulently gain access to user accounts.
+The login portal was vulnerable to credential stuffing—an attack in which an attacker submits a large number of username and password pairs ("credentials") into the login form. This is done with the intention of fraudulently gaining access to user accounts.
 
 ### Affected modules
 
@@ -174,7 +174,7 @@ composer require spryker-shop/security-blocker-page:"~1.1.0"
 composer show spryker-shop/security-blocker-page # Verify the version
 ```
 
-2. Adjust the `configurationsrc/Pyz/Yves/SecurityBlockerPage/SecurityBlockerPageConfig.php`:
+2. Adjust `configurationsrc/Pyz/Yves/SecurityBlockerPage/SecurityBlockerPageConfig.php`:
 
 ```bash
 <?php

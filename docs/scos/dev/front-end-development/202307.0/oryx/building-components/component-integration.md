@@ -41,7 +41,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit...
 Duis aute irure dolor in reprehenderit in voluptate velit...
 ```
 
-Another nice example show the integration of compositions with layout. In the following example we use the product list component with a configuration to render it in a carousel.
+The next example shows the integration of compositions with layout. We use the product list component with a configuration to render it in a carousel.
 
 ```markdown
 ## Markdown example with a carousel of products
@@ -53,6 +53,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit...
 Duis aute irure dolor in reprehenderit in voluptate velit...
 ```
 
-## Integrate in Spryker Yves
+## Integrating Oryx components into Yves
 
-The integration of Oryx components inside Yves is very appealing, especially for customers who want ot gradually migrate their implementation from Yves to Oryx. While the client side rendering of web components is straightforward, the server side rendering requires a node-like application that renders the components. Yves does not provide such infrastructure as a standard feature, but a POC has been conducted to ensure the technical feasibility between Yves and Oryx.
+The integration of Oryx components into Yves may be very useful for projects that want to gradually migrate from Yves to Oryx. While the client-side rendering of web components is straightforward, the server-side rendering requires a node-like application that renders the components. Yves does not provide such infrastructure by  default, but a POC was conducted to ensure the technical feasibility between Yves and Oryx.

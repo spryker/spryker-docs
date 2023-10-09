@@ -10,34 +10,34 @@ Spryker architecture provides extensibility of different modules by using extens
 With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated.
 As the result the manual step can be skipped when engineers have to understand and apply code changes by themselves in order to add new features in the project.
 
-Extension points that upgrader supports:
-- Configure
-  - module
-  - environment
-- Copy module files
-- Add/Remove
-  - plugin
-  - navigation
-  - widget
-  - glue relationship
-- Add
-  - transfer
-  - db schema
+Supported extension points:
+- Configuration
+  - Module
+  - Environment
+- Copying module files
+- Adding/Removing
+  - Plugin
+  - Navigation element
+  - Widget
+  - Glue relationship
+- Adding
+  - Transfer definition
+  - DB schema definition
 
-# What is release rating
-The release rating is a measure of the integrability coverage of each spryker release, representing the percentage of integrated plugins, configurations, schemas, and other components.
-This rating is determined through internal testing, where the updated code is compared with the released code to assess the level of integration achieved.
+# What is a release rating
+The release rating is a measure of the integrability coverage of each Spryker release, representing the percentage of automatically integratable plugins, configurations, schemas, and other components.
+This rating is determined during internal testing, where the generated integration code is compared with the manually released code to assess the level of integration achieved. If both are equal, then the release is fully integratable.
 
-There are type of releases that provide only dependency updates without any code integrations (so called module-only releases). Such releases have 100% coverage. 
+There are some kind of releases that provide only dependency updates without any code integrations (so called module-only releases). Such releases have 100% coverage.
 
-The rating for each applied release can be found in the upgrader pull request description.
+The rating for each suggested release can be found in the Upgrader pull request description.
 
 # How to enable and configure
-By default, the Integrator is enabled. It applies integrations of releases that have rating of more than 70% (this threshold can be configured through the spryker CI configuration).
+By default, the Integrator is enabled. It applies integrations of releases with rating 70% or more (this threshold can be configured through the spryker CI configuration).
 
-It is important to note that after the integration process is completed, a style fixer is applied to the updated files. It's recommended for the project to have its own style fixer to expose project-specific code style conventions.
+It is important to note that after the integration process is completed, a style fixer is applied to the changed files. It's recommended for the project to have its own style fixer to expose project-specific code style conventions.
 
 # What to do if you see a generated code, that is not valid
 1. Make sure that your project code follows the Upgradability Guidelines and passes the [Evaluator check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
-2. You can try manually updating the generated code as a quick fix.
+2. You can try manually correcting the generated code as a quick fix.
 3. If none of the above solutions work, please contact us for further assistance.

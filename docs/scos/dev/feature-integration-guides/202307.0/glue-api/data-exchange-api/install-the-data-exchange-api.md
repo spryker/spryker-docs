@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/data-exchange-api/data-exchange-api-integration.html
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
+    - docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
 related:
 - title: How to configure Data Exchange API
   link: docs/scos/dev/glue-api-guides/page.version/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
@@ -161,6 +162,108 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
         return [
             'spy_dynamic_entity_configuration',
         ];
+    }
+}
+```
+
+### Configure Dynamic Data installation
+
+1. Optional: To set the default configuration data, create a configuration file:
+
+<details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
+
+```json
+[
+  {
+      "tableName": "spy_country",
+      "tableAlias": "countries",
+      "isActive": true,
+      "definition": {
+        "identifier": "id_country",
+        "fields": [
+          {
+            "fieldName": "id_country",
+            "fieldVisibleName": "id_country",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "integer",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "iso2_code",
+            "fieldVisibleName": "iso2_code",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": true }
+          },
+          {
+            "fieldName": "iso3_code",
+            "fieldVisibleName": "iso3_code",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "name",
+            "fieldVisibleName": "name",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "postal_code_mandatory",
+            "fieldVisibleName": "postal_code_mandatory",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "postal_code_regex",
+            "fieldVisibleName": "postal_code_regex",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          }
+        ]
+      }
+    }
+]
+```
+</details>
+2. Add the path to the configuration file, to `DynamicEntityConfig`:
+
+**src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\DynamicEntity;
+
+use Spryker\Zed\DynamicEntity\DynamicEntityConfig as SprykerDynamicEntityConfig;
+
+class DynamicEntityConfig extends SprykerDynamicEntityConfig
+{
+    /**
+     * @var string
+     */
+    protected const CONFIGURATION_FILE_PATH = '%s/src/Pyz/Zed/DynamicEntity/data/installer/configuration.json';
+
+    /**
+     * @return string
+     */
+    public function getInstallerConfigurationDataFilePath(): string
+    {
+        return sprintf(static::CONFIGURATION_FILE_PATH, APPLICATION_ROOT_DIR);
     }
 }
 ```

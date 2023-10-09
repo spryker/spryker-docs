@@ -35,7 +35,7 @@ The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCO
 
 For a smooth experience, make sure that your environments meet the minimum technical requirements:
 
-* PHP 8.1+. The Updater supports a minimum version of PHP 8.0. However, PHP 8.0 reaches end of life in November 2023, so make sure to update PHP to the [recommended version](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To check if your PHP version is supported, [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+* PHP 8.1+. The Upgrader supports a minimum version of PHP 8.0. However, PHP 8.0 reaches end of life in November 2023, so make sure to update PHP to the [recommended version](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To check if your PHP version is supported, [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 * Composer 2.5+
 * Git 2.24+
 

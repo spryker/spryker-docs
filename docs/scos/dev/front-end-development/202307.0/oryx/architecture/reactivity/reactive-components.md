@@ -95,7 +95,7 @@ export class ProductPriceComponent {
 }
 ```
 
-In the preceding example, the product data is observed from `ProductService` by creating a `$product` signal. Whenever the product and its route change, new product data is emitted and formatted. `PriceService` formats the sales and the original price. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object and exposed as a computed signal to the component.
+In the preceding example, the product data is observed from `ProductService` by creating the `$product` signal. Whenever the product and its route change, new product data is emitted and formatted. `PriceService` formats the sales and the original prices. `PriceService.format()` uses the current currency and locale for the formatting, which is why it also exposes an observable. Since there are two prices involved, the two streams are _combined_ in an object and exposed as a computed signal to the component.
 
 ## Next steps
 

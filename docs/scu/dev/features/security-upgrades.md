@@ -33,17 +33,9 @@ The PHP ecosystem refers to everything related to the PHP code, which includes t
 To detect violations related to it [Evaluator analysis tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html) can be used.
 
 The Evaluator checkers responsible for that:
-- [Additional logic in dependency provider checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html)
-- [Container set function checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html)
-- [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html)
-- [Minimum allowed shop version checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html)
-- [Multidimensional array checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html)
 - [Open-source vulnerabilities checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html)
 - [PHP versions checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html)
-- [Plugin registration with restrictions checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html)
-- [Single plugin argument checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html)
 - [Spryker dev packages checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html)
-- [Upgradability guidelines checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html)
 
 ## NPM Ecosystem
 The NPM ecosystem refers to everything related to the packages and tools available through the NPM.

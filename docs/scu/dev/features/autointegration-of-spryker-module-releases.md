@@ -10,7 +10,7 @@ Spryker architecture provides extensibility of different modules by using extens
 With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated.
 As the result the manual step can be skipped when engineers have to understand and apply code changes by themselves in order to add new features in the project.
 
-Supported extension points:
+Extension points that upgrader supports:
 - Configure
   - module
   - environment
@@ -28,7 +28,7 @@ Supported extension points:
 The release rating is a measure of the integrability coverage of each spryker release, representing the percentage of integrated plugins, configurations, schemas, and other components.
 This rating is determined through internal testing, where the updated code is compared with the released code to assess the level of integration achieved.
 
-There are some kind of releases that provide only dependency updates without any code integrations (so called module-only releases). Such releases have 100% coverage. 
+There are type of releases that provide only dependency updates without any code integrations (so called module-only releases). Such releases have 100% coverage. 
 
 The rating for each applied release can be found in the upgrader pull request description.
 

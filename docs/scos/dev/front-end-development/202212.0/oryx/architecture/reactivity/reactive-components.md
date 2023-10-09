@@ -53,7 +53,7 @@ The components provided in the Oryx libraries are built with Lit. Lit provides a
 
 The following example shows the usage of the `asyncState` decorator. The decorator subscribes to the assigned observable and requests an update to the component when needed. This means that component developers do not need to worry about how the reactive system works under the hood.
 
-Oryx components are built in TypeScript, and we provide types everywhere to increase the developer experience and avoid errors upfront. The original type of the assigned observable needs to be adjusted. It's impossible to resolve a correct type from the observable by using a decorator, which is why the `valueType` function is used to resolve the observed type.
+Oryx components are built in TypeScript, and we provide types everywhere to improve developer experience and avoid errors upfront. Developers must adjust the original type of the assigned observable. It's impossible to resolve a correct type from the observable by using a decorator, which is why the valueType function is used to resolve the observed type.
 
 ```ts
 export class ProductPriceComponent {

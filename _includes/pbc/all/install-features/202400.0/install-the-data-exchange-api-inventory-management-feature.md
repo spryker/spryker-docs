@@ -1,10 +1,3 @@
----
-title: Data Exchange API + Inventory Management feature integration
-description: Install the Data Exchange API + Inventory Management features in your project.
-last_updated: Sep 06, 2023
-template: feature-integration-guide-template
----
-
 This document describes how to integrate the Data Exchange API + Inventory Management feature into a Spryker project.
 
 ## Install feature core
@@ -66,7 +59,7 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Let's say you want to have a new endpoint `/dynamic-data/stock-products` to operate with data in `spy_stock_product` table in database.
+Let's say you want to have a new endpoint `/dynamic-data/stock-products` to operate with data in `spy_stock_product` table in the database.
 
 Based on the provided information, the SQL transaction for interacting with the `spy_stock_product` table through the API request via `dynamic-entity/stock-products` would be as follows:
 
@@ -76,10 +69,11 @@ INSERT INTO `spy_dynamic_entity_configuration` VALUES (1,'stock-products','spy_s
 COMMIT;
 ```
 
-To obtain an access token follow [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
+Do the following:
 
-### Sending a `PATCH` request
-This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided.
+1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) for details on how to do that.
+
+2. Send a `PATCH` request. This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided:
 
 ```bash
 PATCH /dynamic-entity/stock-products HTTP/1.1
@@ -98,7 +92,7 @@ Content-Length: 174
 }
 ```
 
-Make sure that after updating stock data - product availability is updated as well:
+3. Make sure that after updating the stock data, the product availability is updated as well:
 ```sql
 SELECT * from spy_availability WHERE sku='PRODUCT_SKU';
 ```

@@ -1,20 +1,20 @@
 ---
 title: "Oryx: Building components"
-description: Components are the building blocks of Oryx Applications
-last_updated: Sept 19, 2023
+description: Components are the building blocks of Oryx applications
+last_updated: Sep 19, 2023
 template: concept-topic-template
 ---
 
 Oryx provides a fully component-based architecture where only components are used to render the application. Components are the building blocks used to create modular and reusable elements. The components are primarily concerned with UI/UX, leaving business logic and integrations to other application layers.
 
-Oryx contains a library of standard components, organized and distributed in [packages](/docs/scos/dev/front-end-development/{{page.version}}/getting-started/oryx-packages.html). There are different [types of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html), including a design system. The components are built with powerful UI/UX features:
+Oryx contains a library of standard components organized and distributed in [packages](/docs/scos/dev/front-end-development/{{page.version}}/getting-started/oryx-packages.html). There are different [types of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-types.html), including a design system. The components are built with powerful UI/UX features:
 
 - Responsive design
 - Themes support using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html)
 - [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html)
 - [Icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html)
 - Internationalization (i18n) features:
-  - [locales](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/oryx-service-layer.html)
+  - [Locales](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/oryx-service-layer.html)
   - Number and price formatting
   - Directionality: left-to-right versus right-to-left
 - Accessibility features:
@@ -27,6 +27,6 @@ The components are rendered inside [compositions](/docs/scos/dev/front-end-devel
 
 You can customize the components with a custom theme, style rules, [component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html), or component logic. You can also [implement custom components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-implementation.html) and add them to the application.
 
-The components are built as web components, which makes them highly reusable in other web frameworks and systems. For more details, see [components integrations](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/components-integration.html).
+The components are built as web components, which makes them highly reusable in other web frameworks and systems. For more details, see [Integration of components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/oryx-integration-of-components.html).
 
-Oryx provides a reactive framework and is designed to work highly efficiently in a Single Page Application architecture. To ensure _reactivity_ throughout the application, Oryx only re-renders those fragments of the components that were affected by the changing application state. For more details, see [key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html).
+Oryx provides a reactive framework and is designed to work efficiently in a single page application architecture. To ensure _reactivity_ throughout the application, Oryx rerenders only  fragments of the components that are affected by the changing application state. For more details, see [key concepts of reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html).

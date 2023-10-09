@@ -1,5 +1,5 @@
 ---
-title: "Integrate Oryx Components in any web frameworks"
+title: "Oryx: Integration of components"
 description: Oryx Components are build as web components
 last_updated: Sept 20, 2023
 template: concept-topic-template

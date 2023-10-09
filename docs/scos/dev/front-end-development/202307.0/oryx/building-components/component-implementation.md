@@ -39,7 +39,7 @@ In this example, the `Domain` is `Product` and the `Feature` is `Id`. The compon
 
 {% info_block infoBox %}
 
-Oryx is built in typescript with fairly strict typing configurations. This ensures high quality standards and a good developer experience. You are free to use TypeScript in your application code, or leave it out. If you do use TypeScript, you are in charge of the TypeScript configuration (`.tsconfig`) that is used in your application, so you can decide on how strict the configuration should be.
+Oryx is built in TypeScript with fairly strict typing configurations. This ensures high-quality standards and a good developer experience. If you decide to use TypeScript in your code, which is optional, you are in charge of the TypeScript configuration: `.tsconfig`. So you decide how strict the configuration should be.
 
 {% endinfo_block %}
 
@@ -74,7 +74,7 @@ This code shows the ease of use, but there's a lot going on in the background:
 2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses an adapter (`ProductAdapter`) to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
 3. The `$product` signal subscribes to the application state using `ProductService`. Whenever the product state is changed, the [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
 
-The above steps are a commonly used pattern cross all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
+The preceding steps are a commonly used pattern across all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
 ### 3. Configure the component
 

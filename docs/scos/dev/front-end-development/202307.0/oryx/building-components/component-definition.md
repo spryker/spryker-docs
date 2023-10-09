@@ -5,7 +5,7 @@ last_updated: Sept 19, 2023
 template: concept-topic-template
 ---
 
-Oryx components can be used in different ways. They can be configured in [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), used in components or even integrated in content coming from your CMS of choice.
+Oryx components can be used in different ways. They can be configured in [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), used in components or integrated in the content from a CMS of choice.
 
 When a component is rendered for the first time, Oryx resolves the component definition from the registry and loads the associated implementation. With this, components are lazily loaded.
 

@@ -38,7 +38,9 @@ Oryx components follow a simple naming convention that is used in the class name
 In this example, the `Domain` is `Product` and the `Feature` is `Id`. The component's name is `ProductIdComponent`.
 
 {% info_block infoBox %}
-Oryx is implemented with TypeScript to improve the development experience. This is not necessary. There also no TypeScript configuration that are forces by Oryx.
+
+Oryx is built in typescript with fairly strict typing configurations. This ensures high quality standards and a good developer experience. You are free to use TypeScript in your application code, or leave it out. If you do use TypeScript, you are in charge of the TypeScript configuration (`.tsconfig`) that is used in your application, so you can decide on how strict the configuration should be.
+
 {% endinfo_block %}
 
 ### 2. Integrate backend data
@@ -72,7 +74,7 @@ This code shows the ease of use, but there's a lot going on in the background:
 2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses an adapter (`ProductAdapter`) to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
 3. The `$product` signal subscribes to the application state using `ProductService`. Whenever the product state is changed, the [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
 
-The above pattern is commonly used in all Oryx domains. It ensures efficient consumption of backend APIs and rendering of DOM elements.
+The above steps are a commonly used pattern cross all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
 ### 3. Configure the component
 
@@ -134,7 +136,7 @@ If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose
 
 ### 6. Use services inside the component
 
-You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx integrates _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
+You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
 
 The Oryx DI container is used to register and resolve services by a token. You can read more about resolving services in [the documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html). In the following example you see how the pricing service is resolved.
 
@@ -204,6 +206,20 @@ This ensures that whenever the component is used anywhere in the DOM, Oryx lazil
 
 ## Place the component
 
-After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside  (CMS) content.
+After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside (CMS) content.
 
-Also, you can merge the component into an existing page structure. For example, `before` or `after` an existing component or inside (`prepend` or `append`) the components of an existing composition.
+Also, you can merge the component into an existing page structure. For example, before or after an existing component or inside (prepend or append) the components of an existing composition.
+
+The available merge types are exported in the [@spryker-oryx/experience](https://www.npmjs.com/package/@spryker-oryx/experience) package.
+
+```ts
+export const enum ExperienceDataMergeType {
+  Before = "before",
+  Prepend = "prepend",
+  Append = "append",
+  After = "after",
+  Replace = "replace",
+  Patch = "patch",
+  Remove = "remove",
+}
+```

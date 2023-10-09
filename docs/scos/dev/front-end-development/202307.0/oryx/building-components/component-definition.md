@@ -5,13 +5,13 @@ last_updated: Sept 19, 2023
 template: concept-topic-template
 ---
 
-Oryx components can be integrated in different ways. They can be listed in [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html) and used inside other components or content integrated from a third-party CMS.
+Oryx components can be used in different ways. They can be configured in [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), used in components or even integrated in content coming from your CMS of choice.
 
 When a component is rendered for the first time, Oryx resolves the component definition from the registry and loads the associated implementation. With this, components are lazily loaded.
 
 ## Creating a component definition
 
-To register a [component implementation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-implementation.html), you need to provide a component definition. The component definition requires a name and an implementation. The name is used as the web component element name. Definition of a web component consists of two or more words separated by a dash. It is a good practice to prefix components with a project, brand, or company name. For example, Oryx components are prefixed with `oryx-`.
+To register a [component implementation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-implementation.html), you need to provide a component definition. The component definition requires a name and an implementation. The name is used as the web component element name and consists of two or more words separated by a dash. It is a good practice to prefix components with a project, brand, or company name. For example, Oryx components are prefixed with `oryx-`.
 
 {% info_block infoBox "Update definitions" %}
 You can also update an existing component definition. To match an existing definition, you still need to provide a name.

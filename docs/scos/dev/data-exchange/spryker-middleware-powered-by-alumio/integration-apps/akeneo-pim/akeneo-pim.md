@@ -30,6 +30,13 @@ To import data from Akeneo PIM to your Spryker project, you need to do the follo
 
 ## 1. Connect the Spryker Middleware powered by Alumio with Akeneo PIM
 
+{% info_block warningBox "Prerequisite" %}
+
+Before you can connect the Spryker Middleware powered by Alumio with Akeneo, you must establish a connection in Akeneo for Spryker. The connection to Spryker must be with the *Data destination* flow type. For step-by-step instructions on how to set up the connection in Akeneo, refer to the [Akeneo documentation](https://help.akeneo.com/serenity-connect-your-pim/serenity-manage-your-connections).
+
+{% endinfo_block %}
+
+
 To connect the Spryker Middleware powered by Alumio with Akeneo PIM, you need to create an HTTP client. To create the client, do the following.
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Clients->HTTP client** and click the + sign.
@@ -38,12 +45,18 @@ To connect the Spryker Middleware powered by Alumio with Akeneo PIM, you need to
 ![akeneo-http-client]
 3. Click **Next step**.
 4. In *Base URL*, enter the URL to your Akeneo PIM environment.
-5. Enter the *Client ID* and *Client Secret* received from Akeneo. See [Akeneo Documentation](https://api.akeneo.com/documentation/authentication.html#client-idsecret-generation) for details on how to get them.
-6. Enter the username and password (QUESTION: WHAT USERNAME AND PASSWORD ARE THESE? WHERE SHOULD I GET THEM? OR ARE THESE CREDENTIALS FOR THE CLIENT THAT I SHOULD CREATE?)
-7. Optional: Check the *Enable logging of requests* checkbox.
-8. Click **Grant access to Alumio** and proceed to the next step.
-9. Enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
-10. Click **Save**. The client should now be in the list of the *HTTP clients* page.
+5. Go to your Akeneo PIM environment, to **Connections->Connection settings** and copy the following information from there to the *Create Client* page of the Spryker Middleware Powered by Alumio platform:  
+ - Client ID
+ - Client Secret
+ - Username
+ - Password
+
+ ![connection-credentials]
+
+6. Optional: Check the *Enable logging of requests* checkbox.
+7. Click **Grant access to Alumio** and proceed to the next step.
+8. Enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
+9. Click **Save**. The client should now be in the list of the *HTTP clients* page.
 
 ## 2. Connect SCCOS with the Middleware Powered by Alumio platform
 

@@ -4,7 +4,10 @@ description: How Spryker Code Upgrader works with releases related to known secu
 template: concept-topic-template
 ---
 
-TBD: Generic Description
+Being on top of security releases of your vendor or 3rd-parties is very crusial:
+* *Vulnerability Mitigation*: Security updates often address known vulnerabilities or weaknesses in software. Installing these updates promptly helps to mitigate these vulnerabilities, reducing the risk of unauthorized access, data breaches, or malicious activities.
+* *Enhanced Protection and risk mitigation*: Security updates typically include patches and improvements that enhance the overall security of the system.
+* *Regulatory Compliance*: Many regulatory bodies require organizations to maintain up-to-date security measures, which often includes installing security updates promptly. Compliance with these regulations not only reduces legal and financial risks but also helps to maintain a positive reputation and trust with stakeholders and customers.
 
 # What kind of security releases covered?
 
@@ -20,7 +23,7 @@ These tools assist in identifying and preventing potential security risks from t
 Security release is a type of release that aims to deliver a security vulnerability fixes, rather than introducing new features or functionalities.
 The example of security release is [https://api.release.spryker.com/release-group/4753](https://api.release.spryker.com/release-group/4753)
 
-The security releases are applied alongside other releases, but the security release being prioritized and delivered first, ensuring the fast delivery of critical security updates.
+The security releases are applied alongside other releases, but the security release is being prioritized and delivered first, ensuring the fast delivery of critical security updates.
 
 Automatic installation of security releases is only available between the major version releases. However, the major releases require manual installation, similar to all major releases.
 

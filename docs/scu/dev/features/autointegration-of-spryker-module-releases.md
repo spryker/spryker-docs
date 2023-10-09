@@ -6,32 +6,38 @@ template: concept-topic-template
 
 # Challenges of integrating Spryker Code Releases
 
-Spryker architecture requires to connect functionalities of different modules in your project code by using the defined extention points. Spryker Code Upgrader automatically integrates Plugins, sets configurations keys, adds new translations etc to your project code. This results in removing the manual step when your engineer needs to understand and apply code changes to activate the new feature in your project.
+Spryker architecture provides extensibility of different modules by using extension points in the project code.
+With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated.
+As the result the manual step can be skipped when engineers have to understand and apply code changes by themselves in order to add new features in the project.
 
-Explain supported extention points:
-- Configurations (find links)
-    default php
-    module config
-- Plugin stacks (find links)
-- Translations (find links)
-- XML
-- ???
+Supported extension points:
+- Configure
+  - module
+  - environment
+- Copy module files
+- Add/Remove
+  - plugin
+  - navigation
+  - widget
+  - glue relationship
+- Add
+  - transfer
+  - db schema
+
+# What is release rating
+The release rating is a measure of the integrability coverage of each spryker release, representing the percentage of integrated plugins, configurations, schemas, and other components.
+This rating is determined through internal testing, where the updated code is compared with the released code to assess the level of integration achieved.
+
+There are some kind of releases that provide only dependency updates without any code integrations (so called module-only releases). Such releases have 100% coverage. 
+
+The rating for each applied release can be found in the upgrader pull request description.
 
 # How to enable and configure
+By default, the Integrator is enabled. It applies integrations of releases that have rating of more than 70% (this threshold can be configured through the spryker CI configuration).
 
-- enabled by default
-- not all the releases are integrated, but those having high integratability coverage
-- code is process by code style fixers, ensure you have it in your project
-
- How Upgrader decides what release to integrate?
-- each release has an integrability coverage which is from 0 to 100%, Upgrader integrates those releases having 70+% but it can be changed by self-service.
-
-# What is integrability coverage
-- internally Spryker tests how the release can be integrated and what plugins, configuration etc need to change in your project code the coverage shows the number of those changes that can be replayed automatically
-- there are some releases that do not need any integrations (so called module-only releases), these receive 100% coverage. Explain what module-only means or find a better name
-- you can see the coverage of each release in the PR that is created by Spryker Code Upgrader
+It is important to note that after the integration process is completed, a style fixer is applied to the updated files. It's recommended for the project to have its own style fixer to expose project-specific code style conventions.
 
 # What to do if you see a generated code, that is not valid
-1. Ensure that your project code is passing Upgradability Guidelines and Evaluator check (links)
-2. Quick fix might be to manually correct the generated code
-3. If none of those help, please contact us
+1. Make sure that your project code follows the Upgradability Guidelines and passes the [Evaluator check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+2. You can try manually updating the generated code as a quick fix.
+3. If none of the above solutions work, please contact us for further assistance.

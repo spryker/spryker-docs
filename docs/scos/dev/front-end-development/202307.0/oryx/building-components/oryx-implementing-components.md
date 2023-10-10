@@ -111,10 +111,10 @@ Styling components in the shadow DOM is a big topic we recommend studying separa
 - [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens are used to ensure consistent styling.
 - Custom properties, also known as CSS variables, cascade into web components, which is why the application theme is based on CSS variables. See [Design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) for more information.
 - Oryx provides an [icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html) that you can leverage in your components.
-- Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen specific styles in the component definition as described in the following sections.
-- You can use Oryx themes and provide component styles for a specific theme. Similar to breakpoint specific styles, you can configure styles for a theme.
+- Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen-specific styles in the component definition as described in the following sections.
+- You can use Oryx themes and provide component styles for a specific theme. Similarly to breakpoint-specific styles, you can configure styles for a theme.
 
-## 5. Localize messages
+## 5. Localizing messages
 
 Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage [localization](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-localization.html).
 
@@ -128,9 +128,9 @@ protected render(): TemplateResult | void {
 
 If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose to not use mixins, you can integrate the `i18n` directive directly.
 
-## 6. Use services inside the component
+## 6. Using services inside the component
 
-You've seen how `ProductMixin` resolves the product data and hide the integration with the `ProductService`. It is also common to use services directly in components. Oryx _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
+You've seen how `ProductMixin` resolves the product data and hides the integration with the `ProductService`. It is also common to use services directly in components. Oryx _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
 
 The Oryx DI container is used to register and resolve services by a token. You can read more about resolving services in [the documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html). In the following example you see how the pricing service is resolved.
 

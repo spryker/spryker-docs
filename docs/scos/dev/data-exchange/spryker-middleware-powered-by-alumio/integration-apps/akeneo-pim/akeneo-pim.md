@@ -44,12 +44,12 @@ To connect the Spryker Middleware powered by Alumio with Akeneo PIM, you need to
 2. In the platform selection filed, start typing "Akeneo" and select *Akeneo HTTP Client*.
 ![akeneo-http-client]
 3. Click **Next step**.
-4. In *Base URL*, enter the URL to your Akeneo PIM environment.
+4. In *Base URL*, enter the URL to your Akeneo PIM environment. For example, `https://test.cloud.akeneo.com`
 5. Go to your Akeneo PIM environment, to **Connections->Connection settings** and copy the following information from there to the *Create Client* page of the Spryker Middleware Powered by Alumio platform:  
  - Client ID
  - Client Secret
  - Username
- - Password
+ - Password: Keep in mind that password is hidden in Akeneo. If you don't remember it, you have to generate a new one.
 
  ![connection-credentials]
 
@@ -97,15 +97,42 @@ To create an incoming configuration, do the following:
 2. In the **Name** field, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
-5. In the *Subscriber* field, select *Akeneo Subscriber*. 
+5. In the *Subscriber* field, select the *HTTP subscriber*. 
+  QUESTION: What is the subscriber, what is each subscriber in the dropdown for, and how do they know which subscriber to select here?
+6. In the *Request URL*, specify the URL to a specific product, or a list of products. 
+
+{% info_block infoBox "Info" %}
+
+The URL should include the just the path after `akeneo.com`, as the base path to the Akeneo environment is already specified in the HTTP client you created. For example, if the actual path to a specific product you want to import from akeneo is `https://test.cloud.akeneo.com/api/rest/v1/producs/1234567890`, the path to specify in the *Request URL* field is `/api/rest/v1/producs/1234567890`. If you want to import multiple products from page `https://test.cloud.akeneo.com//api/rest/v1/products?limit=10`, the path you should specify is `/api/rest/v1/products?limit=10`.
+
+{% endinfo_block %}
+
+8. In *HTTP Client*, select the Akeneo client that you created at this step: [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+10. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incoming configuration has been created.
+![incoming-configuration-batch-products]
+
+The incoming configuration should now appear at the **Configurations->Incoming** page.
+
+QUESTION: HOW AND WHAT CONFIGURATIONS SHOULD BE DIFFERENT IF WE WANT TO EXPORT 1 PROUDCT OR MULTIPLE PRODUCTS AT ONCE?
+
+The incoming configuation defines what data should be retrieved from Akeneo and how this should be done.
+
+
+<!--This is a hidden comment. This configuration is for the Akeneo Subscriber
+
+1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click the + sign.
+2. In the **Name** field, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+3. Optional: In the **Description** field, add the description of your incoming configuration.
+4. To activate the incoming configuration, set the status to *Enabled*.
+5. In the *Subscriber* field, select the subscriber. 
   QUESTION: What is the subscriber, what is each subscriber in the dropdown for, and how do they know which subscriber to select here?
 6. In *Entity*, select the entity depending on what data you want to import from Akeneo. For example, to import product abstracts, select *Get list of products*.
 7. Leave the *Input transformer* field empty.
 8. In *HTTP Client*, select the Akeneo client that you created at this step: [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
 10. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incomfing configuration has been created.
-![incoming-for-akeneo-product-import.png]
 
-The incoming configuration should now appear at the **Configurations->Incoming** page.
+![incoming-for-akeneo-product-import.png]
+-->
 
 ### Create an outgoing configuration
 
@@ -164,6 +191,16 @@ If the locale in Akeneo is not specified, the locale you specify at this step wi
   2. On the *Overview of tax sets* page, copy the value from the *Name* column of the tax set you want to use for the products imported from Akeneo PIM.
   3. Go back to the transformer creation page in the Spryker Middleware powered by Alumio and enter the tax name in the **Tax** field.
 
+## Create a task for the products import from Akeneo
+
+To create a task for the products import from Akeneo, you have to run the incoming created at step [Create an incoming configuration](#create-an-incoming-configuration). 
+To run the incoming, do the following:
+
+1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click on the necessary incoming configuration.
+2. In the top right corner, click *Run incoming*.
+3. Go to *Tasks* and make sure that there are new tasks with the route you created at step [Define the route](#define-the-route). 
+
+![tasks]
 
 ## 1. Create an incoming:
 

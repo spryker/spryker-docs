@@ -1070,3 +1070,143 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-options-feature-domain-model-and-relationships.html
               - title: "Marketplace Merchant Portal Product Management feature: Domain model and relationships"
                 url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-merchant-portal-product-management-feature-domain-model-and-relationships.html
+      - title: Product Relationship Management
+        url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
+        include_versions:
+        - "202212.0"
+        - "202307.0"
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install the Product Relations feature
+                url: /docs/pbc/all/product-relationship-management/install-and-upgrade/install-the-product-relations-feature.html
+              - title: Install the Product Relations Glue API
+                url: /docs/pbc/all/product-relationship-management/install-and-upgrade/install-the-product-relations-glue-api.html
+              - title: Upgrade the ProductRelation module
+                url: /docs/pbc/all/product-relationship-management/install-and-upgrade/upgrade-the-productrelation-module.html
+              - title: Upgrade the ProductRelationCollector module
+                url: /docs/pbc/all/product-relationship-management/install-and-upgrade/upgrade-the-productrelationcollector-module.html
+              - title: Upgrade the ProductRelationStorage module
+                url: /docs/pbc/all/product-relationship-management/install-and-upgrade/upgrade-the-productrelationstorage-module.html
+          - title: Import product relations
+            url: /docs/pbc/all/product-relationship-management/file-details-product-relation.csv.html
+          - title: Manage in the Back Office
+            url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
+            nested:
+              - title: "Best practices: Promote products with product relations"
+                url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html
+              - title: Create product relations
+                url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/create-product-relations.html
+              - title: Edit product relations
+                url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/edit-product-relations.html
+              - title: View product relations
+                url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/view-product-relations.html
+          - title: "Glue API: Retrieve related products"
+            url: /docs/pbc/all/product-relationship-management/glue-api-retrieve-related-products.html
+          - title: Build your own product relation type
+            url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html
+          - title: "Product Relations: module relations"
+            url: /docs/pbc/all/product-relationship-management/product-relations-module-relations.html
+          - title: Third-party integrations
+            nested:
+              - title: Contentserv
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/contentserv.html
+              - title: Econda
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/econda.html
+                nested:
+                  - title: Installing Econda
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/install-econda.html
+                  - title: Integrating Econda
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/integrate-econda.html
+                  - title: Integrating Econda cross-selling
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/integrate-econda-cross-selling.html
+                  - title: Adding the Econda tracking code
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/add-the-econda-tracking-code.html
+                  - title: Exporting Econda data
+                    url: /docs/pbc/all/product-relationship-management/third-party-integrations/econda/export-econda-data.html
+              - title: Nosto
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/nosto.html
+              - title: 8Select
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/8select.html
+              - title: trbo
+                url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
+      - title: Ratings and Reviews
+        url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
+        nested:
+          - title: What's changed in Ratings and Reviews
+            url: /docs/pbc/all/ratings-reviews/whats-changed-in-ratings-and-reviews.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the Product Rating and Reviews feature
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html
+              - title: Install the Product Rating and Reviews + Product Group feature
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
+              - title: Install the Product Rating and Reviews Glue API
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
+          - title: Import and export data
+            url: /docs/pbc/all/ratings-reviews/import-and-export-data/ratings-and-reviews-data-import.html
+            nested:
+              - title: File details- product_review.csv
+                url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
+          - title: Manage in the Back Office
+            url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/log-into-the-back-office.html
+            nested:
+              - title: Manage product reviews
+                url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage product reviews using Glue API
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+              - title: Retrieve product reviews when retrieving abstract products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+              - title: Retrieving product reviews when retrieving concrete products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Configure product reviews"
+                url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
+          - title: Third-party integrations
+            nested:
+              - title: Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
+              - title: Integrate Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
+              - title: Configure Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
+              - title: Disconnect Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
+      - title: Request for Quote
+        url: /docs/pbc/all/request-for-quote/request-for-quote.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Quotation Process
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-feature.html
+                  - title: Quotation Process + Checkout
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html
+                  - title: Quotation Process + Approval Process
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
+                  - title: Quotation Process + Multiple Carts
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
+                  - title: Quotation Process Glue API
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: QuoteRequest
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html
+                  - title: QuoteRequestAgent
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html
+                  - title: QuoteRequestAgentPage
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html
+                  - title: QuoteRequestAgentWidget
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html
+                  - title: QuoteRequestPage
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
+                  - title: QuoteRequestwidget
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
+          - title: Module relations
+            url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
+          - title: Use cases
+            url: /docs/pbc/all/request-for-quote/use-cases-request-for-quote-processes.html                

@@ -11,18 +11,18 @@ entries:
       - title: Access
         url: /docs/ca/dev/access/access.html
         nested:
-          - title: Accessing AWS Management Console
-            url: /docs/ca/dev/access/accessing-aws-management-console.html
-          - title: Locating service credentials
-            url: /docs/ca/dev/access/locating-service-credentials.html
-          - title: Connecting to services via SSH
-            url: /docs/ca/dev/access/connecting-to-services-via-ssh.html
+          - title: Access AWS Management Console
+            url: /docs/ca/dev/access/access-aws-management-console.html
+          - title: Locate service credentials
+            url: /docs/ca/dev/access/locate-service-credentials.html
+          - title: Connect to services via SSH
+            url: /docs/ca/dev/access/connect-to-services-via-ssh.html
       - title: Connecting the Docker SDK
         url: /docs/ca/dev/connecting-the-docker-sdk.html
-      - title: Connecting a code repository
-        url: /docs/ca/dev/connecting-a-code-repository.html
+      - title: Connect a code repository
+        url: /docs/ca/dev/connect-a-code-repository.html
       - title: Set up a custom domain name
-        url: /docs/ca/dev/set-up-a-custom-domain-name/setting-up-a-custom-domain-name.html
+        url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name.html
         nested:
           - title: Set up a custom domain name with Route 53
             url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-route-53.html
@@ -30,16 +30,16 @@ entries:
             url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
       - title: Setting up a custom SSL certificate
         url: /docs/ca/dev/setting-up-a-custom-ssl-certificate.html
-      - title: Deploying in a staging environment
-        url: /docs/ca/dev/deploying-in-a-staging-environment.html
-      - title: Configuring debugging
-        url: /docs/ca/dev/configuring-debugging.html
+      - title: Deploy in a staging environment
+        url: /docs/ca/dev/deploy-in-a-staging-environment.html
+      - title: Configure debugging
+        url: /docs/ca/dev/configure-debugging.html
       - title: Working with logs
         url: /docs/ca/dev/working-with-logs.html
       - title: Preparation for going live
         url: /docs/ca/dev/preparation-for-going-live.html
-      - title: Deploying in a production environment
-        url: /docs/ca/dev/deploying-in-a-production-environment.html
+      - title: Deploy in a production environment
+        url: /docs/ca/dev/deploy-in-a-production-environment.html
       - title: Starting asynchronous commands
         url: /docs/ca/dev/starting-asynchronous-commands.html
       - title: Best practices
@@ -65,8 +65,8 @@ entries:
         nested:
           - title: Checking ECR image scan results
             url: /docs/ca/dev/security/checking-ecr-image-scan-results.html
-          - title: Generating access keys
-            url: /docs/ca/dev/security/generating-access-keys.html
+          - title: Generate access keys
+            url: /docs/ca/dev/security/generate-access-keys.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
       - title: Configure deployment pipelines
@@ -76,16 +76,16 @@ entries:
             url: /docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html
           - title: Deployment in states
             url: /docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html
-          - title: Customizing deployment pipelines
-            url: /docs/ca/dev/configure-deployment-pipelines/customizing-deployment-pipelines.html
-          - title: Configuring Azure Pipelines
-            url: /docs/ca/dev/configure-deployment-pipelines/configuring-azure-pipelines.html
-          - title: Configuring GitHub Actions
-            url: /docs/ca/dev/configure-deployment-pipelines/configuring-github-actions.html
-          - title: Configuring GitLab pipelines
-            url: /docs/ca/dev/configure-deployment-pipelines/configuring-gitlab-pipelines.html
-          - title: Configuring Bitbucket Pipelines
-            url: /docs/ca/dev/configure-deployment-pipelines/configuring-bitbucket-pipelines.html
+          - title: Customize deployment pipelines
+            url: /docs/ca/dev/configure-deployment-pipelines/customize-deployment-pipelines.html
+          - title: Configure Azure Pipelines
+            url: /docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html
+          - title: Configure GitHub Actions
+            url: /docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html
+          - title: Configure GitLab pipelines
+            url: /docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html
+          - title: Configure Bitbucket Pipelines
+            url: /docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html
       - title: Configuring data import from an S3 bucket
         url: /docs/ca/dev/configuring-data-import-from-an-s3-bucket.html
       - title: Create and restore databse backups

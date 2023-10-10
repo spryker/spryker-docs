@@ -32,6 +32,18 @@ Make sure that the following module has been installed:
 | ProductOfferShipmentTypeStorage          | vendor/spryker/product-offer-shipment-type-storage           |
 | ProductOfferShipmentTypeStorageExtension | vendor/spryker/product-offer-shipment-type-storage-extension |
 
+Also, we offer the demo Click&Collect functionalities. To use it, install the following module:
+
+```bash
+composer require spryker/click-and-collect-example: "^0.4.0" --update-with-dependencies
+```
+
+Make sure that the following module has been installed:
+
+| MODULE                 | EXPECTED DIRECTORY                       |
+|------------------------|------------------------------------------|
+| ClickAndCollectExample | vendor/spryker/click-and-collect-example |
+
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
@@ -506,7 +518,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 namespace Pyz\Client\ShipmentTypeStorage;
 
-use Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage\ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin;
+use Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage\ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin;
 use Spryker\Client\ShipmentTypeStorage\ShipmentTypeStorageDependencyProvider as SprykerShipmentTypeStorageDependencyProvider;
 
 class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDependencyProvider

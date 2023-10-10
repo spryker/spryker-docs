@@ -41,7 +41,7 @@ The Upgrader tool does not influence your development process. Your development 
 
 * Cover customizations with automated tests.
 
-* Regularly process pull requests that were created by Spryker Code Upgrader.
+* Consistently conduct [testing on the pull requests](/docs/scos/dev/updating-spryker/testing-updates.html) created by the Spryker Code Upgrader, and upon verification of their integrity, proceed with merging as per standard procedure.
 
 * To continue receiving suggestions from Spryker Code Upgrader, apply major upgrades manually.
 

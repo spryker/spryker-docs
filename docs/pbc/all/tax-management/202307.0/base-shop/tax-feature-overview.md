@@ -21,7 +21,6 @@ redirect_from:
   - /docs/scos/user/features/202200.0/tax-feature-overview.html
   - /docs/scos/user/features/202307.0/tax-feature-overview.html
   - /docs/pbc/all/tax-management/tax-management.html
-  - /docs/pbc/all/tax-management/202307.0/base-shop/tax-feature-overview.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/tax-feature-overview.html
 ---
 

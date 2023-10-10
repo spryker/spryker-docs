@@ -29,27 +29,23 @@ export class ProductIdComponent extends LitElement {
 }
 ```
 
-Oryx components follow the naming convention for class names:
-
-`[Domain][Feature]Component`,
-
-In this example, the `Domain` is `Product`, and the `Feature` is `Id`. The component's name is `ProductIdComponent`.
+Oryx components follow the naming convention for class names: `[Domain][Feature]Component`. In the example of the `ProductIdComponent` component, `Domain` is `Product`, and `Feature` is `Id`.
 
 {% info_block infoBox %}
 
-Oryx is built in TypeScript with strict typing configuration. This ensures high-quality standards and a good developer experience. If you use TypeScript in your code, which is optional, you are in charge of the TypeScript configuration: `.tsconfig`. So you decide how strict the configuration should be.
+Oryx is built in TypeScript with strict typing configuration. This ensures high-quality standards and a good developer experience. If you use TypeScript in your code, which is optional, you define the typing configuration in `.tsconfig`.
 
 {% endinfo_block %}
 
-## 2. Integrate backend data
+## 2. Integrating backend data
 
-In this step you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time—for example, when a user navigates one product page to another. In order to render the state efficiently, the component must support [reactivity](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
+In this step, you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time—for example, when a user navigates from one product page to another. To be able to render the state efficiently, the component must support [reactivity](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
 
-Oryx provides standard [application layers](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html#application-layers) to load and resolve the backend data. The service layer is intended to be used by components, and product components interact with `ProductService`. The integration with the product service and reactivity is simplified by using `ProductMixin`. Mixins provide component properties and methods, which you can use in your components.
+Oryx provides standard [application layers](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html#application-layers) to load and resolve the backend data. The service layer is intended to be used by components, and product components interact with `ProductService`. The integration with the product service and reactivity is simplified by using `ProductMixin`. Mixins provide component properties and methods, which you can use in components.
 
 {% info_block infoBox "Inheritance versus composition" %}
 
-While component classes extend from a base class, Oryx mostly avoids inheritance and uses the _composition_ design pattern. Not all component logic can be composed, which is why mixins are used.
+While component classes extend from a base class, Oryx mostly avoids inheritance and uses the _composition_ design pattern. Not all the component logic can be composed, which is why mixins are used.
 
 {% endinfo_block %}
 

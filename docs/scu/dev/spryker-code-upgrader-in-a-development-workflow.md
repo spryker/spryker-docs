@@ -1,6 +1,7 @@
 ---
 title: Spryker Code Upgrader in a development workflow
 description: Instructions for integrating Spryker Code Upgrader into a development process
+last_updated: Oct 10, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html

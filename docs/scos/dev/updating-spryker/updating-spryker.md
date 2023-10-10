@@ -1,7 +1,7 @@
 ---
 title: Updating Spryker
 description: Learn how to make the Spryker update process smoother, easier, and update efforts predictable
-last_updated: Jun 16, 2021
+last_updated: Oct 10, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-based-project
 originalArticleId: 0aac9b81-7db9-4a7e-87f8-35c2ac6efe1d

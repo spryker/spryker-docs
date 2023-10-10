@@ -76,7 +76,7 @@ In August 2023, we have added and updated the following pages:
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202400.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
 - [Shipment feature integration guide](/docs/pbc/all/carrier-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
-- [Best practises: Jenkins stability](/docs/ca/dev/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
+- [Best practises: Jenkins stability](/docs/ca/dev/best-practises/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
 - [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
 
@@ -89,7 +89,7 @@ In July 2023, we have added and updated the following pages:
 
 ### New pages
 - [Oryx: Color system](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-color-system.html): Documentation on colors in Oryx.
-- [Best practises: Jenkins stability](/docs/ca/dev/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
+- [Best practises: Jenkins stability](/docs/ca/dev/best-practises/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
 - [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html): This document describes how to integrate the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.

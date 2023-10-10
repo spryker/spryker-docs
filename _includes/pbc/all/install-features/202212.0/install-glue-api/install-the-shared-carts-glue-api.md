@@ -109,7 +109,7 @@ The result should be 0 records.
 
 * `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastucture/glue-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
 
 {% endinfo_block %}
 

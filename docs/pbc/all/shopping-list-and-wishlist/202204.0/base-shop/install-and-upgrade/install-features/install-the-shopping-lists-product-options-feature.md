@@ -19,4 +19,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-shopping-lists-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shopping-lists-product-options-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-shopping-lists-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shopping-lists-product-options-feature.md -->

@@ -27,11 +27,13 @@ composer require spryker-feature/warehouse-user-management: "{{page.version}}" -
 
 Make sure that the following modules have been installed:
 
-| MODULE                   | EXPECTED DIRECTORY                        |
-|--------------------------|-------------------------------------------|
-| WarehouseUser            | vendor/spryker/warehouse-user             |
-| WarehouseUserGui         | vendor/spryker/warehouse-user-gui         |
-| WarehouseUsersBackendApi | vendor/spryker/warehouse-user-backend-api |
+| MODULE                    | EXPECTED DIRECTORY                         |
+|---------------------------|--------------------------------------------|
+| OauthWarehouse            | vendor/spryker/oauth-warehouse             |
+| WarehouseOauthBackendApi  | vendor/spryker/warehouse-oauth-backend-api |
+| WarehouseUser             | vendor/spryker/warehouse-user              |
+| WarehouseUserGui          | vendor/spryker/warehouse-user-gui          |
+| WarehouseUsersBackendApi  | vendor/spryker/warehouse-user-backend-api  |
 
 {% endinfo_block %}
 
@@ -52,40 +54,43 @@ Make sure that the following changes have been applied by checking your database
 |-------------------------------|--------|---------|
 | spy_warehouse_user_assignment | table  | created |
 | spy_stock.uuid                | column | created |
+| spy_user.is_warehouse_user    | column | created |
 | spy_user.uuid                 | column | created |
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER                                        | TYPE     | EVENT      | PATH                                                                          |
-|-------------------------------------------------|----------|------------|-------------------------------------------------------------------------------|
-| WarehouseUserAssignment                         | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignment                         |
-| WarehouseUserAssignmentCriteria                 | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCriteria                 |
-| WarehouseUserAssignmentConditions               | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentConditions               |
-| WarehouseUserAssignmentCollection               | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollection               |
-| WarehouseUserAssignmentCollectionRequest        | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionRequest        |
-| WarehouseUserAssignmentCollectionResponse       | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionResponse       |
-| WarehouseUserAssignmentCollectionDeleteCriteria | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionDeleteCriteria |
-| ApiWarehouseUserAssignmentsAttributes           | class    | created    | src/Generated/Shared/Transfer/ApiWarehouseUserAssignmentsAttributesTransfer   |
-| ApiWarehousesAttributes                         | class    | created    | src/Generated/Shared/Transfer/ApiWarehousesAttributes                         |
-| UserCollection                                  | class    | created    | src/Generated/Shared/Transfer/UserCollection                                  |
-| UserConditions                                  | class    | created    | src/Generated/Shared/Transfer/UserConditions                                  |
-| User.uuid                                       | property | created    | src/Generated/Shared/Transfer/User                                            |
-| User.isWarehouseUser                            | property | created    | src/Generated/Shared/Transfer/User                                            |
-| UserCriteria.userConditions                     | property | created    | src/Generated/Shared/Transfer/UserCriteria                                    |
-| StockCriteriaFilter.uuids                       | property | created    | src/Generated/Shared/Transfer/StockCriteriaFilter                             |
-| StockCriteriaFilter.stockIds                    | property | created    | src/Generated/Shared/Transfer/StockCriteriaFilter                             |
-| Collection                                      | class    | deprecated | src/Generated/Shared/Transfer/Collection                                      |
-| UserCriteria.idUser                             | property | deprecated | src/Generated/Shared/Transfer/UserCriteria                                    |
-| UserCriteria.email                              | property | deprecated | src/Generated/Shared/Transfer/UserCriteria                                    |
-| UserCriteria.userReference                      | property | deprecated | src/Generated/Shared/Transfer/UserCriteria                                    |
-| UserCriteria.withExpanders                      | property | deprecated | src/Generated/Shared/Transfer/UserCriteria                                    |
-| StockCriteriaFilter.idStock                     | property | deprecated | src/Generated/Shared/Transfer/StockCriteriaFilter                             |
+| TRANSFER                                        | TYPE     | EVENT      | PATH                                                                                  |
+|-------------------------------------------------|----------|------------|---------------------------------------------------------------------------------------|
+| WarehouseUserAssignment                         | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentTransfer                         |
+| WarehouseUserAssignmentCriteria                 | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCriteriaTransfer                 |
+| WarehouseUserAssignmentConditions               | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentConditionsTransfer               |
+| WarehouseUserAssignmentCollection               | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionTransfer               |
+| WarehouseUserAssignmentCollectionRequest        | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionRequestTransfer        |
+| WarehouseUserAssignmentCollectionResponse       | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionResponseTransfer       |
+| WarehouseUserAssignmentCollectionDeleteCriteria | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentCollectionDeleteCriteriaTransfer |
+| WarehouseIdentifier                             | class    | created    | src/Generated/Shared/Transfer/WarehouseIdentifierTransfer                             |
+| GlueRequestWarehouse                            | class    | created    | src/Generated/Shared/Transfer/GlueRequestWarehouseTransfer                            |
+| WarehouseUserAssignmentsBackendApiAttributes    | class    | created    | src/Generated/Shared/Transfer/WarehouseUserAssignmentsBackendApiAttributesTransfer    |
+| WarehousesBackendApiAttributes                  | class    | created    | src/Generated/Shared/Transfer/WarehousesBackendApiAttributesTransfer                  |
+| UserCollection                                  | class    | created    | src/Generated/Shared/Transfer/UserCollectionTransfer                                  |
+| UserConditions                                  | class    | created    | src/Generated/Shared/Transfer/UserConditionsTransfer                                  |
+| User.uuid                                       | property | created    | src/Generated/Shared/Transfer/UserTransfer                                            |
+| User.isWarehouseUser                            | property | created    | src/Generated/Shared/Transfer/UserTransfer                                            |
+| UserCriteria.userConditions                     | property | created    | src/Generated/Shared/Transfer/UserCriteriaTransfer                                    |
+| StockCriteriaFilter.uuids                       | property | created    | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer                             |
+| StockCriteriaFilter.stockIds                    | property | created    | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer                             |
+| Collection                                      | class    | deprecated | src/Generated/Shared/Transfer/CollectionTransfer                                      |
+| UserCriteria.idUser                             | property | deprecated | src/Generated/Shared/Transfer/UserCriteriaTransfer                                    |
+| UserCriteria.email                              | property | deprecated | src/Generated/Shared/Transfer/UserCriteriaTransfer                                    |
+| UserCriteria.userReference                      | property | deprecated | src/Generated/Shared/Transfer/UserCriteriaTransfer                                    |
+| UserCriteria.withExpanders                      | property | deprecated | src/Generated/Shared/Transfer/UserCriteriaTransfer                                    |
+| StockCriteriaFilter.idStock                     | property | deprecated | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer                             |
 
 {% endinfo_block %}
 
 ### 3) Set up configuration
 
-Optional: To make `warehouse-user-assignments` resource protected, adjust the protected paths configuration:
+Optional: To make `warehouse-user-assignments` and `warehouse-tokens` resources protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -107,10 +112,15 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
             '/\/warehouse-user-assignments(?:\/[^\/]+)?\/?$/' => [
                 'isRegularExpression' => true,
             ],
+             '/warehouse-tokens' => [
+                'isRegularExpression' => false,
+                'methods' => [
+                    'post',
+                ],
+            ],
         ];
     }
 }
-
 ```
 
 ### 4) Add translations
@@ -163,12 +173,16 @@ To switch the language, follow these steps:
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                   |
-|------------------------------------------------------|--------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| WarehouseUserLoginRestrictionPlugin                  | Restricts access to the Back office for warehouse users.         |               | Spryker\Zed\WarehouseUser\Communication\Plugin\SecurityGui  |
-| WarehouseUserAssignmentUserTableActionExpanderPlugin | Expands the **User** table with the **Assign Warehouses** button.    |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
-| WarehouseUserAssignmentUserFormExpanderPlugin        | Expands the User form with the `is_warehouse_user` checkbox. |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
-| WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication |
+| PLUGIN                                                    | SPECIFICATION                                                                                                                                                                                                         | PREREQUISITES | NAMESPACE                                                                                    |
+|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------|
+| WarehouseUserLoginRestrictionPlugin                       | Restricts access to the Back office for warehouse users.                                                                                                                                                              |               | Spryker\Zed\WarehouseUser\Communication\Plugin\SecurityGui                                   |
+| WarehouseUserAssignmentUserTableActionExpanderPlugin      | Expands the **User** table with the **Assign Warehouses** button.                                                                                                                                                     |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User                                       |
+| WarehouseUserAssignmentUserFormExpanderPlugin             | Expands the User form with the `is_warehouse_user` checkbox.                                                                                                                                                          |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User                                       |
+| WarehouseTokenAuthorizationStrategyPlugin                 | Checks if the request identity is a valid user and warehouse.                                                                                                                                                         |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Authorization                                |
+| OauthWarehouseInstallerPlugin                             | Installs warehouse OAuth scope data.                                                                                                                                                                                  |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Installer                                    |
+| WarehouseOauthUserProviderPlugin                          | Retrieves warehouse user if `OauthUserTransfer.idWarehouse` provided and expands `OauthUserTransfer` if warehouse user exists.                                                                                        |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
+| WarehouseOauthScopeProviderPlugin                         | Checks whether the grant type is `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE`.                                                                                                            |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
+| WarehouseOauthRequestGrantTypeConfigurationProviderPlugin | Checks whether the requested OAuth grant type equals to `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE` and whether the requested application context equals to `GlueBackendApiApplication`. |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
 
 **src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
 
@@ -183,7 +197,7 @@ use Spryker\Zed\WarehouseUser\Communication\Plugin\SecurityGui\WarehouseUserLogi
 class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\UserLoginRestrictionPluginInterface>
+     * @return list<\Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\UserLoginRestrictionPluginInterface>
      */
     protected function getUserLoginRestrictionPlugins(): array
     {
@@ -192,7 +206,6 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
         ];
     }
 }
-
 ```
 
 **src/Pyz/Zed/User/UserDependencyProvider.php**
@@ -209,7 +222,7 @@ use Spryker\Zed\WarehouseUserGui\Communication\Plugin\User\WarehouseUserAssignme
 class UserDependencyProvider extends SprykerUserDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserTableActionExpanderPluginInterface>
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserTableActionExpanderPluginInterface>
      */
     protected function getUserTableActionExpanderPlugins(): array
     {
@@ -219,7 +232,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
      */
     protected function getUserFormExpanderPlugins(): array
     {
@@ -228,7 +241,6 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
         ];
     }
 }
-
 ```
 
 {% info_block warningBox "Verification" %}
@@ -245,14 +257,277 @@ Ensure that the plugins work correctly:
 
 {% endinfo_block %}
 
-2. Enable the Backend API by registering the plugin:
+2. Enable the Backend API autorization for warehouse users by registering the plugins:
 
-| PLUGIN                                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                   |
-|------------------------------------------------------|--------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication |
+| PLUGIN                                                    | SPECIFICATION                                                                                                                                                                                                         | PREREQUISITES | NAMESPACE                                                                                    |
+|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------|
+| WarehouseTokenAuthorizationStrategyPlugin                 | Checks if the request identity is a valid user and warehouse.                                                                                                                                                         |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Authorization                                |
+| OauthWarehouseInstallerPlugin                             | Installs warehouse OAuth scope data.                                                                                                                                                                                  |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Installer                                    |
+| WarehouseOauthUserProviderPlugin                          | Retrieves warehouse user if `OauthUserTransfer.idWarehouse` provided and expands `OauthUserTransfer` if warehouse user exists.                                                                                        |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
+| WarehouseOauthScopeProviderPlugin                         | Checks whether the grant type is `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE`.                                                                                                            |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
+| WarehouseOauthRequestGrantTypeConfigurationProviderPlugin | Checks whether the requested OAuth grant type equals to `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE` and whether the requested application context equals to `GlueBackendApiApplication`. |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
+| WarehouseTokensBackendResourcePlugin                      | Registers the `warehouse-tokens` resource.                                                                                                                                                                            |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
+| WarehouseRequestBuilderPlugin                             | Sets `GlueRequestTransfer.requestWarehouse` if the warehouse credentials are valid.                                                                                                                                   |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
+| WarehouseRequestValidatorPlugin                           | Validates if `GlueRequestTransfer.requestWarehouse` is set in case if the request has Authorization header.                                                                                                           |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
+| WarehouseAuthorizationRequestExpanderPlugin               | Expands `AuthorizationRequestTransfer.entity` with `GlueRequestWarehouseTransfer`.                                                                                                                                    |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
+| WarehouseUserRequestValidationPreCheckerPlugin            | Checks if `GlueRequestTransfer` has `GlueRequestWarehouseTransfer`, and if true, sets `GlueRequestValidationTransfer` as valid.                                                                                       |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi                                 |
 
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
-**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\OauthBackendApi\Plugin\GlueBackendApiApplication\UserRequestBuilderPlugin;
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestBuilderPlugin;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestValidatorPlugin;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseTokensBackendResourcePlugin;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestBuilderPluginInterface>
+     */
+    protected function getRequestBuilderPlugins(): array
+    {
+        return [
+            new UserRequestBuilderPlugin(),
+            new WarehouseRequestBuilderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface>
+     */
+    protected function getRequestValidatorPlugins(): array
+    {
+        return [
+            new WarehouseRequestValidatorPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     */
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new WarehouseTokensBackendResourcePlugin(),
+        ];
+    }
+}
+```
+</details>
+
+**src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplicationAuthorizationConnector;
+
+use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\GlueBackendApiApplicationAuthorizationConnectorDependencyProvider as SprykerGlueBackendApiApplicationAuthorizationConnectorDependencyProvider;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector\WarehouseAuthorizationRequestExpanderPlugin;
+
+/**
+ * @method \Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\GlueBackendApiApplicationAuthorizationConnectorConfig getConfig()
+ */
+class GlueBackendApiApplicationAuthorizationConnectorDependencyProvider extends SprykerGlueBackendApiApplicationAuthorizationConnectorDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\GlueBackendApiApplicationAuthorizationConnectorExtension\Dependency\Plugin\AuthorizationRequestExpanderPluginInterface>
+     */
+    protected function getAuthorizationRequestExpanderPlugins(): array
+    {
+        return [
+            new WarehouseAuthorizationRequestExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Glue/OauthBackendApi/OauthBackendApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\OauthBackendApi;
+
+use Spryker\Glue\OauthBackendApi\OauthBackendApiDependencyProvider as SprykerOauthBackendApiDependencyProvider;
+use Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi\WarehouseUserRequestValidationPreCheckerPlugin;
+
+/**
+ * @method \Spryker\Glue\OauthBackendApi\OauthBackendApiConfig getConfig()
+ */
+class OauthBackendApiDependencyProvider extends SprykerOauthBackendApiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\OauthBackendApiExtension\Dependency\Plugin\UserRequestValidationPreCheckerPluginInterface>
+     */
+    protected function getUserRequestValidationPreCheckerPlugins(): array
+    {
+        return [
+            new WarehouseUserRequestValidationPreCheckerPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Authorization;
+
+use Spryker\Zed\Authorization\AuthorizationDependencyProvider as SprykerAuthorizationDependencyProvider;
+use Spryker\Zed\OauthWarehouse\Communication\Plugin\Authorization\WarehouseTokenAuthorizationStrategyPlugin;
+
+class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\AuthorizationExtension\Dependency\Plugin\AuthorizationStrategyPluginInterface>
+     */
+    protected function getAuthorizationStrategyPlugins(): array
+    {
+        return [
+            new WarehouseTokenAuthorizationStrategyPlugin(),
+        ];
+    }
+}
+```
+**src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Installer;
+
+use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
+use Spryker\Zed\OauthWarehouse\Communication\Plugin\Installer\OauthWarehouseInstallerPlugin;
+
+class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface|\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
+     */
+    public function getInstallerPlugins(): array
+    {
+        return [
+            new OauthWarehouseInstallerPlugin(),
+        ];
+    }
+}
+```
+
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Oauth;
+
+use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
+use Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth\WarehouseOauthRequestGrantTypeConfigurationProviderPlugin;
+use Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth\WarehouseOauthScopeProviderPlugin;
+use Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth\WarehouseOauthUserProviderPlugin;
+
+class OauthDependencyProvider extends SprykerOauthDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface>
+     */
+    protected function getUserProviderPlugins(): array
+    {
+        return [
+            new WarehouseOauthUserProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface>
+     */
+    protected function getScopeProviderPlugins(): array
+    {
+        return [
+            new WarehouseOauthScopeProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRequestGrantTypeConfigurationProviderPluginInterface>
+     */
+    protected function getOauthRequestGrantTypeConfigurationProviderPlugins(): array
+    {
+        return [
+            new WarehouseOauthRequestGrantTypeConfigurationProviderPlugin(),
+        ];
+    }
+}
+```
+</details>
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. This opens **USERS LIST**.
+2. For a user of your choice, in **Actions**, click **Edit**.
+3. On the **Edit User: `{USER_NAME}`** page that opens, select **THIS USER IS A WAREHOUSE USER**. The `{USER_NAME}` placeholder stands for the name of the user selected in the previous step.
+4. Click **Update**.
+5. Go back to **USERS LIST**.
+6. For the user edited in step 2, in **Actions**, click **Assign Warehouses**. This opens the **Assign Warehouse to User: `{USER_NAME}`** page. The `{USER_NAME}` placeholder stands for the name of the user you're assigning a warehouse to.
+7. In the **Select warehouses to assign** tab, for a needed warehouse, select **ASSIGN** and click **Save**.
+8. Authenticate the user while requesting a token:
+
+   ```json
+   POST /access-tokens HTTP/1.1
+   Host: glue-backend.mysprykershop.com
+   Content-Type: application/vnd.api+json
+   Content-Length: 167
+   {
+      "data": {
+         "type": "access-tokens",
+         "attributes": {
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+         },
+         "links": {
+            "self": "https://glue-backend.mysprykershop.com/access-tokens"
+         }
+      }
+   }
+   ```
+
+9. Generate a warehouse token with the generated token from the previous step:
+
+   ```json
+   POST /warehouse-tokens HTTP/1.1
+   Host: glue-backend.mysprykershop.com
+   Content-Type: application/vnd.api+json
+   Content-Length: 165
+   {
+      "data": {
+         "type": "warehouse-tokens",
+         "links": {
+            "self": "https://glue-backend.mysprykershop.com/warehouse-tokens"
+         }
+      }
+   }
+   ```
+
+{% endinfo_block %}
+
+3. Enable the Backend API resource by registering the plugin:
+
+| PLUGIN                                        | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                              |
+|-----------------------------------------------|-------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| WarehouseUserAssignmentsBackendResourcePlugin | Registers the `warehouse-user-assignments` resource.  |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication |
+
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -260,21 +535,20 @@ Ensure that the plugins work correctly:
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsResourcePlugin;
+use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
      */
     protected function getResourcePlugins(): array
     {
         return [
-            new WarehouseUserAssignmentsResourcePlugin(),
+            new WarehouseUserAssignmentsBackendResourcePlugin(),
         ];
     }
 }
-
 ```
 
 {% info_block warningBox "Verification" %}
@@ -307,7 +581,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             "data" : {
                 "type" : "warehouse-user-assignments",
                 "attributes" : {
-                "isActive": true
+                    "isActive": true
                 }
             }
         }

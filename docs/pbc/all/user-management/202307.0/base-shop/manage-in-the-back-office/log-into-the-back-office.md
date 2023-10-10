@@ -9,4 +9,4 @@ template: back-office-user-guide-template
 
 ## Next steps
 
-[Best practices: Manage users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)
+[Best practices: Manage users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)

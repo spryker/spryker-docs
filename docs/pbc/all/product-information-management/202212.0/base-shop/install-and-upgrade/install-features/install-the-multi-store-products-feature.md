@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/multi-store-products-feature-integration.html
 related:
   - title: Migration Guide - Collector
-    link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
   - title: Migration Guide - Touch
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
   - title: Migration Guide - Product
@@ -23,4 +23,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->

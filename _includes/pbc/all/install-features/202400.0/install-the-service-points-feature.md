@@ -43,11 +43,12 @@ Make sure that the following modules have been installed:
 
 1. Adjust the schema definition so entity changes trigger events.
 
-| AFFECTED ENTITY               | TRIGGERED EVENTS                                                                                                              |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| spy_service_point             | Entity.spy_service_point.create<br>Entity.spy_service_point.update<br>Entity.spy_service_point.delete                         |
-| spy_service_point_address     | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update<br>Entity.spy_service_point_address.delete |
-| spy_service_point_store       | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.update<br>Entity.spy_service_point_store.delete       |
+| AFFECTED ENTITY           | TRIGGERED EVENTS                                                                                                              |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| spy_service_point         | Entity.spy_service_point.create<br>Entity.spy_service_point.update<br>Entity.spy_service_point.delete                         |
+| spy_service_point_address | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update<br>Entity.spy_service_point_address.delete |
+| spy_service_point_store   | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.update<br>Entity.spy_service_point_store.delete       |
+| spy_service_type          | Entity.spy_service_type.create<br>Entity.spy_service_type.update<br>Entity.spy_service_type.delete                            |
 
 **src/Pyz/Zed/ServicePoint/Persistence/Propel/Schema/spy_service_point.schema.xml**
 
@@ -76,6 +77,12 @@ Make sure that the following modules have been installed:
    <table name="spy_service">
       <behavior name="event">
          <parameter name="spy_service_all" column="*"/>
+      </behavior>
+   </table>
+
+   <table name="spy_service_type">
+      <behavior name="event">
+         <parameter name="spy_service_type_all" column="*"/>
       </behavior>
    </table>
 
@@ -109,97 +116,99 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
-| CLASS NAMESPACE                                                             | EXTENDS                                                                                      |
-|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                         |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress                  |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery                      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery                    |
-| \Orm\Zed\ServicePoint\Persistence\SpyService                                | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyService                              |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceQuery                           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceQuery                         |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore                      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore                    |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery                 | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery               |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                            | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                          |
-| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery                       | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery                     |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch               | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch             |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery          | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery        |
-| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage             | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage           |
-| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery        | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery      |
-| \Orm\Zed\ServicePointStorage\Persistence\SpySalesOrderItemServicePoint      | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePoint      |
-| \Orm\Zed\ServicePointStorage\Persistence\SpySalesOrderItemServicePointQuery | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePointQuery |
+| CLASS NAMESPACE                                                           | EXTENDS                                                                                      |
+|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                         | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                         |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress                  | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress                  |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyService                              | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyService                              |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceQuery                         | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceQuery                         |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery               |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                          | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                          |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery                     | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery                     |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch             | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch             |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery        | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery        |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage           | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage           |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery      | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery      |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorage            | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServiceTypeStorage            |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServiceTypeStorageQuery       | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServiceTypeStorageQuery       |
+| \Orm\Zed\SalesServicePoint\Persistence\SpySalesOrderItemServicePoint      | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePoint      |
+| \Orm\Zed\SalesServicePoint\Persistence\SpySalesOrderItemServicePointQuery | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePointQuery |
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                              | TYPE  | EVENT   | PATH                                                                        |
-|---------------------------------------|-------|---------|-----------------------------------------------------------------------------|
-| ServicePoint                          | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                          |
-| ServicePointCollection                | class | created | src/Generated/Shared/Transfer/ServicePointCollectionTransfer                |
-| ServicePointCollectionRequest         | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequestTransfer         |
-| ServicePointCollectionResponse        | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponseTransfer        |
-| ServicePointCriteria                  | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                  |
-| ServicePointConditions                | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                |
-| ApiServicePointsAttributes            | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributesTransfer            |
-| ApiServiceTypesAttributes             | class | created | src/Generated/Shared/Transfer/ApiServiceTypesAttributesTransfer             |
-| ApiServicesAttributes                 | class | created | src/Generated/Shared/Transfer/ApiServicesAttributesTransfer                 |
-| ApiServicesRequestAttributes          | class | created | src/Generated/Shared/Transfer/ApiServicesRequestAttributesTransfer          |
-| ApiServicePointAddressesAttributes    | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributesTransfer    |
-| StoreRelation                         | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                         |
-| Store                                 | class | created | src/Generated/Shared/Transfer/StoreTransfer                                 |
-| Error                                 | class | created | src/Generated/Shared/Transfer/ErrorTransfer                                 |
-| Sort                                  | class | created | src/Generated/Shared/Transfer/SortTransfer                                  |
-| Pagination                            | class | created | src/Generated/Shared/Transfer/PaginationTransfer                            |
-| ErrorCollection                       | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                       |
-| DataImporterConfiguration             | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer             |
-| DataImporterReport                    | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                    |
-| CountryCriteria                       | class | created | src/Generated/Shared/Transfer/CountryCriteriaTransfer                       |
-| CountryConditions                     | class | created | src/Generated/Shared/Transfer/CountryConditionsTransfer                     |
-| Country                               | class | created | src/Generated/Shared/Transfer/CountryTransfer                               |
-| CountryCollection                     | class | created | src/Generated/Shared/Transfer/CountryCollectionTransfer                     |
-| Region                                | class | created | src/Generated/Shared/Transfer/RegionTransfer                                |
-| ServicePointAddressCollection         | class | created | src/Generated/Shared/Transfer/ServicePointAddressCollectionTransfer         |
-| ServicePointAddressCollectionRequest  | class | created | src/Generated/Shared/Transfer/ServicePointAddressCollectionRequestTransfer  |
-| ServicePointAddressCollectionResponse | class | created | src/Generated/Shared/Transfer/ServicePointAddressCollectionResponseTransfer |
-| ServicePointAddressCriteria           | class | created | src/Generated/Shared/Transfer/ServicePointAddressCriteriaTransfer           |
-| ServicePointAddressConditions         | class | created | src/Generated/Shared/Transfer/ServicePointAddressConditionsTransfer         |
-| ServicePointAddress                   | class | created | src/Generated/Shared/Transfer/ServicePointAddressTransfer                   |
-| GlueRelationship                      | class | created | src/Generated/Shared/Transfer/GlueRelationshipTransfer                      |
-| ServicePointSearchCollection          | class | created | src/Generated/Shared/Transfer/ServicePointSearchCollectionTransfer          |
-| ServicePointSearch                    | class | created | src/Generated/Shared/Transfer/ServicePointSearchTransfer                    |
-| ServicePointSearchRequest             | class | created | src/Generated/Shared/Transfer/ServicePointSearchRequestTransfer             |
-| ServiceCollectionRequest              | class | created | src/Generated/Shared/Transfer/ServiceCollectionRequestTransfer              |
-| ServiceCollectionResponse             | class | created | src/Generated/Shared/Transfer/ServiceCollectionResponseTransfer             |
-| ServiceCollection                     | class | created | src/Generated/Shared/Transfer/ServiceCollectionTransfer                     |
-| ServiceConditions                     | class | created | src/Generated/Shared/Transfer/ServiceConditionsTransfer                     |
-| ServiceCriteria                       | class | created | src/Generated/Shared/Transfer/ServiceCriteriaTransfer                       |
-| Service                               | class | created | src/Generated/Shared/Transfer/ServiceTransfer                               |
-| ServiceTypeCollectionRequest          | class | created | src/Generated/Shared/Transfer/ServiceTypeCollectionRequestTransfer          |
-| ServiceTypeCollectionResponse         | class | created | src/Generated/Shared/Transfer/ServiceTypeCollectionResponseTransfer         |
-| ServiceTypeCollection                 | class | created | src/Generated/Shared/Transfer/ServiceTypeCollectionTransfer                 |
-| ServiceTypeConditions                 | class | created | src/Generated/Shared/Transfer/ServiceTypeConditionsTransfer                 |
-| ServiceTypeCriteria                   | class | created | src/Generated/Shared/Transfer/ServiceTypeCriteriaTransfer                   |
-| ServiceType                           | class | created | src/Generated/Shared/Transfer/ServiceTypeTransfer                           |
-| ServicePointStorage                   | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                   |
-| ServicePointAddressStorage            | class | created | src/Generated/Shared/Transfer/ServicePointAddressStorageTransfer            |
-| ServiceStorage                        | class | created | src/Generated/Shared/Transfer/ServiceStorageTransfer                        |
-| CountryStorage                        | class | created | src/Generated/Shared/Transfer/CountryStorageTransfer                        |
-| RegionStorage                         | class | created | src/Generated/Shared/Transfer/RegionStorageTransfer                         |
-| ServicePointStorageCollection         | class | created | src/Generated/Shared/Transfer/ServicePointStorageCollectionTransfer         |
-| ServicePointStorageCriteria           | class | created | src/Generated/Shared/Transfer/ServicePointStorageCriteriaTransfer           |
-| ServicePointStorageConditions         | class | created | src/Generated/Shared/Transfer/ServicePointStorageConditionsTransfer         |
-| SynchronizationData                   | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                   |
-| Filter                                | class | created | src/Generated/Shared/Transfer/FilterTransfer                                |
-| SalesOrderItemServicePoint            | class | created | src/Generated/Shared/Transfer/FilterTransfer                                |
-| Item                                  | class | created | src/Generated/Shared/Transfer/FilterTransfer                                |
-| SalesOrderItemServicePointCriteria    | class | created | src/Generated/Shared/Transfer/SalesOrderItemServicePointCriteria            |
-| SalesOrderItemServicePointConditions  | class | created | src/Generated/Shared/Transfer/SalesOrderItemServicePointConditions          |
-| SalesOrderItemServicePointCollection  | class | created | src/Generated/Shared/Transfer/SalesOrderItemServicePointCollection          |
-| Quote                                 | class | created | src/Generated/Shared/Transfer/QuoteTransfer                                 |
-| SaveOrder                             | class | created | src/Generated/Shared/Transfer/SaveOrderTransfer                             |
-| ShipmentGroup                         | class | created | src/Generated/Shared/Transfer/ShipmentGroupTransfer                         |
-| RestServicePointsAttributes           | class | created | src/Generated/Shared/Transfer/RestServicePointsAttributesTransfer           |
-| RestServicePointAddressesAttributes   | class | created | src/Generated/Shared/Transfer/RestServicePointAddressesAttributesTransfer   |
-| RestErrorMessage                      | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                      |
+| TRANSFER                                  | TYPE  | EVENT   | PATH                                                                            |
+|-------------------------------------------|-------|---------|---------------------------------------------------------------------------------|
+| ServicePoint                              | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                              |
+| ServicePointCollection                    | class | created | src/Generated/Shared/Transfer/ServicePointCollectionTransfer                    |
+| ServicePointCollectionRequest             | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequestTransfer             |
+| ServicePointCollectionResponse            | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponseTransfer            |
+| ServicePointCriteria                      | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                      |
+| ServicePointConditions                    | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                    |
+| ServicePointsBackendApiAttributes         | class | created | src/Generated/Shared/Transfer/ServicePointsBackendApiAttributesTransfer         |
+| ServiceTypesBackendApiAttributes          | class | created | src/Generated/Shared/Transfer/ServiceTypesBackendApiAttributesTransfer          |
+| ServicesBackendApiAttributes              | class | created | src/Generated/Shared/Transfer/ServicesBackendApiAttributesTransfer              |
+| ServicesRequestBackendApiAttributes       | class | created | src/Generated/Shared/Transfer/ServicesRequestBackendApiAttributesTransfer       |
+| ServicePointAddressesBackendApiAttributes | class | created | src/Generated/Shared/Transfer/ServicePointAddressesBackendApiAttributesTransfer |
+| StoreRelation                             | class | created | src/Generated/Shared/Transfer/StoreRelationTransfer                             |
+| Store                                     | class | created | src/Generated/Shared/Transfer/StoreTransfer                                     |
+| Error                                     | class | created | src/Generated/Shared/Transfer/ErrorTransfer                                     |
+| Sort                                      | class | created | src/Generated/Shared/Transfer/SortTransfer                                      |
+| Pagination                                | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                |
+| ErrorCollection                           | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                           |
+| DataImporterConfiguration                 | class | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer                 |
+| DataImporterReport                        | class | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                        |
+| CountryCriteria                           | class | created | src/Generated/Shared/Transfer/CountryCriteriaTransfer                           |
+| CountryConditions                         | class | created | src/Generated/Shared/Transfer/CountryConditionsTransfer                         |
+| Country                                   | class | created | src/Generated/Shared/Transfer/CountryTransfer                                   |
+| CountryCollection                         | class | created | src/Generated/Shared/Transfer/CountryCollectionTransfer                         |
+| Region                                    | class | created | src/Generated/Shared/Transfer/RegionTransfer                                    |
+| ServicePointAddressCollection             | class | created | src/Generated/Shared/Transfer/ServicePointAddressCollectionTransfer             |
+| ServicePointAddressCollectionRequest      | class | created | src/Generated/Shared/Transfer/ServicePointAddressCollectionRequestTransfer      |
+| ServicePointAddressCollectionResponse     | class | created | src/Generated/Shared/Transfer/ServicePointAddressCollectionResponseTransfer     |
+| ServicePointAddressCriteria               | class | created | src/Generated/Shared/Transfer/ServicePointAddressCriteriaTransfer               |
+| ServicePointAddressConditions             | class | created | src/Generated/Shared/Transfer/ServicePointAddressConditionsTransfer             |
+| ServicePointAddress                       | class | created | src/Generated/Shared/Transfer/ServicePointAddressTransfer                       |
+| GlueRelationship                          | class | created | src/Generated/Shared/Transfer/GlueRelationshipTransfer                          |
+| ServicePointSearchCollection              | class | created | src/Generated/Shared/Transfer/ServicePointSearchCollectionTransfer              |
+| ServicePointSearch                        | class | created | src/Generated/Shared/Transfer/ServicePointSearchTransfer                        |
+| ServicePointSearchRequest                 | class | created | src/Generated/Shared/Transfer/ServicePointSearchRequestTransfer                 |
+| ServiceCollectionRequest                  | class | created | src/Generated/Shared/Transfer/ServiceCollectionRequestTransfer                  |
+| ServiceCollectionResponse                 | class | created | src/Generated/Shared/Transfer/ServiceCollectionResponseTransfer                 |
+| ServiceCollection                         | class | created | src/Generated/Shared/Transfer/ServiceCollectionTransfer                         |
+| ServiceConditions                         | class | created | src/Generated/Shared/Transfer/ServiceConditionsTransfer                         |
+| ServiceCriteria                           | class | created | src/Generated/Shared/Transfer/ServiceCriteriaTransfer                           |
+| Service                                   | class | created | src/Generated/Shared/Transfer/ServiceTransfer                                   |
+| ServiceTypeCollectionRequest              | class | created | src/Generated/Shared/Transfer/ServiceTypeCollectionRequestTransfer              |
+| ServiceTypeCollectionResponse             | class | created | src/Generated/Shared/Transfer/ServiceTypeCollectionResponseTransfer             |
+| ServiceTypeCollection                     | class | created | src/Generated/Shared/Transfer/ServiceTypeCollectionTransfer                     |
+| ServiceTypeConditions                     | class | created | src/Generated/Shared/Transfer/ServiceTypeConditionsTransfer                     |
+| ServiceTypeCriteria                       | class | created | src/Generated/Shared/Transfer/ServiceTypeCriteriaTransfer                       |
+| ServiceType                               | class | created | src/Generated/Shared/Transfer/ServiceTypeTransfer                               |
+| ServicePointStorage                       | class | created | src/Generated/Shared/Transfer/ServicePointStorageTransfer                       |
+| ServicePointAddressStorage                | class | created | src/Generated/Shared/Transfer/ServicePointAddressStorageTransfer                |
+| ServiceStorage                            | class | created | src/Generated/Shared/Transfer/ServiceStorageTransfer                            |
+| CountryStorage                            | class | created | src/Generated/Shared/Transfer/CountryStorageTransfer                            |
+| RegionStorage                             | class | created | src/Generated/Shared/Transfer/RegionStorageTransfer                             |
+| ServicePointStorageCollection             | class | created | src/Generated/Shared/Transfer/ServicePointStorageCollectionTransfer             |
+| ServicePointStorageCriteria               | class | created | src/Generated/Shared/Transfer/ServicePointStorageCriteriaTransfer               |
+| ServicePointStorageConditions             | class | created | src/Generated/Shared/Transfer/ServicePointStorageConditionsTransfer             |
+| SynchronizationData                       | class | created | src/Generated/Shared/Transfer/SynchronizationDataTransfer                       |
+| Filter                                    | class | created | src/Generated/Shared/Transfer/FilterTransfer                                    |
+| SalesOrderItemServicePoint                | class | created | src/Generated/Shared/Transfer/FilterTransfer                                    |
+| Item                                      | class | created | src/Generated/Shared/Transfer/FilterTransfer                                    |
+| SalesOrderItemServicePointCriteria        | class | created | src/Generated/Shared/Transfer/SalesOrderItemServicePointCriteria                |
+| SalesOrderItemServicePointConditions      | class | created | src/Generated/Shared/Transfer/SalesOrderItemServicePointConditions              |
+| SalesOrderItemServicePointCollection      | class | created | src/Generated/Shared/Transfer/SalesOrderItemServicePointCollection              |
+| Quote                                     | class | created | src/Generated/Shared/Transfer/QuoteTransfer                                     |
+| SaveOrder                                 | class | created | src/Generated/Shared/Transfer/SaveOrderTransfer                                 |
+| ShipmentGroup                             | class | created | src/Generated/Shared/Transfer/ShipmentGroupTransfer                             |
+| RestServicePointsAttributes               | class | created | src/Generated/Shared/Transfer/RestServicePointsAttributesTransfer               |
+| RestServicePointAddressesAttributes       | class | created | src/Generated/Shared/Transfer/RestServicePointAddressesAttributesTransfer       |
+| RestErrorMessage                          | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                          |
 
 {% endinfo_block %}
 
@@ -912,6 +921,14 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
+    
+    /**
+     * @return string|null
+     */
+    public function getServiceTypeStorageSynchronizationPoolName(): ?string
+    {
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+    }
 
     /**
      * @return string|null
@@ -925,13 +942,15 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 
 4. Set up publisher plugins:
 
-| PLUGIN                                           | SPECIFICATION                                                                                         | PREREQUISITES | NAMESPACE                                                                                      |
-|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------|
-| ServicePointWritePublisherPlugin                 | Publishes service point data by `SpyServicePoint` entity events.                                      |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint                    |
-| ServicePointAddressWritePublisherPlugin          | Publishes service point data by `SpyServicePointAddress` entity events.                               |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress             |
-| ServicePointStoreWritePublisherPlugin            | Publishes service point data by service point store entity events.                                    |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore               |
-| ServiceWritePublisherPlugin                      | Publishes service point data by `SpyService` entity events.                                           |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\Service                         |
-| ServicePointPublisherTriggerPlugin               | Allows to populate service point storage table with data and trigger further export to Redis.         |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                                 |
+| PLUGIN                                  | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
+| ServicePointWritePublisherPlugin        | Publishes service point data by `SpyServicePoint` entity events.                              |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointAddressWritePublisherPlugin | Publishes service point data by `SpyServicePointAddress` entity events.                       |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress |
+| ServicePointStoreWritePublisherPlugin   | Publishes service point data by service point store entity events.                            |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
+| ServiceWritePublisherPlugin             | Publishes service point data by `SpyService` entity events.                                   |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\Service             |
+| ServiceTypeWritePublisherPlugin         | Publishes service type data by `SpyType` entity events.                                       |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServiceType         |
+| ServicePointPublisherTriggerPlugin      | Allows to populate service point storage table with data and trigger further export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServiceTypePublisherTriggerPlugin       | Allows to populate service type storage table with data and trigger further export to Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -945,6 +964,8 @@ use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint\
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin as ServicePointStorageAddressWritePublisherPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointPublisherTriggerPlugin as ServicePointStoragePublisherTriggerPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore\ServicePointStoreWritePublisherPlugin as ServicePointStorageStoreWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServiceType\ServiceTypeWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServiceTypePublisherTriggerPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\Service\ServiceWritePublisherPlugin as ServicePointStorageServiceWritePublisherPlugin;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -966,6 +987,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new ServicePointStoragePublisherTriggerPlugin(),
+            new ServiceTypePublisherTriggerPlugin(),
         ];
     }
 
@@ -979,6 +1001,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ServicePointStorageAddressWritePublisherPlugin(),
             new ServicePointStorageStoreWritePublisherPlugin(),
             new ServicePointStorageServiceWritePublisherPlugin(),
+            new ServiceTypeWritePublisherPlugin(),
         ];
     }
 }
@@ -986,9 +1009,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 5. Set up synchronization plugins:
 
-| PLUGIN                                                     | SPECIFICATION                                                                    | PREREQUISITES | NAMESPACE                                                            |
-|------------------------------------------------------------|----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin        | Allows synchronizing the service point storage table content into Redis.         |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| PLUGIN                                                    | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
+|-----------------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| ServicePointSynchronizationDataBulkRepositoryPlugin       | Allows synchronizing the service point storage table content into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Allows synchronizing the service type storage table content into Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -998,6 +1022,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 namespace Pyz\Zed\Synchronization;
 
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin as ServicePointStorageSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServiceTypeSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
 
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
@@ -1009,6 +1034,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     {
         return [
             new ServicePointStorageSynchronizationDataBulkRepositoryPlugin(),
+            new ServiceTypeSynchronizationDataBulkRepositoryPlugin(),
         ];
     }
 }
@@ -1074,6 +1100,33 @@ Make sure that, in Redis, data is displayed in the following format:
    "_timestamp": 1683216744.8334839
 }
 ```
+
+Make sure that the `service-type` trigger plugin works correctly:
+
+1. Fill the `spy_service_type` table with data.
+2. Run the `console publish:trigger-events -r service_type` command.
+3. Make sure that the `spy_service_type_storage` table has been filled with respective data.
+4. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
+
+Make sure that the `service-type` synchronization plugin works correctly:
+
+1. Fill the `spy_service_type_storage` table with some data.
+2. Run the `console sync:data -r service_type` command.
+3. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
+
+Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+
+Make sure that, in Redis, data is displayed in the following format:
+```json
+{
+    "id_service_type": 1,
+    "uuid": "2370ad95-4e9f-5ac3-913e-300c5805b181",
+    "name": "Pickup",
+    "key": "pickup",
+    "_timestamp": 1692352890.0729749
+}
+```
+
 {% endinfo_block %}
 
 ### 7) Set up behavior

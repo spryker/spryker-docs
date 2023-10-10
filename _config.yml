@@ -83,23 +83,6 @@ defaults:
       feed: true
   -
     scope:
-      path: "docs/marketplace"
-    values:
-      product: "marketplace"
-  -
-    scope:
-      path: "docs/marketplace/dev"
-    values:
-      sidebar: "marketplace_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/marketplace/user"
-    values:
-      sidebar: "marketplace_user_sidebar"
-      role: "user"
-  -
-    scope:
       path: "docs/scos"
     values:
       product: "scos"
@@ -172,13 +155,6 @@ defaults:
       role: "all"
 
 versions:
-  '201811.0': '201811.0'
-  '201903.0': '201903.0'
-  '201907.0': '201907.0'
-  '202001.0': '202001.0'
-  '202005.0': 'Code releases 05.20'
-  '202009.0': '202009.0'
-  '202108.0': '202108.0'
   '202204.0': '202204.0'
   '202212.0': '202212.0'
   '202307.0': '202307.0'
@@ -186,21 +162,6 @@ versions:
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
-  marketplace:
-    user:
-      - features
-      - back-office-user-guides
-      - merchant-portal-user-guides
-    dev:
-      - feature-integration-guides
-      - feature-walkthroughs
-      - glue-api-guides
-      - data-import
-      - data-export
-      - legacy-demoshop
-      - front-end
-      - setup
-      - technical-enhancement
   scos:
     user:
       - features
@@ -242,7 +203,6 @@ versioned_categories:
       - payment-service-provider
       - product-information-management
       - product-relationship-management
-      - punchout
       - push-notification
       - return-management
       - ratings-reviews
@@ -260,8 +220,6 @@ versioned_categories:
 # these are defaults used for the front matter for these file types
 
 sidebars:
-  - marketplace_dev_sidebar
-  - marketplace_user_sidebar
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
@@ -293,10 +251,6 @@ algolia:
       title: 'SCOS User'
     - name: 'scos_dev'
       title: 'SCOS Developer'
-    - name: 'marketplace_user'
-      title: 'Marketplace User'
-    - name: 'marketplace_dev'
-      title: 'Marketplace Developer'
     - name: 'sdk_dev'
       title: 'SDK Developer'
     - name: 'cloud_dev'

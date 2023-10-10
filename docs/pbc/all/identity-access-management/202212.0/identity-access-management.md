@@ -70,7 +70,7 @@ If a user logs in with an SSO but does not have a Back Office account, the user 
 
 ## Glue API authentication
 
-For details about Glue API authentication, see [Glue API authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html)
+For details about Glue API authentication, see [Glue API authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html)
 
 ## Current constraints
 
@@ -78,11 +78,7 @@ The feature has the following functional constraint:
 
 Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
-## Related Business User documents
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
 
 
 
@@ -90,8 +86,8 @@ Each of the identity managers is an ECO module that must be developed separately
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-security-and-authentication.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/scos/dev/glue-api-guides/{{page.version}}/security-and-authentication.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |

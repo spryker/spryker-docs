@@ -12,21 +12,21 @@ related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Payment Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-payment-workflow.html
   - title: RatePay facade methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-facade-methods.html
   - title: Disabling address updates from the backend application for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
   - title: Integrating the Invoice payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-core-module-structure-diagram.html
   - title: Integrating the Prepayment payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
   - title: RatePay - State Machine Commands and Conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/ratepay-state-machine-commands-and-conditions.html
   - title: Integrating the Direct Debit payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
 
 The shop must implement the Calculation Request operation to calculate an example installment plan and show it to the customer. Some input parameters for the calculation are passed from the shop (e.g. the shopping basket total), others are stored in the merchant's RatePAY profile held by the Gateway (e.g. the allowed interest rate range). The merchant's profile parameters can be retrieved by the Configuration Request operation.

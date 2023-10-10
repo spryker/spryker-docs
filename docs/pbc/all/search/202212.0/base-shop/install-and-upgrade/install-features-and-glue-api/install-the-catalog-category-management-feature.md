@@ -17,4 +17,4 @@ redirect_from:
   - /docs/pbc/all/search/202212.0/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md -->

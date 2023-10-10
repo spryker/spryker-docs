@@ -1,10 +1,10 @@
 {% info_block warningBox %}
 
-Dynamic Multistore is part of an *Early Access Release*. This *Early Access* feature introduces the ability to handle the store entity in the Back Office. Business users can try creating stores without editing the `Stores.php` file and redeploying the system.
+Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
-This document describes how to install Dynamic Store + the Prices feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -24,7 +24,7 @@ Install the required features:
 Since Dynamic Multistore is now enabled, configuration of stores is stored in the database, making `config/Shared/stores.php` deprecated.
 
 The default store configuration is imported using new data import modules, like `CurrencyDataImport`. These modules populate the store configuration in the database.
-The `Currency` module is responsible for extending store data and configuring it in the database. For upgrade instructions, see [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-currency-module.html).
+The `Currency` module is responsible for extending store data and configuring it in the database. For upgrade instructions, see [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html).
 
 {% endinfo_block %}
 

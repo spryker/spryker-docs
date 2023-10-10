@@ -4,30 +4,28 @@ description: This guide shows how to configure the Data Exchange API endpoints.
 last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202304.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
+  - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
-This document describes how to configure the Data Exchange API endpoints by executing SQL queries.
+This document describes how to create and configure the Data Exchange API endpoints.
 
-## Configuration of Data Exchange API endpoints
+The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/countries` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
 
-To create an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table.
+## Create and configure a Data Exchange API endpoint
 
-The `spy_dynamic_entity_configuration` table contains the configuration of dynamic entity endpoints and has the following columns:
+To register an endpoint for interacting with entities in the database, you need to add a corresponding row to the `spy_dynamic_entity_configuration` table. The table contains the configuration of dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION |
 | --- | --- |
-| id_dynamic_entity_configuration | The unique ID of the configuration. |
+| id_dynamic_entity_configuration | ID of the configuration. |
 | table_alias | An alias used in the request URL to refer to the endpoint. |
-| table_name | The name of the corresponding table in the database to operate on. |
-| is_active | Indicates whether the endpoint is enabled or disabled. |
+| table_name | The name of the database table to operate on. |
+| is_active | Defines if the endpoint can be interacted with. |
 | definition | A JSON-formatted string containing the configuration details for each field in the table. |
 | created_at | Date and time when the configuration was created. |
-| updated_at | Date and time when the configuration was last updated. |
+| updated_at | Date and time when the configuration was updated. |
 
-Dive deeper into the configuration of the `spy_dynamic_entity_definition.definition` field.
-
-The following example shows the structure of a possible definition value based on the `spy_country` table:
+The following example shows a possible value of the `spy_dynamic_entity_configuration.definition` field configured for the `spy_country` table:
 
 ```json
 {
@@ -59,9 +57,7 @@ The following example shows the structure of a possible definition value based o
 }
 ```
 
-The following table describes the purpose of each field:
-
-| FIELD | SPECIFICATION |
+| FIELD | DESCRIPTION |
 | --- | --- |
 | identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique ID for each record. |
 | fields | An array containing the descriptions of the columns from the table. It defines the columns that are included for interaction. The API exposes and operates on the included columns. Columns that are not included in the array are inaccessible through API requests. |
@@ -72,8 +68,10 @@ The following table describes the purpose of each field:
 | isCreatable | Defines if the field can be included in requests to provide an initial value during record creation. |
 | validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria. |
 | required | Defines if the field must be provided in API requests. |
-| maxLength/minLength | Defines the minimum/maximum length allowed for the field with a string type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. |
-| max/min | Defines the minimum/maximum value allowed for the field with an integer type. It enforces a lower boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
+| maxLength | Defines the maximum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. |
+| minLength | Defines the minimum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined requirement. |
+| max | Defines the maximum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. Optional. |
+| min | Defines the minimum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
 
 
 {% info_block infoBox %}
@@ -90,39 +88,34 @@ The following table describes the purpose of each field:
 
 {% endinfo_block %}
 
-## Create Data Exchange API endpoints
-
-In this example, we are creating the `/dynamic-data/country` endpoint to operate with data in the `spy_country` table. When following the steps, adjust the data per your requirements:
-
+## Enable and configure the Data Exchange API endpoint in the Back Office
 
 1. In the Back Office, go to **Data Exchange API Configuration**.
 2. On the **Data Exchange API Configuration** page, click **Create Data Exchange API configuration**.
 
-[PASTE SCREENSHOT HERE]
+![configure-data-exchange-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/configure-data-exchange-in-back-office.png)
 
-3. Then you need to select a configurable table in the form below. In our case it is `spy_country`:
+3. In **CREATE DATA EXCHANGE API CONFIGURATION** pane, for **TABLE NAME**, select the table you want to configure the API for. In our example, it's `spy_country`.
 
-[PASTE SCREENSHOT HERE]
-
-{% info_block infoBox %}
-
-Note, that you can only select tables that are not excluded from configuring.
-In order to exclude a table from configuring follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html).
-
-{% endinfo_block %}
-
-After you select a table, you will see a form for configuring the endpoint. Let's fill in the form with the following values:
-
-[PASTE SCREENSHOT HERE]
+![create-data-exchange-api-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/create-data-exchange-api-configuration.png)
 
 {% info_block infoBox %}
 
-Note, that you have to enable the endpoint in order to be able to use it. And besides that, you have to provide enable each field you want to use as well.
+If you don't see the needed table, it may be [excluded from configuring](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api/install-the-data-exchange-api.html#exclude-database-schemas-from-configuring).
 
 {% endinfo_block %}
 
-After you click "Save" button, you will see a new endpoint in the list of endpoints in Data Exchange API section in Backoffice.
-And you will be able to send request to it.
+4. Click **Create**.
+    This opens the **EDIT DATA EXCHANGE API CONFIGURATION** page.
+5. For **RESOURCE NAME**, enter the name of the endpoint you want to create. In our case, it's `countries`.
+5. Optional: To enable the endpoint after it's configured, select **IS ENABLED**.
+6. Configure the fields for interactions per your requirements.
+
+![edit-data-exchange-api-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/edit-data-exchange-api-configuration.png)
+
+
+7. Click **Save**.
+This opens the **Data Exchange API Configuration** page with the endpoint displayed in the list. Now you can send requests to this endpoint.
 
 {% info_block warningBox "Verification" %}
 
@@ -135,10 +128,14 @@ Or if you're in the middle of the integration process for the Data Exchange API 
 
 You can download the specification of for all available endpoints including the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download API Specification** on the **Data Exchange API Configuration** page.
 
-[PASTE SCREENSHOT deapi_download_spec_button.png HERE]
+![deapi_download_spec_button](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_download_spec_button.png)
 
 After you click the button, the specification will be downloaded to your computer.
 
 If you added new endpoints, documentation will be updated automatically with the new endpoints, but need wait 1 minute for it. Button **Download API Specification** will be disabled during this time and aviailable after 1 minute. You can see  message about it in the top of the page:
 
-[PASTE SCREENSHOT deapi_generation_in_progress.png HERE]
+![deapi_generation_in_progress](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_generation_in_progress.png)
+
+## Next steps
+
+[Send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)

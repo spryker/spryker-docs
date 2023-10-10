@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/adyen/integrate-adyen-payment-methods.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/adyen/installing-and-configuring-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/adyen/install-and-configure-adyen.html
   - title: Integrating Adyen
     link: docs/pbc/all/payment-service-provider/page.version/adyen/integrate-adyen.html
   - title: Enabling filtering of payment methods for Ayden

@@ -16,4 +16,4 @@ related:
       link: docs/pbc/all/return-management/page.version/install-and-upgrade/install-the-return-management-glue-api.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-return-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-return-management-feature.md -->

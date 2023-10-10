@@ -7,18 +7,17 @@ template: concept-topic-template
 
 Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
 
-## Lit's standard concepts
+## Implementing a component
 
 This document describes how to implement a component using Lit. Lit's standard concepts are not covered. To learn more about them, see [Components overview](https://lit.dev/docs/components/overview/).
 
+We use the product _ID_ component as an example. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
 
-In this documentation we'll guide you through the development process to implement a product _ID_ component. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
+Oryx creates a folder per component, like `src/product/id`, and separates some of the component logic in separate files. However, you can create a component as a single file. To allow for lazy loading of the component, you still need to separate out its definition.
 
-Oryx creates a folder per component, like `src/product/id`, and separates some of the component logic in separate files. However, if you are more comfortable with the Single-File Components pattern, it is fine to do so. Only the component definition should be separated out to ensure lazy loading of the component.
+## 1. Creating the component class
 
-## 1. Create the component class
-
-Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class based elements that extend from `HTMLElement`. Lit provides `LitElement` as a base class to extend from when you create a custom element.
+Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class-based elements that extend from `HTMLElement`. Lit provides `LitElement` as a base class to extend from when you create a custom element.
 
 ```ts
 import { LitElement, TemplateResult } from "lit";
@@ -30,15 +29,15 @@ export class ProductIdComponent extends LitElement {
 }
 ```
 
-Oryx components follow a simple naming convention that is used in the class name:
+Oryx components follow the naming convention for class names:
 
 `[Domain][Feature]Component`,
 
-In this example, the `Domain` is `Product` and the `Feature` is `Id`. The component's name is `ProductIdComponent`.
+In this example, the `Domain` is `Product`, and the `Feature` is `Id`. The component's name is `ProductIdComponent`.
 
 {% info_block infoBox %}
 
-Oryx is built in TypeScript with fairly strict typing configurations. This ensures high-quality standards and a good developer experience. If you decide to use TypeScript in your code, which is optional, you are in charge of the TypeScript configuration: `.tsconfig`. So you decide how strict the configuration should be.
+Oryx is built in TypeScript with strict typing configuration. This ensures high-quality standards and a good developer experience. If you use TypeScript in your code, which is optional, you are in charge of the TypeScript configuration: `.tsconfig`. So you decide how strict the configuration should be.
 
 {% endinfo_block %}
 

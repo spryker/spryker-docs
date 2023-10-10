@@ -23,7 +23,7 @@ Install the necessary features:
 |NAME | VERSION | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Product Options | master |  |
-| Avalara Tax | master | [Install Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) |
+| Avalara Tax | master | [Install Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html) |
 
 ### Install the required modules using Composer
 
@@ -146,4 +146,4 @@ Make sure that the data has been imported to `spy_product_option_value`.
 
 ## Next steps
 
-[Install Avalara + Shipment](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-shipment.html)
+[Install Avalara + Shipment](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-shipment.html)

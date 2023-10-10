@@ -473,9 +473,9 @@ Make sure the data has been imported to `spy_product_abstract` and `spy_product`
 
 | INSTALLATION | REQUIRED FOR THE CURRENT INSTALLATION | INSTALLATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-product-options.html) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-shipment.html) |
+|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html) |
+|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-shipment.html) |
 
 ## Next steps
 
-[Install Avalara + Product Options](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara-product-options.html)
+[Install Avalara + Product Options](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html)

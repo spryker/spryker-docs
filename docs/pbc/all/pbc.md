@@ -68,7 +68,7 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 
 | NAME | CATEGORY |
 | --- | --- |
-| [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/algolia.html) | Search |
+| [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/algolia/algolia.html) | Search |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html) | PSP (Payment Service Provider) |
 | [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | CMP (Consent Management Platform) |

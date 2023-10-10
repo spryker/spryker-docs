@@ -22,6 +22,76 @@ Install the required features:
 | --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue Application | {{page.version}} | [Integrate the API Key Authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html) |
 
+
+## Protect routes with API Key authorization
+
+In order to protect a route with API Key authorization, you need to add the authorization strategy to the route configuration. To do this, add the following code to required route:
+
+```php
+<?php
+
+namespace Spryker\Glue\DummyStoresApi\Plugin;
+
+use Spryker\Glue\DummyStoresApi\Plugin\Controller\StoresResourceController;
+use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface;
+use Spryker\Glue\Kernel\Backend\AbstractPlugin;
+use Symfony\Component\Routing\Route; 
+use Symfony\Component\Routing\RouteCollection;
+
+class DummyStoresApiProviderPlugin extends AbstractPlugin implements RouteProviderPluginInterface
+{
+    /**
+     * @var string
+     */
+    protected const METHOD_GET = 'GET';
+    
+    /**
+     * @var string
+     */
+    protected const ROUTE_STORES_GET_LIST = 'stores/get-list';
+    
+    /**
+     * @var string
+     */
+    protected const ROUTE_STORES_GET_LIST_ACTION = 'getCollectionAction';
+
+    /**
+     * @var string
+     */
+    protected const STRATEGIES_AUTHORIZATION = '_authorization_strategies';
+    
+    /**
+     * @var string
+     */ 
+    protected const STRATEGY_AUTHORIZATION_API_KEY = 'ApiKey';
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param \Symfony\Component\Routing\RouteCollection $routeCollection
+     *
+     * @return \Symfony\Component\Routing\RouteCollection
+     */
+    public function addRoutes(RouteCollection $routeCollection): RouteCollection
+    {
+        $route = new Route(static::ROUTE_STORES_GET_LIST);
+        $route->setMethods([static::METHOD_GET])
+            ->setController(StoresResourceController::class, static::ROUTE_STORES_GET_LIST_ACTION)
+            ->setDefault(static::STRATEGIES_AUTHORIZATION, [static::STRATEGY_AUTHORIZATION_API_KEY]);
+        
+        $routeCollection->add(
+            static::ROUTE_STORES_GET_LIST,
+            static::METHOD_GET,
+            $route
+         );
+         
+         return $routeCollection;
+    }
+}
+```
+
 ## Create an API Key in Backoffice
 
 To create an API Key in Backoffice, follow these steps:

@@ -16,8 +16,9 @@ Follow the steps below to install the API Key authorization feature core.
 
 Install the required features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
-| -------------- | ----------------- | ----------------- |
+| NAME                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                                                |
+|------------------------------| ----------------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                 | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                                |
 | Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ### 1) Install the required modules using Composer
@@ -25,10 +26,7 @@ Install the required features:
 Install the required modules:
 
 ```bash
-commposer require spryker/api-key:"^2.0.0" \
-spryker/api-key-gui:"^2.0.0" \
-spryker/authorization:"^1.4.0" \
-spryker/api-key-authorization-connector:"^1.0.0" \
+commposer require spryker/api-key-authorization-connector:"^1.0.0" \
 spryker/spryker/glue-backend-api-application-authorization-connector:"^1.4.0"
 ```
 
@@ -41,7 +39,7 @@ Make sure that the following modules have been installed:
 | ApiKey                       | vendor/spryker/api-key                         |
 | ApiKeyGui                    | vendor/spryker/api-key-gui                     |
 | Authorization                | vendor/spryker/authorization                   |
-| ApiKeyAuthorizationCOnnector | vendor/spryker/api-key-authorization-connector |
+| ApiKeyAuthorizationConnector | vendor/spryker/api-key-authorization-connector |
 | GlueBackendApiApplicationAuthorizationConnector                | vendor/spryker/glue-backend-api-application-authorization-connector                   |
 
 {% endinfo_block %}
@@ -84,64 +82,13 @@ Ensure that the following changes have occurred in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+## 3) Set up configuration
 
-1. Activate the following plugins:
+Add the configuration to your project:
 
-| PLUGIN | SPECIFICATION                                | NAMESPACE |
-| --- |----------------------------------------------| --- |
-| ApiKeyAuthorizationRequestExpanderPlugin | Expands the request by the API Key provided. | Spryker\Glue\ApiKeyAuthorizationConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector\ApiKeyAuthorizationRequestExpanderPlugin |
-| ApiKeyAuthorizationStrategyPlugin | Executes the API Key verification process.         | Spryker\Zed\ApiKeyAuthorizationConnector\Communication\Plugin\Authorization\ApiKeyAuthorizationStrategyPlugin |
-
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Glue\GlueBackendApiApplicationAuthorizationConnector;
-
-use Spryker\Glue\ApiKeyAuthorizationConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector\ApiKeyAuthorizationRequestExpanderPlugin;
-use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\GlueBackendApiApplicationAuthorizationConnectorDependencyProvider as SprykerGlueBackendApiApplicationAuthorizationConnectorDependencyProvider;
-
-class GlueBackendApiApplicationAuthorizationConnectorDependencyProvider extends SprykerGlueBackendApiApplicationAuthorizationConnectorDependencyProvider
-{
-    protected function getAuthorizationRequestExpanderPlugins(): array
-    {
-        return [
-            new ApiKeyAuthorizationRequestExpanderPlugin(),
-        ];
-    }
-}
-
-```
-</details>
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php</summary>
-
-```php  
-<?php
-
-namespace Pyz\Zed\Authorization;
-
-use Spryker\Zed\ApiKeyAuthorizationConnector\Communication\Plugin\Authorization\ApiKeyAuthorizationStrategyPlugin;
-use Spryker\Zed\Authorization\AuthorizationDependencyProvider as SprykerAuthorizationDependencyProvider;
-
-class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProvider
-{
-    protected function getAuthorizationStrategyPlugins(): array
-    {
-        return [
-            new ApiKeyAuthorizationStrategyPlugin(),
-        ];
-    }
-}
-
-```
-</details>
-
-2. Add the following configuration:
+| CONFIGURATION                                              | SPECIFICATION                                                    | NAMESPACE |
+|------------------------------------------------------------|------------------------------------------------------------------| --- |
+| AuthorizationConfig::isMultistrategyAuthorizationAllowed() | Returns true if the multiple strategies authorization is allowed. | Pyz\Zed\Authorization\AuthorizationConfig |
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Authorization/AuthorizationConfig.php</summary>
@@ -168,3 +115,71 @@ namespace Pyz\Zed\Authorization;
 ```
 </details>
 
+### 4) Set up behavior
+
+1. Activate the following plugins:
+
+| PLUGIN | SPECIFICATION                                | NAMESPACE |
+| --- |----------------------------------------------| --- |
+| ApiKeyAuthorizationRequestExpanderPlugin | Expands the request by the API Key provided. | Spryker\Glue\ApiKeyAuthorizationConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector |
+| ApiKeyAuthorizationStrategyPlugin | Executes the API Key verification process.         | Spryker\Zed\ApiKeyAuthorizationConnector\Communication\Plugin\Authorization |
+
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplicationAuthorizationConnector;
+
+use Spryker\Glue\ApiKeyAuthorizationConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector\ApiKeyAuthorizationRequestExpanderPlugin;
+use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\GlueBackendApiApplicationAuthorizationConnectorDependencyProvider as SprykerGlueBackendApiApplicationAuthorizationConnectorDependencyProvider;
+
+class GlueBackendApiApplicationAuthorizationConnectorDependencyProvider extends SprykerGlueBackendApiApplicationAuthorizationConnectorDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\AuthorizationRequestExpanderPluginInterface>
+     */
+    protected function getAuthorizationRequestExpanderPlugins(): array
+    {
+        return [
+            new ApiKeyAuthorizationRequestExpanderPlugin(),
+        ];
+    }
+}
+
+```
+</details>
+
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php</summary>
+
+```php  
+<?php
+
+namespace Pyz\Zed\Authorization;
+
+use Spryker\Zed\ApiKeyAuthorizationConnector\Communication\Plugin\Authorization\ApiKeyAuthorizationStrategyPlugin;
+use Spryker\Zed\Authorization\AuthorizationDependencyProvider as SprykerAuthorizationDependencyProvider;
+
+class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\AuthorizationExtension\Dependency\Plugin\AuthorizationStrategyPluginInterface>
+     */
+    protected function getAuthorizationStrategyPlugins(): array
+    {
+        return [
+            new ApiKeyAuthorizationStrategyPlugin(),
+        ];
+    }
+}
+
+```
+</details>
+
+{% info_block warningBox "Verification" %}
+
+Use the following guide [Use API Key authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/use-api-key-authorization.html) to check that the API Key authorization is integrated properly.
+
+{% endinfo_block %}

@@ -26,4 +26,3 @@ This section contains a collection of guides for working with the Old Spryker Gl
 * [Glue Spryks](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html)
 * [Glue infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html)
 * [Glue API tutorials](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/glue-api-tutorials.html)
-* [Use API Key authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/use-api-key-authorization.html)

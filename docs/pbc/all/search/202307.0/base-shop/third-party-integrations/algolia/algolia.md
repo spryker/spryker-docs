@@ -14,7 +14,7 @@ Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) a
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://s3.console.aws.amazon.com/s3/object/spryker?region=eu-central-1&prefix=docs/pbc/all/search/algolia/algolia/Algolia_ACPApp_Demo.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/Algolia_ACPApp_Demo.mp4" type="video/mp4">
   </video>
 </figure>
 

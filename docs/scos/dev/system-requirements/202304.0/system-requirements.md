@@ -27,6 +27,9 @@ redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/system-requirements.html
 - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
 ---
+
+## Base shop system requirements
+
 | REQUIREMENT | VALUE |
 |---|---|
 | OS                                        | Native: Linux                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -45,7 +48,7 @@ redirect_from:
 | Available languages                       | Spryker is available in the following languages:<ul><li>German</li><li>English</li></ul> Spryker offers full UTF-8 left-to-right language support.                                                                                                                                                                                                                                                                                                                    |
 
 
-## Spryker Marketplace system requirements
+## Marketplace system requirements
 
 | OPERATING SYSTEM | NATIVE: LINUXONLY tHROUGH VM: MACOS AND MS WINDOWS                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

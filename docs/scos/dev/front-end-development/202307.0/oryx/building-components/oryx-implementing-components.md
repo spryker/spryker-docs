@@ -15,7 +15,7 @@ We use the product _ID_ component as an example. It is a simple component that s
 
 Oryx creates a folder per component, like `src/product/id`, and separates some of the component logic in separate files. However, you can create a component as a single file. To allow for lazy loading of the component, you still need to separate out its definition.
 
-## 1. Creating the component class
+## 1. Creating a component class
 
 Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class-based elements that extend from `HTMLElement`. Lit provides `LitElement` as a base class to extend from when you create a custom element.
 
@@ -64,17 +64,17 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 This code shows the ease of use, but there's a lot going on in the background:
 
-1. The product _context_ (sku) is resolved from the URL or any of the component's ancestor DOM elements, depending on where the component is used. When the component is used inside a product card or cart entry, the `sku` is added as an attribute, but when the component is used on the Product Details Page, the `sku` is resolved from the URL. The current locale and currency are used as additional context. When the context is changing, the product data is reloaded automatically.
-2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses an adapter (`ProductAdapter`) to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
+1. The product _context_ (sku) is resolved from the URL or any of the component's ancestor DOM elements, depending on where the component is used. When the component is used inside a product card or cart entry, the `sku` is added as an attribute. When the component is used on the Product Details Page, the `sku` is resolved from the URL. The current locale and currency are used as additional context. When the context is changing, the product data is reloaded automatically.
+2. `ProductService` is used to resolve the product data from the application state. When the product is not yet loaded from the backend, the service uses the `ProductAdapter` adapter to fetch the data. The HTTP response is converted to meet the client-side product model. _Command and Query_, Oryx's state management solution, prevents data reloading unless explicitly requested.
 3. The `$product` signal subscribes to the application state using `ProductService`. Whenever the product state is changed, the [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) updates the associated DOM elements that are affected by the data.
 
 The preceding steps are a commonly used pattern across all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
-## 3. Configure the component
+## 3. Configuring a component
 
-Oryx components can be made configurable by options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options allow components to be reusable across different business models. For example, a component can render different results based on an option that is provided: `true` for a B2C application, but `false` for a B2B application.
+Oryx components can be made configurable with options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options enable components to be reusable across different business models. For example, a component can render different results based on the provided option: `true` for a B2C application, but `false` for a B2B application.
 
-The component options are resolved by `ContentMixin`, similar to how `ProductService` resolves the product data. You can combine multiple mixins in component implementation—for example:
+Component options are resolved by `ContentMixin`, similar to how `ProductService` resolves the product data. You can combine multiple mixins in a component implementation—for example:
 
 ```ts
 import { resolve } from "@spryker-oryx/di";
@@ -100,7 +100,7 @@ export class ProductIdComponent extends ProductMixin(
 
 You can provide default options in the component, in feature sets, or in the application. For more details, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html).
 
-## 4. Style the component DOM
+## 4. Styling the component DOM
 
 Oryx components are styled with standard CSS. The components have a separate DOM attached using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components and prevents global styles from cascading down to the component.
 

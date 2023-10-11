@@ -57,11 +57,11 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 }
 ```
 
-### Feature set component options
+### Configuring feature set component options
 
 Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a standard for a specific business model, such as B2B or B2C. Besides providing the features, a feature set can also provide component configurations. The feature set configurations override the default option values provided by the components.
 
-### Application-driven component options
+### Configuring application-driven component options
 
 You can customize default component values and feature set values in the application configuration. The configuration is used every time the component is used in the application.
 
@@ -80,7 +80,7 @@ export const app = appBuilder()
 
 For more information, see [Application orchestration](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html).
 
-### Component option values in experience data
+### Configuring component option values in experience data
 
 The default options, feature set configurations, and application configurations are applied to the Component type. The options provided in the experience data are applied to a specific instance in the experience data structure.
 
@@ -100,7 +100,7 @@ In the following configuration, you see a part of the experience data that sets 
 
 For more information about creating and customizing experience data, see [Oryx: Pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
 
-### Hardcoded component options
+### Configuring hardcoded component options
 
 When using components in code, options can be provided using the `options` attribute. The options attribute is resolved automatically by `ContentMixin` that most domain components use.
 
@@ -116,9 +116,9 @@ protected override render(): TemplateResult {
 }
 ```
 
-## Use component options
+## Using component options
 
-To use component options asynchronously, it is important to observe the options and react to updates in the component UI. Oryx provides a [reactive](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) framework with observable data streams that can update the UI using [signals](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/signals.html). To simplify the integration in component logic, `ContentMixin` provides the `$options` signal that can be called in the render logic or other signals.
+To use component options asynchronously, it is important to observe the options and react to updates in the component UI. Oryx provides a [reactive](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) framework with observable data streams that can update the UI using [signals](/docs/scos/dev/front-end-development/{{page.version}}/oryx/reactivity/signals.html). To simplify the integration in the component logic, `ContentMixin` provides the `$options` signal that can be called in the render logic or other signals.
 
 The following code shows how to use the `$options` signal. Due to the component option interface, the usage of the signal is type safe.
 

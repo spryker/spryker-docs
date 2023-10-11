@@ -13,7 +13,7 @@ This document describes how to implement a component using Lit. Lit's standard c
 
 We use the product _ID_ component as an example. It is a simple component that shows the basic concepts. The component already exists in the Oryx product package.
 
-Oryx creates a folder per component, like `src/product/id`, and separates some of the component logic in separate files. However, you can create a component as a single file. To allow for lazy loading of the component, you still need to separate out its definition.
+In Oryx, components are organized in folders, like `src/product/id`, with some component logic located in separate files. However, you can create a component as a single file. To allow for lazy loading of the component, you still need to separate out its definition.
 
 ## 1. Creating a component class
 

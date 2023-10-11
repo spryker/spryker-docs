@@ -147,13 +147,13 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
 
-## 7. Prepare for server side rendering and hydration
+## 7. Configuring the component for server-side rendering and hydration
 
 If your application needs to be indexed by crawlers, such as Google Search or Pinterest, the application needs to be [server-side rendered](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
 
-When a component is server-side rendered, some of the browser APIs are not available. Most commonly known is the `window` or `document` object. Take this into account when implementing custom components.
+When a component is server-side rendered, some of the browser APIs are not available. Most commonly known are the `window` and `document` objects. Take this into account when implementing custom components.
 
-Oryx renders pages on the server and returns the minimum amount of JavaScript needed. Components doesn't need JavaScript initially, but when a user start interacting with a component, or when the component needs to reflect a certain application state, additional JavaScript needs to be loaded. Loading the component logic at the client side is called _hydration_. Because the component logic is loaded over the network and initialized in the application, hydration is costly. Additionally, the component might need to fetch data from a backend API. Oryx therefore tries to avoid or delay hydration till it is needed.
+Oryx renders pages on the server and returns the minimum amount of JavaScript needed. A component doesn't need JavaScript initially, but when a user start interacting with it, or when the component needs to reflect a certain application state, additional JavaScript needs to be loaded. Loading the component logic at the client side is called _hydration_. Because the component logic is loaded over the network and initialized in the application, hydration is costly. Additionally, the component might need to fetch data from a backend API. Oryx therefore tries to avoid or delay hydration till it is needed.
 
 When developing a component, you need to configure the hydration trigger using the `@hydrate` decorator that can take an event or context. The following example shows how to set up the component to be hydrated when the context is changed:
 
@@ -177,9 +177,9 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 }
 ```
 
-## Component definition
+## Registering the component definition
 
-The component implementation you've started building in the first section of this document is not yet registered in the application. To make the component available to the application, you need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html).
+The component implementation you've started building is not yet registered in the application. To make the component available to the application, you need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html).
 
 ```ts
 import { componentDef } from "@spryker-oryx/utilities";
@@ -198,13 +198,13 @@ This ensures that whenever the component is used anywhere in the DOM, Oryx lazil
 </div>
 ```
 
-## Place the component
+## Placing the component
 
-After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside (CMS) content.
+After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside  CMS content.
 
 Also, you can merge the component into an existing page structure. For example, before or after an existing component or inside (prepend or append) the components of an existing composition.
 
-The available merge types are exported in the [@spryker-oryx/experience](https://www.npmjs.com/package/@spryker-oryx/experience) package.
+Available merge types are exported in the [@spryker-oryx/experience](https://www.npmjs.com/package/@spryker-oryx/experience) package.
 
 ```ts
 export const enum ExperienceDataMergeType {

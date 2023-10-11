@@ -4870,6 +4870,8 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
       - title: Testing console commands
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+      - title: Testing the Asynchronous API
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-asynchronous-api.html
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data processing guidelines

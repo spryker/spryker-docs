@@ -12,7 +12,7 @@ Oryx supports three types of components:
 - Design system components  
   Highly reusable components that are used to build consistent user interfaces (UIs).
 - Domain components  
-  Functional components that are concerned with a specific _domain_, like the product or cart domains. Domain Components use
+  Functional components that are concerned with a specific _domain_, like the product or cart domains.
 - Composition components  
   Containers that are used to render pages or sections by providing a list of components and their layout.
 

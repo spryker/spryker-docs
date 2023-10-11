@@ -52,7 +52,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit...
 
 Duis aute irure dolor in reprehenderit in voluptate velit...
 ```
-
-## Integrating Oryx components with Yves
-
-The integration of Oryx components with Yves may be very useful for projects that want to gradually migrate from Yves to Oryx. While the client-side rendering of web components is straightforward, the server-side rendering requires a node-like application that renders the components. Yves does not provide such infrastructure by  default, but a POC was conducted to ensure the technical feasibility between Yves and Oryx.

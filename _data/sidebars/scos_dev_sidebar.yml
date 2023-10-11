@@ -3196,7 +3196,7 @@ entries:
           - title: Create, use, and extend the transfer objects
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-link-middleware.html
       - title: Event
         url: /docs/scos/dev/back-end-development/data-manipulation/event/event.html
         nested:
@@ -4228,10 +4228,6 @@ entries:
       nested:
         - title: New Relic
           include_versions:
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Installing and configuring New Relic
@@ -4246,14 +4242,7 @@ entries:
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
           include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-        - "202204.0"
+          - "202204.0"
     - title: Order Management Erpoms
       include_versions:
       - "202204.0"
@@ -4262,13 +4251,6 @@ entries:
       nested:
         - title: Adyen
           include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Installing and configuring Adyen
@@ -4281,13 +4263,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
         - title: Afterpay
           include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Installing and configuring Afterpay
@@ -4296,13 +4271,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
         - title: Amazon Pay
           include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Configuring Amazon Pay

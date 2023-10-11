@@ -14,6 +14,9 @@ entries:
         url: /docs/acp/user/app-composition-platform-installation.html
       - title: Developing an app
         url: /docs/acp/user/developing-an-app.html
+        nested:
+          - title: AppKernel
+            url: /docs/acp/user/app-kernel.html
       - title: App manifest
         url: /docs/acp/user/app-manifest.html
       - title: App configuration

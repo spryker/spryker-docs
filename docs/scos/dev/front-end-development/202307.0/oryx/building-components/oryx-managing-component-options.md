@@ -1,5 +1,5 @@
 ---
-title: "Oryx Components options"
+title: "Oryx: Managing components options"
 description: Components Options provide reusable components cross business models
 last_updated: Sept 19, 2023
 template: concept-topic-template
@@ -7,9 +7,9 @@ template: concept-topic-template
 
 Oryx components support configurable options to make the components reusable in different business contexts. Component options are JavaScript objects that can be configured as part of the application configuration or added by providing an attribute. To ensure a good developer experience, each component type can provide an interface for the options.
 
-To show the usage of component options, we use the tax message ("incl. vat") that is rendered on `ProductPriceComponent`. The tax message might not be useful for all businesses. For example, in a b2c context, the message might not be required. You can conditionally render the message based on a configuration.
+To show the usage of component options, we use the tax message ("incl. vat") that is rendered on `ProductPriceComponent`. The tax message might not be useful for all businesses. For example, in a b2c context, the message might not be required. You can configure the message to be loaded conditionally.
 
-## Set up component options
+## Setting up component options
 
 Component options are provided by a TypeScript interface. This ensures a good developer experience when implementing a component and configuring the application. The component option interface is defined in a separate `*.model.ts` file in Oryx components, but there's no strict rule to follow.
 
@@ -22,7 +22,7 @@ export interface ProductPriceOptions {
 }
 ```
 
-To resolve component options in your new components, you can use `ContentMixin`. `ContentMixin` provides a type safe `$option` [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) that guarantees efficient usage of the options.
+To resolve component options in new components, you can use `ContentMixin`. `ContentMixin` provides a type-safe `$option` [signal](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) that guarantees efficient usage of the options.
 
 Oryx provides the `ContentMixin` mixin to work with component options. You can use the mixin to hand in the option interface. The following example shows how mixin is used to define the options.
 
@@ -34,11 +34,9 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 }
 ```
 
-## Configure component options
+## Configuring component options
 
-There are different ways to configure component options. Components can set up default values for the options that are used as a fallback in case no values are provided. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) can provide values for a specific business context. As an application developer, you can provide customized values, either for all component instances in the application configuration or by providing options per instance in the experience data.
-
-You can also override the options when using components in your code.
+There are different ways to configure component options. Components can have default option values that are used as a fallback in case no values are provided. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) can provide values for a specific business context. As an application developer, you can provide customized values, either for all component instances in the application configuration or by providing options per instance in the experience data. You can also override the options when using components in your code.
 
 The approaches to set up the values are detailed in the following sections.
 

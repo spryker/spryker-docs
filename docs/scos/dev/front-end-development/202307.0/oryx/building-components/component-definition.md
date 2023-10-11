@@ -32,7 +32,7 @@ The implementation is imported using the [static import declaration](https://dev
 
 ## Register a component definition
 
-After you've created a component definition, you need to configure it in the application. The [application orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html) provides the `withComponents()` API that can be used to register an array of components.
+After you've created a component definition, you need to configure it in the application. The [application orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html) provides the `withComponents()` API that's used register arrays of components.
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";

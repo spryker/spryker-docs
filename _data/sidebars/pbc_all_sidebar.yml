@@ -11,56 +11,56 @@ entries:
           - title: Base shop
             nested:
               - title: Payments feature overview
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/payments-feature-overview.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/payments-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
                     nested:
                       - title: Payments
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-feature.html
                   - title: Install Glue APIs
                     nested:
                       - title: Payments
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/install-the-payments-glue-api.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/install-the-payments-glue-api.html
                   - title: Upgrade modules
                     nested:
                       - title: Payment
-                        url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/install-and-upgrade/upgrade-the-payment-module.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/install-and-upgrade/upgrade-the-payment-module.html
               - title: Import and export data
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
                 nested:
                   - title: File details - payment_method.csv
-                    url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method.csv.html
+                    url: /docs/pbc/all/payment-service-provider/base-shop/import-and-export-data/import-file-details-payment-method.csv.html
                   - title: File details - payment_method_store.csv
-                    url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html
+                    url: /docs/pbc/all/payment-service-provider/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Edit payment methods
-                    url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/manage-in-the-back-office/edit-payment-methods.html
+                    url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/edit-payment-methods.html
                   - title: View payment methods
-                    url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/manage-in-the-back-office/view-payment-methods.html
+                    url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
               - title: Hydrate payment methods for an order
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/hydrate-payment-methods-for-an-order.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
               - title: Interact with third party payment providers using Glue API
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
               - title: "Payments feature: Domain model and relationships"
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/base-shop/payments-feature-domain-model-and-relationships.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/payments-feature-domain-model-and-relationships.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer-domain-model-and-relationships.html
               - title: Third-party integrations
                 nested:
                   - title: Adyen
-                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ayden/adyen.html
+                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/adyen/adyen.html
                     nested:
                       - title: Install and configure
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ayden/install-and-configure-adyen.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html
                       - title: Integrate
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ayden/integrate-adyen.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/adyen/integrate-adyen.html
                       - title: Integrate payment methods
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ayden/integrate-adyen-payment-methods.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
                       - title: Enable filtering of payment methods
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ayden/enable-filtering-of-payment-methods-for-adyen.html
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
 
                   - title: Afterpay
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/afterpay/afterpay.html
@@ -248,7 +248,7 @@ entries:
                     - title: Integrate
                       url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
                   - title: Powerpay
-                    url: /docs/pbc/all/payment-service-provider/powerpay.html
+                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/powerpay.html
                   - title: RatePay
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/ratepay.html
                     nested:
@@ -306,7 +306,7 @@ entries:
           - title: Marketplace
             nested:
               - title: Install Marketplace Dummy Payment
-                url: /docs/pbc/all/payment-service-provider/spryker-pay/marketplace/install-marketplace-dummy-payment.html
+                url: /docs/pbc/all/payment-service-provider/marketplace/install-marketplace-dummy-payment.html
 
 
       - title: Price Management
@@ -1535,3 +1535,81 @@ entries:
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-shopping-lists-feature-domain-model-and-relationships.html
                   - title: Marketplace Wishlist
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html
+      - title: Tax Management
+        url: /docs/pbc/all/tax-management/tax-management.html
+        nested:
+          - title: Base shop
+            nested:
+              - title: Tax feature overview
+                url: /docs/pbc/all/tax-management/base-shop/tax-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Integrate the Tax Glue API
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/install-the-tax-glue-api.html
+                  - title: Integrate the Product Tax Sets Glue API
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html
+                  - title: Upgrade the ProductTaxSetsRestApi module
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+                  - title: Upgrade the Tax module
+                    url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-tax-module.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                nested:
+                  - title: Create tax rates
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
+                  - title: Edit tax rates
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-rates.html
+                  - title: Create tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-sets.html
+                  - title: Edit tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/edit-tax-sets.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Retrieve tax sets
+                    url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+                  - title: Retrieve tax sets when retrieving abstract products
+                    url: /docs/pbc/all/tax-management/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
+              - title: Import and export data
+                url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/tax-management-data-import.html
+                nested:
+                  - title: "Import file details: tax_sets.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
+                  - title: "Import file details: product_abstract.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
+                  - title: "Import file details: product_option.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-product-option.csv.html
+                  - title: "Import file details: shipment.csv"
+                    url: /docs/pbc/all/tax-management/base-shop/import-and-export-data/import-file-details-shipment.csv.html
+              - title: Extend and customize
+                url: /docs/pbc/all/tax-management/base-shop/extend-and-customize/tax-module-reference-information.html
+              - title: Domain model and relationships
+                url: /docs/pbc/all/tax-management/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
+              - title: Third-paty integrations
+                nested:
+                  - title: Avalara
+                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/avalara.html
+                    nested:
+                      - title: Install Avalara
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/install-avalara.html
+                      - title: Install Avalara + Product Options
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/install-avalara-product-options.html
+                      - title: Install Avalara + Shipment
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/install-avalara-shipment.html
+                      - title: Apply Avalara tax codes
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html
+                  - title: Vertex
+                    url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
+                    include_versions:
+                    - "202400.0"
+                    nested:
+                      - title: Install Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
+                        include_versions:
+                        - "202400.0"
+          - title: Marketplace
+            include_versions:
+            - "202212.0"
+            - "202307.0"
+            nested:
+              - title: Install the Tax + Merchant Portal - Marketplace Product feature
+                url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html

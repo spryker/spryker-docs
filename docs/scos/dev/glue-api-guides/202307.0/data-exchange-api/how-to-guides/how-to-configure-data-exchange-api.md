@@ -126,13 +126,12 @@ Or if you're in the middle of the integration process for the Data Exchange API 
 
 ## Download Data Exchange API specification
 
-You can download the specification of for all available endpoints including the Data Exchange API endpoints in the OpenAPI format. To do so, click **Download API Specification** on the **Data Exchange API Configuration** page.
+You can download the specification of all the available endpoints, including the Data Exchange API endpoints, in the OpenAPI format. 
+To download the specification, go to the *Data Exchange API Configuration* page, click **Download API Specification**. This initiates the download of the specification to your computer.
 
 ![deapi_download_spec_button](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_download_spec_button.png)
 
-After you click the button, the specification will be downloaded to your computer.
-
-If you added new endpoints, documentation will be updated automatically with the new endpoints, but need wait 1 minute for it. Button **Download API Specification** will be disabled during this time and aviailable after 1 minute. You can see  message about it in the top of the page:
+In case you've added new endpoints, the documentation will be automatically updated with the new information after a minute. The **Download API Specification** button is inactive during the documentation update process and becomes available again after one minute. There is a notification about this at the top of the page:
 
 ![deapi_generation_in_progress](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_generation_in_progress.png)
 

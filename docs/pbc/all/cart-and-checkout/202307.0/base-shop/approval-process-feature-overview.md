@@ -12,7 +12,7 @@ redirect_from:
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
 
-Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/pbc/all/customer-relationship-management/{{site.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
+Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
 {% info_block warningBox "Approvals within a business unit" %}
 

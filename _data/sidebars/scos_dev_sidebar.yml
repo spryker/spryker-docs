@@ -1004,9 +1004,9 @@ entries:
       - "202307.0"
       nested:
       - title: How to send a request in Data Exchange API
-        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
+        url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
       - title: How to configure Data Exchange API endpoints.
-        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
+        url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
   - title: Feature integration guides
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
     include_versions:
@@ -1378,8 +1378,12 @@ entries:
             url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
             include_versions:
               - "202204.0"
-      - title: Data Exchange API integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/data-exchange-api-integration.html
+      - title: Install the Data Exchange API
+        url: /docs/scos/dev/feature-integration-guides/glue-api/data-exchange-api/install-the-data-exchange-api.html
+        include_versions:
+        - "202307.0"
+      - title: Data Exchange API + Inventory Management feature integration
+        url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/install-the-data-exchange-api-inventory-management-feature.md
         include_versions:
         - "202307.0"
     - title: Agent Assist
@@ -2285,10 +2289,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
       include_versions:
       - "202204.0"
-    - title: Picker user login
-      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html
-      include_versions:
-        - "202400.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -2976,6 +2976,12 @@ entries:
       - "202108.0"
       - "202307.0"
       - "202204.0"
+    - title: Marketplace data import
+      url: /docs/scos/dev/data-import/marketplace-data-import.html
+      include_versions:
+      - "202212.0"
+      - "202307.0"
+
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html
     nested:
@@ -3256,11 +3262,6 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-      - title: Oryx Builder overview and setup
-        url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
-        include version:
-        - "202212.0"
-        - "202307.0"
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
         include version:
@@ -3420,6 +3421,7 @@ entries:
               url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
 
     - title: Marketplace
+      url: /docs/scos/dev/front-end-development/marketplace/marketplace-frontend.html
       include_versions:
       - "202204.0"
       - "202212.0"
@@ -3427,6 +3429,13 @@ entries:
       nested:
         - title: Extend the Marketplace frontend
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
+          include_versions:
+          - "202204.0"
+          - "202212.0"
+        - title: Extend the Merchant Portal frontend
+          url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
+          include_versions:
+          - "202307.0"
         - title: "Table design"
           url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
           nested:
@@ -3934,6 +3943,8 @@ entries:
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+      - title: Combined product offer import
+        url: /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
       - title: SCSS linter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
       - title: TS linter
@@ -4055,8 +4066,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
       - title: "Tutorial: Customer import"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
-      - title: "Tutorial: Calculator plugin"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
       - title: "Tutorial: Using translations"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"
@@ -4067,8 +4076,8 @@ entries:
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configure cross-origin resource sharing for Glue API
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
         - title: Configuring Visibility of the Included Section
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources
@@ -4249,21 +4258,6 @@ entries:
       include_versions:
       - "202204.0"
       nested:
-      - title: Punchout Catalog
-        include_versions:
-      - "202204.0"
-    - title: Punchout Catalog feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs + Product Bundles feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
-      include_versions:
-      - "202204.0"
     - title: Payment partners
       nested:
         - title: Adyen
@@ -4761,6 +4755,20 @@ entries:
       url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
+    - title: Marketplace architecture
+      url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-architecture.html
+      nested:
+        - title: Marketplace Application composition
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html
+        - title: Marketplace domain model
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
+        - title: Merchant Portal architecture overview
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+        - title: Marketplace in the Back Office
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+
+
+
   - title: Guidelines
     url: /docs/scos/dev/guidelines/guidelines.html
     nested:
@@ -4814,6 +4822,10 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
+        - title: Spryker dev packages checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
+      - title: Ignore evaluation errors
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:

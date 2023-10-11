@@ -5,10 +5,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-integration-into-project
 originalArticleId: c4cff442-13cf-4c1e-ad8e-95457220cc85
 redirect_from:
-  - /2021080/docs/econda-integration-into-project
-  - /2021080/docs/en/econda-integration-into-project
-  - /docs/econda-integration-into-project
-  - /docs/en/econda-integration-into-project
   - /docs/scod/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
   - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html

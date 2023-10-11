@@ -22,7 +22,7 @@ This document describes how to create company units.
 
 ## Prerequisites
 
-* [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/manage-companies.html).
+* [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html).
 * Review the [reference information](#reference-information-create-a-company-unit) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company unit
@@ -49,4 +49,4 @@ This document describes how to create company units.
 
 ## Next steps
 
-Add addresses to the company unit. For instructions, see [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-units/edit-company-units.html)
+Add addresses to the company unit. For instructions, see [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html)

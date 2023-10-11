@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 related:
   - title: Scheduled Prices feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/scheduled-prices-feature-walkthrough.html
+    link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html
 ---
 
 

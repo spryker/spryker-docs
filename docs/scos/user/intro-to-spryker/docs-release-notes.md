@@ -2,8 +2,40 @@
 title: Docs release notes
 description: Spryker docs release notes
 template: concept-topic-template
-last_updated: Aug 2, 2023
+last_updated: Oct 2, 2023
 ---
+
+## September 2023
+
+In September 2023, we have added and updated the following pages:
+
+### New pages
+
+- [Catalog + Merchant Product Restrictions feature integration guide](/docs/pbc/all/search/202307.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
+- [Container set function](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
+- [Ignore evaluation errors](/docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
+- [Spryker dev packages checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
+- [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html).
+- [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
+
+### Updated pages
+
+- [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
+- [Delete stores](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/delete-stores.html): Learn how to delete a store for the Dynamic Multistore feature.
+- [Prepare a project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html): Get your project ready to start using Spryker Code Upgrader.
+- [Bazaarvoice app integration guide](/docs/pbc/all/ratings-reviews/202307.0/third-party-integrations/integrate-bazaarvoice.html).
+- [Algolia app integration guide](/docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html).
+- [Cart Notes feature integration guide](/docs/pbc/all/cart-and-checkout/202400.0/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html).
+- [Order management feature integration guide](/docs/pbc/all/order-management-system/202400.0/base-shop/install-features/install-the-order-management-feature.html).
+- [Packaging Units feature integration guide](/docs/pbc/all/product-information-management/202400.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html).
+- [Push notification feature integration guide](/docs/pbc/all/push-notification/202400.0/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html).
+- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
+- [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html).
+- [Vertex app integration guide](/docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html).
+
+For more details about these and other updates to the Spryker docs in September 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
+
 
 ## August 2023
 
@@ -25,7 +57,7 @@ In August 2023, we have added and updated the following pages:
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/service-points/202400.0/unified-commerce/install-and-upgrade/install-the-customer-account-management-service-points-feature.html).
 - [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
-- [Vertex integration guide](/docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html#integrate-acp-connector-module-for-tax-calculation).
+- [Vertex integration guide](/docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html).
 - [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
 - [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
 - [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
@@ -64,7 +96,7 @@ In July 2023, we have added and updated the following pages:
 - [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html): Find out how you can configure Usercentrics in your Spryker shop.
 - [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html): Details about data import files for the Ratings and Reviews PBC.
 - [Search data import](/docs/pbc/all/search/202212.0/base-shop/import-and-export-data/search-data-import.html): Details about data import files for the Search PBC.
-- [Tax Management data import](/docs/pbc/all/tax-management/202204.0/spryker-tax/base-shop/import-and-export-data/tax-management-data-import.html): Details about data import files for the Tax Management PBC.
+- [Tax Management data import](/docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/import-and-export-data/tax-management-data-import.html): Details about data import files for the Tax Management PBC.
 - [Warehouse Management System data import](/docs/pbc/all/warehouse-management-system/202212.0/base-shop/import-and-export-data/warehouse-management-system-data-import.html): Details about data import files for the Warehouse Management System PBC.
 - [Marketplace Merchant Portal Product Management feature overview](/docs/pbc/all/product-information-management/202212.0/marketplace/marketplace-merchant-portal-product-management-feature-overview.html): Overview of the Marketplace Merchant Portal Product Management feature.
 -
@@ -75,7 +107,7 @@ In July 2023, we have added and updated the following pages:
 - [Security Release Notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html): Added missing security HTTP headers.
 - [Merchant Users Overview](/docs/pbc/all/merchant-management/202212.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html): Added information about the assignment of groups for the merchant user.
 - [Handle data with Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
-- [How send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html): Added error codes and error code descriptions.
+- [How send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html): Added error codes and error code descriptions.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
 - [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 - [Payment Service Provider](/docs/pbc/all/payment-service-provider/202212.0/payment-service-provider.html): Different payment methods for your shop.
@@ -205,12 +237,7 @@ In April 2023, we have added and updated the following pages:
 - [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-    - [Install the Picker user login feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html)
-    - [Install the Warehouse picking + Inventory Management feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-inventory-management-feature.html)
-    - [Install the Warehouse picking + Order Management feature](/docs/scos/dev/feature-integration-guides/202304.0/install-the-warehouse-picking-order-management-feature.html)
-    - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-order-management-feature.html)
-   - [Install the Warehouse picking + Shipment feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-shipment-feature.html)
-   - [Install the Warehouse picking + Spryker Core Back Office feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-spryker-core-back-office-feature.html)
+    - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-picking/202400.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)
 - [Security release notes 202304.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html)
 - [Releases vs Customization types](/docs/sdk/dev/releases-vs-customization-types.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.
 

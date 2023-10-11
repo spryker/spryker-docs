@@ -15,7 +15,7 @@ The App Composition Platform (ACP) lets Spryker Cloud Commerce Operating System 
 
 The following apps are supported:
 
-- [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/integrate-algolia.html), a Search Engine
+- [Algolia](/docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia/integrate-algolia.html), a Search Engine
 - [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html), a Consent Management Platform (CMP)
 - [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), a platform for User-Generated Content (UGC)

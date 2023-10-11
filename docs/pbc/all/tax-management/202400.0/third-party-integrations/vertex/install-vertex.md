@@ -52,12 +52,6 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
-    // ...
-    
-    'payment-tax-invoice-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-];
-
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     // ...
     

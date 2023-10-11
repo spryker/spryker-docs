@@ -185,6 +185,21 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```
 
+If you have custom Yves templates or make your own frontend, add the ```CartSummaryHideTaxAmountWidget``` to your template.
+
+Core template: SprykerShop/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig
+
+Example:
+```html
+<li class="list__item spacing-y">
+    {{ 'cart.total.tax_total' | trans }}
+    {% widget 'CartSummaryHideTaxAmountWidget' args [data.cart] only %}
+    {% nowidget %}
+        <span class="float-right">{{ data.cart.totals.taxTotal.amount | money(true, data.cart.currency.code) }}</span>
+    {% endwidget %}
+</li>
+```
+
 
 ### 4. Configure the Message Broker dependency provider
 

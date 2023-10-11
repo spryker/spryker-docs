@@ -5,15 +5,15 @@ template: howto-guide-template
 redirect_from:
 ---
 
-This checker identifies and reports security vulnerabilities in the npm dependencies.
+This checker identifies and reports security vulnerabilities in npm dependencies.
 
 ## Problem description
 
-Frontend packages play an integral role in building modern web applications. Since these packages are created by different developers and teams, they can inadvertently include vulnerabilities that could be exploited by malicious actors to compromise the security and functionality of an application.
+Because frontend packages are created by different developers and teams, they can  include vulnerabilities that can be exploited by malicious actors to compromise the security and functionality of an application.
 
-The npm vulnerabilities checker addresses this concern by actively scanning and identifying potential vulnerabilities in frontend packages. It accomplishes this by comparing the versions of packages used in a project against a continuously updated database of known vulnerabilities. When a package with a known vulnerability is detected, the checker alerts developers, provides information about the nature of the vulnerability, the potential risks it poses, and any recommended actions to help mitigate the threat.
+The npm vulnerabilities checker addresses this concern by actively scanning and identifying potential vulnerabilities in frontend packages. It accomplishes this by comparing the versions of packages used in a project against a continuously updated database of known vulnerabilities. When a package with a known vulnerability is detected, the checker gives an alert, provides information about the nature of the vulnerability, potential risks, and the recommended actions to help mitigate the threat.
 
-By using the npm vulnerabilities checker with the Evaluator, developers can safeguard their applications against security breaches and ensure that they are using the latest and most secure versions of frontend packages. This approach helps maintain the integrity of web applications and provides developers with the necessary information to make informed decisions about the packages they include in their projects.
+By using the npm vulnerabilities checker with the Evaluator, you can safeguard  your applications against security breaches and ensure that you are using the latest and  secure versions of frontend packages.
 
 ## Example of an evaluator error message
 
@@ -39,9 +39,13 @@ Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-u
 
 ## Configuration
 
-You have the option to set the desired npm vulnerabilities level for checking, which is enabled by default for high and critical levels.
+There are four levels of security vulnerabilities:
+* Low
+* Moderate
+* High
+* Critical
 
-To specify a custom list of allowed levels, modify the tooling.yml file located in the project's root directory. Here's an example configuration that permits low, moderate, high, and critical levels:
+By default, the npm checker evaluates the code against the high and critical levels. To define the levels to be checked, create or update `tooling.yml` in the project's root directory. Here's an exemplary configuration for evaluating against all vulnerability errors:
 ```yaml
 evaluator:
     checkerConfiguration:
@@ -52,4 +56,4 @@ evaluator:
 
 ## Resolve the error
 
-To resolve the issue, update the npm dependencies with known vulnerabilities to the versions where the vulnerability issues are fixed.
+To resolve the issue, update the npm dependencies with vulnerabilities to the versions with the vulnerability issues fixed.

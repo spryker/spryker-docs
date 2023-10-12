@@ -155,9 +155,6 @@ In cases where there are no integration apps for data exchange, you can build th
 
 To build custom integrations you need:
 
-1. Provision the Spryker Middleware Powered by Alumio.
-2. Enable the API connectors offered by Alumio.
-3. Build the mapping and transformation of data. Initial configuration of data mapping and transformation usually takes up to a few days, changing them takes up to a few hours.
 
 With Custom Integration Apps, the data exchange process like this:
 
@@ -167,7 +164,7 @@ Note to PMs: Here is a draw.io diagram created from image here: https://docs.goo
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 
 
-We recommend building Custom Integration Apps with the existing Alumio connectors in the following cases:
+We recommend building custom integrations with the existing Alumio connectors in the following cases:
 - There is no Spryker Integration App for the system you need. However, Alumio offers a connector for this system.
 - You require a quick setup of the data exchange process, which should take up to a few days.
 - You don't have the developer resources to do the coding job upon initial setup.

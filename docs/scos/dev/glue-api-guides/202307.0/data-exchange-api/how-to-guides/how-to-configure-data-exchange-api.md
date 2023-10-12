@@ -5,6 +5,7 @@ last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
+   - /docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
 This document describes how to create and configure the Data Exchange API endpoints.
@@ -117,7 +118,24 @@ If you don't see the needed table, it may be [excluded from configuring](/docs/s
 7. Click **Save**.
 This opens the **Data Exchange API Configuration** page with the endpoint displayed in the list. Now you can send requests to this endpoint.
 
+{% info_block warningBox "Verification" %}
+
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
+
+{% endinfo_block %}
+
+## Download Data Exchange API specification
+
+You can download the specification of all the available endpoints, including the Data Exchange API endpoints, in the OpenAPI format. 
+To download the specification, go to the *Data Exchange API Configuration* page, click **Download API Specification**. This initiates the download of the specification to your computer.
+
+![deapi_download_spec_button](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_download_spec_button.png)
+
+In case you've added new endpoints, the documentation will be automatically updated with the new information after a minute. The **Download API Specification** button is inactive during the documentation update process and becomes available again after one minute. There is a notification about this at the top of the page:
+
+![deapi_generation_in_progress](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_generation_in_progress.png)
 
 ## Next steps
 
-[How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)
+[Send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html)

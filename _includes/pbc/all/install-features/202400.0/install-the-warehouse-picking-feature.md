@@ -29,13 +29,15 @@ composer require spryker-feature/warehouse-picking: "{{page.version}}" --update-
 
 Make sure that the following modules have been installed:
 
-| MODULE                          | EXPECTED DIRECTORY                                 |
-|---------------------------------|----------------------------------------------------|
-| PickingList                     | vendor/spryker/picking-list                        |
-| PickingListExtension            | vendor/spryker/picking-list-extension              |
-| PickingListPushNotification     | vendor/spryker/picking-lists-push-notification     |
-| PickingListsBackendApi          | vendor/spryker/picking-lists-backend-api           |
-| PickingListsBackendApiExtension | vendor/spryker/picking-lists-backend-api-extension |
+| MODULE                           | EXPECTED DIRECTORY                                  |
+|----------------------------------|-----------------------------------------------------|
+| PickingList                      | vendor/spryker/picking-list                         |
+| PickingListExtension             | vendor/spryker/picking-list-extension               |
+| PickingListPushNotification      | vendor/spryker/picking-list-push-notification       |
+| PickingListsBackendApi           | vendor/spryker/picking-lists-backend-api            |
+| PickingListsBackendApiExtension  | vendor/spryker/picking-lists-backend-api-extension  |
+| PickingListsUsersBackendApi      | vendor/spryker/picking-lists-users-backend-api      |
+| PickingListsWarehousesBackendApi | vendor/spryker/picking-lists-warehouses-backend-api |
 
 Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
 
@@ -73,29 +75,40 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER                                       | TYPE     | EVENT   | PATH                                                            |
-|------------------------------------------------|----------|---------|-----------------------------------------------------------------|
-| PickingListCriteria                            | class    | created | src/Generated/Shared/Transfer/PickingListCriteria               |
-| PickingListConditions                          | class    | created | src/Generated/Shared/Transfer/PickingListConditions             |
-| PickingListCollection                          | class    | created | src/Generated/Shared/Transfer/PickingListCollection             |
-| PickingList                                    | class    | created | src/Generated/Shared/Transfer/PickingList                       |
-| PickingListItem                                | class    | created | src/Generated/Shared/Transfer/PickingListItem                   |
-| PickingListCollectionRequest                   | class    | created | src/Generated/Shared/Transfer/PickingListCollectionRequest      |
-| PickingListCollectionResponse                  | class    | created | src/Generated/Shared/Transfer/PickingListCollectionResponse     |
-| GeneratePickingListsRequest                    | class    | created | src/Generated/Shared/Transfer/GeneratePickingListsRequest       |
-| PickingListOrderItemGroup                      | class    | created | src/Generated/Shared/Transfer/PickingListOrderItemGroup         |
-| StockCollection                                | class    | created | src/Generated/Shared/Transfer/StockCollection                   |
-| StockConditions                                | class    | created | src/Generated/Shared/Transfer/StockConditions                   |
-| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
-| ApiPickingListAttributes                       | class    | created | src/Generated/Shared/Transfer/ApiPickingListAttributes          |
-| ApiPickingListItemAttributes                   | class    | created | src/Generated/Shared/Transfer/ApiPickingListItemAttributes      |
-| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
-| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
-| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
-| Item.uuid                                      | property | created | src/Generated/Shared/Transfer/Item                              |
-| User.uuid                                      | property | created | src/Generated/Shared/Transfer/User                              |
-| Stock.pickingListStrategy                      | property | created | src/Generated/Shared/Transfer/Stock                             |
-| PushNotificationCollectionRequest.pickingLists | property | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequest |
+| TRANSFER                                       | TYPE     | EVENT   | PATH                                                                          |
+|------------------------------------------------|----------|---------|-------------------------------------------------------------------------------|
+| PickingListCriteria                            | class    | created | src/Generated/Shared/Transfer/PickingListCriteriaTransfer                     |
+| PickingListConditions                          | class    | created | src/Generated/Shared/Transfer/PickingListConditionsTransfer                   |
+| PickingListCollection                          | class    | created | src/Generated/Shared/Transfer/PickingListCollectionTransfer                   |
+| PickingList                                    | class    | created | src/Generated/Shared/Transfer/PickingListTransfer                             |
+| PickingListItemCriteria                        | class    | created | src/Generated/Shared/Transfer/PickingListItemCriteriaTransfer                 |
+| PickingListItemConditions                      | class    | created | src/Generated/Shared/Transfer/PickingListItemConditionsTransfer               |
+| PickingListItemCollection                      | class    | created | src/Generated/Shared/Transfer/PickingListItemCollectionTransfer               |
+| PickingListItem                                | class    | created | src/Generated/Shared/Transfer/PickingListItemTransfer                         |
+| PickingListCollectionRequest                   | class    | created | src/Generated/Shared/Transfer/PickingListCollectionRequestTransfer            |
+| PickingListCollectionResponse                  | class    | created | src/Generated/Shared/Transfer/PickingListCollectionResponseTransfer           |
+| GeneratePickingListsRequest                    | class    | created | src/Generated/Shared/Transfer/GeneratePickingListsRequestTransfer             |
+| PickingListOrderItemGroup                      | class    | created | src/Generated/Shared/Transfer/PickingListOrderItemGroupTransfer               |
+| PickingListGenerationFinishedRequest           | class    | created | src/Generated/Shared/Transfer/PickingListGenerationFinishedRequestTransfer    |
+| PickingListGenerationFinishedResponse          | class    | created | src/Generated/Shared/Transfer/PickingListGenerationFinishedResponseTransfer   |
+| PickingStartedRequest                          | class    | created | src/Generated/Shared/Transfer/PickingStartedRequestTransfer                   |
+| PickingStartedResponse                         | class    | created | src/Generated/Shared/Transfer/PickingStartedResponseTransfer                  |
+| PickingFinishedRequest                         | class    | created | src/Generated/Shared/Transfer/PickingFinishedRequestTransfer                  |
+| PickingFinishedResponse                        | class    | created | src/Generated/Shared/Transfer/PickingFinishedResponseTransfer                 |
+| StockCollection                                | class    | created | src/Generated/Shared/Transfer/StockCollectionTransferTransfer                 |
+| StockConditions                                | class    | created | src/Generated/Shared/Transfer/StockConditionsTransferTransfer                 |
+| PickingListsRequestBackendApiAttributes        | class    | created | src/Generated/Shared/Transfer/PickingListsRequestBackendApiAttributesTransfer |
+| PickingListsBackendApiAttributes               | class    | created | src/Generated/Shared/Transfer/PickingListsBackendApiAttributesTransfer        |
+| PickingListItemsBackendApiAttributes           | class    | created | src/Generated/Shared/Transfer/PickingListItemsBackendApiAttributesTransfer    |
+| OrderItemsBackendApiAttributes                 | class    | created | src/Generated/Shared/Transfer/OrderItemsBackendApiAttributesTransfer          |
+| UsersBackendApiAttributes                      | class    | created | src/Generated/Shared/Transfer/UsersBackendApiAttributesTransfer               |
+| UserResourceCollection                         | class    | created | src/Generated/Shared/Transfer/UserResourceCollectionTransfer                  |
+| WarehousesBackendApiAttributes                 | class    | created | src/Generated/Shared/Transfer/WarehousesBackendApiAttributesTransfer          |
+| WarehouseResourceCollection                    | class    | created | src/Generated/Shared/Transfer/WarehouseResourceCollectionTransfer             |
+| Item.uuid                                      | property | created | src/Generated/Shared/Transfer/ItemTransfer                                    |
+| User.uuid                                      | property | created | src/Generated/Shared/Transfer/UserTransfer                                    |
+| Stock.pickingListStrategy                      | property | created | src/Generated/Shared/Transfer/StockTransfer                                   |
+| PushNotificationCollectionRequest.pickingLists | property | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequestTransfer       |
 
 {% endinfo_block %}
 
@@ -120,7 +133,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     public function getProtectedPaths(): array
     {
         return [
-               '/\/picking-lists.*/' => [
+            '/\/picking-lists.*/' => [
                 'isRegularExpression' => true,
                 'methods' => [
                     'patch',
@@ -144,51 +157,50 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
         xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
 >
 
-    <process name="DummyPicking">
-        <states>
-            <state name="picking list generation scheduled" display="oms.state.picking-list-generation-scheduled"/>
-            <state name="picking list generation started" display="oms.state.picking-list-generation-started"/>
-            <state name="ready for picking" display="oms.state.ready-for-picking"/>
-            <state name="picking started" display="oms.state.picking-started"/>
-            <state name="picking finished" display="oms.state.picking-done"/>
-        </states>
+   <process name="DummyPicking">
+      <states>
+         <state name="picking list generation scheduled" display="oms.state.confirmed"/>
+         <state name="picking list generation started" display="oms.state.confirmed"/>
+         <state name="ready for picking" display="oms.state.confirmed"/>
+         <state name="picking started" display="oms.state.confirmed"/>
+         <state name="picking finished" display="oms.state.confirmed"/>
+      </states>
 
-        <transitions>
-            <transition happy="true">
-                <source>picking list generation scheduled</source>
-                <target>picking list generation started</target>
-                <event>generate picking lists</event>
-            </transition>
+      <transitions>
+         <transition happy="true">
+            <source>picking list generation scheduled</source>
+            <target>picking list generation started</target>
+            <event>generate picking lists</event>
+         </transition>
 
-            <transition happy="true" condition="PickingList/isPickingListGenerationFinished">
-                <source>picking list generation started</source>
-                <target>ready for picking</target>
-                <event>prepare for picking</event>
-            </transition>
+         <transition happy="true" condition="PickingList/isPickingListGenerationFinished">
+            <source>picking list generation started</source>
+            <target>ready for picking</target>
+            <event>prepare for picking</event>
+         </transition>
 
-            <transition happy="true" condition="PickingList/isPickingStarted">
-                <source>ready for picking</source>
-                <target>picking started</target>
-                <event>start picking</event>
-            </transition>
+         <transition happy="true" condition="PickingList/isPickingStarted">
+            <source>ready for picking</source>
+            <target>picking started</target>
+            <event>start picking</event>
+         </transition>
 
-            <transition happy="true" condition="PickingList/isPickingFinished">
-                <source>picking started</source>
-                <target>picking finished</target>
-                <event>finish picking</event>
-            </transition>
-        </transitions>
+         <transition happy="true" condition="PickingList/isPickingFinished">
+            <source>picking started</source>
+            <target>picking finished</target>
+            <event>finish picking</event>
+         </transition>
+      </transitions>
 
-        <events>
-            <event name="picking list generation schedule" timeout="1 second" manual="true"/>
-            <event name="generate picking lists" onEnter="true" command="PickingList/GeneratePickingLists"/>
-            <event name="prepare for picking" timeout="1 second" manual="true"/>
-            <event name="start picking" timeout="1 second" manual="true"/>
-            <event name="finish picking" timeout="1 second" manual="true"/>
-        </events>
-    </process>
+      <events>
+         <event name="picking list generation schedule" manual="true"/>
+         <event name="generate picking lists" onEnter="true" command="PickingList/GeneratePickingLists"/>
+         <event name="prepare for picking" timeout="1 second" manual="true"/>
+         <event name="start picking" timeout="1 second" manual="true"/>
+         <event name="finish picking" timeout="1 second" manual="true"/>
+      </events>
+   </process>
 </statemachine>
-
 ```
 
    2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
@@ -330,22 +342,10 @@ Make sure the defined picking list strategies are applied correctly by finding t
 1. Append glossary according to your configuration:
 
 ```csv
-oms.state.picking-done,Picking done,en_US
-oms.state.picking-done,Picking erledigt,de_DE
-oms.state.picking-started,Picking started,en_US
-oms.state.picking-started,Picking gestartet,de_DE
-oms.state.ready-for-picking,Ready for picking,en_US
-oms.state.ready-for-picking,Bereit zum Picking,de_DE
-oms.state.picking-list-generation-scheduled,Picking list generation scheduled,en_US
-oms.state.picking-list-generation-scheduled,Packlistengenerierung geplant,de_DE
-oms.state.picking-list-generation-started,Picking list generation started,en_US
-oms.state.picking-list-generation-started,Packlistengenerierung gestartet,de_DE
-picking_list.validation.wrong_action_attribute,Wrong action attribute.,en_US
-picking_list.validation.wrong_action_attribute,Falsches Aktionsattribut.,de_DE
 picking_list.validation.wrong_request_body,Wrong request body.,en_US
 picking_list.validation.wrong_request_body,Falscher Anforderungstext.,de_DE
-picking_list.validation.picked_by_another_user,Picked by another user.,en_US
-picking_list.validation.picked_by_another_user,Wird von einem anderen User kommissioniert.,de_DE
+picking_list.validation.picked_by_another_user,Picklist is already being picked by another user.,en_US
+picking_list.validation.picked_by_another_user,Die Kommisionierliste wird bereits von einem anderen Nutzer bearbeitet.,de_DE
 picking_list.validation.picking_list_entity_not_found,The picking list entity was not found.,en_US
 picking_list.validation.picking_list_entity_not_found,Picking List Entität wurde nicht gefunden.,de_DE
 picking_list.validation.picking_list_item_entity_not_found,The picking list item entity was not found.,en_US
@@ -378,17 +378,18 @@ console data:import glossary
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                    | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                                     |
-|-----------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| GeneratePickingListsCommandByOrderPlugin                  | Generates the picking lists based on warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingFinishedConditionPlugin                          | Checks if all picking lists are finished for the given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingListGenerationFinishedConditionPlugin            | Checks if picking lists generation is finished for the given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingStartedConditionPlugin                           | Checks if picking of at least one picking list is started for the given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| PushNotificationPickingListPostCreatePlugin               | Creates a push notification after creating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
-| PushNotificationPickingListPostUpdatePlugin               | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
-| WarehouseUserPushNotificationSubscriptionValidatorPlugin  | Validates whether the user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
+| PLUGIN                                                   | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                                     |
+|----------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| GeneratePickingListsCommandByOrderPlugin                 | Generates the picking lists based on warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingFinishedConditionPlugin                         | Checks if all picking lists are finished for the given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingListGenerationFinishedConditionPlugin           | Checks if picking lists generation is finished for the given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingStartedConditionPlugin                          | Checks if picking of at least one picking list is started for the given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| UnassignPickingListUserPostSavePlugin                    | Removes user assignment from picking lists.                                          |               | Spryker\Zed\PickingList\Communication\Plugin\User                             |
+| PushNotificationPickingListPostCreatePlugin              | Creates a push notification after creating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
+| PushNotificationPickingListPostUpdatePlugin              | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
+| WarehouseUserPushNotificationSubscriptionValidatorPlugin | Validates whether the user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
-<details open><summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -511,7 +512,6 @@ use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
 
 class UserDependencyProvider extends SprykerUserDependencyProvider
 {
-
     /**
      * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserPostSavePluginInterface>
      */
@@ -522,7 +522,6 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
         ];
     }
 }
-
 ```
 
 2. Enable the demo multi-shipment picking strategy plugin:
@@ -533,7 +532,7 @@ For the demo purpose, we propose the example of the multi-shipment picking strat
 |-------------------------------------------------|----------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
 | MultiShipmentPickingListGeneratorStrategyPlugin | Generates the picking lists based on warehouse strategy. |               | Spryker\Zed\PickingListMultiShipmentPickingStrategyExample\Communication\Plugin\PickingList |
 
-**\Pyz\Zed\PickingList\PickingListDependencyProvider.php**
+**src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
 
 ```php
 <?php
@@ -560,12 +559,14 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 
 3. To enable the Backend API, register these plugins:
 
-| PLUGIN                                                          | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                                                          |
-|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
-| PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                                    |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
-| PickingListStartPickingBackendResourcePlugin                    | Registers the `picking-lists` resources `start-picking` resource.                          |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
-| PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                               |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                               |
-| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds the `picking-list-items` resources as relationships to the `picking-lists` resources. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| PLUGIN                                                          | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                                                                    |
+|-----------------------------------------------------------------|------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------|
+| PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                            |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
+| PickingListStartPickingBackendResourcePlugin                    | Registers the `picking-lists` resources `start-picking` resource.                  |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
+| PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                       |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
+| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds `picking-list-items` resources as relationships to `picking-lists` resources. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector           |
+| UsersByPickingListsBackendResourceRelationshipPlugin            | Adds `users` resources as a relationship to `picking-lists` resources.             |               | Spryker\Glue\PickingListsUsersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector      |
+| WarehousesByPickingListsBackendResourceRelationshipPlugin       | Adds `warehouses` resources as a relationships to `picking-lists` resources.       |               | Spryker\Glue\PickingListsWarehousesBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -582,7 +583,7 @@ use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication\Picking
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
      */
     protected function getResourcePlugins(): array
     {
@@ -593,7 +594,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
         ];
     }
 }
-
 ```
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
@@ -607,6 +607,8 @@ use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBac
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
 use Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\PickingListItemsByPickingListsBackendResourceRelationshipPlugin;
+use Spryker\Glue\PickingListsUsersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\UsersByPickingListsBackendResourceRelationshipPlugin;
+use Spryker\Glue\PickingListsWarehousesBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\WarehousesByPickingListsBackendResourceRelationshipPlugin;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {
@@ -621,6 +623,16 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
         $resourceRelationshipCollection->addRelationship(
             PickingListsBackendApiConfig::RESOURCE_PICKING_LISTS,
             new PickingListItemsByPickingListsBackendResourceRelationshipPlugin(),
+        );
+
+        $resourceRelationshipCollection->addRelationship(
+            PickingListsBackendApiConfig::RESOURCE_PICKING_LISTS,
+            new UsersByPickingListsBackendResourceRelationshipPlugin(),
+        );
+
+        $resourceRelationshipCollection->addRelationship(
+            PickingListsBackendApiConfig::RESOURCE_PICKING_LISTS,
+            new WarehousesByPickingListsBackendResourceRelationshipPlugin(),
         );
 
         return $resourceRelationshipCollection;
@@ -642,6 +654,10 @@ Make sure that you can send the following requests:
 * To get a collection of available picking lists for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
 * To get a collection of available picking lists with picking list items for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
+
+* To get a collection of available picking lists with included users resources for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
+
+* To get a collection of available picking lists with included warehouses resources for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
 
 * To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 

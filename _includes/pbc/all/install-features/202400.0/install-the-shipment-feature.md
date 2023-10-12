@@ -43,6 +43,7 @@ Make sure that the following modules have been installed:
 | ShipmentDataImport      | vendor/spryker/shipment-data-import       |
 | ShipmentGui             | vendor/spryker/shipment-gui               |
 | Shipment                | vendor/spryker/shipment                   |
+| ShipmentsBackendApi     | vendor/spryker/shipments-backend-api      |
 | ShipmentType            | vendor/spryker/shipment-type              |
 | ShipmentTypeDataImport  | vendor/spryker/shipment-type-data-import  |
 | ShipmentTypesRestApi    | vendor/spryker/shipment-types-rest-api    |
@@ -55,9 +56,10 @@ Make sure that the following modules have been installed:
 
 1. Add the following configuration to your project:
 
-| CONFIGURATION                           | SPECIFICATION                                             | NAMESPACE            |
-|-----------------------------------------|-----------------------------------------------------------|----------------------|
-| ShipmentConfig::getShipmentHashFields() | Used to group items by shipment using shipment type uuid. | Pyz\Service\Shipment |
+| CONFIGURATION                                                | SPECIFICATION                                                                                                                                                                         | NAMESPACE            |
+|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| ShipmentConfig::getShipmentHashFields()                      | Used to group items by shipment using shipment type uuid.                                                                                                                             | Pyz\Service\Shipment |
+| ShipmentConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation in `ShipmentFacade::expandQuoteWithShipmentGroups()` method. | Pyz\Zed\Shipment     |
 
 **src/Pyz/Service/Shipment/ShipmentConfig.php**
 
@@ -77,6 +79,27 @@ class ShipmentConfig extends SprykerShipmentConfig
     public function getShipmentHashFields(): array
     {
         return array_merge(parent::getShipmentHashFields(), [ShipmentTransfer::SHIPMENT_TYPE_UUID]);
+    }
+}
+```
+
+**src/Pyz/Zed/Shipment/ShipmentConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Shipment;
+
+use Spryker\Zed\Shipment\ShipmentConfig as SprykerShipmentConfig;
+
+class ShipmentConfig extends SprykerShipmentConfig
+{
+    /**
+     * @return bool
+     */
+    public function shouldExecuteQuotePostRecalculationPlugins(): bool
+    {
+        return false;
     }
 }
 ```
@@ -109,18 +132,28 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 ```
 
 ### 3) To enable the Storefront API, register the following plugins:
-| PLUGIN                           | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                |
-|----------------------------------|------------------------------------------|---------------|----------------------------------------------------------|
-| ShipmentTypesResourceRoutePlugin | Registers the `shipment-types` resource. |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication |
+
+| PLUGIN                                                   | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                             |
+|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
+| ShipmentTypesResourceRoutePlugin                         | Registers the `shipment-types` resource.                                                                 |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds the `shipment-types` resources as a relationship to `shipment-methods` resources.                       |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps the selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
+| ItemShipmentTypeQuoteMapperPlugin                        | Maps shipment types taken from shipment methods to `Quote.items.shipmentType`.                           |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesByShipmentMethodsResourceRelationshipPlugin;
 use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesResourceRoutePlugin;
+use Spryker\Glue\ShipmentsRestApi\ShipmentsRestApiConfig;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -133,16 +166,455 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         new ShipmentTypesResourceRoutePlugin(),
     }
+    
+    /**
+     * {@inheritDoc}
+     *
+     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            ShipmentsRestApiConfig::RESOURCE_SHIPMENT_METHODS,
+            new ShipmentTypesByShipmentMethodsResourceRelationshipPlugin(),
+        );
+        
+        return $resourceRelationshipCollection;
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+- Make sure that you can send the following requests:
 
 * `GET https://glue.mysprykershop.com/shipment-types`
 * `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}`
 
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+- Make sure you have the `shipment-types` resource as a relationship to `shipment-methods` when you send a request with the multi-shipment request structure.
+
+`POST https://glue-backend.mysprykershop.com/checkout-data?include=shipments,shipment-methods,shipment-types`
+<details>
+  <summary markdown='span'>Request body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "attributes": {
+              "customer": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin"
+              },
+              "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
+              "payments": [
+                  {
+                      "paymentMethodName": "credit card",
+                      "paymentProviderName": "DummyPayment"
+                  }
+              ],
+              "shipments": [
+                  {
+                      "items": [
+                          "139_24699831_c45147dee729311ef5b5c3003946c48f"
+                      ],
+                      "shippingAddress": {
+                          "salutation": "Mr",
+                          "email": "spencor.hopkin@spryker.com",
+                          "firstName": "Spencor",
+                          "lastName": "Hopkin",
+                          "address1": "West road",
+                          "address2": "212",
+                          "address3": "",
+                          "zipCode": "61000",
+                          "city": "Berlin",
+                          "iso2Code": "DE",
+                          "company": "Spryker",
+                          "isDefaultShipping": true,
+                          "isDefaultBilling": true
+                      },
+                      "idShipmentMethod": 1,
+                      "requestedDeliveryDate": null
+                  }
+              ]
+          }
+      }
+  }
+  ```
+</details>
+
+<details>
+  <summary markdown='span'>Response body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "id": null,
+          "attributes": {
+              "addresses": [],
+              "paymentProviders": [],
+              "shipmentMethods": [],
+              "selectedShipmentMethods": [],
+              "selectedPaymentMethods": [],
+              "selectedServicePoints": [],
+              "selectedShipmentTypes": []
+          },
+          "links": {
+              "self": "http://glue.de.spryker.local/checkout-data?include=shipments,shipment-methods,shipment-types"
+          },
+          "relationships": {
+              "shipments": {
+                  "data": [
+                      {
+                          "type": "shipments",
+                          "id": "d96343e971c91e3ecb098976d1e2cc9b"
+                      }
+                  ]
+              }
+          }
+      },
+      "included": [
+          {
+              "type": "shipment-types",
+              "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3",
+              "attributes": {
+                  "name": "Delivery",
+                  "key": "delivery"
+              },
+              "links": {
+                  "self": "http://glue.de.spryker.local/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
+              }
+          },
+          {
+              "type": "shipment-methods",
+              "id": "1",
+              "attributes": {
+                  "name": "Standard",
+                  "carrierName": "Spryker Dummy Shipment",
+                  "deliveryTime": null,
+                  "price": 490,
+                  "currencyIsoCode": "EUR"
+              },
+              "links": {
+                  "self": "http://glue.de.spryker.local/shipment-methods/1"
+              },
+              "relationships": {
+                  "shipment-types": {
+                      "data": [
+                          {
+                              "type": "shipment-types",
+                              "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3"
+                          }
+                      ]
+                  }
+              }
+          },
+          {
+              "type": "shipments",
+              "id": "d96343e971c91e3ecb098976d1e2cc9b",
+              "attributes": {
+                  "items": [
+                      "139_24699831_eb160de1de89d9058fcb0b968dbbbd68"
+                  ],
+                  "requestedDeliveryDate": null,
+                  "shippingAddress": {
+                      "id": null,
+                      "salutation": "Mr",
+                      "firstName": "Spencor",
+                      "lastName": "Hopkin",
+                      "address1": "West road",
+                      "address2": "212",
+                      "address3": "",
+                      "zipCode": "61000",
+                      "city": "Berlin",
+                      "country": null,
+                      "iso2Code": "DE",
+                      "company": "Spryker",
+                      "phone": null,
+                      "isDefaultBilling": true,
+                      "isDefaultShipping": true,
+                      "idCompanyBusinessUnitAddress": null
+                  },
+                  "selectedShipmentMethod": {
+                      "id": 1,
+                      "name": "Standard",
+                      "carrierName": "Spryker Dummy Shipment",
+                      "price": 490,
+                      "taxRate": "19.00",
+                      "deliveryTime": null,
+                      "currencyIsoCode": "EUR"
+                  }
+              },
+              "links": {
+                  "self": "http://glue.de.spryker.local/shipments/d96343e971c91e3ecb098976d1e2cc9b"
+              },
+              "relationships": {
+                  "shipment-methods": {
+                      "data": [
+                          {
+                              "type": "shipment-methods",
+                              "id": "1"
+                          }
+                      ]
+                  }
+              }
+          }
+      ]
+  }
+  ```
+</details>
+{% endinfo_block %}
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Glue\CheckoutRestApi;
+
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi\SelectedShipmentTypesCheckoutDataResponseMapperPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataResponseMapperPluginInterface>
+     */
+    protected function getCheckoutDataResponseMapperPlugins(): array
+    {
+        return [
+            new SelectedShipmentTypesCheckoutDataResponseMapperPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+- Make sure you have the `selectedShipmentTypes` field in the response when you send a request with the single-shipment request structure.
+
+`POST https://glue-backend.mysprykershop.com/checkout-data`
+<details>
+  <summary markdown='span'>Request body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "attributes": {
+              "customer": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin"
+              },
+              "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
+              "billingAddress": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin",
+                  "address1": "West road",
+                  "address2": "212",
+                  "address3": "",
+                  "zipCode": "61000",
+                  "city": "Berlin",
+                  "iso2Code": "DE",
+                  "company": "Spryker",
+                  "isDefaultShipping": true,
+                  "isDefaultBilling": true
+              },
+              "shippingAddress": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin",
+                  "address1": "West road",
+                  "address2": "212",
+                  "address3": "",
+                  "zipCode": "61000",
+                  "city": "Berlin",
+                  "iso2Code": "DE",
+                  "company": "Spryker",
+                  "isDefaultShipping": true,
+                  "isDefaultBilling": true
+              },
+              "payments": [
+                  {
+                      "paymentMethodName": "credit card",
+                      "paymentProviderName": "DummyPayment"
+                  }
+              ],
+              "shipment": {
+                  "idShipmentMethod": 1
+              }
+          }
+      }
+  }
+  ```
+</details>
+
+<details>
+  <summary markdown='span'>Response body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "id": null,
+          "attributes": {
+              "addresses": [],
+              "paymentProviders": [],
+              "shipmentMethods": [],
+              "selectedShipmentMethods": [
+                  {
+                      "id": 1,
+                      "name": "Standard",
+                      "carrierName": "Spryker Dummy Shipment",
+                      "price": 490,
+                      "taxRate": null,
+                      "deliveryTime": null,
+                      "currencyIsoCode": "EUR"
+                  }
+              ],
+              "selectedPaymentMethods": [],
+              "selectedServicePoints": [],
+              "selectedShipmentTypes": [
+                  {
+                      "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3",
+                      "name": "Delivery",
+                      "key": "delivery"
+                  }
+              ]
+          },
+          "links": {
+              "self": "http://glue.de.spryker.local/checkout-data"
+          }
+      }
+  }
+  ```
+</details>
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\CheckoutRestApi;
+
+use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi\ItemShipmentTypeQuoteMapperPlugin;
+use Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi\ShipmentTypeCheckoutDataValidatorPlugin;
+use Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi\ShipmentTypeReadCheckoutDataValidatorPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+/**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\QuoteMapperPluginInterface>
+     */
+    protected function getQuoteMapperPlugins(): array
+    {
+        return [
+            new ItemShipmentTypeQuoteMapperPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataValidatorPluginInterface>
+     */
+    protected function getCheckoutDataValidatorPlugins(): array
+    {
+        return [
+            new ShipmentTypeCheckoutDataValidatorPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\ReadCheckoutDataValidatorPluginInterface>
+     */
+    protected function getReadCheckoutDataValidatorPlugins(): array
+    {
+        return [
+            new ShipmentTypeReadCheckoutDataValidatorPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Deactivate one of the shipment types and send a request with a corresponding shipment method: 
+`POST https://glue-backend.mysprykershop.com/checkout-data`
+<details>
+  <summary markdown='span'>Request body example</summary>
+  ```json
+    {
+        "data": {
+            "type": "checkout-data",
+            "attributes": {
+                "customer": {
+                    "salutation": "Mr",
+                    "email": "spencor.hopkin@spryker.com",
+                    "firstName": "Spencor",
+                    "lastName": "Hopkin"
+                },
+                "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
+                "payments": [
+                    {
+                        "paymentMethodName": "credit card",
+                        "paymentProviderName": "DummyPayment"
+                    }
+                ],
+                "shipments": [
+                    {
+                        "items": [
+                            "139_24699831_c45147dee729311ef5b5c3003946c48f"
+                        ],
+                        "shippingAddress": {
+                            "salutation": "Mr",
+                            "email": "spencor.hopkin@spryker.com",
+                            "firstName": "Spencor",
+                            "lastName": "Hopkin",
+                            "address1": "West road",
+                            "address2": "212",
+                            "address3": "",
+                            "zipCode": "61000",
+                            "city": "Berlin",
+                            "iso2Code": "DE",
+                            "company": "Spryker",
+                            "isDefaultShipping": true,
+                            "isDefaultBilling": true
+                        },
+                        "idShipmentMethod": 1,
+                        "requestedDeliveryDate": null
+                    }
+                ]
+            }
+        }
+    }
+  ```
+</details>
+
+<details>
+  <summary markdown='span'>Response body example</summary>
+    ```json
+    {
+        "errors": [
+            {
+                "code": "1101",
+                "status": 422,
+                "detail": "Selected delivery type \"Delivery\" is not available."
+            }
+        ]
+    }
+    ```
+</details>
 {% endinfo_block %}
 
 ### 4) Set up database schema and transfer objects
@@ -186,42 +658,51 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY                       | TYPE   | EVENT   |
-|---------------------------------------|--------|---------|
-| spy_sales_shipment_type               | table  | created |
-| spy_shipment_method_store             | table  | created |
-| spy_shipment_type                     | table  | created |
-| spy_shipment_type_storage             | table  | created |
-| spy_shipment_type_store               | table  | created |
-| spy_sales_shipment.fk_shipment_type   | column | created |
-| spy_shipment_method.fk_shipment_type  | column | created |
+| DATABASE ENTITY                      | TYPE   | EVENT   |
+|--------------------------------------|--------|---------|
+| spy_sales_shipment_type              | table  | created |
+| spy_shipment_method_store            | table  | created |
+| spy_shipment_type                    | table  | created |
+| spy_shipment_type_storage            | table  | created |
+| spy_shipment_type_store              | table  | created |
+| spy_sales_shipment.fk_shipment_type  | column | created |
+| spy_sales_shipment.uuid              | column | created |
+| spy_shipment_carrier.uuid            | column | created |
+| spy_shipment_method.fk_shipment_type | column | created |
+| spy_shipment_method.uuid             | column | created |
+| spy_shipment_method_price.uuid       | column | created |
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                | TYPE     | EVENT   | PATH                                                                  |
-|-----------------------------------------|----------|---------|-----------------------------------------------------------------------|
-| ShipmentTransfer                        | class    | created | src/Generated/Shared/Transfer/ShipmentTransfer                        |
-| StoreTransfer                           | class    | created | src/Generated/Shared/Transfer/StoreTransfer                           |
-| DataImporterConfigurationTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer       |
-| DataImporterReaderConfigurationTransfer | class    | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer |
-| DataImporterReportTransfer              | class    | created | src/Generated/Shared/Transfer/DataImporterReportTransfer              |
-| DataImporterReportMessageTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterReportMessageTransfer       |
-| TotalsTransfer                          | class    | created | src/Generated/Shared/Transfer/TotalsTransfer                          |
-| ShipmentTypeCollectionTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer          |
-| ShipmentTypeTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                    |
-| ShipmentTypeCriteriaTransfer            | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer            |
-| ShipmentTypeConditionsTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer          |
-| ShipmentTypeStorageCollectionTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer   |
-| ShipmentTypeStorageTransfer             | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer             |
-| ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer     |
-| ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer   |
-| ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer        |
-| SalesShipmentTypeTransfer               | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer               |
-| RestShipmentTypesAttributesTransfer     | class    | created | src/Generated/Shared/Transfer/RestShipmentTypesAttributesTransfer     |
-| RestErrorMessageTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                |
-| ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                  |
-| ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                        |
-| ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                            |
+| TRANSFER                                | TYPE     | EVENT   | PATH                                                                     |
+|-----------------------------------------|----------|---------|--------------------------------------------------------------------------|
+| ShipmentTransfer                        | class    | created | src/Generated/Shared/Transfer/ShipmentTransfer                           |
+| StoreTransfer                           | class    | created | src/Generated/Shared/Transfer/StoreTransfer                              |
+| DataImporterConfigurationTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterConfigurationTransfer          |
+| DataImporterReaderConfigurationTransfer | class    | created | src/Generated/Shared/Transfer/DataImporterReaderConfigurationTransfer    |
+| DataImporterReportTransfer              | class    | created | src/Generated/Shared/Transfer/DataImporterReportTransfer                 |
+| DataImporterReportMessageTransfer       | class    | created | src/Generated/Shared/Transfer/DataImporterReportMessageTransfer          |
+| TotalsTransfer                          | class    | created | src/Generated/Shared/Transfer/TotalsTransfer                             |
+| SalesShipmentCriteria                   | class    | created | src/Generated/Shared/Transfer/SalesShipmentCriteriaTransfer              |
+| SalesShipmentConditions                 | class    | created | src/Generated/Shared/Transfer/SalesShipmentConditionsTransfer            |
+| SalesShipmentCollection                 | class    | created | src/Generated/Shared/Transfer/SalesShipmentCollectionTransfer            |
+| ShipmentTypeCollectionTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer             |
+| ShipmentTypeTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                       |
+| ShipmentTypeCriteriaTransfer            | class    | created | src/Generated/Shared/Transfer/ShipmentTypeCriteriaTransfer               |
+| ShipmentTypeConditionsTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentTypeConditionsTransfer             |
+| ShipmentTypeStorageCollectionTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCollectionTransfer      |
+| ShipmentTypeStorageTransfer             | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                |
+| ShipmentTypeStorageCriteriaTransfer     | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageCriteriaTransfer        |
+| ShipmentTypeStorageConditionsTransfer   | class    | created | src/Generated/Shared/Transfer/ShipmentTypeStorageConditionsTransfer      |
+| ShipmentMethodCollectionTransfer        | class    | created | src/Generated/Shared/Transfer/ShipmentMethodCollectionTransfer           |
+| SalesShipmentTypeTransfer               | class    | created | src/Generated/Shared/Transfer/SalesShipmentTypeTransfer                  |
+| RestShipmentTypesAttributesTransfer     | class    | created | src/Generated/Shared/Transfer/RestShipmentTypesAttributesTransfer        |
+| SalesShipmentResourceCollection         | class    | created | src/Generated/Shared/Transfer/SalesShipmentResourceCollectionTransfer    |
+| SalesShipmentsBackendApiAttributes      | class    | created | src/Generated/Shared/Transfer/SalesShipmentsBackendApiAttributesTransfer |
+| RestErrorMessageTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer                   |
+| ShipmentMethodTransfer.shipmentType     | property | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                     |
+| ShipmentTransfer.shipmentTypeUuid       | property | created | src/Generated/Shared/Transfer/ShipmentTransfer                           |
+| ItemTransfer.shipmentType               | property | created | src/Generated/Shared/Transfer/ItemTransfer                               |
 
 {% endinfo_block %}
 
@@ -246,6 +727,8 @@ shipment_type.validation.shipment_type_name_invalid_length,A delivery type name 
 shipment_type.validation.shipment_type_name_invalid_length,Der Lieferart-Name muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
 shipment_type.validation.store_does_not_exist,A store with the name ‘%name%’ does not exist.,en_US
 shipment_type.validation.store_does_not_exist,Store mit dem Namen ‘%name%’ existiert nicht.,de_DE
+shipment_types_rest_api.error.shipment_type_not_available,Selected delivery type "%name%" is not available.,en_US
+shipment_types_rest_api.error.shipment_type_not_available,Die ausgewählte Lieferart "%name%" ist nicht verfügbar.,de_DE
 ```
 
 2. Import data:
@@ -1065,9 +1548,10 @@ Make sure that when you place an order, the selected shipment type is persisted 
 
 7. To enable the Backend API, register these plugins:
 
-| PLUGIN                             | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                             |
-|------------------------------------|------------------------------------------|---------------|-----------------------------------------------------------------------|
-| ShipmentTypesBackendResourcePlugin | Registers the `shipment-types` resource. |               | Spryker\Glue\ShipmentTypesBackendApi\Plugin\GlueBackendApiApplication |
+| PLUGIN                                                        | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                       |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------------|
+| ShipmentTypesBackendResourcePlugin                            | Registers the `shipment-types` resource.                                              |               | Spryker\Glue\ShipmentTypesBackendApi\Plugin\GlueBackendApiApplication                           |
+| SalesShipmentsByPickingListsBackendResourceRelationshipPlugin | Adds `sales-shipments` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\ShipmentsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -1091,12 +1575,43 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
         ];
     }
 }
+```
 
+**src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
+
+use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
+use Spryker\Glue\ShipmentsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\SalesShipmentsByPickingListsBackendResourceRelationshipPlugin;
+
+class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
+{
+    /**
+     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            PickingListsBackendApiConfig::RESOURCE_PICKING_LIST_ITEMS,
+            new SalesShipmentsByPickingListsBackendResourceRelationshipPlugin(),
+        );
+
+        return $resourceRelationshipCollection;
+    }
+}
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+1. Make sure that you can send the following requests:
 
 * `GET https://glue-backend.mysprykershop.com/shipment-types`
 * `GET https://glue-backend.mysprykershop.com/shipment-types/{% raw %}{{{% endraw %}shipment-types-uuid{% raw %}}{{% endraw %}`
@@ -1129,6 +1644,79 @@ Make sure that you can send the following requests:
     }
     ```
 
+2. Make sure you have a `sales-shipments` resource as a relationship to `picking-list-items` when you do a request.
+
+`GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-shipments`
+<details>
+  <summary markdown='span'>Response body example</summary>
+```json
+{
+    "data": {
+        "id": "14baa0f3-e6e7-5aa8-bc6c-c02ec39ca77b",
+        "type": "picking-lists",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-03-23 15:47:07.000000",
+            "updatedAt": "2023-03-30 12:47:45.000000"
+        },
+        "relationships": {
+            "picking-list-items": {
+                "data": [
+                    {
+                        "id": "65bb3aec-0a45-5ec6-9b12-bbca6551d87f",
+                        "type": "picking-list-items"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/14baa0f3-e6e7-5aa8-bc6c-c02ec39ca77b?include=picking-list-items,sales-shipments"
+        }
+    },
+    "included": [
+        {
+            "id": "84935e86-ef86-507f-9c23-54942486d8cb",
+            "type": "sales-shipments",
+            "attributes": {
+                "requestedDeliveryDate": "2023-04-20"
+            },
+            "links": {
+                "self": "https://glue-backend.mysprykershop.com/sales-shipments/84935e86-ef86-507f-9c23-54942486d8cb?include=picking-list-items,sales-shipments"
+            }
+        },
+        {
+            "id": "65bb3aec-0a45-5ec6-9b12-bbca6551d87f",
+            "type": "picking-list-items",
+            "attributes": {
+                "quantity": 1,
+                "numberOfPicked": 1,
+                "numberOfNotPicked": 0,
+                "orderItem": {
+                    "uuid": "31e21001-e544-5533-9754-51331c8c9ac5",
+                    "sku": "141_29380410",
+                    "quantity": 1,
+                    "name": "Asus Zenbook US303UB",
+                    "amountSalesUnit": null
+                }
+            },
+            "relationships": {
+                "sales-shipments": {
+                    "data": [
+                        {
+                            "id": "84935e86-ef86-507f-9c23-54942486d8cb",
+                            "type": "sales-shipments"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/65bb3aec-0a45-5ec6-9b12-bbca6551d87f?include=picking-list-items,sales-shipments"
+            }
+        }
+    ]
+}
+```
+</details>
 {% endinfo_block %}
 
 ## Install feature frontend

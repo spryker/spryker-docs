@@ -6,10 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda
 originalArticleId: 55ba509a-6fe7-480d-914f-1bbcf9e84d2f
 redirect_from:
-  - /2021080/docs/econda
-  - /2021080/docs/en/econda
-  - /docs/econda
-  - /docs/en/econda
   - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
   - /docs/scos/user/technology-partners/202307.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
 ---

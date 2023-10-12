@@ -1,6 +1,6 @@
 ---
-title: Spryker Middleware
-description: Spryker Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system.
+title: Spryker LINK Middleware
+description: Spryker LINK Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system.
 last_updated: Oct 13, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-middleware
@@ -27,13 +27,13 @@ redirect_from:
 
 {% info_block warningBox "Warning" %}
 
-Spryker Middleware has been discontinued and is no longer supported.
+Spryker LINK Middleware has been discontinued.
 
 {% endinfo_block %}
 
 ## Overview
 
-Spryker Middleware is a constructor that lets you set up a linear data processing flow, also referred to as a pipeline, to import and export data from some system to a shop or from the shop to some system. For example, it can be used for importing products to a shop or exporting orders from a shop.
+Spryker LINK Middleware is a constructor that lets you set up a linear data processing flow, also referred to as a pipeline, to import and export data from some system to a shop or from the shop to some system. For example, it can be used for importing products to a shop or exporting orders from a shop.
 
 ### Pipeline structure
 
@@ -55,7 +55,7 @@ Each stage can be abstracted as having the following:
 
 The incoming data is taken from the stream. The middleware does not care about the source of the data, whether it comes from a file or an API. The middleware provides its own interface so that the source of data does not matter.
 
-### How Spryker Middleware works
+### How Spryker LINK Middleware works
 
 The middleware provides a console interface to allow job triggering and Jenkins integration. It is evoked by running the `middleware:process:run` command. The main parameter of the command is `-p` (process name), which defines the process to be started.
 
@@ -200,9 +200,9 @@ The following is an example of code organization for a project:
 
 ![Code organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Spryker+Middleware/code-organization.png)
 
-### Integrate Spryker Middleware
+### Integrate Spryker LINK Middleware
 
-The core of the Spryker Middleware is implemented in the `Process` module. This module collects all process plugins and creates processes out of them.
+The core of the Spryker LINK Middleware is implemented in the `Process` module. This module collects all process plugins and creates processes out of them.
 
 1. Install the `Process` module:
 

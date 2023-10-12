@@ -29,7 +29,7 @@ To restrict or allow access to an area or action of the Back Office, you need th
 
 Bundle and controller are responsible for allowing and restricting access to areas, while action is responsible for allowing or restricting actions.
 
-There are several ways you can extract these values in. For more information about this, see the [Users and Rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html#users-and-customers). The easiest way is to look it up in the URL. To look up the values for restricting access to adding product attributes, do the following:
+There are several ways you can extract these values in. For more information about this, see the [Users and Rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html#users-and-customers). The easiest way is to look it up in the URL. To look up the values for restricting access to adding product attributes, do the following:
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 2. Click **Create Product Attribute**.

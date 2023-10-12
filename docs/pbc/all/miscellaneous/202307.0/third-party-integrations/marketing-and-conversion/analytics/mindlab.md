@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/mindlab
 originalArticleId: 9ed22cbb-d549-4160-86ee-b1ef6932a5ab
 redirect_from:
-  - /2021080/docs/mindlab
-  - /2021080/docs/en/mindlab
-  - /docs/mindlab
-  - /docs/en/mindlab
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/mindlab.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

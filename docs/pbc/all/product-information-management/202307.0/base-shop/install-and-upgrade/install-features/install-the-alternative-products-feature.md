@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/alternative-products-feature-integration
 related:
   - title: Glue API - Alternative products feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
   - title: Alternative Products - Inventory Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-inventory-management-feature-integration.html
   - title: Alternative Products - Wishlist feature integration
@@ -22,7 +22,7 @@ related:
   - title: Alternative Products - Discontinued Products feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-discontinued-products-feature-integration.html
   - title: Alternative Products feature walkthrough
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-alternative-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-alternative-products-feature.md -->

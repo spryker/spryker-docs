@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/usercentrics
 originalArticleId: c5befac4-d875-4e4e-b20e-59089c27ea38
 redirect_from:
-  - /2021080/docs/usercentrics
-  - /2021080/docs/en/usercentrics
-  - /docs/usercentrics
-  - /docs/en/usercentrics
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/usercentrics.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

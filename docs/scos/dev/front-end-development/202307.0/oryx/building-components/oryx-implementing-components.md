@@ -106,13 +106,12 @@ Oryx components are styled with standard CSS. The components have a separate DOM
 
 Styling components in the shadow DOM is a big topic we recommend studying separately. However, there are a few things to know when it comes to Oryx and styling components:
 
-- Design system components are provided in the UI package. Components like `<oryx-button>` or `<oryx-link>` are used to ensure a common visual language. They can be customized.
-- Font styles rules like `font-face` or `font-size`, unlike other CSS rules, cascade to web components, no matter how deep they are nested. Standard font rules are provided in the `<oryx-app>` component.
-- [Typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens are used to ensure consistent styling.
+- Design system components are provided in the UI package. Components like `<oryx-button>` or `<oryx-link>` are used to ensure a common visual language. They can be customized. If your components use the design system as much as possible, you have a consistent design language throughout your application. Moreover, the amount of component specific styling will decrease.
+- While web components styles do not leak in other components, the font style rules like `font-face` or `font-size`, do cascade into web components, no matter how deep they are nested. Standard font rules are provided therefor in the `<oryx-app>` component. The [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens are used to ensure consistent styling.
 - Custom properties, also known as CSS variables, cascade into web components, which is why the application theme is based on CSS variables. See [Design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) for more information.
-- Oryx provides an [icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html) that you can leverage in your components.
 - Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen-specific styles in the component definition as described in the following sections.
 - You can use Oryx themes and provide component styles for a specific theme. Similarly to breakpoint-specific styles, you can configure styles for a theme.
+- Oryx provides an [icon system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-icon-system.html) that you can leverage in your components.
 
 ### 5. Localizing messages
 

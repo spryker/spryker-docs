@@ -43,15 +43,15 @@ According to our naming convention, all custom tables must be prefixed with `pyz
 
 1. Replace in `*.xml` `pyz_`
 
-### Methods renaming
+### Rename methods
 
-1. Replace regexp `on (get|set|add|map)Pyz` with `on $1`
-2. Replace regexp `\->(get|set|add|map)Pyz` with `->$1`
-3. Replace `class Pyz` with `class`
-4. Replace `BasePyz` with `Base
-5. Replace `([a-z])Pyz([A-Z])` with `$1$2`
+1. Replace regexp `on (get|set|add|map)Pyz` with `on $1`.
+2. Replace regexp `\->(get|set|add|map)Pyz` with `->$1`.
+3. Replace `class Pyz` with `class`.
+4. Replace `BasePyz` with `Base`.
+5. Replace `([a-z])Pyz([A-Z])` with `$1$2`.
 
-### Replacement of the rest of pyz occurrences (variables, Class names)
+### Rename variables and class names
 
 1. Search and replace by `\w\\Pyz` (regexp), `Pyz(`, `: Pyz`, `(Pyz`
 2. Check and replace all the  `pyz` occurrences by regexp `(?<!(namespace |use |@[a-z]+ \\))(Pyz|pyz)`

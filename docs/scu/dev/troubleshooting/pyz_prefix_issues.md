@@ -33,9 +33,13 @@ It's suitable to use phpStorm for such replaces.
 2. In `*.php` files, replace regexp `Transfer\->(get|set|require)Pyz` with `Transfer->$1`.
 3. In `*.twig` files, replace transfer getters `.getPyz` or `.pyz`
 
-### DB schema renaming
+### Rename DB schema
 
-It's important to note that all the custom tables should be with `pyz_` prefixes due to Spryker conventions
+{% info_block warningBox "Naming convention" %}
+
+According to our naming convention, all custom tables must be prefixed with `pyz_`
+
+{% endinfo_block %}
 
 1. Replace in `*.xml` `pyz_`
 

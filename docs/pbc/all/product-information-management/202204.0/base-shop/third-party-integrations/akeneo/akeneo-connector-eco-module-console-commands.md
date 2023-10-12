@@ -11,6 +11,7 @@ redirect_from:
   - /docs/akeneo-console-commands
   - /docs/en/akeneo-console-commands
   - /docs/scos/dev/technology-partner-guides/202204.0/product-information-pimerp/akeneo/akeneo-console-commands.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
 ---
 
 The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html) of the Akeneo module. Run them one by one.

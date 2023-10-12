@@ -6,17 +6,11 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/prices-overview
 originalArticleId: 003e8985-3230-4498-838b-234a10f1a810
 redirect_from:
-  - /2021080/docs/prices-overview
-  - /2021080/docs/en/prices-overview
-  - /docs/prices-overview
-  - /docs/en/prices-overview
-  - /2021080/docs/prices
-  - /2021080/docs/en/prices
-  - /docs/prices
-  - /docs/en/prices
   - /docs/scos/user/features/202200.0/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202307.0/prices-feature-overview/prices-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202307.0/prices-feature-walkthrough/prices-feature-walkthrough.html
+  - /docs/scos/user/features/202108.0/prices-feature-overview/prices-feature-overview.html
+  - /docs/scos/user/features/202005.0/prices-feature-overview/prices-feature-overview.html
 ---
 
 The *Prices* feature enables Back Office users to set prices for products and manage them effectively.

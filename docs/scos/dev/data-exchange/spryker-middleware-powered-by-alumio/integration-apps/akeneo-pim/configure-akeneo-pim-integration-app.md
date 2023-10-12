@@ -1,32 +1,16 @@
-https://docs.google.com/document/d/18P3yepqhyVQP2kSaSEIKpglDstysEJmXweTuFEJgLWY/edit#heading=h.tgvj6mw8do4i
-
-The Akeneo PIM Integration App uses the dynamic Data Exchange API 
-User journey: https://spryker.atlassian.net/wiki/spaces/Data/pages/3752787969/WIP+PRD+Akeneo+PIM+Integration+App#NOW-(for-MVP-%3Aquestion_mark%3A----import-data-from-Akeneo-PIM-to-Spryker)
-
-Akeneo Integration App MVP - Demo Recording (by Memo-ICT) - 23.06.2023: 
-
-https://spryker.zoom.us/rec/play/Kd5gss431LQN2Dg247HQM4CxSxSPe1b-q0HAO2ed2OHEPTUBeDin2Z0fP5jOMdjwE61LqDBSayRHzwKB.2FyR29MgRDG0J1H-?canPlayFromShare=true&from=share_recording_detail&continueMode=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fspryker.zoom.us%2Frec%2Fshare%2FyxgPY437hP88vPVPGrNpGmsyw7RCpWNnFeXKIiKRmTZLqczOSydzzjmNAB_DV90n.0DzhpgeTQsoRbuiL
-
-Passcode: 0p^@.Pqv
-
-Ask if it is still relevant
-
-You need to create a base in Alumio that you would use for communication between Spryker and Akeneo (incoming?) - Spryker http client.
-
-In Alumio
+This document describe how to configure the Akeneo PIM integration app to import data from there to a Spryker project via the [Spryker Middleware powered by Alumio](/docs/scos/dev/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html).
 
 To import data from Akeneo PIM to your Spryker project, you need to do the following:
 
-1. Connect the Spryker Middleware Powered by Alumio with Akeneo PIM.
+1. Connect the Spryker Middleware Powered by Alumio with Akeneo PIM. 
 2. Connect SCCOS with the Middleware Powered by Alumio platform.
-3. Configure data mapping between Akeneo and Spryker.
-4. Run the import.
+3. Configure the data integration path of the Akeneo PIM integration app.
+4. Configure data mapping between Akeneo and Spryker.
+5. Run the import.
 
 ## Prerequisites
 
-- To use the Akeneo PIM integration app, you need to buy the Spryker Middleware and the Akeneo PIM app. Contact the Spryker support team with your request.
-- Make sure the Data Exchange API is installed with the minimum version 202307.0. [See Data Exchange API installation guide](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html) for the installation instructions.
-
+Make sure to review reference information before you start, or look up the necessary information as you go through the process.
 
 ## 1. Connect the Spryker Middleware powered by Alumio with Akeneo PIM
 
@@ -84,9 +68,12 @@ Now that the client is created, you can test if it works. To test the client, do
 4. Click **Run test**. If the configuration is successful, the response field should return a list of abstract products available in your project.
 ![sccos-to-middleware-response]
 
-## 3. Configure data mapping between Akeneo and Spryker
+## 3. Configure the data integration path of the Akeneo PIM integration app.
 
-To configure data mapping between Akeneo and Spryker, you need to create an incoming and outgoing configuration.
+To Configure the data integration path of the Akeneo PIM integration app., you need to do the followoing:
+- create an incoming configuraiton
+- create an outgoing configuration
+- defined the route
 
 ### Create an incoming configuration
 
@@ -158,9 +145,17 @@ To define the route, do the following:
 
 The route should now appear at the **Configurations->Routes** page.
 
-## Create the Akeneo to Base model transformer
+## Configure data mapping between Akeneo and Spryker
 
-To import data from Akeneo PIM, you need to transform it from the Akeneo model to the base model. To transform the data like this, you need to create the Akeneo to Base model transformer. Do the following:
+To import data from Akeneo PIM to your Spryker project, you need to map the data you want to import between the two systems. To map the data, you need to do the following:
+
+- Transform Akeneo data into the Base data by defining an Akeneo to Base model transformer.
+- Transform the Base data into the Spryker data by defining the Base model to Spryker transformer.
+
+
+## Define the Akeneo to Base model transformer
+
+To import data from Akeneo PIM, you need to transform it from the Akeneo model to the Base model. To transform the data like this, you need to create the Akeneo to Base model transformer. Do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Entity transformers** and click the + sign.
 2. In the **Name** field, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
@@ -206,3 +201,31 @@ To run the incoming, do the following:
 
 
 QUESTION: Is it possible import products in batch? Say 100 product at once?
+
+
+## Transformers
+
+Data transformers let you define the data you want to import from Akeneo PIM and map them accordingly to your Spryker system. There are two kinds of entity transformers: Akeneo data to Base data transformers and Base data to Spryker data transformers.
+
+### Akeneo to Base data transformers
+
+Akeneo to Base data transformers let you define what data you want to import from Akeneo to Spryker and transform these data to Base data. This Base data is then transformed to Spryker data.
+
+{% info_block infoBox "Info" %}
+
+It can be that some fields that Product pages have are not required in the Akeneo PIM, but required in the Spryker system. For example, the *Price* information is not required in Akeneo, but it is required in Spryker. Even though you cannot really import these values if they are not provided in Akeneo, you must enter them manually in the corresponding fields of the entity transformers.
+
+![placeholders-in-entity-transformers]
+
+{% endinfo_block %}
+
+By default, there are the following data transformers that you can use depening on the data you want to import:
+
+- Memo Akeneo to Base - Product - Set Base information: Imports basic product information, such as name, description, SKU, tax.
+- Memo Akeneo to Base - Product - Set Price Properties
+- Memo Akeneo to Base - Product - Set Product Properties
+- Memo Akeneo to Base - Product - Set Product Category
+- Memo Base - Product - Set Stock
+- Memo Akeneo to Base - Product - Set Product Media
+
+

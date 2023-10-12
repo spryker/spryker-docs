@@ -71,9 +71,26 @@ Currently, Spryker offers four options to import and export data:
 
 
 For more information on data importers and exporters, see [LINK TO SECTION WITH DATA IMPORTERS AND EXPORTERS]
+
 ## Data Exchange API
 
-Data exchange API is a robust API that facilitates real-time data transfers, ensuring data is always current across all integrated platforms.
+Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is always current across all integrated platforms. It is part of the Spryker Cloud Commerce OS platform core.
+
+Traditionally, developing APIs required technical expertise and time-consuming coding processes. However, with our innovative dynamic Data Exchange API infrastructure, we have removed the complexities, making it seamless for our customers to create APIs effortlessly. 
+With this tool, you can quickly build, customize, and manage APIs tailored to your specific business requirements, all through an intuitive user interface.
+
+**Benefits**
+
+**No Coding Required:** Say goodbye to complex coding and development efforts. Our user-friendly interface enables you to create API endpoints effortlessly.
+
+**Rapid API Generation:** Our streamlined process lets you generate APIs in a matter of minutes. Speed up your integration projects and get your applications up and running faster than ever before.
+
+**Flexibility and Customization:** Tailor your APIs to your exact needs. You can define parameters which allows for seamless compatibility with your systems.
+
+**Real-time Updates:** Modify your APIs on-the-go. Our infrastructure allows you to make changes dynamically, so you can adapt to evolving business needs without any downtime.
+
+**Security and Access Control:** Rest easy knowing your data is secure. Our infrastructure implements robust  security measures and access controls to safeguard your sensitive information.
+
 
 TBD:
 QUESTIONS:

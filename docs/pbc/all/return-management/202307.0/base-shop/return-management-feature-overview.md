@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-overview
 originalArticleId: 74024d01-461c-4514-a158-fb22bb729dde
 redirect_from:
-  - /2021080/docs/return-management-feature-overview
-  - /2021080/docs/en/return-management-feature-overview
-  - /docs/return-management-feature-overview
-  - /docs/en/return-management-feature-overview
-  - /2021080/docs/return-details-reference-information
-  - /2021080/docs/en/return-details-reference-information
-  - /docs/return-details-reference-information
-  - /docs/en/return-details-reference-information
+  - /docs/scos/user/features/202108.0/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 The *Return Management* capability lets you create and manage returns for a sales order.

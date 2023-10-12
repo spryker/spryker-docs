@@ -6,12 +6,9 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rest-api-reference
 originalArticleId: 4f1c673e-8917-40ed-a88e-8710a00aec8a
 redirect_from:
-  - /2021080/docs/rest-api-reference
-  - /2021080/docs/en/rest-api-reference
-  - /docs/rest-api-reference
-  - /docs/en/rest-api-reference
   - /docs/scos/dev/glue-api-guides/202204.0/rest-api-reference.html
   - /docs/scos/dev/glue-api-guides/202200.0/rest-api-reference.html
+  - /docs/scos/dev/glue-api-guides/202108.0/rest-api-reference.html
 related:
   - title: Reference information- GlueApplication errors
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html

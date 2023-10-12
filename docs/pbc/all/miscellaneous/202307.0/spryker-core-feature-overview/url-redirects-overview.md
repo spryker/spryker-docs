@@ -4,6 +4,7 @@ last_updated: Aug 20, 2021
 description: With URL redirects, you can create content redirects and increase your store's search engine visibility
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/user/back-office-user-guides/202005.0/content/redirects/redirects.html
   - /docs/scos/dev/feature-walkthroughs/202108.0/spryker-core-feature-walkthrough/url-redirects-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/spryker-core-feature-walkthrough/url-redirects-overview.html
 ---

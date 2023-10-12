@@ -11,6 +11,7 @@ related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 redirect_from:
+  - /docs/marketplace/user/back-office-user-guides/202108.0/catalog/products/abstract-product-reference-information.html
   - /docs/marketplace/user/back-office-user-guides/202307.0/catalog/products/abstract-products/creating-abstract-products.html
 ---
 

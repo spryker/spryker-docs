@@ -1,5 +1,5 @@
 ---
-title: "Akeneo Connector (Eco module): Console commands"
+title: "Akeneo: Console commands"
 description: This guide provides the console commands for the Akeneo module.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -10,10 +10,11 @@ redirect_from:
   - /2021080/docs/en/akeneo-console-commands
   - /docs/akeneo-console-commands
   - /docs/en/akeneo-console-commands
-  - /docs/scos/dev/technology-partner-guides/202307.0/product-information-pimerp/akeneo/akeneo-console-commands.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/product-information-pimerp/akeneo/akeneo-console-commands.html
+  - /docs/pbc/all/product-information-management/202212.0/base-shop/third-party-integrations/akeneo/akeneo-console-commands.html
 ---
 
-The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html) of the Akeneo Connector Eco module. Run them one by one.
+The following console commands are available in your project after successful [installation](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html) of the Akeneo module. Run them one by one.
 
 1) Command to import super attributes:
 ```bash
@@ -62,7 +63,7 @@ vendor/bin/console middleware:process:run -p DEFAULT_PRODUCT_IMPORT_PROCESS -i d
 
 <!--## outdated as per https://spryker.atlassian.net/wiki/spaces/ECO/pages/864453632/New+Akeneo+Documentation Multi-select Att ributes
 
-The section below explains how Spryker treats multi-select attributes from Akeneo.
+The section below explains how Spryker treats multi-select attribues from Akeneo.
 
 1. The attribute `pim_catalog_multiselect` is imported as a concatenated string.
 2. The following attribute types are skipped during import:

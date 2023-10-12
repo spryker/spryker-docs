@@ -1446,8 +1446,6 @@ entries:
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
-          - title: What's changed in Ratings and Reviews
-            url: /docs/pbc/all/ratings-reviews/whats-changed-in-ratings-and-reviews.html
           - title: Install and upgrade
             nested:
               - title: Install the Product Rating and Reviews feature
@@ -1745,8 +1743,6 @@ entries:
         nested:
           - title: Base Shop
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/whats-changed-in-shopping-list-and-wishlist.html
               - title: Shopping List feature overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
                 nested:

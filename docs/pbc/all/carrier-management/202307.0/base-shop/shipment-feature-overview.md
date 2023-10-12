@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-overview
 originalArticleId: 9090caf1-5dfb-4b5a-ac10-13f268edab9f
 redirect_from:
+  - /docs/scos/user/features/202009.0/shipment-feature-overview.html
   - /docs/scos/user/features/202108.0/shipment-feature-overview.html
   - /docs/scos/user/features/202200.0/shipment-feature-overview.html
   - /docs/scos/user/features/202307.0/shipment-feature-overview.html  

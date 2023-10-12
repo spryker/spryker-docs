@@ -95,7 +95,6 @@ With this tool, you can quickly build, customize, and manage APIs tailored to yo
 TBD:
 QUESTIONS:
 
-1. How business users can use it
 2. In what cases we recommend using the Data Exchange API (can it be used independently, without Alumio middleware?)
 
 ## Spryker Middleware Powered by Alumio
@@ -128,8 +127,6 @@ To exchange data between a Spryker system and a third-party system with an integ
 We recommend considering Integration Apps for data exchange in the following cases:
 
 - You require a quick setup of the data exchange process, which should take up to a few hours.
-- You don't have the developer resources to do the coding job upon initial setup.
-- You don't have the developer resources to do the coding job when you need to update mapping or configuration settings.
 - You need a pre-configured mapping and transformation of data for exchange between Spryker and a third-party system so you would have to make minimum adjustments.
 - For your project, it is important that the data exchange solution allows for the the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, .CSV file validation, health monitoring, etc.
 

@@ -28,3 +28,7 @@ We recommend sticking to the default executor count or the concurrent job limit 
 ## Queue worker configuration
 
 If you have configured multiple queue workers per queue, keep in mind that the comments made above regarding memory management also apply in this scenario. Each configured queue worker can consume up to PHP's max_memory, causing a significant increase in total memory demand as they are spawned. Another crucial factor to take into consideration is CPU utilization. If you have configured more workers than the number of available cores, it becomes increasingly likely that processes will need to wait for CPU resources. This can ultimately lead to suboptimal performance and potentially even stability issues. We recommend avoiding resource contention of this nature by adjusting the number of workers in a manner that aligns with your environment package. Our service description specifies the number of CPU cores available to you in each package.
+
+## Creating Jenkins Jobs in UI
+
+While you are free to create Jenkins jobs in UI to quickly run console commands, please remember that these jobs are ephemeral and will not survive a reprovisioning of the Jenkins instance. Jenkins can be reprovisioned during self healing, recovering from an exception of the underlying instance or container, or during execution of pipelines. If you need to rely on a job running, please register this job as described [here](https://docs.spryker.com/docs/scos/dev/back-end-development/cronjobs/cronjobs.html#using-cronjob-schedulers). 

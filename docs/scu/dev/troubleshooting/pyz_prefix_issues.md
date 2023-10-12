@@ -13,25 +13,25 @@ Constant does not exist because the existent constant has `PYZ_` prefix.
 
 ## Solution
 
-Need to remove `pyz` from naming of constant, classes, methods and properties. 
+Need to remove `pyz` from naming of constant, classes, methods and properties.
 
 It's suitable to use phpStorm for such replaces.
 
-### Constants renaming
+### Rename constants
 
-1. replace `const PYZ_` with `const `.
-2. replace `::PYZ_` with `::`.
-3. replace constant values that start with `PYZ_`.
-4. remove constants that override the same parent constant with the same value.
+1. Replace `const PYZ_` with `const `.
+2. Replace `::PYZ_` with `::`.
+3. Replace constant values that start with `PYZ_`.
+4. Remove constants that override the same parent constant with the same value.
 
-### Transfers renaming
+### Rename transfers
 
-1. Replace in `shared` folder only for `*.xml` transfers files:
-   1. `"(pyz)(.)(\w*)` with `"\L$2\E$3`
-   2. `"(Pyz)(.)(\w*)` with `"$2E$3`
+1. In the `shared` folder, replace the following for `*.xml` transfers files:
+   * `"(pyz)(.)(\w*)` with `"\L$2\E$3`
+   * `"(Pyz)(.)(\w*)` with `"$2E$3`
 
-2. Replace regexp `Transfer\->(get|set|require)Pyz` with `Transfer->$1` in `*.php` files
-3. Replace in `*.twig` files transfer getters `.getPyz` or `.pyz`
+2. In `*.php` files, replace regexp `Transfer\->(get|set|require)Pyz` with `Transfer->$1`.
+3. In `*.twig` files, replace transfer getters `.getPyz` or `.pyz`
 
 ### DB schema renaming
 

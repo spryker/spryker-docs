@@ -10,9 +10,9 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202212.0/install-and-upgrade/install-the-payments-glue-api.html
 related:
   - title: Payments feature integration
-    link: docs/pbc/all/payment-service-provider/page.version/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/install-the-payments-feature.html
   - title: Payments feature walkthrough
-    link: docs/pbc/all/payment-service-provider/page.version/spryker-pay/base-shop/payments-feature-overview.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Updating payment data

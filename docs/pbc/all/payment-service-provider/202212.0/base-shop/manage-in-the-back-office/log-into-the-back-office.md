@@ -9,5 +9,5 @@ template: back-office-user-guide-template
 
 ## Next steps
 
-* [View payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/view-payment-methods.html)
-* [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/edit-payment-methods.html)
+* [View payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/view-payment-methods.html)
+* [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html)

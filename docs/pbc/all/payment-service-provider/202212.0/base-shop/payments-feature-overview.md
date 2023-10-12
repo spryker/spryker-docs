@@ -56,13 +56,13 @@ In the Back Office, you can view all payment methods available in the shop appli
 
 {% info_block warningBox "Note" %}
 
-Before managing payment methods in the Back Office, you need to create them by [importing payment methods data using a .CSV file](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method.csv.html).
+Before managing payment methods in the Back Office, you need to create them by [importing payment methods data using a .CSV file](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html).
 
 {% endinfo_block %}
 
 ![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png)
 
-To learn more on how to make a payment method available during the checkout and assign it to a different store, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+To learn more on how to make a payment method available during the checkout and assign it to a different store, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
 
 <!-- Managing Payment Methods in the Back Office
 
@@ -78,13 +78,13 @@ Hydrating payment methods for an order
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [View payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/view-payment-methods.html)   |
-| [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/edit-payment-methods.html)   |
+| [View payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/view-payment-methods.html)   |
+| [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html)   |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
-| [Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html) | [Payment migration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/install-and-upgrade/upgrade-the-payment-module.html) | [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/update-payment-data.html) | [File details: payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [HowTo: Hydrate payment methods for an order](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/hydrate-payment-methods-for-an-order.html) | |
-|  |  |  | [File details: payment_method_store.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [Implementing Direct Debit Payment](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html) |  |
-|  |  |  |  | [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/interact-with-third-party-payment-providers-using-glue-api.html) |  |
+| [Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html) | [Payment migration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-payment-module.html) | [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/update-payment-data.html) | [File details: payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [HowTo: Hydrate payment methods for an order](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/hydrate-payment-methods-for-an-order.html) | |
+|  |  |  | [File details: payment_method_store.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [Implementing Direct Debit Payment](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html) |  |
+|  |  |  |  | [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html) |  |

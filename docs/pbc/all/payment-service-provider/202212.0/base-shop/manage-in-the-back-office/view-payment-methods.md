@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202212.0/manage-in-the-back-office/view-payment-methods.html  
 related:
   - title: Payments feature overview
-    link: docs/pbc/all/payment-service-provider/page.version/spryker-pay/base-shop/payments-feature-overview.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
 ---
 
 To view a payment methods in the Back Office, follow the steps:
@@ -28,4 +28,4 @@ To view a payment methods in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/manage-in-the-back-office/edit-payment-methods.html)
+[Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html)

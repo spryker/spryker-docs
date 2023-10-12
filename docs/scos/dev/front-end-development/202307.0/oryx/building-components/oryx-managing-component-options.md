@@ -59,7 +59,7 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 
 ### Configuring feature set component options
 
-Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a specific business model, such as B2B or B2C. Besides providing page structures with components, feature sets can also add component configurations. The feature set configurations take precedence over the components default values.
+Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a specific business model, such as B2B or B2C. Besides providing page structures with components, feature sets can also add component configurations. The feature set configurations override default component values.
 
 ### Configuring application-driven component options
 

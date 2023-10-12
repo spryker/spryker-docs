@@ -9,12 +9,9 @@ Oryx applications are built completely out of components. Whether it's a page or
 
 Oryx supports three types of components:
 
-- Design system components  
-  Highly reusable components that are used to build consistent user interfaces (UIs).
-- Domain components  
-  Functional components that are concerned with a specific _domain_, like the product or cart domains.
-- Composition components  
-  Containers that are used to render pages or sections by providing a list of components and their layout.
+- Design system components: highly reusable components that are used to build consistent user interfaces (UIs).
+- Domain components: functional components that are concerned with a specific _domain_, like the product or cart domains.
+- Composition components: containers that are used to render pages or sections by providing a list of components and their layout.
 
 Even though Oryx does not implement [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), the component types can be roughly mapped to the Atomic Design levels:
 

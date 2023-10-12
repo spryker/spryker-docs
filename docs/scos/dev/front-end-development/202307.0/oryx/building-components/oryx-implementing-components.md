@@ -177,11 +177,11 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 }
 ```
 
-## Register the component definition
+## Registering the component definition
 
 The component implementation you've started building in the previous section is not imported anywhere in your application. You need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html) so that the application can get hold of it, whenever it needs to render the component.
 
-In the example below, you see how the component is registered inline in the appBuilder. It is, however, recommended to create a component definition in a separate file and maintain it in the component folder.
+In the example below, you see how the component is registered inline in the appBuilder. However, we recommend creating a component definition in a separate file and maintain it in the component folder.
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";
@@ -194,10 +194,10 @@ export const app = appBuilder().withComponents([
 ]);
 ```
 
-## Use the component in the page structure
+## Using the component in the page structure
 
 After you've implemented and registered the component, you can use it in the application. For example, in a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) or [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or inside CMS content.
 
-If you build your first component, you might want to skip creating custom pages altogether, and just see the component in action. You can quickly merge the component into an existing page structure. You can for example add the component before or after an existing component. This is documented in the [page documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
+If you build your first component, you might want to skip creating custom pages altogether, and just see the component in action. You can quickly merge the component into an existing page structure. For example, add the component before or after an existing component. For more details, see [Oryx: Pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
 
 Also, you can merge the component into an existing page structure. For example, before or after an existing component or inside (prepend or append) the components of an existing composition.

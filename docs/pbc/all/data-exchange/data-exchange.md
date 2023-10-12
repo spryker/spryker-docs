@@ -62,21 +62,13 @@ Currently, Spryker offers four options to import and export data:
 
 - Data Importers and Data Exporters: available in SCCOS by default.
 - Data Exchange API: available in SCCOS by default.
-- Via the Spryker Middleware powered by Alumio:
-    - Via the Spryker integration apps.
-    - Via custom integrations using the existing Alumio connectors.
-    - Via custom integration apps using the SDK to build own connectors.
+- Spryker Middleware powered by Alumio:
+    - Spryker Integration Apps
+    - Custom integrations using the existing Alumio connectors
+    - Custom integration apps using the SDK to build own connectors
 
-## Data Importers and Data Exporters
-The Data Importers and Data Exporters available in SCCOS by default, let you bring external data into and send data from SCCOS, in CSV format. The Data Importers and Exporters require customization for each project, and ongoing development effort.
 
-We recommend using the Data Importers and exporters in the following cases:
 
-- You need a cost-effective solution, which is included to SCCOS by default.
-- You can wait up to a few weeks till the project importers are set up and ready to use.
-- You have the developer resources who can do coding at the project level upon initial setup of the data importers.
-- You have the developer resources who can do coding at the project level wherever you need to make changes to the existing data importers an exporters or troubleshoot issues.
-- Your project isn't affected by some limitations of the data importers and exporters, like missing data orchestration (no dependency management), no delta synchronization, minimum error logging.
 
 For more information on data importers and exporters, see [LINK TO SECTION WITH DATA IMPORTERS AND EXPORTERS]
 ## Data Exchange API

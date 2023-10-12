@@ -15,7 +15,7 @@ We use the product _ID_ component as an example. It is a simple component that s
 
 In Oryx, components are organized in folders, like `src/product/id`, with some component logic located in separate files. However, you can create a component as a single file. To allow for lazy loading of the component, you still need to separate out its definition.
 
-## 1. Creating a component class
+### 1. Creating a component class
 
 Oryx components are based on the Web Components standard. One of the features of web components are custom elements. Custom elements are class-based elements that extend from `HTMLElement`. Lit provides `LitElement` as a base class to extend from when you create a custom element.
 
@@ -37,7 +37,7 @@ Oryx is built in TypeScript with strict typing configuration. This ensures high-
 
 {% endinfo_block %}
 
-## 2. Integrating backend data
+### 2. Integrating backend data
 
 In this step, you're going to resolve the product data and render the `id` field of the data. The product data comes from the backend API and is loaded asynchronously. Once the data is loaded, it's part of the _application state_. The state might change over time—for example, when a user navigates from one product page to another. To be able to render the state efficiently, the component must support [reactivity](https://docs.spryker.com/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html).
 
@@ -70,7 +70,7 @@ This code shows the ease of use, but there's a lot going on in the background:
 
 The preceding steps are a commonly used pattern across all Oryx domain components. It ensures efficient consumption of backend APIs and rendering of DOM elements.
 
-## 3. Configuring a component
+### 3. Configuring a component
 
 Oryx components can be made configurable with options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options enable components to be reusable across different business models. For example, a component can render different results based on the provided option: `true` for a B2C application, but `false` for a B2B application.
 
@@ -100,7 +100,7 @@ export class ProductIdComponent extends ProductMixin(
 
 You can provide default options in the component, in feature sets, or in the application. For more details, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html).
 
-## 4. Styling the component DOM
+### 4. Styling the component DOM
 
 Oryx components are styled with standard CSS. The components have a separate DOM attached using the open [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM). The shadow DOM encapsulates the styles so that they cannot _leak_ into other components and prevents global styles from cascading down to the component.
 
@@ -114,7 +114,7 @@ Styling components in the shadow DOM is a big topic we recommend studying separa
 - Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen-specific styles in the component definition as described in the following sections.
 - You can use Oryx themes and provide component styles for a specific theme. Similarly to breakpoint-specific styles, you can configure styles for a theme.
 
-## 5. Localizing messages
+### 5. Localizing messages
 
 Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage [localization](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-localization.html).
 
@@ -128,7 +128,7 @@ protected render(): TemplateResult | void {
 
 If you do not use `ContentMixin`, you can use `I18nMixin` instead. If you choose to not use mixins, you can integrate the `i18n` directive directly.
 
-## 6. Using services inside the component
+### 6. Using services inside the component
 
 You've seen how `ProductMixin` resolves the product data and hides the integration with the `ProductService`. It is also common to use services directly in components. Oryx _injects_ services using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html). DI provides decoupling of components and shared business logic. This is a common design pattern that separates concerns and lets you customize services without touching the components or other depending services.
 
@@ -147,7 +147,7 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
 
-## 7. Configuring the component for server-side rendering and hydration
+### 7. Configuring the component for server-side rendering and hydration
 
 If your application needs to be indexed by crawlers, such as Google Search or Pinterest, the application needs to be [server-side rendered](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
 
@@ -177,43 +177,27 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 }
 ```
 
-## Registering the component definition
+## Register the component definition
 
-The component implementation you've started building is not yet registered in the application. To make the component available to the application, you need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html).
+The component implementation you've started building in the previous section is not imported anywhere in your application. You need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html) so that the application can get hold of it, whenever it needs to render the component.
+
+In the example below, you see how the component is registered inline in the appBuilder. It is, however, recommended to create a component definition in a separate file and maintain it in the component folder.
 
 ```ts
-import { componentDef } from "@spryker-oryx/utilities";
+import { appBuilder } from "@spryker-oryx/application";
 
-export const productIdComponent = componentDef({
-  name: "my-product-id",
-  impl: () => import("./id.component").then((m) => m.ProductIdComponent),
-});
+export const app = appBuilder().withComponents([
+  {
+    name: "oryx-product-id",
+    impl: () => import("./components/product/id.component"),
+  },
+]);
 ```
 
-This ensures that whenever the component is used anywhere in the DOM, Oryx lazily loads the associated implementation.
+## Use the component in the page structure
 
-```html
-<div>
-  <my-product-id></my-product-id>
-</div>
-```
+After you've implemented and registered the component, you can use it in the application. For example, in a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) or [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or inside CMS content.
 
-## Placing the component
-
-After you've implemented and registered the component, you need to use it in the application. For example, place the component on a [page](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html), [composition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), or use it inside  CMS content.
+If you build your first component, you might want to skip creating custom pages altogether, and just see the component in action. You can quickly merge the component into an existing page structure. You can for example add the component before or after an existing component. This is documented in the [page documentation](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html).
 
 Also, you can merge the component into an existing page structure. For example, before or after an existing component or inside (prepend or append) the components of an existing composition.
-
-Available merge types are exported in the [@spryker-oryx/experience](https://www.npmjs.com/package/@spryker-oryx/experience) package.
-
-```ts
-export const enum ExperienceDataMergeType {
-  Before = "before",
-  Prepend = "prepend",
-  Append = "append",
-  After = "after",
-  Replace = "replace",
-  Patch = "patch",
-  Remove = "remove",
-}
-```

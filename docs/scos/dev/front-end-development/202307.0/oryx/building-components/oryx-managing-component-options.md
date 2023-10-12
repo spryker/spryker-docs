@@ -42,9 +42,9 @@ The approaches to set up the values are detailed in the following sections.
 
 ### Default component option values
 
-Components can set up default values for the component options. The default values are used as a fallback in case there are no specific values provided.
+To avoid hardcoded default values in the component code, components can have default values for their options. Oryx provides a `@defaultOptions` decorator that components can use to set up the values. The decorated values are used by the `ContentMixin` and are transparent for the component developer.
 
-Oryx provides the `@defaultOptions` class decorator that can be used to add default values.
+The default values are used as a fallback in case there are no specific values configured. Whenever more specific values are configured at a feature set or application, the default options are neglected.
 
 ```ts
 @defaultOptions({
@@ -59,7 +59,7 @@ export class ProductPriceComponent extends ContentMixin<ProductPriceOptions>(
 
 ### Configuring feature set component options
 
-Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a standard for a specific business model, such as B2B or B2C. Besides providing the features, a feature set can also provide component configurations. The feature set configurations override the default option values provided by the components.
+Default component options can be overridden in feature sets. [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html) simplify the setup of a specific business model, such as B2B or B2C. Besides providing page structures with components, feature sets can also add component configurations. The feature set configurations take precedence over the components default values.
 
 ### Configuring application-driven component options
 

@@ -28,19 +28,12 @@ export const productIdComponent = componentDef({
 });
 ```
 
-The implementation is imported using the [static import declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import). This import binding is used by build systems such as [Vite](https://vitejs.dev/) to create a separate JavaScript chunk during the build. This allows to load the JavaScript chunk upon demand.
+The [dynamic `import()` expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) is used to ensure the component is lazily loaded. The dynamic imports are used by build systems such as [Vite](https://vitejs.dev/) to create a separate JavaScript chunk during the build. This allows to load the JavaScript chunk upon demand.
 
-## Register a component definition
+Lazy loading components is a recommended technique as it will avoid loading all the application components at the start of the application. Components are only loaded when they are used which will therefor increase the performance of the application.
 
-After you've created a component definition, you need to configure it in the application. The [application orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html) provides the `withComponents()` API that's used register arrays of components.
+{% info_block warningBox "Warning" %}
 
-```ts
-import { appBuilder } from "@spryker-oryx/application";
+Make sure that you do not _statically_ import the component file anywhere in your application, as it will break the lazy loading principals.
 
-export const app = appBuilder().withComponents([
-  {
-    name: "oryx-product-id",
-    impl: () => import("./components/product/id.component"),
-  },
-]);
-```
+{% endinfo_block %}

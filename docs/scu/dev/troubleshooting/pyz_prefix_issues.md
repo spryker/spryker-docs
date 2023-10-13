@@ -33,7 +33,7 @@ Remove `pyz` from the names of the entities:
    * `"(Pyz)(.)(\w*)` with `"$2E$3`
 
 2. In `*.php` files, replace regexp `Transfer\->(get|set|require)Pyz` with `Transfer->$1`.
-3. In `*.twig` files, replace transfer getters `.getPyz` or `.pyz`
+3. In `*.twig` files, remove `pyz` in transfer getters like `.getPyz` or `.pyz`.
 
 ### Rename DB schema
 
@@ -43,7 +43,7 @@ According to our naming convention, all custom tables must be prefixed with `pyz
 
 {% endinfo_block %}
 
-1. Replace in `*.xml` `pyz_`
+1. Remove `pyz_` in `*.xml` schema files.
 
 ### Rename methods
 
@@ -55,8 +55,8 @@ According to our naming convention, all custom tables must be prefixed with `pyz
 
 ### Rename variables and class names
 
-1. Search and replace by `\w\\Pyz` (regexp), `Pyz(`, `: Pyz`, `(Pyz`
-2. Check and replace all the  `pyz` occurrences by regexp `(?<!(namespace |use |@[a-z]+ \\))(Pyz|pyz)`
+1. Search by `\w\\Pyz` (regexp), `Pyz(`, `: Pyz`, `(Pyz` and remove `pyz`.
+2. Check and remove all the  `pyz` occurrences by regexp `(?<!(namespace |use |@[a-z]+ \\))(Pyz|pyz)` search.
 
 ### Verify the changes
 1. Use phpstan to find all the missed places and errors

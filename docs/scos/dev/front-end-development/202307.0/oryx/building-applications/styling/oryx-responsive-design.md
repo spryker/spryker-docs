@@ -1,15 +1,13 @@
 ---
-title: "Oryx's Responsive Design system"
+title: "Oryx: Responsive design system"
 description: Learn how to leverage Oryx's Responsive Design system to create stunning and user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
 last_updated: October 3rd, 2023
 template: concept-topic-template
 ---
 
-In today's digital landscape, it is crucial to create websites and applications that adapt seamlessly to different screen sizes and devices. Oryx's Responsive Design system empowers developers to implement designs for a variety of screen sizes and layouts without in a convenient way.
+Oryx's responsive design system empowers developers to implement designs for a variety of screen sizes and layouts in a convenient way. The design system provides various screen sizes,  which you can redefine when needed. The CSS styles that are linked to the screen sizes adapt automatically to the provided configuration. This makes the design system useful for different types of applications. For example, if you need to build a business application for users with large screens, you can optimize the layout of your application to benefit from  the available space.
 
-Oryx's Responsive Design System provides various screen sizes which you can redefine when needed. The associated CSS styles, that are linked to the screen sizes will adapt automatically to the configuration that your provide for your application. This makes the Responsive Design System useful for different types of applications. For example, if you need to build a business application where users will have a large screen available, you can optimize the layout of your application to benefit from all the available space.
-
-The responsive design system works closely with other styling techniques in Oryx, such as layouts, [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), themes and [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) and play an important role in some of the design system components, such as media and images.
+The design system works closely with other styling techniques in Oryx, such as layouts, [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), themes, and [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html). It plays an important role in some design system components, such as media and images.
 
 <!-- TODO: Add link to layout docs when they're published -->
 <!-- TODO: Add link to themes docs when they're published -->

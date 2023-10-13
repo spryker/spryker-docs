@@ -5,7 +5,7 @@ last_updated: Sept 20, 2023
 template: concept-topic-template
 ---
 
-Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
+Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.
 
 ## Implementing a component
 
@@ -72,7 +72,7 @@ The preceding steps are a commonly used pattern across all Oryx domain component
 
 ### 3. Configuring a component
 
-Oryx components can be made configurable with options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html) can be provided statically to the application or load from a backend API. Component options enable components to be reusable across different business models. For example, a component can render different results based on the provided option: `true` for a B2C application, but `false` for a B2B application.
+Oryx components can be made configurable with options. [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/oryx-managing-component-options.html) can be provided statically to the application or load from a backend API. Component options enable components to be reusable across different business models. For example, a component can render different results based on the provided option: `true` for a B2C application, but `false` for a B2B application.
 
 Component options are resolved by `ContentMixin`, similar to how `ProductService` resolves the product data. You can combine multiple mixins in a component implementation—for example:
 
@@ -98,7 +98,7 @@ export class ProductIdComponent extends ProductMixin(
 }
 ```
 
-You can provide default options in the component, in feature sets, or in the application. For more details, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-options.html).
+You can provide default options in the component, in feature sets, or in the application. For more details, see [Component options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/oryx-managing-component-options.html).
 
 ### 4. Styling the component DOM
 
@@ -106,8 +106,8 @@ Oryx components are styled with standard CSS. The components have a separate DOM
 
 Styling components in the shadow DOM is a big topic we recommend studying separately. However, there are a few things to know when it comes to Oryx and styling components:
 
-- Design system components are provided in the UI package. Components like `<oryx-button>` or `<oryx-link>` are used to ensure a common visual language. They can be customized. If your components use the design system as much as possible, you have a consistent design language throughout your application. Moreover, the amount of component specific styling will decrease.
-- While web components styles do not leak in other components, the font style rules like `font-face` or `font-size`, do cascade into web components, no matter how deep they are nested. Standard font rules are provided therefor in the `<oryx-app>` component. The [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens are used to ensure consistent styling.
+- Design system components are provided in the UI package. Components like `<oryx-button>` or `<oryx-link>` are used to ensure a common visual language. They can be customized. If your components use the design system as much as possible, you have a consistent design language throughout your application.
+- While web components styles do not leak in other components, the font style rules like `font-face` or `font-size` do cascade into web components, no matter how deep they are nested. Standard font rules are provided therefor in the `<oryx-app>` component. The [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html) design tokens are used to ensure consistent styling.
 - Custom properties, also known as CSS variables, cascade into web components, which is why the application theme is based on CSS variables. See [Design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) for more information.
 - Oryx uses configurable breakpoints to set up the screen size for responsive designs. To avoid hardcoded breakpoints in the component styles, you can configure screen-specific styles in the component definition as described in the following sections.
 - You can use Oryx themes and provide component styles for a specific theme. Similarly to breakpoint-specific styles, you can configure styles for a theme.
@@ -144,7 +144,7 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 }
 ```
 
-You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](docs/scos/dev/front-end-development/{{oage.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
+You can now use the pricing service API in the component. Service methods always return observables (using [RxJS](https://rxjs.dev/)), so that the service can be lazy loaded and the response can be used by [signals](docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) to update the DOM efficiently.
 
 ### 7. Configuring the component for server-side rendering and hydration
 
@@ -178,7 +178,7 @@ export class ProductIdComponent extends ProductMixin(LitElement) {
 
 ## Registering the component definition
 
-The component implementation you've started building in the previous section is not imported anywhere in your application. You need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/component-definition.html) so that the application can get hold of it, whenever it needs to render the component.
+The component implementation you've started building in the previous section is not imported anywhere in your application. You need to register the [component definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/oryx-providing-component-definitions.html) so that the application can get hold of it, whenever it needs to render the component.
 
 In the example below, you see how the component is registered inline in the appBuilder. However, we recommend creating a component definition in a separate file and maintain it in the component folder.
 

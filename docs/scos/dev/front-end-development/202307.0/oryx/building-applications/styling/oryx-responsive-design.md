@@ -15,21 +15,21 @@ The design system works closely with other styling techniques in Oryx, such as l
 
 ## Screen sizes
 
-Oryx is designed to render applications and their components on a variety of devices, from smartphones and tablets to desktop monitors or even smartwatches. The Design System is not connected to the various devices, but the screen sizes associated to those devices. Screen sizes are not one to one related to devices. A small screen design, for example, is not only used for mobile devices, but can also be used on large screens in physical stores.
+Oryx is designed to render applications and their components on a variety of devices, from smartphones and tablets to desktop monitors or even smartwatches. The design system is not connected to the various devices, but the screen sizes associated to those devices. Screen sizes are mapped to devises one to one. For example, a small screen design is used for mobile devices, but can also be used for large screens in physical stores.
 
-Oryx provides five t-shirt size values, that are given by a generic `size` enumeration, that can be imported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
+Oryx provides five t-shirt size values that are given by a generic `size` enumeration, which can be imported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
 
 | Screen      | Code | Enum breakpoint | Example devices                  |
 | ----------- | ---- | --------------- | -------------------------------- |
-| Extra small | `xs` | `Size.Xs`       | Small phone, Smart Watch         |
-| Small       | `sm` | `Size.Sm`       | Smart phone, instore application |
+| Extra small | `xs` | `Size.Xs`       | Small phone, smart Watch         |
+| Small       | `sm` | `Size.Sm`       | Smartphone, in-store application |
 | Medium      | `md` | `Size.Md`       | Tablet                           |
 | Large       | `lg` | `Size.Lg`       | Desktop                          |
 | Extra large | `xl` | `Size.Xl`       | Wide screen                      |
 
-While the `xs` and `xl` sizes are available in the typescript enumeration, they are not used in most Oryx components and layouts. You can however use the definitions to create an optimized user experience for these screen sizes. Moreover, you can introduce additional screen sizes in case you need.
+While the `xs` and `xl` sizes are available in the TypeScript enumeration, they are not used in most Oryx components and layouts. However, you can use the definitions to create an optimized user experience for these screen sizes. Moreover, you can introduce additional screen sizes if needed.
 
-The actual screen definition is provided by a breakpoint configuration and can be referenced by their code. If you need to use the screen definitions in your custom code, you can use the `ScreenService`, provided by the [layout package](https://www.npmjs.com/package/@spryker-oryx/layout).
+The actual screen definition is provided by a breakpoint configuration and can be referenced by their code. If you need to use the screen definitions in your custom code, you can use `ScreenService` provided by the [layout package](https://www.npmjs.com/package/@spryker-oryx/layout).
 
 {% info_block infoBox "" %}
 

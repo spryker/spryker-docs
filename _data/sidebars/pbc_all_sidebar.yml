@@ -30,8 +30,6 @@ entries:
         nested:
           - title: Base shop
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/carrier-management/base-shop/whats-changed-in-carrier-management.html
               - title: Shipment feature overview
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
               - title: Install and upgrade
@@ -143,8 +141,6 @@ entries:
           - title: Base shop
             url: /docs/pbc/all/cart-and-checkout/base-shop/cart-and-checkout-base-shop.html
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/cart-and-checkout/base-shop/whats-changed-in-cart-and-checkout.html
               - title: Cart feature overview
                 url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-feature-overview.html
                 nested:
@@ -443,8 +439,6 @@ entries:
         nested:
           - title: Base shop
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/content-management-system/base-shop/whats-changed-in-cms.html
                 include_versions:
                 - "202204.0"
               - title: CMS feature overview
@@ -935,8 +929,6 @@ entries:
         nested:
           - title: Base shop
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/discount-management/base-shop/whats-changed-in-discount-management.html
               - title: Promotions & Discounts feature overview
                 url: /docs/pbc/all/discount-management/base-shop/promotions-discounts-feature-overview.html
               - title: Install and upgrade

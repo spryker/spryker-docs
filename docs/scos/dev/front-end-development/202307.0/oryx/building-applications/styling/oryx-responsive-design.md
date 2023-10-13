@@ -27,29 +27,29 @@ Oryx provides five t-shirt size values that are given by a generic `size` enumer
 | Large       | `lg` | `Size.Lg`       | Desktop                          |
 | Extra large | `xl` | `Size.Xl`       | Wide screen                      |
 
-While the `xs` and `xl` sizes are available in the TypeScript enumeration, they are not used in most Oryx components and layouts. However, you can use the definitions to create an optimized user experience for these screen sizes. Moreover, you can introduce additional screen sizes if needed.
+While the `xs` and `xl` sizes are available in the TypeScript enumeration, they are not used in most Oryx components and layouts. However, you can use the definitions to create an optimized user experience (UX) for these screen sizes. Moreover, you can introduce additional screen sizes if needed.
 
 The actual screen definition is provided by a breakpoint configuration and can be referenced by their code. If you need to use the screen definitions in your custom code, you can use `ScreenService` provided by the [layout package](https://www.npmjs.com/package/@spryker-oryx/layout).
 
 {% info_block infoBox "" %}
 
-Screen sizes might be confusing in some cases. For example, when you browser an Oryx application on a wide screen in a smaller browser window, the physical screen size is not relevant, as the browser viewport is used to indicate the screen size.
+Screen sizes might be confusing in some cases. For example, when you browse an Oryx application on a wide screen in a smaller browser window, the physical screen size is not relevant because the browser viewport is used to indicate the screen size.
 
 {% endinfo_block %}
 
 ## Breakpoints
 
-Breakpoints play a crucial role in responsive design, as they define the specific screen sizes at which your website or application layout should adapt. Oryx's Responsive Design system provides default breakpoint for small, medium and large screen sizes. You can adjust the defaults or introduce custom breakpoints to tailor the design system to your specific needs.
+Breakpoints define the specific screen sizes at which your website or application layout should adapt. Oryx's responsive design system provides default breakpoints for small, medium, and large screen sizes. You can adjust the defaults or introduce custom breakpoints to tailor the design system to your specific needs.
 
-Breakpoints are configurable in themes. If you use an Oryx theme it comes with preconfigured breakpoints, but you can override the breakpoints in an additional theme configuration.
+Breakpoints are configurable in themes. Oryx themes come with preconfigured breakpoints, but you can override the breakpoints in an additional theme configuration.
 
 {% info_block infoBox "" %}
 
-You'd assume that breakpoints and their usage would be controlled by design tokens, and used as CSS variables. Unfortunately, CSS variables can not be used inside media queries definitions. This is the main reason why Oryx provides a configurable system to provide the breakpoint definitions.
+It may seem that breakpoints and their usage should be controlled by design tokens and used as CSS variables. Unfortunately, CSS variables can not be used inside media query definitions. This is the main reason why Oryx provides a configurable system to provide the breakpoint definitions.
 
 {% endinfo_block %}
 
-### Default Breakpoints
+### Default breakpoints
 
 Oryx provides the following default breakpoints for three screen sizes.
 
@@ -59,7 +59,7 @@ Oryx provides the following default breakpoints for three screen sizes.
 | Medium      | Between `"768px"` and `"1023px"` |
 | Large       | Larger than `"1023px"`           |
 
-The default breakpoints are given by the `defaultBreakpoints` object, available in the [themes](https://www.npmjs.com/package/@spryker-oryx/themes) package. The breakpoint values are configured in pixels.
+The default breakpoints are given by the `defaultBreakpoints` object, which is available in the [themes](https://www.npmjs.com/package/@spryker-oryx/themes) package. The breakpoint values are configured in pixels.
 
 ```ts
 import { Breakpoints, Size } from "@spryker-oryx/utilities";
@@ -78,13 +78,13 @@ export const defaultBreakpoints: Breakpoints = {
 };
 ```
 
-The breakpoint definition shows that you only need to define the required breakpoint min or max values. For example, there's no `min` value provided for small size, as it will default to `0`. The same is true for the large screen, which starts with 1024 and will support all screens that are larger than the 1024 px.
+The breakpoint definition shows that you only need to define the required breakpoint min or max values. For example, there's no `min` value provided for small size, as it defaults to `0`. The same is true for the large screen, which starts with 1024&nbsp;px and supports all screens that are larger than 1024&nbsp;px.
 
-### Custom Breakpoints
+### Custom breakpoints
 
-By utilizing custom breakpoints, you can create a responsive design that is tailored to your project's needs and provides an optimal user experience across different devices and screen sizes.
+By using custom breakpoints, you can create a responsive design that is tailored to your project's needs and provides an optimal UX across different devices and screen sizes.
 
-Breakpoints are part of Oryx themes. Oryx themes use the default configuration, but you can configure a(n additional) theme with custom breakpoints.
+Breakpoints are part of Oryx themes. Oryx themes use the default configuration, but you can configure an additional theme with custom breakpoints.
 
 ```ts
 import { Size } from "@spryker-oryx/utilities";
@@ -190,7 +190,7 @@ The Cloudinary integration is an example implementation, which is why it's in th
 
 Adaptive Design is a technique used in web development to create user interfaces that adapt to specific devices or screen sizes. Unlike Responsive Design, which focuses on fluidly adjusting the layout and content based on the viewport size, Adaptive Design involves creating different versions of a website or application specifically tailored to different devices or screen sizes.
 
-In Adaptive Design, developers create multiple fixed layouts or templates optimized for specific devices or screen resolutions. These layouts are then served to users based on their device characteristics, such as screen size, device type, or browser capabilities. This approach allows for more precise control over the user experience on different devices, as elements can be rearranged, resized, or even hidden to provide an optimized interface.
+In Adaptive Design, developers create multiple fixed layouts or templates optimized for specific devices or screen resolutions. These layouts are then served to users based on their device characteristics, such as screen size, device type, or browser capabilities. This approach allows for more precise control over the UX on different devices, as elements can be rearranged, resized, or even hidden to provide an optimized interface.
 
 It's important to note that while Adaptive Design offers more control and customization for specific devices, Oryx does not fully support Adaptive Design. For example, Oryx does not have native knowledge of the specific device characteristics, such as the device type or browser capabilities. In todays web development, responsive design is considered being a very mature technique that does not need much in addition. However, on order to dictate the visibility of certain elements on various screen sizes, Oryx supports visibility rules on compositions and components.
 

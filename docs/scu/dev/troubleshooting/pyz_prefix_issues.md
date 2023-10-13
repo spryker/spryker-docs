@@ -13,9 +13,11 @@ Constant does not exist because the existent constant has `PYZ_` prefix.
 
 ## Solution
 
-Need to remove `pyz` from naming of constant, classes, methods and properties.
-
-It's suitable to use phpStorm for such replaces.
+Remove `pyz` from the names of the entities:
+* Constant
+* Class
+* Method
+* Property
 
 ### Rename constants
 
@@ -56,7 +58,7 @@ According to our naming convention, all custom tables must be prefixed with `pyz
 1. Search and replace by `\w\\Pyz` (regexp), `Pyz(`, `: Pyz`, `(Pyz`
 2. Check and replace all the  `pyz` occurrences by regexp `(?<!(namespace |use |@[a-z]+ \\))(Pyz|pyz)`
 
-### Final check
+### Verify the changes
 1. Use phpstan to find all the missed places and errors
 2. Manually check the project base functionality
 3. Make sure that CI is green

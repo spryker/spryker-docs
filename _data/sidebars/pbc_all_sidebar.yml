@@ -13,14 +13,14 @@ entries:
             url: /docs/pbc/all/back-office/back-office-translations-overview.html
           - title: Install the Spryker Core Back Office feature
             url: /docs/pbc/all/back-office/install-the-spryker-core-back-office-feature.html
-          - title: "HowTo: Add support of number formatting in the Back Office"
-            url: /docs/pbc/all/back-office/howto-add-support-of-number-formatting-in-the-back-office.html
           - title: Manage in the Back Office
             nested:
               - title: View Dashboard
                 url: /docs/pbc/all/back-office/manage-in-the-back-office/view-dashboard.html
           - title: Install and upgrade
             nested:
+              - title: Install the Back Office number formatting
+                url: /docs/pbc/all/back-office/install-and-upgrade/install-the-back-office-number-formatting.html
               - title: Upgrade modules
                 nested:
                   - title: Chart
@@ -3450,7 +3450,7 @@ entries:
                       - title: Install Avalara + Shipment
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/install-avalara-shipment.html
                       - title: Apply Avalara tax codes
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html   
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html
                   - title: Vertex
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     include_versions:
@@ -3459,7 +3459,7 @@ entries:
                       - title: Install Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
-                        - "202400.0"                       
+                        - "202400.0"
           - title: Marketplace
             include_versions:
             - "202212.0"

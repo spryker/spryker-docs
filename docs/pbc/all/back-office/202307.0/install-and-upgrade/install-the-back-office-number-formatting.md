@@ -1,10 +1,11 @@
 ---
-title: "HowTo: Add support of number formatting in the Back Office"
+title: Install the Back Office number formatting
 description: Add support of numbers formatting in the Back Office UI.
 template: howto-guide-template
 last_updated: Aug 30, 2022
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
+  - /docs/pbc/all/back-office/202307.0/howto-add-support-of-number-formatting-in-the-back-office.html
 ---
 
 This document explains how to add support of number formatting in the Back Office UI.

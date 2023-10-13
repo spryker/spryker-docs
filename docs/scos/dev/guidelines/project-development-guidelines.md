@@ -30,16 +30,16 @@ There are different strategies developers can use to develop projects. Before st
 - Plug and play
 - Project modules
 
-## Apply coding guidelines
+## Updating Spryker
+It is essential to ensure that [Spryker is updated](https://docs.spryker.com/docs/scos/dev/updating-spryker/updating-spryker.html) to the latest stable version.
 
+## Apply coding guidelines
 Starting from the first day of development, apply the [coding guidelines](/docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html).
 
 ## Use custom namespaces
-
 Instead of using the `Pyz` namespace, create your own namespace for project development. For example, use the project name as a namespace.
 
 ## Use custom names
-
 Use custom names for everything that is added on the project level, like the following:
 - Transfers
 - Transfer properties
@@ -55,31 +55,38 @@ Use custom names for everything that is added on the project level, like the fol
 For example, customize the names by adding the project name.
 
 ## Avoid using, extending, and overriding Private API
+Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. Spryker provides you extension points, which allows you extend via Public API and helps you to customize the application. Please try to use them instead of overriding private API.
 
-Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. In future, we will add the extension points, and you will be able to extend it via Public API.
+## Avoid using unsupported types
+Avoid using unsupported types as a constructor arguments of a plugin. 
 
+The [supported types](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html#problem-description) are: null, bool, integer, float, string and object.
 
 ## Keep modules up to date
-
 During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
 
 Additionally, we recommend keeping modules up to date in general.
 
 ## Development and tests
-
 Starting from the first day of development, write tests for all the customizations you implement. We provide infrastructure for unit, functional, and acceptance tests.
 
 ## Implement CI/CD
-
 Starting from the first day of development, we recommend establishing an incremental development process based on CI/CD and the tests mentioned in the previous section.
 
-
 ## Establish coding standards
-
 Before you start developing, establish coding standards. Implement code checks based on the standards into your CI/CD. The default code checks shipped with Spryker are located in `/config/install/sniffs.yml`. You might want to add more checks that are based on your project's requirements.
 
 Make sure that code can't be merged until it corresponds to your coding standards.
 
+## Code Maintainability
+Code maintainability is important because it ensures that your code remains understandable, adaptable, and modifiable throughout its lifecycle. It helps development teams to manage and enhance code efficiently, reducing the likelihood of bugs and costly errors over time.
+
+Following tools can contribute to code maintainability:
+
+- [PHPStan](https://docs.spryker.com/docs/sdk/dev/development-tools/phpstan.html)
+- [Architecture Sniffer](https://docs.spryker.com/docs/sdk/dev/development-tools/architecture-sniffer.html)
+- [Code Style Sniffer](https://docs.spryker.com/docs/sdk/dev/development-tools/code-sniffer.html)
+- [PHP Mess detector](https://github.com/spryker/architecture-sniffer)
 
 
 <!--More on test infrastructure <link>

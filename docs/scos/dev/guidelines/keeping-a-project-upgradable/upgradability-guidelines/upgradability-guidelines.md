@@ -29,3 +29,25 @@ In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. The 
 | DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER | The condition statement if {statement} is forbidden in the DependencyProvider | [Dependency provider additional logic checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html) |
 
 </div>
+
+
+## Avoid using deprecated method and classes
+By avoiding [deprecated methods and classes](https://docs.spryker.com/docs/scos/dev/updating-spryker/updating-spryker.html) ensures stability, security, and compatibility with newer versions.
+
+## Avoid using additional logic in dependency provider
+Avoiding [additional logic in dependency providers](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html) is required to maintain simplicity, reliability, and adherence to best practices, ensuring clean and efficient dependency injection.
+
+## PHP Version
+Use one [PHP version](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html) across all your environments.
+
+## Avoid using outdated modules
+Avoid using [outdated](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html) feature- and core- modules.
+
+## Avoid multiple nesting in the plugin registration methods 
+Avoid to use [multiple nesting](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html) within plugin registration methods in the dependency providers.
+
+
+
+
+
+

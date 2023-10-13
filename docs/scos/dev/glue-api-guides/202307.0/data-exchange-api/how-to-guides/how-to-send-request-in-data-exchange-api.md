@@ -5,6 +5,7 @@ last_updated: June 23, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
+  - /docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
 ---
 
 This document describes how to send interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we are using the `/dynamic-data/countries` to interact with the `spy_country` table as an example.
@@ -45,24 +46,26 @@ Authorization: Bearer {your_token}
 Response sample:
 
 ```json
-[
-    {
-        "id_country": 2,
-        "iso2_code": "AD",
-        "iso3_code": "AND",
-        "name": "Andorra",
-        "postal_code_mandatory": true,
-        "postal_code_regex": "AD\\d{3}"
-    },
-    {
-        "id_country": 3,
-        "iso2_code": "AE",
-        "iso3_code": "ARE",
-        "name": "United Arab Emirates",
-        "postal_code_mandatory": false,
-        "postal_code_regex": null
-    }
-]
+{
+  "data": [
+      {
+          "id_country": 2,
+          "iso2_code": "AD",
+          "iso3_code": "AND",
+          "name": "Andorra",
+          "postal_code_mandatory": true,
+          "postal_code_regex": "AD\\d{3}"
+      },
+      {
+          "id_country": 3,
+          "iso2_code": "AE",
+          "iso3_code": "ARE",
+          "name": "United Arab Emirates",
+          "postal_code_mandatory": false,
+          "postal_code_regex": null
+      }
+  ]
+}
 ```
 
 The response contains all the columns from the `spy_country` table that are configured in `spy_dynamic_entity_definition.definition`. Each column is represented using the `fieldVisibleName` as the key, providing a comprehensive view of the table's data in the API response. By default the API `GET` request returns up to 20 records.
@@ -81,16 +84,18 @@ Authorization: Bearer {your_token}
 Response sample:
 
 ```json
-[
-  {
-    "id_country": 1,
-    "iso2_code": "AA",
-    "iso3_code": "UUD",
-    "name": "Create",
-    "postal_code_mandatory": false,
-    "postal_code_regex": null
-  }
-]
+{
+  "data": [
+    {
+      "id_country": 1,
+      "iso2_code": "AA",
+      "iso3_code": "UUD",
+      "name": "Create",
+      "postal_code_mandatory": false,
+      "postal_code_regex": null
+    }
+  ]
+}
 ```
 {% info_block infoBox %}
 
@@ -111,16 +116,18 @@ Authorization: Bearer {your_token}
 Response sample:
 
 ```json
-[
-  {
-    "id_country": 3,
-    "iso2_code": "AE",
-    "iso3_code": "ARE",
-    "name": "United Arab Emirates",
-    "postal_code_mandatory": false,
-    "postal_code_regex": null
-  }
-]
+{
+  "data":[
+    {
+      "id_country": 3,
+      "iso2_code": "AE",
+      "iso3_code": "ARE",
+      "name": "United Arab Emirates",
+      "postal_code_mandatory": false,
+      "postal_code_regex": null
+    }
+  ]
+}
 ```
 
 
@@ -163,14 +170,16 @@ Content-Length: 154
 The response payload includes all the specified fields from the request body, along with the ID of the created entity. Response sample:
 
 ```json
-[
-  {
-    "iso2_code": "WA",
-    "iso3_code": "WWA",
-    "name": "FOO",
-    "id_country": 257
-  }
-]
+{
+  "data":[
+    {
+      "iso2_code": "WA",
+      "iso3_code": "WWA",
+      "name": "FOO",
+      "id_country": 257
+    }
+  ]
+}
 ```
 
 
@@ -232,14 +241,16 @@ Content-Length: 174
 The response payload includes all the specified fields from the request body. Response sample:
 
 ```json
-[
-  {
-    "iso2_code": "WB",
-    "iso3_code": "WWB",
-    "name": "FOO",
-    "id_country": 1
-  }
-]
+{
+    "data":[
+      {
+        "iso2_code": "WB",
+        "iso3_code": "WWB",
+        "name": "FOO",
+        "id_country": 1
+      }
+    ]
+}
 ```
 
 
@@ -337,16 +348,18 @@ Content-Length: 263
 The response payload includes all touched fields for the provided resource. Response sample:
 
 ```json
-[
-  {
-    "iso2_code": "WB",
-    "iso3_code": "WWB",
-    "name": "FOO",
-    "postal_code_mandatory": null,
-    "postal_code_regex": null,
-    "id_country": 1
-  }
-]
+{
+  "data": [
+    {
+      "iso2_code": "WB",
+      "iso3_code": "WWB",
+      "name": "FOO",
+      "postal_code_mandatory": null,
+      "postal_code_regex": null,
+      "id_country": 1
+    }
+  ]
+}
 ```
 
 
@@ -397,6 +410,6 @@ Bellow you can find a list of error codes that you can receive when sending `GET
 | 1305 | Invalid data type for field: `field` |  The specified field has an incorrect type. Please check the configuration for this field and correct the value. |
 | 1306 | Invalid data value for field: `field`, row number: `row`. Field rules: `validation rules`. | The error indicates a data row and a field that does not comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`. |
 | 1307 | The required field must not be empty. Field: `field` | The specified field is required according to the configuration. The field was not provided. Please check the data you are sending and try again. |
-| 1308 | Entity not found by identifier, and new identifier can not be persisted. Please update the request. | The entity could not be found using the provided identifier, and a new identifier cannot be persisted. Please update your request accordingly or check configuration for identifier field. |
+| 1308 |Entity `some field identifier` not found by identifier, and new identifier can not be persisted. Please update the request. | The entity could not be found using the provided identifier, and a new identifier cannot be persisted. Please update your request accordingly or check configuration for identifier field. |
 | 1309 | Failed to persist the data. Please verify the provided data and try again. Entry is duplicated. | Failed to persist the data. Please verify the provided data and try again. This error may occur if a record with the same information already exists in the database. |
 | 1310 | Incomplete Request - missing identifier. | The request is incomplete. The identifier is missing. Please check the request and try again. |

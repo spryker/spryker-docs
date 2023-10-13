@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
     - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/data-exchange-api/data-exchange-api-integration.html
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
+    - docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
 related:
 - title: How to configure Data Exchange API
   link: docs/scos/dev/glue-api-guides/page.version/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
@@ -33,7 +34,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/dynamic-entity-backend-api:"^0.1.0" spryker/dynamic-entity-gui:"^0.1.0" --update-with-dependencies
+composer require spryker/dynamic-entity-backend-api:"^1.0.0" spryker/dynamic-entity-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -165,6 +166,108 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 }
 ```
 
+### Configure Dynamic Data installation
+
+1. Optional: To set the default configuration data, create a configuration file:
+
+<details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
+
+```json
+[
+  {
+      "tableName": "spy_country",
+      "tableAlias": "countries",
+      "isActive": true,
+      "definition": {
+        "identifier": "id_country",
+        "fields": [
+          {
+            "fieldName": "id_country",
+            "fieldVisibleName": "id_country",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "integer",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "iso2_code",
+            "fieldVisibleName": "iso2_code",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": true }
+          },
+          {
+            "fieldName": "iso3_code",
+            "fieldVisibleName": "iso3_code",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "name",
+            "fieldVisibleName": "name",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "postal_code_mandatory",
+            "fieldVisibleName": "postal_code_mandatory",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          },
+          {
+            "fieldName": "postal_code_regex",
+            "fieldVisibleName": "postal_code_regex",
+            "isCreatable": true,
+            "isEditable": true,
+            "type": "string",
+            "validation": { "isRequired": false }
+          }
+        ]
+      }
+    }
+]
+```
+</details>
+2. Add the path to the configuration file, to `DynamicEntityConfig`:
+
+**src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\DynamicEntity;
+
+use Spryker\Zed\DynamicEntity\DynamicEntityConfig as SprykerDynamicEntityConfig;
+
+class DynamicEntityConfig extends SprykerDynamicEntityConfig
+{
+    /**
+     * @var string
+     */
+    protected const CONFIGURATION_FILE_PATH = '%s/src/Pyz/Zed/DynamicEntity/data/installer/configuration.json';
+
+    /**
+     * @return string
+     */
+    public function getInstallerConfigurationDataFilePath(): string
+    {
+        return sprintf(static::CONFIGURATION_FILE_PATH, APPLICATION_ROOT_DIR);
+    }
+}
+```
+
 ### Set up database schema and transfer objects
 
 1. Apply database changes and generate entity and transfer changes:
@@ -181,6 +284,8 @@ Make sure you've triggered the following changes by checking the database:
 | DATABASE ENTITY | TYPE |
 | --- | --- |
 | spy_dynamic_entity_configuration | table |
+| spy_dynamic_entity_configuration_relation | table |
+| spy_dynamic_entity_configuration_relation_field_mapping | table |
 
 Make sure the following transfers have been created:
 
@@ -216,7 +321,20 @@ Make sure the following transfers have been created:
 | GlueResponse | class | created | src/Generated/Shared/Transfer/GlueResponseTransfer.php |
 | Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
 
+Ensure successful generation of Propel entities by verifying that they exist. Additionally, modify the generated entity classes to extend from Spryker core classes.
+
+| CLASS PATH | EXTENDS |
+| --- | --- |
+| src/Generated/Entity/SpyDynamicEntityConfiguration.php | \Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfiguration |
+| src/Generated/Entity/SpyDynamicEntityConfigurationQuery.php | \Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationQuery |
+| src/Generated/Entity/SpyDynamicEntityConfigurationRelation.php | \Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationRelation |
+| src/Generated/Entity/SpyDynamicEntityConfigurationRelationQuery.php | \Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationRelationQuery |
+| src/Generated/Entity/SpyDynamicEntityConfigurationRelationFieldMapping.php | \Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationRelationFieldMapping |
+| src/Generated/Entity/SpyDynamicEntityConfigurationRelationFieldMappingQuery.php | \Spryker\Zed\DynamicEntity\Persistence\Propel\AbstractSpyDynamicEntityConfigurationRelationFieldMappingQuery |
+
+
 {% endinfo_block %}
+
 
 ### Add translations
 
@@ -239,8 +357,8 @@ dynamic_entity.validation.invalid_field_value,"Invalid data value for field: %fi
 dynamic_entity.validation.invalid_field_value,"Ungültiger Datenwert für das Feld: %fieldName%, Zeilennummer: %rowNumber%. Feldregeln: %validationRules%",de_DE
 dynamic_entity.validation.required_field_is_missing,"The required field must not be empty. Field: '%fieldName%'",en_US
 dynamic_entity.validation.required_field_is_missing,"Das erforderlich Feld darf nicht leer sein. Feld: '%fieldName%'",de_DE
-dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entity not found by identifier, and new identifier can not be persisted. Please update the request.",en_US
-dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entität konnte anhand der ID nicht gefunden werden, und die neue ID kann nicht dauerhaft gespeichert werden. Bitte aktualisieren Sie die Anfrage.",de_DE
+dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entity `%identifier%` not found by identifier, and new identifier can not be persisted. Please update the request.",en_US
+dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entität `%identifier%` konnte anhand der ID nicht gefunden werden, und die neue ID kann nicht dauerhaft gespeichert werden. Bitte aktualisieren Sie die Anfrage.",de_DE
 dynamic_entity.validation.modification_of_immutable_field_prohibited,"Modification of immutable field `%fieldName%` is prohibited",en_US
 dynamic_entity.validation.modification_of_immutable_field_prohibited,"Änderung des unveränderlichen Feldes %fieldName% ist nicht zulässig.",de_DE
 dynamic_entity.validation.missing_identifier,"Incomplete Request - missing identifier",en_US

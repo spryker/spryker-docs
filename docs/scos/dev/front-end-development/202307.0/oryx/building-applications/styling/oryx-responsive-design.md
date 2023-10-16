@@ -5,9 +5,9 @@ last_updated: October 3rd, 2023
 template: concept-topic-template
 ---
 
-Oryx's responsive design system empowers developers to implement designs for a variety of screen sizes and layouts in a convenient way. The design system provides various screen sizes,  which you can redefine when needed. The CSS styles that are linked to the screen sizes adapt automatically to the provided configuration. This makes the design system useful for different types of applications. For example, if you need to build a business application for users with large screens, you can optimize the layout of your application to benefit from  the available space.
+Oryx's responsive design system empowers developers to implement designs for a variety of screen sizes and layouts in a convenient way. The design system provides various screen sizes, which you can redefine when needed. The CSS styles that are linked to the screen sizes adapt automatically to the provided configuration. This makes the design system useful for different types of applications. For example, if you need to build a business application for users with large screens, you can optimize the layout of your application to benefit from the available space.
 
-The design system works closely with other styling techniques in Oryx, such as layouts, [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), themes, and [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html). It plays an important role in some design system components, such as media and images.
+The design system works closely with other styling techniques in Oryx, such as layouts, [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), themes, and [typography](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-typography.html). Responsive design is not only a styling technique, but also plays a role in some specific design system components, like image components. These components add images for specific screens to optimize the experience per screen.
 
 <!-- TODO: Add link to layout docs when they're published -->
 <!-- TODO: Add link to themes docs when they're published -->
@@ -15,7 +15,7 @@ The design system works closely with other styling techniques in Oryx, such as l
 
 ## Screen sizes
 
-Oryx is designed to render applications and their components on a variety of devices, from smartphones and tablets to desktop monitors or even smartwatches. The design system is not connected to the various devices, but the screen sizes associated to those devices. Screen sizes are mapped to devises one to one. For example, a small screen design is used for mobile devices, but can also be used for large screens in physical stores.
+Oryx applications are designed for an optimized experience on a variety of devices, such as smartphones, tables, desktop or even smartwatches. The responsive design system is however not connected to specific devices, but to the associated screen sizes. Screen sizes are better reusable cross devices. For example, a small screen design is used for mobile devices, but can also be used for in-Store displays in physical stores.
 
 Oryx provides five t-shirt size values that are given by a generic `size` enumeration, which can be imported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
 
@@ -84,9 +84,7 @@ The breakpoint definition shows that you only need to define the required breakp
 
 By using custom breakpoints, you can create a responsive design that is tailored to your project's needs and provides an optimal UX across different devices and screen sizes.
 
-Breakpoints are part of Oryx themes. Oryx themes use the default configuration, but you can configure an additional theme with custom breakpoints.
-
-In the following example, custom breakpoints are defined for extra small and small screen sizes. The small screen gets a minimum value and the extra small only requires a max value because it starts with 0 by default.
+Breakpoints are part of Oryx themes. All Oryx themes use the default configuration for breakpoints. You can provide a custom theme, or an additional theme this is used on top of the standard themes. A custom theme can add a single breakpoint or redefine all breakpoints. In the following example, custom breakpoints are defined for extra small and small screen sizes. The small screen gets a minimum value and the extra small only requires a max value because it starts with `0` by default.
 
 ```ts
 import { Size } from "@spryker-oryx/utilities";
@@ -107,8 +105,6 @@ export const app = appBuilder()
   })
   .create();
 ```
-
-
 
 ## Building responsive designs
 

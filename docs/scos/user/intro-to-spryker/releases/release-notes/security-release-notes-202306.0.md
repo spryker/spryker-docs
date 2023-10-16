@@ -3,6 +3,8 @@ title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
 last_updated: Jul 11, 2023
 template: concept-topic-template
+redirect_from:
+    - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -44,7 +46,7 @@ composer show spryker/product-management # Verify the version
 
 ## Cross-company role manipulation 
 
-Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This attack was possible by manipulating the company ID parameter included in the HTTP requests of the role creation functionality. 
+Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This was possible due to the possibility to manipulate the company ID parameter included in the HTTP requests of the role creation functionality. 
 
 ### Affected modules
 
@@ -56,9 +58,9 @@ Access validation controls have been implemented to prevent administrators from 
 
 ### How to get the fix
 
-The update requires PHP 8 to be installed. If you are using PHP 7, see [PHP 8.0 as the minimum version for all Spryker projects](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html).
+The update requires PHP 8 to be installed. If you are using PHP 7, see [PHP 8.0 as the minimum version for all Spryker projects](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html) for details on how to migrate to PHP 8.0.
 
-To implement a fix for this vulnerability, upgrade the company page module to version 2.22.0:
+To implement a fix for this vulnerability, upgrade the `company-page` module to version 2.22.0:
 
 ```bash
 composer require spryker-shop/company-page:"~2.22.0"
@@ -79,7 +81,7 @@ Additional validation controls have been implemented to prevent an attacker from
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, update the Kernel module:
+To implement a fix for this vulnerability, update the `kernel` module:
 
 * If your version of `spryker/kernel` is 3.72.0, update to version 3.72.1:
 
@@ -109,9 +111,9 @@ composer require spryker/kernel:"~3.68.1"
 composer show spryker/kernel # Verify the version
 ```
 
-## Brute-force Attacks in the Storefront and Back Office
+## Brute-force attacks on the Storefront and in the Back Office
 
-The Storefront, Back Office, and Merchant portals were prone to brute-force attacks. By exploiting this type of vulnerability, an attacker was able to systematically attempt different combinations of usernames and passwords against the login pages of the affected portals until a valid combination is identified.
+The Storefront, the Back Office, and the Merchant portals were prone to brute-force attacks. By exploiting this type of vulnerability, an attacker was able to systematically attempt different combinations of usernames and passwords against the login pages of the affected portals until a valid combination was identified.
 
 ### Affected modules
 
@@ -193,7 +195,7 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 9. Add translations to `data/import/common/common/glossary.csv`:
 
 ```csv
-security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_backoffice_gui.error.account_blocked,"Too many log-in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
@@ -386,7 +388,7 @@ Input validation controls have been implemented on the server side to validate v
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, update the ShopUi, CustomerPage, CompanyPage, Customer, CompanyUnitAddressGui, and MerchantProfileGui modules:
+To implement a fix for this vulnerability, update the `shop-ui`, `customer-page`, `company-page`, `customer`, `company-unit-address-gui`, and `merchant-profile-gui` modules:
 
 1. Upgrade the `spryker-shop/shop-ui` module to at least version 1.70.0:
 
@@ -489,7 +491,7 @@ The affected library has been upgraded.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, update the Guzzle, MessageBrokerAws, SecretsManagerAws, and  OauthAuth0 modules:
+To implement a fix for this vulnerability, update the `guzzle`, `message-broker-aws`, `secrets-manager-aws`, and  `oauth-auth0` modules:
 
 1. Upgrade the `spryker/guzzle` module to version 2.4.1:
 
@@ -545,7 +547,7 @@ The following security-related HTTP headers can be implemented:
 
 To implement a fix for this vulnerability: 
 
-1. Update the event-dispatcher, glue-backend-api-application, glue-storefront-api-application, HTTP and merchant-portal-application modules:
+1. Update the `event-dispatcher`, `glue-backend-api-application`, `glue-storefront-api-application`, `HTTP`, and `merchant-portal-application` modules:
 
 ```bash
 composer update spryker/event-dispatcher spryker/glue-backend-api-application spryker/glue-storefront-api-application spryker/http spryker/merchant-portal-application

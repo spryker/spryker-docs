@@ -439,8 +439,6 @@ entries:
         nested:
           - title: Base shop
             nested:
-                include_versions:
-                - "202204.0"
               - title: CMS feature overview
                 url: /docs/pbc/all/content-management-system/base-shop/cms-feature-overview/cms-feature-overview.html
                 nested:

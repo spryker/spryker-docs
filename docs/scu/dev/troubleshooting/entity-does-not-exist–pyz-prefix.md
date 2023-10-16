@@ -1,6 +1,6 @@
 ---
 title: "Entity does not exist: Pyz prefix"
-description: How to solve the issue related to an entity prefixed with "pyz"
+description: How to solve the issue related to an entity prefixed with pyz
 template: concept-topic-template
 ---
 

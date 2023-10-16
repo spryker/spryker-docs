@@ -3391,7 +3391,7 @@ entries:
             - title: Routing
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
 
-        - title: Building Components
+        - title: Building components
           url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-building-components.html
           include_versions:
           - "202307.0"

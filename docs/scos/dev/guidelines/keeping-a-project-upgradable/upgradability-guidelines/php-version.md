@@ -77,7 +77,7 @@ A `composer.json` file that produces the error message:
 
 Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `deploy.yml` file.
 
-```shell
+```bash
 ===================
 PHP VERSION CHECKER
 ===================
@@ -102,7 +102,7 @@ image:
 
 Below is an example of inconsistent PHP versions being used in the `composer.json` and `deploy.yml` files:
 
-```shell
+```bash
 ===================
 PHP VERSION CHECKER
 ===================
@@ -150,3 +150,10 @@ To resolve the issue:
 2. Make sure that all the files contain the consistent PHP version declaration:
    - `composer.json`
    - Config deploy files `deploy.**.yml`
+
+
+## Running only this checker
+To run only this checker, please include `PHP_VERSION_CHECKER` into the checkers list, for example:
+```bash
+vendor/bin/evaluator evaluate --checkers=PHP_VERSION_CHECKER
+```

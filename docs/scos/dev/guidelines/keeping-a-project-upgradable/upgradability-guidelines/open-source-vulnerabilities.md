@@ -26,7 +26,7 @@ Target:  guzzlehttp/psr7:2.4.1
 
 Your `composer.lock` file contains package versions that have security issues:
 
-```yaml
+```json
 ...
     {
     "name": "guzzlehttp/psr7",

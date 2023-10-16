@@ -729,6 +729,10 @@ entries:
       include_versions:
       - "202212.0"
       - "202307.0"
+    - title: Use API Key authorization
+      url: /docs/scos/dev/glue-api-guides/use-api-key-authorization.html
+      include_versions:
+      - "202307.0"
     - title: Old Glue infrastructure
       include_versions:
       - "202212.0"
@@ -3391,7 +3395,7 @@ entries:
             - title: Routing
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
 
-        - title: Building Components
+        - title: Building components
           url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-building-components.html
           include_versions:
           - "202307.0"
@@ -3649,6 +3653,8 @@ entries:
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
         - title: Integrate the authentication
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+        - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
         - title: Integrate the authorization scopes
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
         - title: Integrate the documentation generator

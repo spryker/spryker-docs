@@ -3,6 +3,9 @@ title: Release notes 202212.0
 description: Release notes for the Spryker SCOS release 202212.0
 last_updated: Dec 14, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes-202212.0/release-notes-202212.0.html
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0/release-notes-202212.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
@@ -47,7 +50,7 @@ For an effortless shopping experience, the localized number formatting is availa
 
 ##### Documentation
 
-[HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
+[HowTo: Add support for number formatting in the Storefront](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 
 
 #### Number formatting in the Back Office
@@ -55,7 +58,7 @@ Efficiency and accuracy are essential when working in the Back Office. Increasin
 
 ##### Documentation
 
-[HowTo: Add support of number formatting in the Back Office](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
+[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
 
 
 ## Spryker Glue API
@@ -70,9 +73,9 @@ It lets your customers always see the accurate price they must pay for the entir
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 * Technical prerequisites:
-  * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html)
+  * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)

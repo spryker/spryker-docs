@@ -47,7 +47,7 @@ $config[HeidelpayConstants::CONFIG_IS_SPLIT_PAYMENT_ENABLED_KEY] = true;
 
 ## Project Implementation
 
-A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/pbc/all/cart-and-checkout/{{site.version}}/extend-and-customize/cart-module-reference-information.html#cart-expanders).
+A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/cart-module-reference-information.html#cart-expanders).
 
 Example:
 

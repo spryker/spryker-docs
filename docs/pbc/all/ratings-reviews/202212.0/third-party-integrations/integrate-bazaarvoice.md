@@ -10,14 +10,16 @@ To integrate Bazaarvoice, follow these guidelines.
 
 ## Prerequisites
 
+Before you can integrate Bazaarvoice, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+
 The Bazaarvoice app requires the following Spryker modules:
 
 * `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
-* `spryker/merchant-profile: ^1.1.0` (Marketplace only)
+* `spryker/merchant-profile: ^1.2.1` (Marketplace only)
 * `spryker/message-broker: ^1.3.0`
-* `spryker/message-broker-aws: ^1.3.2`
-* `spryker/oms: ^11.23.0`
+* `spryker/message-broker-aws: ^1.4.1`
+* `spryker/oms: ^11.25.0`
 * `spryker/product-review: ^2.10.0`
 * `spryker/product-review-gui: ^1.5.0`
 * `spryker-shop/asset-widget: ^1.0.0`
@@ -72,17 +74,35 @@ If you have custom Yves templates or make your own frontend, add the markups req
 
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
-| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY |
-|------------------------------|----------------------|
-| product.sku                  | productId            |
-| product.name                 | productName          |
-| product.description          | productDescription   |
-| product.image                | productImageURL      |
-| product.url                  | productPageURL       |
-| product.brand.name           | brandId, brandName   |
-| product.category             | categoryPath         |
-| product.gtin12               | upcs                 |
-| product.inProductGroupWithID | family               |
+| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY | Required | Example                                                                          |
+|------------------------------|----------------------|----------|----------------------------------------------------------------------------------|
+| product.sku                  | productId            | Yes      | 012_3456789                                                                      |
+| product.name                 | productName          | Yes      | Camera Pro 123                                                                   |
+| product.description          | productDescription   | No       | Lorem ipsum dolor sit amet, consectetur adipiscing elit.                         |
+| product.image                | productImageURL      | Yes      | https://www.example.com/img/gallery/camera-pro-123.jpg (always use absolute URL) |
+| product.url                  | productPageURL       | Yes      | https://www.example.com/office-chair (always use absolute URL)                   |    
+| product.brand.name           | brandId, brandName   | No       | Xyz Brand                                                                        |
+| product.category             | categoryPath         | No       | [{"id":1,"name":"Cameras & Camcorders"},{"id":4,"name":"Digital Cameras"}]       |
+| product.gtin12               | upcs                 | No       | 123456789876                                                                     |
+| product.inProductGroupWithID | family               | No       | 6                                                                                |
+
+Example:
+```html
+<section itemscope="" itemtype="https://schema.org/Product">
+    <meta itemprop="name" content="Camera Pro 123">
+    <meta itemprop="url" content="https://www.example.com/camera-pro-123?">
+    <meta itemprop="sku" content="012_3456789">
+    <meta itemprop="productId" content="012_3456789">
+    <meta itemprop="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <meta itemprop="image" content="https://www.example.com/img/gallery/camera-pro-123.jpg">
+    <div itemprop="brand" itemscope="" itemtype="https://schema.org/Brand">
+        <meta itemprop="name" content="Xyz Brand">
+    </div>
+    <meta itemprop="category" content="[{&quot;id&quot;:1,&quot;name&quot;:&quot;Cameras &amp; Camcorders&quot;},{&quot;id&quot;:4,&quot;name&quot;:&quot;Digital Cameras&quot;}]">
+    <meta itemprop="inProductGroupWithID" content="6">
+    <meta itemprop="gtin12" content="123456789876">
+</section>
+```
 
 #### DCC for merchants
 
@@ -94,11 +114,20 @@ Since merchants don't have their own entities in the Bazaarvoice service, produc
 
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
-|----------------------------|----------------------|
-| organization.identifier    | productId            |
-| organization.name          | productName          |
-| organization.logo          | productImageURL      |
+| SCHEMA.ORG PROPERTY     | BAZAARVOICE PROPERTY | Required | Example                                                                      |
+|-------------------------|----------------------|----------|------------------------------------------------------------------------------|
+| organization.identifier | productId            | Yes      | MER000001                                                                    |
+| organization.name       | productName          | Yes      | Xyz Merchant                                                                 |
+| organization.logo       | productImageURL      | Yes      | https://www.example.com/merchant/merchant-logo.png (always use absolute URL) |
+
+Example:
+```html
+<section itemscope="" itemtype="https://schema.org/Organization">
+    <meta itemprop="identifier" content="MER000001">
+    <meta itemprop="name" content="Xyz Merchant">
+    <meta itemprop="logo" content="https://www.example.com/merchant/merchant-logo.png">
+</section>
+```
 
 #### Ratings and reviews (for Product)
 
@@ -179,12 +208,10 @@ $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...,
     'reviews' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'orders' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...,
-    'reviews' => 'http',
     'orders' => 'http',
 ];
 ```
@@ -258,7 +285,7 @@ protected function extendCommandPlugins(Container $container): Container
 
 Adjust your OMS state machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
 
-Here is an example with the `DummyPayment01.xml` process for the `authorize` event:
+Here is an example with the `DummyPayment01.xml` process for the `deliver` event:
 
 ```xml
 <?xml version="1.0"?>
@@ -271,7 +298,7 @@ Here is an example with the `DummyPayment01.xml` process for the `authorize` eve
         <!-- ... -->
         <events>
             <!-- ... -->
-            <event name="authorize" timeout="1 second" command="Order/RequestProductReviews"/>
+            <event name="deliver" timeout="1 second" command="Order/RequestProductReviews"/>
             <!-- ... -->
         </events>
     </process>

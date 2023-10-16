@@ -9,7 +9,7 @@ Follow the steps below to install the CMS feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -790,7 +790,7 @@ cms-page--7,Placeholders Title & Content,1,1,1,/de/ruecknahmegarantie,/en/return
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |template_name |yes |string |static full |Template name. |
 |is_searchable |yes |bool |1 |Flag that defines if entity is searchable. |
@@ -833,7 +833,7 @@ cms-page--7,AT
 cms-page--7,US
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | page_key | mandatory | string | page_5 | Unique page identifier. |
 | store_name | mandatory | string | DE | Unique store identifier. |
@@ -856,7 +856,7 @@ blck-10,CMS block for the footer navigation,Navigation block,@CmsBlock/template/
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |block_key |yes |string |blck-31 |Block key. |
 | block_name| yes|string |10% Discount |Block name. |
@@ -914,7 +914,7 @@ blck-31,AT
 blck-31,US
 ```
 </details>
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |block_key|yes|string|blck-31|Block key.|
 |store_name|yes|string|DE|Store name.|
@@ -931,7 +931,7 @@ Product,"The layout of Slots in the Product Pages, always below Header including
 CMS Page: Placeholders Title and Content + Slot,A CMS Page that includes a Slot as well.,@Cms/templates/placeholders-title-content-slot/placeholders-title-content-slot.twig
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_path | yes | string | @HomePage/views/home/home.twig | Unique path to the corresponding Twig file. |
 | name | yes | string | Home Page | Template name used in the Back Office. |
@@ -952,7 +952,7 @@ slt-footer,Footer,"In the store Footer section, On desktop, bottom of the page. 
 slt-mobile-header,Header mobile view,"In the store Header section. On mobile, under the hamburger menu.",SprykerCmsSlotBlock,@ShopUi/templates/page-layout-main/page-layout-main.twig,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which slot is assigned. |
 | slot_key | mandatory | string | slt-4 |Unique slot identifier. |
@@ -979,7 +979,7 @@ slt-footer,blck-12,3,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which this CMS block to slot assignment belongs. |
 | slot_key | mandatory | string | slt-4 | Unique slot identifier. |
@@ -1304,7 +1304,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | CmsBlockTwigPlugin | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | SprykerShop\Yves\CmsBlockWidget\Plugin |
 | CmsTwigPlugin | Provides the `spyCms` function. | SprykerShop\Yves\CmsPage\Plugin\Twig |
-| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
+| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
 | ShopCmsSlotTwigPlugin | Provides the `cms_slot` Twig tag. | SprykerShop\Yves\ShopCmsSlot\Plugin\Twig |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1537,7 +1537,7 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. For references, see [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html).
+Verify the changes by adding a slot widget to a page. For references, see [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html).
 
 {% endinfo_block %}
 
@@ -1545,7 +1545,7 @@ Verify the changes by adding a slot widget to a page. For references, see [Templ
 
 {% info_block infoBox %}
 
-Follow the further steps only if you are going to use the [visibility conditions](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conditions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 
 {% endinfo_block %}
 
@@ -1654,7 +1654,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 1. In the Back Office, go to **Content&nbsp;<span aria-label="and then">></span> Slots**.
 2. In **LIST OF TEMPLATES**, choose the template for which you've created the visibility condition.
 3. Choose a slot in the **LIST OF SLOTS FOR *[NAME]* TEMPLATE**.
-4. Select or [assign](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **LIST OF SLOTS FOR *[NAME]* SLOT**.
+4. Select or [assign](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **LIST OF SLOTS FOR *[NAME]* SLOT**.
 5. Make sure that for each CMS block, there is an additional form that lets you define the visibility condition you have created.
 
 {% endinfo_block %}

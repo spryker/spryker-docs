@@ -12,7 +12,7 @@ Follow the steps below to install the Company Account + Order Management feature
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Set up synchronization queue pools to synchronize non-multistore entities (not store-specific entities) among stores:
+Set up synchronization queue pools to synchronize non-multi-store entities (not store-specific entities) among stores:
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageConfig.php**
 
@@ -274,7 +274,7 @@ DE--7,BoB-Hotel-Kudamm,business-unit-kudamm-1,0
 DE--7,spryker_systems,spryker_systems_HQ,0
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | customer_reference | mandatory | string | DE--6 | Identifies a customer to add data to. |
 | company_key | mandatory | string | BoB-Hotel-Mitte | Identifies a company to add data to. |
@@ -652,7 +652,7 @@ class CompanyBusinessUnitGuiDependencyProvider extends SprykerCompanyBusinessUni
 
 Log in to a customer account that has multiple company users and a default one. In the session, check if the default company user is assigned to the customer and if the `IsOnBehalf` property is set correctly for the customer.
 
-Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
+Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/generate-login-tokens.html).
 
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` is set up correctly, check the data exported to the key-value storage key `kv:company_user:1` for `id_company_business_unit:id` and `id_company_business_unit` must be set up to a correct foreign key of the business unit that the company user is assigned to.
 
@@ -690,7 +690,7 @@ Follow these steps to install the Company Account + Order Management feature fro
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

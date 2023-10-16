@@ -6,6 +6,8 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/overview-of-features.html
 ---
 
+<!--DO NOT DELETE OR MOVE THIS PAGE. The document must exist and must be absent in the sidebar. -->
+
 As a starting point to working with the Spryker Commerce OS, we created a list of all the capabilities we have to offer that arrive out of the box. 
 
 {% info_block infoBox "Info" %}

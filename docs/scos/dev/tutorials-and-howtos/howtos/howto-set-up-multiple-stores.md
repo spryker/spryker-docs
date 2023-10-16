@@ -16,9 +16,9 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
-{% info_block warningBox "Multiple stores in cloud environments" %}
+{% info_block warningBox %}
 
-For instructions about setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) installed, you can only add stores in the Back Office.
 
 {% endinfo_block %}
 
@@ -29,32 +29,7 @@ With the Spryker Commerce OS, you can create multiple stores per your business r
 * Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
 * Set up a default store.
 
-## Multi-store setup infrastructure options
-
-Multi-store setup 1: Database, search engine, and key-value storage are shared between stores.
-
-![multi-store setup 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-1.png)
-
-Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
-
-Multi-store setup 2: Each store has a dedicated search engine and key-value storage while the database is shared.
-
-![multi-store setup 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-2.png)
-
-This setup is most suitable for B2B projects with high traffic and a large amount of data.
-
-Multi-store setup 3: Each store has a dedicated database, search engine, and key-value storage.
-
-![multi-store setup 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-3.png)
-
-This setup is most suitable for projects with the following requirements:
-
-* Completely different business requirements per store, like business logic and features.
-* Independent maintenance and development flow.
-* Separated data management for entities like products, customers, and orders.
-* On-demand setup of any type of environment per store, like test, staging, or production.
-
-It's the most expensive but flexible option in terms of per-store scaling and performance.
+For details on all the multi-store infrastructure options, see [Multistore setup options](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html).
 
 ## Set up multiple stores
 
@@ -214,7 +189,7 @@ Also, make sure that commands that need to trigger for each store have stores: `
 
 ## Configure the deploy file
 
-According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
+According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default): database, search engine, and key-value storage are shared:
 
 Deploy file configuration for the multi-store setup 1:
 
@@ -263,6 +238,12 @@ The following configuration parameters are used in this example:
 
 For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
+{% info_block warningBox "Change Request needed" %}
+
+Once you have configured your `deploy.yml` file, get in touch with our Support because infrastructure adjustments are needed. To speed up the process, attach your `deploy.yml file` to the case.
+
+{% endinfo_block %}
+
 ## Define the store context
 
 You can define stores by domains or by headers. We recommend defining stores by domains, which is supported by default.  
@@ -271,7 +252,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 
 {% info_block infoBox %}
 
-The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
+The workaround is only supported by the [multi-store store setup 1](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
 ```php

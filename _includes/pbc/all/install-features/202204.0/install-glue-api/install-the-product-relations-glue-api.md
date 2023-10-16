@@ -5,14 +5,14 @@ Follow the steps to install the Product Relations feature API.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|
 |Spryker Core| {{page.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
 |Product Relation| {{page.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relations-feature-integration.html)|
 |Cart| {{page.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) ||
-Product| {{page.version}} |[Products API](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
+Product| {{page.version}} |[Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
 
 ### 1) Install the required modules using Composer
 

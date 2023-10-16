@@ -41,7 +41,7 @@ The feature has the following functional constraints, which are going to be reso
 * A review is available in all the stores that share the locale of the store in which it has been originally created.
 
 
-## Related Business User articles
+## Related Business User documents
 
 | BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
 | - | - |
@@ -51,7 +51,7 @@ The feature has the following functional constraints, which are going to be reso
 | [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/disconnect-bazaarvoice.html) | |
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------| - |

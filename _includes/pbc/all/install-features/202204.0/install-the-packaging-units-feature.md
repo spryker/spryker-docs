@@ -4,7 +4,7 @@
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -86,7 +86,7 @@ Adjust the schema definition, so entity changes can trigger events.
 </database>
 ```
 
-Set up synchronization queue pools, so non-multistore entities (not store-specific entities) can be synchronized among stores:
+Set up synchronization queue pools, so non-multi-store entities (not store-specific entities) can be synchronized among stores:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
 
@@ -395,7 +395,7 @@ packaging_unit_type.pack_100.name
 packaging_unit_type.pack_500.name
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | name |  mandatory|string  | packaging_unit_type.ring_500.name |Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales.  |
 
@@ -456,7 +456,7 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 ```
 
 <div>
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | concrete_sku | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
 | lead_product_sku | mandatory | string | 1 | Lead product concrete SKU. |
@@ -903,7 +903,7 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

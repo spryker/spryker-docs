@@ -61,7 +61,7 @@ When an application service is unavailable, you might want to apply a fix and ru
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
@@ -220,7 +220,7 @@ quote-23,Spryker--4,READ_ONLY
 quote-23,Spryker--5,READ_ONLY
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |quote_key|mandatory|string |quote-22|Key that will identify the quote to add data to.|
 |company_user_key|mandatory|string|Spryker--1|Key that will identify the company user that the quote is shared with.|

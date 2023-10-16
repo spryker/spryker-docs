@@ -10,6 +10,8 @@ entries:
             url: /docs/acp/user/intro-to-acp/acp-overview.html
           - title: ACP security assessment
             url: /docs/acp/user/intro-to-acp/aop-security-assessment.html
+      - title: Install ACP catalog
+        url: /docs/acp/user/app-composition-platform-installation.html
       - title: Developing an app
         url: /docs/acp/user/developing-an-app.html
       - title: App manifest

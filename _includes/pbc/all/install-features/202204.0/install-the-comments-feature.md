@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/comments-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -9,7 +9,7 @@ Follow the steps below to install the Comments feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |
@@ -202,7 +202,7 @@ Follow the steps below to install the Comments feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 | --- | --- | --- |

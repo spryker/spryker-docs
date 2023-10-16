@@ -1,129 +1,44 @@
 ---
 title: Tax Management
-description: With the Tax Management capability you can define taxes for the items you sell.
-last_updated: Jun 25, 2021
+description: Tax Management PBC lets you define tax rates for different stores and products
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
-originalArticleId: 2ca980d2-d08b-4511-b26c-4cafa8624283
-redirect_from:
-  - /2021080/docs/tax-feature-overview
-  - /2021080/docs/en/tax-feature-overview
-  - /docs/tax-feature-overview
-  - /docs/en/tax-feature-overview
-  - /2021080/docs/tax
-  - /2021080/docs/en/tax
-  - /docs/tax
-  - /docs/en/tax
-  - /2021080/docs/international-tax-rates-sets-1
-  - /2021080/docs/en/international-tax-rates-sets-1
-  - /docs/international-tax-rates-sets-1
-  - /docs/en/international-tax-rates-sets-1
-  - /docs/scos/user/features/202200.0/tax-feature-overview.html
-  - /docs/scos/user/features/202212.0/tax-feature-overview.html 
-  - /docs/pbc/all/tax-management/tax-management.html 
 ---
 
-The *Tax Management* capability lets you define taxes for the items you sell. The capability is represented by two entities: tax rates and tax sets.
+Adhere to the respective tax regulations in the countries you sell and effortlessly configure and manage tax rates for products, shipments, and additional services.
 
-The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-rates.html).
+## Available tax providers
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-sets.html) or[ import tax sets](/docs/pbc/all/tax-management/{{site.version}}/import-and-export-data/import-tax-sets.html) into your project.
+| TAX PROVIDER | BUILT AND MAINTAINED BY | AVAILABLE FROM | BUSINESS MODEL SUPPORTED | SUITABLE WHEN | CAN BE EXTENDED AND CUSTOMIZED |
+| --- | --- | ---| ---| --- | -- |
+| [Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/avalara.html) | Avalara | Composer | B2C | You do business primarily in North America. | From the Avalara Admin panel, you can customize all the tax rules of your business. |
+| [Spryker Tax](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/base-shop/tax-feature-overview.html) | Spryker | Composer | B2B, B2C, Marketplace | You do business primarily in Europe and in the countries where tax systems are simple. | While you still need  a development team to customize the tax experience, some parts of it can be customized in Spryker Back Office. |
 
-Tax sets can be applied to an abstract product, product option, and shipment:
+The following are some key usages and values of a tax engine in the ecommerce context.
 
+## Automated tax calculation
 
-| ENTITY | INSTRUCTIONS ON DEFINING TAX SETS FOR THE ENTITY IN THE BACK OFFICE  | DETAILS ON THE IMPORT FILE TO IMPORT TAX SETS FOR THE ENTITY |
-| --- | --- | --- |
-| Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) |
-| Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/product-options/file-details-product-option.csv.html) |
-| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+A tax engine automates the complex process of calculating taxes for online transactions. It integrates with the ecommerce platform and considers various factors such as the customer's location, the seller's location, product type, and applicable tax laws and regulations. By automating tax calculations, businesses can ensure accuracy, reduce manual errors, and save time and resources that would otherwise be spent on manual tax calculations.
 
-## International tax rates and sets
+## Compliance with tax laws
 
-Align your business with international tax standards by defining tax rates and sets. Determine country-based tax rates for products, options, and shipments, that will automatically be applied to the respective shops.
+Tax regulations can be intricate and constantly changing, making it challenging for businesses to keep up. A tax engine stays up to date with the latest tax laws, rates, and jurisdictions. It ensures that the correct taxes are applied based on the specific location and products involved in the transaction. By ensuring compliance with tax laws, businesses can avoid penalties, legal issues, and reputational damage.
 
-In a tax system, the tax rate is the ratio (usually expressed as a percentage) at which a business, person, item is taxed.
+## Real-time tax rates
 
-A *tax set* is a set of tax rates that can be applied to a specific product.
+Tax rates can vary depending on the customer's location and the products being sold. A tax engine provides real-time tax rate information, eliminating the need for businesses to manually research and update tax rates. This real-time functionality ensures accurate tax calculations, regardless of changes in tax rates or jurisdictions.
 
-Keeping that in mind, the tax rate is created first.
-![Tax rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-rate.gif)
+## Seamless international sales
 
-Once the rate is defined, you can attach it to a tax set(s). A tax set can contain from one to many tax rates.
-![Tax set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-set.gif)
+For ecommerce businesses operating across borders, dealing with international taxes can be complex. A tax engine simplifies the process by automatically calculating and applying the appropriate taxes for each international transaction. It takes into account factors such as import duties, value-added taxes (VAT), or goods and services taxes (GST). This simplification enables businesses to expand their customer base globally and facilitates international sales without the burden of navigating complex tax regulations.
 
-The described values are defined in the **Back Office&nbsp;<span aria-label="and then">></span> Taxes** section.
+## Transparency and customer trust
 
-![Tax section](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/taxes-section.gif)
+Clear and transparent tax calculations contribute to customer trust. By providing accurate and transparent tax breakdowns during the checkout process, businesses build credibility and avoid any potential confusion or disputes with customers regarding taxes. This transparency strengthens the overall customer experience and fosters trust in the brand.
 
-## Avalara system for automated tax compliance
+## Audit trail and reporting
 
-You can integrate the third-party system Avalara to automatically apply tax rates that depend on such factors as location, product type, and shipping rules.
+A tax engine maintains a comprehensive audit trail of tax calculations, ensuring businesses have a record of all transactions and associated taxes. This audit trail can be used for internal purposes, such as financial reporting, as well as for external entities like tax authorities during audits or compliance checks. The ability to generate accurate tax reports simplifies tax filing processes and helps businesses maintain proper financial records.
 
-{% info_block warningBox %}
+## Scalability and efficiency
 
-Avalara is mostly meant for the USA.
-
-{% endinfo_block %}
-
-To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
-
-You can set the Avalara tax codes for the following entities by importing the codes:
-
-* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
-* Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/product-options/file-details-product-option.csv.html).
-* Shipment: For details about import, see [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html).
-
-{% info_block infoBox %}
-
-Since shipment and products fall under different taxability categories, Avalara tax code for shipment is different from that of the abstract product or product option. For details about the codes and categories, see [Avalara tax code search](https://taxcode.avatax.avalara.com/).
-
-{% endinfo_block %}
-
-The Avalara codes are not displayed on the Storefront or in the Back Office. They are processed in the background to define taxes for order items. Avalara calculates taxes during the checkout, and, by default, the taxes are shown at the final checkout step.
-
-When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Warehouse assignment to order items (with Avalara integration only)](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#warehouse-assignment-to-order-items-with-avalara-integration-only).
-
-## Tax Management capability on the Storefront
-
-A *product tax set* is calculated when buyers add products to the cart. Therefore, by default, the tax calculated on the basis of the product tax sets is displayed in the **Tax** section on the **Cart** page. However, the tax value on the **Cart** page is not always final because it does not take a possible shipment tax set into account since buyers select the shipping method during the checkout. If you have Avalara integrated, it calculates tax during the checkout as well. Therefore, the final tax value is always displayed only upon checkout.
-
-Tax on the **Cart** page:
-
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/tax-in-cart.png)
-
-Tax in the checkout:
-
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/tax-in-checkout.png)
-
-## Current constraints
-
-The capability has the following functional constraints:
-
-* There is no Back Office UI for the Avalara tax codes.
-* Many Avalara features are not supported yet. This will be resolved in the future.
-
-
-## Related Business User articles
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-rates.html) |
-| [Edit tax rates](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/edit-tax-rates.html) |
-| [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-sets.html) |
-| [Edit tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/edit-tax-sets.html) |
-
-## Related Developer articles
-
-| INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
-|---|---|---|---|
-| [Integrate the Tax Glue API](/docs/pbc/all/tax-management/{{site.version}}/install-and-upgrade/integrate-the-tax-glue-api.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets.html)  | [Import tax sets](/docs/pbc/all/tax-management/{{site.version}}/import-and-export-data/import-tax-sets.html) |
-| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/{{site.version}}/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/{{site.version}}/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/{{site.version}}/import-and-export-data/import-tax-sets-for-abstract-products.html) |
-| | | | [Import tax sets for shipment methods](/docs/pbc/all/tax-management/{{site.version}}/import-and-export-data/import-tax-sets-for-shipment-methods.html) |
-| | | | [Import tax sets for product options](/docs/pbc/all/tax-management/{{site.version}}/import-and-export-data/import-tax-sets-for-product-options.html) |
-
-<!--
-| [Integrate Avalara](/docs/pbc/all/tax-management/{{site.version}}/third-party-integrations/integrate-avalara.html) |
-| [Integrrate Avalara Tax + Shipment feature](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |
-| [Integrate Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/{{site.version}}/third-party-integrations/integrate-avalara-tax-product-options.html) |
--->
+As an ecommerce business grows, the volume of transactions and tax calculations increases significantly. A tax engine can handle a large volume of transactions efficiently and accurately, even during peak periods. It ensures scalability and reliability, allowing businesses to focus on core operations and growth strategies, rather than dedicating excessive resources to manual tax calculations.

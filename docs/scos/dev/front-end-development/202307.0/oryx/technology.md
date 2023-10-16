@@ -16,7 +16,7 @@ In terms of styling and layout rendering, Oryx adopts a CSS-first approach, cons
 The following technologies are employed in the development of Oryx:
 - [HTML](#html)
 - [CSS](#css)
-- [TypeScript](#typescript)
+- [TS](#TS)
 - [Web Components](#web-components)
 - [Lit](#lit)
 - [RxJS](#rxjs)
@@ -35,16 +35,18 @@ CSS is a style sheet language used to describe the visual presentation of a docu
 
 Oryx uses standard CSS syntax and does not use CSS preprocessors because Oryx does not use a global CSS utility library; instead, we have isolated styles per component and because of that we do not want to load global css utils in each component.
 
-Also unlike some other CSS methodologies, such as BEM (Block, Element, Modifier), Oryx does not rely on a specific naming convention to structure its CSS classes.
+Unlike some other CSS methodologies, like Block, Element, or Modifier, Oryx does not rely on a specific naming convention to structure its CSS classes.
 
 ## TypeScript
-TypeScript is a superset of JS that adds optional static typing, classes, and interfaces to the language. In Oryx, TypeScript is used to provide type safety and better code organization. It allows developers to catch errors early in the development process and provides better code navigation and refactoring capabilities.
+
+TypeScript (TS) is a superset of JS that adds optional static typing, classes, and interfaces to the language. In Oryx, TS provides type safety and better code organization. It enables developers to catch errors early in the development process and provides better code navigation and refactoring capabilities.
 
 ## Web Components
-In Oryx, Web Components are used to create reusable UI components that can be used across the application. It allows developers to create complex components with minimal code duplication and provides better code organization and maintainability. At the same time it means Oryx component are compatible with any other frontend framework and can be integrated into almost any web-application.
+
+In Oryx, Web Components are used to create reusable UI components that can be used across the application. It enables developers to create complex components with minimal code duplication and provides better code organization and maintainability. It also means that Oryx components are compatible with any other frontend framework and can be integrated into almost any web application.
 
 ## Lit
-Lit is a lightweight library for creating web components using TypeScript and HTML templates. In Oryx, Lit is used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and allows developers to write less boilerplate code.
+Lit is a lightweight library for creating web components using TS and HTML templates. In Oryx, Lit is used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and allows developers to write less boilerplate code.
 You can use Lit to customise Oryx, but you can also use another framework to build web components. Using Lit will give you a few advantages:
 - Reuse Component Mixins and controllers.
 - Out of the box integration with optimised (reactivity)[https://docs.spryker.com/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html] and partial hydration concepts.

@@ -10,7 +10,7 @@ The *Fulfillment App* feature streamlines the process of fulfilling orders by in
 
 ## Warehouse user
 
-A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, instead of having access to the Back Office, they have access to the Fulfillment App.
+A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, they don't have access to the Back Office. Instead,  they are using the Fulfillment App.
 
 In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular user.
 
@@ -18,11 +18,11 @@ To give a warehouse user access to fulfilling orders in a warehouse, you need to
 
 ## Fulfillment app
 
-Fulfillment app is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a suitable warehouse. Then, the warehouse users gathers and ships the order items.
+Fulfillment app is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment app to gather and ship the order items.
 
 ## Assigning a warehouse
 
-By default, when a customer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never out of stock item quantity is considered to be holding the biggest stock.
+By default, when a customer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never-out-of-stock item quantity is considered to be holding the biggest stock.
 
 
 In some cases, the ordered quantity might not be available in the warehouse holding the biggest stock of the item. Then, the warehouse fulfills the order partially. The remaining quantity is fulfilled by the the warehouse holding the next biggest stock of the item. For example, the customer orders 100 tablets. The store's warehouses hold the following stock:
@@ -43,7 +43,7 @@ Warehouse allocation shouldn't be confused with the reservation process, meaning
 
 ## Warehouse picklists
 
-A *warehouse picklist* is a document that contains a list of items to be picked from the shelves or racks in order to fulfill an order. It includes the following information:
+A *warehouse picklist* is a document available in the Fulfillment app that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
 * Product name
 * Product image
 * Quantity to be picked

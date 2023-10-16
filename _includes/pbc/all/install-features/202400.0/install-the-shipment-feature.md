@@ -56,9 +56,10 @@ Make sure that the following modules have been installed:
 
 1. Add the following configuration to your project:
 
-| CONFIGURATION                           | SPECIFICATION                                             | NAMESPACE            |
-|-----------------------------------------|-----------------------------------------------------------|----------------------|
-| ShipmentConfig::getShipmentHashFields() | Used to group items by shipment using shipment type uuid. | Pyz\Service\Shipment |
+| CONFIGURATION                                                | SPECIFICATION                                                                                                                                                                         | NAMESPACE            |
+|--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| ShipmentConfig::getShipmentHashFields()                      | Used to group items by shipment using shipment type uuid.                                                                                                                             | Pyz\Service\Shipment |
+| ShipmentConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation in `ShipmentFacade::expandQuoteWithShipmentGroups()` method. | Pyz\Zed\Shipment     |
 
 **src/Pyz/Service/Shipment/ShipmentConfig.php**
 
@@ -78,6 +79,27 @@ class ShipmentConfig extends SprykerShipmentConfig
     public function getShipmentHashFields(): array
     {
         return array_merge(parent::getShipmentHashFields(), [ShipmentTransfer::SHIPMENT_TYPE_UUID]);
+    }
+}
+```
+
+**src/Pyz/Zed/Shipment/ShipmentConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Shipment;
+
+use Spryker\Zed\Shipment\ShipmentConfig as SprykerShipmentConfig;
+
+class ShipmentConfig extends SprykerShipmentConfig
+{
+    /**
+     * @return bool
+     */
+    public function shouldExecuteQuotePostRecalculationPlugins(): bool
+    {
+        return false;
     }
 }
 ```
@@ -111,9 +133,14 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 ### 3) To enable the Storefront API, register the following plugins:
 
-| PLUGIN                           | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                |
-|----------------------------------|------------------------------------------|---------------|----------------------------------------------------------|
-| ShipmentTypesResourceRoutePlugin | Registers the `shipment-types` resource. |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication |
+| PLUGIN                                                   | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                             |
+|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
+| ShipmentTypesResourceRoutePlugin                         | Registers the `shipment-types` resource.                                                                 |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds the `shipment-types` resources as a relationship to `shipment-methods` resources.                       |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
+| SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps the selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
+| ItemShipmentTypeQuoteMapperPlugin                        | Maps shipment types taken from shipment methods to `Quote.items.shipmentType`.                           |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -123,7 +150,10 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesByShipmentMethodsResourceRelationshipPlugin;
 use Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication\ShipmentTypesResourceRoutePlugin;
+use Spryker\Glue\ShipmentsRestApi\ShipmentsRestApiConfig;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -136,16 +166,455 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         new ShipmentTypesResourceRoutePlugin(),
     }
+    
+    /**
+     * {@inheritDoc}
+     *
+     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            ShipmentsRestApiConfig::RESOURCE_SHIPMENT_METHODS,
+            new ShipmentTypesByShipmentMethodsResourceRelationshipPlugin(),
+        );
+        
+        return $resourceRelationshipCollection;
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+- Make sure that you can send the following requests:
 
 * `GET https://glue.mysprykershop.com/shipment-types`
 * `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}`
 
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+- Make sure you have the `shipment-types` resource as a relationship to `shipment-methods` when you send a request with the multi-shipment request structure.
+
+`POST https://glue-backend.mysprykershop.com/checkout-data?include=shipments,shipment-methods,shipment-types`
+<details>
+  <summary markdown='span'>Request body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "attributes": {
+              "customer": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin"
+              },
+              "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
+              "payments": [
+                  {
+                      "paymentMethodName": "credit card",
+                      "paymentProviderName": "DummyPayment"
+                  }
+              ],
+              "shipments": [
+                  {
+                      "items": [
+                          "139_24699831_c45147dee729311ef5b5c3003946c48f"
+                      ],
+                      "shippingAddress": {
+                          "salutation": "Mr",
+                          "email": "spencor.hopkin@spryker.com",
+                          "firstName": "Spencor",
+                          "lastName": "Hopkin",
+                          "address1": "West road",
+                          "address2": "212",
+                          "address3": "",
+                          "zipCode": "61000",
+                          "city": "Berlin",
+                          "iso2Code": "DE",
+                          "company": "Spryker",
+                          "isDefaultShipping": true,
+                          "isDefaultBilling": true
+                      },
+                      "idShipmentMethod": 1,
+                      "requestedDeliveryDate": null
+                  }
+              ]
+          }
+      }
+  }
+  ```
+</details>
+
+<details>
+  <summary markdown='span'>Response body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "id": null,
+          "attributes": {
+              "addresses": [],
+              "paymentProviders": [],
+              "shipmentMethods": [],
+              "selectedShipmentMethods": [],
+              "selectedPaymentMethods": [],
+              "selectedServicePoints": [],
+              "selectedShipmentTypes": []
+          },
+          "links": {
+              "self": "http://glue.de.spryker.local/checkout-data?include=shipments,shipment-methods,shipment-types"
+          },
+          "relationships": {
+              "shipments": {
+                  "data": [
+                      {
+                          "type": "shipments",
+                          "id": "d96343e971c91e3ecb098976d1e2cc9b"
+                      }
+                  ]
+              }
+          }
+      },
+      "included": [
+          {
+              "type": "shipment-types",
+              "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3",
+              "attributes": {
+                  "name": "Delivery",
+                  "key": "delivery"
+              },
+              "links": {
+                  "self": "http://glue.de.spryker.local/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
+              }
+          },
+          {
+              "type": "shipment-methods",
+              "id": "1",
+              "attributes": {
+                  "name": "Standard",
+                  "carrierName": "Spryker Dummy Shipment",
+                  "deliveryTime": null,
+                  "price": 490,
+                  "currencyIsoCode": "EUR"
+              },
+              "links": {
+                  "self": "http://glue.de.spryker.local/shipment-methods/1"
+              },
+              "relationships": {
+                  "shipment-types": {
+                      "data": [
+                          {
+                              "type": "shipment-types",
+                              "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3"
+                          }
+                      ]
+                  }
+              }
+          },
+          {
+              "type": "shipments",
+              "id": "d96343e971c91e3ecb098976d1e2cc9b",
+              "attributes": {
+                  "items": [
+                      "139_24699831_eb160de1de89d9058fcb0b968dbbbd68"
+                  ],
+                  "requestedDeliveryDate": null,
+                  "shippingAddress": {
+                      "id": null,
+                      "salutation": "Mr",
+                      "firstName": "Spencor",
+                      "lastName": "Hopkin",
+                      "address1": "West road",
+                      "address2": "212",
+                      "address3": "",
+                      "zipCode": "61000",
+                      "city": "Berlin",
+                      "country": null,
+                      "iso2Code": "DE",
+                      "company": "Spryker",
+                      "phone": null,
+                      "isDefaultBilling": true,
+                      "isDefaultShipping": true,
+                      "idCompanyBusinessUnitAddress": null
+                  },
+                  "selectedShipmentMethod": {
+                      "id": 1,
+                      "name": "Standard",
+                      "carrierName": "Spryker Dummy Shipment",
+                      "price": 490,
+                      "taxRate": "19.00",
+                      "deliveryTime": null,
+                      "currencyIsoCode": "EUR"
+                  }
+              },
+              "links": {
+                  "self": "http://glue.de.spryker.local/shipments/d96343e971c91e3ecb098976d1e2cc9b"
+              },
+              "relationships": {
+                  "shipment-methods": {
+                      "data": [
+                          {
+                              "type": "shipment-methods",
+                              "id": "1"
+                          }
+                      ]
+                  }
+              }
+          }
+      ]
+  }
+  ```
+</details>
+{% endinfo_block %}
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Glue\CheckoutRestApi;
+
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi\SelectedShipmentTypesCheckoutDataResponseMapperPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataResponseMapperPluginInterface>
+     */
+    protected function getCheckoutDataResponseMapperPlugins(): array
+    {
+        return [
+            new SelectedShipmentTypesCheckoutDataResponseMapperPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+- Make sure you have the `selectedShipmentTypes` field in the response when you send a request with the single-shipment request structure.
+
+`POST https://glue-backend.mysprykershop.com/checkout-data`
+<details>
+  <summary markdown='span'>Request body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "attributes": {
+              "customer": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin"
+              },
+              "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
+              "billingAddress": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin",
+                  "address1": "West road",
+                  "address2": "212",
+                  "address3": "",
+                  "zipCode": "61000",
+                  "city": "Berlin",
+                  "iso2Code": "DE",
+                  "company": "Spryker",
+                  "isDefaultShipping": true,
+                  "isDefaultBilling": true
+              },
+              "shippingAddress": {
+                  "salutation": "Mr",
+                  "email": "spencor.hopkin@spryker.com",
+                  "firstName": "Spencor",
+                  "lastName": "Hopkin",
+                  "address1": "West road",
+                  "address2": "212",
+                  "address3": "",
+                  "zipCode": "61000",
+                  "city": "Berlin",
+                  "iso2Code": "DE",
+                  "company": "Spryker",
+                  "isDefaultShipping": true,
+                  "isDefaultBilling": true
+              },
+              "payments": [
+                  {
+                      "paymentMethodName": "credit card",
+                      "paymentProviderName": "DummyPayment"
+                  }
+              ],
+              "shipment": {
+                  "idShipmentMethod": 1
+              }
+          }
+      }
+  }
+  ```
+</details>
+
+<details>
+  <summary markdown='span'>Response body example</summary>
+  ```json
+  {
+      "data": {
+          "type": "checkout-data",
+          "id": null,
+          "attributes": {
+              "addresses": [],
+              "paymentProviders": [],
+              "shipmentMethods": [],
+              "selectedShipmentMethods": [
+                  {
+                      "id": 1,
+                      "name": "Standard",
+                      "carrierName": "Spryker Dummy Shipment",
+                      "price": 490,
+                      "taxRate": null,
+                      "deliveryTime": null,
+                      "currencyIsoCode": "EUR"
+                  }
+              ],
+              "selectedPaymentMethods": [],
+              "selectedServicePoints": [],
+              "selectedShipmentTypes": [
+                  {
+                      "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3",
+                      "name": "Delivery",
+                      "key": "delivery"
+                  }
+              ]
+          },
+          "links": {
+              "self": "http://glue.de.spryker.local/checkout-data"
+          }
+      }
+  }
+  ```
+</details>
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\CheckoutRestApi;
+
+use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi\ItemShipmentTypeQuoteMapperPlugin;
+use Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi\ShipmentTypeCheckoutDataValidatorPlugin;
+use Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi\ShipmentTypeReadCheckoutDataValidatorPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+/**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\QuoteMapperPluginInterface>
+     */
+    protected function getQuoteMapperPlugins(): array
+    {
+        return [
+            new ItemShipmentTypeQuoteMapperPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataValidatorPluginInterface>
+     */
+    protected function getCheckoutDataValidatorPlugins(): array
+    {
+        return [
+            new ShipmentTypeCheckoutDataValidatorPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\ReadCheckoutDataValidatorPluginInterface>
+     */
+    protected function getReadCheckoutDataValidatorPlugins(): array
+    {
+        return [
+            new ShipmentTypeReadCheckoutDataValidatorPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Deactivate one of the shipment types and send a request with a corresponding shipment method: 
+`POST https://glue-backend.mysprykershop.com/checkout-data`
+<details>
+  <summary markdown='span'>Request body example</summary>
+  ```json
+    {
+        "data": {
+            "type": "checkout-data",
+            "attributes": {
+                "customer": {
+                    "salutation": "Mr",
+                    "email": "spencor.hopkin@spryker.com",
+                    "firstName": "Spencor",
+                    "lastName": "Hopkin"
+                },
+                "idCart": "d60de64b-08c7-564d-8916-d7756f2dc865",
+                "payments": [
+                    {
+                        "paymentMethodName": "credit card",
+                        "paymentProviderName": "DummyPayment"
+                    }
+                ],
+                "shipments": [
+                    {
+                        "items": [
+                            "139_24699831_c45147dee729311ef5b5c3003946c48f"
+                        ],
+                        "shippingAddress": {
+                            "salutation": "Mr",
+                            "email": "spencor.hopkin@spryker.com",
+                            "firstName": "Spencor",
+                            "lastName": "Hopkin",
+                            "address1": "West road",
+                            "address2": "212",
+                            "address3": "",
+                            "zipCode": "61000",
+                            "city": "Berlin",
+                            "iso2Code": "DE",
+                            "company": "Spryker",
+                            "isDefaultShipping": true,
+                            "isDefaultBilling": true
+                        },
+                        "idShipmentMethod": 1,
+                        "requestedDeliveryDate": null
+                    }
+                ]
+            }
+        }
+    }
+  ```
+</details>
+
+<details>
+  <summary markdown='span'>Response body example</summary>
+    ```json
+    {
+        "errors": [
+            {
+                "code": "1101",
+                "status": 422,
+                "detail": "Selected delivery type \"Delivery\" is not available."
+            }
+        ]
+    }
+    ```
+</details>
 {% endinfo_block %}
 
 ### 4) Set up database schema and transfer objects
@@ -258,6 +727,8 @@ shipment_type.validation.shipment_type_name_invalid_length,A delivery type name 
 shipment_type.validation.shipment_type_name_invalid_length,Der Lieferart-Name muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
 shipment_type.validation.store_does_not_exist,A store with the name ‘%name%’ does not exist.,en_US
 shipment_type.validation.store_does_not_exist,Store mit dem Namen ‘%name%’ existiert nicht.,de_DE
+shipment_types_rest_api.error.shipment_type_not_available,Selected delivery type "%name%" is not available.,en_US
+shipment_types_rest_api.error.shipment_type_not_available,Die ausgewählte Lieferart "%name%" ist nicht verfügbar.,de_DE
 ```
 
 2. Import data:

@@ -1,8 +1,13 @@
-# Oryx technologies
+---
+title: "Oryx: Technology"
+description: The technologies Oryx is built on
+template: concept-topic-template
+last_updated: Oct 23, 2023
+---
 
-Oryx is a frontend framework that is designed to help developers build web applications using modern technologies and leveraging (Spryker API)[https://docs.spryker.com/docs/scos/dev/glue-api-guides/202307.0/decoupled-glue-api.html].
+Oryx is a frontend framework designed to help developers build web applications using modern technologies and leveraging [Spryker API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html).
 
-Oryx leverage standard technology, frameworks and tools provided by the web platform and the community wherever possible. It emphasizes utilizing the inherent capabilities of the web and minimizing the reliance on build tools. During development, Oryx primarily employs JavaScript but aims to reduce the need for executing JavaScript in the browser. It prioritizes HTML and CSS for delivering a fast-loading experience across various screen sizes.
+Oryx leverages standard technology, frameworks and tools provided by the web platform and the community wherever possible.  It emphasizes utilizing the inherent capabilities of the web and minimizing the reliance on build tools. During development, Oryx primarily employs JavaScript but aims to reduce the need for executing JavaScript in the browser. It prioritizes HTML and CSS for delivering a fast-loading experience across various screen sizes.
 
 Furthermore, Oryx is framework-agnostic and can seamlessly integrate into various web frameworks like React and Vue.js. This versatility is achieved through a combination of Web Components for the user interface and vanilla JavaScript for handling business logic. This approach offers the flexibility to use the entire library, including its components, or to selectively employ specific layers, such as integration logic.
 
@@ -49,13 +54,13 @@ RxJS is predominantly used in the service layer to provide a reactive system tha
 RxJS is not a main citizen in the component logic, as we try to hide the reactivity altogether to avoid complexity
 
 ## Vite
-Vite is a build tool and development server for modern web projects. In Oryx, Vite is used to provide fast and efficient development and build times. It provides an optimized build process and a hot-reloading development server, making it easy to develop and test the application in real-time. Oryx is not tightly coupled to Vite, and you can use an alternative build tool and development server if you like. 
+Vite is a build tool and development server for modern web projects. In Oryx, Vite is used to provide fast and efficient development and build times. It provides an optimized build process and a hot-reloading development server, making it easy to develop and test the application in real-time. Oryx is not tightly coupled to Vite, and you can use an alternative build tool and development server if you like.
 
 ## Storybook
 Storybook is an open-source tool for developing UI components in isolation. In Oryx, Storybook is used to create a component library and showcase the different UI components in the application. It provides a simple and intuitive way to develop and test UI components in isolation, making it easier to iterate on them and ensure consistency across the application.
 
 ## Web hosting
-Oryx applications are decoupled applications and can be hosted separately. It is recommended to host Oryx applications at a frontend hosting providing, to benefit from standard features, like: 
+Oryx applications are decoupled applications and can be hosted separately. It is recommended to host Oryx applications at a frontend hosting providing, to benefit from standard features, like:
 
 - Build process integration: Choose hosting providers with seamless build process integration to streamline updates and deployments.
 - HTTP header configuration: Opt for hosting providers that allow flexible configuration of HTTP headers for improved security, caching, and optimizations.
@@ -65,6 +70,6 @@ Oryx applications are decoupled applications and can be hosted separately. It is
 
 If your Oryx applications requires [Server-Side Rendering](./oryx-server-side-rendering.md) you need to make sure that the right infrastructure is in place at your hosting provider. You can run SSR in a Lambda function or have a long-running server that processes the SSR.
 
-If you have a fairly static application that doesn't require SSR, you could consider a non-frontend hosting provider. 
+If you have a fairly static application that doesn't require SSR, you could consider a non-frontend hosting provider.
 
 By considering these capabilities, you can optimize the deployment, performance, and customization options for your Oryx application.

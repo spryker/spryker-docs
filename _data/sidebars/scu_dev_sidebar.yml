@@ -40,7 +40,7 @@ entries:
         - title: Check Spryker Code Upgrader logs
           url: /docs/scu/dev/check-spryker-code-upgrader-logs.html
         - title: "Entity does not exist: Pyz prefix"
-          url: /docs/scu/dev/entity-does-not-exist–pyz-prefix.html          
+          url: /docs/scu/dev/troubleshooting/entity-does-not-exist–pyz-prefix.html
         - title: "TransportException: Cannot move pack"
           url: /docs/scu/dev/troubleshooting/transportexception-cannot-move-pack.html
         - title: The process exceeded the timeout

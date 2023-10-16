@@ -12,20 +12,15 @@ This document describes how to use API Key authorization mechanism in Spryker.
 
 ## How authentication works
 
-The API Key authorization mechanism lets users authenticate themselves with their API Key generated from Backoffice. The generated API Key can then be used to access protected resources.
+The API Key authorization mechanism lets users authenticate themselves with their API Key generated from the Back Office. The generated API Key can then be used to access protected resources.
 
 ## Prerequisites
 
-Install the required features:
-
-| NAME | VERSION | INTEGRATION GUIDE                                                                                                                                        |
-| --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue Application | {{page.version}} | [Integrate the API Key Authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html) |
-
+To be able to generate the API key in the Back Office, make sure the required features are installed. For the installation guidelines, see [Integrate the API Key Authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html).
 
 ## Protect routes with API Key authorization
 
-In order to protect a route with API Key authorization, you need to add the authorization strategy to the route configuration. To do this, add the following code to required route:
+To protect a route with the API Key authorization, you must add the authorization strategy to the route configuration. To do this, add the following code to the required route:
 
 ```php
 <?php
@@ -92,20 +87,20 @@ class DummyStoresApiProviderPlugin extends AbstractPlugin implements RouteProvid
 }
 ```
 
-## Create an API Key in Backoffice
+## Create an API Key in the Back Office
 
-To create an API Key in Backoffice, follow these steps:
-1. Log in to Backoffice.
-2. Navigate to **Administration** > **API Keys**.
+To create an API Key in the Back Office, follow these steps:
+1. Log in to the Back Office.
+2. Go to **Administration** > **API Keys**.
 3. Click **Create API Key**.
 4. Enter a name for the API Key.
-5. Enter a Valid To date if needed. Note that if you **do not enter a date**, the API Key will be valid indefinitely.
+5. Optional: Enter a *Valid To* date if needed. If you *don't* enter a date, the API Key will be valid indefinitely.
 6. Click **Create**.
-7. Copy the generated API Key and save it in a secure place. Spryker does not store the API Key, so if you lose it, you will need to generate a new one or regenerate the current Key.
+7. Copy the generated API Key and save it in a secure place. Spryker does not store the API Keys, so if you lose it, you will have to generate a new one or regenerate the current Key.
 
 ## Use the API Key to access protected resources
 
-There are 2 ways to pass the API Key to access protected resources:
+There are two ways to pass the API Key to access protected resources:
 1. Pass the API Key in the `X-Api-Key` header.
 2. Pass the API Key in the `api_key` URL parameter.
 

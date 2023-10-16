@@ -1,12 +1,12 @@
 ---
-title: "Decoupled Glue infrastructure: Integrate the API Key Authorization"
+title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
 description: Integration of the API Key authorization mechanism into a Spryker project.
 last_updated: October 10, 2023
 template: feature-integration-guide-template
 redirect_from:
 ---
 
-This document describes how to integrate API Key authorization to Backend API applications in a Spryker project.
+This document describes how to integrate the API Key authorization to Backend API applications in a Spryker project.
 
 ## Install feature core
 
@@ -18,7 +18,7 @@ Install the required features:
 
 | NAME                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                                                |
 |------------------------------| ----------------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                 | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                                |
+| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                                |
 | Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ### 1) Install the required modules using Composer
@@ -180,6 +180,6 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Use the following guide [Use API Key authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/use-api-key-authorization.html) to check that the API Key authorization is integrated properly.
+Follow the instructions from [Use API Key authorization](/docs/scos/dev/glue-api-guides/{{site.version}}/use-api-key-authorization.html) to check that the API Key authorization has been integrated properly.
 
 {% endinfo_block %}

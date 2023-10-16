@@ -316,11 +316,11 @@ entries:
               - title: Import and export data
                 url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-cart-and-checkout-data.html
                 nested:
-                  - title: File details - comment.csv
+                  - title: "Import file details: comment.csv"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-comment.csv.html
-                  - title: File details - product_quantity.csv
+                  - title: "Import file details: product_quantity.csv"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-product-quantity.csv.html
-                  - title: File details - sales_order_threshold.csv
+                  - title: "Import file details: sales_order_threshold.csv"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html

@@ -37,7 +37,7 @@ Your `composer.lock` file contains package versions that have security issues:
         ...
     },
 ...
-````
+```
 
 ## Resolve the error
 

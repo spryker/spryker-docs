@@ -9,7 +9,7 @@ Open-source vulnerabilities checker is a tool that checks if your PHP applicatio
 
 ## Problem description
 
-A project can sometimes use dependencies that contain known vulnerabilities.. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
+A project can sometimes use dependencies that contain known vulnerabilities. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
 
 ## Example of an evaluator error message
 
@@ -26,9 +26,9 @@ Target:  guzzlehttp/psr7:2.4.1
 
 Your `composer.lock` file contains package versions that have security issues:
 
-```bash
+```yaml
 ...
-{
+    {
     "name": "guzzlehttp/psr7",
     "version": "2.4.1",
     "source": {
@@ -36,10 +36,17 @@ Your `composer.lock` file contains package versions that have security issues:
         "url": "https://github.com/guzzle/psr7.git",
         ...
     },
-    ...
+...
 ````
 
 ## Resolve the error
 
 To resolve the error:
 1. Upgrade the package to a version where the vulnerability issue is fixed.
+
+
+## Running only this checker
+To run only this checker, please include `OPEN_SOURCE_VULNERABILITIES_CHECKER` into the checkers list, for example:
+```bash
+vendor/bin/evaluator evaluate --checkers=OPEN_SOURCE_VULNERABILITIES_CHECKER
+```

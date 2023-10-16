@@ -8,8 +8,8 @@ related:
   - title: Vertex
     link: docs/pbc/all/tax-management/page.version/vertex/vertex.html
 redirect_from:
-  - /docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html
-  - /docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202400.0/base-shop/vertex/install-vertex.html
 
 ---
 
@@ -17,19 +17,16 @@ redirect_from:
 
 Before integrating Vertex, ensure the following prerequisites are met:
 
-- Make sure your project is ACP-enabled.
-  See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-- The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex
-  app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
-  Ensure that your installation meets these requirements.
+- The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
+Ensure that your installation meets these requirements.
 
 - Make sure that your deployment pipeline executes database migrations.
 
 ## 1. Integrate ACP connector module for tax calculation
 
-To enable the Vertex integration, you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP
-connector module first.
+To enable the Vertex integration, you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
 
 To integrate the connector module for the Vertex app, follow the steps below.
 
@@ -137,10 +134,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 {% info_block infoBox "Performance improvement" %}
 
-Spryker has its
-own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax\base-shop/tax-feature-overview.html) feature,
-which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external
-Tax calculation provider, we recommend disabling the following plugins:
+Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax\base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
 
 in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
 
@@ -156,8 +150,7 @@ in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPlugin
 - TaxAmountAfterCancellationCalculatorPlugin
 - OrderTaxTotalCalculationPlugin
 
-Disabling them will also disable Spryker Taxes feature. This means that in case when Vertex is unresponsive or disabled
-order taxes will not be calculated and their amount will be always 0.
+Disabling them will also disable Spryker Taxes feature. This means that in case when Vertex is unresponsive or disabled order taxes will not be calculated and their amount will be always 0.
 
 {% endinfo_block %}
 
@@ -191,6 +184,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 
 ```
+
 
 ### 4. Configure the Message Broker dependency provider
 
@@ -228,23 +222,23 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
 ```xml
 <?xml version="1.0"?>
 <statemachine
-        xmlns="spryker:oms-01"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
 >
 
     <process name="SomePaymentProcess" main="true">
 
         <!-- other configurations -->
-
+        
         <states>
 
             <!-- other states -->
-
+            
             <state name="tax invoice submitted" reserved="true" display="oms.state.paid"/>
 
             <!-- other states -->
-
+            
         </states>
 
         <transitions>
@@ -261,13 +255,13 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
 
             <transition happy="true">
                 <source>tax invoice submitted</source>
-
+                
                 <!-- Here are the contents of the target transition -->
-
+                
             </transition>
 
             <!-- other transitions -->
-
+            
         </transitions>
 
         <events>
@@ -277,16 +271,15 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
             <event name="submit tax invoice" onEnter="true" command="TaxApp/SubmitPaymentTaxInvoice"/>
 
             <!-- other events -->
-
+            
         </events>
-
+        
     </process>
-
+    
 </statemachine>
 ```
 
 #### Configure the Oms dependency provider
-
 Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
 ```php
@@ -321,13 +314,11 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoiceP
 
 ## 2. Integrate the Vertex app
 
-Spryker does not have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the
-integration requires project developers to to add some missing information to the Quote object before sending a
-calculation request.
+Spryker does not have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to to add some missing information to the Quote object before sending a calculation request.
 
 The following diagram shows the data flow of the tax calculation request from Spryker Cart to the Vertex API.
 
-![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
+ ![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
 
 ### 1. Configure Vertex-specific metadata transfers
 
@@ -382,8 +373,7 @@ Define specific Vertex Tax metadata transfers and extend other transfers with th
 
 ```
 
-`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You can
-extend them as you need, following to the Vertex API structure.
+`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You can extend them as you need, following to the Vertex API structure.
 
 - `SaleTaxMetadata` equals the Invoicing/Quotation request payload, excluding LineItems.
 
@@ -392,9 +382,7 @@ extend them as you need, following to the Vertex API structure.
 ### 2. Implement Vertex-specific metadata extender plugins
 
 There are several types of expander plugins you have to introduce.
-As a starting point, you can take examples provided by Spryker in
-the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins inside are for development purposes.
-The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
+As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins inside are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
 
 #### Configure the Customer Class Code Expander plugins
 
@@ -430,6 +418,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
 The following code sample shows how to introduce the following expander plugin:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexCodeExpanderPlugin.php`
+
 
 ```php
 <?php
@@ -520,10 +509,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 
 {% info_block infoBox "Use same Product Class Code" %}
 
-You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's
-perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them,
-refer to the definition of transfers
-in [Configure Vertex-specific Metadata Transfers](#1-configure-vertex-specific-metadata-transfers).
+You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#1-configure-vertex-specific-metadata-transfers).
 
 {% endinfo_block %}
 
@@ -617,8 +603,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 
 ### 4. Configure Product Offer Stock dependency provider (Marketplace only)
 
-After you configured the Product Offer Stock dependency provider for Marketplace, the plugin stack will look similar to
-this one:
+After you configured the Product Offer Stock dependency provider for Marketplace, the plugin stack will look similar to this one:
 
 ```php
 

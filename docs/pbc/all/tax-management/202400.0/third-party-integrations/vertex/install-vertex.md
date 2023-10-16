@@ -628,7 +628,13 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ```
 
-#### Quote/Order object to Vertex API mapping
+
+---
+
+
+## Appendix A
+
+### Quote/Order object to Vertex API mapping
 
 Mapping of Spryker Quote/Order transfer object to Vertex API request format is described in the following table:
 

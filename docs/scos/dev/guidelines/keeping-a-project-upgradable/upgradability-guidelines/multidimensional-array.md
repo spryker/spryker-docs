@@ -56,3 +56,10 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
 ## Resolving the error
 
 Try to have simple configuration arrays. They shouldn't have more than two nesting levels inside.
+
+
+## Running only this checker
+To run only this checker, please include `MULTIDIMENSIONAL_ARRAY_CHECKER` into the checkers list, for example:
+```bash
+vendor/bin/evaluator evaluate --checkers=MULTIDIMENSIONAL_ARRAY_CHECKER
+```

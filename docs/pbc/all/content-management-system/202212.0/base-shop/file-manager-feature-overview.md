@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/media-management
 originalArticleId: 55cbe64d-f656-4d8d-a3d5-c32998acb947
 redirect_from:
-  - /2021080/docs/media-management
-  - /2021080/docs/en/media-management
-  - /docs/media-management
-  - /docs/en/media-management
+  - /docs/scos/user/back-office-user-guides/202005.0/content/file-manager/file-manager.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/file-manager-feature-walkthrough.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html  

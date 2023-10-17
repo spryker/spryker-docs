@@ -6,17 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-options-feature-overview
 originalArticleId: bb06c0c0-3cdb-46de-bf29-37606bd1646b
 redirect_from:
-  - /2021080/docs/product-options-feature-overview
-  - /2021080/docs/en/product-options-feature-overview
-  - /docs/product-options-feature-overview
-  - /docs/en/product-options-feature-overview
-  - /2021080/docs/product-options
-  - /2021080/docs/en/product-options
-  - /docs/product-options
-  - /docs/en/product-options
-  - /docs/scos/user/shop-user-guides/201811.0/shop-guide-managing-products.html
-  - /docs/scos/user/shop-user-guides/201903.0/shop-guide-managing-products.html
   - /docs/scos/user/features/202200.0/product-options-feature-overview.html
+  - /docs/scos/user/features/202108.0/product-options-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-options-feature-walkthrough.html  
   - /docs/scos/user/features/202307.0/product-options-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/product-options-feature-walkthrough.html  

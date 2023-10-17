@@ -35,3 +35,62 @@ Lazy loading components is the recommended technique as it avoids loading all th
 To prevent breaking the lazy loading principals, do not import component files _statically_.
 
 {% endinfo_block %}
+
+## Dynamic Stylesheets
+
+To build a [responsive design](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-responsive-design.html), a common practice is to specify different CSS rules per screen size. CSS supports [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) which can take a minimum and/or maximum width to determine the target screen size.
+
+```css
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* … */
+}
+```
+
+CSS, however, only supports static assignment of the minimum and maximum width. Since Oryx provides custom screen sizes, the static minimum and maximum width would not align with these configurations. To create styles per screen size, you can add `stylesheets` for different media queries. The stylesheets can be written _inline_ in the component definition, or provided as a dynamic import.
+
+The stylesheets add in component definitions are added on top of stylesheets that are added statically as part of the component implementation.
+
+### Inline Stylesheets
+
+The example below shows style rules being added for small screens (`sm`) only.
+The disadvantage of adding styles to the component definition is the instant effect when the application is bootstrapped. In most cases it is recommended to dynamically import the styles, so that they're only loaded when the component is used.
+
+```ts
+export const cartEntriesComponent = componentDef({
+  name: "oryx-cart-entries",
+  impl: () => import("./entries.component").then((m) => m.CartEntriesComponent),
+  stylesheets: [
+    {
+      rules: [
+        {
+          media: { screen: Size.Sm },
+          css: css`
+            oryx-cart-entry:first-child {
+              border-top: 1px solid var(--oryx-color-neutral-6);
+            }
+            oryx-cart-entry:last-child {
+              border-bottom: 1px solid var(--oryx-color-neutral-6);
+            }
+          `,
+        },
+      ],
+    },
+  ],
+});
+```
+
+### Lazy Loaded Stylesheets
+
+In the below snippet the stylesheets are lazily loaded. The actual styles and their assignment to the media queries are handled inside the object that's been loaded.
+
+```ts
+export const linkComponent = componentDef({
+  name: "oryx-link",
+  impl: () => import("./link.component").then((m) => m.LinkComponent),
+  stylesheets: [
+    {
+      rules: () => import("./styles/link.styles").then((m) => m.linkStyles),
+    },
+  ],
+});
+```

@@ -4,6 +4,7 @@ description: All the details about the Configurable Product feature of Spryker.
 last_updated: Dec 27, 2022
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/202307.0/configurable-product-feature-overview.html

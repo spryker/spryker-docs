@@ -152,7 +152,7 @@ class YourHelper extends Module
 ## Next steps
 
 * Learn about the [available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html).
-* [Execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
-* Learn [how to test console commands](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
+* [Execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
+* Learn [how to test console commands](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
 * [Configure data builders to create transfers for your tests](/docs/scos/dev/guidelines/testing-guidelines/data-builders.html).
 * [Generate code coverage report for your tests](/docs/scos/dev/guidelines/testing-guidelines/code-coverage.html).

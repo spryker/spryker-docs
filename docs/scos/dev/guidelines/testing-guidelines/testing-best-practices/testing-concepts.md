@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/testing-concepts
   - /v1/docs/en/testing-concepts
   - /docs/scos/dev/guidelines/testing-concepts.html
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html

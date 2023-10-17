@@ -151,7 +151,7 @@ There are many console commands provided from Codeception, but the most used one
 
 For information on other Codeception console commands, run `vendor/bin/codecept list`.
 
-See [Executing Tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html) for details on some commands.
+See [Executing Tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html) for details on some commands.
 
 ## Testing with Spryker
 

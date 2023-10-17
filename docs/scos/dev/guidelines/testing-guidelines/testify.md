@@ -94,4 +94,4 @@ As you can see, this test is much smaller, easier to read, and better understand
 
 * [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
 * [Create or enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).
-* Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
+* Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).

@@ -5,7 +5,7 @@ template: data-import-template
 ---
 
 
-This document describes how to import taxes for product options via  `product_option.csv`. To import full information for product options, see [File details- product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html).
+This document describes how to import taxes for product options via  `product_option.csv`. To import full information for product options, see ["Import file details: product_option.csv"](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html).
 
 
 ## Dependencies

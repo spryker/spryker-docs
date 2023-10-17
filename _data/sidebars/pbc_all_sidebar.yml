@@ -1278,26 +1278,26 @@ entries:
                   - title: Install the Merchant Portal
                     url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-the-merchant-portal.html
               - title: Import data
-                url: /docs/pbc/all/merchant-management/marketplace/import-data/import-merchant-management-data.html
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-merchant-management-data.html
                 nested:
                   - title: "Import file details: merchant.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant.csv.html
                   - title: "Import file details: merchant_profile.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
                   - title: "Import file details: merchant_profile_address.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile-address.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html
                   - title: "Import file details: merchant_open_hours_week_day_schedule.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-week-day-schedule.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-week-day-schedule.csv.html
                   - title: "Import file details: merchant_open_hours_date_schedule.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
                   - title: "Import file details: merchant_category.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-category.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-category.csv.html
                   - title: "Import file details: merchant_stock.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-stock.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-stock.csv.html
                   - title: "Import file details: merchant_store.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-store.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-store.csv.html
                   - title: "Import file details: merchant_user.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-user.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-user.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
@@ -2984,7 +2984,7 @@ entries:
           - title: Import and export data
             url: /docs/pbc/all/ratings-reviews/import-and-export-data/ratings-and-reviews-data-import.html
             nested:
-              - title: File details- product_review.csv
+              - title: "Import file details: product_review.csv"
                 url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/log-into-the-back-office.html
@@ -3573,13 +3573,13 @@ entries:
               - title: Import and export data
                 url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
                 nested:
-                  - title: File details - warehouse.csv
+                  - title: "Import file details: warehouse.csv"
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse.csv.html
-                  - title: File details - warehouse_address.csv
+                  - title: "Import file details: warehouse_address.csv"
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse-address.csv.html
-                  - title: File details - warehouse_store.csv
+                  - title: "Import file details: warehouse_store.csv"
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse-store.csv.html
-                  - title: File details - product_stock.csv
+                  - title: "Import file details: product_stock.csv"
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-product-stock.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
@@ -3649,7 +3649,7 @@ entries:
               - title: Import and export data
                 nested:
                   - title: "Import file details: product_offer_stock.csv"
-                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-and-export-data/file-details-product-offer-stock.csv.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

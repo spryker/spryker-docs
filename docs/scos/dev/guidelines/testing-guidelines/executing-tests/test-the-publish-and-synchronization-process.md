@@ -22,7 +22,7 @@ related:
   - title: Data builders
     link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Setting up tests
     link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework

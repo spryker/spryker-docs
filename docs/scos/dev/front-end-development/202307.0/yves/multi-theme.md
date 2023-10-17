@@ -6,11 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-theme-feature-overview
 originalArticleId: cf8b9f81-8053-422c-805d-1554529652c0
 redirect_from:
-  - /2021080/docs/multi-theme-feature-overview
-  - /2021080/docs/en/multi-theme-feature-overview
-  - /docs/multi-theme-feature-overview
-  - /docs/en/multi-theme-feature-overview
   - /docs/scos/dev/front-end-development/yves/multi-theme.html
+  - /docs/scos/user/features/202009.0/multi-channel/multi-theme/multi-theme-feature-overview.html
 related:
   - title: Yves multi-themes
     link: docs/scos/dev/front-end-development/page.version/yves/yves-multi-themes.html

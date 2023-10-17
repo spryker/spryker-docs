@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-overview
 originalArticleId: 74024d01-461c-4514-a158-fb22bb729dde
 redirect_from:
-  - /2021080/docs/return-management-feature-overview
-  - /2021080/docs/en/return-management-feature-overview
-  - /docs/return-management-feature-overview
-  - /docs/en/return-management-feature-overview
-  - /2021080/docs/return-details-reference-information
-  - /2021080/docs/en/return-details-reference-information
-  - /docs/return-details-reference-information
-  - /docs/en/return-details-reference-information
+  - /docs/scos/user/features/202108.0/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 The *Return Management* capability lets you create and manage returns for a sales order.
@@ -75,7 +68,7 @@ The *guest users* can not initiate returns of their orders, as the return manage
 {% info_block warningBox "Note" %}
 
 For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
@@ -125,7 +118,7 @@ To install the return management capability, do the following:
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-documents).
+2. Follow the integration guides in [Related Developer documents](#related-developer-documents).
 
 ## Related Business User articles
 
@@ -135,7 +128,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/base-shop/build-a-return-management-process-best-practices.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|

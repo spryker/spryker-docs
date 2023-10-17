@@ -44,7 +44,7 @@ related:
 
 On top of [Codeception](https://codeception.com), Spryker offers some classes to make your test life easier. In the Spryker [Testify](https://github.com/spryker/testify) module, you can find many useful  helpers.
 
-The helpers provided within the Testify module let you write your tests way faster and with less mocking required. For the list of the most useful helpers from the Testify module, see [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#testify-helpers).
+The helpers provided within the Testify module let you write your tests way faster and with less mocking required. For the list of the most useful helpers from the Testify module, see [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#testify-helpers).
 
 Spryker follows an [API test](/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html) approach to have more coverage with less test code. Testing through the API ensures that the underlying wireup code is working properly. With the helpers of the Testify module, you can avoid ending-up in the so-called "mocking hell". The "mocking hell" means that your test contains more mocks than real test code, which makes the test unreadable and hard to maintain.
 

@@ -127,7 +127,7 @@ Please note Spryker is only issuing SSL certificates for endpoints that are mana
 Customer or partner users must have access to the following entities:
 * AWS Console access: You can use it to access environment CloudWatch logs, deployment pipelines, parameter store, S3 buckets. Provide the email addresses of users who need access to AWS Console.
 * VPN: You can use it to access services such as databases, Jenkins, and RabbitMQ. Usually, developers or DevOps personnel need it. Provide the email addresses of users that need VPN access.
-* SSH: You can use it to access the Bastion Host, and from there, reach other services via [port forwarding](/docs/ca/dev/access/connecting-to-services-via-ssh.html). Usually, developers or DevOps personnel need it in special cases. Provide an SSH public key and email addresses of users who need access to SSH. Keep in mind that VPN access is required to use SSH.
+* SSH: You can use it to access the Bastion Host, and from there, reach other services via [port forwarding](/docs/ca/dev/access/connect-to-services-via-ssh.html). Usually, developers or DevOps personnel need it in special cases. Provide an SSH public key and email addresses of users who need access to SSH. Keep in mind that VPN access is required to use SSH.
 * SFTP: This access is required for the SFTP Bastion Host. Provide an SSH public key and email addresses of users who need access to SFTP. Keep in mind that VPN access is required to use SFTP. Please note that SFTP is not provisioned by default.
 
 ## Optional: Additional attributes

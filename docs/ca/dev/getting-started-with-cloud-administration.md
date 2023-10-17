@@ -22,38 +22,29 @@ SCCOS is a fully-managed solution. Before you start developing, we set up enviro
 
 After the initial setup, the following is configured and available:
 
-* [Environments](/docs/ca/dev/environments-overview.html): staging and production
+* [Environments](/docs/ca/dev/environments-overview.html): staging and production.
 * Services: RDS database, RDS backup, logs, SMTP, etc.
-* Access to AWS, internal resources and services
-* CD pipelines for staging and production environments
-* Domain names and SSL certificates
+* Access to AWS, internal resources, and services.
+* CD pipelines for staging and production environments.
+* Domain names and SSL certificates.
 
 
-## Access
-You can access SCCOS via:
+## Accessing the cloud environments
 
-* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html) for more details.
-* SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/docs/ca/dev/access/connecting-to-services-via-ssh.html) for more details.
-* VPN - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). We provide the access details during the onboarding.
-* SFTP - provides access to the SFTP folder mounted inside the Jenkins container.
+You can access your cloud environments via the following means:
 
-{% info_block warningBox %}
-
-
-* For security purposes, VPN and SSH access are available only for the IP addresses in the security group. Provide your public IPs via [support](https://spryker.force.com/support/s/) to get the access. Additionally, for SSH access, provide your public SSH keys.
-
-* If you didn’t request SFTP access for the initial setup, you can request it via support later.
-
-
-{% endinfo_block %}
-
+* IAM account: provides access to the AWS Management Console. For instructions, see [Access AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html).
+* SSH: provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). For instructions, see [Connect to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html).
+* VPN: provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). You receive these access details during the onboarding.
+* SFTP: provides access to the SFTP folder mounted inside the Jenkins container. You receive these access details during the onboarding.
 
 
 ## Service credentials
-You can find the credentials for services in the environment variables for the Zed container in [Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). See [Locating service credentials](/docs/ca/dev/access/locating-service-credentials.html) to learn how to get them.
+
+You can find the credentials for services in the environment variables for the Zed container in [Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). For instructions, see [Locate service credentials](/docs/ca/dev/access/locating-service-credentials.html).
 
 
-## CD Pipelines
+## CD pipelines
 
 The following CD pipelines are configured in [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html):
 
@@ -68,7 +59,8 @@ The following CD pipelines are configured in [CodePipeline](https://docs.aws.ama
 
 </div>
 
-See [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html) and [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html) to learn about running pipelines.
+To learn about running pipelines, see [Deploy in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html) and [Deploy in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 
 ## Next step
+
 [Environments overview](/docs/ca/dev/environments-overview.html)

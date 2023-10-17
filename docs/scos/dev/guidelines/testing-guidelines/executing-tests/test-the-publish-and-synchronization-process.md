@@ -1,5 +1,5 @@
 ---
-title: Publish and Synchronization testing
+title: Test the Publish and Synchronization process
 description: Learn how you can test Publish and Synchronization
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -13,6 +13,7 @@ redirect_from:
   - /v6/docs/publish-and-synchronization-testing
   - /v6/docs/en/publish-and-synchronization-testing
   - /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
+  - /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html

@@ -729,6 +729,10 @@ entries:
       include_versions:
       - "202212.0"
       - "202307.0"
+    - title: Use API Key authorization
+      url: /docs/scos/dev/glue-api-guides/use-api-key-authorization.html
+      include_versions:
+      - "202307.0"
     - title: Old Glue infrastructure
       include_versions:
       - "202212.0"
@@ -3391,7 +3395,7 @@ entries:
             - title: Routing
               url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
 
-        - title: Building Components
+        - title: Building components
           url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-building-components.html
           include_versions:
           - "202307.0"
@@ -3649,6 +3653,8 @@ entries:
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
         - title: Integrate the authentication
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+        - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
         - title: Integrate the authorization scopes
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
         - title: Integrate the documentation generator
@@ -4830,30 +4836,43 @@ entries:
     - title: Testing guidelines
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
-      - title: Testing concepts
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
-      - title: Setting up tests
-        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
-      - title: Publish and Synchronization testing
-        url: /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
-      - title: Test helpers
-        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
-      - title: Testify
-        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
-      - title: Executing tests
-        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+      - title: Code coverage
+        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html      
       - title: Test framework
         url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
-      - title: Code coverage
-        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+      - title: Setting up tests
+        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+      - title: Test helpers
+        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+        nested:
+          - title: Available test helpers
+            url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html
+          - title: Test helpers best practices
+            url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
+      - title: Executing tests
+        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+        nested:
+          - title: Execute tests
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
+          - title: Test console commands
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test the publish and synchronization process
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
+      - title: Testify
+        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
+      - title: Testing concepts
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       - title: Data builders
         url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
       - title: Testing best practices
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
-      - title: Available test helpers
-        url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
-      - title: Testing console commands
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
+        nested:
+          - title: Testing concepts
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
+          - title: Best practices for effective testing
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+          - title: Test types best practices
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html     
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data processing guidelines

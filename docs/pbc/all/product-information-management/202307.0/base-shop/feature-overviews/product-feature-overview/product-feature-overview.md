@@ -6,18 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-overview
 originalArticleId: d12e5fdb-b74a-4d9b-91d9-866f330b46df
 redirect_from:
-  - /2021080/docs/products-overview
-  - /2021080/docs/en/products-overview
-  - /docs/products-overview
-  - /docs/en/products-overview
-  - /2021080/docs/product
-  - /2021080/docs/en/product
-  - /docs/product
-  - /docs/en/product
-  - /2021080/docs/shop-guide-managing-products
-  - /2021080/docs/en/shop-guide-managing-products
-  - /docs/shop-guide-managing-products
-  - /docs/en/shop-guide-managing-products
+  - /docs/scos/user/features/202108.0/product-feature-overview/product-feature-overview.html
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
   - /docs/product-quantity-restrictions
   - /docs/product-ttl

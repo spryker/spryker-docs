@@ -1506,7 +1506,7 @@ To retrieve detailed information about an order, send the request:
 
 | ATTRIBUTE     | TYPE | DESCRIPTION      |
 | ------------------ | ----------- | ------------------------ |
-| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/retrieving-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/glue-api-retrieve-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE |
 | ---------------- | --------------------- | ------ |

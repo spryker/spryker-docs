@@ -37,22 +37,22 @@ This RACI Matrix defines responsibilities, consultation and reporting obligation
 
 | ACTIVITY | CUSTOMER | RESPONSIBLE DEVELOPING PARTY (CUSTOMER OR PARTNER) | SPRYKER |
 | --- | ---| --- | --- |
-| Application health, security, and performance. |
+| <b>Application health, security, and performance. </b>|
 | Provide an operational application based on the code of the Docker SDK and Spryker. | C | A/R | I |
 | Optimize application performance by applying best practices. | I/C | R/A | I |
 | Maintain application up to date and secure. | I/C | R/A | I |
-| Infrastructure configuration and scaling.	 |
+| <b>Infrastructure configuration and scaling.	</b> |
 | Resize environments according to changing needs. | - | C | R/A |
 | Maintain the infrastructure up to date and secure. | I | I | R/A |
 | Configure infrastructure for applications. | I | C | R/A |
 | Provide deploy files for SCCOS environments. | I | R/A | C |
-| Deployment |
+| <b> Deployment </b> |
 | Provide valid access tokens for repositories and make them available per requirements. | - | R/A | I |
 | Conduct appropriate testing, especially the load testing of data import  before production deployments. | I/C | R/A | I |
 | Conduct initial troubleshoot of deployment issues. | - | R/A | - |
 | Resolve deployment issues related to code and data, like data imports, timeouts during data import,  or wrong data structure. | - | R/A | I |
 | Resolve deployment infrastructure issues: placement issues, timeouts of image building, deployment of containers like Jenkins. | - | - | R/A |
-| Monitoring, alerting, and troubleshooting. |
+| <b> Monitoring, alerting, and troubleshooting. </b> |
 | Analyze logs to detect and troubleshoot infrastructure issues. | I | I | R/A |
 | Analyze logs to detect and troubleshoot application issues. | I/C | R/A | - |
 | Monitor infrastructure and inform stakeholders about issues proactively. | I | I | R/A |

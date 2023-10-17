@@ -93,7 +93,7 @@ You normally add a CNAME record in your DNS Management for the domains you want 
 - We terraform this endpoint and send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site).
 - You set these entries in your DNS management and let us know when you are done.
 - Terraforming can then be completed, and you receive the CNAME DNS records that you can then set in your DNS management to point your DNS names to the newly created endpoints.
-- After this is completed, your application gets accessible through the new endpoints.
+- After this is completed, your application becomes accessible through the new endpoints.
 
 {% info_block infoBox "Info" %}
 
@@ -105,7 +105,7 @@ To use a root domain for your application (for example, spryker.com), use an IP 
 
 {% info_block infoBox "Info" %}
 
-We do not normally support full delegation of your DNS to us and therefore do not suggest that you change your domain’s NS records to ours.
+We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain’s NS records to ours.
 
 {% endinfo_block %}
 
@@ -116,10 +116,16 @@ We do not normally support full delegation of your DNS to us and therefore do no
 - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 
+{% info_block warningBox "Integration with payment providers" %}
+
+Lower or nonproduction environments may not have the same WAF and Firewall settings configured as production environments. Therefore, make sure that all your requests have valid headers. Also, test the functionality of payment integrations that use call-backs or depend on API calls to your application in your production environment.
+
+{% endinfo_block %}
+
 ### Data preparation and communication
 
 - *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
-- *Let us know your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hyper care phase we provide before and after your go-live.
+- *Let us know your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hypercare phase we provide before and after your go-live.
 
 ### Last checks
 

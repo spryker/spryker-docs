@@ -15,13 +15,13 @@ The design system works closely with other styling techniques in Oryx, such as l
 
 ## Screen sizes
 
-Oryx applications are designed for an optimized experience on a variety of devices, such as smartphones, tables, desktop or even smartwatches. The responsive design system is however not connected to specific devices, but to the associated screen sizes. Screen sizes are better reusable cross devices. For example, a small screen design is used for mobile devices, but can also be used for in-Store displays in physical stores.
+Oryx applications are designed for an optimized experience on a variety of devices, such as smartphones, tables, desktop, or even smartwatches. However, the responsive design system does not relate to specific devices, but to the associated screen sizes. Screen sizes are more reusable across devices. For example, a small screen design is used for mobile devices but can also be used for in-store displays in physical stores.
 
 Oryx provides five t-shirt size values that are given by a generic `size` enumeration, which can be imported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
 
 | Screen      | Code | Enum breakpoint | Example devices                  |
 | ----------- | ---- | --------------- | -------------------------------- |
-| Extra small | `xs` | `Size.Xs`       | Small phone, smart Watch         |
+| Extra small | `xs` | `Size.Xs`       | Small phone, smartwatch          |
 | Small       | `sm` | `Size.Sm`       | Smartphone, in-store application |
 | Medium      | `md` | `Size.Md`       | Tablet                           |
 | Large       | `lg` | `Size.Lg`       | Desktop                          |
@@ -84,7 +84,7 @@ The breakpoint definition shows that you only need to define the required breakp
 
 By using custom breakpoints, you can create a responsive design that is tailored to your project's needs and provides an optimal UX across different devices and screen sizes.
 
-Breakpoints are part of Oryx themes. All Oryx themes use the default configuration for breakpoints. You can provide a custom theme, or an additional theme this is used on top of the standard themes. A custom theme can add a single breakpoint or redefine all breakpoints. In the following example, custom breakpoints are defined for extra small and small screen sizes. The small screen gets a minimum value and the extra small only requires a max value because it starts with `0` by default.
+Breakpoints are part of Oryx themes. All Oryx themes use the default configuration for breakpoints. You can provide a custom theme or an additional theme to be used on top of the standard themes. A custom theme can add a single breakpoint or redefine all breakpoints. In the following example, custom breakpoints are defined for extra small and small screen sizes. The small screen gets a minimum value, and the extra small only requires a maximum value because it starts with `0` by default.
 
 ```ts
 import { Size } from "@spryker-oryx/utilities";

@@ -16,9 +16,9 @@ In the Back Office, to create a warehouse user, you need to select a respective 
 
 To give a warehouse user access to fulfilling orders in a warehouse, you need to assign the warehouse to them. For instructions on how to do that, see [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202400.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html).
 
-## Fulfillment app
+## Fulfillment App
 
-Fulfillment app is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment app to gather and ship the order items.
+Fulfillment App is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment App to gather and ship the order items.
 
 ## Assigning a warehouse
 
@@ -43,7 +43,7 @@ Warehouse allocation shouldn't be confused with the reservation process, meaning
 
 ## Warehouse picklists
 
-A *warehouse picklist* is a document available in the Fulfillment app that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
+A *warehouse picklist* is a document available in the Fulfillment App that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
 * Product name
 * Product image
 * Quantity to be picked
@@ -69,10 +69,10 @@ Picking is semi-automated and follows the steps:
 2. A warehouse is assigned to the order.
 3. The picklist is generated.
 4. In the Fulfillment App, a warehouse user assigns the picklist to themselves.
-5. The user marks the items as picked or not found.
+5. The warehouse user marks the items as picked or not found.
 6. Picking is finished.
 7. Order items states are updated to reflect the picking being finished.
-8. The items are shipped.
+8. The picked items are shipped.
 
 
 ## Push notifications
@@ -89,7 +89,7 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 * Doesn't support partial picking of non-splittable order items.
 * Doesn't support the business logic for picking of bundle products. However, if all concrete products of a bundle product are picked, it can be processed by the State Machine.
 * Visualization of configurable bundles in Fulfillment App is impossible, but picking of items in bundles is possible.
-* Picking of random weight products is not available.
+* Picking of random-weight products is not available.
 
 
 

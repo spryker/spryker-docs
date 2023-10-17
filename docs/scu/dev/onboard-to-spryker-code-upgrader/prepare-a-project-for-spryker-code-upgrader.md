@@ -29,7 +29,7 @@ Currently, the Upgrader supports GitHub, GitLab and Azure. If you want to use a 
 
 ## Migrate to Spryker Cloud Commerce OS
 
-The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/ca/dev/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
+The Upgrader supports only projects that run in [cloud environments](/docs/ca/dev/getting-started-with-cloud-administration.html). If you are running Spryker on premises, migrate to  cloud.
 
 ## Minimum technical requirements
 

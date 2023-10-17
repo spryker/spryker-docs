@@ -2,8 +2,8 @@ title: Cloud administration guide
 entries:
   - product: Cloud administration
     nested:
-      - title: Getting started with the Spryker Cloud Commerce OS
-        url: /docs/ca/dev/getting-started-with-the-spryker-cloud-commerce-os.html
+      - title: Getting started with cloud administration
+        url: /docs/ca/dev/getting-started-with-cloud-administration.html
       - title: Environments overview
         url: /docs/ca/dev/environments-overview.html
       - title: Environments provisioning
@@ -12,7 +12,7 @@ entries:
         url: /docs/ca/dev/access/access.html
         nested:
           - title: Access AWS Management Console
-            url: /docs/ca/dev/access/access-aws-management-console.html
+            url: /docs/ca/dev/access/access-the-aws-management-console.html
           - title: Locate service credentials
             url: /docs/ca/dev/access/locate-service-credentials.html
           - title: Connect to services via SSH
@@ -63,8 +63,8 @@ entries:
       - title: Security
         url: /docs/ca/dev/security/security.html
         nested:
-          - title: Checking ECR image scan results
-            url: /docs/ca/dev/security/checking-ecr-image-scan-results.html
+          - title: Check ECR image scan results
+            url: /docs/ca/dev/security/check-ecr-image-scan-results.html
           - title: Generate access keys
             url: /docs/ca/dev/security/generate-access-keys.html
           - title: Web Application Firewall (WAF)
@@ -96,8 +96,6 @@ entries:
         url: /docs/ca/dev/verify-email-addresses.html
       - title: Set up notifications for 5xx errors
         url: /docs/ca/dev/set-up-notifications-for-5xx-errors.html
-      - title: Peformance testing
-        url: /docs/ca/dev/performance-testing.html
       - title: Performance testing in staging environments
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
       - title: Managing parameters in the Parameter Store

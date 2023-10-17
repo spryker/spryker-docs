@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/zenloop
 originalArticleId: 53542a74-7858-44d0-939b-0d9c76aa4011
 redirect_from:
-  - /2021080/docs/zenloop
-  - /2021080/docs/en/zenloop
-  - /docs/zenloop
-  - /docs/en/zenloop
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/zenloop.html  
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

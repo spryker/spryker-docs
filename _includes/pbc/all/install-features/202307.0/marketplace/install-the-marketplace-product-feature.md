@@ -287,7 +287,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 Make sure that you can filter products by merchants at `https://zed.de.demo-spryker.com/product-management`.
 
-Make sure that you can see the merchant name at `https://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}`. It is applicable only for products that are assigned to some merchant. For details, the [6) Import merchant product data](#6-import-merchant-product-data) step.
+Make sure that you can see the merchant name at `https://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}`. It is applicable only for products that are assigned to some merchant. For details, the [6) Import merchant product data](#import-merchant-product-data) step.
 
 {% endinfo_block %}
 
@@ -819,4 +819,3 @@ Make sure you can filter concrete products by merchant reference while searching
 | Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
 | Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |
 | Marketplace Product + Quick Add to Cart | | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html) |
-

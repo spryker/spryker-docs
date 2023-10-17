@@ -22,4 +22,4 @@ related:
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-inventory-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-inventory-management-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-inventory-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-inventory-management-glue-api.md -->

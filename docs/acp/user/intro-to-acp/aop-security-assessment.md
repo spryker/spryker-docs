@@ -163,7 +163,7 @@ The diagram below demonstrates the security assessment procedure:
 
 ## Communication channels
 
-- Spryker will create a Slack channel for the app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions.
+- For the app developers to ask questions related to security, Spryker will create a (private) subforum in our [CommerceQuest](https://commercequest.space/) community platform. Security experts will monitor this channel and respond to the questions.
 - Communication during individual assessments would be handled through emails.
 - In cases where a discussion is needed to resolve open questions, a call can be set up between the developer and Spryker security experts.
 

@@ -25,7 +25,7 @@ related:
   - title: Glue infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html
   - title: Glue API installation and configuration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 
 To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue lets you generate it automatically with the help of the `DocumentationGeneratorRestApi` module, which extracts information on your REST API endpoints directly from their implementation. It also can provide additional information on endpoints, such as their purpose, usage details, and request parameters—for example, in headers, paths, queries, or cookies.
@@ -42,7 +42,7 @@ REST API endpoints shipped by Spryker are covered by documentation by default. A
 
 ## Prerequisites
 
-Install and enable [Spryker Glue](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html). Also, see the following documents:
+Install and enable [Spryker Glue](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html). Also, see the following documents:
 
 * [Open API Specification](https://github.com/OAI/OpenAPI-Specification)
 * [Swagger Tools Reference](https://swagger.io/)

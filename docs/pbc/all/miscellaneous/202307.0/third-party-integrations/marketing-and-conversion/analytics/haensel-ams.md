@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/haensel-ams
 originalArticleId: f282ab4f-da56-4ee3-b09c-b91dd1b32a23
 redirect_from:
-  - /2021080/docs/haensel-ams
-  - /2021080/docs/en/haensel-ams
-  - /docs/haensel-ams
-  - /docs/en/haensel-ams
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/haensel-ams.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

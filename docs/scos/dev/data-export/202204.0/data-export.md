@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/exporting-data
   - /docs/exporting-data
   - /docs/en/exporting-data
+  - /docs/scos/dev/data-import/202307.0/data-export.html
 related:
   - title: Sales Data Export feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html

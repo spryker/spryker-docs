@@ -6,10 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/new-relic
 originalArticleId: 6932e215-8b44-4cb4-b43e-12704e967a45
 redirect_from:
-  - /2021080/docs/new-relic
-  - /2021080/docs/en/new-relic
-  - /docs/new-relic
-  - /docs/en/new-relic
   - docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 

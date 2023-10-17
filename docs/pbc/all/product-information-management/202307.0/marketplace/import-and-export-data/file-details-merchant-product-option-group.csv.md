@@ -1,5 +1,5 @@
 ---
-title: "File details: merchant_product_option_group.csv"
+title: "Import file details: merchant_product_option_group.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_product_option_group file to create product options for merchants.
 template: import-file-template

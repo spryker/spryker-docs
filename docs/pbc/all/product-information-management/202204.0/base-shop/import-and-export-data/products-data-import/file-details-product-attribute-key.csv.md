@@ -1,5 +1,5 @@
 ---
-title: "File details: product_attribute_key.csv"
+title: "Import file details: product_attribute_key.csv"
 last_updated: Jul 7, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-attribute-keycsv

@@ -1,5 +1,5 @@
 ---
-title: "File details: price-product-offer.csv"
+title: "Import file details: price-product-offer.csv"
 last_updated: Feb 26, 2021
 description: This document describes the price-product-offer.csv file to configure merchant product offer price information in your Spryker shop.
 template: import-file-template

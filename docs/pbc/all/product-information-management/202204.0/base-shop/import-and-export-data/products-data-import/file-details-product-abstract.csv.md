@@ -1,5 +1,5 @@
 ---
-title: "File details: product_abstract.csv"
+title: "Import file details: product_abstract.csv"
 last_updated: Oct 4, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-abstractcsv

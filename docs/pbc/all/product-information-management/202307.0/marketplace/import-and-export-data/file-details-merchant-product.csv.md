@@ -1,5 +1,5 @@
 ---
-title: "File details: merchant_product.csv"
+title: "Import file details: merchant_product.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_product.csv file to configure marketplace products in your Spryker shop.
 template: import-file-template

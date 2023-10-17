@@ -1,5 +1,5 @@
 ---
-title: "File details: product_price.csv"
+title: "Import file details: product_price.csv"
 last_updated: Sep 7, 2021
 description: This document describes the product_price.csv file to configure  product prices in your Spryker shop.
 template: import-file-template

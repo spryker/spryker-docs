@@ -1,5 +1,5 @@
 ---
-title: "File details: merchant_stock.csv"
+title: "Import file details: merchant_stock.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_stock.csv file to configure merchant stock information in your Spryker shop.
 template: import-file-template

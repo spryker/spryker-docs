@@ -1,5 +1,5 @@
 ---
-title: "File details: product_offer_stock.csv"
+title: "Import file details: product_offer_stock.csv"
 last_updated: Feb 26, 2021
 description: This document describes the product_offer_stock.csv file to configure merchant product offer stock in your Spryker shop.
 template: import-file-template

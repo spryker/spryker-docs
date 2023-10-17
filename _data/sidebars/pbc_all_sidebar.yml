@@ -915,7 +915,7 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html
                   - title: "Customer module overview: reference information"
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
-              - title: "File details: customer.csv"
+              - title: "Import file details: customer.csv"
                 url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
           - title: Marketplace
             nested:
@@ -984,13 +984,13 @@ entries:
               - title: Import and export data
                 url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-discount-management-data.html
                 nested:
-                  - title: File details - discount.csv
+                  - title: "Import file details: discount.csv"
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount.csv.html
-                  - title: File details - discount_store.csv
+                  - title: "Import file details: discount_store.csv"
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-store.csv.html
-                  - title: File details - discount_amount.csv
+                  - title: "Import file details: discount_amount.csv"
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-amount.csv.html
-                  - title: File details - discount_voucher.csv
+                  - title: "Import file details: discount_voucher.csv"
                     url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
               - title: Create discounts based on shipment
                 url: /docs/pbc/all/discount-management/base-shop/create-discounts-based-on-shipment.html
@@ -1097,9 +1097,9 @@ entries:
           - title: Import and export data
             url: /docs/pbc/all/gift-cards/import-and-export-data/import-gift-cards-data.html
             nested:
-              - title: File details- gift_card_abstract_configuration.csv
+              - title: "Import file details: gift_card_abstract_configuration.csv"
                 url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html
-              - title: File details- gift_card_concrete_configuration.csv
+              - title: "Import file details: gift_card_concrete_configuration.csv"
                 url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
           - title: Manage using Glue API
             nested:
@@ -1280,23 +1280,23 @@ entries:
               - title: Import data
                 url: /docs/pbc/all/merchant-management/marketplace/import-data/import-merchant-management-data.html
                 nested:
-                  - title: "File details: merchant.csv"
+                  - title: "Import file details: merchant.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant.csv.html
-                  - title: "File details: merchant_profile.csv"
+                  - title: "Import file details: merchant_profile.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile.csv.html
-                  - title: "File details: merchant_profile_address.csv"
+                  - title: "Import file details: merchant_profile_address.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile-address.csv.html
-                  - title: "File details: merchant_open_hours_week_day_schedule.csv"
+                  - title: "Import file details: merchant_open_hours_week_day_schedule.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-week-day-schedule.csv.html
-                  - title: "File details: merchant_open_hours_date_schedule.csv"
+                  - title: "Import file details: merchant_open_hours_date_schedule.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html
-                  - title: "File details: merchant_category.csv"
+                  - title: "Import file details: merchant_category.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-category.csv.html
-                  - title: "File details: merchant_stock.csv"
+                  - title: "Import file details: merchant_stock.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-stock.csv.html
-                  - title: "File details: merchant_store.csv"
+                  - title: "Import file details: merchant_store.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-store.csv.html
-                  - title: "File details: merchant_user.csv"
+                  - title: "Import file details: merchant_user.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-user.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
@@ -2286,9 +2286,9 @@ entries:
                         url: /docs/pbc/all/price-management/marketplace/install-and-upgrade/install-glue-api/install-the-prices-marketplace-wishlist-glue-api.html
               - title: Import and export data
                 nested:
-                  - title: "File details: product_price.csv"
+                  - title: "Import file details: product_price.csv"
                     url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-product-price.csv.html
-                  - title: "File details: price-product-offer.csv"
+                  - title: "Import file details: price-product-offer.csv"
                     url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
               - title: Retrieve product offer prices using Glue API
                 url: /docs/pbc/all/price-management/marketplace/glue-api-retrieve-product-offer-prices.html
@@ -3195,9 +3195,9 @@ entries:
               - title: Import and export data
                 url: /docs/pbc/all/search/base-shop/import-and-export-data/search-data-import.html
                 nested:
-                  - title: "File details: product_search_attribute_map.csv"
+                  - title: "Import file details: product_search_attribute_map.csv"
                     url: /docs/pbc/all/search/base-shop/import-and-export-data/file-details-product-search-attribute-map.csv.html
-                  - title: "File details: product_search_attribute.csv"
+                  - title: "Import file details: product_search_attribute.csv"
                     url: /docs/pbc/all/search/base-shop/import-and-export-data/file-details-product-search-attribute.csv.html
               - title: Tutorials and Howtos
                 nested:
@@ -3648,7 +3648,7 @@ entries:
                 url: /docs/pbc/all/warehouse-management-system/marketplace/manage-availability.html
               - title: Import and export data
                 nested:
-                  - title: "File details: product_offer_stock.csv"
+                  - title: "Import file details: product_offer_stock.csv"
                     url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html

@@ -1,5 +1,5 @@
 ---
-title: "File details: product_concrete_pre_configuration.csv"
+title: "Import file details: product_concrete_pre_configuration.csv"
 description: Description of the `product_concrete_pre_configuration.csv` import file.
 last_updated: Jun 25, 2021
 template: data-import-template

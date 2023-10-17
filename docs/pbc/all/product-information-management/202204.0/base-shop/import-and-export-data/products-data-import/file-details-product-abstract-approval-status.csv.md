@@ -1,5 +1,5 @@
 ---
-title: "File details: product_abstract_approval_status.csv"
+title: "Import file details: product_abstract_approval_status.csv"
 description: This document contains content of the product_approval_status_default.csv file to configure products approval information about your Spryker Demo Shop.
 template: data-import-template
 redirect_from:

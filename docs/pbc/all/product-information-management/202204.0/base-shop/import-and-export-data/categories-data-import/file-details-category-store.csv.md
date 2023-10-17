@@ -1,5 +1,5 @@
 ---
-title: "File details: category_store.csv"
+title: "Import file details: category_store.csv"
 description: Learn the description of the category_store.csv file to configure assignments of categories in your Spryker shop | Spryker
 last_updated: Jul 1, 2021
 template: data-import-template

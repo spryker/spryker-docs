@@ -1,5 +1,5 @@
 ---
-title: "File details: cms_block_category_position.csv"
+title: "Import file details: cms_block_category_position.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv

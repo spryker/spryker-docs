@@ -1,5 +1,5 @@
 ---
-title: "File details: product_option_price.csv"
+title: "Import file details: product_option_price.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-option-pricecsv

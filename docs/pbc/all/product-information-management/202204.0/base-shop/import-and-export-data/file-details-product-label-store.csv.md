@@ -1,5 +1,5 @@
 ---
-title: "File details: product_label_store.csv"
+title: "Import file details: product_label_store.csv"
 description: Description of the product_label_store.csv import file used to import store relations of product labels.
 last_updated: Jun 16, 2021
 template: data-import-template

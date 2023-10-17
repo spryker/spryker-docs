@@ -6,10 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-dashboard
 originalArticleId: a8e88fca-d49f-462e-94bc-acb65899d0e9
 redirect_from:
-  - /2021080/docs/viewing-dashboard
-  - /2021080/docs/en/viewing-dashboard
-  - /docs/viewing-dashboard
-  - /docs/en/viewing-dashboard
+  - /docs/scos/user/back-office-user-guides/202001.0/dashboard/viewing-dashboard.html
   - /docs/pbc/all/back-office/202307.0/manage-in-the-back-office/viewing-dashboard.html
 ---
 

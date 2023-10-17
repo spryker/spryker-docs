@@ -6,10 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-factfinder-search
 originalArticleId: 4d1987e5-ae5c-4884-84ae-d5bc2eaa99a6
 redirect_from:
-  - /2021080/docs/search-factfinder-search
-  - /2021080/docs/en/search-factfinder-search
-  - /docs/search-factfinder-search
-  - /docs/en/search-factfinder-search
+  - /docs/scos/dev/technology-partner-guides/202108.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html

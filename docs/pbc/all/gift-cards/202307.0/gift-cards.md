@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-overview
 originalArticleId: 942e081b-6312-483d-bc93-761af98f1f44
 redirect_from:
-  - /2021080/docs/gift-cards-feature-overview
-  - /2021080/docs/en/gift-cards-feature-overview
-  - /docs/gift-cards-feature-overview
-  - /docs/en/gift-cards-feature-overview
+  - /docs/scos/user/features/202009.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202307.0/gift-cards-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202307.0/gift-cards-feature-walkthrough.html

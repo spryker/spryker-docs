@@ -176,6 +176,7 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

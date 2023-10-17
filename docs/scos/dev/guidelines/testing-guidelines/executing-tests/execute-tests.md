@@ -1,5 +1,5 @@
 ---
-title: Executing tests
+title: Execute tests
 description: Lean what commands you can use to execute your tests.
 last_updated: Jun 16, 2021
 template: concept-topic-template

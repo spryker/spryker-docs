@@ -68,7 +68,7 @@ Check out the organization within the [tests/PyzTest/](https://github.com/spryke
 
 Together with the [root configuration](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html#configuration), you are now able to organize your tests in a way that each test suite can have its own helper applied and can be executed separately.
 
-## Next Steps
+## Next steps
 
 * Learn about the [available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html).
 * [Create or enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).

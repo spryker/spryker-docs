@@ -23,7 +23,7 @@ related:
   - title: Data builders
     link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
     link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
   - title: Setting up tests
@@ -50,7 +50,7 @@ We strongly recommend reading the documentation of both frameworks to get the be
 
 Codeception offers many handy things to write better and cleaner tests. Many solutions this framework has are built on top of PHPUnit. In the next articles, we will only reference Codeception even if these features are available in PHPUnit as well.
 
-On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify](/docs/scos/dev/guidelines/testing-guidelines/testify.html) for more details on Testify itself, and [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#testify-helpers) for details on the existing Testify helpers.
+On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify](/docs/scos/dev/guidelines/testing-guidelines/testify.html) for more details on Testify itself, and [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#testify-helpers) for details on the existing Testify helpers.
 
 ## Basic test setup
 
@@ -151,7 +151,7 @@ There are many console commands provided from Codeception, but the most used one
 
 For information on other Codeception console commands, run `vendor/bin/codecept list`.
 
-See [Executing Tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html) for details on some commands.
+See [Executing Tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html) for details on some commands.
 
 ## Testing with Spryker
 
@@ -163,7 +163,7 @@ On top of Codeception, we have added a basic infrastructure for tests. We have d
 
 The **Communication** suite can contain unit and functional tests. The controller tests can be used to test like a user that interacts with the browser but without the overhead of the GUI rendering. This suite should be used for all tests that do not need JavaScript.
 
-The **Business** suite can contain unit and functional tests. The facade test is one kind of an API test approach. For more information, see [Test API](/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html#test-api).
+The **Business** suite can contain unit and functional tests. The facade test is one kind of an API test approach. For more information, see [Test API](/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html#test-api).
 
 The **Presentation** suite contains functional tests that can be used to interact with a headless browser. These tests should be used when you have JavaScript on the page under test.
 

@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/testing-concepts
   - /v1/docs/en/testing-concepts
   - /docs/scos/dev/guidelines/testing-concepts.html
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
@@ -31,7 +32,7 @@ related:
   - title: Data builders
     link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
     link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
   - title: Setting up tests

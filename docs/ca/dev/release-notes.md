@@ -33,7 +33,7 @@ Flexibility. You can change environment variables according to a needed schedule
 
 #### Documentation
 
-[Define parameter and secret values in SCCOS environments](/docs/ca/dev/define-parameter-and-secret-values-in-sccos-environments.html)
+[Define parameter and secret values in SCCOS environments](/docs/ca/dev/managing-parameters-in-the-parameter-store.html)
 
 
 ### Maintenance mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -136,7 +136,7 @@ Increased the stability of Jenkins deployment. This update addresses critical is
 
 * **Documentation about Onboarding deliverables**: updated the cloud administration getting started page with the deliverables provided after the onboarding. See [Getting started with cloud administration](/docs/ca/dev/getting-started-with-cloud-administration.html).
 
-* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/ca/dev/connecting-a-code-repository.html#connect-a-gitlab-code-repository).
+* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository).
 
 * **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 

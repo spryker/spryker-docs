@@ -229,7 +229,7 @@ You've restored the database and connected it ot your application.
 ## Restore an application
 
 
-Application restoration is part of a regular deployment workflow. See [Rolling back an application](/docs/ca/dev/deploying-in-a-staging-environment.html#roll-back-an-application) to learn about restoring a previous version of an application.
+Application restoration is part of a regular deployment workflow. See [Rolling back an application](/docs/ca/dev/deploy-in-a-staging-environment.html#roll-back-an-application) to learn about restoring a previous version of an application.
 
 
 ## Next step

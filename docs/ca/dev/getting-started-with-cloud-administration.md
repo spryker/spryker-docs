@@ -41,7 +41,7 @@ You can access your cloud environments via the following means:
 
 ## Service credentials
 
-You can find the credentials for services in the environment variables for the Zed container in [Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). For instructions, see [Locate service credentials](/docs/ca/dev/access/locating-service-credentials.html).
+You can find the credentials for services in the environment variables for the Zed container in [Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). For instructions, see [Locate service credentials](/docs/ca/dev/access/locate-service-credentials.html).
 
 
 ## CD pipelines

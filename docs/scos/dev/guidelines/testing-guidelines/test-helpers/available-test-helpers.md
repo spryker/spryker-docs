@@ -17,6 +17,7 @@ redirect_from:
   - /v5/docs/propel
   - /v5/docs/en/propel
   - /docs/scos/dev/guidelines/testing/available-test-helpers.html
+  - /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
 related:
   - title: Code coverage
     link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
@@ -243,11 +244,5 @@ Lets you create a table in the database and the `\Propel\Generator\Model\Table` 
 
 Lets you create Propel model files based on builders and tables.
 
-## Next Steps
-
-* [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
-* [Create or enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).
-Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
-* [Configure data builders to create transfers for your tests](/docs/scos/dev/guidelines/testing-guidelines/data-builders.html).
-* [Generate a code coverage report for your tests](/docs/scos/dev/guidelines/testing-guidelines/code-coverage.html).
-* Learn about the [testing best practices](/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html).
+## Next step: 
+[Enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).

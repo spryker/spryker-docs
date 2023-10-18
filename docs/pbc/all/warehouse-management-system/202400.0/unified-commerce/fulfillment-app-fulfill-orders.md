@@ -1,4 +1,17 @@
-## Picking using the Fulfillment App
+
+
+
+
+## Prerequisites
+
+Log into the Fulfillment App. The login details should be provided by your Back Office administrator. A Back Office user can create or convert an existing Back Office user into a warehouse user. For instructions, see [Create users](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [Edit users](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
+
+
+## Fulfill an order
+
+1. In the Fulfillment App, next to the warehouse you want to fulfill an order in, click **Select**.
+2. On the **PICK LISTS** page, next to the order you want to fulfill, click **Start picking**.
+3. 
 
 Follow the guide below to learn how to pick order items using our Fulfillment App.
 The Fulfillment App allows warehouse users to start the picking process for a picklist, and easily mark items in the picklist as picked or not found. Once the picking process is complete the state in the State Machine is updated to Picking Finished. To set up State Machine configuration, go (here)[https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html#set-up-configuration]. This feature improves inventory accuracy and reduces the likelihood of incorrect orders being shipped to customers.

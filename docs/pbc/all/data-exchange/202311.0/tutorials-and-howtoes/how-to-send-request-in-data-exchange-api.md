@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
   - /docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
+  - /docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
 ---
 
 This document describes how to send interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we are using the `/dynamic-data/countries` to interact with the `spy_country` table as an example.

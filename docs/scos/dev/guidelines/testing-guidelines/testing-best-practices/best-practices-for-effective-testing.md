@@ -24,7 +24,7 @@ related:
   - title: Data builders
     link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
     link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
   - title: Setting up tests
@@ -83,7 +83,7 @@ These inline comments give the reader of your test method a clear understanding 
 
 There are several ways to make your test methods small, easy to read and understand. When your `Arrange` part becomes huge, you can use the tester class and helper classes. If you see too many code lines in this section, you can move the `Arrange` code into the generated `Tester` class.
 
-Additionally, when you want to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html#using-another-helper-in-a-helper).
+Additionally, when you want to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#using-another-helper-in-a-helper).
 
 Take a look into [\SprykerTest\Shared\Customer\Helper\CustomerDataHelper](https://github.com/spryker/customer/blob/master/tests/SprykerTest/Shared/Customer/_support/Helper/CustomerDataHelper.php) - this one can be re-used in many modules to give you CustomerTransfer.
 

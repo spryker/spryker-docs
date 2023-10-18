@@ -4,10 +4,10 @@ description: Spryker Code Upgrader automatically integrates code releases
 template: concept-topic-template
 ---
 
-Spryker architecture provides extensibility of different modules by using extension points in the project code. With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated. As a result, to add new features, developers don't need to manually apply code changes.
+Spryker architecture supports the extensions of modules using extension points in the project code. With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated. As a result, to add new features, developers don't need to apply code changes manually.
 
-The upgrader supports the following extension points:
-- Configuration:
+The Upgrader supports the following extension points:
+- Configuration of the following:
   - Module
   - Environment
 - Copying module files
@@ -20,15 +20,15 @@ The upgrader supports the following extension points:
   - Transfer definition
   - DB schema definition
 
-## Release rating
+## Release integrability rating
 
-The release rating is a measure of the integrability coverage of a code release. It  represents the percentage of automatically integratable plugins, configurations, schemas, and other components.
+Release integrability rating is a measure of the integrability coverage of a code release. It represents the percentage of automatically integratable plugins, configurations, schemas, and other components.
 
-This rating is determined during internal testing, where the generated integration code is compared with the manually released code to assess the level of integration achieved. If both are equal, then the release is fully integratable.
+This rating is determined during the internal testing where the generated integration code is compared with the manually released code to assess the level of integration achieved. If both are equal, then the release is fully auto-integratable.
 
-There are type of releases that provide only dependency updates without any code integrations, so-called module-only releases. Such releases have 100% coverage.
+There are types of releases that provide only dependency updates without any code integrations, so-called module-only releases. Such releases have 100% coverage.
 
-The Upgrader's PRs contain the rating for the suggested releases.
+Each of the Upgrader's PRs contains the release rating of the suggested release.
 
 # Enable and configure
 

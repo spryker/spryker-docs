@@ -1,30 +1,28 @@
 ---
-title: AppKernel
-description: Documentation of how to use the AppKernel when developing an App with Spryker's Mini Framework
+title: Create an app with AppKernel
+description: Learn how to use the AppKernel when developing an App with Spryker's Mini Framework
 template: howto-guide-template
 ---
 
-# Creating an App with the help of the AppKernel
+The [AppKernel](https://github.com/spryker/app-kernel) is a module that provides the default functionality required by most of the apps. The functionality includes:
 
-The AppKernel is a module that provides the default functionality required by most of our Apps. This includes:
+- Configuration of an app: Receiving a request from the App Store Catalog to configure this app for a Tenant.
+- Disconnecting an app: The App gets disconnected from a Tenant through the App Store Catalog.
 
-- Configure an App (receive a request from the App Store Catalog to configure this App for a Tenant)
-- Disconnect an App (an App gets disconnected from a Tenant through the App Store Catalog)
-
-This guide provides a step-by-step description of how to use the AppKernel together with Spryker's Mini Framework to develop an App.
+This document provides describes how to use AppKernel together with Spryker's Mini Framework to develop an app.
 
 ## AppKernel
-Basically, every App needs to be configured for each Tenant individually. To prevent this logic from being implemented with each PBC the AppKernel provides this functionality out of the box.
+Basically, every app needs to be configured for each Tenant individually. To prevent this logic from being implemented with each PBC, AppKernel provides this functionality by default.
 
-This includes:
+This functionality includes the following components:
 
-- The route provider plugin \Spryker\Glue\App\Plugin\RouteProvider\AppRouteProviderPlugin which provides Glue endpoints
-  - `/private/configure` - Used to receive the configuration request.
-  - `/private/disconnect` - Used to disconnect the App from a Tenant (configuration gets deleted).
-- The controller \Spryker\Glue\App\Controller\AppConfigController::postConfigureAction() which will receive the configuration request. 
-- The controller \Spryker\Glue\App\Controller\AppDisconnectController::postDisconnectAction() which will receive the disconnection request. 
+- The `\Spryker\Glue\App\Plugin\RouteProvider\AppRouteProviderPlugin` route provider plugin which provides the following Glue endpoints:
+  - `/private/configure` - to receive the configuration request.
+  - `/private/disconnect` - to disconnect the app from a Tenant (configuration gets deleted).
+- The `\Spryker\Glue\App\Controller\AppConfigController::postConfigureAction()` controller that receives the configuration request. 
+- The `\Spryker\Glue\App\Controller\AppDisconnectController::postDisconnectAction()` controller that receives the disconnection request. 
  
-Additionally, you can extend the AppKernel with your own business logic by using plugins in the provided extension points as outlined in the integration guide.
+Additionally, you can extend the AppKernel with your own business logic by using plugins in the provided extension points as outlined in the following sections.
 
 ## Install the required modules using Composer
 

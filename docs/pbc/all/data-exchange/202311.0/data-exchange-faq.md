@@ -10,6 +10,7 @@ template: concept-topic-template
 When data isn't processed successfully via Alumio, the specific task which contains the data will be set to “Failed”. This feature allows you to identify incomplete tasks through the Alumio dashboard. You can also filter tasks by this status. The reason for the failure can be located in the task detail page, within either the *Import* or *Export* logs. These logs provide insights into why the data import or export failed and allow you to find the cause. Additionally, the latest version of Alumio allows you to export tasks, specifically all failed tasks, to a .CSV file. This way, other parties without access to Alumio can also analyze the data.
 
 **How can I get notified of any issues?**
+
 There are multiple types of alerts via email within Alumio. See the following pages for more details:
 
 - [Alerts for Incoming Configurations](https://forum.alumio.com/t/alerts-for-incoming-configurations/355)

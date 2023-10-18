@@ -32,7 +32,7 @@ We use the *Hello World* example throughout this document. All code references t
 
 ## Pre-requisites
 
-Either you followed the instructions on how to Create an App or you have an already created App in place.
+<!--Either you followed the instructions on how to Create an App or you have an already created App in place.-->
 
 Make sure the following prerequisites are met:
 

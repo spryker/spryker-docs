@@ -2,6 +2,7 @@
 title: Open-source vulnerabilities checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 Open-source vulnerabilities checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.
@@ -38,7 +39,7 @@ Your `composer.lock` file contains package versions that have security issues:
     ...
 ````
 
-### Resolving the error
+## Resolve the error
 
 To resolve the error:
 1. Upgrade the package to a version where the vulnerability issue is fixed.

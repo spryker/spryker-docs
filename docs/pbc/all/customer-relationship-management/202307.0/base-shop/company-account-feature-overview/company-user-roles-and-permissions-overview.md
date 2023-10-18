@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-user-roles-and-permissions-overview
 originalArticleId: 444e741d-bc54-4eb6-9483-16c4a94b765d
 redirect_from:
-  - /2021080/docs/company-user-roles-and-permissions-overview
-  - /2021080/docs/en/company-user-roles-and-permissions-overview
-  - /docs/company-user-roles-and-permissions-overview
-  - /docs/en/company-user-roles-and-permissions-overview
-  - /2021080/docs/company-roles-reference-information
-  - /2021080/docs/en/company-roles-reference-information
-  - /docs/company-roles-reference-information
-  - /docs/en/company-roles-reference-information
+  - /docs/scos/user/features/202108.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - /docs/scos/user/features/202307.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
@@ -152,10 +145,10 @@ Every company role includes a set of permissions that can be enabled/disabled ac
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-roles/create-company-roles.html) |
-| [Edit company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-roles/edit-company-roles.html) |
-| [Create company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-users/create-company-users.html) |
-| [Edit company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-users/edit-company-users.html) |
+| [Create company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html) |
+| [Edit company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html) |
+| [Create company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/create-company-users.html) |
+| [Edit company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/edit-company-users.html) |
 
 
 
@@ -167,4 +160,4 @@ Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/fe
 
 ## See next
 
-[Business on Behalf overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)
+[Business on Behalf overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-on-behalf-overview.html)

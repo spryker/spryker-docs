@@ -22,7 +22,7 @@ This document describes the `merchant-order-status.csv` file to configure the up
 | merchant_reference |   | String |   | Unique | Identifier of the merchant in the system. |
 | merchant_order_reference |   | String |   | Unique | Identifier of the merchant order in the system. |
 | order_item_reference | &check; | String |   | Unique | Identifier of the  item in the order. |
-| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
+| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
 
 ## Additional Information
 

@@ -2,6 +2,7 @@
 title: Upgradability guidelines
 description: Find solutions to Evaluator violations
 template: howto-guide-template
+redirect_from:
 ---
 
 The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with both Spryker's and industry coding standards.

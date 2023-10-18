@@ -5,11 +5,6 @@ description: This guide explains how Marketplace administrator can manage mercha
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202307.0/marketplace/merchants/managing-merchant-users.html
-related:
-  - title: Managing merchants
-    link: docs/marketplace/user/back-office-user-guides/202204.0/marketplace/merchants/managing-merchants.html
-  - title: Merchant users overview
-    link: docs/marketplace/user/features/202204.0/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 A merchant user is a user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace administrator can manage merchant users in the Back Office.
@@ -43,7 +38,7 @@ To create a merchant user, do the following:
 
 4. Click **Create**.
 
-By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/edit-users.html).
+By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 
 ### Reference information: Creating a merchant user
 

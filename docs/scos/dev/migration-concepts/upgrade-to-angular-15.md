@@ -15,9 +15,11 @@ Our current version of Angular is v12 with v9 compatibility.
 Angular v12 was deprecated on 2022-11-12, according to the [policy](https://angular.io/guide/releases#support-policy-and-schedule).
 The current stable version of Angular is v15.
 
-We need to upgrade to the latest major to get the latest bug fixes and security fixes, as well as performance in runtime and tooling.
-We can't maintain compatibility with older versions of Angular when updating Angular v15.
-So the update requires a major release for these modules:
+
+Upgrade to the latest major version of Angular to get the most recent bug fixes and security updates. Additionally, this will lead to optimization in both runtime performance and tooling.
+
+Keep in mind that updating to Angular v15 results in incompatibility with older versions of Angular. Therefore, a major release is necessary for these modules:
+
 - `ZedUi`
 - `DashboardMerchantPortalGui`
 - `GuiTable`

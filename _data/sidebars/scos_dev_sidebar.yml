@@ -11,7 +11,6 @@ entries:
     - title: System requirements
       url: /docs/scos/dev/system-requirements/system-requirements.html
       include_versions:
-      - "202108.0"
       - "202204.0"
       - "202212.0"
       - "202307.0"
@@ -83,18 +82,15 @@ entries:
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
     include_versions:
-    - "202108.0"
     - "202204.0"
     nested:
     - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
       include_versions:
-      - "202108.0"
       - "202204.0"
     - title: Alternative Products
       url: /docs/scos/dev/feature-walkthroughs/alternative-products-feature-walkthrough.html
       include_versions:
-      - "202108.0"
       - "202204.0"
     - title: Approval Process
       url: /docs/scos/dev/feature-walkthroughs/approval-process-feature-walkthrough.html
@@ -733,11 +729,19 @@ entries:
       include_versions:
       - "202212.0"
       - "202307.0"
+    - title: Use API Key authorization
+      url: /docs/scos/dev/glue-api-guides/use-api-key-authorization.html
+      include_versions:
+      - "202307.0"
     - title: Old Glue infrastructure
       include_versions:
       - "202212.0"
       - "202307.0"
       nested:
+      - title: Glue API authentication and authorization
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-authentication-and-authorization.html
+      - title: Glue API security and authentication
+        url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-security-and-authentication.html
       - title: Glue REST API
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-rest-api.html
         include_versions:
@@ -999,14 +1003,14 @@ entries:
       - "201907.0"
       - "202108.0"
       - "202204.0"
-    - title: Dynamic data API
+    - title: Data Exchange API
       include_versions:
       - "202307.0"
       nested:
-      - title: How to send a request in Dynamic Data API
-        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-send-request-in-dynamic-data-api.html
-      - title: How to configure Dynamic Data API endpoints.
-        url: /docs/scos/dev/glue-api-guides/dynamic-data-api/how-to-guides/how-to-configure-dynamic-data-api.html
+      - title: How to send a request in Data Exchange API
+        url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
+      - title: How to configure Data Exchange API endpoints.
+        url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
   - title: Feature integration guides
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
     include_versions:
@@ -1378,8 +1382,12 @@ entries:
             url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
             include_versions:
               - "202204.0"
-      - title: Dynamic Data API integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/dynamic-data-api-integration.html
+      - title: Install the Data Exchange API
+        url: /docs/scos/dev/feature-integration-guides/glue-api/data-exchange-api/install-the-data-exchange-api.html
+        include_versions:
+        - "202307.0"
+      - title: Data Exchange API + Inventory Management feature integration
+        url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/install-the-data-exchange-api-inventory-management-feature.md
         include_versions:
         - "202307.0"
     - title: Agent Assist
@@ -2285,10 +2293,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
       include_versions:
       - "202204.0"
-    - title: Picker user login
-      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-picker-user-login-feature.html
-      include_versions:
-        - "202400.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -2317,51 +2321,7 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
       include_versions:
       - "202204.0"
-  - title: Module migration guides
-    url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
-    nested:
-    - title: Migration Guide - API Module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-api.html
-    - title: Migration guide - Auth module to SecurityGui module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
-    - title: Migration Guide - Business On Behalf Data Import
-      url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
-    - title: Migration Guide - Collector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
-    - title: Migration Guide - ConfigurableBundle
-      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
-    - title: Migration Guide - ConfigurableBundleStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
-    - title: Migration Guide - Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-console.html
-    - title: Migration Guide - Customer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
-    - title: Migration Guide - CustomerPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
-    - title: Migration Guide - CustomerReorderWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration guide - Elastica
-      url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
-    - title: Migration Guide - Environment Configuration
-      url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
-    - title: Migration Guide - Flysystem
-      url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
-    - title: Migration Guide - Monitoring
-      url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - Oauth
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
-    - title: Migration Guide - OauthCompanyUser
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
-    - title: Migration Guide - Payment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration Guide - RabbitMQ
-      url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
-    - title: Migration Guide - Publish and Synchronization
-      url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - Setup
-      url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
-    - title: Migration Guide - Step Engine
-      url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
+
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -2413,8 +2373,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
-      - "202307.0"
       nested:
       - title: Commerce setup
         url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/commerce-setup.html
@@ -2423,8 +2381,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
-        - "202307.0"
         nested:
         - title: File details - payment_method.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html
@@ -2476,8 +2432,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
-          - "202307.0"
         - title: File details - shipment.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html
           include_versions:
@@ -3006,6 +2960,7 @@ entries:
     - "202005.0"
     - "202009.0"
     - "202108.0"
+    - "202307.0"
     - "202204.0"
     nested:
     - title: Exporting data
@@ -3023,7 +2978,14 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202307.0"
       - "202204.0"
+    - title: Marketplace data import
+      url: /docs/scos/dev/data-import/marketplace-data-import.html
+      include_versions:
+      - "202212.0"
+      - "202307.0"
+
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html
     nested:
@@ -3238,7 +3200,7 @@ entries:
           - title: Create, use, and extend the transfer objects
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-link-middleware.html
       - title: Event
         url: /docs/scos/dev/back-end-development/data-manipulation/event/event.html
         nested:
@@ -3304,11 +3266,6 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-      - title: Oryx Builder overview and setup
-        url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
-        include version:
-        - "202212.0"
-        - "202307.0"
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
         include version:
@@ -3383,78 +3340,108 @@ entries:
       - "202212.0"
       - "202307.0"
       nested:
-        - title: "Oryx: Compositions"
-          url: /docs/scos/dev/front-end-development/oryx/oryx-compositions.html
-        - title: Set up
-          url: /docs/scos/dev/front-end-development/oryx/set-up-oryx.html
-        - title: Boilerplate
-          url: /docs/scos/dev/front-end-development/oryx/oryx-boilerplate.html
-        - title: Feature sets
-          url: /docs/scos/dev/front-end-development/oryx/oryx-feature-sets.html
-        - title: Packages
-          url: /docs/scos/dev/front-end-development/oryx/oryx-packages.html
-        - title: Routing
-          url: /docs/scos/dev/front-end-development/oryx/oryx-routing.html
-        - title: Server-side rendering
-          url: /docs/scos/dev/front-end-development/oryx/oryx-server-side-rendering.html
-        - title: Versioning
-          url: /docs/scos/dev/front-end-development/oryx/oryx-versioning.html
-        - title: Presets
-          url: /docs/scos/dev/front-end-development/oryx/oryx-presets.html
-        - title: Localization
-          url: /docs/scos/dev/front-end-development/oryx/oryx-localization.html          
-        - title: Supported browsers
-          url: /docs/scos/dev/front-end-development/oryx/oryx-supported-browsers.html
-        - title: Dependency injection
-          url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection.html
+        - title: Getting started
           nested:
-            - title: Oryx service layer
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/oryx-service-layer.html
-            - title: Using services
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-using-services.html
-            - title: Defining services
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-defining-services.html
-            - title: Providing services
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-providing-services.html
-            - title: Advanced strategies
-              url: /docs/scos/dev/front-end-development/oryx/dependency-injection/dependency-injection-advanced-strategies.html
-        - title: Application orchestration
-          url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-orchestration.html
+            - title: Set up
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
+            - title: Boilerplate
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
+            - title: Packages
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-packages.html
+            - title: Versioning
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-versioning.html
+            - title: Supported browsers
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-supported-browsers.html
+
+        - title: Building applications
           nested:
-            - title: Application
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application.html
-            - title: Application environment
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-environment.html
-            - title: Application feature
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-feature.html
-            - title: Application plugins
-              url: /docs/scos/dev/front-end-development/oryx/oryx-application-orchestration/oryx-application-plugins.html
-        - title: Reactivity
-          url: /docs/scos/dev/front-end-development/oryx/reactivity/reactivity.html
+          - title: Presets
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-presets.html
+          - title: Feature sets
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-feature-sets.html
+          - title: Application orchestration
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
+            nested:
+              - title: Application
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application.html
+              - title: Application environment
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
+              - title: Application feature
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
+              - title: Application plugins
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
+          - title: Localization
+            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-localization.html
+          - title: Styling
+            include_versions:
+            - "202212.0"
+            - "202307.0"
+            nested:
+              - title: Color system
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-color-system.html
+              - title: Design tokens
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-design-tokens.html
+              - title: Icon system
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-icon-system.html
+              - title: Typography
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-typography.html
+
+        - title: Building pages
           nested:
-            - title: Key concepts
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/key-concepts-of-reactivity.html
-            - title: Reactive components
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/reactive-components.html
-            - title: Integration of backend APIs
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/oryx-integration-of-backend-apis.html
-            - title: Signals
-              url: /docs/scos/dev/front-end-development/oryx/reactivity/signals.html
-        - title: Styling
+            - title: "Pages"
+              url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-pages.html
+            - title: "Compositions"
+              url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-compositions.html
+            - title: Routing
+              url: /docs/scos/dev/front-end-development/oryx/building-pages/oryx-routing.html
+
+        - title: Building components
+          url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-building-components.html
           include_versions:
-          - "202212.0"
           - "202307.0"
           nested:
-            - title: Color system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-color-system.html
-            - title: Design tokens
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-design-tokens.html
-            - title: Icon system
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-icon-system.html              
-            - title: Typography
-              url: /docs/scos/dev/front-end-development/oryx/styling/oryx-typography.html
+            - title: Component types
+              url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-component-types.html
+            - title: Implementing components
+              url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-implementing-components.html
+            - title: Providing component definitions
+              url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-providing-component-definitions.html
+            - title: Managing components options
+              url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-managing-component-options.html
+            - title: Integrating components
+              url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-integrating-components.html
+
+        - title: Architecture
+          nested:
+            - title: Dependency injection
+              url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection.html
+              nested:
+                - title: Oryx service layer
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/oryx-service-layer.html
+                - title: Using services
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-using-services.html
+                - title: Defining services
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-defining-services.html
+                - title: Providing services
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-providing-services.html
+                - title: Advanced strategies
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
+            - title: Reactivity
+              url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/reactivity.html
+              nested:
+                - title: Key concepts
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/key-concepts-of-reactivity.html
+                - title: Reactive components
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/reactive-components.html
+                - title: Integration of backend APIs
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html
+                - title: Signals
+                  url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/signals.html
+            - title: Server-side rendering
+              url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
 
     - title: Marketplace
+      url: /docs/scos/dev/front-end-development/marketplace/marketplace-frontend.html
       include_versions:
       - "202204.0"
       - "202212.0"
@@ -3462,6 +3449,13 @@ entries:
       nested:
         - title: Extend the Marketplace frontend
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
+          include_versions:
+          - "202204.0"
+          - "202212.0"
+        - title: Extend the Merchant Portal frontend
+          url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
+          include_versions:
+          - "202307.0"
         - title: "Table design"
           url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
           nested:
@@ -3659,6 +3653,8 @@ entries:
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
         - title: Integrate the authentication
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+        - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
+          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
         - title: Integrate the authorization scopes
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
         - title: Integrate the documentation generator
@@ -3667,6 +3663,8 @@ entries:
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
         - title: Integrate the protected endpoints authorization
           url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
+    - title: Migrate from Auth to SecurityGui module
+      url: /docs/scos/dev/migration-concepts/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Silex Replacement
@@ -3715,10 +3713,12 @@ entries:
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html
           - title: WebProfiler          
             url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
-      - title: Update to Angular 12
+      - title: Upgrade to Angular 12
         url: /docs/scos/dev/migration-concepts/upgrade-to-angular-12.html
-      - title: Update to Angular 15
+      - title: Upgrade to Angular 15
         url: /docs/scos/dev/migration-concepts/upgrade-to-angular-15.html
+      - title: Upgrade Publish and Sync
+        url: /docs/scos/dev/migration-concepts/upgrade-publish-and-sync.html
       - title: Upgrade to Marketplace
         url: /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html
       - title: Migrate to Docker
@@ -4046,6 +4046,8 @@ entries:
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+      - title: Combined product offer import
+        url: /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
       - title: SCSS linter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
       - title: TS linter
@@ -4103,40 +4105,31 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
     - title: Symfony 6
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-6.html
+    - title: Twig and TwigExtension
+      url: /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
-  - title: SDK
-    url: /docs/scos/dev/sdk/sdk.html
+    - title: Update environemnt configuration
+      url: /docs/scos/dev/technical-enhancement-integration-guides/update-environment-configuration.html
+  - title: Zed API
+    url: /docs/scos/dev/zed-api/zed-api.html
     nested:
-    - title: Development Virtual Machine, Docker Containers & Console
-      url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
-    - title: Zed API
-      url: /docs/scos/dev/sdk/zed-api/zed-api.html
-      nested:
-      - title: Project implementation - Zed API
-        url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
-      - title: Zed API configuration
-        url: /docs/scos/dev/sdk/zed-api/zed-api-configuration.html
-      - title: CRUD functionality - Zed API
-        url: /docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
-      - title: Processor stack - Zed API
-        url: /docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
-      - title: Zed API resources
-        url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
-      - title: Zed API (BETA)
-        url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
-    - title: Cronjob scheduling
-      url: /docs/scos/dev/sdk/cronjob-scheduling.html
-    - title: Importer
-      url: /docs/scos/dev/sdk/data-import.html
-    - title: Twig and TwigExtension
-      url: /docs/scos/dev/sdk/twig-and-twigextension.html
-    - title: Code generator
-      url: /docs/scos/dev/sdk/code-generator.html
-      include_versions:
-      - "201811.0"
-    - title: Data export
-      url: /docs/scos/dev/sdk/data-export.html
+    - title: Project implementation - Zed API
+      url: /docs/scos/dev/zed-api/zed-api-project-implementation.html
+    - title: Zed API configuration
+      url: /docs/scos/dev/zed-api/zed-api-configuration.html
+    - title: CRUD functionality - Zed API
+      url: /docs/scos/dev/zed-api/zed-api-crud-functionality.html
+    - title: Processor stack - Zed API
+      url: /docs/scos/dev/zed-api/zed-api-processor-stack.html
+    - title: Zed API resources
+      url: /docs/scos/dev/zed-api/zed-api-resources.html
+    - title: Zed API (BETA)
+      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
+  - title: Code generator
+    url: /docs/scos/dev/sdk/code-generator.html
+    include_versions:
+    - "201811.0"
   - title: Tutorials and HowTos
     url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     nested:
@@ -4176,8 +4169,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
       - title: "Tutorial: Customer import"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
-      - title: "Tutorial: Calculator plugin"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
       - title: "Tutorial: Using translations"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"
@@ -4188,8 +4179,8 @@ entries:
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configure cross-origin resource sharing for Glue API
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
         - title: Configuring Visibility of the Included Section
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources
@@ -4254,8 +4245,6 @@ entries:
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     include_versions:
     - "202204.0"
-    - "202212.0"
-    - "202307.0"
     nested:
     - title: Marketing and conversion
       url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
@@ -4342,10 +4331,6 @@ entries:
       nested:
         - title: New Relic
           include_versions:
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Installing and configuring New Relic
@@ -4360,44 +4345,15 @@ entries:
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
           include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-        - "202204.0"
+          - "202204.0"
     - title: Order Management Erpoms
       include_versions:
       - "202204.0"
       nested:
-      - title: Punchout Catalog
-        include_versions:
-      - "202204.0"
-    - title: Punchout Catalog feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Eco - Punchout Catalogs + Product Bundles feature integration
-      url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
-      include_versions:
-      - "202204.0"
     - title: Payment partners
       nested:
         - title: Adyen
           include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Installing and configuring Adyen
@@ -4410,13 +4366,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
         - title: Afterpay
           include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Installing and configuring Afterpay
@@ -4425,13 +4374,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
         - title: Amazon Pay
           include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
           - "202204.0"
           nested:
             - title: Configuring Amazon Pay
@@ -4884,6 +4826,20 @@ entries:
       url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
+    - title: Marketplace architecture
+      url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-architecture.html
+      nested:
+        - title: Marketplace Application composition
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html
+        - title: Marketplace domain model
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
+        - title: Merchant Portal architecture overview
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+        - title: Marketplace in the Back Office
+          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+
+
+
   - title: Guidelines
     url: /docs/scos/dev/guidelines/guidelines.html
     nested:
@@ -4919,6 +4875,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html
         - title: Additional logic in dependency provider
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
+        - title: Container set function
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
         - title: Minimum allowed shop version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
         - title: Multidimensional array
@@ -4932,9 +4890,13 @@ entries:
         - title: Plugin registration with restrictions
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
+        - title: Spryker dev packages checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
+      - title: Ignore evaluation errors
+        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
@@ -4955,30 +4917,43 @@ entries:
     - title: Testing guidelines
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
-      - title: Testing concepts
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
-      - title: Setting up tests
-        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
-      - title: Publish and Synchronization testing
-        url: /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
-      - title: Test helpers
-        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
-      - title: Testify
-        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
-      - title: Executing tests
-        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+      - title: Code coverage
+        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html      
       - title: Test framework
         url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
-      - title: Code coverage
-        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+      - title: Setting up tests
+        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+      - title: Test helpers
+        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+        nested:
+          - title: Available test helpers
+            url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html
+          - title: Test helpers best practices
+            url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
+      - title: Executing tests
+        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+        nested:
+          - title: Execute tests
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
+          - title: Test console commands
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test the publish and synchronization process
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
+      - title: Testify
+        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
+      - title: Testing concepts
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       - title: Data builders
         url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
       - title: Testing best practices
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
-      - title: Available test helpers
-        url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
-      - title: Testing console commands
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
+        nested:
+          - title: Testing concepts
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
+          - title: Best practices for effective testing
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+          - title: Test types best practices
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html     
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data processing guidelines

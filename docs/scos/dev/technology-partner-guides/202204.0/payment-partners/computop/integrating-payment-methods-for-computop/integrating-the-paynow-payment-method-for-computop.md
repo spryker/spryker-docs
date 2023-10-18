@@ -240,7 +240,7 @@ protected function defineControllers(Application $app)
 
  .....
 
- $this->createController('/{checkout}/computop/paynow', self::CHECKOUT_COMPUTOP_PAYNOW, 'Checkout', 'Checkout', 'paynow')
+ $this->createController('/{checkout}/base-shop/third-party-integrations/computop/paynow', self::CHECKOUT_COMPUTOP_PAYNOW, 'Checkout', 'Checkout', 'paynow')
  ->assert('checkout', $allowedLocalesPattern . 'checkout|checkout')
  ->value('checkout', 'checkout')
  ->method('GET|POST');

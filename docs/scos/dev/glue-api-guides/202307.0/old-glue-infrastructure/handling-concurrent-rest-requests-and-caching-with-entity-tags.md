@@ -17,6 +17,8 @@ related:
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
 ---
 
+<!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
+
 {% info_block warningBox %}
 
 This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)

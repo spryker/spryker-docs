@@ -6,37 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
-  - /2021080/docs/dev-getting-started
-  - /2021080/docs/en/dev-getting-started
-  - /docs/dev-getting-started
-  - /docs/en/dev-getting-started
-  - /v6/docs/dev-getting-started
-  - /v6/docs/en/dev-getting-started
-  - /v5/docs/dev-getting-started
-  - /v5/docs/en/dev-getting-started
-  - /v4/docs/dev-getting-started
-  - /v4/docs/en/dev-getting-started
-  - /v3/docs/dev-getting-started
-  - /v3/docs/en/dev-getting-started
-  - /v2/docs/dev-getting-started
-  - /v2/docs/en/dev-getting-started
-  - /v1/docs/dev-getting-started
-  - /v1/docs/en/dev-getting-started
-  - /2021080/docs/about-the-development-guide
-  - /2021080/docs/en/about-the-development-guide
-  - /docs/about-the-development-guide
-  - /docs/en/about-the-development-guide
-  - /v6/docs/about-the-development-guide
-  - /v6/docs/en/about-the-development-guide
-  - /v5/docs/about-the-development-guide
-  - /v5/docs/en/about-the-development-guide
-  - /v4/docs/about-the-development-guide
-  - /v4/docs/en/about-the-development-guide
-  - /v3/docs/about-the-development-guide
-  - /v3/docs/en/about-the-development-guide
-  - /v2/docs/about-the-development-guide
-  - /v2/docs/en/about-the-development-guide
-  - /v1/docs/about-the-development-guide
   - /v1/docs/en/about-the-development-guide
   - /v4/docs/installation-guide-b2c
   - /v4/docs/en/installation-guide-b2c
@@ -48,9 +17,11 @@ redirect_from:
   - /docs/en/installation-guide-b2c
   - /dev-getting-started.htm
   - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
+  - /docs/scos/dev/module-migration-guides/about-migration-guides.html
+  - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
 ---
 
-This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
+This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access the Spryker community at [CommerceQuest](https://commercequest.space/).
 
 ## 1. Install Spryker
 
@@ -67,7 +38,7 @@ To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-l
 
 ### The deploy file
 
-When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 

@@ -22,22 +22,26 @@ The Upgrader supports the following extension points:
 
 ## Release integrability rating
 
-Release integrability rating is a measure of the integrability coverage of a code release. It represents the percentage of automatically integratable plugins, configurations, schemas, and other components.
+Release integrability rating is a measure of the integrability coverage of a code release. It is the percentage of automatically integratable plugins, configurations, schemas, and other components.
 
-This rating is determined during the internal testing where the generated integration code is compared with the manually released code to assess the level of integration achieved. If both are equal, then the release is fully auto-integratable.
+This rating is determined during the internal testing where the generated integration code is compared with the manually released code to assess the level of integration achieved. If both are equal, the release is fully auto-integratable.
 
-There are types of releases that provide only dependency updates without any code integrations, so-called module-only releases. Such releases have 100% coverage.
+There are types of releases that provide only dependency updates without any code integrations, so-called module-only releases. Such releases are 100% auto-integratable.
 
-Each of the Upgrader's PRs contains the release rating of the suggested release.
+## Release integrability rating threshold
 
-# Enable and configure
+By default, the Upgrader creates PRs for all the releases with rating 70% or more. The description of the PRs contains the rating of the suggested release.
 
-The Integrator is enabled by default. It integrates the releases with rating 70% or more. You can adjust this treshold to your requirements in Spryker CI.
+You can configure the threshold per your requirements in Spryker CI.
 
-After a release is integrated, a style fixer is applied to the changed files. We recommend implementing your own style fixer to expose project-specific code style conventions.
+## Implementing and applying style fixers
 
-# What to do if you see a generated code, that is not valid
+After a release is integrated, a style fixer is applied to the changed files. We recommend implementing your own style fixer to expose project-specific code and style conventions.
 
-1. Make sure that your project code follows the Upgradability Guidelines and passes the [Evaluator check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
-2. You can try manually correcting the generated code as a quick fix.
-3. If none of the above solutions work, please contact us for further assistance.
+## Fixing generated code
+
+If you see errors in the generated code, do the following:
+
+1. Double-check if your code follows the upgradability guidelines by [running the Evaluator](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+2. If you see any quick fixes, try manually correcting the errors.
+3. Contact us for further assistance. 

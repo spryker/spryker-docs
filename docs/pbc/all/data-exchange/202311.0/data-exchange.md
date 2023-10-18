@@ -21,13 +21,13 @@ Spryker offers the following options to import and export data:
 Data Importers and Data Exporters are tools that let you bring external data into and send data from SCCOS, using .CSV files.  Data Importers and Data Exporters are part of the SCCOS platform core.
 Data Importers and Data Exporters require extensive customization development for each project and ongoing development effort, which makes them less suitable for demanding data exchange.
 
-For information on how data importers and exporters work, see [Data import](/docs/scos/dev/data-import/202307.0/data-import.html) and [Data export](/docs/scos/dev/data-export/202307.0/data-export.html).
+For information on how Data importers and Exporters work, see [Data import](/docs/scos/dev/data-import/202307.0/data-import.html) and [Data export](/docs/scos/dev/data-export/202307.0/data-export.html).
 
 ## Data Exchange API
 
 Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is always current across all integrated platforms. It's part of the SCCOS platform core.
 
-Data Exchange API lets you build, customize, and manage APIs tailored to your specific business requirements through an intuitive user interface.
+Data Exchange API lets you build, customize, and manage APIs tailored to your specific business requirements through a user interface.
 
 The main benefits of the Data Exchange API include the following:
 
@@ -39,7 +39,7 @@ The main benefits of the Data Exchange API include the following:
 
 We recommend considering the Data Exchange API in the following cases:
 
-- You want to implement a data integration via API with another middleware that's not [Alumio](https://www.alumio.com).
+- You want to implement a data integration via API with a middleware that's not [Alumio](https://www.alumio.com).
 - You want to create your own data integration engine via API, without using any middleware software.
 
 ## Spryker Middleware Powered by Alumio
@@ -111,7 +111,7 @@ We recommend building custom integrations with the existing Alumio connectors in
 For more details on how to manage integrations and exchange data in the Alumio platform, see the following information provided by Alumio:
 - [The Basic Parts Of A Connector Package In Alumio](https://support.alumio.com/support/solutions/articles/80001031213-the-basic-parts-of-a-connector-package-in-alumio)
 - [How To Use The Alumio Connector Packages](https://forum.alumio.com/t/how-to-use-the-alumio-connector-packages/219) 
-- Up-to-date list of Alumio standard Connector Packages: [Latest iPaaS Connector Packages](https://forum.alumio.com/c/ipaas-connector-packages/27)
+- List of Alumio standard Connector Packages: [Latest iPaaS Connector Packages](https://forum.alumio.com/c/ipaas-connector-packages/27)
 
 ### Custom integrations with custom connectors
 

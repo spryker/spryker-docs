@@ -22,7 +22,7 @@ related:
   - title: Data builders
     link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Setting up tests
     link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
@@ -52,11 +52,11 @@ For a better testing experience, Spryker provides some helpers that turn this as
 
 The main helpers involved in the P&S testing are:
 
-- [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
-- [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#eventbehaviorhelper)
-- [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#queuehelper)
-- [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#storagehelper)
-- [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#searchhelper)
+- [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
+- [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
+- [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
+- [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#storagehelper)
+- [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#searchhelper)
 
 ## P&S testing storage
 
@@ -74,10 +74,10 @@ To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
 - Besides some other [helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#queuehelper)
-    - [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#storagehelper)
+    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
+    - [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#storagehelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.
@@ -123,10 +123,10 @@ To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Search` module
 - Besides some other [helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#queuehelper)
-    - [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#searchhelper)
+    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
+    - [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#searchhelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.

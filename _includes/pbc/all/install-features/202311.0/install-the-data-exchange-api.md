@@ -1,17 +1,3 @@
----
-title: Install the Data Exchange API
-description: Learn how to install the Data Exchange API
-last_updated: June 22, 2023
-template: feature-integration-guide-template
-redirect_from:
-    - /docs/scos/dev/feature-integration-guides/202304.0/glue-api/data-exchange-api/data-exchange-api-integration.html
-    - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api-integration.html
-    - docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
-related:
-- title: How to configure Data Exchange API
-  link: docs/scos/dev/glue-api-guides/page.version/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
----
-
 This document describes how to install the Data Exchange API.
 
 Data Exchange API is a powerful tool that enables seamless interaction with databases. You can easily access data by sending requests to a dedicated API endpoint. It lets you retrieve, create, update, and manage data in a flexible and efficient manner.
@@ -26,8 +12,8 @@ Install the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue Backend Api Application | {{page.version}} | [Glue API - Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html) |
-| Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-authentication-integration.html) |
+| Glue Backend Api Application | {{page.version}} | [Glue API - Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
+| Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
 
 ### Install the required modules
 

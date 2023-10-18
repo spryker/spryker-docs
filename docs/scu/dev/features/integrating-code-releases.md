@@ -43,5 +43,6 @@ After a release is integrated, a style fixer is applied to the changed files. We
 If you see errors in the generated code, do the following:
 
 1. Double-check if your code follows the upgradability guidelines by [running the Evaluator](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+    After fixing the upgradability issues, close the PR with errors and restart the Upgrader to get a new PR.
 2. If you see any quick fixes, try manually correcting the errors.
-3. Contact us for further assistance. 
+3. [Contact us](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) for further assistance. 

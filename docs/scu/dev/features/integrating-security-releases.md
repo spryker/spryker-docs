@@ -18,12 +18,13 @@ The static code analysis tools provide the capability to detect various known vu
 
 ## Spryker Security releases
 
-A security release is a type of release that aims to deliver vulnerability fixes rather than introducing new features or functionalities.
-Here's an example of a security release: [4753](https://api.release.spryker.com/release-group/4753).
+A security release is a type of release that aims to deliver vulnerability fixes rather than introducing new features or functionalities. Here's an example of a security release: [4753](https://api.release.spryker.com/release-group/4753).
 
-Even though security releases are applied alongside other releases, they are prioritized to ensure a quick delivery of critical security updates.
+Even though security releases are applied alongside other releases, they are prioritized to ensure faster delivery of critical security updates.
 
 ## Installing security releases
+
+The Upgrader creates PR for security releases in the same way it does for the regular code releases. For more information, see [Integrating code releases](/docs/scu/dev/features/integrating-code-releases.html)
 
 Automatic installation of security releases is only available for minor releases. The major releases require a manual installation.
 

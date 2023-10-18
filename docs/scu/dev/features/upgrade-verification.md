@@ -15,15 +15,12 @@ Warning types:
 - Major code release.
   All the major releases should be installed manually to integrate the BC breaks.
 - Broken PHP files.
-  Phpstan checks project code after each release application and provides corresponding warnings.
-- Conflict between a project class that extends a private class in a module and the  changes introduced in the latest release.
-  To resolve this conflict you need to rewrite the custom class with the necessary changes.
+  Phpstan checks the project's code after a release is integrated. To resolve the issue, fix the identified broken files.
+- Conflict between a project class that extends a private class in a Spryker module and the changes introduced in the latest release.
+  To resolve the conflict, rewrite the custom class with the necessary changes.
 - Module name conflict warnings.
-  A Custom project module matches the name of the spryker released module and should be renamed.
-- Release integration warnings (warnings related to the integration process)
-- Upgrader warnings (warnings related to the upgrader process)
-
-# What to do when you see these warnings in the PR?
-
-In most cases, warnings come with specific information that helps you identify the class or file needed to fix the issue.
-Most of these issues are easily fixable in your IDE.
+  A project module matches the name of a Spryker module. To resolve the issue, rename the project-level module.
+- Release integration warnings.
+  Resolve the issue using the instructions in the warning.
+- Upgrader warnings
+  Resolve the issue using the instructions in the warning.

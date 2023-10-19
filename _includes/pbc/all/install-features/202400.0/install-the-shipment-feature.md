@@ -621,10 +621,13 @@ Deactivate one of the shipment types and send a request with a corresponding shi
 
 1. Adjust the schema definition so entity changes trigger events.
 
-| AFFECTED ENTITY         | TRIGGERED EVENTS                                                                                                        |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| spy_shipment_type       | Entity.spy_shipment_type.create<br>Entity.spy_shipment_type.update<br>Entity.spy_shipment_type.delete                   |
-| spy_shipment_type_store | Entity.spy_shipment_type_store.create<br>Entity.spy_shipment_type_store.update<br>Entity.spy_shipment_type_store.delete |
+| AFFECTED ENTITY           | TRIGGERED EVENTS                                                                                                        |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| spy_shipment_type         | Entity.spy_shipment_type.create<br>Entity.spy_shipment_type.update<br>Entity.spy_shipment_type.delete                   |
+| spy_shipment_type_store   | Entity.spy_shipment_type_store.create<br>Entity.spy_shipment_type_store.update<br>Entity.spy_shipment_type_store.delete |
+| spy_shipment_carrier      | Entity.spy_shipment_carrier.create<br>Entity.spy_shipment_carrier.update<br>Entity.spy_shipment_carrier.delete |
+| spy_shipment_method       | Entity.spy_shipment_method.create<br>Entity.spy_shipment_method.update<br>Entity.spy_shipment_method.delete |
+| spy_shipment_method_store | Entity.spy_shipment_method_store.create<br>Entity.spy_shipment_method_store.update<br>Entity.spy_shipment_method_store.delete |
 
 
 **src/Pyz/Zed/ShipmentType/Persistence/Propel/Schema/spy_shipment_type.schema.xml**
@@ -642,6 +645,35 @@ Deactivate one of the shipment types and send a request with a corresponding shi
     <table name="spy_shipment_type_store" idMethod="native" allowPkInsert="true">
         <behavior name="event">
             <parameter name="spy_shipment_type_store_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
+**src/Pyz/Zed/Shipment/Persistence/Propel/Schema/spy_shipment.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" namespace="Orm\Zed\Shipment\Persistence" package="src.Orm.Zed.Shipment.Persistence" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd">
+
+    <table name="spy_shipment_carrier">
+        <behavior name="event">
+            <parameter name="spy_shipment_carrier_is_active" column="is_active"/>
+        </behavior>
+    </table>
+
+    <table name="spy_shipment_method">
+        <behavior name="event">
+            <parameter name="spy_shipment_method_is_active" column="is_active"/>
+            <parameter name="spy_shipment_method_fk_shipment_type" column="fk_shipment_type"/>
+            <parameter name="spy_shipment_method_fk_shipment_carrier" column="fk_shipment_carrier"/>
+        </behavior>
+    </table>
+
+    <table name="spy_shipment_method_store">
+        <behavior name="event">
+            <parameter name="spy_shipment_method_store_all" column="*"/>
         </behavior>
     </table>
 
@@ -830,11 +862,15 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 
 4. Set up publisher plugins:
 
-| PLUGIN                                 | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
-|----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
-| ShipmentTypeWriterPublisherPlugin      | Publishes shipment type data by `SpyShipmentType` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType        |
-| ShipmentTypeStoreWriterPublisherPlugin | Publishes shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
-| ShipmentTypePublisherTriggerPlugin     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
+| PLUGIN                                                 | SPECIFICATION                                                                                   | PREREQUISITES | NAMESPACE                                                                          |
+|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
+| ShipmentTypeWriterPublisherPlugin                      | Publishes shipment type data by `SpyShipmentType` entity events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType        |
+| ShipmentTypeStoreWriterPublisherPlugin                 | Publishes shipment type data by `SpyShipmentTypeStore` events.                                  |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
+| ShipmentCarrierShipmentTypeWriterPublisherPlugin       | Publishes shipment type data by `SpyShipmentCarrier` entity events.                             |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentCarrier     |
+| ShipmentMethodPublishShipmentTypeWriterPublisherPlugin | Publishes shipment type data by `ShipmentMethod` publish events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
+| ShipmentMethodShipmentTypeWriterPublisherPlugin        | Publishes shipment type data by `SpyShipmentMethod` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
+| ShipmentMethodStoreShipmentTypeWriterPublisherPlugin   | Publishes shipment type data by `SpyShipmentMethodStore` entity events.                         |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore |
+| ShipmentTypePublisherTriggerPlugin                     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -844,6 +880,10 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentCarrier\ShipmentCarrierShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod\ShipmentMethodPublishShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod\ShipmentMethodShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore\ShipmentMethodStoreShipmentTypeWriterPublisherPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeWriterPublisherPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypePublisherTriggerPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreWriterPublisherPlugin;
@@ -861,7 +901,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return lsit<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
     protected function getPublisherTriggerPlugins(): array
     {
@@ -878,6 +918,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new ShipmentTypeWriterPublisherPlugin(),
             new ShipmentTypeStoreWriterPublisherPlugin(),
+            new ShipmentCarrierShipmentTypeWriterPublisherPlugin(),
+            new ShipmentMethodPublishShipmentTypeWriterPublisherPlugin(),
+            new ShipmentMethodShipmentTypeWriterPublisherPlugin(),
+            new ShipmentMethodStoreShipmentTypeWriterPublisherPlugin(),
         ];
     }
 }

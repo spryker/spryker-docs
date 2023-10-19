@@ -34,7 +34,42 @@ Make sure that the following module has been installed:
 
 {% endinfo_block %}
 
-## 2) Import data
+## 2) Set up configuration
+
+Add the following configuration to your project:
+
+| CONFIGURATION                                                                   | SPECIFICATION                                                                                                                              | NAMESPACE                |
+|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
+| ShipmentsRestApiConfig::shouldExecuteShippingAddressValidationStrategyPlugins() | Returns a list of shipment type keys which applicable for shipping address validation and setting address based on selected service point. | Pyz\Zed\ShipmentsRestApi |
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\ShipmentTypeServicePointsRestApi;
+
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\ShipmentTypeServicePointsRestApiConfig as SprykerShipmentTypeServicePointsRestApiConfig;
+
+class ShipmentTypeServicePointsRestApiConfig extends SprykerShipmentTypeServicePointsRestApiConfig
+{
+    /**
+     * @var string
+     */
+    protected const SHIPMENT_TYPE_KEY_PICKUP = 'pickup';
+
+    /**
+     * @return list<string>
+     */
+    public function getApplicableShipmentTypeKeysForShippingAddress(): array
+    {
+        return [static::SHIPMENT_TYPE_KEY_PICKUP];
+    }
+}
+
+```
+
+## 3) Import data
 
 1. Prepare your data according to your requirements using our demo data:
 
@@ -136,7 +171,7 @@ Make sure that entities were imported to the `spy_shipment_type_service_type` da
 
 {% endinfo_block %}
 
-## 3) Set up behavior
+## 4) Set up behavior
 
 1. Enable the expanding of shipment type storage data with service type by registering the following plugins:
 
@@ -205,9 +240,9 @@ Make sure that `shipment-type` storage data is expanded with the service type UU
 
 2. Enable the relationship between `shipment-types` and `service-types` resources in the Storefront API by registering the following plugins:
 
-| PLUGIN                                               | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                                          |
-|------------------------------------------------------|--------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
-| ServiceTypeByShipmentTypesResourceRelationshipPlugin | Adds the `service-types` resource as a relationship by `shipment-types`. |               | Spryker\Glue\ShipmentTypesServicePointsResourceRelationship\Plugin\GlueApplication |
+| PLUGIN                                               | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
+|------------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| ServiceTypeByShipmentTypesResourceRelationshipPlugin | Adds the `service-types` resource as a relationship by `shipment-types`. |               | Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -219,7 +254,7 @@ namespace Pyz\Glue\GlueApplication;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ShipmentTypesRestApi\ShipmentTypesRestApiConfig;
-use Spryker\Glue\ShipmentTypesServicePointsResourceRelationship\Plugin\GlueApplication\ServiceTypeByShipmentTypesResourceRelationshipPlugin;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\GlueApplication\ServiceTypeByShipmentTypesResourceRelationshipPlugin;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -246,5 +281,190 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that you can include the `service-types` relation in the `shipment-types` resource requests.
 * `GET https://glue.mysprykershop.com/shipment-types?include=service-types`
 * `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}?include=service-types`
+
+{% endinfo_block %}
+
+3. Enable setting address based on selected service point and shipment type for the Storefront API checkout:
+
+| PLUGIN                                                                | SPECIFICATION                                                                                                                                    | PREREQUISITES | NAMESPACE                                                             |
+|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
+| ShipmentTypeServicePointCheckoutRequestAttributesValidatorPlugin      | Checks that valid service point is provided for each element in `RestCheckoutRequestAttributesTransfer.shipments` with applicable shipment type. |               | Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi  |
+| ShipmentTypeServicePointCheckoutRequestExpanderPlugin                 | Maps provided service point address to shipping address.                                                                                         |               | Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi  |
+| MultiShipmentTypeServicePointShippingAddressValidationStrategyPlugin  | Checks if multi-shipment request is given and at least one of the provided shipment methods is related to applicable shipment type.              |               | Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\ShipmentsRestApi |
+| SingleShipmentTypeServicePointShippingAddressValidationStrategyPlugin | Checks if single-shipment request is given and given shipment method is related to applicable shipment type.                                     |               | Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\ShipmentsRestApi |
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\CheckoutRestApi;
+
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestAttributesValidatorPlugin;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestExpanderPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutRequestAttributesValidatorPluginInterface>
+     */
+    protected function getCheckoutRequestAttributesValidatorPlugins(): array
+    {
+        return [
+            new ShipmentTypeServicePointCheckoutRequestAttributesValidatorPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutRequestExpanderPluginInterface>
+     */
+    protected function getCheckoutRequestExpanderPlugins(): array
+    {
+        return [
+            new ShipmentTypeServicePointCheckoutRequestExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Glue/ShipmentsRestApi/ShipmentsRestApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\ShipmentsRestApi;
+
+use Spryker\Glue\ShipmentsRestApi\ShipmentsRestApiDependencyProvider as SprykerShipmentsRestApiDependencyProvider;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\ShipmentsRestApi\MultiShipmentTypeServicePointShippingAddressValidationStrategyPlugin;
+use Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\ShipmentsRestApi\SingleShipmentTypeServicePointShippingAddressValidationStrategyPlugin;
+
+class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\ShipmentsRestApiExtension\Dependency\Plugin\ShippingAddressValidationStrategyPluginInterface>
+     */
+    protected function getShippingAddressValidationStrategyPlugins(): array
+    {
+        return [
+            new MultiShipmentTypeServicePointShippingAddressValidationStrategyPlugin(),
+            new SingleShipmentTypeServicePointShippingAddressValidationStrategyPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+Make sure that validation plugins work as expected:
+
+1. Create a cart and add some items to it.
+2. Send request to `POST https://glue.mysprykershop.com/checkout-data` endpoint with incorrect request body (i.e. service point is not provided for one of the shipment methods).
+   
+```json
+{
+  "data": {
+    "type": "checkout-data",
+    "attributes": {
+      "idCart": "{{cart_uuid}}",
+      "customer": {
+        "salutation": "Mr",
+        "email": "spencor.hopkin@spryker.com",
+        "firstName": "Spencor",
+        "lastName": "Hopkin"
+      },
+      "shipments": [
+        {
+          "idShipmentMethod": "{{id_shipment_method}}",
+          "items": [
+            "{{item_group_key}}"
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+3. Check that response contains information about the validation error.
+
+Make sure service point address is set as shipping address during checkout:
+
+1. Create a cart and add some items to it.
+2. Send request to `POST https://glue.mysprykershop.com/checkout`
+
+```json
+{
+  "data": {
+    "type": "checkout",
+    "attributes": {
+      "idCart": "{{cart_uuid}}",
+      "customer": {
+        "salutation": "Mr",
+        "email": "spencor.hopkin@spryker.com",
+        "firstName": "Spencor",
+        "lastName": "Hopkin"
+      },
+      "billingAddress": {
+        "salutation": "Mr",
+        "email": "spencor.hopkin@spryker.com",
+        "firstName": "spencor",
+        "lastName": "hopkin",
+        "address1": "Seeburger Str. 270",
+        "address2": "210",
+        "address3": "",
+        "zipCode": "10115",
+        "city": "Berlin",
+        "iso2Code": "DE",
+        "company": "Spryker",
+        "phone": "+380669455897",
+        "isDefaultShipping": true,
+        "isDefaultBilling": true
+      },
+      "payments": [
+        {
+          "dummyPaymentInvoice": {
+            "dateOfBirth": "08.04.1986"
+          },
+          "paymentMethodName": "Invoice",
+          "paymentProviderName": "dummyPayment",
+          "paymentSelection": "dummyPaymentInvoice"
+        }
+      ],
+      "servicePoints": [
+        {
+          "items": [
+            "{{item_group_key}}"
+          ],
+          "idServicePoint": "{{id_service_point}}"
+        }
+      ],
+      "shipments": [
+        {
+          "idShipmentMethod": "{{applicable_shipment_method_id}}",
+          "items": [
+            "{{item_group_key}}"
+          ],
+          "shippingAddress": {
+            "salutation": "Mr",
+            "email": "spencor.hopkin@spryker.com",
+            "firstName": "spencor",
+            "lastName": "hopkin",
+            "address1": "Seeburger Str. 270",
+            "address2": "210",
+            "address3": "",
+            "zipCode": "10115",
+            "city": "Berlin",
+            "iso2Code": "DE",
+            "company": "Spryker",
+            "phone": "+380669455897",
+            "isDefaultShipping": true,
+            "isDefaultBilling": true
+          }
+        }
+      ]
+    }
+  }
+}
+```
+3. In database check that `spy_sales_order_address` contains service point address data for newly created order.
 
 {% endinfo_block %}

@@ -2,6 +2,8 @@
 title: Developing an app
 Descriptions: Learn how to develop an app
 template: howto-guide-template
+redirect_from:
+- /docs/acp/user/developing-an-app.html
 ---
 
 To develop an app, follow the instructions in this document.

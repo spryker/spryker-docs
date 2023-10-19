@@ -150,7 +150,7 @@ in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPlugin
 - TaxAmountAfterCancellationCalculatorPlugin
 - OrderTaxTotalCalculationPlugin
 
-Disabling them will also disable Spryker Taxes feature. This means that in case when Vertex is unresponsive or disabled order taxes will not be calculated and their amount will be always 0.
+Disabling them will also disable Spryker Taxes feature. This means that in case Vertex is unresponsive or disabled, order taxes will not be calculated, and their amount will always be 0.
 
 {% endinfo_block %}
 
@@ -185,11 +185,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```
 
-If you have custom Yves templates or make your own frontend, add the ```CartSummaryHideTaxAmountWidget``` to your template.
+If you have custom Yves templates or make your own Frontend, add ```CartSummaryHideTaxAmountWidget``` to your template. The core template is located at `SprykerShop/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig`.
 
-Core template: SprykerShop/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig
+Here is an example with ```CartSummaryHideTaxAmountWidget```:
 
-Example:
 ```html
 <li class="list__item spacing-y">
     {{ 'cart.total.tax_total' | trans }}

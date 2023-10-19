@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms
 originalArticleId: 31b0fc46-5030-47e2-95fb-b002e42c8e7d
 redirect_from:
-  - /2021080/docs/cms
-  - /2021080/docs/en/cms
-  - /docs/cms
-  - /docs/en/cms
+  - /docs/scos/user/features/202108.0/cms-feature-overview/cms-feature-overview.html
   - /docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
   - /docs/scos/user/features/202307.0/cms-feature-overview/cms-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/cms-feature-walkthrough/cms-feature-walkthrough.html

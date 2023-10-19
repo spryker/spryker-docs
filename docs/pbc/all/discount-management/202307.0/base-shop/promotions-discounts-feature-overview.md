@@ -6,15 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
 originalArticleId: bdb56333-569c-42ac-9a12-2f8ecc84c6b5
 redirect_from:
-  - /2021080/docs/promotions-discounts-feature-overview
-  - /2021080/docs/en/promotions-discounts-feature-overview
-  - /docs/promotions-discounts-feature-overview
-  - /docs/en/promotions-discounts-feature-overview
-  - /2021080/docs/promotions-discounts
-  - /2021080/docs/en/promotions-discounts
-  - /docs/promotions-discounts
-  - /docs/en/promotions-discounts
-  - /docs/cart-rules-discounts
+  - /docs/scos/user/features/201903.0/promotions-discounts-feature-overview.html
+  - /docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202307.0/promotions-discounts-feature-overview.html  
 ---

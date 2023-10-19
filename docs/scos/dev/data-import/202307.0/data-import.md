@@ -5,6 +5,7 @@ last_updated: Sep 7, 2022
 template: concept-topic-template
 redirect_from:
     - /docs/scos/dev/sdk/data-import.html
+    - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/products/products.html
 ---
 
 * [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)

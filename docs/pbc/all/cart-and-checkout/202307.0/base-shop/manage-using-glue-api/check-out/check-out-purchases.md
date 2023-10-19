@@ -6,10 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
 originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
 redirect_from:
-  - /2021080/docs/checking-out-purchases
-  - /2021080/docs/en/checking-out-purchases
-  - /docs/checking-out-purchases
-  - /docs/en/checking-out-purchases
+  - /docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html
   - /docs/scos/dev/glue-api-guides/202307.0/checking-out/checking-out-purchases.html
 ---
 

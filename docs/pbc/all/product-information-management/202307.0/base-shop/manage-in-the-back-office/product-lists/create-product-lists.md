@@ -6,10 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list
 originalArticleId: e7682701-b572-4934-9422-2a95d31610a1
 redirect_from:
-  - /2021080/docs/creating-a-product-list
-  - /2021080/docs/en/creating-a-product-list
-  - /docs/creating-a-product-list
-  - /docs/en/creating-a-product-list
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/product-lists/creating-product-lists.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/creating-product-lists.html
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/product-lists/creating-product-lists.html  
 ---

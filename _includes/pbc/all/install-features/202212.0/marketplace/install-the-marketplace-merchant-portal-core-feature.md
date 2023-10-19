@@ -1241,4 +1241,4 @@ Integrate the following related features:
 
 | FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                  |
 |-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |

@@ -20,4 +20,4 @@ When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/pbc
 
 ## Next steps
 
-[Install Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html)
+[Install Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html)

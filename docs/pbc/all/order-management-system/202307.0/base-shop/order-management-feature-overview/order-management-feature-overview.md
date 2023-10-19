@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-management
 originalArticleId: f9fbd2cd-af2f-4850-a07a-1cb4d8934171
 redirect_from:
-  - /2021080/docs/order-management
-  - /2021080/docs/en/order-management
-  - /docs/order-management
-  - /docs/en/order-management
+  - /docs/scos/user/features/202108.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202200.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202307.0/order-management-feature-overview/order-management-feature-overview.html
 ---

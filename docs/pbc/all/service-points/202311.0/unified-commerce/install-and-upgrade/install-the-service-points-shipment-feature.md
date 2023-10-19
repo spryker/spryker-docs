@@ -8,4 +8,4 @@ redirect_from:
   - /docs/pbc/all/service-points/202400.0/unified-commerce/install-the-service-points-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-shipment-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-shipment-service-points-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-shipment-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-shipment-service-points-feature.md -->

@@ -3463,12 +3463,12 @@ entries:
                   - title: Vertex
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     include_versions:
-                    - "202400.0"
+                    - "202311.0"
                     nested:
                       - title: Install Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
-                        - "202400.0"
+                        - "202311.0"
           - title: Marketplace
             include_versions:
             - "202212.0"
@@ -3677,7 +3677,7 @@ entries:
               - title: Import and export data
                 nested:
                   - title: "File details: product_offer_stock.csv"
-                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html 
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

@@ -7,4 +7,4 @@ redirect_From:
   - /docs/scos/dev/feature-integration-guides/202307.0/install-the-push-notification-feature.html
 ---
 
-{% include pbc/all/install-features/202400.0/install-the-push-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-push-notification-feature.md -->
+{% include pbc/all/install-features/202311.0/install-the-push-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-push-notification-feature.md -->

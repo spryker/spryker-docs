@@ -11,7 +11,15 @@ Log into the Fulfillment App. The login details should be provided by your Back 
 
 1. In the Fulfillment App, next to the warehouse you want to fulfill an order in, click **Select**.
 2. On the **PICK LISTS** page, next to the order you want to fulfill, click **Start picking**.
-3. 
+3. Based on the description of an item in the picklist, find and collect it in the warehouse.
+4. Based on whether you found the item, do one of the following next to its cart in the Fulfillment App:
+  * If you've collected the item, select or enter the number of items you've collected and click **✓ Done**.
+  * If the item wasn't found, click **✓ Done**.
+5. In the dialog that appears, to confirm you've collected the item, click **Confirm**.
+    This moves the item from the **Not Picked** tab to either the **Picked** or the **Not Found** tab.
+5. Repeat steps 3-5 until you process all the items by collecting or marking them as not found.
+6. To finish picking, click **Finish picking**.
+  This opens the **PICK LISTS** page. The picklist you've processed is no longer displayed.
 
 Follow the guide below to learn how to pick order items using our Fulfillment App.
 The Fulfillment App allows warehouse users to start the picking process for a picklist, and easily mark items in the picklist as picked or not found. Once the picking process is complete the state in the State Machine is updated to Picking Finished. To set up State Machine configuration, go (here)[https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html#set-up-configuration]. This feature improves inventory accuracy and reduces the likelihood of incorrect orders being shipped to customers.

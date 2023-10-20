@@ -12,13 +12,15 @@ The *Fulfillment App* feature streamlines the process of fulfilling orders by in
 
 A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, they don't have access to the Back Office. Instead,  they are using the Fulfillment App.
 
-In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular user.
+In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/202400.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular Back Office user.
 
 To give a warehouse user access to fulfilling orders in a warehouse, you need to assign the warehouse to them. For instructions on how to do that, see [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202400.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html).
 
 ## Fulfillment App
 
 Fulfillment App is an app used by warehouse users to fulfill orders. When a customer places an order, it is assigned to a warehouse that can fulfill the order. In the assigned warehouse, a warehouse user uses the Fulfillment App to gather and ship the order items.
+
+![screenshot with two picklists]
 
 ## Assigning a warehouse
 
@@ -48,9 +50,11 @@ A *warehouse picklist* is a document available in the Fulfillment App that conta
 * Product image
 * Quantity to be picked
 
-Based on the picklist, the warehouse user gathers and prepares the items for shipping.
+Based on a picklist, the warehouse user gathers and prepares the items for shipping.
 
 The information within will also allow you to quickly restock inventory as required.
+
+![screenshot with a piklist]
 
 ### Picklist generation strategies
 

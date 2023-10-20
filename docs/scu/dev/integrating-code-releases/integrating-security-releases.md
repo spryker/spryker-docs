@@ -1,6 +1,6 @@
 ---
 title: Integrating security releases
-description: How Spryker Code Upgrader works with releases related to known security vulnerabilities
+description: Spryker Code Upgrader prioritizes security releases over regular releases
 template: concept-topic-template
 ---
 

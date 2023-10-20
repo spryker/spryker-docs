@@ -35,6 +35,14 @@ entries:
         url: /docs/scu/dev/change-default-branch.html
       - title: Roll back upgrades
         url: /docs/scu/dev/roll-back-upgrades.html
+      - title: Integrating code releases
+        url: /docs/scu/dev/integrating-code-releases/integrating-code-releases.html
+        nested:
+          - title: Integrating security releases
+            url: /docs/scu/dev/integrating-code-releases/integrating-security-releases.html
+          - title: Handling upgrade warnings
+            url: /docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html            
+
       - title: Troubleshooting
         nested:
         - title: Check Spryker Code Upgrader logs

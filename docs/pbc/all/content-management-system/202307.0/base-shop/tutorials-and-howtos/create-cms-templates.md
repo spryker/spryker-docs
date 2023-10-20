@@ -1,20 +1,18 @@
 ---
-title: "HowTo: Create CMS templates"
+title: Create CMS templates
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-cms-templates
 originalArticleId: 6f52ee42-6c1a-4d0b-865b-3512b7f4b9aa
 redirect_from:
-  - /2021080/docs/ht-create-cms-templates
-  - /2021080/docs/en/ht-create-cms-templates
-  - /docs/ht-create-cms-templates
-  - /docs/en/ht-create-cms-templates
   - /docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
-  - /docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html
+  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-create-cms-templates.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
 related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
@@ -91,7 +89,7 @@ Create a template with slots:
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
 3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
-Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) or [creating a category](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
+Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) or [creating a category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
 
 {% info_block warningBox %}
 

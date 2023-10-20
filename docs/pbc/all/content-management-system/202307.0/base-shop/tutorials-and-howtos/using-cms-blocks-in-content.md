@@ -1,28 +1,13 @@
 ---
-title: "HowTo: Use blocks"
+title: "Using CMS blocks in content"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks
 originalArticleId: 655564ee-69d9-455c-a495-88b6c4c4bfe2
 redirect_from:
-  - /2021080/docs/ht-use-cms-blocks
-  - /2021080/docs/en/ht-use-cms-blocks
-  - /docs/ht-use-cms-blocks
-  - /docs/en/ht-use-cms-blocks
-  - /v6/docs/ht-use-cms-blocks
-  - /v6/docs/en/ht-use-cms-blocks
-  - /v5/docs/ht-use-cms-blocks
-  - /v5/docs/en/ht-use-cms-blocks
-  - /v4/docs/ht-use-cms-blocks
-  - /v4/docs/en/ht-use-cms-blocks
-  - /v3/docs/ht-use-cms-blocks
-  - /v3/docs/en/ht-use-cms-blocks
-  - /v2/docs/ht-use-cms-blocks
-  - /v2/docs/en/ht-use-cms-blocks
-  - /v1/docs/ht-use-cms-blocks
-  - /v1/docs/en/ht-use-cms-blocks
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
   - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-use-blocks.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-use-blocks.html
 ---
 
 Blocks can be viewed as partial content snippets that can be embedded in other pages. From an SEO perspective, blocks are a real advantage.

@@ -39,8 +39,8 @@ The following list illustrates the order followed to run the data importers and 
   * [payment-method-store](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html)
 
 * [Catalog](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-catalog-data.html):
-  * [category-template](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html)
-  * [category](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
+  * [category-template](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html)
+  * [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
   * [product-attribute-key](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html)
   * [product-management-attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html)
   * [product-abstract](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
@@ -88,7 +88,7 @@ The following list illustrates the order followed to run the data importers and 
   * [discount-store](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-discount-store.csv.html)
   * [discount-voucher](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-discount-voucher.csv.html)
   * [product-group](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html)
-  * [product-relation](/docs/pbc/all/product-relationship-management/{{page.version}}/file-details-product-relation.csv.html)
+  * [product-relation](/docs/pbc/all/product-relationship-management/{{page.version}}/import-file-details-product-relation.csv.html)
   * [product-review](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/import-file-details-product-review.csv.html)
   * [product-label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label.csv.html)
   * [product-set](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html)

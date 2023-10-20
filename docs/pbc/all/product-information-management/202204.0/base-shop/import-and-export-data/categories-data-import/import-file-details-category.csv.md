@@ -22,7 +22,7 @@ This document describes the `category.csv` file to configure [categories](/docs/
 
 ## Import file dependencies
 
-[category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html).
+[category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html).
 
 ## Import file parameters
 

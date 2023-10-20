@@ -1,17 +1,14 @@
 ---
-title: "HowTo: Create a custom content item"
+title: Create a custom content item
 description: If the content items shipped with Spryker do not fulfill your needs, the document shows how to create a new one.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-custom-content-item
 originalArticleId: 82c46d06-3f67-4bad-8142-b83624c79197
 redirect_from:
-  - /2021080/docs/howto-create-a-custom-content-item
-  - /2021080/docs/en/howto-create-a-custom-content-item
-  - /docs/howto-create-a-custom-content-item
-  - /docs/en/howto-create-a-custom-content-item
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
   - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-create-a-custom-content-item.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-create-a-custom-content-item.html
 ---
 
 By default, Spryker provides `Banner`, `Product Abstract List`, `Product Set` and `File List` content items.

@@ -1,20 +1,14 @@
 ---
-title: "HowTo: Create a visibility condition for CMS Blocks"
+title: Create a visibility condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-visibility-condition-for-cms-blocks
 originalArticleId: 0e3aef82-ebd1-4c7a-bb05-d0bf5cd54bd7
 redirect_from:
-  - /2021080/docs/howto-create-a-visibility-condition-for-cms-blocks
-  - /2021080/docs/en/howto-create-a-visibility-condition-for-cms-blocks
-  - /docs/howto-create-a-visibility-condition-for-cms-blocks
-  - /docs/en/howto-create-a-visibility-condition-for-cms-blocks
-  - /v6/docs/howto-create-a-visibility-condition-for-cms-blocks
-  - /v6/docs/en/howto-create-a-visibility-condition-for-cms-blocks
-  - /v5/docs/howto-create-a-visibility-condition-for-cms-blocks
-  - /v5/docs/en/howto-create-a-visibility-condition-for-cms-blocks
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
 related:
   - title: Templates & Slots overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html

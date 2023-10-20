@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Define positions of category CMS blocks"
+title: Define positions of category CMS blocks
 description: Use the guide to customize the content field size in the CMS module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -8,7 +8,6 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
-  - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Use blocks"
+title: Using CMS blocks in content
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks

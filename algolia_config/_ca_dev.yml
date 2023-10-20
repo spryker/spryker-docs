@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'cloud_dev'
+  index_name: 'ca_dev'
   files_to_exclude:
     - index.md
     - 404.md

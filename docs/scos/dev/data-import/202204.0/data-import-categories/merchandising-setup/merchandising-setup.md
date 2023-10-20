@@ -24,9 +24,9 @@ In the [Discounts](/docs/scos/dev/data-import/{{page.version}}/data-import-categ
 
 The order in which the files are imported is *very strict*. For this reason, the data importers must be executed in the following order:
 
-1. [Discount](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html)
-2. [Discount Store](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-store.csv.html)
-3. [Discount Voucher](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-voucher.csv.html)
+1. [Discount](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/import-file-details-discount.csv.html)
+2. [Discount Store](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/import-file-details-discount-store.csv.html)
+3. [Discount Voucher](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/import-file-details-discount-voucher.csv.html)
 4. [Product Group](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html)
 5. [Product Relation](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-relation.csv.html)
 6. [Product Review](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)

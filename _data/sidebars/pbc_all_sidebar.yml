@@ -921,6 +921,33 @@ entries:
             nested:
               - title: Install the Customer Account Management + Merchant Switcher feature
                 url: /docs/pbc/all/customer-relationship-management/marketplace/install-the-customer-account-management-merchant-switcher-feature.html
+      - title: Data Exchange
+        url: /docs/pbc/all/data-exchange/data-exchange.html
+        include_versions:
+        - "202311.0"
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Data Exchange API
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
+                include_versions:
+                - "202311.0"
+              - title: Data Exchange API + Inventory Management
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
+                include_versions:
+                - "202311.0"
+          - title: Tutorials and HowTos
+            nested:
+              - title: Configure Data Exchange API endpoints
+                url: /docs/pbc/all/data-exchange/tutorials-and-howtoes/how-to-configure-data-exchange-api.html
+                include_versions:
+                - "202311.0"
+              - title: How to send a request in Data Exchange API
+                url: /docs/pbc/all/data-exchange/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html
+                include_versions:
+                - "202311.0"
+          - title: Data Exchange FAQ
+            url: /docs/pbc/all/data-exchange/data-exchange-faq.html      
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

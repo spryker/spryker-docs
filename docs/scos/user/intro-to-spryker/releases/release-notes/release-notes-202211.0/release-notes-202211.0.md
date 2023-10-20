@@ -8,7 +8,6 @@ redirect_from:
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
-For information about installing the Spryker Commerce OS, see [Getting started guide](https://documentation.spryker.com/docs/dev-getting-started).
 
 ## PHP 8.0 is the minimum version for all Spryker projects
 With 202211.0, Spryker released a new version of its Demo Shops requiring PHP 8.0 as their minimum PHP version. PHP 7.4 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.0 or later.

@@ -3380,8 +3380,8 @@ entries:
                 nested:
                   - title: Service Points
                     url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-feature.html
-                      include_versions:
-                      - "202311.0"
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points + Order Management
                     url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-order-management-feature.html
                     include_versions:

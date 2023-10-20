@@ -5,7 +5,7 @@ algolia:
     - 404.md
     - 403.md
     - search.md
-    - docs/cloud/dev/**/*.md
+    - docs/ca/dev/**/*.md
     - docs/scos/user/**/*.md
     - docs/scu/dev/**/*.md
     - docs/fes/dev/**/*.md

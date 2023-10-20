@@ -5,7 +5,7 @@ last_updated: Apr 23, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/psp.html
-  - /docs/pbc/all/payment-service-provider/202212.0/third-party-integrations/payment-service-provider-integrations.html
+  - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/payment-service-provider-integrations.html
 ---
 
 The *Payment Service Provider* PBC enables different kinds of payment methods, like credit cards of gift cards, to be used by customers. You can configure multiple payment methods to be available in your shop. The variety of third-party payment solutions let you find the best payment methods for your business requirements.
@@ -24,6 +24,6 @@ Spryker offers the following Payment Service Providers (PSP) integrations:
 | Computop | No | No |
 | Easycredit | No | No |
 | Optile | No | No |
-| [Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html) | No | Yes |
+| [Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html) | No | Yes |
 | Ratepay | No | No |
-| [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/unzer/unzer.html) | Yes | No |
+| [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/unzer.html) | Yes | No |

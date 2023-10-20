@@ -11,7 +11,7 @@ related:
 ---
 
 This document describes the system infrastructure requirements that help mitigate security risks for Spryker Marketplace projects.
-When you host your Spryker application in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html), these requirements are configured for you out of the box. If your system infrastructure (cloud PaaS or on-premise) is managed, you must ensure these security requirements are met.
+When you host your Spryker application in [SCCOS](/docs/ca/dev/getting-started-with-cloud-administration.html), these requirements are configured for you out of the box. If your system infrastructure (cloud PaaS or on-premise) is managed, you must ensure these security requirements are met.
 
 ## Applications resources visibility
 

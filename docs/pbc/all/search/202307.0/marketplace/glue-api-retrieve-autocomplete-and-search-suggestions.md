@@ -4,6 +4,7 @@ description: This document provides information about which endpoints to use to 
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202212.0/retrieving-autocomplete-and-search-suggestions.html
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-autocomplete-and-search-suggestions.html
 related:
   - title: Searching the product catalog
     link: docs/pbc/all/search/page.version/marketplace/glue-api-search-the-product-catalog.html

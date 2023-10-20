@@ -29,7 +29,7 @@ Oryx provides five t-shirt size values that are given by a generic `size` enumer
 
 While the `xs` and `xl` sizes are available in the TypeScript enumeration, they are not used in most Oryx components and layouts. However, you can use the definitions to create an optimized user experience (UX) for these screen sizes. Moreover, you can introduce additional screen sizes when needed.
 
-The actual definition per screen is provided by a breakpoint configuration. The breakpoint values are not being used inside the component styles, as this would not allow you to change the breakpoints. Instead, you can create stylesheets per screen for a component, see [Component Definition](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/oryx-providing-component-definitions.html).
+The actual definition per screen is provided by a breakpoint configuration. The breakpoint values are not used inside the component styles, as this doesn't let you  change the breakpoints. Instead, you can create stylesheets per screen for a component. For more details, see [Providing component definitions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-components/oryx-providing-component-definitions.html).
 
 If you need to use the screen definitions in your custom code, you can use `ScreenService` provided by the [layout package](https://www.npmjs.com/package/@spryker-oryx/layout).
 

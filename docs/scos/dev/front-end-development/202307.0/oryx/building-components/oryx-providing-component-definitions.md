@@ -36,7 +36,7 @@ To prevent breaking the lazy loading principals, do not import component files _
 
 {% endinfo_block %}
 
-## Dynamic Stylesheets
+## Dynamic stylesheets
 
 To build a [responsive design](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-responsive-design.html), a common practice is to specify different CSS rules per screen size. CSS supports [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) which can take a minimum and/or maximum width to determine the target screen size.
 
@@ -46,14 +46,14 @@ To build a [responsive design](/docs/scos/dev/front-end-development/{{page.versi
 }
 ```
 
-CSS, however, only supports static assignment of the minimum and maximum width. Since Oryx provides custom screen sizes, the static minimum and maximum width would not align with these configurations. To create styles per screen size, you can add `stylesheets` for different media queries. The stylesheets can be written _inline_ in the component definition, or provided as a dynamic import.
+However, CSS supports only static assignment of the minimum and maximum width. Because Oryx provides custom screen sizes, the static minimum and maximum widths don't align with these configurations. To create styles per screen size, you can add `stylesheets` for different media queries. The stylesheets can be written _inline_ in the component definition or provided as a dynamic import.
 
-The stylesheets add in component definitions are added on top of stylesheets that are added statically as part of the component implementation.
+The stylesheets written in component definitions are added on top of stylesheets that are added statically as part of the component implementation.
 
-### Inline Stylesheets
+### Inline stylesheets
 
-The example below shows style rules being added for small screens (`sm`) only.
-The disadvantage of adding styles to the component definition is the instant effect when the application is bootstrapped. In most cases it is recommended to dynamically import the styles, so that they're only loaded when the component is used.
+In the following example, style rules are added for small screens (`sm`) only.
+The disadvantage of adding styles to the component definition is the instant effect when the application is bootstrapped. In most cases, we recommend dynamically importing the styles so that they're only loaded when the component is used.
 
 ```ts
 export const cartEntriesComponent = componentDef({
@@ -79,9 +79,9 @@ export const cartEntriesComponent = componentDef({
 });
 ```
 
-### Lazy Loaded Stylesheets
+### Lazy-loaded stylesheets
 
-In the below snippet the stylesheets are lazily loaded. The actual styles and their assignment to the media queries are handled inside the object that's been loaded.
+In the following example, the stylesheets are lazily loaded. The styles and their assignment to the media queries are handled inside the object that's loaded.
 
 ```ts
 export const linkComponent = componentDef({

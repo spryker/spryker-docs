@@ -24,7 +24,7 @@ Install the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/shipments-rest-api:"1.6.0" --update-with-dependencies
+composer require spryker/shipments-rest-api:"1.11.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

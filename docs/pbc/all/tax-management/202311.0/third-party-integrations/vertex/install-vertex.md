@@ -190,6 +190,7 @@ If you have custom Yves templates or make your own Frontend, add ```CartSummaryH
 Here is an example with ```CartSummaryHideTaxAmountWidget```:
 
 ```html
+{% raw %}
 <li class="list__item spacing-y">
     {{ 'cart.total.tax_total' | trans }}
     {% widget 'CartSummaryHideTaxAmountWidget' args [data.cart] only %}
@@ -197,6 +198,7 @@ Here is an example with ```CartSummaryHideTaxAmountWidget```:
         <span class="float-right">{{ data.cart.totals.taxTotal.amount | money(true, data.cart.currency.code) }}</span>
     {% endwidget %}
 </li>
+{% endraw %}
 ```
 
 

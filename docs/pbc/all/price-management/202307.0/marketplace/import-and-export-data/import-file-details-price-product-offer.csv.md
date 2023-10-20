@@ -19,7 +19,7 @@ This document describes the `price-product-offer.csv` file to configure [Merchan
 ## Import file dependencies
 
 - [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
-- [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html)
+- [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html)
 
 
 ## Import file parameters

@@ -20,8 +20,8 @@ This document describes the `cms_slot_block.csv` file to configure [CMS Slot Blo
 
 ## Import file dependencies
 
-* [cms_slot.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-slot.csv.html)
-* [cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-block.csv.html)
+* [cms_slot.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-slot.csv.html)
+* [cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
 
 ## Import file parameters
 

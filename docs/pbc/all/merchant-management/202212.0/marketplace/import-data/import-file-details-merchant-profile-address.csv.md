@@ -37,7 +37,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_profile.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/file-details-merchant-profile.csv.html)
+- [merchant_profile.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html)
 
 ## Import template file and content example
 

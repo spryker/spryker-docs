@@ -17,7 +17,7 @@ This document describes the `merchant_store.csv` file to configure merchant's st
 ## Import file dependencies
 
 
-- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/file-details-merchant.csv.html)
+- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
 - `stores.php` configuration file of the demo shop PHP project, where stores are defined initially
 
 

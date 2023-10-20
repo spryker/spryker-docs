@@ -20,7 +20,7 @@ This document describes the `merchant.csv` file to configure [merchant](/docs/pb
 ## Import file dependencies
 
 
-- [merchant_profile.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/file-details-merchant-profile.csv.html).
+- [merchant_profile.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html).
 
 
 ## Import file parameters

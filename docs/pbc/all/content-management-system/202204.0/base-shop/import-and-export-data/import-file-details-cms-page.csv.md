@@ -21,7 +21,7 @@ This document describes the `cms_page.csv` file to configure [CMS Page](/docs/pb
 
 ## Import file dependencies
 
-This file has the following dependency: [cms_template.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-template.csv.html).
+This file has the following dependency: [cms_template.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-template.csv.html).
 
 ## Import file parameters
 

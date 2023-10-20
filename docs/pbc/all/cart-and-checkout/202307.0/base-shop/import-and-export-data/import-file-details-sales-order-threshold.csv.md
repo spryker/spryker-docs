@@ -38,7 +38,7 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [currency.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-currency.csv.html)
+* [currency.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-currency.csv.html)
 * [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 

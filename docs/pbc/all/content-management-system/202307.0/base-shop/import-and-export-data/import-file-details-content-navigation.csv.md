@@ -24,7 +24,7 @@ This document describes the `content_navigation.csv` file to configure [Content 
 
 ## Import file dependencies
 
- [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html).
+ [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html).
 
 
 ## Import file parameters
@@ -36,9 +36,9 @@ This document describes the `content_navigation.csv` file to configure [Content 
 | key | &check; | string | Must be unique. | Identifier of the content item. |
 | name | &check; | string | Human-readable name. | Name of the content. |
 | description |   | string |  | Description of the content. |
-| navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html).  |
-| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html) for the `en_US` [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html). |
-| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html). |
+| navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html).  |
+| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html) for the `en_US` [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html). |
+| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html) for the `de_DE` [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html). |
 
 
 

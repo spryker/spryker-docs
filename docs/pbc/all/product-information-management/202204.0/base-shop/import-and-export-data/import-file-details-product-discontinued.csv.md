@@ -19,7 +19,7 @@ This document describes the `product_discontinued.csv` file to configure [Discon
 
 ## Import file dependencies
 
-[product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
+[product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 
 
 ## Import file parameters

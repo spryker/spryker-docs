@@ -16,7 +16,7 @@ This document describes the `merchant_open_hours_week_day_schedule.csv` file to 
 
 ## Import file dependencies
 
-[merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/file-details-merchant.csv.html)
+[merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
 
 
 ## Import file parameters

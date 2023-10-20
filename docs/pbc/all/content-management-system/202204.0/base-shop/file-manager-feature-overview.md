@@ -123,6 +123,6 @@ See [Integrating custom location for static assets](/docs/scos/dev/technical-enh
 
 | UPGRADE GUIDES| DATA IMPORT	|
 | - | - |
-| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | ["Import file details: mime_type.csv"](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-mime-type.csv.html) |
+| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | ["Import file details: mime_type.csv"](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-mime-type.csv.html) |
 | [Upgrade the FileManagerStorage module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html) | |
 | [Upgrade the FileManagerWidget module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html) | |

@@ -7,12 +7,12 @@ redirect_from:
 ---
 
 
-This document describes how to import taxes for product options via  `product_option.csv`. To import full information for product options, see ["Import file details: product_option.csv"](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html).
+This document describes how to import taxes for product options via  `product_option.csv`. To import full information for product options, see ["Import file details: product_option.csv"](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
 
 
 ## Dependencies
 
-* [product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
+* [product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
 * [tax.csv](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
 
 

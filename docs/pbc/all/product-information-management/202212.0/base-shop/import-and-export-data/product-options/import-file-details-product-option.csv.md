@@ -22,7 +22,7 @@ This document describes the `product_option.csv` file to configure [product opt
 
 ## Dependencies
 
-[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
 
 ## Import file parameters
 

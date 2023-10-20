@@ -25,13 +25,13 @@ This document describes the `warehouse_address.csv` file to configure [warehouse
 
 ## Import file dependencies
 
-[File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-store.csv.html).
+[File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html).
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | &check; | String |  | Warehouse name from the [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse.csv.html) file. |
+| warehouse_name | &check; | String |  | Warehouse name from the [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html) file. |
 | address1 | &check; | String |  | Warehouse address—first line. |
 | address2 |  | String |  | Warehouse address—second line. |
 | address3 |  | String |  | Warehouse address—third line. |

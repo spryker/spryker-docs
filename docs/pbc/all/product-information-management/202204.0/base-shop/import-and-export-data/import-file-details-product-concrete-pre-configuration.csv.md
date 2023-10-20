@@ -25,7 +25,7 @@ This document describes the `product_concrete_pre_configuration.csv` file to c
 
 ## Import file dependencies
 
-[File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html#import-file-parameters)
+[File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html#import-file-parameters)
 
 ## Import file parameters
 

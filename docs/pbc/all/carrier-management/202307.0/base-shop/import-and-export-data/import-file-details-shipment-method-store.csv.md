@@ -33,14 +33,14 @@ data:import:shipment-method-store
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| shipment_method_key | &check; | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
+| shipment_method_key | &check; | String | Can be imported from the content that was loaded using the [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | store | &check; | String | Must be one of the existing store names. The store names are initially already defined in the *stores.php* configuration file. | Name of the store. |
 
 ## Import file dependencies
 
 
 
-* [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html)
+* [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html)
 * *stores.php* The configuration file of the Spryker Demo Shop PHP project
 
 ## Import template file and content example

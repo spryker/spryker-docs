@@ -57,6 +57,6 @@ data:import:stock
 
 ## Next steps
 
-* ["Import file details: warehouse_address.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-address.csv.html)
-* ["Import file details: warehouse_store.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-store.csv.html)
-* ["Import file details: product_stock.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-product-stock.csv.html)
+* ["Import file details: warehouse_address.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html)
+* ["Import file details: warehouse_store.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html)
+* ["Import file details: product_stock.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)

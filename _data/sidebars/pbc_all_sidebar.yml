@@ -25,6 +25,14 @@ entries:
                 nested:
                   - title: Chart
                     url: /docs/pbc/all/back-office/install-and-upgrade/upgrade-modules/upgrade-the-chart-module.html
+              - title: Install features
+                include_versions:
+                - "202311.0"
+                nested:
+                  - title: Spryker Core Back Office + Warehouse User Management
+                    url: /docs/pbc/all/back-office//unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
+                    include_versions:
+                    - "202311.0"
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -135,6 +143,26 @@ entries:
                     url: /docs/pbc/all/carrier-management/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/carrier-management/marketplace/marketplace-shipment-feature-domain-model-and-relationships.html
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested:
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Shipment Service Points
+                        url: /docs/pbc/all/carrier-management//unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html
+                        include_versions:
+                        - "202311.0"
+              - title: Import data
+                nested:
+                  - title: File details - shipment_method_shipment_type.csv
+                    url: /docs/pbc/all/carrier-management//unified-commerce/import-and-export-data/file-details-shipment-method-shipment-type.csv.html
+                    include_versions:
+                    - "20311.0"
+                  - title: File details - Shipment type
+                    url: /docs/pbc/all/carrier-management/202311.0/unified-commerce/import-and-export-data/file-details-shipment-type.csv.html
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
@@ -1595,6 +1623,10 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-marketplace-product-feature.html
                       - title: Marketplace Product Offer + Quick Add to Cart
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html
+                      - title: Marketplace Product Offer Service Points
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
+                        include_versions:
+                        - "202311.0"
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Product Offer
@@ -1652,6 +1684,22 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-store-relation.html
               - title: "Marketplace Product Offer feature: Domain model and relationships"
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/marketplace-product-offer-feature-domain-model-and-relationships.html
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested:
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Product Offer Shipment
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html
+                        include_versions:
+                        - "202311.0"
+                      - title: Product Offer Service Points
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html
+                        include_versions:
+                        - "202311.0"            
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         nested:
@@ -1869,6 +1917,18 @@ entries:
                 url: /docs/pbc/all/order-management-system/marketplace/create-merchant-oms-flows.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/order-management-system/marketplace/marketplace-order-management-feature-domain-model-and-relationships.html
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested: 
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Install the Order Management + Service Points feature
+                        url: /docs/pbc/all/order-management-system/unified-commerce/install-and-upgrade/install-the-order-management-service-points-feature.html
+                        include_versions:
+                        - "202311.0"
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         include_versions:
@@ -2998,6 +3058,23 @@ entries:
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/8select.html
               - title: trbo
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
+      - title: Push Notification
+        url: /docs/pbc/all/push-notification/unified-commerce/push-notification-feature-overview.html
+        include_versions:
+        - "202311.0"
+        nested:
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested: 
+              - title: Install and upgarde
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Push Notification
+                        url: /docs/pbc/all/push-notification/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html
+                        include_versions:
+                        - "202311.0"
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
@@ -3293,6 +3370,38 @@ entries:
                 url: /docs/pbc/all/search/marketplace/glue-api-search-the-product-catalog.html
               - title: "Glue API: Retrieve autocomplete and search suggestions"
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
+      - title: Service Points
+        nested:
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested:
+              - title: Install and upgrade
+                nested:
+                  - title: Service Points
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-feature.html
+                      include_versions:
+                      - "202311.0"
+                  - title: Service Points + Order Management
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-order-management-feature.html
+                    include_versions:
+                    - "202311.0"
+                  - title: Service Points + Shipment
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-shipment-feature.html
+                    include_versions:
+                    - "202311.0"
+                  - title: Customer Account Management + Service Points
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-customer-account-management-service-points-feature.html
+                    include_versions:
+                    - "202311.0"
+                  - title: Product Offer Service Points Availability
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html
+                    include_versions:
+                    - "202311.0"
+                  - title: Product Offer Shipments Availability
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-product-offer-shipments-availability-feature.html
+                    include_versions:
+                    - "202311.0"
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -3677,7 +3786,37 @@ entries:
               - title: Import and export data
                 nested:
                   - title: "File details: product_offer_stock.csv"
-                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html 
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested: 
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Warehouse User Management
+                        url: /docs/pbc/all/warehouse-management-system//unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
+                        include_versions:
+                        - "202311.0"
+      - title: Warehouse Picking
+        nested:
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            nested:
+              - title: Install and upgrade
+                nested: 
+                  - title: Install features
+                    nested:
+                    - title: Warehouse Picking
+                      url: /docs/pbc/all/warehouse-picking//unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
+                      include_versions:
+                      - "202311.0"
+                    - title: Warehouse Picking + Product
+                      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
+                      include_versions:
+                      - "202311.0"
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

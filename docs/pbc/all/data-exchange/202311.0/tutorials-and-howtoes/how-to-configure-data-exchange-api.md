@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
   - /docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
   - /docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
+  - /docs/scos/dev/glue-api-guides/202311.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 ---
 
 This document describes how to create and configure the Data Exchange API endpoints.

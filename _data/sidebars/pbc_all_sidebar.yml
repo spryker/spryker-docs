@@ -163,6 +163,8 @@ entries:
                     - "20311.0"
                   - title: File details - Shipment type
                     url: /docs/pbc/all/carrier-management/202311.0/unified-commerce/import-and-export-data/file-details-shipment-type.csv.html
+                    include_versions:
+                    - "20311.0"
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:

@@ -24,7 +24,7 @@ Even though security releases are applied alongside other releases, they are pri
 
 ## Installing security releases
 
-The Upgrader creates PR for security releases in the same way it does for the regular code releases. For more information, see [Integrating code releases](/docs/scu/dev/features/integrating-code-releases.html)
+The Upgrader creates PR for security releases in the same way it does for the regular code releases. For more information, see [Integrating code releases](/docs/scu/dev/integrating-code-releases/integrating-code-releases.html)
 
 Automatic installation of security releases is only available for minor releases. The major releases require a manual installation.
 

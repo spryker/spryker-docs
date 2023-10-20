@@ -4856,6 +4856,8 @@ entries:
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
           - title: Test console commands
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test the asynchronous API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
       - title: Testify

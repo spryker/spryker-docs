@@ -46,14 +46,15 @@ To build a [responsive design](/docs/scos/dev/front-end-development/{{page.versi
 }
 ```
 
-However, CSS supports only static assignment of the minimum and maximum width. Because Oryx provides custom screen sizes, the static minimum and maximum widths don't align with these configurations. To create styles per screen size, you can add `stylesheets` for different media queries. The stylesheets can be written _inline_ in the component definition or provided as a dynamic import.
+CSS, however, supports only _static assignment_ of the minimum and maximum width. Since Oryx supports customizing the minimum and maximum of each screen size, using static minimum and maximum for the width won't work. This is why hard-coded minimum and maximum values in stylesheets are avoided in Oryx. It is therefor recommended to add stylesheets per screen size in the component definition.
+
+The stylesheets per screen size can be written _inline_ in the component definition or provided as a dynamic import to gain a lazy loaded experience.
 
 The stylesheets written in component definitions are added on top of stylesheets that are added statically as part of the component implementation.
 
 ### Inline stylesheets
 
-In the following example, style rules are added for small screens (`sm`) only.
-The disadvantage of adding styles to the component definition is the instant effect when the application is bootstrapped. In most cases, we recommend dynamically importing the styles so that they're only loaded when the component is used.
+In the following example, the responsive styles are added in component definition. The stylesheets can have multiple rules, and each rule can configure a media query. In the example, the style rules are created for the small screen size. The actual size of the small screen is provided by Oryx based on the breakpoints that have been configured for the small screen.
 
 ```ts
 export const cartEntriesComponent = componentDef({
@@ -79,9 +80,13 @@ export const cartEntriesComponent = componentDef({
 });
 ```
 
+You can configure multiple rules, targeting different screen sizes.
+
+Adding styles to the component definition adds a little overhead to the initial bootstrap of an Oryx application. In most cases, it is recommended to to import the styles dynamically, so so that they're loaded when the component is used.
+
 ### Lazy-loaded stylesheets
 
-In the following example, the stylesheets are lazily loaded. The styles and their assignment to the media queries are handled inside the object that's loaded.
+In the following example, the stylesheets are lazily loaded. The component definition does not know about the actual rules and how they're assigned to various screen sizes, as this is not needed when the definition is loaded. Only when the component is rendered, the stylesheets are imported and the rules are evaluated. Only those rules that are relevant at the given time will be written inside the component.
 
 ```ts
 export const linkComponent = componentDef({
@@ -92,5 +97,27 @@ export const linkComponent = componentDef({
       rules: () => import("./styles/link.styles").then((m) => m.linkStyles),
     },
   ],
+});
+```
+
+The actual imported file could contain the following rules. Oryx provides a small helper function that can be used to conveniently setup the rules per screen size
+
+```ts
+import { screenCss } from "@spryker-oryx/utilities";
+import { css } from "lit";
+
+const smallScreen = css`
+  :host {
+    display: block;
+    position: sticky;
+    inset-block-end: 0;
+    padding: 10px;
+    background: var(--oryx-color-neutral-1);
+  }
+`;
+
+export const checkoutLinkScreenStyles = screenCss({
+  sm: smallScreen,
+  // md: ...
 });
 ```

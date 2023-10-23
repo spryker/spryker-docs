@@ -78,7 +78,7 @@ export const cartEntriesComponent = componentDef({
 });
 ```
 
-You can configure multiple rules targeting different screen sizes. The rules are expected to be an array of `CssStylesWithMedia` type, which is exported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
+You can configure multiple rules targeting different screen sizes. The rules are expected to be an array of the `CssStylesWithMedia` type, which is exported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
 
 ```ts
 const screenStyles: CssStylesWithMedia[] = [
@@ -113,7 +113,7 @@ export const linkComponent = componentDef({
 });
 ```
 
-The imported file could contain the following rules. Oryx provides a small helper function to set up the rules per screen size, which returns an array of `CssStylesWithMedia` type.
+The imported file could contain the following rules. Oryx provides a small helper function to set up the rules per screen size, which returns an array of the `CssStylesWithMedia` type.
 
 ```ts
 import { screenCss } from "@spryker-oryx/utilities";

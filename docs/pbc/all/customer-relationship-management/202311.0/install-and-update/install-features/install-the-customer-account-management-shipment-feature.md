@@ -1,7 +1,7 @@
 ---
-title: Install the Shipment + Customer Account Management feature
-description: Learn how to integrate the Shipment + Customer Account Management feature into your project
-last_updated: July 31, 2023
+title: Install the Customer Account Management + Shipment feature
+description: Learn how to integrate the Customer Account Management + Shipment feature into your project
+last_updated: Aug 7, 2023
 template: feature-integration-guide-template
 ---
 

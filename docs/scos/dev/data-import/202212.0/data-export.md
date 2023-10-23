@@ -1,5 +1,5 @@
 ---
-title: Data export
+title: Exporting data
 description: This document shows how to export data from a Spryker shop to an external system
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -17,48 +17,28 @@ related:
 
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.
 
-You can export only order data, which includes data about the following:
+You can export any of the following data in the CSV format:
 
 * Orders
 * Order items
 * Order expenses
 
-{% info_block infoBox "Export file format" %}
+Spryker Data Export supports the multi-store functionality, so you can define which stores to export data for.
 
-Out of the box, Spryker supports only CSV as a format for exporting files.
 
-{% endinfo_block %}
+## Prerequisites
 
-To export the order data, follow these steps:
+[Install the Sales Data Export feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html).
 
-1. Make sure you have the [Sales Data Export feature installed](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html) for your project.
-2. Specify necessary configurations in the YML export configuration file residing in `./data/export/config/`. For details about the YML export configuration file structure and configuration options, see [.yml Export configuration file](#yml-export-configuration-file).
-3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
+## Defining the information to export
 
-{% info_block infoBox "Multi-store support" %}
-
-Spryker Data Export supports the multi-store functionality, which means that you can export data for multiple stores.
-
-{% endinfo_block %}
-
-## YML export configuration file
-
-The YML export configuration file lets you define what orders you want to export. The following content is exported:
+The YML export configuration file lets you define what information to export. The root of data export files is configured globally, and data export does not change it. The following can be exported:
 * order
 * order-item
 * order-expense
 
-By default, the YML export configuration file resides in `./data/export/config/`. You can adjust your YML export configuration file, but stick to its [structure](#structure-of-the-yml-export-configuration-file) and take the possible [data filtering options](#setting-the-filter-criteria-in-a-yml-file) into account.
 
-{% info_block warningBox "Note" %}
-
-The root of data export files is configured globally, and data export does not change it.
-
-{% endinfo_block %}
-
-### Structure of the YML export configuration file
-
-Structure of the YML export configuration file is as follows:
+By default, the YML export configuration file resides in `./data/export/config/`. The structure of the YML export configuration file is as follows:
 
 ```yml
 defaults:
@@ -97,9 +77,17 @@ actions:
           <<: *default_filter_criteria
           store_name: [<store_name_value_1>]
 ```
-The type of content to export is defined in section `actions` by `data_entity` and must be `order`, `order-item`, and `order-expense`. You can define what stores to run export for, and specify order dates to export data for. For information about exporting order data for specific stores and time periods, see [Setting the filter criteria](#setting-the-filter-criteria-in-a-yml-file) in a YML file.
 
-For example, check out the default YML export configuration file [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml). It's configuration presupposes batch export of the three data entities: `order`, `order-item`, and `order-expense.`
+The type of content to export is defined in the `actions` section by `data_entity` and can be any of the following:
+* `order`
+* `order-item`
+* `order-expense`.
+
+For an example, see the default configuration file: [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml).
+
+
+You can define what stores to run export for, and specify order dates to export data for. For information about exporting order data for specific stores and time periods, see [Setting the filter criteria](#setting-the-filter-criteria-in-a-yml-file) in a YML file.
+
 
 When running the command for data export with this file, `console data:export --config order_export_config.yml`, exported CSV files are created in `data/export`. For each data entity and store, a separate file is generated:
 
@@ -157,7 +145,7 @@ actions:
 
 {% endinfo_block %}
 
-#### Defining the Date and Time Range for Order Data Export
+#### Defining the date and time range for order data export
 
 The default date and time range filter criteria—for example, the order creation dates filter applied to all `data_entity` items by default—is specified in the `defaults` section:
 
@@ -214,6 +202,18 @@ actions:
 ```
 
 After running the command with the changed filter criteria for `order-expense`, the `order-expenses_AT.csv` file only contains the orders created on May 15th, 2020. The other files contain the orders created from May 1st till July 6th, as specified in `&default_filter_criteria` of the `defaults` section.
+
+
+## Creating the export files
+
+
+
+
+3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
+
+
+
+
 
 ## Overwriting existing CSV files upon repeated command run
 

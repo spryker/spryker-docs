@@ -6,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/twig-and-twig-extension
 originalArticleId: 9ac44605-593b-46dd-9500-2525f99643cf
 redirect_from:
-  - /2021080/docs/twig-and-twig-extension
-  - /2021080/docs/en/twig-and-twig-extension
-  - /docs/twig-and-twig-extension
-  - /docs/en/twig-and-twig-extension
-  - /v6/docs/twig-and-twig-extension
-  - /v6/docs/en/twig-and-twig-extension
-  - /v5/docs/twig-and-twig-extension
-  - /v5/docs/en/twig-and-twig-extension
-  - /v4/docs/twig-and-twig-extension
-  - /v4/docs/en/twig-and-twig-extension
-  - /v3/docs/twig-and-twig-extension
-  - /v3/docs/en/twig-and-twig-extension
-  - /v2/docs/twig-and-twig-extension
-  - /v2/docs/en/twig-and-twig-extension
-  - /v1/docs/twig-and-twig-extension
-  - /v1/docs/en/twig-and-twig-extension
+  - /docs/scos/dev/legacy-demoshop/201811.0/twig-templates/overview-twig.html
   - /docs/scos/dev/sdk/201811.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/201903.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/201907.0/twig-and-twigextension.html

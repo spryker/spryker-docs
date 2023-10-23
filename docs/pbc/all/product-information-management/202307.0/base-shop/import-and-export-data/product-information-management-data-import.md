@@ -13,12 +13,6 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/import-product-catalog-data.html
 ---
 
-{% info_block warningBox "Order of data import" %}
-
-We recommend setting up the Catalog after having done the [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) (which provides the overall structure of the store).
-
-{% endinfo_block %}
-
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
 
 

@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-user-roles-and-permissions-overview
 originalArticleId: 444e741d-bc54-4eb6-9483-16c4a94b765d
 redirect_from:
-  - /2021080/docs/company-user-roles-and-permissions-overview
-  - /2021080/docs/en/company-user-roles-and-permissions-overview
-  - /docs/company-user-roles-and-permissions-overview
-  - /docs/en/company-user-roles-and-permissions-overview
-  - /2021080/docs/company-roles-reference-information
-  - /2021080/docs/en/company-roles-reference-information
-  - /docs/company-roles-reference-information
-  - /docs/en/company-roles-reference-information
+  - /docs/scos/user/features/202108.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - /docs/scos/user/features/202307.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---

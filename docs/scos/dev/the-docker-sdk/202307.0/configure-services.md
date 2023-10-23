@@ -6,10 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
 originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
 redirect_from:
-  - /2021080/docs/configuring-services
-  - /2021080/docs/en/configuring-services
-  - /docs/configuring-services
-  - /docs/en/configuring-services
+  - /docs/scos/dev/the-docker-sdk/202005.0/services.html  
   - /docs/scos/dev/the-docker-sdk/201811.0/configuring-services.html
   - /docs/scos/dev/the-docker-sdk/201903.0/configuring-services.html
   - /docs/scos/dev/the-docker-sdk/201907.0/configuring-services.html
@@ -22,6 +19,7 @@ redirect_from:
   - /scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html  
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
   - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
@@ -492,8 +490,8 @@ image:
 
 2. Push and deploy the changes using one of the following guides:
 
-  * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
+  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 

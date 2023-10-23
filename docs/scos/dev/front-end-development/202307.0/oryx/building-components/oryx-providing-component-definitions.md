@@ -78,7 +78,22 @@ export const cartEntriesComponent = componentDef({
 });
 ```
 
-You can configure multiple rules targeting different screen sizes.
+You can configure multiple rules targeting different screen sizes. The rules are expected to be an array of `CssStylesWithMedia` type, which is exported from the [utilities package](https://www.npmjs.com/package/@spryker-oryx/utilities).
+
+```ts
+const screenStyles: CssStylesWithMedia[] = [
+  {
+    media: {
+      [DefaultMedia.Screen]: Breakpoint.Sm,
+    },
+    css: css`
+      :host {
+        // put styles for small screens here
+      }
+    `,
+  },
+];
+```
 
 Adding styles to the component definition adds a little overhead to the initial bootstrap of an Oryx application. In most cases, we recommend importing the styles dynamically so that they're loaded when the component is used.
 

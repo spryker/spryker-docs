@@ -629,13 +629,13 @@ entries:
                     url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Create personalized prices"
+                  - title: Create personalized prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
-                  - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
+                  - title: Handle twenty five million prices in Spryker Commerce OS
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
-                  - title: "HowTo: Manage business unit specific prices via data import"
+                  - title: Manage business unit specific prices via data import
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
-                  - title: "HowTo: Schedule cron job for Scheduled Prices"
+                  - title: Schedule cron job for scheduled prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
               - title: Extend and customize
                 nested:

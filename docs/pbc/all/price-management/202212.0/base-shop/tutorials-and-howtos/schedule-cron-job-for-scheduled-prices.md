@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Schedule cron job for Scheduled Prices"
+title: Schedule cron job for scheduled prices
 Description: This document describes how to change the default behavior of the cron job shipped with the Scheduled Prices feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template

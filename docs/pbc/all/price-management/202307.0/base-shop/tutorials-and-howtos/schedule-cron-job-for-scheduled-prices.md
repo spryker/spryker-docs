@@ -1,25 +1,14 @@
 ---
-title: "HowTo: Schedule cron job for Scheduled Prices"
+title: Schedule cron job for scheduled prices
 Description: This document describes how to change the default behavior of the cron job shipped with the Scheduled Prices feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-schedule-cron-job-for-scheduled-prices-201907
 originalArticleId: 612d102b-f61a-4c7b-adec-9a2697ed6349
 redirect_from:
-  - /2021080/docs/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /2021080/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /docs/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v6/docs/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v6/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v5/docs/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v5/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v4/docs/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v4/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v3/docs/ht-schedule-cron-job-for-scheduled-prices-201907
-  - /v3/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/how-to-schedule-cron-job-for-scheduled-prices.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 related:
   - title: Scheduled Prices feature walkthrough
     link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html

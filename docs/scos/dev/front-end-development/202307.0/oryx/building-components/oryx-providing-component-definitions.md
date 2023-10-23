@@ -113,7 +113,7 @@ export const linkComponent = componentDef({
 });
 ```
 
-The imported file could contain the following rules. Oryx provides a small helper function to set up the rules per screen size.
+The imported file could contain the following rules. Oryx provides a small helper function to set up the rules per screen size, which returns an array of `CssStylesWithMedia` type.
 
 ```ts
 import { screenCss } from "@spryker-oryx/utilities";

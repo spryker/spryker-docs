@@ -58,7 +58,7 @@ Recommended: `/home/jdoe/workspace/project`.
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202307.0 --single-branch ./b2b-demo-shop && \
-    cd b2c-demo-shop
+    cd b2b-demo-shop
     ```
 
     * B2C Marketplace Demo Shop

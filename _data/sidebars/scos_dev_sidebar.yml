@@ -2257,21 +2257,7 @@ entries:
       url: /docs/scos/dev/data-import/marketplace-data-import.html
       include_versions:
       - "202212.0"
-      - "202307.0"      
-  - title: Data export
-    url: /docs/scos/dev/data-export/data-export.html
-    include_versions:
-    - "202204.0"
-    nested:
-    - title: Exporting data
-      url: /docs/scos/dev/data-export/data-export.html
-      include_versions:
-      - "202204.0"
-    - title: Data export orders .csv files format
-      url: /docs/scos/dev/data-export/data-export-orders-.csv-files-format.html
-      include_versions:
-      - "202204.0"
-
+      - "202307.0"
 
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html

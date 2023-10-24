@@ -40,4 +40,4 @@ $jobs[] = [
 ];
 ```
 
-How to configure the schedule precisely, please check the general [Cron Expression documentation]{https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm}.
+For information on how to configure the schedule precisely, check the [Cron Expression documentation](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm).

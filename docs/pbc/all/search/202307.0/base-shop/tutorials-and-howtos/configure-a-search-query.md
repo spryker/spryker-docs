@@ -304,9 +304,9 @@ Fuzzy search is valid for Master Suite only and has not been integrated into B2B
 
 It looks up for products even if a customer makes typos and spelling mistakes in a search query. Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FuzzyQueryExpanderPlugin` to allow Elasticsearch to add the `"fuzziness": "AUTO" parameter` to any matching query that is created as the suggested search.
 
-Before enabling this plugin for the primary search (not a suggestions search), please make sure that you are not using `cross_fields` search type, which is not allowed with a conjunction with a [fuzzy search in Elastic Search]{https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#crossfields-fuzziness}.
-This behaviour could be changed overridding \Spryker\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin on the project and adjusting `createMultiMatchQuery` method.
-For example, change the type to the `best_fields`:
+Before enabling this plugin for the primary search (not a suggestions search), make sure that you are not using the `cross_fields` search type, which is not allowed in conjunction with the [fuzzy search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#crossfields-fuzziness).
+You can change this behavior by overriding `\Spryker\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin` on the project level and adjusting the `createMultiMatchQuery` method.
+For example, you can change the type to the `best_fields`:
 ```php
  /**
      * @param array<string> $fields

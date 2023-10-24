@@ -152,8 +152,8 @@ To resolve the issue:
    - Config deploy files `deploy.**.yml`
 
 
-## Running only this checker
-To run only this checker, please include `PHP_VERSION_CHECKER` into the checkers list, for example:
+## Run only this checker
+To run only this checker, include `PHP_VERSION_CHECKER` into the checkers list. Example:
 ```bash
 vendor/bin/evaluator evaluate --checkers=PHP_VERSION_CHECKER
 ```

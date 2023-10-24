@@ -45,8 +45,8 @@ class SinglePlugin extends SprykerSinglePlugin
 Remove the unused dead code in project.
 
 
-## Running only this checker
-To run only this checker, please include `DEAD_CODE_CHECKER` into the checkers list, for example:
+## Run only this checker
+To run only this checker, include `DEAD_CODE_CHECKER` into the checkers list. Example:
 ```bash
 vendor/bin/evaluator evaluate --checkers=DEAD_CODE_CHECKER
 ```

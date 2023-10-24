@@ -43,8 +43,8 @@ Your `composer.lock` file contains package versions that have security issues:
 ## Resolve the error
 To resolve the error, upgrade the package to a version where the vulnerability issue is fixed.
 
-## Running only this checker
-To run only this checker, please include `SPRYKER_SECURITY_CHECKER` into the checkers list, for example:
+## Run only this checker
+To run only this checker, include `SPRYKER_SECURITY_CHECKER` into the checkers list. Example:
 ```bash
 vendor/bin/evaluator evaluate --checkers=SPRYKER_SECURITY_CHECKER
 ```

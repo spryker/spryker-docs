@@ -64,8 +64,8 @@ To resolve the error:
 
 
 
-## Running only this checker
-To run only this checker, please include `SINGLE_PLUGIN_ARGUMENT` into the checkers list, for example:
+## Run only this checker
+To run only this checker, include `SINGLE_PLUGIN_ARGUMENT` into the checkers list. Example:
 ```bash
 vendor/bin/evaluator evaluate --checkers=SINGLE_PLUGIN_ARGUMENT
 ```

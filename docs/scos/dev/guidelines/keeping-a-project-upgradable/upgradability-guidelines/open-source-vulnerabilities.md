@@ -45,8 +45,8 @@ To resolve the error:
 1. Upgrade the package to a version where the vulnerability issue is fixed.
 
 
-## Running only this checker
-To run only this checker, please include `OPEN_SOURCE_VULNERABILITIES_CHECKER` into the checkers list, for example:
+## Run only this checker
+To run only this checker, include `OPEN_SOURCE_VULNERABILITIES_CHECKER` into the checkers list. Example:
 ```bash
 vendor/bin/evaluator evaluate --checkers=OPEN_SOURCE_VULNERABILITIES_CHECKER
 ```

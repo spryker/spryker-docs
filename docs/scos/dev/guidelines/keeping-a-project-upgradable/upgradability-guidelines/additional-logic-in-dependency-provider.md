@@ -120,8 +120,9 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 2. Use only the supported expressions in the `if` construct.
 
 
-## Running only this checker
-To run only this checker, please include `DEPENDENCY_PROVIDER_ADDITIONAL_LOGIC_CHECKER` into the checkers list, for example:
+## Run only this checker
+
+To run only this checker, include `DEPENDENCY_PROVIDER_ADDITIONAL_LOGIC_CHECKER` into the checkers list. Example:
 ```bash
 vendor/bin/evaluator evaluate --checkers=DEPENDENCY_PROVIDER_ADDITIONAL_LOGIC_CHECKER
 ```

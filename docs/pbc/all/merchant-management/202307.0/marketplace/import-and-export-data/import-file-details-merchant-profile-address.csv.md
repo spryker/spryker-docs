@@ -3,6 +3,8 @@ title: "Import file details: merchant_profile_address.csv"
 last_updated: Jun 07, 2021
 description: This document describes the merchant_profile_address.csv file to configure merchant profile addresses in your Spryker shop.
 template: import-file-template
+redirect_from:
+- /docs/pbc/all/merchant-management/202307.0/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

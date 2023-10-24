@@ -5,12 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipment-pricecsv
 originalArticleId: 5a755c1f-20a7-42d0-a1ac-30f4b8586351
 redirect_from:
-  - /2021080/docs/file-details-shipment-pricecsv
-  - /2021080/docs/en/file-details-shipment-pricecsv
-  - /docs/file-details-shipment-pricecsv
-  - /docs/en/file-details-shipment-pricecsv
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html  
   - /docs/pbc/all/carrier-management/202307.0/import-and-export-data/file-details-shipment-price.csv.html
+  - /docs/pbc/all/carrier-management/202307.0/base-shop/import-and-export-data/file-details-shipment-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

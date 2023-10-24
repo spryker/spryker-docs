@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos"
+folder_path="docs/pbc/all/offer-management/202307.0/marketplace/import-and-export-data"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

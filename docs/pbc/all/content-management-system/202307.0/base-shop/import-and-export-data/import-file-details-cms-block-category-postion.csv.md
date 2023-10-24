@@ -5,12 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv
 originalArticleId: 22c4245e-5056-4bb9-9d77-e932a74c63b9
 redirect_from:
-  - /2021080/docs/file-details-cms-block-category-postioncsv
-  - /2021080/docs/en/file-details-cms-block-category-postioncsv
-  - /docs/file-details-cms-block-category-postioncsv
-  - /docs/en/file-details-cms-block-category-postioncsv
   - /docs/scos/dev/data-import/202307.0/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html
   - /docs/pbc/all/content-management-system/202307.0/import-and-export-data/file-details-cms-block-category-postion.csv.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/import-and-export-data/file-details-cms-block-category-postion.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

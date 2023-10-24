@@ -5,9 +5,8 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-sales-order-thresholdcsv
 originalArticleId: 6a897bd7-2a39-4fb0-8eb3-9704e23cd423
 redirect_from:
-  - /docs/file-details-sales-order-thresholdcsv
-  - /docs/en/file-details-sales-order-thresholdcsv
   - /docs/pbc/all/cart-and-checkout/202307.0/import-and-export-data/file-details-sales-order-threshold.csv.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

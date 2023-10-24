@@ -5,15 +5,12 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigation-nodecsv
 originalArticleId: a3ec2a04-ce34-4501-8ce4-da2240bfc583
 redirect_from:
-  - /2021080/docs/file-details-navigation-nodecsv
-  - /2021080/docs/en/file-details-navigation-nodecsv
-  - /docs/file-details-navigation-nodecsv
-  - /docs/en/file-details-navigation-nodecsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/pbc/all/content-management-system/202307.0/import-and-export-data/file-details-navigation-node.csv.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/import-and-export-data/file-details-navigation-node.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

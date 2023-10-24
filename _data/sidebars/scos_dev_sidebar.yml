@@ -3388,7 +3388,7 @@ entries:
               - title: Responsive Design
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-responsive-design.html
                 include_versions:
-                - "202212.0"
+                - "202307.0"
 
         - title: Building pages
           nested:

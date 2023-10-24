@@ -25,7 +25,7 @@ To define a period within which an item can be returned, in `Pyz\Zed\SalesReturn
 
 Where _{% raw %}{{{% endraw %}`Number of days`{% raw %}}}{% endraw %}_ is the time period in days after the item purchase within which the item can be returned.
 
-Example with 30 days return policy set:
+Example with the 30 days return policy:
 
 ```php
 namespace Pyz\Zed\SalesReturn;

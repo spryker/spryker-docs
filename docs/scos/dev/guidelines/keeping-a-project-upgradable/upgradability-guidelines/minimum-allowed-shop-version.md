@@ -2,6 +2,7 @@
 title: Minimum allowed shop version
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 The *Minimum allowed shop version* check makes sure that the project uses one of the supported product releases by the [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
@@ -16,7 +17,7 @@ In case the project does not utilize the feature packages, it is necessary to en
 
 Below is an example of when a used feature package version doesn't correspond to the minimum required version:
 
-```shell
+```bash
 ============================
 MINIMUM ALLOWED SHOP VERSION
 ============================
@@ -41,8 +42,13 @@ The following is an example of the `composer.json` file when the used Spryker fe
 }
 ```
 
-### Resolving the error
+## Resolving the error
 
-To resolve this issue:
+Update the outdated dependencies to make it correspond to the minimum required version.
 
-1. Update the outdated dependencies to make it correspond to the minimum required version.
+
+## Run only this checker
+To run only this checker, include `MINIMUM_ALLOWED_SHOP_VERSION` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=MINIMUM_ALLOWED_SHOP_VERSION
+```

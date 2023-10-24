@@ -17,4 +17,4 @@ To create merchant categories, you should import them. For details, see [File de
 | INSTALLATION GUIDES | DATA IMPORT |
 |---|---|
 | [Merchant Category feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html)    |[File details: merchant_category.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-category.csv.html)  |
-| [Glue API: Merchant Category integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-category-glue-api.html) |  |  
+| [Glue API: Merchant Category integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html) |  |  

@@ -28,7 +28,7 @@ A warehouse can be assigned to a single store or shared between several stores. 
 
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-address.csv.html).
 
-### Warehouse assignment to order items (with Avalara integration only)
+### Avalara: Warehouse assignment to order items
 
 {% info_block warningBox %}
 

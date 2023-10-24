@@ -12,9 +12,13 @@ redirect_from:
 
 Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out due to its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store.
 
-{% wistia za7wet2x2s 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/Algolia_ACPApp_Demo.mp4" type="video/mp4">
+  </video>
+</figure>
 
-To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/integrate-algolia.html).
+To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 
 {% info_block infoBox "Note" %}
 

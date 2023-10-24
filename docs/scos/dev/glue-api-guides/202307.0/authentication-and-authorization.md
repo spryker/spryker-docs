@@ -1,5 +1,5 @@
 ---
-title: Authentication and authorization
+title: Glue API authentication and authorization
 description: Information about Glue API authentication and authorization.
 last_updated: Oct 23, 2022
 template: glue-api-storefront-guide-template
@@ -64,4 +64,6 @@ Response sample with an error:
 }
 ```
 
-For more details, see [Create protected Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/create-protected-glue-api-endpoints.html)
+For more details, see:
+* [Create protected Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/create-protected-glue-api-endpoints.html)
+* [Use API Key authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/use-api-key-authorization.html)

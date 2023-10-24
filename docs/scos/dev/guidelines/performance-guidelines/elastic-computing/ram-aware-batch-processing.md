@@ -3,6 +3,7 @@ title: RAM-aware batch processing
 description: RAM-aware batch processing increases memory consumption efficiency for long-running operations.
 last_updated: May 16, 2022
 template: concept-topic-template
+redirect_from:
 related:
   - title: New Relic transactions grouping by queue names
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html

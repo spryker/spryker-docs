@@ -33,7 +33,7 @@ The schema below illustrates relations between modules of the business on behalf
 
 
 
-The following schema represents module relations of the [Customer Login by Token](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature:
+The following schema represents module relations of the [Customer Login by Token](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/customer-login-by-token-overview.html) feature:
 
 <div class="width-100">
 

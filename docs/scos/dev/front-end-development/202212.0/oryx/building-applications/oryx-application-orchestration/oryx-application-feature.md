@@ -2,6 +2,8 @@
 title: Oryx application feature
 description: Feature of the Oryx Application
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-feature.html
 ---
 
 `AppFeature` is a higher level collection of lower-level primitives, such as the following:

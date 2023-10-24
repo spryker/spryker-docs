@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/glue-infrastructure.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
 ---
 
 {% info_block warningBox %}
@@ -432,7 +432,7 @@ In addition to HTTP Status codes, Glue can return additional error codes to dist
 |  1001-1099    | Guest Cart API |
 | 1101-1199 |  Checkout API|
 |  1201-1299| Product Labels API     |
-|  1301-1399| Dynamic Data API     |
+|  1301-1399| Data Exchange API     |
 
 ### Data formatting
 

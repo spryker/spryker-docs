@@ -2,6 +2,7 @@
 title: Run the evaluator tool
 description: Instructions for running the evaluator tool
 template: howto-guide-template
+redirect_from:
 ---
 
 This document outlines the process of using the evaluator tool to verify if your project code adheres to Spryker's standards.

@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-overview
 originalArticleId: 7bc42ccb-f76c-400f-9372-251104ce0b77
 redirect_from:
-  - /2021080/docs/product-sets-feature-overview
-  - /2021080/docs/en/product-sets-feature-overview
-  - /docs/product-sets-feature-overview
-  - /docs/en/product-sets-feature-overview
-  - /2021080/docs/product-set
-  - /2021080/docs/en/product-set
-  - /docs/product-set
-  - /docs/en/product-set
+  - /docs/scos/user/features/202108.0/product-sets-feature-overview.html
   - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
   - /docs/scos/user/features/202307.0/product-sets-feature-overview.html
   - /docs/pbc/all/content-management-system/202307.0/product-sets-feature-overview.html

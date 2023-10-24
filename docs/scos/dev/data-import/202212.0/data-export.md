@@ -30,7 +30,7 @@ Spryker Data Export supports the multi-store functionality, so you can define wh
 
 [Install the Sales Data Export feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html).
 
-## Defining the information to export
+## Defining the data to export
 
 The YML export configuration file lets you define what information to export. The root of data export files is configured globally, and data export does not change it. The following can be exported:
 * order
@@ -86,30 +86,9 @@ The type of content to export is defined in the `actions` section by `data_enti
 For an example, see the default configuration file: [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml).
 
 
-You can define what stores to run export for, and specify order dates to export data for. For information about exporting order data for specific stores and time periods, see [Setting the filter criteria](#setting-the-filter-criteria-in-a-yml-file) in a YML file.
-
-
-When running the command for data export with this file, `console data:export --config order_export_config.yml`, exported CSV files are created in `data/export`. For each data entity and store, a separate file is generated:
-
-* `order-expenses_AT.csv`
-* `order-expenses_DE.csv`
-* `order-items_AT.csv`
-* `order-items_DE.csv`
-* `orders_AT.csv`
-* `orders_DE.csv`
-
-### Setting the filter criteria in a YML file
-
-You can set the following filter criteria for the order data export in your YML export configuration file:
-
-* *Store names*: stores from which the data are exported.
-* *Date and time range*: interval *from* what date and time *to* what date and time the order was created, including the *from* and the *to* values. If you use the label `order_updated_at`, the range is relative to the date and time the order was updated.
-
-#### Defining the stores for order data export
+## Defining the stores to export data from
 
 To define the stores you want to export the order data for, specify them in `destination` for the specific data entities.
-
-{% info_block warningBox "Warning" %}
 
 You _must_ create individual files for each data entity and each store if your filter criteria include `store_name`.
 
@@ -143,40 +122,21 @@ actions:
   ```
 
 
-{% endinfo_block %}
 
-#### Defining the date and time range for order data export
 
-The default date and time range filter criteria—for example, the order creation dates filter applied to all `data_entity` items by default—is specified in the `defaults` section:
+## Defining the date and time range to export data for
 
-```yml
-defaults:
-  filter_criteria: &default_filter_criteria
-        order_created_at:  
-            type: between
-            from: '2020-05-01 08:00:00'
-            to: '2020-06-07 08:00:00'  
- ```
+The following sections of the YML configuration file let you define the date the date and time range to export data for per entity.
 
-{% info_block infoBox "Info" %}
 
-To use the date and time range filter criteria of the `defaults` section and apply the filter criteria to `data_entity` items of the `actions` section, `<<: *default_filter_criteria` must be declared in the `filter_criteria` parameter of each `data_entity` item.
+| SECTION | DESCRIPTION |
+| - | - |
+| actions | Inclusively defines the date and time range to export data for per entity. If you use the label `order_updated_at`, the range is relative to the date and time the order was updated at. |
+| defaults | Defines the default date and time range to export data for. This range is used in case a data and time range is not provided for an entity. |
 
-{% endinfo_block %}
-
-You can change the filter criteria for any `data_entity` items by replacing `<<: *default_filter_criteria` with the values you need.
-
-For example, to export only orders created on May 15th, 2020, for the `order-expenses` data entity in the AT store, you need to replace the `<<: *default_filter_criteria` line under `filter_criteria` for `order-expenses` in AT store with the following:
+In the `actions` section of data export configuration file, you can define
 
 ```yml
-order_created_at:  
-  type: between
-  from: '2020-05-15 00:00:00'
-  to: '2020-05-15 23:59:59'
-  ```
-  Example:
-
-  ```yml
   defaults:
   filter_criteria: &default_filter_criteria
         order_created_at:  
@@ -201,18 +161,20 @@ actions:
     ...
 ```
 
-After running the command with the changed filter criteria for `order-expense`, the `order-expenses_AT.csv` file only contains the orders created on May 15th, 2020. The other files contain the orders created from May 1st till July 6th, as specified in `&default_filter_criteria` of the `defaults` section.
-
-
 ## Creating the export files
 
 
+Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
 
 
-3. Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
+When running the command for data export with this file, `console data:export --config order_export_config.yml`, exported CSV files are created in `data/export`. For each data entity and store, a separate file is generated:
 
-
-
+* `order-expenses_AT.csv`
+* `order-expenses_DE.csv`
+* `order-items_AT.csv`
+* `order-items_DE.csv`
+* `orders_AT.csv`
+* `orders_DE.csv`
 
 
 ## Overwriting existing CSV files upon repeated command run

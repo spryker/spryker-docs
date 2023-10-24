@@ -5,10 +5,6 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-import
 originalArticleId: a2aeed1c-8613-43f2-9141-abb20c9aedb1
 redirect_from:
-  - /2021080/docs/products-import
-  - /2021080/docs/en/products-import
-  - /docs/products-import
-  - /docs/en/products-import
   - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/products/products.html
 ---
 

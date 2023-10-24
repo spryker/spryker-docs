@@ -6,16 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-based-project
 originalArticleId: 0aac9b81-7db9-4a7e-87f8-35c2ac6efe1d
 redirect_from:
-  - /2021080/docs/updating-a-spryker-based-project
-  - /2021080/docs/en/updating-a-spryker-based-project
-  - /docs/updating-a-spryker-based-project
-  - /docs/en/updating-a-spryker-based-project
-  - /v6/docs/updating-a-spryker-based-project
-  - /v6/docs/en/updating-a-spryker-based-project
-  - /v5/docs/updating-a-spryker-based-project
-  - /v5/docs/en/updating-a-spryker-based-project
-  - /v4/docs/updating-a-spryker-based-project
-  - /v4/docs/en/updating-a-spryker-based-project
   - /docs/scos/dev/updating-a-spryker-based-project.html
 ---
 
@@ -27,7 +17,7 @@ Updating your Spryker shop is always an effort. New features, fixes, and updates
 
 This article gives answers to these questions and provides recommendations that will help you make the Spryker update process smoother, easier, and update efforts predictable.
 
-The [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html) addresses the challenges of an application's upgradability and can help you semi-automate the Spryker update process on a regular basis.
+[Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html) addresses the challenges of an application's upgradability and can help you semi-automate updates and make them regular.
 
 ## Spryker product structure
 
@@ -36,8 +26,8 @@ The smallest building block of Spryker is a *module*. Usually, a module does not
 The set of features makes up a *product*. Spryker offers the following products:
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html)
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html)
-* B2B Demo Marketplace
-* B2C Demo Marketplace
+* [B2B Demo Marketplace](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
+* [B2C Demo Marketplace](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
 * [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html)
 
 Schematically, the Spryker product structure looks like this:

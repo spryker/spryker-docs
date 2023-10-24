@@ -36,13 +36,13 @@ The Upgrader tool does not influence your development process. Your development 
 
 ## Development team responsibilities
 
-* Prepare your project for the Spryker Code Upgrader. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
+* Prepare your project for Spryker Code Upgrader. For instructions, see [Prepare a project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
 
-* Connect Spryker Code Upgrader with your code hosting service. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
+* Connect Spryker Code Upgrader with your code hosting service. For instructions, see [Onboard to Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html).
 
 * Cover customizations with automated tests.
 
-* Consistently conduct [testing on the pull requests](/docs/scos/dev/updating-spryker/testing-updates.html) created by the Spryker Code Upgrader, and upon verification of their integrity, proceed with merging as per standard procedure.
+* Cover with tests each pull request created by Spryker Code Upgrader. For information about different kinds of tests, see [Testing updates](/docs/scos/dev/updating-spryker/testing-updates.html).
 
 * To continue receiving suggestions from Spryker Code Upgrader, apply major upgrades manually.
 

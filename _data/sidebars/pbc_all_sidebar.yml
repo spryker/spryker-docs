@@ -978,7 +978,7 @@ entries:
                 include_versions:
                 - "202311.0"
           - title: Data Exchange FAQ
-            url: /docs/pbc/all/data-exchange/data-exchange-faq.html      
+            url: /docs/pbc/all/data-exchange/data-exchange-faq.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -1701,7 +1701,7 @@ entries:
                       - title: Product Offer Service Points
                         url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html
                         include_versions:
-                        - "202311.0"            
+                        - "202311.0"
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         nested:
@@ -1922,7 +1922,7 @@ entries:
           - title: Unified Commerce
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -3068,7 +3068,7 @@ entries:
           - title: Unified Commerce
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Install and upgarde
                 nested:
                   - title: Install features
@@ -3792,33 +3792,24 @@ entries:
           - title: Unified Commerce
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Install and upgrade
                 nested:
                   - title: Install features
                     nested:
+                      - title: Warehouse Picking
+                        url: /docs/pbc/all/warehouse-picking//unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
+                        include_versions:
+                        - "202311.0"
+                      - title: Warehouse Picking + Product
+                        url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
+                        include_versions:
+                        - "202311.0"                      
                       - title: Warehouse User Management
                         url: /docs/pbc/all/warehouse-management-system//unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
                         include_versions:
                         - "202311.0"
-      - title: Warehouse Picking
-        nested:
-          - title: Unified Commerce
-            include_versions:
-            - "202311.0"
-            nested:
-              - title: Install and upgrade
-                nested: 
-                  - title: Install features
-                    nested:
-                    - title: Warehouse Picking
-                      url: /docs/pbc/all/warehouse-picking//unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
-                      include_versions:
-                      - "202311.0"
-                    - title: Warehouse Picking + Product
-                      url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
-                      include_versions:
-                      - "202311.0"
+
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

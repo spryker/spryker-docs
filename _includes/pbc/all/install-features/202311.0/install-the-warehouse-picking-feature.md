@@ -17,7 +17,7 @@ Install the required features:
 | Order Management + Inventory Management | {{page.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
 | Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)                                                       |
 | Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html)                                     |
-| Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Backoffice feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
+| Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
 
 ### 1) Install the required modules using Composer
 
@@ -255,7 +255,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 {% info_block warningBox "Verification" %}
 
 Make sure that the OMS transition diagram shows the expected transitions:
-1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**. 
+1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 2. To see the diagram, click the `DummyPayment01` process.
 3. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 

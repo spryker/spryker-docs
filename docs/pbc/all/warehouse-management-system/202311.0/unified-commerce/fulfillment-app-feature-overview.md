@@ -2,7 +2,7 @@
 title: Fulfillment App feature overview
 description:
 last_updated: Oct 3, 2023
-template: Which Template to use for this?
+template: concept-topic-template
 ---
 
 The *Fulfillment App* feature streamlines the process of fulfilling orders by introducing the Fulfillment App and the warehouse user.
@@ -22,10 +22,9 @@ Fulfillment App is an app used by warehouse users to fulfill orders. When a cust
 
 ![screenshot with two picklists]
 
-## Assigning a warehouse
+## Warehouse assignment
 
 By default, when a customer orders several items of the same SKU, the requested item’s stock is checked in all of the store's warehouses. The warehouses are sorted in the descending order of how much stock of the item they are holding. The warehouse holding the biggest stock of the item is assigned to the order. The warehouse holding the never-out-of-stock item quantity is considered to be holding the biggest stock.
-
 
 In some cases, the ordered quantity might not be available in the warehouse holding the biggest stock of the item. Then, the warehouse fulfills the order partially. The remaining quantity is fulfilled by the the warehouse holding the next biggest stock of the item. For example, the customer orders 100 tablets. The store's warehouses hold the following stock:
 
@@ -36,7 +35,6 @@ In some cases, the ordered quantity might not be available in the warehouse hold
 | 1 | 13 |
 
 In this case, warehouse 2 provides 65 tables by emptying out its stock completely. Warehouse 3 provides the remaining 35 tablets with 5 tablets left in stock.
-
 
 {% info_block warningBox "Item reservation" %}
 Warehouse allocation shouldn't be confused with the reservation process, meaning items are not reserved when they are allocated to a warehouse. The warehouse management system is responsible for warehouse reservation. The default strategy is designed to show how warehouse allocation can be implemented and used in the fulfillment process.
@@ -101,10 +99,10 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html)  |
-| [Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)  |
+|BACK OFFICE USER GUIDES| FULFILLMENT APP USER GUIDES |
+| - | - |
+| [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html)  |  [Fulfill orders](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-fulfill-orders.html) |
+| [Edit discounts](/docs/pbc/all/discount-management/202311.0/base-shop/manage-in-the-back-office/edit-discounts.html)  |
 
 ## Related Developer articles
 

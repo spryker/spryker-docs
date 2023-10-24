@@ -777,6 +777,7 @@ entries:
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
       - title: Customer Relationship Management
+        url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
         - "202212.0"
         - "202307.0"

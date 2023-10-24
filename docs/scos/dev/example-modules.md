@@ -1,7 +1,7 @@
 
 ## The difference between core and example modules
 
-**Core modules** provide generic, reusable functionality that benefits a wide range of projects. They offer a foundation for customization and serve as versatile building blocks.
+**Core modules** provide generic, reusable functionality that benefits a wide range of customers. They offer a foundation for customization and serve as versatile building blocks.
 
 **Example Modules** in contrast, are designed for specific, one-off use-cases. Their functionality is tightly aligned with unique business requirements and isn't suitable for broad reuse. These modules serve as specialized, project-specific solutions.
 
@@ -9,7 +9,7 @@
 
 ### SCOS: Showcase functionality
 
-SCOS uses example modules to fill the gap with concrete/example implementation over an abstract workflow (latter is the target of delivery), where the concrete/example implementation is never actually usable by any concrete customer or business use-case, thus the actual business logic is not part of the core (eg: Example picking strategy).
+SCOS uses example modules to fill the gap with concrete/example implementation over an abstract workflow (latter is the target of delivery), where the concrete/example implementation is never actually usable by any concrete customer or business use-case, thus the actual business logic is not part of the core (eg: the React API Example).
 
 ### SCOS: Unique business use-case
 
@@ -22,45 +22,38 @@ SCOS uses example modules to implement functionality that is unique business (cu
 Sprkyer has no strict obligations regarding the maintenance, compatibility, flexibility, and extendibility of the example modules.
 
 * **Compliance**
-  * Example modules MUST NOT be mapped to features.
-  * Examples modules MUST never reach a stable release.
+  * Examples modules will never reach a stable release.
 * **Compatibility**
-  * Forward and backward compatibility is NOT in scope (more majors).
+  * Forward and backward compatibility is NOT guranteed.
   * NO upgradability support for projects, or demoshop integrations.
 * **Learnability**
-  * NO commitment on documentation (MAY increase learning curve for project / core development).
+  * NO commitment on documentation.
 * **Maintainability**
   * There is NO obligation to maintain them.
   * They MAY be abandoned at any time.
   * They are NOT supported in any way.
-  * Maintenance is NOT part of the design (more expensive core adjustments & more majors around core adjustments).
+  * Maintenance is NOT part of the design.
 * **Customisability**
-  * They do NOT support to build other functionality on/related to them (neither for core/project).
-    * Consequence: Application infrastructure can NOT be developed in example module.
-  * They are NOT designed to be used, extended, configured on project production.
+  * They do NOT support to build other functionality on/related to them.
+  * They are NOT designed to be used, extended, configured in projects.
 * **Modularity**
-  * NO guarantee on modularity & reusability (the parts are NOT designed to be reusable without investment both for project/core).
+  * NO guarantee on modularity & reusability.
 * **Security**
   * NO obligations on security fixes.
 * **Performance**
   * NO commitment on performance.
 * **Testability**
-  * (NOT wired in Spryker Products) NO commitment on any level of correct behaviour per any release.
+  * NO commitment on any level of correct behaviour per any release.
 
 ### Commitments
 
 * **Compliance**
-  * The code quality MUST match the project quality guidelines (or better).
-  * New Example Modules MUST be in the “example organisation” (SprykerExample).
-  * All Example Modules MUST be released as standalone modules.
-  * All Example Modules MUST be released under the MIT license.
-* **Maintenance**
-  * Feature integrations in Spryker Products MUST be aligned with the integrated example modules (extra maintenance effort on the Feature modules + on the example module).
-  * Project development MUST clean-up (aka “remove”) the example module when enabling it for production.
+  * All Example Modules will be part of the Spyker Example organization on Github.
+  * All Example Modules will be released as standalone modules.
+  * All Example Modules will be released under the MIT license.
 * **Uniformity**
-  * Example modules MUST be suffixed with “example”.
-  * Example modules MUST provide the before-mentioned disclaimer.
+  * Example modules will be suffixed with “example”.
 * **Testability**
-  * They SHOULD provide tests.
+  * They might provide tests.
 * **Learnability**
-  * A proper explanation of the implemented functionality MUST be provided in the `readme.md`.
+  * A proper explanation of the implemented functionality will be provided in the `readme.md`.

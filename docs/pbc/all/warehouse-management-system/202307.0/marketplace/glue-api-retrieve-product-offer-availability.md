@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/product-offers/retrieving-product-offer-availability.html
 related:
   - title: Retrieving product offer prices
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-prices.html
+    link: docs/pbc/all/price-management/page.version/marketplace/glue-api-retrieve-product-offer-prices.html
   - title: Retrieving product offers
     link: docs/pbc/all/offer-management/page.version/marketplace/glue-api-retrieve-product-offers.html
 ---

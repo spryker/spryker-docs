@@ -3,6 +3,7 @@ title: Storage caching for primary-replica database setups
 description: This guideline explains how to setup the Master-Replica database connection.
 last_updated: May 16, 2022
 template: concept-topic-template
+redirect_from:
 related:
   - title: New Relic transactions grouping by queue names
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html

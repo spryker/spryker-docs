@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html-feature-overview
 originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
 redirect_from:
-  - /2021080/docs/inventory-management-feature-overview
-  - /2021080/docs/en/inventory-management-feature-overview
-  - /docs/inventory-management-feature-overview
-  - /docs/en/inventory-management-feature-overview
+  - /docs/scos/user/features/202108.0/inventory-management-feature-overview.html
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
   - /docs/scos/user/features/202204.0/inventory-management-feature-overview.html  
 ---
@@ -27,7 +24,7 @@ A warehouse can be assigned to a single store or shared between several stores. 
 
 You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-warehouse-address.csv.html).
 
-### Warehouse assignment to order items (with Avalara integration only)
+### Avalara: Warehouse assignment to order items
 
 {% info_block warningBox %}
 

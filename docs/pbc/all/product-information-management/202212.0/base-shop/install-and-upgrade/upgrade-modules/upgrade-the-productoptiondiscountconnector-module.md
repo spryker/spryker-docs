@@ -29,7 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
+  - /docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-modulediscountconnector.html
 related:
   - title: Migration guide - Product
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html

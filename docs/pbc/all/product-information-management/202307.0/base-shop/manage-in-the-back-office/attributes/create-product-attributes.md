@@ -6,10 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-attributes
 originalArticleId: 1b1f5ddd-b2e3-4095-a1e0-abb9b298fd46
 redirect_from:
-  - /2021080/docs/creating-product-attributes
-  - /2021080/docs/en/creating-product-attributes
-  - /docs/creating-product-attributes
-  - /docs/en/creating-product-attributes
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/attributes/creating-product-attributes.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/creating-product-attributes.html
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/attributes/creating-product-attributes.html  
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/attributes/create-product-attributes.html  

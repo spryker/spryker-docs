@@ -3,6 +3,8 @@ title: Key concepts of Reactivity
 description: Understanding Reactivity concepts will help you understand how Oryx works
 template: concept-topic-template
 last_updated: Jul 11, 2023
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/reactivity/key-concepts-of-reactivity.html
 ---
 
 ## Reactive data streams

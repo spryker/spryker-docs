@@ -3,6 +3,8 @@ title: "Oryx: Feature sets"
 description: Feature sets are collections of standard features
 last_updated: May 24, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-feature-sets.html
 ---
 
 A _feature set_ is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.

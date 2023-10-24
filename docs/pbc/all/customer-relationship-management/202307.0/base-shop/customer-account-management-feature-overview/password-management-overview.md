@@ -16,7 +16,7 @@ redirect_from:
 
 *Password Management* lets Spryker admins manage customer account passwords. It also lets B2B and B2C Shoppers manage their own account passwords.
 
-When you create a customer account in the Back Office, you do not enter the password. Instead, you can select to send a password reset email to the customer account’s email address. This way, the customer knows that the account has been created, and they need to reset the password to access it. To learn how Spryker admin sends password reset emails when creating customer accounts, see [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html).
+When you create a customer account in the Back Office, you do not enter the password. Instead, you can select to send a password reset email to the customer account’s email address. This way, the customer knows that the account has been created, and they need to reset the password to access it. To learn how Spryker admin sends password reset emails when creating customer accounts, see [Create a customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html).
 
 You can create customer accounts by [importing](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import) a [`customerCSV file`](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-customer.csv.html). In this case, you can specify the passwords of the customer accounts to import, but it’s not mandatory. If you do not specify the passwords, you can send password reset emails to the customers without passwords by running `console customer:password:set`. Also, you can send password reset emails to all customers by running console `customer:password:reset`. To learn how a developer can import customer data, see [Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
@@ -28,8 +28,8 @@ On the Storefront, it is mandatory to enter a password when creating a customer 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Customer Account](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html)  |
-| [Get a general idea of Customer Registration](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)   |
-| [Get a general idea of Customer Login](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)  |
-| [Get a general idea of Customer Groups](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
-| [Get a general idea of Password Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
+| [Get a general idea of Customer Account](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-accounts-overview.html)  |
+| [Get a general idea of Customer Registration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-registration-overview.html)   |
+| [Get a general idea of Customer Login](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-login-overview.html)  |
+| [Get a general idea of Customer Groups](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-groups-overview.html)   |
+| [Get a general idea of Password Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/password-management-overview.html)  |

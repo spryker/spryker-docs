@@ -1465,7 +1465,73 @@ service_point_widget.no_results,"Nichts gefunden...",de_DE
 console data:import glossary
 ```
 
-### 2) Enable controllers
+### 2) Set up configuration
+
+Add the following configuration to your project:
+
+1. Disable service point selection for product bundles (if it's exists) during checkout:
+
+| CONFIGURATION                                                                                     | SPECIFICATION                                                                                         | NAMESPACE                   |
+|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------|
+| ServicePointWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines a list of properties in a `ItemTransfer` that are not intended for form hydration.            | Pyz\Yves\ServicePointWidget |
+| ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines a list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |
+
+**src/Pyz/Yves/ServicePointWidget/ServicePointWidgetConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ServicePointWidget;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use SprykerShop\Yves\ServicePointWidget\ServicePointWidgetConfig as SprykerServicePointWidgetConfig;
+
+class ServicePointWidgetConfig extends SprykerServicePointWidgetConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getNotApplicableServicePointAddressStepFormItemPropertiesForHydration(): array
+    {
+        return [
+            ItemTransfer::BUNDLE_ITEM_IDENTIFIER,
+            ItemTransfer::RELATED_BUNDLE_ITEM_IDENTIFIER,
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductBundle/ProductBundleConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductBundle;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use Spryker\Zed\ProductBundle\ProductBundleConfig as SprykerProductBundleConfig;
+
+class ProductBundleConfig extends SprykerProductBundleConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getAllowedBundleItemFieldsToCopy(): array
+    {
+        return [
+            ItemTransfer::SHIPMENT,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that service point selection is not possible for product bundles on the checkout address step (`http://mysprykershop.com/checkout/address`).
+
+{% endinfo_block %}
+
+### 3) Enable controllers
 
 Register the following route providers on the Storefront:
 
@@ -1499,7 +1565,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 3) Set up widgets
+### 4) Set up widgets
 
 1. Register the following plugins to enable widgets:
 

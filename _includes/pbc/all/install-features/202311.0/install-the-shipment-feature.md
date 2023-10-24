@@ -1749,7 +1749,73 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up Behavior
+### 2) Set up configuration
+
+Add the following configuration to your project:
+
+1. Disable shipment point selection for product bundles (if it's exists) during checkout:
+
+| CONFIGURATION                                                                                     | SPECIFICATION                                                                                         | NAMESPACE                   |
+|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------|
+| ShipmentTypeWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines a list of properties in a `ItemTransfer` that are not intended for form hydration.            | Pyz\Yves\ShipmentTypeWidget |
+| ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines a list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |
+
+**src/Pyz/Yves/ShipmentTypeWidget/ShipmentTypeWidgetConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShipmentTypeWidget;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use SprykerShop\Yves\ShipmentTypeWidget\ShipmentTypeWidgetConfig as SprykerShipmentTypeWidgetConfig;
+
+class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getNotApplicableShipmentTypeAddressStepFormItemPropertiesForHydration(): array
+    {
+        return [
+            ItemTransfer::BUNDLE_ITEM_IDENTIFIER,
+            ItemTransfer::RELATED_BUNDLE_ITEM_IDENTIFIER,
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductBundle/ProductBundleConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductBundle;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use Spryker\Zed\ProductBundle\ProductBundleConfig as SprykerProductBundleConfig;
+
+class ProductBundleConfig extends SprykerProductBundleConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getAllowedBundleItemFieldsToCopy(): array
+    {
+        return [
+            ItemTransfer::SHIPMENT,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that shipment point selection is not possible for product bundles on the checkout address step (`http://mysprykershop.com/checkout/address`).
+
+{% endinfo_block %}
+
+### 3) Set up Behavior
 
 Enable the following behaviors by registering the plugins:
 

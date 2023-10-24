@@ -2680,6 +2680,10 @@ entries:
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-icon-system.html
               - title: Typography
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-typography.html
+              - title: Responsive Design
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-responsive-design.html
+                include_versions:
+                - "202307.0"
 
         - title: Building pages
           nested:

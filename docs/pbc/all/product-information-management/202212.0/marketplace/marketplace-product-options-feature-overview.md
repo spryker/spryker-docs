@@ -30,7 +30,7 @@ Currently, you can create and manage general product options via the Back Office
 
 * For details about how you can create product options in the Back Office, see [Creating a product option](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html).
 * For details about how you can manage the product options in the Back Office, see [Managing product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/product-options/create-product-options.html).
-* For details about how you can import merchant product options, see [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html).
+* For details about how you can import merchant product options, see [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html).
 
 {% endinfo_block %}
 
@@ -43,7 +43,7 @@ Product option groups created by merchants can have the following statuses:
 * *Denied*: The Marketplace administrator rejected the product option, and merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
 
 
-Currently, you can only import the Marketplace options approval statuses. For details, see [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html).
+Currently, you can only import the Marketplace options approval statuses. For details, see [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html).
 
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:
@@ -92,5 +92,5 @@ Currently, the feature has the following functional constraints which are going 
 
 | INTEGRATION GUIDES          | DATA IMPORT         |
 |--------------------------------|----------------|
-| [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)                                        | [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html)  |
+| [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)                                        | [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html)  |
 | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html) |  

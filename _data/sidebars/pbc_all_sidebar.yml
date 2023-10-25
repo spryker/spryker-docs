@@ -13,18 +13,18 @@ entries:
             url: /docs/pbc/all/back-office/back-office-translations-overview.html
           - title: Install the Spryker Core Back Office feature
             url: /docs/pbc/all/back-office/install-the-spryker-core-back-office-feature.html
-          - title: "HowTo: Add support of number formatting in the Back Office"
-            url: /docs/pbc/all/back-office/howto-add-support-of-number-formatting-in-the-back-office.html
           - title: Manage in the Back Office
             nested:
               - title: View Dashboard
                 url: /docs/pbc/all/back-office/manage-in-the-back-office/view-dashboard.html
           - title: Install and upgrade
             nested:
-              - title: Upgrade modules
-                nested:
-                  - title: Chart
-                    url: /docs/pbc/all/back-office/install-and-upgrade/upgrade-modules/upgrade-the-chart-module.html
+              - title: Install the Spryker Core Back Office feature
+                url: /docs/pbc/all/back-office/install-and-upgrade/install-the-spryker-core-back-office-feature.html
+              - title: Upgrade the Chart module
+                url: /docs/pbc/all/back-office/install-and-upgrade/upgrade-the-chart-module.html
+              - title: Install the Back Office number formatting
+                url: /docs/pbc/all/back-office/install-and-upgrade/install-the-back-office-number-formatting.html
               - title: Install features
                 include_versions:
                 - "202311.0"
@@ -86,11 +86,11 @@ entries:
                 url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-carrier-management-data.html
                 nested:
                   - title: File details - shipment.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment.csv.html
                   - title: File details - shipment_method_store.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-store.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-method-store.csv.html
                   - title: File details - shipment_price.csv
-                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-price.csv.html
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-price.csv.html
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Add a new shipment method"
@@ -158,11 +158,11 @@ entries:
               - title: Import data
                 nested:
                   - title: File details - shipment_method_shipment_type.csv
-                    url: /docs/pbc/all/carrier-management//unified-commerce/import-and-export-data/file-details-shipment-method-shipment-type.csv.html
+                    url: /docs/pbc/all/carrier-management//unified-commerce/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html
                     include_versions:
                     - "20311.0"
                   - title: File details - Shipment type
-                    url: /docs/pbc/all/carrier-management/202311.0/unified-commerce/import-and-export-data/file-details-shipment-type.csv.html
+                    url: /docs/pbc/all/carrier-management/202311.0/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html
                     include_versions:
                     - "20311.0"
       - title: Cart and Checkout
@@ -344,11 +344,11 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-cart-and-checkout-data.html
                 nested:
                   - title: File details - comment.csv
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-comment.csv.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-file-details-comment.csv.html
                   - title: File details - product_quantity.csv
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-product-quantity.csv.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html
                   - title: File details - sales_order_threshold.csv
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -597,41 +597,41 @@ entries:
                 url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-content-management-system-data.html
                 nested:
                   - title: cms_template.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-template.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-template.csv.html
                   - title: cms_block.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-block.csv.html
                   - title: cms_block_store.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block-store.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-block-store.csv.html
                   - title: cms_block_category_position.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block-category-postion.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-block-category-postion.csv.html
                   - title: cms_block_category.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-block-category.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-block-category.csv.html
                   - title: content_banner.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-banner.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-content-banner.csv.html
                   - title: content_product_abstract_list.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-product-abstract-list.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html
                   - title: content_product_set.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-product-set.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-content-product-set.csv.html
                   - title: cms_page.csv.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-page.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-page.csv.html
                   - title: cms_page_store.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-page-store.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-page-store.csv.html
                   - title: cms_slot_template.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-slot-template.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-slot-template.csv.html
                   - title: cms_slot.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-slot.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-slot.csv.html
                   - title: cms_slot_block.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-cms-slot-block.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-cms-slot-block.csv.html
                   - title: mime_type.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-mime-type.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-mime-type.csv.html
                   - title: navigation.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-navigation.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-navigation.csv.html
                   - title: navigation_node.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-navigation-node.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html
                   - title: content_navigation.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-content-navigation.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html
                   - title: product_set.csv
-                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/file-details-product-set.csv.html
+                    url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-file-details-product-set.csv.html
               - title: Manage using Glue API
                 nested:
                   - title: Retrieve abstract product list content items
@@ -731,20 +731,18 @@ entries:
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Create a custom content item"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-create-a-custom-content-item.html
-                  - title: "HowTo: Create a visibility condition for CMS Blocks"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
-                  - title: "HowTo: Create CMS templates"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
-                  - title: "HowTo: Define positions of category CMS blocks"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
-                  - title: "HowTo: Define the maximum size of content fields"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html
-                  - title: "HowTo: Use blocks"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/howto-use-blocks.html
-                  - title: "Tutorial: CMS"
-                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/tutorial-cms.html
+                  - title: Create a custom content item
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/create-a-custom-content-item.html
+                  - title: Create a visibility condition for CMS Blocks
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
+                  - title: Create CMS templates
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/create-cms-templates.html
+                  - title: Define positions of category CMS blocks
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/define-positions-for-category-cms-blocks.html
+                  - title: Define the maximum size of content fields
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/define-the-maximum-size-of-content-fields.html
+                  - title: Using CMS blocks in content
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/using-cms-blocks-in-content.html
                   - title: "Tutorial: Content and search - personalized catalog pages"
                     url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
               - title: Third-party integrations
@@ -779,6 +777,7 @@ entries:
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
       - title: Customer Relationship Management
+        url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
         - "202212.0"
         - "202307.0"
@@ -978,7 +977,7 @@ entries:
                 include_versions:
                 - "202311.0"
           - title: Data Exchange FAQ
-            url: /docs/pbc/all/data-exchange/data-exchange-faq.html      
+            url: /docs/pbc/all/data-exchange/data-exchange-faq.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -1043,13 +1042,13 @@ entries:
                 url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-discount-management-data.html
                 nested:
                   - title: File details - discount.csv
-                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount.csv.html
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-file-details-discount.csv.html
                   - title: File details - discount_store.csv
-                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-store.csv.html
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-file-details-discount-store.csv.html
                   - title: File details - discount_amount.csv
-                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-amount.csv.html
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html
                   - title: File details - discount_voucher.csv
-                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-file-details-discount-voucher.csv.html
               - title: Create discounts based on shipment
                 url: /docs/pbc/all/discount-management/base-shop/create-discounts-based-on-shipment.html
           - title: Marketplace
@@ -1156,9 +1155,9 @@ entries:
             url: /docs/pbc/all/gift-cards/import-and-export-data/import-gift-cards-data.html
             nested:
               - title: File details- gift_card_abstract_configuration.csv
-                url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html
+                url: /docs/pbc/all/gift-cards/import-and-export-data/import-file-details-gift-card-abstract-configuration.csv.html
               - title: File details- gift_card_concrete_configuration.csv
-                url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
+                url: /docs/pbc/all/gift-cards/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html
           - title: Manage using Glue API
             nested:
               - title: Manage gift cards of guest users
@@ -1336,26 +1335,26 @@ entries:
                   - title: Install the Merchant Portal
                     url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-the-merchant-portal.html
               - title: Import data
-                url: /docs/pbc/all/merchant-management/marketplace/import-data/import-merchant-management-data.html
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-merchant-management-data.html
                 nested:
                   - title: "File details: merchant.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant.csv.html
                   - title: "File details: merchant_profile.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html
                   - title: "File details: merchant_profile_address.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile-address.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html
                   - title: "File details: merchant_open_hours_week_day_schedule.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-week-day-schedule.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-open-hours-week-day-schedule.csv.html
                   - title: "File details: merchant_open_hours_date_schedule.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-open-hours-date-schedule.csv.html
                   - title: "File details: merchant_category.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-category.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-category.csv.html
                   - title: "File details: merchant_stock.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-stock.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html
                   - title: "File details: merchant_store.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-store.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-store.csv.html
                   - title: "File details: merchant_user.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-user.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
@@ -1701,7 +1700,7 @@ entries:
                       - title: Product Offer Service Points
                         url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html
                         include_versions:
-                        - "202311.0"            
+                        - "202311.0"
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         nested:
@@ -1922,7 +1921,7 @@ entries:
           - title: Unified Commerce
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -2301,11 +2300,11 @@ entries:
                 url: /docs/pbc/all/price-management/base-shop/import-and-export-data/import-and-export-price-management-data.html
                 nested:
                   - title: currency.csv
-                    url: /docs/pbc/all/price-management/base-shop/import-and-export-data/file-details-currency.csv.html
+                    url: /docs/pbc/all/price-management/base-shop/import-and-export-data/import-file-details-currency.csv.html
                   - title: product_price_schedule.csv
-                    url: /docs/pbc/all/price-management/base-shop/import-and-export-data/file-details-product-price-schedule.csv.html
+                    url: /docs/pbc/all/price-management/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html
                   - title: product_price.csv
-                    url: /docs/pbc/all/price-management/base-shop/import-and-export-data/file-details-product-price.csv.html
+                    url: /docs/pbc/all/price-management/base-shop/import-and-export-data/import-file-details-product-price.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/price-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -2377,9 +2376,9 @@ entries:
               - title: Import and export data
                 nested:
                   - title: "File details: product_price.csv"
-                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-product-price.csv.html
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/import-file-details-product-price.csv.html
                   - title: "File details: price-product-offer.csv"
-                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/file-details-price-product-offer.csv.html
+                    url: /docs/pbc/all/price-management/marketplace/import-and-export-data/import-file-details-price-product-offer.csv.html
               - title: Retrieve product offer prices using Glue API
                 url: /docs/pbc/all/price-management/marketplace/glue-api-retrieve-product-offer-prices.html
               - title: Domain model and relationships
@@ -2676,47 +2675,47 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/categories-data-import.html
                     nested:
                       - title: category_template.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/file-details-category-template.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html
                       - title: category.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/file-details-category.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html
                       - title: category_store.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/file-details-category-store.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/categories-data-import/import-file-details-category-store.csv.html
                   - title:  Products data import
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/products-data-import.html
                     nested:
                       - title: product_attribute_key.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html
                       - title: product_management_attribute.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html
                       - title: product_abstract.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html
                       - title: product_abstract_store.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html
                       - title: product_concrete.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html
                       - title: product_image.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-image.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html
                       - title: product_abstract_approval_status.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/file-details-product-abstract-approval-status.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-approval-status.csv.html
                   - title: Product options data import
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/product-options-data-import.html
                     nested:
                       - title: product_option.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html
                       - title: product_option_price.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/file-details-product-option-price.csv.html
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html
                   - title: product_alternative.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-alternative.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html
                   - title: product_concrete_pre_configuration.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html
                   - title: product_discontinued.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-discontinued.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html
                   - title: product_group.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-group.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-group.csv.html
                   - title: product_label_store.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-label-store.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
                   - title: product_label.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-label.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -2925,11 +2924,11 @@ entries:
               - title: Import and export data
                 nested:
                   - title: "merchant_product.csv"
-                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product.csv.html
+                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/import-file-details-merchant-product.csv.html
                   - title: "merchant_product_option_group.csv"
-                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html
+                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html
                   - title: merchant_product_approval_status_default.csv
-                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html
+                    url: /docs/pbc/all/product-information-management/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html
                 nested:
@@ -3019,7 +3018,7 @@ entries:
               - title: Upgrade the ProductRelationStorage module
                 url: /docs/pbc/all/product-relationship-management/install-and-upgrade/upgrade-the-productrelationstorage-module.html
           - title: Import product relations
-            url: /docs/pbc/all/product-relationship-management/file-details-product-relation.csv.html
+            url: /docs/pbc/all/product-relationship-management/import-file-details-product-relation.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
             nested:
@@ -3068,7 +3067,7 @@ entries:
           - title: Unified Commerce
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Install and upgarde
                 nested:
                   - title: Install features
@@ -3092,7 +3091,7 @@ entries:
             url: /docs/pbc/all/ratings-reviews/import-and-export-data/ratings-and-reviews-data-import.html
             nested:
               - title: File details- product_review.csv
-                url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
+                url: /docs/pbc/all/ratings-reviews/import-and-export-data/import-file-details-product-review.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/log-into-the-back-office.html
             nested:
@@ -3303,9 +3302,9 @@ entries:
                 url: /docs/pbc/all/search/base-shop/import-and-export-data/search-data-import.html
                 nested:
                   - title: "File details: product_search_attribute_map.csv"
-                    url: /docs/pbc/all/search/base-shop/import-and-export-data/file-details-product-search-attribute-map.csv.html
+                    url: /docs/pbc/all/search/base-shop/import-and-export-data/import-file-details-product-search-attribute-map.csv.html
                   - title: "File details: product_search_attribute.csv"
-                    url: /docs/pbc/all/search/base-shop/import-and-export-data/file-details-product-search-attribute.csv.html
+                    url: /docs/pbc/all/search/base-shop/import-and-export-data/import-file-details-product-search-attribute.csv.html
               - title: Tutorials and Howtos
                 nested:
                   - title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
@@ -3713,13 +3712,13 @@ entries:
                 url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
                 nested:
                   - title: File details - warehouse.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-warehouse.csv.html
                   - title: File details - warehouse_address.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse-address.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html
                   - title: File details - warehouse_store.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-warehouse-store.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html
                   - title: File details - product_stock.csv
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/file-details-product-stock.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-product-stock.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -3788,11 +3787,11 @@ entries:
               - title: Import and export data
                 nested:
                   - title: "File details: product_offer_stock.csv"
-                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-data/file-details-product-offer-stock.csv.html
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-and-export-data/import-file-details-product-offer-stock.csv.html
           - title: Unified Commerce
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -3808,7 +3807,7 @@ entries:
             - "202311.0"
             nested:
               - title: Install and upgrade
-                nested: 
+                nested:
                   - title: Install features
                     nested:
                     - title: Warehouse Picking

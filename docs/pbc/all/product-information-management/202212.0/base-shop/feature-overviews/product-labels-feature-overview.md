@@ -126,7 +126,7 @@ A Back Office user can define the stores each product label is displayed in. For
 
 To learn how a Back Office user can define store relation for a product label, see [Creating product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html).
 
-A developer can also [import store relations for product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-label-store.csv.html).
+A developer can also [import store relations for product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html).
 
 ## Product label statuses
 

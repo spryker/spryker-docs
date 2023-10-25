@@ -415,6 +415,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 #### Adjust Product configuration in `Zed`
 
+Because of Algolia product search index syncronization is triggerd by internal Spryker events, it's required to provide a list of events for enabling product data syncronization.
 Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 ```php
@@ -469,6 +470,19 @@ class ProductConfig extends SprykerProductConfig
     //...
 }
 ```
+
+{% info_block warningBox "Warning" %}
+
+If your project has project-speciific functionality where abstract or concrete products are created/update/deleted, please add needed events to the list, when you need to send updated data to Algolia.
+The examples of such functionality:
+- a custom functionality in the Back Office;
+- custom data import;
+- integration with some middleware when product or product related data is update in Spryker.
+
+Note: to trigger custom events in Spryker you need to use `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods.
+
+{% endinfo_block %}
+
 
 #### Configure product dependencies in `Zed`
 

@@ -475,13 +475,11 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that the plugins are activated, send the `POST https://glue.mysprykershop.com/checkout` request with invalid shipments and check that errors are returned.
+To verify the plugins are activated, send the `POST https://glue.mysprykershop.com/checkout` request with invalid shipments and make sure errors are returned.
 
 {% endinfo_block %}
 
-## Related features
-
-Integrate the following related features.
+## Install related features
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                               |
 |--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|

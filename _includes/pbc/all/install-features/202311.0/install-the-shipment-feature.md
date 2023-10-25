@@ -166,7 +166,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         new ShipmentTypesResourceRoutePlugin(),
     }
-    
+
     /**
      * {@inheritDoc}
      *
@@ -181,7 +181,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ShipmentsRestApiConfig::RESOURCE_SHIPMENT_METHODS,
             new ShipmentTypesByShipmentMethodsResourceRelationshipPlugin(),
         );
-        
+
         return $resourceRelationshipCollection;
     }
 }
@@ -524,7 +524,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
             new ItemShipmentTypeQuoteMapperPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataValidatorPluginInterface>
      */
@@ -534,7 +534,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
             new ShipmentTypeCheckoutDataValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\ReadCheckoutDataValidatorPluginInterface>
      */
@@ -549,7 +549,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Deactivate one of the shipment types and send a request with a corresponding shipment method: 
+Deactivate one of the shipment types and send a request with a corresponding shipment method:
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
   <summary markdown='span'>Request body example</summary>
@@ -870,7 +870,7 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 | ShipmentMethodPublishShipmentTypeWriterPublisherPlugin | Publishes shipment type data by `ShipmentMethod` publish events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
 | ShipmentMethodShipmentTypeWriterPublisherPlugin        | Publishes shipment type data by `SpyShipmentMethod` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
 | ShipmentMethodStoreShipmentTypeWriterPublisherPlugin   | Publishes shipment type data by `SpyShipmentMethodStore` entity events.                         |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore |
-| ShipmentTypePublisherTriggerPlugin                     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
+| ShipmentTypePublisherTriggerPlugin                     | Allows populating shipment type storage table with data and triggering the export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 

@@ -10,6 +10,7 @@ related:
 redirect_from:
     - /docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
 
 ---
 

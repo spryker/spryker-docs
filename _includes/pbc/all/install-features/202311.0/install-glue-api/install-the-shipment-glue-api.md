@@ -1,13 +1,9 @@
 
 
 
-This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) API.
+This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) Glue API.
 
-## Install feature core
-
-Follow the steps below to install the Shipment feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -19,7 +15,7 @@ Install the required features:
 | Glue API: Glue Application | {{page.version}} | [Glue API: Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                         |
 | Glue API: Order Management | {{page.version}} | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -37,7 +33,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+## 2) Set up configuration
 
 Add the following configuration to your project:
 
@@ -66,7 +62,7 @@ class ShipmentsRestApiConfig extends SprykerShipmentsRestApiConfig
 }
 ```
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Generate transfer changes:
 
@@ -124,7 +120,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Add translations
+## 4) Add translations
 
 Add translations as follows:
 
@@ -147,11 +143,11 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 Set up the following behaviors.
 
-#### Enable resources and relationships
+### Enable resources and relationships
 
 Activate the following plugins:
 
@@ -218,7 +214,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% endinfo_block %}
 
-#### Configure mapping
+### Configure mapping
 
 To map the data from requests to `QuoteTransfer`, configure the following mappers on the project level:
 
@@ -385,7 +381,7 @@ To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send th
 
 {% endinfo_block %}
 
-#### Configure the multi-shipment method validator and expander plugins
+### Configure the multi-shipment method validator and expander plugins
 
 Activate the following plugins:
 
@@ -481,6 +477,6 @@ To verify the plugins are activated, send the `POST https://glue.mysprykershop.c
 
 ## Install related features
 
-| FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                               |
+| FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                               |
 |--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

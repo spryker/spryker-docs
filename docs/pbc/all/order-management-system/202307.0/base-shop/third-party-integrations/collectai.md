@@ -11,9 +11,6 @@ redirect_from:
   - /docs/collect-ai
   - /docs/en/collect-ai
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/collectai.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

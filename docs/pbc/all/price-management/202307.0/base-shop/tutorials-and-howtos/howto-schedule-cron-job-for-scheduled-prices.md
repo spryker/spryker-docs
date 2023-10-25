@@ -22,14 +22,13 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 related:
   - title: Scheduled Prices feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/scheduled-prices-feature-walkthrough.html
+    link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html
 ---
 
 
 By default, the cron job runs every day at 00:06:00-00:00. You can change the frequency, date and time of running the cron job by modifying the `'schedule'` key in `config/Zed/cronjobs/jobs.php`:
 
 ```php
-...
 /* PriceProductSchedule */
 $jobs[] = [
     'name' => 'apply-price-product-schedule',
@@ -40,3 +39,5 @@ $jobs[] = [
     'stores' => $allStores,
 ];
 ```
+
+For information on how to configure the schedule precisely, check the [Cron Expression documentation](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm).

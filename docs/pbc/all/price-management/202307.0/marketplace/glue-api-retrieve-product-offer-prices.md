@@ -8,7 +8,7 @@ related:
   - title: Retrieving product offers
     link: docs/pbc/all/offer-management/page.version/marketplace/glue-api-retrieve-product-offers.html
   - title: Retrieving product offer availabilities
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/glue-api-retrieve-product-offer-availability.html
 ---
 
 This document describes how to retrieve product offer prices via Glue API.

@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/datavirtuality
 originalArticleId: 5de4a6c0-796c-4aa3-baa4-cfae81cc3810
 redirect_from:
-  - /2021080/docs/datavirtuality
-  - /2021080/docs/en/datavirtuality
-  - /docs/datavirtuality
-  - /docs/en/datavirtuality
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/data-virtuality.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

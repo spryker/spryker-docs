@@ -5,14 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopmacher
 originalArticleId: 9ae60ecc-8181-45c1-8797-e5b101e1e61b
 redirect_from:
-  - /2021080/docs/shopmacher
-  - /2021080/docs/en/shopmacher
-  - /docs/shopmacher
-  - /docs/en/shopmacher
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/shopmacher.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Copyright and Disclaimer

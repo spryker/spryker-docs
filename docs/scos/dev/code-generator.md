@@ -17,8 +17,6 @@ redirect_from:
 related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
-  - title: Data export
-    link: docs/scos/dev/sdk/data-export.html
   - title: Data import
     link: docs/scos/dev/sdk/data-import.html
   - title: Development virtual machine, docker containers & console

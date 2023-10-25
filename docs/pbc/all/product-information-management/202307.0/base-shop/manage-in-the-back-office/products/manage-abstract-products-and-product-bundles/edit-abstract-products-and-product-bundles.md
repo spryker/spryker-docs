@@ -43,7 +43,7 @@ Each section contains reference information. Make sure to look up the necessary 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| STORE RELATION  | [Stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product is available in. |
+| STORE RELATION  | [Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in. |
 | SKU PREFIX | Unique product identifier that helps to track unique information related to the product. |
 | NAME | Name that's displayed for the product on the Storefront. |
 | DESCRIPTION | Description that's displayed for the product on the Storefront. |
@@ -67,7 +67,7 @@ Each section contains reference information. Make sure to look up the necessary 
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| TAX SET | Conditions under which the product is taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html). |
+| TAX SET | Conditions under which the product is taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html). |
 
 ## Edit volume prices of an abstract product or product bundle
 
@@ -151,7 +151,7 @@ Click the **Images** tab and do any of the following for needed locales.
 | --- | --- |
 | ABSTRACT SKU | Unique identifier of an abstract product the scheduled price belongs to |
 | CONCRETE SKU | Unique identifier of a concrete product the scheduled price belongs to. The field is blank because you are editing the scheduled price of an abstract product. |
-| STORE | [Store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the scheduled price is displayed. |
+| STORE | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the scheduled price is displayed. |
 | CURRENCY | Currency in which the scheduled price is defined. |
 | NET PRICE | Net value of the product defined by the scheduled price. |
 | NET PRICE | Net value of the product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**. |

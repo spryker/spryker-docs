@@ -5,10 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/overview-of-the-feature-guides
 originalArticleId: d4bebd49-d3f1-4fbb-b508-5a53149ad0b7
 redirect_from:
-  - /2021080/docs/overview-of-the-feature-guides
-  - /2021080/docs/en/overview-of-the-feature-guides
-  - /docs/overview-of-the-feature-guides
-  - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/201811.0/features.html
   - /docs/scos/user/features/202200.0/features.html
 ---
 

@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/episerver.html
 related:
   - title: Episerver - Integration into a project
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
   - title: Episerver - Installation and Configuration
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html
   - title: Episerver - API Requests
     link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
   - title: Episerver - Order referenced commands
@@ -35,8 +35,8 @@ YOUR ADVANTAGES:
 
 * [Episerver API](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
 * [Episerver order reference commands](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
-* [Installing and configuring Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html)
-* [Integrating Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html)
+* [Installing and configuring Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html)
+* [Integrating Episerver](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html)
 
 
 ---

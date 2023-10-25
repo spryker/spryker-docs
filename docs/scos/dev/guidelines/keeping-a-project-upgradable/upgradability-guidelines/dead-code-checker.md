@@ -29,7 +29,7 @@ Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
 
 Unused class `Pyz/Zed/Single/Communication/Plugin/SinglePlugin` that produces an error:
 
-```bash
+```php
 namespace Pyz\Zed\Single\Communication\Plugin;
 
 use Spryker\Zed\Single\Communication\Plugin\SinglePlugin as SprykerSinglePlugin;
@@ -43,3 +43,10 @@ class SinglePlugin extends SprykerSinglePlugin
 ## Resolve the error
 
 Remove the unused dead code in project.
+
+
+## Run only this checker
+To run only this checker, include `DEAD_CODE_CHECKER` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=DEAD_CODE_CHECKER
+```

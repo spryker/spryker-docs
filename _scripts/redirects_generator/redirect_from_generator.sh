@@ -21,7 +21,7 @@ process_markdown_files() {
 }
 
 # Specify the folder to add `redirect_from` to
-folder_path=""
+folder_path="docs/pbc/all/product-information-management/202307.0/marketplace/import-and-export-data"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

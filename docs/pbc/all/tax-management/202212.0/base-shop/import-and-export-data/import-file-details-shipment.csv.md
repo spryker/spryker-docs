@@ -6,7 +6,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202212.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html
 ---
 
-This document describes how to import taxes for shipment methods via  `shipment.csv`. To import full information for shipment methods, see [File details - shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/file-details-shipment.csv.html).
+This document describes how to import taxes for shipment methods via  `shipment.csv`. To import full information for shipment methods, see ["Import file details: shipment.csv"](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html).
 
 ## Import file dependencies
 

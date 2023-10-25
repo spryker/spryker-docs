@@ -58,4 +58,4 @@ The feature has the following functional constraints which are going to be resol
 
 |INSTALLATION GUIDES | DATA IMPORT |
 |---------|---------|
-| [Product Sets feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-product-set.csv.html) |
+| [Product Sets feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html) |

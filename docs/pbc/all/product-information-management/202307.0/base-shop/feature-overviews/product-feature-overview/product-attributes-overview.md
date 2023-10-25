@@ -18,7 +18,7 @@ You can create characteristic attributes for products, like brand or special fea
 
 A Back Office user can [create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 
-A developer can import [product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html) and [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html).
+A developer can import [product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html) and [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html).
 
 
 ## Product attribute inheritance
@@ -28,7 +28,7 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 ## Declared attributes
 
-A declared attribute is an attribute that was [created](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html) or [imported](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html).
+A declared attribute is an attribute that was [created](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html) or [imported](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it.
 

@@ -1,5 +1,5 @@
 ---
-title: "File details: order-status.csv"
+title: "Import file details: order-status.csv"
 description: Import the data to to configure the update of the regular order status information
 last_updated: Jun 22, 2021
 template: data-import-template

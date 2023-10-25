@@ -1,23 +1,19 @@
 
 
-This document describes how to integrate the Service Points Cart + Checkout feature into a Spryker project.
+This document describes how to install the Service Points Cart + Checkout feature.
 
-## Install feature core
+## Prerequisites
 
-Follow the steps below to install the Service Points Cart + Checkout feature.
-
-### Prerequisites
-
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                | VERSION           | INTEGRATION GUIDE                                                                                                                                                          |
 |---------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html) |
 | Checkout            | {{page.version}}  | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                                               |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules using Composer
 
-We offer the example Click & Collect service point cart replacement strategies. To use them, install the following module:
+We offer an example of Click & Collect service point cart replacement strategies. To use them, install the following module:
 
 ```bash
 composer require spryker/click-and-collect-example: "^0.3.0" --update-with-dependencies
@@ -33,7 +29,7 @@ Make sure that the following module has been installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
+## 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -56,21 +52,21 @@ Make sure that the following changes have been applied in transfer objects:
 | ServicePoint                     | class | created | src/Generated/Shared/Transfer/ServicePointTransfer                     |
 | ShipmentType                     | class | created | src/Generated/Shared/Transfer/ShipmentTypeTransfer                     |
 | Shipment                         | class | created | src/Generated/Shared/Transfer/ShipmentTransfer                         |
-| ProductOffer                     | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                     | 
+| ProductOffer                     | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer                     |
 | ProductOfferServicePoint         | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointTransfer         |
-| ProductOfferServicePointCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointCriteriaTransfer | 
+| ProductOfferServicePointCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointCriteriaTransfer |
 | ProductOfferPrice                | class | created | src/Generated/Shared/Transfer/ProductOfferPriceTransfer                |
 | ProductOfferStock                | class | created | src/Generated/Shared/Transfer/ProductOfferStockTransfer                |
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+## 2) Set up behavior
 
 1. Register plugins:
 
 | PLUGIN                                            | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                             |
 |---------------------------------------------------|-------------------------------------------------|---------------|-------------------------------------------------------|
-| ServicePointCheckoutAddressStepPostExecutePlugin  | Replaces quote items using applicable strategy. | None          | SprykerShop\Yves\ServicePointCartPage\Plugin\CartPage |
+| ServicePointCheckoutAddressStepPostExecutePlugin  | Replaces quote items using an  applicable strategy. |           | SprykerShop\Yves\ServicePointCartPage\Plugin\CartPage |
 
 **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
@@ -103,12 +99,10 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 2. Enable the demo Click & Collect replacement strategy plugins:
 
-For the demo purpose, we propose the example of the Click & Collect replacement strategy.
-
 | PLUGIN                                                                   | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                                                |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin | Replaces product offers in quote items that have `delivery` shipment type with suitable product offers replacements. |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
-| ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin   | Replaces product offers in quote items that have `pickup` shipment type with suitable product offers replacements.   |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
+| ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin | Replaces product offers in quote items that have the `delivery` shipment type with suitable product offers replacements. |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
+| ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin   | Replaces product offers in quote items that have the `pickup` shipment type with suitable product offers replacements.   |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
 
 **src/Pyz/Zed/ServicePointCart/ServicePointCartDependencyProvider.php**
 
@@ -143,12 +137,12 @@ class ServicePointCartDependencyProvider extends SprykerServicePointCartDependen
 
 {% info_block warningBox "Verification" %}
 
-1. Create two Product Offers with `delivery` and `pickup` shipment types for the same product.
-2. Add the Product Offer with `delivery` shipment type to the cart.
-3. Start Checkout.
+1. Create two product offers with the `delivery` and `pickup` shipment types for the same product.
+2. Add the product offer with `delivery` shipment type to cart.
+3. Start the checkout.
 4. Go to the Address step.
-5. Choose `pickup` shipment type.
+5. Choose the `pickup` shipment type.
 6. Go to the next step.
-7. Make sure that the Product Offer with `delivery` type was replaced with the Product Offer with `pickup` type.
+7. Check that the product offer with the `delivery` type was replaced with the product offer with `pickup` type.
 
 {% endinfo_block %}

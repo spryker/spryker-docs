@@ -13,7 +13,7 @@ redirect_from:
 
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
-The preparation steps listed here are mandatory because they are critical to the success of your go-live. We expect every Spryker customer and partner to complete the list as described below. We can't assist you with problems related to your go-live that are caused by these steps not being completed in time. Ensure that your project plan contains tasks related to the go-live checklist and allows enough time for them to be completed.
+The preparation steps listed here are mandatory because they are critical to the success of your go-live. We strongly encourage you to complete these steps because we won't be able to resolve the issues related to the steps not completed in time. Ensure that your project plan contains the tasks related to the go-live checklist and allows enough time for them to be completed.
 
 {% endinfo_block %}
 
@@ -55,11 +55,11 @@ Double check that you do not have any clear text passwords stored in config file
 
 ## Four weeks before go-live
 
-- *Make sure you are familiar with NewRelic APM*. If you have not requested NewRelic APM to be set up for you, please do so. For this, see [Platform change requests](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests) in "How to use the Support Portal."
+- *Make sure you are familiar with NewRelic APM*. If you have not requested NewRelic APM to be set up for you, do so. For more details about requesting changes, see [Platform change requests](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests).
 - *Performance Tips implemented and verified*. Double-check that you implemented all the provided [performance tips](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Conduct Load Tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
-- *Performance Testing and Environment Scale Dial-In* Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Since production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
-To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune your environment to meet your specific requirements.
+- *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
+To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune the environment to meet your specific requirements.
 
 {% info_block warningBox "Data import" %}
 

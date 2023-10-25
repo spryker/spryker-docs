@@ -24,7 +24,7 @@ related:
   - title: Retrieving image sets of abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/page.version/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 ---
 
 This endpoint allows retrieving detailed information about the prices of abstract products.

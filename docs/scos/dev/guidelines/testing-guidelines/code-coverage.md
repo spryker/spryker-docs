@@ -21,7 +21,7 @@ related:
   - title: Data builders
     link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
     link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
   - title: Setting up tests
@@ -53,3 +53,10 @@ Keep in mind, that if you execute the tests with the coverage report, it will ta
 Currently, we don't support code coverage for Presentation (Acceptance) tests out of the box.
 
 {% endinfo_block %}
+
+## Next steps
+
+- [Configure your testing environment]
+- [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html)
+
+

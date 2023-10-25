@@ -29,9 +29,6 @@ An Econda ID can be found in your account details (see image below).
 
 These instructions assume  you are using Antelope<!-- add link https://documentation.spryker.com/front-end_developer_guide/demoshop/antelope_global_tool/overview--> for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
 
-Before getting started we recommend that you read the following topics: [asset management](/docs/scos/dev/legacy-demoshop/201811.0/frontend-overview.html#asset-management)
-and Twig.
-
 ## Installing assets
 
 After you have successfully downloaded the SDK you need to register it in Yves. One way is to create an Econda folder in `assets/Yves/<themeName>` folder and extract the SDK to it (look at picture below)

@@ -8,6 +8,7 @@ originalArticleId: 6f7d36c1-2ee4-47d1-8f7f-ea0f1b7f93a7
 redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/system-requirements.html
 - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+- /docs/marketplace/dev/setup/202204.0/system-requirements.html
 - /docs/scos/dev/system-requirements/202304.0/system-requirements.html
 - /docs/marketplace/dev/setup/202307.0/system-requirements.html
 ---

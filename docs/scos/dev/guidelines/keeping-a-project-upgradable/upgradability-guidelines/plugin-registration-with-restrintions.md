@@ -91,3 +91,10 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 To solve this issue:
 
 1. Rewrite the plugin restrictions annotation according to required format.
+
+
+## Run only this checker
+To run only this checker, include `PLUGINS_REGISTRATION_WITH_RESTRICTIONS_CHECKER` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=PLUGINS_REGISTRATION_WITH_RESTRICTIONS_CHECKER
+```

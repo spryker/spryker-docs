@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
 originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
 redirect_from:
-  - /2021080/docs/retrieving-abstract-products
-  - /2021080/docs/en/retrieving-abstract-products
-  - /docs/retrieving-abstract-products
-  - /docs/en/retrieving-abstract-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/abstract-products/retrieving-abstract-products.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
@@ -21,7 +17,7 @@ related:
   - title: Retrieving image sets of abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/page.version/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/manage-using-glue-api/retrieve-tax-sets.html
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
@@ -1943,7 +1939,7 @@ For the attributes of other included resources, see:
 * [Retrieve prices of an abstract product](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html#category-nodes-response-attributes)
-* [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 * [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 * [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)

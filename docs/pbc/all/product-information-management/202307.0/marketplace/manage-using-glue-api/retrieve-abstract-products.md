@@ -2,6 +2,8 @@
 title: Retrieve abstract products
 description: This glue API document describes how to retrieve general information about abstract products and related resources in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/retrieving-product-information.html
 related:
   - title: Retrieving abstract products in abstract product lists
     link: docs/marketplace/dev/glue-api-guides/page.version/content-items/retrieving-abstract-products-in-abstract-product-lists.html
@@ -1483,7 +1485,7 @@ For the attributes of other included resources, see:
 * [Retrieve prices of an abstract product](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
 * [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)
-* [Retrieve tax sets](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html)
 * [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#retrieve-product-reviews)
 *  [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)

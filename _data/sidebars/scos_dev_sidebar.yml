@@ -3385,6 +3385,10 @@ entries:
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-icon-system.html
               - title: Typography
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-typography.html
+              - title: Responsive Design
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-responsive-design.html
+                include_versions:
+                - "202307.0"
 
         - title: Building pages
           nested:
@@ -4837,7 +4841,7 @@ entries:
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
       - title: Code coverage
-        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html      
+        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
       - title: Test framework
         url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
       - title: Setting up tests
@@ -4863,7 +4867,7 @@ entries:
       - title: Testify
         url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
       - title: Testing concepts
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
       - title: Data builders
         url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
       - title: Testing best practices
@@ -4874,7 +4878,7 @@ entries:
           - title: Best practices for effective testing
             url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
           - title: Test types best practices
-            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html     
+            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data processing guidelines

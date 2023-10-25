@@ -111,14 +111,14 @@ defaults:
        role: "dev"
   -
     scope:
-      path: "docs/cloud"
+      path: "docs/ca"
     values:
-      product: "cloud"
+      product: "ca"
   -
     scope:
-      path: "docs/cloud/dev"
+      path: "docs/ca/dev"
     values:
-      sidebar: "cloud_dev_sidebar"
+      sidebar: "ca_dev_sidebar"
       role: "dev"
   -
     scope:
@@ -222,7 +222,7 @@ versioned_categories:
 # these are defaults used for the front matter for these file types
 
 sidebars:
-  - cloud_dev_sidebar
+  - ca_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
   - sdk_dev_sidebar
@@ -255,8 +255,8 @@ algolia:
       title: 'SCOS Developer'
     - name: 'sdk_dev'
       title: 'SDK Developer'
-    - name: 'cloud_dev'
-      title: 'Cloud Developer'
+    - name: 'ca_dev'
+      title: 'Cloud administration'
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'scu_dev'

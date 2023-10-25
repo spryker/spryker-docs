@@ -1,8 +1,0 @@
----
-title: Install the Order Management + Service Points feature
-description: Learn how to integrate the Order Management + Service Points feature into your project
-last_updated: Aug 04, 2023
-template: feature-integration-guide-template
----
-
-{% include pbc/all/install-features/202400.0/install-the-service-points-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-service-points-order-management-feature.md -->

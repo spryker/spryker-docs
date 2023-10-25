@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) feature API into a Spryker project.
+This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) API.
 
 ## Install feature core
 
@@ -19,9 +19,9 @@ Install the required features:
 | Glue API: Glue Application | {{page.version}} | [Glue API: Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                         |
 | Glue API: Order Management | {{page.version}} | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/shipments-rest-api:"1.11.0" --update-with-dependencies
@@ -43,7 +43,7 @@ Add the following configuration to your project:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                 | NAMESPACE                |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
-| ShipmentsRestApiConfig::shouldExecuteShippingAddressValidationStrategyPlugins() | Defines if a stack of `ShippingAddressValidationStrategyPluginInterface` plugins should be executed during shipment checkout data validation. | Pyz\Zed\ShipmentsRestApi |
+| ShipmentsRestApiConfig::shouldExecuteShippingAddressValidationStrategyPlugins() | Defines if the stack of `ShippingAddressValidationStrategyPluginInterface` plugins should be executed during shipment checkout data validation. | Pyz\Zed\ShipmentsRestApi |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
 
@@ -143,7 +143,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -157,10 +157,10 @@ Activate the following plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                            |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------|
-| ShipmentMethodsByCheckoutDataResourceRelationshipPlugin | If `RestCheckoutDataTransfer` is provided as payload, adds the `shipment-methods` resource as relationship. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
-| OrderShipmentByOrderResourceRelationshipPlugin          | If `OrderTransfer` is provided as a payload, adds the `order-shipments` resource as a relationship .        |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
-| ShipmentMethodsByShipmentResourceRelationshipPlugin     | If`ShipmentGroupTransfer` is provided as payload, adds the `shipment-methods` resource as relationship.     |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
-| ShipmentsByCheckoutDataResourceRelationshipPlugin       | Adds `shipments` resource as relationship if `RestCheckoutDataTransfer` is provided as payload.             |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| ShipmentMethodsByCheckoutDataResourceRelationshipPlugin | If `RestCheckoutDataTransfer` is provided as payload, adds the `shipment-methods` resource as a relationship. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| OrderShipmentByOrderResourceRelationshipPlugin          | If `OrderTransfer` is provided as payload, adds the `order-shipments` resource as a relationship .        |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| ShipmentMethodsByShipmentResourceRelationshipPlugin     | If `ShipmentGroupTransfer` is provided as payload, adds the `shipment-methods` resource as a relationship.     |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| ShipmentsByCheckoutDataResourceRelationshipPlugin       | If `RestCheckoutDataTransfer` is provided as payload, adds the `shipments` resource as a relationship.              |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
 
 
 <details>
@@ -224,7 +224,7 @@ To map the data from requests to `QuoteTransfer`, configure the following mapper
 
 | PLUGIN                                         | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                         |
 |------------------------------------------------|-------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| ShipmentQuoteMapperPlugin                      | Adds a mapper that maps shipment information to `QuoteTransfer`.                    |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentQuoteMapperPlugin                      | Maps shipment information to `QuoteTransfer`.                    |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 | ShipmentRestOrderDetailsAttributesMapperPlugin | Maps the shipments from `OrderTransfer` to `RestOrderDetailsAttributesTransfer`.    |               | Spryker\Glue\ShipmentsRestApi\Plugin\OrdersRestApi                |
 | ShipmentsQuoteMapperPlugin                     | Maps the shipments from `RestCheckoutRequestAttributesTransfer` to `QuoteTransfer`. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 
@@ -283,7 +283,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-* To make sure that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you've provided in the request.
+* To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you've provided in the request.
 * To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout?include=shipments` and check that the order contains the shipments you've provided in the request.
 * To verify that `ShipmentRestOrderDetailsAttributesMapperPlugin` is activated, send the `GET https://glue.mysprykershop.com/orders?include=order-shipments` request and make sure that the order contains the shipments you've provided in the request.
 
@@ -350,7 +350,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data` request endpoint with shipment a method ID and check that, in the response, the `selectedShipmentMethods` is not empty:
+To verify that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data` request with a shipment a method ID and check that, in the response, the `selectedShipmentMethods` is not empty:
 
 **Response sample**
 
@@ -381,7 +381,7 @@ To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is ac
 }
 ```
 
-To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that you get the error saying that a shipment method is not found.
+To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and make sure you get the shipment method not found error.
 
 {% endinfo_block %}
 

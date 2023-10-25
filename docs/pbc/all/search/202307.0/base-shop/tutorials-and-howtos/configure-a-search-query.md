@@ -304,6 +304,28 @@ Fuzzy search is valid for Master Suite only and has not been integrated into B2B
 
 It looks up for products even if a customer makes typos and spelling mistakes in a search query. Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FuzzyQueryExpanderPlugin` to allow Elasticsearch to add the `"fuzziness": "AUTO" parameter` to any matching query that is created as the suggested search.
 
+Before enabling this plugin for the primary search (not a suggestions search), make sure that you are not using the `cross_fields` search type, which is not allowed in conjunction with the [fuzzy search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#crossfields-fuzziness).
+You can change this behavior by overriding `\Spryker\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin` on the project level and adjusting the `createMultiMatchQuery` method.
+For example, you can change the type to the `best_fields`:
+```php
+ /**
+     * @param array<string> $fields
+     * @param string $searchString
+     *
+     * @return \Elastica\Query\MultiMatch
+     */
+    protected function createMultiMatchQuery(array $fields, string $searchString): MultiMatch
+    {
+        return (new MultiMatch())
+            ->setFields($fields)
+            ->setType(MultiMatch::TYPE_BEST_FIELDS)
+            ->setFuzziness(MultiMatch::FUZZINESS_AUTO)
+            ->setQuery($searchString)
+            ->setType(MultiMatch::TYPE_BEST_FIELDS);
+    }
+```
+Please check [official Elastic Search documentation]{https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#multi-match-types} in order to pick most preferable type for the multi-match search query.
+
 #### Suggestions by page type
 
 Suggestions by page type result by page types such as a category, products, and CMS pages. To return sets of documents matching a full-text search query grouped by type, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` —for example, "product", "category", or "cms page". Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.

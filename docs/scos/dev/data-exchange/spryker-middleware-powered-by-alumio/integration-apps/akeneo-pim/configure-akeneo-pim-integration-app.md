@@ -72,8 +72,6 @@ Now that the client is created, you can test if it works. To test the client, do
 4. Click **Run test**. If the configuration is successful, the response field should return a list of abstract products available in your project.
 ![sccos-to-middleware-response]
 
-QUESTION: SHOULD WE CREATE A SPRYKER CLIENT AS WELL? WHAT SETTINGS SHOULD BE DIFFERENT?
-
 ## Configure data mapping between Akeneo and Spryker
 
 To import data from Akeneo PIM to your Spryker project, you need to map the data you want to import between the two systems. To map the data, you need to do the following:
@@ -104,7 +102,7 @@ After the data has been transformed to the Base model, they need to be transform
 4. To activate the entity transformer, set the status to *Enabled*.
 5. In *Settings*, select *Data, transform using mappers and conditions*. QUESTIONS: WHAT DOES THIS SETTING MEAN? CAN THEY SELECT OTHER SETTINGS, AND IF YES, THEN IN WHAT CASES WHAT SETTING SHOULD BE SELECTED?
 6.  Click **Add data transformer** and select the Base to Spryker transformers. You can select multiple transformers depending on what product information you want to import. For information about the available Akeneo to Base transformers, see [Base to Spryker data transformers](#base-to-spryker-data-transformers).
-7. In the **Spryker HTTP Client** field, enter the client you created at this step: [Connect SCCOS with the Middleware Powered by Alumio platform](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+7. In the **Spryker HTTP Client** field, enter the client you created at this step: [Connect SCCOS with the Middleware Powered by Alumio platform](#2-connect-sccos-with-the-middleware-powered-by-alumio-platform).
 QUESTION: DO WE REALLY SELECT THE SAME CLIENT FOR AKENEO TO BASE AND BASE TO SPRYKER? OR CAN THE CLIENTS BE DIFFERENT?
 8. In the **Store name** field, enter the store to which you want to import data from Akeneo. For example, *us_US*. 
 9. Optional: In the *New From* and *New To* dates, enter the starting and ending dates of when the product should be displayed with the *New* label in your store.
@@ -260,6 +258,7 @@ By default, there are the following data transformers that you can use depening 
 - Memo Akeneo to Base - Product - Set Product Category
 - Memo Base - Product - Set Stock
 - Memo Akeneo to Base - Product - Set Product Media
+- Memo Akeneo to Base - Product - Product Associations
 
 #### Configuring the Memo Akeneo to Base - Product - Set Base information transformer
 

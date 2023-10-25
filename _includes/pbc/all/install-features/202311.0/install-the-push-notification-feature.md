@@ -72,6 +72,9 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationCollectionResponse                   | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionResponseTransfer                   |
 | PushNotification                                     | class | created | src/Generated/Shared/Transfer/PushNotificationTransfer                                     |
 | PushNotificationGroup                                | class | created | src/Generated/Shared/Transfer/PushNotificationGroupTransfer                                |
+| PushNotificationGroupCriteria                        | class | created | src/Generated/Shared/Transfer/PushNotificationGroupCriteriaTransfer                        |
+| PushNotificationGroupConditions                      | class | created | src/Generated/Shared/Transfer/PushNotificationGroupConditionsTransfer                      |
+| PushNotificationGroupCollection                      | class | created | src/Generated/Shared/Transfer/PushNotificationGroupCollectionTransfer                      |
 | PushNotificationProviderCriteria                     | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCriteriaTransfer                     |
 | PushNotificationSubscriptionCriteria                 | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCriteriaTransfer                 |
 | PushNotificationProviderCollection                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionTransfer                   |
@@ -82,6 +85,7 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationProviderConditions                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderConditionsTransfer                   |
 | PushNotificationSubscriptionConditions               | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionConditionsTransfer               |
 | ErrorCollection                                      | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                                      |
+| Error                                                | class | created | src/Generated/Shared/Transfer/ErrorTransfer                                                |
 | PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
 | PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
 | PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
@@ -89,9 +93,16 @@ Make sure that the following changes have been triggered in transfer objects:
 | PushNotificationGroupsBackendApiAttributes           | class | created | src/Generated/Shared/Transfer/PushNotificationGroupsBackendApiAttributesTransfer           |
 | PushNotificationProvidersBackendApiAttributes        | class | created | src/Generated/Shared/Transfer/PushNotificationProvidersBackendApiAttributesTransfer        |
 | GlueRequest                                          | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer                                          |
-| GlueResourceMethodCollection                         | class | created | src/Generated/Shared/Transfer/GlueResourceMethodCollectionTransfer                         |
+| GlueRequestUser                                      | class | created | src/Generated/Shared/Transfer/GlueRequestUserTransfer                                      |
+| GlueResponse                                         | class | created | src/Generated/Shared/Transfer/GlueResponseTransfer                                         |
+| GlueResource                                         | class | created | src/Generated/Shared/Transfer/GlueResourceTransfer                                         |
+| GlueResourceMethodConfiguration                      | class | created | src/Generated/Shared/Transfer/GlueResourceMethodConfigurationTransfer                      |
+| GlueError                                            | class | created | src/Generated/Shared/Transfer/GlueErrorTransfer                                            |
 | Sort                                                 | class | created | src/Generated/Shared/Transfer/SortTransfer                                                 |
 | Pagination                                           | class | created | src/Generated/Shared/Transfer/PaginationTransfer                                           |
+| LocaleCriteria                                       | class | created | src/Generated/Shared/Transfer/LocaleCriteriaTransfer                                       |
+| LocaleConditions                                     | class | created | src/Generated/Shared/Transfer/LocaleConditionsTransfer                                     |
+| Locale                                               | class | created | src/Generated/Shared/Transfer/LocaleTransfer                                               |
 
 {% endinfo_block %}
 

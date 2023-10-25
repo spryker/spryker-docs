@@ -1,33 +1,33 @@
 
 
-This document describes how to integrate the Service Points + [Order Management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the Service Points + [Order Management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html) feature.
 
 ## Install feature core
 
-Follow the steps below to install the Service Points + Order Management feature.
+Follow the steps below to install the Service Points + Order Management feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                       |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                         |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
-## Set up behavior
+### Set up behavior
 
-1. Register plugins:
+1. Register the plugins:
 
 | PLUGIN                                                | SPECIFICATION                                                                                        | PREREQUISITES | NAMESPACE                                                                                     |
 |-------------------------------------------------------|------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
-| ServicePointOrderItemExpanderPlugin                   | Expands sales order items with with related service point.                                           | None          | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemExpanderPlugin  |
-| ServicePointOrderItemsPostSavePlugin                  | Persists service point information for sales order items.                                            | None          | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemsPostSavePlugin |
-| ServicePointCheckoutDataExpanderPlugin                | Expands `RestCheckoutDataTransfer` with extracted service points.                                    | None          | Spryker\Zed\ServicePointsRestApi\Communication\Plugin\CheckoutRestApi                         |
-| ServicePointQuoteMapperPlugin                         | Maps service points rest checkout request data to quote transfer.                                    | None          | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemsPostSavePlugin |
-| ServicePointsByCheckoutDataResourceRelationshipPlugin | Adds `service-points` resources as a relationship to `checkout-data` resources.                      | None          | Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication                                      |
-| ServicePointCheckoutDataResponseMapperPlugin          | Maps service points from `RestCheckoutDataTransfer` to `RestCheckoutDataResponseAttributesTransfers` | None          | Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi                                      |
-| ServicePointCheckoutRequestAttributesValidatorPlugin  | Validates service points in `RestCheckoutRequestAttributesTransfer`.                                 | None          | Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi                                      |
+| ServicePointOrderItemExpanderPlugin                   | Expands sales order items with a related service point.                                           |           | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemExpanderPlugin  |
+| ServicePointOrderItemsPostSavePlugin                  | Persists service point information for sales order items.                                            |           | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemsPostSavePlugin |
+| ServicePointCheckoutDataExpanderPlugin                | Expands `RestCheckoutDataTransfer` with extracted service points.                                    |           | Spryker\Zed\ServicePointsRestApi\Communication\Plugin\CheckoutRestApi                         |
+| ServicePointQuoteMapperPlugin                         | Maps the rest checkout request data of service points to a quote transfer.                                    |           | Spryker\Zed\SalesServicePoint\Communication\Plugin\Sales\ServicePointOrderItemsPostSavePlugin |
+| ServicePointsByCheckoutDataResourceRelationshipPlugin | Adds the `service-points` resources as a relationship to the `checkout-data` resources.                      |           | Spryker\Glue\ServicePointsRestApi\Plugin\GlueApplication                                      |
+| ServicePointCheckoutDataResponseMapperPlugin          | Maps service points from `RestCheckoutDataTransfer` to `RestCheckoutDataResponseAttributesTransfers` |           | Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi                                      |
+| ServicePointCheckoutRequestAttributesValidatorPlugin  | Validates service points in `RestCheckoutRequestAttributesTransfer`.                                 |           | Spryker\Glue\ServicePointsRestApi\Plugin\CheckoutRestApi                                      |
 
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
@@ -67,13 +67,11 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that sales plugins work correctly:
+1.  Add a product offer with the service point shipment type to cart.
 
-1.  Add a product offer with the service point shipment type to your cart.
+2.  Place the order.
 
-2.  Place an order with the added product.
-
-3.  Check that the `spy_sales_order_item_service_point` database table contains a record with the product and selected service point.
+3.  Check that the `spy_sales_order_item_service_point` database table contains a record with the product and the selected service point.
 
 {% endinfo_block %}
 
@@ -166,7 +164,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
             new ServicePointQuoteMapperPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataExpanderPluginInterface>
      */
@@ -181,17 +179,18 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure `checkout-data` Glue API endpoint supports service points:
+Verify the `checkout-data` Glue API endpoint supports service points:
 
-- Add a product offer with service point relation to Cart.
-- `POST https://glue.mysprykershop.com/checkout-data`
+1. Add a product offer with a service point relation to cart:
+
+`POST https://glue.mysprykershop.com/checkout-data`
 <details>
   <summary markdown='span'>Request body example</summary>
 ```json
 {
     "data": {
-        "type": "checkout-data", 
-        "attributes": { 
+        "type": "checkout-data",
+        "attributes": {
         	"idCart": "Cart ID",
             "servicePoints": [{
                 "idServicePoint": "Service Point ID",
@@ -204,6 +203,8 @@ Make sure `checkout-data` Glue API endpoint supports service points:
 }
 ```
 </details>
+
+Make sure you receive a valid response:
 
 <details>
   <summary markdown='span'>Response body example</summary>
@@ -230,16 +231,18 @@ Make sure `checkout-data` Glue API endpoint supports service points:
 ```
 </details>
 
-- Repeat the previous steps but specify not existing/not active Service Point ID, make sure you see the corresponding errors in the response.
-- Repeat the previous steps but do not specify data.attributes.servicePoints.idServicePoint/data.attributes.servicePoints.items, make sure you see the corresponding errors in the response.
+2. Repeat the previous steps but specify a non-existing or inactive service point ID.
+  Make sure the response contains the corresponding error.
+3. Repeat step 1 but do not specify `data.attributes.servicePoints.idServicePoint` or `data.attributes.servicePoints.items`.
+  Make sure the response contains the corresponding error.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure `checkout` Glue API endpoint supports service points:
+Verify the `checkout` Glue API endpoint supports service points:
 
-- Add a product offer with service point relation to Cart.
+1. Add a product offer with a service point relation to cart.
 - `POST https://glue.mysprykershop.com/checkout`
 <details>
   <summary markdown='span'>Request body example</summary>
@@ -261,23 +264,27 @@ Make sure `checkout` Glue API endpoint supports service points:
 ```
 </details>
 
-- Make sure the response status is 201 and the `spy_sales_order_item_service_point` database table contains a record with the selected service point.
-- Repeat the previous steps but specify not existing/not active Service Point ID, make sure you see the corresponding errors in the response.
-- Repeat the previous steps but do not specify data.attributes.servicePoints.idServicePoint/data.attributes.servicePoints.items, make sure you see the corresponding errors in the response.
+  Make sure the response status is 201 and the `spy_sales_order_item_service_point` database table contains the record with the selected service point.
+
+2. Repeat the previous steps but specify a non-existing or inactive service point ID.
+  Make sure the response contains the corresponding error.
+
+3. Repeat step 1 but do not specify `data.attributes.servicePoints.idServicePoint` or `data.attributes.servicePoints.items`.
+  Make sure the response contains the corresponding error.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-Follow the steps below to install the {Feature Name} feature frontend.
+Follow the steps below to install the Service Points + Order Management feature frontend.
 
-## Set up widgets
+### Set up widgets
 
-1. Register the following plugins to enable widgets:
+Register the following plugins to enable widgets:
 
 | PLUGIN                                      | SPECIFICATION                                               | PREREQUISITES | NAMESPACE                                       |
 |---------------------------------------------|-------------------------------------------------------------|---------------|-------------------------------------------------|
-| SalesServicePointNameForShipmentGroupWidget | Allow customers to display order service point information. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
+| SalesServicePointNameForShipmentGroupWidget | Display order service point information on the Storefront. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

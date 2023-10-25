@@ -10,10 +10,10 @@ Follow the steps below to install the Service Points Cart feature.
 
 To start feature integration, integrate the required features:
 
-| NAME                    | VERSION           | INTEGRATION GUIDE                                                                                                                                                                               |
-|-------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points          | {{page.version}}  | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-feature.html)                                                    |
-| Cart                    | {{page.version}}  | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/cart-feature-overview/cart-feature-overview.html) |
+| NAME           | VERSION           | INTEGRATION GUIDE                                                                                                                                                |
+|----------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Service Points | {{page.version}}  | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-feature.html) |
+| Cart           | {{page.version}}  | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/cart-feature-overview/cart-feature-overview.html)                          |
 
 ### 1) Install the required modules using Composer
 
@@ -25,10 +25,11 @@ composer require spryker-feature/service-points-cart: "{{page.version}}" --updat
 
 Make sure that the following modules have been installed:
 
-| MODULE                  | EXPECTED DIRECTORY                          |
-|-------------------------|---------------------------------------------|
-| ServicePointCart        | vendor/spryker/service-point-cart           |
-| ServicePointCartPage    | vendor/spryker-shop/service-point-cart-page |
+| MODULE                    | EXPECTED DIRECTORY                          |
+|---------------------------|---------------------------------------------|
+| ServicePointCart          | vendor/spryker/service-point-cart           |
+| ServicePointCartExtension | vendor/spryker/service-point-cart-extension |
+| ServicePointCartPage      | vendor/spryker-shop/service-point-cart-page |
 
 {% endinfo_block %}
 

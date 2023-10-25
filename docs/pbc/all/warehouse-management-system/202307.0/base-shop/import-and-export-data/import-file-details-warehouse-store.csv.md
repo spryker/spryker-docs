@@ -5,15 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehouse-storecsv
 originalArticleId: f6e5e526-d776-465d-a2d0-518d11ca5b5b
 redirect_from:
-  - /2021080/docs/file-details-warehouse-storecsv
-  - /2021080/docs/en/file-details-warehouse-storecsv
-  - /docs/file-details-warehouse-storecsv
-  - /docs/en/file-details-warehouse-storecsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/import-data/file-details-warehouse-store.csv.html
+  - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/import-and-export-data/file-details-warehouse-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

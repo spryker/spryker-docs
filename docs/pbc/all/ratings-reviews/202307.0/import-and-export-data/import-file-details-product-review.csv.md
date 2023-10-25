@@ -5,10 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-reviewcsv
 originalArticleId: f404c07b-fa94-4e85-97e1-7aac3f282de8
 redirect_from:
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
+  - /docs/pbc/all/ratings-reviews/202307.0/import-and-export-data/file-details-product-review.csv.html
   - /docs/pbc/all/ratings-reviews/202307.0/import-and-export-data/file-details-product-review.csv.html
 related:
   - title: Execution order of data importers in Demo Shop

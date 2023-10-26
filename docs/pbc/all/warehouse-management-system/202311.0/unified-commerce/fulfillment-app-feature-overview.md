@@ -76,6 +76,14 @@ Picking is semi-automated and follows the steps:
 7. Order items states are updated to reflect the picking being finished.
 8. The picked items are shipped.
 
+## Fulfillment App state machine
+
+The feature is shipped with exemplary picking subprocesses for the state machine. You can check them in the Back Office&nbsp;<span aria-label="and then">></span>**Administration**&nbsp;<span aria-label="and then">></span>**OMS**.
+
+| Demo Shop | Subprocess |
+| - | - |
+| B2C |  DummyPayment01 |
+| B2C Marketplace | MarketplacePayment01 |
 
 ## Push notifications
 
@@ -87,10 +95,10 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 
 ## Current constraints
 
-* Supports only regular products. Doesn't support bundles and configurable products.
+* Supports only concrete products. Doesn't support bundles and configurable products.
 * Doesn't support partial picking of non-splittable order items.
 * Doesn't support the business logic for picking of bundle products. However, if all concrete products of a bundle product are picked, it can be processed by the State Machine.
-* Visualization of configurable bundles in Fulfillment App is impossible, but picking of items in bundles is possible.
+* Visualization of configurable bundles in Fulfillment App is not implemented, but picking of individual items in bundles is possible.
 * Picking of random-weight products is not available.
 
 

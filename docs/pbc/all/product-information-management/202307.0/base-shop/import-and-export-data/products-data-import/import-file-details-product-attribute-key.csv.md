@@ -5,12 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-attribute-keycsv
 originalArticleId: 141aa68e-c752-4021-b6cb-df6fa4803d72
 redirect_from:
-  - /2021080/docs/file-details-product-attribute-keycsv
-  - /2021080/docs/en/file-details-product-attribute-keycsv
-  - /docs/file-details-product-attribute-keycsv
-  - /docs/en/file-details-product-attribute-keycsv
   - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html
   - /docs/pbc/all/product-information-management/202307.0/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html  
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

@@ -6,15 +6,12 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-label-storecsv
 originalArticleId: 6d00793f-81ee-4e04-894f-5650a9e26d17
 redirect_from:
-  - /2021080/docs/file-details-product-label-storecsv
-  - /2021080/docs/en/file-details-product-label-storecsv
-  - /docs/file-details-product-label-storecsv
-  - /docs/en/file-details-product-label-storecsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/202005.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/file-details-product-label-store.csv.html
 related:
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html

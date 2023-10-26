@@ -5,6 +5,7 @@ description: This document describes the merchant_profile.csv file to configure 
 template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202307.0/file-details-merchant-profile.csv.html
+  - /docs/pbc/all/merchant-management/202307.0/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

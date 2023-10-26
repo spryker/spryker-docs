@@ -5,14 +5,11 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-option-pricecsv
 originalArticleId: 7990de20-cb7f-467d-80e8-b3ca2cb5ff81
 redirect_from:
-  - /2021080/docs/file-details-product-option-pricecsv
-  - /2021080/docs/en/file-details-product-option-pricecsv
-  - /docs/file-details-product-option-pricecsv
-  - /docs/en/file-details-product-option-pricecsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/product-options/file-details-product-option-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

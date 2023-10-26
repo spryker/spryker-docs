@@ -5,10 +5,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-relationcsv
 originalArticleId: ce1a13ce-5d62-4e75-9af5-912210f3a8f0
 redirect_from:
-  - /2021080/docs/file-details-product-relationcsv
-  - /2021080/docs/en/file-details-product-relationcsv
-  - /docs/file-details-product-relationcsv
-  - /docs/en/file-details-product-relationcsv
+  - /docs/pbc/all/product-relationship-management/202307.0/file-details-product-relation.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

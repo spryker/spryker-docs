@@ -5,13 +5,10 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-pagecsv
 originalArticleId: 65418d11-4c73-4b42-94fb-8397c29eed33
 redirect_from:
-  - /2021080/docs/file-details-cms-pagecsv
-  - /2021080/docs/en/file-details-cms-pagecsv
-  - /docs/file-details-cms-pagecsv
-  - /docs/en/file-details-cms-pagecsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-page.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/content-management/file-details-cms-page.csv.html
   - /docs/pbc/all/content-management-system/202307.0/import-and-export-data/file-details-cms-page.csv.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/import-and-export-data/file-details-cms-page.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

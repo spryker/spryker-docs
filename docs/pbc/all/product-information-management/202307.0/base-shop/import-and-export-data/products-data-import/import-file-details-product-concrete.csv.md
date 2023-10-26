@@ -5,13 +5,10 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concretecsv
 originalArticleId: bff2c63c-1239-4c76-9c74-40fa3c9eb19d
 redirect_from:
-  - /2021080/docs/file-details-product-concretecsv
-  - /2021080/docs/en/file-details-product-concretecsv
-  - /docs/file-details-product-concretecsv
-  - /docs/en/file-details-product-concretecsv
   - /docs/scos/dev/data-import/202200.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
   - /docs/pbc/all/product-information-management/202307.0/import-and-export-data/products-data-import/file-details-product-concrete.csv.html  
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

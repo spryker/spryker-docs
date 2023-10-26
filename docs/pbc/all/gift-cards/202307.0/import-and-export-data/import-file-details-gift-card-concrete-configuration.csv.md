@@ -5,14 +5,11 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-gift-card-concrete-configurationcsv
 originalArticleId: 6346beb6-6aec-440e-a458-dbf86e05e33d
 redirect_from:
-  - /2021080/docs/file-details-gift-card-concrete-configurationcsv
-  - /2021080/docs/en/file-details-gift-card-concrete-configurationcsv
-  - /docs/file-details-gift-card-concrete-configurationcsv
-  - /docs/en/file-details-gift-card-concrete-configurationcsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
+  - /docs/pbc/all/gift-cards/202307.0/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

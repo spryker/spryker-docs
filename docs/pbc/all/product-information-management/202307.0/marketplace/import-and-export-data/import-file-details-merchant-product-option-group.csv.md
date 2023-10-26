@@ -3,6 +3,8 @@ title: "Import file details: merchant_product_option_group.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_product_option_group file to create product options for merchants.
 template: import-file-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/202307.0/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html
 related:
   - title: Marketplace Product Options feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html

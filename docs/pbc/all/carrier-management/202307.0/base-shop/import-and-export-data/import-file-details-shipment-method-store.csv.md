@@ -5,13 +5,10 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipment-method-storecsv
 originalArticleId: 0cfd5942-817e-4ad6-bb79-4d854ca9979b
 redirect_from:
-  - /2021080/docs/file-details-shipment-method-storecsv
-  - /2021080/docs/en/file-details-shipment-method-storecsv
-  - /docs/file-details-shipment-method-storecsv
-  - /docs/en/file-details-shipment-method-storecsv
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
   - /docs/pbc/all/carrier-management/202307.0/import-and-export-data/file-details-shipment-method-store.csv.html
+  - /docs/pbc/all/carrier-management/202307.0/base-shop/import-and-export-data/file-details-shipment-method-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

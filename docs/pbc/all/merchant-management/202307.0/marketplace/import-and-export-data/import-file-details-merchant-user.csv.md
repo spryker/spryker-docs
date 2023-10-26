@@ -5,6 +5,7 @@ description: This document describes the merchant_user.csv file to configure mer
 template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202307.0/file-details-merchant-user.csv.html
+  - /docs/pbc/all/merchant-management/202307.0/marketplace/import-and-export-data/file-details-merchant-user.csv.html
 related:
   - title: Merchant users overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html

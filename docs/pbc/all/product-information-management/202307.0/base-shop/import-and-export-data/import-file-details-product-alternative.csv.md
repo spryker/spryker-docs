@@ -5,11 +5,8 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-alternativecsv
 originalArticleId: cda20a75-66a5-4c07-a130-74725e5e5da0
 redirect_from:
-  - /2021080/docs/file-details-product-alternativecsv
-  - /2021080/docs/en/file-details-product-alternativecsv
-  - /docs/file-details-product-alternativecsv
-  - /docs/en/file-details-product-alternativecsv
   - /docs/scos/dev/data-import/202307.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
+  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/file-details-product-alternative.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

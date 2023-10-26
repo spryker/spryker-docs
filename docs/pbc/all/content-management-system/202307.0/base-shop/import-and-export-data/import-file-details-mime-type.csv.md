@@ -5,12 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-mime-typecsv
 originalArticleId: cec9c3b6-fb1c-4d60-829c-cf37d9d54404
 redirect_from:
-  - /2021080/docs/file-details-mime-typecsv
-  - /2021080/docs/en/file-details-mime-typecsv
-  - /docs/file-details-mime-typecsv
-  - /docs/en/file-details-mime-typecsv
   - /docs/scos/dev/data-import/202204.0/data-import-categories/miscellaneous/file-details-mime-type.csv.html  
   - /docs/pbc/all/content-management-system/202307.0/import-and-export-data/file-details-mime-type.csv.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/import-and-export-data/file-details-mime-type.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

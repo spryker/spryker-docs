@@ -314,6 +314,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
+
 | WIDGET                                      | VERIFICATION                                                                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SalesServicePointNameForShipmentGroupWidget | `{% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |

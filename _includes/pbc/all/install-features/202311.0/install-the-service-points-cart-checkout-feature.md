@@ -21,7 +21,7 @@ composer require spryker/click-and-collect-example: "^0.3.0" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following module has been installed:
+Make sure the following module has been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                       |
 |------------------------|------------------------------------------|
@@ -62,7 +62,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ## 2) Set up behavior
 
-1. Register plugins:
+1. Register the plugins:
 
 | PLUGIN                                            | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                             |
 |---------------------------------------------------|-------------------------------------------------|---------------|-------------------------------------------------------|
@@ -101,8 +101,8 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 | PLUGIN                                                                   | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                                                |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin | Replaces product offers in quote items that have the `delivery` shipment type with suitable product offers replacements. |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
-| ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin   | Replaces product offers in quote items that have the `pickup` shipment type with suitable product offers replacements.   |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
+| ClickAndCollectExampleDeliveryServicePointQuoteItemReplaceStrategyPlugin | Replaces product offers in quote items that have the `delivery` shipment type with suitable product offer replacements. |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
+| ClickAndCollectExamplePickupServicePointQuoteItemReplaceStrategyPlugin   | Replaces product offers in quote items that have the `pickup` shipment type with suitable product offer replacements.   |               | Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart |
 
 **src/Pyz/Zed/ServicePointCart/ServicePointCartDependencyProvider.php**
 
@@ -139,10 +139,10 @@ class ServicePointCartDependencyProvider extends SprykerServicePointCartDependen
 
 1. Create two product offers with the `delivery` and `pickup` shipment types for the same product.
 2. Add the product offer with `delivery` shipment type to cart.
-3. Start the checkout.
+3. Proceed to checkout.
 4. Go to the Address step.
 5. Choose the `pickup` shipment type.
 6. Go to the next step.
-7. Check that the product offer with the `delivery` type was replaced with the product offer with `pickup` type.
+7. Check that the product offer with the `delivery` type is replaced with the product offer with `pickup` type.
 
 {% endinfo_block %}

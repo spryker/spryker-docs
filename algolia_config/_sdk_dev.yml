@@ -8,7 +8,7 @@ algolia:
     - docs/scos/user/**/*.md
     - docs/scos/dev/**/*.md
     - docs/scu/dev/**/*.md
-    - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md
+    - docs/ca/dev/**/*.md
     - docs/acp/user/**/*.md
     - docs/fes/dev/**/*.md
     - docs/pbc/all/**/*.md

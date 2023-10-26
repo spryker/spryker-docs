@@ -58,7 +58,7 @@ Efficiency and accuracy are essential when working in the Back Office. Increasin
 
 ##### Documentation
 
-[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
+[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/install-and-upgrade/install-the-back-office-number-formatting.html#prerequisites)
 
 
 ## Spryker Glue API

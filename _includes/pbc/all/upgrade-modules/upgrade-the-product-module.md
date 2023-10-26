@@ -4,7 +4,7 @@
 
 This version defines connection between abstract products and stores, allowing users to manage abstract product appearance per store.
 
-1. Update/install `spryker/collector` to at least 6.0.0 version. See [Migration Guide - Collector](/docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html) for more details.
+1. Update/install `spryker/collector` to at least 6.0.0 version. See [Migration Guide - Collector](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html) for more details.
 2. Update/install `spryker/store` to at least 1.3.0 version.
 3. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
 4. Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
@@ -373,4 +373,4 @@ For all other issues that you might encounter after migration, please refer to t
 
 ## Upgrading from version 2.* to version 3.*
 
-The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/install-and-upgrade/upgrade-the-tax-module.html).
+The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

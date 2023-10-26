@@ -12,7 +12,7 @@ The *Testing guidelines* section includes the following documents:
 * [Available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html)
 * [Code coverage](/docs/scos/dev/guidelines/testing-guidelines/code-coverage.html)
 * [Data builders](/docs/scos/dev/guidelines/testing-guidelines/data-builders.html)
-* [Executing tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html)
+* [Executing tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html)
 * [Publish and Synchronization testing](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html)
 * [Setting up tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html)
 * [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html)

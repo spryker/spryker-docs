@@ -5,19 +5,9 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-setup
 originalArticleId: 16830216-0c33-4009-86e0-f9995eef7eed
 redirect_from:
-  - /2021080/docs/catalog-setup
-  - /2021080/docs/en/catalog-setup
-  - /docs/catalog-setup
-  - /docs/en/catalog-setup
   - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/catalog-setup.html
   - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/import-product-catalog-data.html
 ---
-
-{% info_block warningBox "Order of data import" %}
-
-We recommend setting up the Catalog after having done the [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) (which provides the overall structure of the store).
-
-{% endinfo_block %}
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
 
@@ -41,8 +31,8 @@ In the  [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categor
 By default, most of the product data is stored in a separate subfolder in `data/import/icecat_biz_data`. The order in which the files are imported is **very strict**:
 
 1. Any product-related entities such as categories, attributes, and tax sets must be imported before the actual products.
-2. [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) and for multi-store setups [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html).
-3. [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html).
+2. [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) and for multi-store setups [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html).
+3. [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html).
 4. Other product data such as images, product sets, etc. in any order.
 
 {% endinfo_block %}

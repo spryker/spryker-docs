@@ -23,10 +23,11 @@ composer require spryker-feature/service-points-cart: "{{page.version}}" --updat
 
 Make sure that the following modules have been installed:
 
-| MODULE                  | EXPECTED DIRECTORY                          |
-|-------------------------|---------------------------------------------|
-| ServicePointCart        | vendor/spryker/service-point-cart           |
-| ServicePointCartPage    | vendor/spryker-shop/service-point-cart-page |
+| MODULE                    | EXPECTED DIRECTORY                          |
+|---------------------------|---------------------------------------------|
+| ServicePointCart          | vendor/spryker/service-point-cart           |
+| ServicePointCartExtension | vendor/spryker/service-point-cart-extension |
+| ServicePointCartPage      | vendor/spryker-shop/service-point-cart-page |
 
 {% endinfo_block %}
 

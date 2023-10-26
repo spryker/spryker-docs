@@ -1968,6 +1968,8 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/edit-payment-methods.html
                   - title: View payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
+              - title: Debug payment integrations locally
+                url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
                 url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
               - title: Interact with third party payment providers using Glue API

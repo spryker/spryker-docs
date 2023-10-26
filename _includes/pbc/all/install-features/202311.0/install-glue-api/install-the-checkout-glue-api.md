@@ -43,9 +43,10 @@ Make sure that the following modules have been installed:
 
 1. Add the following configuration to your project:
 
-| CONFIGURATION                                                       | SPECIFICATION                                                                                                             | NAMESPACE               |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| CheckoutRestApiConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation. | Pyz\Zed\CheckoutRestApi |
+| CONFIGURATION                                                           | SPECIFICATION                                                                                                             | NAMESPACE                |
+|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------|
+| CheckoutRestApiConfig::shouldExecuteQuotePostRecalculationPlugins()     | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation. | Pyz\Zed\CheckoutRestApi  |
+| CheckoutRestApiConfig::getRequiredCustomerRequestDataForGuestCheckout() | Returns the list of customer data fields required for checkout as guest user.                                             | Pyz\Glue\CheckoutRestApi |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
 
@@ -64,6 +65,31 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     public function shouldExecuteQuotePostRecalculationPlugins(): bool
     {
         return false;
+    }
+}
+```
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\CheckoutRestApi;
+
+use Generated\Shared\Transfer\RestCustomerTransfer;
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig as SprykerCheckoutRestApiConfig;
+
+class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getRequiredCustomerRequestDataForGuestCheckout(): array
+    {
+        return array_merge(parent::getRequiredCustomerRequestDataForGuestCheckout(), [
+            RestCustomerTransfer::FIRST_NAME,
+            RestCustomerTransfer::LAST_NAME,
+        ]);
     }
 }
 ```

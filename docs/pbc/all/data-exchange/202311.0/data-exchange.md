@@ -4,7 +4,7 @@ description: General information about the data exchange options.
 template: concept-topic-template
 ---
 
-Data Exchange refers to the process of transferring data between Spryker and third-party systems. Spryker offers various solutions to facilitate data exchange between a Spryker-based solution and third-party systems, ensuring compatibility, consistency, quality, and security of your data.
+Data Exchange refers to the process of transferring data between Spryker and third-party systems. 
 
 Spryker offers the following options to import and export data: 
 

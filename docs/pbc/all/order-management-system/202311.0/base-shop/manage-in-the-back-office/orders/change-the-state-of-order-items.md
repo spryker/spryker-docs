@@ -6,10 +6,6 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-orders
 originalArticleId: 6d125a8a-63ca-4ddc-bb74-1526aa1fe44b
 redirect_from:
-  - /2021080/docs/managing-orders
-  - /2021080/docs/en/managing-orders
-  - /docs/managing-orders
-  - /docs/en/managing-orders
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-orders.html
   - /docs/scos/user/back-office-user-guides/202307.0/sales/orders/changing-the-state-of-order-items.html
 related:

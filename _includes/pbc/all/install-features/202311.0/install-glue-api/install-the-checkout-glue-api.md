@@ -46,7 +46,7 @@ Make sure that the following modules have been installed:
 | CONFIGURATION                                                           | SPECIFICATION                                                                                                             | NAMESPACE                |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------|
 | CheckoutRestApiConfig::shouldExecuteQuotePostRecalculationPlugins()     | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation. | Pyz\Zed\CheckoutRestApi  |
-| CheckoutRestApiConfig::getRequiredCustomerRequestDataForGuestCheckout() | Returns the list of customer data fields required for checkout as guest user.                                             | Pyz\Glue\CheckoutRestApi |
+| CheckoutRestApiConfig::getRequiredCustomerRequestDataForGuestCheckout() | Returns the customer data fields required for checkout as a guest user.                                             | Pyz\Glue\CheckoutRestApi |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
 

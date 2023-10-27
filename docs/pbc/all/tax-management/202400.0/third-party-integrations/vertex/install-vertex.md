@@ -649,7 +649,7 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ### Reference: Quote/Order object to Vertex API mapping
 
-While developing custom plugins for for a deeper integration with your projects, you may need to know how Spryker data is mapped to Vertex API requests.
+While developing custom plugins for deeper integration with your projects, you may need to know how Spryker data is mapped to Vertex API requests.
 
 The following table reflects the mapping of the Spryker Quote/Order transfer object to the Vertex API request format.
 

@@ -1,21 +1,23 @@
 
 
-This document describes how to integrate the Product Offer Service Points Availability feature into a Spryker project.
+This document describes how to install the Product Offer Service Points Availability feature.
 
 ## Install feature core
 
-Follow the steps below to install the Product Offer Service Points Availability feature.
+Follow the steps below to install the Product Offer Service Points Availability feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                         |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer Service Points     | {{page.version}} | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html)            |
 | Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
+
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-offer-service-points-availability: "{{page.version}}" --update-with-dependencies
@@ -23,7 +25,7 @@ composer require spryker-feature/product-offer-service-points-availability: "{{p
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                                                  | EXPECTED DIRECTORY                                                           |
 |---------------------------------------------------------|------------------------------------------------------------------------------|
@@ -36,7 +38,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-Also, we offer the example Click & Collect product offer service point availability calculator strategy. To use it, install the following module:
+We offer an exemplary calculator strategy for the Click & Collect product offer service point availability. To use it, install the following module:
 
 ```bash
 composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies

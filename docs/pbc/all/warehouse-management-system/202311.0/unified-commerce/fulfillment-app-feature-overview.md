@@ -50,19 +50,17 @@ A *warehouse picklist* is a document available in the Fulfillment App that conta
 
 Based on a picklist, the warehouse user gathers and prepares the items for shipping.
 
-The information within will also allow you to quickly restock inventory as required.
-
 ![screenshot with a piklist]
 
 ### Picklist generation strategies
 
-A picklist generation strategies defines how picklists are generated based on the fulfillment requirements of orders per warehouse. On the project level, each warehouse can have its own strategy.
+A *picklist generation strategy* defines how picklists are generated based on the fulfillment requirements of orders per warehouse. On the project level, each warehouse can have its own strategy.
 
 The default picklist generation strategy is designed to generate picklists by order, where each order line is assigned to a unique picklist that contains all the items needed to fulfill the order.
 
 Also, an order can be split into multiple picklists by shipments. If an order contains items that need to be shipped to multiple locations, the order is split into two picklists. This helps the warehouse user ship items more efficiently.
 
-You can also import warehouse strategies by following the (relevant guide)[https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-warehouse-picking-feature.html#import-warehouse-picking-list-strategies].
+The default generation strategy is an example of how it can work. A developer can implement the generation strategies to match your project's requirements.
 
 ## The picking process
 
@@ -96,12 +94,10 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 ## Current constraints
 
 * Supports only concrete products. Doesn't support bundles and configurable products.
-* Doesn't support partial picking of non-splittable order items.
+* Doesn't support partial picking of non-splittable order items. If a customer orders an item with quantity 1, a warehouse user can either pick 1 full item or not pick at all.
 * Doesn't support the business logic for picking of bundle products. However, if all concrete products of a bundle product are picked, it can be processed by the State Machine.
 * Visualization of configurable bundles in Fulfillment App is not implemented, but picking of individual items in bundles is possible.
 * Picking of random-weight products is not available.
-
-
 
 
 

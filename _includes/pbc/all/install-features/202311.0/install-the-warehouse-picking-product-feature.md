@@ -100,12 +100,12 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 }
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue-backend.de.spryker.local/picking-lists?include=picking-list-items,concrete-products,concrete-product-image-sets"
+        "self": "https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items,concrete-products,concrete-product-image-sets"
     },
     "included": [
         {
@@ -136,7 +136,7 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 ]
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/concrete-product-image-sets/091_25873091?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/concrete-product-image-sets/091_25873091?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         },
         {
@@ -210,7 +210,7 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 }
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/concrete-products/091_25873091?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/concrete-products/091_25873091?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         },
         {
@@ -240,7 +240,7 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 }
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/picking-list-items/9ac9fd06-f491-506e-b302-0b166786d91c?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/9ac9fd06-f491-506e-b302-0b166786d91c?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         },
         {
@@ -271,7 +271,7 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 ]
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/concrete-product-image-sets/066_23294028?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/concrete-product-image-sets/066_23294028?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         },
         {
@@ -345,7 +345,7 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 }
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/concrete-products/066_23294028?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/concrete-products/066_23294028?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         },
         {
@@ -375,7 +375,7 @@ Make sure you have a `concrete-products` and `concrete-product-image-sets` resou
                 }
             },
             "links": {
-                "self": "http://glue-backend.de.spryker.local/picking-list-items/54a264b8-dc2b-5a0e-9a78-ae7138e9d0b5?include=picking-list-items,concrete-products,concrete-product-image-sets"
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/54a264b8-dc2b-5a0e-9a78-ae7138e9d0b5?include=picking-list-items,concrete-products,concrete-product-image-sets"
             }
         }
     ]

@@ -1,21 +1,18 @@
 ---
-title: Update payment data
+title: "Glue API: Update payment data"
 description: Learn how to update payment data with the payload from a third-party payment provider via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-payment-data
 originalArticleId: d2870fab-7811-4b18-9bfa-dafd43791d00
 redirect_from:
-  - /2021080/docs/updating-payment-data
-  - /2021080/docs/en/updating-payment-data
-  - /docs/updating-payment-data
-  - /docs/en/updating-payment-data
   - /docs/scos/dev/glue-api-guides/201811.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/201903.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/201907.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/202005.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/202200.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/202307.0/checking-out/updating-payment-data.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/manage-using-glue-api/check-out/update-payment-data.html
 related:
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html

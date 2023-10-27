@@ -1,10 +1,11 @@
 ---
-title: Retrieve shipments when checking out purchases
+title: "Glue API: Retrieve shipments when checking out purchases"
 description: Learn how to retrieve shipments when checking out via Glue API.
 last_updated: July 28, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
+  - /docs/pbc/all/carrier-management/202307.0/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
 ---
 
 This document describes how to retrieve order shipments when checking out through the Glue API. For full information about the endpoint, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html)

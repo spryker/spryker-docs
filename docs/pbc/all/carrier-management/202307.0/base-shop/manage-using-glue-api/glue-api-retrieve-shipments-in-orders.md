@@ -1,8 +1,10 @@
 ---
-title: Retrieve shipments in orders
+title: "Glue API: Retrieve shipments in orders"
 description: Retrieve all orders of a customer or a particular order via Glue API.
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/carrier-management/202307.0/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
 ---
 
 This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html)

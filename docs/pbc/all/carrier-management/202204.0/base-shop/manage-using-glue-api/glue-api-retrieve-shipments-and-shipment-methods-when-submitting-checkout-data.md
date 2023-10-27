@@ -582,4 +582,4 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 ## Next steps
 
-[Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html)
+[Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html)

@@ -1,18 +1,15 @@
 ---
-title: Retrieve cart permission groups
+title: "Glue API: Retrieve cart permission groups"
 description: Learn how to retrieve cart permission groups via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cart-permission-groups
 originalArticleId: 0cb5d28a-634a-425a-916e-5f1a18885f98
 redirect_from:
-  - /2021080/docs/retrieving-cart-permission-groups
-  - /2021080/docs/en/retrieving-cart-permission-groups
-  - /docs/retrieving-cart-permission-groups
-  - /docs/en/retrieving-cart-permission-groups
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
 related:
   - title: Share company user carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html

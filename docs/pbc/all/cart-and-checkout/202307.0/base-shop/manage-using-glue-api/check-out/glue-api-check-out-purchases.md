@@ -1,5 +1,5 @@
 ---
-title: Check out purchases
+title: "Glue API: Check out purchases"
 description: Learn how to check out purchases via Glue API.
 last_updated: Jul 13, 2021
 template: glue-api-storefront-guide-template
@@ -8,6 +8,7 @@ originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html
   - /docs/scos/dev/glue-api-guides/202307.0/checking-out/checking-out-purchases.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/manage-using-glue-api/check-out/check-out-purchases.html
 ---
 
 This endpoint allows finalizing the checkout process by placing an order.

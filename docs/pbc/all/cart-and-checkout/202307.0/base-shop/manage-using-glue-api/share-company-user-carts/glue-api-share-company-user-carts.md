@@ -1,18 +1,15 @@
 ---
-title: Share company user carts
+title: "Glue API: Share company user carts"
 description: Share company user carts via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sharing-company-user-carts
 originalArticleId: a200e568-906d-4ae4-b50a-8ad5433d4399
 redirect_from:
-  - /2021080/docs/sharing-company-user-carts
-  - /2021080/docs/en/sharing-company-user-carts
-  - /docs/sharing-company-user-carts
-  - /docs/en/sharing-company-user-carts
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html
 related:
   - title: Retrieving cart permission groups
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html

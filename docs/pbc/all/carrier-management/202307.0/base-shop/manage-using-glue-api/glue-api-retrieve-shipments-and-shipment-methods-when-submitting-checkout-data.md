@@ -1,8 +1,10 @@
 ---
-title: Retrieve shipments and shipment methods when submitting checkout data
+title: "Glue API: Retrieve shipments and shipment methods when submitting checkout data"
 description: Learn how to submit check out data with shipment and shipment methods.
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/carrier-management/202307.0/base-shop/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
 ---
 
 This document describes how to retrieve shipments and shipment methods when submitting checkout data. For full information about the endpoint, see [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html).
@@ -582,4 +584,4 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 ## Next steps
 
-[Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html)
+[Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html)

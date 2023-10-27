@@ -1,21 +1,18 @@
 ---
-title: Retrieve customer carts
+title: "Glue API: Retrieve customer carts"
 description: Retrieve customer's carts via Glue API
 last_updated: Jul 20, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
 originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
 redirect_from:
-  - /2021080/docs/retrieving-customer-carts
-  - /2021080/docs/en/retrieving-customer-carts
-  - /docs/retrieving-customer-carts
-  - /docs/en/retrieving-customer-carts
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/retrieving-customer-carts.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/manage-using-glue-api/retrieve-customer-carts.html
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html

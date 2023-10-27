@@ -1,17 +1,14 @@
 ---
-title: Manage guest carts
+title: "Glue API: Manage guest carts"
 description: Retrieve details about guest carts and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-carts
 originalArticleId: 70f8ca95-9dc9-4083-8056-4acd342e0054
 redirect_from:
-  - /2021080/docs/managing-guest-carts
-  - /2021080/docs/en/managing-guest-carts
-  - /docs/managing-guest-carts
-  - /docs/en/managing-guest-carts
   - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/guest-carts/managing-guest-carts.html
   - /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
 related:
   - title: Manage guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html

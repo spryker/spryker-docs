@@ -6,7 +6,7 @@ This document describes how to configure the Akeneo PIM integration app to impor
 
 To import data from Akeneo PIM to your Spryker project, you need to do the following:
 
-1. Connect the Spryker Middleware Powered by Alumio with Akeneo PIM. 
+1. Connect the Spryker Middleware Powered by Alumio with Akeneo PIM. - Connect the Spryker Middleware Powered by Alumio with Akeneo PIM and Spryker 
 2. Connect SCCOS with the Middleware Powered by Alumio platform.
 3. Configure the data integration path of the Akeneo PIM integration app.
 4. Configure data mapping between Akeneo and Spryker.
@@ -53,7 +53,6 @@ To connect SCCOS to the Spryker Middleware powered by Alumio, you also need to c
 1. In the Spryker Middleware Powered by Alumio platform, go to **Clients->HTTP client** and click the + sign.
 ![create-http-client]
 2. In the platform selection filed, start typing "Spryker" and select *Spryker Dynamic Data Exchange HTTP Client*.
-![akeneo-http-client]
 3. Click **Next step**.
 4. In *Base URL*, enter the URL to your Spryker Glue API environment with the Dynamic Data exchange. For example, `https://glue-backend.de.alumio.mysprykershop.com/dynamic-entity`.
 5. Enter the username and password from your Spryker Glue API environment.
@@ -88,9 +87,25 @@ To import data from Akeneo PIM, you need to transform it from the Akeneo model t
 2. In the **Name** field, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your route.
 4. To activate the entity transformer, set the status to *Enabled*.
-5. In *Settings*, select *Data, transform using mappers and conditions*. QUESTIONS: WHAT DOES THIS SETTING MEAN? CAN THEY SELECT OTHER SETTINGS, AND IF YES, THEN IN WHAT CASES WHAT SETTING SHOULD BE SELECTED?
-6.  Click **Add data transformer** and select the Akeneo to Base transformers.  QUESTION: DO WE HAVE TO SELECT ALL THE TRANSFORMERS, OR JUST ONE? You can select multiple transformers depending on what product information you want to import. For information about the available Akeneo to Base transformers, see [Akeneo to Base data transformers](#akeneo-to-base-data-transformers).
+5. In *Settings*, select *Data, transform using mappers and conditions*.
+6. Click **Add data transformer** and select the Akeneo to Base transformers. Regardless of the data you wish to import, you must always select the `Memo Akeneo to Base - Product - Set Base information` transformer, as it contains the basic data necessary for the import process. Other transformers are optional, which means you can pick only those that handle product data that you need to import. For information about the available Akeneo to Base transformers, see [Akeneo to Base data transformers](#akeneo-to-base-data-transformers).
 ![akeneo-create-an-entity-tansformer]
+
+### Create cache
+
+When you perform the initial product import from Akeneo, all data pertaining to the imported products is stored in the cache. During subsequent product imports, the Spryker Middleware Powered by Alumio compares this cached data with the information that needs to be imported from Akeneo. If no changes are detected, the product data is not re-imported from Akeneo but is instead retrieved from the cache. This significantly speeds up the importing process. 
+
+To create the cache, do the following:
+
+1. Go to **Storages -> Storages** and click the + sign.
+2. In the **Name** field, enter the name of your cache. As you are entering the name, the identifier will be populated automatically based on the name.
+3. Optional: In the **Description** field, add the description of your cache.
+3. To activate the entity transformer, set the status to *Enabled*.
+4. In *Settings*, select the settings for the caching mechanism. For example, you can *Enable pruning of storage items* that allows you to set up the *Time to live*. If you set it for instance to 1 hour, all data will be removed from the storage every hour.
+You can also enable storage logs upon creating, updating, or deletng the entities.
+
+
+Create a separate cache for each of the Base to Spryker model transformers that are explained in the next sections. Thus, if you have three Base to Spryker model transformers, you need three caches.
 
 ### Define the Base to Spryker model transformer
 
@@ -136,6 +151,7 @@ The URL should include just the path after `akeneo.com`, as the base path to the
 {% endinfo_block %}
 
 8. In *HTTP Client*, select the Akeneo client that you created at this step: [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+9. In *Entity schema*, select *Akeneo Product*.
 10. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incoming configuration has been created.
 ![incoming-configuration-batch-products]
 
@@ -169,7 +185,7 @@ To create the outgoing configuration, do the following:
 3. Optional: In the **Description** field, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
 5. In the *Publisher* field, select *No action publisher*. QUESTION: MUST ALWAYS THIS PUBLISHER BE SELECTE? WHAT DO OTHERS MEAN?
-6. Click **Add entity transformer** and add two transformers: the one you created at the [Define the Akeneo to Base model transformer](#define-the-akeneo-to-base-model-transformer) and the one you created at the [Define the Base to Spryker model transformer](#define-the-base-to-spryker-model-transformer) step.
+6. Click **Add entity transformer** and add two transformers: the one you created at the [Define the Akeneo to Base model transformer](#define-the-akeneo-to-base-model-transformer) step and the one you created at the [Define the Base to Spryker model transformer](#define-the-base-to-spryker-model-transformer) step.
 
 ### Define the route
 
@@ -195,10 +211,27 @@ To create a task for the products import from Akeneo, you have to run the incomi
 To run the incoming, do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click on the necessary incoming configuration.
-2. In the top right corner, click *Run incoming*.
+2. In the top right corner, click *Run incoming*. 
 3. Go to *Tasks* and make sure that there the new task with the route you created at step [Define the route](#define-the-route). The task's status should be *Processing*.
 
 ![tasks]
+
+{% info_block infoBox "Separate task for each product" %}
+
+A separate task is created for every product. In other words, if you initiate an incoming bulk import of, for instance, 40 products, this results in the creation of 40 individual tasks.
+
+{% endinfo_block %}
+
+### Filtering task messages
+
+You can filter the task messages by different categories such as info, notice, error and others. This is especially useful when you need to determine a reason why the task execution failed. In such a case, you can filter the messages by errors and see details of the errors. To filter the messages, do the following:
+1. On the *Tasks* page, click the necessary task, for example, the one with the *Failed* status.
+2. On the task details page, go to *Export Messages* tab.
+3. In the filter dropdown, select the category you want to filter by.
+4. Optional: To view details of the message, click *Details*.
+
+![task-messages-filter]
+
 
 ## Test the outgoing connection
 
@@ -211,11 +244,11 @@ Before importing data from Akeneo, you can test whether configuration of the Ake
 4. Go to *Connection - Outgoing* and select the configuration you created at step [Create an outgoing configuration](#create-an-outgoing-configuration).
 5. On the *Outgoing connections* page, in the *Entity transformers* section, click **View configuration** for you Akeneo to Base transformer.
 6. Paste the copied content to the *Input* field of the transformer tester on the right.
-6. Click **Run test**.
+6. Click **Run test**. The test is run for all the transformers in the outgoing connection.
 
 The product that will be sent to SCCOS appears at the bottom of the transformer tester.
 
-~[transformer-tester]
+![transformer-tester]
 
 ## Run the route
 
@@ -233,7 +266,6 @@ To check the imported product in the Back Office, go to **Catalog - Products* pa
 
 
 
-
 ## Reference information: Transformers
 
 Data transformers let you define the data you want to import from Akeneo PIM and map them accordingly to your Spryker system. There are two kinds of entity transformers: Akeneo data to Base data transformers and Base data to Spryker data transformers.
@@ -242,25 +274,20 @@ Data transformers let you define the data you want to import from Akeneo PIM and
 
 Akeneo to Base data transformers let you define what data you want to import from Akeneo to Spryker and transform these data to Base data. This Base data is then transformed to Spryker data.
 
-{% info_block infoBox "Info" %}
-
-It can be that some fields that Product pages have are not required in the Akeneo PIM, but required in the Spryker system. For example, the *Price* information is not required in Akeneo, but it is required in Spryker. Even though you cannot really import these values if they are not provided in Akeneo, you must enter them manually in the corresponding fields of the entity transformers.
-
-![placeholders-in-entity-transformers]
-
-{% endinfo_block %}
 
 By default, there are the following data transformers that you can use depening on the data you want to transform and import:
 
-- Memo Akeneo to Base - Product - Set Base information: Transforms basic product information, such as name, description, SKU, tax.
+- Memo Akeneo to Base - Product - Set Base Information
 - Memo Akeneo to Base - Product - Set Price Properties
 - Memo Akeneo to Base - Product - Set Product Properties
 - Memo Akeneo to Base - Product - Set Product Category
 - Memo Base - Product - Set Stock
 - Memo Akeneo to Base - Product - Set Product Media
-- Memo Akeneo to Base - Product - Product Associations
+- Memo Akeneo to Base - Product - Set Product Associations
 
-#### Configuring the Memo Akeneo to Base - Product - Set Base information transformer
+#### Memo Akeneo to Base - Product - Set Base Information transformer
+
+The Memo Akeneo to Base - Product - Set Base Information is the main transformer that processes all the basic product information. You must always select this transformer to enable the product data import.
 
 1. In the **Client** field, enter the Akeneo client you created at this step: [Connect SCCOS with the Middleware Powered by Alumio platform](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
 2. In the **Locale** field, enter the locale from which you want to import data from Akeneo. For example, *us_US*. 
@@ -271,9 +298,9 @@ If the locale in Akeneo is not specified, the locale you specify at this step wi
 
 {% endinfo_block %}
 
-3. In the SKU field, select one of the following options:
- - Identifier as SKU: The product identifier in Akeneo will be used as SKU in SCCOS
- - Value as SKU: You can specify the value of another filed in Akeneo which should be used as SKU in SCCOS. Specify the value in the *SKU Identifier* field that appears as the very last field
+3. In *SKU*, select one of the following options:
+ - Identifier as SKU: The product identifier in Akeneo will be used as SKU in SCCOS.
+ - Value as SKU: You can specify the value of another filed in Akeneo which should be used as SKU in SCCOS. Specify the value in the *SKU Identifier* field that appears as the very last field.
  ![value-as-sku]
 4. In the *Name* field, either enter the name for your products or if you want to import it from Akeneo, use the `&{values.name}` as a placeholder.
 4. In the *Description* field, either enter the description for your products or if you want to import it from Akeneo, use the `&{values.description}` as a placeholder.
@@ -282,6 +309,68 @@ If the locale in Akeneo is not specified, the locale you specify at this step wi
   1. Go to your project's Back Office, to **Administration -> Tax Sets** page.
   2. On the *Overview of tax sets* page, copy the value from the *Name* column of the tax set you want to use for the products imported from Akeneo PIM.
   3. Go back to the transformer creation page in the Spryker Middleware powered by Alumio and enter the tax name in the **Tax** field.
+7. Optional: Parent?
+
+#### Memo Base - Product - Set Price Properties transformer
+
+Memo Base - Product - Set Price Properties is the optional transformer that processes price information. Since the price value refers to the "hot" product data, it's not a required field in Akeneo, and, therefore, might be empty.
+
+To configure this transformer, do the following:
+
+1. In *Currencies*, set the currency values.
+2. In *Property name*, set the name of the price property as specified in Akeneo. For example, this value can be `price`.
+3. In *Price type*, select if this is the gross or net price.
+
+#### Memo Akeneo to Base - Product - Set Product Properties transformer
+
+Memo Akeneo to Base - Product - Set Product Properties is the Optional transformer that processes all properties that you select for import from Akeneo. The product properties handled by this transformer are called product attributes in Akeneo. The Akeneo product attributes include the entities that are referred to as product attributes and product labels in SCCOS.
+
+To configure this transformer, do the following:
+
+1. In *Locale*, set the locale where you want to import product properties. For example, `en_US`.
+2. Optional: In *Properties*, specify the product properties in Akeneo that you want to import as product attributes to SCCOS. For example, `color` for the attribute and `sale_label` for a label in SCCOS.
+
+{% info_block infoBox "Product attributes" %}
+
+Akeneo multi select attributes correspond to the Spryker product labels. Therefore, if you want to import product labels from Akeneo, there should be a corresponding multi select attribute in Akeneo. For information on how to create the multi select attributes in Akeneo that you can use as product labels in SCCOS, see [LINK TO GUIDE ON HOW TO CREATE MULTI SELECT ATTRIBUTES].
+
+{% endinfo_block %}
+
+#### Memo Akeneo to Base - Product - Set Product Category
+
+Memo Akeneo to Base - Product - Set Product Category is the optional transformer that processes category information.
+
+To configure this transformer, do the following:
+
+1. In *Client*, specify the Akeneo client created at step [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+2. In *Locale*, set the locale where you want to import product categories. For example, `en_US`.
+3. Optional: To exclude specific categories from import, in *Exclude categories*, click **Add categories** and enter the categories to exclude.
+
+#### Memo Base - Product - Set Stock
+
+Memo Base - Product - Set Stock is the optional transformer that processes stock information. Since the stock value refers to the "hot" product data, it's not a required field in Akeneo, and, therefore, might be empty.
+
+To configure this transformer, do the following:
+
+1. In *Stock value*, specify the value of stock that the product will have after it is imported to Spryker. You can specify 0 as well, but in this case, in SCCOS, this product would be considered as out-of-stock, and, therefore, be unavailable on the Storefront.
+2. Optional: Specify the warehouse where this stock should be kept. For details about the warehouses in the Back Office, see [Create warehouses](/docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-in-the-back-office/create-warehouses.html).
+
+#### Memo Akeneo to Base - Product - Set Product Media
+
+Memo Akeneo to Base - Product - Set Product Media is the optional transformer that processes all media data of a product.
+
+To configure this transformer, do the following:
+
+1. In *Client*, specify the Akeneo client created at step [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+2. In *Locale*, set the locale where you want to import product media. For example, `en_US`.
+3. In *Media*, for *Property name*, enter the name of media.?
+
+#### Memo Akeneo to Base - Product - Set Product Associations
+
+Memo Akeneo to Base - Product - Set Product Associations is the optional transformer that processes product associations, referred to as product relations in SCCOS.
+
+To configure this transformer, optionally, in *Relation type* specify all association types you want to import from Akeneo. For example, `cross sell`, `pack`, `upsell`.
+
 
 ### Base to Spryker data transformers
 QUESTIONS: WHAT DOES EACH OF THESE TRANSFOMERS DO?
@@ -290,5 +379,4 @@ Memo Spryker - Product - Set General Settings
 Memo Base to Spryker - Product - Akeneo Preprocessor
 Memo Base to Spryker - Product - Insert into Spryker
 
-WE NEED INSTRUCTIONS ON HOW TO CONFIGURE ALL OF THESE TRANSFORMERS
 

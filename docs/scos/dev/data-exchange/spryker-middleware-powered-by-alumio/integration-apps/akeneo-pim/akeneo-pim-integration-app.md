@@ -21,3 +21,6 @@ You need to create a base in Alumio that you would use for communication between
 
 In Alumio
 
+
+The Akeneo PIM integration app processes only "cold" product data. The "cold" data is the data that doesn't change frequently, for example, product description, attributes, etc. The "hot" product data, that is, the data that changes frequently, such as price and stock, is not managed in Akeneo PIM. Therefore, the Akeneo PIM integration app also does not process the "hot" data. 
+

@@ -27,7 +27,7 @@
                                 <div class="nav-popup__content">
                                     <div class="main-nav dropdown">
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="main-nav__opener-label">Select Product</span>
+                                            <span class="main-nav__opener-label">Select a guide</span>
                                             <span class="main-nav__opener-text">
                                                 {% if page.product == 'sdk' and page.role == 'dev' %}
                                                 Spryker SDK
@@ -44,7 +44,7 @@
                                                 {% elsif page.product == 'acp' and page.role == 'user' %}
                                                 App Composition Platform users guide
                                                 {% else %}
-                                                Select Product
+                                                Select a guide
                                                 {% endif %}
                                             </span>
                                             <i class="main-nav__opener-icon icon-arrow-down"></i>

@@ -1,15 +1,10 @@
 ---
-title: Exporting data
+title: Orders data export
 description: This document shows how to export data from a Spryker shop to an external system
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/exporting-data
 originalArticleId: 0a38b991-f10c-4f6c-90db-247a62cda2e7
-redirect_from:
-  - /2021080/docs/exporting-data
-  - /2021080/docs/en/exporting-data
-  - /docs/exporting-data
-  - /docs/en/exporting-data
 related:
   - title: Sales Data Export feature integration
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
@@ -121,7 +116,34 @@ actions:
           store_name: [AT]
   ```
 
+## Defining the file names
 
+Defining the file names to export data to is important when you are running the export multiple times. Existing data export files are overwritten by running a new export. So, if you want to keep several versions of the export files, you can use the `{timestamp}` tag in the file name. The timestamp tag adds a timestamp to the files names based on the time you run the export.
+
+
+```yml
+defaults:
+  filter_criteria: &default_filter_criteria
+        order_created_at:  
+            type: between
+            from: '2020-05-01 08:00:00'
+            to: '2020-06-07 08:00:00'
+
+actions:  
+   - data_entity: order-expense
+      destination: '{data_entity}s_DE_{timestamp}.{extension}'
+      filter_criteria:
+          <<: *default_filter_criteria
+          store_name: DE
+    - data_entity: order-expense
+      destination: '{data_entity}s_AT_{timestamp}.{extension}'
+      filter_criteria:
+          <<: *default_filter_criteria
+          store_name: AT
+    ...
+```
+
+The other way around, if you want to overwrite the previous version of the export files, don't add the `{timestamp}` tag or change the `destination` in any other way.
 
 
 ## Defining the date and time range to export data for
@@ -163,70 +185,16 @@ actions:
 
 ## Creating the export files
 
+To generate data export files, run the following command:
 
-Run `console data:export --config file-name.yml`, where `file-name.yml` is the name of the YML export configuration file. The command creates export CSV files in the `./data/export/` folder for each `data_entity` of the YML file. For each store specified in the YML file, a separate file is created. For an example of how the export works, see [Structure of the YML export configuration file](#structure-of-the-yml-export-configuration-file).
-
-
-When running the command for data export with this file, `console data:export --config order_export_config.yml`, exported CSV files are created in `data/export`. For each data entity and store, a separate file is generated:
-
-* `order-expenses_AT.csv`
-* `order-expenses_DE.csv`
-* `order-items_AT.csv`
-* `order-items_DE.csv`
-* `orders_AT.csv`
-* `orders_DE.csv`
-
-
-## Overwriting existing CSV files upon repeated command run
-
-When exporting data, the newly generated CSV files overwrite the existing ones. Currently, this behavior is not configurable.
-
-If you want to generate new CSV files without overwriting eventual existing ones, you may use a `{timestamp}` tag in the name of the file to be generated. For example, if you use the default structure of the YAML export configuration file, upon repeated launch of the `console data:export --config file-name.yml`, the already existing export CSV files are generated with different file names according to the `{timestamp}` on the moment of its creation, and therefore are not overwritten.
-
-And vice versa: if you want to overwrite the existing files, remove `{timestamp}` from the `destination` parameter of the YML file for the necessary `data_entity` items—for example:
-
-Initial file:
-```yml
-defaults:
-  filter_criteria: &default_filter_criteria
-        order_created_at:  
-            type: between
-            from: '2020-05-01 08:00:00'
-            to: '2020-06-07 08:00:00'
-
-actions:  
-   - data_entity: order-expense
-      destination: '{data_entity}s_DE_{timestamp}.{extension}'
-      filter_criteria:
-          <<: *default_filter_criteria
-          store_name: DE
-    - data_entity: order-expense
-      destination: '{data_entity}s_AT_{timestamp}.{extension}'
-      filter_criteria:
-          <<: *default_filter_criteria
-          store_name: AT
-    ...
+```bash
+console data:export --config {{CONFIG_FILE_NAME}}
 ```
 
-File with the removed `{timestamp}`:
-```yml
-defaults:
-  filter_criteria: &default_filter_criteria
-        order_created_at:  
-            type: between
-            from: '2020-05-01 08:00:00'
-            to: '2020-06-07 08:00:00'
+Example:
 
-actions:  
-   - data_entity: order-expense
-      destination: '{data_entity}s_DE.{extension}'
-      filter_criteria:
-          <<: *default_filter_criteria
-          store_name: DE
-    - data_entity: order-expense
-      destination: '{data_entity}s_AT.{extension}'
-      filter_criteria:
-          <<: *default_filter_criteria
-          store_name: AT
-    ...
- ```
+```bash
+console data:export --config order_export_config.yml
+```
+
+This creates export CSV files in `./data/export/` per the defined configuration.

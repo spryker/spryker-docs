@@ -8,7 +8,7 @@ Follow the steps below to install the Marketplace Inventory Management Glue API 
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
 | Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
@@ -112,10 +112,10 @@ Make sure that `ProductOfferAvailabilitiesByProductOfferReferenceResourceRelatio
 {% endinfo_block %}
 
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |---|---|---|
 | Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html) |

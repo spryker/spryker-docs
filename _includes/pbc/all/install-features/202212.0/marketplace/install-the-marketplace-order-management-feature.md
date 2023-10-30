@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Order Management feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------- | ------ | ---------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
@@ -1107,7 +1107,7 @@ Make sure that after splitting the order into merchants' orders, their IDs are d
 {% endinfo_block %}
 
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 

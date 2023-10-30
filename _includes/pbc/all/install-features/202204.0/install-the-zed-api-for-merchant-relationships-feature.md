@@ -10,7 +10,7 @@ Follow the steps below to install the Zed API for Merchant Relationships feature
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME   | VERSION    | INTEGRATION GUIDE   |
+| NAME   | VERSION    | INSTALLATION GUIDE   |
 |-------------------------|-------------------|---------------------------|
 | Zed API                     | {{page.version}}  | [Zed API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/zed-api-feature-integration.html)                                          |
 | Merchants and Merchant Relations | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchants-and-merchant-relations-feature.html) |

@@ -259,8 +259,8 @@ sku,value
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sku | mandatory | string| 1234 | An SKU reference of an abstract gift card product. |
-| value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
+| sku | ✓ | string| 1234 | An SKU reference of an abstract gift card product. |
+| value | ✓ | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
 
 ```bash
 console data:import:gift-card-abstract-configuration

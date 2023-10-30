@@ -24,7 +24,7 @@ Follow the steps below to install the Order Management feature core.
 
 Install the required features:
 
-| NAME                      | VERSION          | INTEGRATION GUIDE                                                                                                                                                                       |
+| NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |---------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core              | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
 | Mailing and Notifications | {{page.version}} | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)                          |
@@ -1428,11 +1428,11 @@ To make sure that you've registered the widget, log in as a customer on the Stor
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                |
+| FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                                |
 |--------------------------------------------------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Comments + Order Management feature integration                    |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                            |
 | Glue API: Order Management feature integration                     |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)                                                         |

@@ -11,7 +11,7 @@ Follow the steps below to install Checkout feature API.
 
 Install the required features:
 
-| FEATURE                                | VERSION          | INTEGRATION GUIDE                                                                                                                                                                        |
+| FEATURE                                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue API: Spryker Core                 | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                                 |
 | Glue API: Cart                         | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                                             |
@@ -872,11 +872,11 @@ Ensure that the plugins work correctly:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features.
 
-| FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE    |
+| FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE    |
 | -------- | ----------------- | ---------------------- |
 | Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)  |
 | Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |

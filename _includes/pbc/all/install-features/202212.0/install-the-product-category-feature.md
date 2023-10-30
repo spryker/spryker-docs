@@ -694,11 +694,11 @@ Make sure that category breadcrumbs are displayed on the *Product Details* page.
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 | Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |

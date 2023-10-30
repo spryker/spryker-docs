@@ -5,8 +5,10 @@ template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-inline-table.html
 related:
-  - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+  - title: Datasource Dependable
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
+  - title: Datasource Trigger
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger.html
   - title: Datasource Http
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline

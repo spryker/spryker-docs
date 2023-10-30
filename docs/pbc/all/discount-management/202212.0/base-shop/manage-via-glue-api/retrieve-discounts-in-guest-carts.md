@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202212.0/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
 ---
 
-This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. For full information on the endpoint, see [Manage guest carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html).
+This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. For full information on the endpoint, see [Manage guest carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-glue-api-manage-guest-carts.html).
 
 ## Installation
 

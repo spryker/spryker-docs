@@ -362,24 +362,29 @@ entries:
                     - "202307.0"
               - title: Manage using Glue API
                 nested:
-                  - title: Check out purchases
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/check-out-purchases.html
+                  - title: Check out
+                    nested:
+                      - title: Glue API checkout workflow
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-checkout-workflow.html
+                      - title: Submit checkout data
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
+                      - title: Check out purchases
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/check-out-purchases.html
+                      - title: Update payment data
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/update-payment-data.html
+
                   - title: Manage carts of registered users
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
-                  - title: Retrieve customer carts
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/retrieve-customer-carts.html
-                  - title: Submit checkout data
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
-                  - title: Update payment data
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/update-payment-data.html
                     nested:
                       - title: Manage items in carts of registered users
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+
                   - title: Manage guest carts
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
                     nested:
                       - title: Manage guest cart items
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
+
                   - title: Share company user carts
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html
                     nested:
@@ -387,6 +392,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
                       - title: Retrieve cart permission groups
                         url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
+
+                  - title: Retrieve customer carts
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Add additional countries to Spryker checkout"

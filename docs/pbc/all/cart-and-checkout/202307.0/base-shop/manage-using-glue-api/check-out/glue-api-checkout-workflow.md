@@ -1,5 +1,5 @@
 ---
-title: Glue API Checkout workflow
+title: Glue API checkout workflow
 description: Checkout workflow of Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -14,7 +14,7 @@ related:
   - title: Submit checkout data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
   - title: Update payment data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/update-payment-data.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---
 
 The Checkout API provides endpoints for placing, updating and retrieving checkout information.
@@ -25,4 +25,4 @@ A typical API client workflow is as follows:
 
 ## Next steps
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-glue-api-submit-checkout-data.html)

@@ -145,6 +145,6 @@ On the storefront, company users can share a cart with other users within the sa
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)  |
-| [Install the Shared Carts Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html) | [Retrieve cart permission groups](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html) |
-| | [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html) |
+|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html)  |
+| [Install the Shared Carts Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html) | [Retrieve cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html) |
+| | [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html) |

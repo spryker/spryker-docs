@@ -17,7 +17,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Install the required modules using Composer:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-offer-service-points-availability: "{{page.version}}" --update-with-dependencies
@@ -38,7 +38,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-We offer an exemplary calculator strategy for the Click & Collect product offer service point availability. To use it, install the following module:
+2. Optional: To install an exemplary calculator strategy for the Click & Collect product offer service point availability, install the following module:
 
 ```bash
 composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies
@@ -113,7 +113,7 @@ Set up the following behaviors.
 
 | PLUGIN                                                  | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                                                                                                                  |
 |---------------------------------------------------------|-------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| ProductOfferServicePointBatchAvailabilityStrategyPlugin | Validates service point for the product offer.  | None          | Spryker\Zed\ProductOfferServicePointAvailability\Communication\Plugin\Availability\ProductOfferServicePointBatchAvailabilityStrategyPlugin |
+| ProductOfferServicePointBatchAvailabilityStrategyPlugin | Validates the service point for a product offer.  |           | Spryker\Zed\ProductOfferServicePointAvailability\Communication\Plugin\Availability\ProductOfferServicePointBatchAvailabilityStrategyPlugin |
 
 **src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
 
@@ -146,17 +146,16 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 2.  In the `spy_product_offer_service` database table, delete the connection between the product offer and the service point.
 
 3.  Try to create an order.
-    You should see the error message that the product isn't available at the moment.
+    Make sure you get an error message about the product being unavailable.
 
 {% endinfo_block %}
 
 #### Enable the demo Click & Collect availability calculator strategy plugin
 
-This plugin is provided as an example.
-
+Add the following examplary plugin.
 | PLUGIN                                                                             | SPECIFICATION                                                                                                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
-| ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin | Calculates product offer availabilities, considers merchant references if provided, and returns availabilities by service point UUID for requested items, prioritizing matching criteria. |               | Spryker\Client\ClickAndCollectExample\Plugin |
+| ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin | Calculates and returns product offer availabilities by service point UUID for requested items, prioritizing the matching criteria. Takes into account merchant references if provided. |               | Spryker\Client\ClickAndCollectExample\Plugin |
 
 **src/Pyz/Client/ProductOfferServicePointAvailabilityCalculator/ProductOfferServicePointAvailabilityCalculatorDependencyProvider.php**
 
@@ -188,7 +187,6 @@ class ProductOfferServicePointAvailabilityCalculatorDependencyProvider extends S
 ```
 
 #### Enable the Storefront API
-
 
 To enable the Storefront API, register the following plugin:
 

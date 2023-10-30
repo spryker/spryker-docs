@@ -473,13 +473,14 @@ class ProductConfig extends SprykerProductConfig
 
 {% info_block warningBox "Warning" %}
 
-If your project has project-speciific functionality where abstract or concrete products are created/update/deleted, please add needed events to the list, when you need to send updated data to Algolia.
-The examples of such functionality:
-- a custom functionality in the Back Office;
-- custom data import;
-- integration with some middleware when product or product related data is update in Spryker.
+If your project has project-speciific functionality where abstract or concrete products are created, updated or deleted, add the necessary events to the list for when you need to send updated data to Algolia.
 
-Note: to trigger custom events in Spryker you need to use `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods.
+Examples of such functionality include:
+- A custom functionality in the Back Office
+- Custom data import
+- Integration with some middleware when product or product-related data is updates in Spryker
+
+Keep int mind, that to trigger custom events in Spryker you need to use `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods.
 
 {% endinfo_block %}
 

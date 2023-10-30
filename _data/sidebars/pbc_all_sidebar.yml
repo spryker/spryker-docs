@@ -1729,7 +1729,7 @@ entries:
                 url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-and-export-order-management-system-data.html
                 nested:
                   - title: Orders data export
-                    url: /docs/pbc/all/order-management-system/202307.0/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
                     nested:
                       - title: "Export file details: orders.csv"
                         url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-orders.csv.html
@@ -1901,11 +1901,11 @@ entries:
                   - title: "Import file details: merchant-order-status.csv"
                     url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html
                   - title: "Export file details: merchant_orders.csv"
-                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/orders-data-export/export-file-details-merchant-orders.csv.html
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-orders.csv.html
                   - title: "Export file details: merchant_orders-expenses.csv"
-                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/orders-data-export/export-file-details-merchant-order-expenses.csv.html
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-order-expenses.csv.html
                   - title: "Export file details: merchant_orders-items.csv"
-                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/orders-data-export/export-file-details-merchant-order-items.csv.html
+                    url: /docs/pbc/all/order-management-system/marketplace/import-and-export-data/export-file-details-merchant-order-items.csv.html
               - title: Manage in the Back Office
                 nested:
                   - title: Manage main merchant orders

@@ -8,7 +8,7 @@ Follow the steps below to install the Quotation Process feature API.
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                | VERSION          | INTEGRATION GUIDE  |
+| NAME                | VERSION          | INSTALLATION GUIDE  |
 |---------------------|------------------|--------------------|
 | Spryker Core API    | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)       |
 | Cart API            | {{page.version}} | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)                       |

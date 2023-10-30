@@ -7,7 +7,7 @@ This document describes how to install the [Shipment](/docs/pbc/all/carrier-mana
 
 Install the required features:
 
-| FEATURE                    | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                  |
+| FEATURE                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                  |
 |----------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue API: Spryker Core     | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                             |
 | Shipment                   | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                 |

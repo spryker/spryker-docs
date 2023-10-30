@@ -21,7 +21,7 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 
 2. Overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | master | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 |Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html) |
@@ -40,7 +40,7 @@ composer require spryker-eco/avalara-tax:"^0.1.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 |MODULE | EXPECTED DIRECTORY |
 |--- | --- |

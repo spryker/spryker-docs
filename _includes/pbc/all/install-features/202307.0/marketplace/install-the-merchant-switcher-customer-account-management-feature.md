@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Order Management + Customer Ac
 
 Install the required features:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
+| NAME  | VERSION | INSTALLATION GUIDE |
 | ------------------ | ----------- | ----------|
 | Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
 | Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |

@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Return Management Glue API fea
 Install the required features:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------- | ------ | --------|
 | Marketplace Merchant | {{page.version}}  | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Marketplace Return Management | {{page.version}} | [Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) |

@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product Offer feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | -------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
@@ -1546,7 +1546,7 @@ Follow the steps below to install the Marketplace Product Offer feature front en
 
 To start feature integration, integrate the following features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | ---------- | ----- | --------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
@@ -1682,7 +1682,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | ----------------- | ----------------- |
@@ -1723,9 +1723,9 @@ class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDe
 }
 ```
 
-## Related features
+## Install related features
 
-| FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |--------------|---------------|-----------------|
 | Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)                                           |
 | Marketplace Product Offer Prices                     |                           | [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                             |

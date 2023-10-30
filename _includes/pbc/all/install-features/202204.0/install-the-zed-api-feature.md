@@ -10,7 +10,7 @@ Follow the steps below to install the Zed API feature core.
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME    | VERSION    | INTEGRATION GUIDE            |
+| NAME    | VERSION    | INSTALLATION GUIDE            |
 |---------------| ----------------- |------------------------|
 | Spryker Core  | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 

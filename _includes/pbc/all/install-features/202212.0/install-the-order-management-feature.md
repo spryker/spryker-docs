@@ -1318,11 +1318,11 @@ To make sure that you’ve registered the widget, log in as a customer on the St
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
+| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE   |
 | ---------------------- | ------------- | ---------------- |
 | Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |
 | Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |

@@ -11,7 +11,7 @@ Follow the steps below to install the Warehouse Picking + Product feature core.
 
 Install the required features:
 
-| NAME              | VERSION          | INTEGRATION GUIDE                                                                                                                                                 |
+| NAME              | VERSION          | INSTALLATION GUIDE                                                                                                                                                 |
 |-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse Picking | {{page.version}} | [Warehouse Picking feature integration](/docs/pbc/all/install-features/{{page.version}}/install-the-warehouse-picking-feature.html)                    |
 | Product           | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |

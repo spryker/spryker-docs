@@ -15,7 +15,7 @@ Follow the steps below to install Payments feature API.
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
 | Payments | {{page.version}} | [Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html) |
@@ -258,7 +258,7 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 {% endinfo_block %}
 
-## Related Features
+## Install related features
 
 | FEATURE | LINK |
 | --- | --- |

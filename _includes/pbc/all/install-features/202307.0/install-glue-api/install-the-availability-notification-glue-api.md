@@ -22,7 +22,7 @@ composer require spryker/availability-notifications-rest-api --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|

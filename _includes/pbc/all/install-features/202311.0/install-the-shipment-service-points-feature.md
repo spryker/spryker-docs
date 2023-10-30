@@ -78,10 +78,10 @@ shipment_type_key,service_type_key
 pickup,pickup
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                 |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                 |
 |-------------------|-----------|-----------|--------------|----------------------------------|
-| shipment_type_key | mandatory | string    | pickup       | Unique key of the shipment type. |
-| service_type_key  | mandatory | string    | pickup       | Unique key of the service type.  |
+| shipment_type_key | ✓ | string    | pickup       | Unique key of the shipment type. |
+| service_type_key  | ✓ | string    | pickup       | Unique key of the service type.  |
 
 2. Enable data imports in your configuration file—for example:
 

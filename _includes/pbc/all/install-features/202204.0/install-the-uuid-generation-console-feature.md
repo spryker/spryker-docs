@@ -4,7 +4,7 @@ This document describes how to integrate the Uuid Generation Console feature.
 
 Install the required features:
 
-| FEATURE | VERSION | INTEGRATION GUIDE |
+| FEATURE | VERSION | INSTALLATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 

@@ -8,7 +8,7 @@ Follow the steps below to install the Offer Volume Prices Glue API feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-| - |
 | Marketplace Product Offer Prices | {{page.version}} | [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
 | Marketplace Product Offer Volume Prices | {{page.version}} | Marketplace Product Offer Volume Prices feature integration <!---LINK--> |

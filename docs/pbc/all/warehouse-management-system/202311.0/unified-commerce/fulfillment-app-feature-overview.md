@@ -106,9 +106,15 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 |BACK OFFICE USER GUIDES| FULFILLMENT APP USER GUIDES |
 | - | - |
 | [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html)  |  [Fulfill orders](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-fulfill-orders.html) |
-| [Edit discounts](/docs/pbc/all/discount-management/202311.0/base-shop/manage-in-the-back-office/edit-discounts.html)  |
+| [Create users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/create-users.html)  | |
+| [Edit users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html)  | |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---|---|---|---|---|
+| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | | | | |
+| [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html) | | | | |
+| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | | | | |
+| [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html) | | | | |
+| [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html) | | | | |

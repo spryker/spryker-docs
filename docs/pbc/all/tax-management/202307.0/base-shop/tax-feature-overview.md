@@ -35,8 +35,8 @@ Tax sets can be applied to an abstract product, product option, and shipment:
 
 | ENTITY | DEFINE TAX SETS IN THE BACK OFFICE  | IMPORT TAX SETS |
 | --- | --- | --- |
-| Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) |
-| Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html) |
+| Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) |
+| Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html) |
 | Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
 
 ## International tax rates and sets
@@ -70,8 +70,8 @@ To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_Av
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 
-* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
-* Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html).
+* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+* Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
 * Shipment: For details about import, see [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html).
 
 {% info_block infoBox %}

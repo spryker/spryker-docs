@@ -90,3 +90,11 @@ class ExampleDependencyProvider
 
 }
 ```
+
+
+## Run only this checker
+
+To run only this checker, include `CONTAINER_SET_FUNCTION_CHECKER` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=CONTAINER_SET_FUNCTION_CHECKER
+```

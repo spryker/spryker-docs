@@ -38,7 +38,7 @@ Target:  {PATH_TO_PROJECT}\ConsoleDependencyProvider::getMonitoringConsoleMethod
 
 The dependency provider method returns the plugin with the unwanted argument: 
 
-```bash
+```php
 namespace Pyz\Zed\SinglePluginArgument;
 
 use Pyz\Zed\Monitoring\Communication\Plugin\Console\MonitoringConsolePlugin;
@@ -62,3 +62,10 @@ class ConsoleDependencyProvider
 To resolve the error:
 1. Refactor the plugin - remove the usage of the complicated constructor arguments.
 
+
+
+## Run only this checker
+To run only this checker, include `SINGLE_PLUGIN_ARGUMENT` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=SINGLE_PLUGIN_ARGUMENT
+```

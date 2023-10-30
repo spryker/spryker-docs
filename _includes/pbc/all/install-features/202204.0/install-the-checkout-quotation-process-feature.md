@@ -11,7 +11,7 @@ Follow the steps below to install the Quotation Process feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
@@ -81,7 +81,7 @@ Follow the steps below to install the [Quotation Process](/docs/pbc/all/request-
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |

@@ -12,7 +12,7 @@ This document describes how to integrate the Company Account feature API into a 
 
 To start the feature integration, overview and install the necessary features:
 
-| FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
+| FEATURE OR GLUE API  | VERSION    | INSTALLATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
 | Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |

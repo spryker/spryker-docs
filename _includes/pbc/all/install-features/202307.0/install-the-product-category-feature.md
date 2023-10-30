@@ -10,7 +10,7 @@ Follow the steps below to install the Product + Category feature core.
 
 Install the required features:
 
-| NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
+| NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
@@ -662,7 +662,7 @@ Follow the steps below to install the Product + Category feature frontend.
 
 Install the required features:
 
-| NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
+| NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
@@ -723,11 +723,11 @@ Make sure that category breadcrumbs are displayed on the *Product Details* page.
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE                       | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                 |
+| FEATURE                       | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                 |
 |-------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Category Management Feature   | &check;                                | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)                                                |
 | Product Management Feature    | &check;                                | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                        |

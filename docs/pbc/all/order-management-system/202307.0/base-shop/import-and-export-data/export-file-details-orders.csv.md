@@ -20,7 +20,7 @@ related:
 
 These are the header fields included in the `order.csv` file:
 
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | ✓ | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String | Unique | Order reference identifier. |
 | 2 | customer_reference | No | String |  | Customer reference identifier. |

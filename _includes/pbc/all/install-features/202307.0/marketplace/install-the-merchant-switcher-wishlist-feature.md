@@ -10,7 +10,7 @@ Follow the steps below to install the Merchant Switcher + Wishlist feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE  |
+| NAME | VERSION | INSTALLATION GUIDE  |
 |-|-|-|
 | Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
 | Marketplace Wishlist | {{page.version}} | [Marketplace Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |

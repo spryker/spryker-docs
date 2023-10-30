@@ -10,7 +10,7 @@ Follow the steps below to install the Service Points feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -260,11 +260,11 @@ sp1,Spryker Main Store,1
 sp2,Spryker Berlin Store,1
 ```
 
-| COLUMN    | REQUIRED? | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                        |
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                        |
 |-----------|-----------|-----------|--------------------|-----------------------------------------|
-| key       | mandatory | string    | sp1                | Unique key of the service point.        |
-| name      | mandatory | string    | Spryker Main Store | Name of the service point.              |
-| is_active | mandatory | bool      | 0                  | Defines if the service point is active. |
+| key       | ✓ | string    | sp1                | Unique key of the service point.        |
+| name      | ✓ | string    | Spryker Main Store | Name of the service point.              |
+| is_active | ✓ | bool      | 0                  | Defines if the service point is active. |
 
 **data/import/common/{{store}}/service_point_store.csv**
 
@@ -274,10 +274,10 @@ sp1,DE
 sp2,DE
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                        |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                        |
 |-------------------|-----------|-----------|--------------|-----------------------------------------|
-| service_point_key | mandatory | string    | sp1          | Unique key of the service point.        |
-| store_name        | mandatory | string    | DE           | Name of the store to make relation for. |
+| service_point_key | ✓ | string    | sp1          | Unique key of the service point.        |
+| store_name        | ✓ | string    | DE           | Name of the store to make relation for. |
 
 **data/import/common/common/service_point_address.csv**
 
@@ -287,16 +287,16 @@ sp1,,DE,Caroline-Michaelis-Straße,8,,Berlin,10115
 sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                 |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                 |
 |-------------------|-----------|-----------|---------------------------|----------------------------------|
-| service_point_key | mandatory | string    | sp1                       | Unique key of the service point. |
+| service_point_key | ✓ | string    | sp1                       | Unique key of the service point. |
 | region_iso2_code  | optional  | string    | DE-BE                     | Region ISO2 code                 |
-| country_iso2_code | mandatory | string    | DE                        | Country ISO2 code                |
-| address1          | mandatory | string    | Caroline-Michaelis-Straße | First line of address            |
-| address2          | mandatory | string    | 8a                        | Second line of address           |
+| country_iso2_code | ✓ | string    | DE                        | Country ISO2 code                |
+| address1          | ✓ | string    | Caroline-Michaelis-Straße | First line of address            |
+| address2          | ✓ | string    | 8a                        | Second line of address           |
 | address3          | optional  | string    | 12/1                      | Third line of address            |
-| city              | mandatory | string    | Berlin                    | City                             |
-| zip_code          | mandatory | string    | 10115                     | Zip code                         |
+| city              | ✓ | string    | Berlin                    | City                             |
+| zip_code          | ✓ | string    | 10115                     | Zip code                         |
 
 **data/import/common/common/service_type.csv**
 
@@ -305,10 +305,10 @@ name,key
 Pickup,pickup
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
 |--------|-----------|-----------|--------------|-----------------------------------|
-| name   | mandatory | string    | Pickup       | Unique key of the service type.   |
-| key    | mandatory | string    | pickup       | Unique name of the service type.  |
+| name   | ✓ | string    | Pickup       | Unique key of the service type.   |
+| key    | ✓ | string    | pickup       | Unique name of the service type.  |
 
 **data/import/common/common/service.csv**
 
@@ -318,12 +318,12 @@ s1,sp1,pickup,1
 s2,sp2,pickup,1
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE      | DATA EXPLANATION                  |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE      | DATA EXPLANATION                  |
 |-------------------|-----------|-----------|-------------------|-----------------------------------|
-| key               | mandatory | string    | sps1              | Unique key of the service.        |
-| service_point_key | mandatory | string    | sp1               | Unique key of the service point.  |
-| service_type_key  | mandatory | string    | pickup            | Unique key of the service type.   |
-| is_active         | mandatory | bool      | 0                 | Defines if the service is active. |
+| key               | ✓ | string    | sps1              | Unique key of the service.        |
+| service_point_key | ✓ | string    | sp1               | Unique key of the service point.  |
+| service_type_key  | ✓ | string    | pickup            | Unique key of the service type.   |
+| is_active         | ✓ | bool      | 0                 | Defines if the service is active. |
 
 2. Enable data imports at your configuration file—for example:
 
@@ -1533,7 +1533,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET                   | VERIFICATION                                                                                                                                                 |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|

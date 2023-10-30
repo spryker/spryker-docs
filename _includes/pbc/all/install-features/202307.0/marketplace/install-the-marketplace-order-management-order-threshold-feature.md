@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Order Management Feature + Ord
 
 Install the required features:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
+| NAME  | VERSION | INSTALLATION GUIDE |
 | -------------- | --------- | -------------|
 | Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |

@@ -7,7 +7,7 @@ This integration guide expects the basic feature to be in place. It adds only th
 Install the required features:
 
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|

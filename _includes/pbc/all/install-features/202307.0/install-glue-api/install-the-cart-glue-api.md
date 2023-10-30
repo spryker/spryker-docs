@@ -7,7 +7,7 @@ This document describes how to integrate the [Cart](/docs/pbc/all/cart-and-check
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                   | VERSION          | INTEGRATION GUIDE                                                                                                                                                |
+| NAME                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                |
 |------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue API: Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Glue API: Product      | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)          |
@@ -24,7 +24,7 @@ composer require spryker/carts-rest-api:"^5.22.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                | EXPECTED DIRECTORY                      |
 |-----------------------|-----------------------------------------|

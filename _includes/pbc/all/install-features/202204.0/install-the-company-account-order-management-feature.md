@@ -11,7 +11,7 @@ Follow the steps below to install the Comments + Order Management feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)|
 | Company Account | {{page.version}} | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)
@@ -315,7 +315,7 @@ Follow the steps below to install the Comments + Order Management feature fronte
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 | Company Account | {{page.version}} | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)

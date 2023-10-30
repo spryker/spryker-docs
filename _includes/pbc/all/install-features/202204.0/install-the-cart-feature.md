@@ -17,7 +17,7 @@ Follow the steps below to install the Cart feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
@@ -62,7 +62,7 @@ Follow the steps below to install the Cart feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 

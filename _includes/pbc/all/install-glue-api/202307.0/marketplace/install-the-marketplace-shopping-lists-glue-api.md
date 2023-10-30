@@ -8,7 +8,7 @@ Follow the steps below to install Marketplace Shopping Lists API feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 | Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)
@@ -246,8 +246,8 @@ Response sample:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
 | Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)  |

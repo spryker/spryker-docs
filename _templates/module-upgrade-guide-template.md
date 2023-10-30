@@ -1,11 +1,11 @@
 ---
-title: {Meta name}
-description: {Meta description}
-template: module-migration-guide-template
+title: Upgrade the {module name} module
+description: Learn how to upgrade the {module name} module
+template: module-upgrade-guide-template
 ---
 
-## Upgrading from version {version number} to version {version number}
-<!-- For example "## Upgrading from version 4.* to version 5.0.0"
+## Upgrade from version {version number} to version {version number}
+<!-- For example "## Upgrade from version 4.* to version 5.0.0"
 
 *Estimated migration time: {time in hours or minutes}*
 

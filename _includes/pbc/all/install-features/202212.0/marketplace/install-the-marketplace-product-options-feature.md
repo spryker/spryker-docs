@@ -9,7 +9,7 @@ Follow the steps below to install the Marketplace Product Options feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product Options      | {{page.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
@@ -360,9 +360,9 @@ Make sure that merchant product options are a part of the marketplace/merchant o
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Product Options + Cart | | [Marketplace Product Options + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-cart-feature-integration.html) |
 | Marketplace Product Options + Checkout | | [Marketplace Product Options + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-checkout-feature-integration.html) |

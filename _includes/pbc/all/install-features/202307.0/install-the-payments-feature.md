@@ -96,10 +96,10 @@ dummyPaymentCreditCard,Credit Card,dummyPayment,Dummy Payment,1
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| payment_method_key | mandatory | string | dummyPaymentInvoice | Key of a payment method. |
-| payment_method_name | mandatory | string | Invoice | Name of a payment method. |
-| payment_provider_key | mandatory | string | dummyPayment | Key of a payment provider. |
-| payment_provider_name | mandatory | string | Dummy Payment | Name of a payment provider. |
+| payment_method_key | ✓ | string | dummyPaymentInvoice | Key of a payment method. |
+| payment_method_name | ✓ | string | Invoice | Name of a payment method. |
+| payment_provider_key | ✓ | string | dummyPayment | Key of a payment provider. |
+| payment_provider_name | ✓ | string | Dummy Payment | Name of a payment provider. |
 | is_active | optional | boolean | 1 | Indicates if this payment method is available. |
 
 **data/import/payment_method_store.csv**
@@ -116,8 +116,8 @@ dummyPaymentCreditCard,US
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| payment_method_key | mandatory | string | dummyPaymentInvoice | Key of the existing payment method. |
-| store | mandatory | string | DE |Name of the existing store. |
+| payment_method_key | ✓ | string | dummyPaymentInvoice | Key of the existing payment method. |
+| store | ✓ | string | DE |Name of the existing store. |
 
 Register the following plugin data import plugins:
 

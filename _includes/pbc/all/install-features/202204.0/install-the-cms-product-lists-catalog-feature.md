@@ -11,7 +11,7 @@ Follow the steps below to install the CMS + Product Lists + Catalog feature core
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- |  --- |
 | Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 | Product Lists | {{page.version}} | [Product Lists feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-lists-featureinstall-features/install-the-product-lists-feature.html) | 

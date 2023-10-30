@@ -11,7 +11,7 @@ Follow the steps below to install the Shipment feature core.
 
 Install the required features:
 
-| FEATURE | VERSION | INTEGRATION GUIDE  |
+| FEATURE | VERSION | INSTALLATION GUIDE  |
 | ----------------- | ------ | ------------------- |
 | Glue API: Spryker Core     | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Shipment                  | {{page.version}}  | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
@@ -455,10 +455,10 @@ To make sure that the plugins are activated, send the `POST https://glue.myspryk
 {% endinfo_block %}
 
 
-## Related features
+## Install related features
 
 Integrate the following related features.
 
-| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE       |
+| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE       |
 | ------- | -------------- | ------------------------- |
 | Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

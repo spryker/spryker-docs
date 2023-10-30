@@ -11,7 +11,7 @@ Follow the steps below to install the Warehouse picking feature core.
 
 Install the required features:
 
-| NAME                                    | VERSION          | INTEGRATION GUIDE                                                                                                                                                                  |
+| NAME                                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                  |
 |-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html)                     |
 | Order Management + Inventory Management | {{page.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
@@ -319,10 +319,10 @@ Budget Cameras MER000005 Warehouse 1,1,multi-shipment
 Sony Experts MER000006 Warehouse 1,1,multi-shipment
 ```
 
-| COLUMN                | REQUIRED? | DATA TYPE | DATA EXAMPLE   | DATA EXPLANATION                                                     |
+| COLUMN                | REQUIRED | DATA TYPE | DATA EXAMPLE   | DATA EXPLANATION                                                     |
 |-----------------------|-----------|-----------|----------------|----------------------------------------------------------------------|
-| name                  | mandatory | string    | Warehouse1     | Name of the warehouse.                                               |
-| is_active             | mandatory | bool      | 1              | Defines if the warehouse is active.                                  |
+| name                  | ✓ | string    | Warehouse1     | Name of the warehouse.                                               |
+| is_active             | ✓ | bool      | 1              | Defines if the warehouse is active.                                  |
 | picking_list_strategy | optional  | string    | multi-shipment | Defines the picking generation strategy used for the given warehouse |
 
 2. Import data:

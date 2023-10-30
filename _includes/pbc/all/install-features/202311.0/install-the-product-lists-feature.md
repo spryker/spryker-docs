@@ -11,7 +11,7 @@ Follow the steps below to install the Product Lists feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{page.version}}  | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
@@ -504,7 +504,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string (unique) | pl-001 |  A unique identifier used to identify a product list. |
+| product_list_key | ✓ | string (unique) | pl-001 |  A unique identifier used to identify a product list. |
 |name|mandatory|string|All computers| A custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
 |type|mandatory|string ("blacklist"/"whitelist")|whitelist| Defines whether the list is a denylist or allowlist.|
 
@@ -570,7 +570,7 @@ pl-008,smartwatches
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-001 | An existing product list identifier for the assignment. |
 |category_key|mandatory|string|computer| An existing category identifier to be assigned to the product list.|
 
 2. Register the following plugin to enable data import:
@@ -667,7 +667,7 @@ pl-007,177_25913296
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-002 | An existing product list identifier for the assignment. |
 |concrete_sku|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|
 
 2. Register the following plugin to enable data import:

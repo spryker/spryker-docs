@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product Glue API feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)  |
 | Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)|
@@ -111,8 +111,8 @@ Make sure that when you do a `GET` request to retrieve abstract products that be
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | Marketplace Product + Cart API | | [Glue API: Marketplace Product + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-cart-glue-api.html) |

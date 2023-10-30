@@ -7,7 +7,7 @@ Follow the steps below to install the Glue API: Order Management feature.
 
 To start feature integration, overview and install the following features and Glue APIs:
 
-| NAME  | VERSION  | INTEGRATION GUIDE   |
+| NAME  | VERSION  | INSTALLATION GUIDE   |
 | ---------------- | ------- | --------------------------- |
 | Glue API: Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Order Management       | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |

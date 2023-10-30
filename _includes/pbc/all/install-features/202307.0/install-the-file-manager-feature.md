@@ -11,7 +11,7 @@ Follow the steps below to install the File Manager feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -23,7 +23,7 @@ composer require spryker-feature/file-manager:"{{page.version}}" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                | EXPECTED DIRECTORY                      |
 |-----------------------|-----------------------------------------|

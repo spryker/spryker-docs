@@ -1,38 +1,30 @@
 ---
-title: {Feature Name} feature integration
-description: Integrate the {Feature Name} into your project
-template: feature-integration-guide-template
+title: Install the {Feature Name} feature
+description: Learn how to install the {Feature Name} feature
+template: feature-installation-guide-template
 ---
 
-<!-- This document is an integration guide template.
+<!-- This document is an installation guide template.
 All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner.
 
 
 Before you start, check out the formatting templates in [Formatting templates for feature integration guides](formatting-templates-for-feature-integration-guides.md).-->
 
----
-title: {Meta name}
-description: {Meta description}
-tags: [, ]
----
-
-# {Feature Name} feature integration
-
-This document describes how to integrate the [Feature Name feature]({link to a respective feature overview}) into a Spryker project.
+This document describes how to install the [Feature Name feature]({link to a respective feature overview}) feature.
 
 ## Install feature core
 
 Follow the steps below to install the {Feature Name} feature core.
 
 ### Prerequisites
-<!-- List the features a project must have before they can integrate the current feature. -->
+<!-- List the features a project must have before they can install the current feature. -->
 
-To start feature integration, integrate the required features and Glue APIs:
+Install the required features and Glue APIs:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| {feature name / Glue API name} | {feature version} | {integration guide link} |
+| {feature name / Glue API name} | {feature version} | {installation guide link} |
 
 ### 1) Install the required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -44,7 +36,7 @@ To start feature integration, integrate the required features and Glue APIs:
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE       | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | ------------ | ---------------- |
@@ -91,13 +83,13 @@ console transfer:generate
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following changes have been applied by checking your database:
+Make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE          | EVENT   |
 | --------------- | ------------- | ------- |
 | {entity}        | {entity type} | {event} |
 
-Make sure that the following changes have been triggered in transfer objects:
+Make sure the following changes have been triggered in transfer objects:
 
 | TRANSFER   | TYPE   | EVENT   | PATH   |
 | ---------- | ------ | ------- | ------ |
@@ -129,7 +121,7 @@ console transfer:generate
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following changes have been applied by checking your database:
+Make sure that following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE   | EVENT   |
 | --------------- | ------ | ------- |
@@ -361,12 +353,12 @@ Enable the following behaviors by registering the plugins:
 Follow the steps below to install the {Feature Name} feature frontend.
 
 ### Prerequisites
-<!--Describe the features the project must have before the current feature can be integrated.-->
+<!--Describe the features the project must have before the current feature can be installed.-->
 
-To start feature integration, integrate the required features and Glue APIs:
+Install the required features and Glue APIs:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {integration guide link} |
 
@@ -382,7 +374,7 @@ Install the required modules:
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE       | EXPECTED DIRECTORY <!--for public Demo Shops--> |
 | ------------ | ----------------------------------------------- |
@@ -446,7 +438,7 @@ Set up widgets as follows:
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET   | VERIFICATION                  |
 | -------- | ----------------------------- |
@@ -460,10 +452,8 @@ Make sure that the following widgets have been registered by adding the respecti
 console frontend:yves:build
 ```
 
-## Related features
+## Install related features
 
-Integrate the following related features and Glue APIs:
-
-| NAME        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| NAME        | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
 | {feature name / Glue API name} | {&check; /  }    | [{Integration guide name}](link to the integration guide) |

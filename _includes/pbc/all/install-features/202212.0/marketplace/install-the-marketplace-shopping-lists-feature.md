@@ -8,7 +8,7 @@ Follow the steps below to install the Marketplace Shopping Lists feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
 | Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
@@ -337,7 +337,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST  |
 | ----------------- |---------------|
@@ -395,7 +395,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE |  TEST  |
 | ----------------- |----------------------|
@@ -503,9 +503,9 @@ Make sure that the following plugins were registered:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | -|
 | Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
 | Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  <!---[Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)-->  |

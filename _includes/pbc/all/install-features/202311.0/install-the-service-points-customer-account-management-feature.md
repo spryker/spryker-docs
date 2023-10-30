@@ -11,7 +11,7 @@ Follow the steps below to install the Service Points + Customer Account Manageme
 
 To start feature integration, integrate the required features:
 
-| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
+| NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points              | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.html)                                                                      |
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
@@ -240,7 +240,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE                                    | TEST                                                                            |
 |-------------------------------------------|---------------------------------------------------------------------------------|

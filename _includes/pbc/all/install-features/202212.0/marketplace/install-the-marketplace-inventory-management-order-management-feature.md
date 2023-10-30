@@ -8,7 +8,7 @@ Follow the steps below to install the Marketplace Inventory Management + Order M
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Marketplace Inventory Management | {{page.version}} |  [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
 | Marketplace Order Management | {{page.version}} |  [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)  |

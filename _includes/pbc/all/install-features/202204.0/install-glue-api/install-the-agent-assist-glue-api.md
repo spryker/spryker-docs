@@ -6,7 +6,7 @@ Follow the steps below to install the Agent Assist feature API.
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Customer Account Management + Agent Assist | {{page.version}} | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |
@@ -190,11 +190,11 @@ Ensure that, when `Authorization` and `X-Agent-Authorization` headers are sent, 
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE | INTEGRATION GUIDE |
+| FEATURE | INSTALLATION GUIDE |
 | --- | --- |
 | Customer account management | [Customer account management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 | Customer account management + Agent assist | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |

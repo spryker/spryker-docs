@@ -13,7 +13,7 @@ related:
 These are the header fields included in the `order-expenses.csv` file:
 
 
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | ✓ | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String |  | Order reference identifier. |
 | 2 | order_shipment_id | No | Number |  |Order shipment identification. |

@@ -6,7 +6,7 @@ This document describes how to install the Service Points Cart + Checkout featur
 
 Install the required features:
 
-| NAME                | VERSION           | INTEGRATION GUIDE                                                                                                                                                          |
+| NAME                | VERSION           | INSTALLATION GUIDE                                                                                                                                                          |
 |---------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html) |
 | Checkout            | {{page.version}}  | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                                               |

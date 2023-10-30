@@ -187,11 +187,11 @@ Ensure the following:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
+| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE     |
 | ---------- | ----------------- | ---------------------------- |
 | Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |
 | CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |

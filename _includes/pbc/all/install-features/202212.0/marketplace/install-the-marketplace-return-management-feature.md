@@ -8,7 +8,7 @@ Follow the steps below to install the Marketplace Return Management feature core
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core                 | {{page.version}} | [Spryker Core Feature Integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
@@ -1080,7 +1080,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
@@ -1094,8 +1094,8 @@ Make sure that the following widgets have been registered by adding the respecti
 console frontend:yves:build
 ```
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
 | Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |

@@ -10,7 +10,7 @@ Follow the steps below to install the Service Points + Order Management feature 
 
 Install the required features:
 
-| NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                       |
+| NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                         |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |

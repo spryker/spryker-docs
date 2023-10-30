@@ -276,10 +276,10 @@ DE--7,spryker_systems,spryker_systems_HQ,0
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| customer_reference | mandatory | string | DE--6 | Identifies a customer to add data to. |
-| company_key | mandatory | string | BoB-Hotel-Mitte | Identifies a company to add data to. |
-| business_unit_key | mandatory | string | business-unit-mitte-1 | Identifies the Company Business Unit to add data to. |
-| default | mandatory | bool integer | 0 | Decides if there is a pre-selected Company Business Unit for a Business on Behalf user. |
+| customer_reference | ✓ | string | DE--6 | Identifies a customer to add data to. |
+| company_key | ✓ | string | BoB-Hotel-Mitte | Identifies a company to add data to. |
+| business_unit_key | ✓ | string | business-unit-mitte-1 | Identifies the Company Business Unit to add data to. |
+| default | ✓ | bool integer | 0 | Decides if there is a pre-selected Company Business Unit for a Business on Behalf user. |
 
 To enable data import, register the following plugins:
 

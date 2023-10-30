@@ -120,22 +120,22 @@ Make sure that availability plugin works correctly:
 
 | PLUGIN                                                        | SPECIFICATION                                                     | PREREQUISITES | NAMESPACE                                                                                                                                                    |
 |---------------------------------------------------------------|-------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin  | Filters product offer service point availability by shipmen type. | None          | Spryker\Client\ProductOfferShipmentTypeAvailability\Plugin\ProductOfferServicePointAvailability\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin |
+| ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin  | Filters product offer service point availability by shipmen type. | None          | Spryker\Client\ProductOfferShipmentTypeAvailabilityStorage\Plugin\ProductOfferServicePointAvailabilityStorage\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin |
 
-**src/Pyz/Client/ProductOfferServicePointAvailability/ProductOfferServicePointAvailabilityDependencyProvider.php**
+**src/Pyz/Client/ProductOfferServicePointAvailabilityStorage/ProductOfferServicePointAvailabilityStorageDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Client\ProductOfferServicePointAvailability;
+namespace Pyz\Client\ProductOfferServicePointAvailabilityStorage;
 
-use Spryker\Client\ProductOfferServicePointAvailability\ProductOfferServicePointAvailabilityDependencyProvider as SprykerProductOfferServicePointAvailabilityDependencyProvider;
-use Spryker\Client\ProductOfferShipmentTypeAvailability\Plugin\ProductOfferServicePointAvailability\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin;
+use Spryker\Client\ProductOfferServicePointAvailabilityStorage\ProductOfferServicePointAvailabilityStorageDependencyProvider as SprykerProductOfferServicePointAvailabilityStorageDependencyProvider;
+use Spryker\Client\ProductOfferShipmentTypeAvailabilityStorage\Plugin\ProductOfferServicePointAvailabilityStorage\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin;
 
-class ProductOfferServicePointAvailabilityDependencyProvider extends SprykerProductOfferServicePointAvailabilityDependencyProvider
+class ProductOfferServicePointAvailabilityStorageDependencyProvider extends SprykerProductOfferServicePointAvailabilityStorageDependencyProvider
 {
     /**
-     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityFilterPluginInterface>
+     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityFilterPluginInterface>
      */
     protected function getProductOfferServicePointAvailabilityFilterPlugins(): array
     {

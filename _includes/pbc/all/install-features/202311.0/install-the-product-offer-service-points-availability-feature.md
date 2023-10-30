@@ -27,14 +27,15 @@ composer require spryker-feature/product-offer-service-points-availability: "{{p
 
 Make sure the following modules have been installed:
 
-| MODULE                                                  | EXPECTED DIRECTORY                                                           |
-|---------------------------------------------------------|------------------------------------------------------------------------------|
-| ProductOfferServicePointAvailability                    | vendor/spryker/product-offer-service-point-availability                      |
-| ProductOfferServicePointAvailabilityExtension           | vendor/spryker/product-offer-service-point-availability-extension            |
-| ProductOfferServicePointAvailabilityCalculator          | vendor/spryker/product-offer-service-point-availability-calculator           |
-| ProductOfferServicePointAvailabilityCalculatorExtension | vendor/spryker/product-offer-service-point-availability-calculator-extension |
-| ProductOfferServicePointAvailabilitiesRestApi           | vendor/spryker/product-offer-service-point-availabilities-rest-api           |
-| ProductOfferServicePointAvailabilityWidget              | vendor/spryker-shop/product-offer-service-point-availability-widget          |
+| MODULE                                                         | EXPECTED DIRECTORY                                                                   |
+|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| ProductOfferServicePointAvailability                           | vendor/spryker/product-offer-service-point-availability                              |
+| ProductOfferServicePointAvailabilityCalculatorStorage          | vendor/spryker/product-offer-service-point-availability-calculator-storage           |
+| ProductOfferServicePointAvailabilityCalculatorStorageExtension | vendor/spryker/product-offer-service-point-availability-calculator-storage-extension |
+| ProductOfferServicePointAvailabilitiesRestApi                  | vendor/spryker/product-offer-service-point-availabilities-rest-api                   |
+| ProductOfferServicePointAvailabilityStorage                    | vendor/spryker/product-offer-service-point-availability-storage                      |
+| ProductOfferServicePointAvailabilityStorageExtension           | vendor/spryker/product-offer-service-point-availability-storage-extension            |
+| ProductOfferServicePointAvailabilityWidget                     | vendor/spryker-shop/product-offer-service-point-availability-widget                  |
 
 {% endinfo_block %}
 
@@ -153,29 +154,25 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 #### Enable the demo Click & Collect availability calculator strategy plugin
 
 Add the following examplary plugin.
+
 | PLUGIN                                                                             | SPECIFICATION                                                                                                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
 | ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin | Calculates and returns product offer availabilities by service point UUID for requested items, prioritizing the matching criteria. Takes into account merchant references if provided. |               | Spryker\Client\ClickAndCollectExample\Plugin |
 
-**src/Pyz/Client/ProductOfferServicePointAvailabilityCalculator/ProductOfferServicePointAvailabilityCalculatorDependencyProvider.php**
+**src/Pyz/Client/ProductOfferServicePointAvailabilityCalculatorStorage/ProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider.php**
 
 ```php
 <?php
 
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
-namespace Pyz\Client\ProductOfferServicePointAvailabilityCalculator;
+namespace Pyz\Client\ProductOfferServicePointAvailabilityCalculatorStorage;
 
 use Spryker\Client\ClickAndCollectExample\Plugin\ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin;
-use Spryker\Client\ProductOfferServicePointAvailabilityCalculator\ProductOfferServicePointAvailabilityCalculatorDependencyProvider as SprykerProductOfferServicePointAvailabilityCalculatorDependencyProvider;
+use Spryker\Client\ProductOfferServicePointAvailabilityCalculatorStorage\ProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider as SprykerProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider;
 
-class ProductOfferServicePointAvailabilityCalculatorDependencyProvider extends SprykerProductOfferServicePointAvailabilityCalculatorDependencyProvider
+class ProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider extends SprykerProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider
 {
     /**
-     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityCalculatorExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityCalculatorStrategyPluginInterface>
+     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityCalculatorStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityCalculatorStrategyPluginInterface>
      */
     protected function getProductOfferServicePointAvailabilityCalculatorStrategyPlugins(): array
     {

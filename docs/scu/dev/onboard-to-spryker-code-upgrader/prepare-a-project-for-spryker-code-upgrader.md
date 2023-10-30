@@ -39,6 +39,7 @@ For a smooth experience, make sure that your environments meet the minimum techn
 * Composer 2.5+
 * Git 2.24+
 * PHPStan 1.9+
+* PHPCodeSniffer 3.6.2+
 
 ## Optional: Implement headless design
 

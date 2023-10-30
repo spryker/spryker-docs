@@ -10,7 +10,7 @@ Follow the steps below to install feature core.
 
 Install the required features:
 
-| NAME         | EXPECTED DIRECTORY | INTEGRATION GUIDE                                                                                                                    |
+| NAME         | EXPECTED DIRECTORY | INSTALLATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}}   | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product      | {{page.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           |

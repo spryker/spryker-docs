@@ -10,6 +10,7 @@ related:
 redirect_from:
     - /docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
 
 ---
 
@@ -643,3 +644,52 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 }
 
 ```
+
+
+---
+
+### Reference: Quote/Order object to Vertex API mapping
+
+While developing custom plugins for deeper integration with your projects, you may need to know how Spryker data is mapped to Vertex API requests.
+
+The following table reflects the mapping of the Spryker Quote/Order transfer object to the Vertex API request format.
+
+| QuoteTransfer/OrderTransfer object properties                                                | Vertex API field                                                         | Comment                                                                                                                                         |
+|----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Current date (Y-m-d)                                                                         | documentDate                                                             |                                                                                                                                                 |
+| QuoteTransfer.uuid / OrderTransfer.orderReference / new Uuid4 (if quote.uuid is not present) | documentNumber                                                           |                                                                                                                                                 |
+| QuoteTransfer.uuid / OrderTransfer.orderReference / new Uuid4 (if quote.uuid is not present) | transactionId                                                            |                                                                                                                                                 |
+| -                                                                                            | transactionType                                                          | Always `SALE`.                                                                                                                                   |
+| -                                                                                            | saleMessageType                                                          | Depends on the type of operation, `INVOICE` or `QUOTATION`.                                                                                      |
+| taxMetadata                                                                                  | **Mapped over the final request 1:1**                                    | Metadata is supposed to follow the structure of the Vertex API request.                                                                              |
+| taxMetadata.seller.company                                                                   | seller.company                                                           | Required by Vertex from the legal point of view.                                                                                                     |
+| items[].sku                                                                                  | lineItems[].lineItemId; lineItems[].product.value; lineItems[].vendorSku | lineItems[].lineItemId can be changed if there are multiple items with the same SKU in the request.                                              |
+| items[].shipment.shippingAddress                                                             | lineItems[].customer.destination                                         |                                                                                                                                                 |
+| billingAddress                                                                               | lineItems[].customer.administrativeDestination                           |                                                                                                                                                 |
+| items[].merchantStockAddresses                                                               | lineItems[].seller.physicalOrigin                                        | Multiple addresses are mapped to multiple items in the Vertex PBC and Vertex API lineItems[].                                                       |
+| items[].merchantProfileAddress                                                               | lineItems[].seller.administrativeOrigin                                  |                                                                                                                                                 |
+| items[].unitDiscountAmountFullAggregation                                                    | lineItems[].discount.discountValue                                       | Prices are converted from the Spryker’s cent-based format to the Vertex decimal format.                                                                  |
+| -                                                                                            | lineItems[].discount.discountType                                        | Always `DiscountAmount`. Spryker stores discount based on amount, so there is no need for percentage-based discounts.                           |
+| items[].unitPrice (either GROSS or NET depending on the currently selected mode)             | lineItems[].unitPrice                                                    | Prices are converted from Spryker’s cent-based format to Vertex decimal format.                                                                  |
+| items[].merchantStockAddresses.quantityToShip                                                | lineItems[].quantity.value                                               | If quantityToShip is less than quantity requested in cart - in this case this item will be mapped to multiple items in the Vertex API.               |
+| -                                                                                            | lineItems[].quantity.unitOfMeasure                                       | Always `EA` (“each”). Other units of measure are not supported yet.                                                                             |
+| items[].taxMetadata                                                                          | Mapped over specific lineItem 1:1                                        | Metadata is supposed to follow the structure of the Vertex API request. For lineItems it is mapped over each corresponding item based on lineItemId. |
+| items[].taxMetadata.seller.company                                                           | lineItems[].seller.company                                               | Required by Vertex from the legal point of view.                                                                                                     |
+| expenses (only for expenses with type `SHIPMENT_EXPENSE_TYPE`)                               | lineItems                                                                | Shipments are treated just like products in Vertex - it’s all a line item.                                                                       |
+| expenses.hash                                                                                | lineItems[].lineItemId                                                   |                                                                                                                                                 |
+| expenses.shipment.shipmentAddress                                                            | lineItems[].customer.destination                                         |                                                                                                                                                 |
+| billingAddress                                                                               | lineItems[].customer.administrativeDestination                           |                                                                                                                                                 |
+| expenses.sumPrice (either GROSS or NET depending on currently selected mode)                 | lineItems[].extendedPrice                                                |                                                                                                                                                 |
+| expenses.sumDiscountAmountAggregation                                                        | lineItems[].discount.discountValue                                       | Prices are converted from the Spryker’s cent-based format to the Vertex decimal format.                                                                  |
+| -                                                                                            | lineItems[].discount.discountType                                        | Always `DiscountAmount`. Spryker stores discount based on amount, so there is no need to use percentage-based discounts.                   |
+
+##### Location mapping
+
+| Spryker          | Vertex         | Comment                            |
+|------------------|----------------|------------------------------------|
+| address1         | streetAddress1 |                                    |
+| address2         | streetAddress2 | Should be either not empty or null |
+| city             | city           |                                    |
+| state            | mainDivision   | Should be either not empty or null |
+| zipCode          | postalCode     |                                    |
+| country.iso2Code | country        |                                    |

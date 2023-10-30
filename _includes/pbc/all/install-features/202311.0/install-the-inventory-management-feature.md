@@ -21,7 +21,7 @@ Follow the steps below to install the Inventory Management feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -284,8 +284,8 @@ Sony Experts MER000006 Warehouse 1,1
 
 | COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                    |
 |-----------|-----------|-----------|--------------|-------------------------------------|
-| name      | mandatory | string    | Warehouse1   | Name of the warehouse.              |
-| is_active | mandatory | bool      | 1            | Defines if the warehouse is active. |
+| name      | ✓ | string    | Warehouse1   | Name of the warehouse.              |
+| is_active | ✓ | bool      | 1            | Defines if the warehouse is active. |
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse_store.csv**
 
@@ -300,8 +300,8 @@ Warehouse2,US
 
 | COLUMN         | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                      |
 |----------------|-----------|-----------|--------------|-------------------------------------------------------|
-| warehouse_name | mandatory | string    | Warehouse1   | Name of the warehouse.                                |
-| store_name     | mandatory | string    | DE           | Name of the store the warehouse will be available in. |
+| warehouse_name | ✓ | string    | Warehouse1   | Name of the warehouse.                                |
+| store_name     | ✓ | string    | DE           | Name of the store the warehouse will be available in. |
 
 **data/import/common/common/warehouse_address.csv**
 
@@ -318,14 +318,14 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 
 | COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                          |
 |-------------------|-----------|-----------|--------------------|-------------------------------------------|
-| warehouse_name    | mandatory | string    | Warehouse1         | Warehouse name.                           |
-| address1          | mandatory | string    | Hallesches Ufer 71 | The first line of the warehouse address.  |
+| warehouse_name    | ✓ | string    | Warehouse1         | Warehouse name.                           |
+| address1          | ✓ | string    | Hallesches Ufer 71 | The first line of the warehouse address.  |
 | address2          | optional  | string    |                    | The second line of the warehouse address. |
 | address3          | optional  | string    |                    | The third line of the warehouse address.  |
-| zip_code          | mandatory | string    | 73271              | Zipcode.                                  |
-| city              | mandatory | string    | Holzmaden          | City.                                     |
+| zip_code          | ✓ | string    | 73271              | Zipcode.                                  |
+| city              | ✓ | string    | Holzmaden          | City.                                     |
 | region_name       | optional  | string    |                    | Region name from the `spy_region` table.  |
-| country_iso2_code | mandatory | string    | DE                 | The ISO code of the country.              |
+| country_iso2_code | ✓ | string    | DE                 | The ISO code of the country.              |
 | phone             | optional  | string    | +49 7023 87 33 18  | Landline or any other contact phone.      |
 | comment           | optional  | string    |                    | Any related comment.                      |
 
@@ -635,7 +635,7 @@ Follow the steps below to install an example for product and product offer wareh
 
 To start integration, integrate the required features:
 
-| NAME                   | VERSION          | INTEGRATION GUIDE                                                 |
+| NAME                   | VERSION          | INSTALLATION GUIDE                                                 |
 |------------------------|------------------|-------------------------------------------------------------------|
 | Inventory Management   | {{page.version}} | [Inventory Mamagement feature integration](#install-feature-core) |
 
@@ -804,9 +804,9 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                          |
+| FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                          |
 |--------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
 | Alternative Products     |                                  | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html) |

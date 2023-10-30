@@ -11,7 +11,7 @@ Follow the steps below to install the Approval Proces feature core.
 
 To start feature integration, review and install the necessary features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
@@ -401,7 +401,7 @@ Follow the steps below to install the Approval Proces feature frontend.
 
 To start feature integration, review and install the necessary features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|

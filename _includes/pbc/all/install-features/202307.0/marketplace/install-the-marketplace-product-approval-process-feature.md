@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Product Approval Process featu
 
 Install the required features:
 
-| NAME                     | VERSION            | INTEGRATION GUIDE                                                                                                                                                   |
+| NAME                     | VERSION            | INSTALLATION GUIDE                                                                                                                                                   |
 |--------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core             | {{page.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                         |
 | Marketplace Product      | {{page.version}}   | [Marketplace Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)           |

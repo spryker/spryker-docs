@@ -5,7 +5,7 @@
 ### Prerequisites
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | 201903.0 |Feature API |
 | Product | 201903.0 |Feature API |

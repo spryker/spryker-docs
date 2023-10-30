@@ -10,7 +10,7 @@ Follow the steps below to install the Marketplace Merchant Custom Prices feature
 
 Install the required features:
 
-| NAME    | VERSION    | INTEGRATION GUIDE    |
+| NAME    | VERSION    | INSTALLATION GUIDE    |
 |----------------|------------------|-------------------|
 | Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
 | Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |

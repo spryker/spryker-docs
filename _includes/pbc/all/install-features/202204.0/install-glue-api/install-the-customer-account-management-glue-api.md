@@ -16,7 +16,7 @@ This feature integration guide expects the basic feature to be in place. It only
 
 Install the required features:
 
-| FEATURE  | VERSION    | INTEGRATION GUIDE   |
+| FEATURE  | VERSION    | INSTALLATION GUIDE   |
 | ------------- | ---------- | ------------- |
 | Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
@@ -35,7 +35,7 @@ composer require "spryker/customers-rest-api":"^1.13.0" "spryker/auth-rest-api":
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                      |
 | ---------------------- | --------------------------------------- |

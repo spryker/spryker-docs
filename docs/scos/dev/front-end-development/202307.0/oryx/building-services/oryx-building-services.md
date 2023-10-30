@@ -62,16 +62,7 @@ We use `Default` prefix for default service implementation, but it's optional. W
 
 To make services available for injection, you need to provide them in the Oryx DI container.
 
-Use class provider, to binds a token to a class constructor:
-
-```ts
-{
-  provide: MyServiceToken,
-  useClass: DefaultMyService
-}
-```
-
-Then make sure your provider is passed to the DI container, either as part of a bigger feature, or directly to the app orchestrator:
+Use class provider, to binds a token to a class constructor and make sure your provider is passed to the DI container, either as part of a bigger feature, or directly to the app orchestrator:
 
 ```ts
 export const app = appBuilder()
@@ -96,9 +87,6 @@ When creating services, often, you'll need to communicate with a backend server 
 - using `HttpService` to make HTTP requests in `adapters`, as it provides a consistent way of making HTTP requests and handling responses, including interceptors. 
 - using `Transfomers` (`Normalizers` and `Serializers`) to transform data from API models to client models in a generic, and customizable way.
 
-For a deeper understanding role of adapters in Oryx's reactivity layers, refer to the [Integration of backend APIs](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html).
-
-
 Typical implementation from the service perspective could look like:
 
 ```ts
@@ -115,6 +103,9 @@ export class DefaultMyService implements MyService {
   }
 }
 ```
+
+For a deeper understanding role of adapters in Oryx's reactivity layers, refer to the [Integration of backend APIs](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html).
+
 
 ## State Management with Queries
 

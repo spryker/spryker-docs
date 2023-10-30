@@ -3389,6 +3389,14 @@ entries:
                     url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-feature.html
                     include_versions:
                     - "202311.0"
+                  - title: Service Points Cart
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html
+                    include_versions:
+                    - "202311.0"
+                  - title: Service Points Cart + Checkout feature
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-cart-checkout-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points + Order Management
                     url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-order-management-feature.html
                     include_versions:

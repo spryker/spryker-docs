@@ -22,7 +22,7 @@ Follow the steps below to install the Customer Account Management feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -36,7 +36,7 @@ composer require spryker-feature/customer-account-management: "{{page.version}}"
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                      |
 |------------------------|-----------------------------------------|
@@ -615,7 +615,7 @@ Follow the steps below to install the [Customer Account Management]([Spryker Cor
 
 Overview and install the necessary features before beginning the integration.
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -997,9 +997,9 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| NAME                                           | INTEGRATION GUIDE                                                                                                                                                                                      |
+| NAME                                           | INSTALLATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
 | Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

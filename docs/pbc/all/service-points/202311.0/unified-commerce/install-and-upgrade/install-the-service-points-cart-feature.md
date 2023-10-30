@@ -1,0 +1,8 @@
+---
+title: Install the Service Points Cart feature
+description: Learn how to integrate the Service Points Cart feature into your project
+last_updated: Oct 5, 2023
+template: feature-integration-guide-template
+---
+
+{% include pbc/all/install-features/{{page.version}}/install-the-service-points-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202400.0/install-the-service-points-cart-feature.md/ -->

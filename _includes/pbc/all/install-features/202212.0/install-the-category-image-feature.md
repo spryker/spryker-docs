@@ -11,7 +11,7 @@ Follow the steps below to install the Category Image feature core.
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Category | {{page.version}} | |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
@@ -273,8 +273,8 @@ template_name,template_path
 
 | COLUMN | IS REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| template_name | mandatory | string | My category template | A human readable name of the category template. |
-| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
+| template_name | ✓ | string | My category template | A human readable name of the category template. |
+| template_path | ✓ | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
 
 2. Import data:
 
@@ -398,7 +398,7 @@ Follow the steps below to install the Category Image feature frontend.
 
 Install the required features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Category | {{page.version}} | |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
@@ -453,7 +453,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

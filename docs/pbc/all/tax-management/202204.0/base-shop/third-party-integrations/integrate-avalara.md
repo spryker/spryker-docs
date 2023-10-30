@@ -27,7 +27,7 @@ Follow the steps below to install the feature core.
 
 1.  To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 |Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
@@ -48,7 +48,7 @@ composer require spryker-eco/avalara-tax:"^0.1.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 |MODULE | EXPECTED DIRECTORY |
 |--- | --- |
@@ -479,7 +479,7 @@ Open `spy_product_abstract`, and `spy_product` and make sure that all data has b
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 | FEATURE |REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | ---  |---  |---  |

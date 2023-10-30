@@ -11,7 +11,7 @@ Follow the steps below to install the Availability Notification feature core.
 
 Install the required features:
 
-| NAME                      | VERSION            | INTEGRATION GUIDE                                                                                                                                                                         |
+| NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mailing and Notifications | {{site.version}}   | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
 | Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
@@ -339,7 +339,7 @@ Follow the steps below to install the Availability Notification feature frontend
 
 To start feature integration, integrate the required feature:
 
-| NAME                      | VERSION            | INTEGRATION GUIDE                                                                                                                                                                         |
+| NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mailing and Notifications | {{site.version}}   | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
 | Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |

@@ -146,13 +146,14 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 2.  In the `spy_product_offer_service` database table, delete the connection between the product offer and the service point.
 
 3.  Try to create an order.
-    Make sure you get an error message about the product being unavailable.
+    Make sure you get the error message about the product being unavailable.
 
 {% endinfo_block %}
 
 #### Enable the demo Click & Collect availability calculator strategy plugin
 
-Add the following examplary plugin.
+Add the following example plugin.
+
 | PLUGIN                                                                             | SPECIFICATION                                                                                                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
 | ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin | Calculates and returns product offer availabilities by service point UUID for requested items, prioritizing the matching criteria. Takes into account merchant references if provided. |               | Spryker\Client\ClickAndCollectExample\Plugin |
@@ -190,7 +191,7 @@ class ProductOfferServicePointAvailabilityCalculatorDependencyProvider extends S
 
 To enable the Storefront API, register the following plugin:
 
-| PLUGIN                                                    | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                  |
+| PLUGIN        | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                  |
 |-----------------------------------------------------------|----------------------------------------------------------------------|---------------|------------------------------------------------------------|
 | ProductOfferServicePointAvailabilitiesResourceRoutePlugin | Registers the `product-offer-service-point-availabilities` resource. |               | Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi |
 
@@ -224,27 +225,27 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Send the following request:
 
-* `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
-   ```json
-      {
-          "data": {
-              "type": "product-offer-service-point-availabilities",
-              "attributes": {
-                  "servicePointUuids": [
-                      "{{service-point-uuid}}"
-                  ],
-                  "serviceTypeUuid": "{{service-type-uuid}}",
-                  "productOfferServicePointAvailabilityRequestItems": [
-                      {
-                          "productConcreteSku": "{{product-concrete-sku}}",
-                          "productOfferReference": "{{product-offer-reference}}",
-                          "quantity": 1
-                      }
-                  ]
-              }
+`POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+```json
+  {
+      "data": {
+          "type": "product-offer-service-point-availabilities",
+          "attributes": {
+              "servicePointUuids": [
+                  "{{service-point-uuid}}"
+              ],
+              "serviceTypeUuid": "{{service-type-uuid}}",
+              "productOfferServicePointAvailabilityRequestItems": [
+                  {
+                      "productConcreteSku": "{{product-concrete-sku}}",
+                      "productOfferReference": "{{product-offer-reference}}",
+                      "quantity": 1
+                  }
+              ]
           }
       }
-   ```
+  }
+```
 
 Make sure you get a valid response.
 
@@ -252,7 +253,7 @@ Make sure you get a valid response.
 
 ## Install feature frontend
 
-Follow the steps below to install the Product Offer Service Points Availability feature frontend.
+Follow the steps to install the Product Offer Service Points Availability feature frontend.
 
 ### 1) Add translations
 

@@ -6,7 +6,7 @@ This document describes how to install the Shipment Product Offer Service Points
 
 Install the required features:
 
-| NAME                                      | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                                      |
+| NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer Service Points Availability | {{page.version}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html) |
 | Shipment                                  | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
@@ -40,36 +40,36 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure the following changes have been applied in transfer objects:
+* Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                                    | TYPE  | EVENT   | PATH                                                                                              |
 |-------------------------------------------------------------|-------|---------|---------------------------------------------------------------------------------------------------|
 | RestProductOfferServicePointAvailabilitiesRequestAttributes | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer |
 | ProductOfferServicePointAvailabilityConditions              | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityConditionsTransfer              |
 
-2. Make sure that `shipmentTypeUuid` filter can be used with `product-offer-service-point-availabilities` resource in Storefront API.
+* Make sure you can use the `shipmentTypeUuid` filter when sending requests to the  `product-offer-service-point-availabilities` resource. Example:
 
-* `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
-   ```json
-      {
-          "data": {
-              "type": "product-offer-service-point-availabilities",
-              "attributes": {
-                  "servicePointUuids": [
-                      "{{service-point-uuid}}"
-                  ],
-                  "serviceTypeUuid": "{{service-type-uuid}}",
-                  "productOfferServicePointAvailabilityRequestItems": [
-                      {
-                          "productConcreteSku": "{{product-concrete-sku}}",
-                          "productOfferReference": "{{product-offer-reference}}",
-                          "quantity": 1
-                      }
-                  ],
-                  "shipmentTypeUuid": "{{shipment-type-uuid}}"
-              }
+`POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+```json
+  {
+      "data": {
+          "type": "product-offer-service-point-availabilities",
+          "attributes": {
+              "servicePointUuids": [
+                  "{{service-point-uuid}}"
+              ],
+              "serviceTypeUuid": "{{service-type-uuid}}",
+              "productOfferServicePointAvailabilityRequestItems": [
+                  {
+                      "productConcreteSku": "{{product-concrete-sku}}",
+                      "productOfferReference": "{{product-offer-reference}}",
+                      "quantity": 1
+                  }
+              ],
+              "shipmentTypeUuid": "{{shipment-type-uuid}}"
           }
       }
-   ```
+  }
+```
 
 {% endinfo_block %}

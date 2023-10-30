@@ -6,7 +6,7 @@ This document describes how to install the Marketplace Merchant + Product Offer 
 
 Install the required features:
 
-| NAME                                      | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                                      |
+| NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer Service Points Availability | {{page.version}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html) |
 | Merchant                                  | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)                                      |
@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure the following changes have been applied in transfer objects:
+* Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                                       | TYPE  | EVENT   | PATH                                                                                                 |
 |----------------------------------------------------------------|-------|---------|------------------------------------------------------------------------------------------------------|
@@ -49,29 +49,29 @@ console transfer:generate
 | ProductOfferServicePointAvailabilityResponseItem               | class | created | src/Generated/Shared/Transfer/ProductOfferServicePointAvailabilityResponseItemTransfer               |
 | RestProductOfferServicePointAvailabilityRequestItemsAttributes | class | created | src/Generated/Shared/Transfer/RestProductOfferServicePointAvailabilityRequestItemsAttributesTransfer |
 
-2. Make sure that `merchantReference` filter can be used with `product-offer-service-point-availabilities` resource in Storefront API.
+* Make sure you can use the  `merchantReference` filter when sending requests to the `product-offer-service-point-availabilities` resource. Example:
 
-* `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
-   ```json
-      {
-          "data": {
-              "type": "product-offer-service-point-availabilities",
-              "attributes": {
-                  "servicePointUuids": [
-                      "{{service-point-uuid}}"
-                  ],
-                  "serviceTypeUuid": "{{service-type-uuid}}",
-                  "productOfferServicePointAvailabilityRequestItems": [
-                      {
-                          "productConcreteSku": "{{product-concrete-sku}}",
-                          "productOfferReference": "{{product-offer-reference}}",
-                          "quantity": 1,
-                          "merchantReference": "{{merchant-reference}}"
-                      }
-                  ]
-              }
+`POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+```json
+  {
+      "data": {
+          "type": "product-offer-service-point-availabilities",
+          "attributes": {
+              "servicePointUuids": [
+                  "{{service-point-uuid}}"
+              ],
+              "serviceTypeUuid": "{{service-type-uuid}}",
+              "productOfferServicePointAvailabilityRequestItems": [
+                  {
+                      "productConcreteSku": "{{product-concrete-sku}}",
+                      "productOfferReference": "{{product-offer-reference}}",
+                      "quantity": 1,
+                      "merchantReference": "{{merchant-reference}}"
+                  }
+              ]
           }
       }
-   ```
+  }
+```
 
 {% endinfo_block %}

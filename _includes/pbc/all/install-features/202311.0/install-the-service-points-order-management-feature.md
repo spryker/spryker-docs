@@ -317,7 +317,7 @@ Add the widget to a Twig template:
 {% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-Make sure you can place an order with a service point, and the service point is displayed in the order details. 
+For service point-related orders, make sure the service point name is displayed in the order details.
 
 
 

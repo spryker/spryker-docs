@@ -1,6 +1,7 @@
-# Building Services with Oryx
-
-This tutorial will guide you through the process of building services with the Oryx framework. We'll leverage Oryx's dependency injection (DI) mechanism, HttpService and Query.
+---
+title: Building Services with Oryx
+description: This tutorial will guide you through the process of building services with the Oryx framework. We'll leverage Oryx's dependency injection (DI) mechanism, HttpService and Query.
+---
 
 ## Introduction
 

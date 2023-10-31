@@ -17,9 +17,16 @@ By default, our system has a limit of two Jenkins executors for each environment
 
 Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU utilization are not generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores. 
 
-There are two potential solutions to address this problem: application optimization and better background job orchestration.
+There are two potential solutions to address this problem that can be implemented simultaneously: application optimization and better background job orchestration.
 
-# Proposed Solution
+# Proposed Solution "Application optimization"
+This solution is not part of the current documentation.
+For more information please check next articles: 
+- [https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html)
+- [https://docs.spryker.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html#prerequisites] (https://docs.spryker.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html#prerequisites)
+  
+# Proposed Solution "Background job orchestration."
+## Solution descritpion
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/OneWorker-diagram.png)
 
@@ -27,7 +34,7 @@ The solution described here is targeted at small to medium projects but can be i
 
 The proposed solution is to use one Worker (`queue:worker:start`) for all stores, regardless of the number of stores. Instead of executing these steps for one store within one process and having multiple processes for multiple stores, we can have one process that scans all queues for all stores and spawns child processes the same way as the OOTB solution. However, instead of determining the number of processes based on the presence of a single message, we can analyse the total number of messages in the queue to make an informed decision on how many processes should be launched at any given moment.
 
-## The Process Pool
+### The Process Pool
 
 In computer science, a pool refers to a collection of resources that are kept in memory and ready to use. In this context, we have a fixed-sized pool (fixed-size array) where new processes are only ran if there is space available among the other running processes. This approach allows us to have better control over the number of processes launched by the OOTB solution, resulting in more predictable memory consumption.
 
@@ -40,7 +47,7 @@ The following parameters exist:
 - pool size (default 5-10)
 - free memory buffer - minimum amount of RAM (MB) the system should have in order to spawn a new child process (default 750mb)
 
-## Worker Statistics and Logs
+### Worker Statistics and Logs
 
 With the proposed solution, we gather better statistics to understand the health of the worker and make informed decisions. We can track the number of tasks executed per queue/store, the distribution of error codes, cycles, and various metrics related to skipping cycles, cooldown, available slots, and memory limitations. These statistics help us monitor performance, identify bottlenecks, and optimize resource allocation.
 
@@ -48,17 +55,17 @@ With the proposed solution, we gather better statistics to understand the health
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/stats-summary.png)
 
-## Error Logging
+### Error Logging
 
 In addition to statistics, we also capture the output of children's processes in the standard output of the main worker process. This simplifies troubleshooting by providing logs with store and queue names.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/stats-error-log.png)
 
-## Edge Cases/Limitation
+### Edge Cases/Limitation
 
 Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, please note that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to 10s (rough estimate), to reduce the number of messages that will be retried.
 
-## Implementation
+## Solution Implementation
 
 
 There are two methods possible for implementing this:

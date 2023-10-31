@@ -1736,14 +1736,18 @@ entries:
               - title: Import and export data
                 url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-and-export-order-management-system-data.html
                 nested:
+                  - title: Orders data export
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
+                    nested:
+                      - title: "Export file details: orders.csv"
+                        url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-orders.csv.html
+                      - title: "Export file details: order-expenses.csv"
+                        url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-order-expenses.csv.html
+                      - title: "Export file details: order-items.csv"
+                        url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-order-items.csv.html
                   - title: "Import file details: order-status.csv"
                     url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-file-details-order-status.csv.html
-                  - title: "Export file details: orders.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-orders.csv.html
-                  - title: "Export file details: order-expenses.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
-                  - title: "Export file details: order-items.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html
+
               - title: Install and upgrade
                 nested:
                   - title: Install features

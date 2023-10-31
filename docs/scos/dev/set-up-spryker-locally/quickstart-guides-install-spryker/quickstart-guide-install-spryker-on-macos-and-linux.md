@@ -9,11 +9,11 @@ redirect_from:
 
 This document describes how to quickly install Spryker on MacOS or Linux in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
 
-To install Spryker on MacOS or Linux, follow these steps:
+To install Spryker on macOS or Linux, follow these steps:
 
 ## Prerequisites
 
-* Install [Docker](https://www.docker.com/).
+* Install [Docker](https://www.docker.com/) or [OrbStack](https://orbstack.dev/) for MacOS only.
 
 * MacOS: Install or update Mutagen and Mutagen Compose:
 

@@ -1634,8 +1634,12 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-marketplace-product-feature.html
                       - title: Marketplace Product Offer + Quick Add to Cart
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html
-                      - title: Marketplace Product Offer Service Points
+                      - title: Marketplace Product Offer + Service Points
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
+                        include_versions:
+                        - "202311.0"
+                      - title: Marketplace Merchant + Product Offer Service Points Availability
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
                         include_versions:
                         - "202311.0"
                   - title: Install Glue API
@@ -3425,6 +3429,10 @@ entries:
                     - "202311.0"
                   - title: Product Offer Shipments Availability
                     url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-product-offer-shipments-availability-feature.html
+                    include_versions:
+                    - "202311.0"
+                  - title: Shipment Product Offer Service Points Availability
+                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-shipment-product-offer-service-points-availability-feature.html
                     include_versions:
                     - "202311.0"
       - title: Shopping List and Wishlist

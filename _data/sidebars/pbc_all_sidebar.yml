@@ -1732,14 +1732,18 @@ entries:
               - title: Import and export data
                 url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-and-export-order-management-system-data.html
                 nested:
+                  - title: Orders data export
+                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
+                    nested:
+                      - title: "Export file details: orders.csv"
+                        url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-orders.csv.html
+                      - title: "Export file details: order-expenses.csv"
+                        url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-order-expenses.csv.html
+                      - title: "Export file details: order-items.csv"
+                        url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/orders-data-export/export-file-details-order-items.csv.html
                   - title: "Import file details: order-status.csv"
                     url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/import-file-details-order-status.csv.html
-                  - title: "Export file details: orders.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-orders.csv.html
-                  - title: "Export file details: order-expenses.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
-                  - title: "Export file details: order-items.csv"
-                    url: /docs/pbc/all/order-management-system/base-shop/import-and-export-data/export-file-details-order-items.csv.html
+
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1972,6 +1976,8 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/edit-payment-methods.html
                   - title: View payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/view-payment-methods.html
+              - title: Debug payment integrations locally
+                url: /docs/pbc/all/payment-service-provider/base-shop/debug-payment-integrations-locally.html
               - title: Hydrate payment methods for an order
                 url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
               - title: Interact with third party payment providers using Glue API
@@ -2332,13 +2338,13 @@ entries:
                     url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Create personalized prices"
+                  - title: Create personalized prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
-                  - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
+                  - title: Handle twenty five million prices in Spryker Commerce OS
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
-                  - title: "HowTo: Manage business unit specific prices via data import"
+                  - title: Manage business unit specific prices via data import
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
-                  - title: "HowTo: Schedule cron job for Scheduled Prices"
+                  - title: Schedule cron job for scheduled prices
                     url: /docs/pbc/all/price-management/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
               - title: Extend and customize
                 nested:

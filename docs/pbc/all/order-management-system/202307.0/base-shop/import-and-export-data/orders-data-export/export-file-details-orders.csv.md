@@ -6,10 +6,7 @@ template: data-export-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-export-orders-csv-files-format
 originalArticleId: 90c9187a-73af-4fb5-92fd-914ed471f74e
 redirect_from:
-  - /2021080/docs/data-export-orders-csv-files-format
-  - /2021080/docs/en/data-export-orders-csv-files-format
-  - /docs/data-export-orders-csv-files-format
-  - /docs/en/data-export-orders-csv-files-format
+  - /docs/pbc/all/order-management-system/202307.0/base-shop/import-and-export-data/export-file-details-orders.csv.html
 related:
   - title: Exporting data
     link: docs/scos/dev/data-import/page.version/data-export.html

@@ -38,7 +38,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-2. Optional: To install an exemplary calculator strategy for the Click & Collect product offer service point availability, install the following module:
+2. Optional: To install an example calculator strategy for the Click & Collect product offer service point availability, install the following module:
 
 ```bash
 composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies
@@ -109,7 +109,7 @@ Make sure the following changes have been applied in transfer objects:
 
 Set up the following behaviors.
 
-#### Register the availability plugin
+#### Enable the availability plugin
 
 | PLUGIN                                                  | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                                                                                                                  |
 |---------------------------------------------------------|-------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -152,7 +152,7 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 
 #### Enable the demo Click & Collect availability calculator strategy plugin
 
-Add the following example plugin.
+Optional: If you've installed the example module in [1) Install the required modules](#install-the-required-modules), enable the following example plugin.
 
 | PLUGIN                                                                             | SPECIFICATION                                                                                                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|

@@ -90,7 +90,7 @@ Currently, the feature has the following functional constraints which are going 
 
 ## Related Developer documents
 
-| INTEGRATION GUIDES          | DATA IMPORT         |
+| INSTALLATION GUIDES          | DATA IMPORT         |
 |--------------------------------|----------------|
 | [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)                                        | [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html)  |
 | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html) |  

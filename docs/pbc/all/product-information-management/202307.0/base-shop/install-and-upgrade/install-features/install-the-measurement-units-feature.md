@@ -479,7 +479,7 @@ ITEM,218
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| code | mandatory | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
+| code | ✓ | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
 |abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
 Register the following plugin to enable data import:
 
@@ -553,7 +553,7 @@ sales_unit_19,218_1232,ITEM,1,1,1,1
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sales_unit_key | mandatory | unique, string | sales_unit_1 | A unique identifier that allows referring to this record from other data importers. |
+| sales_unit_key | ✓ | unique, string | sales_unit_1 | A unique identifier that allows referring to this record from other data importers. |
 |concrete_sku|mandatory|string|215_123|An already existing product concrete SKU.|
 |code|mandatory|string|METR	|An already existing measurement unit code that will be used to convert back and forth with the base unit defined in product abstract.|
 |conversion|mandatory|float, empty|5|<p>A custom multiplier that is used to calculate base unit. This field can be empty if both base and sales unit code is defined in the general [conversion ratios](https://github.com/spryker/util-measurement-unit-conversion/blob/1ae26cf8e629d25157e273097941bde438a24ddc/src/Spryker/Service/UtilMeasurementUnitConversion/UtilMeasurementUnitConversionConfig.php).</p><p>Example: 5 means that 1 quantity of this sales unit represents 5 of the base unit.</p>|
@@ -1027,7 +1027,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

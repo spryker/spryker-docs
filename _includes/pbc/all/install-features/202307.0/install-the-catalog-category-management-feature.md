@@ -10,7 +10,7 @@ Follow the steps below to install the Catalog + Category Management feature core
 
 To start feature integration, integrate the required features
 
-| NAME                | VERSION | INTEGRATION GUIDE                                            |
+| NAME                | VERSION | INSTALLATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
 | Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Catalog             | {{page.version}}  |  |
@@ -83,11 +83,11 @@ Make sure the following:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
 | Catalog             |      &check;     | |
 | Category Management |      &check;     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |

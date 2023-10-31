@@ -10,7 +10,7 @@ Follow the steps below to install the Product Offer Service Points Availability 
 
 To start feature integration, integrate the required features:
 
-| NAME                             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                         |
+| NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer Service Points     | {{page.version}} | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html)            |
 | Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |

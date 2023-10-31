@@ -258,7 +258,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
-|  concrete_sku | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
+|  concrete_sku | ✓ | string | 420566 | SKU of concrete product which will have alternative products. |
 |  alternative_product_concrete_sku | optional | string | 420565 | SKU of the concrete alternative product. |
 |  alternative_product_abstract_sku | optional | string | M1000785 | SKU of the abstract alternative product. |
 
@@ -513,7 +513,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

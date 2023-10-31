@@ -10,7 +10,7 @@ Follow the steps below to install the Service Points feature core.
 
 Install the required features:
 
-| NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                                                                        |
+| NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer  | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 | Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/servcie-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                                 |
@@ -131,10 +131,10 @@ offer423,s1
 offer424,s1
 ```
 
-| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
+| COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
 |-------------------------|-----------|-----------|--------------|----------------------------------------|
-| product_offer_reference | mandatory | string    | offer419     | Unique reference of the product offer. |
-| service_key             | mandatory | string    | s1           | Unique key of the service.             |
+| product_offer_reference | ✓ | string    | offer419     | Unique reference of the product offer. |
+| service_key             | ✓ | string    | s1           | Unique key of the service.             |
 
 2. Enable data imports at your configuration file—for example:
 

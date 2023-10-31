@@ -10,7 +10,7 @@ Follow the steps below to install the Service Points feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -320,7 +320,7 @@ s1,sp1,pickup,1
 s2,sp2,pickup,1
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE      | DATA EXPLANATION                  |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE      | DATA EXPLANATION                  |
 |-------------------|-----------|-----------|-------------------|-----------------------------------|
 | key               | ✓ | string    | sps1              | Unique key of the service.        |
 | service_point_key | ✓ | string    | sp1               | Unique key of the service point.  |
@@ -1601,7 +1601,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET                   | VERIFICATION                                                                                                                                                 |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|

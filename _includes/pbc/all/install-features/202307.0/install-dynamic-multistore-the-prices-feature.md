@@ -178,7 +178,7 @@ CHF,DE,0
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| currency_code | mandatory | string | EUR | Define currency code. |
+| currency_code | ✓ | string | EUR | Define currency code. |
 |store_name |mandatory |string | DE | Defines the store name. |
 |is_default |mandatory |bool | 1 | Defines if the currency is default. |
 

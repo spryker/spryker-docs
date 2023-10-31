@@ -22,7 +22,7 @@ Follow the steps below to install the Shipment feature core.
 To start the feature integration, integrate the required features:
 
 
-| NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                |
@@ -1010,12 +1010,12 @@ spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 free_pickup,Free Pickup,pickup,Tax Exempt
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION              |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION              |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Shipment method key.   |
-| name                | mandatory | string    | Standard                        | Shipment method name.  |
-| carrier             | mandatory | string    | Spryker Dummy Shipment          | Shipment carrier name. |
-| taxSetName          | mandatory | string    | Shipment Taxes                  | Tax set name.                 |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Shipment method key.   |
+| name                | ✓ | string    | Standard                        | Shipment method name.  |
+| carrier             | ✓ | string    | Spryker Dummy Shipment          | Shipment carrier name. |
+| taxSetName          | ✓ | string    | Shipment Taxes                  | Tax set name.                 |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_method_store.csv**
 ```yaml
@@ -1040,10 +1040,10 @@ spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
-| store               | mandatory | string    | DE                              | Existing store name.          |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
+| store               | ✓ | string    | DE                              | Existing store name.          |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_price.csv**
 ```yaml
@@ -1090,11 +1090,11 @@ spryker_no_shipment,US,EUR,0,0
 spryker_no_shipment,US,CHF,0,0
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
-| store               | mandatory | string    | DE                              | Existing store name.          |
-| currency            | mandatory | string    | EUR                             | Existing currency name.       |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
+| store               | ✓ | string    | DE                              | Existing store name.          |
+| currency            | ✓ | string    | EUR                             | Existing currency name.       |
 | value_net           | optional  | integer   | 390                             | Net price, in coins.                 |
 | value_gross         | optional  | integer   | 490                             | Gross price, in coins.               |
 
@@ -1105,11 +1105,11 @@ pickup,Pickup,1
 delivery,Delivery,1
 ```
 
-| COLUMN    | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION             |
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION             |
 |-----------|-----------|-----------|--------------|------------------------------|
-| key       | mandatory | string    | pickup       | Key for the shipment type.   |
-| name      | mandatory | string    | Pickup       | Name for the shipment type.  |
-| is_active | mandatory | string    | 1            | Status of the shipment type. |
+| key       | ✓ | string    | pickup       | Key for the shipment type.   |
+| name      | ✓ | string    | Pickup       | Name for the shipment type.  |
+| is_active | ✓ | string    | 1            | Status of the shipment type. |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_type_store.csv**
 ```yaml
@@ -1122,10 +1122,10 @@ pickup,US
 delivery,US
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
 |-------------------|-----------|-----------|--------------|-----------------------------------|
-| shipment_type_key | mandatory | string    | pickup       | Key of an existing shipping type. |
-| store_name        | mandatory | string    | DE           | Name of an existing store.        |
+| shipment_type_key | ✓ | string    | pickup       | Key of an existing shipping type. |
+| store_name        | ✓ | string    | DE           | Name of an existing store.        |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_method_shipment_type.csv**
 ```yaml
@@ -1139,10 +1139,10 @@ spryker_no_shipment,delivery
 free_pickup,pickup
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| shipment_type_key   | mandatory | string    | delivery                        | Key of an existing shipping type.   |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
+| shipment_type_key   | ✓ | string    | delivery                        | Key of an existing shipping type.   |
 
 1. Register the following data import plugins:
 
@@ -1771,7 +1771,7 @@ Follow the steps below to install the feature frontend.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                            |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
 | Product      | {{page.version}} | [Isntall the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
@@ -1784,7 +1784,7 @@ composer require spryker-feature/shipment:"{{page.version}}" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE             | EXPECTED DIRECTORY                       |
 |--------------------|------------------------------------------|

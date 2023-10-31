@@ -12,7 +12,7 @@ Follow the steps below to install the Alternative Products + Inventory Managemen
 
 To start feature integration, review and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
 |Alternative Products|{{page.version}}| [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
 |Inventory Management|{{page.version}}| [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |

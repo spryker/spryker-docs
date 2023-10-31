@@ -1192,7 +1192,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 ```
 
-2. To enable the Backend API relationships, register the plugin:
+2. To enable the Backend API relationships, register the plugins:
 
 | PLUGIN                                                                | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                                            |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
@@ -1453,13 +1453,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+Make sure you can send the following requests:
 
 * `GET https://glue.mysprykershop.com/service-points`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
 
-Make sure that you can include the `service-point-addresses` relation in the `service-points` resource requests.
+Make sure that you can include the `service-point-addresses` resource in the `service-points` resource requests.
 * `GET https://glue.mysprykershop.com/service-points?include=service-point-addresses`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}?include=service-point-addresses`
 
@@ -1471,7 +1471,7 @@ Follow the steps below to install the Service Points feature frontend.
 
 ### 1) Add translations
 
-1. Append glossary for the feature:
+1. Append the glossary:
 
 ```csv
 service_point_widget.search,"Search for Store, zip code or city...",en_US
@@ -1490,14 +1490,14 @@ console data:import glossary
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
-1. Disable service point selection for product bundles (if it's exists) during checkout:
+1. Disable service points to be selected for product bundles during checkout:
 
-| CONFIGURATION                                                                                     | SPECIFICATION                                                                                         | NAMESPACE                   |
-|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------|
-| ServicePointWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines a list of properties in a `ItemTransfer` that are not intended for form hydration.            | Pyz\Yves\ServicePointWidget |
-| ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines a list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |
+|CONFIGURATION     | SPECIFICATION   NAMESPACE                   |
+|------------------------|----------------------------------------------------------|-----------------------------|
+| ServicePointWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines the list of properties in an `ItemTransfer` that are not intended for form hydration.   | Pyz\Yves\ServicePointWidget |
+| ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines the list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |
 
 **src/Pyz/Yves/ServicePointWidget/ServicePointWidgetConfig.php**
 
@@ -1550,7 +1550,7 @@ class ProductBundleConfig extends SprykerProductBundleConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that service point selection is not possible for product bundles on the checkout address step (`http://mysprykershop.com/checkout/address`).
+Make sure service points can't be selected for product bundles on the checkout address step.
 
 {% endinfo_block %}
 
@@ -1590,11 +1590,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ### 4) Set up widgets
 
-1. Register the following plugins to enable widgets:
+1. To enable widgets, register the following plugins:
 
 | PLUGIN                   | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
 |--------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
-| ServicePointSearchWidget | Allow customers to search, and sort a list of service points. |               | SprykerShop\Yves\ServicePointWidget\Widget |
+| ServicePointSearchWidget | Enables customers to search and sort service points. |               | SprykerShop\Yves\ServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/cart-feature-overview/cart-feature-overview.html) feature API into a Spryker project.
+This document describes how to integrate the [Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html) feature API into a Spryker project.
 
 ## Prerequisites
 

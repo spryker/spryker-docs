@@ -170,38 +170,40 @@ entries:
           - title: Base shop
             url: /docs/pbc/all/cart-and-checkout/base-shop/cart-and-checkout-base-shop.html
             nested:
-              - title: Cart feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-feature-overview.html
+              - title: Feature overviews
                 nested:
-                  - title: Cart notes
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-notes-overview.html
-                  - title: Cart widget
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-widget-overview.html
-                  - title: Quick order from the catalog page
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
-              - title: Multiple Carts feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/multiple-carts-feature-overview.html
-              - title: Persistent Cart Sharing feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/persistent-cart-sharing-feature-overview.html
-              - title: Quick Add to Cart feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/quick-add-to-cart-feature-overview.html
-              - title: Shared Carts feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/shared-carts-feature-overview.html
-              - title: Checkout feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/checkout-feature-overview.html
-                nested:
-                  - title: Multi-step checkout
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/multi-step-checkout-overview.html
-                  - title: Order thresholds overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/order-thresholds-overview.html
-              - title: Approval Process feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/approval-process-feature-overview.html
-              - title: Comments feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/comments-feature-overview.html
-              - title: Non-splittable Products feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/non-splittable-products-feature-overview.html
-              - title: Resource Sharing feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/resource-sharing-feature-overview.html
+                  - title: Cart feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-feature-overview.html
+                    nested:
+                      - title: Cart notes
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-notes-overview.html
+                      - title: Cart widget
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-widget-overview.html
+                      - title: Quick order from the catalog page
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+                  - title: Multiple Carts feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/multiple-carts-feature-overview.html
+                  - title: Persistent Cart Sharing feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/persistent-cart-sharing-feature-overview.html
+                  - title: Quick Add to Cart feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/quick-add-to-cart-feature-overview.html
+                  - title: Shared Carts feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/shared-carts-feature-overview.html
+                  - title: Checkout feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/checkout-feature-overview.html
+                    nested:
+                      - title: Multi-step checkout
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/multi-step-checkout-overview.html
+                      - title: Order thresholds overview
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/order-thresholds-overview.html
+                  - title: Approval Process feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/approval-process-feature-overview.html
+                  - title: Comments feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/comments-feature-overview.html
+                  - title: Non-splittable Products feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/non-splittable-products-feature-overview.html
+                  - title: Resource Sharing feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/resource-sharing-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features

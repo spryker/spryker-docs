@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -69,7 +69,7 @@ Make sure that the configuration returns the billing address and payment keys.
 
 {% endinfo_block %}
 
-If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/multiple-carts-feature-overview.html), add the following configuration to your project:
+If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html), add the following configuration to your project:
 
 **src/Pyz/Client/MultiCart/MultiCartConfig.php**
 

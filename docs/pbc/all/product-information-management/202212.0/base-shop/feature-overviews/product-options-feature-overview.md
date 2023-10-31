@@ -75,7 +75,7 @@ The feature has the following functional constraints, which are going to be reso
 {% endinfo_block %}
 
 * Product options are available in all the stores where the corresponding concrete product is available.
-* Unlike [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/shared-carts-feature-overview.html), [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) does not support product options.
+* Unlike [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html), [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) does not support product options.
 * If you add a product with an option to a shopping list, the product option gets discarded.
 * You cannot define product option prices in a per-merchant manner.
 * If you create a product option, the price remains the same for all merchants.

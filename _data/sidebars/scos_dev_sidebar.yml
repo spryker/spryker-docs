@@ -1922,18 +1922,18 @@ entries:
     - title: Migration program
       nested:
       - title: "Introduction"
-        url: /docs/scos/dev/migration-program-v2/migration-to-paas/paas-introduction.html
+        url: /docs/scos/dev/migration-program/migration-to-paas/paas-introduction.html
       - title: "Understanding PaaS"
-        url: /docs/scos/dev/migration-program-v2/migration-to-paas/understanding-paas.html
+        url: /docs/scos/dev/migration-program/migration-to-paas/understanding-paas.html
       - title: "Migration overview"
-        url: /docs/scos/dev/migration-program-v2/migration-to-paas/migration-overview.html
+        url: /docs/scos/dev/migration-program/migration-to-paas/migration-overview.html
       - title: "Enabler: PaaS structure and overview"
-        url: /docs/scos/dev/migration-program-v2/migration-to-paas/enabler-paas-structure-and-overview.html
+        url: /docs/scos/dev/migration-program/migration-to-paas/enabler-paas-structure-and-overview.html
         nested:
           - title: "Step 1: Docker SDK Integration"
-            url: /docs/scos/dev/migration-program-v2/migration-to-paas/migration-to-paas-guides/step-1-docker-sdk-integration.html
+            url: /docs/scos/dev/migration-program/migration-to-paas/migration-to-paas-guides/step-1-docker-sdk-integration.html
           - title: "Step 2: PHP Version Upgrade"
-            url: /docs/scos/dev/migration-program-v2/migration-to-paas/migration-to-paas-guides/step-2-php-version-upgrade.html
+            url: /docs/scos/dev/migration-program/migration-to-paas/migration-to-paas-guides/step-2-php-version-upgrade.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

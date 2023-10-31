@@ -173,37 +173,37 @@ entries:
               - title: Feature overviews
                 nested:
                   - title: Cart feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
                     nested:
                       - title: Cart notes
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-notes-overview.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-notes-overview.html
                       - title: Cart widget
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-widget-overview.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
                       - title: Quick order from the catalog page
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
                   - title: Multiple Carts feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/multiple-carts-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.html
                   - title: Persistent Cart Sharing feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/persistent-cart-sharing-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html
                   - title: Quick Add to Cart feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/quick-add-to-cart-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html
                   - title: Shared Carts feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/shared-carts-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/shared-carts-feature-overview.html
                   - title: Checkout feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/checkout-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
                     nested:
                       - title: Multi-step checkout
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/multi-step-checkout-overview.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html
                       - title: Order thresholds overview
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/order-thresholds-overview.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
                   - title: Approval Process feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/approval-process-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.html
                   - title: Comments feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/comments-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.html
                   - title: Non-splittable Products feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/non-splittable-products-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/non-splittable-products-feature-overview.html
                   - title: Resource Sharing feature overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/resource-sharing-feature-overview.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/resource-sharing-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -404,9 +404,9 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
                   - title: "HowTo: Define if a cart should be deleted after placing an order"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
-                  - title: "HowTo: Enable guest checkout in B2B Demo Shop"
+                  - title: Enable guest checkout in the B2B Demo Shop
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
-                  - title: "HowTo: Implement customer approval process based on a generic state machine"
+                  - title: Implement a customer approval process based on a generic state machine
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html

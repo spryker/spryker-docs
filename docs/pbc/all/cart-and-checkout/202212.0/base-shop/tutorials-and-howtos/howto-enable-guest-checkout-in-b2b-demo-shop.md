@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Enable guest checkout in B2B Demo Shop"
+title: Enable guest checkout in the B2B Demo Shop
 description: Learn how to enable guest checkout in B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template

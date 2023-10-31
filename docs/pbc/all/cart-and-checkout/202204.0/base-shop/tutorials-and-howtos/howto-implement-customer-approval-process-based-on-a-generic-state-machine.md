@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Implement customer approval process based on a generic state machine"
+title: Implement a customer approval process based on a generic state machine
 description: The guide describes the implementation flow of a customer approval process based on a state machine.
 last_updated: Jun 16, 2021
 template: howto-guide-template

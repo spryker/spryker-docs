@@ -1,30 +1,12 @@
 ---
-title: "HowTo: Implement customer approval process based on a generic state machine"
+title: Implement a customer approval process based on a generic state machine
 description: The guide describes the implementation flow of a customer approval process based on a state machine.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-implement-customer-approval-process-on-state-machine
 originalArticleId: 8c73b907-4006-4e26-8583-d4cb21fd5de3
 redirect_from:
-  - /2021080/docs/t-implement-customer-approval-process-on-state-machine
-  - /2021080/docs/en/t-implement-customer-approval-process-on-state-machine
-  - /docs/t-implement-customer-approval-process-on-state-machine
-  - /docs/en/t-implement-customer-approval-process-on-state-machine
-  - /v6/docs/t-implement-customer-approval-process-on-state-machine
-  - /v6/docs/en/t-implement-customer-approval-process-on-state-machine
-  - /v5/docs/t-implement-customer-approval-process-on-state-machine
-  - /v5/docs/en/t-implement-customer-approval-process-on-state-machine
-  - /v4/docs/t-implement-customer-approval-process-on-state-machine
-  - /v4/docs/en/t-implement-customer-approval-process-on-state-machine
-  - /v3/docs/t-implement-customer-approval-process-on-state-machine
-  - /v3/docs/en/t-implement-customer-approval-process-on-state-machine
-  - /v2/docs/t-implement-customer-approval-process-on-state-machine
-  - /v2/docs/en/t-implement-customer-approval-process-on-state-machine
-  - /v1/docs/t-implement-customer-approval-process-on-state-machine
-  - /v1/docs/en/t-implement-customer-approval-process-on-state-machine
-related:
-  - title: Approval Process feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
 ---
 
 ## Introduction

@@ -1,18 +1,13 @@
 ---
-title: "HowTo: Enable guest checkout in B2B Demo Shop"
+title: Enable guest checkout in the B2B Demo Shop
 description: Learn how to enable guest checkout in B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-enable-guest-checkout-in-b2b-demo-shop
 originalArticleId: 669e5e5c-f26a-484c-ab68-4588c701aa99
 redirect_from:
-  - /2021080/docs/howto-enable-guest-checkout-in-b2b-demo-shop
-  - /2021080/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
-  - /docs/howto-enable-guest-checkout-in-b2b-demo-shop
-  - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
-  - /v6/docs/howto-enable-guest-checkout-in-b2b-demo-shop
-  - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html

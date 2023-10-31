@@ -739,12 +739,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                                            | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                              |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
-| ServicePointSearchResultFormatterPlugin                           | Maps raw Elasticsearch results to a transfer.                                                                 | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
-| SortedServicePointSearchQueryExpanderPlugin                       | Adds sorting to a search query.                                                                               | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes service point address relation from query if the `excludeAddressRelation` request parameter is provided. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointSearchResultFormatterPlugin                           | Maps raw Elasticsearch results to a transfer.                                                                 |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
+| SortedServicePointSearchQueryExpanderPlugin                       | Adds sorting to a search query.                                                                               |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes the service point address relation from a query if the `excludeAddressRelation` request parameter is provided. |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 
@@ -790,8 +790,8 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 {% info_block warningBox "Verification" %}
 
 1. Fill the `spy_service_point` table with some data and run `console publish:trigger-events -r service_point`.
-2. Make sure that the `spy_service_point_search` table is filled with respective data per store.
-3. Check Elasticearch documents and make sure data is structured in the following format:
+    * Make sure the `spy_service_point_search` table is filled with respective data per store.
+    * Make sure, in Elasticearch documents, data is structured in the following format:
 
 ```yaml
 {
@@ -842,8 +842,8 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 }
 ```
 
-4. In the `spy_service_point_search` table, change some records and run `console sync:data service_point`.
-5. Make sure that your changes have been synced to the respective Elasticsearch document.
+1. In the `spy_service_point_search` table, change some records and run `console sync:data service_point`.
+    Make sure your changes have been synced to the respective Elasticsearch document.
 
 {% endinfo_block %}
 

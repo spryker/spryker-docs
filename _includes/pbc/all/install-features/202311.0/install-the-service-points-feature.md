@@ -849,7 +849,7 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 
 ### 6) Configure export to Redis
 
-Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
+Configure tables to be published and synced to the Storage on create, edit, and delete changes:
 
 1. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module's configuration:
 
@@ -877,7 +877,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-2. Register new queue message processor:
+2. Register the queue message processor:
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -905,7 +905,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-3. Configure synchronization pool and event queue name:
+3. Configure the synchronization pool and event queue name:
 
 **src/Pyz/Zed/ServicePointStorage/ServicePointStorageConfig.php**
 
@@ -946,7 +946,7 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 }
 ```
 
-4. Set up publisher plugins:
+4. Set up the publisher plugins:
 
 | PLUGIN                                  | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
@@ -955,8 +955,8 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 | ServicePointStoreWritePublisherPlugin   | Publishes service point data by service point store entity events.                            |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
 | ServiceWritePublisherPlugin             | Publishes service point data by `SpyService` entity events.                                   |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\Service             |
 | ServiceTypeWritePublisherPlugin         | Publishes service type data by `SpyType` entity events.                                       |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServiceType         |
-| ServicePointPublisherTriggerPlugin      | Allows to populate service point storage table with data and trigger further export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
-| ServiceTypePublisherTriggerPlugin       | Allows to populate service type storage table with data and trigger further export to Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServicePointPublisherTriggerPlugin      | Populates the service point storage table with data and triggers the export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServiceTypePublisherTriggerPlugin       | Populates the service type storage table with data and triggers the export to Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -1013,12 +1013,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-5. Set up synchronization plugins:
+5. Set up the synchronization plugins:
 
 | PLUGIN                                                    | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin       | Allows synchronizing the service point storage table content into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
-| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Allows synchronizing the service type storage table content into Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServicePointSynchronizationDataBulkRepositoryPlugin       | Synchronizes the content of the service point storage table into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Synchronizes the content of the service type storage table into Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -1048,22 +1048,30 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `service-point` trigger plugin works correctly:
+Verify the `service-point` trigger plugin works correctly:
 
 1. Fill the `spy_service_point`, `spy_service_point_store`, and `spy_servoce_point_address` tables with data.
 2. Run the `console publish:trigger-events -r service_point` command.
-3. Make sure that the `spy_service_point_storage` table has been filled with respective data.
-4. Make sure that, in your system, storage entries are displayed with `kv:service_point:{store}:{service_point_id}` mask.
+  * Make sure the `spy_service_point_storage` table has been filled with respective data.
+  * Make sure storage entries are now displayed with the `kv:service_point:{store}:{service_point_id}` mask.
 
-Make sure that `service-point` synchronization plugin works correctly:
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify the `service-point` synchronization plugin works correctly:
 
 1. Fill the `spy_service_point_storage` table with some data.
 2. Run the `console sync:data -r service_point` command.
-3. Make sure that, in your system, storage entries are displayed with the `kv:service_point:{store}:{service_point_id}` mask.
+    Make sure storage entries are now displayed with the `kv:service_point:{store}:{service_point_id}` mask.
 
-Make sure that when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+{% endinfo_block %}
 
-Make sure that, in Redis, data is displayed in the following format:
+{% info_block warningBox "Verification" %}
+
+* Make sure that, when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+
+* Make sure that, in Redis, data is displayed in the following format:
 ```yaml
 {
    "id_service_point": 1,
@@ -1107,18 +1115,27 @@ Make sure that, in Redis, data is displayed in the following format:
 }
 ```
 
-Make sure that the `service-type` trigger plugin works correctly:
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify the `service-type` trigger plugin works correctly:
 
 1. Fill the `spy_service_type` table with data.
 2. Run the `console publish:trigger-events -r service_type` command.
-3. Make sure that the `spy_service_type_storage` table has been filled with respective data.
-4. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
+  * Make sure the `spy_service_type_storage` table has been filled with respective data.
+  * Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
 
-Make sure that the `service-type` synchronization plugin works correctly:
+{% endinfo_block %}
+
+
+{% info_block warningBox "Verification" %}
+
+Verify the `service-type` synchronization plugin works correctly:
 
 1. Fill the `spy_service_type_storage` table with some data.
 2. Run the `console sync:data -r service_type` command.
-3. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
+    Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
 
 Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
 

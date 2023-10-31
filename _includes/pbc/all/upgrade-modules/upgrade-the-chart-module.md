@@ -13,7 +13,7 @@ composer update spryker/chart:"^1.6.0" --update-with-dependencies
 ```
 
 2. The 1.6.0 module version requires an update of the `@spryker/oryx-for-zed` dependency to version 3.3 or later at the project level.
-   To perform the updates, in the root `package.json` file, update the dependencies to the following versions or newer:
+   To perform the updates, in the root `package.json` file, update the dependency to the following versions or newer:
 
 ```json
 {

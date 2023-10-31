@@ -203,34 +203,6 @@ To define the route, do the following:
 
 The route should now appear at the **Configurations->Routes** page.
 
-## Create a task for the products import from Akeneo
-
-To create a task for the products import from Akeneo, you have to run the incoming created at step [Create an incoming configuration](#create-an-incoming-configuration). 
-To run the incoming, do the following:
-
-1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click on the necessary incoming configuration.
-2. In the top right corner, click *Run incoming*. 
-3. Go to *Tasks* and make sure that there the new task with the route you created at step [Define the route](#define-the-route). The task's status should be *Processing*.
-
-![tasks]
-
-{% info_block infoBox "Separate task for each product" %}
-
-A separate task is created for every product. In other words, if you initiate an incoming bulk import of, for instance, 40 products, this results in the creation of 40 individual tasks.
-
-{% endinfo_block %}
-
-### Filtering task messages
-
-You can filter the task messages by different categories such as info, notice, error and others. This is especially useful when you need to determine a reason why the task execution failed. In such a case, you can filter the messages by errors and see details of the errors. To filter the messages, do the following:
-1. On the *Tasks* page, click the necessary task, for example, the one with the *Failed* status.
-2. On the task details page, go to *Export Messages* tab.
-3. In the filter dropdown, select the category you want to filter by.
-4. Optional: To view details of the message, click *Details*.
-
-![task-messages-filter]
-
-
 ## Test the outgoing connection
 
 Before importing data from Akeneo, you can test whether configuration of the Akeneo to Base transformer is set up correctly and processes the data as needed. To test the transformer, do the following:
@@ -248,6 +220,34 @@ The product that will be sent to SCCOS appears at the bottom of the transformer 
 
 ![transformer-tester]
 
+## Create a task for the products import from Akeneo
+
+To create a task for the products import from Akeneo, you have to run the incoming created at step [Create an incoming configuration](#create-an-incoming-configuration). 
+To run the incoming, do the following:
+
+1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click on the necessary incoming configuration.
+2. In the top right corner, click *Run incoming*. 
+3. Go to *Tasks* and make sure that there the new task with the route you created at step [Define the route](#define-the-route). The task's status should be *Processing*, and then *Finished*.
+
+![tasks]
+
+{% info_block infoBox "Separate task for each product" %}
+
+A separate task is created for every product. In other words, if you initiate an incoming bulk import of, for instance, 40 products, this results in the creation of 40 individual tasks.
+
+{% endinfo_block %}
+
+### Filtering task messages
+
+You can filter the task messages by different categories such as info, notice, error and others. This is especially useful when you need to determine a reason why the task execution has failed. In such a case, you can filter the messages by errors and see details of the errors. To filter the messages, do the following:
+1. On the *Tasks* page, click the necessary task, for example, the one with the *Failed* status.
+2. On the task details page, go to *Export Messages* tab.
+3. In the filter dropdown, select the category you want to filter by.
+4. Optional: To view details of the message, click *Details*.
+
+![task-messages-filter]
+
+
 ## Run the route
 
 To get the task processed, you need to run the full route. To run the route, do the following:
@@ -257,6 +257,12 @@ To get the task processed, you need to run the full route. To run the route, do 
 ![run-route]
 
 In case of the successful processing, this returns a message saying that the publisher has been exported. The status of task you created at the previous step, should change to *Finished*.
+
+{% info_block infoBox "Route execution logs" %}
+
+You can check the execution status of the route in the route execution logs. To check the status, on the *Routes* page, in *Action* column of the route, click **Logs**. In the *Logs* window, you can filter the records by error messages, warnings, etc. The logs are especially useful when you need to determine a reason why the route execution has failed.
+
+{% endinfo_block %}
 
 ## Check the product in the Back Office
 
@@ -268,6 +274,8 @@ To check the imported product in the Back Office, go to **Catalog - Products* pa
 Data transformers let you define the data you want to import from Akeneo PIM and map them accordingly to your Spryker system. There are two kinds of entity transformers: Akeneo data to Base data transformers and Base data to Spryker data transformers.
 
 ### Akeneo to Base data transformers
+
+ADD SCREENSHOTS FOR EACH TRANSFORMER
 
 Akeneo to Base data transformers let you define what data you want to import from Akeneo to Spryker and transform these data to Base data. This Base data is then transformed to Spryker data.
 
@@ -319,18 +327,12 @@ To configure this transformer, do the following:
 
 #### Memo Akeneo to Base - Product - Set Product Properties transformer
 
-Memo Akeneo to Base - Product - Set Product Properties is the Optional transformer that processes all properties that you select for import from Akeneo. The product properties handled by this transformer are called product attributes in Akeneo. The Akeneo product attributes include the entities that are referred to as product attributes and product labels in SCCOS.
+Memo Akeneo to Base - Product - Set Product Properties is the Optional transformer that processes all properties that you select for import from Akeneo. The product properties handled by this transformer are called product attributes in Akeneo.
 
 To configure this transformer, do the following:
 
 1. In *Locale*, set the locale where you want to import product properties. For example, `en_US`.
-2. Optional: In *Properties*, specify the product properties in Akeneo that you want to import as product attributes to SCCOS. For example, `color` for the attribute and `sale_label` for a label in SCCOS. If you do not specify any properties, no properties are imported.
-
-{% info_block infoBox "Product attributes" %}
-
-Akeneo multi select attributes correspond to the Spryker product labels. Therefore, if you want to import product labels from Akeneo, there should be a corresponding multi select attribute in Akeneo. For information on how to create the multi select attributes in Akeneo that you can use as product labels in SCCOS, see [LINK TO GUIDE ON HOW TO CREATE MULTI SELECT ATTRIBUTES].
-
-{% endinfo_block %}
+2. Optional: In *Properties*, specify the product properties in Akeneo that you want to import as product attributes to SCCOS. For example, `color`. If you do not specify any properties, no properties are imported.
 
 Keep in mind, that even though you specify the attributes for import in this entity transformer, you specify the super attributes in the [Memo Base to Spryker - Product - Akeneo Preprocessor](#memo-base-to-spryker---product---akeneo-preprocessor) transformer.
 
@@ -412,7 +414,32 @@ To configure this transformer, do the following:
   2. On the Association type details page, copy the code and paste it in the *Akeneo Relation Key Name* field.
   ![akeneo-association-type].
   3. In *Spryker Relation Key Name*, enter either the code of the existing SCCOS relation type key, for example, `up-selling`, or the new one that you want to be automatically created in SCCOS after the product import. 
-5. In the *Cache* field, select the cache that you created for this transformer at the [Create cache](#create-cache) step.
+5. Optional: To use specific Akeneo multi select attributes as labels in SCCOS, in *Akeneo label attribute code*, specify the corresponding Akeneo multi select association code.
+
+{% info_block infoBox "Product attributes" %}
+
+Akeneo multi select attributes correspond to the SCCOS product labels. Therefore, if you want to import product labels from Akeneo, there should be a corresponding multi select attribute in Akeneo. For information on how to create the multi select attributes in Akeneo that you can use as product labels in SCCOS, see [LINK TO GUIDE ON HOW TO CREATE MULTI SELECT ATTRIBUTES].
+
+{% endinfo_block %}
+
+6. In the *Cache* field, select the cache that you created for this transformer at the [Create cache](#create-cache) step.
+
+### Memo Base to Spryker - Product - Insert into Spryker
+
+The Memo Base to Spryker - Product - Insert into Spryker transformer sends data to Spryker and sets the default category for the product.
+
+To configure this transformer, do the following:
+
+1. In *Spryker HTTP client*, select the client you created at step [Connect SCCOS with the Middleware Powered by Alumio platform](#2-connect-sccos-with-the-middleware-powered-by-alumio-platform).
+2. In *Root category name*, enter the root category name as you have it in SCCOS. For information about the categories in SCCOS, see [Category Management feature overview](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/category-management-feature-overview.html).
+3. In *Category template name*, enter the name of the category template in SCCOS where the product has to be imported. For information about the default category templates in SCCOS, see /docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html#reference-information-template).
+4. Optional: To mark the product as active, check *Is product active*.
+5. Optional: To mark the product as splittable, check *Is product splittable*.
+4. Optional: To update prices in SCCOS with those from Akeneo, check *Update price*.
+5. Optional: To update stock values in SCCOS with those from Akeneo, check *Update stock*.
+
+![insert-into-spryker-transformer]
+
 
 
 

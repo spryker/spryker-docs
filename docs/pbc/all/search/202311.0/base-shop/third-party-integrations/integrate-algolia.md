@@ -480,7 +480,7 @@ If your project has project-speciific functionality where abstract or concrete p
 Examples of such functionality include:
 - A custom functionality in the Back Office
 - Custom data import
-- Integration with some middleware when product or product-related data is updates in Spryker
+- Integration with some middleware when product or product-related data is updated in Spryker
 
 Keep int mind, that to trigger custom events in Spryker you need to use `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods.
 

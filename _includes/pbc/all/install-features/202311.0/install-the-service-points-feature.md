@@ -327,7 +327,7 @@ s2,sp2,pickup,1
 | service_type_key  | ✓ | string    | pickup            | Unique key of the service type.   |
 | is_active         | ✓ | bool      | 0                 | Defines if the service is active. |
 
-2. Enable data imports at your configuration file—for example:
+2. Enable the data imports per your configuration file—for example:
 
 **data/import/local/full_EU.yml**
 
@@ -348,11 +348,11 @@ s2,sp2,pickup,1
 
 | PLUGIN                              | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                                       |
 |-------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
-| ServicePointDataImportPlugin        | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServicePointStoreDataImportPlugin   | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServiceTypeDataImportPlugin         | Imports service types into the database.                      | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServiceDataImportPlugin             | Imports services into the database.                           | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointDataImportPlugin        | Imports service points into the database.                |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointStoreDataImportPlugin   | Imports service point store relations into the database. |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServiceTypeDataImportPlugin         | Imports service types into the database.                      |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServiceDataImportPlugin             | Imports services into the database.                           |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -433,7 +433,7 @@ console data:import:service-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that entities were imported to the following database tables respectively:
+Make sure the entities have been imported to the following database tables:
 
 - `spy_service_point`
 - `spy_service_point_store`
@@ -447,6 +447,8 @@ Make sure that entities were imported to the following database tables respectiv
 
 1. Append the glossary according to your configuration:
 
+<details>
+  <summary markdown='span'>Glossary</summary>
 ```csv
 service_point.validation.service_point_key_exists,A service point with the same key already exists.,en_US
 service_point.validation.service_point_key_exists,Es existiert bereits eine Servicestelle mit dem gleichen Schlüssel.,de_DE
@@ -518,7 +520,9 @@ service_points_rest_api.error.endpoint_not_found,The endpoint is not found.,en_U
 service_points_rest_api.error.endpoint_not_found,Der Endpunkt wurde nicht gefunden.,de_DE
 service_points_rest_api.error.service_point_identifier_is_not_specified,The service point identifier is not specified.,en_US
 service_points_rest_api.error.service_point_identifier_is_not_specified,Der Servicestellen-Identifikator ist ungültig.,de_DE
- ```
+```
+
+</details>
 
 2. Import data:
 
@@ -547,7 +551,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
-2. Set up a new source for Service Points:
+2. Set up a source for service points:
 
 ```bash
 console search:setup:source-map
@@ -638,8 +642,8 @@ class ServicePointSearchConfig extends SprykerServicePointSearchConfig
 
 | PLUGIN                                              | SPECIFICATION                                                                                          | PREREQUISITES | NAMESPACE                                                           |
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the service point search table content into Elasticsearch.                        | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
-| ServicePointPublisherTriggerPlugin                  | Allows populating service point search table with data and triggering further export to Elasticsearch. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
+| ServicePointSynchronizationDataBulkRepositoryPlugin | Synchronizes the content of the service point search table into Elasticsearch.                        |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
+| ServicePointPublisherTriggerPlugin                  | Populates the service point search table with data and triggers the export to Elasticsearch. |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -693,11 +697,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                  | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                                         |
 |-----------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
-| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data.       | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
-| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
-| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
-| ServiceWritePublisherPlugin             | Listens for service events and publishes respective data. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\Service             |
+| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.         |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data.       |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.         |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
+| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.         |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
+| ServiceWritePublisherPlugin             | Listens for service events and publishes respective data. |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\Service             |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 

@@ -921,7 +921,7 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
-    
+
     /**
      * @return string|null
      */
@@ -1533,11 +1533,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
+Verify the widgets have been registered by adding the respective code snippets to a Twig template.
 
 | WIDGET                   | VERIFICATION                                                                                                                                                 |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ServicePointSearchWidget | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
+
+Make sure that, during checkout, you can find a select a service point for the order items.
 
 {% endinfo_block %}
 

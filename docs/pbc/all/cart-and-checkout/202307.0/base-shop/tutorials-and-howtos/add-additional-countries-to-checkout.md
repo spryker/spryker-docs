@@ -1,18 +1,14 @@
 ---
-title: "HowTo: Add additional countries to Spryker checkout"
-description: This HowTo explains how to add additional countries to the checout.
+title: Add additional countries to checkout
+description: Learn how to add additional countries to the checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-add-additional-countries-to-spryker-checkout
 originalArticleId: b9645f6e-965d-4f56-ad9e-2e24a879261d
 redirect_from:
-  - /2021080/docs/howto-add-additional-countries-to-spryker-checkout
-  - /2021080/docs/en/howto-add-additional-countries-to-spryker-checkout
-  - /docs/howto-add-additional-countries-to-spryker-checkout
-  - /docs/en/howto-add-additional-countries-to-spryker-checkout
-  - /v6/docs/howto-add-additional-countries-to-spryker-checkout
-  - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
+  - /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
 ---
 
 This document explains how to add additional shipping countries selected by customers upon checkout.

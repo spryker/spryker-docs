@@ -1,15 +1,12 @@
 ---
-title: "HowTo: Define if a cart should be deleted after placing an order"
+title: Define if carts are deleted after placing an order
 last_updated: Jul 20, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
 originalArticleId: d465e11a-6ed9-4729-bce8-e6c82d961d37
 redirect_from:
-  - /2021080/docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
-  - /2021080/docs/en/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
-  - /docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
-  - /docs/en/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+  - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
 ---
 
 After placing an order, the cart can either be deleted or saved. If you configure carts to be saved, after placing an order, the cart is duplicated, and the customer can access it.

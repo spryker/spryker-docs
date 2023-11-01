@@ -400,14 +400,14 @@ entries:
 
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Add additional countries to Spryker checkout"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
-                  - title: "HowTo: Define if a cart should be deleted after placing an order"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+                  - title: Add additional countries to checkout
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/add-additional-countries-to-checkout.html
+                  - title: Define if carts are deleted after placing an order
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/define-if-carts-are-deleted-after-placing-an-order.html
                   - title: Enable guest checkout in the B2B Demo Shop
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
                   - title: Implement a customer approval process based on a generic state machine
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
                   - title: "Tutorial: Calculator plugin"

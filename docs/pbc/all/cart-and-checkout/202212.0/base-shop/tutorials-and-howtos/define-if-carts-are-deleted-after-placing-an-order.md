@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Define if a cart should be deleted after placing an order"
+title: Define if carts are deleted after placing an order
 last_updated: Jul 20, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order

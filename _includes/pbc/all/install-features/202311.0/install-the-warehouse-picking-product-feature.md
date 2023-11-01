@@ -20,11 +20,10 @@ Install the required features:
 
 Enable the following plugins.
 
-| PLUGIN                                                              | SPECIFICATION                                                                                     | PREREQUISITES | NAMESPACE                                                                                                                       |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------|
-| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources.           |               | Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector                                  |
-| ConcreteProductImageSetsByProductsBackendResourceRelationshipPlugin | Adds `concrete-product-image-sets` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\ProductsProductImageSetsBackendResourceRelationship\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
-
+| PLUGIN                                                              | SPECIFICATION                                                                                    | PREREQUISITES | NAMESPACE                                                                                              |
+|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------|
+| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources.          |               | Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector         |
+| ConcreteProductImageSetsByProductsBackendResourceRelationshipPlugin | Adds `concrete-product-image-sets` resources as a relationship to `concrete-products` resources. |               | Spryker\Glue\ProductImageSetsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
 
@@ -38,7 +37,7 @@ use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelati
 use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
 use Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin;
 use Spryker\Glue\ProductsBackendApi\ProductsBackendApiConfig;
-use Spryker\Glue\ProductsProductImageSetsBackendResourceRelationship\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ConcreteProductImageSetsByProductsBackendResourceRelationshipPlugin;
+use Spryker\Glue\ProductImageSetsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ConcreteProductImageSetsByProductsBackendResourceRelationshipPlugin;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {

@@ -1137,9 +1137,14 @@ Verify the `service-type` synchronization plugin works correctly:
 2. Run the `console sync:data -r service_type` command.
     Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
 
-Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+{% endinfo_block %}
 
-Make sure that, in Redis, data is displayed in the following format:
+
+{% info_block warningBox "Verification" %}
+
+* Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+
+* Make sure that, in Redis, data is displayed in the following format:
 ```json
 {
     "id_service_type": 1,

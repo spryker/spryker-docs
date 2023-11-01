@@ -1,5 +1,5 @@
 ---
-title: 'Step 3: Non standard services migration'
+title: 'Step 3: Non-standard services migration'
 description: 
 template: howto-guide-template
 ---

@@ -1921,19 +1921,39 @@ entries:
             url: /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
     - title: Migration program
       nested:
-      - title: "Introduction"
-        url: /docs/scos/dev/migration-program/migration-to-paas/paas-introduction.html
       - title: "Understanding PaaS"
         url: /docs/scos/dev/migration-program/migration-to-paas/understanding-paas.html
       - title: "Migration overview"
         url: /docs/scos/dev/migration-program/migration-to-paas/migration-overview.html
-      - title: "Enabler: PaaS structure and overview"
-        url: /docs/scos/dev/migration-program/migration-to-paas/enabler-paas-structure-and-overview.html
+      - title: "Migrating to PaaS: Step-by-Step Guide"
+        url: /docs/scos/dev/migration-program/migration-to-paas/migration-to-paas-step-by-step.html
         nested:
           - title: "Step 1: Docker SDK Integration"
-            url: /docs/scos/dev/migration-program/migration-to-paas/migration-to-paas-guides/step-1-docker-sdk-integration.html
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-1-docker-sdk-integration.html
           - title: "Step 2: PHP Version Upgrade"
-            url: /docs/scos/dev/migration-program/migration-to-paas/migration-to-paas-guides/step-2-php-version-upgrade.html
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-2-php-version-upgrade.html
+          - title: "Step 3: Non-standard services migration"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-3-non-standard-services.html
+          - title: "Step 4: Spryker PaaS environments provisioning"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-4-environments-provisioning.html
+          - title: "Step 5: Deployment strategy"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-5-deployment-strategy.html
+          - title: "Step 6: Environment variables"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-6-environment-variables.html
+          - title: "Step 7: Elasticsearch and Redis restoration capabilities"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-7-es-redis-restoration.html
+          - title: "Step 8: File system based features adaptation"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-8-filesystem-features.html
+          - title: "Step 9: Implement Security and Performance guidelines"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-9-security-and-performance.html
+          - title: "Step 10: Frontend assets"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-10-frontend-assets.html
+          - title: "Step 11: Wire custom services"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-11-wire-services-vpn.html
+          - title: "Step 12: Database migration"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-12-database-migration.html
+          - title: "Step 13: Finilizing the migration"
+            url: /docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-13-finalizing-the-migration.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

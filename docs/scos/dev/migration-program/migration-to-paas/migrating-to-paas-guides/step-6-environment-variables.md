@@ -1,5 +1,5 @@
 ---
-title: 'Step 5: Environment variables'
+title: 'Step 6: Environment variables'
 description: 
 template: howto-guide-template
 ---

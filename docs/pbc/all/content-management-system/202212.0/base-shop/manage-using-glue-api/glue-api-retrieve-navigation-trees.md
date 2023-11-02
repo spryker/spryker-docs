@@ -1,5 +1,5 @@
 ---
-title: Retrieve navigation trees
+title: "Glue API: Retrieve navigation trees"
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -11,8 +11,8 @@ redirect_from:
   - /docs/retrieving-navigation-trees
   - /docs/en/retrieving-navigation-trees
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-navigation-trees.html
-  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-navigation-trees.html
-  - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-navigation-trees.html
+  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-navigation-trees.html
+  - /docs/pbc/all/content-management-system/202212.0/manage-using-glue-api/retrieve-navigation-trees.html
 related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html

@@ -1,18 +1,15 @@
 ---
-title: Retrieve navigation trees
+title: "Glue API: Retrieve navigation trees"
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-navigation-trees
 originalArticleId: 6dba4315-b7d0-485e-880e-b7d4ff125a3a
 redirect_from:
-  - /2021080/docs/retrieving-navigation-trees
-  - /2021080/docs/en/retrieving-navigation-trees
-  - /docs/retrieving-navigation-trees
-  - /docs/en/retrieving-navigation-trees
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-navigation-trees.html
-  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-navigation-trees.html
-  - /docs/pbc/all/content-management-system/202212.0/manage-using-glue-api/retrieve-navigation-trees.html
+  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-navigation-trees.html
+  - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-navigation-trees.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
 related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html

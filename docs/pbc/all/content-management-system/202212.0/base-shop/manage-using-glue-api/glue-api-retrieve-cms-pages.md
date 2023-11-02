@@ -1,5 +1,5 @@
 ---
-title: Retrieve CMS pages
+title: "Glue API: Retrieve CMS pages"
 description: Retrieve details on CMS pages via the API.
 last_updated: Jun 18, 2021
 template: glue-api-storefront-guide-template

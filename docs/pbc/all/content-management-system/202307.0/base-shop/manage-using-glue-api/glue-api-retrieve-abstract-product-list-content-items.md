@@ -1,20 +1,16 @@
 ---
-title: Retrieve abstract product list content items
+title: "Glue API: Retrieve abstract product list content items"
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retireving-abstract-product-list-content-items
 originalArticleId: 2fcfc554-7617-455e-bb22-ead08bb774b9
 redirect_from:
-  - /2021080/docs/retireving-abstract-product-list-content-items
-  - /2021080/docs/en/retireving-abstract-product-list-content-items
-  - /docs/retireving-abstract-product-list-content-items
-  - /docs/en/retireving-abstract-product-list-content-items
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
-  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
+  - /docs/scos/dev/glue-api-guides/202307.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
+  - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
 related:
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
 ---
@@ -212,7 +208,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 
-For the attributes of the included resource, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
+For the attributes of the included resource, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
 
 ## Retrieve Abstract Product List with its abstract products
 
@@ -367,4 +363,4 @@ Request sample: retrieve Abstract Product List with its abstract products
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -1,18 +1,15 @@
 ---
-title: Retrieve banner content items
+title: "Glue API: Retrieve banner content items"
 description: Retrieve information about banner content items via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-banner-content-items
 originalArticleId: 783ecf8b-aa0a-4920-acb4-b3ccaced02b1
 redirect_from:
-  - /2021080/docs/retrieving-banner-content-items
-  - /2021080/docs/en/retrieving-banner-content-items
-  - /docs/retrieving-banner-content-items
-  - /docs/en/retrieving-banner-content-items
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-banner-content-items.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-content-items/retrieving-banner-content-items.html
   - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-banner-content-items.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-banner-content-items.html
 related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html

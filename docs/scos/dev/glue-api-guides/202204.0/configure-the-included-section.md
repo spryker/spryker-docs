@@ -1,24 +1,9 @@
 ---
-title: Configuring visibility of the included section
+title: Configure the included section
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-configuring-visibility-included-section-201903
 originalArticleId: d6d74121-749a-4a8d-8f95-d3455b2db252
-redirect_from:
-  - /2021080/docs/ht-configuring-visibility-included-section-201903
-  - /2021080/docs/en/ht-configuring-visibility-included-section-201903
-  - /docs/ht-configuring-visibility-included-section-201903
-  - /docs/en/ht-configuring-visibility-included-section-201903
-  - /v6/docs/ht-configuring-visibility-included-section-201903
-  - /v6/docs/en/ht-configuring-visibility-included-section-201903
-  - /v5/docs/ht-configuring-visibility-included-section-201903
-  - /v5/docs/en/ht-configuring-visibility-included-section-201903
-  - /v4/docs/ht-configuring-visibility-included-section-201903
-  - /v4/docs/en/ht-configuring-visibility-included-section-201903
-  - /v3/docs/ht-configuring-visibility-included-section-201903
-  - /v3/docs/en/ht-configuring-visibility-included-section-201903
-  - /v2/docs/ht-configuring-visibility-included-section-201903
-  - /v2/docs/en/ht-configuring-visibility-included-section-201903
 ---
 
 Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, and availability information.
@@ -54,9 +39,7 @@ To configure the behavior of the **included** and **relationships** sections:
 
 To make the option possible, you need to have at least version *1.12.0* of the `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
 
-## Configuration
-
-To configure the behavior of the sections:
+## Configure
 
 1. Open or create the `Pyz\Glue\GlueApplication\GlueApplicationConfig.php` file on your project level.
 2. Set the value of the `getIsEagerRelatedResourcesInclusionEnabled` parameter according to the desired behavior:
@@ -87,13 +70,14 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 }
 ```
 
-3. Save the file.
 
 {% info_block warningBox "Verification" %}
 
 To verify that the configuration has been completed successfully, follow these steps:
-   1. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`.
-   2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
+
+1. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`.
+
+    Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 
  <details><summary markdown='span'>Sample response</summary>
 
@@ -142,11 +126,13 @@ To verify that the configuration has been completed successfully, follow these s
 
 </details>
 
-   1. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
-   2. Make sure that the endpoint responds in accordance with your configuration:
-      * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
+2. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
 
- <details><summary markdown='span'>Sample response</summary>
+    Make sure that the endpoint responds in accordance with your configuration:
+
+  * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
+
+<details><summary markdown='span'>Sample response</summary>
 
     ```json
     {
@@ -239,7 +225,7 @@ To verify that the configuration has been completed successfully, follow these s
         }
       ]
     }
-    
+
     ```
 
 </details>

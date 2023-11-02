@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Manage business unit specific prices via data import"
+title: Manage business unit specific prices via data import
 last_updated: Feb 04, 2022
 template: howto-guide-template
 redirect_from:

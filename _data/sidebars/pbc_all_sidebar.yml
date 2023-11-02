@@ -3381,6 +3381,19 @@ entries:
                 url: /docs/pbc/all/search/marketplace/glue-api-search-the-product-catalog.html
               - title: "Glue API: Retrieve autocomplete and search suggestions"
                 url: /docs/pbc/all/search/marketplace/glue-api-retrieve-autocomplete-and-search-suggestions.html
+      - title: Service Point Management
+        url: /docs/pbc/all/service-point-management/service-point-management.html
+        include_versions:
+        - "202311.0"
+        nested:
+          - title: Unified Commerce
+            nested:
+              - title: Service Points feature overview
+                url: /docs/pbc/all/service-point-management/unified-commerce/service-points-feature-overview.html
+              - title: Service Points
+                url: /docs/pbc/all/service-point-management/unified-commerce/install-the-service-points-feature.html
+              - title: Service Points + Shipment
+                url: /docs/pbc/all/service-point-management/unified-commerce/install-the-service-points-shipment-feature.html   
       - title: Service Points
         nested:
           - title: Unified Commerce
@@ -3389,10 +3402,7 @@ entries:
             nested:
               - title: Install and upgrade
                 nested:
-                  - title: Service Points
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-feature.html
-                    include_versions:
-                    - "202311.0"
+
                   - title: Service Points Cart
                     url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html
                     include_versions:

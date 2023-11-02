@@ -55,3 +55,5 @@ entries:
           url: /docs/scu/dev/troubleshooting/the-process-exceeded-the-timeout.html
         - title: You have an unprocessed PR from a previous update
           url: /docs/scu/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
+        - title: "Install or enable PHP's extension"
+          url: /docs/scu/dev/troubleshooting/install-or-enable-php-s-extension.html

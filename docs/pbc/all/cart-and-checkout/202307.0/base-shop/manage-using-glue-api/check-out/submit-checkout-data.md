@@ -6,10 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/submitting-checkout-data
 originalArticleId: 86d07f3a-6ef0-4dfe-87e0-322cc4cf42a7
 redirect_from:
-  - /2021080/docs/submitting-checkout-data
-  - /2021080/docs/en/submitting-checkout-data
-  - /docs/submitting-checkout-data
-  - /docs/en/submitting-checkout-data
+  - /docs/scos/dev/glue-api-guides/202009.0/checking-out/submitting-checkout-data.html
   - /docs/scos/dev/glue-api-guides/202307.0/checking-out/submitting-checkout-data.html
 related:
   - title: Check out purchases
@@ -283,9 +280,9 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 <summary markdown='span'>Request sample: submit checkout data with the guest customer's cart data.</summary>
 
 ```json
-{"data": 
-    {"type": "checkout-data", 
-    "attributes": 
+{"data":
+    {"type": "checkout-data",
+    "attributes":
         {
             "idCart": "9743f227-97ec-5d89-8679-bc5ee7a9ea17",
             "shipment": {

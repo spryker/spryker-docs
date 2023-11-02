@@ -75,7 +75,7 @@ The *guest users* can not initiate returns of their orders, as the return manage
 {% info_block warningBox "Note" %}
 
 For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
@@ -137,7 +137,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
 | [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
 | [Configurable Bundle + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html) |  |  |

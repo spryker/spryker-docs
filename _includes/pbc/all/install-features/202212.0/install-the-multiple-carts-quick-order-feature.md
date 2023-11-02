@@ -102,7 +102,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

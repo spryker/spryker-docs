@@ -21,7 +21,7 @@ Follow the steps below to install the Customer Account Management feature core.
 Overview and install the necessary features before beginning the integration.
 
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- |--- |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
@@ -35,7 +35,7 @@ composer require spryker-feature/customer-account-management: "{{page.version}}"
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -848,8 +848,8 @@ Ensure that when you try to access your account without confirming the registrat
 {% endinfo_block %}
 
 
-## Related features
-| NAME | INTEGRATION GUIDE |
+## Install related features
+| NAME | INSTALLATION GUIDE |
 | --- | --- |
 | Customer API	 | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |

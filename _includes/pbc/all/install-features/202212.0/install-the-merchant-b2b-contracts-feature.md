@@ -103,8 +103,8 @@ mr-011,restrictions-merchant,Sales,Sales;Sales-under-400
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  merchant_relation_key | optional | string | mr-002 | A reference used for the merchant relationship data import. |
-|  merchant_key | mandatory | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |
-|  company_business_unit_owner_key | mandatory | string | test-business-unit-1 | A reference used to define a Company Business Unit of the contract (relationship) between it and a Merchant. |
+|  merchant_key | ✓ | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |
+|  company_business_unit_owner_key | ✓ | string | test-business-unit-1 | A reference used to define a Company Business Unit of the contract (relationship) between it and a Merchant. |
 |  company_business_unit_assignee_keys | optional | string | test-business-unit-1;test-business-unit-2 | A reference to the assigned business units, on which this contract is applied. |
 
 Register the following plugin to enable data import:

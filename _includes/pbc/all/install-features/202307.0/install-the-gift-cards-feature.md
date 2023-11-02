@@ -15,7 +15,7 @@ Install the required features:
 | Spryker Core | {{site.version}}| [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 |Product  | {{site.version}} |[Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
-|Payments  | {{site.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/spryker-pay/base-shop/install-and-upgrade/install-the-payments-feature.html)|
+|Payments  | {{site.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
 | Shipment | {{site.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
 | Order Management | {{site.version}} |[Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
 | Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
@@ -259,8 +259,8 @@ sku,value
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sku | mandatory | string| 1234 | An SKU reference of an abstract gift card product. |
-| value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
+| sku | ✓ | string| 1234 | An SKU reference of an abstract gift card product. |
+| value | ✓ | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
 
 ```bash
 console data:import:gift-card-abstract-configuration

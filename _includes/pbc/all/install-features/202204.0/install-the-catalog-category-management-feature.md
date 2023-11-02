@@ -6,7 +6,7 @@ This document describes how to integrate the Catalog + Category Management into 
 
 Install the required features:
 
-| NAME                | VERSION | INTEGRATION GUIDE                                            |
+| NAME                | VERSION | INSTALLATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
 | Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Catalog             | {{page.version}}  |  |

@@ -6,24 +6,11 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-spryker-with-docker
 originalArticleId: 41fb5887-0351-4678-8e21-9c37ce898925
 redirect_from:
-  - /2021080/docs/installing-spryker-with-docker
-  - /2021080/docs/en/installing-spryker-with-docker
-  - /docs/installing-spryker-with-docker
-  - /docs/en/installing-spryker-with-docker
-  - /v6/docs/installing-spryker-with-docker
-  - /v6/docs/en/installing-spryker-with-docker
-  - /v5/docs/getting-started-with-docker
-  - /v5/docs/en/getting-started-with-docker
-  - /v3/docs/spryker-in-docker-201907
-  - /v3/docs/en/spryker-in-docker-201907
-  - /2021080/docs/getting-started-with-docker
-  - /2021080/docs/en/getting-started-with-docker
-  - /docs/getting-started-with-docker
-  - /docs/en/getting-started-with-docker
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-docker.html
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-development-virtual-machine-or-docker.html
   - /docs/docker-installation-prerequisites-windows
+  - /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 related:
   - title: Install Docker prerequisites on Linux
     link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html

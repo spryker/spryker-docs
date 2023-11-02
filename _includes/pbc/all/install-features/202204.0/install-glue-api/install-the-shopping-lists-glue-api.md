@@ -13,7 +13,7 @@ Follow the steps below to install Shopping List feature API.
 
 Install the required features:
 
-| FEATURE | VERSION | INTEGRATION GUIDE  |
+| FEATURE | VERSION | INSTALLATION GUIDE  |
 | --- | --- |--- |
 | Spryker Core	 | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Shopping Lists	 | {{page.version}} |[Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |

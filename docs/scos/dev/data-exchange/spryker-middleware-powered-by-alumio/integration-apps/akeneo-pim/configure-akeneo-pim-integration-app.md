@@ -84,7 +84,7 @@ To import data from Akeneo PIM to your Spryker project, you need to map the data
 To import data from Akeneo PIM, you need to transform it from the Akeneo model to the Base model. To transform the data like this, you need to create the Akeneo to Base model transformer. Do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Entity transformers** and click the + sign.
-2. In the **Name** field, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your route.
 4. To activate the entity transformer, set the status to *Enabled*.
 5. In *Settings*, select *Data, transform using mappers and conditions*.
@@ -99,7 +99,7 @@ When you perform the initial product import from Akeneo, all data pertaining to 
 To create the cache, do the following:
 
 1. Go to **Storages -> Storages** and click the + sign.
-2. In the **Name** field, enter the name of your cache. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the name of your cache. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your cache.
 3. To activate the entity transformer, set the status to *Enabled*.
 4. In *Settings*, select the settings for the caching mechanism. For example, you can *Enable pruning of storage items* that allows you to set up the *Time to live*. If you set it for instance to 1 hour, all data will be removed from the storage every hour.
@@ -112,7 +112,7 @@ Create a separate cache for each of the Base to Spryker model transformers that 
 After the data has been transformed to the Base model, they need to be transformed to the Spryker model. To transform the data like this, you need to create the Base model to Spryker model transformer. Do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Entity transformers** and click the + sign.
-2. In the **Name** field, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your route.
 4. To activate the entity transformer, set the status to *Enabled*.
 5. In *Settings*, select *Data, transform using mappers and conditions*.
@@ -132,7 +132,7 @@ The incoming configuration defines what data should be retrieved from Akeneo and
 To create an incoming configuration, do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click the + sign.
-2. In the **Name** field, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
 5. In the *Subscriber* field, select the *HTTP subscriber*. You may also select the *Akeneo subscriber*, however, in this procedure, we consider the settings for the HTTP subscriber.
@@ -148,18 +148,23 @@ If you want to import products in batch, say 100 products from page `https://tes
 
 {% endinfo_block %}
 
-8. In *HTTP Client*, select the Akeneo client that you created at this step: [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
-9. In *Entity schema*, select *Akeneo Product*.
-10. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incoming configuration has been created.
+8. Optional: In *Request Parameters*, you can specify the request parameters to configure your incoming in a certain way. For example, you can specify the parameters that would enable import of products that were updated in Akeneo: `search={"updated":[{"operator":">","value":"&{timestamp}"}],"completeness":[{"operator":"=","value":100,"scope":"ecommerce"}],"enabled":[{"operator":"=","value":true}]}`.
+
+![incoming-request-parameters]
+9. In *HTTP Client*, select the Akeneo client that you created at this step: [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
+10. In *Entity schema*, select *Akeneo Product*.
+11. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incoming configuration has been created.
 ![incoming-configuration-batch-products]
 
 The incoming configuration should now appear at the **Configurations->Incoming** page.
 
 
+
+
 <!--This is a hidden comment. This configuration is for the Akeneo Subscriber
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Incoming** and click the + sign.
-2. In the **Name** field, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
 5. In the *Subscriber* field, select the subscriber. 
@@ -179,7 +184,7 @@ The outgoing configuration defines how data retrieved from Akeneo should be sent
 To create the outgoing configuration, do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Outgoing** and click the + sign.
-2. In the **Name** field, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
 5. In the *Publisher* field, select *No action publisher*. You may also select the *Akeneo publisher*, however, in this procedure, we consider the settings for the No action publisher.
@@ -192,7 +197,7 @@ The route configuration connects the incoming configuration and outgoing configu
 To define the route, do the following:
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Connections->Routes** and click the + sign.
-2. In the **Name** field, enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In the **Description** field, add the description of your route.
 4. To activate the route, set the status to *Enabled*.
 5. In the **Incoming configuration** filed, select the configuration you created at this step:[Create an incoming configuration](#create-an-incoming-configuration).
@@ -263,6 +268,29 @@ In case of the successful processing, this returns a message saying that the pub
 You can check the execution status of the route in the route execution logs. To check the status, on the *Routes* page, in *Action* column of the route, click **Logs**. In the *Logs* window, you can filter the records by error messages, warnings, etc. The logs are especially useful when you need to determine a reason why the route execution has failed.
 
 {% endinfo_block %}
+
+## Optional: Create a scheduler
+
+To run the product import automatically on a regular basis, you would need to create a scheduler - a job, that would run the route.
+
+To create the scheduler, do the following:
+
+1. Go to **Settings -> Scheduler** and click the + sign.
+2. In *Name*, enter the name of your scheduler. As you are entering the name, the identifier will be populated automatically based on the name.
+3. In *Job*, click **Add job** and select *Run incoming configuration*.
+4. In *Incoming*, select the incoming configuration you created at step [Create an incoming configuration](#create-an-incoming-configuration).
+5. Enter the time you want the scheduler to be run. Use [Crontab guru](https://crontab.guru/) to set the time in the right format.
+
+Since the number of tasks that can be processed is limited, it is recommended to create a scheduler that would remove completed tasks after the specified intervals. 
+
+To create such a scheduler, do the following:
+
+1. Go to **Settings -> Scheduler** and click the + sign.
+2. In *Name*, enter the name of your scheduler. As you are entering the name, the identifier will be populated automatically based on the name.
+3. In *Job*, click **Add job** and select *Prune tasks*.
+
+
+
 
 ## Check the product in the Back Office
 

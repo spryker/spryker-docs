@@ -63,7 +63,7 @@ The following table describes the states you can select for order items.
 | Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html). |
 | Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html).
 | Start picking |
-| Finish picking | 
+| Finish picking |
 | Ship | Select this state once the order is shipped.|
 | Stock-update | Select this state when you update the number of available products of products in **Products&nbsp;<span aria-label="and then">></span> Availability**. |
 |  Close| Select this state when your customer has successfully received the ordered items and is satisfied with their quality.|

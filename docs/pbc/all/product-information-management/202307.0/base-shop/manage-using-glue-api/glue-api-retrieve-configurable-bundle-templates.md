@@ -755,9 +755,9 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 You can use the configurable bundle resource in the following way:
 
-* [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-glue-api-manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
-* [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-glue-api-manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
-* [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-glue-api-manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
+* [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
+* [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
+* [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
 * [Add a configurable bundle to a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
 * [Change the quantity of the configurable bundles in a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
 * [Remove a configurable bundle from a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)

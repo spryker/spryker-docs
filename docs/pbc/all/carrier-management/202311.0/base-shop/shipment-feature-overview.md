@@ -10,22 +10,43 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202307.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
 ---
 
-The *Shipment* feature lets you create and manage carrier companies, and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. You can define delivery price and expected delivery time, tax sets, and the availability of specific delivery methods per each store.
+The *Shipment* feature lets you create and manage carrier companies, delivery types, and delivery methods. You can define delivery prices, expected delivery time, tax sets, and the availability of specific delivery methods per store.
 
-The main concepts regarding shipping are as follows:
-* *Carrier company*: A company that provides shipping services such as DHL, FedEx, or Hermes.
-* *Delivery method*: Shipping services provided by a carrier company such as DHL Express, DHL Standard, Hermes Next Day, or Hermes Standard.
+## Carrier company
+
+A *carrier company* is a business that provides shipping services, like DHL, FedEx, or Hermes.
+
+For instructions on adding carrier companies in the Back Office, see [Add carrier companies](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
+
+## Delivery type
+
+A *delivery type* is a way in which a customer receives an order after placing it. Delivery type examples:
+* Home delivery: products are delivered to the customer's residence.
+* In-store pickup: customer places an order online and picks it up at a selected physical store.
+* Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
+* Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
+
+## Delivery method
+
+A *delivery method* is a way in which a carrier company delivers an order to a customer. Delivery method examples:
+
+* Ground shipping
+* Expedited shipping
+* Overnight shipping
+* Air freight
+
+There are also branded delivery methods like like DHL Express, DHL Standard, or Hermes Next Day. They are essentially variations of the regular delivery methods that refer to a particular carrier.
 
 A sales order can have multiple delivery methods from different carrier companies.
 
-In the Back Office, you can create a carrier company and configure multiple delivery methods. For each delivery method, you can set a price and an associated tax set, define a store for which the delivery method is to be available, as well as activate or deactivate the delivery method. For more information about how to add delivery methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html).
+Carrier companies and delivery methods are managed in the Back Office. For instructions, see  and [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html)
 
 {% info_block warningBox %}
 
 If a Back Office user creates or edits a shipment of an order created by a customer, the grand total paid by the customer is not affected:
 
 * If a new shipment method is added, its price is 0.
-* If the shipment method is changed, the price of the previous shipment method is displayed.
+* If a shipment method is changed, the price of the shipment method stays the same for that order.
 
 {% endinfo_block %}
 
@@ -37,12 +58,9 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 ## Shipment type versus shipment method
 
-A shipment type is a manner in which a customer receives the good after purchasing online. Shipment type examples:
-* Home delivery: products are delivered directly to the customer's residence.
-* In-store pickup: Where customers order online and then pick up their order at a local brick-and-mortar store.
-Curbside Pickup: A variation of Click & Collect where customers can stay in their vehicle, and the store associate brings the order directly to them.
-Locker Pickup: Where an order is left in a secure locker, and the customer retrieves it using a code or key.
-While Shipment Method refers to the specific way or mode in which goods are transported from the seller to the buyer or to a pickup location (e.g. standard ground shipping, expedited or overnight shipping, air freight, etc.)
+
+
+
 You can import shipment types, see:
 Import shipment types
 

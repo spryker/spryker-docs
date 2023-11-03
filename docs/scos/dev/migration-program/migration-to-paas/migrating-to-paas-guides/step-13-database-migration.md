@@ -1,5 +1,5 @@
 ---
-title: 'Step 12: Database migration'
+title: 'Step 13: Database migration'
 description: 
 template: howto-guide-template
 ---

@@ -42,7 +42,7 @@ Make sure that the following modules have been installed:
 Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
 
 ```bash
-composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
+composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.2.0" --update-with-dependencies
 ```
 
 Make sure that the following module has been installed:

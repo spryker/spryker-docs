@@ -6,18 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-macos
 originalArticleId: 5794d7a0-7b64-4847-a32f-2c84f3c54c9b
 redirect_from:
-  - /2021080/docs/installing-docker-prerequisites-on-macos
-  - /2021080/docs/en/installing-docker-prerequisites-on-macos
-  - /docs/installing-docker-prerequisites-on-macos
-  - /docs/en/installing-docker-prerequisites-on-macos
-  - /v6/docs/installing-docker-prerequisites-on-macos
-  - /v6/docs/en/installing-docker-prerequisites-on-macos
-  - /v5/docs/docker-installation-prerequisites-macos
-  - /v5/docs/en/docker-installation-prerequisites-macos
-  - /v4/docs/docker-installation-prerequisites-macos
-  - /v4/docs/en/docker-installation-prerequisites-macos
-  - /v3/docs/docker-install-prerequisites-macos-201907
-  - /v3/docs/en/docker-install-prerequisites-macos-201907
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
   - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html  
 related:
@@ -46,6 +34,8 @@ Review the system and software requirements in the table and configure them usin
 
 
 ## Install and configure the required software
+
+Install and configure the following required software.
 
 ### Install Docker Desktop
 

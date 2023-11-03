@@ -1921,8 +1921,6 @@ entries:
             url: /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
     - title: Migration program
       nested:
-      - title: "Understanding PaaS"
-        url: /docs/scos/dev/migration-program/migration-to-paas/understanding-paas.html
       - title: "Migration overview"
         url: /docs/scos/dev/migration-program/migration-to-paas/migration-overview.html
       - title: "Migrating to PaaS: Step-by-Step Guide"

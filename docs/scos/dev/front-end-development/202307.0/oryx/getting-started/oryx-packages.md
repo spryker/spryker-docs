@@ -1,21 +1,23 @@
 ---
 title: "Oryx: Packages"
 description: Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
-last_updated: Apr 19, 2023
+last_updated: November 3, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-packages.html
 ---
 
+The Oryx code base is publicly [available on Github](https://github.com/spryker/oryx/), and published and distributed on [npmjs.com](https://www.npmjs.com/). Npm is a widely used registry of npm packages, that is used by package managers, like npm, yarn, deno, or bun, to install dependencies in an application.
 
-
-The Oryx code base is [available on Github](https://github.com/spryker/oryx/), and the code is published and distributed as npm packages. [npmjs.com](https://www.npmjs.com/) is a widely used registry of packages. Package managers, like npm, yarn, deno, or bun, are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
+The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
 Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see [Versioning](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-versioning.html).
 
-We recommend [installing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html) the packages instead of cloning the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
+It is highly recommended to [install](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html) the packages rather than cloning the source code from the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
 
-## Layers
+The Oryx framework utilizes both its own packages and third party dependencies to provide a robust development experience. In this document, we will explore how Oryx manages these packages to ensure stability, security, and flexibility.
+
+## Oryx Packages
 
 While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
 
@@ -23,7 +25,7 @@ While the package layering might be irrelevant during your development, it might
 
 {% include diagrams/oryx/packages.md %}
 
-## Template packages
+### Template packages
 
 The template layer contains packages that can be used as quick starters for demos and projects. Templated packages follow semantic versioning and ensure upgradability. Some packages in the template layer, like presets, are opinionated and might not be used inside your final setup. Their main purpose is to quickly get up and running a standard frontend application.
 
@@ -41,7 +43,7 @@ The Labs package is an exception. It consists of experimental or demo functional
 
 {% endinfo_block %}
 
-## Domain packages
+### Domain packages
 
 Domain packages provide components and service logic for certain domains. Organizing packages in domains improves the developer experience by making it easy to understand where to find a certain component or service. For example, the `product` domain package contains all product-related components, as well as product services and adapters that integrate with Spryker APIs.
 
@@ -57,7 +59,7 @@ Domain packages provide components and service logic for certain domains. Organi
 | [Site](https://www.npmjs.com/package/@spryker-oryx/site)         | `@spryker-oryx/site`     |
 | [User](https://www.npmjs.com/package/@spryker-oryx/user)         | `@spryker-oryx/user`     |
 
-## Platform packages
+### Platform packages
 
 The platform layer contains the core packages of the Oryx framework. They provide the infrastructure to the whole system.
 
@@ -73,7 +75,7 @@ The platform layer contains the core packages of the Oryx framework. They provid
 | [push-notification](https://www.npmjs.com/package/@spryker-oryx/push-notification) | `@spryker-oryx/push-notification` |
 | [router](https://www.npmjs.com/package/@spryker-oryx/router)                       | `@spryker-oryx/router`            |
 
-## Base packages
+### Base packages
 
 The base layer contains packages that serve as utilities to all layers above. An important part of the base layer is the design system package (UI).
 
@@ -82,3 +84,21 @@ The base layer contains packages that serve as utilities to all layers above. An
 | [UI](https://www.npmjs.com/package/@spryker-oryx/ui)               | `@spryker-oryx/ui`        |
 | [Utilities](https://www.npmjs.com/package/@spryker-oryx/utilities) | `@spryker-oryx/utilities` |
 | [DI](https://www.npmjs.com/package/@spryker-oryx/di)               | `@spryker-oryx/di`        |
+
+## Managing Third Party Dependencies
+
+Oryx follows a careful approach when it comes to incorporating third party dependencies. By minimizing unnecessary dependencies and evaluating them based on various factors, Oryx aims to avoid potential issues such as outdated packages, vulnerabilities, and compatibility problems that could introduce breaking changes. Here are some guidelines we follow:
+
+- **Avoid unnecessary third party dependencies**: We strive to minimize the use of third party dependencies whenever possible to mitigate risks and maintain control over the ecosystem.
+
+- **Evaluate dependencies carefully**: Before adding a new third party dependency, we carefully evaluate its risks and benefits, considering factors such as maintenance, community support, security track record, and adherence to semantic versioning.
+
+- **Use semantic versioning and caret (^) notation**: We prefer to use semantic versioning and the caret (^) notation in the `package.json` file to ensure compatibility and allow for seamless updates without introducing breaking changes. Ideally, versions only include the major version number, so that the minor and patch are controlled by application owners and can be updated over time. E.g. `"lit": "^2.0.0"`.
+
+- **Avoid shipping lock files in the boilerplate**: Lock files, such as `package-lock.json`, are not included in the Oryx boilerplate to allow application developers to benefit from the latest versions of dependencies when creating their projects.
+
+- **Utilize peer dependencies**: Oryx makes use of peer dependencies whenever possible, allowing application owners to choose specific versions of dependencies while maintaining compatibility with the framework.
+
+- **Documented version resolutions**: In cases where there are known security concerns or significant improvements, Oryx may document version resolutions for the `package.json` file for application owners to override specific dependency versions.
+
+By following these guidelines, Oryx aims to maintain a stable and secure ecosystem while providing flexibility for application developers to choose the versions of dependencies that best suit their needs.

@@ -24,6 +24,4 @@ To configure Vertex, do the following:
 4. In the top right corner of the Vertex app details page, click **Configure**.
 5. In *Security URI*, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
 6. In *Transaction calls URI*, enter the Transaction Calls URI of your Vertex platform. For details on the Transaction Calls URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
-
-5. On the Algolia website, go to **Settings**.
-6. Under **Team and Access**, click **API keys**.
+7. In *Client ID/Client secret*, enter ?

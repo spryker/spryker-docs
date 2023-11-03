@@ -1,5 +1,5 @@
 ---
-title: Configure data mapping between Akeneo and Spryker
+title: Configure data mapping between Akeneo and SCCOS
 description: Create data transformers in the Spryker Middleware Powered by Alumio
 template: howto-guide-template
 ---
@@ -74,11 +74,11 @@ By default, there are the following Akeneo to Base data transformers that you ca
 *Memo Akeneo to Base - Product - Set Base Information* is the main Akeneo to Base transformer that processes all the basic product information. You must always select this transformer to enable the product data import.
 
 1. In *Client*, enter the Akeneo client you created at this step: [Connect Akeneo with Spryker Middleware Powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
-2. In *Locale* field, enter the locale from which you want to import data from Akeneo. For example, *us_US*. 
+2. In *Locale*, enter the locale from which you want to import data in Akeneo. For example, *us_US*. 
 
 {% info_block infoBox "Locale in Akeneo" %}
 
-If the locale is not specified in Akeneo, the locale you specify at this step will be assigned as a default one.
+If the locale isn't specified in Akeneo, the locale you specify at this step will be assigned as a default one.
 
 {% endinfo_block %}
 
@@ -99,13 +99,7 @@ If the locale is not specified in Akeneo, the locale you specify at this step wi
 
 #### Memo Base - Product - Set Price Properties transformer
 
-*Memo Base - Product - Set Price Properties* is the optional transformer that processes price information. 
-
-{% info_block infoBox "Price data" %}
-
-Keep in mind, however, that since the price value refers to the "hot" product data, it's not a required field in Akeneo, and, therefore, might be empty.
-
-{% endinfo_block %}
+*Memo Base - Product - Set Price Properties* is the optional transformer that processes price information. Since the price value refers to the "hot" product data, it's not a required field in Akeneo, and, therefore, might be empty.
 
 To configure this transformer, do the following:
 
@@ -157,7 +151,7 @@ To configure this transformer, do the following:
 
 #### Memo Akeneo to Base - Product - Set Product Media
 
-Memo Akeneo to Base - Product - Set Product Media is the optional transformer that processes all media data of a product.
+*Memo Akeneo to Base - Product - Set Product Media* is the optional transformer that processes all media data of a product.
 
 To configure this transformer, do the following:
 
@@ -179,11 +173,13 @@ To configure this transformer, optionally, in *Relation type* specify all associ
 ### Base to Spryker data transformers
 After you have transformed the data from Akeneo to Base, the Base data need to be transformed to the Spryker data.
 
-By default, there are the following Base to Spryker data transformers that you must use irrespective of the data you want to import:
+By default, there are the following Base to Spryker data transformers.
 
 - Memo Spryker - Product - Set General Settings
 - Memo Base to Spryker - Product - Akeneo Preprocessor
 - Memo Base to Spryker - Product - Insert into Spryker
+
+You must use them all of these transformers, irrespective of the data you want to import.
 
 ### Memo Spryker - Product - Set General Settings
 
@@ -212,9 +208,9 @@ The *Memo Base to Spryker - Product - Akeneo Preprocessor* transformer prepares 
 
 To configure this transformer, do the following:
 
-1. In *Akeneo HTTP client*, select the Akeneo client you created at step [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](#1-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim).
-2. In *Spryker HTTP client*, select the Spryker client you created at step [Connect SCCOS with the Middleware Powered by Alumio platform](#2-connect-sccos-with-the-middleware-powered-by-alumio-platform).
-3. Optional: specify the super attributes for your product. If you don't specify any super attributes here, there will not be any super attributes for the products in SCCOS as well, even though the products might have them in Alumio. Keep in mind, that once you specify an attribute as a super attribute, it can't be a normal attribute attribute in SCCOS. 
+1. In *Akeneo HTTP client*, select the Akeneo client you created at step [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+2. In *Spryker HTTP client*, select the Spryker client you created at step [Connect SCCOS with the Middleware Powered by Alumio platform](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-sccos-with-spryler-middleware-powered-by-alumio).
+3. Optional: specify the super attributes for your product. If you don't specify any super attributes here, there will not be any super attributes for the products in SCCOS, even though the products might have them in Alumio. Keep in mind, that once you specify an attribute as a super attribute, it can't be a normal attribute attribute in SCCOS. 
 4. Optional: In *Relations*, Map Akeneo relation keys to the SCCOS relation keys. To map the relation keys, do the following:
   1. In Akeneo PIM, go to **Settings -> Association types** and click the label of the necessary association type. For example, *Upsell*.
   2. On the Association type details page, copy the code and paste it in the *Akeneo Relation Key Name* field.
@@ -228,9 +224,9 @@ Akeneo multi select attributes correspond to the SCCOS product labels. Therefore
 
 {% endinfo_block %}
 
-![memo-base-to-spryker-product-akeneo-preprocessor](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/memo-base-to-spryker-product-akeneo-preprocessor.png)
-
 6. In the *Cache* field, select the cache that you created for this transformer at the [Create cache](#create-cache) step.
+
+![memo-base-to-spryker-product-akeneo-preprocessor](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/memo-base-to-spryker-product-akeneo-preprocessor.png)
 
 ### Memo Base to Spryker - Product - Insert into Spryker
 
@@ -240,7 +236,7 @@ To configure this transformer, do the following:
 
 1. In *Spryker HTTP client*, select the client you created at step [Connect SCCOS with the Middleware Powered by Alumio platform](#2-connect-sccos-with-the-middleware-powered-by-alumio-platform).
 2. In *Root category name*, enter the root category name as you have it in SCCOS. For information about the categories in SCCOS, see [Category Management feature overview](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/category-management-feature-overview.html).
-3. In *Category template name*, enter the name of the category template in SCCOS where the product has to be imported. For information about the default category templates in SCCOS, see /docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html#reference-information-template).
+3. In *Category template name*, enter the name of the category template in SCCOS where the product has to be imported. For information about the default category templates in SCCOS, see [Reference information: template](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html#reference-information-template).
 4. Optional: To mark the product as active, check *Is product active*.
 5. Optional: To mark the product as splittable, check *Is product splittable*.
 4. Optional: To update prices in SCCOS with those from Akeneo, check *Update price*.
@@ -250,4 +246,4 @@ To configure this transformer, do the following:
 
 
 ## Next step
-[Configure the data integration path of the Akeneo PIM integration app](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-of-the-akeneo-pim-integration-app.html)
+[Configure the data integration path between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html)

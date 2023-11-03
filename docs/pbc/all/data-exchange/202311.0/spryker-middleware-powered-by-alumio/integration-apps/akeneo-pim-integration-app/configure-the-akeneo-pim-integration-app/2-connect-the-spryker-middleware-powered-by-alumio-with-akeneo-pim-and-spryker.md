@@ -65,4 +65,4 @@ Now that the client is created, you can test if it works. To test the client, do
 ![sccos-to-middleware-response](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/sccos-to-middleware-response.png)
 
 ## Next step
-[Configure data mapping between Akeneo and Spryker](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker.html)
+[Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-sccos.html)

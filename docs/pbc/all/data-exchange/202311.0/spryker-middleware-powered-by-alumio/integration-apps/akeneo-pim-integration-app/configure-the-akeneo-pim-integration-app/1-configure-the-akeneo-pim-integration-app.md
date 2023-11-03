@@ -11,4 +11,4 @@ To import data from Akeneo PIM to your Spryker project, you need to do the follo
 1. Connect the Spryker Middleware Powered by Alumio with Akeneo PIM and Spryker.
 3. Configure the data integration path of the Akeneo PIM integration app.
 4. Configure data mapping between Akeneo and Spryker.
-5. Run the products import.
+5. Create tasks and imprt products from Akeneo to SCCOS.

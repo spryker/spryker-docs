@@ -3797,22 +3797,18 @@ entries:
             include_versions:
             - "202311.0"
             nested:
+              - title: Fulfillment App overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
                     nested:
                       - title: Warehouse Picking
                         url: /docs/pbc/all/warehouse-picking//unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
-                        include_versions:
-                        - "202311.0"
                       - title: Warehouse Picking + Product
                         url: /docs/pbc/all/warehouse-picking/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
-                        include_versions:
-                        - "202311.0"
                       - title: Warehouse User Management
                         url: /docs/pbc/all/warehouse-management-system//unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
-                        include_versions:
-                        - "202311.0"
       - title: Warehouse Picking
         nested:
           - title: Unified Commerce

@@ -72,7 +72,7 @@ You can check the execution status of the route in the route execution logs. To 
 ## Optional: Create a scheduler
 
 To run the product import automatically on a regular basis, you would need to create a scheduler—
-a job, that would run the route.
+a job, that would run the route. You need to create two schedulers: one for the incoming configuration, and the other one for the outgoing configuration.
 
 To create the scheduler, do the following:
 
@@ -81,6 +81,7 @@ To create the scheduler, do the following:
 3. In *Job*, click **Add job** and select *Run incoming configuration*.
 4. In *Incoming*, select the incoming configuration you created at step [Create an incoming configuration](#create-an-incoming-configuration).
 5. In *Expression*, enter the time you want the scheduler to run. Use [Crontab guru](https://crontab.guru/) to set the time in the right format.
+6. Create one more scheduler with the same parameters, but for step 3, the *Run outgoing configuration* job.
 
 Since the number of tasks that can be processed is limited, it is recommended to create a scheduler that would remove completed tasks after the specified intervals. 
 

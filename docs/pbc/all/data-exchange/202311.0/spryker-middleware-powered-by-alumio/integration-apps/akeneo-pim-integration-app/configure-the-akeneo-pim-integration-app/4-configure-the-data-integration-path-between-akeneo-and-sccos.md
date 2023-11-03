@@ -89,7 +89,6 @@ To define the route, do the following:
 4. To activate the route, set the status to *Enabled*.
 5. In *Incoming configuration* filed, select the configuration you created at step [Create an incoming configuration](#create-an-incoming-configuration).
 6. In *Outgoing configuration*, select the outgoing configuration created at step [Create and outgoing configuration](#create-an-outgoing-configuration).
-
 ![create-a-new-route](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos/create-a-new-route.png)
 
 7. Click **Save & Continue**. 

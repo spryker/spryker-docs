@@ -111,7 +111,7 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 
 ## Related Developer articles
 
-| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES  |
 |---|---|---|---|---|
 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | | | | |
 | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html) | | | | |

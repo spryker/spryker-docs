@@ -1,13 +1,9 @@
 
 
 
-This document describes how to integrate the Warehouse picking feature into a Spryker project.
+This document describes how to install the Warehouse picking feature.
 
-## Install feature core
-
-Follow the steps below to install the Warehouse picking feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -19,7 +15,9 @@ Install the required features:
 | Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html)                                     |
 | Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
+
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/warehouse-picking: "{{page.version}}" --update-with-dependencies
@@ -27,7 +25,7 @@ composer require spryker-feature/warehouse-picking: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                           | EXPECTED DIRECTORY                                  |
 |----------------------------------|-----------------------------------------------------|
@@ -39,13 +37,13 @@ Make sure that the following modules have been installed:
 | PickingListsUsersBackendApi      | vendor/spryker/picking-lists-users-backend-api      |
 | PickingListsWarehousesBackendApi | vendor/spryker/picking-lists-warehouses-backend-api |
 
-Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
+2. Optional: To install the demo multi-shipment picking strategy, install the module:
 
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
 ```
 
-Make sure that the following module has been installed:
+Make sure the following module has been installed:
 
 | MODULE                                         | EXPECTED DIRECTORY                                                  |
 |------------------------------------------------|---------------------------------------------------------------------|
@@ -53,7 +51,7 @@ Make sure that the following module has been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+## 2) Set up database schema and transfer objects
 
 Apply the database changes and generate entity and transfer changes:
 
@@ -64,7 +62,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY                 | TYPE   | EVENT   |
 |---------------------------------|--------|---------|
@@ -73,7 +71,7 @@ Make sure that the following changes have been applied by checking your database
 | spy_sales_order_item.uuid       | column | created |
 | spy_stock.picking_list_strategy | column | created |
 
-Make sure that the following changes have been triggered in transfer objects:
+Make sure the following changes have been triggered in transfer objects:
 
 | TRANSFER                                       | TYPE     | EVENT   | PATH                                                                          |
 |------------------------------------------------|----------|---------|-------------------------------------------------------------------------------|
@@ -112,7 +110,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up configuration
+## 3) Set up configuration
 
 1. To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths' configuration:
 
@@ -144,8 +142,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. Configure OMS:
-   1. Add the `DummyPicking` subprocess that describes the warehouse picking in the system.
+2. To configure OMS, add the `DummyPicking` subprocess that describes the warehouse picking in the system.
 
 **config/Zed/oms/DummySubprocess/DummyPicking.xml**
 
@@ -203,65 +200,64 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 </statemachine>
 ```
 
-   2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
+3. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
-    <details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+<details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
-    ```xml
-    <?xml version="1.0"?>
-    <statemachine
-            xmlns="spryker:oms-01"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
-    >
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
 
-        <process name="DummyPayment01" main="true">
-            <subprocesses>
-                <process>DummyPicking</process> <!-- Registering the subprocess. -->
-            </subprocesses>
+    <process name="DummyPayment01" main="true">
+        <subprocesses>
+            <process>DummyPicking</process> <!-- Registering the subprocess. -->
+        </subprocesses>
 
-            <transitions>
-                <!-- We will find the following transition and substitute it with the provided below. -->
-                <!--            <transition happy="true">-->
-                <!--                <source>waiting</source>-->
-                <!--                <target>exported</target>-->
-                <!--                <event>check giftcard purchase</event>-->
-                <!--            </transition>-->
-                <!-- / -->
+        <transitions>
+            <!-- We will find the following transition and substitute it with the provided below. -->
+            <!--            <transition happy="true">-->
+            <!--                <source>waiting</source>-->
+            <!--                <target>exported</target>-->
+            <!--                <event>check giftcard purchase</event>-->
+            <!--            </transition>-->
+            <!-- / -->
 
-                <transition happy="true">
-                    <source>waiting</source>
-                    <target>picking list generation scheduled</target>
-                    <event>picking list generation schedule</event>
-                </transition>
+            <transition happy="true">
+                <source>waiting</source>
+                <target>picking list generation scheduled</target>
+                <event>picking list generation schedule</event>
+            </transition>
 
-                <transition happy="true">
-                    <source>picking finished</source>
-                    <target>exported</target>
-                    <event>finish picking</event>
-                </transition>
+            <transition happy="true">
+                <source>picking finished</source>
+                <target>exported</target>
+                <event>finish picking</event>
+            </transition>
 
-            </transitions>
+        </transitions>
 
-        </process>
+    </process>
 
-        <process name="DummyPicking"
-                file="DummySubprocess/DummyPicking01.xml"/> <!-- Include the subprocess file to be loaded by the state machine. -->
+    <process name="DummyPicking"
+            file="DummySubprocess/DummyPicking01.xml"/> <!-- Include the subprocess file to be loaded by the state machine. -->
 
-    </statemachine>
-    ```
-    </details>
+</statemachine>
+```
+</details>
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the OMS transition diagram shows the expected transitions:
-1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
-2. To see the diagram, click the `DummyPayment01` process.
-3. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
+2. Click the `DummyPayment01` process.
+    Make sure the OMS transition diagram shows the transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
-3. Configure the Push Notification provider:
+4. Configure the Push Notification provider:
 
 **src/Pyz/Zed/PickingListPushNotification/PickingListPushNotificationConfig.php**
 
@@ -291,12 +287,12 @@ class PickingListPushNotificationConfig extends SprykerPickingListPushNotificati
 }
 ```
 
-### 4) Import warehouse picking list strategies
+## 4) Import warehouse picking list strategies
 
 1. Prepare your data according to your requirements using our demo data:
 
+* Base shop:
 **data/import/common/common/warehouse.csv**
-
 ```csv
 name,is_active,picking_list_strategy
 Warehouse1,1,multi-shipment
@@ -304,10 +300,9 @@ Warehouse2,1,multi-shipment
 Warehouse3,0,multi-shipment
 ```
 
-If you are using the marketplace setup:
+* Marketplace:
 
 **data/import/common/common/marketplace/warehouse.csv**
-
 ```csv
 name,is_active,picking_list_strategy
 Warehouse1,1,multi-shipment
@@ -333,11 +328,11 @@ console data:import stock
 
 {% info_block warningBox “Verification” %}
 
-Make sure the defined picking list strategies are applied correctly by finding them in the `spy_stock` database table.
+Make sure the defined picking list strategies have been imported to the `spy_stock` database table.
 
 {% endinfo_block %}
 
-### 4) Add translations
+## 4) Add translations
 
 1. Append glossary according to your configuration:
 
@@ -374,20 +369,20 @@ picking_list_push_notification.validation.warehouse_entity_not_found,Lager nicht
 console data:import glossary
 ```
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                   | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                                     |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| GeneratePickingListsCommandByOrderPlugin                 | Generates the picking lists based on warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingFinishedConditionPlugin                         | Checks if all picking lists are finished for the given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingListGenerationFinishedConditionPlugin           | Checks if picking lists generation is finished for the given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingStartedConditionPlugin                          | Checks if picking of at least one picking list is started for the given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| UnassignPickingListUserPostSavePlugin                    | Removes user assignment from picking lists.                                          |               | Spryker\Zed\PickingList\Communication\Plugin\User                             |
+| GeneratePickingListsCommandByOrderPlugin                 | Generates picking lists based on a warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingFinishedConditionPlugin                         | Checks if all picking lists are finished for a given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingListGenerationFinishedConditionPlugin           | Checks if picking lists generation is finished for a given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingStartedConditionPlugin                          | Checks if picking of at least one picking list is started for a given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| UnassignPickingListUserPostSavePlugin                    | Removes a user assignment from picking lists.                                          |               | Spryker\Zed\PickingList\Communication\Plugin\User                             |
 | PushNotificationPickingListPostCreatePlugin              | Creates a push notification after creating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
 | PushNotificationPickingListPostUpdatePlugin              | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
-| WarehouseUserPushNotificationSubscriptionValidatorPlugin | Validates whether the user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
+| WarehouseUserPushNotificationSubscriptionValidatorPlugin | Validates whether a user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
 <details open><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
@@ -524,13 +519,11 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 }
 ```
 
-2. Enable the demo multi-shipment picking strategy plugin:
-
-For the demo purpose, we propose the example of the multi-shipment picking strategy.
+2. If you've installed the demo picking strategy module in [Install the required modules](#install-the-required-modules), enable the demo multi-shipment picking strategy plugin:
 
 | PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                                                   |
 |-------------------------------------------------|----------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
-| MultiShipmentPickingListGeneratorStrategyPlugin | Generates the picking lists based on warehouse strategy. |               | Spryker\Zed\PickingListMultiShipmentPickingStrategyExample\Communication\Plugin\PickingList |
+| MultiShipmentPickingListGeneratorStrategyPlugin | Generates picking lists based on a warehouse strategy. |               | Spryker\Zed\PickingListMultiShipmentPickingStrategyExample\Communication\Plugin\PickingList |
 
 **src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
 
@@ -562,11 +555,11 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 | PLUGIN                                                          | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                                                                    |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------|
 | PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                            |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
-| PickingListStartPickingBackendResourcePlugin                    | Registers the `picking-lists` resources `start-picking` resource.                  |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
+| PickingListStartPickingBackendResourcePlugin                    | Registers the `picking-lists` and `start-picking` resources.                  |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
 | PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                       |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication                                         |
-| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds `picking-list-items` resources as relationships to `picking-lists` resources. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector           |
-| UsersByPickingListsBackendResourceRelationshipPlugin            | Adds `users` resources as a relationship to `picking-lists` resources.             |               | Spryker\Glue\PickingListsUsersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector      |
-| WarehousesByPickingListsBackendResourceRelationshipPlugin       | Adds `warehouses` resources as a relationships to `picking-lists` resources.       |               | Spryker\Glue\PickingListsWarehousesBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds the `picking-list-items` resource as a relationship to the `picking-lists` resource. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector           |
+| UsersByPickingListsBackendResourceRelationshipPlugin            | Adds the `users` resource as a relationship to the `picking-lists` resource.             |               | Spryker\Glue\PickingListsUsersBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector      |
+| WarehousesByPickingListsBackendResourceRelationshipPlugin       | Adds the `warehouses` resource as a relationship to the `picking-lists` resource.       |               | Spryker\Glue\PickingListsWarehousesBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -642,10 +635,10 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
 
 {% info_block warningBox "Verification" %}
 
-As a prerequisite, you must take the following steps:
+As a prerequisite, do the following:
 
-1. Attach a Back Office user to any warehouse you have in the system—use the [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html) guide.
-2. Place an order in the system so that the product is in the warehouse where you added the user in the previous step.
+1. [Assign a warehouse to a warhouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html).
+2. Place an order with a product that has the highest stock in the warehouse you've assigned the user to.
 3. Obtain the access token of the warehouse user.
 4. Use the warehouse user access token as the request header `Authorization: Bearer {{YOUR_ACCESS_TOKEN}}`.
 

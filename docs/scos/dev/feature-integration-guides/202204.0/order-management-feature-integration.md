@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/order-management-feature-integration.html
 related:
-  - title: Comments + Order Management feature integration
+  - title: Install the Comments + Order Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
   - title: Glue API - Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-order-management-feature-integration.html
-  - title: Company Account + Order Management feature integration
+  - title: Install the Company Account + Order Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
   - title: Product + Order Management feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html

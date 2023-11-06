@@ -13,6 +13,7 @@ Before configuring Vertex, ensure the following prerequisites are met:
 
 - You have an account with [Vertex](https://www.vertexinc.com/). Contact the Spryker Support team or your Customer Success Manager if you need support getting a Vertex account.
 - Company Code is set up in Vertex and added to your project. See the Guidelines LINK for more details.
+- You removed the default tax rate value from the Back Office. When you use Vertex to determine taxes, the tax rate received from Vertex does not overwrite the existing tax rate values in the Back Office. Therefore, before using Vertex, we recommend removing the default values from the Back Office. To remove the default tax rates, in your store's Back Office, go to **Administration -> Tax rates** and delete the tax rates.
 
 ## Configure Vertex
 
@@ -22,8 +23,38 @@ To configure Vertex, do the following:
 2. On the *App Composition Platform Catalog* page, click **Vertex**. This takes you to the Vertex app details page.
 3. In the top right corner of the Vertex app details page, click **Connect app**. The notification saying that the application connection is pending is displayed.
 4. In the top right corner of the Vertex app details page, click **Configure**.
-5. In *Security URI*, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
-6. In *Transaction calls URI*, enter the Transaction Calls URI of your Vertex platform. For details on the Transaction Calls URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
-7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://hanes.ondemand.vertexinc.com/oseries-help/help/oseries/166223.html) for details about how to obtain it. 
-8. Set the status to *Active*.
-9. Optional: To enable invoice saving in Vertex, check *Enable invoice save in Vertex*.
+5. To activate the app, select *Active*.
+6. In *Security URI*, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
+7. In *Transaction calls URI*, enter the Transaction Calls URI of your Vertex platform. For details on the Transaction Calls URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
+7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://hanes.ondemand.vertexinc.com/oseries-help/help/oseries/166223.htm) for details about how to obtain it. 
+8. Optional: To enable invoice saving in Vertex, check *Enable invoice save in Vertex*.
+9. Click **Save**.
+
+![vertex-configuration]
+
+{% info_block infoBox "Company code" %}
+
+Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
+
+
+{% endinfo_block %}
+
+## Configuration verification
+
+Once you have configured Vertex, the taxes are calculated in real time in the checkout. The respective note appears on the checkout page.
+
+![vertex_checkout_page]
+
+On the Storefront, the tax amount is displayed at the checkout summary page. 
+
+In the Back Office, the taxes are displayed at the order details page.
+
+If you enabled invoice saving in Vertex in your configuration, you can view the taxes processed by Vertex for the Spryker order on the Vertex platform. Do the following:
+
+1. Go to ***Reporting -> Standard Reports**.
+2. Click ***Report Output**.
+3. Find the necessary report and click **Action -> View report**.
+![vertex-report-output]
+4. On the invoice page, you verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.
+![invoice-in-vertex]
+

@@ -17,7 +17,7 @@ This document explains the Datasource Trigger service in the Components Library.
 
 ## Overview
 
-Datasource Trigger is an Angular Service that provides a flexible way to fetch data based on events triggered by the user. 
+Datasource Trigger is an Angular Service that provides a flexible way to fetch data based on user-triggered events.
 
 ```html
 <spy-select
@@ -58,7 +58,7 @@ export class SelectComponent implements DatasourceTriggerElement {
 
 The main module provides an opportunity to register any `datasource.trigger` by key via static method `withEvents()`. It assigns the object of datasources to the `DatasourceEventTypesToken` under the hood.
 
-`resolve()` method gets the trigger element using the `DatasourceTriggerElement` abstract class (token)`, finds specific service from the `DatasourceEventTypesToken` by `config.event` (from the argument) and returns observable with data (based on the data returned from trigger element) by `Datasource.resolve()`.
+`resolve()` method gets the trigger element using the `DatasourceTriggerElement` abstract class (token), finds specific service from the `DatasourceEventTypesToken` by `config.event` (from the argument) and returns observable with data (based on the data returned from trigger element) by `Datasource.resolve()`.
 
 ## Datasource
 

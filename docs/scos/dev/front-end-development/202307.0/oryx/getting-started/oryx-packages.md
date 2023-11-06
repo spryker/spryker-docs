@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-packages.html
 ---
 
-The Oryx code base is publicly [available on Github](https://github.com/spryker/oryx/), and published and distributed on [npmjs.com](https://www.npmjs.com/). Npm is a widely used registry of npm packages, that is used by package managers, like npm, yarn, deno, or bun, to install dependencies in an application.
+The Oryx code base is publicly [available on Github](https://github.com/spryker/oryx/) and the code is published on [npmjs.com](https://www.npmjs.com/). Npm is a widely used registry for npm packages, that is used by package managers, like npm, yarn, deno, or bun, to install dependencies in an application.
 
 The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
@@ -87,7 +87,11 @@ The base layer contains packages that serve as utilities to all layers above. An
 
 ## Managing Third Party Dependencies
 
-Oryx follows a careful approach when it comes to incorporating third party dependencies. By minimizing unnecessary dependencies and evaluating them based on various factors, Oryx aims to avoid potential issues such as outdated packages, vulnerabilities, and compatibility problems that could introduce breaking changes. Here are some guidelines we follow:
+Oryx follows a careful approach when incorporating third-party components. Third-party components are included only when they bring significant value to projects. This approach involves minimizing unnecessary dependencies and thoroughly assessing their worth to prevent issues like outdated packages, vulnerabilities, and compatibility problems that could disrupt code stability.
+
+To demonstrate commitment to code quality and security, regular inspections of third-party components are conducted to identify and fix vulnerabilities. Attention is also given to optimizing bundle size and performance to maintain fast and responsive applications. Prioritizing the well-being of dependencies includes regular checks for updates and compatibility to maintain a strong and well-maintained ecosystem.
+
+The following guidelines are used to ensure Oryx can continue to innovate and maintained:
 
 - **Avoid unnecessary third party dependencies**: We strive to minimize the use of third party dependencies whenever possible to mitigate risks and maintain control over the ecosystem.
 
@@ -99,6 +103,6 @@ Oryx follows a careful approach when it comes to incorporating third party depen
 
 - **Utilize peer dependencies**: Oryx makes use of peer dependencies whenever possible, allowing application owners to choose specific versions of dependencies while maintaining compatibility with the framework.
 
-- **Documented version resolutions**: In cases where there are known security concerns or significant improvements, Oryx may document version resolutions for the `package.json` file for application owners to override specific dependency versions.
+- **Document version resolutions**: In cases where there are known security concerns or significant improvements that can only be solved with a breaking change to the dependencies, a _version resolutions_ might be added to the Oryx documentation. Application owners can change their `package.json` accordingly to override specific dependencies.
 
 By following these guidelines, Oryx aims to maintain a stable and secure ecosystem while providing flexibility for application developers to choose the versions of dependencies that best suit their needs.

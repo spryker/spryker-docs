@@ -116,7 +116,8 @@ Make sure the following changes have been applied in the database:
 | spy_region.uuid                     | column | created |
 | spy_sales_order_item_service_point  | table  | created |
 
-Make sure propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending  respective Spryker core classes.
+* Make sure propel entities have been generated successfully by checking their existence.
+* Make sure the existing Propel classes have been extended to include the new added columns.
 
 | CLASS NAMESPACE                                                           | EXTENDS                                                                                      |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -1633,7 +1634,7 @@ Verify the following widgets have been registered by adding the respective code 
 |--------------------------|-----------------------------------------------------------------|
 | ServicePointSearchWidget | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
-Make sure that, during checkout, you can select a service point for the order items. 
+Make sure that, during checkout, you can select a service point for the order items.
 
 {% endinfo_block %}
 

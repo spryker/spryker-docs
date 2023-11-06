@@ -469,49 +469,49 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
-2. On the **Users** page, for a user of your choice, click **Edit**.
+2. On the **Users** page, for the user of your choice, click **Edit**.
 3. On the **Edit User: `{USER}`** page that opens, select **THIS USER IS A WAREHOUSE USER**.
 4. Click **Update**.
-5. Go back to **USERS LIST**.
-6. For the user you've edited, click **Assign Warehouses**.
-7. On the **Assign Warehouse to User: `{USER_NAME}`** page, in the **Select warehouses to assign** tab, for a warehouse of your choice, select **ASSIGN** and click **Save**.
-8. Authenticate the user while requesting a token:
+5. On the **Users** page, for the user you've edited, click **Assign Warehouses**.
+    This opens the **Assign Warehouse to User: `{USER_NAME}`** page.
+6. In the **Select warehouses to assign** tab, for a warehouse of your choice, select **ASSIGN** and click **Save**.
+7. Authenticate as the warehouse user:
 
-   ```json
-   POST /access-tokens HTTP/1.1
-   Host: glue-backend.mysprykershop.com
-   Content-Type: application/vnd.api+json
-   Content-Length: 167
-   {
-      "data": {
-         "type": "access-tokens",
-         "attributes": {
-            "username": "{USERNAME}",
-            "password": "{PASSWORD}"
-         },
-         "links": {
-            "self": "https://glue-backend.mysprykershop.com/access-tokens"
-         }
-      }
-   }
-   ```
+```json
+POST /access-tokens HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/vnd.api+json
+Content-Length: 167
+{
+  "data": {
+     "type": "access-tokens",
+     "attributes": {
+        "username": "{USERNAME}",
+        "password": "{PASSWORD}"
+     },
+     "links": {
+        "self": "https://glue-backend.mysprykershop.com/access-tokens"
+     }
+  }
+}
+```
 
 9. Generate a warehouse token with the generated token from the previous step:
 
-   ```json
-   POST /warehouse-tokens HTTP/1.1
-   Host: glue-backend.mysprykershop.com
-   Content-Type: application/vnd.api+json
-   Content-Length: 165
-   {
-      "data": {
-         "type": "warehouse-tokens",
-         "links": {
-            "self": "https://glue-backend.mysprykershop.com/warehouse-tokens"
-         }
-      }
-   }
-   ```
+```json
+POST /warehouse-tokens HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/vnd.api+json
+Content-Length: 165
+{
+  "data": {
+     "type": "warehouse-tokens",
+     "links": {
+        "self": "https://glue-backend.mysprykershop.com/warehouse-tokens"
+     }
+  }
+}
+```
 
 {% endinfo_block %}
 
@@ -548,40 +548,40 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that you can send the following requests:
+Make sure you can send the following requests:
 
-   * `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments`
-   * `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
-   * `POST https://glue-backend.mysprykershop.com/warehouse-user-assignments`
+* `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments`
+* `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
+* `POST https://glue-backend.mysprykershop.com/warehouse-user-assignments`
 
-        ```json
-        {
-            "data": {
-                "type": "warehouse-user-assignments",
-                "attributes": {
-                    "userUuid": {% raw %}{{{% endraw %}user-uuid{% raw %}}}{% endraw %},
-                    "warehouse": {
-                        "uuid": {% raw %}{{{% endraw %}warehouse-uuid{% raw %}}}{% endraw %}
-                    },
-                    "isActive": true
-                }
-            }
+```json
+{
+    "data": {
+        "type": "warehouse-user-assignments",
+        "attributes": {
+            "userUuid": {% raw %}{{{% endraw %}user-uuid{% raw %}}}{% endraw %},
+            "warehouse": {
+                "uuid": {% raw %}{{{% endraw %}warehouse-uuid{% raw %}}}{% end%}
+            },
+            "isActive": true
         }
-        ```
+    }
+}
+```
 
-   * `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
+* `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
 
-        ```json
-        {
-            "data" : {
-                "type" : "warehouse-user-assignments",
-                "attributes" : {
-                    "isActive": true
-                }
-            }
+```json
+{
+    "data" : {
+        "type" : "warehouse-user-assignments",
+        "attributes" : {
+            "isActive": true
         }
-        ```
+    }
+}
+```
 
-   * `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`.
+* `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`.
 
 {% endinfo_block %}

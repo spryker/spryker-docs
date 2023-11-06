@@ -10,7 +10,7 @@ To start feature integration, overview and install the following features and Gl
 | NAME  | VERSION  | INSTALLATION GUIDE   |
 | ---------------- | ------- | --------------------------- |
 | Glue API: Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Order Management       | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| Order Management       | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

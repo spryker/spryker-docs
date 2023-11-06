@@ -30,7 +30,7 @@ To configure Vertex, do the following:
 8. Optional: To enable invoice saving in Vertex, check *Enable invoice save in Vertex*.
 9. Click **Save**.
 
-![vertex-configuration]
+![vertex-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-configuration.png)
 
 {% info_block infoBox "Company code" %}
 
@@ -43,7 +43,7 @@ Vertex expects to receive the Company Code you have set in Vertex from Spryker a
 
 Once you have configured Vertex, the taxes are calculated in real time in the checkout. The respective note appears on the checkout page.
 
-![vertex_checkout_page]
+![vertex_checkout_page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex_checkout_page.png)
 
 On the Storefront, the tax amount is displayed at the checkout summary page. 
 
@@ -54,7 +54,7 @@ If you enabled invoice saving in Vertex in your configuration, you can view the 
 1. Go to ***Reporting -> Standard Reports**.
 2. Click ***Report Output**.
 3. Find the necessary report and click **Action -> View report**.
-![vertex-report-output]
+![vertex-report-output](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-report-output.png)
 4. On the invoice page, you verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.
-![invoice-in-vertex]
+![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
 

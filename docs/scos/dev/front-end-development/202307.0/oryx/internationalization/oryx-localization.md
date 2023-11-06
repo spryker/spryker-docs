@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: July 23, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-localization.html
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-localization.html
 ---
 
 Localization is the part of internationalization (`i18n`) that's concerned with creating variations of the same application in different locales.
@@ -49,8 +50,6 @@ This mechanism lets Oryx avoid distributing localizations as a standard package 
 The [Oryx labs package](https://www.npmjs.com/package/@spryker-oryx/labs) provides some localizations mainly for demonstration reasons. For more information on the labs package, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html).
 
 {% endinfo_block %}
-
-
 
 ## Installing the i18n package
 

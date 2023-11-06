@@ -640,27 +640,27 @@ As a prerequisite, do the following:
 1. [Assign a warehouse to a warhouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html).
 2. Place an order with a product that has the highest stock in the warehouse you've assigned the user to.
 3. Obtain the access token of the warehouse user.
-4. Use the warehouse user access token as the request header `Authorization: Bearer {{YOUR_ACCESS_TOKEN}}`.
+4. Use the warehouse user access token as the request header: `Authorization: Bearer {{YOUR_ACCESS_TOKEN}}`.
 
 Make sure that you can send the following requests:
 
-* To get a collection of available picking lists for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists`.
+* Retrieve a collection of available picking lists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
-* To get a collection of available picking lists with picking list items for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
+* Retrieve a collection of available picking lists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
 
-* To get a collection of available picking lists with included users resources for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
+* Retrieve a collection of available picking lists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
 
-* To get a collection of available picking lists with included warehouses resources for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
+* Retrieve a collection of available picking lists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
 
-* To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
+* Retrieve a picking list: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
-* To start a pick-up operation for a warehouse user, send the request: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
+* Start picking: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
 
-* To get a collection of the picking list items for a particular picking list, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
+* Retrieve items from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
 
-* To get a single picking list item for a particular picking list, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
+* Retrieve an item from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
 
-* To pick the picking list items, send the following request. The endpoint works in a bulk mode:
+* Pick one or more items from a picklist:
 
 `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 
@@ -687,12 +687,14 @@ Make sure that you can send the following requests:
 }
 ```
 
-Make sure that push notification generation work for the picking list feature:
+Make sure push notification generation works:
 
-1. Make an order with a products from the warehouse with `multi-shipment` picking strategy.
-2. Log to the Back Office and navigate to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**. The **Orders** page opens.
-3. Select your order and click the **View** button.
-4. Wait until the order item status became **Ready for picking**.
+1. Place an order with a product from the warehouse with the `multi-shipment` picking strategy.
+2. In the Back Office, go to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**.
+3. On the **Orders** page, next the order you've placed, click **View**.
+4. To make the order ready for picking, manually change the state of the order. For instructions, see [Change the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
+  The order state should be **ready for picking**.
+
 5. Check the `spy_push_notification` database table to ensure that a push notification has been created.
 
 {% endinfo_block %}

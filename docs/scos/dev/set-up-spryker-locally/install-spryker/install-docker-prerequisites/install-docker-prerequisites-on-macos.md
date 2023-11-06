@@ -70,7 +70,8 @@ Signup for Docker Hub is not required.
 3. If you need switch to OrbsStack from Docker, see [Switch from Docker to OrbStack](https://docs.orbstack.dev/install#docker-context).
 
 ### Install Mutagen for development mode
-1. [Development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
+
+[Development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start

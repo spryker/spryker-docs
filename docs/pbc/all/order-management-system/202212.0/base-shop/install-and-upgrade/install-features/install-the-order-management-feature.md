@@ -21,7 +21,7 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
   - title: Install the Company Account + Order Management feature
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
-  - title: Product + Order Management feature integration
+  - title: Install the Product + Order Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
   - title: Install the Customer Account Management + Order Management feature
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html

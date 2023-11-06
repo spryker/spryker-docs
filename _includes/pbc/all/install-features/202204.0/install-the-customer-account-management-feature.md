@@ -852,4 +852,4 @@ Ensure that when you try to access your account without confirming the registrat
 | NAME | INSTALLATION GUIDE |
 | --- | --- |
 | Customer API	 | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |
+| Customer Account Management + Order Management | [Install the Customer Account Management + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |

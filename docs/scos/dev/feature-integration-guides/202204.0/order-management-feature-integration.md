@@ -20,9 +20,9 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-order-management-feature-integration.html
   - title: Install the Company Account + Order Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
-  - title: Product + Order Management feature integration
+  - title: Install the Product + Order Management feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html
-  - title: Customer Account Management + Order Management feature integration
+  - title: Install the Customer Account Management + Order Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
   - title: Order Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html

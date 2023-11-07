@@ -490,7 +490,7 @@ Content-Length: 167
         "password": "{PASSWORD}"
      },
      "links": {
-        "self": "https://glue-backend.mysprykershop.com/access-tokens"
+        "self": "https://glue-backend.mysprykershop.com/token"
      }
   }
 }

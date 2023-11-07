@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define doc folder paths
-FOLDERS=("docs/acp/user" "docs/cloud/dev" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
+FOLDERS=("docs/acp/user" "docs/ca/dev" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
 
 # Define sidebar file paths
 SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/scos_dev_sidebar.yml" "_data/sidebars/scos_user_sidebar.yml" "_data/sidebars/scu_dev_sidebar.yml" "_data/sidebars/sdk_dev_sidebar.yml")

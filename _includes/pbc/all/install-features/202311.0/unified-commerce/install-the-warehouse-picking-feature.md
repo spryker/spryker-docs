@@ -644,13 +644,13 @@ As a prerequisite, do the following:
 
 Make sure that you can send the following requests:
 
-* Retrieve a collection of available picking lists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
+* Retrieve picklists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
-* Retrieve a collection of available picking lists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
+* Retrieve picklists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
 
-* Retrieve a collection of available picking lists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
+* Retrieve picklists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
 
-* Retrieve a collection of available picking lists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
+* Retrieve picklists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
 
 * Retrieve a picking list: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 

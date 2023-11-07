@@ -11,6 +11,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
 
 ---
 This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}third-party-integrations/vertex/vertex.html) into a Spryker shop.
@@ -695,3 +696,6 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 | state            | mainDivision   | Should be either not empty or null |
 | zipCode          | postalCode     |                                    |
 | country.iso2Code | country        |                                    |
+
+## Next step
+[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)

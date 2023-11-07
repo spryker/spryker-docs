@@ -51,8 +51,8 @@ In the Back Office, the taxes are displayed at the order details page.
 
 If you enabled invoice saving in Vertex in your configuration, you can view the taxes processed by Vertex for the Spryker order on the Vertex platform. Do the following:
 
-1. Go to ***Reporting -> Standard Reports**.
-2. Click ***Report Output**.
+1. Go to **Reporting -> Standard Reports**.
+2. Click **Report Output**.
 3. Find the necessary report and click **Action -> View report**.
 ![vertex-report-output](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-report-output.png)
 4. On the invoice page, you verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.

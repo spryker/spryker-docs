@@ -3601,6 +3601,12 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
                         - "202311.0"
+                      - title: Configure Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
+                        include_versions:
+                        - "202311.0"
+                      - title: Disconnect Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
           - title: Marketplace
             include_versions:
             - "202212.0"

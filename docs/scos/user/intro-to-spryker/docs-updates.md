@@ -7,6 +7,25 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
 ---
 
+## October 2023
+
+In October 2023, we have added and updated the following pages:
+
+### New pages
+
+- [Data Exchange](/docs/pbc/all/data-exchange/202311.0/data-exchange.html): Get an overview of the Data Exchange features: Data Importers and Data Exporters, Data Exchange API, Spryker Middleware powered by Alumio.
+- [Data Exchange FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html).
+- [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
+- [Security release notes 202309.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html).
+- [Upgrade the Chart module](/docs/pbc/all/back-office/202307.0/install-and-upgrade/upgrade-the-chart-module.html): Learn how to upgrade the Chart module from version 1.5.0 to version 1.6.1.
+- Oryx components docs:
+    - [Oryx: Component types](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-component-types.html): Learn about the Oryx components compared to Atomic design.
+
+### Updated pages
+
+- [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html): Learn how to integrate the Vertex app in your ACP catalog in the Back Office.
+- - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html).
+
 ## September 2023
 
 In September 2023, we have added and updated the following pages:

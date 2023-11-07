@@ -29,7 +29,7 @@ In September 2023, we have added and updated the following pages:
 - [Cart Notes feature integration guide](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html).
 - [Order management feature integration guide](/docs/pbc/all/order-management-system/202311.0/base-shop/install-features/install-the-order-management-feature.html).
 - [Packaging Units feature integration guide](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html).
-- [Push notification feature integration guide](/docs/pbc/all/push-notification/202311.0/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html).
+- [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
 - [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html).
 - [Vertex app integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
@@ -148,7 +148,7 @@ In June 2023, we have added and updated the following pages:
 - [Spryker Core Back Office + Warehouse User Management feature integration guide](/docs/pbc/all/back-office/202311.0/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html).
 - [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 - [Warehouse picking feature integration guide](/docs/pbc/all/warehouse-picking/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html).
-- [Push notification feature integration guide](/docs/pbc/all/push-notification/202311.0/unified-commerce/install-and-upgrade/install-the-push-notification-feature.html).
+- [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [Product Offer Shipment feature integration guide](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
 - [Service Points feature integration guide](/docs/pbc/all/service-points/202311.0/unified-commerce/install-the-service-points-feature.html).
 - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.

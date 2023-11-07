@@ -91,6 +91,8 @@ The Fulfillment App supports push notifications. This lets warehouse users recei
 
 To reduce costs and improve flexibility, Fulfillment App support offline mode. Warehouse users can perform picking tasks when regardless of internet connectivity. Any changes performed in offline mode are synchronized when you get online. This is relevant for warehouses in remote areas or big warehouses that do not have full network coverage.
 
+The offline mode is enabled by the [Push Notification](/docs/pbc/all/miscellaneous/202311.0/push-notification-feature-overview.html) feature.
+
 ## Current constraints
 
 * Supports only concrete products. Doesn't support bundles and configurable products.
@@ -101,7 +103,7 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES| FULFILLMENT APP USER GUIDES |
 | - | - |
@@ -109,12 +111,12 @@ To reduce costs and improve flexibility, Fulfillment App support offline mode. W
 | [Create users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/create-users.html)  | |
 | [Edit users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html)  | |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  |
-|---|---|---|---|---|
+|---|
 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | | | | |
 | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html) | | | | |
-| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | | | | |
+| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html) | | | | |
 | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html) | | | | |
 | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html) | | | | |

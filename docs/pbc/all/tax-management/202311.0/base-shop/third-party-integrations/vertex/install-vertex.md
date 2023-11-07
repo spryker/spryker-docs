@@ -11,8 +11,10 @@ redirect_from:
     - /docs/pbc/all/tax-management/202307.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
 
 ---
+This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}third-party-integrations/vertex/vertex.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -24,6 +26,7 @@ Before integrating Vertex, ensure the following prerequisites are met:
 Ensure that your installation meets these requirements.
 
 - Make sure that your deployment pipeline executes database migrations.
+- You are using NET prices in your Spryker project. Keep in mind that the Vertex integration only works with NET prices, as it is assumed that businesses using the app are unable to determine GROSS prices.
 
 ## 1. Integrate ACP connector module for tax calculation
 
@@ -693,3 +696,6 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 | state            | mainDivision   | Should be either not empty or null |
 | zipCode          | postalCode     |                                    |
 | country.iso2Code | country        |                                    |
+
+## Next step
+[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)

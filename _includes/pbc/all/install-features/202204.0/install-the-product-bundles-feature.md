@@ -10,7 +10,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product | {{page.version}} |[Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+| Product | {{page.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ## 1) Install required modules using Composer
 

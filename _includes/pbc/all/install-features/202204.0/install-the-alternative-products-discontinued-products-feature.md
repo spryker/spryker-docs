@@ -15,7 +15,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | ---| --- |
 | Alternative Products | {{page.version}} | [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html) |
-|  Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) 0|
+|  Product | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) 0|
 
 ### 1) Set up behavior
 

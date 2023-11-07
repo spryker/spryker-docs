@@ -25,7 +25,7 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 | --- | --- | --- |
 | Spryker Core | master | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 |Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html) |
-|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+|Product  | master | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 |Tax  | master | |
 | Inventory Management | master | [Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |
 |Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)|

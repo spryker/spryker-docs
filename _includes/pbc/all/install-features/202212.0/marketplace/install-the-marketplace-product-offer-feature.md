@@ -14,7 +14,7 @@ Install the required features:
 | --------------- | ------- | -------|
 | Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Product              | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

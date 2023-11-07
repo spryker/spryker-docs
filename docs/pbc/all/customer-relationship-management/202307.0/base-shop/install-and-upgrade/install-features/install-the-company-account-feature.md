@@ -15,7 +15,7 @@ redirect_from:
 related:
   - title: Glue API - Company Account feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
-  - title: Company Account + Order Management feature integration
+  - title: Install the Company Account + Order Management feature
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
 ---
 

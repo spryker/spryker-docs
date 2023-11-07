@@ -10,9 +10,6 @@ redirect_from:
   - /2021080/docs/en/sales-data-export-feature-integration
   - /docs/sales-data-export-feature-integration
   - /docs/en/sales-data-export-feature-integration
-related:
-  - title: Data export
-    link: docs/scos/dev/sdk/data-export.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-sales-data-export-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-sales-data-export-feature.md -->

@@ -1,8 +1,10 @@
 ---
-title: Docs release notes
+title: Docs updates
 description: Spryker docs release notes
 template: concept-topic-template
 last_updated: Oct 2, 2023
+redirect_from:
+- /docs/scos/user/intro-to-spryker/docs-release-notes.html
 ---
 
 ## September 2023

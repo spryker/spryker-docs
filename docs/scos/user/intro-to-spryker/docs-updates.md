@@ -40,11 +40,11 @@ In October 2023, we have added and updated the following pages:
 
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html): Learn how to integrate the Vertex app in your ACP catalog in the Back Office.
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html).
-- [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html/docs/scos/dev/guidelines/testing-guidelines/test-framework.html): Learn how to set up and configure tests with the Codeception test framework.
+- [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html): Learn how to set up and configure tests with the Codeception test framework.
 - [Test helpers best practices](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 - [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
-- [Install the Checkout Glue API](/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Install the Checkout Glue API](/install-and-upgrade/install-glue-api//docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
 - [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).

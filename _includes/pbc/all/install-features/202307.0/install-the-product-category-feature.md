@@ -12,7 +12,7 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
 
@@ -664,7 +664,7 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
 | Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
 

@@ -24,7 +24,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -806,7 +806,7 @@ To start feature integration, integrate the required feature:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -1205,4 +1205,4 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 | NAME                                           | INSTALLATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html) |
+| Customer Account Management + Order Management | [Install the Customer Account Management + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html) |

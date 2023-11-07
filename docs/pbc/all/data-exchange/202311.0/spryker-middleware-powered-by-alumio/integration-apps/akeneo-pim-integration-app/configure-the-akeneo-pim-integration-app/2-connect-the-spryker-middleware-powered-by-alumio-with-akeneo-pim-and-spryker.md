@@ -3,31 +3,29 @@ title: Configure the Spryker Middleware Powered by Alumio with Akeneo PIM and Sp
 description: Create clients for Akeneo and Spryker in the Spryker Middleware Powered by Alumio
 template: howto-guide-template
 ---
-To start importing products from Akeneo to your Spryker project using the Spryker Middleware powered by Alumio, you need to connect the the Spryker Middleware powered by Alumio with Akeneo and SCCOS. 
+To start importing products from Akeneo to your Spryker project using the Spryker Middleware powered by Alumio, you need to connect Spryker Middleware powered by Alumio with Akeneo and SCCOS. 
 
-You establish this connection directly in the Spryker Middleware Powered by Alumio platform by following these guidelines.
+You can establish this connection directly in the Spryker Middleware Powered by Alumio platform by following these guidelines.
 
 ## Prerequisite
 
 Before you can connect the Spryker Middleware powered by Alumio with Akeneo, you need to establish a connection to Spryker in Akeneo. The connection to Spryker should use the *Data destination* flow type. For step-by-step instructions on how to set up this connection in Akeneo, refer to the [Akeneo documentation](https://help.akeneo.com/serenity-connect-your-pim/serenity-manage-your-connections).
 
-{% endinfo_block %}
-
 ## Connect Akeneo with Spryker Middleware Powered by Alumio
 
-To connect Akeneo with the Spryker Middleware powered by Alumio, you need to create an HTTP client. To create the client, do the following.
+To connect Akeneo with Spryker Middleware powered by Alumio, you need to create an HTTP client. To create the client, do the following.
 
-1. In the the Spryker Middleware powered by Alumio, go to **Clients -> HTTP client** and click the + sign.
+1. In the Spryker Middleware powered by Alumio platform, go to **Clients -> HTTP client** and click the + sign.
 ![create-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/create-http-client.png)
-2. In the platform selection filed, start typing "Akeneo" and select *Akeneo HTTP Client*.
-![akeneo-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/akeneo-http-client.png)
+2. In the platform selection field, start typing "Akeneo" and select *Akeneo HTTP Client*.
+![akeneo-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-appfiled/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/akeneo-http-client.png)
 3. Click **Next step**.
 4. In *Base URL*, enter the URL to your Akeneo PIM environment. For example, `https://test.cloud.akeneo.com`
-5. Go to your Akeneo PIM environment, to **Connections -> Connection settings** and copy the following information from there to the *Create Client* page of the Spryker Middleware Powered by Alumio platform:  
+5. Go to your Akeneo PIM environment, to **Connections -> Connection settings**, and copy the following information from there to the *Create Client* page of the Spryker Middleware Powered by Alumio platform:  
  - Client ID
  - Client Secret
  - Username
- - Password: Keep in mind that password is hidden in Akeneo. If you don't remember it, you have to generate a new one.
+ - Password: Keep in mind that the password is hidden in Akeneo. If you don't remember it, you have to generate a new one.
 
  ![connection-credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/connection-credentials.png)
 
@@ -36,16 +34,16 @@ To connect Akeneo with the Spryker Middleware powered by Alumio, you need to cre
 8. Enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
 9. Click **Save**. 
 
-The client should now be in the list of the *HTTP clients* page.
+The client should now be on the list of the *HTTP clients* page.
 
 ## Connect SCCOS with Spryker Middleware Powered by Alumio
 
-To connect SCCOS to the Spryker Middleware powered by Alumio, you also need to create an HTTP client. To create the client, do the following.
+To connect SCCOS to Spryker Middleware powered by Alumio, you also need to create an HTTP client. To create the client, do the following.
 
 1. In the Spryker Middleware Powered by Alumio platform, go to **Clients -> HTTP client** and click the + sign.
-2. In the platform selection filed, start typing "Spryker" and select *Spryker Dynamic Data Exchange HTTP Client*.
+2. In the platform selection field, start typing "Spryker" and select *Spryker Dynamic Data Exchange HTTP Client*.
 3. Click **Next step**.
-4. In *Base URL*, enter the URL to your Spryker Glue API environment with the Dynamic Data exchange. For example, `https://glue-backend.de.alumio.mysprykershop.com/dynamic-entity`.
+4. In *Base URL*, enter the URL to your Spryker Glue API environment with the Dynamic Data Exchange. For example, `https://glue-backend.de.alumio.mysprykershop.com/dynamic-entity`.
 5. Enter the username and password from your Spryker Glue API environment.
 6. Optional: Check the *Enable caching of the token* checkbox.
 7. Optional: Check the *Enable logging of requests* checkbox.
@@ -53,7 +51,7 @@ To connect SCCOS to the Spryker Middleware powered by Alumio, you also need to c
 9. Enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
 10. Click **Save**. 
 
-The client should now be in the list of the *HTTP clients* page.
+The client should now be on the list of the *HTTP clients* page.
 
 Now that the client is created, you can test if it works. To test the client, do the following:
 

@@ -18,29 +18,29 @@ The incoming configuration defines what data should be retrieved from Akeneo and
 To create the incoming configuration, do the following:
 
 1. In Spryker Middleware Powered by Alumio, go to **Connections -> Incoming** and click the + sign.
-2. In *Name*, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description*, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
-5. In the *Subscriber* field, select the *HTTP subscriber*. You may also select the *Akeneo subscriber*, however, in this document, we consider the settings for the HTTP subscriber.
-6. In the *Request URL*, specify the URL to a specific product, or the URL to a list of products. The URL should include just the path after `akeneo.com`, as the base path to the Akeneo environment is already specified in the HTTP client you created. For example, if the actual path to a specific product you want to import from Akeneo is `https://test.cloud.akeneo.com/api/rest/v1/producs/1234567890`, the path to specify in the *Request URL* field is `/api/rest/v1/producs/1234567890`. 
+5. In the *Subscriber* field, select the *HTTP subscriber*. You may also select the *Akeneo subscriber*, however, in this document, we consider the settings for the *HTTP subscriber*.
+6. In the *Request URL*, specify the URL to a specific product or the URL to a list of products. The URL should include just the path after `akeneo.com`, as the base path to the Akeneo environment is already specified in the HTTP client you created. For example, if the actual path to a specific product you want to import from Akeneo is `https://test.cloud.akeneo.com/api/rest/v1/producs/1234567890`, the path to specify in the *Request URL* field is `/api/rest/v1/producs/1234567890`. 
 
 {% info_block infoBox "Batch products import" %}
 
-If you want to import products in batch, say 100 products from page `https://test.cloud.akeneo.com//api/rest/v1/products`, the path you should specify is `/api/rest/v1/products?limit=100`. If you do not specify the limit value in the URL for batch import, by default, 10 products are imported. If you want to import all the products, do the following:
+If you want to import products in batch, say 100 products from page `https://test.cloud.akeneo.com//api/rest/v1/products`, the path you should specify is `/api/rest/v1/products?limit=100`. If you don't specify the limit value in the URL for batch import, by default, 10 products are imported. If you want to import all the products, do the following:
 
-1. In the *Request URL* field, add the link to the page with product without the limit value. For example: `/api/rest/v1/products`.
+1. In the *Request URL* field, add the link to the page with the product without the limit value. For example: `/api/rest/v1/products`.
 2. In *Follow pagination*, select *Follow next links*.
 3. in *Pattern to the link for the next page* enter `_links.next`.
 
 {% endinfo_block %}
 
-8. Optional: In *Request Parameters*, you can specify the request parameters to configure your incoming in a certain way. For example, you can specify the parameters that would enable import of products that were updated in Akeneo: `search={"updated":[{"operator":">","value":"&{timestamp}"}],"completeness":[{"operator":"=","value":100,"scope":"ecommerce"}],"enabled":[{"operator":"=","value":true}]}`.
+8. Optional: In *Request Parameters*, you can specify the request parameters to configure your incoming in a certain way. For example, you can specify the parameters that would enable the import of products that were updated in Akeneo: `search={"updated":[{"operator":">","value":"&{timestamp}"}],"completeness":[{"operator":"=","value":100,"scope":"ecommerce"}],"enabled":[{"operator":"=","value":true}]}`.
 
 ![incoming-request-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos/incoming-request-parameters.png)
 
-9. In *HTTP Client*, select the Akeneo client that you created at [Connect Akeneo with Spryker Middleware Powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+9. In *HTTP Client*, select the Akeneo client that you created at step [Connect Akeneo with Spryker Middleware Powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
 10. In *Entity schema*, select *Akeneo Product*.
-11. Live other fields empty. In the top right click **Save and continue**. You should see the message that the incoming configuration has been created.
+11. Leave other fields empty. In the top right, click **Save and continue**. You should see the message that the incoming configuration has been created.
 
 ![incoming-configuration-batch-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos/incoming-configuration-batch-products.png)
 
@@ -69,17 +69,17 @@ The outgoing configuration defines how data retrieved from Akeneo should be sent
 To create the outgoing configuration, do the following:
 
 1. In Spryker Middleware Powered by Alumio, go to **Connections -> Outgoing** and click the + sign.
-2. In *Name*, enter the Name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
+2. In *Name*, enter the name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description*, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
-5. In *Publisher*, select *No action publisher*. You may also select the *Akeneo publisher*, however, in this document, we consider the settings for the No action publisher.
-6. Click **Add entity transformer** and add two transformers: the one you created at the [Define the Akeneo to Base model transformer](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#define-the-akeneo-to-base-model-transformer) step and the one you created at the [Define the Base to Spryker model transformer](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#define-the-base-to-spryker-model-transformer) step.
+5. In *Publisher*, select *No action publisher*. You may also select the *Akeneo publisher*, however, in this document, we consider the settings for the *No action publisher*.
+6. Click **Add entity transformer** and add two transformers: the one you created at step [Define the Akeneo to Base model transformer](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#define-the-akeneo-to-base-model-transformer) step and the one you created at step [Define the Base to Spryker model transformer](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#define-the-base-to-spryker-model-transformer).
 
 ![outgoing-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos/outgoing-configuration.png)
 
 ### Define the route
 
-The route configuration connects the incoming configuration and outgoing configuration to enable import of data from Akeneo PIM to SCCOS.
+The route configuration connects the incoming configuration and outgoing configuration to enable the import of data from Akeneo PIM to SCCOS.
 
 To define the route, do the following:
 
@@ -87,13 +87,13 @@ To define the route, do the following:
 2. In *Name*, enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description* field, add the description of your route.
 4. To activate the route, set the status to *Enabled*.
-5. In *Incoming configuration* filed, select the configuration you created at step [Create an incoming configuration](#create-an-incoming-configuration).
+5. In *Incoming configuration* fieled, select the configuration you created at step [Create an incoming configuration](#create-an-incoming-configuration).
 6. In *Outgoing configuration*, select the outgoing configuration created at step [Create and outgoing configuration](#create-an-outgoing-configuration).
 ![create-a-new-route](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos/create-a-new-route.png)
 
 7. Click **Save & Continue**. 
 
-The route should now appear at the *Configurations -> Routes* page.
+The route should now appear on the *Configurations -> Routes* page.
 
 ## Next step
 [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html)

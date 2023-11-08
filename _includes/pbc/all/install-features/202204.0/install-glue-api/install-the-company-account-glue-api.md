@@ -14,7 +14,7 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE OR GLUE API  | VERSION    | INSTALLATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
-| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Spryker Core                | {{page.version}} | [Install the Spryker Core Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
 | Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |

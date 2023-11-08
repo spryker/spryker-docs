@@ -2956,7 +2956,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html
                       - title: Manage marketplace abstract product meta information
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html
-                  - title:
+                  - title: Concrete products
                     nested:
                       - title: Create marketplace concrete products
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
@@ -3601,6 +3601,12 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
                         - "202311.0"
+                      - title: Configure Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
+                        include_versions:
+                        - "202311.0"
+                      - title: Disconnect Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
           - title: Marketplace
             include_versions:
             - "202212.0"

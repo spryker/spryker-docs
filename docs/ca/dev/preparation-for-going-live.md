@@ -38,6 +38,7 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
 - Use the option to [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
+- Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management). 
 
 If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
@@ -141,3 +142,4 @@ If your go-live date is close and you feel like you need help with any of the de
 
 - *Validate that the rollback strategy is still valid*. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
+- *Validate BI and Analytics Integrations*. They should not be connected to your production database, but should be connected to the provided read replica. Make sure that no external system is working with your production database.

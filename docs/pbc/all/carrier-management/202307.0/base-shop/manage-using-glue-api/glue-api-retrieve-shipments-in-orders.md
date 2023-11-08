@@ -41,7 +41,7 @@ To retrieve detailed information about an order, send the following request:
 
 | REQUEST  | USAGE  |
 | ------------------ | --------------------- |
-| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieves information about the order with the id `DE--6`, with order shipments included. |
+| `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieves information about the order with the id `DE--6`, with order shipments included. |
 
 ### Response
 

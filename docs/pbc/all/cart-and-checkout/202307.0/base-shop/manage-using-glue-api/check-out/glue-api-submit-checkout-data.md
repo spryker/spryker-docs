@@ -57,15 +57,15 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 | REQUEST | USAGE |
 | --- | --- |
-| POST https://glue.mysprykershop.com/checkout-data | Submit checkout data. |
-| POST https://glue.mysprykershop.com/checkout-data?include=payment-methods | Submit checkout data and include all available payment methods in the response. |
-| POST https://glue.mysprykershop.com/checkout-data?include=addresses | Submit checkout data and include the logged-in customer's addresses in the response. |
-| POST https://glue.mysprykershop.com/checkout-data?include=shipments | Submit checkout data and include all the order shipments in the response. |
-| POST https://glue.mysprykershop.com/checkout-data?include=shipments,shipment-methods | Submit checkout data and include all the order shipments and all available shipment methods in the response. |
-| POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses | Submit checkout data and include the logged-in company users' company business unit addresses in the response. |
-| POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods&sort=shipment-methods.carrierName,-shipment-methods.defaultNetPrice | Submit checkout data and include all available shipment methods in the response. Sort the returned shipment methods `carrierName` in ascending order and by `defaultNetPrice` in descending order. |
-| POST https://glue.mysprykershop.com/checkout-data?include=carts  | Submit checkout data and include the logged-in customer's cart data in the response. |
-| POST https://glue.mysprykershop.com/checkout-data?include=guest-carts  | Submit checkout data and include the guest customer's cart data in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data` | Submit checkout data. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` | Submit checkout data and include all available payment methods in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=addresses` | Submit checkout data and include the logged-in customer's addresses in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=shipments` | Submit checkout data and include all the order shipments in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=shipments,shipment-methods` | Submit checkout data and include all the order shipments and all available shipment methods in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` | Submit checkout data and include the logged-in company users' company business unit addresses in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods&sort=shipment-methods.carrierName,-shipment-methods.defaultNetPrice` | Submit checkout data and include all available shipment methods in the response. Sort the returned shipment methods `carrierName` in ascending order and by `defaultNetPrice` in descending order. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=carts`  | Submit checkout data and include the logged-in customer's cart data in the response. |
+| `POST https://glue.mysprykershop.com/checkout-data?include=guest-carts`  | Submit checkout data and include the guest customer's cart data in the response. |
 
 
 

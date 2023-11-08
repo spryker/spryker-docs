@@ -1,18 +1,13 @@
 ---
-title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
+title: Handle twenty five million prices in Spryker Commerce OS
 description: Learn how we enabled Spryker to handle 25 million of prices.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 originalArticleId: f6f42291-bbf4-4fd1-b506-131fafcd0257
 redirect_from:
-  - /2021080/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
-  - /2021080/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
-  - /docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
-  - /docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
-  - /v6/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
-  - /v6/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
+  - /docs/pbc/all/price-management/202307.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
 ---
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.

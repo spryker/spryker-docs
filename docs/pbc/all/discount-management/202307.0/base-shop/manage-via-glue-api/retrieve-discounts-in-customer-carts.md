@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202307.0/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
 ---
 
-This document describes how to retrieve cart rules, vouchers, and promotional items in customer carts. For full information on the endpoint, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/retrieve-customer-carts.html).
+This document describes how to retrieve cart rules, vouchers, and promotional items in customer carts. For full information on the endpoint, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html).
 
 ## Installation
 
@@ -24,7 +24,7 @@ To retrieve a customer’s carts, send the following request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/carts** endpoint. For details, see [Retrieve discounts in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).
+Alternatively, you can retrieve all carts belonging to a customer through the **/carts** endpoint. For details, see [Retrieve discounts in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 {% endinfo_block %}
 

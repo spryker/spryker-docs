@@ -240,7 +240,7 @@ The feature has the following functional constraints which are going to be resol
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
     * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
-    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/non-splittable-products-feature-overview.html)
+    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 

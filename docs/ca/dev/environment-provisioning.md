@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 Before proceeding with the provisioning of your Spryker PaaS environment, we would like to clarify the information we require from you. To initiate the environment provisioning process, you need to create a case using your support portal access. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey.
-Once you are logged in to the Spryker Support Portal, you can submit the [environment provisioning request](https://support.spryker.com/s/hosting-change-requests/change-request-new-environment).
+Once you are logged in to the Spryker Support Portal, you can submit an [Infrastructure Change Request/Access Management Case](https://support.spryker.com/s/case-funnel-problem) selecting that you want to "Create a new Environment". 
 
 {% info_block warningBox %}
 

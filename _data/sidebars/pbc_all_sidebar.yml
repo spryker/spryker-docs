@@ -2966,7 +2966,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html
                       - title: Manage marketplace abstract product meta information
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html
-                  - title:
+                  - title: Concrete products
                     nested:
                       - title: Create marketplace concrete products
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html

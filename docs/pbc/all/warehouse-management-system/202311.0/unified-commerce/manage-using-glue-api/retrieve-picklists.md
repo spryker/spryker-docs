@@ -22,16 +22,20 @@ For detailed information about the modules that provide the API functionality an
 
 ### Request
 
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>picking-list-items</li> <li>users</li> <li>warehouses</li></ul> |
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/picking-lists` | Retrieve all picking lists.  |
-| `GET https://glue.mysprykershop.com/picking-lists?include=picking-list-items` | Retrieve all picking lists with picklist items included.  |
-| `GET https://glue.mysprykershop.com/picking-lists?include=users` | Retrieve all picking lists. Include information about the users that started or finished picking. |
-| `GET https://glue.mysprykershop.com/picking-lists?include=warehouses` |  |
+| `GET https://glue.mysprykershop.com/picking-lists` | Retrieve all picklists.  |
+| `GET https://glue.mysprykershop.com/picking-lists?include=picking-list-items` | Retrieve all picklists with picklist items included.  |
+| `GET https://glue.mysprykershop.com/picking-lists?include=users` | Retrieve all picklists. Include information about the users the picking lists are available to. |
+| `GET https://glue.mysprykershop.com/picking-lists?include=warehouses` | Retrieve all picklists. Include information about the warehouses the picking lists are available in. |
 
 
 ### Response
@@ -269,6 +273,103 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
+<details open>
+  <summary>Response sample: retrieve picklists with warehouses included</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "picking-lists",
+            "id": "910a4d20-59a3-5c49-808e-aa7038a59313",
+            "attributes": {
+                "status": "picking-finished",
+                "createdAt": "2023-11-07 17:09:32.000000",
+                "updatedAt": "2023-11-07 17:10:23.000000"
+            },
+            "relationships": {
+                "warehouses": {
+                    "data": [
+                        {
+                            "type": "warehouses",
+                            "id": "834b3731-02d4-5d6f-9a61-d63ae5e70517"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses"
+            }
+        },
+        {
+            "type": "picking-lists",
+            "id": "eeee32bc-dd52-5130-809f-b64710a791ee",
+            "attributes": {
+                "status": "picking-finished",
+                "createdAt": "2023-11-07 19:18:12.000000",
+                "updatedAt": "2023-11-07 19:20:23.000000"
+            },
+            "relationships": {
+                "warehouses": {
+                    "data": [
+                        {
+                            "type": "warehouses",
+                            "id": "834b3731-02d4-5d6f-9a61-d63ae5e70517"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/eeee32bc-dd52-5130-809f-b64710a791ee?include=warehouses"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists?include=warehouses"
+    },
+    "included": [
+        {
+            "type": "warehouses",
+            "id": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+            "attributes": {
+                "name": "Warehouse1",
+                "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+                "isActive": true
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| status | String | Status of the picking list based on your configuration. |
+| createdAt | Date | The date and time when the picklist was generated. |
+| updatedAt | Date | The latest date and time when the picklist was updated. |
+
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- | --- |
+| picking-list-items | quantity | Integer | Quantity of the item to pick. |
+| picking-list-items | numberOfPicked | Integer | Quantity of the item that was picked. |
+| picking-list-items | numberOfNotPicked | Integer | Quantity of the item that was not found. |
+| picking-list-items | orderItem.sku | String | Unique identifier of the product. |
+| picking-list-items | orderItem.quantity | Integer | Quantity of the item that was ordered. |
+| picking-list-items | orderItem.name | Integer | Name of the product. |
+| users | username | String | Username of the warehouse user the picklists are available to. |
+| users | firstName | String | First name. |
+| users | lastName | String | Last name. |
+| warehouses | name | Integer | Name of the warehouse. |
+| warehouses | isActive | Boolean | Defines if the warehouse is active. |
+
+
+
+
+
 
 ## Retrieve a picklist
 
@@ -279,11 +380,189 @@ For detailed information about the modules that provide the API functionality an
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{picklist_id}}***{% endraw %} | ID of the picklist to retrieve. To get it, see                            |
+| {% raw %}***{{picklist_id}}***{% endraw %} | ID of the picklist to retrieve. To get it, [retrieve picklists](#retrieve-picklists).     |
 
 ### Request
 
-Request sample:
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
+| REQUEST  | USAGE |
+| --- | --- |
+| `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313` | Retrieve the picklist specified with the ID.  |
+| `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items` | Retrieve the picklist specified with the ID with picklist items included.  |
+| `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=users` | Retrieve the picklist specified with the ID. Include information about the users the picklist is available to. |
+| `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses` | Retrieve the picklist specified with the ID. Include information about the warehouses the picking list is available in. |
 
 ### Response
+
+
+<details open>
+  <summary>Response sample: Retrieve the picklist spcified with the ID</summary>
+
+```json
+{
+    "data": {
+        "type": "picking-lists",
+        "id": "910a4d20-59a3-5c49-808e-aa7038a59313",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-11-07 17:09:32.000000",
+            "updatedAt": "2023-11-07 17:10:23.000000"
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313"
+        }
+    }
+}
+```
+
+</details>
+
+
+<details open>
+  <summary>Response sample: Retrieve the picklist spcified with the ID with picklist items included</summary>
+
+```json
+{
+    "data": {
+        "type": "picking-lists",
+        "id": "910a4d20-59a3-5c49-808e-aa7038a59313",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-11-07 17:09:32.000000",
+            "updatedAt": "2023-11-07 17:10:23.000000"
+        },
+        "relationships": {
+            "picking-list-items": {
+                "data": [
+                    {
+                        "type": "picking-list-items",
+                        "id": "9ac9fd06-f491-506e-b302-0b166786d91c"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items"
+        }
+    },
+    "included": [
+        {
+            "type": "picking-list-items",
+            "id": "9ac9fd06-f491-506e-b302-0b166786d91c",
+            "attributes": {
+                "quantity": 1,
+                "numberOfPicked": 1,
+                "numberOfNotPicked": 0,
+                "orderItem": {
+                    "uuid": "42de8c95-69a7-56b1-b43e-ce876ca79458",
+                    "sku": "141_29380410",
+                    "quantity": 1,
+                    "name": "Asus Zenbook US303UB"
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-list-items/9ac9fd06-f491-506e-b302-0b166786d91c?include=picking-list-items"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details open>
+  <summary>Response sample: Retrieve the picklist spcified with the ID with users included</summary>
+
+```json
+{
+    "data": {
+        "type": "picking-lists",
+        "id": "910a4d20-59a3-5c49-808e-aa7038a59313",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-11-07 17:09:32.000000",
+            "updatedAt": "2023-11-07 17:10:23.000000"
+        },
+        "relationships": {
+            "users": {
+                "data": [
+                    {
+                        "type": "users",
+                        "id": "ce63fe5c-4897-5a17-b683-39f2825316b8"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=users"
+        }
+    },
+    "included": [
+        {
+            "type": "users",
+            "id": "ce63fe5c-4897-5a17-b683-39f2825316b8",
+            "attributes": {
+                "username": "herald.hopkins@spryker.com",
+                "firstName": "Herald",
+                "lastName": "Hopkins"
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/ce63fe5c-4897-5a17-b683-39f2825316b8?include=users"
+            }
+        }
+    ]
+}
+```
+
+</details>  
+
+
+<details open>
+  <summary>Response sample: Retrieve the picklist spcified with the ID with warehouses included</summary>
+
+```json
+
+{
+    "data": {
+        "type": "picking-lists",
+        "id": "910a4d20-59a3-5c49-808e-aa7038a59313",
+        "attributes": {
+            "status": "picking-finished",
+            "createdAt": "2023-11-07 17:09:32.000000",
+            "updatedAt": "2023-11-07 17:10:23.000000"
+        },
+        "relationships": {
+            "warehouses": {
+                "data": [
+                    {
+                        "type": "warehouses",
+                        "id": "834b3731-02d4-5d6f-9a61-d63ae5e70517"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses"
+        }
+    },
+    "included": [
+        {
+            "type": "warehouses",
+            "id": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+            "attributes": {
+                "name": "Warehouse1",
+                "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+                "isActive": true
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
+            }
+        }
+    ]
+}
+```
+
+</details>

@@ -34,7 +34,7 @@ For detailed information about the modules that provide the API functionality an
 | --- | --- |
 | `GET https://glue.mysprykershop.com/picking-lists` | Retrieve all picklists.  |
 | `GET https://glue.mysprykershop.com/picking-lists?include=picking-list-items` | Retrieve all picklists with picklist items included.  |
-| `GET https://glue.mysprykershop.com/picking-lists?include=users` | Retrieve all picklists. Include information about the users the picking lists are available to. |
+| `GET https://glue.mysprykershop.com/picking-lists?include=users` | Retrieve all picklists. Include information about the users you are authenticated with. |
 | `GET https://glue.mysprykershop.com/picking-lists?include=warehouses` | Retrieve all picklists. Include information about the warehouses the picking lists are available in. |
 
 
@@ -211,7 +211,7 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 <details open>
-  <summary>Response sample: retrieve picklists with users included</summary>
+  <summary>Response sample: retrieve picklists with information about the authenticated user</summary>
 
 ```json
 {
@@ -360,7 +360,7 @@ For detailed information about the modules that provide the API functionality an
 | picking-list-items | orderItem.sku | String | Unique identifier of the product. |
 | picking-list-items | orderItem.quantity | Integer | Quantity of the item that was ordered. |
 | picking-list-items | orderItem.name | Integer | Name of the product. |
-| users | username | String | Username of the warehouse user the picklists are available to. |
+| users | username | String | Username of the warehouse user you are authenticated with. |
 | users | firstName | String | First name. |
 | users | lastName | String | Last name. |
 | warehouses | name | Integer | Name of the warehouse. |
@@ -392,7 +392,7 @@ For detailed information about the modules that provide the API functionality an
 | --- | --- |
 | `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313` | Retrieve the picklist specified with the ID.  |
 | `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items` | Retrieve the picklist specified with the ID with picklist items included.  |
-| `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=users` | Retrieve the picklist specified with the ID. Include information about the users the picklist is available to. |
+| `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=users` | Retrieve the picklist specified with the ID. Include information about the user you are authenticated with. |
 | `GET https://glue.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses` | Retrieve the picklist specified with the ID. Include information about the warehouses the picking list is available in. |
 
 ### Response
@@ -474,7 +474,7 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 <details open>
-  <summary>Response sample: Retrieve the picklist spcified with the ID with users included</summary>
+  <summary>Response sample: Retrieve the picklist spcified with the ID. Include information about the authenticated user</summary>
 
 ```json
 {

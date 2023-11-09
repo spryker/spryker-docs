@@ -42,15 +42,24 @@ To start using Vertex in your project, you need to do the following:
 
 Once you have installed and configured the Vertex app, the taxes will be automatically calculated based on the address from where the order is shipped. In case of a Marketplace, Vertex uses the merchant warehouse address to calculate taxes.
 
-Buyers see the tax amount calculated by Vertex at the checkout step, and the Back Office users can see it on the order details page.
+Buyers see the tax amount calculated by Vertex during the checkout, after they have provided their shipping address.
+
+The Back Office users can see the taxes calculated by Vertex on the order details page.
 
 {% info_block infoBox "Default tax values in the Back Office" %}
 
 Keep in mind that when using Vertex for tax determination, no exact tax rate is received from Vertex instead a default tax value in the Back Office. Therefore, to avoid confusion, we recommend to remove the default tax rate that appears in the Back Office. 
 
-In a situation where the Vertex integration isn’t working, SCCOS displays the default tax provided the plugins for Tax Calculation aren't disabled.
+In a situation where the Vertex integration isn’t working, SCCOS displays the default tax provided the plugins for Tax Calculation aren't disabled. This solution applies to the following errors:
+- Timeout error
+- Shipping address error
+
 
 {% endinfo_block %}
+
+The following diagram demonstrates the flow of the Vertex app integration:
+
+![vertex-app-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-app-flow.png)
 
 
 ### Vertex configuration options
@@ -61,7 +70,9 @@ If you want to include other data such as Customer Exemption Certificate in the 
 
 
 
-video, images
+The following video demonstrates the Vertex app configuration and usage:
+
+![vertex-demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/Vertex+Demo.mp4)
 
 
 ## Next steps

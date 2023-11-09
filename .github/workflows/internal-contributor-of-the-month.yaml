@@ -16,8 +16,8 @@ jobs:
         id: determine
         run: |
           # Set the start and end dates for July 2023
-          START_DATE="2023-09-01"
-          END_DATE="2023-09-31"
+          START_DATE="2023-10-01"
+          END_DATE="2023-10-31"
           MONTH_NAME="September"
 
           # Exclude certain users

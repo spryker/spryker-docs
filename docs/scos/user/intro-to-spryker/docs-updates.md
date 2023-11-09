@@ -137,10 +137,10 @@ In August 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Product Offer Shipment feature integration guide](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
+- [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
-- [Shipment feature integration guide](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
+- [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
 - [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
@@ -208,13 +208,13 @@ In June 2023, we have added and updated the following pages:
     - [Spelling](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html).
 
 ## Updated pages
-- [Shipment feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-and-upgrade/install-the-shipment-feature.html).
+- [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-and-upgrade/install-the-shipment-feature.html).
 - [Environments overview](/docs/ca/dev/environments-overview.html).
 - [Spryker Core Back Office + Warehouse User Management feature integration guide](/docs/pbc/all/back-office/202311.0/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html).
 - [Warehouse User Management feature integration guide](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 - [Warehouse picking feature integration guide](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
-- [Product Offer Shipment feature integration guide](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
+- [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html).
 - [Service Points feature integration guide](/docs/pbc/all/service-points/202311.0/unified-commerce/install-the-service-points-feature.html).
 - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
 - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.

@@ -225,7 +225,7 @@ In June 2023, we have added and updated the following pages:
 - [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Single plugin argument](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
 - [Integrate profiler module](/docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html).
-- [Approval Process feature overview](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/approval-process-feature-overview.html).
+- [Approval Process feature overview](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/feature-overviews/approval-process-feature-overview.html).
 - [Approval Process feature integration](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html).
 
 For more details on these and other updates to the Spryker docs in June 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

@@ -6,22 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-checkout-and-step-engine-spryker-commerce-os
 originalArticleId: 27252ff0-474b-47cf-9f0c-02b1ccdf2ad5
 redirect_from:
-  - /2021080/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /2021080/docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /v6/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /v6/docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /v5/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /v5/docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /v4/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /v4/docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /v3/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /v3/docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /v2/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /v2/docs/en/t-checkout-and-step-engine-spryker-commerce-os
-  - /v1/docs/t-checkout-and-step-engine-spryker-commerce-os
-  - /v1/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
 related:
   - title: Checkout steps

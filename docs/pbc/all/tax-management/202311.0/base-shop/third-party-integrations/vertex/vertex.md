@@ -21,7 +21,7 @@ redirect_from:
 
 For more information, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
 
-The Vertex app has the following features that are good to consider when you compare it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-managemen/{{page.version}}/tax-management.html) or the [Avalara](/docs/pbc/all/tax-management/{{page.versoin}}/base-shop/third-party-integrations/avalara/avalara.html) integration:
+The Vertex app offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html) or the [Avalara](/docs/pbc/all/tax-management/{{page.versoin}}/base-shop/third-party-integrations/avalara/avalara.html) integration:
 
 - Compliance in states or countries with complex tax calculations: Takes into account various tax jurisdictions and rates applicable to different states and countries. This helps a lot with tax calculations if you sell in states or countries where tax calculations are complex. 
 - Dynamic tax calculation: As tax rules or rates change in Vertex, these changes are applied to customer’s quote during the checkout process.
@@ -35,7 +35,7 @@ The Vertex app has the following features that are good to consider when you com
 To start using Vertex in your project, you need to do the following:
 
 1. Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
-2. Make sure you use NET prices in your project, as Vertex app only works with NET prices, GROSS prices aren't supported.
+2. Make sure you use NET prices in your project, as Vertex app only works with NET prices. GROSS prices aren't supported.
 3. Get an account with [Vertex](https://www.vertexinc.com/). Contact the Spryker Support team or your Customer Success Manager if you need support getting a Vertex account.
 4. Install the Vertex app. See [Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html) for details.
 5. Configure the Vertex app. See [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html) for details.
@@ -48,9 +48,9 @@ The Back Office users can see the taxes calculated by Vertex on the order detail
 
 {% info_block infoBox "Default tax values in the Back Office" %}
 
-Keep in mind that when using Vertex for tax determination, no exact tax rate is received from Vertex instead a default tax value in the Back Office. Therefore, to avoid confusion, we recommend to remove the default tax rate that appears in the Back Office. 
+Keep in mind that when using Vertex for tax determination, no exact tax rate is received from Vertex instead of a default tax value in the Back Office. Therefore, to avoid confusion, we recommend removing the default tax rate that appears in the Back Office. 
 
-In a situation where the Vertex integration isn’t working, SCCOS displays the default tax provided the plugins for Tax Calculation aren't disabled. This solution applies to the following errors:
+When the Vertex integration isn’t working, SCCOS displays the default tax, provided the plugins for Tax Calculation aren't disabled. This solution applies to the following errors:
 - Timeout error
 - Shipping address error
 
@@ -64,10 +64,9 @@ The following diagram demonstrates the flow of the Vertex app integration:
 
 ### Vertex configuration options
 
-Once you have the Vertex app installed, you can configure it so that the invoice in saved in Vertex. We recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously hence no response is saved in SCCOS.
+You can configure the Vertex app so that the invoice in saved in Vertex. However, we recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously hence no response is saved in SCCOS.
 
-If you want to include other data such as Customer Exemption Certificate in the requests to Vertex, you can do so via plugins and the "taxMetadata" fields. You can add more data to requests any specific information which is not available in Spryker by default. For example, this could be data from ERP, other systems, and customized Spryker instances. For the implementation details, see [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html#implement-vertex-specific-metadata-extender-plugins).
-
+If you want to include other data such as Customer Exemption Certificate in the requests to Vertex, you can do so via plugins and the "taxMetadata" fields. You can add more data to request any specific information which is not available in Spryker by default. For example, this could be data from ERP, other systems, and customized Spryker instances. For the implementation details, see [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html#implement-vertex-specific-metadata-extender-plugins).
 
 
 The following video demonstrates the Vertex app configuration and usage:

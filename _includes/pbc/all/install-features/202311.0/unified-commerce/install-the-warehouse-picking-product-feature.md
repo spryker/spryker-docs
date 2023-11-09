@@ -1,28 +1,24 @@
 
 
 
-This document describes how to integrate the Warehouse picking + [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
+This document describes how to install the Warehouse picking + [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) feature.
 
-## Install feature core
-
-Follow the steps below to install the Warehouse Picking + Product feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
 | NAME              | VERSION          | INSTALLATION GUIDE                                                                                                                                                 |
 |-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse Picking | {{page.version}} | [Warehouse Picking feature integration](/docs/pbc/all/install-features/{{page.version}}/install-the-warehouse-picking-feature.html)                    |
-| Product           | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Warehouse Picking | {{page.version}} | [Install the Warehouse Picking feature](/docs/pbc/all/install-features/{{page.version}}/install-the-warehouse-picking-feature.html)                    |
+| Product           | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
-### 1) Set up behavior
+## 1) Set up behavior
 
 Enable the following plugins.
 
 | PLUGIN                                                              | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                                                      |
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------|
-| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `picking-list-items` resource. |               | Spryker\Glue\ProductsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
@@ -61,11 +57,12 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
 
 {% info_block warningBox "Verification" %}
 
-Make sure you have a `concrete-products` resource as a relationship to `picking-list-items` when you do a request.
+Send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,concrete-products`.
 
-`GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,concrete-products`
+Make sure the `concrete-products` resource is returned as a relationship to the `picking-list-items` resource.
+
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary markdown='span'>Response sample</summary>
 ```json
 {
     "data": {

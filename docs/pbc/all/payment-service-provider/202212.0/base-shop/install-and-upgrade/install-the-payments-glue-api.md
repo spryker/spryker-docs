@@ -16,7 +16,7 @@ related:
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Updating payment data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/update-payment-data.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-payments-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-payments-glue-api.md -->

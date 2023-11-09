@@ -484,4 +484,4 @@ Open `spy_product_abstract`, and `spy_product` and make sure that all data has b
 | FEATURE |REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | ---  |---  |---  |
 |Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html) |
+|Avalara Tax + Shipment |✓ |[Install Avalara Tax + the Shipment feature](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html) |

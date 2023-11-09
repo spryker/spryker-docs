@@ -1,12 +1,12 @@
 ---
-title: "Install or enable PHP's extension"
-description: How to add support for the missing PHP extension to Spryker Code Upgrader
+title: A PHP extension is missing from your system
+description: Learn how to resolve missing PHP extensions
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/troubleshooting/install-or-enable-php-s-extension.html
 ---
 
-Spryker Code Upgrader supports the most common PHP extensions. If your project necessitates an absent PHP extension, kindly seek assistance from the Spryker team to acquire the required support for the extension.
+Spryker Code Upgrader supports the most common PHP extensions. If your application requires an extension not supported by the Upgrader, contact us to enable it.
 
 ## Supported PHP extensions
 
@@ -68,7 +68,7 @@ By default Spryker Code Upgrader supports the following PHP extensions:
 Your requirements could not be resolved to an installable set of packages.
 
   Problem 1
-  
+
     - <organisation_name>/<package_name> <package_version> requires ext-<extension_name> * -> it is missing from your system. Install or enable PHP\'s <extension_name> extension.
 
 You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
@@ -80,7 +80,7 @@ Installation failed, reverting ./composer.json and ./composer.lock to their orig
 
 ## Solution
 
-Kindly [reach out to our support team](https://spryker.force.com/support/s/) to request assistance in acquiring the missing PHP extension. Ensure to include the name of the required extension and your project's name in your request.
+Request the missing extension to be added by [contacting us](https://spryker.force.com/support/s/). Make sure to include the name of the required extension and your project's name in the request.
 
 ## Support for Spryker CI
 

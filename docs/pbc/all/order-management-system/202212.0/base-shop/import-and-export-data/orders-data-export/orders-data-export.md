@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/exporting-data
 originalArticleId: 0a38b991-f10c-4f6c-90db-247a62cda2e7
 related:
-  - title: Sales Data Export feature integration
+  - title: Install the Sales Data Export feature
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 

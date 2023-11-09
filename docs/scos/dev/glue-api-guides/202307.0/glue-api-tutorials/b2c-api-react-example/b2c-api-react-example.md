@@ -62,8 +62,8 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 | Product Labels API | [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html) |
 | Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) |
 | Customer API | [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html) |
-| Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
-| Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html) |
+| Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html) |
+| Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html) |
 | Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) |
 | Store API | [Retrieving store configuration](/docs/pbc/all/miscellaneous/{{site.version}}/glue-api-retrieve-store-configuration.html) |

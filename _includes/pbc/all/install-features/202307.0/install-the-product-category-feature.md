@@ -12,9 +12,9 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
-| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
+| Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Product             | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
 
 ### 1) Install the required modules using Composer
 
@@ -664,9 +664,9 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
-| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
+| Spryker Core        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
+| Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Product             | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
 
 
 ### 1) Install the required modules using Composer
@@ -729,8 +729,8 @@ Integrate the following related features:
 
 | FEATURE                       | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                 |
 |-------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Category Management Feature   | &check;                                | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)                                                |
-| Product Management Feature    | &check;                                | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                        |
+| Category Management Feature   | &check;                                | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)                                                |
+| Product Management Feature    | &check;                                | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                        |
 | Glue API: Category Management |                                  | [Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html)                    |
-| Catalog + Category Management |                                  | [Catalog + Category Management feature integration](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
+| Catalog + Category Management |                                  | [Install the Catalog + Category Management feature](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
 | CMS + Category Management     |                                  | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)   |

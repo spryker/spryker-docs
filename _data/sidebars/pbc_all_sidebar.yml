@@ -73,15 +73,14 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-delivery-methods.html
                   - title: Edit delivery methods
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/edit-delivery-methods.html
-              - title: Manage in the Back Office
               - title: Manage using Glue API
                 nested:
                   - title: Retrieve shipments and shipment methods when submitting checkout data
-                    url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
+                    url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
                   - title: Retrieve shipments when checking out purchases
-                    url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
+                    url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html
                   - title: Retrieve shipments in orders
-                    url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
+                    url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html
               - title: Import data
                 url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-carrier-management-data.html
                 nested:
@@ -171,38 +170,40 @@ entries:
           - title: Base shop
             url: /docs/pbc/all/cart-and-checkout/base-shop/cart-and-checkout-base-shop.html
             nested:
-              - title: Cart feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-feature-overview.html
+              - title: Feature overviews
                 nested:
-                  - title: Cart notes
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-notes-overview.html
-                  - title: Cart widget
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/cart-widget-overview.html
-                  - title: Quick order from the catalog page
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
-              - title: Multiple Carts feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/multiple-carts-feature-overview.html
-              - title: Persistent Cart Sharing feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/persistent-cart-sharing-feature-overview.html
-              - title: Quick Add to Cart feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/quick-add-to-cart-feature-overview.html
-              - title: Shared Carts feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/shared-carts-feature-overview.html
-              - title: Checkout feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/checkout-feature-overview.html
-                nested:
-                  - title: Multi-step checkout
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/multi-step-checkout-overview.html
-                  - title: Order thresholds overview
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/checkout-feature-overview/order-thresholds-overview.html
-              - title: Approval Process feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/approval-process-feature-overview.html
-              - title: Comments feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/comments-feature-overview.html
-              - title: Non-splittable Products feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/non-splittable-products-feature-overview.html
-              - title: Resource Sharing feature overview
-                url: /docs/pbc/all/cart-and-checkout/base-shop/resource-sharing-feature-overview.html
+                  - title: Cart feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
+                    nested:
+                      - title: Cart notes
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-notes-overview.html
+                      - title: Cart widget
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
+                      - title: Quick order from the catalog page
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+                  - title: Multiple Carts feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.html
+                  - title: Persistent Cart Sharing feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html
+                  - title: Quick Add to Cart feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html
+                  - title: Shared Carts feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/shared-carts-feature-overview.html
+                  - title: Checkout feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
+                    nested:
+                      - title: Multi-step checkout
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html
+                      - title: Order thresholds overview
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
+                  - title: Approval Process feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.html
+                  - title: Comments feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.html
+                  - title: Non-splittable Products feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/non-splittable-products-feature-overview.html
+                  - title: Resource Sharing feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/resource-sharing-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -363,41 +364,50 @@ entries:
                     - "202307.0"
               - title: Manage using Glue API
                 nested:
-                  - title: Check out purchases
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/check-out-purchases.html
+                  - title: Check out
+                    nested:
+                      - title: Glue API checkout workflow
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-checkout-workflow.html
+                      - title: Submit checkout data
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
+                      - title: Check out purchases
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+                      - title: Update payment data
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
+
                   - title: Manage carts of registered users
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
-                  - title: Retrieve customer carts
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/retrieve-customer-carts.html
-                  - title: Submit checkout data
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
-                  - title: Update payment data
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/check-out/update-payment-data.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
                     nested:
                       - title: Manage items in carts of registered users
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html
+
                   - title: Manage guest carts
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html
                     nested:
                       - title: Manage guest cart items
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
+
                   - title: Share company user carts
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html
                     nested:
                       - title: Manage shared company user carts
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html
                       - title: Retrieve cart permission groups
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
+
+                  - title: Retrieve customer carts
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
+
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Add additional countries to Spryker checkout"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
-                  - title: "HowTo: Define if a cart should be deleted after placing an order"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
-                  - title: "HowTo: Enable guest checkout in B2B Demo Shop"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
-                  - title: "HowTo: Implement customer approval process based on a generic state machine"
-                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
+                  - title: Add additional countries to checkout
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/add-additional-countries-to-checkout.html
+                  - title: Define if carts are deleted after placing an order
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/define-if-carts-are-deleted-after-placing-an-order.html
+                  - title: Enable guest checkout in the B2B Demo Shop
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
+                  - title: Implement a customer approval process based on a generic state machine
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
                   - title: "Tutorial: Calculator plugin"
@@ -2964,7 +2974,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html
                       - title: Manage marketplace abstract product meta information
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html
-                  - title:
+                  - title: Concrete products
                     nested:
                       - title: Create marketplace concrete products
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
@@ -3592,6 +3602,12 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
                         - "202311.0"
+                      - title: Configure Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
+                        include_versions:
+                        - "202311.0"
+                      - title: Disconnect Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
           - title: Marketplace
             include_versions:
             - "202212.0"

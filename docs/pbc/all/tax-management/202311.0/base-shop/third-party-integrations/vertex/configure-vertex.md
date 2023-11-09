@@ -41,6 +41,12 @@ Vertex expects to receive the Company Code you have set in Vertex from Spryker a
 
 ## Configuration verification
 
+{% info_block warningBox "Test the configuration" %}
+
+To ensure accuracy and compiance with tax laws, We highly recommend to thoroughly test the Vertex integration.
+
+{% endinfo_block %}
+
 Once you have configured Vertex, the taxes are calculated in real time in the checkout. The respective note appears on the checkout page.
 
 ![vertex_checkout_page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex_checkout_page.png)

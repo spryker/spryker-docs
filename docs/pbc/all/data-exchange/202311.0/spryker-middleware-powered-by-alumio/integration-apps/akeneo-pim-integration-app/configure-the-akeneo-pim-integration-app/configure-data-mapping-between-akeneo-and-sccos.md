@@ -4,7 +4,7 @@ description: Create data transformers in the Spryker Middleware powered by Alumi
 template: howto-guide-template
 ---
 
-After you have [connected the Spryker Middleware Powered by Alumio with Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html), you need to map the data you want to import between the two systems by doing the following:
+After you have [connected the Spryker Middleware Powered by Alumio with Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html), you need to map the data you want to import between the two systems by doing the following:
 
 - Transforming Akeneo data into the Base data by defining an Akeneo to Base model transformer.
 - Transforming the Base data into the Spryker data by defining the Base model to Spryker transformer.

@@ -1,5 +1,5 @@
 ---
-title: Configure the Spryker Middleware Powered by Alumio connection with your Akeneo PIM and your Spryker Cloud Commerce OS
+title: Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS
 description: Create clients for Akeneo and Spryker in the Spryker Middleware Powered by Alumio
 template: howto-guide-template
 ---

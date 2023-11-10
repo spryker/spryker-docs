@@ -976,11 +976,11 @@ Make sure that when a shipment type is created or edited through BAPI, it is exp
 In Redis, make sure data is represented in the following format:
 ```json
 {
-  "id_shipment_type": 1,
-  "uuid": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
-  "name": "Pickup",
-  "key": "pickup",
-  "_timestamp": 1684933897.870368
+    "id_shipment_type": 1,
+    "uuid": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
+    "name": "Pickup",
+    "key": "pickup",
+    "_timestamp": 1684933897.870368
 }
 ```
 

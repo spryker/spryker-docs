@@ -12,7 +12,7 @@ To create a task for the products import from Akeneo, you have to run the incomi
 
 To run the incoming, do the following:
 
-1. In the Spryker Middleware Powered by Alumio platform, go to **Connections -> Incoming** and click the necessary incoming configuration.
+1. In the Spryker Middleware powered by Alumio platform, go to **Connections -> Incoming** and click the necessary incoming configuration.
 2. In the top right corner, click **Run incoming**. 
 3. Go to *Tasks* and make sure that there is the new task with the route you created at step [Define the route](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#define-the-route). The task's status should be *Processing*.
 
@@ -48,7 +48,7 @@ Before importing data from Akeneo, you can test whether the configuration of the
 6. Paste the copied content into the *Input* field of the transformer tester on the right.
 6. Click **Run test**. The test is run for all the transformers in the outgoing connection.
 
-The product that will be imported to SCCOS, appears at the bottom of the transformer tester.
+The product that will be imported into SCCOS, appears at the bottom of the transformer tester.
 
 ![transformer-tester](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos/transformer-tester.png)
 
@@ -94,6 +94,6 @@ To create such a scheduler, do the following:
 5. In *Expression*, enter the time you want the scheduler to run. Use [Crontab guru](https://crontab.guru/) to set the time in the right format.
 
 
-## Check the product in the Back Office
+## Check the product in the SCCOS Back Office
 
-To check the imported product in the Back Office, go to **Catalog -> Products** and check if the product appeared on the list.
+To check the imported product in the SCCOS Back Office, go to **Catalog -> Products** and check if the product appeared on the list.

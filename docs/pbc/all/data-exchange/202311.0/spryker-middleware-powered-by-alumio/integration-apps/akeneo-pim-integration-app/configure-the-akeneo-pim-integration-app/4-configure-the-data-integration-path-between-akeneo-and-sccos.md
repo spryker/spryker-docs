@@ -17,7 +17,7 @@ The incoming configuration defines what data should be retrieved from Akeneo and
 
 To create the incoming configuration, do the following:
 
-1. In Spryker Middleware Powered by Alumio, go to **Connections -> Incoming** and click the + sign.
+1. In Spryker Middleware powered by Alumio, go to **Connections -> Incoming** and click the + sign.
 2. In *Name*, enter the name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description*, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
@@ -38,7 +38,7 @@ If you want to import products in batch, say 100 products from page `https://tes
 
 ![incoming-request-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos/incoming-request-parameters.png)
 
-9. In *HTTP Client*, select the Akeneo client that you created at step [Connect Akeneo with Spryker Middleware Powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+9. In *HTTP Client*, select the Akeneo client that you created at step [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
 10. In *Entity schema*, select *Akeneo Product*.
 11. Leave other fields empty. In the top right, click **Save and continue**. You should see the message that the incoming configuration has been created.
 
@@ -68,7 +68,7 @@ The outgoing configuration defines how data retrieved from Akeneo should be sent
 
 To create the outgoing configuration, do the following:
 
-1. In Spryker Middleware Powered by Alumio, go to **Connections -> Outgoing** and click the + sign.
+1. In Spryker Middleware powered by Alumio, go to **Connections -> Outgoing** and click the + sign.
 2. In *Name*, enter the name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description*, add the description of your incoming configuration.
 4. To activate the incoming configuration, set the status to *Enabled*.
@@ -79,11 +79,11 @@ To create the outgoing configuration, do the following:
 
 ### Define the route
 
-The route configuration connects the incoming configuration and outgoing configuration to enable the import of data from Akeneo PIM to SCCOS.
+The route configuration connects the incoming configuration and outgoing configuration to enable the import of data from Akeneo PIM into SCCOS.
 
 To define the route, do the following:
 
-1. In the Spryker Middleware Powered by Alumio platform, go to **Connections -> Routes** and click the + sign.
+1. In the Spryker Middleware powered by Alumio platform, go to **Connections -> Routes** and click the + sign.
 2. In *Name*, enter the name of your client. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description* field, add the description of your route.
 4. To activate the route, set the status to *Enabled*.
@@ -96,5 +96,5 @@ To define the route, do the following:
 The route should now appear on the *Configurations -> Routes* page.
 
 ## Next step
-[Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html)
+[Create tasks and import products from Akeneo into SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html)
 

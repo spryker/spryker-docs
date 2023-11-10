@@ -15,7 +15,7 @@ redirect_from:
 related:
   - title: Install the Approval Process feature
     link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
-  - title: Shipment feature integration
+  - title: Install the Shipment feature
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
   - title: Shipment feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html

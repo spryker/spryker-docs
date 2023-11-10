@@ -13,13 +13,13 @@ redirect_from:
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)
 
-*Vertex O Series* does automatic, near real time taxes calculation at the point of purchase while accounting for the following:
+The Spryker Vertex app, constructed on the basis of the *Vertex O Series* software, performs automatic, near-real-time taxes calculation at the point of purchase while accounting for the following:
 
 * Tax rates in each state, county, and city.  
 * Laws, rules, and jurisdiction boundaries.  
 * Special circumstances like tax holidays and product exemptions.
 
-For more information, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
+For more information about how Vertex calculates taxes, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
 
 The Spryker Vertex app offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html) or the [Avalara integration](/docs/pbc/all/tax-management/{{page.versoin}}/base-shop/third-party-integrations/avalara/avalara.html):
 
@@ -30,7 +30,7 @@ The Spryker Vertex app offers the following features that are worth considering 
 - *Tax reporting and filing*: You have the option of sending invoice requests to Vertex after an order is paid. You can generate accurate tax reports which helps in the filing of sales tax returns across multiple jurisdictions, reducing the risk of audit and penalties.
 - *Application of custom tax rules to products*: You can implement custom tax rules to accommodate unique product categorizations or specific tax regulations that apply to your business. The Vertex Integration provides a means for taxes to be calculated using these rules.
 
-## Vertex app in Spryker-based projects
+## Using the Vertex app in Spryker-based projects
 
 To start using the Spryker Vertex app in your project, you need to do the following:
 

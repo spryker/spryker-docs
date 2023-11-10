@@ -1,6 +1,6 @@
 ---
 title: Configure data mapping between Akeneo and SCCOS
-description: Create data transformers in the Spryker Middleware Powered by Alumio
+description: Create data transformers in the Spryker Middleware powered by Alumio
 template: howto-guide-template
 ---
 
@@ -13,7 +13,7 @@ After you have [connected the Spryker Middleware Powered by Alumio with Akeneo a
 
 To import data from Akeneo PIM, you need to transform it from the Akeneo model to the Base model. To transform the data like this, you need to create the Akeneo to Base model transformer. Do the following:
 
-1. In the Spryker Middleware Powered by Alumio platform, go to **Connections -> Entity transformers** and click the + sign.
+1. In the Spryker Middleware powered by Alumio platform, go to **Connections -> Entity transformers** and click the + sign.
 2. In *Name*, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description*, add the description of your route.
 4. To activate the entity transformer, set the status to *Enabled*.
@@ -24,7 +24,7 @@ To import data from Akeneo PIM, you need to transform it from the Akeneo model t
 
 ## Create cache
 
-When you perform the initial product import from Akeneo, all data pertaining to the imported products is stored in the cache. During subsequent product imports, Spryker Middleware Powered by Alumio compares this cached data with the information that needs to be imported from Akeneo. If no changes are detected, the product data isn't re-imported from Akeneo but is instead retrieved from the cache. This significantly speeds up the importing process. 
+When you perform the initial product import from Akeneo, all data pertaining to the imported products is stored in the cache. During subsequent product imports, Spryker Middleware powered by Alumio compares this cached data with the information that needs to be imported from Akeneo. If no changes are detected, the product data isn't re-imported from Akeneo but is instead retrieved from the cache. This significantly speeds up the importing process. 
 
 To create the cache, do the following:
 
@@ -43,7 +43,7 @@ Create a separate cache for each of the Base to Spryker model transformers that 
 
 After the data has been transformed to the Base model, it needs to be transformed to the Spryker model. To transform the data like this, you need to create the Base model to the Spryker model transformer. Do the following:
 
-1. In the Spryker Middleware Powered by Alumio platform, go to **Connections -> Entity transformers** and click the + sign.
+1. In the Spryker Middleware powered by Alumio platform, go to **Connections -> Entity transformers** and click the + sign.
 2. In *Name*, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In *Description*, add the description of your route.
 4. To activate the entity transformer, set the status to *Enabled*.
@@ -73,8 +73,8 @@ By default, there are the following Akeneo to Base data transformers that you ca
 
 *Memo Akeneo to Base - Product - Set Base Information* is the main Akeneo to Base transformer that processes all the basic product information. You must always select this transformer to enable the product data import.
 
-1. In *Client*, enter the Akeneo client you created at this step: [Connect Akeneo with Spryker Middleware Powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
-2. In *Locale*, enter the locale from which you want to import data in Akeneo. For example, *en_US*. 
+1. In *Client*, enter the Akeneo client you created at this step: [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+2. In *Locale*, enter the locale from where you want to import data in the Akeneo PIM. For example, *en_US*. 
 
 {% info_block infoBox "Locale in Akeneo" %}
 
@@ -90,7 +90,7 @@ If the locale isn't specified in Akeneo, the locale you specify at this step wil
 5. In *Description*, either enter the description for your products, or if you want to import it from Akeneo, use the `&{values.description}` as a placeholder.
 6. In *Short description*, either enter the short description for your products or if you want to import it from Akeneo, use the `&{values.short_description}` as a placeholder.
 7. Optional: Define the tax set to use for the imported products. Do the following:
-  1. Go to your project's Back Office, to **Administration -> Tax Sets** page.
+  1. Go to your Spryker project's Back Office, to **Administration -> Tax Sets** page.
   2. On the *Overview of tax sets* page, copy the value from the *Name* column of the tax set you want to use for the products imported from Akeneo PIM.
   3. Go back to the Spryker Middleware powered by Alumio, to the transformer creation page, and enter the tax name in the *Tax* field.
 8. Optional: In *Parent*, enter the SKU of the parent product, or if you want to import it from Akeneo, use the `&{parent}` as a placeholder.
@@ -111,18 +111,18 @@ To configure this transformer, do the following:
 
 #### Memo Akeneo to Base - Product - Set Product Properties transformer
 
-*Memo Akeneo to Base - Product - Set Product Properties* is the optional transformer that processes all properties that you select for import from Akeneo. The product properties handled by this transformer are called product attributes in Akeneo.
+*Memo Akeneo to Base - Product - Set Product Properties* is the optional transformer that processes all properties that you select to import from Akeneo. The product properties handled by this transformer are called product attributes in Akeneo.
 
 To configure this transformer, do the following:
 
 1. In *Locale*, set the locale where you want to import product properties. For example, `en_US`.
-2. Optional: In *Properties*, specify the product properties in Akeneo that you want to import as product attributes to SCCOS. For example, `color`. If you don't specify any properties, no properties are imported.
+2. Optional: In *Properties*, specify the product properties in Akeneo that you want to import as product attributes into SCCOS. For example, `color`. If you don't specify any properties, no properties are imported.
 
 ![memo-akeneo-to-base-product-set-product-properties-transformer](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/memo-akeneo-to-base-product-set-product-properties-transformer.png)
 
 {% info_block infoBox "Super attributes" %}
 
-Keep in mind that even though you specify the attributes for import in this entity transformer, you specify the super attributes in the [Memo Base to Spryker - Product - Akeneo Preprocessor](#memo-base-to-spryker---product---akeneo-preprocessor) transformer.
+Keep in mind that even though you specify the attributes to import in this entity transformer, you specify the super attributes in the [Memo Base to Spryker - Product - Akeneo Preprocessor](#memo-base-to-spryker---product---akeneo-preprocessor) transformer.
 
 {% endinfo_block %}
 

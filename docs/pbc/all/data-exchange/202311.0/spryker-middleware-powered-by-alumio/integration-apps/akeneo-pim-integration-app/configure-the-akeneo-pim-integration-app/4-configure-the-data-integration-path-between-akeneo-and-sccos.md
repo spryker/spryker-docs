@@ -1,6 +1,6 @@
 ---
 title: Configure the data integration path between Akeneo and SCCOS
-description: Create incoming configuration, outgoing configuration, and route in the Spryker Middleware Powered by Alumio
+description: Create incoming configuration, outgoing configuration, and route in the Spryker Middleware powered by Alumio
 template: howto-guide-template
 ---
 

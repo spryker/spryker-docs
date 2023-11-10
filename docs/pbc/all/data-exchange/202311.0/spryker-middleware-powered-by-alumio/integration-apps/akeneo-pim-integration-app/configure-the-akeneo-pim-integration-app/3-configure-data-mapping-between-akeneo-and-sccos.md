@@ -144,8 +144,8 @@ To configure this transformer, do the following:
 
 To configure this transformer, do the following:
 
-1. In *Stock value*, specify the value of stock that the product will have after it is imported to Spryker. You can specify 0 as well, but in this case, in SCCOS, this product would be considered as out-of-stock, and, therefore, be unavailable on the Storefront.
-2. Optional: Specify the warehouse where this stock should be kept. For details about the warehouses in the Back Office, see [Create warehouses](/docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-in-the-back-office/create-warehouses.html).
+1. In *Stock value*, specify the value of the stock that the product will have after it is imported into Spryker. You can specify 0 as well, but in this case, in SCCOS, this product would be considered as out-of-stock, and, therefore, be unavailable in the Storefront.
+2. Optional: Specify the warehouse where this stock should be kept. For details about the warehouses in the Spryker Back Office, see [Create warehouses](/docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-in-the-back-office/create-warehouses.html).
 
 ![memo-base-product-set-stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/memo-base-product-set-stock.png)
 
@@ -187,12 +187,12 @@ The *Memo Spryker - Product - Set General Settings* transformer sets the destina
 
 To configure this transformer, do the following:
 
-1. In *Spryker HTTP Client*, select the client you created at step [Connect SCCOS with Spryker Middleware Powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app\connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-sccos-with-spryker-middleware-powered-by-alumio).
+1. In *Spryker HTTP Client*, select the client you created at step [Connect SCCOS with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app\connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-sccos-with-spryker-middleware-powered-by-alumio).
 2. In *Store name*, enter the store to which you want to import data from Akeneo. For example, *en_US*. 
 
 {% info_block infoBox "Multiple stores" %}
 
-If you want to import the same products to multiple stores, you have to create additional routes with individual *Memo Spryker - Product - Set General Settings* transformers for each store. In other words, you need as many routes with individual *Memo Spryker - Product - Set General Settings* transformers as many stores you want to import the products to.
+If you want to import the same products into multiple stores, you have to create additional routes with individual *Memo Spryker - Product - Set General Settings* transformers for each store. In other words, you need as many routes with individual *Memo Spryker - Product - Set General Settings* transformers as many stores you want to import the products into.
 
 {% endinfo_block %}
 
@@ -204,14 +204,14 @@ If you want to import the same products to multiple stores, you have to create a
 
 ### Memo Base to Spryker - Product - Akeneo Preprocessor
 
-The *Memo Base to Spryker - Product - Akeneo Preprocessor* transformer prepares the data for sending to Spryker.
+The *Memo Base to Spryker - Product - Akeneo Preprocessor* transformer prepares the data for sending into Spryker.
 
 To configure this transformer, do the following:
 
 1. In *Akeneo HTTP client*, select the Akeneo client you created at step [Connect the Spryker Middleware powered by Alumio with Akeneo PIM](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
-2. In *Spryker HTTP client*, select the Spryker client you created at step [Connect SCCOS with the Middleware Powered by Alumio platform](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-sccos-with-spryler-middleware-powered-by-alumio).
+2. In *Spryker HTTP client*, select the Spryker client you created at step [Connect SCCOS with the Middleware powered by Alumio platform](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-sccos-with-spryler-middleware-powered-by-alumio).
 3. Optional: specify the super attributes for your product. If you don't specify any super attributes here, there won't be any super attributes for the products in SCCOS, even though the products might have them in Alumio. Keep in mind that once you specify an attribute as a super attribute, it can't be a normal attribute attribute in SCCOS. 
-4. Optional: In *Relations*, Map Akeneo relation keys to the SCCOS relation keys. To map the relation keys, do the following:
+4. Optional: In *Relations*, map Akeneo relation keys to the SCCOS relation keys. To map the relation keys, do the following:
   1. In Akeneo PIM, go to **Settings -> Association types** and click the label of the necessary association type. For example, *Upsell*.
   2. On the Association type details page, copy the code and paste it in the *Akeneo Relation Key Name* field.
   ![akeneo-association-type].
@@ -234,7 +234,7 @@ The *Memo Base to Spryker - Product - Insert into Spryker* transformer sends dat
 
 To configure this transformer, do the following:
 
-1. In *Spryker HTTP client*, select the client you created at step [Connect SCCOS with the Middleware Powered by Alumio platform](#2-connect-sccos-with-the-middleware-powered-by-alumio-platform).
+1. In *Spryker HTTP client*, select the client you created at step [Connect SCCOS with the Middleware powered by Alumio platform](#2-connect-sccos-with-the-middleware-powered-by-alumio-platform).
 2. In *Root category name*, enter the root category name as you have it in SCCOS. For information about the categories in SCCOS, see [Category Management feature overview](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/category-management-feature-overview.html).
 3. In *Category template name*, enter the name of the category template in SCCOS where the product has to be imported. For information about the default category templates in SCCOS, see [Reference information: template](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html#reference-information-template).
 4. Optional: To mark the product as active, check *Is product active*.

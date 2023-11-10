@@ -73,7 +73,7 @@ By default, there are the following Akeneo to Base data transformers that you ca
 
 *Memo Akeneo to Base - Product - Set Base Information* is the main Akeneo to Base transformer that processes all the basic product information. You must always select this transformer to enable the product data import.
 
-1. In *Client*, enter the Akeneo client you created at this step: [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+1. In *Client*, enter the Akeneo client you created at this step: [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
 2. In *Locale*, enter the locale from where you want to import data in the Akeneo PIM. For example, *en_US*. 
 
 {% info_block infoBox "Locale in Akeneo" %}
@@ -214,13 +214,13 @@ To configure this transformer, do the following:
 4. Optional: In *Relations*, map Akeneo relation keys to the SCCOS relation keys. To map the relation keys, do the following:
   1. In Akeneo PIM, go to **Settings -> Association types** and click the label of the necessary association type. For example, *Upsell*.
   2. On the Association type details page, copy the code and paste it in the *Akeneo Relation Key Name* field.
-  ![akeneo-association-type].
+  ![akeneo-association-type](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/akeneo-association-type.png).
   3. In *Spryker Relation Key Name*, enter either the code of the existing SCCOS relation type key, for example, `up-selling`, or the new one that you want to be automatically created in SCCOS after the product import. 
 5. Optional: To use specific Akeneo multi select attributes as labels in SCCOS, in *Akeneo label attribute code*, specify the corresponding Akeneo multi select association code.
 
 {% info_block infoBox "Product attributes" %}
 
-Akeneo multi select attributes correspond to the SCCOS product labels. Therefore, if you want to import product labels from Akeneo, there should be a corresponding multi select attribute in Akeneo. For information on how to create the multi select attributes in Akeneo that you can use as product labels in SCCOS, see <!--[LINK TO GUIDE ON HOW TO CREATE MULTI SELECT ATTRIBUTES]-->.
+Akeneo multi select attributes correspond to the SCCOS product labels. Therefore, if you want to import product labels from Akeneo, there should be a corresponding multi select attribute in Akeneo. For information on how to create the multi select attributes in Akeneo that you can use as product labels in SCCOS, see [Reference information: Creating multi select attributes in Alumio](#reference-information-creating-multi-select-attributes-in-alumio).
 
 {% endinfo_block %}
 

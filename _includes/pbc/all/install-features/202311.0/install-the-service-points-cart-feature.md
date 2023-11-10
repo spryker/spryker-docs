@@ -86,7 +86,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
 <?php

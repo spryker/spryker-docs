@@ -238,6 +238,13 @@ To configure this transformer, do the following:
 2. In *Root category name*, enter the root category name as you have it in SCCOS. For information about the categories in SCCOS, see [Category Management feature overview](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/category-management-feature-overview.html).
 3. In *Category template name*, enter the name of the category template in SCCOS where the product has to be imported. For information about the default category templates in SCCOS, see [Reference information: template](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html#reference-information-template).
 4. Optional: To mark the product as active, check *Is product active*.
+
+{% info_block infoBox "Inactive product in Akeneo" %}
+
+If a product is inactive in Akeneo and you want to import it as inactive as well, in the *Active product* dropdown, select *Dynamic value* and enter `&{enabled}` in the field as the placeholder.
+
+{% endinfo_block %}
+
 5. Optional: To mark the product as splittable, check *Is product splittable*.
 4. Optional: To update prices in SCCOS with those from Akeneo, check *Update price*.
 5. Optional: To update stock values in SCCOS with those from Akeneo, check *Update stock*.

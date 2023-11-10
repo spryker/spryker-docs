@@ -1,5 +1,5 @@
 ---
-title: Configure the Spryker Middleware Powered by Alumio with Akeneo PIM and Spryker
+title: Configure the Spryker Middleware Powered by Alumio connection with your Akeneo PIM and your Spryker Cloud Commerce OS
 description: Create clients for Akeneo and Spryker in the Spryker Middleware Powered by Alumio
 template: howto-guide-template
 ---
@@ -9,11 +9,11 @@ You can establish this connection directly in the Spryker Middleware Powered by 
 
 ## Prerequisite
 
-Before you can connect the Spryker Middleware powered by Alumio with Akeneo, you need to establish a connection to Spryker in Akeneo. The connection to Spryker should use the *Data destination* flow type. For step-by-step instructions on how to set up this connection in Akeneo, refer to the [Akeneo documentation](https://help.akeneo.com/serenity-connect-your-pim/serenity-manage-your-connections).
+Before you can connect the Spryker Middleware powered by Alumio with the Akeneo PIM, you need to establish a connection to Spryker in Akeneo. The connection to Spryker should use the *Data destination* flow type. For step-by-step instructions on how to set up this connection in Akeneo, refer to the [Akeneo documentation](https://help.akeneo.com/serenity-connect-your-pim/serenity-manage-your-connections).
 
 ## Connect Akeneo with Spryker Middleware Powered by Alumio
 
-To connect Akeneo with Spryker Middleware powered by Alumio, you need to create an HTTP client. To create the client, do the following.
+To connect Akeneo with Spryker Middleware powered by Alumio, you need to create an HTTP client. To create the client, do the following:
 
 1. In the Spryker Middleware powered by Alumio platform, go to **Clients -> HTTP client** and click the + sign.
 ![create-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/create-http-client.png)
@@ -36,14 +36,14 @@ To connect Akeneo with Spryker Middleware powered by Alumio, you need to create 
 
 The client should now be on the list of the *HTTP clients* page.
 
-## Connect SCCOS with Spryker Middleware Powered by Alumio
+## Connect SCCOS with Spryker Middleware powered by Alumio
 
-To connect SCCOS to Spryker Middleware powered by Alumio, you also need to create an HTTP client. To create the client, do the following.
+To connect SCCOS to Spryker Middleware powered by Alumio, you also need to create an HTTP client. To create the client, do the following:
 
-1. In the Spryker Middleware Powered by Alumio platform, go to **Clients -> HTTP client** and click the + sign.
+1. In the Spryker Middleware powered by Alumio platform, go to **Clients -> HTTP client** and click the + sign.
 2. In the platform selection field, start typing "Spryker" and select *Spryker Dynamic Data Exchange HTTP Client*.
 3. Click **Next step**.
-4. In *Base URL*, enter the URL to your Spryker Glue API environment with the Dynamic Data Exchange. For example, `https://glue-backend.de.alumio.mysprykershop.com/dynamic-entity`.
+4. In *Base URL*, enter the URL to your Spryker Glue API environment with the Dynamic Data Exchange API. For example, `https://glue-backend.de.alumio.mysprykershop.com/dynamic-entity`.
 5. Enter the username and password from your Spryker Glue API environment.
 6. Optional: Check the *Enable caching of the token* checkbox.
 7. Optional: Check the *Enable logging of requests* checkbox.

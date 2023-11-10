@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME                     | VERSION            | INSTALLATION GUIDE                                                                                                                                                   |
 |--------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core             | {{page.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                         |
-| Marketplace Product      | {{page.version}}   | [Marketplace Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)           |
+| Spryker Core             | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                         |
+| Marketplace Product      | {{page.version}}   | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)           |
 | Product Approval Process | {{page.version}}   | [Product Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-approval-process-feature-integration.html) |
 
 

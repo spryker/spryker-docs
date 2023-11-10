@@ -16,7 +16,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `cms_template.csv` file to configure [CMS Template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#cms-page-template) information in your Spryker Demo Shop.
+This document describes the `cms_template.csv` file to configure [CMS Template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-page-template) information in your Spryker Demo Shop.
 
 ## Import file parameters
 

@@ -993,7 +993,7 @@ entries:
               - title: Integration apps
                 include_versions:
                 - "202311.0"
-              nested:
+                nested:
                 - title: Akeneo PIM Integration App
                   include_versions:
                   - "202311.0"
@@ -1002,7 +1002,7 @@ entries:
                       url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
                       include_versions:
                       - "202311.0"
-                    nested:
+                      nested:
                       - title: Configure the Spryker Middleware powered by Alumio connection with Akeneo PIM and SCCOS
                         url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html
                         include_versions:

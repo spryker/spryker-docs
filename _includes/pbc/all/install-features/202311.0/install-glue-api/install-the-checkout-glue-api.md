@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html) feature API into a Spryker project.
+This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API into a Spryker project.
 
 ## Install feature core
 
@@ -931,5 +931,5 @@ Integrate the following related features.
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                              |
 |--------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Shipment | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                   |
+| Glue API: Shipment | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                   |
 | Glue API: Payments | ✓                                | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |

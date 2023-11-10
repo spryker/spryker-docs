@@ -13,7 +13,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
-| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Category Management | {{page.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Set up behavior

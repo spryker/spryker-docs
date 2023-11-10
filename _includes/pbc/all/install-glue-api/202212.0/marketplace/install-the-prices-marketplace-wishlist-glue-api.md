@@ -11,8 +11,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
-| Product Prices API | {{page.version}} |[Glue API: Product Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html) |
+| Marketplace Wishlist | {{page.version}} |[Install Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
+| Product Prices API | {{page.version}} |[Install the Product Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html) |
 
 
 ### 1) Set up behavior

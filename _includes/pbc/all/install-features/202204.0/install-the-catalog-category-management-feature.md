@@ -10,7 +10,7 @@ Install the required features:
 | ------------------- | ------- | ------------------------------------------------------------ |
 | Spryker Core        | {{page.version}}  | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Catalog             | {{page.version}}  |  |
-| Category Management | {{page.version}}  | [Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Category Management | {{page.version}}  | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ## 1) Set up behavior
 

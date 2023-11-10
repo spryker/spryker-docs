@@ -2776,6 +2776,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
         - title: Container set function
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
+        - title: Discouraged packages checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html          
         - title: Minimum allowed shop version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
         - title: Multidimensional array

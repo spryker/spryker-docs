@@ -5,16 +5,13 @@ template: howto-guide-template
 redirect_from:
 ---
 
-This is a tool that checks that project installed packages contains no discouraged packages.
+This checker checks if discouraged packages are installed.
 
 ## Problem description
 
-The Spryker has own internal list of the not recommended or prohibited packages.
-The installation of such packages should be avoided. The reason why this package is discouraged you can find in the checker output.
+Some packages are prohibited or not recommended because they are deprecated or contain security vulnerabilities. The evaluator tool provides the reason for each checker to be prohibited in the output.
 
 ## Example of an evaluator error message
-
-Below is an example of violation when discouraged package is installed
 
 ```bash
 ============================
@@ -28,9 +25,7 @@ Target: sllh/composer-versions-check
 
 ## Example of code that causes an evaluator error
 
-The package found in `composer.lock` file.
-
-composer.lock
+**composer.lock**
 ```json
 {
   "_readme": [
@@ -46,9 +41,10 @@ composer.lock
       ...
 ```
 
+
 ## Resolve the error
 
-To resolve an issue need to remove discouraged package or to follow instructions in violation message.
+To resolve the issue, remove the discouraged package or follow the instructions in the output.
 
 ## Run only this checker
 
@@ -56,4 +52,3 @@ To run only this checker, include `DISCOURAGED_PACKAGES_CHECKER` into the checke
 ```bash
 vendor/bin/evaluator evaluate --checkers=DISCOURAGED_PACKAGES_CHECKER
 ```
-

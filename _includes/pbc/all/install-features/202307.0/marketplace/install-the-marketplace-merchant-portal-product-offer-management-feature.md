@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME  | VERSION | INSTALLATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | {{page.version}}  | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
+| Marketplace Product Offer        | {{page.version}}  | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
 | Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)
 
 

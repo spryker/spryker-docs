@@ -13,7 +13,7 @@ Install the required features:
 | NAME   | VERSION | INSTALLATION GUIDE   |
 | ---------------- | ------ | ------------------ |
 | Spryker Core   | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant Category | {{page.version}}  | [Marketplace Merchant Category feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html) |
+| Marketplace Merchant Category | {{page.version}}  | [Install the Marketplace Merchant Category feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html) |
 
 ### 1) Install the required modules using Composer
 

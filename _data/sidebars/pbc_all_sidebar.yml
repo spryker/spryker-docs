@@ -981,8 +981,8 @@ entries:
             - "202311.0"
             nested: 
               - title: Integration apps
-              include_versions:
-              - "202311.0"
+                include_versions:
+                - "202311.0"
               nested:
                 - title: Akeneo PIM Integration App
                   include_versions:

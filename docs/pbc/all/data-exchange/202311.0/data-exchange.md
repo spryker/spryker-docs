@@ -42,7 +42,7 @@ We recommend considering the Data Exchange API in the following cases:
 - You want to implement a data integration via API with a middleware that's not [Alumio](https://www.alumio.com).
 - You want to create your own data integration engine via API, without using any middleware software.
 
-## Spryker Middleware Powered by Alumio
+## Spryker Middleware powered by Alumio
 
 The Spryker Middleware powered by Alumio is a cloud-based integration Platform as a Service (iPaaS). It lets you exchange data between your Spryker system and third-party systems via a user-friendly interface.
 The Spryker Middleware Powered by Alumio isn't a part of SCCOS by default. To obtain it, reach out to [Spryker support](https://spryker.com/support/).
@@ -55,7 +55,7 @@ With the Spryker Middleware powered by Alumio, the data exchange process looks l
 
 <!--For more details about the Spryker Middleware Powered by Alumio, see [LINK].-->
 
-The Spryker Middleware Powered by Alumio is the foundation of the Spryker Integration Apps. You can also use it to build [custom integrations](#custom-integrations-with-alumio-connectors).
+The Spryker Middleware powered by Alumio is the foundation of the Spryker Integration Apps. You can also use it to build [custom integrations](#custom-integrations-with-alumio-connectors).
 
 ### Spryker Integration Apps
 
@@ -63,11 +63,11 @@ The Integration Apps let you import data between your Spryker system and third-p
 
 To exchange data between a Spryker system and a third-party system with an Integration App, you need to do the following:
 
-- Have a user account on Spryker Middleware Powered by Alumio. 
+- Have a user account on Spryker Middleware powered by Alumio. 
 - Have the Integration App you need deployed in the Spryker Middleware powered by Alumio platform.
 - Make minimum adjustments to the existing mapping and transformation of data.
 
-Reach out to [Spryker support](https://spryker.com/support/) or to your Customer Success Manager if you need access to the Spryker Middleware Powered by Alumio and the Integration Apps.
+Reach out to [Spryker support](https://spryker.com/support/) or to your Customer Success Manager if you need access to the Spryker Middleware powered by Alumio and the Integration Apps.
 
 We recommend considering Integration Apps for data exchange in the following cases:
 

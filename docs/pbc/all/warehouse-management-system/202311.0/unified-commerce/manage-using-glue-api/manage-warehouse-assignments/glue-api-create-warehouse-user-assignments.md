@@ -28,15 +28,14 @@ For detailed information about the modules that provide the API functionality an
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <li>users</li> |
+| include | Adds resource relationships to the request. | users |
 
 | REQUEST  | USAGE |
 | --- | --- |
 | `POST http://glue-backend.mysprykershop.com/warehouse-user-assignments` | Create a warehouse user assignment.  |
 | `POST http://glue-backend.mysprykershop.com/warehouse-user-assignments?include=users` | Create a warehouse user assignment. Include information about the user in the response.  |
 
-Request sample: Activate a warehouse assignment
-
+Request sample:
 ```json
 {
     "data": {
@@ -139,3 +138,19 @@ Request sample: Activate a warehouse assignment
 ```
 
 </details>
+
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| userUuid | String | Unique identifier of the user the assignment belongs to. |
+| isActive | Boolean | Defines if the warehouse assignment is active. |
+| warehouse.name | String | Name of the warehouse in the assignment. |
+| warehouse.uuid | String | Unique identifier of the warehouse in the assignment. |
+| warehouse.isActive | Boolean | Defines if the warehouse in the assignment is active. |
+
+
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- | --- |
+| users | username | String | Username of the warehouse user you are authenticated with. |
+| users | firstName | String | First name. |
+| users | lastName | String | Last name. |

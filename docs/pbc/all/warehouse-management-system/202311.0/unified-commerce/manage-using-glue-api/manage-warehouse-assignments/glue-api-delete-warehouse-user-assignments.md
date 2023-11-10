@@ -4,7 +4,7 @@ description: Learn how to activate and deactivate warehouse assignments using Gl
 template: glue-api-storefront-guide-template
 ---
 
-A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you activate and deactivate warehouse assignments for warehouse users.
+A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you delete warehouse user assignments.
 
 ## Installation
 
@@ -17,7 +17,7 @@ For detailed information about the modules that provide the API functionality an
 ## Delete a warehouse user assignment
 
 ---
-`DELETE` **/warehouse-user-assignments/*{{warehouse_user_assignment_id}}***
+`DELETE` **/warehouse-user-assignments/*{% raw %}{{warehouse_user_assignment_id}}{% endraw %}***
 ---
 
 | PATH PARAMETER | DESCRIPTION |

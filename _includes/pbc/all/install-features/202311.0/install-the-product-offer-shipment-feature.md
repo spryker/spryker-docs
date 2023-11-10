@@ -195,7 +195,7 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
     /**
      * @return string|null
      */
-    public function getProductOfferShipmentTypeStorageSynchronizationPoolName(): ?string
+    public function getProductOfferShipmentTypeSynchronizationPoolName(): ?string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }

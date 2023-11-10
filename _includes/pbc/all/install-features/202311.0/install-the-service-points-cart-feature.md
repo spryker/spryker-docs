@@ -17,6 +17,7 @@ Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/service-points-cart: "{{page.version}}" --update-with-dependencies
+composer require spryker/service-point-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -28,6 +29,7 @@ Make sure that the following modules have been installed:
 | ServicePointCart          | vendor/spryker/service-point-cart           |
 | ServicePointCartExtension | vendor/spryker/service-point-cart-extension |
 | ServicePointCartPage      | vendor/spryker-shop/service-point-cart-page |
+| ServicePointCartsRestApi  | vendor/spryker/service-point-carts-rest-api |
 
 {% endinfo_block %}
 
@@ -44,9 +46,35 @@ service_point_cart.checkout.validation.error,Der ausgewählte Servicepunkt "%uui
 
 Register the plugins:
 
-| PLUGIN                                           | SPECIFICATION                                                                                    | PREREQUISITES | NAMESPACE                                                   |
-|--------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| ServicePointCheckoutPreConditionPlugin           | Validates if `QuoteTransfer.items.servicePoint` is active and available for the current store.  | None          | Spryker\Zed\ServicePointCart\Communication\Plugin\Checkout  |
+| PLUGIN                                         | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE                                                                 |
+|------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
+| ServicePointCheckoutPreConditionPlugin         | Validates if `QuoteTransfer.items.servicePoint` is active and available for the current store. | None          | Spryker\Zed\ServicePointCart\Communication\Plugin\Checkout                |
+| ReplaceServicePointQuoteItemsQuoteMapperPlugin | Replaces quote items using applicable strategy if shipments are provided.                      | None          | Spryker\Zed\ServicePointCartsRestApi\Communication\Plugin\CheckoutRestApi |
+
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+use Spryker\Zed\ServicePointCart\Communication\Plugin\Checkout\ServicePointCheckoutPreConditionPlugin;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>
+     */
+    protected function getCheckoutPreConditions(Container $container): array
+    {
+        return [
+            new ServicePointCheckoutPreConditionPlugin(),
+        ];
+    }
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -54,6 +82,42 @@ Register the plugins:
 2. Select a service point.
 3. Deactivate the service point.
 4. Proceed to the *Summary* page.
-    On the *Summary* page, make sure you get the validation error.
+5. On the *Summary* page, make sure you get the validation error.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CheckoutRestApi;
+
+use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use Spryker\Zed\ServicePointCartsRestApi\Communication\Plugin\CheckoutRestApi\ReplaceServicePointQuoteItemsQuoteMapperPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\QuoteMapperPluginInterface>
+     */
+    protected function getQuoteMapperPlugins(): array
+    {
+        return [
+            new ReplaceServicePointQuoteItemsQuoteMapperPlugin() # Has to be placed before PaymentsQuoteMapperPlugin
+        ];
+    }
+```
+
+{% info_block warningBox "Verification" %}
+
+Please follow the steps below to complete the process:
+1. Prepare two product offers for the same product,one with support for pickup shipment type and a connection to the service point, and another without support for pickup shipment type.
+2. Add the product offer that does not support the pickup shipment type to the cart.
+3. Proceed to the checkout-data resource in the GLUE API.
+4. Select a service point for the item.
+5. Send a POST request to the checkout-data resource.
+6. Check that the selected service point is returned in the response.
+7. Lastly, make sure that the product offer has been replaced with the one that has the service point connection.
 
 {% endinfo_block %}

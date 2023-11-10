@@ -976,11 +976,11 @@ Make sure that when a shipment type is created or edited through BAPI, it is exp
 In Redis, make sure data is represented in the following format:
 ```json
 {
-    "id_shipment_type": 1,
-    "uuid": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
-    "name": "Pickup",
-    "key": "pickup",
-    "_timestamp": 1684933897.870368
+  "id_shipment_type": 1,
+  "uuid": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
+  "name": "Pickup",
+  "key": "pickup",
+  "_timestamp": 1684933897.870368
 }
 ```
 
@@ -1588,45 +1588,7 @@ Make sure that when you place an order, the selected shipment type is persisted 
 
 {% endinfo_block %}
 
-7. To enable the ACL configuration in the MerchantPortal, register these plugins:
-
-| PLUGIN                                           | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                       |
-|--------------------------------------------------|-----------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| ShipmentTypeAclEntityConfigurationExpanderPlugin | Expands provided `AclEntityMetadataConfig` transfer object with shipment type composite data. |               | Spryker\Zed\ShipmentType\Communication\Plugin\AclMerchantPortal |
-
-
-**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\AclMerchantPortal;
-
-use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
-use \Spryker\Zed\ShipmentType\Communication\Plugin\AclMerchantPortal\ShipmentTypeAclEntityConfigurationExpanderPlugin;
-
-class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
-{
-
-    /**
-     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
-     */
-    protected function getAclEntityConfigurationExpanderPlugins(): array
-    {
-        return [
-           new ShipmentTypeAclEntityConfigurationExpanderPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that read access is allowed to the shipment type entity in the MerchantPortal.
-
-{% endinfo_block %}
-
-8. To enable the Backend API, register these plugins:
+7. To enable the Backend API, register these plugins:
 
 | PLUGIN                                                        | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------------|

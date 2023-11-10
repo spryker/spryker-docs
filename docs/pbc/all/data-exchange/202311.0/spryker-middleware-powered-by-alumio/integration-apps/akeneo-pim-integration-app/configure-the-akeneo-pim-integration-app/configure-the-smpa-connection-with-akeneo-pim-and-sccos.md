@@ -18,7 +18,7 @@ To connect Akeneo with Spryker Middleware powered by Alumio, you need to create 
 1. In the Spryker Middleware powered by Alumio platform, go to **Clients -> HTTP client** and click the + sign.
 ![create-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/create-http-client.png)
 2. In the platform selection field, start typing "Akeneo" and select *Akeneo HTTP Client*.
-![akeneo-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-appfiled/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/akeneo-http-client.png)
+![akeneo-http-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/akeneo-http-client.png)
 3. Click **Next step**.
 4. In *Base URL*, enter the URL to your Akeneo PIM environment. For example, `https://test.cloud.akeneo.com`
 5. Go to your Akeneo PIM environment, to **Connections -> Connection settings**, and copy the following information from there to the *Create Client* page of the Spryker Middleware Powered by Alumio platform:  
@@ -63,4 +63,4 @@ Now that the client is created, you can test if it works. To test the client, do
 ![sccos-to-middleware-response](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/2-connect-the-spryker-middleware-powered-by-alumio-with-akeneo-pim-and-spryker/sccos-to-middleware-response.png)
 
 ## Next step
-[Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-sccos.html)
+[Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html)

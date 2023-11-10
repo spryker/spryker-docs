@@ -4,7 +4,7 @@ description: Learn how you can configure the Akeneo PIM Integration App in the S
 template: concept-topic-template
 ---
 
-This section describes how to configure the Akeneo PIM Integration App to import data from there to a Spryker project via the Spryker Middleware powered by Alumio.
+This section describes how to configure the Akeneo PIM Integration App to import data from your Akeneo PIM into your Spryker Cloud Commerce OS project via the Spryker Middleware powered by Alumio.
 
 To import data from Akeneo PIM to your Spryker Cloud Commerce OS (SCCOS) project, you need to do the following:
 

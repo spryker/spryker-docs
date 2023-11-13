@@ -22,12 +22,12 @@ For detailed information about the modules that provide the API functionality an
 * [Glue API: Product options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 * [GLUE API: Marketplace Poruduct Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -1964,7 +1964,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/multiple-carts-feature-overview.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html) environment:
 
 * In a *single cart* environment, the products in the guest cart are added to the customers' own cart.
 * In a *multiple cart* environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.

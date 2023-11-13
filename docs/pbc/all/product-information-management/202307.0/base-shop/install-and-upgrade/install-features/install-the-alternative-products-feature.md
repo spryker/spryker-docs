@@ -15,7 +15,7 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
   - title: Alternative Products - Inventory Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-inventory-management-feature-integration.html
-  - title: Alternative Products - Wishlist feature integration
+  - title: Install the Alternative Products - Wishlist feature
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-wishlist-feature-integration.html
   - title: Alternative Products - Product Label feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html

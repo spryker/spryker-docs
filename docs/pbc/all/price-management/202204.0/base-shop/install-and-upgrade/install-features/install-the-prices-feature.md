@@ -1,5 +1,5 @@
 ---
-title: Integrate the Prices feature
+title: Install the Prices feature
 description: The guide walks you through the process of installing the Volume Prices feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -18,7 +18,7 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Images + Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
-  - title: Product feature integration
+  - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html

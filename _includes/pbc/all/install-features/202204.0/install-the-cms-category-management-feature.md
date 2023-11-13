@@ -11,9 +11,9 @@ Follow the steps below to install the CMS + Category Management feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | ---  |
-| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html)|
+| Category Management | {{page.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 

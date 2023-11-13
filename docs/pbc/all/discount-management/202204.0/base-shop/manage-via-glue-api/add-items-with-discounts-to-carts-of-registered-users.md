@@ -5,7 +5,7 @@ last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
+This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
 
 ## Installation
 
@@ -24,7 +24,7 @@ To add items to a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | The unique ID of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | The unique ID of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -692,7 +692,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 For the attributes of the other included resources, see the docs:
 
 * [Retrieve measurement units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
-* [Create a cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
+* [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
 

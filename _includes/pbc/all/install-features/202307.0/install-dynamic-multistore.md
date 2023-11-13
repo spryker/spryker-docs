@@ -675,7 +675,7 @@ de_DE,DE
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| locale_name | mandatory | string | en_US | Define locale name. |
+| locale_name | ✓ | string | en_US | Define locale name. |
  |store_name |mandatory |string | DE | Define store name. |
 
 
@@ -690,7 +690,7 @@ en_US,DE
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| locale_name | mandatory | string | en_US | Define locale name. |
+| locale_name | ✓ | string | en_US | Define locale name. |
 | store_name |mandatory |string | DE | Define store name. |
 
 
@@ -707,7 +707,7 @@ DE,FR
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| country | mandatory | string | DE | Define counry code. |
+| country | ✓ | string | DE | Define counry code. |
 | store_name |mandatory |string | DE | Define store name. |
 
 

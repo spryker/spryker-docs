@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
-  - /2021080/docs/managing-customers-via-glue-api
-  - /2021080/docs/en/managing-customers-via-glue-api
-  - /docs/managing-customers-via-glue-api
-  - /docs/en/managing-customers-via-glue-api
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/managing-customers.html

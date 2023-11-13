@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-carts-of-registered-users
 originalArticleId: fdd347a8-d5ae-4799-87f5-b4030c57cdec
 redirect_from:
-  - /2021080/docs/managing-discount-vouchers-in-carts-of-registered-users
-  - /2021080/docs/en/managing-discount-vouchers-in-carts-of-registered-users
-  - /docs/managing-discount-vouchers-in-carts-of-registered-users
-  - /docs/en/managing-discount-vouchers-in-carts-of-registered-users
   - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202307.0/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
 related:

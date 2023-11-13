@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Customer Account Management feature into a Spryker project.
+This document describes how to install the Customer Account Management feature.
 {% info_block errorBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:

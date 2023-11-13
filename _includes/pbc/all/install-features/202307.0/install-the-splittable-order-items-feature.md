@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
+This document describes how to install the [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) feature.
 
 ## Install feature core
 

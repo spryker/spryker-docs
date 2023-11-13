@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Merchant Portal - Marketplace Product + Inventory Management feature into a Spryker project.
+This document describes how to install the Merchant Portal - Marketplace Product + Inventory Management feature.
 
 ## Install feature core
 

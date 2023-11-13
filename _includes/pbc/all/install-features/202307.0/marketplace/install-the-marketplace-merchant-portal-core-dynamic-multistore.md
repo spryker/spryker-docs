@@ -4,7 +4,7 @@ Dynamic Multistore is currently running under an *Early Access Release*. Early A
 
 {% endinfo_block %}
 
-This document describes how to integrate the Marketplace MerchantPortal Core + Dynamic Store feature into a Spryker project.
+This document describes how to install the Marketplace MerchantPortal Core + Dynamic Store feature.
 
 ## Install feature core
 

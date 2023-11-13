@@ -1,6 +1,6 @@
 
 
-This document describes how to ingrate the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature.
 
 {% info_block errorBox %}
 

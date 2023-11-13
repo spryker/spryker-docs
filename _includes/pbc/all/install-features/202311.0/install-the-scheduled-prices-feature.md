@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) into a Spryker project.
+This document describes how to install the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html).
 
 ## Install feature core
 

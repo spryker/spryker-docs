@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Comments + Order Management feature into a Spryker project.
+This document describes how to install the Comments + Order Management feature.
 
 ## Install feature core
 

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Marketplace Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Marketplace Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) feature.
 
 ## Install feature core
 

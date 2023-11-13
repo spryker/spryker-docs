@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Switcher feature into a Spryker project.
+This document describes how to install the Merchant Switcher feature.
 
 ## Install feature core
 

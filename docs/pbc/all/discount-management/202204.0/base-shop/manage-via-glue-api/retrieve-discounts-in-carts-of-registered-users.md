@@ -5,7 +5,7 @@ last_updated: July 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve cart rules, vouchers, and promotional items in carts of registered users. For full information on the endpoint, see [Managing carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
+This document describes how to retrieve cart rules, vouchers, and promotional items in carts of registered users. For full information on the endpoint, see [Managing carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
 
 ## Installation
 
@@ -26,7 +26,7 @@ To retrieve all carts, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/retrieve-customer-carts.html).
+Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html).
 
 {% endinfo_block %}
 
@@ -364,7 +364,7 @@ To retrieve a particular cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | The unique ID of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | The unique ID of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 ### Request
 

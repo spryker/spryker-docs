@@ -17,7 +17,7 @@ Ensure that the related features are installed:
 
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | 
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | 
 
 ## 1) Install the required modules using Composer
 
@@ -29,7 +29,7 @@ composer require spryker-feature/spryker-core-back-office:"{{page.version}}" --u
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                       | EXPECTED DIRECTORY                             |
 |------------------------------|------------------------------------------------|

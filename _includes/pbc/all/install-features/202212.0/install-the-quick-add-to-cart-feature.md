@@ -353,9 +353,9 @@ Make the following checks at https://mysprykershop.com/quick-order:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE  |
 |---------|--------------|--------------|
 | Marketplace Product + Quick Add to Cart       |              | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html)             |
 | Marketplace Product Offer + Quick Add to Cart |              | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html) |

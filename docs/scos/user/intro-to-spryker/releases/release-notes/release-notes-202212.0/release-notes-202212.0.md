@@ -3,6 +3,9 @@ title: Release notes 202212.0
 description: Release notes for the Spryker SCOS release 202212.0
 last_updated: Dec 14, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes-202212.0/release-notes-202212.0.html
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0/release-notes-202212.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
@@ -55,7 +58,7 @@ Efficiency and accuracy are essential when working in the Back Office. Increasin
 
 ##### Documentation
 
-[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
+[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/install-and-upgrade/install-the-back-office-number-formatting.html#prerequisites)
 
 
 ## Spryker Glue API
@@ -70,7 +73,7 @@ It lets your customers always see the accurate price they must pay for the entir
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html)
 
 * Technical prerequisites:
   * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)

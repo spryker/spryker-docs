@@ -4,7 +4,7 @@ Dynamic Multistore is currently running under an *Early Access Release*. Early A
 
 {% endinfo_block %}
 
-This document describes how to install Dynamic Store + the Prices feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -178,7 +178,7 @@ CHF,DE,0
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| currency_code | mandatory | string | EUR | Define currency code. |
+| currency_code | ✓ | string | EUR | Define currency code. |
 |store_name |mandatory |string | DE | Defines the store name. |
 |is_default |mandatory |bool | 1 | Defines if the currency is default. |
 

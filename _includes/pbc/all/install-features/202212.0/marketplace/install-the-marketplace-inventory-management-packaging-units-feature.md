@@ -8,11 +8,11 @@ Follow the steps below to install the Marketplace Inventory Management + Packagi
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Packaging Units  | {{page.version}} | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)  |
-| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)  |
+| Marketplace Inventory Management | {{page.version}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)  |
 
 ### 1) Set up behavior
 

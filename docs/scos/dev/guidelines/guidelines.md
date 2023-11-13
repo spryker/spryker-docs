@@ -2,6 +2,7 @@
 title: Guidelines
 description: Guidelines for developers working on Spryker Commerce OS
 template: concept-topic-template
+redirect_from:
 ---
 
 This section contains a collection of useful guidelines for developing on the Spryker Commerce OS:  

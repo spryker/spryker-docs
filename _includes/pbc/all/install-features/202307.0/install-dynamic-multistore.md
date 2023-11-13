@@ -2,10 +2,13 @@
 
 Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
-{% endinfo_block %} 
+{% endinfo_block %}
+
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html).
 
 ## Install feature core
 
+Follow the steps below to install the Dynamic Multistore feature core.
 ### Prerequisites
 
 Follow the steps below to install the Dynamic Store feature:
@@ -672,7 +675,7 @@ de_DE,DE
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| locale_name | mandatory | string | en_US | Define locale name. |
+| locale_name | ✓ | string | en_US | Define locale name. |
  |store_name |mandatory |string | DE | Define store name. |
 
 
@@ -687,7 +690,7 @@ en_US,DE
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| locale_name | mandatory | string | en_US | Define locale name. |
+| locale_name | ✓ | string | en_US | Define locale name. |
 | store_name |mandatory |string | DE | Define store name. |
 
 
@@ -704,7 +707,7 @@ DE,FR
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| country | mandatory | string | DE | Define counry code. |
+| country | ✓ | string | DE | Define counry code. |
 | store_name |mandatory |string | DE | Define store name. |
 
 

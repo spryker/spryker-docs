@@ -19,7 +19,7 @@ Follow the steps below to install the Glue JSON:API convention core.
 
 Install the required features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 

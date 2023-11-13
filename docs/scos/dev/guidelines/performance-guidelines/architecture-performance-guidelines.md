@@ -3,6 +3,7 @@ title: Architecture performance guidelines
 description: Learn about the bad and best architecture practices which can affect the performance of applications in the very end servers
 last_updated: Nov 26, 2021
 template: concept-topic-template
+redirect_from:
 related:
   - title: General performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
@@ -207,7 +208,7 @@ Make sure to check the following articles on how to optimize the performance of 
 - [Performance guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
 - [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html)
 - [Integrating multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html)
-- [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html)
+- [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html)
 
 ## Application performance and load tests
 

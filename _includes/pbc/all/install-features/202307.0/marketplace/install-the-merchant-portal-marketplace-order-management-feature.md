@@ -5,10 +5,10 @@ This document describes how to integrate the Merchant Portal - Marketplace Order
 
 Install the required features:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
+| NAME  | VERSION | INSTALLATION GUIDE |
 | --------------- | --------- | ------------|
 | Marketplace Merchant Portal Core | {{page.version}} | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -97,10 +97,10 @@ Make sure that the `OrdersMerchantDashboardCardPlugin` plugin is set up by openi
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |  |[Merchant Portal -  Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |  |[Install the Merchant Portal -  Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |

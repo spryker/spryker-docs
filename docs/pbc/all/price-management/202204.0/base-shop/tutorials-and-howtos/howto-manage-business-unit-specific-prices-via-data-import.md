@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Manage business unit specific prices via data import"
+title: Manage business unit specific prices via data import
 last_updated: Feb 04, 2022
 template: howto-guide-template
 redirect_from:
@@ -37,7 +37,7 @@ console data:import merchant-relationship
 3. For each merchant relationship, create separate data import CSV files. For example, you can have a file `price-product-merchant-relationship-mr001.csv`, where `mr001` is the merchant relation key you defined in the previous step. In this file, you specify product prices for this specific merchant.
 4. Do one of the following:
    - Set specific default prices for this merchant manually.
-     <br>For example, if you provide a 20% discount on a product for the merchant relation `mr001` and change the default price for the product in the [product price file](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-product-price.csv.html), you have to go to the `price-product-merchant-relationship-mr001.csv` file and change the price for this merchant as well. Because changing the general default product price does not automatically change the merchant custom price for this product. Thus, with every change of the default product price, you have to manually change every merchant custom price of this product.
+     <br>For example, if you provide a 20% discount on a product for the merchant relation `mr001` and change the default price for the product in the [product price file](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html), you have to go to the `price-product-merchant-relationship-mr001.csv` file and change the price for this merchant as well. Because changing the general default product price does not automatically change the merchant custom price for this product. Thus, with every change of the default product price, you have to manually change every merchant custom price of this product.
      <br>This option can work for a relatively small amount of products and merchants you provide the specific prices for. For big amount of this data, to avoid too much manual work, we recommend considering the following option.
    - Create a custom script that can automatically adjust merchant-specific prices upon the default price change.
     <br>In your ERP, you might have the base, or default price, defined along with the percentage of discount for your merchants. The script would handle the relation between the default price and the discount for merchants to define the specific price for the merchants.

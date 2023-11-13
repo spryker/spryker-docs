@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
 related:
   - title: Episerver - Installation and Configuration
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html
   - title: Episerver - Order referenced commands
     link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
   - title: Episerver - API Requests
@@ -24,7 +24,7 @@ related:
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
-Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 

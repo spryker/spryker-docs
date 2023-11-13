@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product Approval Process feature into a Spryker project.
+This document describes how to install the Marketplace Product Approval Process feature.
 
 ## Install feature core
 

@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
+This document describes how to install the Marketplace Inventory Management + Packaging Units feature.
 
 ## Install feature core
 

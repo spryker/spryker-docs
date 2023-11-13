@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Merchant Custom Prices feature into a Spryker project.
+This document describes how to install the Marketplace Merchant Custom Prices feature.
 
 ## Install feature core
 

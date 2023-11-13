@@ -1,4 +1,4 @@
-This document describes how to integrate the Uuid Generation Console feature.
+This document describes how to install the Uuid Generation Console feature.
 
 ## Prerequisites
 

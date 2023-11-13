@@ -1,8 +1,8 @@
 
-This document describes how to integrate Alternative Products + Inventory Management into a Spryker project.
+This document describes how to install Alternative Products + Inventory Management.
 
 
-This document describes how to integrate Alternative Products + Inventory Management into a Spryker project.
+This document describes how to install Alternative Products + Inventory Management.
 
 ## Install feature core
 

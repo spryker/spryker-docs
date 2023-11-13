@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) + [Category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html#root-parent-and-child-categories) feature into a Spryker project.
+This document describes how to install the [Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) + [Category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html#root-parent-and-child-categories) feature.
 
 ## Install feature core
 

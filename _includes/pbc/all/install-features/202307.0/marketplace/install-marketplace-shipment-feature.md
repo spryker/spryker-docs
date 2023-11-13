@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Shipment feature into a Spryker project.
+This document describes how to install the Marketplace Shipment feature.
 
 ## Install feature core
 

@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Return Management feature into a Spryker project.
+This document describes how to install the Marketplace Return Management feature.
 
 ## Install feature core
 

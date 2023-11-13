@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature into a Spryker project.
+This document describes how to install the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ To start feature integration, install the required features:
 | NAME  | VERSION | INSTALLATION GUIDE |
 | --------------- | --------- | ------------|
 | Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |
-| Merchant Portal - Marketplace Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
+| Merchant Portal - Marketplace Order Management | {{page.version}} | [Install the Marketplace Merchant Portal Order Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
 
 
 ### 1) Set up behavior

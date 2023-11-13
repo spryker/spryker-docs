@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Service Points feature into a Spryker project.
+This document describes how to install the Service Points feature.
 
 ## Install feature core
 
@@ -14,7 +14,9 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
+
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/service-points: "{{page.version}}" --update-with-dependencies
@@ -22,7 +24,7 @@ composer require spryker-feature/service-points: "{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                  | EXPECTED DIRECTORY                             |
 |-------------------------|------------------------------------------------|
@@ -100,7 +102,7 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in the database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY                     | TYPE   | EVENT   |
 |-------------------------------------|--------|---------|
@@ -114,7 +116,8 @@ Make sure that the following changes have been applied in the database:
 | spy_region.uuid                     | column | created |
 | spy_sales_order_item_service_point  | table  | created |
 
-Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
+* Make sure propel entities have been generated successfully by checking their existence.
+* Make sure the existing Propel classes have been extended to include the new added columns.
 
 | CLASS NAMESPACE                                                           | EXTENDS                                                                                      |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -138,7 +141,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\SalesServicePoint\Persistence\SpySalesOrderItemServicePoint      | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePoint      |
 | \Orm\Zed\SalesServicePoint\Persistence\SpySalesOrderItemServicePointQuery | \Spryker\Zed\SalesServicePoint\Persistence\Propel\AbstractSpySalesOrderItemServicePointQuery |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                  | TYPE  | EVENT   | PATH                                                                            |
 |-------------------------------------------|-------|---------|---------------------------------------------------------------------------------|
@@ -250,7 +253,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 ### 4) Import service points
 
-1. Prepare your data according to your requirements using our demo data:
+1. Prepare the data according to your requirements using our demo data:
 
 **data/import/common/common/service_point.csv**
 
@@ -277,7 +280,7 @@ sp2,DE
 | COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                        |
 |-------------------|-----------|-----------|--------------|-----------------------------------------|
 | service_point_key | ✓ | string    | sp1          | Unique key of the service point.        |
-| store_name        | ✓ | string    | DE           | Name of the store to make relation for. |
+| store_name        | ✓ | string    | DE           | Store relation for the service point. |
 
 **data/import/common/common/service_point_address.csv**
 
@@ -290,13 +293,13 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                 |
 |-------------------|-----------|-----------|---------------------------|----------------------------------|
 | service_point_key | ✓ | string    | sp1                       | Unique key of the service point. |
-| region_iso2_code  | optional  | string    | DE-BE                     | Region ISO2 code                 |
-| country_iso2_code | ✓ | string    | DE                        | Country ISO2 code                |
-| address1          | ✓ | string    | Caroline-Michaelis-Straße | First line of address            |
-| address2          | ✓ | string    | 8a                        | Second line of address           |
-| address3          | optional  | string    | 12/1                      | Third line of address            |
-| city              | ✓ | string    | Berlin                    | City                             |
-| zip_code          | ✓ | string    | 10115                     | Zip code                         |
+| region_iso2_code  | optional  | string    | DE-BE                     | Region ISO2 code.               |
+| country_iso2_code | ✓ | string    | DE                        | Country ISO2 code.                |
+| address1          | ✓ | string    | Caroline-Michaelis-Straße | First line of address.            |
+| address2          | ✓ | string    | 8a                        | Second line of address.           |
+| address3          | optional  | string    | 12/1                      | Third line of address.            |
+| city              | ✓ | string    | Berlin                    | City.                             |
+| zip_code          | ✓ | string    | 10115                     | Zip code.                         |
 
 **data/import/common/common/service_type.csv**
 
@@ -325,7 +328,7 @@ s2,sp2,pickup,1
 | service_type_key  | ✓ | string    | pickup            | Unique key of the service type.   |
 | is_active         | ✓ | bool      | 0                 | Defines if the service is active. |
 
-2. Enable data imports at your configuration file—for example:
+2. Enable the data imports per your configuration file—for example:
 
 **data/import/local/full_EU.yml**
 
@@ -346,11 +349,11 @@ s2,sp2,pickup,1
 
 | PLUGIN                              | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                                       |
 |-------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
-| ServicePointDataImportPlugin        | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServicePointStoreDataImportPlugin   | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServiceTypeDataImportPlugin         | Imports service types into the database.                      | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
-| ServiceDataImportPlugin             | Imports services into the database.                           | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointDataImportPlugin        | Imports service points into the database.                |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointStoreDataImportPlugin   | Imports service point store relations into the database. |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServiceTypeDataImportPlugin         | Imports service types into the database.                      |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
+| ServiceDataImportPlugin             | Imports services into the database.                           |           | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport             |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -431,7 +434,7 @@ console data:import:service-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that entities were imported to the following database tables respectively:
+Make sure the entities have been imported to the following database tables:
 
 - `spy_service_point`
 - `spy_service_point_store`
@@ -445,6 +448,8 @@ Make sure that entities were imported to the following database tables respectiv
 
 1. Append the glossary according to your configuration:
 
+<details>
+  <summary markdown='span'>Glossary</summary>
 ```csv
 service_point.validation.service_point_key_exists,A service point with the same key already exists.,en_US
 service_point.validation.service_point_key_exists,Es existiert bereits eine Servicestelle mit dem gleichen Schlüssel.,de_DE
@@ -516,7 +521,9 @@ service_points_rest_api.error.endpoint_not_found,The endpoint is not found.,en_U
 service_points_rest_api.error.endpoint_not_found,Der Endpunkt wurde nicht gefunden.,de_DE
 service_points_rest_api.error.service_point_identifier_is_not_specified,The service point identifier is not specified.,en_US
 service_points_rest_api.error.service_point_identifier_is_not_specified,Der Servicestellen-Identifikator ist ungültig.,de_DE
- ```
+```
+
+</details>
 
 2. Import data:
 
@@ -545,7 +552,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
-2. Set up a new source for Service Points:
+2. Set up a source for service points:
 
 ```bash
 console search:setup:source-map
@@ -636,8 +643,8 @@ class ServicePointSearchConfig extends SprykerServicePointSearchConfig
 
 | PLUGIN                                              | SPECIFICATION                                                                                          | PREREQUISITES | NAMESPACE                                                           |
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the service point search table content into Elasticsearch.                        | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
-| ServicePointPublisherTriggerPlugin                  | Allows populating service point search table with data and triggering further export to Elasticsearch. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
+| ServicePointSynchronizationDataBulkRepositoryPlugin | Synchronizes the content of the service point search table into Elasticsearch.                        |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
+| ServicePointPublisherTriggerPlugin                  | Populates the service point search table with data and triggers the export to Elasticsearch. |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -691,11 +698,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                  | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                                         |
 |-----------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
-| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data.       | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
-| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
-| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.         | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
-| ServiceWritePublisherPlugin             | Listens for service events and publishes respective data. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\Service             |
+| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.         |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data.       |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.         |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
+| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.         |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
+| ServiceWritePublisherPlugin             | Listens for service events and publishes respective data. |           | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\Service             |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -733,12 +740,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                                            | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                              |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
-| ServicePointSearchResultFormatterPlugin                           | Maps raw Elasticsearch results to a transfer.                                                                 | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
-| SortedServicePointSearchQueryExpanderPlugin                       | Adds sorting to a search query.                                                                               | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes service point address relation from query if the `excludeAddressRelation` request parameter is provided. | None          | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointSearchResultFormatterPlugin                           | Maps raw Elasticsearch results to a transfer.                                                                 |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter |
+| SortedServicePointSearchQueryExpanderPlugin                       | Adds sorting to a search query.                                                                               |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes the service point address relation from a query if the `excludeAddressRelation` request parameter is provided. |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 
@@ -784,8 +791,8 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 {% info_block warningBox "Verification" %}
 
 1. Fill the `spy_service_point` table with some data and run `console publish:trigger-events -r service_point`.
-2. Make sure that the `spy_service_point_search` table is filled with respective data per store.
-3. Check Elasticearch documents and make sure data is structured in the following format:
+    * Make sure the `spy_service_point_search` table is filled with respective data per store.
+    * Make sure, in Elasticearch documents, data is structured in the following format:
 
 ```yaml
 {
@@ -836,14 +843,14 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 }
 ```
 
-4. In the `spy_service_point_search` table, change some records and run `console sync:data service_point`.
-5. Make sure that your changes have been synced to the respective Elasticsearch document.
+1. In the `spy_service_point_search` table, change some records and run `console sync:data service_point`.
+    Make sure your changes have been synced to the respective Elasticsearch document.
 
 {% endinfo_block %}
 
 ### 6) Configure export to Redis
 
-Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
+Configure tables to be published and synced to the Storage on create, edit, and delete changes:
 
 1. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module's configuration:
 
@@ -871,7 +878,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-2. Register new queue message processor:
+2. Register the queue message processor:
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -899,7 +906,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-3. Configure synchronization pool and event queue name:
+3. Configure the synchronization pool and event queue name:
 
 **src/Pyz/Zed/ServicePointStorage/ServicePointStorageConfig.php**
 
@@ -940,7 +947,7 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 }
 ```
 
-4. Set up publisher plugins:
+4. Set up the publisher plugins:
 
 | PLUGIN                                  | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
@@ -949,8 +956,8 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 | ServicePointStoreWritePublisherPlugin   | Publishes service point data by service point store entity events.                            |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
 | ServiceWritePublisherPlugin             | Publishes service point data by `SpyService` entity events.                                   |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\Service             |
 | ServiceTypeWritePublisherPlugin         | Publishes service type data by `SpyType` entity events.                                       |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServiceType         |
-| ServicePointPublisherTriggerPlugin      | Allows to populate service point storage table with data and trigger further export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
-| ServiceTypePublisherTriggerPlugin       | Allows to populate service type storage table with data and trigger further export to Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServicePointPublisherTriggerPlugin      | Populates the service point storage table with data and triggers the export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+| ServiceTypePublisherTriggerPlugin       | Populates the service type storage table with data and triggers the export to Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -1007,12 +1014,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-5. Set up synchronization plugins:
+5. Set up the synchronization plugins:
 
 | PLUGIN                                                    | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin       | Allows synchronizing the service point storage table content into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
-| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Allows synchronizing the service type storage table content into Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServicePointSynchronizationDataBulkRepositoryPlugin       | Synchronizes the content of the service point storage table into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+| ServiceTypeSynchronizationDataBulkRepositoryPlugin        | Synchronizes the content of the service type storage table into Redis.  |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -1042,22 +1049,30 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `service-point` trigger plugin works correctly:
+Verify the `service-point` trigger plugin works correctly:
 
 1. Fill the `spy_service_point`, `spy_service_point_store`, and `spy_servoce_point_address` tables with data.
 2. Run the `console publish:trigger-events -r service_point` command.
-3. Make sure that the `spy_service_point_storage` table has been filled with respective data.
-4. Make sure that, in your system, storage entries are displayed with `kv:service_point:{store}:{service_point_id}` mask.
+  * Make sure the `spy_service_point_storage` table has been filled with respective data.
+  * Make sure storage entries are now displayed with the `kv:service_point:{store}:{service_point_id}` mask.
 
-Make sure that `service-point` synchronization plugin works correctly:
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify the `service-point` synchronization plugin works correctly:
 
 1. Fill the `spy_service_point_storage` table with some data.
 2. Run the `console sync:data -r service_point` command.
-3. Make sure that, in your system, storage entries are displayed with the `kv:service_point:{store}:{service_point_id}` mask.
+    Make sure storage entries are now displayed with the `kv:service_point:{store}:{service_point_id}` mask.
 
-Make sure that when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+{% endinfo_block %}
 
-Make sure that, in Redis, data is displayed in the following format:
+{% info_block warningBox "Verification" %}
+
+* Make sure that, when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+
+* Make sure that, in Redis, data is displayed in the following format:
 ```yaml
 {
    "id_service_point": 1,
@@ -1101,22 +1116,36 @@ Make sure that, in Redis, data is displayed in the following format:
 }
 ```
 
-Make sure that the `service-type` trigger plugin works correctly:
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Verify the `service-type` trigger plugin works correctly:
 
 1. Fill the `spy_service_type` table with data.
 2. Run the `console publish:trigger-events -r service_type` command.
-3. Make sure that the `spy_service_type_storage` table has been filled with respective data.
-4. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
+  * Make sure the `spy_service_type_storage` table has been filled with respective data.
+  * Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
 
-Make sure that the `service-type` synchronization plugin works correctly:
+{% endinfo_block %}
+
+
+{% info_block warningBox "Verification" %}
+
+Verify the `service-type` synchronization plugin works correctly:
 
 1. Fill the `spy_service_type_storage` table with some data.
 2. Run the `console sync:data -r service_type` command.
-3. Make sure that, in your system, storage entries are displayed with the `kv:service_type:{service_type_id}` mask.
+    Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
 
-Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+{% endinfo_block %}
 
-Make sure that, in Redis, data is displayed in the following format:
+
+{% info_block warningBox "Verification" %}
+
+* Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+
+* Make sure that, in Redis, data is displayed in the following format:
 ```json
 {
     "id_service_type": 1,
@@ -1169,7 +1198,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 ```
 
-2. To enable the Backend API relationships, register the plugin:
+2. To enable the Backend API relationships, register the plugins:
 
 | PLUGIN                                                                | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                                            |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
@@ -1430,13 +1459,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can send the following requests:
+Make sure you can send the following requests:
 
 * `GET https://glue.mysprykershop.com/service-points`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
 
-Make sure that you can include the `service-point-addresses` relation in the `service-points` resource requests.
+Make sure that you can include the `service-point-addresses` resource in the `service-points` resource requests.
 * `GET https://glue.mysprykershop.com/service-points?include=service-point-addresses`
 * `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}?include=service-point-addresses`
 
@@ -1448,7 +1477,7 @@ Follow the steps below to install the Service Points feature frontend.
 
 ### 1) Add translations
 
-1. Append glossary for the feature:
+1. Append the glossary:
 
 ```csv
 service_point_widget.search,"Search for Store, zip code or city...",en_US
@@ -1465,7 +1494,73 @@ service_point_widget.no_results,"Nichts gefunden...",de_DE
 console data:import glossary
 ```
 
-### 2) Enable controllers
+### 2) Set up configuration
+
+Add the following configuration:
+
+1. Disable service points to be selected for product bundles during checkout:
+
+|CONFIGURATION     | SPECIFICATION   NAMESPACE                   |
+|------------------------|----------------------------------------------------------|-----------------------------|
+| ServicePointWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines the list of properties in an `ItemTransfer` that are not intended for form hydration.   | Pyz\Yves\ServicePointWidget |
+| ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines the list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |
+
+**src/Pyz/Yves/ServicePointWidget/ServicePointWidgetConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ServicePointWidget;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use SprykerShop\Yves\ServicePointWidget\ServicePointWidgetConfig as SprykerServicePointWidgetConfig;
+
+class ServicePointWidgetConfig extends SprykerServicePointWidgetConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getNotApplicableServicePointAddressStepFormItemPropertiesForHydration(): array
+    {
+        return [
+            ItemTransfer::BUNDLE_ITEM_IDENTIFIER,
+            ItemTransfer::RELATED_BUNDLE_ITEM_IDENTIFIER,
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductBundle/ProductBundleConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductBundle;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use Spryker\Zed\ProductBundle\ProductBundleConfig as SprykerProductBundleConfig;
+
+class ProductBundleConfig extends SprykerProductBundleConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getAllowedBundleItemFieldsToCopy(): array
+    {
+        return [
+            ItemTransfer::SHIPMENT,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure service points can't be selected for product bundles on the checkout address step.
+
+{% endinfo_block %}
+
+### 3) Enable controllers
 
 Register the following route providers on the Storefront:
 
@@ -1499,13 +1594,13 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 3) Set up widgets
+### 4) Set up widgets
 
-1. Register the following plugins to enable widgets:
+1. To enable widgets, register the following plugins:
 
 | PLUGIN                   | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
 |--------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
-| ServicePointSearchWidget | Allow customers to search, and sort a list of service points. |               | SprykerShop\Yves\ServicePointWidget\Widget |
+| ServicePointSearchWidget | Enables customers to search and sort service points. |               | SprykerShop\Yves\ServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1533,13 +1628,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Verify the widgets have been registered by adding the respective code snippets to a Twig template.
+Verify the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| WIDGET                   | VERIFICATION                                                                                                                                                 |
-|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| WIDGET                   | VERIFICATION                              |
+|--------------------------|-----------------------------------------------------------------|
 | ServicePointSearchWidget | `{% raw %}{%{% endraw %} widget 'ServicePointSearchWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
-Make sure that, during checkout, you can find a select a service point for the order items.
+Make sure that, during checkout, you can select a service point for the order items.
 
 {% endinfo_block %}
 

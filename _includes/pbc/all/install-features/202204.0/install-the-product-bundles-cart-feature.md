@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Bundles + Cart feature into a Spryker project.
+This document describes how to install the Product Bundles + Cart feature.
 
 ## Install feature core
 
@@ -12,7 +12,7 @@ Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 | Product Bundles | {{page.version}} | [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
 | Cart | {{page.version}} | |
 

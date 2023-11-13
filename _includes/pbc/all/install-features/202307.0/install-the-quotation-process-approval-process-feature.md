@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Quotation process + Approval Process feature into a Spryker project.
+This document describes how to install the Quotation process + Approval Process feature.
 
 ## Install feature core
 

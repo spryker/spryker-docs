@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Portal — Marketplace Product Options Management into a Spryker project.
+This document describes how to install the Merchant Portal — Marketplace Product Options Management.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ To start integration, integrate the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Marketplace Product Options| {{page.version}} | [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html) |
-| Merchant Portal Marketplace Order Management | {{page.version}} | [Merchant Portal Marketplace Order Management feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
+| Merchant Portal Marketplace Order Management | {{page.version}} | [Install the Merchant Portal Marketplace Order Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 

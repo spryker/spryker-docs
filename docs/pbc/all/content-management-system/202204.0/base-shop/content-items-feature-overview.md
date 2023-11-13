@@ -105,7 +105,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. For more details, see [Adding a Template for a Content Item Widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#content-item-widget-template).
+A developer can create and customize templates. For more details, see [Adding a Template for a Content Item Widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
 
 ## Content Database Schema
 CMS content is an item that can contain different content based on its type (banner, products, product set, file). Content items can be added to blocks and pages with a Twig function.

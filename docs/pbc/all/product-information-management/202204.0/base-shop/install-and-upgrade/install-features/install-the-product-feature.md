@@ -1,5 +1,5 @@
 ---
-title: Product feature integration
+title: Install the Product feature
 description: The guide describes the process of installing the Product Concrete Search Widget feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/product-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/product-feature-integration.html
 related:
-  - title: Glue API - Product feature integration
+  - title: Install the Product Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
   - title: Glue API - Product Image Sets feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
@@ -28,9 +28,9 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
-  - title: Product + Order Management feature integration
+  - title: Install the Product + Order Management feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html
-  - title: Product feature integration
+  - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 

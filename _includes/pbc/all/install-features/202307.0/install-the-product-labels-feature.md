@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Product Labels feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+This document describes how to install the [Product Labels feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html).
 
 ## Install feature core
 
@@ -14,7 +14,7 @@ Install the required features:
 | NAME         | VERSION           | INSTALLATION GUIDE                                                                                                                                                  |
 |--------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                               |
-| Product      | {{site.version}}  | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Product      | {{site.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -562,7 +562,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+| Product | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ### 1) Install the required modules using Composer
 

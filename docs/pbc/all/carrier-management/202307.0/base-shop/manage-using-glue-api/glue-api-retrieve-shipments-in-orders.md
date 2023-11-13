@@ -13,7 +13,7 @@ This document describes how to retrieve shipments in orders. For full informatio
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
+* [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
 * [Glue API: Order Management Feature Integration](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 
 ## Retrieve an order
@@ -41,7 +41,7 @@ To retrieve detailed information about an order, send the following request:
 
 | REQUEST  | USAGE  |
 | ------------------ | --------------------- |
-| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieves information about the order with the id `DE--6`, with order shipments included. |
+| `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieves information about the order with the id `DE--6`, with order shipments included. |
 
 ### Response
 

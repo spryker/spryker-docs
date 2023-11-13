@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Shipment + Cart feature into a Spryker project.
+This document describes how to install the Marketplace Shipment + Cart feature.
 
 ## Install feature core
 
@@ -10,7 +10,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
+| Marketplace Shipment | {{page.version}} | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
 | Cart | {{page.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### 1) Set up behavior

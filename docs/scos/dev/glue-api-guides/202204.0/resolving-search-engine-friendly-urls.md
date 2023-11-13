@@ -11,7 +11,7 @@ redirect_from:
   - /docs/resolving-search-engine-friendly-urls
   - /docs/en/resolving-search-engine-friendly-urls
 related:
-  - title: Glue API - Spryker Core feature integration
+  - title: Install the Spryker Core Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
@@ -32,7 +32,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Spryker Core Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Resolve a SEF URL into a Glue API URL
 

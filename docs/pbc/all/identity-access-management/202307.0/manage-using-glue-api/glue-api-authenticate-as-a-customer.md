@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-customer
 originalArticleId: 4d61554f-dce0-40a2-9091-2db810bcf9a2
 redirect_from:
-  - /2021080/docs/authenticating-as-a-customer
-  - /2021080/docs/en/authenticating-as-a-customer
-  - /docs/authenticating-as-a-customer
-  - /docs/en/authenticating-as-a-customer
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/authenticating-as-a-customer.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/authenticating-as-a-customer.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/authenticating-as-a-customer.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/authenticating-as-a-customer.html

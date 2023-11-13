@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Offer Shipments Availability feature into a Spryker project.
+This document describes how to install the Product Offer Shipments Availability feature.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 | NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer Service Points Availability | {{page.version}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html) |
-| Shipment                                  | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
+| Shipment                                  | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
 
 ### 1) Install the required modules using Composer
 
@@ -120,22 +120,22 @@ Make sure that availability plugin works correctly:
 
 | PLUGIN                                                        | SPECIFICATION                                                     | PREREQUISITES | NAMESPACE                                                                                                                                                    |
 |---------------------------------------------------------------|-------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin  | Filters product offer service point availability by shipmen type. | None          | Spryker\Client\ProductOfferShipmentTypeAvailability\Plugin\ProductOfferServicePointAvailability\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin |
+| ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin  | Filters product offer service point availability by shipmen type. | None          | Spryker\Client\ProductOfferShipmentTypeAvailabilityStorage\Plugin\ProductOfferServicePointAvailabilityStorage\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin |
 
-**src/Pyz/Client/ProductOfferServicePointAvailability/ProductOfferServicePointAvailabilityDependencyProvider.php**
+**src/Pyz/Client/ProductOfferServicePointAvailabilityStorage/ProductOfferServicePointAvailabilityStorageDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Client\ProductOfferServicePointAvailability;
+namespace Pyz\Client\ProductOfferServicePointAvailabilityStorage;
 
-use Spryker\Client\ProductOfferServicePointAvailability\ProductOfferServicePointAvailabilityDependencyProvider as SprykerProductOfferServicePointAvailabilityDependencyProvider;
-use Spryker\Client\ProductOfferShipmentTypeAvailability\Plugin\ProductOfferServicePointAvailability\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin;
+use Spryker\Client\ProductOfferServicePointAvailabilityStorage\ProductOfferServicePointAvailabilityStorageDependencyProvider as SprykerProductOfferServicePointAvailabilityStorageDependencyProvider;
+use Spryker\Client\ProductOfferShipmentTypeAvailabilityStorage\Plugin\ProductOfferServicePointAvailabilityStorage\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin;
 
-class ProductOfferServicePointAvailabilityDependencyProvider extends SprykerProductOfferServicePointAvailabilityDependencyProvider
+class ProductOfferServicePointAvailabilityStorageDependencyProvider extends SprykerProductOfferServicePointAvailabilityStorageDependencyProvider
 {
     /**
-     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityFilterPluginInterface>
+     * @return list<\Spryker\Client\ProductOfferServicePointAvailabilityStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityFilterPluginInterface>
      */
     protected function getProductOfferServicePointAvailabilityFilterPlugins(): array
     {

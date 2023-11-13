@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Category Image feature into a Spryker project.
+This document describes how to install the Category Image feature.
 
 ## Install feature core
 
@@ -14,7 +14,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
 | Category | {{page.version}} | |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -406,7 +406,7 @@ Please overview and install the necessary features before beginning the integrat
 | NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
 | Category | {{page.version}} | |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 

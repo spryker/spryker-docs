@@ -38,8 +38,8 @@ For detailed information on the modules that provide the API functionality and r
 Gift Card is available in the Spryker shop as an abstract product with its variants (concrete products). To purchase the gift card:
 
 1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart) for more details.
-2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-glue-api-submit-checkout-data.html).
-3. [Complete the checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-glue-api-check-out-purchases.html#place-an-order).
+2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).
+3. [Complete the checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html#place-an-order).
 
 {% info_block warningBox "Note" %}
 

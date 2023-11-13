@@ -8,39 +8,13 @@ Data Exchange refers to the process of transferring data between Spryker and thi
 
 Spryker offers the following options to import and export data:
 
-- Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
-- Data Exchange API: available in SCCOS by default
 - Spryker Middleware powered by Alumio:
     - Spryker Integration Apps
     - Custom integrations using the existing Alumio connectors
     - Custom integration apps using the Alumio SDK to build your own connectors
+- Data Exchange API: available in SCCOS by default
+- Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
 
-
-## Data Importers and Data Exporters
-
-Data Importers and Data Exporters are tools that let you bring external data into and send data from SCCOS, using .CSV files.  Data Importers and Data Exporters are part of the SCCOS platform core.
-Data Importers and Data Exporters require extensive customization development for each project and ongoing development effort, which makes them less suitable for demanding data exchange.
-
-For information on how Data importers and Exporters work, see [Data import](/docs/scos/dev/data-import/{{site.version}}/data-import.html) and [Data export](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/import-and-export-data/orders-data-export/orders-data-export.html).
-
-## Data Exchange API
-
-Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is always current across all integrated platforms. It's part of the SCCOS platform core.
-
-Data Exchange API lets you build, customize, and manage APIs tailored to your specific business requirements through a user interface.
-
-The main benefits of the Data Exchange API include the following:
-
-- No coding is required: The API endpoints are created from the user interface.
-- Rapid API generation: The APIs are generated within minutes.
-- Flexibility and customization: You can tailor APIs to your needs. You can define parameters to ensure compatibility with your systems.
-- Real-time updates: The infrastructure supports dynamic changes, so you can modify APIs on the fly.
-- Security and Access Control: The infrastructure incorporates strong security measures and access controls, which safeguards sensitive information.
-
-We recommend considering the Data Exchange API in the following cases:
-
-- You want to implement a data integration via API with a middleware that's not [Alumio](https://www.alumio.com).
-- You want to create your own data integration engine via API, without using any middleware software.
 
 ## Spryker Middleware powered by Alumio
 
@@ -139,3 +113,31 @@ With the data integration with custom connectors, the data exchange process look
 We recommend building custom integrations with the connectors created using the Alumio SDK, in cases where Alumio doesn't have the connectors to the system you want to exchange data with. Even though you need a developer to build a connector for such systems, most of the time, this solution is still faster and, in the long term, more cost-efficient than, for example, using the default Data Importers and Data Exporters.
 
 For information on how to build Alumio connectors with the Alumio SDK, check the Alumio documentation: [Creating Alumio Connector Packages](https://forum.alumio.com/t/creating-alumio-connector-packages/252).
+
+
+## Data Exchange API
+
+Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is always current across all integrated platforms. It's part of the SCCOS platform core.
+
+Data Exchange API lets you build, customize, and manage APIs tailored to your specific business requirements through a user interface.
+
+The main benefits of the Data Exchange API include the following:
+
+- No coding is required: The API endpoints are created from the user interface.
+- Rapid API generation: The APIs are generated within minutes.
+- Flexibility and customization: You can tailor APIs to your needs. You can define parameters to ensure compatibility with your systems.
+- Real-time updates: The infrastructure supports dynamic changes, so you can modify APIs on the fly.
+- Security and Access Control: The infrastructure incorporates strong security measures and access controls, which safeguards sensitive information.
+
+We recommend considering the Data Exchange API in the following cases:
+
+- You want to implement a data integration via API with a middleware that's not [Alumio](https://www.alumio.com).
+- You want to create your own data integration engine via API, without using any middleware software.
+
+
+## Data Importers and Data Exporters
+
+Data Importers and Data Exporters are tools that let you bring external data into and send data from SCCOS, using .CSV files.  Data Importers and Data Exporters are part of the SCCOS platform core.
+Data Importers and Data Exporters require extensive customization development for each project and ongoing development effort, which makes them less suitable for demanding data exchange.
+
+For information on how Data importers and Exporters work, see [Data import](/docs/scos/dev/data-import/{{site.version}}/data-import.html) and [Data export](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/import-and-export-data/orders-data-export/orders-data-export.html).

@@ -5,16 +5,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access-to-glue-api-resources
 originalArticleId: 8811d81a-5a7a-4c30-a73f-d1ae53494e9e
 redirect_from:
-  - /2021080/docs/managing-customer-access-to-glue-api-resources
-  - /2021080/docs/en/managing-customer-access-to-glue-api-resources
-  - /docs/managing-customer-access-to-glue-api-resources
-  - /docs/en/managing-customer-access-to-glue-api-resources
-  - /v6/docs/managing-customer-access-to-api-resources
-  - /v6/docs/en/managing-customer-access-to-api-resources
-  - /v5/docs/managing-customer-access-to-api-resources
-  - /v5/docs/en/managing-customer-access-to-api-resources
-  - /v4/docs/managing-customer-access-to-api-resources
-  - /v4/docs/en/managing-customer-access-to-api-resources
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
 related:
   - title: Authentication and Authorization

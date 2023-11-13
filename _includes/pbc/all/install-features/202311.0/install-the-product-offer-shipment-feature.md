@@ -104,6 +104,8 @@ Ensure the following transfers have been created:
 | ProductOfferShipmentTypeIteratorConditions | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeIteratorConditionsTransfer |
 | ProductOfferShipmentType                   | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeTransfer                   |
 | ProductOfferShipmentTypeStorage            | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeStorageTransfer            |
+| ProductOfferShipmentTypeCollectionRequest  | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionRequestTransfer  |
+| ProductOfferShipmentTypeCollectionResponse | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionResponseTransfer |
 | ProductOfferCriteria                       | class    | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer                       |
 | ProductOfferConditions                     | class    | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer                     |
 | ProductOfferCollection                     | class    | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer                     |
@@ -132,6 +134,8 @@ Ensure the following transfers have been created:
 | Item                                       | class    | created | src/Generated/Shared/Transfer/ItemTransfer                                       |
 | ProductOfferStorageCriteria                | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer                |
 | ProductOfferStorageCollection              | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer              |
+| Error                                      | class    | created | src/Generated/Shared/Transfer/ErrorTransfer                                      |
+| ErrorCollection                            | class    | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                            |
 | ProductOfferStorage.productConcreteSku     | property | added   | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                        |
 | ShipmentTypeStorage.key                    | property | added   | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                        |
 
@@ -435,7 +439,28 @@ Make sure that the configured data has been added to the `spy_product_offer_ship
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 5) Add translations
+
+1. Append the glossary according to your configuration:
+
+```csv
+product_offer_shipment_type.validation.product_offer_reference_not_found,Product offer '%product_offer_reference%' not found.,en_US
+product_offer_shipment_type.validation.product_offer_reference_not_found,Product offer '%product_offer_reference%' nicht gefunden.,de_DE
+product_offer_shipment_type.validation.shipment_type_uuid_not_found,Delivery types with uuids '%shipment_type_uuids%' not found.,en_US
+product_offer_shipment_type.validation.shipment_type_uuid_not_found,Lieferarten mit den uuids '%shipment_type_uuids%' wurde nicht gefunden.,de_DE
+product_offer_shipment_type.validation.product_offer_not_unique,A product offer with the same reference already exists in request.,de_DE
+product_offer_shipment_type.validation.product_offer_not_unique,Ein Product Offer mit der gleichen Referenz liegt bereits in der Anfrage vor.,de_DE
+product_offer_shipment_type.validation.shipment_type_not_unique,A delivery type for product offer '%product_offer_reference%' with the same uuid already exists in request.,de_DE
+product_offer_shipment_type.validation.shipment_type_not_unique,Ein Lieferart für Product Offer '%product_offer_reference%' mit derselben UUID ist bereits in der Anfrage vorhanden.,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+### 6) Set up behavior
 
 Enable the following plugins:
 

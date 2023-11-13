@@ -5,7 +5,7 @@ This document describes how to install the Service Points + [Customer Account Ma
 
 ## Prerequisites
 
-To start feature installation, integrate the required features:
+To start feature installation, install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -19,6 +19,8 @@ To install the the demo Click&Collect functionalities, install the module using 
 ```bash
 composer require spryker-shop/click-and-collect-page-example: "^0.1.0" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
 
 Make sure the following module has been installed:
 

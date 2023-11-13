@@ -1,30 +1,26 @@
 
 
 
-This document describes how to integrate the Service Points + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the Service Points + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
-## Install feature core
+## Prerequisites
 
-Follow the steps below to install the Service Points + Customer Account Management feature.
-
-### Prerequisites
-
-To start feature integration, integrate the required features:
+To start feature installation, integrate the required features:
 
 | NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points              | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-the-service-points-feature.html)                                                                      |
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-We offer the demo Click&Collect functionalities. To use it, install the following module:
+To install the the demo Click&Collect functionalities, install the module using Composer:
 
 ```bash
 composer require spryker-shop/click-and-collect-page-example: "^0.1.0" --update-with-dependencies
 ```
 
-Make sure that the following module has been installed:
+Make sure the following module has been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                                 |
 |----------------------------|----------------------------------------------------|
@@ -79,10 +75,10 @@ Enable the following plugins:
 |------------------------------------------------------------------------------|-----------------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
 | ClickAndCollectServiceTypeCheckoutAddressCollectionFormExpanderPlugin        | Expands the `ServicePoint` subform with a pickupable service type.          |               | SprykerShop\Yves\ClickAndCollectPageExample\Plugin\CustomerPage    |
 | ClickAndCollectServiceTypeCheckoutMultiShippingAddressesFormExpanderPlugin   | Expands `ServicePoint` with a pickupable service type.                      |               | SprykerShop\Yves\ClickAndCollectPageExample\Plugin\CustomerPage    |
-| ServicePointCheckoutAddressCollectionFormExpanderPlugin                      | Expands checkout address form with `ServicePoint`.                          |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage            |
-| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin                 | Expands checkout multi-shipping address form with `ServicePoint`.           |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage            |
-| ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin               | Expands shipments with service point address.                               |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage            |
-| ClickAndCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin  | Skips caching of the `ClickAndCollectServicePointAddressFormWidget` widget. |               | SprykerShop\Yves\ClickAndCollectPageExample\Plugin\ShopApplication |
+| ServicePointCheckoutAddressCollectionFormExpanderPlugin                      | Expands the checkout address form with `ServicePoint`.                          |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage            |
+| ServicePointCheckoutMultiShippingAddressesFormExpanderPlugin                 | Expands the checkout multi-shipping address form with `ServicePoint`.           |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage            |
+| ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin               | Expands shipments with the service point address.                               |               | SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage            |
+| ClickAndCollectServicePointAddressFormWidgetCacheKeyGeneratorStrategyPlugin  | Skips the caching of the `ClickAndCollectServicePointAddressFormWidget` widget. |               | SprykerShop\Yves\ClickAndCollectPageExample\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -256,10 +252,10 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets have been registered:
 
 | MODULE                                       | TEST                                                                             |
 |----------------------------------------------|----------------------------------------------------------------------------------|
-| ClickAndCollectServicePointAddressFormWidget | Go to **Address Checkout Step** and make sure that you can select service point. |
+| ClickAndCollectServicePointAddressFormWidget | Go to the address checkout step and make sure you can select a service point. |
 
 {% endinfo_block %}

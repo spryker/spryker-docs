@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) into a Spryker project.
+This document describes how to install the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html).
 
 ## Install feature core
 

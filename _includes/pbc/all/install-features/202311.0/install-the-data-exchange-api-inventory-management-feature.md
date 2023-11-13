@@ -1,4 +1,4 @@
-This document describes how to integrate the Data Exchange API + Inventory Management feature into a Spryker project.
+This document describes how to install the Data Exchange API + Inventory Management feature.
 
 ## Install feature core
 

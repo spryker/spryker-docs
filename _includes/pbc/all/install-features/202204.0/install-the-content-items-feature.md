@@ -1,6 +1,6 @@
 
 
-This document describes how. to integrate the [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) feature into a Spryker project.
+This document describes how. to integrate the [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) feature.
 
 ## Install feature core
 

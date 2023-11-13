@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Catalog + Category Management feature into a Spryker project.
+This document describes how to install the Catalog + Category Management feature.
 
 ## Install feature core
 

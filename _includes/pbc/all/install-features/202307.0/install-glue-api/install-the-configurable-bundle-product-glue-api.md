@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Glue API: Configurable Bundle + Product feature.
+This document describes how to install the Glue API: Configurable Bundle + Product feature.
 
 ## Prerequisites
 

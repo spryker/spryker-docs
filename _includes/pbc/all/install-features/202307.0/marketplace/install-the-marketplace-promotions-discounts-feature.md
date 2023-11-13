@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
+This document describes how to install the Marketplace Promotions & Discounts feature.
 
 ## Install feature core
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Zed API Merchant Relationships into a Spryker project.
+This document describes how to install the Zed API Merchant Relationships.
 
 ## Install feature core
 

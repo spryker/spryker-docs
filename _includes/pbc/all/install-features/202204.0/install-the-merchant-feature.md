@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant feature into a Spryker project.
+This document describes how to install the Merchant feature.
 
 ## Install feature core
 

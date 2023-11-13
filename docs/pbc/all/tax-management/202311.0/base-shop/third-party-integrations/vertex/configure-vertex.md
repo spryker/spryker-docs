@@ -12,7 +12,7 @@ Once you have [integrated the Vertex app](/docs/pbc/all/tax-management/{{page.ve
 Before configuring Vertex, ensure the following prerequisites are met:
 
 - You have an account with [Vertex](https://www.vertexinc.com/). Contact the Spryker Support team or your Customer Success Manager if you need support getting a Vertex account.
-- Company Code is set up in Vertex and added to your project. See the Guidelines LINK for more details.
+- Company Code is set up in Vertex and added to your project. See the [information about Company code](#company-code) for more details.
 - You removed the default tax rate value from the Back Office. When you use Vertex to determine taxes, the tax rate received from Vertex does not overwrite the existing tax rate values in the Back Office. Therefore, before using Vertex, we recommend removing the default values from the Back Office. To remove the default tax rates, in your store's Back Office, go to **Administration -> Tax rates** and delete the tax rates.
 
 ## Configure Vertex
@@ -31,6 +31,8 @@ To configure Vertex, do the following:
 9. Click **Save**.
 
 ![vertex-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-configuration.png)
+
+<a name="company-code"></a>
 
 {% info_block infoBox "Company code" %}
 

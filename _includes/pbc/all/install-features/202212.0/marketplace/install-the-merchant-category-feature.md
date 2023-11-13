@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Category feature into a Spryker project.
+This document describes how to install the Merchant Category feature.
 
 ## Install feature core
 

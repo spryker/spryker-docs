@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Customer Account Management + Agent Assist feature into a Spryker project.
+This document describes how to install the Customer Account Management + Agent Assist feature.
 
 ## Install feature core
 

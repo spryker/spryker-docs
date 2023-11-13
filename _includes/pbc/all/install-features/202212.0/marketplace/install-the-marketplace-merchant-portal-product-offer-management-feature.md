@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
+This document describes how to install the Marketplace Merchant Portal Product Offer Management feature.
 
 ## Prerequisites
 

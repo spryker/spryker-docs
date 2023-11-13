@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
+This document describes how to install the Marketplace Product + Inventory Management feature.
 
 ## Install feature core
 

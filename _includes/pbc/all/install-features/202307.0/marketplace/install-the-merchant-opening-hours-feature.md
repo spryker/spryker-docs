@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Opening Hours feature into a Spryker project.
+This document describes how to install the Merchant Opening Hours feature.
 
 ## Install feature core
 

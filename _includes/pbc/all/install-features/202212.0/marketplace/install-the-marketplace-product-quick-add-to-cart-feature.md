@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Product + Quick Add to Cart feature into a Spryker project.
+This document describes how to install the Marketplace Product + Quick Add to Cart feature.
 
 ## Install feature frontend
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product Options + Checkout feature into a Spryker project.
+This document describes how to install the Marketplace Product Options + Checkout feature.
 
 
 ## Install feature core

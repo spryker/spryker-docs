@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature into a Spryker project.
+This document describes how to install the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature.
 
 ## Install feature core
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Catalog + Order Management feature connector into a Spryker project.
+This document describes how to install the Catalog + Order Management feature connector.
 
 ## Install feature core
 

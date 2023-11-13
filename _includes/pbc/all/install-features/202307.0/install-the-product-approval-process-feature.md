@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Approval Process feature into a Spryker project.
+This document describes how to install the Product Approval Process feature.
 
 ## Install feature core
 

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Glue JSON:API convention for Backend API application into a Spryker project.
+This document describes how to install the Glue JSON:API convention for Backend API application.
 
 ## Install feature core
 

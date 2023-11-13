@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature.
 
 ## Install feature core
 

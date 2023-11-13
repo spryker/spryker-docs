@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Category Management Glue API feature into a Spryker project.
+This document describes how to install the Category Management Glue API feature.
 
 ## Prerequisites
 

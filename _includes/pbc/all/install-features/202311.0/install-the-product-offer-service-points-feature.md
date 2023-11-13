@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Offer + Service Points feature into a Spryker project.
+This document describes how to install the Product Offer + Service Points feature.
 
 ## Install feature core
 

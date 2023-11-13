@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [File Manager feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html) into a Spryker project.
+This document describes how to install the [File Manager feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html).
 
 ## Install feature core
 

@@ -6,7 +6,7 @@ The following feature integration guide expects the basic feature to be in place
 
 {% endinfo_block %}
 
-This document describes how to integrate the Company Account feature API into a Spryker project.
+This document describes how to install the Company Account feature API.
 
 ## Prerequisites
 

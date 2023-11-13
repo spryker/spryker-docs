@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Offer Shipments Availability feature into a Spryker project.
+This document describes how to install the Product Offer Shipments Availability feature.
 
 ## Install feature core
 

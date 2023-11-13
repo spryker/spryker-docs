@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html) feature.
 
 ## Install feature core
 

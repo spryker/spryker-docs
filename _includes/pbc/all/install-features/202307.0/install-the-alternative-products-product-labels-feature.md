@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Alternative Products + Product Labels feature into a Spryker project.
+This document describes how to install the Alternative Products + Product Labels feature.
 
 ## Install feature core
 

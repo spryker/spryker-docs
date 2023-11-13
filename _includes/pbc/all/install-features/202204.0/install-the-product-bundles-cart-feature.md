@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Bundles + Cart feature into a Spryker project.
+This document describes how to install the Product Bundles + Cart feature.
 
 ## Install feature core
 

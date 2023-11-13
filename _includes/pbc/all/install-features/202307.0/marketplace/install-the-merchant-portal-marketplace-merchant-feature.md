@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Merchant Portal - Marketplace Merchant feature into a Spryker project.
+This document describes how to install the Merchant Portal - Marketplace Merchant feature.
 
 ## Install feature core
 

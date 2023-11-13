@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Shared Carts Glue API into a Spryker project.
+This document describes how to install the Shared Carts Glue API.
 
 
 ## Prerequisites

@@ -33,15 +33,15 @@ Shipment type refers to the different options available to customers for receivi
 
 Spryker offers two ways to set up the shipment types:
 - Backend API (check `ShipmentTypesBackendApi` module)
-- Import (check `ShipmentTypeDataImport` module)
+- Data import (check `ShipmentTypeDataImport` module)
 
-## 3. Extension point for filter shipment types for the quote during checkout process
+## 3. Extension point for filter shipment types for the quote during the checkout process
 
-Allows filtering out shipment types for the quote during checkout process.
+Allows filtering out shipment types for the quote during the checkout process.
 
 **\Spryker\Client\ShipmentTypeStorageExtension\Dependency\Plugin\AvailableShipmentTypeFilterPluginInterface**
 
-The example of implementation:
+An example:
 
 **\Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage\ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin**
 
@@ -49,12 +49,12 @@ The plugin filters out shipment types without product offer shipment type relati
 
 ## 4. Extension point for expanding Shipment Type data before publishing to the Storage
 
-Provides ability to expand shipment type storage collection with additional data before publishing it to the Storage.
+Provides the ability to expand shipment type storage collection with additional data before publishing it to the Storage.
 Later, the expanded data can be used after retrieving the Shipment Type data from the Storage.
 
 **\Spryker\Zed\ShipmentTypeStorageExtension\Dependency\Plugin\ShipmentTypeStorageExpanderPluginInterface**
 
-The example of implementation:
+An example:
 
 **\Spryker\Zed\ShipmentTypeServicePointStorage\Communication\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin**
 
@@ -62,11 +62,11 @@ The plugin expands shipment type with a service type.
 
 ## 5. Extension point for expanding Shipment Type data after retrieving from the Storage
 
-Provides ability to expand shipment type storage collection with additional data after it is retrieved from the Storage.
+Provides the ability to expand shipment type storage collection with additional data after it is retrieved from the Storage.
 
 **\Spryker\Client\ShipmentTypeStorageExtension\Dependency\Plugin\ShipmentTypeStorageExpanderPluginInterface**
 
-The example of implementation:
+An example:
 
 **\Spryker\Client\ShipmentTypeServicePointStorage\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin**
 

@@ -35,4 +35,4 @@ Each service point can provide one or multiple unique services in it to the cust
 
 Spryker offers two ways to set up the service points, service point addresses, service point stores, service types and services:
 - Backend API (check `ServicePointsBackendApi` module)
-- Import (check `ServicePointDataImport` module)
+- Data import (check `ServicePointDataImport` module)

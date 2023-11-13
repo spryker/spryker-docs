@@ -22,26 +22,26 @@ Refers to the availability calculation.
 | ProductOfferServicePointAvailabilityStorage                    | vendor/spryker/product-offer-service-point-availability-storage                      |
 | ProductOfferServicePointAvailabilityStorageExtension           | vendor/spryker/product-offer-service-point-availability-storage-extension            |
 
-## 2. Extension point for calculating product offer service availability
+## 2. Extension point for calculating the availability of a product offer at a service point.
 
-The plugin is used to calculate product offer service point availability based on a specific needs.
+The plugin is used to calculate product offer availability at the service point based on specific needs.
 
 **\Spryker\Client\ProductOfferServicePointAvailabilityCalculatorStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityCalculatorStrategyPluginInterface**
 
-The example of implementation:
+An example:
 
 **\Spryker\Client\ClickAndCollectExample\Plugin\ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin**
 
 The plugin calculates product offer availabilities per service point for each item in request based on the provided conditions.
 
-## 3. Extension point for filtering product offer service availability
+## 3. Extension point for filtering data about the availability of a product offer at a service point.
 
 Provides ability to filter product offer service point availability collection by provided criteria. The plugin gets executed after a list of `ProductOfferServicePointAvailabilityResponseItemTransfer` is created.
 
 **\Spryker\Client\ProductOfferServicePointAvailabilityStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityFilterPluginInterface**
 
-The example of implementation:
+An example:
 
 **\Spryker\Client\ProductOfferShipmentTypeAvailabilityStorage\Plugin\ProductOfferServicePointAvailabilityStorage\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin**
 
-The plugin filters product offer service point availability transfers by shipment type.
+The plugin filters product offer availability data at the service point by shipment type in case of its existence in the criteria of the availability request.

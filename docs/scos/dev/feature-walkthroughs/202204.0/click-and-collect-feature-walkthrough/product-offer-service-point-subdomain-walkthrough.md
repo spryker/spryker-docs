@@ -33,13 +33,13 @@ Refers to the connection between product offer and service point.
 
 Spryker offers import (check `ProductOfferServicePointDataImport` module) functionality to set up the connection between product offers and service points.
 
-## 3. Extension point for filtering Product Offer Services before publishing it to Storage.
+## 3. Extension point for filtering services assigned to the product offers before publishing them to Storage
 
 Provides ability to filter Product Offer Service collection before publishing it to the Storage.
 
 **\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependency\Plugin\ProductOfferServiceCollectionStorageFilterPluginInterface**
 
-The example of implementation:
+An example:
 
 **\Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceStorageFilterPlugin**
 

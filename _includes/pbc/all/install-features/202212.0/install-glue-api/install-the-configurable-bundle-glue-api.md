@@ -7,11 +7,11 @@ This document describes how to integrate the Configurable Bundle feature.
 To start the feature integration, overview and install the necessary features:
 
 
-| FEATURE | VERSION | INTEGRATION GUIDE |
+| FEATURE | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 |Configurable Bundles |{{page.version}} | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html)|
-|Order Management |{{page.version}} |[Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)|
+|Order Management |{{page.version}} |[Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)|
 
 ## 1) Install the required modules using Composer
 
@@ -178,12 +178,12 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 {% endinfo_block %}
 
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Glue API: Configurable Bundle + Cart Feature | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) |
-| Glue API: Configurable Bundle + Product Feature | ✓ | [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |
+| Glue API: Configurable Bundle + Product Feature | ✓ | [Install the Configurable Bundle + Product Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html) |

@@ -6,9 +6,9 @@ This document describes how to integrate the Agent Assist + Shopping List featur
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME          | VERSION | INTEGRATION GUIDE                                            |
+| NAME          | VERSION | INSTALLATION GUIDE                                            |
 | ------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core  | master  | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core  | master  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Agent Assist  | master  | [Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html) |
 | Shopping List | master  | [Shopping lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html) |
 
@@ -50,11 +50,11 @@ Ensure that, after finishing customer impersonation, the session shopping list c
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | ---------- | ---------------- | ----------------- |
 | Agent Assist | ✓      | [Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html) |
 | Agent Assist + Cart |       | [Install the Agent Assist + Cart feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-cart-feature.html) |

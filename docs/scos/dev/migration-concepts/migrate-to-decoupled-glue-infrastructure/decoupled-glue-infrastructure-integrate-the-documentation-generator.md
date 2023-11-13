@@ -17,7 +17,7 @@ Follow the steps below to install the Glue documentation generation.
 
 To start the integration of the feature, overview and install the necessary features:
 
-| NAME                                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                           |
+| NAME                                         | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                           |
 |----------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html)  |
 

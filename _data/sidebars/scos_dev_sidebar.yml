@@ -356,6 +356,10 @@ entries:
           url: /docs/scos/dev/glue-api-guides/routing/create-backend-resources.html
         - title: Create routes
           url: /docs/scos/dev/glue-api-guides/routing/create-routes.html
+    - title: Configure the included section
+      url: /docs/scos/dev/glue-api-guides/configure-the-included-section.html
+    - title: Configure cross-origin resource sharing
+      url: /docs/scos/dev/glue-api-guides/configure-cross-origin-resource-sharing-for-glue-api.html
     - title: Create and change Glue API conventions
       url: /docs/scos/dev/glue-api-guides/create-and-change-glue-api-conventions.html
       include_versions:
@@ -407,6 +411,8 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+    - title: Integrate a CIAM provider
+      url: /docs/scos/dev/glue-api-guides/integrate-a-ciam-provider.html
     - title: Resolving search engine friendly URLs
       url: /docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
       include_versions:
@@ -2178,25 +2184,12 @@ entries:
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
-      - title: Glue API HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
-        nested:
-        - title: Configure cross-origin resource sharing for Glue API
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
-        - title: Configuring Visibility of the Included Section
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
-        - title: Managing customer access to Glue API resources
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
-        - title: "HowTo: Integrate a CIAM provider"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/howto-integrate-a-ciam-provider.html
       - title: "HowTo: Replace key-value storage with database"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
-      - title: "HowTo: Debug payment integrations locally"
-        url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
       - title: "HowTo: Do better deployments"
@@ -2211,8 +2204,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
       - title: "HowTo: Handle graceful shutdown"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
-      - title: "HowTo: Install Spryker in AWS environment"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-install-spryker-in-aws-environment.html
       - title: "HowTo: Set up custom response headers on project level"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
       - title: "HowTo: Set up database connections"
@@ -2785,6 +2776,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
         - title: Container set function
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
+        - title: Discouraged packages checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html          
         - title: Minimum allowed shop version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
         - title: Multidimensional array

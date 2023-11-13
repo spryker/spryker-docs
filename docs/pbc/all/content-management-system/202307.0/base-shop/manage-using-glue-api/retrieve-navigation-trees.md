@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-navigation-trees
 originalArticleId: 6dba4315-b7d0-485e-880e-b7d4ff125a3a
 redirect_from:
-  - /2021080/docs/retrieving-navigation-trees
-  - /2021080/docs/en/retrieving-navigation-trees
-  - /docs/retrieving-navigation-trees
-  - /docs/en/retrieving-navigation-trees
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-navigation-trees.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-navigation-trees.html
   - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-navigation-trees.html
 related:

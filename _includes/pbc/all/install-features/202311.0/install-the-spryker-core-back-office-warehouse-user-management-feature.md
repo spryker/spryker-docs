@@ -8,7 +8,7 @@ Follow the steps below to install the Picking App feature API.
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                      | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
+| NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |---------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core Back Office  | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)   |
 | Warehouse User Management | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html) |

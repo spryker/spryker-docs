@@ -14,12 +14,12 @@ This document describes how to install Combined Product Offer Import.
 
 To start integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
-| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
-| Marketplace Product Offer Prices | {{site.version}} | [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)  |
-| Marketplace Inventory Management | {{site.version}} | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Marketplace Product Offer | {{site.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
+| Marketplace Product Offer Prices | {{site.version}} | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)  |
+| Marketplace Inventory Management | {{site.version}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
 
 
 {% info_block infoBox "Info" %}

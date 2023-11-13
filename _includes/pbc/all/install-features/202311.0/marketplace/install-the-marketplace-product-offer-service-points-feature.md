@@ -10,9 +10,9 @@ Follow the steps below to install the Marketplace Product Offer + Service Points
 
 Install the required features:
 
-| NAME                         | VERSION          | INTEGRATION GUIDE                                                                                                                                                                               |
+| NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
 |------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product Offer    | {{page.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer    | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html) |
 | Product Offer + Service Points | {{page.version}} | [Install the Product Offer + Service Points feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-product-offer-service-points-feature.html)                            |
 
 ### 1) Set up behavior

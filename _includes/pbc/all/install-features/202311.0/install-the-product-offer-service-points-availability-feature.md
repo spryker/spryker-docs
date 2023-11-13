@@ -10,10 +10,10 @@ Follow the steps below to install the Product Offer Service Points Availability 
 
 Install the required features:
 
-| NAME                             | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                         |
+| NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer Service Points     | {{page.version}} | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html)            |
-| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
+| Marketplace Inventory Management | {{page.version}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 
 ### 1) Install the required modules
 
@@ -39,7 +39,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-2. Optional: To install an exemplary calculator strategy for the Click & Collect product offer service point availability, install the following module:
+2. Optional: To install an example calculator strategy for the Click & Collect product offer service point availability, install the following module:
 
 ```bash
 composer require spryker/click-and-collect-example: "^0.1.0" --update-with-dependencies
@@ -110,7 +110,7 @@ Make sure the following changes have been applied in transfer objects:
 
 Set up the following behaviors.
 
-#### Register the availability plugin
+#### Enable the availability plugin
 
 | PLUGIN                                                  | SPECIFICATION                                   | PREREQUISITES | NAMESPACE                                                                                                                                  |
 |---------------------------------------------------------|-------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -147,13 +147,13 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 2.  In the `spy_product_offer_service` database table, delete the connection between the product offer and the service point.
 
 3.  Try to create an order.
-    Make sure you get an error message about the product being unavailable.
+    Make sure you get the error message about the product being unavailable.
 
 {% endinfo_block %}
 
 #### Enable the demo Click & Collect availability calculator strategy plugin
 
-Add the following examplary plugin.
+Optional: If you've installed the example module in [1) Install the required modules](#install-the-required-modules), enable the following example plugin.
 
 | PLUGIN                                                                             | SPECIFICATION                                                                                                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
@@ -187,7 +187,7 @@ class ProductOfferServicePointAvailabilityCalculatorStorageDependencyProvider ex
 
 To enable the Storefront API, register the following plugin:
 
-| PLUGIN                                                    | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                  |
+| PLUGIN        | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                  |
 |-----------------------------------------------------------|----------------------------------------------------------------------|---------------|------------------------------------------------------------|
 | ProductOfferServicePointAvailabilitiesResourceRoutePlugin | Registers the `product-offer-service-point-availabilities` resource. |               | Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi |
 
@@ -221,27 +221,27 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Send the following request:
 
-* `POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
-   ```json
-      {
-          "data": {
-              "type": "product-offer-service-point-availabilities",
-              "attributes": {
-                  "servicePointUuids": [
-                      "{{service-point-uuid}}"
-                  ],
-                  "serviceTypeUuid": "{{service-type-uuid}}",
-                  "productOfferServicePointAvailabilityRequestItems": [
-                      {
-                          "productConcreteSku": "{{product-concrete-sku}}",
-                          "productOfferReference": "{{product-offer-reference}}",
-                          "quantity": 1
-                      }
-                  ]
-              }
+`POST https://glue.mysprykershop.com/product-offer-service-point-availabilities`
+```json
+  {
+      "data": {
+          "type": "product-offer-service-point-availabilities",
+          "attributes": {
+              "servicePointUuids": [
+                  "{{service-point-uuid}}"
+              ],
+              "serviceTypeUuid": "{{service-type-uuid}}",
+              "productOfferServicePointAvailabilityRequestItems": [
+                  {
+                      "productConcreteSku": "{{product-concrete-sku}}",
+                      "productOfferReference": "{{product-offer-reference}}",
+                      "quantity": 1
+                  }
+              ]
           }
       }
-   ```
+  }
+```
 
 Make sure you get a valid response.
 
@@ -249,7 +249,7 @@ Make sure you get a valid response.
 
 ## Install feature frontend
 
-Follow the steps below to install the Product Offer Service Points Availability feature frontend.
+Follow the steps to install the Product Offer Service Points Availability feature frontend.
 
 ### 1) Add translations
 

@@ -24,10 +24,14 @@ Here is a list of the entities and their relationships as they appear in the dia
   - Has a Service (1-to-many relationship).
 - **Service:**
   - Has a Service Type (1-to-1 relationship).
-  - Relates to Sales Order through Sales Order Item (1-to-many relationship).
+  - Relates to Product Offer (many-to-many relationship).
+- **Service Type:**
+  - Relates to a Service (1-to-many relationship).
+  - Relates to Product Offer (many-to-many relationship).
 - **Shipment Type:**
   - Relates to Shipping Method (1-to-many relationship).
   - Relates to Product Offer (many-to-many relationship).
+  - Relates to Sales Shipment (1-to-many relationship).
 - **Product Offer:**
   - Contains attributes like Price, Availability, etc.
   - Relates to Product (1-to-many relationship).

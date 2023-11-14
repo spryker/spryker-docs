@@ -645,13 +645,13 @@ entries:
               - title: Manage using Glue API
                 nested:
                   - title: Retrieve abstract product list content items
-                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
                   - title: Retrieve banner content items
-                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-banner-content-items.html
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
                   - title: Retrieve CMS pages
-                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-cms-pages.html
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
                   - title: Retrieve navigation trees
-                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
+                    url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -989,7 +989,7 @@ entries:
           - title: Spryker Middleware powered by Alumio
             include_versions:
             - "202311.0"
-            nested: 
+            nested:
               - title: Integration apps
                 include_versions:
                 - "202311.0"
@@ -1065,22 +1065,22 @@ entries:
                   - title: Export voucher codes
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/export-voucher-codes.html
               - title: Manage using Glue API
-                url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discounts-via-glue-api.html
+                url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discounts.html
                 nested:
                   - title: Add items with discounts to carts of registered users
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html
                   - title: Manage discount vouchers in carts of registered users
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-carts-of-registered-users.html
                   - title: Retrieve discounts in carts of registered users
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html
                   - title: Retrieve discounts in customer carts
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-customer-carts.html
                   - title: Add items with discounts to guest carts
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-guest-carts.html
                   - title: Manage discount vouchers in guest carts
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-guest-carts.html
                   - title: Retrieve discounts in guest carts
-                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
+                    url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-guest-carts.html
               - title: Import and export data
                 url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/import-discount-management-data.html
                 nested:
@@ -1486,7 +1486,7 @@ entries:
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
                     include_versions:
-                    - "202311.0"                                
+                    - "202311.0"
               - title: Upgrade modules
                 nested:
                   - title: Api

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+This document describes how to install the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html).
 
 ## Install feature core
 

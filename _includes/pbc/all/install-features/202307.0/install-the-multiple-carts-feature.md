@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/multiple-carts-feature-overview.html) into a Spryker project.
+This document describes how to install the [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html).
 
 ## Install feature core
 

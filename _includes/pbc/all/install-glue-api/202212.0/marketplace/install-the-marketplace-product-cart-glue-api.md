@@ -13,7 +13,7 @@ Install the required features:
 | NAME        | VERSION | INSTALLATION GUIDE |
 | ----------- | ------- | ------------------|
 | Cart API | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
-| Marketplace Product API | {{page.version}} | [Glue API: Marketplace Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-glue-api.html) |
+| Marketplace Product API | {{page.version}} | [Install the Marketplace Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-glue-api.html) |
 
 
 ### 1) Set up behavior

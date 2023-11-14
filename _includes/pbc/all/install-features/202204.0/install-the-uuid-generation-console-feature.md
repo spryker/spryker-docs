@@ -1,4 +1,4 @@
-This document describes how to integrate the Uuid Generation Console feature.
+This document describes how to install the Uuid Generation Console feature.
 
 ## Prerequisites
 
@@ -6,7 +6,7 @@ Install the required features:
 
 | FEATURE | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 
 ## 1) Install the required modules using Composer

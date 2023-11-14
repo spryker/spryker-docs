@@ -1,5 +1,5 @@
 ---
-title: Product + Order Management feature integration
+title: Install the Product + Order Management feature
 description: This guide provides step-by-step instructions on integrating Product + Order Management feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/product-order-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202307.0/product-order-management-feature-integration.html
 related:
-  - title: Product feature integration
+  - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 

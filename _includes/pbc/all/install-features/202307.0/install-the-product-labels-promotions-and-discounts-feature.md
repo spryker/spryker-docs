@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Product Labels + Promotions & Discounts Feature into a Spryker project.
+This document describes how to install the Product Labels + Promotions & Discounts feature.
 
 ## Install feature core
 

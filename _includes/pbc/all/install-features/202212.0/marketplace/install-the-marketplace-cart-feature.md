@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Cart feature into a Spryker project.
+This document describes how to install the Marketplace Cart feature.
 
 ## Install feature core
 
@@ -12,7 +12,7 @@ Install the required features:
 | ----------- | ------- | ------------------|
 | Cart            | {{page.version}}  | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Marketplace Order Management | {{page.version}}  | [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Marketplace Order Management | {{page.version}}  | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 

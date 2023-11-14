@@ -40,7 +40,7 @@ entries:
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
         - title: Release notes 202204.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
-    - title: Docs release notes
+    - title: Docs updates
       url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
@@ -110,7 +110,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html
       - title: Back Office for Marketplace Operator
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
-      - title: Merchant onborading
+      - title: Merchant onboarding
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
       - title: Marketplace Storefront
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html

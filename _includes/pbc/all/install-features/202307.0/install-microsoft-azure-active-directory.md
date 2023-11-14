@@ -1,6 +1,6 @@
 
 
-This page describes the Microsoft Azure Active Directory and how to integrate it into a Spryker project.
+This page describes the Microsoft Azure Active Directory and how to install it.
 
 ## General information
 

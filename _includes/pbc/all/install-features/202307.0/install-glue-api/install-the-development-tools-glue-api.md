@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Glue: Development Tools feature into a Spryker project.
+This document describes how to install the Glue: Development Tools feature.
 
 ## Prerequisites
 

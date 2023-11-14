@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cms-pages
 originalArticleId: 790ea5b1-23b6-4db1-8878-1de75bc438dd
 redirect_from:
-  - /2021080/docs/retrieving-cms-pages
-  - /2021080/docs/en/retrieving-cms-pages
-  - /docs/retrieving-cms-pages
-  - /docs/en/retrieving-cms-pages
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-cms-pages.html
   - /docs/scos/dev/glue-api-guides/202005.0/retrieving-cms-pages.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-cms-pages.html
   - /docs/pbc/all/content-management-system/202307.0/manage-using-glue-api/retrieve-cms-pages.html

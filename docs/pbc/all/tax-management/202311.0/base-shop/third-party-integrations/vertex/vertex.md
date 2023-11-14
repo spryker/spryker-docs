@@ -44,7 +44,11 @@ To start using the Spryker Vertex app in your project, you need to do the follow
 
 Once you have installed and configured the Vertex app, the taxes will be calculated by Vertex during the checkout process. See this video to understand the experience for the end user:
 
-![vertex-demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/Vertex+Demo.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/Vertex+Demo.mp4" type="video/mp4">
+  </video>
+</figure>
 
 By default, the following data is sent to Vertex for tax calculation:
 

@@ -1,5 +1,5 @@
 ---
-title: Retrieve concrete product prices
+title: "Glue API: Retrieve concrete product prices"
 description: Retrieve prices of concrete products.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template

@@ -1,50 +1,60 @@
 ---
-title: Retrieve prices when retrieving abstract products
-description: Learn how to retrieve prices when retrieving abstract products.
-last_updated: Aug 2, 2022
+title: "Glue API: Retrieve prices when retrieving concrete products"
+description: Retrieve general information about concrete products.
+last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/price-management/202307.0/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
 ---
 
-This document describes how to retrieve prices when retrieving abstract products. To retrieve full information about abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
+This document describes how to retrieve prices when retrieving concrete products. To retrieve full information about concrete products, see [Retrieve concrete products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Install the Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 
 
+## Retrieve a concrete product
 
-## Retrieve an abstract product
-
-To retrieve general information about an abstract product, send the request:
-
----
-`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}***
+To retrieve general information about a concrete product, send the request:
 
 ---
+`GET` **/concrete-products/*{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}***
 
+---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get information for. |
+| ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get information for. |
 
 ### Request
 
-`GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices`: Retrieve information about the abstract product with SKU `093` with its prices.
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
+| --- | --- | --- |
+| include | Adds resource relationships to the request. | concrete-product-prices |
 
+
+| REQUEST  | USAGE |
+| --- | --- |
+|`GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its prices. |
+| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
+
+<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the concrete product prices</summary>
 
 ```json
 {
     "data": {
-        "type": "abstract-products",
-        "id": "001",
+        "type": "concrete-products",
+        "id": "001_25904006",
         "attributes": {
-            "sku": "001",
+            "sku": "001_25904006",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
@@ -60,22 +70,6 @@ To retrieve general information about an abstract product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
-            "superAttributes": {
-                "color": [
-                    "Red"
-                ]
-            },
-            "attributeMap": {
-                "product_concrete_ids": [
-                    "001_25904006"
-                ],
-                "super_attributes": {
-                    "color": [
-                        "Red"
-                    ]
-                },
-                "attribute_variants": []
-            },
             "metaTitle": "Canon IXUS 160",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
@@ -86,18 +80,17 @@ To retrieve general information about an abstract product, send the request:
                 "usb_version": "USB version",
                 "brand": "Brand",
                 "color": "Color"
-            },
-            "url": "/en/canon-ixus-160-1"
+            }
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices"
         },
         "relationships": {
-            "abstract-product-prices": {
+            "concrete-product-prices": {
                 "data": [
                     {
-                        "type": "abstract-product-prices",
-                        "id": "001"
+                        "type": "concrete-product-prices",
+                        "id": "001_25904006"
                     }
                 ]
             }
@@ -105,8 +98,8 @@ To retrieve general information about an abstract product, send the request:
     },
     "included": [
         {
-            "type": "abstract-product-prices",
-            "id": "001",
+            "type": "concrete-product-prices",
+            "id": "001_25904006",
             "attributes": {
                 "price": 9999,
                 "prices": [
@@ -133,7 +126,7 @@ To retrieve general information about an abstract product, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ]
@@ -141,48 +134,34 @@ To retrieve general information about an abstract product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
+<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
 
 ```json
 {
     "data": {
-        "type": "abstract-products",
-        "id": "093",
+        "type": "concrete-products",
+        "id": "093_24495843",
         "attributes": {
-            "sku": "093",
-            "merchantReference": "MER000001",
+            "sku": "093_24495843",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
             "averageRating": 4.3,
             "reviewCount": 4,
+            "productAbstractSku": "093",
             "name": "Sony SmartWatch 3",
-            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.  Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
+            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.         Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
             "attributes": {
                 "internal_ram": "512 MB",
                 "flash_memory": "4 GB",
                 "weight": "45 g",
                 "protection_feature": "Water resistent",
                 "brand": "Sony",
-                "color": "Yellow"
+                "color": "Silver"
             },
             "superAttributesDefinition": [
                 "flash_memory",
                 "color"
             ],
-            "superAttributes": {
-                "color": [
-                    "Silver"
-                ]
-            },
-            "attributeMap": {
-                "product_concrete_ids": [
-                    "093_24495843"
-                ],
-                "super_attributes": {
-                    "color": [
-                        "Silver"
-                    ]
-                },
-                "attribute_variants": []
-            },
             "metaTitle": "Sony SmartWatch 3",
             "metaKeywords": "Sony,Smart Electronics",
             "metaDescription": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated,",
@@ -193,18 +172,17 @@ To retrieve general information about an abstract product, send the request:
                 "protection_feature": "Protection feature",
                 "brand": "Brand",
                 "color": "Color"
-            },
-            "url": "/en/sony-smartwatch-3-93"
+            }
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices"
+            "self": "https://glue.mysprykershop.com/concrete-products/093_24495843?include=concrete-product-prices"
         },
         "relationships": {
-            "abstract-product-prices": {
+            "concrete-product-prices": {
                 "data": [
                     {
-                        "type": "abstract-product-prices",
-                        "id": "093"
+                        "type": "concrete-product-prices",
+                        "id": "093_24495843"
                     }
                 ]
             }
@@ -212,8 +190,8 @@ To retrieve general information about an abstract product, send the request:
     },
     "included": [
         {
-            "type": "abstract-product-prices",
-            "id": "093",
+            "type": "concrete-product-prices",
+            "id": "093_24495843",
             "attributes": {
                 "price": 24899,
                 "prices": [
@@ -247,7 +225,7 @@ To retrieve general information about an abstract product, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/abstract-products/093/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/093_24495843/concrete-product-prices"
             }
         }
     ]
@@ -257,19 +235,17 @@ To retrieve general information about an abstract product, send the request:
 
 
 
+<a name="concrete-products-response-attributes"></a>
 
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md -->
 
-<a name="abstract-products-response-attributes"></a>
-
-{% include pbc/all/glue-api-guides/202204.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-an-abstract-product-response-attributes.md -->
-
-
-For the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html).
-
+For the attributes of prices, see [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html#response).
 
 ## Possible errors
 
 | CODE | REASON |
-|-|-|
-| 301 | Abstract product is not found. |
-| 311 | Abstract product SKU is not specified. |
+| --- | --- |
+| 302 | Concrete product is not found. |
+| 312 | Concrete product is not specified.  |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

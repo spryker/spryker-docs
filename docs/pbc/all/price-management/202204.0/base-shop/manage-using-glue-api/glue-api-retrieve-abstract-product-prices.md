@@ -1,5 +1,5 @@
 ---
-title: Retrieve abstract product prices
+title: "Glue API: Retrieve abstract product prices"
 description: Retrieve details information about prices of abstract products.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
@@ -31,7 +31,7 @@ This endpoint allows retrieving detailed information about the prices of abstrac
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 ## Retrieve prices of an abstract product
 
@@ -225,4 +225,4 @@ To retrieve prices of an abstract product, send the request:
 | 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

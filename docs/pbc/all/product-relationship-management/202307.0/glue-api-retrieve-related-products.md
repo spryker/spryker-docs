@@ -5,11 +5,6 @@ last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-related-products
 originalArticleId: db6deab2-f115-4802-a989-c594cebc6120
-redirect_from:
-  - /2021080/docs/retrieving-related-products
-  - /2021080/docs/en/retrieving-related-products
-  - /docs/retrieving-related-products
-  - /docs/en/retrieving-related-products
 related:
   - title: Retrieving alternative products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
@@ -53,8 +48,8 @@ To get related items of an abstract product, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/abstract-products/122/related-products | Retrieve related products of the specified product. |
-| GET https://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels | Retrieve related products of the specified product. Product labels assigned to the related products are included. |
+| `GET https://glue.mysprykershop.com/abstract-products/122/related-products` | Retrieve related products of the specified product. |
+| `GET https://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels` | Retrieve related products of the specified product. Product labels assigned to the related products are included. |
 
 ### Response
 

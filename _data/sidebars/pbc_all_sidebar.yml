@@ -1065,7 +1065,7 @@ entries:
                   - title: Export voucher codes
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/export-voucher-codes.html
               - title: Manage using Glue API
-                url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discounts-via-glue-api.html
+                url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-manage-discounts.html
                 nested:
                   - title: Add items with discounts to carts of registered users
                     url: /docs/pbc/all/discount-management/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html

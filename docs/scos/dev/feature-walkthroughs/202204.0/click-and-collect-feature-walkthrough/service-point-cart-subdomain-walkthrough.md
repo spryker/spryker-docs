@@ -1,13 +1,15 @@
 ---
 title: Click and Collect feature Service Point Cart subdomain walkthrough
 last_updated: Nov 02, 2023
-description: TODO
+description: |
+  Explore the Service Point Cart subdomain in the Click and Collect feature, focusing on the validation of service points and the replacement of line items in a shopping cart. Learn how to install the essential modules and leverage the extension point for implementing custom item replacement strategies during the checkout process.
+
 template: concept-topic-template
 ---
 
 # Service Point Cart
 
-Enables validation of service points and replacement of line items in a shopping cart.
+The Service Point Cart subdomain empowers you to validate service points and replace line items within a shopping cart.
 
 [Install the Service Points Cart feature](/docs/pbc/all/install-features/{{page.version}}/install-the-service-points-cart-feature.html)
 
@@ -21,17 +23,17 @@ Enables validation of service points and replacement of line items in a shopping
 
 ## 2. Extension point that allows for the implementation of item replacement strategies in the cart during the checkout process
 
-Allows you to provide your strategy for replacing items in your cart.
+Utilize the extension point to implement custom strategies for replacing items in the cart during the checkout process.
 
 **\Spryker\Zed\ServicePointCartExtension\Dependency\Plugin\ServicePointQuoteItemReplaceStrategyPluginInterface**
 
-The example of the implementation:
+Example Implementation:
 
 **\Spryker\Zed\ClickAndCollectExample\Communication\Plugin\ServicePointCart\ClickAndCollectExampleServicePointQuoteItemReplaceStrategyPlugin**
 
-An example replacement strategy replaces a product offer with another product offer based on updated information about the Service Point and Shipment Type in the shopping cart.
+This example replacement strategy substitutes a product offer with another based on updated information about the Service Point and Shipment Type in the shopping cart.
 
-On a project level, this can be extended to support more complex scenarios such as:
+At the project level, extend this capability to support more intricate scenarios, such as:
 
-1. Receive information from external systems about the offer you want to replace the current offer with.
-2. Have different algorithms for cart item replacement based on information obtained from a customer.
+1. Receiving information from external systems about the offer intended for replacement.
+2. Implementing diverse algorithms for cart item replacement based on information obtained from customers.

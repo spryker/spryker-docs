@@ -1,13 +1,15 @@
 ---
 title: Click and Collect feature Product Offer Service Point Availability subdomain walkthrough
 last_updated: Nov 02, 2023
-description: TODO
+description: |
+  Explore the intricacies of the Product Offer Service Point Availability subdomain in the Click and Collect feature. Learn about the modules, installation of the feature, and the extension points for calculating and filtering data related to the availability of a product offer at a service point. Enhance your understanding with examples of plugins and strategies used in the availability calculation process.
+
 template: concept-topic-template
 ---
 
 # Product Offer Service Point Availability
 
-Refers to the availability calculation.
+The Product Offer Service Point Availability subdomain refers to the calculation of product availability at service points.
 
 [Install the Product Offer Service Points Availability feature](/docs/pbc/all/install-features/{{page.version}}/install-the-product-offer-service-points-availability-feature.html)
 
@@ -28,20 +30,20 @@ The plugin is used to calculate product offer availability at the service point 
 
 **\Spryker\Client\ProductOfferServicePointAvailabilityCalculatorStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityCalculatorStrategyPluginInterface**
 
-An example:
+Example:
 
 **\Spryker\Client\ClickAndCollectExample\Plugin\ExampleClickAndCollectProductOfferServicePointAvailabilityCalculatorStrategyPlugin**
 
-The plugin calculates product offer availabilities per service point for each item in request based on the provided conditions.
+This plugin calculates product offer availabilities per service point for each item in the request based on the provided conditions.
 
 ## 3. Extension point for filtering data about the availability of a product offer at a service point.
 
-Provides ability to filter product offer service point availability collection by provided criteria. The plugin gets executed after a list of `ProductOfferServicePointAvailabilityResponseItemTransfer` is created.
+Provides the ability to filter product offer service point availability collection by provided criteria. The plugin gets executed after a list of `ProductOfferServicePointAvailabilityResponseItemTransfer` is created.
 
 **\Spryker\Client\ProductOfferServicePointAvailabilityStorageExtension\Dependency\Plugin\ProductOfferServicePointAvailabilityFilterPluginInterface**
 
-An example:
+Example:
 
 **\Spryker\Client\ProductOfferShipmentTypeAvailabilityStorage\Plugin\ProductOfferServicePointAvailabilityStorage\ShipmentTypeProductOfferServicePointAvailabilityFilterPlugin**
 
-The plugin filters product offer availability data at the service point by shipment type in case of its existence in the criteria of the availability request.
+This plugin filters product offer availability data at the service point by shipment type if it exists in the criteria of the availability request.

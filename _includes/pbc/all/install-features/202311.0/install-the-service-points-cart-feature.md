@@ -112,7 +112,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 {% info_block warningBox "Verification" %}
 
 Please follow the steps below to complete the process:
-1. Prepare two product offers for the same product,one with support for pickup shipment type and a connection to the service point, and another without support for pickup shipment type.
+1. Prepare two product offers for the same product, one with support for pickup shipment type and a connection to the service point, and another without support for pickup shipment type.
 2. Add the product offer that does not support the pickup shipment type to the cart.
 3. Proceed to the checkout-data resource in the GLUE API.
 4. Select a service point for the item.

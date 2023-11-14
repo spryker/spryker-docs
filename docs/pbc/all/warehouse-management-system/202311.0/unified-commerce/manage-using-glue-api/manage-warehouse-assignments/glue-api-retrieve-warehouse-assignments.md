@@ -32,12 +32,12 @@ For detailed information about the modules that provide the API functionality an
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. |  |
+| include | Adds resource relationships to the request. | users |
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `POST http://glue-backend.mysprykershop.com/warehouse-user-assignments` | Create a warehouse user assignment.  |
-| `POST http://glue-backend.mysprykershop.com/warehouse-user-assignments?include=users` | Create a warehouse user assignment. Include information about the user in the response.  |
+| `https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2` | Retrieve the warehouse assignment with the specified ID.  |
+| `https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users` | Retrieve the warehouse assignment with the specified ID. Include information about the authenticated user. |
 
 
 
@@ -46,24 +46,24 @@ For detailed information about the modules that provide the API functionality an
 
 
 <details open>
-  <summary>Create a warehouse user assignment</summary>
+  <summary>Retrieve a warehouse user assignment</summary>
 
 ```json
 {
     "data": {
         "type": "warehouse-user-assignments",
-        "id": "75d8832e-0aa8-570e-9761-f2ccad7e3a37",
+        "id": "99e048ef-8cd8-5e52-aca9-50a590a469c2",
         "attributes": {
-            "userUuid": "ce63fe5c-4897-5a17-b683-39f2825316b8",
-            "isActive": false,
+            "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+            "isActive": true,
             "warehouse": {
-                "name": "Warehouse2",
-                "uuid": "3899fb51-7419-5df6-9257-4599c9b857a5",
+                "name": "Warehouse1",
+                "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
                 "isActive": true
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/75d8832e-0aa8-570e-9761-f2ccad7e3a37"
+            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2"
         }
     }
 }
@@ -72,19 +72,19 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 <details open>
-  <summary>Create a warehouse user assignment with user information included</summary>
+  <summary>Retrieve a warehouse user assignment with user information included</summary>
 
 ```json
 {
     "data": {
         "type": "warehouse-user-assignments",
-        "id": "624c30c2-4ce9-5f1d-a368-fb2df62a8f6c",
+        "id": "99e048ef-8cd8-5e52-aca9-50a590a469c2",
         "attributes": {
-            "userUuid": "ce63fe5c-4897-5a17-b683-39f2825316b8",
-            "isActive": false,
+            "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+            "isActive": true,
             "warehouse": {
-                "name": "Warehouse2",
-                "uuid": "3899fb51-7419-5df6-9257-4599c9b857a5",
+                "name": "Warehouse1",
+                "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
                 "isActive": true
             }
         },
@@ -93,26 +93,26 @@ For detailed information about the modules that provide the API functionality an
                 "data": [
                     {
                         "type": "users",
-                        "id": "ce63fe5c-4897-5a17-b683-39f2825316b8"
+                        "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
                     }
                 ]
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/624c30c2-4ce9-5f1d-a368-fb2df62a8f6c?include=users"
+            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users"
         }
     },
     "included": [
         {
             "type": "users",
-            "id": "ce63fe5c-4897-5a17-b683-39f2825316b8",
+            "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
             "attributes": {
-                "username": "herald.hopkins@spryker.com",
-                "firstName": "Herald",
-                "lastName": "Hopkins"
+                "username": "andrii.tserkovnyi@spryker.com",
+                "firstName": "Andrii",
+                "lastName": "Tserkovnyi"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/ce63fe5c-4897-5a17-b683-39f2825316b8?include=users"
+                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
             }
         }
     ]

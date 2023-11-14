@@ -1,8 +1,10 @@
 ---
-title: Retrieve gift cards in carts of registered users
+title: "Glue API: Retrieve gift cards in carts of registered users"
 description: Learn how to retrieve gift cards in carts of registered users using Glue API.
 last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+- /docs/pbc/all/gift-cards/202307.0/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html
 ---
 
 This document describes how to retrieve gift cards in carts of registered users using Glue API. To retrieve full information about carts of registered users, see [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
@@ -116,9 +118,9 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 <a name="retrieve-a-registered-users-carts-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202204.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-a-registered-users-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-registered-users-carts-response-attributes.md -->
 
-For the included attributes of gift cards, see [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
+For the included attributes of gift cards, see [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
 
 ## Retrieve a registered user's cart
 
@@ -215,9 +217,9 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-{% include pbc/all/glue-api-guides/202204.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-a-registered-users-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-registered-users-carts-response-attributes.md -->
 
-For the attributes of the gift cards included resource, see [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
+For the attributes of the gift cards included resource, see [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
 
 
 
@@ -235,4 +237,4 @@ For the attributes of the gift cards included resource, see [Manage gift cards o
 | 115 | Unauthorized cart action. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

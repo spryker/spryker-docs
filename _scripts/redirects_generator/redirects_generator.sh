@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade"
+folder_path="docs/pbc/all/gift-cards/202307.0/manage-using-glue-api"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

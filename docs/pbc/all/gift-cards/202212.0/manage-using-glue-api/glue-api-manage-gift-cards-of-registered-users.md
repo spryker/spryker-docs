@@ -1,5 +1,5 @@
 ---
-title: Manage gift cards of registered users
+title: "Glue API: Manage gift cards of registered users"
 description: Retrieve details about gift cards of the registered users, and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -25,7 +25,7 @@ This article includes a list of endpoints to manage Gift Cards for registered us
 
 {% info_block infoBox "Info" %}
 
-To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html).
+To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html).
 
 {% endinfo_block %}
 

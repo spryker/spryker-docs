@@ -1,5 +1,5 @@
 ---
-title: Manage gift cards of registered users
+title: "Glue API: Manage gift cards of registered users"
 description: Retrieve details about gift cards of the registered users, and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
+  - /docs/pbc/all/gift-cards/202307.0/manage-using-glue-api/manage-gift-cards-of-registered-users.html
 ---
 
 [Gift Card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
@@ -21,7 +22,7 @@ This article includes a list of endpoints to manage Gift Cards for registered us
 
 {% info_block infoBox "Info" %}
 
-To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html).
+To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html).
 
 {% endinfo_block %}
 

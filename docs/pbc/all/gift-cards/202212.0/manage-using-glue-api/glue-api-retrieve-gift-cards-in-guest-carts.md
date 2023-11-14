@@ -1,5 +1,5 @@
 ---
-title: Retrieve gift cards in guest carts
+title: "Glue API: Retrieve gift cards in guest carts"
 description: Learn how to retrieve gift cards in guest carts using Glue Api.
 last_updated: Aug 12, 2022
 template: glue-api-storefront-guide-template
@@ -130,10 +130,10 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202204.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/manage-guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md -->
 
 
-For the attributes of guest cart items, see [Managing gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html).
+For the attributes of guest cart items, see [Managing gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html).
 
 
 
@@ -146,4 +146,4 @@ For the attributes of guest cart items, see [Managing gift cards of guest users]
 | 104 | Cart uuid is missing. |
 | 109 | Anonymous customer unique id is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

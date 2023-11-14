@@ -374,7 +374,7 @@ For detailed information about the modules that provide the API functionality an
 ## Retrieve a picklist
 
 ***
-`GET` **{% raw %}/picking-lists/{{picklist_id}}**{% endraw %}
+`GET` **/picking-lists/*{% raw %}{{picklist_id}}{% endraw %}***
 ***  
 
 

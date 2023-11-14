@@ -26,6 +26,8 @@ A *delivery type* is a way in which a customer receives an order after placing i
 * Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
 * Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
 
+To import delivery types, see []
+
 ## Delivery method
 
 A *delivery method* is a way in which a carrier company delivers an order to a customer. Delivery method examples:
@@ -39,20 +41,25 @@ There are also branded delivery methods like like DHL Express, DHL Standard, or 
 
 A sales order can have multiple delivery methods from different carrier companies.
 
-Carrier companies and delivery methods are managed in the Back Office. For instructions, see  and [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html)
+For instructions on adding delivery methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html).
+
 
 {% info_block warningBox %}
 
 If a Back Office user creates or edits a shipment of an order created by a customer, the grand total paid by the customer is not affected:
 
-* If a new shipment method is added, its price is 0.
-* If a shipment method is changed, the price of the shipment method stays the same for that order.
+* If a new delivery method is added, its price is 0.
+* If a delivery method is changed, the price of the shipment method stays the same for that order.
 
 {% endinfo_block %}
 
-Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about method plugins types, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
+### Delivery method plugins
 
-Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit and their preferred currency selection.
+Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about delivery method plugins, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
+
+### Delivery method prices and discounts
+
+Each delivery method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit and their preferred currency selection.
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 

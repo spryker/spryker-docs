@@ -29,7 +29,7 @@ Currently, the Upgrader supports GitHub, GitLab and Azure. If you want to use a 
 
 ## Migrate to Spryker Cloud Commerce OS
 
-The Upgrader supports only projects that run on [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html). If you are running Spryker on premises, migrate to SCCOS.
+The Upgrader supports only projects that run in [cloud environments](/docs/ca/dev/getting-started-with-cloud-administration.html). If you are running Spryker on premises, migrate to  cloud.
 
 ## Minimum technical requirements
 
@@ -39,6 +39,7 @@ For a smooth experience, make sure that your environments meet the minimum techn
 * Composer 2.5+
 * Git 2.24+
 * PHPStan 1.9+
+* PHPCodeSniffer 3.6.2+
 
 ## Optional: Implement headless design
 

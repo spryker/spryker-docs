@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Product Raiting and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.
+This document describes how to install the [Product Raiting and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) Glue API feature.
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Follow the steps below to install the Product Raiting and Review Glue API featur
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core Glue API | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Product Rating & Reviews  | {{page.version}} | [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) |

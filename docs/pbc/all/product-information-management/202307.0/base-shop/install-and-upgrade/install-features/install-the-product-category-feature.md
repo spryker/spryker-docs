@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/product-category-feature-integration.html
 related:
-    - title: Product feature integration
+    - title: Install the Product feature
       link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 

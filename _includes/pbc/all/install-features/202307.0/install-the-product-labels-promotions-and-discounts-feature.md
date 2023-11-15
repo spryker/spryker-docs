@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Product Labels + Promotions & Discounts Feature into a Spryker project.
+This document describes how to install the Product Labels + Promotions & Discounts feature.
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Follow the steps below to install the feature core.
 
 Install the required features:
 
-| NAME                   | VERSION            | INTEGRATION GUIDE                                                                                                                                          |
+| NAME                   | VERSION            | INSTALLATION GUIDE                                                                                                                                          |
 |------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Promotions & Discounts | {{site.version}}   | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html) |
 | Product Labels         | {{site.version}}   | [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)                   |

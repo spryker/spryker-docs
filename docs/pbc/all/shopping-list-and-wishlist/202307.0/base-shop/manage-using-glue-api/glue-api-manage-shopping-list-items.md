@@ -6,14 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-list-items
 originalArticleId: 9800fd79-ab57-4778-a68e-50b23236a3cc
 redirect_from:
-  - /2021080/docs/managing-shopping-list-items
-  - /2021080/docs/en/managing-shopping-list-items
-  - /docs/managing-shopping-list-items
-  - /docs/en/managing-shopping-list-items
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-shopping-lists/managing-shopping-list-items.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-shopping-lists/managing-shopping-list-items.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-shopping-lists/managing-shopping-list-items.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-shopping-lists/managing-shopping-list-items.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-shopping-lists/managing-shopping-list-items.html
   - /docs/pbc/all/shopping-list-and-wishlist/202307.0/manage-using-glue-api/manage-shopping-list-items-via-glue-api.html
 

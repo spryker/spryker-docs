@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Customer Account Management + Agent Assist feature into a Spryker project.
+This document describes how to install the Customer Account Management + Agent Assist feature.
 
 ## Install feature core
 
@@ -10,7 +10,7 @@ Follow the steps below to install the Customer Account Management + Agent Assist
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                  |
+| NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer Account ManagemenT | {{page.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Agent Assist                | {{page.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                               |
@@ -269,11 +269,11 @@ class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Install the following related features:
 
-| FEATURE                     | INTEGRATION GUIDE                                                                                                                                                 |
+| FEATURE                     | INSTALLATION GUIDE                                                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer Account Management | [Customer Acount Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Agent Assist                | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                              |

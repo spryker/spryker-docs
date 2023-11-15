@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Order Management + Order Threshold feature into a Spryker project.
+This document describes how to install the Marketplace Order Management + Order Threshold feature.
 
 ## Install feature core
 
@@ -10,10 +10,10 @@ Follow the steps below to install the Marketplace Order Management Feature + Ord
 
 Install the required features:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
+| NAME  | VERSION | INSTALLATION GUIDE |
 | -------------- | --------- | -------------|
 | Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### Install the required modules using Composer
 

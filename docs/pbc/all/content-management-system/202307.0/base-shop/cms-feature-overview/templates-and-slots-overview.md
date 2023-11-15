@@ -60,7 +60,7 @@ A content manager can [manage templates with slots](/docs/pbc/all/content-manage
 
 </details>
 
-To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html).
+To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html).
 
 
 

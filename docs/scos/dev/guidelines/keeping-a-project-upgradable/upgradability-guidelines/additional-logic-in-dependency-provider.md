@@ -118,3 +118,11 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 1. Try to avoid the usage of conditions in the dependency providers.
 2. Use only the supported expressions in the `if` construct.
+
+
+## Run only this checker
+
+To run only this checker, include `DEPENDENCY_PROVIDER_ADDITIONAL_LOGIC_CHECKER` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=DEPENDENCY_PROVIDER_ADDITIONAL_LOGIC_CHECKER
+```

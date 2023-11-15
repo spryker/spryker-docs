@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/deleting-expired-refresh-tokens
 originalArticleId: acf43e94-6fa4-46dd-8f39-b971e5f6aa04
 redirect_from:
-  - /2021080/docs/deleting-expired-refresh-tokens
-  - /2021080/docs/en/deleting-expired-refresh-tokens
-  - /docs/deleting-expired-refresh-tokens
-  - /docs/en/deleting-expired-refresh-tokens
   - /docs/scos/dev/glue-api-guides/202204.0/deleting-expired-refresh-tokens.html
 related:
   - title: Authenticating as a customer

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Catalog + Category Management feature into a Spryker project.
+This document describes how to install the Catalog + Category Management feature.
 
 ## Install feature core
 
@@ -10,11 +10,11 @@ Follow the steps below to install the Catalog + Category Management feature core
 
 To start feature integration, integrate the required features
 
-| NAME                | VERSION | INTEGRATION GUIDE                                            |
+| NAME                | VERSION | INSTALLATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core        | {{page.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Catalog             | {{page.version}}  |  |
-| Category Management | {{page.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Category Management | {{page.version}}  | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 
 ### 1) Set up behavior
 
@@ -83,11 +83,11 @@ Make sure the following:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
 | Catalog             |      &check;     | |
-| Category Management |      &check;     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Category Management |      &check;     | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |

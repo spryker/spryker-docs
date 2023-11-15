@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
   - /docs/pbc/all/user-management/202212.0/user-and-rights-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is implemented in the following three bundles:

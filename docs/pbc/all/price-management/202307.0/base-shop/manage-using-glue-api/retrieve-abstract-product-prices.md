@@ -6,15 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-prices
 originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308
 redirect_from:
-  - /2021080/docs/retrieving-abstract-product-prices
-  - /2021080/docs/en/retrieving-abstract-product-prices
-  - /docs/retrieving-abstract-product-prices
-  - /docs/en/retrieving-abstract-product-prices
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
@@ -24,7 +15,7 @@ related:
   - title: Retrieving image sets of abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/page.version/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 ---
 
 This endpoint allows retrieving detailed information about the prices of abstract products.

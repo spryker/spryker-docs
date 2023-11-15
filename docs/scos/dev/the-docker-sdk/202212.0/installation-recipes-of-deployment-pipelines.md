@@ -5,7 +5,7 @@ last_updated: Nov 29, 2022
 template: howto-guide-template
 ---
 
-Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
+Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
 
 ```
 config
@@ -102,13 +102,13 @@ For examples, see [b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop/
 
 ## Staging and Production environment recipes
 
-For [Staging and Production](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html) environments, there are [dedicated installation recipes](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install/EU) with custom sections:
+For [Staging and Production](/docs/ca/dev/environments-overview.html) environments, there are [dedicated installation recipes](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install/EU) with custom sections:
 
 - destructive.yml
 - pre-deploy.yml
 - production.yml
 
-You can use them as a hook definition when [customizing pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html#adding-a-single-command-to-a-deployment-pipeline):
+You can use them as a hook definition when [customizing pipelines](/docs/ca/dev/configure-deployment-pipelines/customize-deployment-pipelines.html#adding-a-single-command-to-a-deployment-pipeline):
 
 ```shell
 image:

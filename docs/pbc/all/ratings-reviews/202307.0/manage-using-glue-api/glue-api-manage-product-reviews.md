@@ -1,19 +1,12 @@
 ---
-title: Manage product reviews using Glue API
+title: "Glue API: Manage product reviews"
 description: Learn how to manage product reviews via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-ratings-and-reviews
 originalArticleId: e712d25f-b084-4fac-ac5f-cbb46e0947cb
 redirect_from:
-  - /2021080/docs/managing-product-ratings-and-reviews
-  - /2021080/docs/en/managing-product-ratings-and-reviews
-  - /docs/managing-product-ratings-and-reviews
-  - /docs/en/managing-product-ratings-and-reviews
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/managing-product-ratings-and-reviews.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-product-ratings-and-reviews.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-product-ratings-and-reviews.html
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/managing-product-ratings-and-reviews.html  
+  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/managing-product-ratings-and-reviews.html  
 related:
   - title: Product Rating and Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
@@ -197,4 +190,4 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 | 311 | Abstract product ID is not specified. |
 | 901 | One or more of the following reasons:<ul><li>The `nickname` attribute is empty or not specified.</li><li>The `rating` attribute is empty or not specified.</li><li>The `summary` attribute is empty or not specified.</li></ul> |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

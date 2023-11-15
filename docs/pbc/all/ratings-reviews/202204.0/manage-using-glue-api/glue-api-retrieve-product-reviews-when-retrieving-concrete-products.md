@@ -1,5 +1,5 @@
 ---
-title: Retrieving product reviews when retrieving concrete products
+title: "Glue API: Retrieve product reviews when retrieving concrete products"
 description: Retrieve general information about concrete products.
 last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
@@ -11,7 +11,7 @@ This endpoint allows retrieving general information about concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
 
-* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
@@ -150,7 +150,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-a-concrete-product-response-attributes.md -->
 
 
 For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
@@ -162,4 +162,4 @@ For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -1,33 +1,32 @@
 ---
-title: Retrieve product reviews when retrieving abstract products
-description: Learn how to retrieve product reviews when retrieving abstract products using Glue API.
+title: "Glue API: Retrieve product reviews when retrieving concrete products"
+description: Retrieve general information about concrete products.
 last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows retrieving general information about abstract products.
+This endpoint allows retrieving general information about concrete products.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
+## Retrieve a concrete product
 
-## Retrieve an abstract product
-
-To retrieve general information about an abstract product, send the request:
-
----
-`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}***
+To retrieve general information about a concrete product, send the request:
 
 ---
+`GET` **/concrete-products/*{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}***
 
+---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get information for. |
+| ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get information for. |
 
 ### Request
 
@@ -35,26 +34,25 @@ To retrieve general information about an abstract product, send the request:
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | product-reviews |
 
-
-`GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews`: Retrieve information about the abstract product with SKU `001` with its product reviews.
+`GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews`:  Get information about the `001_25904006` product with its product reviews.  |
 
 
 ### Response
 
 
 
-
-
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product reviews</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
 
 ```json
 {
     "data": {
-        "type": "abstract-products",
-        "id": "035",
+        "type": "concrete-products",
+        "id": "035_17360369",
         "attributes": {
-            "sku": "035",
+            "sku": "035_17360369",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
             "averageRating": 4.7,
             "reviewCount": 3,
             "name": "Canon PowerShot N",
@@ -70,22 +68,6 @@ To retrieve general information about an abstract product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
-            "superAttributes": {
-                "color": [
-                    "Silver"
-                ]
-            },
-            "attributeMap": {
-                "product_concrete_ids": [
-                    "035_17360369"
-                ],
-                "super_attributes": {
-                    "color": [
-                        "Silver"
-                    ]
-                },
-                "attribute_variants": []
-            },
             "metaTitle": "Canon PowerShot N",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creat",
@@ -96,11 +78,10 @@ To retrieve general information about an abstract product, send the request:
                 "sensor_type": "Sensor type",
                 "brand": "Brand",
                 "color": "Color"
-            },
-            "url": "/en/canon-powershot-n-35"
+            }
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/abstract-products/035?include=product-reviews"
+            "self": "https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews"
         },
         "relationships": {
             "product-reviews": {
@@ -166,15 +147,19 @@ To retrieve general information about an abstract product, send the request:
 ```
 </details>
 
-<a name="abstract-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202204.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-an-abstract-product-response-attributes.md -->
+<a name="concrete-products-response-attributes"></a>
 
-For the attributes of product reviews resources, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes).
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md -->
+
+
+For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 
 ## Possible errors
 
 | CODE | REASON |
-|-|-|
-| 301 | Abstract product is not found. |
-| 311 | Abstract product SKU is not specified. |
+| --- | --- |
+| 302 | Concrete product is not found. |
+| 312 | Concrete product is not specified.  |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

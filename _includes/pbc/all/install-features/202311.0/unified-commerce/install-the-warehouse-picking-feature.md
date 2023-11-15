@@ -39,6 +39,14 @@ Make sure the following modules have been installed:
 
 2. Optional: To install the demo multi-shipment picking strategy, install the module:
 
+This module showcases an example of a strategy used for generating a picking list.
+Picking list strategies are used to define the location and method of ordering items that are being picked.
+You can create a custom picklist generation strategy for each warehouse on a project level.
+The default picklist generation strategy enables the generation of picklists based on order shipments.
+Each order line is assigned to a unique picklist that contains all the necessary items to fulfill that order.
+Additionally, this strategy splits orders into several picklists based on the warehouse assigned to each order line.
+It's important to note that this is just an example, and you are free to implement any business logic using a strategy that reflects your actual business processes.
+
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
 ```
@@ -48,6 +56,22 @@ Make sure the following module has been installed:
 | MODULE                                         | EXPECTED DIRECTORY                                                  |
 |------------------------------------------------|---------------------------------------------------------------------|
 | PickingListMultiShipmentPickingStrategyExample | vendor/spryker/picking-list-multi-shipment-picking-strategy-example |
+
+
+3. Optional: To install the Fulfillment Apps's early access OAuth Authorization that supports the "Authorization Code Grant" flow, install the corresponding module:
+
+The module provides the modified OAuth "Authorization Code Grant" flow for the Fulfillment App frontend application.
+
+```bash
+    composer require spryker-eco/authorization-picking-app-backend-api: "^0.2.0" --update-with-dependencies
+```
+
+Make sure the following module has been installed:
+
+| MODULE                            | EXPECTED DIRECTORY                                       |
+|-----------------------------------|----------------------------------------------------------|
+| AuthorizationPickingAppBackendApi | vendor/spryker-eco/authorization-picking-app-backend-api |
+| OauthCodeFlow                     | vendor/spryker/oauth-code-flow                           |
 
 {% endinfo_block %}
 
@@ -107,6 +131,24 @@ Make sure the following changes have been triggered in transfer objects:
 | User.uuid                                      | property | created | src/Generated/Shared/Transfer/UserTransfer                                    |
 | Stock.pickingListStrategy                      | property | created | src/Generated/Shared/Transfer/StockTransfer                                   |
 | PushNotificationCollectionRequest.pickingLists | property | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequestTransfer       |
+
+
+Optional: In case the Fulfillment Apps's early access OAuth Authorization was installed.
+
+Make sure the following changes have been applied by checking your database:
+
+| DATABASE ENTITY               | TYPE  | EVENT   |
+|-------------------------------|-------|---------|
+| spy_oauth_code_flow_auth_code | table | created |
+
+
+Make sure the following changes have been triggered in transfer objects:
+
+| TRANSFER                   | TYPE  | EVENT   | PATH                                                             |
+|----------------------------|-------|---------|------------------------------------------------------------------|
+| AuthCode                   | class | created | src/Generated/Shared/Transfer/AuthCodeTransfer                   |
+| AuthCodeAttributes         | class | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer         |
+| AuthCodeResponseAttributes | class | created | src/Generated/Shared/Transfer/AuthCodeResponseAttributesTransfer |
 
 {% endinfo_block %}
 
@@ -252,8 +294,8 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
-2. Click the `DummyPayment01` process.
-    Make sure the OMS transition diagram shows the transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+2. Click the `DummyPayment01` process. 
+3. Make sure the OMS transition diagram shows the transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
@@ -286,6 +328,44 @@ class PickingListPushNotificationConfig extends SprykerPickingListPushNotificati
     }
 }
 ```
+
+5. Optional: Configure the OAuth client configuration for the Fulfillment Apps's access OAuth Authorization:
+
+Configure the value of the `SPRYKER_OAUTH_CLIENT_CONFIGURATION` environment variable that represents the OAuth client configuration:
+
+```json
+[
+  {
+    "identifier": "the-client-identifier-of-your-app",
+    "secret": "frontend-secret",
+    "isConfidential": true,
+    "name": "Name of your app",
+    "redirectUri": "https://my-app.com",
+    "isDefault": true
+  }
+]
+```
+
+For security reasons, it is recommended to use a different OAUTH client for each application.
+By application, we mean a separate application that uses the same OAuth server.
+
+Run the following console command to set up the OAuth client:
+
+```bash
+console setup:init-db
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that the OAuth client exists in the database:
+
+* Run the following SQL query:
+```sql
+SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your-app';
+```
+* Check that the output contains one record (create if not) and the redirect uri is not empty.
+
+{% endinfo_block %}
 
 ## 4) Import warehouse picking list strategies
 
@@ -550,7 +630,117 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-3. To enable the Backend API, register these plugins:
+3. If you've installed the Fulfillment Apps's OAuth Authorization module in [Install the required modules](#install-the-required-modules), enable the following plugins:
+
+| PLUGIN                                                       | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                                                  |
+|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------|
+| AuthorizeResource                                            | Registers the OAuth authorize resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication\AuthorizeResource |
+| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds OauthGrantTypeConfigurationTransfer from configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                                       |
+
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication\AuthorizeResource;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{   
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     */
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new AuthorizeResource(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oauth;
+
+use Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth\UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin;
+use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
+
+class OauthDependencyProvider extends SprykerOauthDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRequestGrantTypeConfigurationProviderPluginInterface>
+     */
+    protected function getOauthRequestGrantTypeConfigurationProviderPlugins(): array
+    {
+        return [
+            new UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that Fulfillment Apps's OAuth Authorization works: 
+
+* Pickup any back-office user.
+* Send the following authorization request to the OAuth server:
+
+```http
+POST /authorize/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 210
+
+username={username}&password={password}&response_type=code&client_id={client_id}&state={state}&code_challenge={code_challenge}&code_challenge_method=S256&redirect_uri={redirect_uri}
+```
+
+| Parameter name        | Type   | Example                           | Description                                                                                                                                                                                                                                                                    |
+|-----------------------|--------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| username              | string | some@user.com                     | The username of the back-office user.                                                                                                                                                                                                                                          |
+| password              | string | some-pass                         | The password of the back-office user.                                                                                                                                                                                                                                          |
+| response_type         | string | code                              | Specifies how the authorization server should respond to the client after the resource owner grants.                                                                                                                                                                           |
+| client_id             | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources.                                                                                                                                                                                  |
+| state                 | string | some-random-string                | Used to mitigate the risk of cross-site request forgery (CSRF) attacks.                                                                                                                                                                                                        |
+| code_challenge        | string | some-random-string                | Used in the Authorization Code Grant flow with Proof Key for Code Exchange (PKCE) to enhance the security of the authorization process. PKCE is designed to protect against certain types of attacks, especially when the authorization code is exchanged for an access token. |
+| code_challenge_method | string | S256                              | Used in the Authorization Code Grant flow with Proof Key for Code Exchange (PKCE). It specifies the method used to transform the code_verifier into the code_challenge before initiating the authorization request.                                                            |
+| redirect_uri          | string | `https://some-redirect-url`       | Used in the authorization request to specify where the authorization server should redirect the user after the user grants or denies permission.                                                                                                                               |
+
+For more detailed information about the Authorization (Code Grant flow) Request with PKCE, refer to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
+* Check that the output contains the 201 response with a code.
+
+* To get a back-office user token, send the following request:
+
+```http
+POST /token/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 1051
+
+grant_type=authorization_code&code={code}&client_id={client_id}&code_verifier={code_verifier}
+```
+
+| Parameter name | Type   | Example                           | Description                                                                                                                                                                                                                       |
+|----------------|--------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| grant_type     | string | authorization_code                | Specifies the type of grant requested by the client. In this case, it's the Authorization Code Grant flow.                                                                                                                        |
+| code           | string | some-code                         | The authorization code obtained from the authorization server.                                                                                                                                                                    |
+| client_id      | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources.                                                                                                                                     |
+| code_verifier  | string | some-random-string                | A random string generated by the client in the Authorization Code Grant flow with Proof Key for Code Exchange (PKCE). It is used to verify the identity of the client when exchanging the authorization code for an access token. |
+
+* Check that the output contains the 201 response with a code.
+* Use the obtained token to access the protected backend API resources.
+
+{% endinfo_block %}
+
+4. To enable the Backend API, register these plugins:
 
 | PLUGIN                                                          | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                                                                    |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------|

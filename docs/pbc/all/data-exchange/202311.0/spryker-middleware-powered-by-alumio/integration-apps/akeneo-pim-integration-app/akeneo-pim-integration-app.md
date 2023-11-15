@@ -7,10 +7,6 @@ template: concept-topic-template
 
 The Akeneo PIM Integration App lets you import products from Akeneo PIM to your Spryker project.
 
-Prerequisites
-To use your Akeneo PIM Integration App you need to have the Spryker Middleware powered by Alumio.
-The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently it doesn't cover the Marketplace business models.
-
 You can import the following product data:
 
 - General product information: Name, description, SKU, locale, stores
@@ -23,13 +19,19 @@ You can import the following product data:
 - Product labels
 - Price types
 
-For more information on the product data you can import, see
+You can specify the product data you want to import from Akeneo when configuring the data mapping between Akeneo and SCCOS in the Spryker Middleware powered by Alumio.
+For more information, see [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html)
 
-You can initiate the products import manually whenever you need, or set up the scheduler to automatically import data on a regular basis. For details on how to do that, see [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
+You can initiate the product import manually whenever you need, or set up the scheduler to automatically import data on a regular basis. For details on how to do that, see [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
+
+## Prerequisites for the Akeneo PIM Integration App
+
+To use the Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio. To obtain it, reach out to [Spryker support](https://spryker.com/support/).
+The Akeneo PIM Integration App works with B2C and B2B business models of Spryker Cloud Commerce OS (SCCOS). It doesn't cover the Marketplace business models.
 
 ## Importing product structure from Akeneo to Spryker 
 
-Akeneo lets you create products with up to 3 levels of enrichment, while Spryker allows users to select multiple super attributes to enrich product information and create product variants. 
+Akeneo lets you create products with up to 3 levels of enrichment, while Spryker lets you select multiple super attributes to enrich product information and create product variants. 
 
 For example, if you want to create a T-shirt with varying sizes and colors, here is how it is created in Akeneo:
 *Root* Product Model = T-shirt
@@ -37,15 +39,27 @@ For example, if you want to create a T-shirt with varying sizes and colors, here
 *Level 2* Product Variants (with variant: size) = Yellow T-shirt small, yellow T-shirt large, red T-shirt small, red T-shirt Large
 
 When importing this data to Spryker, the following applies:
-- Level 1 Product Models from Akeneo are imported as  Abstract products into Spryker. In our example, this implies that two abstract products are created in SCCOS: a yellow T-shirt and a red T-shirt.
-- Level 2 variants are imported as concretes of the Abstract. In our example, this means that two concrete products are created per product abstract in Spryker: 
+- Level 1 Product Models from Akeneo are imported as abstract products into Spryker. In our example, this means that two abstract products are created in SCCOS: a yellow T-shirt and a red T-shirt.
+- Level 2 variants are imported as concretes of the abstract product. In our example, this means that two concrete products are created per product abstract in Spryker: 
 - For the yellow T-shirt abstract product, a yellow T-shirt small and a yellow T-shirt large concrete products
--  For the red T-shirt abstract product, a red T-shirt small and a red T-shirt large concrete products
+- For the red T-shirt abstract product, a red T-shirt small and a red T-shirt large concrete products
 
-To identify the Product Model (Abstract product) for the different Akeneo products upon import, the parent identifier is saved as the abstract SKU in Spryker. This way, the hierarchy and relationship between the products is preserved.
+To identify the Product Model (abstract product) for the different Akeneo products upon import, the parent identifier is saved as the abstract SKU in Spryker. This way, the hierarchy and relationship between the products is preserved after the import.
 
-{% info_block infoBox "Importing product descriptions" %}
+The following table represents the high-level mapping of product data between Akeneo and Spryker:
 
-Spryker uses a simple text editor as its product description however Akeneo enables customers to use rich-text in their product description. If you want to use rich-text on your store you need to extend Spryker to enable the support of rich text on the project-level. 
+| Akeneo                | Spryker          | Note                                                                                                                                                           |
+|-----------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Product Model         | Abstract Product |                                                                                                                                                                |
+| Family                | Abstract Product |                                                                                                                                                                |
+| Product               | Concrete Product |                                                                                                                                                                |
+| Family Variant        | Concrete Product | Spryker uses the family variant structure to determine the relationship between the Abstract and Concrete Product                                                |
+| Family Variant (axes) | Super Attribute  | Spryker uses the family variant axes to identify the super attribute. However, for the sake of accuracy, make sure to specify the super attributes when configuring the [Memo Base to Spryker - Product - Akeneo Preprocessor](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#memo-base-to-spryker---product---akeneo-preprocessor) |
+| Category              | Category         |                                                                                                                                                                |
+| Attribute             | Attribute        |                                                                                                                                                                |
+| Localized Labels      | Locales          |                                                                                                                                                                |
 
-{% endinfo_block %}
+## Next steps
+[Configure the Akeneo PIM Integration app](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html)
+
+

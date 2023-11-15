@@ -19,7 +19,7 @@ Spryker offers the following options to import and export data:
 ## Spryker Middleware powered by Alumio
 
 The Spryker Middleware powered by Alumio is a cloud-based integration Platform as a Service (iPaaS). It lets you exchange data between your Spryker system and third-party systems via a user-friendly interface.
-The Spryker Middleware Powered by Alumio isn't a part of SCCOS by default. To obtain it, reach out to [Spryker support](https://spryker.com/support/).
+The Spryker Middleware Powered by Alumio isn't a part of SCCOS by default. To obtain it, reach out to [Spryker support](https://spryker.com/support/). To connect the Spryker Middleware powered by Alumio with SCCOS, you need to have the [Data Exchange API feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade\install-the-data-exchange-api-inventory-management-feature.html) in your environment.
 
 With the Spryker Middleware powered by Alumio, the data exchange process looks like this:
 

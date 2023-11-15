@@ -42,3 +42,10 @@ When importing this data to Spryker, the following applies:
 - For the yellow T-shirt abstract product, a yellow T-shirt small and a yellow T-shirt large concrete products
 -  For the red T-shirt abstract product, a red T-shirt small and a red T-shirt large concrete products
 
+To identify the Product Model (Abstract product) for the different Akeneo products upon import, the parent identifier is saved as the abstract SKU in Spryker. This way, the hierarchy and relationship between the products is preserved.
+
+{% info_block infoBox "Importing product descriptions" %}
+
+Spryker uses a simple text editor as its product description however Akeneo enables customers to use rich-text in their product description. If you want to use rich-text on your store you need to extend Spryker to enable the support of rich text on the project-level. 
+
+{% endinfo_block %}

@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-sales-units
 originalArticleId: 4150363f-4c47-4e7c-b7e6-d1430ce864ba
 redirect_from:
-  - /2021080/docs/retrieving-sales-units
-  - /2021080/docs/en/retrieving-sales-units
-  - /docs/retrieving-sales-units
-  - /docs/en/retrieving-sales-units
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/concrete-products/retrieving-sales-units.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 related:

@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates
 originalArticleId: 7d42fcee-0edb-4f80-826c-988162b30119
 redirect_from:
-  - /2021080/docs/retrieving-configurable-bundle-templates
-  - /2021080/docs/en/retrieving-configurable-bundle-templates
-  - /docs/retrieving-configurable-bundle-templates
-  - /docs/en/retrieving-configurable-bundle-templates
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-configurable-bundle-templates.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-configurable-bundle-templates.html  
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
 related:
@@ -110,10 +105,10 @@ To retrieve information about a specific Configurable Bundle template, send the 
 
 | REQUEST | USAGE |
 | --- | --- |
-| `https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de`. |
-| `https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-slot` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de` with its slots. |
-| `https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-slots,concrete-products,concrete-product-prices,concrete-product-image-sets` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de` with its slots, concrete products defined per slot, concrete product prices and concrete product image sets. |
-| `https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-image-sets` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de with image sets`. |
+| `GET https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de`. |
+| `GET https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-slot` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de` with its slots. |
+| `GET https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-slots,concrete-products,concrete-product-prices,concrete-product-image-sets` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de` with its slots, concrete products defined per slot, concrete product prices and concrete product image sets. |
+| `GET https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-image-sets` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de with image sets`. |
 
 <details>
 <summary markdown='span'>Response sample: retrieve information about a configurable bundle</summary>

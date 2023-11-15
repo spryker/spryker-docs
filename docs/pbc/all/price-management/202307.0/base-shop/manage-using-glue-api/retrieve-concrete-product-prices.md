@@ -6,14 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-prices
 originalArticleId: 7192572b-0b8e-4bbb-a579-570eecffc1e2
 redirect_from:
-  - /2021080/docs/retrieving-concrete-product-prices
-  - /2021080/docs/en/retrieving-concrete-product-prices
-  - /docs/retrieving-concrete-product-prices
-  - /docs/en/retrieving-concrete-product-prices
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
   - /docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
 related:
@@ -53,8 +45,8 @@ To retrieve prices of a concrete product, send the request:
 
 | REQUEST | USAGE |
 |-|-|
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices | Retrieve the prices of the `001_25904006` product. |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE | Retrieve the gross price of the 001_25904006 product in Swiss Franc. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the prices of the `001_25904006` product. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the 001_25904006 product in Swiss Franc. |
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |-|-|-|

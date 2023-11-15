@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/impersonating-customers-as-an-agent-assist
 originalArticleId: 603fa249-5eab-42d0-93c3-3c09f75da9d0
 redirect_from:
-  - /2021080/docs/impersonating-customers-as-an-agent-assist
-  - /2021080/docs/en/impersonating-customers-as-an-agent-assist
-  - /docs/impersonating-customers-as-an-agent-assist
-  - /docs/en/impersonating-customers-as-an-agent-assist
   - /docs/scos/dev/glue-api-guides/202307.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview

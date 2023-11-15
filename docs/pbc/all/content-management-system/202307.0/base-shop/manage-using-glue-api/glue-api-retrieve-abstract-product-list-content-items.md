@@ -208,7 +208,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 
-For the attributes of the included resource, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
+For the attributes of the included resource, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
 
 ## Retrieve Abstract Product List with its abstract products
 

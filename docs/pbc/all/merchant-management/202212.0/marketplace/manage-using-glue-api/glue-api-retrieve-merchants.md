@@ -644,8 +644,8 @@ For the attributes of the included resources, see:
 
 Retrieve merchant information as a relationship when sending the following requests:
 
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#retrieve-a-wishlist)
 * [Retrieve a product offer]
 * [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)

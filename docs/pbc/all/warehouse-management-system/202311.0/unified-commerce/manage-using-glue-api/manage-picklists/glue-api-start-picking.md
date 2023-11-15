@@ -37,9 +37,9 @@ For detailed information about the modules that provide the API functionality an
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `POST https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/start-picking` | Start picking the picklist with the specified ID.  |
-| `POST https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/start-picking?include=users` | Start picking the picklist with the specified ID. Include information about the authenticated user into the response.  |
-| `POST https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/start-picking?include=warehouses` | Start picking the picklist with the specified ID. Include information about the warehouse the order is fulfilled in.  |
+| `POST https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/start-picking` | Start picking the picklist with the specified ID.  |
+| `POST https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/start-picking?include=users` | Start picking the picklist with the specified ID. Include information about the authenticated user into the response.  |
+| `POST https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/start-picking?include=warehouses` | Start picking the picklist with the specified ID. Include information about the warehouse the order is fulfilled in.  |
 
 
 ### Response
@@ -58,7 +58,7 @@ For detailed information about the modules that provide the API functionality an
             "updatedAt": "2023-11-13 13:42:29.739183"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313"
         }
     }
 }
@@ -90,7 +90,7 @@ For detailed information about the modules that provide the API functionality an
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4?include=users"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4?include=users"
         }
     },
     "included": [
@@ -98,12 +98,12 @@ For detailed information about the modules that provide the API functionality an
             "type": "users",
             "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
             "attributes": {
-                "username": "andrii.tserkovnyi@spryker.com",
-                "firstName": "Andrii",
-                "lastName": "Tserkovnyi"
+                "username": "herald.hopkins@spryker.com",
+                "firstName": "Herald",
+                "lastName": "Hopkins"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
             }
         }
     ]
@@ -136,7 +136,7 @@ For detailed information about the modules that provide the API functionality an
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4?include=warehouses"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4?include=warehouses"
         }
     },
     "included": [
@@ -149,7 +149,7 @@ For detailed information about the modules that provide the API functionality an
                 "isActive": true
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/460a5030-1e06-545f-81ee-05299f239fd4/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
             }
         }
     ]
@@ -159,22 +159,8 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| status | String | Status of the picking list based on your configuration. |
-| createdAt | Date | The date and time when the picklist was generated. |
-| updatedAt | Date | The latest date and time when the picklist was updated. |
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-lists-response-attributes.md -->
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| picking-list-items | quantity | Integer | Quantity of the item to pick. |
-| picking-list-items | numberOfPicked | Integer | Quantity of the item that was picked. |
-| picking-list-items | numberOfNotPicked | Integer | Quantity of the item that was not found. |
-| picking-list-items | orderItem.sku | String | Unique identifier of the product. |
-| picking-list-items | orderItem.quantity | Integer | Quantity of the item that was ordered. |
-| picking-list-items | orderItem.name | Integer | Name of the product. |
-| users | username | String | Username of the warehouse user you are authenticated with. |
-| users | firstName | String | First name. |
-| users | lastName | String | Last name. |
-| warehouses | name | Integer | Name of the warehouse. |
-| warehouses | isActive | Boolean | Defines if the warehouse is active. |
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md -->

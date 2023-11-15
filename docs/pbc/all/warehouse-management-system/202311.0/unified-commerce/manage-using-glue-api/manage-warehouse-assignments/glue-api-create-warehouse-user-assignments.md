@@ -24,7 +24,7 @@ For detailed information about the modules that provide the API functionality an
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ Request sample:
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/75d8832e-0aa8-570e-9761-f2ccad7e3a37"
+            "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/75d8832e-0aa8-570e-9761-f2ccad7e3a37"
         }
     }
 }
@@ -117,7 +117,7 @@ Request sample:
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/624c30c2-4ce9-5f1d-a368-fb2df62a8f6c?include=users"
+            "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/624c30c2-4ce9-5f1d-a368-fb2df62a8f6c?include=users"
         }
     },
     "included": [
@@ -130,7 +130,7 @@ Request sample:
                 "lastName": "Hopkins"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/ce63fe5c-4897-5a17-b683-39f2825316b8?include=users"
+                "self": "https://glue-backend.mysprykershop.com/users/ce63fe5c-4897-5a17-b683-39f2825316b8?include=users"
             }
         }
     ]
@@ -140,17 +140,7 @@ Request sample:
 </details>
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| userUuid | String | Unique identifier of the user the assignment belongs to. |
-| isActive | Boolean | Defines if the warehouse assignment is active. |
-| warehouse.name | String | Name of the warehouse in the assignment. |
-| warehouse.uuid | String | Unique identifier of the warehouse in the assignment. |
-| warehouse.isActive | Boolean | Defines if the warehouse in the assignment is active. |
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md -->
 
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| users | username | String | Username of the warehouse user you are authenticated with. |
-| users | firstName | String | First name. |
-| users | lastName | String | Last name. |
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->

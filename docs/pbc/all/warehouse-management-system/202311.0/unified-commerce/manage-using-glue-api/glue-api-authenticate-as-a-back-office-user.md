@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Authenticate as a Back Office user"
-description: Learn how to authenticate as a Back Office user
+description: Learn how to authenticate as a Back Office user using Glue API
 last_updated: Nov 13, 2023
 template: glue-api-storefront-guide-template
 ---
@@ -9,7 +9,7 @@ This endpoint allows authenticating as a Back Office user.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 ## Authenticate as a Back Office user
 
@@ -23,7 +23,7 @@ For detailed information on the modules that provide the API functionality and r
 |-|-|-|-|
 | Content-Type | application/x-www-form-urlencoded | &check; | `x-www-form-urlencoded` is a URL encoded form. This is the default value if the encrypted attribute is not set to anything. The keys and values are encoded in key-value tuples separated by `&`, with a `=` between the key and the value. Non-alphanumeric characters in both keys and values are percent encoded. |
 
-<details><summary markdown='span'>Request sample: authenticate as a customer</summary>
+<details><summary markdown='span'>Request sample: authenticate as a Back Office user</summary>
 
 | REQUEST BODY KEY | VALUE |
 |-|-|

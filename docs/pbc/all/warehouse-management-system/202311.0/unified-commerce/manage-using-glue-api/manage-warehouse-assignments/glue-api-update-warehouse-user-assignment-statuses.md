@@ -28,7 +28,7 @@ For detailed information about the modules that provide the API functionality an
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -36,8 +36,8 @@ For detailed information about the modules that provide the API functionality an
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `PATCH https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2` | Update the warehouse user assignment with the specified ID.  |
-| `PATCH https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users` | Update the warehouse user assignment with the specified ID. Include information about the authenticated user in the response.  |
+| `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2` | Update the warehouse user assignment with the specified ID.  |
+| `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users` | Update the warehouse user assignment with the specified ID. Include information about the authenticated user in the response.  |
 
 Request sample:
 ```json
@@ -75,7 +75,7 @@ Request sample:
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2"
+            "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2"
         }
     }
 }
@@ -111,7 +111,7 @@ Request sample:
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users"
+            "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users"
         }
     },
     "included": [
@@ -119,12 +119,12 @@ Request sample:
             "type": "users",
             "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
             "attributes": {
-                "username": "andrii.tserkovnyi@spryker.com",
-                "firstName": "Andrii",
-                "lastName": "Tserkovnyi"
+                "username": "herald.hopkins@spryker.com",
+                "firstName": "Herald",
+                "lastName": "Hopkins"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
+                "self": "https://glue-backend.mysprykershop.com/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
             }
         }
     ]
@@ -132,3 +132,8 @@ Request sample:
 ```
 
 </details>  
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->

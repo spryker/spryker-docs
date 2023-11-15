@@ -1,5 +1,5 @@
 ---
-title: Retrieve picklists
+title: "Glue API: Retrieve picklists"
 description: Learn how to retrieve picklists using Glue API
 template: glue-api-storefront-guide-template
 ---
@@ -55,7 +55,7 @@ For detailed information about the modules that provide the API functionality an
                 "updatedAt": "2023-11-02 12:30:20.000000"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/44ae0215-06a2-5d10-85da-c996c0c2f79e"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/44ae0215-06a2-5d10-85da-c996c0c2f79e"
             }
         },
         {
@@ -67,7 +67,7 @@ For detailed information about the modules that provide the API functionality an
                 "updatedAt": "2023-11-02 12:33:00.000000"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/217f10d7-9c03-541b-b782-28797327afdc"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/217f10d7-9c03-541b-b782-28797327afdc"
             }
         },
         {
@@ -79,12 +79,12 @@ For detailed information about the modules that provide the API functionality an
                 "updatedAt": "2023-11-03 12:11:59.000000"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/efbbe047-37df-5dc5-9f7f-d306be203082"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/efbbe047-37df-5dc5-9f7f-d306be203082"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists"
+        "self": "https://glue-backend.mysprykershop.com/picking-lists"
     }
 }
 ```  
@@ -120,7 +120,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/44ae0215-06a2-5d10-85da-c996c0c2f79e?include=picking-list-items"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/44ae0215-06a2-5d10-85da-c996c0c2f79e?include=picking-list-items"
             }
         },
         {
@@ -142,12 +142,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/efbbe047-37df-5dc5-9f7f-d306be203082?include=picking-list-items"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/efbbe047-37df-5dc5-9f7f-d306be203082?include=picking-list-items"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists?include=picking-list-items"
+        "self": "https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items"
     },
     "included": [
         {
@@ -165,7 +165,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-list-items/b38e74bf-f40d-5a89-a398-0f868f1702ca?include=picking-list-items"
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/b38e74bf-f40d-5a89-a398-0f868f1702ca?include=picking-list-items"
             }
         },
         {
@@ -183,7 +183,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-list-items/ac549fc5-0e9e-55bc-a32d-4f0835497c00?include=picking-list-items"
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/ac549fc5-0e9e-55bc-a32d-4f0835497c00?include=picking-list-items"
             }
         },
         {
@@ -201,7 +201,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-list-items/bdff472f-74d2-51bc-b692-3890651ebf0c?include=picking-list-items"
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/bdff472f-74d2-51bc-b692-3890651ebf0c?include=picking-list-items"
             }
         }
     ]
@@ -235,7 +235,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/44ae0215-06a2-5d10-85da-c996c0c2f79e?include=users"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/44ae0215-06a2-5d10-85da-c996c0c2f79e?include=users"
             }
         },
         {
@@ -247,12 +247,12 @@ For detailed information about the modules that provide the API functionality an
                 "updatedAt": "2023-11-03 12:11:59.000000"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/efbbe047-37df-5dc5-9f7f-d306be203082?include=users"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/efbbe047-37df-5dc5-9f7f-d306be203082?include=users"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists?include=users"
+        "self": "https://glue-backend.mysprykershop.com/picking-lists?include=users"
     },
     "included": [
         {
@@ -264,7 +264,7 @@ For detailed information about the modules that provide the API functionality an
                 "lastName": "Hopkins"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/0d743cc3-a772-5145-971e-d4018ee7a489?include=users"
+                "self": "https://glue-backend.mysprykershop.com/users/0d743cc3-a772-5145-971e-d4018ee7a489?include=users"
             }
         }
     ]
@@ -298,7 +298,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses"
             }
         },
         {
@@ -320,12 +320,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/eeee32bc-dd52-5130-809f-b64710a791ee?include=warehouses"
+                "self": "https://glue-backend.mysprykershop.com/picking-lists/eeee32bc-dd52-5130-809f-b64710a791ee?include=warehouses"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists?include=warehouses"
+        "self": "https://glue-backend.mysprykershop.com/picking-lists?include=warehouses"
     },
     "included": [
         {
@@ -337,7 +337,7 @@ For detailed information about the modules that provide the API functionality an
                 "isActive": true
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
+                "self": "https://glue-backend.mysprykershop.com/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
             }
         }
     ]
@@ -346,27 +346,13 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| status | String | Status of the picking list based on your configuration. |
-| createdAt | Date | The date and time when the picklist was generated. |
-| updatedAt | Date | The latest date and time when the picklist was updated. |
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-lists-response-attributes.md -->
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| picking-list-items | quantity | Integer | Quantity of the item to pick. |
-| picking-list-items | numberOfPicked | Integer | Quantity of the item that was picked. |
-| picking-list-items | numberOfNotPicked | Integer | Quantity of the item that was not found. |
-| picking-list-items | orderItem.sku | String | Unique identifier of the product. |
-| picking-list-items | orderItem.quantity | Integer | Quantity of the item that was ordered. |
-| picking-list-items | orderItem.name | Integer | Name of the product. |
-| users | username | String | Username of the warehouse user you are authenticated with. |
-| users | firstName | String | First name. |
-| users | lastName | String | Last name. |
-| warehouses | name | Integer | Name of the warehouse. |
-| warehouses | isActive | Boolean | Defines if the warehouse is active. |
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-list-items-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-list-items-included-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md -->
 
 
 
@@ -412,7 +398,7 @@ For detailed information about the modules that provide the API functionality an
             "updatedAt": "2023-11-07 17:10:23.000000"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313"
         }
     }
 }
@@ -445,7 +431,7 @@ For detailed information about the modules that provide the API functionality an
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=picking-list-items"
         }
     },
     "included": [
@@ -464,7 +450,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-list-items/9ac9fd06-f491-506e-b302-0b166786d91c?include=picking-list-items"
+                "self": "https://glue-backend.mysprykershop.com/picking-list-items/9ac9fd06-f491-506e-b302-0b166786d91c?include=picking-list-items"
             }
         }
     ]
@@ -497,7 +483,7 @@ For detailed information about the modules that provide the API functionality an
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=users"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=users"
         }
     },
     "included": [
@@ -510,7 +496,7 @@ For detailed information about the modules that provide the API functionality an
                 "lastName": "Hopkins"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/users/ce63fe5c-4897-5a17-b683-39f2825316b8?include=users"
+                "self": "https://glue-backend.mysprykershop.com/users/ce63fe5c-4897-5a17-b683-39f2825316b8?include=users"
             }
         }
     ]
@@ -545,7 +531,7 @@ For detailed information about the modules that provide the API functionality an
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses"
+            "self": "https://glue-backend.mysprykershop.com/picking-lists/910a4d20-59a3-5c49-808e-aa7038a59313?include=warehouses"
         }
     },
     "included": [
@@ -558,7 +544,7 @@ For detailed information about the modules that provide the API functionality an
                 "isActive": true
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.internal-testing.demo-spryker.com/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
+                "self": "https://glue-backend.mysprykershop.com/warehouses/834b3731-02d4-5d6f-9a61-d63ae5e70517?include=warehouses"
             }
         }
     ]
@@ -566,3 +552,12 @@ For detailed information about the modules that provide the API functionality an
 ```
 
 </details>
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-lists-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-list-items-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/picking-list-items-included-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md -->

@@ -39,16 +39,16 @@ You can use the following tools to design your APIs:
 - [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-You can also use wizards provided by Spryker, which will be used by the [SprykerSDK workflow](/docs/sdk/dev/initialize-and-run-workflows.html).
+You can also use wizards provided by Spryker, which will be used by the [Spryker SDK workflow](/docs/sdk/dev/initialize-and-run-workflows.html).
 
 ## Build an app
 
-You can build a new app with the help of the SprykerSDK. After you have installed the Spryker SDK, you can run the following commands to start building the app.
+You can build a new app with the help of the [Spryker SDK](/docs/sdk/dev/spryker-sdk.html). After you have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html), you can run the following commands to start building the app.
 
 1. Ensure that you are in the correct working directory:
 
 ```bash
-cd /www/my-app (The local project directory you created before)
+cd /www/my-app # The local project directory you created before
 ```
 2. Initialize the project:
 
@@ -67,10 +67,10 @@ You can skip through the prompts by hitting **Enter**.
 
 {% endinfo_block %}
 
-Starting from SprykerSDK version 0.3.0, you can use the following set of commands:
+Starting from [Spryker SDK](/docs/sdk/dev/spryker-sdk.html) version 0.3.0, you can use the following set of commands:
 
 ```bash
-cd /www/my-app (The local project directory you created before)
+cd /www/my-app # The local project directory you created before
 spryker-sdk sdk:workflow:run # and select the app workflow
 ```
 The workflow guides you as much as possible through the process of building an app. Whenever something needs manual interaction, the workflow stops with a message on what you need to do. After you completed the manual step, re-run the workflow with the `spryker-sdk sdk:workflow:run` command. This continues the previously paused workflow.

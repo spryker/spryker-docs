@@ -3,6 +3,8 @@ title: "Glue API: Retrieve product reviews when retrieving concrete products"
 description: Retrieve general information about concrete products.
 last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/ratings-reviews/202307.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -153,7 +155,7 @@ To retrieve general information about a concrete product, send the request:
 {% include pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md -->
 
 
-For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
+For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html#product-reviews-response-attributes)
 
 ## Possible errors
 

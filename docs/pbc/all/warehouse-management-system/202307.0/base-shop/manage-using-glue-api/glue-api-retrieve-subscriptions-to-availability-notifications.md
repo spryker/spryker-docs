@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
 related:
   - title: Managing availability notifications
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/manage-availability-notifications.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
 ---
 
 This endpoint allows retrieving subscriptions to availability notifications of a registered customer.

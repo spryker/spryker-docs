@@ -3,6 +3,8 @@ title: Retrieve availability when retrieving concrete products
 description: Retrieve general information about concrete products.
 last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+- /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -114,9 +116,9 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="retrieve-a-concrete-product-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202212.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202307.0/retrieve-a-concrete-product-response-attributes.md -->
 
-For the attributes of concrete product availability, see [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
+For the attributes of concrete product availability, see [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
 
 ## Possible errors

@@ -1,22 +1,25 @@
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-<script src="/js/algolia-suggestions.js"></script>
-{% include search/algolia_config.html %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
 <div id="search-demo-container">
     <form action="{% link search.md %}" class="quick-search-form">
-        <input type="text" class="search-input" placeholder="Search documentation" />
+        <input
+            type="text"
+            class="search-input"
+            placeholder="Search documentation"
+        />
     </form>
 </div>
+
+<div id="docsearch"></div>
+
 <script type="text/javascript">
-    Suggestions.init(
-        searchClient,
-        indices,
-        {
-            searchInput: '.quick-search-form .search-input',
-            options: {
-                debug: true,
-                hitsPerPage: 5,
-            }
-        },
-    );
+    docsearch({
+        appId: 'SF7W0R2XNG',
+        apiKey: '8cbd2a0a179df1123898430a33e6938b',
+        indexName: 'spryker',
+        insights: true,
+        container: '#docsearch',
+        debug: true,
+    });
 </script>

@@ -57,9 +57,7 @@ Note to document writer: extract import instructions from the guide or make a li
 Backend APIs (See Swagger documentation here https://spryker.atlassian.net/browse/CC-31210 )
 
 
-
-
-## Service point search widget
+## Service points on the Storefront
 
 When checking out, customers select a service point they want to process their order at. The feature is shipped with a search widget that lets them search service points by the following:
 * Service point name
@@ -70,6 +68,11 @@ By default, search results are sorted by city.
 
 ![search widget screenshot]
 
+You can add only predefined service points by default. But developers can configure customers to be able to enter custom addresses for service points.
+
+After placing an order, the customer can see the selected service point on the Order Details page.
+
+![screenshot with an order]
 
 ## Related Business User documents
 
@@ -84,5 +87,7 @@ By default, search results are sorted by city.
 | - |
 | [Install the Service Points feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-the-service-points-feature.html) |
 | [Install the Service Points + Shipment feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-the-service-points-shipment-feature.html) |
+| [Install the Service Points + Customer Account Management feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-the-service-points-customer-account-management-feature.html) |
+| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-the-service-points-order-management-feature.html) |
 | [Install the Product Offer Shipment feature](docs/pbc/all/offer-management/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html) |
 | [Install the Shipment + Customer Account Management feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html) |

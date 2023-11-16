@@ -24,7 +24,7 @@ Here is a list of the entities and their relationships as they appear in the dia
   - Has a Service (1-to-many relationship).
   - Has a Store (many-to-many relationship)
 - **Service:**
-  - Has a Service Type (1-to-1 relationship).
+  - Has a Service Type (many-to-1 relationship).
   - Relates to Product Offer (many-to-many relationship).
 - **Service Type:**
   - Relates to a Service (1-to-many relationship).
@@ -35,21 +35,20 @@ Here is a list of the entities and their relationships as they appear in the dia
   - Relates to Sales Shipment (1-to-many relationship).
   - Has a Store (many-to-many relationship).
 - **Product Offer:**
-  - Contains attributes like Price, Availability, etc.
-  - Relates to Product (1-to-many relationship).
-  - Relates to Stock (Warehouse) (1-to-many relationship).
+  - Relates to Product (many-to-1 relationship).
+  - Relates to Stock (Warehouse) (many-to-1 relationship).
 - **Product:**
-  - Relates to Product Price (1-to-1 relationship).
-  - Relates to Product Stock (1-to-1 relationship).
+  - Relates to Product Price (1-to-many relationship).
+  - Relates to Product Stock (1-to-many relationship).
   - Has a Product Offer (1-to-many relationship).
 - **Sales Order:**
-  - Contains Sales Order Item (1-to-many relationship).
+  - Has Sales Order Item (1-to-many relationship).
   - Relates to Sales Shipment (1-to-many relationship).
 - **Sales Order Item:**
-  - Has a Sales Shipemnt (1-to-many relationship).
+  - Has a Sales Shipment (many-to-1 relationship).
 - **Stock (Warehouse):**
-  - Contains Product Offer Stock (1-to-many relationship).
-  - Contains Product Stock (1-to-many relationship).
+  - Has Product Offer Stock (1-to-many relationship).
+  - Has Product Stock (1-to-many relationship).
   
 The relationships indicate how each entity interacts with others within the system. For example, a Store can have multiple Service Points, a Merchant can offer various Product Offers, and each Product Offer can be linked to multiple Products.
 The model also differentiates between new entities and relations (shown in green) and existing ones (shown in white), which helps to understand the changes or extensions made to the existing system.
@@ -70,8 +69,8 @@ This system not only enhances customer convenience by providing a more flexible 
 
 # Service Point
 
-* A **Service point** refers to a physical location, such as a store or a post office, where customers can pick up their orders. Service points are typically used to deliver products purchased online, especially for customers who may not be able to receive the products at their homes or workplace. <br/> Service points can be owned and operated by the e-commerce platform operator itself or by third-party providers.
-* A **Service point address** is the physical address of a location where customers can pick up their orders. <br/> For example, if a customer chooses to use an Amazon Locker as a service point to pick up their order, they will be given the address of the specific Amazon Locker location where their package will be delivered. The customer can then go to that location and use a unique code or barcode to retrieve their package. <br/> The service point address is an important component of e-commerce logistics, as it allows customers to locate and access their orders for pickup easily.
+* A **Service point** refers to a physical location, such as a store or a post office, where customers can pick up their orders. Service points are typically used to deliver products purchased online, especially for customers who may not be able to receive the products at their homes or workplace. <br/> Service points can be owned and operated by the e-commerce platform operator.
+* A **Service point address** is the physical address of a location where customers can pick up their orders. <br/> For example, if a customer chooses to use an Parcel Locker as a service point to pick up their order, they will be given the address of the specific Parcel Locker location where their package will be delivered. The customer can then go to that location and use a unique code or barcode to retrieve their package. <br/> The service point address is an important component of e-commerce logistics, as it allows customers to locate and access their orders for pickup easily.
 * A **Service Type** is different categories or classifications of services that a business offers to its customers. These service types are often determined by the nature of the business. Examples: Pickup service, Return service, Stock keeping service, et.
 * A **Service** represent a specific service type that are provided (enabled) in specific Service point. <br/> A service is a capability within a service point that is offered to other entities, for example customers, merchants, third parties, basically any business entity. A service can be a point of sale, a locker where you can deliver to and customers can pick up their goods. It could be as well a loading point or loading dock. A service itself can be an aggregation of business entities that must be a logical part of this service. A service in this context is a point of interaction that exists in the real world.
 
@@ -86,9 +85,9 @@ Some common shipment types include:
 
 # Domains and subdomains
 
-- [Service Points](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/service-points-domain-walkthrough.html)
+- [Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/service-points-domain-walkthrough.html)
   - [Service Point Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/service-point-cart-subdomain-walkthrough.html)
-- [Shipment Types](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/shipment-types-domain-walkthrough.html)
+- [Shipment Type](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/shipment-types-domain-walkthrough.html)
   - [Shipment Type Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/shipment-type-service-point-subdomain-walkthrough.html)
 - [Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
   - [Product Offer Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-service-point-subdomain-walkthrough.html)

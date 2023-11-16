@@ -20,21 +20,29 @@ This document describes how to set up an environment for developing in the Oryx 
 
 ## Install Oryx with the boilerplate project
 
-1. Download the boilerplate project and install dependencies:
+1. Download the boilerplate project and install dependencies. There are two options:
+    - Default Oryx setup, which is most suitable for a general eCommerce web-application, like B2C or B2B shop:
+        ```shell
+        git clone https://github.com/spryker/composable-frontend && \
+        cd composable-frontend && \
+        npm i
+        ```
 
-```shell
-git clone https://github.com/spryker/composable-frontend && \
-cd composable-frontend && \
-npm i
-```
+    - Fulfillment application based on Oryx, which is a specific PWA setup perfectly fits Fulfillment flow with a few additional features, like offline mode, mobile-oriented UI, etc.:
+        ```shell
+        git clone https://github.com/spryker/composable-frontend && \
+        cd composable-frontend && \
+        git checkout fulfillment && \
+        npm i
+        ```
 
 2. Run the application:
 
-```shell
-npm run dev
-```
+    ```shell
+    npm run dev
+    ```
 
-The application gets available at `localhost:3000`.
+The application gets available at `localhost:3000` (or localhost:4200 for Fulfillment app).
 
 For more information about the boilerplate project, see the [boilerplate guide](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx-boilerplate.html).
 

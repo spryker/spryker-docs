@@ -3,6 +3,8 @@ title: Retrieve availability when retrieving concrete products
 description: Retrieve general information about concrete products.
 last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+- /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.

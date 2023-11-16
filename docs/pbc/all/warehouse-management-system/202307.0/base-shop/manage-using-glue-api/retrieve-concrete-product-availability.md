@@ -6,15 +6,12 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-product-availability
 originalArticleId: 0c67acf3-3c48-484e-8a9a-3889189c7f56
 redirect_from:
-  - /2021080/docs/retrieving-concrete-product-availability
-  - /2021080/docs/en/retrieving-concrete-product-availability
-  - /docs/retrieving-concrete-product-availability
-  - /docs/en/retrieving-concrete-product-availability
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
+  - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
 related:
   - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
@@ -51,8 +48,9 @@ For detailed information on the modules that provide the API functionality and r
 
 Request sample: retrieve availability of a concrete product
 
+---
 `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
-
+---
 
 ### Response
 

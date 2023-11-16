@@ -28,7 +28,9 @@ This document describes how to set up an environment for developing in the Oryx 
     - Composable Storefront (default)
     - Fulfillment App  
 
-    If you like to install the Fulfillment App, you need to checkout the `fulfillment` branch from the boilerplate (`git checkout fulfillment`). The Fulfillment App is a PWA that comes with an additional build process for the service worker to support offline mode and background sync.
+   {% info_block infoBox %}
+   If you like to install the Fulfillment App, you need to checkout the `fulfillment` branch from the boilerplate (`git checkout fulfillment`). The Fulfillment App is a PWA that comes with an additional build process for the service worker to support offline mode and background sync.
+   {% endinfo_block %}
 
 2. Run the application:
 

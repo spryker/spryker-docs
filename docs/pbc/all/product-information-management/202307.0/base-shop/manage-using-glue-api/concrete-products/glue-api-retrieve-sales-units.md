@@ -14,7 +14,7 @@ related:
   - title: Retrieve concrete product availability
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Measurement units feature overview

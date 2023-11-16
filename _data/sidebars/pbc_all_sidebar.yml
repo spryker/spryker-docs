@@ -1190,7 +1190,7 @@ entries:
         nested:
           - title: Install and upgrade
             nested:
-              - title: Integrate the Gift Cards feature
+              - title: Install the Gift Cards feature
                 url: /docs/pbc/all/gift-cards/install-and-upgrade/install-the-gift-cards-feature.html
               - title: Enable gift cards
                 url: /docs/pbc/all/gift-cards/install-and-upgrade/enable-gift-cards.html
@@ -1204,13 +1204,13 @@ entries:
           - title: Manage using Glue API
             nested:
               - title: Manage gift cards of guest users
-                url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
               - title: Retrieve gift cards in guest carts
-                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/glue-api-retrieve-gift-cards-in-guest-carts.html
               - title: Manage gift cards of registered users
-                url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
               - title: Retrieve gift cards in carts of registered users
-                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/glue-api-retrieve-gift-cards-in-carts-of-registered-users.html
       - title: Identity Access Management
         url: /docs/pbc/all/identity-access-management/identity-access-management.html
         nested:
@@ -2380,13 +2380,13 @@ entries:
               - title: Manage using Glue API
                 nested:
                   - title: Retrieve abstract product prices
-                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
+                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
                   - title: Retrieve concrete product prices
-                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
+                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
                   - title: Retrieve prices when retrieving abstract products
-                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-abstract-products.html
+                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/glue-api-retrieve-prices-when-retrieving-abstract-products.html
                   - title: Retrieve prices when retrieving concrete products
-                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
+                    url: /docs/pbc/all/price-management/base-shop/manage-using-glue-api/glue-api-retrieve-prices-when-retrieving-concrete-products.html
               - title: Tutorials and HowTos
                 nested:
                   - title: Create personalized prices

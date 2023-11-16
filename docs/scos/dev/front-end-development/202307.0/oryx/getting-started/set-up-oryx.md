@@ -38,7 +38,7 @@ This document describes how to set up an environment for developing in the Oryx 
     npm run dev
     ```
 
-The application gets available at `localhost:3000` (or localhost:4200 for Fulfillment app).
+The application gets available at `localhost:3000`.
 
 For more information about the boilerplate project, see the [boilerplate guide](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html).
 

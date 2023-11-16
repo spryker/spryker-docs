@@ -43,7 +43,7 @@ You can also use wizards provided by Spryker, which will be used by the [Spryker
 
 ## Build an app
 
-You can build a new app with the help of the [Spryker SDK](/docs/sdk/dev/spryker-sdk.html). After you have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html), you can run the following commands to start building the app.
+You can build a new app with the help of the [Spryker SDK](/docs/sdk/dev/spryker-sdk.html). After you have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html#installation), you can run the following commands to start building the app.
 
 1. Ensure that you are in the correct working directory:
 

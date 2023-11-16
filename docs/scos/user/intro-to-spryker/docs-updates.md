@@ -30,7 +30,7 @@ In October 2023, we have added and updated the following pages:
 - [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
 - [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
-- [Create an app with AppKernel](/docs/acp/user/developing-an-app/create-an-app with-appkernel.html): Learn how to use AppKernel with Spryker’s Mini Framework to develop an app.
+- [Create an app with AppKernel](/docs/acp/user/developing-an-app/create-an-app-with-appkernel.html): Learn how to use AppKernel with Spryker’s Mini Framework to develop an app.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-points/202311.0/unified-commerce/install-and-upgrade/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-points/202311.0/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html).
 - [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/service-points/202311.0/unified-commerce/install-and-upgrade/install-the-shipment-product-offer-service-points-availability-feature.html).

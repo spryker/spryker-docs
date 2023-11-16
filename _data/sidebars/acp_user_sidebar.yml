@@ -16,7 +16,7 @@ entries:
         url: /docs/acp/user/developing-an-app/developing-an-app.html
         nested:
           - title: Create and app with AppKernel
-            url: /docs/acp/user/developing-an-app/create-an-app with-appkernel.html
+            url: /docs/acp/user/developing-an-app/create-an-app-with-appkernel.html
       - title: App manifest
         url: /docs/acp/user/app-manifest.html
       - title: App configuration

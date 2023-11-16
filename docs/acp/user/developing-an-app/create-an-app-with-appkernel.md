@@ -2,6 +2,9 @@
 title: Create an app with AppKernel
 description: Learn how to use the AppKernel when developing an App with Spryker's Mini Framework
 template: howto-guide-template
+redirect_from:
+- /docs/acp/user/developing-an-app/create-an-app with-appkernel.html
+- /docs/acp/user/developing-an-app/create-an-app%20with-appkernel.html
 ---
 
 The [AppKernel](https://github.com/spryker/app-kernel) is a module that provides the default functionality required by most of the apps. The functionality includes the following actions:

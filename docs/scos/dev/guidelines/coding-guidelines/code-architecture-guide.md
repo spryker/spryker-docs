@@ -30,43 +30,42 @@ related:
   - title: Secure Coding Practices
     link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
+This document outlines Spryker recommendations for the code architecture.
 
-## Architecture and Layer Separation
+## Architecture and layer separation
 * Storage/Search modules should not make RPC calls to ZED and should focus on fetching data from the key-value storage.
-* Maintain separation between layers with the following rules:
+* Maintain separation between layers, sticking to the following rules:
   * Avoid calling Facade functions in the Persistence layer.
   * Database queries must exclusively occur within the Persistence layer.
   * Ensure the Client layer is not dependent on Yves or Zed Communication layers.
   * Prevent the Service layer from relying on the Business layer of another module.
-  * Encourage the Business layer to depend on the Persistence layer (e.g., a Repository) but not on ORM directly.
-  * Avoid cross-module Business layer dependencies, use injected Facades instead.
-* You can run `docker/sdk cli vendor/bin/deptrac analyse` on `./src` directory to identify all violations.
+  * Encourage the Business layer to depend on the Persistence layer, for example, a Repository, but not on ORM directly.
+  * Avoid cross-module Business layer dependencies. Use injected Facades instead.
+* To identify all violations, you can run `docker/sdk cli vendor/bin/deptrac analyse` on the `./src` directory.
 
-## Dependency Handling and Business Logic
+## Dependency handling and business logic
 * Singleton instances should be provided from Dependency Provider classes, and avoid using `getInstance()` method outside the Dependency Provider.
 * Ensure there is no business logic within Non-Business layers. Plugins should focus on using business classes and making simple, one-line calls.
-* There is no need to follow the Bridge design pattern on the project level, and refrain from creating or extending bridges from the core.
+* There is no need to follow the Bridge design pattern on the project level. Refrain from creating or extending bridges from the core.
 * Business Factory classes can resolve Repository, Entity Manager, and Config classes without needing initialization inside the Factory class.
 
-## Code Quality
+## Code quality
 * If a method has multiple tasks, it violates the Single Responsibility Principle. The ideal approach is for a method to perform one task that aligns with its name.
 * Handle exceptions in your code base to provide meaningful error messages to customers at runtime.
 * Separate reader and mapper responsibilities for optimal implementation; mappers convert data types, and readers retrieve data from sources.
-* Avoid to use deprecated classes or functions.
-* Eliminate commented code blocks and unused classes or methods; remove them instead of keeping them as comments.
+* Avoid using deprecated classes or functions.
+* Eliminate commented code blocks and unused classes or methods. Remove them instead of keeping them as comments.
 * Exclusively utilize constants within the configuration classes.
 * Utilize constants exclusively within configuration classes.
-* Avoid hard-coded strings and ids with variables or constants to improved management, enhanced readability, and clearer code intent.
+* For the sake of the improved management, enhanced readability, and clearer code intent, avoid hard-coded strings and IDs with variables or constants.
 * Avoid unnecessary duplications from the core; consider using "parent" when applicable or exploring alternative development strategies such as plug-and-play.
 * Avoid suppressing PHPStan checks. These checks are there to improve the quality of the code base.
 
-## Code Testability and Cleanup
+## Code testability and cleanup
 * Avoid mocking a service outside a test environment.
 * Use of global variables will reduce the testability of the code base.
-* Example modules should be removed e.g. `ExampleProductSalePage`, `ExampleStateMachine`, etc.
-* Rather than relying on comments to ensure that code remains unchanged, it is preferable to create a unit test that fails if the requirements are not met.
-
-
+* Remove example modules such as `ExampleProductSalePage`, `ExampleStateMachine`, etc.
+* Rather than relying on comments to ensure that code remains unchanged, we recommend creating a unit test that fails if the requirements are not met.
 
 ## Tools
 

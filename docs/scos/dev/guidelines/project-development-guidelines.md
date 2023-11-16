@@ -55,12 +55,12 @@ Use custom names for everything that is added on the project level, like the fol
 For example, customize the names by adding the project name.
 
 ## Avoid using, extending, and overriding Private API
-Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. Spryker provides you extension points, which allows you extend via Public API and helps you to customize the application. Please try to use them instead of overriding private API.
+Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. Spryker offers extension points that allow you to extend via the Public API and helps you to customize the application. We recommend to use the extension points instead of overriding Private API.
 
 ## Avoid using unsupported types
-Avoid using unsupported types as a constructor arguments of a plugin. 
+Avoid using unsupported types as constructor arguments of a plugin. 
 
-The [supported types](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html#problem-description) are: null, bool, integer, float, string and object.
+The [supported types](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html#problem-description) are: null, bool, integer, float, string and object.
 
 ## Keep modules up to date
 During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
@@ -78,10 +78,10 @@ Before you start developing, establish coding standards. Implement code checks b
 
 Make sure that code can't be merged until it corresponds to your coding standards.
 
-## Code Maintainability
+## Code maintainability
 Code maintainability is important because it ensures that your code remains understandable, adaptable, and modifiable throughout its lifecycle. It helps development teams to manage and enhance code efficiently, reducing the likelihood of bugs and costly errors over time.
 
-Following tools can contribute to code maintainability:
+The following tools can help you make your code maintainable:
 
 - [PHPStan](https://docs.spryker.com/docs/sdk/dev/development-tools/phpstan.html)
 - [Architecture Sniffer](https://docs.spryker.com/docs/sdk/dev/development-tools/architecture-sniffer.html)

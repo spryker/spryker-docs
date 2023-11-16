@@ -127,16 +127,15 @@ Database queries are the slowest parts of each application. They have different 
 
 ### Pagination
 
-Ensure data fetched from the database is paginated; failing to do so with large datasets may lead to out-of-memory errors.
+Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
 
 ### Wildcards in Redis
 
-Avoid using wildcards (*) in Redis as they can significantly impact performance.
+Avoid using wildcards (*) in Redis, as they can significantly impact performance.
 
-### RPC Calls
+### RPC calls
 
-It's recommended to minimize the number of RPC calls, ideally having only one per page. A high volume of RPC calls can lead to severe performance issues.
-
+We recommend to minimize the number of RPC calls, ideally having only one per page. A high volume of RPC calls can lead to severe performance issues.
 
 ## Feature configurations
 
@@ -205,7 +204,11 @@ Zed calls are necessary when it comes to executing a database-related operation 
 - Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
-**Note:** Please avoid to make ZED calls within the QueryExpanderPlugin (from Storage or Search).
+{% info_block infoBox "Info" %}
+
+Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
+
+{% endinfo_block %}
 
 ### OMS optimization
 

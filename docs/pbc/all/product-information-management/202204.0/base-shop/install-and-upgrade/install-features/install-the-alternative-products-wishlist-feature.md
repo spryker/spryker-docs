@@ -1,5 +1,5 @@
 ---
-title: Alternative Products + Wishlist feature integration
+title: Install the Alternative Products + Wishlist feature
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,4 +14,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/alternative-products-wishlist-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md -->

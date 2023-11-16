@@ -1,6 +1,6 @@
 {% info_block warningBox %}
 
-Dynamic Multistore is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
@@ -67,8 +67,8 @@ Send one of the following requests:
 
 | ENDPOINT | HEADER |
 |-|-|
-| https://glue.mysprykershop.com | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
-| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
+| `https://glue.mysprykershop.com` | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| `https://glue.mysprykershop.com?_store=DE` | [{"key":"Accept-Language","value":"de_DE"}] |
 
 Make sure the response contains the following:
 * The `content-language` header set to `de_DE`.
@@ -108,8 +108,8 @@ Send one of the following requests:
 
 | ENDPOINT | HEADER |
 |-|-|
-| https://glue-backend.mysprykershop.com` | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
-| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
+| `https://glue-backend.mysprykershop.com` | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| `https://glue.mysprykershop.com?_store=DE` | [{"key":"Accept-Language","value":"de_DE"}] |
 
 Make sure you get a response containing the `content-language` header set to `de_DE`.
 
@@ -173,8 +173,8 @@ Send one of the following requests:
 
 | ENDPOINT | HEADER |
 |-|-|
-| https://glue-storefront.mysprykershop.com | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
-| https://glue.mysprykershop.com?_store=DE | [{"key":"Accept-Language","value":"de_DE"}] |
+| `https://glue-storefront.mysprykershop.com` | [{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}] |
+| `https://glue.mysprykershop.com?_store=DE` | [{"key":"Accept-Language","value":"de_DE"}] |
 
 Make sure you get a response containing the `content-language` header set to `de_DE`
 

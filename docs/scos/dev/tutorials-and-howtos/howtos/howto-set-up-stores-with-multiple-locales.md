@@ -1,5 +1,5 @@
 ---
-title: Set up stores with multiple locales
+title: "HowTo: Set up stores with multiple locales"
 description: Use the guide to configure different locales for your store.
 last_updated: Jun 16, 2021
 template: howto-guide-template

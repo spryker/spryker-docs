@@ -6,10 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list
 originalArticleId: e7682701-b572-4934-9422-2a95d31610a1
 redirect_from:
-  - /2021080/docs/creating-a-product-list
-  - /2021080/docs/en/creating-a-product-list
-  - /docs/creating-a-product-list
-  - /docs/en/creating-a-product-list
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/product-lists/creating-product-lists.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/creating-product-lists.html
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/product-lists/creating-product-lists.html  
 ---
@@ -70,6 +67,6 @@ This doc describes how to create product lists. Product lists are used to allow 
 
 ## Next steps
 
-* Allow or deny a company access to the product list by [creating a new merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
-* Allow or deny a company access to the product list by [editing a merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html).
+* Allow or deny the company access to the product list by [creating a new merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
+* Allow or deny the company access to the product list by [editing a merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html).
 * [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html).

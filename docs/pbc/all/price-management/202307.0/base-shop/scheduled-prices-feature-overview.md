@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/scheduled-prices-feature-overview
 originalArticleId: 8a5fc988-3b43-4467-9cd6-97d54a039d1d
 redirect_from:
-  - /2021080/docs/scheduled-prices-feature-overview
-  - /2021080/docs/en/scheduled-prices-feature-overview
-  - /docs/scheduled-prices-feature-overview
-  - /docs/en/scheduled-prices-feature-overview
+  - /docs/scos/user/features/202108.0/scheduled-prices-feature-overview.html
   - /docs/scos/user/features/202307.0/scheduled-prices-feature-overview.html
 ---
 
@@ -43,7 +40,7 @@ Even though you can use any time zone for defining a price schedule, in the data
 ## Defining product price schedules
 
 You can define price schedules as follows:
-Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/create-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-product-price-schedule.csv.html).
+Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/create-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html).
 Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
 ## Cron job
@@ -100,5 +97,5 @@ The feature has the following functional constraints which are going to be resol
 
 |INSTALLATION GUIDES  | UPGRADE GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| [Integrate the Scheduled prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html) | [Upgrade the PriceProductSchedule module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)  | [File details: product_price_schedule.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
+| [Integrate the Scheduled prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html) | [Upgrade the PriceProductSchedule module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)  | [File details: product_price_schedule.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
 |   | [Upgrade the PriceProductScheduleGui module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)  |   |   |

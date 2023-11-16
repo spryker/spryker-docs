@@ -3,6 +3,8 @@ title: Tax Management data import
 description: Details about data import files for the Tax Management PBC
 template: concept-topic-template
 last_updated: Jul 23, 2023
+redirect_from:
+- /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/import-and-export-data/tax-management-data-import.html
 ---
 
 

@@ -2,6 +2,8 @@
 title: Edit tax sets
 last_updated: May 31, 2022
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/tax-management/202212.0/base-shop/manage-in-the-back-office/edit-tax-sets.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

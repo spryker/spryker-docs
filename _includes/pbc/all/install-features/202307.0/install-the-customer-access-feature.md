@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.md) into a Spryker project.
+This document describes how to install the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-access-feature-overview.html).
 
 ## Install Feature Core
 
@@ -10,7 +10,7 @@ Follow the steps below to install the Customer Access feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -405,7 +405,7 @@ Follow the steps below to install the Customer Access feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html
 ---
 
 This document describes how to integrate the Glue Storefront and Backend API applications into a Spryker project.
@@ -18,7 +19,7 @@ Follow the steps below to install the Glue Storefront and Backend API applicatio
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Glue Application | {{page.version}} | [Glue API - Glue Application feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 

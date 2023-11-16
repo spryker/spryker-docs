@@ -2,6 +2,7 @@
 title: Dead code checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+redirect_from:
 ---
 
 The dead code checker checks for dead code that extends core classes in your project.
@@ -28,7 +29,7 @@ Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
 
 Unused class `Pyz/Zed/Single/Communication/Plugin/SinglePlugin` that produces an error:
 
-```bash
+```php
 namespace Pyz\Zed\Single\Communication\Plugin;
 
 use Spryker\Zed\Single\Communication\Plugin\SinglePlugin as SprykerSinglePlugin;
@@ -39,8 +40,13 @@ class SinglePlugin extends SprykerSinglePlugin
 }
 ```
 
-### Resolving the error
+## Resolve the error
 
-To resolve the error:
+Remove the unused dead code in project.
 
-1. Remove the unused dead code in project.
+
+## Run only this checker
+To run only this checker, include `DEAD_CODE_CHECKER` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=DEAD_CODE_CHECKER
+```

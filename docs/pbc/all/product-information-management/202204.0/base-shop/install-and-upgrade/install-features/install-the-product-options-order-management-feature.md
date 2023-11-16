@@ -1,5 +1,5 @@
 ---
-title: Product Options + Order Management feature integration
+title: Install the Product Options + Order Management feature
 description: This guide provides step-by-step instructions on integrating Product Options + Order Management feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -19,4 +19,4 @@ related:
   - title: Glue API - Product Options feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-product-options-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-options-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-options-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-options-order-management-feature.md -->

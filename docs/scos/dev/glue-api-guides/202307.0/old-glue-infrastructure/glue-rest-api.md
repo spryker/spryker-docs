@@ -16,6 +16,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
 ---
 
+<!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
+
 {% info_block warningBox %}
 
 This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
@@ -38,8 +40,8 @@ The Glue REST API comes with a set of predefined APIs, which you can extend or a
 
 For more details, see REST API reference:
 
-* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-reference.html)
-* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2c-reference.html)
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html)
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html)
 
 ## B2C API React example
 

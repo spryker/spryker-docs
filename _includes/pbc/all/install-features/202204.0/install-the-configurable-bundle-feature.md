@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -11,12 +11,12 @@ Follow the steps below to install the Configurable Bundle feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | ---| --- |
 | Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Product Lists	 | {{page.version}} | Product Lists feature integration | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |
+| Product | {{page.version}} |[Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Product Lists	 | {{page.version}} | Product Lists feature integration | [Product Lists feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-lists-featureinstall-features/install-the-product-lists-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -668,10 +668,10 @@ t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smart
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
 | configurable_bundle_template_uuid | optional | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
-| configurable_bundle_template_name | mandatory | string | configurable_bundle.templates.smartstation.name | Glossary key for the configurable bundle name. |
-| configurable_bundle_template_is_active | mandatory | bool | 1 | `IsActive` flag for the configurable bundle name. |
+| configurable_bundle_template_name | ✓ | string | configurable_bundle.templates.smartstation.name | Glossary key for the configurable bundle name. |
+| configurable_bundle_template_is_active | ✓ | bool | 1 | `IsActive` flag for the configurable bundle name. |
 
 **vendor/spryker/spryker/Bundles/ConfigurableBundleDataImport/data/import/configurable_bundle_template_slot.csv**
 
@@ -687,11 +687,11 @@ s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| configurable_bundle_template_slot_key | mandatory | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
-| configurable_bundle_template_slot_name | mandatory | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
+| configurable_bundle_template_slot_key | ✓ | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
+| configurable_bundle_template_slot_name | ✓ | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
 | configurable_bundle_template_slot_uuid | optional | string | 332b40ac-a789-57ce-bec0-23d8dddd71eb |Unique identifier for the configurable bundle template slot.  |
-| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
-| product_list_key | mandatory | string | pl-009 | The ID of the product list for allowed products of the slot. |
+| configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| product_list_key | ✓ | string | pl-009 | The ID of the product list for allowed products of the slot. |
 
 Register the following plugins to enable data import:
 
@@ -926,7 +926,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
   * The quantity of bundle has changed.
 
 * Do the following:
-  1. Make clean up for the configured bundle item (in the `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`. 
+  1. Make clean up for the configured bundle item (in the `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`.
   2. Reload the cart page and make sure that `ConfiguredBundleItem::quantityPerSlot` is not null.
   3. For the configured bundle item, set the wrong quantity to `ConfiguredBundle::quantity`.
   4. Make sure that after updating the configured bundle quantity on the cart page error flash message is displayed.
@@ -1136,12 +1136,12 @@ console frontend:zed:build
 
 Follow the steps below to install the Configurable Bundle feature frontend
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | ---| --- |
 | Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Prices | {{page.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Product | {{page.version}} |[Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Prices | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -1248,7 +1248,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

@@ -14,7 +14,7 @@ redirect_from:
 related:
   - title: Glue API - Configurable Bundle + Cart feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
-  - title: Glue API - Configurable Bundle + Product feature integration
+  - title: Install the Configurable Bundle + Product Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
@@ -24,4 +24,4 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->

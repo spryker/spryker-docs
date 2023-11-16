@@ -11,4 +11,4 @@ redirect_from:
 
 ## Next steps
 
-[Integrate Avalara](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara.html)
+[Integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html)

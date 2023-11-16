@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/product-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/product-cart-feature-integration.html
 related:
-  - title: Product feature integration
+  - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
@@ -20,4 +20,4 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-cart-feature.md -->

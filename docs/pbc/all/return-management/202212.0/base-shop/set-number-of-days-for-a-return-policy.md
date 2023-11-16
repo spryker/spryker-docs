@@ -25,10 +25,14 @@ To define a period within which an item can be returned, in `Pyz\Zed\SalesReturn
 
 Where _{% raw %}{{{% endraw %}`Number of days`{% raw %}}}{% endraw %}_ is the time period in days after the item purchase within which the item can be returned.
 
-Example:
+Example with the 30 days return policy:
 
 ```php
-namespace Pyz\Zed\SalesReturn;use Spryker\Zed\SalesReturn\SalesReturnConfig as SprykerSalesReturnConfig;class SalesReturnConfig extends SprykerSalesReturnConfig
+namespace Pyz\Zed\SalesReturn;
+
+use Spryker\Zed\SalesReturn\SalesReturnConfig as SprykerSalesReturnConfig;
+
+class SalesReturnConfig extends SprykerSalesReturnConfig
 {
     protected const GLOBAL_RETURNABLE_NUMBER_OF_DAYS = 30;
 }

@@ -27,16 +27,12 @@
                                 <div class="nav-popup__content">
                                     <div class="main-nav dropdown">
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="main-nav__opener-label">Select Product</span>
+                                            <span class="main-nav__opener-label">Select a guide</span>
                                             <span class="main-nav__opener-text">
-                                                {% if page.product == 'marketplace' and page.role == 'dev' %}
-                                                Marketplace developer guide
-                                                {% elsif page.product == 'marketplace' and page.role == 'user' %}
-                                                Marketplace users guide
-                                                {% elsif page.product == 'sdk' and page.role == 'dev' %}
+                                                {% if page.product == 'sdk' and page.role == 'dev' %}
                                                 Spryker SDK
-                                                {% elsif page.product == 'cloud' and page.role == 'dev' %}
-                                                Spryker Cloud Commerce OS
+                                                {% elsif page.product == 'ca' and page.role == 'dev' %}
+                                                Cloud administration
                                                 {% elsif page.product == 'scos' and page.role == 'dev' %}
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
@@ -48,7 +44,7 @@
                                                 {% elsif page.product == 'acp' and page.role == 'user' %}
                                                 App Composition Platform users guide
                                                 {% else %}
-                                                Select Product
+                                                Select a guide
                                                 {% endif %}
                                             </span>
                                             <i class="main-nav__opener-icon icon-arrow-down"></i>
@@ -80,40 +76,14 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown">
-                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Marketplace
-                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
-                                                </a>
-                                                <ul class="main-nav__drop dropdown-menu">
-                                                    <li>
-                                                        <a href="/docs/marketplace/dev/setup/{{ site.version }}/system-requirements.html" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-developer"></i>
-                                                                Developer
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">Marketplace developer guide</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-business"></i>
-                                                                Business User
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">Marketplace users guide</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
                                             <li>
                                                 <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
                                                 Spryker SDK
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html" class="main-nav__drop-link">
-                                                Spryker Cloud Commerce OS
+                                                <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
+                                                Cloud administration
                                                 </a>
                                             </li>
                                             <li>

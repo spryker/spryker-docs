@@ -15,7 +15,7 @@ Follow the steps below to install Payments feature API.
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
 | Payments | {{page.version}} | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) |
@@ -258,7 +258,7 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 {% endinfo_block %}
 
-## Related Features
+## Install related features
 
 | FEATURE | LINK |
 | --- | --- |

@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202307.0/tax-feature-walkthrough/tax-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/tax-feature-walkthrough/tax-feature-walkthrough.html  
   - /docs/pbc/all/tax-management/202307.0/domain-model-and-relationships/tax-domain-model-and-relationships.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/domain-model-and-relationships/tax-domain-model-and-relationships.html
 ---
 
 

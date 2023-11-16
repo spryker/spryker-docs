@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/deleting-expired-refresh-tokens
 originalArticleId: acf43e94-6fa4-46dd-8f39-b971e5f6aa04
 redirect_from:
-  - /2021080/docs/deleting-expired-refresh-tokens
-  - /2021080/docs/en/deleting-expired-refresh-tokens
-  - /docs/deleting-expired-refresh-tokens
-  - /docs/en/deleting-expired-refresh-tokens
   - /docs/scos/dev/glue-api-guides/202204.0/deleting-expired-refresh-tokens.html
 related:
   - title: Authenticating as a customer
@@ -18,7 +14,7 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
 ---
 
-After an authentication refresh token is [revoked](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html) or expires, it remains in the database.
+After an authentication refresh token is [revoked](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) or expires, it remains in the database.
 
 For security reasons and to reduce the database storage space, we recommend deleting the tokens by setting their lifetime. Once they have a lifetime, you can configure a cron job to delete them automatically or do it manually.
 

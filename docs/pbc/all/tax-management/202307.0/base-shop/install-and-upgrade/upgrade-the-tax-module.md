@@ -32,6 +32,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202307.0/migration-guide-tax.html
   - /docs/scos/dev/module-migration-guides/migration-guide-tax.html
   - /docs/pbc/all/tax-management/202307.0/install-and-upgrade/upgrade-the-tax-module.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/install-and-upgrade/upgrade-the-tax-module.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/install-and-upgrade/upgrade-the-tax-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-tax-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-tax-module.md -->

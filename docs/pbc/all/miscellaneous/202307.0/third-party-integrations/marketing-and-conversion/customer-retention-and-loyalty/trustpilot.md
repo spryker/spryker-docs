@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/trustpilot
 originalArticleId: d26d9e19-afe5-4838-91bc-c3fe1894443e
 redirect_from:
-  - /2021080/docs/trustpilot
-  - /2021080/docs/en/trustpilot
-  - /docs/trustpilot
-  - /docs/en/trustpilot
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/trustpilot.html  
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

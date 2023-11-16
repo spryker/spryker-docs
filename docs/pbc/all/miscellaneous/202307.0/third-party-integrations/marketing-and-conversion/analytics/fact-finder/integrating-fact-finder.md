@@ -6,11 +6,10 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-integration-into-project
 originalArticleId: 1bd158d4-9fd7-4a62-9665-577d5347a754
 redirect_from:
-  - /2021080/docs/fact-finder-integration-into-project
-  - /2021080/docs/en/fact-finder-integration-into-project
-  - /docs/fact-finder-integration-into-project
-  - /docs/en/fact-finder-integration-into-project
+  - /docs/scos/dev/technology-partner-guides/201907.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+  - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html

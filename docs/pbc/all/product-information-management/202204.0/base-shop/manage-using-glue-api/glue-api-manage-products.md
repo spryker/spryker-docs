@@ -13,7 +13,7 @@ This section contains the descriptions of the following endpoints used to manage
 
 * Concrete products:
 
-  * [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html)
+  * [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html)
 
   * [Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 

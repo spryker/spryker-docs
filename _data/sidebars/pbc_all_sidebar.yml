@@ -3045,11 +3045,11 @@ entries:
                   - title: Manage using Glue API
                     nested:
                       - title: Retrieve abstract products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-abstract-products.html
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html
                       - title: Retrieve concrete products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-concrete-products.html
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
                       - title: Retrieve product offers of concrete products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html
+                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html
                   - title: Domain model and relationships
                     nested:
                       - title: Marketplace Product
@@ -3143,12 +3143,12 @@ entries:
                 url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
           - title: Manage using Glue API
             nested:
-              - title: Manage product reviews using Glue API
-                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+              - title: Manage product reviews
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/glue-api-manage-product-reviews.html
               - title: Retrieve product reviews when retrieving abstract products
-                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-abstract-products.html
               - title: Retrieving product reviews when retrieving concrete products
-                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Configure product reviews"
@@ -3885,4 +3885,4 @@ entries:
           - title: Configure Usercentrics
             url: /docs/pbc/all/usercentrics/configure-usercentrics.html
           - title: Disconnect Usercentrics
-            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html            

@@ -1,5 +1,5 @@
 ---
-title: Manage product reviews using Glue API
+title: "Glue API: Manage product reviews"
 description: Learn how to manage product reviews via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/managing-product-ra
 originalArticleId: e712d25f-b084-4fac-ac5f-cbb46e0947cb
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/managing-product-ratings-and-reviews.html  
+  - /docs/pbc/all/ratings-reviews/202307.0/manage-using-glue-api/manage-product-reviews-using-glue-api.html
 related:
   - title: Product Rating and Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html

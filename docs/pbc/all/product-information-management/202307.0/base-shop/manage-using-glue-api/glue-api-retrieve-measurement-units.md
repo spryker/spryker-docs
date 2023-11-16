@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-measurement-units
 originalArticleId: 21b908ed-07a9-44fa-b3a8-614401d4deab
 redirect_from:
-  - /2021080/docs/retrieving-measurement-units
-  - /2021080/docs/en/retrieving-measurement-units
-  - /docs/retrieving-measurement-units
-  - /docs/en/retrieving-measurement-units
-  - /docs/scos/dev/glue-api-guides/202200.0/retrieving-measurement-units.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-measurement-units.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 related:

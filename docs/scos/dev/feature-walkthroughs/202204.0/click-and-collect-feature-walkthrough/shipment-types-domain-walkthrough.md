@@ -30,6 +30,7 @@ Shipment types offer diverse options for customers to receive their orders.
 | ShipmentTypeStorage                                       | vendor/spryker/shipment-type-storage                                             |
 | ShipmentTypeStorageExtension                              | vendor/spryker/shipment-type-extension                                           |
 | ShipmentTypeWidget                                        | vendor/spryker-shop/shipment-type-widget                                         |
+| SalesShipmentType                                         | vendor/spryker/sales-shipment-type                                               |
 
 ## 2. Data Setup
 

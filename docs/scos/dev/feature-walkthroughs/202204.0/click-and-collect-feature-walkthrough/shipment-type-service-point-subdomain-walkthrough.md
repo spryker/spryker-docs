@@ -25,3 +25,17 @@ The Shipment Type Service Point subdomain establishes the connection between shi
 ## 2. Data Setup
 
 Spryker provides import functionality through the `ShipmentTypeServicePointDataImport` module to facilitate the setup of the connection between service points and shipment types.
+
+## 3. Address Substitution during Checkout
+
+The `ShipmentTypeServicePointsRestApi` module offers a mechanism to substitute the shipping address with the service point address during the checkout process.
+
+### Plugins
+
+The following plugin handles address substitution when the shipment type is set to `pickup` and a service point is selected:
+
+- **\Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestExpanderPlugin**
+
+Additionally, customization possibilities exist to redefine applicable shipment type keys supporting address substitution through module configuration:
+
+- **\Spryker\Shared\ShipmentTypeServicePointsRestApi\ShipmentTypeServicePointsRestApiConfig::getApplicableShipmentTypeKeysForShippingAddress**

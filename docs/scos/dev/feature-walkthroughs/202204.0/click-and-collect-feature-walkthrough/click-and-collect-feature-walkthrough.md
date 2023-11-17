@@ -92,5 +92,6 @@ Some common shipment types include:
 - [Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
   - [Product Offer Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-service-point-subdomain-walkthrough.html)
     - [Product Offer Service Point Availability](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-service-point-availability-subdomain-walkthrough.html)
+      - [Marketplace Merchant Product Offer Service Point Availability](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/marketplace-merchant-product-offer-service-point-availability-subdomain-walkthrough.html)
   - [Product Offer Shipment Type](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-shipment-type-subdomain-walkthrough.html)
     - [Product Offer Shipment Type Availability](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-shipment-type-availability-subdomain-walkthrough.html)

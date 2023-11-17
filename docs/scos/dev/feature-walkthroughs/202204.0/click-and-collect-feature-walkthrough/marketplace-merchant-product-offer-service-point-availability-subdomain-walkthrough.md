@@ -1,0 +1,21 @@
+---
+title: Click and Collect feature Marketplace Merchant Product Offer Service Point subdomain walkthrough
+last_updated: Nov 02, 2023
+description: Explore the Marketplace Merchant Product Offer Service Point Availability subdomain, which facilitates the calculation of merchant product availability at service points within the Click and Collect feature.
+
+template: concept-topic-template
+---
+
+# MarketPlace Merchant Product Offer Service Point Availability
+
+The Marketplace Merchant Product Offer Service Point Availability subdomain refers to the calculation of merchant product availability at service points within the Click and Collect feature.
+
+[Marketplace Merchant Product Offer Service Points Availability feature](/docs/pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html)
+
+## 1. Modules:
+
+| MODULE                                                | EXPECTED DIRECTORY                                                           |
+|-------------------------------------------------------|------------------------------------------------------------------------------|
+| MerchantProductOfferServicePointAvailability          | vendor/spryker/merchant-product-offer-service-point-availability             |
+| MerchantProductOfferServicePointAvailabilitiesRestApi | vendor/spryker/merchant-product-offer-service-point-availabilities-rest-api  |
+| MerchantProductOfferServicePointAvailabilityWidget    | vendor/spryker-shop/merchant-product-offer-service-point-availability-widget |

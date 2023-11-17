@@ -223,7 +223,7 @@ Response sample: add an item to a wishlist
 
 For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#response).
 
-For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
+For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
 ## Update a wishlist item
 
@@ -396,7 +396,7 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 
 For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#response).
 
-For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html#response).
+For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#response).
 
 
 ## Delete a wishlist item

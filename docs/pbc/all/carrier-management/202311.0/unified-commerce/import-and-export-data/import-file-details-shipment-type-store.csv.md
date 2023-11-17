@@ -1,5 +1,5 @@
 ---
-title: File details - shipment_type_store.csv
+title: "Import file details: shipment_type_store.csv"
 description: This document describes the shipment_type_store.csv file to configure the shipment information in your Spryker Demo Shop.
 template: data-import-template
 last_updated: May 23, 2023

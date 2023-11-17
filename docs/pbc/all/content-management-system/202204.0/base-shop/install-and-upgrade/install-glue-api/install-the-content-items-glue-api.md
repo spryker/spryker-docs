@@ -15,10 +15,10 @@ redirect_from:
 related:
   - title: Install the Content Items feature
     link: docs/scos/dev/feature-integration-guides/page.version/content-items-feature-integration.html
-  - title: Retrieve abstract product list content items
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
-  - title: Retrieve banner content items
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/retrieve-banner-content-items.html
+  - title: "Glue API: Retrieve abstract product list content items"
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
+  - title: "Glue API: Retrieve banner content items"
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-content-items-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-content-items-glue-api.md -->

@@ -28,6 +28,8 @@ A *delivery type* is a way in which a customer receives an order after placing i
 
 To import delivery types, see []
 
+Delivery types are important in the context of service points. For more information, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html)
+
 ## Delivery method
 
 A *delivery method* is a way in which a carrier company delivers an order to a customer. Delivery method examples:
@@ -63,19 +65,11 @@ Each delivery method has a dedicated price and tax set in the various currencies
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 
-## Shipment type versus shipment method
-
-
-
-
-You can import shipment types, see:
-Import shipment types
-
 
 ## Related Business User documents
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
-|---| - |
+| - | - |
 | [Add carrier companies](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html)  | [Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/seven-senders/seven-senders.html) |
 | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/paazl.html) |
 | [Edit delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/paqato.html) | |
@@ -84,7 +78,7 @@ Import shipment types
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|
-| [Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{page.version}}/base-shop/create-discounts-based-on-shipment.html) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html) |
+| [Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{page.version}}/base-shop/create-discounts-based-on-shipment.html) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html) |
 | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) | [Upgrade the ShipmentGui module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentgui-module.html) | [HowTo: Add a new shipment method 2.0](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html) | [Shipment method entities in the database: reference information](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html) |
 | [Integrate the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) | [Upgrade the ShipmentCartConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcartconnector-module.html) |  |  |
 | [Integrate the Shipment + Cart feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html) | [Upgrade the ShipmentCheckoutConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcheckoutconnector-module.html) |  |  |

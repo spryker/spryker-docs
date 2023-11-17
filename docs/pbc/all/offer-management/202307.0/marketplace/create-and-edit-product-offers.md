@@ -41,6 +41,7 @@ Review the [reference information](#reference-information-create-and-edit-produc
   6. Repeat steps 1-5 until you add all the needed prices.
 9. Optional: Select **Validity Dates**.
 10. Scroll up and click **Create**.
+    This reloads the page with a success message displayed. The created offer is displayed in the list.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
 
@@ -57,12 +58,4 @@ Review the [reference information](#reference-information-create-and-edit-produc
 
 ## Reference information: Create and edit product offers
 
-| ATTRIBUTE     | DESCRIPTION |
-| ------------- |  ------------- |
-| Offer status | Defines if the offer is displayed on the Storefront. By default, the offer is active. |
-| Merchant SKU     | Unique identifier of product offer in the merchant's ERP.              |
-| Offer Reference  | Unique identifier of the product offer in the Marketplace. |
-| Stores           | Defines the stores where the product offer is available.      |
-| Quantity            | Defines the stock of the product offer.                     |
-| Price            | Prices of the product offer per store, currency, and volume quantity. Volume quantity defines the minimum product offer quantity to be added to cart for the price to apply. |
-| Validity Dates   | Defines the period during which the product offer is visible on the Storefront. |
+{% include pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md %} <!-- To edit, see _includes/pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md -->

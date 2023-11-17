@@ -40,6 +40,7 @@ commonOptions = {
     /shopify.github.io\/[\.\w\-\/\?]+/,
     /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
+    /redisdesktop.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
@@ -175,6 +176,7 @@ task :check_pbc do
     /docs\/scu\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
   ]

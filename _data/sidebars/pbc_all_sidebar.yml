@@ -987,6 +987,7 @@ entries:
                 include_versions:
                 - "202311.0"
           - title: Spryker Middleware powered by Alumio
+            url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             include_versions:
             - "202311.0"
             nested: 

@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 related:
   - title: Managing availability notifications
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/manage-availability-notifications.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
 ---
 
 This endpoint allows retrieving subscriptions to availability notifications of a registered customer.

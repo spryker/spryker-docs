@@ -111,28 +111,14 @@
 
 
                     {% if page.url != "/index.html" and page.url != "/search/" %}
-                        <div class="search-popup">
-                            <div class="search-popup__inner">
-                                <div class="search-popup__content">
-                                    <a href="#" class="search-popup__close js-search-popup-close" aria-label="search popup close"><i class="icon-arrow-left"></i></a>
-                                    <div class="main-header__search">
-                                        <i class="main-header__search-icon icon-search"></i>
-                                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
-                                    </div>
-                                </div>
-                                <div class="search-popup__footer">
-                                    <a href="/search" class="search-popup__more">Show all results</a>
-                                </div>
+                        <div class="main-header__search">
+                            <div class="search-section-panel search-section-panel--secondary">
+                                {% include search/{{ site.search | default "default" }}_quicksearch.html %}
                             </div>
                         </div>
                     {% endif %}
-
                 </div>
                 <div class="main-header__right">
-                    {% if page.url != "/search/" %}
-                        <a href="#" class="main-header__search-opener js-search-popup-opener" aria-label="search popup opener"><i class="icon-search"></i></a>
-                    {% endif %}
-
                     {% if page.url != "/index.html" and page.url != "/search/" %}
                         <div class="header-switcher">
                             {% if site.github_editme_path %}

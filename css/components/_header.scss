@@ -6,16 +6,16 @@
     width: 100%;
     min-height: $header-min-height-widescreen;
 
-    @include media("<laptop") {
+    @include media('<laptop') {
         min-height: $header-min-height-desktop;
     }
 
-    @include media("<desktop") {
+    @include media('<desktop') {
         min-height: 0;
     }
 
     .scroll-down & {
-        @include media("<desktop") {
+        @include media('<desktop') {
             pointer-events: none;
         }
     }
@@ -28,36 +28,35 @@
     &__bg {
         background: $header-bg-color;
         box-shadow: 0px 6px 10px 0px rgba($black, 0.05),
-        0px 1px 0px 0px $grey-light,
-        0px 1px 2px 0px rgba($black, 0.05);
-        transition: transform .3s linear, padding .2s linear;
+            0px 1px 0px 0px $grey-light, 0px 1px 2px 0px rgba($black, 0.05);
+        transition: transform 0.3s linear, padding 0.2s linear;
         padding: 15px 0;
 
-        @include media("<laptop") {
+        @include media('<laptop') {
             padding: 7px 0;
         }
 
-        @include media("<tablet") {
+        @include media('<tablet') {
             padding: 5px 0;
         }
 
         .scroll-down & {
-            @include media("<desktop") {
+            @include media('<desktop') {
                 transform: translateY(-128px);
             }
-            @include media("<tablet") {
+            @include media('<tablet') {
                 transform: translateY(-114px);
             }
         }
 
         .toc-active & {
-            @include media("<tablet") {
+            @include media('<tablet') {
                 transform: translateY(0);
             }
         }
 
         .page-scrolled & {
-            @include media(">=desktop") {
+            @include media('>=desktop') {
                 padding: 10px 0;
             }
         }
@@ -66,7 +65,7 @@
         .search-layout & {
             transform: none;
 
-            @include media(">=desktop") {
+            @include media('>=desktop') {
                 padding: 15px 0;
             }
         }
@@ -96,12 +95,12 @@
         padding: 0 0 0 15px;
         flex: 0 0 auto;
 
-        @include media("<laptop") {
+        @include media('<laptop') {
             padding: 0 0 0 24px;
         }
 
         .main-header__button {
-            @include media("<tablet") {
+            @include media('<tablet') {
                 display: none;
             }
         }
@@ -112,12 +111,12 @@
         margin: 0 24px 0 0;
         flex: 0 0 auto;
 
-        @include media("<tablet") {
+        @include media('<tablet') {
             width: auto;
             margin: 0 20px 0 0;
         }
 
-        @include media(">=desktop") {
+        @include media('>=desktop') {
             min-width: 155px;
         }
 
@@ -125,14 +124,14 @@
             display: block;
             width: auto;
             height: 64px;
-            transition: height .1s linear, opacity .2s linear;
+            transition: height 0.1s linear, opacity 0.2s linear;
 
-            @include media("<tablet") {
+            @include media('<tablet') {
                 height: 54px;
             }
 
             .page-scrolled & {
-                @include media(">=desktop") {
+                @include media('>=desktop') {
                     height: 40px;
                     opacity: 0;
                     pointer-events: none;
@@ -141,7 +140,7 @@
 
             .home-layout &,
             .search-layout & {
-                @include media(">=desktop") {
+                @include media('>=desktop') {
                     height: 64px;
                     opacity: 1;
                     pointer-events: auto;
@@ -166,12 +165,12 @@
         flex-direction: column;
         justify-content: center;
 
-        @include media("<desktop") {
+        @include media('<desktop') {
             display: none;
         }
 
         .page-scrolled & {
-            @include media(">=desktop") {
+            @include media('>=desktop') {
                 pointer-events: auto;
                 opacity: 1;
                 transform: scale(1);
@@ -180,7 +179,7 @@
 
         .home-layout &,
         .search-layout & {
-            @include media(">=desktop") {
+            @include media('>=desktop') {
                 display: none;
             }
         }
@@ -227,8 +226,8 @@
             left: 5px;
         }
 
-        input[type="text"],
-        input[type="search"] {
+        input[type='text'],
+        input[type='search'] {
             display: block;
             width: 100%;
             height: 40px;
@@ -242,10 +241,11 @@
             background: none;
             outline: none;
             outline-width: 0;
-            letter-spacing: .02em;
-            transition: color .3s linear, background .3s linear, border-color .3s linear;
+            letter-spacing: 0.02em;
+            transition: color 0.3s linear, background 0.3s linear,
+                border-color 0.3s linear;
 
-            @include media("<desktop") {
+            @include media('<desktop') {
                 height: 56px;
                 padding: 17px 40px;
                 color: $grey-lighten;
@@ -274,17 +274,17 @@
         width: 40px;
         height: 40px;
         color: $grey;
-        transition: .3s linear opacity;
+        transition: 0.3s linear opacity;
 
         &:hover {
             text-decoration: none;
         }
 
-        @include media("<desktop") {
+        @include media('<desktop') {
             display: flex;
         }
 
-        [class*="icon-"] {
+        [class*='icon-'] {
             font-size: 26px;
         }
 
@@ -308,7 +308,9 @@
     &__sticky {
         pointer-events: none;
         opacity: 0;
-        transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear, .3s linear opacity;
+        transition: color 0.3s linear, background 0.3s linear,
+            border-color 0.3s linear, box-shadow 0.3s linear,
+            0.3s linear opacity;
 
         .page-scrolled & {
             pointer-events: auto;
@@ -324,7 +326,9 @@
         position: absolute;
         top: 0;
         right: 0;
-        transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear, .3s linear opacity;
+        transition: color 0.3s linear, background 0.3s linear,
+            border-color 0.3s linear, box-shadow 0.3s linear,
+            0.3s linear opacity;
 
         .page-scrolled & {
             pointer-events: none;

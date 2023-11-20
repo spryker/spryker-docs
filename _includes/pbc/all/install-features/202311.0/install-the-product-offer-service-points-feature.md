@@ -482,11 +482,11 @@ Make sure that, in Redis, data is displayed in the following format:
 
 To expand product offers with services, register the plugins:
 
-| PLUGIN                                   | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                                                    |
-|------------------------------------------|---------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
-| ServiceProductOfferPostCreatePlugin      | Creates the product offer service entities.                         |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
-| ServiceProductOfferPostUpdatePlugin      | Updates the product offer service entities.                         |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
-| ServiceProductOfferExpanderPlugin        | Expands product offer with services.                                |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| PLUGIN                                   | SPECIFICATION                                                           | PREREQUISITES | NAMESPACE                                                                    |
+|------------------------------------------|-------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
+| ServiceProductOfferPostCreatePlugin      | Creates the product offer service entities.                             |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| ServiceProductOfferPostUpdatePlugin      | Updates the product offer service entities.                             |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| ServiceProductOfferExpanderPlugin        | Expands product offer transfer with services.                           |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
 | ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from the storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage    |
 | ServiceProductOfferViewSectionPlugin     | Expands the product offer view section with services.                   |               | Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui |
 

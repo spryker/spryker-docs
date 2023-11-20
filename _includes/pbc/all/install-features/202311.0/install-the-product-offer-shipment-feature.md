@@ -467,12 +467,12 @@ Enable the following plugins:
 
 | PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES | NAMESPACE                                                                            |
 |-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferPostCreatePlugin                  | Persists product offer shipment type to persistence.                                                                          |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferPostCreatePlugin                  | Persists the product offer shipment type to persistence.                                                                          |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
 | ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from persistence. Persists missed product offer shipment types to persistence. |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
 | ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` with shipment type storage data.                                                        |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
+| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` with shipment type storage data.   |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
 | ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                  |               | Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage                     |
-| ShipmentTypeProductOfferViewSectionPlugin                 | Expands product offer view section with shipment types.                                                                       | None          | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
+| ShipmentTypeProductOfferViewSectionPlugin                 | Expands the product offer view section with shipment types.                     |           | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
 
 <details open
 ><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -595,9 +595,10 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-- Log in to the Backoffice.
-- Navigate to the **Marketplace&nbsp;<span aria-label="and then">></span> Offers** section in the navigation menu.
-- Select the specific product offer you want to view.
-- Make sure that `Shipment Types` section is displayed on product offer view page.
+1. In the Back Office, go to the **Marketplace&nbsp;<span aria-label="and then">></span> Offers**.
+2. On the **Offers** page, next to a product offer, click **View**.
+    This opens the **View Offer: {offer ID}** page.
+3. Scroll down the page and make sure the **SHIPMENT TYPES** pane is displayed.
+
 
 {% endinfo_block %}

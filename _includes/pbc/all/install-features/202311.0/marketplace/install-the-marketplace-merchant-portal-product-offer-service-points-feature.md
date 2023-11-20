@@ -1,24 +1,20 @@
 
 
-This document describes how to integrate the Marketplace Merchant Portal Product Offer Service Points feature into a Spryker project.
+This document describes how to install the Marketplace Merchant Portal Product Offer Service Points feature.
 
-## Install feature core
-
-Follow the steps below to install the Marketplace Merchant Portal Product Offer Service Points feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
-| NAME                         | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                          |
+| NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                          |
 |------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html)   |
-| Marketplace Merchant Portal Product Offer Management    | {{page.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                        |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html)   |
+| Marketplace Merchant Portal Product Offer Management    | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                        |
 | Marketplace Product Offer + Service Points | {{page.version}} | [Install the Marketplace Product Offer + Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html)             |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-offer-service-point-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
@@ -26,7 +22,7 @@ composer require spryker/product-offer-service-point-merchant-portal-gui:"{{page
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
@@ -34,9 +30,9 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+## 2) Set up configuration
 
-Deny Backoffice access for Backoffice users to ProductOfferServicePointMerchantPortalGui module.
+Deny Back Office access for Back Office users to the ProductOfferServicePointMerchantPortalGui module.
 
 **src/Pyz/Zed/Acl/AclConfig.php**
 
@@ -57,10 +53,10 @@ class AclConfig extends SprykerAclConfig
     {
         $installerRules = parent::getInstallerRules();
         $installerRules = $this->addMerchantPortalInstallerRules($installerRules);
-        
+
         return $installerRules;
     }
-    
+
     /**
      * @param array<array<string, mixed>> $installerRules
      *
@@ -86,14 +82,14 @@ class AclConfig extends SprykerAclConfig
 }
 ```
 
-### 3) Set up behavior
+## 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                 | DESCRIPTION                                                                                                 | PREREQUISITES | NAMESPACE                                                                                                |
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------|
-| ServiceProductOfferFormExpanderPlugin                                  | Expands `ProductOfferForm` with Service Point and Service fields.                                           |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
-| ServiceProductOfferFormViewExpanderPlugin                              | Expands `ProductOfferForm` Twig template with `service` form section.                                       |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
+| ServiceProductOfferFormExpanderPlugin                                  | Expands `ProductOfferForm` with `Service points` and `Service` fields.                                           |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
+| ServiceProductOfferFormViewExpanderPlugin                              | Expands the `ProductOfferForm` Twig template with the `service` form section.                                       |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
 | ProductOfferServicePointMerchantPortalGuiMerchantAclRuleExpanderPlugin | Adds `product-offer-service-point-merchant-portal-gui` to list of `AclRules`.                               |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\AclMerchantPortal             |
 | ServiceAclEntityConfigurationExpanderPlugin                            | Expands provided `AclEntityMetadataConfig` transfer object with service point composite data.               |               | Spryker\Zed\ServicePoint\Communication\Plugin\AclMerchantPortal                                          |
 | ProductOfferServicePointAclEntityConfigurationExpanderPlugin           | Expands provided `AclEntityMetadataConfig` transfer object with product offer service point composite data. |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\AclMerchantPortal             |

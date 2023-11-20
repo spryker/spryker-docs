@@ -399,7 +399,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductOfferServicePublisherTriggerPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -487,8 +487,8 @@ To expand product offers with services, register the plugins:
 | ServiceProductOfferPostCreatePlugin      | Creates the product offer service entities.                         |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
 | ServiceProductOfferPostUpdatePlugin      | Updates the product offer service entities.                         |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
 | ServiceProductOfferExpanderPlugin        | Expands product offer with services.                                |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
-| ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage    |
-| ServiceProductOfferViewSectionPlugin     | Expands product offer view section with services.                   |               | Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui |
+| ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from the storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage    |
+| ServiceProductOfferViewSectionPlugin     | Expands the product offer view section with services.                   |               | Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui |
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -590,9 +590,9 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-- Log in to the Backoffice.
-- Navigate to the **Marketplace&nbsp;<span aria-label="and then">></span> Offers** section in the navigation menu.
-- Select the specific product offer you want to view.
-- Make sure that `Services` section is displayed on product offer view page.
+1. In the Back Office, go to the **Marketplace&nbsp;<span aria-label="and then">></span> Offers**.
+2. On the **Offers** page, next to a product offer, click **View**.
+    This opens the **View Offer: {offer ID}** page.
+3. Scroll down the page and make sure the **SERVICES** pane is displayed.
 
 {% endinfo_block %}

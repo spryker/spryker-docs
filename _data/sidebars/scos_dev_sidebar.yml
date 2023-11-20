@@ -287,6 +287,17 @@ entries:
       url: /docs/scos/dev/glue-api-guides/use-api-key-authorization.html
       include_versions:
       - "202307.0"
+    - title: Backend Glue infrastructure
+      nested:
+      - title: Backend API Marketplace B2B Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
+        include_versions:
+          - "202311.0"
+      - title: Backend API Marketplace B2C Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
+        include_versions:
+          - "202311.0"
+
     - title: Old Glue infrastructure
       include_versions:
       - "202212.0"
@@ -346,14 +357,7 @@ entries:
         - "202212.0"
         - "202307.0"
         - "202311.0"
-      - title: Backend API Marketplace B2B Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/backend-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
-        include_versions:
-          - "202311.0"
-      - title: Backend API Marketplace B2C Demo Shop reference
-        url: /docs/scos/dev/glue-api-guides/backend-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
-        include_versions:
-          - "202311.0"
+
     - title: Routing
       include_versions:
       - "202204.0"

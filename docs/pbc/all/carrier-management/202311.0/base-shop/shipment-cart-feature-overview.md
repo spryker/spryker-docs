@@ -1,5 +1,5 @@
 ---
-title: Shipment Cart feature overview
+title: Shipment + Cart feature overview
 description: This feature adds delivery type to the cart Glue APIs
 last_updated: Nov 23, 2023
 template: concept-topic-template

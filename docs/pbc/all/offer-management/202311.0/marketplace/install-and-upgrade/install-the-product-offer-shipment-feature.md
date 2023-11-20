@@ -7,4 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/install-the-product-offer-shipment-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-product-offer-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-shipment-feature.md -->
+<!-- Must be moved to base shop after product offers are decoupled from MP @Valerii Pravoslavnyi -->
+
+
+{% include pbc/all/install-features/{{page.version}}/install-the-product-offer-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-shipment-feature.md -->

@@ -90,9 +90,9 @@ Enable the following behaviors by registering the plugins:
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------|
 | ServiceProductOfferFormExpanderPlugin                                  | Expands `ProductOfferForm` with `Service points` and `Service` fields.                                           |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
 | ServiceProductOfferFormViewExpanderPlugin                              | Expands the `ProductOfferForm` Twig template with the `service` form section.                                       |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
-| ProductOfferServicePointMerchantPortalGuiMerchantAclRuleExpanderPlugin | Adds `product-offer-service-point-merchant-portal-gui` to list of `AclRules`.                               |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\AclMerchantPortal             |
-| ServiceAclEntityConfigurationExpanderPlugin                            | Expands provided `AclEntityMetadataConfig` transfer object with service point composite data.               |               | Spryker\Zed\ServicePoint\Communication\Plugin\AclMerchantPortal                                          |
-| ProductOfferServicePointAclEntityConfigurationExpanderPlugin           | Expands provided `AclEntityMetadataConfig` transfer object with product offer service point composite data. |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\AclMerchantPortal             |
+| ProductOfferServicePointMerchantPortalGuiMerchantAclRuleExpanderPlugin | Adds `product-offer-service-point-merchant-portal-gui` to the list of `AclRules`.                               |               | Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Plugin\AclMerchantPortal             |
+| ServiceAclEntityConfigurationExpanderPlugin                            | Expands a provided `AclEntityMetadataConfig` transfer object with service point composite data.               |               | Spryker\Zed\ServicePoint\Communication\Plugin\AclMerchantPortal                                          |
+| ProductOfferServicePointAclEntityConfigurationExpanderPlugin           | Expands a provided `AclEntityMetadataConfig` transfer object with product offer service point composite data. |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\AclMerchantPortal             |
 
 **src/Pyz/Zed/ProductOfferMerchantPortalGui/ProductOfferMerchantPortalGuiDependencyProvider.php**
 
@@ -168,11 +168,13 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 {% info_block warningBox "Verification" %}
 
-- Log in to the Merchant Portal.
-- Navigate to the **Offers** section in the navigation menu.
-- Select the specific product offer you want to edit or create a new one if needed.
-- Make sure that Service Points and Services fields are displayed in their own section when creating or editing an offer.
-- Make sure you can search by Service Points and the corresponding services associated with the selected Service Point are displayed in Services field.
-- Make sure you can save the selected Services.
+When creating and editing product offers in the Merchant Portal, make sure the following applies:
+
+* **SERVICE POINT** and **SERVICES** fields are displayed.
+* For **SERVICE POINT**, you can search by service points.
+* After selecting a service point, you can select services in the **SERVICES** drop-down menu.
+* After adding services, you can save the product offer.
+
+<!-- For instructions on creating and editing product offers, see [Create and edit product offers]() |    add after merging-->
 
 {% endinfo_block %}

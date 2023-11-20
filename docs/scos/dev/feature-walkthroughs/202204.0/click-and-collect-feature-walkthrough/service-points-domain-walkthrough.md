@@ -45,6 +45,6 @@ The `ServicePointWidget` module offers a mechanism to substitute the shipping ad
 
 ### Plugins
 
-The following plugin handles address substitution when the cart item has a service point selected and the shipment type is set to `pickup`:
+The following widget handles address substitution when the cart item has a service point selected and the shipment type is set to `pickup`:
 
 - **\SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin**

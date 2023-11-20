@@ -987,14 +987,17 @@ entries:
                 include_versions:
                 - "202311.0"
           - title: Spryker Middleware powered by Alumio
+            url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             include_versions:
             - "202311.0"
             nested:
               - title: Integration apps
+                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
                 include_versions:
                 - "202311.0"
                 nested:
                 - title: Akeneo PIM Integration App
+                  url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html
                   include_versions:
                   - "202311.0"
                   nested:
@@ -3809,17 +3812,17 @@ entries:
               - title: Manage using Glue API
                 nested:
                   - title: Retrieve abstract product availability
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
                   - title: Retrieve availability when retrieving abstract products
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-abstract-products.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-abstract-products.html
                   - title: Retrieve concrete product availability
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html
                   - title: Retrieve availability when retrieving concrete products
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html
                   - title: Manage availability notifications
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/manage-availability-notifications.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
                   - title: Retrieve subscriptions to availability notifications
-                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
               - title: Domain mode and relationships
                 url: /docs/pbc/all/warehouse-management-system/base-shop/domain-model-and-relationships/availability-notification-domain-model-and-relationships.html
               - title: Extend and customize
@@ -3895,4 +3898,4 @@ entries:
           - title: Configure Usercentrics
             url: /docs/pbc/all/usercentrics/configure-usercentrics.html
           - title: Disconnect Usercentrics
-            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html            
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

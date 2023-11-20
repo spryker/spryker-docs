@@ -144,11 +144,33 @@ Make sure the following changes have been applied by checking your database:
 
 Make sure the following changes have been triggered in transfer objects:
 
-| TRANSFER                   | TYPE  | EVENT   | PATH                                                             |
-|----------------------------|-------|---------|------------------------------------------------------------------|
-| AuthCode                   | class | created | src/Generated/Shared/Transfer/AuthCodeTransfer                   |
-| AuthCodeAttributes         | class | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer         |
-| AuthCodeResponseAttributes | class | created | src/Generated/Shared/Transfer/AuthCodeResponseAttributesTransfer |
+| TRANSFER                               | TYPE     | EVENT   | PATH                                                     |
+|----------------------------------------|----------|---------|----------------------------------------------------------|
+| AuthCode.code                          | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
+| OauthRequest.responseType              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.redirectUri               | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.responseType              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.state                     | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.code                      | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.codeChallenge             | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| OauthRequest.codeChallengeMethod       | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.codeVerifier              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthResponse.state                    | property | created | src/Generated/Shared/Transfer/OauthResponseTransfer      |
+| OauthResponse.code                     | property | created | src/Generated/Shared/Transfer/OauthResponseTransfer      |
+| ApiTokenAttributes.code                | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| ApiTokenAttributes.clientId            | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| ApiTokenAttributes.redirectUri         | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| ApiTokenAttributes.codeVerifier        | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| AuthCodeAttributes.username            | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.password            | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.responseType        | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.clientId            | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.scope               | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.redirectUri         | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.state               | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.codeChallenge       | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.codeChallengeMethod | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCode.identifier                    | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
 
 {% endinfo_block %}
 
@@ -346,7 +368,7 @@ Configure the value of the `SPRYKER_OAUTH_CLIENT_CONFIGURATION` environment vari
 ]
 ```
 
-For security reasons, it is recommended to use a different OAUTH client for each application.
+For security reasons, it is recommended to use a different OAuth client for each application.
 By application, we mean a separate application that uses the same OAuth server.
 
 Run the following console command to set up the OAuth client:
@@ -363,7 +385,7 @@ Ensure that the OAuth client exists in the database:
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your-app';
 ```
-* Check that the output contains one record (create if not) and the redirect uri is not empty.
+* Check that the output contains one record (create if not) and the redirect URI is not empty.
 
 {% endinfo_block %}
 
@@ -632,10 +654,10 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 
 3. If you've installed the Fulfillment Apps's OAuth Authorization module in [Install the required modules](#install-the-required-modules), enable the following plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                                                  |
-|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------|
-| AuthorizeResource                                            | Registers the OAuth authorize resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication\AuthorizeResource |
-| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds OauthGrantTypeConfigurationTransfer from configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                                       |
+| PLUGIN                                                       | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                                |
+|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| AuthorizeResource                                            | Registers the OAuth authorize resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
+| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds OauthGrantTypeConfigurationTransfer from configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 

@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/namogoo
 originalArticleId: 69018fe0-c91f-48d1-be86-6fa06334ea76
 redirect_from:
-  - /2021080/docs/namogoo
-  - /2021080/docs/en/namogoo
-  - /docs/namogoo
-  - /docs/en/namogoo
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/namogoo.html  
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

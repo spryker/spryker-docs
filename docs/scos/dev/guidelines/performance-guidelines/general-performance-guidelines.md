@@ -116,19 +116,41 @@ Twig files can be precompiled into PHP classes to speed the performance up. This
 ---//---
 use Twig\Cache\FilesystemCache;
 ---//---
-$config[\Spryker\Shared\Twig\TwigConstants::ZED_TWIG_OPTIONS] = [
-'cache' => new FilesystemCache(sprintf(
-'%s/data/%s/cache/Zed/twig',
-APPLICATION_ROOT_DIR, $CURRENT_STORE),
-Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
+$currentStore = Store::getInstance()->getStoreName();
+
+$config[TwigConstants::ZED_TWIG_OPTIONS] = [
+    'cache' => new FilesystemCache(
+        sprintf(
+            '%s/src/Generated/Zed/Twig/codeBucket%s',
+            APPLICATION_ROOT_DIR,
+            $currentStore,
+        ),
+        FilesystemCache::FORCE_BYTECODE_INVALIDATION,
+    ),
 ];
 
-$config[\Spryker\Shared\Twig\TwigConstants::YVES_TWIG_OPTIONS] = [
-'cache' => new FilesystemCache(sprintf(
-'%s/data/%s/cache/Yves/twig',
-APPLICATION_ROOT_DIR, $CURRENT_STORE),
-Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
-		];
+$config[TwigConstants::YVES_TWIG_OPTIONS] = [
+    'cache' => new FilesystemCache(
+        sprintf(
+            '%s/src/Generated/Yves/Twig/codeBucket%s',
+            APPLICATION_ROOT_DIR,
+            $currentStore,
+        ),
+        FilesystemCache::FORCE_BYTECODE_INVALIDATION,
+    ),
+];
+
+$config[TwigConstants::YVES_PATH_CACHE_FILE] = sprintf(
+    '%s/src/Generated/Yves/Twig/codeBucket%s/.pathCache',
+    APPLICATION_ROOT_DIR,
+    $currentStore,
+);
+
+$config[TwigConstants::ZED_PATH_CACHE_FILE] = sprintf(
+    '%s/src/Generated/Zed/Twig/codeBucket%s/.pathCache',
+    APPLICATION_ROOT_DIR,
+    $currentStore,
+);
 ```
 
 ## Activate Twig path cache

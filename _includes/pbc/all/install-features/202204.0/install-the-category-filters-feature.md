@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Category Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/category-filters-overview.html) into a Spryker project.
+This document describes how to install the [Category Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/category-filters-overview.html).
 
 ## Install feature core
 

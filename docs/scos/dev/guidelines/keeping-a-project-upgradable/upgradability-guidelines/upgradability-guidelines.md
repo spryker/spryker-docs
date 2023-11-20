@@ -2,6 +2,7 @@
 title: Upgradability guidelines
 description: Find solutions to Evaluator violations
 template: howto-guide-template
+redirect_from:
 ---
 
 The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with both Spryker's and industry coding standards.
@@ -28,3 +29,24 @@ In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. The 
 | DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER | The condition statement if {statement} is forbidden in the DependencyProvider | [Dependency provider additional logic checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html) |
 
 </div>
+
+## Avoid using deprecated methods and classes
+Avoiding [deprecated methods and classes](https://docs.spryker.com/docs/scos/dev/updating-spryker/updating-spryker.html) ensures stability, security, and compatibility with newer versions.
+
+## Avoid using additional logic in dependency provider
+Avoiding [additional logic in dependency providers](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html) helps to maintain simplicity, reliability, and adherence to best practices, ensuring clean and efficient dependency injection.
+
+## PHP version
+Use one [PHP version](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html) across all your environments.
+
+## Avoid using outdated modules
+Avoid using [outdated](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html) feature and core modules.
+
+## Avoid multiple nesting in the plugin registration methods 
+Avoid using [multiple nesting](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html) within plugin registration methods in the dependency providers.
+
+
+
+
+
+

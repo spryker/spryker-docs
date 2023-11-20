@@ -19,7 +19,7 @@ Follow the steps below to install the Glue Storefront and Backend API applicatio
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Glue Application | {{page.version}} | [Glue API - Glue Application feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 

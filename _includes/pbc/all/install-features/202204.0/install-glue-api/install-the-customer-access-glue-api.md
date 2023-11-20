@@ -13,7 +13,7 @@ The current feature integration Guide only adds the Company Account REST API fun
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html) |
 | Customer Access | {{page.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-access-feature-integration.html) |

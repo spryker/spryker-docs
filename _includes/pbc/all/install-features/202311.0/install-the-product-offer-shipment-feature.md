@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Offer Shipment feature into a Spryker project.
+This document describes how to install the Product Offer Shipment feature.
 
 ## Install feature core
 
@@ -10,12 +10,14 @@ Follow the steps below to install the Product Offer Shipment feature core.
 
 To start feature integration, integrate the following required features:
 
-| NAME          | VERSION          | INTEGRATION GUIDE                                                                                                                                         |
+| NAME          | VERSION          | INSTALLATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Shipment      | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/enhanced-click-and-collect/install-and-upgrade/install-the-shipment-feature.html)                   |
+| Shipment      | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/enhanced-click-and-collect/install-and-upgrade/install-the-shipment-feature.html)                   |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
+
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-offer-shipment:"{{page.version}}" --update-with-dependencies
@@ -23,7 +25,7 @@ composer require spryker-feature/product-offer-shipment:"{{page.version}}" --upd
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following module has been installed:
+Make sure the following modules have been installed:
 
 | MODULE                                   | EXPECTED DIRECTORY                                           |
 |------------------------------------------|--------------------------------------------------------------|
@@ -32,6 +34,24 @@ Make sure that the following module has been installed:
 | ProductOfferShipmentTypeGui              | vendor/spryker/product-offer-shipment-type-gui               |
 | ProductOfferShipmentTypeStorage          | vendor/spryker/product-offer-shipment-type-storage           |
 | ProductOfferShipmentTypeStorageExtension | vendor/spryker/product-offer-shipment-type-storage-extension |
+
+{% endinfo_block %}
+
+
+
+2. Optional: To install demo Click&Collect functionalities, install the following module:
+
+```bash
+composer require spryker/click-and-collect-example: "^0.4.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following module has been installed:
+
+| MODULE                 | EXPECTED DIRECTORY                       |
+|------------------------|------------------------------------------|
+| ClickAndCollectExample | vendor/spryker/click-and-collect-example |
 
 {% endinfo_block %}
 
@@ -85,6 +105,8 @@ Ensure the following transfers have been created:
 | ProductOfferShipmentTypeIteratorConditions | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeIteratorConditionsTransfer |
 | ProductOfferShipmentType                   | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeTransfer                   |
 | ProductOfferShipmentTypeStorage            | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeStorageTransfer            |
+| ProductOfferShipmentTypeCollectionRequest  | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionRequestTransfer  |
+| ProductOfferShipmentTypeCollectionResponse | class    | created | src/Generated/Shared/Transfer/ProductOfferShipmentTypeCollectionResponseTransfer |
 | ProductOfferCriteria                       | class    | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer                       |
 | ProductOfferConditions                     | class    | created | src/Generated/Shared/Transfer/ProductOfferConditionsTransfer                     |
 | ProductOfferCollection                     | class    | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer                     |
@@ -113,6 +135,8 @@ Ensure the following transfers have been created:
 | Item                                       | class    | created | src/Generated/Shared/Transfer/ItemTransfer                                       |
 | ProductOfferStorageCriteria                | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer                |
 | ProductOfferStorageCollection              | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer              |
+| Error                                      | class    | created | src/Generated/Shared/Transfer/ErrorTransfer                                      |
+| ErrorCollection                            | class    | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                            |
 | ProductOfferStorage.productConcreteSku     | property | added   | src/Generated/Shared/Transfer/ProductOfferStorageTransfer                        |
 | ShipmentTypeStorage.key                    | property | added   | src/Generated/Shared/Transfer/ShipmentTypeStorageTransfer                        |
 
@@ -196,7 +220,7 @@ class ProductOfferShipmentTypeStorageConfig extends SprykerProductOfferShipmentT
     /**
      * @return string|null
      */
-    public function getProductOfferShipmentTypeStorageSynchronizationPoolName(): ?string
+    public function getProductOfferShipmentTypeSynchronizationPoolName(): ?string
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
@@ -240,7 +264,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getProductOfferShipmentTypeStoragePlugins(),
         );
     }
-    
+
     /**
      * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
@@ -338,10 +362,10 @@ offer3,delivery
 offer4,pickup
 ```
 
-| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION            |
+| COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION            |
 |-------------------------|-----------|-----------|--------------|-----------------------------|
-| product_offer_reference | mandatory | string    | offer1       | Reference of product offer. |
-| shipment_type_key       | mandatory | string    | delivery     | Key of the shipment type.   |
+| product_offer_reference | ✓ | string    | offer1       | Reference of product offer. |
+| shipment_type_key       | ✓ | string    | delivery     | Key of the shipment type.   |
 
 2. Register the following data import plugin:
 
@@ -416,18 +440,39 @@ Make sure that the configured data has been added to the `spy_product_offer_ship
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 5) Add translations
+
+1. Append the glossary according to your configuration:
+
+```csv
+product_offer_shipment_type.validation.product_offer_reference_not_found,Product offer '%product_offer_reference%' not found.,en_US
+product_offer_shipment_type.validation.product_offer_reference_not_found,Product offer '%product_offer_reference%' nicht gefunden.,de_DE
+product_offer_shipment_type.validation.shipment_type_uuid_not_found,Delivery types with uuids '%shipment_type_uuids%' not found.,en_US
+product_offer_shipment_type.validation.shipment_type_uuid_not_found,Lieferarten mit den uuids '%shipment_type_uuids%' wurde nicht gefunden.,de_DE
+product_offer_shipment_type.validation.product_offer_not_unique,A product offer with the same reference already exists in request.,de_DE
+product_offer_shipment_type.validation.product_offer_not_unique,Ein Product Offer mit der gleichen Referenz liegt bereits in der Anfrage vor.,de_DE
+product_offer_shipment_type.validation.shipment_type_not_unique,A delivery type for product offer '%product_offer_reference%' with the same uuid already exists in request.,de_DE
+product_offer_shipment_type.validation.shipment_type_not_unique,Ein Lieferart für Product Offer '%product_offer_reference%' mit derselben UUID ist bereits in der Anfrage vorhanden.,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+### 6) Set up behavior
 
 Enable the following plugins:
 
-| PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES                                                                                                                                                                                                       | NAMESPACE                                                                            |
-|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferPostCreatePlugin                  | Persists product offer shipment type to persistence.                                                                          | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from Persistence. Persists missed product offer shipment types to Persistence. | Requires `ProductOfferTransfer.productOfferReference` to be set. Requires `ShipmentTypeTransfer.shipmentTypeUuid` to be set for each `ShipmentTypeTransfer` in the `ProductOfferTransfer.shipmentTypes` collection. | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   | Requires `ProductOfferTransfer.productOfferReference` to be set                                                                                                                                                     | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` expanded with shipment type storage data.                                               | Requires `ProductOfferStorageTransfer.productOfferReference` to be set.                                                                                                                                             | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
-| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                  | None                                                                                                                                                                                                                | Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage            |
-| ShipmentTypeProductOfferViewSectionPlugin                 | Expands product offer view section with shipment types.                                                                       | None                                                                                                                                                                                                                | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
+| PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES | NAMESPACE                                                                            |
+|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------|
+| ShipmentTypeProductOfferPostCreatePlugin                  | Persists product offer shipment type to persistence.                                                                          |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from persistence. Persists missed product offer shipment types to persistence. |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
+| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` with shipment type storage data.                                                        |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
+| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                  |               | Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage                     |
+| ShipmentTypeProductOfferViewSectionPlugin                 | Expands product offer view section with shipment types.                                                                       | None          | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
 
 <details open
 ><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -508,7 +553,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 namespace Pyz\Client\ShipmentTypeStorage;
 
-use Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ShipmentTypeStorage\ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin;
+use Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage\ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin;
 use Spryker\Client\ShipmentTypeStorage\ShipmentTypeStorageDependencyProvider as SprykerShipmentTypeStorageDependencyProvider;
 
 class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDependencyProvider

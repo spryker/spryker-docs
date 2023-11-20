@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [CMS](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [CMS](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -11,9 +11,9 @@ Follow the steps below to install the CMS feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -835,8 +835,8 @@ cms-page--7,US
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| page_key | mandatory | string | page_5 | Unique page identifier. |
-| store_name | mandatory | string | DE | Unique store identifier. |
+| page_key | ✓ | string | page_5 | Unique page identifier. |
+| store_name | ✓ | string | DE | Unique store identifier. |
 
 <details>
 <summary markdown='span'>vendor/spryker/cms-slot-data-import/data/import/cms_block.csv</summary>
@@ -954,12 +954,12 @@ slt-mobile-header,Header mobile view,"In the store Header section. On mobile, un
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which slot is assigned. |
-| slot_key | mandatory | string | slt-4 |Unique slot identifier. |
-| content_provider | mandatory | string | SprykerCmsSlotBlock | Unique content provider identifier. |
-| name | mandatory | string | Home Page Main | Slot name used in the Back Office. |
+| template_path | ✓ | string | @HomePage/views/home/home.twig | Path to the Twig template to which slot is assigned. |
+| slot_key | ✓ | string | slt-4 |Unique slot identifier. |
+| content_provider | ✓ | string | SprykerCmsSlotBlock | Unique content provider identifier. |
+| name | ✓ | string | Home Page Main | Slot name used in the Back Office. |
 | description | no | string | text | Slot description used in the Back Office. |
-| is_active | mandatory | bool | 1 | Flag that defines if slot is active. |
+| is_active | ✓ | bool | 1 | Flag that defines if slot is active. |
 
 **vendor/spryker/cms-slot-block-data-import/data/import/cms_slot_block.csv**
 
@@ -981,10 +981,10 @@ slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.t
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which this CMS block to slot assignment belongs. |
-| slot_key | mandatory | string | slt-4 | Unique slot identifier. |
-| block_key | mandatory | string | blck-2 | Unique CMS block identifier. |
-| position | mandatory | integer | 1 | CMS Block position in the slot. |
+| template_path | ✓ | string | @HomePage/views/home/home.twig | Path to the Twig template to which this CMS block to slot assignment belongs. |
+| slot_key | ✓ | string | slt-4 | Unique slot identifier. |
+| block_key | ✓ | string | blck-2 | Unique CMS block identifier. |
+| position | ✓ | integer | 1 | CMS Block position in the slot. |
 | conditions | no | mixed |  | Slot-CMS block conditions data. |
 
 2. Register the following plugin to enable data import:

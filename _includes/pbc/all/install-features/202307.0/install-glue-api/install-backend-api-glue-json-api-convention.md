@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Glue JSON:API convention for Backend API application into a Spryker project.
+This document describes how to install the Glue JSON:API convention for Backend API application.
 
 ## Install feature core
 
@@ -11,9 +11,9 @@ Follow the steps below to install the Glue JSON:API convention core.
 
 Install the required features:
 
-| NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                     |
+| NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                     |
 |----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core   | {{site.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Spryker Core   | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 ### 1) Install the required modules using Composer
 

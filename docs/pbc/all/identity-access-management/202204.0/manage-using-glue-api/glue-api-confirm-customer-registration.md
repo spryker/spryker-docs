@@ -32,12 +32,12 @@ related:
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
-After a customer has been created (to create a customer, see [Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
+After a customer has been created (to create a customer, see [Customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.
 
 ## Installation
 

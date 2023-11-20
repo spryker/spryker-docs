@@ -347,7 +347,7 @@ Make sure that `ProductGroupColorWidget` has been registered:
 {% endinfo_block %}
 
 
-## Related features
+## Install related features
 
 | FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+This document describes how to install the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html).
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Follow the steps below to install the Category Image feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
@@ -310,8 +310,8 @@ template_name,template_path
 
 | COLUMN | IS REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| template_name | mandatory | string | My category template | A human readable name of the category template. |
-| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
+| template_name | ✓ | string | My category template | A human readable name of the category template. |
+| template_path | ✓ | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
 
 2. Import data:
 
@@ -437,7 +437,7 @@ Follow the steps below to install the Alternative Products feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
 | Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
@@ -492,7 +492,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

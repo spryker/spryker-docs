@@ -117,9 +117,9 @@ To view generic errors that originate from the Glue Application, see [Reference 
 ## Next steps
 
 After you’ve authenticated as a customer, you can impersonate them:
-* [Manage carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
+* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)  
 

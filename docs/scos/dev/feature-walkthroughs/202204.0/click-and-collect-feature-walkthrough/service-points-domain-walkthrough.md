@@ -38,3 +38,13 @@ Spryker offers two methods for setting up service points, service point addresse
 
 - Backend API (check the `ServicePointsBackendApi` module)
 - Data Import (check the `ServicePointDataImport` module)
+
+## 3. Address Substitution during Checkout
+
+The `ServicePointWidget` module offers a mechanism to substitute the shipping address with the service point address during the checkout process in Yves.
+
+### Plugins
+
+The following plugin handles address substitution when the cart item has a service point selected and the shipment type is set to `pickup`:
+
+- **\SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin**

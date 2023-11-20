@@ -12,14 +12,24 @@ A *service point* is a physical location where services are provided. Depending 
 
 ## Service type
 
-A *service type* is a classification of services that a business offers to its customers. These service types are often determined by the nature of the business. Service type examples:
+A *service type* is a classification of services that a business offers to its customers. Service types are determined by the nature of the business. Service type examples:
 * Pickup service
 * Return service
 * Rental service
+* Repair service
 
 ## Service
 
-A *service* represents a specific service type that is provided at a specific service point. A service is a capability within a service point that is offered to its customers. An example of such a service will be a pickup service at a retail location located on Julie-Wolfthorn-Straße 1, 10115, Berlin.
+A *service* represents a specific service type that is provided at a specific service point. For example, a pickup service at a retail location located at Julie-Wolfthorn-Straße 1, 10115, Berlin.
+
+
+## Service points use cases
+
+
+With the help of service points, types, and services, a Merchant can model different use cases depending on their business needs. Examples of services that can be implemented on a project level are as follows:
+* Ship from store
+* Request product demo in the retail location
+* Request a repair service
 
 
 
@@ -27,10 +37,7 @@ Relation between these entities can be described with the following example of a
 
 
 
-With the help of these entities, a Merchant can model different use cases depending on their business needs. Below are examples of services that can be implemented on a project level:
-* Ship from store
-* Request product demo in the retail location
-* Request a repair service
+
 
 
 
@@ -78,7 +85,7 @@ After placing an order, the customer can see the selected service point on the O
 
 | FEATURE OVERVIEWS | MERCHANT PORTAL GUIDES |
 | - | - |
-| [Shipment feature overview](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html) | Manage product offers |
+| [Shipment feature overview](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html) | [Create and edit product offers](/docs/pbc/all/offer-management/202311.0/unified-commerce/unified-commerce-create-and-edit-product-offers.html) |
 
 
 ## Related Developer documents

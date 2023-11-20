@@ -114,11 +114,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 1. Prepare two product offers for the same product:
   1. With support for the pickup shipment type and a connection to a service point.
   2. Without support for the pickup shipment type.
-2. Add the product offer 2 to cart.
-3. Proceed to the `checkout-data` resource in the GLUE API.
-4. Select a service point for the item.
-5. Send the `POST checkout-data` request.
-6. Check that the selected service point is returned in the response.
-  Make sure the product offer 2 has been replaced with the product offer 1.
+2. Using Glue API, add the product offer 2 to cart.
+3. Using the `checkout-data` endpoint, select a service point for the item.
+  Make sure the selected service point is returned in the response. Make sure the product offer 2 has been replaced with the product offer 1.
 
 {% endinfo_block %}

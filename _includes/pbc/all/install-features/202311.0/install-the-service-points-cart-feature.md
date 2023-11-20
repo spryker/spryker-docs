@@ -48,8 +48,8 @@ Register the plugins:
 
 | PLUGIN                                         | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE                                                                 |
 |------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
-| ServicePointCheckoutPreConditionPlugin         | Validates if `QuoteTransfer.items.servicePoint` is active and available for the current store. | None          | Spryker\Zed\ServicePointCart\Communication\Plugin\Checkout                |
-| ReplaceServicePointQuoteItemsQuoteMapperPlugin | Replaces quote items using applicable strategy if shipments are provided.                      | None          | Spryker\Zed\ServicePointCartsRestApi\Communication\Plugin\CheckoutRestApi |
+| ServicePointCheckoutPreConditionPlugin         | Validates if `QuoteTransfer.items.servicePoint` is active and available for the current store. |           | Spryker\Zed\ServicePointCart\Communication\Plugin\Checkout                |
+| ReplaceServicePointQuoteItemsQuoteMapperPlugin | If shipments are provided, replaces quote items using an applicable strategy.                      |           | Spryker\Zed\ServicePointCartsRestApi\Communication\Plugin\CheckoutRestApi |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
@@ -81,8 +81,8 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 1. Add an item to cart and proceed to checkout.
 2. Select a service point.
 3. Deactivate the service point.
-4. Proceed to the *Summary* page.
-5. On the *Summary* page, make sure you get the validation error.
+4. Proceed to the **Summary** page.
+    On the **Summary** page, make sure you get the validation error.
 
 {% endinfo_block %}
 
@@ -111,13 +111,14 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Please follow the steps below to complete the process:
-1. Prepare two product offers for the same product, one with support for pickup shipment type and a connection to the service point, and another without support for pickup shipment type.
-2. Add the product offer that does not support the pickup shipment type to the cart.
-3. Proceed to the checkout-data resource in the GLUE API.
+1. Prepare two product offers for the same product:
+  1. With support for the pickup shipment type and a connection to a service point.
+  2. Without support for the pickup shipment type.
+2. Add the product offer 2 to cart.
+3. Proceed to the `checkout-data` resource in the GLUE API.
 4. Select a service point for the item.
-5. Send a POST request to the checkout-data resource.
+5. Send the `POST checkout-data` request.
 6. Check that the selected service point is returned in the response.
-7. Lastly, make sure that the product offer has been replaced with the one that has the service point connection.
+  Make sure the product offer 2 has been replaced with the product offer 1.
 
 {% endinfo_block %}

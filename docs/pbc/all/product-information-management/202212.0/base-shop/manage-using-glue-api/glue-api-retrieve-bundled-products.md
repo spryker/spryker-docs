@@ -802,7 +802,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 For the attributes of the included resources, see:
 
-* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
 
 ## Possible errors

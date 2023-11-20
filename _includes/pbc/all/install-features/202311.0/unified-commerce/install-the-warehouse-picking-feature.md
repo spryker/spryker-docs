@@ -146,10 +146,8 @@ Make sure the following changes have been triggered in transfer objects:
 
 | TRANSFER                               | TYPE     | EVENT   | PATH                                                     |
 |----------------------------------------|----------|---------|----------------------------------------------------------|
-| AuthCode.code                          | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
 | OauthRequest.responseType              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
 | OauthRequest.redirectUri               | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
-| OauthRequest.responseType              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
 | OauthRequest.state                     | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
 | OauthRequest.code                      | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
 | OauthRequest.codeChallenge             | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
@@ -170,7 +168,9 @@ Make sure the following changes have been triggered in transfer objects:
 | AuthCodeAttributes.state               | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
 | AuthCodeAttributes.codeChallenge       | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
 | AuthCodeAttributes.codeChallengeMethod | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCode.code                          | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
 | AuthCode.identifier                    | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
+| AuthCode.expiresAt                     | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
 
 {% endinfo_block %}
 

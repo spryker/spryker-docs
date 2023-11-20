@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) into a Spryker project.
+This document describes how to install the [Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html).
 
 ## Install feature core
 

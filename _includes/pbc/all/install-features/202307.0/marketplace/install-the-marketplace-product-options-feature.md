@@ -1,4 +1,4 @@
-This document describes how to integrate the [Marketplace Product Options feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html) into a Spryker project.
+This document describes how to install the [Marketplace Product Options feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html).
 
 ## Install feature core
 

@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker project.
+This document describes how to install the Marketplace Shopping Lists feature.
 
 ## Install feature core
 

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API into a Spryker project.
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API.
 
 ## Install feature core
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html) into a Spryker project.
+This document describes how to install the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html).
 
 ## Install feature core
 

@@ -79,7 +79,7 @@ To create the scheduler, do the following:
 1. Go to **Settings -> Scheduler** and click the + sign.
 2. In *Name*, enter the name of your scheduler. As you are entering the name, the identifier will be populated automatically based on the name.
 3. In *Job*, click **Add job** and select *Run incoming configuration*.
-4. In *Incoming*, select the incoming configuration you created at step [Create an incoming configuration](#create-an-incoming-configuration).
+4. In *Incoming*, select the incoming configuration you created at step [Create an incoming configuration](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#create-an-incoming-configuration).
 5. In *Expression*, enter the time you want the scheduler to run. Use [Crontab guru](https://crontab.guru/) to set the time in the right format.
 6. Create one more scheduler with the same parameters, but for step 3, select the *Run outgoing configuration* job.
 

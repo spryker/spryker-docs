@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) feature.
 
 ## Install feature core
 

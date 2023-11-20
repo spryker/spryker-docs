@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Agent Assist + Shopping List feature into a Spryker project.
+This document describes how to install the Agent Assist + Shopping List feature.
 
 ## Install feature core
 

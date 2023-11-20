@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product Offer + Service Points feature into a Spryker project.
+This document describes how to install the Marketplace Product Offer + Service Points feature.
 
 ## Install feature core
 
@@ -21,27 +21,27 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                          | DESCRIPTION                                                                 | PREREQUISITES | NAMESPACE                                                                                    |
 |-------------------------------------------------|-----------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------|
-| MerchantProductOfferServiceStorageFilterPlugin  | Filters product offer services collection by active and approved merchants. |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage |
+| MerchantProductOfferServiceCollectionStorageFilterPlugin  | Filters product offer services collection by active and approved merchants. |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage |
 
-**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
+**src/Pyz/Zed/ProductOfferServicePointStorage/ProductOfferServicePointStorageDependencyProvider.php**
 
 ```php
 <?php
 
 namespace Pyz\Zed\ProductOfferServicePointStorage;
 
-use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceStorageFilterPlugin;
+use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceCollectionStorageFilterPlugin;
 use Spryker\Zed\ProductOfferServicePointStorage\ProductOfferServicePointStorageDependencyProvider as SprykerProductOfferServicePointStorageDependencyProvider;
 
 class ProductOfferServicePointStorageDependencyProvider extends SprykerProductOfferServicePointStorageDependencyProvider
 {
     /**
-     * @return list<\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependeency\Plugin\ProductOfferServiceStorageFilterPluginInterface>
+     * @return list<\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependency\Plugin\ProductOfferServiceCollectionStorageFilterPluginInterface>
      */
-    protected function getProductOfferServiceStorageFilterPlugins(): array
+    protected function getProductOfferServiceCollectionStorageFilterPlugins(): array
     {
         return [
-            new MerchantProductOfferServiceStorageFilterPlugin(),
+            new MerchantProductOfferServiceCollectionStorageFilterPlugin(),
         ];
     }
 }

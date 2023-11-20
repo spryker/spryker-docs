@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product + Cart feature into a Spryker project.
+This document describes how to install the Marketplace Product + Cart feature.
 
 ## Install feature core
 

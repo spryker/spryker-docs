@@ -88,7 +88,14 @@ If the locale isn't specified in Akeneo, the locale you specify at this step wil
  ![value-as-sku](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/3-configure-data-mapping-between-akeneo-and-spryker/value-as-sku.png)
 4. In *Name*, either enter the name for your products, or if you want to import it from Akeneo, use the `&{values.name}` as a placeholder.
 5. In *Description*, either enter the description for your products, or if you want to import it from Akeneo, use the `&{values.description}` as a placeholder.
-6. In *Short description*, either enter the short description for your products or if you want to import it from Akeneo, use the `&{values.short_description}` as a placeholder.
+
+{% info_block infoBox "Importing product descriptions" %}
+
+Spryker uses a simple text editor in its product description, however Akeneo enables customers to use rich-text in their product description. If you want to use rich-text on your store you need to extend Spryker to enable the support of rich text on a project-level. 
+
+{% endinfo_block %}
+
+6. In *Short description*, either enter the short description for your products, or if you want to import it from Akeneo, use the `&{values.short_description}` as a placeholder.
 7. Optional: Define the tax set to use for the imported products. Do the following:
   1. Go to your Spryker project's Back Office, to **Administration -> Tax Sets** page.
   2. On the *Overview of tax sets* page, copy the value from the *Name* column of the tax set you want to use for the products imported from Akeneo PIM.

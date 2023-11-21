@@ -719,7 +719,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 Make sure that Fulfillment Apps's OAuth Authorization works:
 
-Send the following authorization request to the OAuth server:
+1. Send the following authorization request to the OAuth server:
 
 ```http
 POST /authorize/ HTTP/1.1
@@ -743,9 +743,10 @@ username={username}&password={password}&response_type=code&client_id={client_id}
 | redirect_uri          | string | `https://some-redirect-url`       | Used in the authorization request to specify where the authorization server should redirect the user after the user grants or denies permission.  |
 
 For more detailed information about the Authorization (Code Grant flow) Request with PKCE, refer to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
+
 * Check that the output contains the 201 response with a code.
 
-* To get a Back Office user token, send the following request:
+2. To get a Back Office user token, send the following request:
 
 ```http
 POST /token/ HTTP/1.1

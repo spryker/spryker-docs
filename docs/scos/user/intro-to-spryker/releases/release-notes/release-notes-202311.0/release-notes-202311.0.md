@@ -76,7 +76,7 @@ The key features of the Data Exchange API include the following:
 
 - General information: 
     - [Data Exchange API](/docs/pbc/all/data-exchange/202311.0/data-exchange.html#data-importers-and-data-exporters)
-    - [Data Exchange API FAQ]
+    - [Data Exchange API FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html)
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html)
 - [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html)
 
@@ -257,10 +257,10 @@ Save time and effort with Oryx Framework. Spryker’s purpose-built framework le
 [Oryx in 90 seconds videos](https://www.youtube.com/playlist?list=PLJooqCSo73Sj9r_632NRtr-O0zuY7eHPb)
 
 ### Documentation:
-[Oryx](/docs/scos/dev/frontend-development/202311.0/oryx/oryx.html)
+[Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/oryx.html)
 
 ### Technical prerequisites:
-Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/scos/dev/frontend-development/202311.0/oryx/getting-started/set-up-oryx.html).
+Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/set-up-oryx.html).
 
 ## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Composable Storefront: Additional foundation features - EA (early access) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -275,7 +275,7 @@ Provides commonplace features out-of-the-box for future-proof, agile, scalable, 
 Composable Storefront is part of the Oryx framework. Oryx provides the features, and the presets for the various applications that you can create with Oryx, such as a Composable Storefront or Fulfillment App.
 
 ### Documentation
-[Oryx](/docs/scos/dev/frontend-development/202311.0/oryx/oryx.html)
+[Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/oryx.html)
 
 ### Technical prerequisites:
 Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. See Set up Oryx for more information on the installation. 

@@ -3045,22 +3045,22 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/product-options/create-product-options.html
                       - title: Manage product options
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
-                  - title: Manage using Glue API
-                    nested:
-                      - title: Retrieve abstract products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html
-                      - title: Retrieve concrete products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
-                      - title: Retrieve product offers of concrete products
-                        url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html
-                  - title: Domain model and relationships
-                    nested:
-                      - title: Marketplace Product
-                        url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-feature-domain-model-and-relationships.html
-                      - title: Marketplace Product Approval Process
-                        url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-approval-process-feature-domain-model-and-relationships.html
-                      - title: Marketplace Product Options
-                        url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-options-feature-domain-model-and-relationships.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Retrieve abstract products
+                    url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html
+                  - title: Retrieve concrete products
+                    url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
+                  - title: Retrieve product offers of concrete products
+                    url: /docs/pbc/all/product-information-management/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html
+              - title: Domain model and relationships
+                nested:
+                  - title: Marketplace Product
+                    url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-feature-domain-model-and-relationships.html
+                  - title: Marketplace Product Approval Process
+                    url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-approval-process-feature-domain-model-and-relationships.html
+                  - title: Marketplace Product Options
+                    url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-product-options-feature-domain-model-and-relationships.html
               - title: "Marketplace Merchant Portal Product Management feature: Domain model and relationships"
                 url: /docs/pbc/all/product-information-management/marketplace/domain-model-and-relationships/marketplace-merchant-portal-product-management-feature-domain-model-and-relationships.html
       - title: Product Relationship Management

@@ -668,7 +668,7 @@ If you've installed the OAuth authorization, enable the following plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                                |
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| AuthorizeResource                                            | Registers the OAuth authorize resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
+| AuthorizeResource                                            | Registers the OAuth `authorize` resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
 | UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
@@ -721,9 +721,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Fulfillment Apps's OAuth Authorization works:
-
-1. Authorize with the the OAuth server:
+1. Authenticate as a Back Office user with the the OAuth server:
 
 ```http
 POST /authorize/ HTTP/1.1
@@ -741,16 +739,16 @@ username={username}&password={password}&response_type=code&client_id={client_id}
 | password              | string | 349dldks239fj93498di          | The password of the Back Office user.                        |
 | response_type         | string | code   | Defines how the authorization server should respond to the client after the resource owner grants. |
 | client_id             | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources. |
-| state                 | string | some-random-string                | Used to mitigate the risk of cross-site request forgery (CSRF) attacks. |
+| state                 | string | some-random-string                | Used to mitigate the risk of cross-site request forgery attacks. |
 | code_challenge        | string | some-random-string                | Used in the Authorization Code Grant flow with a Proof Key for Code Exchange (PKCE) to enhance the security of the authorization process. PKCE is designed to protect against certain types of attacks, especially when the authorization code is exchanged for an access token. |
-| code_challenge_method | string | S256                              | Used in the Authorization Code Grant flow with Proof Key for Code Exchange (PKCE). Defines the method used to transform the `code_verifier` into the `code_challenge` before initiating the authorization request.                                                            |
+| code_challenge_method | string | S256                              | Used in the Authorization Code Grant flow with PKCE. Defines the method used to transform the `code_verifier` into the `code_challenge` before initiating the authorization request.                                                            |
 | redirect_uri          | string | `https://some-redirect-url`       | Used in the authorization request to specify where the authorization server should redirect the user after the user grants or denies permission.  |
 
-For more detailed information about the Authorization (Code Grant flow) Request with PKCE, refer to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
+For more detailed information about the Authorization (Code Grant flow) Request with PKCE, see to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
 
     Check that the response contains the 201 response with a code.
 
-2. Using the code, Authenticate as a Back Office user:
+2. Using the code you've retrieved in the previous step, authenticate as a Back Office user:
 
 ```http
 POST /token/ HTTP/1.1
@@ -767,13 +765,15 @@ grant_type=authorization_code&code={code}&client_id={client_id}&code_verifier={c
 | grant_type     | string | authorization_code                | Specifies the type of grant requested by the client. In this case, it's the Authorization Code Grant flow. |
 | code           | string | some-code                         | The authorization code provided by the OAuth server. |
 | client_id      | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources. |
-| code_verifier  | string | some-random-string                | A random string generated by the client in the Authorization Code Grant flow with Proof Key for Code Exchange (PKCE). It's used to verify the identity of the client when exchanging the authorization code for an access token. |
+| code_verifier  | string | some-random-string                | A random string generated by the client in the Authorization Code Grant flow with PKCE. It's used to verify the identity of the client when exchanging the authorization code for an access token. |
 
 Check that the response contains the 201 response with an auth token. Check that you can send requests to protected resources using the auth token.
 
 {% endinfo_block %}
 
-4. To enable the Backend API, register these plugins:
+### Set up the backend API
+
+To enable the Backend API, register these plugins:
 
 | PLUGIN                                                          | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                                                                    |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------|

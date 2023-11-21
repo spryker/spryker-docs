@@ -9,7 +9,7 @@ template: concept-topic-template
 
 # Shipment Type Service Point
 
-The Shipment Type Service Point subdomain establishes the connection between shipment types and service points.
+The Shipment Type Service Point subdomain establishes the connection between shipment types and service type.
 
 [Install the Shipment Service Points feature](/docs/pbc/all/install-features/{{page.version}}/install-the-shipment-service-points-feature.html)
 

@@ -5,7 +5,7 @@ description: Explore the Click and Collect feature technical walkthrough, a reta
 template: concept-topic-template
 ---
 
-C&C business models refers to a retail strategy where customers make purchases online and then collect their ordered products from a physical store or a designated pickup location. This model combines the convenience of online shopping with the immediacy of in-store pickup.
+Click and Collect business models refers to a retail strategy where customers make purchases online and then collect their ordered products from a physical store or a designated pickup location. This model combines the convenience of online shopping with the immediacy of in-store pickup.
 
 # Domain Model
 
@@ -79,7 +79,7 @@ This system not only enhances customer convenience by providing a more flexible 
 Shipment type refers to the different options available to customers for receiving their orders.
 Some common shipment types include:
 * Home Delivery: This option allows customers to get their order delivered to the address they filled in during checkout.
-* In-store pickup (aka click & collect): This option allows customers to pick up their orders from a physical store or service point location, typically within a few hours to a day after the order is placed.
+* In-Store Pickup (or Click and Collect): This option allows customers to pick up their orders from a physical store or service point location, typically within a few hours to a day after the order is placed.
   Shipment method, on the other hand, refers to how the product is physically transported from the seller to the customer. Examples of shipment methods are Next Day Delivery or Express Delivery.
   Shipment type is a logical grouping of the shipment methods.
 

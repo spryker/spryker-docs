@@ -2,7 +2,7 @@
 title: Click and Collect feature Shipment Types domain walkthrough
 last_updated: Nov 02, 2023
 description: |
-  Explore the Shipment Types domain in the Click and Collect feature, understanding the various options available to customers for receiving their orders. This guide provides comprehensive details on installing the Shipment feature, delving into the associated modules, and showcasing different data setup methods. Additionally, discover key extension points for customizing Shipment Types behavior during the checkout process.
+  Explore the Shipment Type domain in the Click and Collect feature, understanding the various options available to customers for receiving their orders. This guide provides comprehensive details on installing the Shipment feature, delving into the associated modules, and showcasing different data setup methods. Additionally, discover key extension points for customizing Shipment Types behavior during the checkout process.
 
 template: concept-topic-template
 ---

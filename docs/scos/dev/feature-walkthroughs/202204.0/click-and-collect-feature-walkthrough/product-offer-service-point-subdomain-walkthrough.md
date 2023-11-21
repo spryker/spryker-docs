@@ -2,7 +2,7 @@
 title: Click and Collect feature Product Offer Service Point subdomain walkthrough
 last_updated: Nov 02, 2023
 description: |
-  Embark on a detailed exploration of the Product Offer Service Point subdomain in the Click and Collect feature. Understand the connection between product offers and service points, and learn how to install and configure the necessary modules for seamless integration. Discover the significance of data setup and explore extension points for filtering services assigned to product offers before publishing them to storage.
+  Explore the Product Offer Service Point subdomain in the Click and Collect feature. Understand the connection between product offers and service points, and learn how to install and configure the necessary modules for seamless integration. Discover the significance of data setup and explore extension points for filtering services assigned to product offers before publishing them to storage.
 
 template: concept-topic-template
 ---

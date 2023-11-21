@@ -2,7 +2,7 @@
 title: Click and Collect feature Product Offer Service Point Availability subdomain walkthrough
 last_updated: Nov 02, 2023
 description: |
-  Explore the intricacies of the Product Offer Service Point Availability subdomain in the Click and Collect feature. Learn about the modules, installation of the feature, and the extension points for calculating and filtering data related to the availability of a product offer at a service point. Enhance your understanding with examples of plugins and strategies used in the availability calculation process.
+  Explore the Product Offer Service Point Availability subdomain in the Click and Collect feature. Learn about the modules, installation of the feature, and the extension points for calculating and filtering data related to the availability of a product offer at a service point. Enhance your understanding with examples of plugins and strategies used in the availability calculation process.
 
 template: concept-topic-template
 ---

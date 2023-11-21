@@ -9,7 +9,7 @@ template: concept-topic-template
 
 # Service Point Cart
 
-The Service Point Cart subdomain empowers you to validate service points and replace line items within a shopping cart.
+The Service Point Cart subdomain enables you to validate service points and replace line items within a shopping cart.
 
 [Install the Service Points Cart feature](/docs/pbc/all/install-features/{{page.version}}/install-the-service-points-cart-feature.html)
 

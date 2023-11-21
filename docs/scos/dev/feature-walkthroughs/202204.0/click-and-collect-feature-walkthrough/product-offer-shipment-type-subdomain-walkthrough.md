@@ -2,7 +2,7 @@
 title: Click and Collect feature Product Offer Shipment Type subdomain walkthrough
 last_updated: Nov 02, 2023
 description: |
-  Immerse yourself in the Product Offer Shipment Type subdomain of the Click and Collect feature. Gain insights into the connection between product offers and shipment types, and learn how to install and configure the necessary modules for seamless integration. Discover the significance of data setup and explore extension points for filtering shipment types assigned to product offers before publishing them to storage.
+  Explore the Product Offer Shipment Type subdomain of the Click and Collect feature. Gain insights into the connection between product offers and shipment types, and learn how to install and configure the necessary modules for seamless integration. Discover the significance of data setup and explore extension points for filtering shipment types assigned to product offers before publishing them to storage.
 
 template: concept-topic-template
 ---

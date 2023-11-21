@@ -10,7 +10,7 @@ Install the required features:
 | NAME                                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                  |
 |-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html)                     |
-| Order Management + Inventory Management | {{page.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
+| Order Management + Inventory Management | {{page.version}} | [Install the Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
 | Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)                                                       |
 | Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html)                                     |
 | Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
@@ -37,19 +37,18 @@ Make sure the following modules have been installed:
 | PickingListsUsersBackendApi      | vendor/spryker/picking-lists-users-backend-api      |
 | PickingListsWarehousesBackendApi | vendor/spryker/picking-lists-warehouses-backend-api |
 
-2. Optional: To install the demo multi-shipment picking strategy, install the module:
 
-This module showcases an example of a strategy used for generating a picking list.
-Picking list strategies are used to define the location and method of ordering items that are being picked.
-You can create a custom picklist generation strategy for each warehouse on a project level.
-The default picklist generation strategy enables the generation of picklists based on order shipments.
-Each order line is assigned to a unique picklist that contains all the necessary items to fulfill that order.
-Additionally, this strategy splits orders into several picklists based on the warehouse assigned to each order line.
-It's important to note that this is just an example, and you are free to implement any business logic using a strategy that reflects your actual business processes.
+{% endinfo_block %}
+
+
+2. Optional: To install the [demo multi-shipment picking strategy](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/warehouse-picking-feature-overview.html#example-of-a-picklist-generation-strategy), install the module:
 
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.2.1" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
+
 
 Make sure the following module has been installed:
 
@@ -58,13 +57,16 @@ Make sure the following module has been installed:
 | PickingListMultiShipmentPickingStrategyExample | vendor/spryker/picking-list-multi-shipment-picking-strategy-example |
 
 
-3. Optional: To install the Fulfillment Apps's early access OAuth Authorization that supports the "Authorization Code Grant" flow, install the corresponding module:
+{% endinfo_block %}
 
-The module provides the modified OAuth "Authorization Code Grant" flow for the Fulfillment App frontend application.
+
+3. Optional: To install early access [OAuth authorization](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/warehouse-picking-feature-overview.html#fulfillment-app-oauth-authorization), install the module:
 
 ```bash
-    composer require spryker-eco/authorization-picking-app-backend-api: "^0.2.0" --update-with-dependencies
+composer require spryker-eco/authorization-picking-app-backend-api: "^0.2.0" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
 
 Make sure the following module has been installed:
 
@@ -77,7 +79,7 @@ Make sure the following module has been installed:
 
 ## 2) Set up database schema and transfer objects
 
-Apply the database changes and generate entity and transfer changes:
+1. Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -133,16 +135,15 @@ Make sure the following changes have been triggered in transfer objects:
 | PushNotificationCollectionRequest.pickingLists | property | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequestTransfer       |
 
 
-Optional: In case the Fulfillment Apps's early access OAuth Authorization was installed.
 
-Make sure the following changes have been applied by checking your database:
+Optional: If you've installed the early access OAuth authorization, make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY               | TYPE  | EVENT   |
 |-------------------------------|-------|---------|
 | spy_oauth_code_flow_auth_code | table | created |
 
 
-Make sure the following changes have been triggered in transfer objects:
+Optional: If you've installed the early access OAuth authorization, make sure the following changes have been triggered in transfer objects:
 
 | TRANSFER                               | TYPE     | EVENT   | PATH                                                     |
 |----------------------------------------|----------|---------|----------------------------------------------------------|
@@ -173,9 +174,14 @@ Make sure the following changes have been triggered in transfer objects:
 
 {% endinfo_block %}
 
+
 ## 3) Set up configuration
 
-1. To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths' configuration:
+Set up the following configuration.
+
+### Configure Glue API resources
+
+To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths' configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -205,7 +211,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. To configure OMS, add the `DummyPicking` subprocess that describes the warehouse picking in the system.
+### Configure OMS
+
+1. Add the `DummyPicking` subprocess that describes the warehouse picking in the system.
 
 **config/Zed/oms/DummySubprocess/DummyPicking.xml**
 
@@ -263,7 +271,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 </statemachine>
 ```
 
-3. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
+2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
 <details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
@@ -315,12 +323,14 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
-2. Click the `DummyPayment01` process. 
+2. Click the `DummyPayment01` process.
 3. Make sure the OMS transition diagram shows the transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
-4. Configure the Push Notification provider:
+## Configure the push notification provider
+
+Add the configuration:
 
 **src/Pyz/Zed/PickingListPushNotification/PickingListPushNotificationConfig.php**
 
@@ -350,9 +360,11 @@ class PickingListPushNotificationConfig extends SprykerPickingListPushNotificati
 }
 ```
 
-5. Optional: Configure the OAuth client configuration for the Fulfillment Apps's access OAuth Authorization:
+### Optional: Configure the OAuth client
 
-Configure the value of the `SPRYKER_OAUTH_CLIENT_CONFIGURATION` environment variable that represents the OAuth client configuration:
+If you've installed the early access OAuth authorization, configure the OAuth client as follows:
+
+1. Configure the value of the `SPRYKER_OAUTH_CLIENT_CONFIGURATION` environment variable that represents the OAuth client configuration:
 
 ```json
 [
@@ -367,10 +379,9 @@ Configure the value of the `SPRYKER_OAUTH_CLIENT_CONFIGURATION` environment vari
 ]
 ```
 
-For security reasons, it is recommended to use a different OAuth client for each application.
-By application, we mean a separate application that uses the same OAuth server.
+For security reasons, we recommended using a different OAuth client for each application. By application, we mean a separate application that uses the same OAuth server.
 
-Run the following console command to set up the OAuth client:
+2. Set up the OAuth client:
 
 ```bash
 console setup:init-db
@@ -378,13 +389,11 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the OAuth client exists in the database:
-
-* Run the following SQL query:
+To verify the OAuth client exists in the database, run the following SQL query:
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your-app';
 ```
-* Check that the output contains one record (create if not) and the redirect URI is not empty.
+  Make sure the output contains one record and the redirect URI is not empty. If the record doesn't exist, create it.
 
 {% endinfo_block %}
 
@@ -620,7 +629,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 }
 ```
 
-2. If you've installed the demo picking strategy module in [Install the required modules](#install-the-required-modules), enable the demo multi-shipment picking strategy plugin:
+2. Optional: If you've installed the demo picking strategy, enable the demo multi-shipment picking strategy plugin:
 
 | PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                                                   |
 |-------------------------------------------------|----------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
@@ -651,12 +660,12 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-3. If you've installed the Fulfillment Apps's OAuth Authorization module in [Install the required modules](#install-the-required-modules), enable the following plugins:
+3. Optional: If you've installed the OAuth Authorization, enable the following plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                                |
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
 | AuthorizeResource                                            | Registers the OAuth authorize resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
-| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds OauthGrantTypeConfigurationTransfer from configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
+| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -708,7 +717,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Fulfillment Apps's OAuth Authorization works: 
+Make sure that Fulfillment Apps's OAuth Authorization works:
 
 * Pickup any back-office user.
 * Send the following authorization request to the OAuth server:

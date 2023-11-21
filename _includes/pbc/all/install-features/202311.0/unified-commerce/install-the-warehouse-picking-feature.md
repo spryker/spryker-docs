@@ -719,8 +719,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 Make sure that Fulfillment Apps's OAuth Authorization works:
 
-* Pickup any back-office user.
-* Send the following authorization request to the OAuth server:
+Send the following authorization request to the OAuth server:
 
 ```http
 POST /authorize/ HTTP/1.1
@@ -732,11 +731,11 @@ Content-Length: 210
 username={username}&password={password}&response_type=code&client_id={client_id}&state={state}&code_challenge={code_challenge}&code_challenge_method=S256&redirect_uri={redirect_uri}
 ```
 
-| Parameter name        | Type   | Example                           | Description                                                                                                                                                                                                                                                                    |
+| PARAMETER  | TYPE   | EXAMPLE                           | DESCRIPTION |
 |-----------------------|--------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| username              | string | some@user.com                     | The username of the back-office user.                                                                                                                                                                                                                                          |
-| password              | string | some-pass                         | The password of the back-office user.                                                                                                                                                                                                                                          |
-| response_type         | string | code                              | Specifies how the authorization server should respond to the client after the resource owner grants.                                                                                                                                                                           |
+| username              | string | some@user.com                     | The username of the Back Office user. |
+| password              | string | 349dldks239fj93498di          | The password of the Back Office user.                        |
+| response_type         | string | code                              | Defines how the authorization server should respond to the client after the resource owner grants. |
 | client_id             | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources.                                                                                                                                                                                  |
 | state                 | string | some-random-string                | Used to mitigate the risk of cross-site request forgery (CSRF) attacks.                                                                                                                                                                                                        |
 | code_challenge        | string | some-random-string                | Used in the Authorization Code Grant flow with Proof Key for Code Exchange (PKCE) to enhance the security of the authorization process. PKCE is designed to protect against certain types of attacks, especially when the authorization code is exchanged for an access token. |
@@ -746,7 +745,7 @@ username={username}&password={password}&response_type=code&client_id={client_id}
 For more detailed information about the Authorization (Code Grant flow) Request with PKCE, refer to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
 * Check that the output contains the 201 response with a code.
 
-* To get a back-office user token, send the following request:
+* To get a Back Office user token, send the following request:
 
 ```http
 POST /token/ HTTP/1.1

@@ -46,7 +46,7 @@ Click&Collect includes the following features:
 
 ![click-and-collect-demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/click-and-collect.gif)
 
-**Business benefits**:
+**Business benefits**:<br>
 Enhanced Click&Collect facilitates immediate product availability, offering both B2B and B2C clients the convenience of bypassing wait times associated with shipping. This feature not only significantly reduces or eliminates shipping costs but also provides an opportunity for immediate product inspection, ensuring quality and specifications meet the client's standards. Moreover, it seamlessly blends the digital shopping experience with the tangible benefits of a physical store, fostering direct customer-business interactions and potentially driving additional in-store purchases.
 
 While pickup has its roots in B2C operations, its utility in B2B contexts is growing:
@@ -95,8 +95,8 @@ The Spryker Middleware powered by Alumio helps you to reach the following outcom
 - Gain higher customer satisfaction by keeping consistent and up-to-date data across all touchpoints.
 - Gain higher conversion rate by reacting to customer demands and competitive challenges more quickly.
 
-
-**Business benefit**: Faster time-to-value shortening setup times for integrations 
+**Business benefit**:<br>
+Faster time-to-value shortening setup times for integrations 
 
 ### Documentation
 - [Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html)
@@ -116,13 +116,14 @@ The Spryker Akeneo PIM Integration App allows you to do the following:
 - Increase the reliability of your data flow between Spryker and Akeneo PIM with buffering, retries, and extensive troubleshooting capabilities.
 
 
-**Business benefit**: Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new product information synchronized at the rhythm your business demands.
+**Business benefit**:<br>
+Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new product information synchronized at the rhythm your business demands.
 
-## Documentation
+### Documentation
 - [Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html)
 - [Configure the Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html)
 
-## Technical prerequisites 
+### Technical prerequisites 
 - To use your Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio.
 - The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently, it doesn't cover the Marketplace business models. 
 
@@ -134,7 +135,8 @@ This integration significantly enhances our current monitoring capabilities by e
 
 This feature is ideal for customer DevOps/SREs seeking enhanced, flexible monitoring solutions.
 
-**Business benefits**: Until now, New Relic was the sole option for aggregating logs and metrics. This integration offers customers the flexibility to connect and integrate their Dynatrace account to Spryker PaaS+, thus enhancing observability and cloud extensibility. 
+**Business benefits**:<br>
+Until now, New Relic was the sole option for aggregating logs and metrics. This integration offers customers the flexibility to connect and integrate their Dynatrace account to Spryker PaaS+, thus enhancing observability and cloud extensibility. 
 
 Key features of this integration include the following:
 
@@ -159,13 +161,12 @@ Key features of this integration include the following:
 - Additional configuration required on your side (Dynatrace metrics and logs). 
 - The configuration of this integration can be triggered via Spryker Support after the upsell process is completed.
 
-
-
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Improved performance, stability, and scalability <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Adding 3rd party integrations via apps to your existing SCCOS solution has become easier with the App Composition Platform (ACP). Get in touch with us to get ACP enabled faster and take advantage of ACP’s steadily growing number of no and low-code apps.
 
-**Business benefit**: Simplified and faster enablement of ACP for SCCOS, as well as improved scalability, performance, and data security of the entire platform.
+**Business benefit**:<br>
+Simplified and faster enablement of ACP for SCCOS, as well as improved scalability, performance, and data security of the entire platform.
 
 ### Documentation
 [ACP overview](/docs/acp/user/intro-to-acp/acp-overview.html) 
@@ -206,7 +207,7 @@ Build an efficient path to purchase for your buyers with Algolia search, an inno
 
 In addition to updating Spryker packages in your repository, with this release, Spryker Code Upgrader starts integrating plugins, settinh configurations keys, and adding new translations and similar elements to your project code. Now engineers don’t have to figure out and manually apply code changes to activate new features.
 
-**Business benefit**:
+**Business benefit**:<br>
 Reduce the engineering time needed to integrate a Spryker module release into your project. 
 
 ### Documentation
@@ -220,7 +221,7 @@ Connect to [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrade
 Receive security releases before any other releases offered by Spryker Code Upgrader. The Upgrader prioritizes security releases, ensuring a timely application of critical security fixes.
 
 
-**Business benefit**: 
+**Business benefit**:<br>
 Reduce the security risks from running outdated software by taking security updates before other updates. 
 
 ### Documentation
@@ -233,7 +234,7 @@ Connect to [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrade
 
 This update offers notifications about critical security issues and vulnerabilities in Spryker and third-party components based on known vulnerability databases from NPM and Composer ecosystems. These improvements enhance the security monitoring and upgrade process. This update is complementary to the [Security Upgrades] improvement for Spryker Code Upgrader, but addresses all Spryker users.
 
-**Business benefit**: 
+**Business benefit**:<br>
 Better awareness of security issues and vulnerabilities.
 
 ### Documentation
@@ -249,7 +250,7 @@ Install and run [Upgrader compliance Evaluator](/docs/scos/dev/guidelines/keepin
 
 Oryx Framework empowers developers to efficiently build composable frontends. Oryx provides a rich library of Oryx components, including a design system, allowing developers to rapidly create modern and visually appealing user interfaces. These components integrate with Spryker APIs by default, providing a seamless, decoupled experience for developers and end consumers.
 
-**Business benefit**:
+**Business benefit**:<br>
 Save time and effort with Oryx Framework. Spryker’s purpose-built framework lets developers utilize fast, lightweight, and reactive components for storefronts and other frontends that quickly and dynamically display various devices.
 
 ### Learn more:
@@ -267,7 +268,7 @@ Additional features are being released for Spryker's new upgradeable, decoupled 
 
 For more information about this Early Access product, contact your Spryker representative.
 
-**Business benefit**: 
+**Business benefit**:<br>
 Provides commonplace features out-of-the-box for future-proof, agile, scalable, and upgradeable solutions for digital commerce business models. 
 
 ### Learn more:

@@ -48,7 +48,7 @@ Additionally, this strategy splits orders into several picklists based on the wa
 It's important to note that this is just an example, and you are free to implement any business logic using a strategy that reflects your actual business processes.
 
 ```bash
-composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
+composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.2.1" --update-with-dependencies
 ```
 
 Make sure the following module has been installed:

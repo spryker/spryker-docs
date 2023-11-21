@@ -15,9 +15,9 @@ redirect_from:
 related:
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
-  - title: Retrieve abstract products
+  - title: "Glue API: Retrieve abstract products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
-  - title: Retrieving concrete products
+  - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 

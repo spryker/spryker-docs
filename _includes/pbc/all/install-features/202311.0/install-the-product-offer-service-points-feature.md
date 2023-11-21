@@ -486,7 +486,7 @@ To expand product offers with services, register the plugins:
 |------------------------------------------|-------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
 | ServiceProductOfferPostCreatePlugin      | Creates the product offer service entities.                             |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
 | ServiceProductOfferPostUpdatePlugin      | Updates the product offer service entities.                             |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
-| ServiceProductOfferExpanderPlugin        | Expands product offer transfer with services.                           |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| ServiceProductOfferExpanderPlugin        | Expands product offer transfers with services.                           |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
 | ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from the storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage    |
 | ServiceProductOfferViewSectionPlugin     | Expands the product offer view section with services.                   |               | Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui |
 

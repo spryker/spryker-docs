@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$( document ).ready(function() {
     let pageOffset = 0;
 
     initCopyText();
@@ -16,6 +16,10 @@ $(document).ready(function () {
     initFeedbackForm();
 
     initDropdown();
+
+    initSearchPopup();
+
+    initHomeSearchPosition();
 
     initPopup();
 
@@ -50,11 +54,11 @@ function initHubspotForm() {
         formId: formContainer.data('formId'),
         submitButtonClass: 'button button--red hubspot-form__submit',
         target: '#' + formContainer.attr('id'),
-        onFormReady: function () {},
-        onFormSubmitted: function () {
+        onFormReady: function() {},
+        onFormSubmitted: function(){
             hubspotPopup.open();
 
-            setTimeout(function () {
+            setTimeout(function(){
                 hubspotPopup.close();
             }, 5000);
         },
@@ -62,14 +66,12 @@ function initHubspotForm() {
 }
 
 function initAnchors() {
-    anchors.add(
-        '.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])'
-    );
+    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
 
     let anchorLinks = $('.anchorjs-link'),
         $window = $(window);
 
-    anchorLinks.on('click', function (e) {
+    anchorLinks.on('click', function(e){
         e.preventDefault();
         $window.scrollTop($(e.target).offset().top - pageOffset + 1);
     });
@@ -100,16 +102,10 @@ function initPageScrolling() {
 
         if (currentScrollPosition < 2) return;
 
-        if (
-            currentScrollPosition > lastScrollPosition &&
-            !body.hasClass('scroll-down')
-        ) {
+        if (currentScrollPosition > lastScrollPosition && !body.hasClass('scroll-down')) {
             // down
             body.removeClass('scroll-up').addClass('scroll-down');
-        } else if (
-            currentScrollPosition < lastScrollPosition &&
-            body.hasClass('scroll-down')
-        ) {
+        } else if (currentScrollPosition < lastScrollPosition && body.hasClass('scroll-down')) {
             // up
             body.removeClass('scroll-down').addClass('scroll-up');
         }
@@ -123,23 +119,19 @@ function initPageScrolling() {
 }
 
 function initLightbox() {
-    $('.post-content img').each(function (i, item) {
+    $('.post-content img').each(function(i, item){
         let image = $(this);
 
         if (image.is('.inline-img img')) {
-            return;
+             return;
         }
 
-        image.wrap(
-            '<a href="' +
-                image.attr('src') +
-                '" data-lightbox="content-lightbox"></a>'
-        );
+        image.wrap('<a href="' + image.attr('src') + '" data-lightbox="content-lightbox"></a>');
     });
 
     lightbox.option({
-        resizeDuration: 300,
-        wrapAround: false,
+      'resizeDuration': 300,
+      'wrapAround': false
     });
 
     let closeButton = $('.lightbox .lb-close');
@@ -181,12 +173,8 @@ function initSetPageOffset() {
     }
 
     function calcOffset() {
-        headerPosition = window
-            .getComputedStyle(headerElement, null)
-            .getPropertyValue('position');
-        menuPosition = window
-            .getComputedStyle(menuElement, null)
-            .getPropertyValue('position');
+        headerPosition = window.getComputedStyle(headerElement, null).getPropertyValue('position');
+        menuPosition = window.getComputedStyle(menuElement, null).getPropertyValue('position');
 
         if (headerPosition === 'fixed' || headerPosition === 'sticky') {
             headerOffset = header.outerHeight();
@@ -223,14 +211,14 @@ function initPopup() {
         close: '.toc__popup-close, .toc__popup-overlay',
         overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
-        showPopup: function () {
+        showPopup: function() {
             $('body').addClass('toc-active');
         },
-        hidePopup: function () {
-            setTimeout(function () {
+        hidePopup: function() {
+            setTimeout(function(){
                 $('body').removeClass('toc-active scroll-down');
             }, 100);
-        },
+        }, 
     });
 
     $('.main-sidebar').popup({
@@ -325,13 +313,9 @@ $.fn.popup = function (options) {
     let popupFunc = function () {
         if (links) {
             popup.on('click', function (e) {
-                if (
-                    e.target.classList.contains(links) &&
-                    window.innerWidth < 1280 &&
-                    !menuIsAnimated
-                ) {
+                if ( e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
                     menuIsAnimated = !menuIsAnimated;
-                    setTimeout(function () {
+                    setTimeout(function(){
                         menuIsAnimated = !menuIsAnimated;
                         toggleMenu();
                     }, 500);
@@ -351,17 +335,77 @@ $.fn.popup = function (options) {
         });
     };
 
-    this.close = function () {
+    this.close = function() {
         menuIsOpened = true;
         toggleMenu();
-    };
+    }
 
-    this.open = function () {
+    this.open = function() {
         toggleMenu();
-    };
+    }
 
     return this.each(popupFunc);
 };
+
+function initHomeSearchPosition() {
+    let homePage = $('.home-layout');
+
+    if (!homePage.length) return;
+
+    let page = jQuery(window),
+        pageOffsetTop,
+        isScrolled = false,
+        searchContainer = $('.js-home-search'),
+        opener = $('.js-search-popup-opener'),
+        searchOffsetTop;
+
+    function handleScroll() {
+        pageOffsetTop = page.scrollTop();
+        searchOffsetTop = searchContainer.offset().top;
+
+        if (isScrolled && pageOffsetTop < searchOffsetTop) {
+            opener.removeClass('under-search');
+            isScrolled = !isScrolled;
+        } else if (!isScrolled && pageOffsetTop > searchOffsetTop ) {
+            opener.addClass('under-search');
+            isScrolled = !isScrolled;
+        }
+    }
+
+    handleScroll();
+
+    page.on('scroll', handleScroll);
+}
+
+function initSearchPopup() {
+    let popup = $('.search-popup'),
+        opener = $('.js-search-popup-opener'),
+        close = $('.js-search-popup-close'),
+        body = $('body'),
+        input = $('.search-input.aa-input'),
+        drop = $('.aa-dropdown-menu');
+
+    // mobile-overflow
+
+    opener.on('click', function(e){
+        e.preventDefault();
+        body.addClass('tablet-overflow');
+        popup.fadeIn(300, function(){
+            input.focus();
+        });
+    });
+
+    close.on('click', function(e){
+        e.preventDefault();
+        body.removeClass('tablet-overflow');
+
+        popup.fadeOut(300);
+    });
+
+    input.on('blur', function(e){
+       drop.hide();
+    });
+}
 
 function initMobileNav() {
     let page = jQuery(window),
@@ -421,11 +465,8 @@ function initDropdown() {
         let $el = $(this);
         let $parent = $el.offsetParent('.dropdown-menu');
 
-        if (!$el.next().hasClass('show')) {
-            $el.parents('.dropdown-menu')
-                .first()
-                .find('.show')
-                .removeClass('show');
+        if ( !$el.next().hasClass('show') ) {
+          $el.parents('.dropdown-menu').first().find('.show').removeClass('show');
         }
 
         let $subMenu = $el.next('.dropdown-menu');
@@ -436,7 +477,7 @@ function initDropdown() {
         return false;
     });
 
-    mainNav.on('hide.bs.dropdown', function (e) {
+    mainNav.on('hide.bs.dropdown', function ( e ) {
         dropdown.removeClass('show');
         subMenu.removeClass('show');
     });
@@ -447,9 +488,7 @@ function initResponsiveTable() {
         let table = jQuery(this),
             th = table.find('th'),
             tr = table.find('tr'),
-            switcher = $(
-                '<div class="table__toggle"><span class="table__toggle-default-text">Show all</span><span class="table__toggle-active-text">Hide</span></div>'
-            ),
+            switcher = $('<div class="table__toggle"><span class="table__toggle-default-text">Show all</span><span class="table__toggle-active-text">Hide</span></div>'),
             isExpanded = false,
             wrapper;
 
@@ -462,14 +501,12 @@ function initResponsiveTable() {
         }
 
         tr.each(function () {
-            $(this)
-                .find('td')
-                .each(function (i, item) {
-                    item.setAttribute('data-th-text', th.eq(i).text());
-                });
+            $(this).find('td').each(function (i, item) {
+                item.setAttribute('data-th-text', th.eq(i).text());
+            });
         });
 
-        switcher.on('click', function (e) {
+        switcher.on('click', function(e) {
             wrapper.toggleClass('expanded');
 
             if (isExpanded) {
@@ -482,7 +519,7 @@ function initResponsiveTable() {
         function checkTableHeight() {
             if (window.innerWidth >= 768) return;
 
-            if (table.outerHeight() > window.innerHeight - pageOffset) {
+            if (table.outerHeight() > (window.innerHeight - pageOffset)) {
                 wrapper.addClass('has-collapse');
             } else {
                 wrapper.removeClass('has-collapse');
@@ -496,24 +533,16 @@ function initResponsiveTable() {
 }
 
 function initCopyText() {
-    jQuery(
-        '.post-content > pre, .post-content details > pre, div.highlight'
-    ).each(function () {
+    jQuery('.post-content > pre, .post-content details > pre, div.highlight').each(function () {
         let block = jQuery(this),
             codeContainer = block.find('code').get(0),
-            copyButton = jQuery(
-                '<div class="code-button"><i class="icon-copy"></i></div>'
-            ),
+            copyButton = jQuery('<div class="code-button"><i class="icon-copy"></i></div>'),
             blockHeader = jQuery('<div class="code-header"></div>');
 
-        copyButton.bind(
-            'click',
-            {
+        copyButton.bind('click', {
                 container: codeContainer,
                 btn: copyButton,
-            },
-            copyText
-        );
+            }, copyText);
 
         blockHeader.append(copyButton);
         blockHeader.insertBefore(block);
@@ -553,8 +582,7 @@ function initSidebarAccordion() {
 function initFeedbackForm() {
     let form = $('#feedback-form'),
         formNative = form.get(0),
-        regEmail =
-            /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+        regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
         isValid = false,
         errorClass = 'validation-error',
         inputs = form.find('.required-field, .required-email, .optional-email'),
@@ -565,7 +593,7 @@ function initFeedbackForm() {
         isValid = true;
         inputs.each(checkField);
 
-        if (!isValid) {
+        if(!isValid) {
             return false;
         }
     }
@@ -574,17 +602,17 @@ function initFeedbackForm() {
         let input = $(item);
 
         // not empty fields
-        if (input.hasClass('required-field')) {
-            setState(input, !input.val().length);
+        if(input.hasClass('required-field')) {
+            setState(input, !input.val().length)
         }
 
         // correct email fields
-        if (input.hasClass('required-email')) {
+        if(input.hasClass('required-email')) {
             setState(input, !regEmail.test(input.val()));
         }
 
         // optional email fields
-        if (input.hasClass('optional-email') && input.val().length) {
+        if(input.hasClass('optional-email') && input.val().length) {
             setState(input, !regEmail.test(input.val()));
         }
     }
@@ -595,7 +623,7 @@ function initFeedbackForm() {
         if (error) {
             field.addClass(errorClass);
 
-            field.one('focus', function () {
+            field.one('focus', function() {
                 field.removeClass(errorClass);
             });
 
@@ -603,18 +631,16 @@ function initFeedbackForm() {
         }
     }
 
-    $(':input', form).change(function () {
+    $(':input', form).change(function() {
         form.data('state-changed', true);
-    });
+    })
 
     $('.form-collapse').each(function () {
         let container = $(this),
             opener = container.find('.js-form-collapse__opener'),
             firstStep = container.find('.js-form-collapse__first-step'),
             secondStep = container.find('.js-form-collapse__second-step'),
-            secondStepOpener = container.find(
-                '.js-form-collapse__second-step-opener'
-            ),
+            secondStepOpener = container.find('.js-form-collapse__second-step-opener'),
             close = container.find('.js-form-collapse__close'),
             slide = container.find('.js-form-collapse__slide'),
             shortFeedback = container.find('.js-form-collapse__short-feedback');
@@ -643,7 +669,7 @@ function initFeedbackForm() {
         });
     });
 
-    $('#feedback-submit').on('click', function (e) {
+    $('#feedback-submit').on('click', function(e){
         e.preventDefault();
         validateForm();
 
@@ -661,26 +687,21 @@ function initFeedbackForm() {
             method: formNative.method,
             body: data,
             headers: {
-                Accept: 'application/json',
-            },
-        })
-            .then((response) => {
-                if (response.status === 200) {
-                    form.hide();
-                    successMessage.show();
-                    formIsSubmitted = true;
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.status === 200) {
+                form.hide();
+                successMessage.show();
+                formIsSubmitted = true;
+            }
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
-    document.addEventListener('visibilitychange', function () {
-        if (
-            document.visibilityState === 'hidden' &&
-            form.data('state-changed')
-        ) {
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden' && form.data('state-changed')) {
             navigator.sendBeacon(formNative.action, new FormData(formNative));
         }
     });
@@ -777,10 +798,7 @@ function initToc() {
             },
 
             generateNavEl: function (anchor, text, navLevel) {
-                var $a =
-                    navLevel == 2
-                        ? $('<a class="nav-link"></a>')
-                        : $('<a class="nav-link nav-link--shifted"></a>');
+                var $a = (navLevel == 2) ? $('<a class="nav-link"></a>') : $('<a class="nav-link nav-link--shifted"></a>');
                 $a.attr('href', '#' + anchor);
                 $a.text(text);
                 var $li = $('<li></li>');
@@ -789,15 +807,9 @@ function initToc() {
                 $a.on('click', function (event) {
                     event.preventDefault();
 
-                    $('html, body').animate(
-                        {
-                            scrollTop:
-                                $($.attr(this, 'href')).offset().top -
-                                pageOffset +
-                                1,
-                        },
-                        500
-                    );
+                    $('html, body').animate({
+                        scrollTop: $($.attr(this, 'href')).offset().top - pageOffset + 1
+                    }, 500);
 
                     window.history.replaceState('', '', '#' + anchor);
                 });

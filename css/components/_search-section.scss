@@ -3,16 +3,15 @@
 }
 
 .search-section {
-    background: url('../images/search-section-bg.jpg') no-repeat #{50% 50% /
-        cover};
+    background: $darkest url('../images/search-section-bg.jpg') no-repeat #{50% 50%/cover};
     color: $white;
     padding: 82px 0 100px;
 
-    @include media('<desktop') {
+    @include media("<desktop") {
         padding: 130px 0;
     }
 
-    @include media('<tablet') {
+    @include media("<tablet") {
         padding: 90px 0;
         background-image: url('../images/search-section-bg-sm.png');
     }
@@ -25,14 +24,113 @@
         text-align: center;
         letter-spacing: -0.02em;
 
-        @include media('<desktop') {
-            margin: 0 0 0.8em;
+        @include media("<desktop") {
+            margin: 0 0 .8em;
         }
 
-        @include media('<tablet') {
+        @include media("<tablet") {
             font-size: 28px;
             line-height: 40px;
-            margin: 0 0 0.6em;
+            margin: 0 0 .6em;
+        }
+    }
+
+    &__panel {
+        max-width: 614px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
+
+        &-icon {
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+            color: $grey-dark;
+            font-size: 16px;
+            top: 20px;
+            left: 5px;
+        }
+
+        input[type="text"],
+        input[type="search"] {
+            display: block;
+            height: 56px;
+            width: 100%;
+            padding: 17px 40px;
+            border: 1px solid transparent;
+            border-bottom-color: $grey-darker;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $grey-lighten;
+            background: transparent !important;
+            outline: none;
+            outline-width: 0;
+            letter-spacing: .02em;
+            transition: color .2s linear, background .2s linear, border-color .2s linear;
+
+            @include placeholder {
+                color: $grey-dark;
+                transition: opacity 0.2s linear;
+            }
+
+            &:focus {
+                border-bottom-color: $grey-lighten;
+                color: $grey-lighten;
+
+                @include placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .fake-input {
+        display: none;
+
+        @include media("<tablet") {
+            display: block;
+            max-width: 614px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+        }
+
+        &__icon {
+            position: absolute;
+            z-index: 2;
+            pointer-events: none;
+            color: $grey-dark;
+            font-size: 16px;
+            top: 20px;
+            left: 5px;
+            pointer-events: none;
+        }
+        &__placeholder {
+            display: block;
+            height: 56px;
+            padding: 17px 40px;
+            border: 1px solid transparent;
+            border-bottom-color: $grey-darker;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $grey-dark;
+            background: transparent !important;
+            letter-spacing: .02em;
+        }
+    }
+}
+
+.home-search {
+    &__opener {
+        @include media("<tablet") {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
         }
     }
 }

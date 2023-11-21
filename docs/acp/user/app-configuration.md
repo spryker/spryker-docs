@@ -11,7 +11,7 @@ For the app configuration translation, see [App configuration translation](/docs
 
 {% endinfo_block %}
 
-## Apps configuration
+## Apps configuration form
 Configuration widget JSON format:
 
 ```json
@@ -629,3 +629,59 @@ DE shop:
 
 EN shop:
 ![configuration-en-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-en-shop.png)
+
+
+## Form validation (server side)
+
+The app will receive the request from configuration form to the URL defined in your `api.json` file, e.g. 
+
+```json
+{
+    "configuration": "/private/configure",
+    "disconnection": "/private/disconnect"
+}
+```
+
+In the cURL request it will look like:
+```bash
+curl -x POST 'https://your-app.domain.name/private/configure' \
+-H 'Accept-Language: en' \
+-H 'X-Tenant-Identifier: tenant-uuid' \
+--data-raw '{
+  "data": {
+    "attributes": {
+      "configuration": "{\"fieldName1\":\"value1\", \"fieldName2\":\"value2\"}"
+    }
+  }
+}'
+```
+
+The app response format for valid request is just HTTP status `200`.
+
+The app response format for invalid request could be error for the whole form:
+```json
+{
+  "errors": [
+    {
+      "code": 443,
+      "message": "human readable message for a user, localized",
+      "status": 400
+    }
+  ]
+}
+```
+
+or field-specific messages in the format:
+```
+{
+  "errors": [
+    {
+      "code": 444,
+      "message": "{"\"fieldName1\": \"errorMessage\", \"fieldName2\": \"errorMessage\"}",
+      "status": 400
+    }
+  ]
+}
+```
+
+In both cases HTTP status has to be `400`.

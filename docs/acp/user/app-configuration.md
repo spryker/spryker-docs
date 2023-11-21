@@ -685,3 +685,9 @@ or field-specific messages in the format:
 ```
 
 In both cases HTTP status has to be `400`.
+
+{% info_block warningBox "Warning" %}
+
+Current limitation for the number of displayed errors from the app reponse is 1.
+
+{% endinfo_block %}

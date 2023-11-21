@@ -5,8 +5,8 @@ description: The Inventory Management feature adds stock and availability manage
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/201903.0/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202307.0/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
-  - /docs/scos/dev/feature-walkthroughs/202307.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
+  - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - /docs/pbc/all/warehouse-management-system/extend-and-customize/inventory-management-feature-modules-overview.html
 ---
 

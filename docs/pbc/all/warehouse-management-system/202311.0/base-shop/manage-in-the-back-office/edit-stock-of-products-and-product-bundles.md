@@ -4,7 +4,7 @@ description: Learn how to edit stock of products and product bundles in the Back
 last_updated: June 3, 2022
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202307.0/catalog/availability/edit-stock-of-products-and-product-bundles.html
+  - /docs/scos/user/back-office-user-guides/202311.0/catalog/availability/edit-stock-of-products-and-product-bundles.html
 ---
 
 

@@ -8,7 +8,7 @@ originalArticleId: a694b2d4-3f66-40fd-8539-d8b455c2da8f
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/availability/managing-products-availability.html
-  - /docs/scos/user/back-office-user-guides/202307.0/catalog/availability/managing-products-availability.html  
+  - /docs/scos/user/back-office-user-guides/202311.0/catalog/availability/managing-products-availability.html  
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html

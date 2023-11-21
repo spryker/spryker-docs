@@ -4,4 +4,4 @@ description: This document describes how to integrate the Marketplace Inventory 
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-inventory-management-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-inventory-management-wishlist-glue-api.md -->
+{% include pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-inventory-management-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-inventory-management-wishlist-glue-api.md -->

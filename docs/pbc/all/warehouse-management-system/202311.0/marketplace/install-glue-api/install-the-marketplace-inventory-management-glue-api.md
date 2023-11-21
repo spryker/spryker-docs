@@ -4,4 +4,4 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-inventory-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-inventory-management-glue-api.md -->
+{% include pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-inventory-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-inventory-management-glue-api.md -->

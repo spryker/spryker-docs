@@ -9,8 +9,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
-  - /docs/scos/dev/glue-api-guides/202307.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
-  - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
+  - /docs/scos/dev/glue-api-guides/202311.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+  - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
 related:
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html

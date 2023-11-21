@@ -6,6 +6,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Spryker Core Back Office feature overview
             url: /docs/pbc/all/back-office/spryker-core-back-office-feature-overview.html
@@ -127,6 +128,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Marketplace Shipment feature overview
                 url: /docs/pbc/all/carrier-management/marketplace/marketplace-shipment-feature-overview.html
@@ -218,16 +220,19 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Cart Notes
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Cart + Non-splittable Products
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
                       - title: Cart + Prices
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-prices-feature.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Cart + Product
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-product-feature.html
                       - title: Cart + Product Bundles
@@ -283,6 +288,7 @@ entries:
                         include_versions:
                         - "202212.0"
                         - "202307.0"
+                        - "202311.0"
                   - title: Install Glue API
                     nested:
                       - title: Install the Cart Glue API
@@ -362,6 +368,7 @@ entries:
                     include_versions:
                     - "202212.0"
                     - "202307.0"
+                    - "202311.0"
               - title: Manage using Glue API
                 nested:
                   - title: Check out
@@ -429,6 +436,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Install
                 nested:
@@ -514,6 +522,7 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: CMS + Product Lists + Catalog
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
                       - title: Content Items
@@ -527,6 +536,7 @@ entries:
                         include_versions:
                           - "202212.0"
                           - "202307.0"
+                          - "202311.0"
                   - title: Install Glue API
                     nested:
                       - title: CMS
@@ -783,6 +793,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: "Glue API: Retrieve abstract products in abstract product lists"
                 url: /docs/pbc/all/content-management-system/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
@@ -791,6 +802,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Base shop
             nested:
@@ -814,6 +826,7 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Customer Account Management + Order Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
 
@@ -1043,6 +1056,7 @@ entries:
                     include_versions:
                     - "202212.0"
                     - "202307.0"
+                    - "202311.0"
                   - title: Upgrade the Discount module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
                   - title: Upgrade the DiscountCalculatorConnector module
@@ -1098,6 +1112,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Marketplace Promotions & Discounts feature overview
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-overview.html
@@ -1109,6 +1124,7 @@ entries:
         url: /docs/pbc/all/dynamic-multistore/dynamic-multistore.html
         include_versions:
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Base shop
             nested:
@@ -1162,6 +1178,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
           - title: "HowTo: Create and register a MailTypePlugin"
             url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
           - title: "HowTo: Create and register a mail provider"
@@ -1174,6 +1191,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Inxmail
                 url: /docs/pbc/all/emails/third-party-integrations/inxmail.html
@@ -1261,6 +1279,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Base shop
             nested:
@@ -1341,6 +1360,7 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Merchant Category
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html
                       - title: Merchant Opening Hours
@@ -1457,6 +1477,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Spryker Core feature overview
             url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
@@ -1642,6 +1663,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Base shop
             nested:
@@ -1994,6 +2016,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Base shop
             nested:
@@ -2322,6 +2345,7 @@ entries:
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-prices-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Merchant Custom Prices
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
                       - title: Scheduled prices
@@ -2331,6 +2355,7 @@ entries:
                         include_versions:
                         - "202212.0"
                         - "202307.0"
+                        - "202311.0"
                       - title: Product Price Glue API
                         url: /docs/pbc/all/price-management/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
                   - title: Upgrade modules
@@ -2411,6 +2436,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Marketplace Merchant Custom Prices feature overview
                 url: /docs/pbc/all/price-management/marketplace/marketplace-merchant-custom-prices-feature-overview.html
@@ -2526,6 +2552,7 @@ entries:
                         include_versions:
                         - "202212.0"
                         - "202307.0"
+                        - "202311.0"
                       - title: Category Management + CMS
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
                       - title: Category Management + Promotions and Discounts
@@ -2545,6 +2572,7 @@ entries:
                         include_versions:
                         - "202212.0"
                         - "202307.0"
+                        - "202311.0"
                       - title: Packaging Units
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
@@ -2567,6 +2595,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Product Configuration
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html
                       - title: Product Group + Cart
@@ -2937,6 +2966,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Marketplace Product feature overview
                 url: /docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.html
@@ -3065,6 +3095,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -3231,6 +3262,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Marketplace Return Management feature overview
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.html
@@ -3259,6 +3291,7 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
           - title: Base shop
             nested:
@@ -3519,6 +3552,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Marketplace Shopping Lists feature overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-shopping-lists-feature-overview.html
@@ -3649,6 +3683,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
@@ -3749,6 +3784,7 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature-dynamic-multistore.html
                         include_versions:
                         - "202307.0"
+                        - "202311.0"
                       - title: Inventory Management
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
                       - title: Inventory Management + Alternative Products
@@ -3774,6 +3810,7 @@ entries:
                         include_versions:
                         - "202212.0"
                         - "202307.0"
+                        - "202311.0"
               - title: Import and export data
                 url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
                 nested:
@@ -3826,6 +3863,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Install features
                 nested:

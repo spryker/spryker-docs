@@ -160,7 +160,7 @@ To add items to a shopping list, send the request:
 
 For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -333,7 +333,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 
 For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -464,7 +464,7 @@ To change item quantity in a shopping list, send the request:
 
 For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -630,7 +630,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 
 For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ## Remove an item from a shopping list
 

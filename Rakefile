@@ -40,6 +40,7 @@ commonOptions = {
     /shopify.github.io\/[\.\w\-\/\?]+/,
     /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
+    /redisdesktop.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,

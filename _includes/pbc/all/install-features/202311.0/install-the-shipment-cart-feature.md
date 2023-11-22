@@ -8,6 +8,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME         | VERSION          |
 |--------------|------------------|
+| Spryker Core | {{page.version}} |
 | Shipment     | {{page.version}} |
 | Cart         | {{page.version}} |
 | Prices       | {{page.version}} |
@@ -17,7 +18,7 @@ To start feature integration, overview, and install the necessary features:
 Run the following commands to install the required modules:
 
 ```bash
-composer require spryker/shipment-cart-connector: "^2.1.0" spryker/shipment-type-cart: "^0.1.0" --update-with-dependencies
+composer require spryker/shipment-cart-connector: "^2.1.0" spryker/shipment-type-cart: "^1.0.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -56,7 +57,7 @@ Make sure that the following changes have been applied in transfer objects:
 | CartChange                | class | Created | src/Generated/Shared/Transfer/CartChangeTransfer                |
 | Currency                  | class | Created | src/Generated/Shared/Transfer/CurrencyTransfer                  |
 | ShipmentGroup             | class | Created | src/Generated/Shared/Transfer/ShipmentGroupTransfer             |
-| Shipment                  | class | Created | src/Generated/Shared/Transfer/ShipmentTransfer`                 |
+| Shipment                  | class | Created | src/Generated/Shared/Transfer/ShipmentTransfer                  |
 | ShipmentMethodsCollection | class | Created | src/Generated/Shared/Transfer/ShipmentMethodsCollectionTransfer |
 | ShipmentType              | class | Created | src/Generated/Shared/Transfer/ShipmentTypeTransfer              |
 | ShipmentTypeCollection    | class | Created | src/Generated/Shared/Transfer/ShipmentTypeCollectionTransfer    |

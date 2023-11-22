@@ -225,7 +225,7 @@ If the `cross` icon is already defined in the project, it's not necessary to add
 }
 ```
 
-4. To the `addres` view of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
+4. To the `address` view of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
 
 ```twig
 {% raw %}{% widget 'ClickAndCollectServicePointAddressFormWidget' args [data.form] only %}{% endwidget %}{% endraw %}

@@ -7,7 +7,7 @@ related:
   - title: Install Vertex
     link: docs/pbc/all/tax-management/page.version/vertex/install-vertex.html
 redirect_from:
-  - /docs/pbc/all/tax-management/202307.0/vertex/vertex.html
+  - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
 ---
 

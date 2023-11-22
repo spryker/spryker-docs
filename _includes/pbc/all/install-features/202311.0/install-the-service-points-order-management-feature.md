@@ -307,6 +307,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             SalesServicePointNameForShipmentGroupWidget::class,
+            ServicePointNameForShipmentGroupWidget::class,
         ];
     }
 }
@@ -320,10 +321,7 @@ Add the widget to a Twig template:
 {% raw %}{%{% endraw %} widget 'ServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-For service point-related orders, make sure the service point name is displayed in the order details.
-
-
-
+Ensure service point name is displayed in checkout summary and order details for service point-related orders.
 
 
 {% endinfo_block %}

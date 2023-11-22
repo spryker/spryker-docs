@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/performance-guidelines
   - /v1/docs/en/performance-guidelines
   - /docs/scos/dev/guidelines/performance-guidelines.html
+  - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
 related:
   - title: Architecture performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
@@ -56,14 +57,14 @@ For performance reasons, always use the newest stable version of PHP, as every n
 
 Make sure that Opcache is activated and properly configured:
 
-| CONFIGURATION  | PURPOSE   | PRODUCTION | DEVELOPMENT |
-| ------------- | ----------------- | ---------- | ----------- |
-| `opcache.enable`    | Activates Opcache for web requests. Most developers disable this on development environments to avoid outdated code in caches. However, you can also activate it and check for changed files via `validate_timestamps` and `revalidate_freq` configurations. | 1     | 0   |
-| `opcache.enable_cli`   | Activates Opcache for console commands.     | 1    | 0   |
-| `opcache.max_accelerated_files` | Spryker and all the used open-source libraries contain a lot of PHP classes, so this value should be high (max is 100k). | ?  | 8192  |
-| `opcache.memory_consumption`  | To avoid an automatic reset of the Opcache, these values must be high enough. You can look into the PHP info (for exaample, in Zed, browse to `/maintenance/php-info`) to see the current usage. You can count the number of classes in your codebase to get an idea of a good value. | ?       |             |
-| `opcache.validate_timestamps`  | Boolean values that activate the check for the updated code. This check is time-consuming and must be disabled in production environments. However, you need to flush the cache during deployments—for example, by restarting PHP. | 0  | 1  |
-| `opcache.revalidate_freq`  | Configures the frequency of checks if enabled by the `validate_timestamps` configuration. *0* means *on every request*,  which is recommended for development environments if you want to program with activated Opcache.	0	0 | 0  | 0  |
+| CONFIGURATION                   | PURPOSE                                                                                                                                                                                                                                                                               | PRODUCTION | DEVELOPMENT |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------- |
+| `opcache.enable`                | Activates Opcache for web requests. Most developers disable this on development environments to avoid outdated code in caches. However, you can also activate it and check for changed files via `validate_timestamps` and `revalidate_freq` configurations.                          | 1          | 0           |
+| `opcache.enable_cli`            | Activates Opcache for console commands.                                                                                                                                                                                                                                               | 1          | 0           |
+| `opcache.max_accelerated_files` | Spryker and all the used open-source libraries contain a lot of PHP classes, so this value should be high (max is 100k).                                                                                                                                                              | ?          | 8192        |
+| `opcache.memory_consumption`    | To avoid an automatic reset of the Opcache, these values must be high enough. You can look into the PHP info (for exaample, in Zed, browse to `/maintenance/php-info`) to see the current usage. You can count the number of classes in your codebase to get an idea of a good value. | ?          |             |
+| `opcache.validate_timestamps`   | Boolean values that activate the check for the updated code. This check is time-consuming and must be disabled in production environments. However, you need to flush the cache during deployments—for example, by restarting PHP.                                                    | 0          | 1           |
+| `opcache.revalidate_freq`       | Configures the frequency of checks if enabled by the `validate_timestamps` configuration. *0* means *on every request*,  which is recommended for development environments if you want to program with activated Opcache.	0	0                                                         | 0          | 0           |
 
 ```php
 zend_extension=opcache.so

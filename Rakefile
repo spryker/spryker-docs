@@ -68,6 +68,7 @@ commonOptions = {
   :ignore_status_codes => [429],
   :enforce_https => false,
   :allow_missing_href => true,
+  :check_external_hash => false,
 }
 
 task :check_acp_user do

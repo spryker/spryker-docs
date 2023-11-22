@@ -63,19 +63,11 @@ commonOptions = {
     :ssl_verifypeer => false,
     :ssl_verifyhost => 0
   },
-  :disable_external => false,
-  :validation => {
-    :report_eof_tags => true,
-    :report_invalid_tags => true,
-    :report_mismatched_tags => true,
-    :report_missing_doctype => true,
-    :report_missing_names => true,
-    :report_script_embeds => true,
-  },
   :ignore_missing_alt => true,
   :only_4xx => false,
   :ignore_status_codes => [429],
-  :parallel => { :in_threads => 3},
+  :enforce_https => false,
+  :allow_missing_href => true,
 }
 
 task :check_acp_user do

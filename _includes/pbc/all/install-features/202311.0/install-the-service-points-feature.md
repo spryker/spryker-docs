@@ -1475,6 +1475,45 @@ Make sure that you can include the `service-point-addresses` resource in the `se
 
 {% endinfo_block %}
 
+### 8) Set up reorder related functionality
+
+1. To ensure that the reorder process works properly with service point-related orders, register the following plugins:
+
+| PLUGIN                                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                              |
+|--------------------------------------------|---------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| ServicePointReorderItemSanitizerPlugin         | Cleans up service point data during the reorder process |               | \SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget |
+
+**src/Pyz/Yves/CustomerReorderWidget/CustomerReorderWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CustomerReorderWidget;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget\ServicePointReorderItemSanitizerPlugin;
+
+
+class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CustomerReorderWidgetExtension\Dependency\Plugin\ReorderItemSanitizerPluginInterface>
+     */
+    protected function getReorderItemSanitizerPlugins(): array
+    {
+        return [
+            new ServicePointReorderItemSanitizerPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure sales service point is empty for each item during the reorder process.
+
+{% endinfo_block %}
+
 ## Install feature frontend
 
 Follow the steps below to install the Service Points feature frontend.

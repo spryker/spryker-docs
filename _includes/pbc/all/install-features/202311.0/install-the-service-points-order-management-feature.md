@@ -285,6 +285,7 @@ Register the following plugins to enable widgets:
 | PLUGIN                                      | SPECIFICATION                                               | PREREQUISITES | NAMESPACE                                       |
 |---------------------------------------------|-------------------------------------------------------------|---------------|-------------------------------------------------|
 | SalesServicePointNameForShipmentGroupWidget | Display order service point information on the Storefront. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
+| ServicePointNameForShipmentGroupWidget | Display service point names per shipment group information on the Storefront. |               | SprykerShop\Yves\ServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -294,6 +295,7 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\SalesServicePointWidget\Widget\SalesServicePointNameForShipmentGroupWidget;
+use SprykerShop\Yves\ServicePointWidget\Widget\ServicePointNameForShipmentGroupWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -315,6 +317,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Add the widget to a Twig template:
 ```twig
 {% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} widget 'ServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
 For service point-related orders, make sure the service point name is displayed in the order details.

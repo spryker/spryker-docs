@@ -2,6 +2,6 @@
 title: Spryker Documentation
 product-type: none
 search: exclude
-layout: home
+layout: new-home
 permalink: /index_ds
 ---

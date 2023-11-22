@@ -10,6 +10,8 @@ The *Service Points* feature lets you create and manage service points, service 
 
 A *service point* is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, like a warehouse or a physical store. The definition of a service point ultimately depends on the services it provides.
 
+You can add service points and service point addresses using Glue API. For a reference, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).   <!-- or by importing them -->
+
 ## Service type
 
 A *service type* is a classification of services that a business offers to its customers. Service types are determined by the nature of the business. Service type examples:
@@ -18,37 +20,22 @@ A *service type* is a classification of services that a business offers to its c
 * Rental service
 * Repair service
 
+You can add service types using Glue API. For a reference, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).   <!-- or by importing them -->
+
 ## Service
 
 A *service* represents a specific service type that is provided at a specific service point. For example, a pickup service at a retail location located at Julie-Wolfthorn-Straße 1, 10115, Berlin.
 
+You can add services using Glue API. For a reference, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).   <!-- or by importing them -->
 
 ## Service points use cases
 
 
-With the help of service points, types, and services, a Merchant can model different use cases depending on their business needs. Examples of services that can be implemented on a project level are as follows:
+With the help of service points, types, and services, a merchant can model different use cases depending on their business needs. Examples of services that can be implemented on a project level are as follows:
 * Ship from store
 * Request product demo in the retail location
 * Request a repair service
 
-
-
-Relation between these entities can be described with the following example of a pickup service provided inside a retail location:
-
-
-
-
-
-
-
-The feature is fully equipped to enable in-store pickup in your store. Stpes to implement in-store pickup:
-1. Configure service points and their addresses.
-2. Configure service types, for example-Pickup.
-3. Create a service per each service point with the previously configured service type.
-4. Configure a service type for the shipment type
-<!-- link to  Shipment + Service Points Feature -->
-5. Define which Product Offers are available for each Service and Shipment Type
-<!-- link to Product Offer Shipment Feature Overview -->
 
 
 ## Adding service data

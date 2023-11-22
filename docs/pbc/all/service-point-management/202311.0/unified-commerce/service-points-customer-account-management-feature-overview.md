@@ -6,6 +6,8 @@ template: concept-topic-template
 
 This feature lets customers select service points during checkout. Service points are selected using the [Service Point Search Widget](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html#service-points-on-the-storefront).
 
+![search widget screenshot]
+
 ## Related Developer documents
 
 | INSTALLATION GUIDES |

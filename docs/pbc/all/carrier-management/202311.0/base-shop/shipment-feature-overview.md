@@ -1,6 +1,6 @@
 ---
 title: Shipment feature overview
-description: With the Carrier Management capability, you can create and manage carrier companies and their delivery methods for every individual store.
+description: With the Carrier Management capability, you can create and manage carrier companies and their shipment methods for every individual store.
 last_updated: July 07, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-overview
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202307.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
 ---
 
-The *Shipment* feature lets you create and manage carrier companies, delivery types, and delivery methods. You can define delivery prices, expected delivery time, tax sets, and the availability of specific delivery methods per store.
+The *Shipment* feature lets you create and manage carrier companies, shipment types, and shipment methods. You can define shipment prices, expected shipment time, tax sets, and the availability of specific shipment methods per store.
 
 ## Carrier company
 
@@ -18,9 +18,9 @@ A *carrier company* is a business that provides shipping services, like DHL, Fed
 
 For instructions on adding carrier companies in the Back Office, see [Add carrier companies](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
 
-## Delivery type
+## Shipment type
 
-A *delivery type* is a way in which a customer receives an order after placing it. Delivery type examples:
+A *shipment type* is a way in which a customer receives an order after placing it. Shipment type examples:
 * Home delivery: products are delivered to the customer's residence.
 * In-store pickup: customer places an order online and picks it up at a selected physical store.
 * Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
@@ -28,41 +28,41 @@ A *delivery type* is a way in which a customer receives an order after placing i
 
 Delivery types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
 
-To import delivery types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html).
+You can add service types using Glue API. For a reference, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html). To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html).
 
 
-## Delivery method
+## Shipment method
 
-A *delivery method* is a way in which a carrier company delivers an order to a customer. Delivery method examples:
+A *shipment method* is a way in which a carrier company delivers an order to a customer. Delivery method examples:
 
 * Ground shipping
 * Expedited shipping
 * Overnight shipping
 * Air freight
 
-There are also branded delivery methods like like DHL Express, DHL Standard, or Hermes Next Day. They are essentially variations of the regular delivery methods that refer to a particular carrier.
+There are also branded shipment methods like like DHL Express, DHL Standard, or Hermes Next Day. They are essentially variations of the regular shipment methods that refer to a particular carrier.
 
-A sales order can have multiple delivery methods from different carrier companies.
+A sales order can have multiple shipment methods from different carrier companies.
 
-For instructions on adding delivery methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html).
+For instructions on adding shipment methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html).
 
 
 {% info_block warningBox %}
 
 If a Back Office user creates or edits a shipment of an order created by a customer, the grand total paid by the customer is not affected:
 
-* If a new delivery method is added, its price is 0.
-* If a delivery method is changed, the price of the shipment method stays the same for that order.
+* If a new shipment method is added, its price is 0.
+* If a shipment method is changed, the price of the shipment method stays the same for that order.
 
 {% endinfo_block %}
 
-### Delivery method plugins
+### Shipment method plugins
 
-Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about delivery method plugins, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
+Additional behaviors can be attached to a shipment method from the Back Office by selecting specific plugins. For more information about shipment method plugins, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
 
-### Delivery method prices and discounts
+### Shipment method prices and discounts
 
-Each delivery method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit and their preferred currency selection.
+Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit and their preferred currency selection.
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 

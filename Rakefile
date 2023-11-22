@@ -56,7 +56,15 @@ commonOptions = {
     /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,
-    /linux.die.net\/[\.\w\-\/\?]+/
+    /linux.die.net\/[\.\w\-\/\?]+/,
+    # check next url's
+    /redisdesktop.com\/[\.\w\-\/\?]+/,
+    /xdebug.org\/[\.\w\-\/\?]+/,
+    /www.javaworld.com\/[\.\w\-\/\?]+/,
+    /code.visualstudio.com\/[\.\w\-\/\?]+/,
+    /www.jetbrains.com\/[\.\w\-\/\?]+/,
+    /www.jetbrains.com\/[\.\w\-\/\?]+/,
+    'http://redisdesktop.com/',
   ],
   :ignore_files => [],
   :typhoeus => {
@@ -67,6 +75,7 @@ commonOptions = {
   :only_4xx => false,
   :ignore_status_codes => [429],
   :enforce_https => false,
+  # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
 }

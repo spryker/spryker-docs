@@ -663,8 +663,21 @@ The app response format for invalid request could be error for the whole form:
 {
   "errors": [
     {
-      "code": 443, // your custom code
+      "code": 443,
       "message": "human readable message for a user, localized",
+      "status": 400
+    }
+  ]
+}
+```
+
+or field-specific messages in the format:
+```
+{
+  "errors": [
+    {
+      "code": 444,
+      "message": "{"\"fieldName1\": \"errorMessage\", \"fieldName2\": \"errorMessage\"}",
       "status": 400
     }
   ]

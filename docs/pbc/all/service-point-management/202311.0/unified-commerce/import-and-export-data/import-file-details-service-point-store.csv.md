@@ -1,19 +1,23 @@
 ---
-title: "Import file details: service_point.csv"
+title: "Import file details: service_point_store.csv"
 last_updated: Nov 23, 2023
 template: data-import-template
 ---
 
-This document describes the `service_point.csv` file to configure [service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
+This document describes the `service_point_store.csv` file to configure store relations for [service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
+
+## Import file dependencies
+
+[service_point.csv](/docs/pbc/all/service-point-management/202311.0/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html)
+
 
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| key       | ✓ | String    |                 | Unique key of the service point.        |
-| name      | ✓ | String    |                 | Name of the service point.              |
-| is_active | ✓ | Boolean      |                | Defines if the service point is active. |
+| service_point_key | ✓ | String    |           | Unique key of the service point.        |
+| store_name        | ✓ | String    |            | Store relation for the service point. |
 
 
 ## Import template file and content example
@@ -26,5 +30,5 @@ This document describes the `service_point.csv` file to configure [service point
 ## Import command
 
 ```bash
-console data:import service-point
+console data:import service-point-store
 ```

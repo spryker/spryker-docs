@@ -14,7 +14,7 @@ This document describes the `service.csv` file to configure [services](/docs/pbc
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-|-------------------|-----------|-----------|-------------------|-----------------------------------|
+|-------------------|-----------|-----------|-------------------|-------------|
 | key               | ✓ | String    |               | Unique key of the service.        |
 | service_point_key | ✓ | String    |                | Unique key of the service point.  |
 | service_type_key  | ✓ | String    |             | Unique key of the service type.   |

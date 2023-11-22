@@ -666,10 +666,10 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 
 If you've installed the OAuth authorization, enable the following plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                                |
-|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| AuthorizeResource                                            | Registers the OAuth `authorize` resource.                                                            |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
-| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of AuthorizationCode GrantType data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
+| PLUGIN                                                       | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                                |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| AuthorizeResource                                            | Registers the OAuth `authorize` resource.                                                                 |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
+| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of AuthorizationCode grant type data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -733,16 +733,16 @@ Content-Length: 210
 username={username}&password={password}&response_type=code&client_id={client_id}&state={state}&code_challenge={code_challenge}&code_challenge_method=S256&redirect_uri={redirect_uri}
 ```
 
-| PARAMETER  | TYPE   | EXAMPLE                           | DESCRIPTION |
-|-----------------------|--------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| username              | string | some@user.com                     | The username of the Back Office user. |
-| password              | string | 349dldks239fj93498di          | The password of the Back Office user.                        |
-| response_type         | string | code   | Defines how the authorization server should respond to the client after the resource owner grants. |
-| client_id             | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources. |
-| state                 | string | some-random-string                | Used to mitigate the risk of cross-site request forgery attacks. |
-| code_challenge        | string | some-random-string                | Used in the Authorization Code Grant flow with a Proof Key for Code Exchange (PKCE) to enhance the security of the authorization process. PKCE is designed to protect against certain types of attacks, especially when the authorization code is exchanged for an access token. |
-| code_challenge_method | string | S256                              | Used in the Authorization Code Grant flow with PKCE. Defines the method used to transform the `code_verifier` into the `code_challenge` before initiating the authorization request.                                                            |
-| redirect_uri          | string | `https://some-redirect-url`       | Used in the authorization request to specify where the authorization server should redirect the user after the user grants or denies permission.  |
+| PARAMETER             | TYPE   | EXAMPLE                                 | DESCRIPTION                                                                                                                                                                                                                                                                      |
+|-----------------------|--------|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| username              | string | some@user.com                           | The username of the Back Office user.                                                                                                                                                                                                                                            |
+| password              | string | some-password                           | The password of the Back Office user.                                                                                                                                                                                                                                            |
+| response_type         | string | code                                    | Defines how the authorization server should respond to the client after the resource owner grants the access to external application.                                                                                                                                            |
+| client_id             | string | the-client-identifier-can-be-any-string | Public identifier for the client application that is requesting access to a user's resources.                                                                                                                                                                                    |
+| state                 | string | some-random-string                      | Used to mitigate the risk of cross-site request forgery attacks.                                                                                                                                                                                                                 |
+| code_challenge        | string | some-random-string                      | Used in the Authorization Code Grant flow with a Proof Key for Code Exchange (PKCE) to enhance the security of the authorization process. PKCE is designed to protect against certain types of attacks, especially when the authorization code is exchanged for an access token. |
+| code_challenge_method | string | S256                                    | Used in the Authorization Code Grant flow with PKCE. Defines the method used to transform the `code_verifier` into the `code_challenge` before initiating the authorization request.                                                                                             |
+| redirect_uri          | string | `https://some-redirect-url`             | Used in the authorization request to specify where the authorization server should redirect the user after the user grants or denies permission.                                                                                                                                 |
 
 For more detailed information about the Authorization (Code Grant flow) Request with PKCE, see to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
 
@@ -760,12 +760,12 @@ Content-Length: 1051
 grant_type=authorization_code&code={code}&client_id={client_id}&code_verifier={code_verifier}
 ```
 
-| Parameter name | Type   | Example                           | Description                                                                                                                                                                                                                       |
-|----------------|--------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| grant_type     | string | authorization_code                | Specifies the type of grant requested by the client. In this case, it's the Authorization Code Grant flow. |
-| code           | string | some-code                         | The authorization code provided by the OAuth server. |
-| client_id      | string | the-client-identifier-of-your-app | Public identifier for the client application that is requesting access to a user's resources. |
-| code_verifier  | string | some-random-string                | A random string generated by the client in the Authorization Code Grant flow with PKCE. It's used to verify the identity of the client when exchanging the authorization code for an access token. |
+| Parameter name | Type   | Example                                 | Description                                                                                                                                                                                        |
+|----------------|--------|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| grant_type     | string | authorization_code                      | Specifies the type of grant requested by the client. In this case, it's the Authorization Code Grant flow.                                                                                         |
+| code           | string | some-code                               | The authorization code provided by the OAuth server.                                                                                                                                               |
+| client_id      | string | the-client-identifier-can-be-any-string | Public identifier for the client application that is requesting access to a user's resources.                                                                                                      |
+| code_verifier  | string | some-random-string                      | A random string generated by the client in the Authorization Code Grant flow with PKCE. It's used to verify the identity of the client when exchanging the authorization code for an access token. |
 
 Check that the response contains the 201 response with an auth token. Check that you can send requests to protected resources using the auth token.
 

@@ -12,4 +12,4 @@ Merchant Portal users can add shipment types when creating and editing product o
 
 | INSTALLATION GUIDES|
 | -------------- |
-⭐ install-the-marketplace-merchant-portal-product-offer-shipment-feature.md
+| [Install the Marketplace Merchant Portal Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-shipment-feature.html) |

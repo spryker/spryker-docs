@@ -3903,6 +3903,8 @@ entries:
             nested:
               - title: Fulfillment App feature overview
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.html
+              - title: Warehouse Picking feature overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html                
               - title: Install and upgrade
                 nested:
                   - title: Install features

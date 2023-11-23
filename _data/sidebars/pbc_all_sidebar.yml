@@ -1690,6 +1690,10 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management - Merchant Portal
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-merchant-portal-feature.html
+                      - title: Marketplace Merchant Portal Product Offer Shipment feature
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-shipment-feature.html
+                        include_versions:
+                        - "202311.0"                        
                       - title: Marketplace Product Offer + Cart feature
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html
                       - title: Marketplace Product Offer + Checkout
@@ -1700,14 +1704,7 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-marketplace-product-feature.html
                       - title: Marketplace Product Offer + Quick Add to Cart
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html
-                      - title: Marketplace Product Offer + Service Points
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
-                        include_versions:
-                        - "202311.0"
-                      - title: Marketplace Merchant + Product Offer Service Points Availability
-                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
-                        include_versions:
-                        - "202311.0"
+
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Product Offer
@@ -1716,6 +1713,7 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-cart-glue-api.html
                       - title: Marketplace Product Offer + Wishlist
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-wishlist-glue-api.html
+
                   - title: Upgrade modules
                     nested:
                       - title: MerchantProductOfferDataImport
@@ -1773,14 +1771,17 @@ entries:
                 nested:
                   - title: Install features
                     nested:
+                      - title: Marketplace Merchant Portal Product Offer Service Points
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html
+                      - title: Marketplace Merchant + Product Offer Service Points Availability
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
+                      - title: Marketplace Product Offer + Service Points
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
                       - title: Product Offer Shipment
                         url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html
-                        include_versions:
-                        - "202311.0"
                       - title: Product Offer Service Points
                         url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html
-                        include_versions:
-                        - "202311.0"
+
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         nested:

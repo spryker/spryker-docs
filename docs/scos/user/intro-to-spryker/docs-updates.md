@@ -33,7 +33,7 @@ In October 2023, we have added and updated the following pages:
 - [Create an app with AppKernel](/docs/acp/user/developing-an-app/create-an-app with-appkernel.html): Learn how to use AppKernel with Spryker’s Mini Framework to develop an app.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-feature.html).
-- [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-and-upgrade/install-features/install-the-shipment-product-offer-service-points-availability-feature.html).
+- [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html).
 - [Install the Marketplace Merchant + Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html).
 
 ### Updated pages
@@ -137,7 +137,7 @@ In August 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
+- [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
@@ -195,7 +195,7 @@ In June 2023, we have added and updated the following pages:
 - [Security release notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html).
 - [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
 - [Service Points feature integration guide](/docs/pbc/all/service-points/202311.0/unified-commerce/install-the-service-points-feature.html).
-- [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html).
+- [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html).
 - Documentation on shipment data import:
     - [File details - shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html).

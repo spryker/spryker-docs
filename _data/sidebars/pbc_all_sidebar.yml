@@ -43,8 +43,12 @@ entries:
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
               - title: Shipment + Cart feature overview
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-cart-feature-overview.html
+                include_versions:
+                - "202311.0"                
               - title: Shipment + Customer Account Management feature overview
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-customer-account-management-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1759,6 +1763,8 @@ entries:
                     url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html
                   - title: "product_offer_shipment_type.csv"
                     url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-product-offer-shipment-type.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "product_offer_validity.csv"
                     url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-product-offer-validity.csv.html
               - title: Manage merchant product offers in the Back Office

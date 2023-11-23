@@ -4,12 +4,12 @@ description: General overview of the Service Points + Customer Account Managemen
 template: concept-topic-template
 ---
 
-This feature lets customers select service points during checkout. Service points are selected using the [Service Point Search Widget](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html#service-points-on-the-storefront).
+This feature lets customers select service points during checkout. Service points are selected using the [Service Point Search Widget](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html#service-points-on-the-storefront).
 
-![search widget screenshot]
+![service point search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/service-points-feature-overview.md/service-point-search.png)
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the Service Points + Customer Account Mangement feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-and-upgrade/install-the-service-points-customer-account-management-feature.html) |
+| [Install the Service Points + Customer Account Mangement feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-customer-account-management-feature.html) |

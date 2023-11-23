@@ -26,9 +26,11 @@ A *shipment type* is a way in which a customer receives an order after placing i
 * Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
 * Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
 
-Delivery types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
+Shipment types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
 
-You can add service types using Glue API. For a reference, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html). To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html).
+To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+
+To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html).
 
 
 ## Shipment method

@@ -41,6 +41,10 @@ entries:
             nested:
               - title: Shipment feature overview
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
+              - title: Shipment + Cart feature overview
+                url: /docs/pbc/all/carrier-management/base-shop/shipment-cart-feature-overview.html
+              - title: Shipment + Customer Account Management feature overview
+                url: /docs/pbc/all/carrier-management/base-shop/shipment-customer-account-management-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -52,7 +56,9 @@ entries:
                       - title: Shipment + Cart
                         url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html
                       - title: Shipment + Customer Account Management
-                        url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html                        
+                        url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html
+                        include_versions:
+                        - "202311.0"
                   - title: Upgrade modules
                     nested:
                       - title: Shipment
@@ -95,10 +101,16 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-price.csv.html
                   - title: "shipment_method_shipment_type.csv"
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "shipment_type.csv"
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "shipment_type_store.csv"
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html
+                    include_versions:
+                    - "202311.0"
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Add a new shipment method"
@@ -156,24 +168,18 @@ entries:
             include_versions:
             - "202311.0"
             nested:
-              - title: Install and upgrade
+              - title: Shipment + Service Points feature overview
+                url: /docs/pbc/all/carrier-management/unified-commerce/shipment-service-points-feature-overview.html
+              - title: Install features
                 nested:
-                  - title: Install features
-                    nested:
-                      - title: Shipment Service Points
-                        url: /docs/pbc/all/carrier-management//unified-commerce/install-and-upgrade/install-the-shipment-service-points-feature.html
-                        include_versions:
-                        - "202311.0"
-              - title: Import data
-                nested:
-                  - title: File details - shipment_method_shipment_type.csv
-                    url: /docs/pbc/all/carrier-management//unified-commerce/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html
-                    include_versions:
-                    - "20311.0"
-                  - title: File details - Shipment type
-                    url: /docs/pbc/all/carrier-management/202311.0/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html
-                    include_versions:
-                    - "20311.0"
+                  - title: Shipment Cart
+                    url: /docs/pbc/all/carrier-management/unified-commerce/install-features/install-the-shipment-cart-feature.html
+                  - title: Shipment Product Offer Service Points Availability
+                    url: /docs/pbc/all/carrier-management/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html
+                  - title: Shipment Service Points
+                    url: /docs/pbc/all/carrier-management/unified-commerce/install-features/install-the-shipment-service-points-feature.html
+              - title: "Import file details: shipment_type_service_type.csv"
+                url: /docs/pbc/all/carrier-management/unified-commerce/file-details-shipment-type-service-type.csv.html
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
@@ -1769,6 +1775,8 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
               - title: Product Offer Service Points Availability feature overview
                 url: /docs/pbc/all/offer-management/marketplace/product-offer-shipment-availability-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: Marketplace Merchant Portal Product Offer Shipment feature overview
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-merchant-portal-product-offer-shipment-feature-overview.html
               - title: "Marketplace Merchant Portal Product Offer Management feature: Domain model and relationships"

@@ -1779,6 +1779,8 @@ entries:
                 - "202311.0"
               - title: Marketplace Merchant Portal Product Offer Shipment feature overview
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-merchant-portal-product-offer-shipment-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: "Marketplace Merchant Portal Product Offer Management feature: Domain model and relationships"
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html
               - title: "Product Offer validity dates: Domain model and relationships"

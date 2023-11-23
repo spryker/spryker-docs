@@ -14,7 +14,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
 
 ---
-This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}third-party-integrations/vertex/vertex.html) into a Spryker shop.
+This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/vertex.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -138,7 +138,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 {% info_block infoBox "Performance improvement" %}
 
-Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax\base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
+Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
 
 in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
 
@@ -529,7 +529,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 
 {% info_block infoBox "Use same Product Class Code" %}
 
-You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#1-configure-vertex-specific-metadata-transfers).
+You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#configure-vertex-specific-metadata-transfers).
 
 {% endinfo_block %}
 

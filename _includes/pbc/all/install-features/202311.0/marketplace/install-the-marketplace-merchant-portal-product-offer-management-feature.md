@@ -8,13 +8,13 @@ Install the required features:
 
 | NAME  | VERSION | INSTALLATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | {{page.version}}  | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)
+| Marketplace Product Offer        | {{page.version}}  | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"{{page.version}}" --update-with-dependencies
@@ -22,7 +22,7 @@ composer require spryker-feature/marketplace-merchant-portal-product-offer-manag
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE  | EXPECTED DIRECTORY  |
 | ------------- | --------------- |
@@ -31,7 +31,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 
-### 2) Set up transfer objects
+## 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE  | EVENT   | PATH |
 | ------------- | ---- | ------ |---------------- |
@@ -63,27 +63,27 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductOfferTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductOfferTableCriteriaTransfer |
 | ProductTableCriteria | class | Created | src/Generated/Shared/Transfer/ProductTableCriteriaTransfer |
 | Item.merchantSku | property | Created | src/Generated/Shared/Transfer/ItemTransfer |
+| ProductOfferFormViewCollection | class | Created | src/Generated/Shared/Transfer/ProductOfferFormViewCollection |
+| ProductOfferFormView | class | Created | src/Generated/Shared/Transfer/ProductOfferFormView |
 
 {% endinfo_block %}
 
 
-### 3) Add translations
+## 3) Add translations
 
-Generate a new translation cache for Zed:
+Generate translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
 
-### 4) Set up behavior
-
-To set up behavior:
+## 4) Set up behavior
 
 1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE  |
 | ---------------- | ------------- | --------- | ---------------- |
-| OffersMerchantDashboardCardPlugin | Adds Product Offers card to `MerchantDashobard`. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
+| OffersMerchantDashboardCardPlugin | Adds the **Offers** pane to the **Dashboard** page. | | Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -110,14 +110,12 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `OffersMerchantDashboardCardPlugin` plugin is set up by opening `http://mp.mysprykershop.com/dashboard-portal-gui`. The Product Offers card should be presented on the page.
+In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sure the **Offers** pane is displayed.
 
 {% endinfo_block %}
 
 
 ## Install related features
-
-Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |

@@ -10,7 +10,7 @@ Install the required features:
 | NAME                                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                  |
 |-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html)                     |
-| Order Management + Inventory Management | {{page.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
+| Order Management + Inventory Management | {{page.version}} | [Install the Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
 | Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)                                                       |
 | Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html)                                     |
 | Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
@@ -37,11 +37,18 @@ Make sure the following modules have been installed:
 | PickingListsUsersBackendApi      | vendor/spryker/picking-lists-users-backend-api      |
 | PickingListsWarehousesBackendApi | vendor/spryker/picking-lists-warehouses-backend-api |
 
-2. Optional: To install the demo multi-shipment picking strategy, install the module:
+
+{% endinfo_block %}
+
+
+2. Optional: To install the [demo multi-shipment picking strategy](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/warehouse-picking-feature-overview.html#example-of-a-picklist-generation-strategy), install the module:
 
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.2.1" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
+
 
 Make sure the following module has been installed:
 
@@ -49,11 +56,30 @@ Make sure the following module has been installed:
 |------------------------------------------------|---------------------------------------------------------------------|
 | PickingListMultiShipmentPickingStrategyExample | vendor/spryker/picking-list-multi-shipment-picking-strategy-example |
 
+
+{% endinfo_block %}
+
+
+3. Optional: To install early access [OAuth authorization](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/warehouse-picking-feature-overview.html#fulfillment-app-oauth-authorization), install the module:
+
+```bash
+composer require spryker-eco/authorization-picking-app-backend-api: "^0.2.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following module has been installed:
+
+| MODULE                            | EXPECTED DIRECTORY                                       |
+|-----------------------------------|----------------------------------------------------------|
+| AuthorizationPickingAppBackendApi | vendor/spryker-eco/authorization-picking-app-backend-api |
+| OauthCodeFlow                     | vendor/spryker/oauth-code-flow                           |
+
 {% endinfo_block %}
 
 ## 2) Set up database schema and transfer objects
 
-Apply the database changes and generate entity and transfer changes:
+1. Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -108,11 +134,54 @@ Make sure the following changes have been triggered in transfer objects:
 | Stock.pickingListStrategy                      | property | created | src/Generated/Shared/Transfer/StockTransfer                                   |
 | PushNotificationCollectionRequest.pickingLists | property | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequestTransfer       |
 
+
+
+Optional: If you've installed the early access OAuth authorization, make sure the following changes have been applied by checking your database:
+
+| DATABASE ENTITY               | TYPE  | EVENT   |
+|-------------------------------|-------|---------|
+| spy_oauth_code_flow_auth_code | table | created |
+
+
+Optional: If you've installed the early access OAuth authorization, make sure the following changes have been triggered in transfer objects:
+
+| TRANSFER                               | TYPE     | EVENT   | PATH                                                     |
+|----------------------------------------|----------|---------|----------------------------------------------------------|
+| OauthRequest.responseType              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.redirectUri               | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.state                     | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.code                      | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.codeChallenge             | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| OauthRequest.codeChallengeMethod       | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthRequest.codeVerifier              | property | created | src/Generated/Shared/Transfer/OauthRequestTransfer       |
+| OauthResponse.state                    | property | created | src/Generated/Shared/Transfer/OauthResponseTransfer      |
+| OauthResponse.code                     | property | created | src/Generated/Shared/Transfer/OauthResponseTransfer      |
+| ApiTokenAttributes.code                | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| ApiTokenAttributes.clientId            | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| ApiTokenAttributes.redirectUri         | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| ApiTokenAttributes.codeVerifier        | property | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer |
+| AuthCodeAttributes.username            | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.password            | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.responseType        | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.clientId            | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.scope               | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.redirectUri         | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.state               | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.codeChallenge       | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCodeAttributes.codeChallengeMethod | property | created | src/Generated/Shared/Transfer/AuthCodeAttributesTransfer |
+| AuthCode.identifier                    | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
+| AuthCode.expiresAt                     | property | created | src/Generated/Shared/Transfer/AuthCodeTransfer           |
+
 {% endinfo_block %}
+
 
 ## 3) Set up configuration
 
-1. To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths' configuration:
+Set up the following configuration.
+
+### Configure Glue API resources
+
+To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths' configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -142,7 +211,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. To configure OMS, add the `DummyPicking` subprocess that describes the warehouse picking in the system.
+### Configure OMS
+
+1. Add the `DummyPicking` subprocess that describes the warehouse picking in the system.
 
 **config/Zed/oms/DummySubprocess/DummyPicking.xml**
 
@@ -200,7 +271,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 </statemachine>
 ```
 
-3. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
+2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
 <details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
@@ -253,11 +324,13 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 2. Click the `DummyPayment01` process.
-    Make sure the OMS transition diagram shows the transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+3. Make sure the OMS transition diagram shows the transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
-4. Configure the Push Notification provider:
+## Configure the push notification provider
+
+Add the configuration:
 
 **src/Pyz/Zed/PickingListPushNotification/PickingListPushNotificationConfig.php**
 
@@ -286,6 +359,43 @@ class PickingListPushNotificationConfig extends SprykerPickingListPushNotificati
     }
 }
 ```
+
+### Optional: Configure the OAuth client
+
+If you've installed the early access OAuth authorization, configure the OAuth client as follows:
+
+1. Configure the value of the `SPRYKER_OAUTH_CLIENT_CONFIGURATION` environment variable that represents the OAuth client configuration:
+
+```json
+[
+  {
+    "identifier": "the-client-identifier-of-your-app",
+    "secret": "frontend-secret",
+    "isConfidential": true,
+    "name": "Name of your app",
+    "redirectUri": "https://my-app.com",
+    "isDefault": true
+  }
+]
+```
+
+For security reasons, we recommended using a different OAuth client for each application. By application, we mean a separate application that uses the same OAuth server.
+
+2. Set up the OAuth client:
+
+```bash
+console setup:init-db
+```
+
+{% info_block warningBox "Verification" %}
+
+To verify the OAuth client exists in the database, run the following SQL query:
+```sql
+SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your-app';
+```
+  Make sure the output contains one record and the redirect URI is not empty. If the record doesn't exist, create it.
+
+{% endinfo_block %}
 
 ## 4) Import warehouse picking list strategies
 
@@ -519,7 +629,9 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 }
 ```
 
-2. If you've installed the demo picking strategy module in [Install the required modules](#install-the-required-modules), enable the demo multi-shipment picking strategy plugin:
+### Optional: Set up the multi-shipment picking strategy
+
+If you've installed the demo picking strategy, enable the demo multi-shipment picking strategy plugin:
 
 | PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                                                   |
 |-------------------------------------------------|----------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
@@ -550,7 +662,118 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-3. To enable the Backend API, register these plugins:
+### Optional: Set up the OAuth authorization
+
+If you've installed the OAuth authorization, enable the following plugins:
+
+| PLUGIN                                                       | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                                |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| AuthorizeResource                                            | Registers the OAuth `authorize` resource.                                                                 |               | SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication |
+| UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of `AuthorizationCode` grant type data. |               | Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth                     |
+
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use SprykerEco\Glue\AuthorizationPickingAppBackendApi\Plugin\GlueApplication\AuthorizeResource;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{   
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     */
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new AuthorizeResource(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oauth;
+
+use Spryker\Zed\OauthCodeFlow\Communication\Plugin\Oauth\UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin;
+use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
+
+class OauthDependencyProvider extends SprykerOauthDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRequestGrantTypeConfigurationProviderPluginInterface>
+     */
+    protected function getOauthRequestGrantTypeConfigurationProviderPlugins(): array
+    {
+        return [
+            new UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Authenticate as a Back Office user with the the OAuth server:
+
+```http
+POST /authorize/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 210
+
+username={username}&password={password}&response_type=code&client_id={client_id}&state={state}&code_challenge={code_challenge}&code_challenge_method=S256&redirect_uri={redirect_uri}
+```
+
+| PARAMETER             | TYPE   | EXAMPLE                                 | DESCRIPTION                                                                                                                                                                                                                                                                      |
+|-----------------------|--------|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| username              | string | some@user.com                           | The username of the Back Office user.                                                                                                                                                                                                                                            |
+| password              | string | some-password                           | The password of the Back Office user.                                                                                                                                                                                                                                            |
+| response_type         | string | code                                    | Defines how the authorization server should respond to the client after the resource owner grants the access to the external application.                                                                                                                                            |
+| client_id             | string | the-client-identifier-can-be-any-string | Public identifier for the client application that is requesting access to a user's resources.                                                                                                                                                                                    |
+| state                 | string | some-random-string                      | Used to mitigate the risk of cross-site request forgery attacks.                                                                                                                                                                                                                 |
+| code_challenge        | string | some-random-string                      | Used in the Authorization Code Grant flow with a Proof Key for Code Exchange (PKCE) to enhance the security of the authorization process. PKCE is designed to protect against certain types of attacks, especially when the authorization code is exchanged for an access token. |
+| code_challenge_method | string | S256                                    | Used in the Authorization Code Grant flow with PKCE. Defines the method used to transform the `code_verifier` into the `code_challenge` before initiating the authorization request.                                                                                             |
+| redirect_uri          | string | `https://some-redirect-url`             | Used in the authorization request to specify where the authorization server should redirect the user after the user grants or denies permission.                                                                                                                                 |
+
+For more detailed information about the Authorization (Code Grant flow) Request with PKCE, see to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
+
+    Check that the response contains the 201 response with a code.
+
+2. Using the code you've retrieved in the previous step, authenticate as a Back Office user:
+
+```http
+POST /token/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 1051
+
+grant_type=authorization_code&code={code}&client_id={client_id}&code_verifier={code_verifier}
+```
+
+| Parameter name | Type   | Example                                 | Description                                                                                                                                                                                        |
+|----------------|--------|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| grant_type     | string | authorization_code                      | Specifies the type of grant requested by the client. In this case, it's the Authorization Code Grant flow.                                                                                         |
+| code           | string | some-code                               | The authorization code provided by the OAuth server.                                                                                                                                               |
+| client_id      | string | the-client-identifier-can-be-any-string | Public identifier for the client application that is requesting access to a user's resources.                                                                                                      |
+| code_verifier  | string | some-random-string                      | A random string generated by the client in the Authorization Code Grant flow with PKCE. It's used to verify the identity of the client when exchanging the authorization code for an access token. |
+
+Check that the response contains the 201 response with an auth token. Check that you can send requests to protected resources using the auth token.
+
+{% endinfo_block %}
+
+### Set up the backend API
+
+To enable the Backend API, register these plugins:
 
 | PLUGIN                                                          | SPECIFICATION                                                                      | PREREQUISITES | NAMESPACE                                                                                                    |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------|

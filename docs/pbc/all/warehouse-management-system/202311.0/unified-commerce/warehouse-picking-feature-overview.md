@@ -6,10 +6,13 @@ template: concept-topic-template
 ---
 
 
-
-
-
-
+The *Warehouse Picking* feature adds the following:
+* The *picking list* entity
+* `picking-lists` and `picking-list-items` Glue API resources
+* Support for [push notifications](/docs/pbc/all/miscellaneous/202311.0/push-notification-feature-overview.html)
+* OMS example
+* Picklist generation strategies
+* OAuth
 
 
 
@@ -20,6 +23,6 @@ The feature is shipped with an optional example of a picklist generation strateg
 You can extend this strategy or create custom strategies on the project level. Each warehouse can have it's own strategy.
 
 
-## Fulfillment App OAuth authorization
+## Fulfillment App OAuth
 
 Fulfillment App's early access OAuth authorization supports the Authorization Code Grant flow. The flow is customized to meet the needs of Fulfillment App.

@@ -16,7 +16,7 @@ This document describes the `service_point_address.csv` file to configure [servi
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-| service_point_key | ✓ | String    |       | Unique key of the service point. |
+| service_point_key | ✓ | String    |       | Identifier of the service point to import the address for. |
 | region_iso2_code  |   | String    |          | Region ISO2 code.               |
 | country_iso2_code | ✓ | String    |          | Country ISO2 code.                |
 | address1          | ✓ | String    |          | First line of address.            |
@@ -31,11 +31,11 @@ This document describes the `service_point_address.csv` file to configure [servi
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template_product_abstract.csv) | Import file template with headers only. |
-| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/product_abstract.csv) | Exemplary import file with the Demo Shop data. |
+| [template_service_point_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/service_point_address.csv.md/template_service_point_address.csv) | Import file template with headers only. |
+| [service_point_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/service_point_address.csv.md/service_point_address.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import command
 
 ```bash
-console data:import service-point-address
+data:import service-point-address
 ```

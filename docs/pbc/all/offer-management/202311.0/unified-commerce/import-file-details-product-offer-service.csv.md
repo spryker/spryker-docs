@@ -8,8 +8,8 @@ This document describes the `product_offer_service.csv` file to configure the as
 
 ## Import file dependencies
 
-* [service.csv](/docs/pbc/all/service-point-management/202311.0/unified-commerce/import-and-export-data/import-file-details-service.csv.html)
-* [merchant_product_offer.csv](/docs/pbc/all/offer-management/202311.0/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
+* [service.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service.csv.html)
+* [merchant_product_offer.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html)
 
 
 
@@ -25,8 +25,8 @@ This document describes the `product_offer_service.csv` file to configure the as
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template_product_abstract.csv) | Import file template with headers only. |
-| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/product_abstract.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_offer_service.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/unified-commerce/import-and-export-data/Import+file+details%3A+product_offer_service.csv/template_product_offer_service.csv) | Import file template with headers only. |
+| [product_offer_service.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/unified-commerce/import-and-export-data/Import+file+details%3A+product_offer_service.csv/product_offer_service.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import command
 

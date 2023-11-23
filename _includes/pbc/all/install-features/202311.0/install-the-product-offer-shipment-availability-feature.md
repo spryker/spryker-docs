@@ -1,6 +1,6 @@
 
 
-This document describes how to install the Product Offer Shipments Availability feature.
+This document describes how to install the Product Offer Shipment Availability feature.
 
 ## Install feature core
 

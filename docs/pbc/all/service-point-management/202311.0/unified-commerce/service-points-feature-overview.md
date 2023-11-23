@@ -1,6 +1,6 @@
 ---
 title: Service Points feature overview
-description:
+description: General overview of the Service Points feature
 template: concept-topic-template
 ---
 
@@ -56,13 +56,13 @@ When checking out, customers select a service point they want to process their o
 
 By default, search results are sorted by city.
 
-![service point search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/service-points-feature-overview.md/service-point-search.png)
+![service point search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/unified-commerce/service-points-feature-overview.md/service-point-search.png)
 
 You can add only predefined service points by default. But developers can configure customers to be able to enter custom addresses for service points.
 
 After placing an order, the customer can see the selected service point on the Order Details page.
 
-![Storefront order with a service point](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/service-points-feature-overview.md/storefront-order-service-point.png)
+![Storefront order with a service point](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/unified-commerce/service-points-feature-overview.md/storefront-order-service-point.png)
 
 ## Related Business User documents
 

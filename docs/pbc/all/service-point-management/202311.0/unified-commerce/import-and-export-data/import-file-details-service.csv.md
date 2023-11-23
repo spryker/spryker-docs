@@ -15,10 +15,10 @@ This document describes the `service.csv` file to configure [services](/docs/pbc
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-------------------|-----------|-----------|-------------------|-------------|
-| key               | ✓ | String    |               | Unique key of the service.        |
-| service_point_key | ✓ | String    |                | Unique key of the service point.  |
-| service_type_key  | ✓ | String    |             | Unique key of the service type.   |
-| is_active         | ✓ | Boolean      |                  | Defines if the service is active. |
+| key               | ✓ | String    |               | Unique key for the service.        |
+| service_point_key | ✓ | String    |                | Identifier of a service point to assign the service to.  |
+| service_type_key  | ✓ | String    |             | Identifier of a service type. Defines the type of the service you are importing.   |
+| is_active         | ✓ | Boolean      |                  | Defines if the service is to be active. |
 
 
 
@@ -26,11 +26,11 @@ This document describes the `service.csv` file to configure [services](/docs/pbc
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template_product_abstract.csv) | Import file template with headers only. |
-| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/product_abstract.csv) | Exemplary import file with the Demo Shop data. |
+| [template_service.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/service.csv.md/template-service.csv) | Import file template with headers only. |
+| [service.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/service.csv.md/service.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import command
 
 ```bash
-console data:import:service
+data:import:service
 ```

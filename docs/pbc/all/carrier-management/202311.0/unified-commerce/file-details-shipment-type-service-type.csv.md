@@ -23,8 +23,8 @@ This document describes the `shipment_type_service_type.csv` file to assign [shi
 
 | FILE | DESCRIPTION |
 |---|---|
-| [`shipment_method_shipment_type.csv` template](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-shipment-type.csv.md/template_shipment_method_shipment_type.csv) | Import file template with headers only. |
-| [`shipment_method_shipment_type.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment-method-shipment-type.csv.md/shipment_method_shipment_type.csv) | Exemplary import file with the Demo Shop data. |
+| [`template_shipment_type_service_type.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/carrier-management/unified-commerce/file-details-shipment-type-service-type.csv.md/template_shipment_type_service_type.csv) | Import file template with headers only. |
+| [`shipment_type_service_type.csv`](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/carrier-management/unified-commerce/file-details-shipment-type-service-type.csv.md/shipment_type_service_type.csv) | Exemplary import file with the Demo Shop data. |
 
 ## Import file command
 

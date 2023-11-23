@@ -147,19 +147,9 @@ Key features of this integration include the following:
 - Spryker support 24/7: Designed to work seamlessly with existing monitoring solutions, Spryker will keep watching over for you 24/7, regardless of the monitoring platform you use.
 - Scalability and adaptability: Can handle varying data volumes and peaks, with 24 hours of retention in case of unavailability. 
 
-### Commercial prerequisites:
-- Existing customers:
-    - Activate the upsell process with CSM.
-    - Yearly fee to activate the integration.
-- New customers: 
-    - Opt-in.
-    - Cost included in the GMV calculation.
-
 ### Technical prerequisites:
-- Only available for Spryker Cloud customers. At least Cloud v9.10.
+- Only available for Spryker Cloud customers.
 - You need a self-managed Dynatrace account, and you have to provide the necessary Endpoints to Spryker.
-- Additional configuration required on your side (Dynatrace metrics and logs). 
-- The configuration of this integration can be triggered via Spryker Support after the upsell process is completed.
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Improved performance, stability, and scalability <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

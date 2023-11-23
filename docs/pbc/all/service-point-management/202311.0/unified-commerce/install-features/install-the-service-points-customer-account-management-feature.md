@@ -1,6 +1,6 @@
 ---
-title: Install the Service Points + Customer Account Mangement feature
-description: Learn how to install the Service Points + Customer Account Mangement feature
+title: Install the Service Points + Customer Account Management feature
+description: Learn how to install the Service Points + Customer Account Management feature
 last_updated: Sep 04, 2023
 template: feature-integration-guide-template
 ---

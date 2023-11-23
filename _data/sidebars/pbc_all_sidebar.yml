@@ -3473,8 +3473,32 @@ entries:
                 url: /docs/pbc/all/service-point-management/unified-commerce/enable-click-collect.html
               - title: Install features
                 nested:
-                  - title: Product Offer Service Points Availability
-                    url:
+                  - title: Service Points Cart + Checkout
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html
+                  - title: Service Points Cart
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-cart-feature.html
+                  - title: Service Points + Customer Account Management
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html
+                  - title: Service Points
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-feature.html
+                  - title: Service Points + Order Management
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-order-management-feature.html
+                  - title: Service Points + Product Offer
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-product-offer-feature.html
+                  - title: Service Points Cart + Shipment
+                    url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-shipment-feature.html
+              - title: Import and export data
+                nested:
+                  - title: "Import file details: service_point_address.csv"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html
+                  - title: "Import file details: service_point_store.csv"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point-store.csv.html
+                  - title: "Import file details: service_point.csv"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html
+                  - title: "Import file details: service_type.csv"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html
+                  - title: "Import file details: service.csv"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service.csv.html
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html

@@ -13,6 +13,7 @@ redirect_from:
   - /v6/docs/front-end-performance-guidelines
   - /v6/docs/en/front-end-performance-guidelines
   - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
+  - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html#frontend-performance
 related:
   - title: General performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html

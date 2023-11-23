@@ -1693,7 +1693,7 @@ entries:
                       - title: Marketplace Merchant Portal Product Offer Shipment feature
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-shipment-feature.html
                         include_versions:
-                        - "202311.0"                        
+                        - "202311.0"
                       - title: Marketplace Product Offer + Cart feature
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html
                       - title: Marketplace Product Offer + Checkout
@@ -3461,51 +3461,21 @@ entries:
             nested:
               - title: Service Points feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-feature-overview.html
-              - title: Service Points
-                url: /docs/pbc/all/service-point-management/unified-commerce/install-the-service-points-feature.html
-              - title: Service Points + Shipment
-                url: /docs/pbc/all/service-point-management/unified-commerce/install-the-service-points-shipment-feature.html   
-      - title: Service Points
-        nested:
-          - title: Unified Commerce
-            include_versions:
-            - "202311.0"
-            nested:
-              - title: Install and upgrade
+              - title: Service Points Cart + Checkout feature overview
+                url: /docs/pbc/all/service-point-management/unified-commerce/service-points-cart-checkout-feature-overview.html
+              - title: Service Points Cart feature overview
+                url: /docs/pbc/all/service-point-management/unified-commerce/service-points-cart-feature-overview.html
+              - title: Service Points + Customer Account Management feature overview
+                url: /docs/pbc/all/service-point-management/unified-commerce/service-points-customer-account-management-feature-overview.html
+              - title: Service Points + Order Management feature overview
+                url: /docs/pbc/all/service-point-management/unified-commerce/service-points-order-management-feature.html
+              - title: Enable Click & Collect
+                url: /docs/pbc/all/service-point-management/unified-commerce/enable-click-collect.html
+              - title: Install features
                 nested:
-
-                  - title: Service Points Cart
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html
-                    include_versions:
-                    - "202311.0"
-                  - title: Service Points Cart + Checkout feature
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-cart-checkout-feature.html
-                    include_versions:
-                    - "202311.0"
-                  - title: Service Points + Order Management
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-order-management-feature.html
-                    include_versions:
-                    - "202311.0"
-                  - title: Service Points + Shipment
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-service-points-shipment-feature.html
-                    include_versions:
-                    - "202311.0"
-                  - title: Customer Account Management + Service Points
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-customer-account-management-service-points-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Product Offer Service Points Availability
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html
-                    include_versions:
-                    - "202311.0"
-                  - title: Product Offer Shipments Availability
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-product-offer-shipments-availability-feature.html
-                    include_versions:
-                    - "202311.0"
-                  - title: Shipment Product Offer Service Points Availability
-                    url: /docs/pbc/all/service-points/unified-commerce/install-and-upgrade/install-the-shipment-product-offer-service-points-availability-feature.html
-                    include_versions:
-                    - "202311.0"
+                    url:
+
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -3915,7 +3885,7 @@ entries:
               - title: Fulfillment App feature overview
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.html
               - title: Warehouse Picking feature overview
-                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html                
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features

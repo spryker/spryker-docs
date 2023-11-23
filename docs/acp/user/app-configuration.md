@@ -633,7 +633,7 @@ EN shop:
 
 ## Form validation (server side)
 
-The app will receive the request from configuration form to the URL defined in your `api.json` file, e.g. 
+The app will receive the request from the configuration form to the URL defined in your `api.json` file, for example, like this:
 
 ```json
 {
@@ -642,7 +642,8 @@ The app will receive the request from configuration form to the URL defined in y
 }
 ```
 
-In the cURL request it will look like:
+In the cURL request, it will look like:
+
 ```bash
 curl -x POST 'https://your-app.domain.name/private/configure' \
 -H 'Accept-Language: en' \
@@ -656,9 +657,10 @@ curl -x POST 'https://your-app.domain.name/private/configure' \
 }'
 ```
 
-The app response format for valid request is just HTTP status `200`.
+The app response format for a valid request is just the HTTP status `200`.
 
-The app response format for invalid request could be error for the whole form:
+The app response format for an invalid request could be an error for the whole form:
+
 ```json
 {
   "errors": [
@@ -671,7 +673,7 @@ The app response format for invalid request could be error for the whole form:
 }
 ```
 
-or field-specific messages in the format:
+or field-specific messages in the following format:
 ```
 {
   "errors": [
@@ -686,8 +688,8 @@ or field-specific messages in the format:
 
 In both cases HTTP status has to be `400`.
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "Error number limitation" %}
 
-Current limitation for the number of displayed errors from the app reponse is 1.
+The current limitation for the number of displayed errors from the app response is 1.
 
 {% endinfo_block %}

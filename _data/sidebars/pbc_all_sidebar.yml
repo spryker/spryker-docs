@@ -51,6 +51,8 @@ entries:
                         url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
                       - title: Shipment + Cart
                         url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html
+                      - title: Shipment + Customer Account Management
+                        url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html                        
                   - title: Upgrade modules
                     nested:
                       - title: Shipment
@@ -85,12 +87,18 @@ entries:
               - title: Import data
                 url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-carrier-management-data.html
                 nested:
-                  - title: File details - shipment.csv
+                  - title: "shipment.csv"
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment.csv.html
-                  - title: File details - shipment_method_store.csv
+                  - title: "shipment_method_store.csv"
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-method-store.csv.html
-                  - title: File details - shipment_price.csv
+                  - title: "shipment_price.csv"
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-price.csv.html
+                  - title: "shipment_method_shipment_type.csv"
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html
+                  - title: "shipment_type.csv"
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html
+                  - title: "shipment_type_store.csv"
+                    url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Add a new shipment method"
@@ -1781,18 +1789,28 @@ entries:
             nested:
               - title: Install and upgrade
                 nested:
+                  - title: Marketplace Merchant Portal Product Offer Service Point feature overview
+                    url: /docs/pbc/all/offer-management/unified-commerce/marketplace-merchant-portal-product-offer-service-point-feature-overview.html
+                  - title: Product Offer Service feature overview
+                    url: /docs/pbc/all/offer-management/unified-commerce/product-offer-service-feature-overview.html
+                  - title: Product Offer Service Points Availability feature overview
+                    url: /docs/pbc/all/offer-management/unified-commerce/product-offer-service-points-availability-feature.html
+                  - title: "Import file details: product_offer_service.csv"
+                    url: /docs/pbc/all/offer-management/unified-commerce/import-file-details-product-offer-service.csv.html
+                  - title: Create and edit product offers
+                    url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html
                   - title: Install features
                     nested:
                       - title: Marketplace Merchant Portal Product Offer Service Points
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html
                       - title: Marketplace Merchant + Product Offer Service Points Availability
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
                       - title: Marketplace Product Offer + Service Points
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
-                      - title: Product Offer Shipment
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html
+                      - title: Product Offer Service Points Availability
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html
                       - title: Product Offer Service Points
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html
+                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-product-offer-service-points-feature.html
 
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html

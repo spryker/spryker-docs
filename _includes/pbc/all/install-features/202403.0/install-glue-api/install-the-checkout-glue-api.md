@@ -24,7 +24,7 @@ Install the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/checkout-rest-api:"3.8.0" spryker/order-payments-rest-api:"^1.0.0" spryker/sales-order-thresholds-rest-api:"^1.0.0" --update-with-dependencies
+composer require spryker/checkout-rest-api:"3.10.0" spryker/order-payments-rest-api:"^1.0.1" spryker/sales-order-thresholds-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

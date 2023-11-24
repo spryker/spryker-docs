@@ -10,7 +10,8 @@ redirect_from:
   - /2021080/docs/en/shipment-feature-integration
   - /docs/shipment-feature-integration
   - /docs/en/shipment-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202311.0/shipment-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202311.0/shipment-feature-integration.html
+  - /docs/pbc/all/carrier-management/202311.0/unified-commerce/enhanced-click-and-collect/install-and-upgrade/install-the-shipment-feature.html  
 related:
   - title: Install the Shipment Glue API
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html

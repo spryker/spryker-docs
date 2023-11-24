@@ -3507,44 +3507,80 @@ entries:
             nested:
               - title: Service Points feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: Service Points Cart + Checkout feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-cart-checkout-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: Service Points Cart feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-cart-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: Service Points + Customer Account Management feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-customer-account-management-feature-overview.html
+                include_versions:
+                - "202311.0"
               - title: Service Points + Order Management feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-order-management-feature.html
+                include_versions:
+                - "202311.0"
               - title: Enable Click & Collect
                 url: /docs/pbc/all/service-point-management/unified-commerce/enable-click-collect.html
+                include_versions:
+                - "202311.0"
               - title: Install features
                 nested:
                   - title: Service Points Cart + Checkout
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points Cart
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-cart-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points + Customer Account Management
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points + Order Management
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-order-management-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points + Product Offer
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-product-offer-feature.html
+                    include_versions:
+                    - "202311.0"
                   - title: Service Points Cart + Shipment
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-shipment-feature.html
+                    include_versions:
+                    - "202311.0"
               - title: Import and export data
                 nested:
                   - title: "Import file details: service_point_address.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "Import file details: service_point_store.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point-store.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "Import file details: service_point.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "Import file details: service_type.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html
+                    include_versions:
+                    - "202311.0"
                   - title: "Import file details: service.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service.csv.html
+                    include_versions:
+                    - "202311.0"
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html

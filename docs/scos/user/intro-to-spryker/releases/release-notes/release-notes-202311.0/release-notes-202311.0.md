@@ -53,6 +53,11 @@ While pickup has its roots in B2C operations, its utility in B2B contexts is gro
 - Automotive industry: Manufacturers and dealers can offer customers the convenience of ordering parts online with the option for on-site installation. 
 - Manufacturing sector: Streamline operations by letting clients directly retrieve bulk orders from warehouses, enhancing the efficiency of the procurement process.
 
+### Documentation
+
+[Fulfillment App feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html)
+[Service point management](/docs/pbc/all/service-point-management/202311.0/service-point-management.html)
+
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Traditionally, developing APIs required technical expertise and time-consuming coding processes. However, with the new Spryker dynamic Data Exchange API infrastructure, we have removed the complexities, making it seamless for you to create APIs effortlessly. With this tool, you can quickly build, customize, and manage APIs tailored to your specific business requirements, all through an intuitive user interface.

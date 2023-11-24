@@ -55,6 +55,7 @@ While pickup has its roots in B2C operations, its utility in B2B contexts is gro
 
 ### Documentation
 
+[Fulfillment App feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html)
 [Service point management](/docs/pbc/all/service-point-management/202311.0/service-point-management.html)
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>

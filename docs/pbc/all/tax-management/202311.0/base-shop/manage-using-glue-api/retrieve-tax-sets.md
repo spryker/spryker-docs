@@ -8,8 +8,6 @@ originalArticleId: 9b8f60f0-3815-4d5b-94df-64deb0771117
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-tax-sets.html
   - /docs/pbc/all/tax-management/202311.0/manage-via-glue-api/retrieve-tax-sets.html
-  - /docs/pbc/all/tax-management/202311.0/base-shop/manage-using-glue-api/retrieve-tax-sets.html
-  - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-using-glue-api/retrieve-tax-sets.html
   - /docs/pbc/all/tax-management/202311.0/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 related:
   - title: Retrieving abstract products

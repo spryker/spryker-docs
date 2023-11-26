@@ -44,7 +44,7 @@ entries:
               - title: Shipment + Cart feature overview
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-cart-feature-overview.html
                 include_versions:
-                - "202311.0"                
+                - "202311.0"
               - title: Shipment + Customer Account Management feature overview
                 url: /docs/pbc/all/carrier-management/base-shop/shipment-customer-account-management-feature-overview.html
                 include_versions:
@@ -1803,30 +1803,28 @@ entries:
             include_versions:
             - "202311.0"
             nested:
-              - title: Install and upgrade
+              - title: Marketplace Merchant Portal Product Offer Service Point feature overview
+                url: /docs/pbc/all/offer-management/unified-commerce/marketplace-merchant-portal-product-offer-service-point-feature-overview.html
+              - title: Product Offer Service feature overview
+                url: /docs/pbc/all/offer-management/unified-commerce/product-offer-service-feature-overview.html
+              - title: Product Offer Service Points Availability feature overview
+                url: /docs/pbc/all/offer-management/unified-commerce/product-offer-service-points-availability-feature.html
+              - title: Install features
                 nested:
-                  - title: Marketplace Merchant Portal Product Offer Service Point feature overview
-                    url: /docs/pbc/all/offer-management/unified-commerce/marketplace-merchant-portal-product-offer-service-point-feature-overview.html
-                  - title: Product Offer Service feature overview
-                    url: /docs/pbc/all/offer-management/unified-commerce/product-offer-service-feature-overview.html
-                  - title: Product Offer Service Points Availability feature overview
-                    url: /docs/pbc/all/offer-management/unified-commerce/product-offer-service-points-availability-feature.html
-                  - title: "Import file details: product_offer_service.csv"
-                    url: /docs/pbc/all/offer-management/unified-commerce/import-file-details-product-offer-service.csv.html
-                  - title: Create and edit product offers
-                    url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html
-                  - title: Install features
-                    nested:
-                      - title: Marketplace Merchant Portal Product Offer Service Points
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html
-                      - title: Marketplace Merchant + Product Offer Service Points Availability
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
-                      - title: Marketplace Product Offer + Service Points
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html
-                      - title: Product Offer Service Points Availability
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html
-                      - title: Product Offer Service Points
-                        url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-product-offer-service-points-feature.html
+                  - title: Marketplace Merchant Portal Product Offer Service Points
+                    url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html
+                  - title: Marketplace Merchant + Product Offer Service Points Availability
+                    url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
+                  - title: Marketplace Product Offer + Service Points
+                    url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html
+                  - title: Product Offer Service Points Availability
+                    url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html
+                  - title: Product Offer Service Points
+                    url: /docs/pbc/all/offer-management/unified-commerce/install-features/install-the-product-offer-service-points-feature.html
+              - title: "Import file details: product_offer_service.csv"
+                url: /docs/pbc/all/offer-management/unified-commerce/import-file-details-product-offer-service.csv.html
+              - title: Create and edit product offers
+                url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html                    
 
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html

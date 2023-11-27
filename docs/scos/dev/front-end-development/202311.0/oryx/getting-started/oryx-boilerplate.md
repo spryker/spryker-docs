@@ -10,7 +10,7 @@ redirect_from:
 
 Boilerplate refers to the _template_ code that is used to generate application code which can be further customized. At first sight, changing boilerplate is convenient as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you customized the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
 
-The Oryx boilerplate is provided in the [Composable Frontend repository](https://github.com/spryker/composable-frontend).
+The Oryx boilerplate is provided in the [Composable Frontend repository](https://github.com/spryker/oryx-starter).
 
 ## How we prevent boilerplate code
 

@@ -144,3 +144,13 @@ Request sample:
 
 
 {% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->
+
+
+## Possible errors
+
+| CODE | REASON |
+| --- | --- |
+| 001 | The provided access token is invalid. To get an access token, see [] |
+| 311 | Abstract product SKU is not specified. |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -51,9 +51,8 @@ Request sample: `POST http://glue-backend.mysprykershop.com/warehouse-tokens`
 
 ## Possible errors
 
-| ERROR NAME | DESCRIPTION |
-|-|-|
-| invalid_request | The refresh token is invalid. |
-| invalid_grant | The provided authorization grant or refresh token is invalid, expired, or revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
+| CODE | REASON |
+| --- | --- |
+| 001 | The provided access token is invalid. To get an access token, see [Authenticate as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -6,6 +6,7 @@ draft: true
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202307.0/combined-product-offer-import-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/202311.0/combined-product-offer-import-feature-integration.html
 ---
 
 This document describes how to install Combined Product Offer Import.

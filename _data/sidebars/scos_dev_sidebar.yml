@@ -2323,6 +2323,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
+      - title: "HowTo: Make a multi-language setup"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/how-to-make-a-multi-language-setup.html"
       - title: "HowTo: Split products by stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-split-products-by-stores.html
   - title: Technology partner guides

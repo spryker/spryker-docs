@@ -561,3 +561,12 @@ For detailed information about the modules that provide the API functionality an
 {% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouses-included-response-attributes.md -->
+
+
+## Possible errors
+
+| CODE | DESCRIPTION |
+|-|-|
+| 5303 | The picklist with the specified ID doesn't exist.  |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

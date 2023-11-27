@@ -36,3 +36,11 @@ Request sample: `https://glue-backend.mysprykershop.com/warehouse-user-assignmen
 ### Response
 
 If the warehouse user assignment is deleted successfully, the endpoint returns the `204 No Content` status code.
+
+## Possible errors
+
+| CODE | REASON |
+| --- | --- |
+| 5201 | The warehouse user assignment with the specified ID doesn't exist.  |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

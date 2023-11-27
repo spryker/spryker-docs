@@ -150,7 +150,6 @@ Request sample:
 
 | CODE | REASON |
 | --- | --- |
-| 001 | The provided access token is invalid. To get an access token, see [] |
-| 311 | Abstract product SKU is not specified. |
+| 5201 | The provided user or warehouse ID is invalid. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

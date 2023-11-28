@@ -22,7 +22,7 @@ For detailed information about the modules that provide the API functionality an
 
 | PATH PARAMETER | DESCRIPTION |
 | - | - |
-| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to delete. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/glue-api-create-warehouse-user-assignments.html) |
+| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to delete. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-create-warehouse-user-assignments.html) |
 
 
 ### Request

@@ -418,6 +418,11 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md -->
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->
+
 ## Retrieve a warehouse user assignment
 
 ---
@@ -426,7 +431,7 @@ For detailed information about the modules that provide the API functionality an
 
 | PATH PARAMETER | DESCRIPTION |
 | - | - |
-| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to retrieve. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/glue-api-create-warehouse-user-assignments.html) |
+| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to retrieve. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-create-warehouse-user-assignments.html) |
 
 ### Request
 

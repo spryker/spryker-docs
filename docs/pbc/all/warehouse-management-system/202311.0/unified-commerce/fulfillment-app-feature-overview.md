@@ -12,9 +12,9 @@ The *Fulfillment App* feature streamlines the process of fulfilling orders by in
 
 A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, they don't have access to the Back Office. Instead,  they are using the Fulfillment App.
 
-In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular Back Office user.
+In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular Back Office user.
 
-To give a warehouse user access to fulfilling orders in a warehouse, you need to assign the warehouse to them. For instructions on how to do that, see [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html).
+To give a warehouse user access to fulfilling orders in a warehouse, you need to assign the warehouse to them. For instructions on how to do that, see [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html).
 
 ## Fulfillment App
 
@@ -91,7 +91,7 @@ The Fulfillment App supports push notifications. This lets warehouse users recei
 
 To reduce costs and improve flexibility, Fulfillment App support offline mode. Warehouse users can perform picking tasks when regardless of internet connectivity. Any changes performed in offline mode are synchronized when you get online. This is relevant for warehouses in remote areas or big warehouses that do not have full network coverage.
 
-The offline mode is enabled by the [Push Notification](/docs/pbc/all/miscellaneous/202311.0/push-notification-feature-overview.html) feature.
+The offline mode is enabled by the [Push Notification](/docs/pbc/all/miscellaneous/{{page.version}}/push-notification-feature-overview.html) feature.
 
 ## Current constraints
 
@@ -107,16 +107,16 @@ The offline mode is enabled by the [Push Notification](/docs/pbc/all/miscellaneo
 
 |BACK OFFICE USER GUIDES| FULFILLMENT APP USER GUIDES |
 | - | - |
-| [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html)  |  [Fulfill orders](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-fulfill-orders.html) |
-| [Create users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/create-users.html)  | |
-| [Edit users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html)  | |
+| [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html)  |  [Fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-fulfill-orders.html) |
+| [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html)  | |
+| [Edit users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html)  | |
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES  |
-|---|
-| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | | | | |
-| [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html) | | | | |
-| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html) | | | | |
-| [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html) | | | | |
-| [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html) | | | | |
+| INSTALLATION GUIDES  | GLUE API GUIDES |
+|---| - |
+| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) | [Retrieve picklists](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html) |
+| [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html) | [Start picking](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html) |
+| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) | [Retrieve picklists](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html) |
+| [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html) | | | | |
+| [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html) | | | | |

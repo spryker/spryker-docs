@@ -16,6 +16,7 @@ This document describes the `service_point_address.csv` file to configure [servi
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+|-|-|-|-|-|
 | service_point_key | ✓ | String    |       | Identifier of the service point to import the address for. |
 | region_iso2_code  |   | String    |          | Region ISO2 code.               |
 | country_iso2_code | ✓ | String    |          | Country ISO2 code.                |

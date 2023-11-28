@@ -1,4 +1,4 @@
-version: "202307.0"
+version: "202311.0"
 
 repository: spryker/spryker-docs
 
@@ -159,7 +159,6 @@ versions:
   '202212.0': '202212.0'
   '202307.0': '202307.0'
   '202311.0': '202311.0'
-  '202400.0': 'Winter release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:

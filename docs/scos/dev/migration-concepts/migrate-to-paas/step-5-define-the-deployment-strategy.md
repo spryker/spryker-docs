@@ -1,6 +1,6 @@
 ---
 title: 'Step 5: Define the deployment strategy'
-description: 
+description: To migrate to PaaS, one of the steps, is defining the deployment strategy.
 template: howto-guide-template
 ---
 
@@ -15,7 +15,7 @@ Within CodePipeline, there are several deployment types:
 * **Normal:** The primary pipeline for application deployment.
 * **Destructive:** Similar to the Normal pipeline but includes the process of clearing and then populating data in the RDS. This pipeline is mandatory for the initial deployment or when data needs to be refreshed.
 
-For more information about deployment process and it's states, see [Deployment in states](docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
+For more information about deployment process and its states, see [Deployment in states](docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
 
 ## Next step
 [Define environment variables](/docs/scos/dev/migration-concepts/migrate-to-paas/step-6-define-environment-variables.md)

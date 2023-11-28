@@ -51,7 +51,7 @@ composer why-not php 8.0
     },
 ```
 
-## 3. Change docker image to php 8.0
+## 3. Change the Docker image to php 8.0
 
 Add the new PHP version in every `deploy.yml` file:
 

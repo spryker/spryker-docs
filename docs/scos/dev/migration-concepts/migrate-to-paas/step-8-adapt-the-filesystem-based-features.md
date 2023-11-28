@@ -1,5 +1,5 @@
 ---
-title: 'Step 8: File system based features adaptation'
+title: 'Step 8: Adapt the file system-based features'
 description: 
 template: howto-guide-template
 ---

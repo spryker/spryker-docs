@@ -13,6 +13,410 @@ For detailed information about the modules that provide the API functionality an
 * [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
 * [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)
 
+## Retrieve warehouse user assignments
+
+---
+`GET` **/warehouse-user-assignments***
+---
+
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
+
+
+| STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
+| --- | --- | --- |
+| include | Adds resource relationships to the request. | users |
+| filter | Filters out the warehouse user assignments to be retrieved. | warehouseUuid, userUuid, isActive, uuid  |
+
+| REQUEST  | USAGE |
+| --- | --- |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments` | Retrieve all warehouse user assignments.  |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments?include=users` | Retrieve all warehouse user assignments. Include information about the authenticated user.  |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da` | Retrieve warehouse user assignments of the user with the specified ID. |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2` | Retrieve the warehouse user assignment with the specified ID. |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.isActive]=false` | Retrieve inactive warehouse user assignments. |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d` | Retrieve warehouse user assignments with the warehouse with the specified ID. |
+| `https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false` | Retrieve inactive warehouse user assignments of the user with the specified ID. |
+
+
+### Response
+
+<details open>
+  <summary>Retrieve all warehouse user assignments</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "warehouse-user-assignments",
+            "id": "99e048ef-8cd8-5e52-aca9-50a590a469c2",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": true,
+                "warehouse": {
+                    "name": "Warehouse1",
+                    "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Video King MER000002 Warehouse 1",
+                    "uuid": "86496ec7-0d44-518c-81e4-f472b9e8547d",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "1bbc2472-44e8-5f4a-8824-4b580b8d58f7",
+            "attributes": {
+                "userUuid": "471f5093-fca8-50b7-83d0-d06adc273442",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Budget Cameras MER000005 Warehouse 1",
+                    "uuid": "5bf5cc56-a50b-5029-9011-feeed83af180",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments"
+    }
+}
+```
+
+</details>
+
+<details open>
+  <summary>Retrieve all warehouse user assignments with the information about authenticated user</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "warehouse-user-assignments",
+            "id": "99e048ef-8cd8-5e52-aca9-50a590a469c2",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": true,
+                "warehouse": {
+                    "name": "Warehouse1",
+                    "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+                    "isActive": true
+                }
+            },
+            "relationships": {
+                "users": {
+                    "data": [
+                        {
+                            "type": "users",
+                            "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Video King MER000002 Warehouse 1",
+                    "uuid": "86496ec7-0d44-518c-81e4-f472b9e8547d",
+                    "isActive": true
+                }
+            },
+            "relationships": {
+                "users": {
+                    "data": [
+                        {
+                            "type": "users",
+                            "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?include=users"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "1bbc2472-44e8-5f4a-8824-4b580b8d58f7",
+            "attributes": {
+                "userUuid": "471f5093-fca8-50b7-83d0-d06adc273442",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Budget Cameras MER000005 Warehouse 1",
+                    "uuid": "5bf5cc56-a50b-5029-9011-feeed83af180",
+                    "isActive": true
+                }
+            },
+            "relationships": {
+                "users": {
+                    "data": [
+                        {
+                            "type": "users",
+                            "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?include=users"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?include=users"
+    },
+    "included": [
+        {
+            "type": "users",
+            "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+            "attributes": {
+                "username": "andrii.tserkovnyi@spryker.com",
+                "firstName": "Andrii",
+                "lastName": "Tserkovnyi"
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details open>
+  <summary>Retrieve warehouse user assignment of the user with the specified ID</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "warehouse-user-assignments",
+            "id": "99e048ef-8cd8-5e52-aca9-50a590a469c2",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": true,
+                "warehouse": {
+                    "name": "Warehouse1",
+                    "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Video King MER000002 Warehouse 1",
+                    "uuid": "86496ec7-0d44-518c-81e4-f472b9e8547d",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+    }
+}
+```
+
+</details>
+
+
+<details open>
+  <summary>Retrieve the warehouse user assignment with the specified ID</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "warehouse-user-assignments",
+            "id": "99e048ef-8cd8-5e52-aca9-50a590a469c2",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": true,
+                "warehouse": {
+                    "name": "Warehouse1",
+                    "uuid": "834b3731-02d4-5d6f-9a61-d63ae5e70517",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2"
+    }
+}
+```
+
+</details>
+
+<details open>
+  <summary>Retrieve inactive warehouse user assignments</summary>
+
+```json
+{
+    "data": [        
+        {
+            "type": "warehouse-user-assignments",
+            "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Video King MER000002 Warehouse 1",
+                    "uuid": "86496ec7-0d44-518c-81e4-f472b9e8547d",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.isActive]=false"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "1bbc2472-44e8-5f4a-8824-4b580b8d58f7",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Budget Cameras MER000005 Warehouse 1",
+                    "uuid": "5bf5cc56-a50b-5029-9011-feeed83af180",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?filter[warehouse-user-assignments.isActive]=false"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.isActive]=false"
+    }
+}
+```
+
+</details>
+
+<details open>
+  <summary>Retrieve warehouse user assignments with the warehouse with the specified ID.</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "warehouse-user-assignments",
+            "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Video King MER000002 Warehouse 1",
+                    "uuid": "86496ec7-0d44-518c-81e4-f472b9e8547d",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d"
+    }
+}
+```
+
+</details>
+
+<details open>
+  <summary>Retrieve inactive warehouse user assignments of the user with the specified ID.</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "warehouse-user-assignments",
+            "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Video King MER000002 Warehouse 1",
+                    "uuid": "86496ec7-0d44-518c-81e4-f472b9e8547d",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
+            }
+        },
+        {
+            "type": "warehouse-user-assignments",
+            "id": "1bbc2472-44e8-5f4a-8824-4b580b8d58f7",
+            "attributes": {
+                "userUuid": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
+                "isActive": false,
+                "warehouse": {
+                    "name": "Budget Cameras MER000005 Warehouse 1",
+                    "uuid": "5bf5cc56-a50b-5029-9011-feeed83af180",
+                    "isActive": true
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
+    }
+}
+```
+
+</details>
 
 ## Retrieve a warehouse user assignment
 
@@ -33,7 +437,6 @@ For detailed information about the modules that provide the API functionality an
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | users |
-| filter | Filters out the warehouse user assignments to be retrieved. | warehouseUuid, userUuid, isActive, uuid  |
 
 | REQUEST  | USAGE |
 | --- | --- |

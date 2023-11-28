@@ -1,0 +1,21 @@
+---
+title: 'Step 5: Define the deployment strategy'
+description: 
+template: howto-guide-template
+---
+
+After you have [provisioned the Spryker PaaS environments](/docs/scos/dev/migration-concepts/migrate-to-paas/step-4-provision-the-spryker-paas-environments.html), you have to define the deployment strategy.
+
+The current Spryker PaaS solution doesn't support advanced rollout strategies like blue-green deployments and canary deployments. Therefore, it's necessary to conduct thorough testing before implementing changes in a production environment.
+
+Within CodePipeline, there are several deployment types:
+
+* **Build:** Used solely for image verification during the building process and does not involve any rollout.
+* **Rollout Scheduler:** This pipeline specifically handles the deployment through Jenkins.
+* **Normal:** The primary pipeline for application deployment.
+* **Destructive:** Similar to the Normal pipeline but includes the process of clearing and then populating data in the RDS. This pipeline is mandatory for the initial deployment or when data needs to be refreshed.
+
+For more information about deployment process and it's states, see [Deployment in states](docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
+
+## Next step
+[Define environment variables](/docs/scos/dev/migration-concepts/migrate-to-paas/step-6-define-environment-variables.md)

@@ -4,7 +4,7 @@ description:
 template: howto-guide-template
 ---
 
-## Migrating to PaaS: Step-by-Step Guide
+This section describes how to migrate from your on-prem Spryker system to PasS. To migrate, you need to do the following:
 
 * [Step 1: Docker SDK Integration](/docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-1-docker-sdk-integration.html)
 * [Step 2: PHP Version Upgrade](/docs/scos/dev/migration-program/migration-to-paas/migrating-to-paas-guides/step-2-php-version-upgrade.html)

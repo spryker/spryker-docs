@@ -140,7 +140,7 @@ Request sample:
 </details>
 
 
-{% include pbc/all/glue-api-guides/202311.0/warehouse-management–system/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/warehouse-user-assignments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/warehouse-management–system/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-feature.md -->
 
 
 {% include pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-management-system/users-included-response-attributes.md -->

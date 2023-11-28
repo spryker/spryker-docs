@@ -31,7 +31,7 @@ npm i
 git checkout fulfillment
 ```
 
-{% info_block infoBox "Fulfillment app" %}
+{% info_block infoBox "Fulfillment App" %}
 
 Fulfillment App is a PWA that comes with an additional build process for the service worker to support offline mode and background sync.
 

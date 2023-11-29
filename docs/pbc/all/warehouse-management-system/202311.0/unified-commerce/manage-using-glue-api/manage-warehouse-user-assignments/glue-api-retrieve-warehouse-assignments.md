@@ -63,7 +63,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2"
             }
         },
         {
@@ -79,7 +79,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9"
             }
         },
         {
@@ -95,12 +95,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments"
     }
 }
 ```
@@ -136,7 +136,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?include=users"
             }
         },
         {
@@ -162,7 +162,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?include=users"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?include=users"
             }
         },
         {
@@ -188,24 +188,24 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?include=users"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?include=users"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?include=users"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments?include=users"
     },
     "included": [
         {
             "type": "users",
             "id": "0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da",
             "attributes": {
-                "username": "andrii.tserkovnyi@spryker.com",
-                "firstName": "Andrii",
-                "lastName": "Tserkovnyi"
+                "username": "herald.hopkins@spryker.com",
+                "firstName": "Herald",
+                "lastName": "Hopkins"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
+                "self": "https://glue-backend.mysprykershop.com/users/0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da?include=users"
             }
         }
     ]
@@ -233,7 +233,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
             }
         },
         {
@@ -249,12 +249,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da"
     }
 }
 ```
@@ -281,12 +281,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/99e048ef-8cd8-5e52-aca9-50a590a469c2?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.uuid]=99e048ef-8cd8-5e52-aca9-50a590a469c2"
     }
 }
 ```
@@ -312,7 +312,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.isActive]=false"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.isActive]=false"
             }
         },
         {
@@ -328,12 +328,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?filter[warehouse-user-assignments.isActive]=false"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?filter[warehouse-user-assignments.isActive]=false"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.isActive]=false"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.isActive]=false"
     }
 }
 ```
@@ -359,12 +359,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.warehouseUuid]=86496ec7-0d44-518c-81e4-f472b9e8547d"
     }
 }
 ```
@@ -390,7 +390,7 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/39fcc049-758b-5f96-96c4-ecd5e103a8f9?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
             }
         },
         {
@@ -406,12 +406,12 @@ For detailed information about the modules that provide the API functionality an
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
+                "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments/1bbc2472-44e8-5f4a-8824-4b580b8d58f7?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c.demo-spryker.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
+        "self": "https://glue-backend.mysprykershop.com/warehouse-user-assignments?filter[warehouse-user-assignments.userUuid]=0c1b09b7-fb51-5fdc-9ef0-1c809d7d99da&filter[warehouse-user-assignments.isActive]=false"
     }
 }
 ```

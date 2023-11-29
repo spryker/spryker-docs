@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Approval Process feature into a Spryker project.
+This document describes how to install the Product Approval Process feature.
 
 ## Install feature core
 
@@ -8,12 +8,12 @@ Follow the steps below to install the Marketplace Product Approval Process featu
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME         | VERSION            | INTEGRATION GUIDE                                                                                                                    |
+| NAME         | VERSION            | INSTALLATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product      | {{page.version}}   | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product      | {{page.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
 | Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
 | Checkout     | {{page.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
 

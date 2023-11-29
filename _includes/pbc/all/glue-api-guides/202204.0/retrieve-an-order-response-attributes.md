@@ -44,7 +44,7 @@
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html) to learn how to do that. |
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html) to learn how to do that. |
 
 **Order item information**
 
@@ -96,7 +96,7 @@
 | items.salesOrderConfiguredBundleItem |Object |Contains information about the items of the configured bundle. |
 | items.salesOrderConfiguredBundleItem.configurableBundleTemplateSlotUuid| String| Unique identifier of the configurable bundle slot in the system. |
 | items.metadata                          | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes          | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes          | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image                    | String  | Product image URL.                                           |
 
 **Measurement unit calculations**
@@ -181,4 +181,4 @@
 
 | ATTRIBUTE | TYPE   | DESCRIPTION      |
 | -------- | ----- | ----------------------- |
-| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |

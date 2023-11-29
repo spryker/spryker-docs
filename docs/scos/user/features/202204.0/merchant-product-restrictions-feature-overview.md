@@ -26,7 +26,7 @@ Product Restriction works on the basis of allowlist and excludelist lists. That 
 
 To restrict the products, a shop administrator needs to create a product list, include the necessary products to the list and excludelist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/create-product-lists.html).
+To create product lists, follow [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html).
 
 You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
 
@@ -35,12 +35,12 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 - When a single product from the product set is added to an excludelist, the other items are displayed in the shop. We are going to update the logic in a way that in case any of the items in the product set is added to the excludelist, all relevant product sets containing this item will be added to the excludelist too.
 -  The current functionality allows displaying the whole product bundle even if it contains the customer-specific products from the excludelist. We are working on updating the logic so that if the bundle product includes an item from the excludelist, the whole bundle will also also be hidden from a customer.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/create-product-lists.html)  |
-| [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/edit-product-lists.html) |
+| [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html)  |
+| [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html) |
 | [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html) |
 | [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) |
 

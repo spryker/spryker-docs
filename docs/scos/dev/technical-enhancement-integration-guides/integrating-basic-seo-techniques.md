@@ -23,9 +23,9 @@ To apply the basic SEO techniques such as improved headings structure and use of
 
 To start the integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Update the required SprykerShop modules using Composer
 
@@ -117,7 +117,7 @@ Add the `meta` tag before the `span` tag and introduce the `itemprop` and `conte
 #### ProductDetailPage
 
 1. In `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig:41`:
-   
+
 ```twig
 <h1 class="title title--product title--h2">{% raw %}{{{% endraw %} productName {% raw %}}}{% endraw %}</h1>
 ```

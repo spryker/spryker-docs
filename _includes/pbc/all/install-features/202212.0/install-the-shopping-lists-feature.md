@@ -6,7 +6,7 @@ Follow the steps below to install feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -491,9 +491,9 @@ Workstations,WorkstationsDE--21
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key| mandatory | string | Laptops | Key that will identify the shopping list to be referred to in future imports. |
-| name | mandatory | string | Laptops | Name of the shopping list. |
-| owner_customer_reference | mandatory | string | DE--21 | Customer reference of the shopping list owner. |
+| shopping_list_key| ✓ | string | Laptops | Key that will identify the shopping list to be referred to in future imports. |
+| name | ✓ | string | Laptops | Name of the shopping list. |
+| owner_customer_reference | ✓ | string | DE--21 | Customer reference of the shopping list owner. |
 
 Register the following plugin to enable data import:
 
@@ -584,9 +584,9 @@ Workstations,129_30706500,1
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key | mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
-| product_sku | mandatory | string | 187_26306352 | SKU of the concrete product variant that will be added to the shopping list. |
-| quantity | mandatory | integer | 3 | Number of products that will be added to the shopping list. |
+| shopping_list_key | ✓ | string | Laptops | Key that will identify the shopping list to add data to. |
+| product_sku | ✓ | string | 187_26306352 | SKU of the concrete product variant that will be added to the shopping list. |
+| quantity | ✓ | integer | 3 | Number of products that will be added to the shopping list. |
 
 Register the following plugin to enable data import:
 
@@ -653,9 +653,9 @@ Workstations,Spryker--6,READ_ONLY
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key | mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
-| company_user_key | mandatory | string | Spryker--7 | Key that will identify the company user that the shopping list is shared with. |
-| permission_group_name | mandatory | integer | READ_ONLY | Permission group that will be assigned to the shared company user. |
+| shopping_list_key | ✓ | string | Laptops | Key that will identify the shopping list to add data to. |
+| company_user_key | ✓ | string | Spryker--7 | Key that will identify the company user that the shopping list is shared with. |
+| permission_group_name | ✓ | integer | READ_ONLY | Permission group that will be assigned to the shared company user. |
 
 Register the following plugin to enable data import:
 
@@ -718,9 +718,9 @@ Workstations,spryker_systems_Berlin,READ_ONLY
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key| mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
-| business_unit_key | mandatory | string | spryker_systems_HR | Key that will identify the company business unit that the shopping list is shared with. |
-| permission_group_name | mandatory | integer | FULL_ACCESS | Permission group that will be assigned to the shared company business unit. |
+| shopping_list_key| ✓ | string | Laptops | Key that will identify the shopping list to add data to. |
+| business_unit_key | ✓ | string | spryker_systems_HR | Key that will identify the company business unit that the shopping list is shared with. |
+| permission_group_name | ✓ | integer | FULL_ACCESS | Permission group that will be assigned to the shared company business unit. |
 
 Register the following plugin to enable data import:
 
@@ -1320,7 +1320,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

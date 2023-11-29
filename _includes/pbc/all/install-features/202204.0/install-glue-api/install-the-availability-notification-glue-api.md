@@ -1,12 +1,12 @@
 
 
-This document describes how to integrate the Glue API - Availability Notification feature into a Spryker project.
+This document describes how to install the Glue API - Availability Notification feature.
 
 Follow the steps below to integrate the Glue API - Availability Notification feature.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |-|-|
@@ -22,7 +22,7 @@ composer require spryker/availability-notifications-rest-api --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|

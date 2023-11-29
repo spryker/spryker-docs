@@ -1,10 +1,10 @@
 
 
-This document describes how to integrate the Glue: Development Tools feature into a Spryker project.
+This document describes how to install the Glue: Development Tools feature.
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION |
 |-|-|
@@ -19,7 +19,7 @@ composer require "spryker/documentation-generator-rest-api":"^1.12.1" --update-w
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|

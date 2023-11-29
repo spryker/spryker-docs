@@ -9,11 +9,13 @@ This document describes how to integrate profiler module into a Spryker project.
 
 ## Prerequisites
 
-To start the integration, review and install the necessary features:
+To start the integration, install the necessary features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE |
-|--------------|------------------|-------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
+| NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                               |
+|-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core          | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
+| Web Profiler for Zed  | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html) |
+| Web Profiler for Yves | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html) |
 
 ## 1) Enable extension
 
@@ -53,10 +55,10 @@ Ensure that the following modules have been updated:
 {% endinfo_block %}
 
 ```shell
-composer require --dev spryker/profiler
+composer require --dev spryker/profiler --ignore-platform-reqs
 ```
 
-### 4) Set up behavior
+### Set up behavior
 
 1. For `Yves` application, register the following plugins:
 
@@ -82,9 +84,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
      */
     protected function getEventDispatcherPlugins(): array
     {
-        return [
-            new ProfilerRequestEventDispatcherPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
+            $plugins[] = new ProfilerRequestEventDispatcherPlugin();
+        }
+    
+        return $plugins;
     }
 }
 ```
@@ -104,9 +112,15 @@ class WebProfilerWidgetDependencyProvider extends SprykerWebProfilerDependencyPr
      */
     public function getDataCollectorPlugins(): array
     {
-        return [
-            new WebProfilerProfilerDataCollectorPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        return $plugins;
     }
 }
 
@@ -134,9 +148,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
      */
     protected function getEventDispatcherPlugins(): array
     {
-        return [
-            new ProfilerRequestEventDispatcherPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
+            $plugins[] = new ProfilerRequestEventDispatcherPlugin();
+        }
+
+        return $plugins;
     }
 }
 ```
@@ -156,9 +176,34 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
      */
     public function getDataCollectorPlugins(): array
     {
-        return [
-            new WebProfilerProfilerDataCollectorPlugin(),
+        $plugins = [
+            //...
         ];
+        
+        if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        return $plugins;
     }
 }
 ```
+
+# Generate transfers
+
+Run the `console transfer:generate` command to generate all the necessary transfer objects.
+
+
+# Enable the configuration
+
+Module Profile works as a part of Web Profiler feature. By default, Web Profiler is disabled.
+To enable Web Profiler, please update `config/Shared/config_default-docker.dev.php` configuration file.
+
+```php
+if (interface_exists(WebProfilerConstants::class, true)) {
+    $config[WebProfilerConstants::IS_WEB_PROFILER_ENABLED]
+        = $config[WebProfilerWidgetConstants::IS_WEB_PROFILER_ENABLED]
+        = true;
+}
+```
+

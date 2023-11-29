@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -281,12 +281,12 @@ mr-003,,051_30107816,DEFAULT,DE,CHF,12533,10333
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-|merchant_relation_key | mandatory | string | mr-001 | Unique identifier used to identify a merchant contract. |
+|merchant_relation_key | ✓ | string | mr-001 | Unique identifier used to identify a merchant contract. |
 | abstract_sku | mandatory (optional if `concrete_sku` provided) | string(unique) | 051 | Existing abstract product SKU to assign to the product list. |
 | concrete_sku | mandatory (optional if `abstract_sku` provided) | string(unique) | 051_29567823 | Existing concrete product SKU to assign to the product list. |
-| price_type | mandatory | string | DEFAULT | Name of the price type. By default it's 'DEFAULT', but could be project specific (strike, sale, ...). |
-| store | mandatory | string | DE | Store name. |
-| currency | mandatory | string | EUR | Currency ISO code. |
+| price_type | ✓ | string | DEFAULT | Name of the price type. By default it's 'DEFAULT', but could be project specific (strike, sale, ...). |
+| store | ✓ | string | DE | Store name. |
+| currency | ✓ | string | EUR | Currency ISO code. |
 | price_net | optional | number | 100 | Net price in cents. |
 | price_gross | optional | number | 120 | Gross price in cents. |
 

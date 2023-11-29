@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Quotation Process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) feature into a Spryker project.
+This document describes how to install the [Quotation Process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) feature.
 
 ## Install feature core
 
@@ -9,9 +9,9 @@ Follow the steps below to install the Quotation Process feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
@@ -81,7 +81,7 @@ Follow the steps below to install the [Quotation Process](/docs/pbc/all/request-
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |

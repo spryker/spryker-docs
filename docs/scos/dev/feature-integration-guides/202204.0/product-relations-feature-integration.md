@@ -13,9 +13,9 @@ redirect_from:
 related:
   - title: Glue API - Product Relations feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-relations-feature-integration.html
-  - title: Spryker Core feature integration
+  - title: Install the Spryker Core feature
     link: docs/scos/dev/feature-integration-guides/page.version/spryker-core-feature-integration.html
-  - title: Glue API - Spryker Core feature integration
+  - title: Install the Spryker Core Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-product-relations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-relations-feature.md -->

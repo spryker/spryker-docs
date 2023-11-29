@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -268,8 +268,8 @@ t000002,product_image_set_4
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
-| product_image_set_key | mandatory | string | product_image_set_1 | Internal data import identifier for the product image set. |
+| configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| product_image_set_key | ✓ | string | product_image_set_1 | Internal data import identifier for the product image set. |
 
 {% info_block warningBox "Verification" %}
 

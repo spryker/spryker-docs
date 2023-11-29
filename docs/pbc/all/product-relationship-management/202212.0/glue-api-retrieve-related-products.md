@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-related-products
 related:
   - title: Retrieving alternative products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 ---
@@ -618,7 +618,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -976,7 +976,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve upselling products of a guest cart
 
@@ -1320,4 +1320,4 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 301 | Abstract product is not found. |
 | 311 | Abstract product ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

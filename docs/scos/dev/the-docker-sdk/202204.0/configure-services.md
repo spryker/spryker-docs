@@ -372,7 +372,7 @@ services:
 
 ## Blackfire
 
-[Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
+Blackfire is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
 
 ### Configure Blackfire
 
@@ -486,8 +486,8 @@ image:
 
 2. Push and deploy the changes using one of the following guides:
 
-  * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
+  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 
@@ -501,7 +501,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support]((/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
 

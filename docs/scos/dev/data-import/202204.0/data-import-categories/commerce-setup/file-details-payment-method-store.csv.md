@@ -1,5 +1,5 @@
 ---
-title: "File details: payment_method_store.csv"
+title: "Import file details: payment_method_store.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-payment-method-storecsv
@@ -12,6 +12,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `payment_method_store.csv` file to configure Payment Method Store information in your Spryker Demo Shop.

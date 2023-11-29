@@ -19,12 +19,12 @@ In the B2B partnership, which is usually based on contracts, the selling company
 There are three key figures: marketplace owner, merchant, and buyer.
 
 * The marketplace owner owns the platform and acts as a broker between merchants and buyers.
-* The merchants are sellers usually represented by a [company](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html#company).
-* The buyers are often [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
+* The merchants are sellers usually represented by a [company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company).
+* The buyers are often [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
-A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html) and [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html) to learn how to do that.
+A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html) and [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html) to learn how to do that.
 
 A developer can also import merchants and merchant relations.
 
@@ -32,16 +32,16 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 {% wistia aowgi1c6k1 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html)  |
-| [Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchants.html)  |
-| [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)  |
+| [Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html)  |
+| [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchants.html)  |
+| [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)  |
 | [Edit merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

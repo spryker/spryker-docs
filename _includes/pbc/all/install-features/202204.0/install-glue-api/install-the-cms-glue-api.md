@@ -1,15 +1,15 @@
 
 
-This document describes how to integrate the CMS feature API into a Spryker project.
+This document describes how to install the CMS feature API.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |
-| Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -187,11 +187,11 @@ Ensure the following:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
+| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE     |
 | ---------- | ----------------- | ---------------------------- |
-| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-content-items-feature.html) |
-| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Content items |                                  | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |
+| CMS           | ✓                                | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |

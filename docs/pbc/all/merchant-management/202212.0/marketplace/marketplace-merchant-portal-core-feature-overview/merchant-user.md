@@ -32,9 +32,9 @@ The following diagram illustrates merchant user relations:
 
 ![Merchant User relations](https://confluence-connect.gliffy.net/embed/image/6a8b09b8-f7a0-4f92-8728-6bcd056c1f2e.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| | |[File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-user.csv.html) |[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)|
+| | |[File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html) |[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)|
 | | | |[Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html)|

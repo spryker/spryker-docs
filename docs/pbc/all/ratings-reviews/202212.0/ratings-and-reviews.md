@@ -41,7 +41,7 @@ The feature has the following functional constraints, which are going to be reso
 * A review is available in all the stores that share the locale of the store in which it has been originally created.
 
 
-## Related Business User articles
+## Related Business User documents
 
 | BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
 | - | - |
@@ -51,10 +51,10 @@ The feature has the following functional constraints, which are going to be reso
 | [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/disconnect-bazaarvoice.html) | |
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------| - |
-| [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews using Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html)  | [File details: product_review.csv](/docs/pbc/all/ratings-reviews/{{site.version}}/import-and-export-data/file-details-product-review.csv.html)  | [HowTo: Configure product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/tutorials-and-howtos/howto-configure-product-reviews.html) |
-| [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)   | [Retrieve product reviews when retrieving abstract products](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html)  |  | |
-| [Install the Product Rating and Reviews + Product Group feature](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html) | [Retrieving product reviews when retrieving concrete products](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html) | | |
+| [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews using Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html)  | [File details: product_review.csv](/docs/pbc/all/ratings-reviews/{{site.version}}/import-and-export-data/import-file-details-product-review.csv.html)  | [HowTo: Configure product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/tutorials-and-howtos/howto-configure-product-reviews.html) |
+| [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)   | [Retrieve product reviews when retrieving abstract products](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-abstract-products.html)  |  | |
+| [Install the Product Rating and Reviews + Product Group feature](/docs/pbc/all/ratings-reviews/{{site.version}}/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html) | [Retrieving product reviews when retrieving concrete products](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html) | | |

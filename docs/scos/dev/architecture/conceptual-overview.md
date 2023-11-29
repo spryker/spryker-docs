@@ -47,7 +47,7 @@ Spryker is a Commerce Operating System, mainly composed of several applications,
 
 * *Storefront*—Frontend-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/components).
 * *Back Office*—an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
-* *Storefront API*—an application providing resources for customers' interaction, provided by Glue Application Layer, based on [JSON API convention](https://jsonapi.org/).
+* *Storefront API*—an application providing resources for customers' interaction, provided by the Glue Application Layer, and can work based on either REST or [JSON API convention](https://jsonapi.org/).
 
 The following diagram shows the conceptual parts of the application and their connections:
 
@@ -57,7 +57,7 @@ The Spryker OS provides the following Application Layers:
 
 * [Yves](/docs/scos/dev/back-end-development/yves/yves.html)—provides frontend functionality with the light-weight data access.
 * [Zed](/docs/scos/dev/back-end-development/zed/zed.html)—provides back office/backend functionality with complicated calculations.
-* [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html)—provides infrastructure for API with the mixed data access.
+* [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-infrastructure.html)—provides infrastructure for API with the mixed data access.
 * [Client](/docs/scos/dev/back-end-development/client/client.html)—provides data access infrastructure.
 * Shared—provides shared code abstractions to be used in other Application Layers of the same module.
 * Service—provides infrastructure for the stateless operations, usually utils.

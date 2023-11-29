@@ -10,7 +10,7 @@ The following feature integration Guide expects the basic feature to be in place
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
@@ -82,11 +82,11 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 |---|---|---|---|---|
 |  abstract_sku | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
 |  concrete_sku | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
-|  price_type | mandatory | string | DEFAULT |  |
-|  store | mandatory | string | DE | Store in which the specific product has that specific price |
-|  currency | mandatory | string | EUR | The currency in which the specific product has that specific price |
-|  value_net | mandatory | integer | 10200 | The net (before tax) price in cents |
-|  value_gross | mandatory | integer | 12000 | The gross (after tax) price in cents |
+|  price_type | ✓ | string | DEFAULT |  |
+|  store | ✓ | string | DE | Store in which the specific product has that specific price |
+|  currency | ✓ | string | EUR | The currency in which the specific product has that specific price |
+|  value_net | ✓ | integer | 10200 | The net (before tax) price in cents |
+|  value_gross | ✓ | integer | 12000 | The gross (after tax) price in cents |
 |  price_data.volume_prices | optional | json string |  `"[{""quantity"":5,""net_price"":150,""gross_price"":165}]"` | A json description of the prices when the quantity changes (volume based pricing). In the example given, the product bought, when it has a quantity of less than 5, it uses the normal price, but uses this Volume Price when the quantity is greater than 5 |
 
 Register the following plugin to enable data import:
@@ -310,11 +310,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |
 | ProductPriceVolumeWidget | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html) feature. |
+| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

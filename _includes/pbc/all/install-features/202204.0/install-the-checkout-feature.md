@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html) feature into a Spryker project. 
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature. 
 
 {% info_block warningBox %}
 
@@ -16,15 +16,15 @@ Follow the steps below to install the Checkout feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Checkout |  {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
-| Prices | {{page.version}}  | [Integrate the Prices feature](/docs/pbc/all/price-management/{{page.version}}/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| Prices | {{page.version}}  | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 | Tax | {{page.version}} | |
 
 ### 1) Install the required modules using Composer
@@ -37,7 +37,7 @@ composer require spryker-feature/order-threshold:"{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -206,10 +206,10 @@ DE,CHF,hard-maximum-threshold,320000,,
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| store| mandatory |string  | DE | The store where the sales order threshold is applicable.  |
-| currency | mandatory | string | EUR | The currency for which the sales order threshold is applicable. |
-| threshold_type_key | mandatory | string | soft-minimum-threshold | The type of threshold to import. It should be the key to a configured plugin from the previous step. |
-| threshold | mandatory | int, in cents |1000  | The amount in cents to be reached or not reached(depending on the threshold type) by an order to pass a threshold check. |
+| store| ✓ |string  | DE | The store where the sales order threshold is applicable.  |
+| currency | ✓ | string | EUR | The currency for which the sales order threshold is applicable. |
+| threshold_type_key | ✓ | string | soft-minimum-threshold | The type of threshold to import. It should be the key to a configured plugin from the previous step. |
+| threshold | ✓ | int, in cents |1000  | The amount in cents to be reached or not reached(depending on the threshold type) by an order to pass a threshold check. |
 | fee |optional  | integer, in cents |50  | The amount in cents or the percentage of order subtotal that is added to the order automatically if the order subtotal is below the threshold. |
 | message_glossary_key | optional | string |sales-order-threshold.hard-minimum-threshold.de.eur.message  | The glossary key identifying the threshold message to show when the threshold is reached or not reached, depending on the threshold type. |
 
@@ -515,9 +515,9 @@ Follow the steps below to install the Checkout feature frontend.
 
 To start feature integration, integrate the required feature:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -529,7 +529,7 @@ composer require spryker-feature/order-threshold:"{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -628,10 +628,10 @@ Ensure that the `SalesOrderThresholdWidget` widget has been registered:
 
 {% endinfo_block %}
 
-### Related features
+### Install related features
 
 Integrate the following related features:
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Glue API: Checkout |  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

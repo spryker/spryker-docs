@@ -1,12 +1,12 @@
 
 
-This document describes how to integrate the Glue API: Spryker Core feature into a Spryker project.
+This document describes how to install the Glue API: Spryker Core feature.
 
 ## Install Feature API
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | TYPE | VERSION |
 | --- | --- | --- |

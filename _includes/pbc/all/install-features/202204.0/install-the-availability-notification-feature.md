@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Availability Notification feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/availability-notification-feature-overview.html) into a Spryker project.
+This document describes how to install the [Availability Notification feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/availability-notification-feature-overview.html).
 
 ## Install feature core
 
@@ -9,14 +9,14 @@ Follow the steps below to install the Availability Notification feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Mailing and Notifications | {{page.version}} | [Mailing and Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)|
-| Inventory Management | {{page.version}} |[Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
-| Product | {{page.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Mailing and Notifications | {{page.version}} | [Install the Mailing and Notifications feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{page.version}} |[Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
+| Product | {{page.version}} |[Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -298,14 +298,14 @@ Follow the steps below to install the Availability Notification feature frontend
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Mailing and Notifications | {{page.version}} | [Mailing and Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)|
-| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
-| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Mailing and Notifications | {{page.version}} | [Install the Mailing and Notifications feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
+| Product | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 

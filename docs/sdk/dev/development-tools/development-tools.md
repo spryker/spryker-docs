@@ -3,6 +3,8 @@ title: Development tools
 description:  How to use the tools associated with developing using the Spryker SDK 
 last_updated: Jan 12, 2023
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/development-tools.html
 ---
 This section explains how to use the following development tools when working with the Spryker SDK:
 * [Architecture Sniffer](/docs/sdk/dev/development-tools/architecture-sniffer.html)

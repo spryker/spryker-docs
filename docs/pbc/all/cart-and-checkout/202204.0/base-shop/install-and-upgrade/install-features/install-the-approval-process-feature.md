@@ -16,7 +16,7 @@ related:
   - title: Install the Quotation Process + Approval Process feature
     link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
   - title: Shipment + Approval Process feature integration
-    link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/install-the-shipment-approval-process-feature.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-approval-process-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-approval-process-feature.md -->

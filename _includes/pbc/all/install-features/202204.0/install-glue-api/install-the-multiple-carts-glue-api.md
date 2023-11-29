@@ -3,9 +3,9 @@ This document describes how to install the Multiple Carts Glue API.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
-| Name | Version | Integration guide |
+| Name | Version | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | Glue Application feature integration |
 | Multiple Carts | {{page.version}} | Install the Multiple Carts feature |

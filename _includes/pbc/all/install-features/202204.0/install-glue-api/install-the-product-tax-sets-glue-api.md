@@ -3,9 +3,9 @@
 ## Install feature API
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | 201903.0 |Feature API |
 | Product | 201903.0 |Feature API |

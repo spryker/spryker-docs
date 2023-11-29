@@ -46,7 +46,7 @@ The following diagram shows the gift card product-voucher transition workflow:
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of product. In this case, this product is a gift card.
 
 
-When a customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details about how to set the custom state names on the Storefront for refunded orders, see [HowTo: Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+When a customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details about how to set the custom state names on the Storefront for refunded orders, see [HowTo: Display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Buying with gift cards
 
@@ -85,11 +85,11 @@ With this strategy, a Back Office user will see gift card balance information su
 Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history. From the customer’s perspective, this strategy might be a better option if a gift card is used by one person, and it does not make sense to send emails with new codes every time a gift card was used.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/install-the-gift-cards-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) | [Manage gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html) |
-| [Enable gift cards](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/enable-gift-cards.html) |  | [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html) |
-| | | [Retrieve gift cards in guest carts](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html) | |
-| | | [Retrieve gift cards in carts of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html) | |
+| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/install-the-gift-cards-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) | [Manage gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-file-details-gift-card-abstract-configuration.csv.html) |
+| [Enable gift cards](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/enable-gift-cards.html) |  | [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html) |
+| | | [Retrieve gift cards in guest carts](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-retrieve-gift-cards-in-guest-carts.html) | |
+| | | [Retrieve gift cards in carts of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-retrieve-gift-cards-in-carts-of-registered-users.html) | |

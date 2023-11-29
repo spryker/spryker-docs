@@ -13,14 +13,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/retrieving-related-products.html
 related:
   - title: Retrieving alternative products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/glue-api-retrieve-alternative-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - title: Product Relations feature overview
     link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
 Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
+Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 * Retrieve related products of an abstract product.
@@ -619,7 +619,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -977,7 +977,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve upselling products of a guest cart
 

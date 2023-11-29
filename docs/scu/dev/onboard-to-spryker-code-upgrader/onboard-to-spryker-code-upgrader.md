@@ -9,7 +9,6 @@ redirect_from:
 
 Onboarding to Spryker CI consists of the following steps.
 
-
 ## Prerequisites
 
 [Prepare your project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
@@ -39,9 +38,10 @@ Your workspace contains the Spryker Code Upgrader project.
 
 Connect the Upgrader to your repository using one of the following documents:
 
-* [Connect to a GitHub repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
-* [Connect to a GitLab repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
-* [Connect to a Azure repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.html)
+* [GitHub access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html#prerequisites)
+* [GitLab access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html#prerequisites)
+* [GitLab access token requirements for self-hosted projects](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html#prerequisites)
+* [Azure access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html#prerequisites)
 
 ![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/pipelines.png)
 

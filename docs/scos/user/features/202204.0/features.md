@@ -5,10 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/overview-of-the-feature-guides
 originalArticleId: d4bebd49-d3f1-4fbb-b508-5a53149ad0b7
 redirect_from:
-  - /2021080/docs/overview-of-the-feature-guides
-  - /2021080/docs/en/overview-of-the-feature-guides
-  - /docs/overview-of-the-feature-guides
-  - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/201811.0/features.html
   - /docs/scos/user/features/202200.0/features.html
 ---
 
@@ -26,7 +23,7 @@ In the feature documentation, you can find the following information:
 
 {% info_block infoBox "Reference documentation" %}
 
-The documentation in the **Features** section provides reference information that can't be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html).
+The documentation in the **Features** section provides reference information that can't be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html).
 
 Or, you can go directly to the following guides:
 

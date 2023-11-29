@@ -151,44 +151,8 @@ This endpoint lets you retrieve service points.
                 "isActive": true,
                 "key": "s1"
             },
-            "relationships": {
-                "service-points": {
-                    "data": [
-                        {
-                            "type": "service-points",
-                            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e"
-                        }
-                    ]
-                }
-            },
             "links": {
                 "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
-            }
-        },
-        {
-            "type": "service-points",
-            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
-            "attributes": {
-                "name": "Spryker Main Store",
-                "key": "sp1",
-                "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
-            },
-            "relationships": {
-                "services": {
-                    "data": [
-                        {
-                            "type": "services",
-                            "id": "37ef89d3-7792-533c-951c-981c6b56312c"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
             }
         },
         {
@@ -199,44 +163,8 @@ This endpoint lets you retrieve service points.
                 "isActive": true,
                 "key": "s2"
             },
-            "relationships": {
-                "service-points": {
-                    "data": [
-                        {
-                            "type": "service-points",
-                            "id": "7e3b03e0-c53c-5298-9ece-968f4628b4f8"
-                        }
-                    ]
-                }
-            },
             "links": {
                 "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6358f60b-958b-53f9-9401-306c063b1282?include=services"
-            }
-        },
-        {
-            "type": "service-points",
-            "id": "7e3b03e0-c53c-5298-9ece-968f4628b4f8",
-            "attributes": {
-                "name": "Spryker Berlin Store",
-                "key": "sp2",
-                "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
-            },
-            "relationships": {
-                "services": {
-                    "data": [
-                        {
-                            "type": "services",
-                            "id": "6358f60b-958b-53f9-9401-306c063b1282"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=services"
             }
         }
     ]
@@ -348,6 +276,12 @@ This endpoint lets you retrieve service points.
 ```
 
 </details>
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/service-point-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-point-addresses-response-attributes.md -->
+
 
 
 ## Retrieve a service point
@@ -547,6 +481,11 @@ This endpoint lets you retrieve service points.
 ```
 
 </details>
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/service-point-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-point-addresses-response-attributes.md -->
 
 
 ## Possible errors

@@ -125,6 +125,21 @@ Database queries are the slowest parts of each application. They have different 
 - Change single inserts to bulk inserts.
 - Break down heavy or slow queries into smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, etc.).
 
+### Disabling Propel Instance Pooling
+
+Propel instance pooling is a feature within Propel that determines whether object instance pooling is enabled or disabled. Object instance pooling involves the reuse of previously created instances. Enabling instance pooling may introduce a potential issue related to PHP memory leaks, especially when executing console commands that involve querying a substantial number of entities.
+
+If you encounter memory leak issues while running console commands, consider the following mitigation steps:
+
+1. Disable Instance Pooling. Use the following command before executing a memory-intensive script:
+```php
+\Propel\Runtime\Propel::disableInstancePooling();
+```
+2. Re-enable Instance Pooling. After the memory-intensive script has been executed, re-enable instance pooling using the following command:
+```php
+\Propel\Runtime\Propel::enableInstancePooling();
+```
+
 ## Feature configurations
 
 Spryker has different features and several configurable modules that need to be adjusted correctly to have the best performance and smooth execution in the applications.

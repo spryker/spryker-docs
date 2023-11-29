@@ -1,4 +1,4 @@
-This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
+This integration guide provides steps on how to integrate the ACL feature.
 
 ## Install feature core
 

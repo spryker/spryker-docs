@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
 originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
 redirect_from:
-  - /2021080/docs/searching-the-product-catalog
-  - /2021080/docs/en/searching-the-product-catalog
-  - /docs/searching-the-product-catalog
-  - /docs/en/searching-the-product-catalog
-  - /docs/scos/dev/glue-api-guides/202200.0/searching-the-product-catalog.html
   - /docs/scos/dev/glue-api-guides/202307.0/searching-the-product-catalog.html
   - /docs/pbc/all/search/202307.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
 related:
@@ -6668,7 +6663,7 @@ To search by products, send the request:
 For other abstract product attributes, see:
 
 * [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html)
+* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html)
 
 **Value facets**
 

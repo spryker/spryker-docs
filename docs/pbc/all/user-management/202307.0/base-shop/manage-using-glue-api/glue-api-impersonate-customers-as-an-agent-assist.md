@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/impersonating-customers-as-an-agent-assist
 originalArticleId: 603fa249-5eab-42d0-93c3-3c09f75da9d0
 redirect_from:
-  - /2021080/docs/impersonating-customers-as-an-agent-assist
-  - /2021080/docs/en/impersonating-customers-as-an-agent-assist
-  - /docs/impersonating-customers-as-an-agent-assist
-  - /docs/en/impersonating-customers-as-an-agent-assist
   - /docs/scos/dev/glue-api-guides/202307.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
@@ -118,7 +114,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 After you’ve authenticated as a customer, you can impersonate them:
 * [Manage carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
 * [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
 * [Manage orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)  
 

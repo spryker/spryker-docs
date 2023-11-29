@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Marketplace Merchant feature into a Spryker project.
+This document describes how to install the Marketplace Merchant feature.
 
 ## Install feature core
 
@@ -1531,4 +1531,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | -|
-| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |
+| Marketplace Merchant API | &check;  |  [Install the Marketplace Merchant feature ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |

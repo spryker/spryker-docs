@@ -22,7 +22,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details about the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html).
+For details about the modules that provide the API functionality and how to install them, [see Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html).
 
 ## Create a return
 

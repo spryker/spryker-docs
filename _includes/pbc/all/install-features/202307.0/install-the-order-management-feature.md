@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) feature.
 
 {% info_block warningBox "Included features" %}
 

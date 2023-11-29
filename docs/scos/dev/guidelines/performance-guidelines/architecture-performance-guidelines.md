@@ -125,6 +125,18 @@ Database queries are the slowest parts of each application. They have different 
 - Change single inserts to bulk inserts.
 - Break down heavy or slow queries into smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, etc.).
 
+### Pagination
+
+Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
+
+### Wildcards in Redis
+
+Avoid using wildcards (*) in Redis, as they can significantly impact performance.
+
+### RPC calls
+
+We recommend to minimize the number of RPC calls, ideally having only one per page. A high volume of RPC calls can lead to severe performance issues.
+
 ### Disabling Propel Instance Pooling
 
 Propel instance pooling is a feature within Propel that determines whether object instance pooling is enabled or disabled. Object instance pooling involves the reuse of previously created instances. Enabling instance pooling may introduce a potential issue related to PHP memory leaks, especially when executing console commands that involve querying a substantial number of entities.
@@ -206,6 +218,12 @@ Zed calls are necessary when it comes to executing a database-related operation 
 
 - Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
+
+{% info_block infoBox "Info" %}
+
+Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
+
+{% endinfo_block %}
 
 ### OMS optimization
 

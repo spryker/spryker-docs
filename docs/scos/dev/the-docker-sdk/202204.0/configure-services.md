@@ -597,7 +597,7 @@ class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensi
         }
 ​
         // Custom application environment name, or use $environment as fallback
-        $environment = getenv('NEWRELIC_CUSTOM_APP_ENVIRONMENT') ?? $environment;
+        $environment = getenv('NEWRELIC_CUSTOM_APP_ENVIRONMENT') ?: $environment;
 ​
         $this->application = $application . '-' . $store . ' (' . $environment . ')';
 ​

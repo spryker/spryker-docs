@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/service
 ---
 
-A *service* is a Spryker application layer shared by the Client, Zed, and Yves application layers. This service layer provides the ability to register a service once and have it applied to both layers. Usage is focused on level details (infrastructure layer)—for example, encoding, text processing, and sanitization. Currently, there are already a few `Util` bundles providing services (UtilText and UtilEncoding).
+The Service Application represents Spryker's multi-purpose library. A Service can be used in all other Applications (like Yves or Zed). A Service could contain only reusable lightweight stateless business logic with no reliance on database or storage connections. All required data should be provided as an input. Usage is focused on level details (infrastructure layer)—for example, encoding, text processing, and sanitization. Currently, there are already a few `Util` bundles providing services (UtilText and UtilEncoding).
 
 ## How to use a service
 

@@ -1,7 +1,7 @@
 ---
-title: Create a backend resource
+title: Create backend resources
 description: This guide shows how to create an API endpoint using a resource for the backend API application.
-last_updated: September 30, 2022
+last_updated: November 29, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-backend-resource.html

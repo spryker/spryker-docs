@@ -1,22 +1,22 @@
 ---
 title: Decoupled Glue API
 description: Learn about the process of handling API requests through GlueStorefront and GlueBackoffice layers.
-last_updated: Jul 11, 2023
+last_updated: November 29, 2023
 template: glue-api-storefront-guide-template
 ---
 
-The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API (SAPI)* and *Glue Backend API (BAPI)* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Backoffice functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API* and *Glue Backend API* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Backoffice functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ## Existing Glue Applications
 
 Out of the box, Spryker Commerce OS provides three API applications:
-* Old Glue API application that can be used as a fallback.
-* New Glue Storefront API (SAPI) that is a replacement for the old Glue and can be used for the same purpose.
-* Glue Backend API (BAPI) that can be used to provide API access for the Backoffice functionality directly without any additional RPC calls.
+* Legacy Glue API application that can be used as a fallback.
+* New Glue Storefront API that is a replacement for the Legacy Glue and can be used for the same purpose.
+* Glue Backend API that can be used to provide API access for the Backoffice functionality directly without any additional RPC calls.
 
-## Difference between Decoupled Glue Api and the old Glue API
+## Difference between Decoupled Glue Api and the Legacy Glue API
 
-There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the old [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-rest-api.html).
+There are a few differences between the current Glue infrastructure (Decoupled Glue API) and the Legacy one [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-rest-api.html).
 
 ### Possibility to create new API applications
 
@@ -24,13 +24,13 @@ With the current infrastructure, projects can easily [create](/docs/scos/dev/glu
 
 ### Decoupling from conventions
 
-Old Glue API was tightly coupled with a JSON:API convention, and all resources have to follow it. With the current infrastructure, resources can use any implemented conventions, create new ones, or even not use any. In this case, the "no convention" approach is used, and a request and response are formatted as a plain JSON. For more details, see [Create and change Glue API conventions](/docs/scos/dev/glue-api-guides/{{page.version}}/create-and-change-glue-api-conventions.html).
+Legacy Glue API was tightly coupled with a JSON:API convention, and all resources have to follow it. With the current infrastructure, resources can use any implemented conventions, create new ones, or even not use any. In this case, the "no convention" approach is used, and a request and response are formatted as a plain JSON. For more details, see [Create and change Glue API conventions](/docs/scos/dev/glue-api-guides/{{page.version}}/create-and-change-glue-api-conventions.html).
 
 ### New type of application: Glue Backend API application
 
-With the current setup out of the box, we have an additional Glue Backend API (BAPI) application that is meant to be an API application for our Back Office. This means that with this new application, infrastructure has direct access to Zed facades from BAPI resources. Also, out of the box, we have a separate `/token` resource specifically for BAPI that uses Back Office users' credentials to issue a token for a BAPI resource.
+With the current setup out of the box, we have an additional Glue Backend API application that is meant to be an API application for our Back Office. This means that with this new application, infrastructure has direct access to Zed facades from Glue Backend API resources. Also, out of the box, we have a separate `/token` resource specifically for Glue Backend API that uses Back Office users' credentials to issue a token for a Glue Backend API resource.
 
-For more details about the difference between SAPI and BAPI, refer to [Backend and storefront API module differences](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-and-storefront-api-module-differences.html).
+For more details about the difference between Glue Storefront API and Glue Backend API, refer to [Backend and storefront API module differences](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-and-storefront-api-module-differences.html).
 
 ### Authentication servers
 Current infrastructure lets you switch between different authentication servers. For example, this can be useful if you want to use Auth0 or any other server in addition to implemented servers.
@@ -48,11 +48,11 @@ For more details and examples, see [Use authentication servers with Glue API](/d
 
 ## Infrastructure
 
-Decoupled Glue API infrastructure is implemented in the same layer of Spryker Commerce OS and called Glue, as the old one. It is responsible for providing API endpoints, processing requests, and communicating with other layers of the OS to retrieve the necessary information. Separate applications are implemented as separate modules—for example, `GlueStorefrontApiApplication`, and `GlueBackendApiApplication`. Each application has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default).
+Decoupled Glue API infrastructure is implemented in the same layer of Spryker Commerce OS and called Glue, as the legacy one. It is responsible for providing API endpoints, processing requests, and communicating with other layers of the OS to retrieve the necessary information. Separate applications are implemented as separate modules—for example, `GlueStorefrontApiApplication`, and `GlueBackendApiApplication`. Each application has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default).
 
 Logically, the Glue layer can be divided into separate parts:
 
-* **`GlueApplication` module**: The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (for example, `http://mysprykershop.com/resource/1`), selects a proper application based on a bootstrap file, does content negotiation and selects applicable convention, and executes request flow. Also, this module is used for the fallback to the old Glue API.
+* **`GlueApplication` module**: The `GlueApplication` module provides a framework for constructing API resources and selecting a proper application. It intercepts all HTTP requests at resource URLs (for example, `http://mysprykershop.com/resource/1`), selects a proper application based on a bootstrap file, does content negotiation and selects applicable convention, and executes request flow. Also, this module is used for the fallback to the Legacy Glue API.
 * **GlueStorefrontApiApplication module**: The `GlueStorefrontApiApplication` module is used for wiring everything related to the Glue Storefront API resources and route processing. All resources, routes, application plugins, and the rest of the required plugin stacks are wired into this module.
 * **GlueBackendApiApplication module**: The `GlueBackendApiApplication` module is used for wiring everything related to the Glue Backend API resources and route processing. All resources, routes, application plugins, and the rest of the required plugin stacks are wired into this module.
 * **Convention module**: Each convention module represents some specific convention and should include all required functionality to format API requests according to this convention. Out of the box, Spryker provides a `GlueJsonApiConvention` module that represents JSON:API convention.
@@ -92,9 +92,9 @@ For more details about creating a resource, see these documents:
 
 ## Resource modules
 
-A `Resource` module is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of `GlueRequestTransfer` and providing responses in the form of `GlueResponseTransfers`. For this purpose, the SAPI `Resource` module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/back-end-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed) through RPC calls. 
+A `Resource` module is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of `GlueRequestTransfer` and providing responses in the form of `GlueResponseTransfers`. For this purpose, the Glue Storefront API `Resource` module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/back-end-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed) through RPC calls. 
 
-BAPI resources can use direct facade access through the dependency provider and access the database directly. `Resource` modules must implement all logic related to processing a request. It is not recommended to have any of the Business Logic, or a part of it, in the GlueApplication or specific application Module. If you need to extend any of the built-in Glue functionality, extending the relevant `Resource` module is always safer than infrastructure.
+Glue Backend API resources can use direct facade access through the dependency provider and access the database directly. `Resource` modules must implement all logic related to processing a request. It is not recommended to have any of the Business Logic, or a part of it, in the GlueApplication or specific application Module. If you need to extend any of the built-in Glue functionality, extending the relevant `Resource` module is always safer than infrastructure.
 
 ### Module naming
 

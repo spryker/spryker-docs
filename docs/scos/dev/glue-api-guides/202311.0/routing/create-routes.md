@@ -1,6 +1,6 @@
 ---
-title: Create routes
-description: This document describes Create routes
+title: Create custom routes
+description: This document describes how to create a custom route for Glue API
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:

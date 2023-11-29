@@ -1,5 +1,5 @@
 ---
-title: Glue infrastructure
+title: Legacy Glue infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship modules.
 last_updated: Jul 16, 2023
 template: glue-api-storefront-guide-template
@@ -25,7 +25,7 @@ related:
 
 {% info_block warningBox %}
 
-This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+This is a document related to the Legacy Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
 
 {% endinfo_block %}
 

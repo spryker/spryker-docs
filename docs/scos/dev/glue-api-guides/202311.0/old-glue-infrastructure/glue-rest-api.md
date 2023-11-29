@@ -1,5 +1,5 @@
 ---
-title: Glue REST API
+title: Legacy Glue REST API
 last_updated: Jul 13, 2023
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-rest-api
@@ -20,11 +20,11 @@ related:
 
 {% info_block warningBox %}
 
-This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
+This document is related to the Legacy Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
 
 {% endinfo_block %}
 
-The *Spryker Glue REST API* is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+The *Spryker Glue REST API* (Legacy Glue REST API) is a JSON REST API that is an application of the Spryker Cloud Commerce OS (SCCOS). It is build to be used as a contract between the SCCOS backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ![Glue REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+REST+API/glue-rest-api.jpg)
 

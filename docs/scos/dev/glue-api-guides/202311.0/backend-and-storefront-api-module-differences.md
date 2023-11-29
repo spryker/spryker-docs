@@ -12,7 +12,7 @@ redirect_from:
 
 This document describes differences between the backend and storefront code in API modules.
 
-The Glue infrastructure can build not only the storefront but also backend APIs in the same project. *storefront APIs* inherit the possibilities of the old Spryker Glue implementation in terms of what they can do and what they have access to. For example, storefront APIs can access Storage and Elasticsearch and make RPC Zed calls using Clients. *backend APIs* have direct access to Facades, which lets you create performant backend APIs that you might often need for your projects.
+The Glue infrastructure can build not only the storefront but also backend APIs in the same project. *storefront APIs* inherit the possibilities of the Legacy Spryker Glue implementation in terms of what they can do and what they have access to. For example, storefront APIs can access Storage and Elasticsearch and make RPC Zed calls using Clients. *backend APIs* have direct access to Facades, which lets you create performant backend APIs that you might often need for your projects.
 
 The storefront API uses authentication based on the customer, while the backend API is based on the user.
 

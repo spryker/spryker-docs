@@ -1,7 +1,7 @@
 ---
-title: Use default Glue parameters
-description: This document explains how to pass the parameters and how to use them in code
-last_updated: September 30, 2022
+title: Pagination, Sorting & Filtering
+description: This document explains how to pass the parameters like pagination, sorting and filtering and how to use them in code
+last_updated: November 29, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/glue-parameters-usage.html

@@ -4,7 +4,7 @@ Descriptions: You can use the Sync API's OpenAPI schema to generate code with th
 template: howto-guide-template
 ---
 
-[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
+[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Legacy Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/). In addition to Legacy Glue API there is a [new approach](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-api.html) to sync API present that decouple API infrastructure from convention and allows to make direct calls to facades.
 Spryker uses schema files to generate code for your project, including predefined test cases. The purpose of doing so is to let you focus on building your business logic without caring about the boilerplate code.
 
 ## Code generation
@@ -50,7 +50,7 @@ The `x-spryker` extension gives you control over the generated code.
 
 ### Application type
 
-Spryker offers two types of API Applications: a frontend API and a backend API. The application type you build depends on your specific needs. The default one is backend. You can define the application type with the console command that builds the code from a given schema file.
+Spryker offers two types of API Applications: a Glue Storefront API and a Glue Backend API. The application type you build depends on your specific needs. The default one is backend. You can define the application type with the console command that builds the code from a given schema file. The main differences are mentioned [here](/docs/scos/dev/glue-api-guides/{{site.version}}/backend-and-storefront-api-module-differences.html)
 
 ### Components
 Within the *Components* section, you describe the data contract for your API endpoints. You always need to define three schemas for one endpoint. Here is an example of a response your API returns:

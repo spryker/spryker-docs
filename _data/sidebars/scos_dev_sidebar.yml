@@ -305,7 +305,7 @@ entries:
         include_versions:
           - "202311.0"
 
-    - title: Old Glue infrastructure
+    - title: Legacy Glue infrastructure
       include_versions:
       - "202212.0"
       - "202307.0"
@@ -321,7 +321,7 @@ entries:
         - "202212.0"
         - "202307.0"
         - "202311.0"
-      - title: Glue infrastructure
+      - title: Legacy Glue infrastructure
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-infrastructure.html
         include_versions:
         - "202212.0"
@@ -383,7 +383,7 @@ entries:
           url: /docs/scos/dev/glue-api-guides/routing/create-storefront-resources.html
         - title: Create backend resources
           url: /docs/scos/dev/glue-api-guides/routing/create-backend-resources.html
-        - title: Create routes
+        - title: Create custom routes
           url: /docs/scos/dev/glue-api-guides/routing/create-routes.html
     - title: Configure the included section
       url: /docs/scos/dev/glue-api-guides/configure-the-included-section.html
@@ -464,7 +464,7 @@ entries:
       - "202212.0"
       - "202307.0"
       - "202311.0"
-    - title: Use default Glue parameters
+    - title: Pagination, Sorting & Filters
       url: /docs/scos/dev/glue-api-guides/use-default-glue-parameters.html
       include_versions:
       - "202204.0"

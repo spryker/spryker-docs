@@ -31,32 +31,44 @@ This endpoint lets you add service point addresses.
 
 Request sample: `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses`
 
+```
+{
+    "data": {
+        "type": "service-point-address",
+        "attributes": {
+            "address1": "Caroline-Michaelis-Straße",
+            "address2": "8",
+            "address3": "null",
+            "city": "Berlin",
+            "zipCode": "10115",
+            "countryIso2Code": "DE",
+            "regionUuid": "02"
+        }
+    }
+}
+```
+
 ### Response
 
 Response sample:
 ```json
 {
-    "data": [
-        {
-            "type": "service-point-addresses",
-            "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
-            "attributes": {
-                "uuid": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
-                "regionUuid": null,
-                "countryIso2Code": "DE",
-                "address1": "Caroline-Michaelis-Straße",
-                "address2": "8",
-                "address3": null,
-                "city": "Berlin",
-                "zipCode": "10115"
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
-            }
+    "data": {
+        "type": "service-point-addresses",
+        "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
+        "attributes": {
+            "uuid": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
+            "regionUuid": 02,
+            "countryIso2Code": "DE",
+            "address1": "Caroline-Michaelis-Straße",
+            "address2": "8",
+            "address3": "null",
+            "city": "Berlin",
+            "zipCode": "10115"
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
         }
-    ],
-    "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses"
     }
 }
 ```

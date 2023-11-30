@@ -1,20 +1,20 @@
 ---
-title: "Glue API: Retrieve service points"
-description: Learn how to retrieve service points using Glue API
+title: "Glue API: Retrieve services"
+description: Learn how to retrieve services using Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint lets you retrieve service points.
+This endpoint lets you retrieve services.
 
 ## Installation
 
 [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
 
-## Retrieve service points
+## Retrieve services
 
 ---
-`GET` **/service-points**
+`GET` **/services**
 ---
 
 ### Request
@@ -290,15 +290,15 @@ This endpoint lets you retrieve service points.
 
 
 
-## Retrieve a service point
+## Retrieve a service
 
 ---
-`GET` {% raw %}**/service-points/*{{service_point_id}}***{% endraw %}
+`GET` {% raw %}**/services/*{{service_id}}***{% endraw %}
 ---
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_point_id}}***{% endraw %} | ID of a service point to retrieve. To get it, [add a service point] or [retrieve service points](#retrieve-service-points). |
+| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service] or [retrieve services](#retrieve-services). |
 
 
 ### Request

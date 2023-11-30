@@ -14,13 +14,14 @@ This endpoint lets you update service point addresses.
 ## Retrieve service points
 
 ---
-`PATCH` {% raw %}**/service-points/*{{service-point-uuid}}*/service-point-addresses/*{{service-point-address-uuid}}**{% endraw %}
+`PATCH` {% raw %}**/service-points/*{{service-point-uuid}}*/service-point-addresses/*{{service-point-address-uuid}}***{% endraw %}
 ---
 
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | {% raw %}***{{service-point-uuid}}***{% endraw %} | ID of a service point to update the addresses of. To get it, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/retrieve-service-points.html). |
+| {% raw %}***{{service-point-address-uuid}}***{% endraw %} | ID of a service point address to update. To get it, [retrieve service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/retrieve-service-point-addresses.md.html). |
 
 
 ### Request
@@ -29,7 +30,24 @@ This endpoint lets you update service point addresses.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses`
+Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54`
+```json
+{
+    "data": {
+        "type": "service-point-address",
+        "attributes": {
+            "address1": "Caroline-Michaelis-Straße",
+            "address2": "20",
+            "address3": "null",
+            "city": "Berlin",
+            "zip_code": "10115",
+            "countryIso2Code": "DE"
+        }
+    }
+}
+```
+
+
 
 ### Response
 
@@ -38,19 +56,19 @@ Response sample:
 {
     "data": {
         "type": "service-point-addresses",
-        "id": "c5da4439-ee5e-5f2a-ba1c-8a18c3dd9178",
+        "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
         "attributes": {
-            "uuid": "c5da4439-ee5e-5f2a-ba1c-8a18c3dd9178",
+            "uuid": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
             "regionUuid": null,
-            "countryIso2Code": "US",
-            "address1": "123",
-            "address2": "address3",
-            "address3": "address2",
-            "city": "123",
+            "countryIso2Code": "DE",
+            "address1": "Caroline-Michaelis-Straße",
+            "address2": "20",
+            "address3": "null",
+            "city": "Berlin",
             "zipCode": "10115"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/924ed48a-b4f0-516a-9921-5e9fd2149638/service-point-addresses/c5da4439-ee5e-5f2a-ba1c-8a18c3dd9178"
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
         }
     }
 }

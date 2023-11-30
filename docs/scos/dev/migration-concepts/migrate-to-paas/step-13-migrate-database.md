@@ -4,14 +4,14 @@ description: To migrate to PaaS, one of the steps, is migrating the database
 template: howto-guide-template
 ---
 
-After you have chosen a multi-store setup, your next step is migrating the database. As Spryker PaaS supports only MariaDB, if you have MySQL or PostgreSQL, you must migrate to MariaDB. 
+After you have [chosen a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-paas/step-12-choose-a-multi-store-setup.html), your next step is migrating the database. As Spryker PaaS supports only MariaDB, if you have MySQL or PostgreSQL, you must migrate to MariaDB. 
 
 ## Migrating MySQL or MariDB to MariaDB
 
-To migrate the MySQL or MariaDB database to MariaDB in Paas, follow these steps.
+To migrate the MySQL or MariaDB database to MariaDB in PaaS, follow these steps.
 
 1. Make sure the version of MySQL or MariaDB in the old system is compatible with the new Spryker Cloud system.
-2. Run the following queries against source DB and save this data. You'll need them later to validate that the restoration went successfully:
+2. Run the following queries against the source DB and save this data. You'll need them later to validate that the restoration went successfully:
 
 ```php
 <?php
@@ -41,12 +41,12 @@ For additional information about this step, see [Importing data from a MariaDB o
 4. Upload the database dump to an AWS S3 bucket of the production environment using the AWS Management Console.
 5. Connect to the EC2 instance. For details on how to do this, see [Create an Amazon EC2 instance and copy the compressed database](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.NonRDSRepl.html#MySQL.Procedural.Importing.Import.Database).
 
-Optional: for the Spryker Cloud environment, we recommend using a Scheduler instance for backup/restore purposes.
+Optional: For the Spryker Cloud environment, we recommend using a Scheduler instance for backup/restore purposes.
 * AWS → EC2 → Instances → <env_name>-<[/d/w]*> → Connect via Session Manager
-  ![Scheduler Container example](../images/scheduler-container-example.png "Scheduler Container example")
+  ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/scheduler-container-example.png)
 * Find AWS credentials here:
-  ![AWS S3 credentials](../images/aws-s3-credentials.png "AWS S3 credentials")
-* Execute the following to copy DB dump from S3 bucket to Scheduler container:
+  ![AWS S3 credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/aws-s3-credentials.png)
+* Run the following command to copy DB dump from S3 bucket to Scheduler container:
       
 ```bash
 sudo su
@@ -64,14 +64,15 @@ aws s3 cp s3://<bucket_name>/<dump_name> .
 ```bash
 mysql -u<SPRYKER_DB_USERNAME> -p<SPRYKER_DB_PASSWORD> -h <Endpoint> <DB name> < <dump_name>.sql
 ```
-9. Repeat step 2 against the restored database. To make sure the migration is successful, compare the outputs from the queries you've run for the original and restored DBs. They should be the same.
+9. Repeat step 2 against the restored database. To make sure the migration is successful, compare the outputs from the queries you've run for the original and for the restored DBs. They should be the same.
 
 ## PostgreSQL to MariaDB
-PostgreSQL DB must be converted to MariaDB compatible dump. More information can be found [here](https://mariadb.com/kb/en/migrating-to-mariadb-from-postgresql/).
+PostgreSQL DB must be converted to MariaDB-compatible dump. More information can be found [here](https://mariadb.com/kb/en/migrating-to-mariadb-from-postgresql/).
 
-There is approach to migrate PostgreSQL DB to MariaDB using [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html). This is not something Spryker offers outside of the box therefore configuration should be requested additionally via [Spryker Support portal](https://support.spryker.com/).
+There is an option to migrate PostgreSQL DB to MariaDB using [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html). However, since this isn't something Spryker offers by default, if you want to implement this approach, you need to request the configuration additionally via [Spryker Support portal](https://support.spryker.com/).
 
-The following queries can be used for verification purposes to ensure that the data has been migrated in a consistent way:
+After the migration, you can use the following queries to ensure that the data has been migrated consistently:
+
 ```sql
 -- count entire database rows;
 WITH tbl AS
@@ -98,3 +99,6 @@ SELECT table_schema,
 FROM tbl
 ORDER BY rows_n DESC;
 ```
+
+## Next step
+[Finalize the migration](/docs/scos/dev/migration-concepts/migrate-to-paas/step-14-finalize-the-migration.html)

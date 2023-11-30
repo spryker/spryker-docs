@@ -7,6 +7,10 @@ template: glue-api-storefront-guide-template
 
 This endpoint lets you retrieve service points.
 
+## Installation
+
+[Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
+
 ## Retrieve service points
 
 ---
@@ -19,9 +23,11 @@ This endpoint lets you retrieve service points.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|
 | include | Adds resource relationships to the request. | services service-point-addresses |
+|  page[offset] | Offsets the page at which to begin the response. | From `0` to any. |
+|  page[limit] | Defines the maximum number of pages to return. | From `1` to any. |
 
 | REQUEST | USAGE |
 |-|-|

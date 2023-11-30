@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202311.0/oryx/set-up-oryx.html
 ---
 
-This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/composable-frontend) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.
+This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/oryx-starter) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.
 
 ## Prerequisites
 
@@ -19,8 +19,8 @@ This document describes how to set up an environment for developing in the Oryx 
 1. Download the boilerplate project and install dependencies:
 
 ```shell
-git clone https://github.com/spryker/composable-frontend && \
-cd composable-frontend && \
+git clone https://github.com/spryker/oryx-starter && \
+cd oryx-starter && \
 npm i
 ```
 

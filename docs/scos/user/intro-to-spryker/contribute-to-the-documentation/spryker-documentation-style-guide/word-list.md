@@ -14,6 +14,12 @@ In general, use [Google's word list](https://developers.google.com/style/spellin
  <dt><b>Customer</b></dt>
  <dd>Don't use. Instead, use <i>you</i> to address the reader who is performing the tasks that you're documenting.</dd>
 
+  <dt><b>GLUE</b></dt>
+ <dd>Don't use. Instead, use <i>Glue API</i> to refer to Spryker's API solution.</dd>
+
+   <dt><b>Glue REST API</b></dt>
+ <dd>Only use when describing the RESTful nature of Spryker's API. In general, use <i>Glue API</i>.</dd>
+
  <dt><b>PaaS</b></dt>
  <dd>Don't use. Instead, use <i>Spryker Cloud Commerce OS (SCCOS)</i> to refer to Spryker's PaaS solution.</dd>
 

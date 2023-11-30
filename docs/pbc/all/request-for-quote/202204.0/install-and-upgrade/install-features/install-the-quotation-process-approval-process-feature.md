@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/quotation-process-approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-approval-process-feature-integration.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-quotation-process-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-approval-process-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-quotation-process-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-approval-process-feature.md -->

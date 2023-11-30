@@ -4,6 +4,7 @@ description: Integrate the Glue documentation generation into your project
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
 ---
 
 This document describes how to integrate the Glue documentation generation into a Spryker project.
@@ -16,7 +17,7 @@ Follow the steps below to install the Glue documentation generation.
 
 To start the integration of the feature, overview and install the necessary features:
 
-| NAME                                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                           |
+| NAME                                         | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                           |
 |----------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html)  |
 

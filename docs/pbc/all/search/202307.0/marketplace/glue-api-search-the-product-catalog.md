@@ -4,6 +4,7 @@ description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/searching-the-product-catalog.html
+  - /docs/scos/dev/glue-api-guides/202001.0/searching-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
     link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
@@ -17,7 +18,9 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api).
+For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
+- [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
+- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html)
 
 ## Search by products
 
@@ -7275,8 +7278,8 @@ To search by products, send the request:
 
 For details of the included resources, see:
 
-- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html)
-- [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
+- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
+- [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
 - [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
 
 ## Possible errors

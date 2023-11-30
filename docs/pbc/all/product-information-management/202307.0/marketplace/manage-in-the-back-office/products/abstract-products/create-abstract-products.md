@@ -11,6 +11,7 @@ related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 redirect_from:
+  - /docs/marketplace/user/back-office-user-guides/202108.0/catalog/products/abstract-product-reference-information.html
   - /docs/marketplace/user/back-office-user-guides/202307.0/catalog/products/abstract-products/creating-abstract-products.html
 ---
 
@@ -57,7 +58,7 @@ The following table describes the attributes you enter and select when defining 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Store relation  | Defines the [stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. |
+| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |

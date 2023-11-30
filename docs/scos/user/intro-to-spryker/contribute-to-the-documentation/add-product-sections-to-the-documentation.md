@@ -104,7 +104,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
 {% raw %}
 <div class="main-nav dropdown">
     <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="main-nav__opener-label">Select Product</span>
+        <span class="main-nav__opener-label">Select a guide</span>
         <span class="main-nav__opener-text">
             ...
             {% elsif page.product == 'acp' and page.role == 'dev' %}

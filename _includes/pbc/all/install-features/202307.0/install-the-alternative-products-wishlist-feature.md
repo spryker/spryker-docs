@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Alternative Products + Wishlist feature into a Spryker project.
+This document describes how to install the Alternative Products + Wishlist feature.
 
 ## Install feature frontend
 
@@ -12,9 +12,9 @@ Follow the steps below to install the Alternative Products + Wishlist feature fr
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-|Alternative Products| {{page.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
+|Alternative Products| {{page.version}} | [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
 |Wishlist|{{page.version}}| |
 
 ### 1) Add translations
@@ -80,7 +80,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

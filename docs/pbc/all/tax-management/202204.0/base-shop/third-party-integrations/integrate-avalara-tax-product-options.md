@@ -27,10 +27,10 @@ Follow the steps below to install the feature core.
 
 To start the feature integration, overview and install the necessary features:
 
-|NAME | VERSION | INTEGRATION GUIDE |
+|NAME | VERSION | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Product Options | master |  |
-| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/integrate-avalara.html)|
+| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -43,7 +43,7 @@ composer require spryker-eco/avalara-tax-product-option:"^0.1.0" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 |MODULE | EXPECTED DIRECTORY |
 | --- | --- |

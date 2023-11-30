@@ -20,4 +20,4 @@ related:
     link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchant-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchant-feature.md -->

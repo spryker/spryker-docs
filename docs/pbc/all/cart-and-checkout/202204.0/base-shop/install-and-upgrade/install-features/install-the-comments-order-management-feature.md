@@ -1,5 +1,5 @@
 ---
-title: Comments + Order Management feature integration
+title: Install the Comments + Order Management feature
 description: The guide walks you through the process of installing the Comments + Order Management feature into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/comments-order-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/comments-order-management-feature-integration.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-comments-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-comments-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-comments-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-comments-order-management-feature.md -->

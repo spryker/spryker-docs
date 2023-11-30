@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/tax-feature-walkthrough/reference-information-tax-module.html  
   - /docs/scos/dev/feature-walkthroughs/202212.0/tax-feature-walkthrough/reference-information-tax-module.html
   - /docs/pbc/all/tax-management/202212.0/extend-and-customize/tax-module-reference-information.html
+  - /docs/pbc/all/tax-management/202212.0/base-shop/extend-and-customize/tax-module-reference-information.html
 ---
 
 

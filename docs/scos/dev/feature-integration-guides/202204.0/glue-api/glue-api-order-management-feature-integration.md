@@ -1,5 +1,5 @@
 ---
-title: Glue API - Order Management feature integration
+title: Install the Order Management Glue API
 last_updated: Jul 27, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-order-management-feature-integration
@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-order-management-feature-integration.html
 related:
-  - title: Order Management feature integration
+  - title: Install the Order Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/order-management-feature-integration.html
   - title: Order Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html

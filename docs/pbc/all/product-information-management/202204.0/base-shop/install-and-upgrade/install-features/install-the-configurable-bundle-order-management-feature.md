@@ -1,5 +1,5 @@
 ---
-title: Configurable Bundle + Order Management feature integration
+title: Install the Configurable Bundle + Order Management feature
 description: This integration guide provides step-by-step instructions on installing Configurable Bundle + Order Management feature.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/configurable-bundle-order-management-feature-integration
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-configurable-bundle-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-configurable-bundle-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-configurable-bundle-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-configurable-bundle-order-management-feature.md -->

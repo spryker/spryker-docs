@@ -57,7 +57,7 @@ You don’t need to activate the email CMS block, as the deactivated status of t
 
 **Tips and tricks**
 
-* Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/add-translations.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/add-translations.html).
+* Add a [glossary key](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html).
 
 * Add variables to the email CMS block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it is replaced with the name of the customer the email is sent to. A developer can provide a full list of variables and create new ones.
 
@@ -67,7 +67,7 @@ You don’t need to activate the email CMS block, as the deactivated status of t
 | ATTRIBUTE  | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- |
 | STORE RELATION | Irrelevant. |
-| TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#cms-block-template). |
+| TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
 | NAME | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Irrelevant. |
 | PRODUCTS | Irrelevant. |

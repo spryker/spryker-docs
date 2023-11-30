@@ -12,9 +12,6 @@ redirect_from:
   - /docs/en/styla
   - /docs/scos/user/technology-partners/202307.0/content-management/styla.html
   - /docs/pbc/all/content-management-system/202307.0/third-party-integrations/styla.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

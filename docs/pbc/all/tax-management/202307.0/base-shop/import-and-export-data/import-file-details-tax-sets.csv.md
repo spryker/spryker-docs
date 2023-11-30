@@ -5,17 +5,14 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv
 originalArticleId: c9d15906-3b02-44fd-9bde-eb6883f5f320
 redirect_from:
-  - /2021080/docs/file-details-taxcsv
-  - /2021080/docs/en/file-details-taxcsv
-  - /docs/file-details-taxcsv
-  - /docs/en/file-details-taxcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-tax.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/pbc/all/tax-management/202307.0/import-and-export-data/import-file-details-tax-sets.csv.html
-  - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html#import-file-parameters
+  - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-tax-sets.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
+  - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/import-and-export-data/import-file-details-tax-sets.csv.html
+  - /docs/pbc/all/tax-management/202307.0/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
 ---
 
 This document describes the `tax.csv` file to configure the [tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/tax-feature-overview.html) information in your Spryker Demo Shop.

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Opening Hours feature into a Spryker project.
+This document describes how to install the Merchant Opening Hours feature.
 
 ## Install feature core
 
@@ -10,10 +10,10 @@ Follow the steps below to install the Merchant Opening Hours feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
+| Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
 
 ###  1) Install the required modules using Composer
 
@@ -545,7 +545,7 @@ Follow the steps below to install the Merchant Opening Hours feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}} | [Spryker Core](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
@@ -684,8 +684,8 @@ Make sure that the following widget was registered:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Merchant Opening Hours API |  | [Glue API: Merchant Opening Hours feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-category-glue-api.html) |
+| Merchant Opening Hours API |  | [Install the Merchant Opening Hours Glue API](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html) |

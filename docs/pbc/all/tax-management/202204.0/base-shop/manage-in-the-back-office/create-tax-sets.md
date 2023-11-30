@@ -20,7 +20,7 @@ This document describes how to create [tax sets](/docs/scos/user/features/{{site
 
 ## Prerequisites
 
-* [Create tax rates](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html).  
+* [Create tax rates](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html).  
 * Review the [reference information](#reference-information-create-tax-sets) before you start, or look up the necessary information as you go through the process.
 
 ## Create a tax set
@@ -54,4 +54,4 @@ This opens the **Edit Tax Set** page with a success message displayed.
 
 * Assign a tax set to a threshold's fee by [managing threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html).
 
-* Assign a tax set to a delivery method by [creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+* Assign a tax set to a delivery method by [adding delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) or [editing delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html).

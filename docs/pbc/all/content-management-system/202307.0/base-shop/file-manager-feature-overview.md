@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/media-management
 originalArticleId: 55cbe64d-f656-4d8d-a3d5-c32998acb947
 redirect_from:
-  - /2021080/docs/media-management
-  - /2021080/docs/en/media-management
-  - /docs/media-management
-  - /docs/en/media-management
+  - /docs/scos/user/features/202001.0/file-manager-feature-overview/file-uploader.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/file-manager-feature-walkthrough.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html  
@@ -124,6 +121,6 @@ See [Integrating custom location for static assets](/docs/scos/dev/technical-enh
 
 | UPGRADE GUIDES| DATA IMPORT	|
 | - | - |
-| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | [File details - mime_type.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-mime-type.csv.html) |
+| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | ["Import file details: mime_type.csv"](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-mime-type.csv.html) |
 | [Upgrade the FileManagerStorage module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html) | |
 | [Upgrade the FileManagerWidget module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html) | |

@@ -13,5 +13,5 @@ To import the assignments of services to product offers, see [Import file detail
 
 | INSTALLATION GUIDES| DATA IMPORT |
 | -------------- | - |
-| [Install the Product Offer + Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-feature.html) | [Import file details: product_offer_service.csv](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/import-file-details-product-offer-service.csv.html) |
-| [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-the-product-offer-shipment-feature.html) | |
+| [Install the Product Offer + Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-feature.html) | [Import file details: product_offer_service.csv](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/import-file-details-product-offer-service.csv.html) |
+| [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html) | |

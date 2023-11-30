@@ -10,8 +10,8 @@ The Akeneo PIM Integration App lets you import products from Akeneo PIM to your 
 You can import the following product data:
 
 - General product information: Name, description, SKU, locale, stores
-- Product hierarchy (Abstract product information with its variants)
-- Digital Assets (e.g. product images)
+- Product hierarchy (abstract product information with its variants)
+- Digital assets (for example, product images)
 - Product categories
 - Product attributes 
 - Product super attributes

@@ -28,7 +28,7 @@ We divided the preparation into approximate timeframes, and you can adjust them 
 Review this preparatory checklist before initiating your go-live plan.  
 You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you do the following:
 
-- Check your concepts for (D)DOS prevention or mitigation and check with relevant vendors for products that fit your needs and that are compatible with Spryker PaaS
+- Check your concepts for (D)DOS prevention or mitigation and check with relevant vendors for products that fit your needs and that are compatible with SCCOS
 - Upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Update spryker/twig to version 3.15.2 or higher because this version and higher have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB if you are not already using it.

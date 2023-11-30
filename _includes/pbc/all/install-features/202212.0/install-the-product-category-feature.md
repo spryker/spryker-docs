@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product + Category feature into a Spryker project.
+This document describes how to install the Product + Category feature.
 
 ## Install feature core
 

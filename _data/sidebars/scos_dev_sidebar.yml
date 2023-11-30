@@ -14,6 +14,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: SCOS supported browsers
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
       include_versions:
@@ -232,6 +233,7 @@ entries:
       include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
       include_versions:
@@ -268,29 +270,46 @@ entries:
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Create Glue API applications
       url: /docs/scos/dev/glue-api-guides/create-glue-api-applications.html
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Authentication and authorization
       url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Security and authentication
       url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Use API Key authorization
       url: /docs/scos/dev/glue-api-guides/use-api-key-authorization.html
       include_versions:
       - "202307.0"
+      - "202311.0"
+    - title: Backend Glue infrastructure
+      nested:
+      - title: Backend API Marketplace B2B Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
+        include_versions:
+          - "202311.0"
+      - title: Backend API Marketplace B2C Demo Shop reference
+        url: /docs/scos/dev/glue-api-guides/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
+        include_versions:
+          - "202311.0"
+
     - title: Old Glue infrastructure
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
       - title: Glue API authentication and authorization
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-api-authentication-and-authorization.html
@@ -301,11 +320,13 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Glue infrastructure
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/glue-infrastructure.html
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
         include_versions:
@@ -319,36 +340,44 @@ entries:
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Reference information - GlueApplication errors
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/reference-information-glueapplication-errors.html
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title:  REST API B2B Demo Shop reference
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: REST API B2C Demo Shop reference
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: REST API Marketplace B2B Demo Shop reference
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: REST API Marketplace B2C Demo Shop reference
         url: /docs/scos/dev/glue-api-guides/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html
         include_versions:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
+
     - title: Routing
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
         - title: Create storefront resources
           url: /docs/scos/dev/glue-api-guides/routing/create-storefront-resources.html
@@ -366,42 +395,49 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Create Glue API authorization strategies
       url: /docs/scos/dev/glue-api-guides/create-glue-api-authorization-strategies.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Create Glue API resources with parent-child relationships
       url: /docs/scos/dev/glue-api-guides/create-glue-api-resources-with-parent-child-relationships.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Create grant type parameters
       url: /docs/scos/dev/glue-api-guides/create-grant-type-parameters.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Create JSON:API relationships
       url: /docs/scos/dev/glue-api-guides/create-json-api-relationships.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Create protected Glue API endpoints
       url: /docs/scos/dev/glue-api-guides/create-protected-glue-api-endpoints.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Document Glue API endpoints
       url: /docs/scos/dev/glue-api-guides/document-glue-api-endpoints.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Handling concurrent REST requests and caching with entity tags
       url: /docs/scos/dev/glue-api-guides/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       include_versions:
@@ -427,24 +463,28 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Use default Glue parameters
       url: /docs/scos/dev/glue-api-guides/use-default-glue-parameters.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Use Glue API authorization scopes
       url: /docs/scos/dev/glue-api-guides/use-glue-api-authorization-scopes.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Glue API tutorials
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
         - title: B2C API React example
           url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
@@ -469,6 +509,7 @@ entries:
           - "202204.0"
           - "202212.0"
           - "202307.0"
+          - "202311.0"
     - title: Reference information - GlueApplication errors
       url: /docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html
       include_versions:
@@ -566,6 +607,7 @@ entries:
     - title: Data Exchange API
       include_versions:
       - "202307.0"
+      - "202311.0"
       nested:
       - title: How to send a request in Data Exchange API
         url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
@@ -691,10 +733,12 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/data-exchange-api/install-the-data-exchange-api.html
         include_versions:
         - "202307.0"
+        - "202311.0"
       - title: Data Exchange API + Inventory Management feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/install-the-data-exchange-api-inventory-management-feature.md
         include_versions:
         - "202307.0"
+        - "202311.0"
     - title: Company Account
       url: /docs/scos/dev/feature-integration-guides/company-account-feature-integration.html
       include_versions:
@@ -889,6 +933,7 @@ entries:
     - "202204.0"
     - "202212.0"
     - "202307.0"
+    - "202311.0"
     nested:
     - title: Importing data with a configuration file
       url: /docs/scos/dev/data-import/importing-data-with-a-configuration-file.html
@@ -899,6 +944,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Demo Shop data import
       url: /docs/scos/dev/data-import/demo-shop-data-import/importing-demo-shop-data.html
       include_versions:
@@ -908,6 +954,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
       - title: Execution order of data importers in Demo Shop
         url: /docs/scos/dev/data-import/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
@@ -918,6 +965,7 @@ entries:
         - "202204.0"
         - "202212.0"
         - "202307.0"
+        - "202311.0"
     - title: Data import categories
       url: /docs/scos/dev/data-import/data-import-categories/about-data-import-categories.html
       include_versions:
@@ -977,6 +1025,7 @@ entries:
           - "202204.0"
           - "202212.0"
           - "202307.0"
+          - "202311.0"
           nested:
           - title: "Import file details: product_price.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
@@ -1011,6 +1060,7 @@ entries:
           - "202204.0"
           - "202212.0"
           - "202307.0"
+          - "202311.0"
           nested:
           - title: File details - product_review.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
@@ -1028,6 +1078,7 @@ entries:
             - "202204.0"
             - "202212.0"
             - "202307.0"
+            - "202311.0"
           - title: "Import file details: product_group.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
             include_versions:
@@ -1131,6 +1182,7 @@ entries:
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Creating a data importer
       url: /docs/scos/dev/data-import/creating-a-data-importer.html
       include_versions:
@@ -1140,6 +1192,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Importing product data with a single file
       url: /docs/scos/dev/data-import/importing-product-data-with-a-single-file.html
       include_versions:
@@ -1148,6 +1201,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Data importers overview and implementation
       url: /docs/scos/dev/data-import/data-importers-overview-and-implementation.html
       include_versions:
@@ -1157,6 +1211,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Importing data with the queue data importer
       url: /docs/scos/dev/data-import/importing-data-with-the-queue-data-importer.html
       include_versions:
@@ -1166,11 +1221,13 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: "Tutorial: Replace a default data importer with the queue data importer"
       url: /docs/scos/dev/data-import/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Data importer speed optimization
       url: /docs/scos/dev/data-import/data-importer-speed-optimization.html
       include_versions:
@@ -1180,6 +1237,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
 
   - title: Back-end development
     url: /docs/scos/dev/back-end-development/back-end-development.html
@@ -1454,44 +1512,52 @@ entries:
     include version:
     - "202212.0"
     - "202307.0"
+    - "202311.0"
     nested:
     - title: Zed
       url: /docs/scos/dev/front-end-development/zed/zed.html
       include version:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
       - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
         include version:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Overriding Webpack, JS, SCSS for ZED on project level
         url: /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
         include version:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Oryx for Zed
         url: /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
         include version:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
     - title: Yves
       url: /docs/scos/dev/front-end-development/yves/yves.html
       include version:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
       - title: Yves multi-themes
         url: /docs/scos/dev/front-end-development/yves/yves-multi-themes.html
         include version:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Atomic Frontend
         url: /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
         include version:
         - "202212.0"
         - "202307.0"
+        - "202311.0"
         nested:
         - title: Integrating JQuery into Atomic Frontend
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
@@ -1534,6 +1600,7 @@ entries:
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
         - title: Getting started
           nested:
@@ -1571,6 +1638,7 @@ entries:
             include_versions:
             - "202212.0"
             - "202307.0"
+            - "202311.0"
             nested:
               - title: Color system
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-color-system.html
@@ -1584,6 +1652,7 @@ entries:
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-responsive-design.html
                 include_versions:
                 - "202307.0"
+                - "202311.0"
 
         - title: Building pages
           nested:
@@ -1598,6 +1667,7 @@ entries:
           url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-building-components.html
           include_versions:
           - "202307.0"
+          - "202311.0"
           nested:
             - title: Component types
               url: /docs/scos/dev/front-end-development/oryx/building-components/oryx-component-types.html
@@ -1645,6 +1715,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
         - title: Extend the Marketplace frontend
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
@@ -1655,6 +1726,7 @@ entries:
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
           include_versions:
           - "202307.0"
+          - "202311.0"
         - title: "Table design"
           url: /docs/scos/dev/front-end-development/marketplace/table-design/table-design.html
           nested:
@@ -1823,26 +1895,31 @@ entries:
       include version:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
       include version:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Migration guide - Upgrade to Webpack v5
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
       include version:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Migration guide - Switch from TSLint to ESLint
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
       include version:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Migration guide - Upgrade Node.js to v18 and npm to v9
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
       include_versions:
       - "202212.0"
       - "202307.0"
+      - "202311.0"
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
@@ -1936,6 +2013,7 @@ entries:
     - "202204.0"
     - "202212.0"
     - "202307.0"
+    - "202311.0"
     nested:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
@@ -1944,6 +2022,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
       nested:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
@@ -1952,6 +2031,7 @@ entries:
         - "202204.0"
         - "202212.0"
         - "202307.0"
+        - "202311.0"
       - title: Deploy file inheritance — common use cases
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
         include_versions:
@@ -1959,6 +2039,7 @@ entries:
         - "202204.0"
         - "202212.0"
         - "202307.0"
+        - "202311.0"
 
     - title: Choosing a Docker SDK version
       url: /docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html
@@ -1968,6 +2049,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Docker SDK quick start guide
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-quick-start-guide.html
       include_versions:
@@ -1976,6 +2058,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Choosing a mount mode
       url: /docs/scos/dev/the-docker-sdk/choosing-a-mount-mode.html
       include_versions:
@@ -1984,6 +2067,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Configuring a mount mode
       url: /docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html
       include_versions:
@@ -1992,6 +2076,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Configuring access to private repositories
       url: /docs/scos/dev/the-docker-sdk/configuring-access-to-private-repositories.html
       include_versions:
@@ -2000,12 +2085,14 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Configure services
       url: /docs/scos/dev/the-docker-sdk/configure-services.html
       include_versions:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Docker SDK configuration reference
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html
       include_versions:
@@ -2014,6 +2101,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Installation recipes of deployment pipelines
       url: /docs/scos/dev/the-docker-sdk/installation-recipes-of-deployment-pipelines.html
     - title: Docker environment infrastructure
@@ -2024,6 +2112,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Configuring debugging in Docker
       url: /docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html
       include_versions:
@@ -2035,6 +2124,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
@@ -2043,6 +2133,7 @@ entries:
       - "202204.0"
       - "202212.0"
       - "202307.0"
+      - "202311.0"
 
   - title: Technical enhancement integration guides
     url: /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html
@@ -2232,6 +2323,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
+      - title: "HowTo: Make a multi-language setup"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/how-to-make-a-multi-language-setup.html"
       - title: "HowTo: Split products by stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-split-products-by-stores.html
   - title: Technology partner guides
@@ -2251,6 +2344,7 @@ entries:
           - "202204.0"
           - "202212.0"
           - "202307.0"
+          - "202311.0"
       - title: Customer communication
         nested:
         - title: Episerver guides
@@ -2258,6 +2352,7 @@ entries:
           include_versions:
           - "202212.0"
           - "202307.0"
+          - "202311.0"
           nested:
           - title: Integrating Episerver
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
@@ -2291,6 +2386,7 @@ entries:
           include_versions:
           - "202212.0"
           - "202307.0"
+          - "202311.0"
           nested:
           - title: Installing Econda
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
@@ -2470,7 +2566,6 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-payment-methods-for-computop.html
             include_versions:
             - "202212.0"
-            - "202307.0"
             nested:
             - title: Integrating the Sofort payment method
               url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
@@ -2497,7 +2592,6 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
-            - "202307.0"
         - title: CrefoPay
           include_versions:
           - "201811.0"
@@ -2776,6 +2870,8 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
         - title: Container set function
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
+        - title: Discouraged packages checker
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html
         - title: Minimum allowed shop version
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
         - title: Multidimensional array

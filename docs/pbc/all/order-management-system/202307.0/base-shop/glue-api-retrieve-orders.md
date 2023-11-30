@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
-  - /2021080/docs/retrieving-orders
-  - /2021080/docs/en/retrieving-orders
-  - /docs/retrieving-orders
-  - /docs/en/retrieving-orders
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
@@ -60,10 +56,10 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/orders | Retrieve all orders. |
-| GET https://glue.mysprykershop.com/orders?page[limit]=10 | Retrieve 10 orders. |
-| GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10 | Retrieve 10 orders starting from the eleventh order. |
-| GET https://glue.mysprykershop.com/orders?page[offset]=20 | Retrieve all orders starting from the twenty first order. |
+| `GET https://glue.mysprykershop.com/orders` | Retrieve all orders. |
+| `GET https://glue.mysprykershop.com/orders?page[limit]=10` | Retrieve 10 orders. |
+| `GET https://glue.mysprykershop.com/orders?page[offset]=10&page[limit]=10` | Retrieve 10 orders starting from the eleventh order. |
+| `GET https://glue.mysprykershop.com/orders?page[offset]=20` | Retrieve all orders starting from the twenty first order. |
 
 ### Response
 
@@ -139,8 +135,8 @@ To retrieve detailed information on an order, send the request:
 
 | REQUEST  | USAGE  |
 | ------------------ | --------------------- |
-| GET https://glue.mysprykershop.com/orders/DE--1              | Retrieve information about the order with the id `DE--6`.      |
-| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
+| `GET https://glue.mysprykershop.com/orders/DE--1`              | Retrieve information about the order with the id `DE--6`.      |
+| `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
 
 ### Response
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Checkout feature into a Spryker project. 
+This document describes how to install the Checkout feature. 
 
 
 {% info_block warningBox %}

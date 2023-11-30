@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Configurable Bundle feature.
+This document describes how to install the Configurable Bundle feature.
 
 ## Prerequisites
 

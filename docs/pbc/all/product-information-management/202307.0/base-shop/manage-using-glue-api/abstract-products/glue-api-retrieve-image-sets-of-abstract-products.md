@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-abstract-products
 originalArticleId: 823ef04b-e614-4022-a30f-6e2130d280d8
 redirect_from:
-  - /2021080/docs/retrieving-image-sets-of-abstract-products
-  - /2021080/docs/en/retrieving-image-sets-of-abstract-products
-  - /docs/retrieving-image-sets-of-abstract-products
-  - /docs/en/retrieving-image-sets-of-abstract-products
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
 related:
@@ -18,7 +14,7 @@ related:
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---

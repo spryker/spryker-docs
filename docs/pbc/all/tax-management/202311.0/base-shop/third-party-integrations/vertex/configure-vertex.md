@@ -12,7 +12,7 @@ Once you have [integrated the Vertex app](/docs/pbc/all/tax-management/{{page.ve
 Before configuring Vertex, ensure the following prerequisites are met:
 
 - You have an account with [Vertex](https://www.vertexinc.com/). Contact the Spryker Support team or your Customer Success Manager if you need support getting a Vertex account.
-- Company Code is set up in Vertex and added to your project. See the Guidelines LINK for more details.
+- Company Code is set up in Vertex and added to your project. See the [information about Company code](#company-code) for more details.
 - You removed the default tax rate value from the Back Office. When you use Vertex to determine taxes, the tax rate received from Vertex does not overwrite the existing tax rate values in the Back Office. Therefore, before using Vertex, we recommend removing the default values from the Back Office. To remove the default tax rates, in your store's Back Office, go to **Administration -> Tax rates** and delete the tax rates.
 
 ## Configure Vertex
@@ -32,6 +32,8 @@ To configure Vertex, do the following:
 
 ![vertex-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-configuration.png)
 
+<a name="company-code"></a>
+
 {% info_block infoBox "Company code" %}
 
 Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
@@ -40,6 +42,12 @@ Vertex expects to receive the Company Code you have set in Vertex from Spryker a
 {% endinfo_block %}
 
 ## Configuration verification
+
+{% info_block warningBox "Test the configuration" %}
+
+To ensure accuracy and compiance with tax laws, We highly recommend to thoroughly test the Vertex integration.
+
+{% endinfo_block %}
 
 Once you have configured Vertex, the taxes are calculated in real time in the checkout. The respective note appears on the checkout page.
 

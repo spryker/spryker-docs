@@ -14,8 +14,8 @@ redirect_from:
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
-  - title: Manage gift cards of registered users
-    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/manage-gift-cards-of-registered-users.html
+  - title: "Glue API: Manage gift cards of registered users"
+    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
 ---
 
 This endpoint allows you to manage items in the carts of registered users by adding, changing, and deleting them.

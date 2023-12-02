@@ -25,73 +25,188 @@ This endpoint lets you retrieve services.
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|
-| include | Adds resource relationships to the request. | services service-point-addresses |
-|  page[offset] | Offsets the page at which to begin the response. | From `0` to any. |
-|  page[limit] | Defines the maximum number of pages to return. | From `1` to any. |
+| include | Adds resource relationships to the request. | service-points service-types |
 
 | REQUEST | USAGE |
 |-|-|
-| `GET https://glue-backend.mysprykershop.com/service-points` | Retrieve all service points. |
-| `GET https://glue-backend.mysprykershop.com/service-points?include=services` | Retrieve service points with services included. |
-| `GET https://glue-backend.mysprykershop.com/service-points?include=service-point-addresses` | Retrieve service points with addresses included. |
+| `GET https://glue-backend.mysprykershop.com/services` | Retrieve all services. |
+| `GET https://glue-backend.mysprykershop.com/services?include=service-types` | Retrieve services with service types included. |
+| `GET https://glue-backend.mysprykershop.com/services?include=service-points` | Retrieve services with service points included. |
 
 
 ### Response
 
-
 <details open>
-  <summary>Retrieve all service points</summary>
+  <summary>Retrieve services</summary>
 
 ```json
 {
     "data": [
         {
-            "type": "service-points",
-            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+            "type": "services",
+            "id": "37ef89d3-7792-533c-951c-981c6b56312c",
             "attributes": {
-                "name": "Spryker Main Store",
-                "key": "sp1",
+                "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
                 "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
+                "key": "s1"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c"
             }
         },
         {
-            "type": "service-points",
-            "id": "7e3b03e0-c53c-5298-9ece-968f4628b4f8",
+            "type": "services",
+            "id": "6358f60b-958b-53f9-9401-306c063b1282",
             "attributes": {
-                "name": "Spryker Berlin Store",
-                "key": "sp2",
+                "uuid": "6358f60b-958b-53f9-9401-306c063b1282",
                 "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
+                "key": "s2"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8"
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6358f60b-958b-53f9-9401-306c063b1282"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points"
+        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services"
     }
+}
+```
+
+
+
+<details open>
+  <summary>Retrieve services with service types included</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "services",
+            "id": "37ef89d3-7792-533c-951c-981c6b56312c",
+            "attributes": {
+                "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
+                "isActive": true,
+                "key": "s1"
+            },
+            "relationships": {
+                "service-types": {
+                    "data": [
+                        {
+                            "type": "service-types",
+                            "id": "2370ad95-4e9f-5ac3-913e-300c5805b181"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=service-types"
+            }
+        },
+        {
+            "type": "services",
+            "id": "6358f60b-958b-53f9-9401-306c063b1282",
+            "attributes": {
+                "uuid": "6358f60b-958b-53f9-9401-306c063b1282",
+                "isActive": true,
+                "key": "s2"
+            },
+            "relationships": {
+                "service-types": {
+                    "data": [
+                        {
+                            "type": "service-types",
+                            "id": "2370ad95-4e9f-5ac3-913e-300c5805b181"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6358f60b-958b-53f9-9401-306c063b1282?include=service-types"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services?include=service-types"
+    },
+    "included": [
+        {
+            "type": "service-types",
+            "id": "2370ad95-4e9f-5ac3-913e-300c5805b181",
+            "attributes": {
+                "name": "Pickup",
+                "key": "pickup"
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/2370ad95-4e9f-5ac3-913e-300c5805b181?include=service-types"
+            }
+        }
+    ]
 }
 ```
 
 </details>
 
+
+
+</details>
+
+
 <details open>
-  <summary>Retrieve service points with services included</summary>
+  <summary>Retrieve services with service points included</summary>
 
 ```json
 {
     "data": [
+        {
+            "type": "services",
+            "id": "37ef89d3-7792-533c-951c-981c6b56312c",
+            "attributes": {
+                "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
+                "isActive": true,
+                "key": "s1"
+            },
+            "relationships": {
+                "service-points": {
+                    "data": [
+                        {
+                            "type": "service-points",
+                            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=service-points"
+            }
+        },
+        {
+            "type": "services",
+            "id": "6358f60b-958b-53f9-9401-306c063b1282",
+            "attributes": {
+                "uuid": "6358f60b-958b-53f9-9401-306c063b1282",
+                "isActive": true,
+                "key": "s2"
+            },
+            "relationships": {
+                "service-points": {
+                    "data": [
+                        {
+                            "type": "service-points",
+                            "id": "7e3b03e0-c53c-5298-9ece-968f4628b4f8"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6358f60b-958b-53f9-9401-306c063b1282?include=service-points"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services?include=service-points"
+    },
+    "included": [
         {
             "type": "service-points",
             "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
@@ -115,7 +230,7 @@ This endpoint lets you retrieve services.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-points"
             }
         },
         {
@@ -141,36 +256,7 @@ This endpoint lets you retrieve services.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=services"
-            }
-        }
-    ],
-    "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points?include=services"
-    },
-    "included": [
-        {
-            "type": "services",
-            "id": "37ef89d3-7792-533c-951c-981c6b56312c",
-            "attributes": {
-                "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
-                "isActive": true,
-                "key": "s1"
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
-            }
-        },
-        {
-            "type": "services",
-            "id": "6358f60b-958b-53f9-9401-306c063b1282",
-            "attributes": {
-                "uuid": "6358f60b-958b-53f9-9401-306c063b1282",
-                "isActive": true,
-                "key": "s2"
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6358f60b-958b-53f9-9401-306c063b1282?include=services"
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=service-points"
             }
         }
     ]
@@ -180,113 +266,12 @@ This endpoint lets you retrieve services.
 </details>
 
 
-<details open>
-  <summary>Retrieve service points with services included</summary>
-
-```json
-{
-    "data": [
-        {
-            "type": "service-points",
-            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
-            "attributes": {
-                "name": "Spryker Main Store",
-                "key": "sp1",
-                "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
-            },
-            "relationships": {
-                "service-point-addresses": {
-                    "data": [
-                        {
-                            "type": "service-point-addresses",
-                            "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
-            }
-        },
-        {
-            "type": "service-points",
-            "id": "7e3b03e0-c53c-5298-9ece-968f4628b4f8",
-            "attributes": {
-                "name": "Spryker Berlin Store",
-                "key": "sp2",
-                "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
-            },
-            "relationships": {
-                "service-point-addresses": {
-                    "data": [
-                        {
-                            "type": "service-point-addresses",
-                            "id": "7a711afc-02ce-5f54-a08c-fadfaf5713c6"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=service-point-addresses"
-            }
-        }
-    ],
-    "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points?include=service-point-addresses"
-    },
-    "included": [
-        {
-            "type": "service-point-addresses",
-            "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
-            "attributes": {
-                "uuid": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
-                "regionUuid": null,
-                "countryIso2Code": "DE",
-                "address1": "Caroline-Michaelis-Straße",
-                "address2": "8",
-                "address3": null,
-                "city": "Berlin",
-                "zipCode": "10115"
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54?include=service-point-addresses"
-            }
-        },
-        {
-            "type": "service-point-addresses",
-            "id": "7a711afc-02ce-5f54-a08c-fadfaf5713c6",
-            "attributes": {
-                "uuid": "7a711afc-02ce-5f54-a08c-fadfaf5713c6",
-                "regionUuid": null,
-                "countryIso2Code": "DE",
-                "address1": "Julie-Wolfthorn-Straße",
-                "address2": "1",
-                "address3": null,
-                "city": "Berlin",
-                "zipCode": "10115"
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-point-addresses/7a711afc-02ce-5f54-a08c-fadfaf5713c6?include=service-point-addresses"
-            }
-        }
-    ]
-}
-```
-
-</details>
-
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-point-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-point-addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
+
 
 
 
@@ -309,7 +294,7 @@ This endpoint lets you retrieve services.
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |-|-|-|
-| include | Adds resource relationships to the request. | services service-point-addresses |
+| include | Adds resource relationships to the request. | service-types service-points |
 
 | REQUEST | USAGE |
 |-|-|
@@ -321,177 +306,38 @@ This endpoint lets you retrieve services.
 ### Response
 
 <details open>
-  <summary>Retrieve the service point with the specified ID</summary>
+  <summary>Retrieve a service with the specified ID</summary>
 
 ```json
-{
-    "data": {
-        "type": "service-points",
-        "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
-        "attributes": {
-            "name": "Spryker Main Store",
-            "key": "sp1",
-            "isActive": true,
-            "stores": [
-                "DE",
-                "AT"
-            ]
-        },
-        "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
-        }
-    }
-}
+
 ```
 
 </details>
 
 <details open>
-  <summary>Retrieve the service point with the specified ID. Include information about its services</summary>
+  <summary>Retrieve a service with the specified ID. Include information about its service type</summary>
 
 ```json
-{
-    "data": {
-        "type": "service-points",
-        "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
-        "attributes": {
-            "name": "Spryker Main Store",
-            "key": "sp1",
-            "isActive": true,
-            "stores": [
-                "DE",
-                "AT"
-            ]
-        },
-        "relationships": {
-            "services": {
-                "data": [
-                    {
-                        "type": "services",
-                        "id": "37ef89d3-7792-533c-951c-981c6b56312c"
-                    }
-                ]
-            }
-        },
-        "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
-        }
-    },
-    "included": [
-        {
-            "type": "services",
-            "id": "37ef89d3-7792-533c-951c-981c6b56312c",
-            "attributes": {
-                "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
-                "isActive": true,
-                "key": "s1"
-            },
-            "relationships": {
-                "service-points": {
-                    "data": [
-                        {
-                            "type": "service-points",
-                            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
-            }
-        },
-        {
-            "type": "service-points",
-            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
-            "attributes": {
-                "name": "Spryker Main Store",
-                "key": "sp1",
-                "isActive": true,
-                "stores": [
-                    "DE",
-                    "AT"
-                ]
-            },
-            "relationships": {
-                "services": {
-                    "data": [
-                        {
-                            "type": "services",
-                            "id": "37ef89d3-7792-533c-951c-981c6b56312c"
-                        }
-                    ]
-                }
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
-            }
-        }
-    ]
-}
+
 ```
 
 </details>
 
 
 <details open>
-  <summary>Retrieve the service point with the specified ID. Include information about its address</summary>
+  <summary>Retrieve a service point with the specified ID. Include information about its service point</summary>
 
 ```json
-{
-    "data": {
-        "type": "service-points",
-        "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
-        "attributes": {
-            "name": "Spryker Main Store",
-            "key": "sp1",
-            "isActive": true,
-            "stores": [
-                "DE",
-                "AT"
-            ]
-        },
-        "relationships": {
-            "service-point-addresses": {
-                "data": [
-                    {
-                        "type": "service-point-addresses",
-                        "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54"
-                    }
-                ]
-            }
-        },
-        "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
-        }
-    },
-    "included": [
-        {
-            "type": "service-point-addresses",
-            "id": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
-            "attributes": {
-                "uuid": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
-                "regionUuid": null,
-                "countryIso2Code": "DE",
-                "address1": "Caroline-Michaelis-Straße",
-                "address2": "8",
-                "address3": null,
-                "city": "Berlin",
-                "zipCode": "10115"
-            },
-            "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54?include=service-point-addresses"
-            }
-        }
-    ]
-}
 ```
 
 </details>
 
+
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-point-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-point-addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
 
 
 ## Possible errors

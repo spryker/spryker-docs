@@ -81,6 +81,7 @@ Response sample:
 | CODE  | REASON |
 | --- | --- |
 | 5403 | The service point with the specified ID doesn't exist. |
+| 5400 | The service point address with the specified ID doesn't exist. |
 | 5415 | Zip code value is length from 4 to 15 characters
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

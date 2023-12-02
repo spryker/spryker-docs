@@ -26,8 +26,6 @@ This endpoint lets you retrieve service points.
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|
 | include | Adds resource relationships to the request. | services service-point-addresses |
-|  page[offset] | Offsets the page at which to begin the response. | From `0` to any. |
-|  page[limit] | Defines the maximum number of pages to return. | From `1` to any. |
 
 | REQUEST | USAGE |
 |-|-|
@@ -181,7 +179,7 @@ This endpoint lets you retrieve service points.
 
 
 <details open>
-  <summary>Retrieve service points with services included</summary>
+  <summary>Retrieve service points with addresses included</summary>
 
 ```json
 {
@@ -283,8 +281,11 @@ This endpoint lets you retrieve service points.
 
 </details>
 
-
 {% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+
 
 {% include pbc/all/glue-api-guides/{{page.version}}/service-point-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-point-addresses-response-attributes.md -->
 
@@ -490,6 +491,9 @@ This endpoint lets you retrieve service points.
 
 
 {% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+
 
 {% include pbc/all/glue-api-guides/{{page.version}}/service-point-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-point-addresses-response-attributes.md -->
 

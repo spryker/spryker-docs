@@ -298,9 +298,9 @@ This endpoint lets you retrieve services.
 
 | REQUEST | USAGE |
 |-|-|
-| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Retrieve the service point with the specified ID. |
-| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services` | Retrieve the service point with the specified ID. Include the information about its services. |
-| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses` | Retrieve the service point with the specified ID. Include the information about its address. |
+| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c` | Retrieve a service with the specified ID. |
+| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=service-types` | Retrieve a service point with the specified ID. Include the information about its services. |
+| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=service-types` | Retrieve a service point with the specified ID. Include the information about its address. |
 
 
 ### Response
@@ -309,7 +309,20 @@ This endpoint lets you retrieve services.
   <summary>Retrieve a service with the specified ID</summary>
 
 ```json
-
+{
+    "data": {
+        "type": "services",
+        "id": "37ef89d3-7792-533c-951c-981c6b56312c",
+        "attributes": {
+            "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
+            "isActive": true,
+            "key": "s1"
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c"
+        }
+    }
+}
 ```
 
 </details>
@@ -318,7 +331,43 @@ This endpoint lets you retrieve services.
   <summary>Retrieve a service with the specified ID. Include information about its service type</summary>
 
 ```json
-
+{
+    "data": {
+        "type": "services",
+        "id": "37ef89d3-7792-533c-951c-981c6b56312c",
+        "attributes": {
+            "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
+            "isActive": true,
+            "key": "s1"
+        },
+        "relationships": {
+            "service-types": {
+                "data": [
+                    {
+                        "type": "service-types",
+                        "id": "2370ad95-4e9f-5ac3-913e-300c5805b181"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=service-types"
+        }
+    },
+    "included": [
+        {
+            "type": "service-types",
+            "id": "2370ad95-4e9f-5ac3-913e-300c5805b181",
+            "attributes": {
+                "name": "Pickup",
+                "key": "pickup"
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/2370ad95-4e9f-5ac3-913e-300c5805b181?include=service-types"
+            }
+        }
+    ]
+}
 ```
 
 </details>
@@ -328,6 +377,48 @@ This endpoint lets you retrieve services.
   <summary>Retrieve a service point with the specified ID. Include information about its service point</summary>
 
 ```json
+{
+    "data": {
+        "type": "services",
+        "id": "37ef89d3-7792-533c-951c-981c6b56312c",
+        "attributes": {
+            "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
+            "isActive": true,
+            "key": "s1"
+        },
+        "relationships": {
+            "service-points": {
+                "data": [
+                    {
+                        "type": "service-points",
+                        "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=service-points"
+        }
+    },
+    "included": [
+        {
+            "type": "service-points",
+            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+            "attributes": {
+                "name": "Spryker Main Store",
+                "key": "sp1",
+                "isActive": true,
+                "stores": [
+                    "DE",
+                    "AT"
+                ]
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-points"
+            }
+        }
+    ]
+}
 ```
 
 </details>

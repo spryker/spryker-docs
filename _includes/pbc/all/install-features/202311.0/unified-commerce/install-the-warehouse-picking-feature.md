@@ -12,7 +12,7 @@ Install the required features:
 | Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app/install-and-upgrade/install-features/install-the-warehouse-user-management-feature.html)                     |
 | Order Management + Inventory Management | {{page.version}} | [Install the Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-and-inventory-management-feature.html) |
 | Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)                                                       |
-| Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-push-notification-feature.html)                                     |
+| Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html)                                     |
 | Spryker Core Back Office                | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-spryker-core-back-office-feature.html)                        |
 
 ## 1) Install the required modules
@@ -60,7 +60,7 @@ Make sure the following module has been installed:
 {% endinfo_block %}
 
 
-3. Optional: To install early access [OAuth authorization](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/warehouse-picking-feature-overview.html#fulfillment-app-oauth-authorization), install the module:
+3. Optional: To install early access [OAuth authorization](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/warehouse-picking-feature-overview.html#fulfillment-app-oauth), install the module:
 
 ```bash
 composer require spryker-eco/authorization-picking-app-backend-api: "^0.2.0" --update-with-dependencies

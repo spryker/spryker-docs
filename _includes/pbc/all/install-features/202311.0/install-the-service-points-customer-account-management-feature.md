@@ -210,7 +210,7 @@ If the `cross` icon is already defined in the project, it's not necessary to add
 
 {% endinfo_block %}
 
-3. To the `tsconfig.yves.json` file of the `ShopUi` module, adjust the `paths` section:
+3. In `tsconfig.yves.json` of the `ShopUi` module, adjust the `paths` section:
 
 ```json
 {
@@ -233,11 +233,11 @@ If the `cross` icon is already defined in the project, it's not necessary to add
 
 {% info_block infoBox "Adding of ClickAndCollectServicePointAddressFormWidget is automated" %}
 
-If using the `ShipmentTypeAddressFormWidget` widget, the `ClickAndCollectServicePointAddressFormWidget` is added automatically. Therefore, you don't need to add it manually.
+If you are using `ShipmentTypeAddressFormWidget`, `ClickAndCollectServicePointAddressFormWidget` is added automatically.
 
 {% endinfo_block %}
 
-5. (Optional) For a multi-shipment, to the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
+5. Optional: For a multi-shipment, to the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
 
 ```twig
 {% raw %}{% widget 'ClickAndCollectServicePointAddressFormWidget' args [item] only %}{% endwidget %}{% endraw %}

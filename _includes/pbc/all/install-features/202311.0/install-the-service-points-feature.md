@@ -151,6 +151,7 @@ Make sure the following changes have been applied in transfer objects:
 | ServicePointCollectionResponse            | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponseTransfer            |
 | ServicePointCriteria                      | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                      |
 | ServicePointConditions                    | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                    |
+| ServicePointSearchConditions              | class | created | src/Generated/Shared/Transfer/ServicePointSearchConditions                      |
 | ServicePointsBackendApiAttributes         | class | created | src/Generated/Shared/Transfer/ServicePointsBackendApiAttributesTransfer         |
 | ServiceTypesBackendApiAttributes          | class | created | src/Generated/Shared/Transfer/ServiceTypesBackendApiAttributesTransfer          |
 | ServicesBackendApiAttributes              | class | created | src/Generated/Shared/Transfer/ServicesBackendApiAttributesTransfer              |
@@ -293,11 +294,11 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                 |
 |-------------------|-----------|-----------|---------------------------|----------------------------------|
 | service_point_key | ✓ | string    | sp1                       | Unique key of the service point. |
-| region_iso2_code  | optional  | string    | DE-BE                     | Region ISO2 code.               |
+| region_iso2_code  |   | string    | DE-BE                     | Region ISO2 code.               |
 | country_iso2_code | ✓ | string    | DE                        | Country ISO2 code.                |
 | address1          | ✓ | string    | Caroline-Michaelis-Straße | First line of address.            |
 | address2          | ✓ | string    | 8a                        | Second line of address.           |
-| address3          | optional  | string    | 12/1                      | Third line of address.            |
+| address3          |   | string    | 12/1                      | Third line of address.            |
 | city              | ✓ | string    | Berlin                    | City.                             |
 | zip_code          | ✓ | string    | 10115                     | Zip code.                         |
 

@@ -12,4 +12,4 @@ This feature lets customers select service points during checkout. Service point
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the Service Points + Customer Account Mangement feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-customer-account-management-feature.html) |
+| [Install the Service Points + Customer Account Mangement feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html) |

@@ -1,5 +1,5 @@
 ---
-title: Product Options + Order Management feature integration
+title: Install the Product Options + Order Management feature
 description: This guide provides step-by-step instructions on integrating Product Options + Order Management feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

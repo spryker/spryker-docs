@@ -1,16 +1,16 @@
 
 
-This document describes how to integrate the Product Offer + Service Points feature into a Spryker project.
+This document describes how to install the Product Offer + Service Points feature.
 
 ## Install feature core
 
-Follow the steps below to install the Service Points feature core.
+Follow the steps below to install the Product Offer + Service Points feature core.
 
 ### Prerequisites
 
 Install the required features:
 
-| NAME           | VERSION          | INTEGRATION GUIDE                                                                                                                                                                        |
+| NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer  | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 | Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/servcie-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                                 |
@@ -29,6 +29,7 @@ Make sure that the following modules have been installed:
 |------------------------------------|--------------------------------------------------------|
 | ProductOfferServicePoint           | vendor/spryker/product-offer-service-point             |
 | ProductOfferServicePointDataImport | vendor/spryker/product-offer-service-point-data-import |
+| ProductOfferServicePointGui        | vendor/spryker/product-offer-service-point-gui         |
 | ProductOfferServicePointStorage    | vendor/spryker/product-offer-service-point-storage     |
 
 {% endinfo_block %}
@@ -131,10 +132,10 @@ offer423,s1
 offer424,s1
 ```
 
-| COLUMN                  | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
+| COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
 |-------------------------|-----------|-----------|--------------|----------------------------------------|
-| product_offer_reference | mandatory | string    | offer419     | Unique reference of the product offer. |
-| service_key             | mandatory | string    | s1           | Unique key of the service.             |
+| product_offer_reference | ✓ | string    | offer419     | Unique reference of the product offer. |
+| service_key             | ✓ | string    | s1           | Unique key of the service.             |
 
 2. Enable data imports at your configuration file—for example:
 
@@ -398,7 +399,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductOfferServicePublisherTriggerPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -481,12 +482,13 @@ Make sure that, in Redis, data is displayed in the following format:
 
 To expand product offers with services, register the plugins:
 
-| PLUGIN                                   | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                                                 |
-|------------------------------------------|---------------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
-| ServiceProductOfferPostCreatePlugin      | Creates the product offer service entities.                         |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer    |
-| ServiceProductOfferPostUpdatePlugin      | Updates the product offer service entities.                         |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer    |
-| ServiceProductOfferExpanderPlugin        | Expands product offer with services.                                |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer    |
-| ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage |
+| PLUGIN                                   | SPECIFICATION                                                           | PREREQUISITES | NAMESPACE                                                                    |
+|------------------------------------------|-------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
+| ServiceProductOfferPostCreatePlugin      | Creates the product offer service entities.                             |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| ServiceProductOfferPostUpdatePlugin      | Updates the product offer service entities.                             |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| ServiceProductOfferExpanderPlugin        | Expands product offer transfers with services.                           |               | Spryker\Zed\ProductOfferServicePoint\Communication\Plugin\ProductOffer       |
+| ServiceProductOfferStorageExpanderPlugin | Expands product offer storage transfers with services from the storage. |               | Spryker\Client\ProductOfferServicePointStorage\Plugin\ProductOfferStorage    |
+| ServiceProductOfferViewSectionPlugin     | Expands the product offer view section with services.                   |               | Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui |
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -563,3 +565,34 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 }
 ```
 
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferGui;
+
+use Spryker\Zed\ProductOfferServicePointGui\Communication\Plugin\ProductOfferGui\ServiceProductOfferViewSectionPlugin;
+
+class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface>
+     */
+    public function getProductOfferViewSectionPlugins(): array
+    {
+        return [
+            new ServiceProductOfferViewSectionPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to the **Marketplace&nbsp;<span aria-label="and then">></span> Offers**.
+2. On the **Offers** page, next to a product offer, click **View**.
+    This opens the **View Offer: {offer ID}** page.
+3. Scroll down the page and make sure the **SERVICES** pane is displayed.
+
+{% endinfo_block %}

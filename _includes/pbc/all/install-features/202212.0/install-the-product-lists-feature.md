@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Lists feature into a Spryker project.
+This document describes how to install the Product Lists feature.
 
 ## Prerequisites
 
@@ -463,7 +463,7 @@ Import product lists:
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string (unique) | pl-001 | Unique identifier used to identify a product list. |
+| product_list_key | ✓ | string (unique) | pl-001 | Unique identifier used to identify a product list. |
 |name|mandatory|string|All computers|Custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
 |type|mandatory|string ("blacklist"/"whitelist")|whitelist|Defines whether the list is a blacklist or a whitelist.|
 
@@ -530,7 +530,7 @@ pl-008,smartwatches
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-001 | An existing product list identifier for the assignment. |
 |category_key|mandatory|string|computer|An existing category identifier to be assigned to the product list.|
 
 2. Register the following plugin to enable data import:
@@ -627,7 +627,7 @@ pl-007,177_25913296
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-002 | An existing product list identifier for the assignment. |
 |concrete_sku|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|
 
 2. Register the following plugin to enable data import:

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Follow the steps below to install the Shipment + Customer Account Management fea
 
 To start feature integration, integrate the required features:
 
-| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
+| NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Shipment                    | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                                                                      |
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
@@ -225,7 +225,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE                         | TEST                                                                            |
 |--------------------------------|---------------------------------------------------------------------------------|

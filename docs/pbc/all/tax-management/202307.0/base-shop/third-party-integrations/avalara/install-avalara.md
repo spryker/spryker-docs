@@ -21,11 +21,11 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 
 2. Overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | master | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 |Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html) |
-|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+|Product  | master | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 |Tax  | master | |
 | Inventory Management | master | [Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |
 |Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)|
@@ -40,7 +40,7 @@ composer require spryker-eco/avalara-tax:"^0.1.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 |MODULE | EXPECTED DIRECTORY |
 |--- | --- |
@@ -474,7 +474,7 @@ Make sure the data has been imported to `spy_product_abstract` and `spy_product`
 | INSTALLATION | REQUIRED FOR THE CURRENT INSTALLATION | INSTALLATION GUIDE |
 | ---  |---  |---  |
 |Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-product-options.html) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-shipment.html) |
+|Avalara Tax + Shipment |✓ |[Install Avalara Tax + the Shipment feature](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara-shipment.html) |
 
 ## Next steps
 

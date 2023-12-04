@@ -18,7 +18,7 @@ Follow the steps below to install the Authorization feature API.
 
 To start feature integration, overview and install the necessary feature:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
 

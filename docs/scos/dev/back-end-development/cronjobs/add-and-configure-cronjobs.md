@@ -67,7 +67,7 @@ After this, you can open Jenkins on port `10007` and watch your scripts running:
 
 For each job you can define several configurations:
 
-| KEY                   | TYPE   | PURPOSE                                                      | MANDATORY |
+| KEY                   | TYPE   | PURPOSE                                                      | ✓ |
 | --------------------- | ------ | ------------------------------------------------------------ | --------- |
 | name                  | string | Name of the job.                                              | yes       |
 | command               | string | The [console command](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html) that is executed. | yes       |

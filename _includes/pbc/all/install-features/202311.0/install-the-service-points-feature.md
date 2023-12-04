@@ -1478,11 +1478,11 @@ Make sure that you can include the `service-point-addresses` resource in the `se
 
 ### 8) Set up reorder related functionality
 
-1. To ensure that the reorder process works properly with service point-related orders, register the following plugins:
+1. To enable reorder to work with service points, register the following plugins:
 
 | PLUGIN                                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                              |
 |--------------------------------------------|---------------------------------------------------------|---------------|------------------------------------------------------------------------|
-| ServicePointReorderItemSanitizerPlugin         | Cleans up service point data during the reorder process |               | \SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget |
+| ServicePointReorderItemSanitizerPlugin         | Cleans up service point data during the reorder process.  |               | \SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget |
 
 **src/Pyz/Yves/CustomerReorderWidget/CustomerReorderWidgetDependencyProvider.php**
 

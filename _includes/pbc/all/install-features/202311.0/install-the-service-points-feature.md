@@ -1476,7 +1476,7 @@ Make sure that you can include the `service-point-addresses` resource in the `se
 
 {% endinfo_block %}
 
-### 8) Set up reorder related functionality
+### 8) Set up the reorder process
 
 1. To enable reorder to work with service points, register the following plugins:
 

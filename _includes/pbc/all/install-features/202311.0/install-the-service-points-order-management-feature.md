@@ -284,8 +284,8 @@ Register the following plugins to enable widgets:
 
 | PLUGIN                                      | SPECIFICATION                                               | PREREQUISITES | NAMESPACE                                       |
 |---------------------------------------------|-------------------------------------------------------------|---------------|-------------------------------------------------|
-| SalesServicePointNameForShipmentGroupWidget | Display order service point information on the Storefront. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
-| ServicePointNameForShipmentGroupWidget | Display service point names per shipment group information on the Storefront. |               | SprykerShop\Yves\ServicePointWidget\Widget |
+| SalesServicePointNameForShipmentGroupWidget | Displays service points in orders on the Storefront. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
+| ServicePointNameForShipmentGroupWidget | Displays service points per shipment group on the Storefront. |               | SprykerShop\Yves\ServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -321,7 +321,7 @@ Add the widget to a Twig template:
 {% raw %}{%{% endraw %} widget 'ServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-Ensure service point name is displayed in checkout summary and order details for service point-related orders.
+Make sure that, in orders with service points, service points are displayed during checkout and in the order details.
 
 
 {% endinfo_block %}

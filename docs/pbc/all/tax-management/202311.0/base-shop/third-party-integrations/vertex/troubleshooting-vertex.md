@@ -7,29 +7,14 @@ This document contains common issues related to the Vertex app.
 
 ## Your project is using the default Spryker Tax feature and not tax calculated by Vertex
 
-
-
-Check that you have added your configuration details. See more details about configuring Vertex in ACP Catalog here.
+Make sure that you have added your configuration details. See [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html) for more details about configuring Vertex in the ACP catalog.
  
-Check that Vertex App is activated in the ACP Catalog
+Also, make sure that the Vertex app is activated in the ACP catalog:
 
+![activate-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/troubleshoot-vertex/activate-vertex.png)
 
-## {Description}
+You can also use the Vertex log files on your Vertex platform to check the logs on the Vertex side. To access the logs, go to **System -> Administration -> Log Files**.
 
-<!-- Describe when the issue occurs, specify the environment and all the details that matter for the issue. Do not use probability conditions like “you might get the following issue”. -->
+## I don’t know if the right address is being sent to Vertex
 
-## Cause
-
-<!-- Specify the cause of the issue, for example:
-You have reached the maximum length of a line that you can have in your hosts file.
-
-If several causes are possible, list them all. For example:
-The following are a few reasons why this issue might occur:
-* …
-* …
-
-If the cause is not defined, do not add this section. -->
-
-## Solution
-
-<!-- Describe how the issue can be solved. Use numbered lists for multi-step procedures. -->
+Ensure that you have the needed fields for the address in your country. For example, if you are in the US, ensure that a state field is on your address form on the Storefront. Alternatively, Vertex offers an [address cleansing product](https://www.vertexinc.com/solutions/products/vertex-o-series-address-cleansing) for the US only. It can be integrated into your project for address cleansing and validation. 

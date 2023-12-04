@@ -10,18 +10,17 @@ The Akeneo PIM Integration App lets you import products from Akeneo PIM to your 
 You can import the following product data:
 
 - General product information: Name, description, SKU, locale, stores
-- Abstract product information with its variants
-- Assets (images)
+- Product hierarchy (abstract product information with its variants)
+- Digital assets (for example, product images)
 - Product categories
 - Product attributes 
 - Product super attributes
-- Product images 
 - Product relations
 - Product labels
 - Price types
 
 You can specify the product data you want to import from Akeneo when configuring the data mapping between Akeneo and SCCOS in the Spryker Middleware powered by Alumio.
-For more information, see [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html)
+For more information, see [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html).
 
 You can initiate the product import manually whenever you need, set up the scheduler to automatically import data on a regular basis, or use webhooks to enable the Akeneo PIM to send data to Alumio in real-time. For details on how to do that, see [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
 

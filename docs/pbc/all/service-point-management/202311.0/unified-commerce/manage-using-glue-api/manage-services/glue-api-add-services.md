@@ -32,7 +32,7 @@ Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/s
             "isActive": false,
             "key": 123,
             "servicePointUuid": 1234,
-            "serviceTypeUuid": "1234"
+            "serviceTypeUuid": "2370ad95-4e9f-5ac3-913e-300c5805b181"
         }
     }
 }
@@ -40,10 +40,10 @@ Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/s
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | This name is displayed on the Storefront. |
-| key | String | &check; | Unique identifier of the service point. |
-| isActive | Boolean | &check; | Defines if the service point is to be active. Inactive service points are not displayed on the Storefront. |
-| stores | Object | &check; | Defines which stores the service point is displayed in. |
+| isActive | Boolean | &check; | Defines if the service is to be active. Inactive services are not displayed on the Storefront. |
+| key | String | &check; | Unique identifier of the service. |
+| servicePointUuid | String | &check; | Unique identifier of the service point to assign this service to. To get it, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/retrieve-service-points.html). |
+| serviceTypeUuid | String | &check; | Unique identifier of the service type to add a service of. To get it, [retrieve service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html). |
 
 
 

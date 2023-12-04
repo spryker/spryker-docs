@@ -1,20 +1,20 @@
 ---
-title: "Glue API: Add service types"
-description: Learn how to add service types using Glue API
+title: "Glue API: Update service types"
+description: Learn how to update service types using Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint lets you add service types.
+This endpoint lets you update service types.
 
 ## Installation
 
 [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
 
-## Add a service point
+## Update a service type
 
 ---
-`POST` **/service-types**
+`PATCH` **/service-points**
 ---
 
 ### Request
@@ -23,14 +23,13 @@ This endpoint lets you add service types.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types`
+Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180`
 ```json
 {
     "data": {
         "type": "service-types",
         "attributes": {
-            "name": "Some Service Type",
-            "key": "sst"
+            "name": "Demos"
         }
     }
 }
@@ -38,10 +37,7 @@ Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/s
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | This name is displayed on the Storefront. |
-| key | String | &check; | Unique identifier of the service point. |
-| isActive | Boolean | &check; | Defines if the service point is to be active. Inactive service points are not displayed on the Storefront. |
-| stores | Object | &check; | Defines which stores the service point is displayed in. |
+| name | String |  | Name. |
 
 
 
@@ -51,19 +47,14 @@ Response sample:
 ```json
 {
     "data": {
-        "type": "service-points",
-        "id": "924ed48a-b4f0-516a-9921-5e9fd2149638",
+        "type": "service-types",
+        "id": "7a263a50-12a3-5ef4-86f4-366f20783180",
         "attributes": {
-            "name": "Central store",
-            "key": "cs",
-            "isActive": true,
-            "stores": [
-                "DE",
-                "AT"
-            ]
+            "name": "Demos",
+            "key": "demo"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/924ed48a-b4f0-516a-9921-5e9fd2149638"
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180"
         }
     }
 }
@@ -76,7 +67,7 @@ Response sample:
 
 | CODE  | REASON |
 | --- | --- |
-| 5404 | A service point with the same key already exists. |
+| 5403 | The service point with the specified ID doesn't exist. |
 
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

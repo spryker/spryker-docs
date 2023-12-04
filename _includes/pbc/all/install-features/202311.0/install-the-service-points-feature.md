@@ -1511,7 +1511,7 @@ class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidg
 
 {% info_block warningBox "Verification" %}
 
-Make sure sales service point is empty for each item during the reorder process.
+Make sure sales service points are empty for order items during the reorder process.
 
 {% endinfo_block %}
 

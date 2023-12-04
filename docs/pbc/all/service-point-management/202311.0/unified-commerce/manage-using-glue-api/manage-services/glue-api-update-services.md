@@ -14,7 +14,7 @@ This endpoint lets you update service points.
 ## Update a service point
 
 ---
-`PATCH` **/service-points**
+`PATCH` **/services**
 ---
 
 ### Request
@@ -23,16 +23,13 @@ This endpoint lets you update service points.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points`
+Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c`
 ```json
 {
     "data": {
-        "type": "service-points",
+        "type": "services",
         "attributes": {
-            "name": "Central store",
-            "key": "cs",
-            "isActive": "false",
-            "stores": ["DE", "AT"]
+            "isActive": false
         }
     }
 }
@@ -40,10 +37,7 @@ Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String |  | This name is displayed on the Storefront. |
-| key | String |  | Unique identifier of the service point. |
-| isActive | Boolean |  | Defines if the service point is to be active. Inactive service points are not displayed on the Storefront. |
-| stores | Object | | Defines which stores the service point is displayed in. |
+| isActive | Boolean |  | Defines if the service is to be active. Inactive services are not displayed on the Storefront. |
 
 
 
@@ -53,25 +47,21 @@ Response sample:
 ```json
 {
     "data": {
-        "type": "service-points",
-        "id": "924ed48a-b4f0-516a-9921-5e9fd2149638",
+        "type": "services",
+        "id": "37ef89d3-7792-533c-951c-981c6b56312c",
         "attributes": {
-            "name": "Central store",
-            "key": "cs",
+            "uuid": "37ef89d3-7792-533c-951c-981c6b56312c",
             "isActive": false,
-            "stores": [
-                "DE",
-                "AT"
-            ]
+            "key": "s1"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/924ed48a-b4f0-516a-9921-5e9fd2149638"
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c"
         }
     }
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
 
 
 ## Possible errors

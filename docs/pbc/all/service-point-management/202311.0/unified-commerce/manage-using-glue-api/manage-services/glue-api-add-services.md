@@ -23,16 +23,26 @@ This endpoint lets you add services.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/services`
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
+|-|-|-|
+| include | Adds resource relationships to the request. | service-types service-points |
+
+| REQUEST | USAGE |
+|-|-|
+| `POST https://glue-backend.mysprykershop.com/services` | Add a service. |
+| `POST https://glue-backend.mysprykershop.com/services?include=service-types` | Add a service. Include information about the specified service type in the response. |
+| `POST https://glue-backend.mysprykershop.com/services?include=service-points` | Add a service. Include information about the specified service type in the response. |
+
+
 ```json
 {
     "data": {
         "type": "services",
         "attributes": {
             "isActive": false,
-            "key": 123,
-            "servicePointUuid": 1234,
-            "serviceTypeUuid": "2370ad95-4e9f-5ac3-913e-300c5805b181"
+            "key": "Demo",
+            "servicePointUuid": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+            "serviceTypeUuid": "7a263a50-12a3-5ef4-86f4-366f20783180"
         }
     }
 }
@@ -49,36 +59,149 @@ Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/s
 
 ### Response
 
-Response sample:
+<details open>
+  <summary>Add a service</summary>
+
 ```json
 {
     "data": {
-        "type": "service-points",
-        "id": "924ed48a-b4f0-516a-9921-5e9fd2149638",
+        "type": "services",
+        "id": "6cec29eb-a835-561c-a821-f7a690538db7",
         "attributes": {
-            "name": "Central store",
-            "key": "cs",
-            "isActive": true,
-            "stores": [
-                "DE",
-                "AT"
-            ]
+            "uuid": "6cec29eb-a835-561c-a821-f7a690538db7",
+            "isActive": false,
+            "key": "Demo"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/924ed48a-b4f0-516a-9921-5e9fd2149638"
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6cec29eb-a835-561c-a821-f7a690538db7"
         }
     }
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+</details>
+
+<details open>
+  <summary>Add a service with service type information included</summary>
+
+```json
+{
+    "data": {
+        "type": "services",
+        "id": "5d1c9ed0-43b9-520b-931c-415557d9a633",
+        "attributes": {
+            "uuid": "5d1c9ed0-43b9-520b-931c-415557d9a633",
+            "isActive": false,
+            "key": "repair"
+        },
+        "relationships": {
+            "service-types": {
+                "data": [
+                    {
+                        "type": "service-types",
+                        "id": "30f29960-b357-53a7-8ad6-1ed93ffc4086"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/5d1c9ed0-43b9-520b-931c-415557d9a633?include=service-types"
+        }
+    },
+    "included": [
+        {
+            "type": "service-types",
+            "id": "30f29960-b357-53a7-8ad6-1ed93ffc4086",
+            "attributes": {
+                "name": "Repair",
+                "key": "rp"
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/30f29960-b357-53a7-8ad6-1ed93ffc4086?include=service-types"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details open>
+  <summary>Add a service with service point information included</summary>
+
+
+```json
+{
+    "data": {
+        "type": "services",
+        "id": "16007e04-72b4-5ac1-ad18-1ed75fef1639",
+        "attributes": {
+            "uuid": "16007e04-72b4-5ac1-ad18-1ed75fef1639",
+            "isActive": false,
+            "key": "installation"
+        },
+        "relationships": {
+            "service-points": {
+                "data": [
+                    {
+                        "type": "service-points",
+                        "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/16007e04-72b4-5ac1-ad18-1ed75fef1639?include=service-points"
+        }
+    },
+    "included": [
+        {
+            "type": "service-points",
+            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+            "attributes": {
+                "name": "Spryker Main Store",
+                "key": "sp1",
+                "isActive": true,
+                "stores": [
+                    "DE",
+                    "AT"
+                ]
+            },
+            "relationships": {
+                "services": {
+                    "data": [
+                        {
+                            "type": "services",
+                            "id": "16007e04-72b4-5ac1-ad18-1ed75fef1639"
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-points"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
 
 ## Possible errors
 
 | CODE  | REASON |
 | --- | --- |
-| 5404 | A service point with the same key already exists. |
+| 5403 | A service point with the specified id doesn't exist. |
+| 5418 | A service type with the specified id doesn't exist. |
+| 5426 | A service with the specified key exists. |
+| 5429 | A service with defined relation of service point and service type exists. |
 
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

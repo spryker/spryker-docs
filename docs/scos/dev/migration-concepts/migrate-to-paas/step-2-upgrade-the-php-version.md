@@ -4,7 +4,8 @@ description: To migrate to PaaS, you need to upgrade the PHP version.
 template: howto-guide-template
 ---
 
-After you have [integrated the Docker SDK](/docs/scos/dev/migration-concepts/migrate-to-paas/step-1-integrate-the-docker-sdk.html), you have to upgrade the PHP version. To upgrade, follow these steps.
+After you have [integrated the Docker SDK](/docs/scos/dev/migration-concepts/migrate-to-paas/step-1-integrate-the-docker-sdk.html), you have to upgrade the PHP version. 
+To upgrade, follow these steps.
 
 ## 1. Check project code for PHP 8.0 compatibility using PHPCompatibility
 

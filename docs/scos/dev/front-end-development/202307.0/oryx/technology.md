@@ -46,25 +46,32 @@ TypeScript (TS) is a superset of JS that adds optional static typing, classes, a
 In Oryx, Web Components are used to create reusable UI components that can be used across the application. It enables developers to create complex components with minimal code duplication and provides better code organization and maintainability. It also means that Oryx components are compatible with any other frontend framework and can be integrated into almost any web application.
 
 ## Lit
-Lit is a lightweight library for creating web components using TS and HTML templates. In Oryx, Lit is used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and allows developers to write less boilerplate code.
-You can use Lit to customise Oryx, but you can also use another framework to build web components. Using Lit will give you a few advantages:
-- Reuse Component Mixins and controllers.
-- Out of the box integration with optimised (reactivity)[https://docs.spryker.com/docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactivity.html] and partial hydration concepts.
-- Out of the box integration with SSR.
+
+Lit is a lightweight library for creating web components using TS and HTML templates. In Oryx, Lit is used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and lets developers write less boilerplate code.
+
+You can use Lit to customize Oryx, but you can also use another framework to build web components. Advantages of using Lit:
+- Reusable component mixins and controllers.
+- Out of the box integration with optimized [reactivity](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/reactivity/reactivity.html) and partial hydration concepts.
+- Out of the box integration with [SSR](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html).
 
 ## RxJS
+
 RxJS is a reactive programming library for JS. In Oryx, RxJS is used to handle asynchronous operations. It provides a declarative way to handle events and data streams, making it easier to manage complex data flows and state transitions.
-RxJS is predominantly used in the service layer to provide a reactive system that emit new values while you navigate through the (SPA) experience.
-RxJS is not a main citizen in the component logic, as we try to hide the reactivity altogether to avoid complexity
+
+RxJS is predominantly used in the service layer to provide a reactive system that emits new values as you navigate through the (SPA) experience.
+RxJS is not a main citizen in the component logic, as we try to hide the reactivity altogether to avoid complexity.
 
 ## Vite
-Vite is a build tool and development server for modern web projects. In Oryx, Vite is used to provide fast and efficient development and build times. It provides an optimized build process and a hot-reloading development server, making it easy to develop and test the application in real-time. Oryx is not tightly coupled to Vite, and you can use an alternative build tool and development server if you like.
+
+Vite is a build tool and development server for modern web projects. In Oryx, Vite is used for fast and efficient development and build times. It provides an optimized build process and a hot-reloading development server, making it easy to develop and test the application in real time. Oryx is not tightly coupled to Vite, and you can use an alternative build tool and development server if you like.
 
 ## Storybook
-Storybook is an open-source tool for developing UI components in isolation. In Oryx, Storybook is used to create a component library and showcase the different UI components in the application. It provides a simple and intuitive way to develop and test UI components in isolation, making it easier to iterate on them and ensure consistency across the application.
+
+Storybook is an open-source tool for developing UI components in isolation. In Oryx, Storybook is used as a component library to showcase the different UI components in the application. It provides a simple and intuitive way to develop and test UI components in isolation, making it easier to iterate on them and ensure consistency across the application.
 
 ## Web hosting
-Oryx applications are decoupled applications and can be hosted separately. It is recommended to host Oryx applications at a frontend hosting providing, to benefit from standard features, like:
+
+Oryx applications are decoupled applications and can be hosted separately. We recommend hosting Oryx applications at a frontend hosting provider, to benefit from standard features like the following:
 
 - Build process integration: Choose hosting providers with seamless build process integration to streamline updates and deployments.
 - HTTP header configuration: Opt for hosting providers that allow flexible configuration of HTTP headers for improved security, caching, and optimizations.

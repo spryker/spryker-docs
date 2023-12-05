@@ -15,6 +15,7 @@ The App Composition Platform (ACP) lets Spryker Cloud Commerce Operating System 
 
 The following apps are supported:
 
+- [Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html), a Tax Compliance Platform
 - [Algolia](/docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia/integrate-algolia.html), a Search Engine
 - [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html), a Consent Management Platform (CMP)

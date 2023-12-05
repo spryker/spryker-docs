@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Comments + Persistent Cart feature into a Spryker project.
+This document describes how to install the Comments + Persistent Cart feature.
 
 ## Install feature core
 

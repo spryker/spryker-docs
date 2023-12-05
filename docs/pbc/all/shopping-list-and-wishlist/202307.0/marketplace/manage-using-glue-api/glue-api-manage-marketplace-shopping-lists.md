@@ -3,9 +3,9 @@ title: "Glue API: Manage marketplace shopping lists"
 last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
-  - title: Marketplace Shopping Lists feature integration
+  - title: Install the Marketplace Shopping Lists feature
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html
-  - title: Glue API - Marketplace Shopping Lists feature integration
+  - title: Install the Marketplace Shopping Lists Glue API
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
   - title: Managing shopping list items
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
@@ -20,7 +20,7 @@ In your development, the resources can help you to enable the shopping list func
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)
+* [Install the Marketplace Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)
 
 
 ## Create a shopping list

@@ -8,7 +8,7 @@ After you have [migrated non-standard services](/docs/scos/dev/migration-concept
 
 Review the existing Spryker PaaS environments at [Environments overview](/docs/ca/dev/environments-overview.html) and determine which environments you need for your project.
 
-Following the assessment, initiate the process of requesting the environments themselves. For details on the process of requesting the environments, see [Environment provisioning](docs/ca/dev/environment-provisioning.html).
+Following the assessment, initiate the process of requesting the environments themselves. For details on the process of requesting the environments, see [Environment provisioning](/docs/ca/dev/environment-provisioning.html).
 
 ## Next step
 

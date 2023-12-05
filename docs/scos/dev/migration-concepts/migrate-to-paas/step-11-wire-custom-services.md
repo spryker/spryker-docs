@@ -10,4 +10,4 @@ If you need such connections, request them via the [Spryker Support Portal](http
 
 ## Next step
 
-[Choose a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-paas/step-12-choose-a-multi-store-setup..html)
+[Choose a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-paas/step-12-choose-a-multi-store-setup.html)

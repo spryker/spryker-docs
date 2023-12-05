@@ -57,3 +57,10 @@ evaluator:
 ## Resolve the error
 
 To resolve the issue, update the npm dependencies with vulnerabilities to the versions with the vulnerability issues fixed.
+
+
+## Run only this checker
+To run only this checker, include `NPM_CHECKER` into the checkers list. Example:
+```bash
+vendor/bin/evaluator evaluate --checkers=NPM_CHECKER
+```

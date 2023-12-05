@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Marketplace Merchant feature into a Spryker project.
+This document describes how to install the Marketplace Merchant feature.
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Install the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Merchant | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |
 
 ### 1) Install the required modules using Composer
@@ -1342,9 +1342,9 @@ Follow the steps below to install the Marketplace Merchant feature front end.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -1440,7 +1440,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | ----------------- | ----------------- |
@@ -1525,10 +1525,10 @@ Make sure that you can view merchant profile data at `http://yves.de.demo-spryke
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | -|
-| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |
+| Marketplace Merchant API | &check;  |  [Install the Marketplace Merchant feature ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |

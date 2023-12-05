@@ -11,9 +11,9 @@ This document describes how to integrate profiler module into a Spryker project.
 
 To start the integration, install the necessary features:
 
-| NAME                  | VERSION          | INTEGRATION GUIDE                                                                                                                                               |
+| NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                               |
 |-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core          | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
+| Spryker Core          | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
 | Web Profiler for Zed  | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html) |
 | Web Profiler for Yves | {{page.version}} | [Web Profiler feature integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html) |
 

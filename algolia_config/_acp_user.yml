@@ -9,6 +9,6 @@ algolia:
     - docs/scos/dev/**/*.md
     - docs/scu/dev/**/*.md
     - docs/fes/dev/**/*.md
-    - docs/cloud/dev/**/*.md
+    - docs/ca/dev/**/*.md
     - docs/pbc/all/**/*.md
     - docs/sdk/dev/**/*.md

@@ -58,7 +58,7 @@ Efficiency and accuracy are essential when working in the Back Office. Increasin
 
 ##### Documentation
 
-[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
+[HowTo: Add support of number formatting in the Back Office](/docs/pbc/all/back-office/{{site.version}}/install-and-upgrade/install-the-back-office-number-formatting.html)
 
 
 ## Spryker Glue API
@@ -73,7 +73,7 @@ It lets your customers always see the accurate price they must pay for the entir
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html)
 
 * Technical prerequisites:
   * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)

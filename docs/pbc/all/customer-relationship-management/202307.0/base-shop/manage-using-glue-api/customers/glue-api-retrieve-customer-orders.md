@@ -6,10 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-orders
 originalArticleId: 4390b08b-349a-406e-8e41-983014e30ab5
 redirect_from:
-  - /2021080/docs/retrieving-customer-orders
-  - /2021080/docs/en/retrieving-customer-orders
-  - /docs/retrieving-customer-orders
-  - /docs/en/retrieving-customer-orders
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-orders.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-orders.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/retrieving-customer-orders.html
 related:
@@ -34,14 +31,14 @@ related:
   - title: Managing customer addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
 ---
 
 This endpoint allows retrieving a customer’s orders.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
 
 ## Retrieve customer’s orders
 

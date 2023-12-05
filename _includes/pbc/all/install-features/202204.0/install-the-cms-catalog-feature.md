@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the CMS + Catalog feature into a Spryker project.
+This document describes how to install the CMS + Catalog feature.
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Follow the steps below to install the CMS + Catalog feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Catalog | {{page.version}} |  |
 | Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
@@ -198,7 +198,7 @@ Follow the steps below to install the CMS + Catalog feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Catalog | {{page.version}} |  |
 | Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
@@ -368,7 +368,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

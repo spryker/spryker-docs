@@ -1,6 +1,6 @@
 ---
 title: Security guidelines
-last_updated: Nov 16, 2022
+last_updated: Sep 15, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
 originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
@@ -25,7 +25,7 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) and PaaS environments.
+This document describes the data security guidelines you need to implement on the  application level. Infrastructure security measures are not described, because they are implemented by default cloud environments.
 
 ## Passwords
 
@@ -33,7 +33,7 @@ The most important about password security is to not save it in plain text. Ther
 
 ## Secrets
 
-Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. 
+Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html) for more information about secrets and parameters.
 
 ## Encrypted communication
 
@@ -61,7 +61,7 @@ The sections below detail configure places for various security headers. You can
 ### X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Content-Security-Policy
 
 #### Yves
-For Yves set of default security headers in: `\Spryker\Yves\Application\ApplicationConfig::getSecurityHeaders()`. 
+For Yves set of default security headers in: `\Spryker\Yves\Application\ApplicationConfig::getSecurityHeaders()`.
 
 Default values:
 
@@ -126,9 +126,9 @@ Content-Security-Policy: frame-ancestors 'self'
 
 ####  Cache-Control header
 
-You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using plugins: 
-* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher::getEventDispatcherPlugins()` 
-and configure using: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`. 
+You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using plugins:
+* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher::getEventDispatcherPlugins()`
+and configure using: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`.
 * `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcher::getEventDispatcherPlugins()`
   and configure using: `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`.
 * `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcher::getEventDispatcherPlugins()`
@@ -196,6 +196,14 @@ Clickjacking is when UI tweaked to force users to click on specific buttons or l
 
 To make sure that all the security updates are installed, keep Spryker and third-party modules up to date. For upgradability guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
 
+## Packages security vulnerabilities
+
+To be up-to-speed with the security vulnerabilities, we recommend doing the following:
+
+- Check if Spryker packages have known vulnerabilities. We recommend checking [security release notes](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) under every release.
+- Verify whether `composer` packages have known vulnerabilities. You can use the `./vendor/bin/console security:check` command to inspect third-party vulnerabilities.
+- Verify whether `npm` packages have known vulnerabilities. You can use `npm audit` command to inspect third-party vulnerabilities.
+
 ## Exceptions and debug mode
 
 Make sure that, in your production environment, the debugging mode is disabled, and exceptions are not shown.
@@ -219,6 +227,6 @@ To sum up, the main points to keep the data secure are the following:
 * Check cookie settings.
 * Configure TLS.
 * Secure the Back Office.
-* Check Spryker configuration and change default authentication parameters like users and passwords.
+* Check the Spryker configuration and change default authentication parameters like users and passwords.
 * Keep systems and applications up to date.
 * Make sure that exceptions are not shown and debug mode is disabled on production.

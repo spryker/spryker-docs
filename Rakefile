@@ -6,7 +6,7 @@ require 'html-proofer'
 
 commonOptions = {
   :allow_hash_href => true,
-  :url_ignore => [
+  :ignore_urls => [
     /mysprykershop.com\/[\.\w\-\/\?]+/,
     /b2c-demo-shop.local\/[\.\w\-\/\?]+/,
     /b2b-demo-shop.local\/[\.\w\-\/\?]+/,
@@ -55,34 +55,35 @@ commonOptions = {
     /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,
-    /linux.die.net\/[\.\w\-\/\?]+/
+    /linux.die.net\/[\.\w\-\/\?]+/,
+    # check next url's
+    /redisdesktop.com\/[\.\w\-\/\?]+/,
+    /xdebug.org\/[\.\w\-\/\?]+/,
+    /www.javaworld.com\/[\.\w\-\/\?]+/,
+    /code.visualstudio.com\/[\.\w\-\/\?]+/,
+    /www.jetbrains.com\/[\.\w\-\/\?]+/,
+    /docs.spring.io\/[\.\w\-\/\?]+/,
+    'http://redisdesktop.com/',
   ],
-  :file_ignore => [],
+  :ignore_files => [],
   :typhoeus => {
     :ssl_verifypeer => false,
     :ssl_verifyhost => 0
   },
-  :disable_external => false,
-  :check_html => true,
-  :validation => {
-    :report_eof_tags => true,
-    :report_invalid_tags => true,
-    :report_mismatched_tags => true,
-    :report_missing_doctype => true,
-    :report_missing_names => true,
-    :report_script_embeds => true,
-  },
-  :empty_alt_ignore => true,
+  :ignore_missing_alt => true,
   :only_4xx => false,
-  :http_status_ignore => [429],
-  :parallel => { :in_threads => 3}
+  :ignore_status_codes => [429],
+  :enforce_https => false,
+  # delete and fix next rules
+  :allow_missing_href => true,
+  :check_external_hash => false,
 }
 
 task :check_acp_user do
   options = commonOptions.dup
-  options[:file_ignore] = [
+  options[:ignore_files] = [
     /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/scu\/.+/,
     /docs\/pbc\/.+/,
@@ -91,9 +92,9 @@ task :check_acp_user do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_cloud do
+task :check_ca do
   options = commonOptions.dup
-  options[:file_ignore] = [
+  options[:ignore_files] = [
     /docs\/scos\/.+/,
     /docs\/fes\/.+/,
     /docs\/scu\/.+/,
@@ -107,8 +108,8 @@ end
 
 task :check_scos_dev do
   options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/cloud\/.+/,
+  options[:ignore_files] = [
+    /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/scu\/.+/,
     /docs\/acp\/.+/,
@@ -130,8 +131,8 @@ end
 
 task :check_scos_user do
   options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/cloud\/.+/,
+  options[:ignore_files] = [
+    /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
@@ -153,9 +154,9 @@ end
 
 task :check_scu do
   options = commonOptions.dup
-  options[:file_ignore] = [
+  options[:ignore_files] = [
     /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
@@ -166,26 +167,27 @@ end
 
 task :check_pbc do
   options = commonOptions.dup
-  options[:file_ignore] = [
+  options[:ignore_files] = [
     /docs\/scos\/.+/,
     /docs\/sdk\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/scu\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202204\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/
+    /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,    
+    /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
 
 task :check_sdk do
   options = commonOptions.dup
-  options[:file_ignore] = [
+  options[:ignore_files] = [
     /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
+    /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,

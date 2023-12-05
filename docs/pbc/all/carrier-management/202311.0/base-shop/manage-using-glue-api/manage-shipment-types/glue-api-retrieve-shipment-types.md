@@ -9,8 +9,7 @@ This endpoint lets you retrieve shipment types.
 
 ## Installation
 
-* [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
-* To include `service-points` as a relationship: [Install the Shipment + Service Points feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
 
 ## Retrieve shipment types
 
@@ -24,14 +23,7 @@ This endpoint lets you retrieve shipment types.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
-|-|-|-|
-| include | Adds resource relationships to the request. | service-types |
-
-| REQUEST | USAGE |
-|-|-|
-| `GET https://glue-backend.mysprykershop.com/shipment-types` | Retrieve all shipment types. |
-| `GET https://glue-backend.mysprykershop.com/shipment-types?include=service-types` | Retrieve shipment types with service types included. |
+Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
 
 
 

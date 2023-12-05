@@ -1,7 +1,7 @@
 ---
 title: How to send a request in Data Exchange API
 description: This guide shows how to send a request in Data Exchange API.
-last_updated: June 23, 2023
+last_updated: Dec 5, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html
 ---
 
-This document describes how to send interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we are using the `/dynamic-data/countries` to interact with the `spy_country` table as an example.
+This document describes how to send interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we are using the `/dynamic-data/countries` to interact with the `spy_country` and `spy_tax_rate` tables as an example.
 
 
 ## Prerequisites
@@ -100,6 +100,57 @@ Response sample:
   ]
 }
 ```
+To retrieve a collection of countries with relations, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/countries?include=countryTaxRates` request.
+
+```bash
+GET /dynamic-entity/countries?include=countryTaxRates HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+```
+
+Response sample:
+
+```json
+{
+  "data": [
+    "...",
+    {
+      "id_country": 14,
+      "iso2_code": "AT",
+      "iso3_code": "AUT",
+      "name": "Austria",
+      "postal_code_mandatory": true,
+      "postal_code_regex": "\\d{4}",
+      "countryTaxRates": [
+        {
+          "id_tax_rate": 1,
+          "fk_country": 14,
+          "name": "Austria Standard",
+          "rate": "20.00"
+        },
+        {
+          "id_tax_rate": 21,
+          "fk_country": 14,
+          "name": "Austria Reduced1",
+          "rate": "13.00"
+        },
+        {
+          "id_tax_rate": 22,
+          "fk_country": 14,
+          "name": "Austria Reduced2",
+          "rate": "10.00"
+        }
+      ]
+    },
+    "..."
+  ]
+}
+```
+
+The response contains all the columns from the `spy_country` table and included `spy_tax_rate` table that are configured in `spy_dynamic_entity_definition.definition`. Each column is represented using the `fieldVisibleName` as the key, providing a comprehensive view of the table's data in the API response.
+
 {% info_block infoBox %}
 
 When you combine multiple filters in a single request, the system applies an `AND` condition to the retrieved results.

@@ -216,7 +216,22 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
             "validation": { "isRequired": false }
           }
         ]
-      }
+      },
+      "child_relations": [
+        {
+          "name": "countryTaxRates",
+          "is_editable": true,
+          "child_dynamic_entity_configuration": {
+            "table_name": "spy_tax_rate"
+          },
+          "relation_field_mapping": [
+            {
+              "child_field_name": "fk_country",
+              "parent_field_name": "id_country"
+            }
+           ]
+        }
+     ]
     }
 ]
 ```
@@ -292,12 +307,15 @@ Make sure the following transfers have been created:
 | DynamicEntityConfigurationCollectionResponse | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCollectionResponseTransfer.php |
 | DynamicEntityConfigurationConditions | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationConditionsTransfer.php |
 | DynamicEntityConfigurationCriteria | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCriteriaTransfer.php |
+| DynamicEntityConfigurationRelation | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationRelationTransfer.php |
 | DynamicEntityConditions | class | created | src/Generated/Shared/Transfer/DynamicEntityConditionsTransfer.php |
 | DynamicEntityCriteria | class | created | src/Generated/Shared/Transfer/DynamicEntityCriteriaTransfer.php |
 | DynamicEntityDefinition | class | created | src/Generated/Shared/Transfer/DynamicEntityDefinitionTransfer.php |
 | DynamicEntityFieldCondition | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldConditionTransfer.php |
 | DynamicEntityFieldDefinition | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldDefinitionTransfer.php |
 | DynamicEntityFieldValidation | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldValidationTransfer.php |
+| DynamicEntityRelation | class | created | src/Generated/Shared/Transfer/DynamicEntityRelationTransfer.php |
+| DynamicEntityRelationFieldMapping | class | created | src/Generated/Shared/Transfer/DynamicEntityRelationFieldMappingTransfer.php |
 | Error | class | created | src/Generated/Shared/Transfer/ErrorTransfer.php |
 | ErrorCollection | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer.php |
 | GlueError | class | created | src/Generated/Shared/Transfer/GlueErrorTransfer.php |
@@ -349,6 +367,12 @@ dynamic_entity.validation.modification_of_immutable_field_prohibited,"Modificati
 dynamic_entity.validation.modification_of_immutable_field_prohibited,"Änderung des unveränderlichen Feldes %fieldName% ist nicht zulässig.",de_DE
 dynamic_entity.validation.missing_identifier,"Incomplete Request - missing identifier",en_US
 dynamic_entity.validation.missing_identifier,"Unvollständige Anforderung - fehlende ID",de_DE
+dynamic_entity.validation.provided_field_is_invalid,"The provided `%fieldName%` is incorrect or invalid.",en_US
+dynamic_entity.validation.provided_field_is_invalid,"Der angegebene `%fieldName%` ist falsch oder ungültig.",de_DE
+dynamic_entity.validation.relation_not_found,"Relation %relationName% not found. Please check the requested relation name and try again.",en_US
+dynamic_entity.validation.relation_not_found,"Beziehung %relationName% nicht gefunden. Bitte überprüfen Sie den angeforderten Beziehungsnamen und versuchen Sie es erneut.",de_DE
+dynamic_entity.validation.configuration_not_found,"Dynamic entity configuration for table alias `%aliasName%` not found.",en_US
+dynamic_entity.validation.configuration_not_found,"Dynamische Entitätskonfiguration für Tabellenalias `%aliasName%` nicht gefunden.",de_DE
 ```
 
 2. Import data:

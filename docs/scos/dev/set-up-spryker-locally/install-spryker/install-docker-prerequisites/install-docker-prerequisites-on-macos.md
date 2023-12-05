@@ -33,9 +33,10 @@ Review the system and software requirements in the table and configure them usin
 | Swap  | 2GB or more |
 
 
-## Install and configure the required software
+## Install and configure a Docker manager
 
-Install and configure the following required software.
+You can run Spryker in Docker using Docker Desktop or OrbStack. Docker Desktop is a free default tool, but OrbStack works faster with intel-based Macs. 
+
 
 ### Install Docker Desktop
 
@@ -65,13 +66,16 @@ Signup for Docker Hub is not required.
 
 ### Install OrbStack
 
-1. Download and install [OrbStack](https://orbstack.dev/).
-2. If you need to migrate from Docker to OrbStack, see [Migrate from Docker to OrbStack](https://docs.orbstack.dev/install#docker-migration).
-3. If you need switch to OrbsStack from Docker, see [Switch from Docker to OrbStack](https://docs.orbstack.dev/install#docker-context).
+Download and install [OrbStack](https://orbstack.dev/download).
 
-### Install Mutagen for development mode
 
-[Development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
+To migrate from Docker Desktop to OrbStack, see [Migrate from Docker to OrbStack](https://docs.orbstack.dev/install#docker-migration).
+To run Docker Desktop and OrbStack side-by-side and switch between them, see [Side-by-side
+](https://docs.orbstack.dev/install#docker-context).
+
+## Install Mutagen for development mode
+
+If you are going to run Spryker in [development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode), install or update Mutagen and Mutagen Compose to the latest version:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start

@@ -226,6 +226,7 @@ composer show spryker-shop/company-page # Verify the version
 Add these properties to the data config of the `permission-table` molecule: 
 
 ```bash
+{% raw %}
 {% include molecule('permission-table', 'CompanyPage') with {
     data: {
         ...
@@ -234,6 +235,7 @@ Add these properties to the data config of the `permission-table` molecule:
         ...
     }
 } only %}
+{% endraw %}
 ```
 
 3. Define new data properties in `CompanyPage/Theme/default/components/molecules/permission-table/permission-table.twig`:
@@ -252,6 +254,7 @@ Add these properties to the data config of the `permission-table` molecule:
 Replace static `unassign / assign` links with Symfony forms: 
 
 ```bash
+{% raw %}
 // unassing 
 
 {% set companyRolePermissionUnassignForm = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
@@ -264,9 +267,11 @@ Replace static `unassign / assign` links with Symfony forms:
 {{ form_start(companyRolePermissionUnassignForm, { action: formAction }) }}
     <button class="link" data-init-single-click>{{ linkText }}</button>
 {{ form_end(companyRolePermissionUnassignForm) }}
+{% endraw %}
 ```
 
 ```bash
+{% raw %}
 // assing
 
 {% set companyRolePermissionAssignForm = data.companyRolePermissionAssignFormCloner.getForm.createView ?? null %}
@@ -279,11 +284,13 @@ Replace static `unassign / assign` links with Symfony forms:
 {{ form_start(companyRolePermissionAssignForm, { action: formAction }) }}
     <button class="link" data-init-single-click>{{ linkText }}</button>
 {{ form_end(companyRolePermissionAssignForm) }}
+{% endraw %}
 ```
 
 If you are using a standard `b2b/b2b-mp` demo-shop design, apply the following approach: 
 
 ```bash
+{% raw %}
 {% set formAssign = data.companyRolePermissionAssignFormCloner.getForm.createView ?? null %}
 {% set formUnassign = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
 {% set actionAssign = path('company/company-role-permission/assign', {
@@ -310,4 +317,5 @@ If you are using a standard `b2b/b2b-mp` demo-shop design, apply the following a
          },
     } only %}
 {{ form_end(form) }}
+{% endraw %}
 ```

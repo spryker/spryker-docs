@@ -3763,6 +3763,8 @@ entries:
                         - "202311.0"
                       - title: Disconnect Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+                      - title: Troubleshooting Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
                       - title: Vertex FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
                         include_versions:

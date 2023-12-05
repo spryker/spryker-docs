@@ -188,7 +188,11 @@ Adjust TWIG templates to display the service point selector:
 ```twig
 {% raw %}{% block globalComponents %}
     ....
-    {% include molecule('main-overlay') only %}
+    {% include molecule('main-overlay') with {
+        attributes: {
+            'is-open': data.isOverlayOpen,
+        },
+    } only %}
 {% endblock %}{% endraw %}
 ```
 
@@ -206,38 +210,37 @@ If the `cross` icon is already defined in the project, it's not necessary to add
 
 {% endinfo_block %}
 
-3. For `/resources/form/form.twig` of `ShopUi` module, adjust `choice_widget_expanded` and `checkbox_widget` blocks:
+3. In `tsconfig.yves.json` of the `ShopUi` module, adjust the `paths` section:
 
-```twig
-{% raw %}{% block choice_widget_expanded -%}
-    ...
-    {{- form_widget(child, {
-        parent_label_class: label_attr.class|default(''),
-        choices_attr: choices_attr | default({}),
-    }) -}}
-    ...
-{%- endblock choice_widget_expanded %}
-
-{%- block checkbox_widget -%}
-    ...
-    {%- set inputClass = attr.class | default ~ ' ' ~ choices_attr.class | default -%}
-
-    {% define attributes = {
-        id: id,
-        name: full_name,
-        checked: checked | default(false),
-        required: required | default(false),
-        disabled: disabled ?: attr.disabled | default(false),
-        value: value | default(),
-    } %}
-    ...
-{%- endblock -%}{% endraw %}
+```json
+{
+    "compilerOptions": {
+        "paths": {
+          ...
+          "ServicePointWidget/*": [
+            "./vendor/spryker-shop/service-point-widget/src/SprykerShop/Yves/ServicePointWidget/Theme/default/*"
+          ]
+        }
+    }
+}
 ```
 
-4. To the `addres` view of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
+4. To the `address` view of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
 
 ```twig
-{% raw %}{% widget 'ClickAndCollectServicePointAddressFormWidget' args [data.checkoutAddressForm] only %}{% endwidget %}{% endraw %}
+{% raw %}{% widget 'ClickAndCollectServicePointAddressFormWidget' args [data.form] only %}{% endwidget %}{% endraw %}
+```
+
+{% info_block infoBox "Adding of ClickAndCollectServicePointAddressFormWidget is automated" %}
+
+If you are using `ShipmentTypeAddressFormWidget`, `ClickAndCollectServicePointAddressFormWidget` is added automatically.
+
+{% endinfo_block %}
+
+5. Optional: For a multi-shipment, to the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ClickAndCollectServicePointAddressFormWidget`:
+
+```twig
+{% raw %}{% widget 'ClickAndCollectServicePointAddressFormWidget' args [item] only %}{% endwidget %}{% endraw %}
 ```
 
 {% info_block infoBox "Adding of ClickAndCollectServicePointAddressFormWidget is automated" %}
@@ -246,7 +249,7 @@ If using the `ShipmentTypeAddressFormWidget` widget, the `ClickAndCollectService
 
 {% endinfo_block %}
 
-5. Build assets:
+6. Build assets:
 
 ```bash
 console frontend:yves:build

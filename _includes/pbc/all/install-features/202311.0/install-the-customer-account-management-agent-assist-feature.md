@@ -106,6 +106,7 @@ Activate the following plugins:
 | AgentCredentialsOauthGrantTypeConfigurationProviderPlugin  | Provides configuration of the`agent_credentials` grant type.                                                        | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
 | UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin | Updates agent's session data in storage if access is granted and an agent is logged in.                             | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage      |
 | CustomerUpdateSessionPostImpersonationPlugin               | Updates customer's session data in storage if a given customer is valid after the session impersonation is started. | None          | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage  |
+| UpdateAgentTokenAfterCustomerAuthenticationSuccessPlugin   | Updates agent token after customer authentication success.                                                          | None          | SprykerShop\Yves\AgentPage\Plugin\Security                       |
 
 <details><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
@@ -204,6 +205,7 @@ Ensure that the agent can get the access token with valid credentials by sending
 
 namespace Pyz\Yves\CustomerPage;
 
+use SprykerShop\Yves\AgentPage\Plugin\Security\UpdateAgentTokenAfterCustomerAuthenticationSuccessPlugin;
 use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
 use SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage\UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin;
 
@@ -215,6 +217,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     protected function getAfterCustomerAuthenticationSuccessPlugins(): array
     {
         return [
+            new UpdateAgentTokenAfterCustomerAuthenticationSuccessPlugin(),
             new UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin(),
         ];
     }

@@ -312,7 +312,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | DESCRIPTION                                                                                               | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| AgentPageSecurityPlugin                                 | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
+| YvesAgentPageSecurityPlugin                             | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
 | AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      | None          | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
 
 **src/Pyz/Yves/Security/SecurityDependencyProvider.php**
@@ -323,7 +323,7 @@ Enable the following behaviors by registering the plugins:
 namespace Pyz\Yves\Security;
 
 use Spryker\Yves\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use SprykerShop\Yves\AgentPage\Plugin\Security\AgentPageSecurityPlugin;
+use SprykerShop\Yves\AgentPage\Plugin\Security\YvesAgentPageSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
@@ -333,7 +333,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            new AgentPageSecurityPlugin(),
+            new YvesAgentPageSecurityPlugin(),
         ];
     }
 }

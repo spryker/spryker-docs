@@ -13,7 +13,7 @@ The Marketplace Merchant Portal Core enables server configuration and basic func
 To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
 
 
-Login and logout in the Merchant Portal are provided by the `SecurityMerchantPortalGui` module, which also provides the `MerchantUserSecurityPlugin` for extending the Merchant Portal firewall.
+Login and logout in the Merchant Portal are provided by the `SecurityMerchantPortalGui` module, which also provides the `ZedMerchantUserSecurityPlugin` for extending the Merchant Portal firewall.
 
 ## Module dependency graph
 

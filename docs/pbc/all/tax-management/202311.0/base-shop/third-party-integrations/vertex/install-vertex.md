@@ -138,7 +138,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 {% info_block infoBox "Performance improvement" %}
 
-Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.md.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
+Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
 
 in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
 

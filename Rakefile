@@ -60,6 +60,7 @@ commonOptions = {
     /redisdesktop.com\/[\.\w\-\/\?]+/,
     /xdebug.org\/[\.\w\-\/\?]+/,
     /www.javaworld.com\/[\.\w\-\/\?]+/,
+    /www.billpay.de\/[\.\w\-\/\?]+/,
     /code.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,

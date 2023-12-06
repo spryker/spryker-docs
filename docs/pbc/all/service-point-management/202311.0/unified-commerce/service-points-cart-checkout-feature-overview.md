@@ -12,6 +12,17 @@ How does it work?
 * If a match is found, the product offer with the lower price is selected and replaces the current product offer in the cart.
 Additionally, the strategy checks the availability of the offer. This means it should be Active and have enough stock to fulfill the order.
 
+Example of Strategy Execution:
+
+A product sold by a merchant has the following product offers created:
+
+|*Product Offer Reference*|*Service*|*Shipment Type*|
+|Offer1|Pickup at Munich Main Store|Pickup|
+|Offer2|Pickup at Berlin Main Store|Pickup|
+|Offer3|-|Delivery|
+
+If a customer has a product in the cart with *Offer3*, and then they select *Pickup* during checkout, and proceed to select *Berlin Main Store* as a service point location, the system will replace the cart line item with another product offer, *Offer2*.
+
 
 On the project level, you can extend this feature to support more complex scenarios, like the following:
 * Getting information from external systems about the offer you want to replace the current offer with.

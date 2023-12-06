@@ -7,19 +7,19 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202307.0/oryx/oryx-packages.html
 ---
 
-The Oryx code base is publicly [available on Github](https://github.com/spryker/oryx/) and the code is published on [npmjs.com](https://www.npmjs.com/). Npm is a widely used registry for npm packages, that is used by package managers, like npm, yarn, deno, or bun, to install dependencies in an application.
+The Oryx code base is publicly [available on Github](https://github.com/spryker/oryx/) and the code is published on [npmjs.com](https://www.npmjs.com/). Npm is a widely used registry for npm packages, which is used by package managers, like npm, yarn, deno, or bun, to install dependencies in an application.
 
 The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
 Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see [Versioning](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-versioning.html).
 
-It is highly recommended to [install](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html) the packages rather than cloning the source code from the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
+We recommend [installing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html) the packages rather than cloning the source code from the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
 
-The Oryx framework utilizes both its own packages and third party dependencies to provide a robust development experience. In this document, we will explore how Oryx manages these packages to ensure stability, security, and flexibility.
+The Oryx framework relies on its own packages and third-party dependencies to provide a robust development experience. This document describes how Oryx manages these packages to ensure stability, security, and flexibility.
 
 ## Oryx Packages
 
-While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
+While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages never depend on a layer above.
 
 While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html), which is set up using a [preset](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html).
 
@@ -85,19 +85,19 @@ The base layer contains packages that serve as utilities to all layers above. An
 | [Utilities](https://www.npmjs.com/package/@spryker-oryx/utilities) | `@spryker-oryx/utilities` |
 | [DI](https://www.npmjs.com/package/@spryker-oryx/di)               | `@spryker-oryx/di`        |
 
-## Managing Third Party Dependencies
+## Managing third-party dependencies
 
-Oryx follows a careful approach when incorporating third-party components. Third-party components are included only when they bring significant value to projects. This approach involves minimizing unnecessary dependencies and thoroughly assessing their worth to prevent issues like outdated packages, vulnerabilities, and compatibility problems that could disrupt code stability.
+Oryx follows a careful approach when incorporating third-party components. Third-party components are included only when they bring significant value to projects. This approach involves minimizing unnecessary dependencies and thoroughly assessing their worth to prevent issues like outdated packages, vulnerabilities, and compatibility problems that may disrupt code stability.
 
-To demonstrate commitment to code quality and security, regular inspections of third-party components are conducted to identify and fix vulnerabilities. Attention is also given to optimizing bundle size and performance to maintain fast and responsive applications. Prioritizing the well-being of dependencies includes regular checks for updates and compatibility to maintain a strong and well-maintained ecosystem.
+We conduct regular inspections of third-party components to identify and fix vulnerabilities. Attention is also given to optimizing bundle size and performance to maintain fast and responsive applications. Prioritizing the well-being of dependencies includes regular checks for updates and compatibility to maintain a strong and well-maintained ecosystem.
 
-The following guidelines are used to ensure Oryx can continue to innovate and maintained:
+To continue innovating and keeping a well-maintained ecosystem, we follow the guidelines:
 
-- **Avoid unnecessary third party dependencies**: We strive to minimize the use of third party dependencies whenever possible to mitigate risks and maintain control over the ecosystem.
+- Avoid unnecessary third party dependencies: minimize the use of third-party dependencies to mitigate risks and maintain control over the ecosystem.
 
-- **Evaluate dependencies carefully**: Before adding a new third party dependency, we carefully evaluate its risks and benefits, considering factors such as maintenance, community support, security track record, and adherence to semantic versioning.
+- Evaluate dependencies carefully: before adding a new third-party dependency, we carefully evaluate its risks and benefits, considering factors such as maintenance, community support, security track record, and adherence to semantic versioning.
 
-- **Use semantic versioning and caret (^) notation**: We prefer to use semantic versioning and the caret (^) notation in the `package.json` file to ensure compatibility and allow for seamless updates without introducing breaking changes. Ideally, versions only include the major version number, so that the minor and patch are controlled by application owners and can be updated over time. E.g. `"lit": "^2.0.0"`.
+- Use semantic versioning and caret (^) notation: we prefer to use semantic versioning and the caret notation in `package.json` to ensure compatibility and allow for seamless updates without introducing breaking changes. Ideally, versions only include the major version number, so that the minor and patch are controlled by application owners and can be updated over time. E.g. `"lit": "^2.0.0"`.
 
 - **Avoid shipping lock files in the boilerplate**: Lock files, such as `package-lock.json`, are not included in the Oryx boilerplate to allow application developers to benefit from the latest versions of dependencies when creating their projects.
 

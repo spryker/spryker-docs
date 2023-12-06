@@ -62,4 +62,8 @@ To import service to shipment type assignments, see [Import file details: shipme
 
 ## 5. Assign product offers to shipment types
 
-To import offers to shipment type assignments, see [Import file details: product_offer_shipment_type](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-product-offer-shipment-type.csv.html).
+To import offers to shipment type assignments, see [Import file details: product_offer_shipment_type.csv](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-product-offer-shipment-type.csv.html).
+
+
+## 6. Assign product offers to services
+To import offers to services assignments, see [Import file details: product_offer_service.csv](https://docs.spryker.com/docs/pbc/all/offer-management/202311.0/unified-commerce/import-file-details-product-offer-service.csv.html)

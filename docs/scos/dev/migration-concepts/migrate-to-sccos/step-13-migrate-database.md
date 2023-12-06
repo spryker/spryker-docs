@@ -43,7 +43,7 @@ For additional information about this step, see [Importing data from a MariaDB o
 
 Optional: For the Spryker Cloud environment, we recommend using a Scheduler instance for backup/restore purposes. Do the following
 * In AWS, go to **EC2 → Instances → <env_name>-<[/d/w]*> → Connect via Session Manager**
-  ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-sccos/scheduler-container-example.png)
+  ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/scheduler-container-example.png)
 * Copy the AWS credentials from here:
   ![AWS S3 credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/aws-s3-credentials.png)
 * Run the following command to copy the DB dump from S3 bucket to the Scheduler container:

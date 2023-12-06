@@ -4,7 +4,7 @@ description: To migrate to SCCOS, one of the steps, is defining the deployment s
 template: howto-guide-template
 ---
 
-After you have [provisioned the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-sccos-environments.html), you have to define the deployment strategy.
+After you have [provisioned the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html), you have to define the deployment strategy.
 
 The current Spryker Cloud Commerce OS solution doesn't support advanced rollout strategies like blue-green deployments and canary deployments. Therefore, it's necessary to conduct thorough testing before implementing changes in a production environment.
 

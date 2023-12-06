@@ -136,7 +136,7 @@ Request sample:
 
 {% include pbc/all/glue-api-guides/202311.0/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouse-user-assignments-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-included-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
 
 
 

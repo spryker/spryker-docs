@@ -350,7 +350,7 @@ For detailed information about the modules that provide the API functionality an
 
 {% include pbc/all/glue-api-guides/202311.0/picking-list-items-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/picking-list-items-included-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-included-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/202311.0/warehouses-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouses-included-response-attributes.md -->
 
@@ -558,7 +558,7 @@ For detailed information about the modules that provide the API functionality an
 
 {% include pbc/all/glue-api-guides/202311.0/picking-list-items-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/picking-list-items-included-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/users-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-included-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/202311.0/warehouses-included-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouses-included-response-attributes.md -->
 

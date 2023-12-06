@@ -7,7 +7,7 @@ last_updated: Oct 23, 2023
 
 Oryx is a frontend framework designed to help developers build web applications using modern technologies and leveraging [Spryker API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html).
 
-Oryx leverages standard technology, frameworks and tools provided by the web platform and the community wherever possible.  It emphasizes utilizing the capabilities of the web and minimizing the reliance on build tools. During development, Oryx primarily employs JavaScript (JS) but aims to reduce the need for executing JS in the browser. It prioritizes HTML and CSS for delivering a fast-loading experience across various screen sizes.
+Wherever possible, Oryx leverages standard technology, frameworks, and tools provided by the web platform and the community.  It emphasizes utilizing the capabilities of the web and minimizing the reliance on build tools. During development, Oryx primarily employs JavaScript (JS) but aims to reduce the need for executing JS in the browser. It prioritizes HTML and CSS for delivering a fast-loading experience across various screen sizes.
 
 Furthermore, Oryx is framework-agnostic and can seamlessly integrate into various web frameworks like React and Vue.js. This versatility is achieved using a combination of web components for the user interface and vanilla JS for handling business logic. This approach offers the flexibility of using the entire library with its components or to selectively employing specific layers, like the integration logic.
 
@@ -33,7 +33,7 @@ HTML is a markup language used to create web pages and applications. In Oryx, HT
 
 CSS is a style sheet language used to describe the visual presentation of a document written in HTML.
 
-Oryx uses standard CSS syntax and does not use CSS preprocessors because Oryx does not use a global CSS utility library; instead, we have isolated styles per component and because of that we do not want to load global css utils in each component.
+Oryx uses standard CSS syntax. Because Oryx doesn't use a global CSS utility library, it doesn't use CSS preprocessors; instead, styles are isolated per component and global CSS utils are not loaded in them.
 
 Unlike some other CSS methodologies, like Block, Element, or Modifier, Oryx does not rely on a specific naming convention to structure its CSS classes.
 
@@ -51,15 +51,14 @@ Lit is a lightweight library for creating web components using TS and HTML templ
 
 You can use Lit to customize Oryx, but you can also use another framework to build web components. Advantages of using Lit:
 - Reusable component mixins and controllers.
-- Out of the box integration with optimized [reactivity](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/reactivity/reactivity.html) and partial hydration concepts.
-- Out of the box integration with [server-side rendering (SSR)](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html).
+- Out of the box integration with optimized [reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) and partial hydration concepts.
+- Out of the box integration with [server-side rendering (SSR)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
 
 ## RxJS
 
 RxJS is a reactive programming library for JS. In Oryx, RxJS is used to handle asynchronous operations. It provides a declarative way to handle events and data streams, making it easier to manage complex data flows and state transitions.
 
-RxJS is predominantly used in the service layer to provide a reactive system that emits new values as you navigate through the (SPA) experience.
-RxJS is not a main citizen in the component logic, as we try to hide the reactivity altogether to avoid complexity.
+RxJS is predominantly used in the service layer to provide a reactive system that emits new values as you navigate through the (SPA) experience. As we try to hide the reactivity altogether to avoid complexity, we avoid using RxJS in the component logic.
 
 ## Vite
 
@@ -79,6 +78,6 @@ Oryx applications are decoupled applications and can be hosted separately. We re
 - Rewrites and redirects: simplifies the management of URL structure and routing.
 - Lambda function integration: lets you execute custom logic, server-side operations, and perform server-side rendering.
 
-If your Oryx applications requires [SSR](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
+If your Oryx applications requires [SSR](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
 
 If your application is fairly static and doesn't require SSR, you could consider a non-frontend hosting provider.

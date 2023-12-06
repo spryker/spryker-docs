@@ -52,7 +52,7 @@ Lit is a lightweight library for creating web components using TS and HTML templ
 You can use Lit to customize Oryx, but you can also use another framework to build web components. Advantages of using Lit:
 - Reusable component mixins and controllers.
 - Out of the box integration with optimized [reactivity](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/reactivity/reactivity.html) and partial hydration concepts.
-- Out of the box integration with [SSR](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html).
+- Out of the box integration with [server-side rendering (SSR)](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html).
 
 ## RxJS
 
@@ -71,16 +71,14 @@ Storybook is an open-source tool for developing UI components in isolation. In O
 
 ## Web hosting
 
-Oryx applications are decoupled applications and can be hosted separately. We recommend hosting Oryx applications at a frontend hosting provider, to benefit from standard features like the following:
+Oryx applications are decoupled applications and can be hosted separately. We recommend hosting Oryx applications with a frontend hosting provider. To be able to optimize the deployment, performance, and customization of your Oryx application, look for a provider with the following features:
 
-- Build process integration: Choose hosting providers with seamless build process integration to streamline updates and deployments.
-- HTTP header configuration: Opt for hosting providers that allow flexible configuration of HTTP headers for improved security, caching, and optimizations.
-- CDN integration: Look for hosting providers with native CDN integration to boost performance and availability by distributing static assets across a network.
-- Rewrites and redirects: Prioritize hosting providers that enable easy configuration of URL rewrites and redirects for managing URL structure and routing.
-- Lambda function integration: Select hosting providers that seamlessly integrate with serverless technologies like AWS Lambda to execute custom logic, server-side operations or perform a server-side rendering.
+- Build process integration: streamlines updates and deployments.
+- HTTP header configuration: improves security, caching, and optimizations.
+- CDN integration: boosts performance and availability by distributing static assets across a network.
+- Rewrites and redirects: simplifies the management of URL structure and routing.
+- Lambda function integration: lets you execute custom logic, server-side operations, and perform server-side rendering.
 
-If your Oryx applications requires [Server-Side Rendering](./oryx-server-side-rendering.md) you need to make sure that the right infrastructure is in place at your hosting provider. You can run SSR in a Lambda function or have a long-running server that processes the SSR.
+If your Oryx applications requires [SSR](/docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
 
-If you have a fairly static application that doesn't require SSR, you could consider a non-frontend hosting provider.
-
-By considering these capabilities, you can optimize the deployment, performance, and customization options for your Oryx application.
+If your application is fairly static and doesn't require SSR, you could consider a non-frontend hosting provider.
